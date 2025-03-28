@@ -60,6 +60,10 @@ public class GetHistoryListByBizTypeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cost
      */
@@ -125,6 +129,20 @@ public class GetHistoryListByBizTypeResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String time; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetHistoryListByBizTypeResponseBody model) {
+            this.cost = model.cost;
+            this.data = model.data;
+            this.dataType = model.dataType;
+            this.errCode = model.errCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.time = model.time;
+        } 
 
         /**
          * cost.
@@ -348,6 +366,23 @@ public class GetHistoryListByBizTypeResponseBody extends TeaModel {
             private String sessionId; 
             private String userQuery; 
 
+            private Builder() {
+            } 
+
+            private Builder(Records model) {
+                this.bizId = model.bizId;
+                this.bizType = model.bizType;
+                this.extraMessage = model.extraMessage;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.llmAnswer = model.llmAnswer;
+                this.llmPrompt = model.llmPrompt;
+                this.llmType = model.llmType;
+                this.sessionId = model.sessionId;
+                this.userQuery = model.userQuery;
+            } 
+
             /**
              * bizId.
              */
@@ -522,6 +557,17 @@ public class GetHistoryListByBizTypeResponseBody extends TeaModel {
             private java.util.List<Records> records; 
             private Long totalPages; 
             private Long totalRecords; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.records = model.records;
+                this.totalPages = model.totalPages;
+                this.totalRecords = model.totalRecords;
+            } 
 
             /**
              * currentPage.

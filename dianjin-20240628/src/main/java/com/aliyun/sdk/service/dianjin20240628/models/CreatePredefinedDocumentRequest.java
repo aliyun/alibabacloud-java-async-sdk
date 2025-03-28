@@ -55,7 +55,7 @@ public class CreatePredefinedDocumentRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -237,6 +237,16 @@ public class CreatePredefinedDocumentRequest extends Request {
             private Integer chunkOrder; 
             private String chunkText; 
             private String chunkType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Chunks model) {
+                this.chunkMeta = model.chunkMeta;
+                this.chunkOrder = model.chunkOrder;
+                this.chunkText = model.chunkText;
+                this.chunkType = model.chunkType;
+            } 
 
             /**
              * chunkMeta.

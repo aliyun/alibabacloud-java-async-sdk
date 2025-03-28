@@ -60,6 +60,10 @@ public class PreviewDocumentResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cost
      */
@@ -125,6 +129,20 @@ public class PreviewDocumentResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String time; 
+
+        private Builder() {
+        } 
+
+        private Builder(PreviewDocumentResponseBody model) {
+            this.cost = model.cost;
+            this.data = model.data;
+            this.dataType = model.dataType;
+            this.errCode = model.errCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.time = model.time;
+        } 
 
         /**
          * cost.
@@ -263,6 +281,16 @@ public class PreviewDocumentResponseBody extends TeaModel {
             private String title; 
             private String uploadTime; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.previewType = model.previewType;
+                this.title = model.title;
+                this.uploadTime = model.uploadTime;
+                this.url = model.url;
+            } 
 
             /**
              * previewType.

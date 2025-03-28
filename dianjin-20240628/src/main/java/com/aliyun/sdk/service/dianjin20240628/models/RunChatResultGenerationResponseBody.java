@@ -60,6 +60,10 @@ public class RunChatResultGenerationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return choices
      */
@@ -125,6 +129,20 @@ public class RunChatResultGenerationResponseBody extends TeaModel {
         private String time; 
         private Integer totalTokens; 
         private Usage usage; 
+
+        private Builder() {
+        } 
+
+        private Builder(RunChatResultGenerationResponseBody model) {
+            this.choices = model.choices;
+            this.created = model.created;
+            this.id = model.id;
+            this.modelId = model.modelId;
+            this.requestId = model.requestId;
+            this.time = model.time;
+            this.totalTokens = model.totalTokens;
+            this.usage = model.usage;
+        } 
 
         /**
          * choices.
@@ -252,6 +270,15 @@ public class RunChatResultGenerationResponseBody extends TeaModel {
             private String role; 
             private java.util.List<java.util.Map<String, ?>> toolCalls; 
 
+            private Builder() {
+            } 
+
+            private Builder(Message model) {
+                this.content = model.content;
+                this.role = model.role;
+                this.toolCalls = model.toolCalls;
+            } 
+
             /**
              * content.
              */
@@ -338,6 +365,15 @@ public class RunChatResultGenerationResponseBody extends TeaModel {
             private String finishReason; 
             private Integer index; 
             private Message message; 
+
+            private Builder() {
+            } 
+
+            private Builder(Choices model) {
+                this.finishReason = model.finishReason;
+                this.index = model.index;
+                this.message = model.message;
+            } 
 
             /**
              * finishReason.
@@ -449,6 +485,17 @@ public class RunChatResultGenerationResponseBody extends TeaModel {
             private Integer inputTokens; 
             private Integer outputTokens; 
             private Integer totalTokens; 
+
+            private Builder() {
+            } 
+
+            private Builder(Usage model) {
+                this.imageCount = model.imageCount;
+                this.imageTokens = model.imageTokens;
+                this.inputTokens = model.inputTokens;
+                this.outputTokens = model.outputTokens;
+                this.totalTokens = model.totalTokens;
+            } 
 
             /**
              * imageCount.

@@ -60,6 +60,10 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cost
      */
@@ -125,6 +129,20 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String time; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDocumentChunkListResponseBody model) {
+            this.cost = model.cost;
+            this.data = model.data;
+            this.dataType = model.dataType;
+            this.errCode = model.errCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.time = model.time;
+        } 
 
         /**
          * cost.
@@ -251,6 +269,15 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
             private java.util.List<Double> axisArray; 
             private Integer page; 
             private java.util.List<Integer> textHighlightArea; 
+
+            private Builder() {
+            } 
+
+            private Builder(Pos model) {
+                this.axisArray = model.axisArray;
+                this.page = model.page;
+                this.textHighlightArea = model.textHighlightArea;
+            } 
 
             /**
              * axisArray.
@@ -471,6 +498,26 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
             private Float score; 
             private String title; 
 
+            private Builder() {
+            } 
+
+            private Builder(Records model) {
+                this.chunkId = model.chunkId;
+                this.chunkMeta = model.chunkMeta;
+                this.chunkOssUrl = model.chunkOssUrl;
+                this.chunkText = model.chunkText;
+                this.chunkType = model.chunkType;
+                this.docId = model.docId;
+                this.fileType = model.fileType;
+                this.libraryId = model.libraryId;
+                this.libraryName = model.libraryName;
+                this.nextChunkId = model.nextChunkId;
+                this.pos = model.pos;
+                this.preChunkId = model.preChunkId;
+                this.score = model.score;
+                this.title = model.title;
+            } 
+
             /**
              * chunkId.
              */
@@ -669,6 +716,17 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
             private java.util.List<Records> records; 
             private Long totalPages; 
             private Long totalRecords; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.records = model.records;
+                this.totalPages = model.totalPages;
+                this.totalRecords = model.totalRecords;
+            } 
 
             /**
              * currentPage.

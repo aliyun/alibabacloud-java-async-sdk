@@ -69,7 +69,7 @@ public class CreateQualityCheckTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -360,6 +360,21 @@ public class CreateQualityCheckTaskRequest extends Request {
             private String role; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(DialogueList model) {
+                this.begin = model.begin;
+                this.beginTime = model.beginTime;
+                this.content = model.content;
+                this.customerId = model.customerId;
+                this.customerServiceId = model.customerServiceId;
+                this.customerServiceType = model.customerServiceType;
+                this.end = model.end;
+                this.role = model.role;
+                this.type = model.type;
+            } 
+
             /**
              * begin.
              */
@@ -549,6 +564,19 @@ public class CreateQualityCheckTaskRequest extends Request {
             private String customerServiceName; 
             private java.util.List<DialogueList> dialogueList; 
             private String gmtService; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConversationList model) {
+                this.callType = model.callType;
+                this.customerId = model.customerId;
+                this.customerName = model.customerName;
+                this.customerServiceId = model.customerServiceId;
+                this.customerServiceName = model.customerServiceName;
+                this.dialogueList = model.dialogueList;
+                this.gmtService = model.gmtService;
+            } 
 
             /**
              * callType.

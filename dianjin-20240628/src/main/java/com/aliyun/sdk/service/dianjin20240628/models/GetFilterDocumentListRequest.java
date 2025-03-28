@@ -71,7 +71,7 @@ public class GetFilterDocumentListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -311,6 +311,16 @@ public class GetFilterDocumentListRequest extends Request {
             private String operator; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(And model) {
+                this.boost = model.boost;
+                this.key = model.key;
+                this.operator = model.operator;
+                this.value = model.value;
+            } 
+
             /**
              * boost.
              */
@@ -417,6 +427,16 @@ public class GetFilterDocumentListRequest extends Request {
             private String key; 
             private String operator; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Or model) {
+                this.boost = model.boost;
+                this.key = model.key;
+                this.operator = model.operator;
+                this.value = model.value;
+            } 
 
             /**
              * boost.

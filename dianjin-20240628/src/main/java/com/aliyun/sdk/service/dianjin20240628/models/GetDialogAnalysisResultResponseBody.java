@@ -60,6 +60,10 @@ public class GetDialogAnalysisResultResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cost
      */
@@ -125,6 +129,20 @@ public class GetDialogAnalysisResultResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String time; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDialogAnalysisResultResponseBody model) {
+            this.cost = model.cost;
+            this.data = model.data;
+            this.dataType = model.dataType;
+            this.errCode = model.errCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.time = model.time;
+        } 
 
         /**
          * cost.
@@ -240,6 +258,14 @@ public class GetDialogAnalysisResultResponseBody extends TeaModel {
             private String name; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(DialogLabels model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
+
             /**
              * name.
              */
@@ -330,6 +356,16 @@ public class GetDialogAnalysisResultResponseBody extends TeaModel {
             private java.util.List<DialogLabels> dialogLabels; 
             private String dialogSop; 
             private String dialogSummary; 
+
+            private Builder() {
+            } 
+
+            private Builder(AnalysisResp model) {
+                this.dialogExecPlan = model.dialogExecPlan;
+                this.dialogLabels = model.dialogLabels;
+                this.dialogSop = model.dialogSop;
+                this.dialogSummary = model.dialogSummary;
+            } 
 
             /**
              * dialogExecPlan.
@@ -450,6 +486,17 @@ public class GetDialogAnalysisResultResponseBody extends TeaModel {
             private String sessionId; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(DialogAnalysisRespList model) {
+                this.analysisResp = model.analysisResp;
+                this.gmtCreate = model.gmtCreate;
+                this.ossUrl = model.ossUrl;
+                this.sessionId = model.sessionId;
+                this.status = model.status;
+            } 
+
             /**
              * analysisResp.
              */
@@ -528,6 +575,13 @@ public class GetDialogAnalysisResultResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DialogAnalysisRespList> dialogAnalysisRespList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.dialogAnalysisRespList = model.dialogAnalysisRespList;
+            } 
 
             /**
              * dialogAnalysisRespList.

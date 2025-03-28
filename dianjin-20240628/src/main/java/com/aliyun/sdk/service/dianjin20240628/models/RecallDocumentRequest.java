@@ -56,7 +56,7 @@ public class RecallDocumentRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -239,6 +239,16 @@ public class RecallDocumentRequest extends Request {
             private String operator; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(And model) {
+                this.boost = model.boost;
+                this.key = model.key;
+                this.operator = model.operator;
+                this.value = model.value;
+            } 
+
             /**
              * boost.
              */
@@ -345,6 +355,16 @@ public class RecallDocumentRequest extends Request {
             private String key; 
             private String operator; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Or model) {
+                this.boost = model.boost;
+                this.key = model.key;
+                this.operator = model.operator;
+                this.value = model.value;
+            } 
 
             /**
              * boost.
@@ -477,6 +497,18 @@ public class RecallDocumentRequest extends Request {
             private String libraryId; 
             private java.util.List<Or> or; 
             private java.util.List<String> status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Filters model) {
+                this.and = model.and;
+                this.chunkType = model.chunkType;
+                this.docIdList = model.docIdList;
+                this.libraryId = model.libraryId;
+                this.or = model.or;
+                this.status = model.status;
+            } 
 
             /**
              * and.

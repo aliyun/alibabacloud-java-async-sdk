@@ -32,6 +32,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateDialogResponse> createDialog(CreateDialogRequest request);
 
     /**
+     * @param request the request parameters of CreateDialogAnalysisTask  CreateDialogAnalysisTaskRequest
+     * @return CreateDialogAnalysisTaskResponse
+     */
+    CompletableFuture<CreateDialogAnalysisTaskResponse> createDialogAnalysisTask(CreateDialogAnalysisTaskRequest request);
+
+    /**
      * @param request the request parameters of CreateDocsSummaryTask  CreateDocsSummaryTaskRequest
      * @return CreateDocsSummaryTaskResponse
      */

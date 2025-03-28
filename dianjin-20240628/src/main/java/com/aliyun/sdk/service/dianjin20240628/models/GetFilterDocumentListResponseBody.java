@@ -60,6 +60,10 @@ public class GetFilterDocumentListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cost
      */
@@ -125,6 +129,20 @@ public class GetFilterDocumentListResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String time; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetFilterDocumentListResponseBody model) {
+            this.cost = model.cost;
+            this.data = model.data;
+            this.dataType = model.dataType;
+            this.errCode = model.errCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.time = model.time;
+        } 
 
         /**
          * cost.
@@ -324,6 +342,21 @@ public class GetFilterDocumentListResponseBody extends TeaModel {
             private String title; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(Records model) {
+                this.docId = model.docId;
+                this.documentMeta = model.documentMeta;
+                this.fileType = model.fileType;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.libraryId = model.libraryId;
+                this.statusCode = model.statusCode;
+                this.title = model.title;
+                this.url = model.url;
+            } 
+
             /**
              * docId.
              */
@@ -482,6 +515,17 @@ public class GetFilterDocumentListResponseBody extends TeaModel {
             private java.util.List<Records> records; 
             private Long totalPages; 
             private Long totalRecords; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.records = model.records;
+                this.totalPages = model.totalPages;
+                this.totalRecords = model.totalRecords;
+            } 
 
             /**
              * currentPage.

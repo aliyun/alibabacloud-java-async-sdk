@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UpdateDocumentResponse} extends {@link TeaModel}
+ * {@link CreateDialogAnalysisTaskResponse} extends {@link TeaModel}
  *
- * <p>UpdateDocumentResponse</p>
+ * <p>CreateDialogAnalysisTaskResponse</p>
  */
-public class UpdateDocumentResponse extends Response {
+public class CreateDialogAnalysisTaskResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class UpdateDocumentResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private UpdateDocumentResponseBody body;
+    private CreateDialogAnalysisTaskResponseBody body;
 
-    private UpdateDocumentResponse(BuilderImpl builder) {
+    private CreateDialogAnalysisTaskResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static UpdateDocumentResponse create() {
+    public static CreateDialogAnalysisTaskResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class UpdateDocumentResponse extends Response {
     /**
      * @return body
      */
-    public UpdateDocumentResponseBody getBody() {
+    public CreateDialogAnalysisTaskResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<UpdateDocumentResponse, Builder> {
+    public interface Builder extends Response.Builder<CreateDialogAnalysisTaskResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(UpdateDocumentResponseBody body);
+        Builder body(CreateDialogAnalysisTaskResponseBody body);
 
         @Override
-        UpdateDocumentResponse build();
+        CreateDialogAnalysisTaskResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<UpdateDocumentResponse, Builder>
+            extends Response.BuilderImpl<CreateDialogAnalysisTaskResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private UpdateDocumentResponseBody body; 
+        private CreateDialogAnalysisTaskResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(UpdateDocumentResponse response) {
+        private BuilderImpl(CreateDialogAnalysisTaskResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class UpdateDocumentResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(UpdateDocumentResponseBody body) {
+        public Builder body(CreateDialogAnalysisTaskResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public UpdateDocumentResponse build() {
-            return new UpdateDocumentResponse(this);
+        public CreateDialogAnalysisTaskResponse build() {
+            return new CreateDialogAnalysisTaskResponse(this);
         } 
 
     } 

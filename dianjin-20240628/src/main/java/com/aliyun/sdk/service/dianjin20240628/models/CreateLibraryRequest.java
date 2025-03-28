@@ -52,7 +52,7 @@ public class CreateLibraryRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -277,6 +277,21 @@ public class CreateLibraryRequest extends Request {
             private Integer size; 
             private Boolean split; 
 
+            private Builder() {
+            } 
+
+            private Builder(ChunkStrategy model) {
+                this.docTreeSplit = model.docTreeSplit;
+                this.docTreeSplitSize = model.docTreeSplitSize;
+                this.enhanceGraph = model.enhanceGraph;
+                this.enhanceTable = model.enhanceTable;
+                this.overlap = model.overlap;
+                this.sentenceSplit = model.sentenceSplit;
+                this.sentenceSplitSize = model.sentenceSplitSize;
+                this.size = model.size;
+                this.split = model.split;
+            } 
+
             /**
              * docTreeSplit.
              */
@@ -399,6 +414,14 @@ public class CreateLibraryRequest extends Request {
         public static final class Builder {
             private Double temperature; 
             private Double topP; 
+
+            private Builder() {
+            } 
+
+            private Builder(ModelConfig model) {
+                this.temperature = model.temperature;
+                this.topP = model.topP;
+            } 
 
             /**
              * temperature.
@@ -527,6 +550,19 @@ public class CreateLibraryRequest extends Request {
             private String localKnowledgeId; 
             private Boolean withDocumentReference; 
 
+            private Builder() {
+            } 
+
+            private Builder(QueryEnhancer model) {
+                this.enableFollowUp = model.enableFollowUp;
+                this.enableMultiQuery = model.enableMultiQuery;
+                this.enableOpenQa = model.enableOpenQa;
+                this.enableQueryRewrite = model.enableQueryRewrite;
+                this.enableSession = model.enableSession;
+                this.localKnowledgeId = model.localKnowledgeId;
+                this.withDocumentReference = model.withDocumentReference;
+            } 
+
             /**
              * enableFollowUp.
              */
@@ -633,6 +669,14 @@ public class CreateLibraryRequest extends Request {
         public static final class Builder {
             private String documentRankType; 
             private Integer limit; 
+
+            private Builder() {
+            } 
+
+            private Builder(RecallStrategy model) {
+                this.documentRankType = model.documentRankType;
+                this.limit = model.limit;
+            } 
 
             /**
              * documentRankType.
@@ -748,6 +792,18 @@ public class CreateLibraryRequest extends Request {
             private Double rankThreshold; 
             private String searchAnalyzer; 
             private Integer topK; 
+
+            private Builder() {
+            } 
+
+            private Builder(TextIndexSetting model) {
+                this.category = model.category;
+                this.enable = model.enable;
+                this.indexAnalyzer = model.indexAnalyzer;
+                this.rankThreshold = model.rankThreshold;
+                this.searchAnalyzer = model.searchAnalyzer;
+                this.topK = model.topK;
+            } 
 
             /**
              * category.
@@ -883,6 +939,17 @@ public class CreateLibraryRequest extends Request {
             private Boolean enable; 
             private Double rankThreshold; 
             private Integer topK; 
+
+            private Builder() {
+            } 
+
+            private Builder(VectorIndexSetting model) {
+                this.category = model.category;
+                this.embeddingType = model.embeddingType;
+                this.enable = model.enable;
+                this.rankThreshold = model.rankThreshold;
+                this.topK = model.topK;
+            } 
 
             /**
              * category.
@@ -1034,6 +1101,19 @@ public class CreateLibraryRequest extends Request {
             private RecallStrategy recallStrategy; 
             private TextIndexSetting textIndexSetting; 
             private VectorIndexSetting vectorIndexSetting; 
+
+            private Builder() {
+            } 
+
+            private Builder(IndexSetting model) {
+                this.chunkStrategy = model.chunkStrategy;
+                this.modelConfig = model.modelConfig;
+                this.promptRoleStyle = model.promptRoleStyle;
+                this.queryEnhancer = model.queryEnhancer;
+                this.recallStrategy = model.recallStrategy;
+                this.textIndexSetting = model.textIndexSetting;
+                this.vectorIndexSetting = model.vectorIndexSetting;
+            } 
 
             /**
              * chunkStrategy.

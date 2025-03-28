@@ -60,6 +60,10 @@ public class GetSummaryTaskResultResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cost
      */
@@ -125,6 +129,20 @@ public class GetSummaryTaskResultResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String time; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSummaryTaskResultResponseBody model) {
+            this.cost = model.cost;
+            this.data = model.data;
+            this.dataType = model.dataType;
+            this.errCode = model.errCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.time = model.time;
+        } 
 
         /**
          * cost.
@@ -252,6 +270,15 @@ public class GetSummaryTaskResultResponseBody extends TeaModel {
             private String role; 
             private java.util.List<java.util.Map<String, ?>> toolCalls; 
 
+            private Builder() {
+            } 
+
+            private Builder(Message model) {
+                this.content = model.content;
+                this.role = model.role;
+                this.toolCalls = model.toolCalls;
+            } 
+
             /**
              * content.
              */
@@ -338,6 +365,15 @@ public class GetSummaryTaskResultResponseBody extends TeaModel {
             private String finishReason; 
             private Integer index; 
             private Message message; 
+
+            private Builder() {
+            } 
+
+            private Builder(Choices model) {
+                this.finishReason = model.finishReason;
+                this.index = model.index;
+                this.message = model.message;
+            } 
 
             /**
              * finishReason.
@@ -449,6 +485,17 @@ public class GetSummaryTaskResultResponseBody extends TeaModel {
             private Integer inputTokens; 
             private Integer outputTokens; 
             private Integer totalTokens; 
+
+            private Builder() {
+            } 
+
+            private Builder(Usage model) {
+                this.imageCount = model.imageCount;
+                this.imageTokens = model.imageTokens;
+                this.inputTokens = model.inputTokens;
+                this.outputTokens = model.outputTokens;
+                this.totalTokens = model.totalTokens;
+            } 
 
             /**
              * imageCount.
@@ -612,6 +659,20 @@ public class GetSummaryTaskResultResponseBody extends TeaModel {
             private String time; 
             private Integer totalTokens; 
             private Usage usage; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.choices = model.choices;
+                this.created = model.created;
+                this.id = model.id;
+                this.modelId = model.modelId;
+                this.requestId = model.requestId;
+                this.time = model.time;
+                this.totalTokens = model.totalTokens;
+                this.usage = model.usage;
+            } 
 
             /**
              * choices.

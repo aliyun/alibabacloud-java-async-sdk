@@ -82,7 +82,7 @@ public class RecognizeIntentionRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -358,6 +358,16 @@ public class RecognizeIntentionRequest extends Request {
             private String intentionCode; 
             private String intentionScript; 
 
+            private Builder() {
+            } 
+
+            private Builder(GlobalIntentionList model) {
+                this.description = model.description;
+                this.intention = model.intention;
+                this.intentionCode = model.intentionCode;
+                this.intentionScript = model.intentionScript;
+            } 
+
             /**
              * description.
              */
@@ -465,6 +475,16 @@ public class RecognizeIntentionRequest extends Request {
             private String intentionCode; 
             private String intentionScript; 
 
+            private Builder() {
+            } 
+
+            private Builder(HierarchicalIntentionList model) {
+                this.description = model.description;
+                this.intention = model.intention;
+                this.intentionCode = model.intentionCode;
+                this.intentionScript = model.intentionScript;
+            } 
+
             /**
              * description.
              */
@@ -571,6 +591,16 @@ public class RecognizeIntentionRequest extends Request {
             private String intention; 
             private String intentionCode; 
             private String intentionScript; 
+
+            private Builder() {
+            } 
+
+            private Builder(IntentionList model) {
+                this.description = model.description;
+                this.intention = model.intention;
+                this.intentionCode = model.intentionCode;
+                this.intentionScript = model.intentionScript;
+            } 
 
             /**
              * description.

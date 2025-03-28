@@ -44,6 +44,10 @@ public class RealTimeDialogRequest extends Request {
     private java.util.Map<String, ?> metaData;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("opType")
+    private String opType;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("recommend")
     private Boolean recommend;
 
@@ -72,6 +76,7 @@ public class RealTimeDialogRequest extends Request {
         this.conversationModel = builder.conversationModel;
         this.dialogMemoryTurns = builder.dialogMemoryTurns;
         this.metaData = builder.metaData;
+        this.opType = builder.opType;
         this.recommend = builder.recommend;
         this.scriptContentPlayed = builder.scriptContentPlayed;
         this.sessionId = builder.sessionId;
@@ -87,7 +92,7 @@ public class RealTimeDialogRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -135,6 +140,13 @@ public class RealTimeDialogRequest extends Request {
     }
 
     /**
+     * @return opType
+     */
+    public String getOpType() {
+        return this.opType;
+    }
+
+    /**
      * @return recommend
      */
     public Boolean getRecommend() {
@@ -176,6 +188,7 @@ public class RealTimeDialogRequest extends Request {
         private java.util.List<ConversationModel> conversationModel; 
         private Integer dialogMemoryTurns; 
         private java.util.Map<String, ?> metaData; 
+        private String opType; 
         private Boolean recommend; 
         private String scriptContentPlayed; 
         private String sessionId; 
@@ -194,6 +207,7 @@ public class RealTimeDialogRequest extends Request {
             this.conversationModel = request.conversationModel;
             this.dialogMemoryTurns = request.dialogMemoryTurns;
             this.metaData = request.metaData;
+            this.opType = request.opType;
             this.recommend = request.recommend;
             this.scriptContentPlayed = request.scriptContentPlayed;
             this.sessionId = request.sessionId;
@@ -255,6 +269,15 @@ public class RealTimeDialogRequest extends Request {
         public Builder metaData(java.util.Map<String, ?> metaData) {
             this.putBodyParameter("metaData", metaData);
             this.metaData = metaData;
+            return this;
+        }
+
+        /**
+         * opType.
+         */
+        public Builder opType(String opType) {
+            this.putBodyParameter("opType", opType);
+            this.opType = opType;
             return this;
         }
 
@@ -443,6 +466,21 @@ public class RealTimeDialogRequest extends Request {
             private Integer end; 
             private Integer role; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConversationModel model) {
+                this.begin = model.begin;
+                this.beginTime = model.beginTime;
+                this.content = model.content;
+                this.customerId = model.customerId;
+                this.customerServiceId = model.customerServiceId;
+                this.customerServiceType = model.customerServiceType;
+                this.end = model.end;
+                this.role = model.role;
+                this.type = model.type;
+            } 
 
             /**
              * begin.

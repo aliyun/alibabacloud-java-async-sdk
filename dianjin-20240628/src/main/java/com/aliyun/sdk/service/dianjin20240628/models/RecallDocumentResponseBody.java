@@ -60,6 +60,10 @@ public class RecallDocumentResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cost
      */
@@ -125,6 +129,20 @@ public class RecallDocumentResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String time; 
+
+        private Builder() {
+        } 
+
+        private Builder(RecallDocumentResponseBody model) {
+            this.cost = model.cost;
+            this.data = model.data;
+            this.dataType = model.dataType;
+            this.errCode = model.errCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.time = model.time;
+        } 
 
         /**
          * cost.
@@ -251,6 +269,15 @@ public class RecallDocumentResponseBody extends TeaModel {
             private java.util.List<Double> axisArray; 
             private Integer page; 
             private java.util.List<Integer> textHighlightArea; 
+
+            private Builder() {
+            } 
+
+            private Builder(Pos model) {
+                this.axisArray = model.axisArray;
+                this.page = model.page;
+                this.textHighlightArea = model.textHighlightArea;
+            } 
 
             /**
              * axisArray.
@@ -471,6 +498,26 @@ public class RecallDocumentResponseBody extends TeaModel {
             private Float score; 
             private String title; 
 
+            private Builder() {
+            } 
+
+            private Builder(ChunkList model) {
+                this.chunkId = model.chunkId;
+                this.chunkMeta = model.chunkMeta;
+                this.chunkOssUrl = model.chunkOssUrl;
+                this.chunkText = model.chunkText;
+                this.chunkType = model.chunkType;
+                this.docId = model.docId;
+                this.fileType = model.fileType;
+                this.libraryId = model.libraryId;
+                this.libraryName = model.libraryName;
+                this.nextChunkId = model.nextChunkId;
+                this.pos = model.pos;
+                this.preChunkId = model.preChunkId;
+                this.score = model.score;
+                this.title = model.title;
+            } 
+
             /**
              * chunkId.
              */
@@ -645,6 +692,15 @@ public class RecallDocumentResponseBody extends TeaModel {
             private java.util.List<Double> axisArray; 
             private Integer page; 
             private java.util.List<Integer> textHighlightArea; 
+
+            private Builder() {
+            } 
+
+            private Builder(ChunkPartListPos model) {
+                this.axisArray = model.axisArray;
+                this.page = model.page;
+                this.textHighlightArea = model.textHighlightArea;
+            } 
 
             /**
              * axisArray.
@@ -864,6 +920,26 @@ public class RecallDocumentResponseBody extends TeaModel {
             private String preChunkId; 
             private Float score; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(ChunkPartList model) {
+                this.chunkId = model.chunkId;
+                this.chunkMeta = model.chunkMeta;
+                this.chunkOssUrl = model.chunkOssUrl;
+                this.chunkText = model.chunkText;
+                this.chunkType = model.chunkType;
+                this.docId = model.docId;
+                this.fileType = model.fileType;
+                this.libraryId = model.libraryId;
+                this.libraryName = model.libraryName;
+                this.nextChunkId = model.nextChunkId;
+                this.pos = model.pos;
+                this.preChunkId = model.preChunkId;
+                this.score = model.score;
+                this.title = model.title;
+            } 
 
             /**
              * chunkId.
@@ -1088,6 +1164,19 @@ public class RecallDocumentResponseBody extends TeaModel {
             private String title; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(Documents model) {
+                this.docId = model.docId;
+                this.documentMeta = model.documentMeta;
+                this.fileType = model.fileType;
+                this.gmtCreate = model.gmtCreate;
+                this.libraryId = model.libraryId;
+                this.title = model.title;
+                this.url = model.url;
+            } 
+
             /**
              * docId.
              */
@@ -1206,6 +1295,15 @@ public class RecallDocumentResponseBody extends TeaModel {
             private java.util.List<Double> axisArray; 
             private Integer page; 
             private java.util.List<Integer> textHighlightArea; 
+
+            private Builder() {
+            } 
+
+            private Builder(TextChunkListPos model) {
+                this.axisArray = model.axisArray;
+                this.page = model.page;
+                this.textHighlightArea = model.textHighlightArea;
+            } 
 
             /**
              * axisArray.
@@ -1426,6 +1524,26 @@ public class RecallDocumentResponseBody extends TeaModel {
             private Float score; 
             private String title; 
 
+            private Builder() {
+            } 
+
+            private Builder(TextChunkList model) {
+                this.chunkId = model.chunkId;
+                this.chunkMeta = model.chunkMeta;
+                this.chunkOssUrl = model.chunkOssUrl;
+                this.chunkText = model.chunkText;
+                this.chunkType = model.chunkType;
+                this.docId = model.docId;
+                this.fileType = model.fileType;
+                this.libraryId = model.libraryId;
+                this.libraryName = model.libraryName;
+                this.nextChunkId = model.nextChunkId;
+                this.pos = model.pos;
+                this.preChunkId = model.preChunkId;
+                this.score = model.score;
+                this.title = model.title;
+            } 
+
             /**
              * chunkId.
              */
@@ -1600,6 +1718,15 @@ public class RecallDocumentResponseBody extends TeaModel {
             private java.util.List<Double> axisArray; 
             private Integer page; 
             private java.util.List<Integer> textHighlightArea; 
+
+            private Builder() {
+            } 
+
+            private Builder(VectorChunkListPos model) {
+                this.axisArray = model.axisArray;
+                this.page = model.page;
+                this.textHighlightArea = model.textHighlightArea;
+            } 
 
             /**
              * axisArray.
@@ -1819,6 +1946,26 @@ public class RecallDocumentResponseBody extends TeaModel {
             private String preChunkId; 
             private Float score; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(VectorChunkList model) {
+                this.chunkId = model.chunkId;
+                this.chunkMeta = model.chunkMeta;
+                this.chunkOssUrl = model.chunkOssUrl;
+                this.chunkText = model.chunkText;
+                this.chunkType = model.chunkType;
+                this.docId = model.docId;
+                this.fileType = model.fileType;
+                this.libraryId = model.libraryId;
+                this.libraryName = model.libraryName;
+                this.nextChunkId = model.nextChunkId;
+                this.pos = model.pos;
+                this.preChunkId = model.preChunkId;
+                this.score = model.score;
+                this.title = model.title;
+            } 
 
             /**
              * chunkId.
@@ -2078,6 +2225,22 @@ public class RecallDocumentResponseBody extends TeaModel {
             private Long totalElapsedMs; 
             private java.util.List<VectorChunkList> vectorChunkList; 
             private Long vectorSearchElapsedMs; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.chunkList = model.chunkList;
+                this.chunkPartList = model.chunkPartList;
+                this.chunkTextList = model.chunkTextList;
+                this.documents = model.documents;
+                this.embeddingElapsedMs = model.embeddingElapsedMs;
+                this.textChunkList = model.textChunkList;
+                this.textSearchElapsedMs = model.textSearchElapsedMs;
+                this.totalElapsedMs = model.totalElapsedMs;
+                this.vectorChunkList = model.vectorChunkList;
+                this.vectorSearchElapsedMs = model.vectorSearchElapsedMs;
+            } 
 
             /**
              * chunkList.

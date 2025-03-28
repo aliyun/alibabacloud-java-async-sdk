@@ -60,6 +60,10 @@ public class RunAgentResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cost
      */
@@ -125,6 +129,20 @@ public class RunAgentResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String time; 
+
+        private Builder() {
+        } 
+
+        private Builder(RunAgentResponseBody model) {
+            this.cost = model.cost;
+            this.data = model.data;
+            this.dataType = model.dataType;
+            this.errCode = model.errCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.time = model.time;
+        } 
 
         /**
          * cost.
@@ -288,6 +306,18 @@ public class RunAgentResponseBody extends TeaModel {
             private String result; 
             private String startTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(FunctionCallResponses model) {
+                this.displayName = model.displayName;
+                this.endTime = model.endTime;
+                this.functionArgs = model.functionArgs;
+                this.functionName = model.functionName;
+                this.result = model.result;
+                this.startTime = model.startTime;
+            } 
+
             /**
              * displayName.
              */
@@ -399,6 +429,15 @@ public class RunAgentResponseBody extends TeaModel {
             private String role; 
             private String roleDisplayName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Message model) {
+                this.content = model.content;
+                this.role = model.role;
+                this.roleDisplayName = model.roleDisplayName;
+            } 
+
             /**
              * content.
              */
@@ -485,6 +524,15 @@ public class RunAgentResponseBody extends TeaModel {
             private String finishReason; 
             private Integer index; 
             private Message message; 
+
+            private Builder() {
+            } 
+
+            private Builder(Choices model) {
+                this.finishReason = model.finishReason;
+                this.index = model.index;
+                this.message = model.message;
+            } 
 
             /**
              * finishReason.
@@ -596,6 +644,17 @@ public class RunAgentResponseBody extends TeaModel {
             private String id; 
             private String modelId; 
             private String time; 
+
+            private Builder() {
+            } 
+
+            private Builder(Response model) {
+                this.choices = model.choices;
+                this.created = model.created;
+                this.id = model.id;
+                this.modelId = model.modelId;
+                this.time = model.time;
+            } 
 
             /**
              * choices.
@@ -747,6 +806,19 @@ public class RunAgentResponseBody extends TeaModel {
             private String threadId; 
             private String traceId; 
             private String versionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.functionCallResponses = model.functionCallResponses;
+                this.inputTokens = model.inputTokens;
+                this.outputTokens = model.outputTokens;
+                this.response = model.response;
+                this.threadId = model.threadId;
+                this.traceId = model.traceId;
+                this.versionId = model.versionId;
+            } 
 
             /**
              * functionCallResponses.

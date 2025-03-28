@@ -67,7 +67,7 @@ public class RunChatResultGenerationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -265,6 +265,14 @@ public class RunChatResultGenerationRequest extends Request {
             private String content; 
             private String role; 
 
+            private Builder() {
+            } 
+
+            private Builder(Messages model) {
+                this.content = model.content;
+                this.role = model.role;
+            } 
+
             /**
              * content.
              */
@@ -331,6 +339,14 @@ public class RunChatResultGenerationRequest extends Request {
         public static final class Builder {
             private java.util.Map<String, ?> properties; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Parameters model) {
+                this.properties = model.properties;
+                this.type = model.type;
+            } 
 
             /**
              * properties.
@@ -423,6 +439,16 @@ public class RunChatResultGenerationRequest extends Request {
             private Parameters parameters; 
             private java.util.List<String> required; 
 
+            private Builder() {
+            } 
+
+            private Builder(Function model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.parameters = model.parameters;
+                this.required = model.required;
+            } 
+
             /**
              * description.
              */
@@ -505,6 +531,14 @@ public class RunChatResultGenerationRequest extends Request {
         public static final class Builder {
             private Function function; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tools model) {
+                this.function = model.function;
+                this.type = model.type;
+            } 
 
             /**
              * function.

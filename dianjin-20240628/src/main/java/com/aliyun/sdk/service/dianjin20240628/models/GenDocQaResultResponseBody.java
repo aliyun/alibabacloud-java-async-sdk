@@ -60,6 +60,10 @@ public class GenDocQaResultResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cost
      */
@@ -125,6 +129,20 @@ public class GenDocQaResultResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String time; 
+
+        private Builder() {
+        } 
+
+        private Builder(GenDocQaResultResponseBody model) {
+            this.cost = model.cost;
+            this.data = model.data;
+            this.dataType = model.dataType;
+            this.errCode = model.errCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.time = model.time;
+        } 
 
         /**
          * cost.
@@ -240,6 +258,14 @@ public class GenDocQaResultResponseBody extends TeaModel {
             private String answer; 
             private String question; 
 
+            private Builder() {
+            } 
+
+            private Builder(ParseQaResults model) {
+                this.answer = model.answer;
+                this.question = model.question;
+            } 
+
             /**
              * answer.
              */
@@ -330,6 +356,16 @@ public class GenDocQaResultResponseBody extends TeaModel {
             private String docId; 
             private String libraryId; 
             private java.util.List<ParseQaResults> parseQaResults; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.currentStatus = model.currentStatus;
+                this.docId = model.docId;
+                this.libraryId = model.libraryId;
+                this.parseQaResults = model.parseQaResults;
+            } 
 
             /**
              * currentStatus.

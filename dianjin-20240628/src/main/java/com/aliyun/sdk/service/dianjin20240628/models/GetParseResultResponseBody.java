@@ -60,6 +60,10 @@ public class GetParseResultResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cost
      */
@@ -125,6 +129,20 @@ public class GetParseResultResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String time; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetParseResultResponseBody model) {
+            this.cost = model.cost;
+            this.data = model.data;
+            this.dataType = model.dataType;
+            this.errCode = model.errCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.time = model.time;
+        } 
 
         /**
          * cost.
@@ -287,6 +305,18 @@ public class GetParseResultResponseBody extends TeaModel {
             private java.util.Map<String, ?> result; 
             private String resultUrl; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.fileType = model.fileType;
+                this.providerType = model.providerType;
+                this.requestId = model.requestId;
+                this.result = model.result;
+                this.resultUrl = model.resultUrl;
+                this.status = model.status;
+            } 
 
             /**
              * fileType.

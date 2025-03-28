@@ -60,6 +60,10 @@ public class GetChatQuestionRespResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cost
      */
@@ -125,6 +129,20 @@ public class GetChatQuestionRespResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String time; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetChatQuestionRespResponseBody model) {
+            this.cost = model.cost;
+            this.data = model.data;
+            this.dataType = model.dataType;
+            this.errCode = model.errCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.time = model.time;
+        } 
 
         /**
          * cost.
@@ -312,6 +330,20 @@ public class GetChatQuestionRespResponseBody extends TeaModel {
             private String userId; 
             private String userName; 
 
+            private Builder() {
+            } 
+
+            private Builder(QuestionList model) {
+                this.content = model.content;
+                this.gmtCreate = model.gmtCreate;
+                this.oriContent = model.oriContent;
+                this.reply = model.reply;
+                this.sessionId = model.sessionId;
+                this.type = model.type;
+                this.userId = model.userId;
+                this.userName = model.userName;
+            } 
+
             /**
              * content.
              */
@@ -426,6 +458,14 @@ public class GetChatQuestionRespResponseBody extends TeaModel {
         public static final class Builder {
             private String currentState; 
             private java.util.List<QuestionList> questionList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.currentState = model.currentState;
+                this.questionList = model.questionList;
+            } 
 
             /**
              * currentState.

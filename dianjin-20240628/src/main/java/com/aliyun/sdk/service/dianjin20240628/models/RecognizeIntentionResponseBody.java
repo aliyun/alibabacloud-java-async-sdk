@@ -60,6 +60,10 @@ public class RecognizeIntentionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cost
      */
@@ -125,6 +129,20 @@ public class RecognizeIntentionResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String time; 
+
+        private Builder() {
+        } 
+
+        private Builder(RecognizeIntentionResponseBody model) {
+            this.cost = model.cost;
+            this.data = model.data;
+            this.dataType = model.dataType;
+            this.errCode = model.errCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.time = model.time;
+        } 
 
         /**
          * cost.
@@ -287,6 +305,18 @@ public class RecognizeIntentionResponseBody extends TeaModel {
             private String intentionScript; 
             private String recommendIntention; 
             private String recommendScript; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.analysisProcess = model.analysisProcess;
+                this.intentionCode = model.intentionCode;
+                this.intentionName = model.intentionName;
+                this.intentionScript = model.intentionScript;
+                this.recommendIntention = model.recommendIntention;
+                this.recommendScript = model.recommendScript;
+            } 
 
             /**
              * analysisProcess.

@@ -60,6 +60,10 @@ public class GetAppConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cost
      */
@@ -125,6 +129,20 @@ public class GetAppConfigResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String time; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAppConfigResponseBody model) {
+            this.cost = model.cost;
+            this.data = model.data;
+            this.dataType = model.dataType;
+            this.errCode = model.errCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.time = model.time;
+        } 
 
         /**
          * cost.
@@ -287,6 +305,18 @@ public class GetAppConfigResponseBody extends TeaModel {
             private java.util.List<java.util.Map<String, String>> llmHelperTypeList; 
             private java.util.List<String> textIndexCategoryList; 
             private java.util.List<String> vectorIndexCategoryList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.embeddingTypeList = model.embeddingTypeList;
+                this.frontendConfig = model.frontendConfig;
+                this.libraryDocumentStatusList = model.libraryDocumentStatusList;
+                this.llmHelperTypeList = model.llmHelperTypeList;
+                this.textIndexCategoryList = model.textIndexCategoryList;
+                this.vectorIndexCategoryList = model.vectorIndexCategoryList;
+            } 
 
             /**
              * embeddingTypeList.

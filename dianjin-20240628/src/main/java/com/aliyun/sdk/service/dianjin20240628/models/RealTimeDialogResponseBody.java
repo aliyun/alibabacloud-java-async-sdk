@@ -48,6 +48,10 @@ public class RealTimeDialogResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return choices
      */
@@ -89,6 +93,17 @@ public class RealTimeDialogResponseBody extends TeaModel {
         private String id; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(RealTimeDialogResponseBody model) {
+            this.choices = model.choices;
+            this.created = model.created;
+            this.id = model.id;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * choices.
@@ -287,6 +302,23 @@ public class RealTimeDialogResponseBody extends TeaModel {
             private String recommendScript; 
             private String selfDirectedScript; 
             private String selfDirectedScriptFullContent; 
+
+            private Builder() {
+            } 
+
+            private Builder(Delta model) {
+                this.analysisProcess = model.analysisProcess;
+                this.callTime = model.callTime;
+                this.hangUpDialog = model.hangUpDialog;
+                this.intentionCode = model.intentionCode;
+                this.intentionName = model.intentionName;
+                this.intentionScript = model.intentionScript;
+                this.interrupt = model.interrupt;
+                this.recommendIntention = model.recommendIntention;
+                this.recommendScript = model.recommendScript;
+                this.selfDirectedScript = model.selfDirectedScript;
+                this.selfDirectedScriptFullContent = model.selfDirectedScriptFullContent;
+            } 
 
             /**
              * analysisProcess.
@@ -538,6 +570,23 @@ public class RealTimeDialogResponseBody extends TeaModel {
             private String selfDirectedScript; 
             private String selfDirectedScriptFullContent; 
 
+            private Builder() {
+            } 
+
+            private Builder(Message model) {
+                this.analysisProcess = model.analysisProcess;
+                this.callTime = model.callTime;
+                this.hangUpDialog = model.hangUpDialog;
+                this.intentionCode = model.intentionCode;
+                this.intentionName = model.intentionName;
+                this.intentionScript = model.intentionScript;
+                this.interrupt = model.interrupt;
+                this.recommendIntention = model.recommendIntention;
+                this.recommendScript = model.recommendScript;
+                this.selfDirectedScript = model.selfDirectedScript;
+                this.selfDirectedScriptFullContent = model.selfDirectedScriptFullContent;
+            } 
+
             /**
              * analysisProcess.
              */
@@ -703,6 +752,16 @@ public class RealTimeDialogResponseBody extends TeaModel {
             private String finishReason; 
             private Integer index; 
             private Message message; 
+
+            private Builder() {
+            } 
+
+            private Builder(Choices model) {
+                this.delta = model.delta;
+                this.finishReason = model.finishReason;
+                this.index = model.index;
+                this.message = model.message;
+            } 
 
             /**
              * delta.

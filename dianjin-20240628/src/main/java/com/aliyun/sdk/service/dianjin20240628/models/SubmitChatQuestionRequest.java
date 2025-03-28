@@ -70,7 +70,7 @@ public class SubmitChatQuestionRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -338,6 +338,19 @@ public class SubmitChatQuestionRequest extends Request {
             private String type; 
             private String userId; 
             private String userName; 
+
+            private Builder() {
+            } 
+
+            private Builder(QuestionList model) {
+                this.content = model.content;
+                this.gmtCreate = model.gmtCreate;
+                this.reply = model.reply;
+                this.sessionId = model.sessionId;
+                this.type = model.type;
+                this.userId = model.userId;
+                this.userName = model.userName;
+            } 
 
             /**
              * <p>This parameter is required.</p>

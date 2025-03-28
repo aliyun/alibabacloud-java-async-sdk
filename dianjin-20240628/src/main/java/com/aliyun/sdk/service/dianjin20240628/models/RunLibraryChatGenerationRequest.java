@@ -128,7 +128,7 @@ public class RunLibraryChatGenerationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -572,6 +572,16 @@ public class RunLibraryChatGenerationRequest extends Request {
             private String operator; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(And model) {
+                this.boost = model.boost;
+                this.key = model.key;
+                this.operator = model.operator;
+                this.value = model.value;
+            } 
+
             /**
              * boost.
              */
@@ -679,6 +689,16 @@ public class RunLibraryChatGenerationRequest extends Request {
             private String operator; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Or model) {
+                this.boost = model.boost;
+                this.key = model.key;
+                this.operator = model.operator;
+                this.value = model.value;
+            } 
+
             /**
              * boost.
              */
@@ -762,6 +782,14 @@ public class RunLibraryChatGenerationRequest extends Request {
             private java.util.List<And> and; 
             private java.util.List<Or> or; 
 
+            private Builder() {
+            } 
+
+            private Builder(QueryCriteria model) {
+                this.and = model.and;
+                this.or = model.or;
+            } 
+
             /**
              * and.
              */
@@ -829,6 +857,14 @@ public class RunLibraryChatGenerationRequest extends Request {
             private Integer limit; 
             private String searchAnalyzerType; 
 
+            private Builder() {
+            } 
+
+            private Builder(TextSearchParameter model) {
+                this.limit = model.limit;
+                this.searchAnalyzerType = model.searchAnalyzerType;
+            } 
+
             /**
              * limit.
              */
@@ -883,6 +919,13 @@ public class RunLibraryChatGenerationRequest extends Request {
 
         public static final class Builder {
             private Integer limit; 
+
+            private Builder() {
+            } 
+
+            private Builder(VectorSearchParameter model) {
+                this.limit = model.limit;
+            } 
 
             /**
              * limit.

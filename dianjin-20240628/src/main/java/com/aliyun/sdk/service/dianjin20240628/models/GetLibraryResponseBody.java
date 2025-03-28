@@ -60,6 +60,10 @@ public class GetLibraryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cost
      */
@@ -125,6 +129,20 @@ public class GetLibraryResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String time; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetLibraryResponseBody model) {
+            this.cost = model.cost;
+            this.data = model.data;
+            this.dataType = model.dataType;
+            this.errCode = model.errCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.time = model.time;
+        } 
 
         /**
          * cost.
@@ -324,6 +342,21 @@ public class GetLibraryResponseBody extends TeaModel {
             private Integer size; 
             private Boolean split; 
 
+            private Builder() {
+            } 
+
+            private Builder(ChunkStrategy model) {
+                this.docTreeSplit = model.docTreeSplit;
+                this.docTreeSplitSize = model.docTreeSplitSize;
+                this.enhanceGraph = model.enhanceGraph;
+                this.enhanceTable = model.enhanceTable;
+                this.overlap = model.overlap;
+                this.sentenceSplit = model.sentenceSplit;
+                this.sentenceSplitSize = model.sentenceSplitSize;
+                this.size = model.size;
+                this.split = model.split;
+            } 
+
             /**
              * docTreeSplit.
              */
@@ -446,6 +479,14 @@ public class GetLibraryResponseBody extends TeaModel {
         public static final class Builder {
             private Double temperature; 
             private Double topP; 
+
+            private Builder() {
+            } 
+
+            private Builder(ModelConfig model) {
+                this.temperature = model.temperature;
+                this.topP = model.topP;
+            } 
 
             /**
              * temperature.
@@ -577,6 +618,19 @@ public class GetLibraryResponseBody extends TeaModel {
             private String localKnowledgeId; 
             private Boolean withDocumentReference; 
 
+            private Builder() {
+            } 
+
+            private Builder(QueryEnhancer model) {
+                this.enableFollowUp = model.enableFollowUp;
+                this.enableMultiQuery = model.enableMultiQuery;
+                this.enableOpenQa = model.enableOpenQa;
+                this.enableQueryRewrite = model.enableQueryRewrite;
+                this.enableSession = model.enableSession;
+                this.localKnowledgeId = model.localKnowledgeId;
+                this.withDocumentReference = model.withDocumentReference;
+            } 
+
             /**
              * enableFollowUp.
              */
@@ -683,6 +737,14 @@ public class GetLibraryResponseBody extends TeaModel {
         public static final class Builder {
             private String documentRankType; 
             private Integer limit; 
+
+            private Builder() {
+            } 
+
+            private Builder(RecallStrategy model) {
+                this.documentRankType = model.documentRankType;
+                this.limit = model.limit;
+            } 
 
             /**
              * documentRankType.
@@ -798,6 +860,18 @@ public class GetLibraryResponseBody extends TeaModel {
             private Double rankThreshold; 
             private String searchAnalyzer; 
             private Integer topK; 
+
+            private Builder() {
+            } 
+
+            private Builder(TextIndexSetting model) {
+                this.category = model.category;
+                this.enable = model.enable;
+                this.indexAnalyzer = model.indexAnalyzer;
+                this.rankThreshold = model.rankThreshold;
+                this.searchAnalyzer = model.searchAnalyzer;
+                this.topK = model.topK;
+            } 
 
             /**
              * category.
@@ -933,6 +1007,17 @@ public class GetLibraryResponseBody extends TeaModel {
             private Boolean enable; 
             private Double rankThreshold; 
             private Integer topK; 
+
+            private Builder() {
+            } 
+
+            private Builder(VectorIndexSetting model) {
+                this.category = model.category;
+                this.embeddingType = model.embeddingType;
+                this.enable = model.enable;
+                this.rankThreshold = model.rankThreshold;
+                this.topK = model.topK;
+            } 
 
             /**
              * category.
@@ -1084,6 +1169,19 @@ public class GetLibraryResponseBody extends TeaModel {
             private RecallStrategy recallStrategy; 
             private TextIndexSetting textIndexSetting; 
             private VectorIndexSetting vectorIndexSetting; 
+
+            private Builder() {
+            } 
+
+            private Builder(IndexSetting model) {
+                this.chunkStrategy = model.chunkStrategy;
+                this.modelConfig = model.modelConfig;
+                this.promptRoleStyle = model.promptRoleStyle;
+                this.queryEnhancer = model.queryEnhancer;
+                this.recallStrategy = model.recallStrategy;
+                this.textIndexSetting = model.textIndexSetting;
+                this.vectorIndexSetting = model.vectorIndexSetting;
+            } 
 
             /**
              * chunkStrategy.
@@ -1251,6 +1349,19 @@ public class GetLibraryResponseBody extends TeaModel {
             private String id; 
             private IndexSetting indexSetting; 
             private String libraryName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.description = model.description;
+                this.documentCount = model.documentCount;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.indexSetting = model.indexSetting;
+                this.libraryName = model.libraryName;
+            } 
 
             /**
              * description.

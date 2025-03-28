@@ -57,7 +57,7 @@ public class CreateDocsSummaryTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -244,6 +244,16 @@ public class CreateDocsSummaryTaskRequest extends Request {
             private Integer endPage; 
             private String libraryId; 
             private Integer startPage; 
+
+            private Builder() {
+            } 
+
+            private Builder(DocInfos model) {
+                this.docId = model.docId;
+                this.endPage = model.endPage;
+                this.libraryId = model.libraryId;
+                this.startPage = model.startPage;
+            } 
 
             /**
              * <p>This parameter is required.</p>

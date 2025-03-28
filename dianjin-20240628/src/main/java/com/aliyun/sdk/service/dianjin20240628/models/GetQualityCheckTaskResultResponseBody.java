@@ -60,6 +60,10 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cost
      */
@@ -125,6 +129,20 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String time; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetQualityCheckTaskResultResponseBody model) {
+            this.cost = model.cost;
+            this.data = model.data;
+            this.dataType = model.dataType;
+            this.errCode = model.errCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.time = model.time;
+        } 
 
         /**
          * cost.
@@ -336,6 +354,22 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
             private String role; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(DialogueList model) {
+                this.begin = model.begin;
+                this.beginTime = model.beginTime;
+                this.content = model.content;
+                this.customerId = model.customerId;
+                this.customerServiceId = model.customerServiceId;
+                this.customerServiceType = model.customerServiceType;
+                this.end = model.end;
+                this.id = model.id;
+                this.role = model.role;
+                this.type = model.type;
+            } 
+
             /**
              * begin.
              */
@@ -526,6 +560,19 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
             private String customerServiceName; 
             private java.util.List<DialogueList> dialogueList; 
             private String gmtService; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConversationList model) {
+                this.callType = model.callType;
+                this.customerId = model.customerId;
+                this.customerName = model.customerName;
+                this.customerServiceId = model.customerServiceId;
+                this.customerServiceName = model.customerServiceName;
+                this.dialogueList = model.dialogueList;
+                this.gmtService = model.gmtService;
+            } 
 
             /**
              * callType.
@@ -729,6 +776,22 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
             private Integer id; 
             private String role; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(OriginDialogue model) {
+                this.begin = model.begin;
+                this.beginTime = model.beginTime;
+                this.content = model.content;
+                this.customerId = model.customerId;
+                this.customerServiceId = model.customerServiceId;
+                this.customerServiceType = model.customerServiceType;
+                this.end = model.end;
+                this.id = model.id;
+                this.role = model.role;
+                this.type = model.type;
+            } 
 
             /**
              * begin.
@@ -1005,6 +1068,26 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
             private String ruleType; 
             private java.util.List<?> subNodeCol; 
 
+            private Builder() {
+            } 
+
+            private Builder(QualityCheckList model) {
+                this.bizType = model.bizType;
+                this.checkExplanation = model.checkExplanation;
+                this.checkPassed = model.checkPassed;
+                this.checkProcess = model.checkProcess;
+                this.checked = model.checked;
+                this.gmtEnd = model.gmtEnd;
+                this.gmtStart = model.gmtStart;
+                this.mode = model.mode;
+                this.originDialogue = model.originDialogue;
+                this.qualityGroupId = model.qualityGroupId;
+                this.ruleDescription = model.ruleDescription;
+                this.ruleId = model.ruleId;
+                this.ruleType = model.ruleType;
+                this.subNodeCol = model.subNodeCol;
+            } 
+
             /**
              * bizType.
              */
@@ -1227,6 +1310,19 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
             private java.util.List<QualityCheckList> qualityCheckList; 
             private String status; 
             private String taskId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.conversationList = model.conversationList;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtEnd = model.gmtEnd;
+                this.gmtStart = model.gmtStart;
+                this.qualityCheckList = model.qualityCheckList;
+                this.status = model.status;
+                this.taskId = model.taskId;
+            } 
 
             /**
              * conversationList.

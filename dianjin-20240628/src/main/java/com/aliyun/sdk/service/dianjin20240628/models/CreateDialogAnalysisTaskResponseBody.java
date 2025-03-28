@@ -12,16 +12,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link SubmitChatQuestionResponseBody} extends {@link TeaModel}
+ * {@link CreateDialogAnalysisTaskResponseBody} extends {@link TeaModel}
  *
- * <p>SubmitChatQuestionResponseBody</p>
+ * <p>CreateDialogAnalysisTaskResponseBody</p>
  */
-public class SubmitChatQuestionResponseBody extends TeaModel {
+public class CreateDialogAnalysisTaskResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("cost")
     private Long cost;
 
     @com.aliyun.core.annotation.NameInMap("data")
-    private Data data;
+    private java.util.List<String> data;
 
     @com.aliyun.core.annotation.NameInMap("dataType")
     private String dataType;
@@ -41,7 +41,7 @@ public class SubmitChatQuestionResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("time")
     private String time;
 
-    private SubmitChatQuestionResponseBody(Builder builder) {
+    private CreateDialogAnalysisTaskResponseBody(Builder builder) {
         this.cost = builder.cost;
         this.data = builder.data;
         this.dataType = builder.dataType;
@@ -56,7 +56,7 @@ public class SubmitChatQuestionResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static SubmitChatQuestionResponseBody create() {
+    public static CreateDialogAnalysisTaskResponseBody create() {
         return builder().build();
     }
 
@@ -74,7 +74,7 @@ public class SubmitChatQuestionResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public Data getData() {
+    public java.util.List<String> getData() {
         return this.data;
     }
 
@@ -122,7 +122,7 @@ public class SubmitChatQuestionResponseBody extends TeaModel {
 
     public static final class Builder {
         private Long cost; 
-        private Data data; 
+        private java.util.List<String> data; 
         private String dataType; 
         private String errCode; 
         private String message; 
@@ -133,7 +133,7 @@ public class SubmitChatQuestionResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(SubmitChatQuestionResponseBody model) {
+        private Builder(CreateDialogAnalysisTaskResponseBody model) {
             this.cost = model.cost;
             this.data = model.data;
             this.dataType = model.dataType;
@@ -155,7 +155,7 @@ public class SubmitChatQuestionResponseBody extends TeaModel {
         /**
          * data.
          */
-        public Builder data(Data data) {
+        public Builder data(java.util.List<String> data) {
             this.data = data;
             return this;
         }
@@ -208,64 +208,10 @@ public class SubmitChatQuestionResponseBody extends TeaModel {
             return this;
         }
 
-        public SubmitChatQuestionResponseBody build() {
-            return new SubmitChatQuestionResponseBody(this);
+        public CreateDialogAnalysisTaskResponseBody build() {
+            return new CreateDialogAnalysisTaskResponseBody(this);
         } 
 
     } 
 
-    /**
-     * 
-     * {@link SubmitChatQuestionResponseBody} extends {@link TeaModel}
-     *
-     * <p>SubmitChatQuestionResponseBody</p>
-     */
-    public static class Data extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("batchId")
-        private String batchId;
-
-        private Data(Builder builder) {
-            this.batchId = builder.batchId;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Data create() {
-            return builder().build();
-        }
-
-        /**
-         * @return batchId
-         */
-        public String getBatchId() {
-            return this.batchId;
-        }
-
-        public static final class Builder {
-            private String batchId; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.batchId = model.batchId;
-            } 
-
-            /**
-             * batchId.
-             */
-            public Builder batchId(String batchId) {
-                this.batchId = batchId;
-                return this;
-            }
-
-            public Data build() {
-                return new Data(this);
-            } 
-
-        } 
-
-    }
 }

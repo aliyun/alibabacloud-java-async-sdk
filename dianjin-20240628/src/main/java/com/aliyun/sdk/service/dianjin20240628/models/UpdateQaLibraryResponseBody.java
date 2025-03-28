@@ -60,6 +60,10 @@ public class UpdateQaLibraryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cost
      */
@@ -125,6 +129,20 @@ public class UpdateQaLibraryResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String time; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateQaLibraryResponseBody model) {
+            this.cost = model.cost;
+            this.data = model.data;
+            this.dataType = model.dataType;
+            this.errCode = model.errCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.time = model.time;
+        } 
 
         /**
          * cost.
@@ -227,6 +245,13 @@ public class UpdateQaLibraryResponseBody extends TeaModel {
 
         public static final class Builder {
             private String qaLibraryId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.qaLibraryId = model.qaLibraryId;
+            } 
 
             /**
              * qaLibraryId.

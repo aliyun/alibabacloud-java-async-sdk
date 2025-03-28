@@ -52,7 +52,7 @@ public class UpdateQaLibraryRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -197,6 +197,14 @@ public class UpdateQaLibraryRequest extends Request {
         public static final class Builder {
             private String answer; 
             private String question; 
+
+            private Builder() {
+            } 
+
+            private Builder(ParseQaResults model) {
+                this.answer = model.answer;
+                this.question = model.question;
+            } 
 
             /**
              * <p>This parameter is required.</p>
