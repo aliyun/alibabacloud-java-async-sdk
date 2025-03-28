@@ -36,6 +36,10 @@ public class ListDIJobsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DIJobPaging
      */
@@ -53,6 +57,14 @@ public class ListDIJobsResponseBody extends TeaModel {
     public static final class Builder {
         private DIJobPaging DIJobPaging; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDIJobsResponseBody model) {
+            this.DIJobPaging = model.DIJobPaging;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The pagination information.</p>
@@ -182,6 +194,19 @@ public class ListDIJobsResponseBody extends TeaModel {
             private String migrationType; 
             private Long projectId; 
             private String sourceDataSourceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(DIJobs model) {
+                this.DIJobId = model.DIJobId;
+                this.destinationDataSourceType = model.destinationDataSourceType;
+                this.jobName = model.jobName;
+                this.jobStatus = model.jobStatus;
+                this.migrationType = model.migrationType;
+                this.projectId = model.projectId;
+                this.sourceDataSourceType = model.sourceDataSourceType;
+            } 
 
             /**
              * <p>The task ID.</p>
@@ -347,6 +372,16 @@ public class ListDIJobsResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(DIJobPaging model) {
+                this.DIJobs = model.DIJobs;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The list of tasks.</p>

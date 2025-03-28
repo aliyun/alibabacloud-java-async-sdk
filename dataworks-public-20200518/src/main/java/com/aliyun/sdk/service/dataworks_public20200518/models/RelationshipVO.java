@@ -40,6 +40,10 @@ public class RelationshipVO extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return attributes
      */
@@ -65,6 +69,15 @@ public class RelationshipVO extends TeaModel {
         private java.util.Map<String, String> attributes; 
         private String relationshipGuid; 
         private String relationshipType; 
+
+        private Builder() {
+        } 
+
+        private Builder(RelationshipVO model) {
+            this.attributes = model.attributes;
+            this.relationshipGuid = model.relationshipGuid;
+            this.relationshipType = model.relationshipType;
+        } 
 
         /**
          * Attributes.

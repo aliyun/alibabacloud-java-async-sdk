@@ -40,6 +40,10 @@ public class StartDISyncInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -65,6 +69,15 @@ public class StartDISyncInstanceResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(StartDISyncInstanceResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The result returned for the start.</p>
@@ -149,6 +162,14 @@ public class StartDISyncInstanceResponseBody extends TeaModel {
         public static final class Builder {
             private String message; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.message = model.message;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The reason why the real-time synchronization task or the data synchronization solution fails to be started.</p>

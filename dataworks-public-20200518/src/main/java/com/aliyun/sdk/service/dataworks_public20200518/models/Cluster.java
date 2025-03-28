@@ -38,6 +38,10 @@ public class Cluster extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clusterBizId
      */
@@ -55,6 +59,14 @@ public class Cluster extends TeaModel {
     public static final class Builder {
         private String clusterBizId; 
         private Long clusterId; 
+
+        private Builder() {
+        } 
+
+        private Builder(Cluster model) {
+            this.clusterBizId = model.clusterBizId;
+            this.clusterId = model.clusterId;
+        } 
 
         /**
          * <p>This parameter is required.</p>

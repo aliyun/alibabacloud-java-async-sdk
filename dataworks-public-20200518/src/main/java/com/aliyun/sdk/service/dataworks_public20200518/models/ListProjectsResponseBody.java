@@ -36,6 +36,10 @@ public class ListProjectsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageResult
      */
@@ -53,6 +57,14 @@ public class ListProjectsResponseBody extends TeaModel {
     public static final class Builder {
         private PageResult pageResult; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListProjectsResponseBody model) {
+            this.pageResult = model.pageResult;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The results that are returned.</p>
@@ -122,6 +134,14 @@ public class ListProjectsResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of tag N added to the workspace.</p>
@@ -327,6 +347,25 @@ public class ListProjectsResponseBody extends TeaModel {
             private Integer tablePrivacyMode; 
             private java.util.List<Tags> tags; 
             private Boolean useProxyOdpsAccount; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProjectList model) {
+                this.disableDevelopment = model.disableDevelopment;
+                this.isDefault = model.isDefault;
+                this.projectDescription = model.projectDescription;
+                this.projectId = model.projectId;
+                this.projectIdentifier = model.projectIdentifier;
+                this.projectName = model.projectName;
+                this.projectOwnerBaseId = model.projectOwnerBaseId;
+                this.projectStatus = model.projectStatus;
+                this.projectStatusCode = model.projectStatusCode;
+                this.resourceManagerResourceGroupId = model.resourceManagerResourceGroupId;
+                this.tablePrivacyMode = model.tablePrivacyMode;
+                this.tags = model.tags;
+                this.useProxyOdpsAccount = model.useProxyOdpsAccount;
+            } 
 
             /**
              * <p>Indicates whether the Development role is disabled. Valid values:</p>
@@ -582,6 +621,16 @@ public class ListProjectsResponseBody extends TeaModel {
             private Integer pageSize; 
             private java.util.List<ProjectList> projectList; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageResult model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.projectList = model.projectList;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The page number.</p>

@@ -36,6 +36,10 @@ public class ListFileTypeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nodeTypeInfoList
      */
@@ -53,6 +57,14 @@ public class ListFileTypeResponseBody extends TeaModel {
     public static final class Builder {
         private NodeTypeInfoList nodeTypeInfoList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListFileTypeResponseBody model) {
+            this.nodeTypeInfoList = model.nodeTypeInfoList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about node types.</p>
@@ -122,6 +134,14 @@ public class ListFileTypeResponseBody extends TeaModel {
         public static final class Builder {
             private Integer nodeType; 
             private String nodeTypeName; 
+
+            private Builder() {
+            } 
+
+            private Builder(NodeTypeInfo model) {
+                this.nodeType = model.nodeType;
+                this.nodeTypeName = model.nodeTypeName;
+            } 
 
             /**
              * <p>The code of the node type. The codes and names of node types have the following mappings: 6 (Shell), 10 (ODPS SQL), 11 (ODPS MR), 23 (Data Integration), 24 (ODPS Script), 99 (zero load), 221 (PyODPS 2), 225 (ODPS Spark), 227 (EMR Hive), 228 (EMR Spark), 229 (EMR Spark SQL), 230 (EMR MR), 239 (OSS object inspection), 257 (EMR Shell), 258 (EMR Spark Shell), 259 (EMR Presto), 260 (EMR Impala), 900 (real-time synchronization), 1089 (cross-tenant collaboration), 1091 (Hologres development), 1093 (Hologres SQL), 1100 (assignment), and 1221 (PyODPS 3)</p>
@@ -219,6 +239,16 @@ public class ListFileTypeResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(NodeTypeInfoList model) {
+                this.nodeTypeInfo = model.nodeTypeInfo;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The information about the node type.</p>

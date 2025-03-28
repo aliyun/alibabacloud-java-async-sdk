@@ -52,6 +52,10 @@ public class GetQualityEntityResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class GetQualityEntityResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetQualityEntityResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The information about the partition filter expression.</p>
@@ -382,6 +398,28 @@ public class GetQualityEntityResponseBody extends TeaModel {
             private Integer sql; 
             private String tableName; 
             private Integer task; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.createTime = model.createTime;
+                this.entityLevel = model.entityLevel;
+                this.envType = model.envType;
+                this.followers = model.followers;
+                this.hasRelativeNode = model.hasRelativeNode;
+                this.id = model.id;
+                this.matchExpression = model.matchExpression;
+                this.modifyTime = model.modifyTime;
+                this.modifyUser = model.modifyUser;
+                this.onDuty = model.onDuty;
+                this.onDutyAccountName = model.onDutyAccountName;
+                this.projectName = model.projectName;
+                this.relativeNode = model.relativeNode;
+                this.sql = model.sql;
+                this.tableName = model.tableName;
+                this.task = model.task;
+            } 
 
             /**
              * <p>The time when the partition filter expression was created.</p>

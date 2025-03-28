@@ -52,6 +52,10 @@ public class ListFoldersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class ListFoldersResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListFoldersResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The information about the folders.</p>
@@ -215,6 +231,14 @@ public class ListFoldersResponseBody extends TeaModel {
             private String folderId; 
             private String folderPath; 
 
+            private Builder() {
+            } 
+
+            private Builder(Folders model) {
+                this.folderId = model.folderId;
+                this.folderPath = model.folderPath;
+            } 
+
             /**
              * <p>The folder ID.</p>
              * 
@@ -311,6 +335,16 @@ public class ListFoldersResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.folders = model.folders;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The list of folders.</p>

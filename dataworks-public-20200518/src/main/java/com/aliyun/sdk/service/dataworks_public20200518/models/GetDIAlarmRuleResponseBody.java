@@ -36,6 +36,10 @@ public class GetDIAlarmRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DIAlarmRule
      */
@@ -53,6 +57,14 @@ public class GetDIAlarmRuleResponseBody extends TeaModel {
     public static final class Builder {
         private DIAlarmRule DIAlarmRule; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDIAlarmRuleResponseBody model) {
+            this.DIAlarmRule = model.DIAlarmRule;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of the alert rule.</p>
@@ -122,6 +134,14 @@ public class GetDIAlarmRuleResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> channels; 
             private String severity; 
+
+            private Builder() {
+            } 
+
+            private Builder(NotificationChannels model) {
+                this.channels = model.channels;
+                this.severity = model.severity;
+            } 
 
             /**
              * <p>The alert notification methods.</p>
@@ -196,6 +216,14 @@ public class GetDIAlarmRuleResponseBody extends TeaModel {
         public static final class Builder {
             private String receiverType; 
             private java.util.List<String> receiverValues; 
+
+            private Builder() {
+            } 
+
+            private Builder(NotificationReceivers model) {
+                this.receiverType = model.receiverType;
+                this.receiverValues = model.receiverValues;
+            } 
 
             /**
              * <p>The recipient type. Valid values: AliyunUid and DingToken.</p>
@@ -282,6 +310,15 @@ public class GetDIAlarmRuleResponseBody extends TeaModel {
             private Integer inhibitionInterval; 
             private java.util.List<NotificationChannels> notificationChannels; 
             private java.util.List<NotificationReceivers> notificationReceivers; 
+
+            private Builder() {
+            } 
+
+            private Builder(NotificationSettings model) {
+                this.inhibitionInterval = model.inhibitionInterval;
+                this.notificationChannels = model.notificationChannels;
+                this.notificationReceivers = model.notificationReceivers;
+            } 
 
             /**
              * <p>The duration of the alert suppression interval. Unit: minutes.</p>
@@ -372,6 +409,15 @@ public class GetDIAlarmRuleResponseBody extends TeaModel {
             private Long duration; 
             private String severity; 
             private Long threshold; 
+
+            private Builder() {
+            } 
+
+            private Builder(TriggerConditions model) {
+                this.duration = model.duration;
+                this.severity = model.severity;
+                this.threshold = model.threshold;
+            } 
 
             /**
              * <p>The time interval for alert calculation. Unit: minutes.</p>
@@ -573,6 +619,23 @@ public class GetDIAlarmRuleResponseBody extends TeaModel {
             private java.util.List<TriggerConditions> triggerConditions; 
             private Long updatedTime; 
             private String updatedUid; 
+
+            private Builder() {
+            } 
+
+            private Builder(DIAlarmRule model) {
+                this.createdTime = model.createdTime;
+                this.createdUid = model.createdUid;
+                this.DIAlarmRuleId = model.DIAlarmRuleId;
+                this.DIJobId = model.DIJobId;
+                this.description = model.description;
+                this.enabled = model.enabled;
+                this.metricType = model.metricType;
+                this.notificationSettings = model.notificationSettings;
+                this.triggerConditions = model.triggerConditions;
+                this.updatedTime = model.updatedTime;
+                this.updatedUid = model.updatedUid;
+            } 
 
             /**
              * <p>The timestamp when the alert rule was created. Unit: seconds.</p>

@@ -36,6 +36,10 @@ public class GetSensitiveDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetSensitiveDataResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.Map<String, ?> sensitiveData; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSensitiveDataResponseBody model) {
+            this.requestId = model.requestId;
+            this.sensitiveData = model.sensitiveData;
+        } 
 
         /**
          * <p>The request ID.</p>

@@ -36,6 +36,10 @@ public class GetInstanceStatusStatisticResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetInstanceStatusStatisticResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private StatusCount statusCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetInstanceStatusStatisticResponseBody model) {
+            this.requestId = model.requestId;
+            this.statusCount = model.statusCount;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -182,6 +194,19 @@ public class GetInstanceStatusStatisticResponseBody extends TeaModel {
             private Integer totalCount; 
             private Integer waitResCount; 
             private Integer waitTimeCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(StatusCount model) {
+                this.failureCount = model.failureCount;
+                this.notRunCount = model.notRunCount;
+                this.runningCount = model.runningCount;
+                this.successCount = model.successCount;
+                this.totalCount = model.totalCount;
+                this.waitResCount = model.waitResCount;
+                this.waitTimeCount = model.waitTimeCount;
+            } 
 
             /**
              * <p>The number of instances that failed to run.</p>

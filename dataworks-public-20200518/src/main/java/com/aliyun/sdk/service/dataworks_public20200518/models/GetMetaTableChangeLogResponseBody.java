@@ -52,6 +52,10 @@ public class GetMetaTableChangeLogResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class GetMetaTableChangeLogResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMetaTableChangeLogResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The business data.</p>
@@ -263,6 +279,18 @@ public class GetMetaTableChangeLogResponseBody extends TeaModel {
             private String objectType; 
             private String operator; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataEntityList model) {
+                this.changeContent = model.changeContent;
+                this.changeType = model.changeType;
+                this.createTime = model.createTime;
+                this.modifiedTime = model.modifiedTime;
+                this.objectType = model.objectType;
+                this.operator = model.operator;
+            } 
+
             /**
              * <p>The content of the change.</p>
              * 
@@ -403,6 +431,16 @@ public class GetMetaTableChangeLogResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.dataEntityList = model.dataEntityList;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The list of instances.</p>

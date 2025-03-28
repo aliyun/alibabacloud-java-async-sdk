@@ -52,6 +52,10 @@ public class ListNodesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class ListNodesResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListNodesResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The nodes.</p>
@@ -515,6 +531,39 @@ public class ListNodesResponseBody extends TeaModel {
             private String resGroupName; 
             private String schedulerType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Nodes model) {
+                this.baselineId = model.baselineId;
+                this.businessId = model.businessId;
+                this.connection = model.connection;
+                this.createTime = model.createTime;
+                this.cronExpress = model.cronExpress;
+                this.deployDate = model.deployDate;
+                this.description = model.description;
+                this.dqcDescription = model.dqcDescription;
+                this.dqcType = model.dqcType;
+                this.fileId = model.fileId;
+                this.fileType = model.fileType;
+                this.fileVersion = model.fileVersion;
+                this.modifyTime = model.modifyTime;
+                this.nodeId = model.nodeId;
+                this.nodeName = model.nodeName;
+                this.ownerId = model.ownerId;
+                this.paramValues = model.paramValues;
+                this.priority = model.priority;
+                this.programType = model.programType;
+                this.projectId = model.projectId;
+                this.relatedFlowId = model.relatedFlowId;
+                this.repeatInterval = model.repeatInterval;
+                this.repeatMode = model.repeatMode;
+                this.repeatability = model.repeatability;
+                this.resGroupIdentifier = model.resGroupIdentifier;
+                this.resGroupName = model.resGroupName;
+                this.schedulerType = model.schedulerType;
+            } 
+
             /**
              * <p>The number of the page to return. Minimum value: 1. Maximum value: 100.</p>
              * 
@@ -887,6 +936,16 @@ public class ListNodesResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.nodes = model.nodes;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The information about the nodes.</p>

@@ -52,6 +52,10 @@ public class ListBaselineConfigsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class ListBaselineConfigsResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListBaselineConfigsResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The returned data.</p>
@@ -359,6 +375,26 @@ public class ListBaselineConfigsResponseBody extends TeaModel {
             private Integer slaMinu; 
             private Boolean useFlag; 
 
+            private Builder() {
+            } 
+
+            private Builder(Baselines model) {
+                this.baselineId = model.baselineId;
+                this.baselineName = model.baselineName;
+                this.baselineType = model.baselineType;
+                this.expHour = model.expHour;
+                this.expMinu = model.expMinu;
+                this.hourExpDetail = model.hourExpDetail;
+                this.hourSlaDetail = model.hourSlaDetail;
+                this.isDefault = model.isDefault;
+                this.owner = model.owner;
+                this.priority = model.priority;
+                this.projectId = model.projectId;
+                this.slaHour = model.slaHour;
+                this.slaMinu = model.slaMinu;
+                this.useFlag = model.useFlag;
+            } 
+
             /**
              * <p>The baseline ID.</p>
              * 
@@ -587,6 +623,16 @@ public class ListBaselineConfigsResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.baselines = model.baselines;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The baselines.</p>

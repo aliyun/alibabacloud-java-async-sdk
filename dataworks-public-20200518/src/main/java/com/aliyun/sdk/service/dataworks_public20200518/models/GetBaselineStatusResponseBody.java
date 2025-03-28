@@ -52,6 +52,10 @@ public class GetBaselineStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class GetBaselineStatusResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetBaselineStatusResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The details of the baseline instance.</p>
@@ -286,6 +302,20 @@ public class GetBaselineStatusResponseBody extends TeaModel {
             private String owner; 
             private Long projectId; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(BlockInstance model) {
+                this.endCast = model.endCast;
+                this.finishTime = model.finishTime;
+                this.instanceId = model.instanceId;
+                this.nodeId = model.nodeId;
+                this.nodeName = model.nodeName;
+                this.owner = model.owner;
+                this.projectId = model.projectId;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The timestamp of the predicted time when the instance finished running.</p>
@@ -497,6 +527,20 @@ public class GetBaselineStatusResponseBody extends TeaModel {
             private String owner; 
             private Long projectId; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(LastInstance model) {
+                this.endCast = model.endCast;
+                this.finishTime = model.finishTime;
+                this.instanceId = model.instanceId;
+                this.nodeId = model.nodeId;
+                this.nodeName = model.nodeName;
+                this.owner = model.owner;
+                this.projectId = model.projectId;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The timestamp of the predicted time when the instance finished running.</p>
@@ -804,6 +848,28 @@ public class GetBaselineStatusResponseBody extends TeaModel {
             private Long projectId; 
             private Long slaTime; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.baselineId = model.baselineId;
+                this.baselineName = model.baselineName;
+                this.bizdate = model.bizdate;
+                this.blockInstance = model.blockInstance;
+                this.buffer = model.buffer;
+                this.endCast = model.endCast;
+                this.expTime = model.expTime;
+                this.finishStatus = model.finishStatus;
+                this.finishTime = model.finishTime;
+                this.inGroupId = model.inGroupId;
+                this.lastInstance = model.lastInstance;
+                this.owner = model.owner;
+                this.priority = model.priority;
+                this.projectId = model.projectId;
+                this.slaTime = model.slaTime;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The ID of the baseline.</p>

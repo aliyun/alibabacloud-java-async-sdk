@@ -52,6 +52,10 @@ public class GetBaselineConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class GetBaselineConfigResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetBaselineConfigResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The details of the baseline.</p>
@@ -358,6 +374,26 @@ public class GetBaselineConfigResponseBody extends TeaModel {
             private Integer slaHour; 
             private Integer slaMinu; 
             private Boolean useFlag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.baselineId = model.baselineId;
+                this.baselineName = model.baselineName;
+                this.baselineType = model.baselineType;
+                this.expHour = model.expHour;
+                this.expMinu = model.expMinu;
+                this.hourExpDetail = model.hourExpDetail;
+                this.hourSlaDetail = model.hourSlaDetail;
+                this.isDefault = model.isDefault;
+                this.owner = model.owner;
+                this.priority = model.priority;
+                this.projectId = model.projectId;
+                this.slaHour = model.slaHour;
+                this.slaMinu = model.slaMinu;
+                this.useFlag = model.useFlag;
+            } 
 
             /**
              * <p>The baseline ID.</p>

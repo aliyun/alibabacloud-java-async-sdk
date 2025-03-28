@@ -52,6 +52,10 @@ public class GetNodeOnBaselineResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class GetNodeOnBaselineResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetNodeOnBaselineResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The list of nodes.</p>
@@ -238,6 +254,16 @@ public class GetNodeOnBaselineResponseBody extends TeaModel {
             private String nodeName; 
             private String owner; 
             private Long projectId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.nodeId = model.nodeId;
+                this.nodeName = model.nodeName;
+                this.owner = model.owner;
+                this.projectId = model.projectId;
+            } 
 
             /**
              * <p>The node ID.</p>

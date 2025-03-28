@@ -52,6 +52,10 @@ public class CreateTableThemeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -101,6 +105,18 @@ public class CreateTableThemeResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Long themeId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateTableThemeResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.themeId = model.themeId;
+        } 
 
         /**
          * <p>The error code.</p>

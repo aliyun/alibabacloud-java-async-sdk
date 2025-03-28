@@ -36,6 +36,10 @@ public class ListTablesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class ListTablesResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTablesResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned data.</p>
@@ -171,6 +183,18 @@ public class ListTablesResponseBody extends TeaModel {
             private String projectName; 
             private String tableName; 
 
+            private Builder() {
+            } 
+
+            private Builder(EntityContent model) {
+                this.dataSourceQualifiedName = model.dataSourceQualifiedName;
+                this.dataSourceUniqueId = model.dataSourceUniqueId;
+                this.databaseName = model.databaseName;
+                this.instanceId = model.instanceId;
+                this.projectName = model.projectName;
+                this.tableName = model.tableName;
+            } 
+
             /**
              * <p>The unique identifier of the data source.</p>
              * 
@@ -288,8 +312,16 @@ public class ListTablesResponseBody extends TeaModel {
             private EntityContent entityContent; 
             private String entityQualifiedName; 
 
+            private Builder() {
+            } 
+
+            private Builder(TableEntityList model) {
+                this.entityContent = model.entityContent;
+                this.entityQualifiedName = model.entityQualifiedName;
+            } 
+
             /**
-             * <p>Table entity information.</p>
+             * <p>The information about the table.</p>
              */
             public Builder entityContent(EntityContent entityContent) {
                 this.entityContent = entityContent;
@@ -370,6 +402,15 @@ public class ListTablesResponseBody extends TeaModel {
             private java.util.List<TableEntityList> tableEntityList; 
             private Long total; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.nextToken = model.nextToken;
+                this.tableEntityList = model.tableEntityList;
+                this.total = model.total;
+            } 
+
             /**
              * <p>Pagination information, which specifies the starting point of the next read.</p>
              * 
@@ -382,7 +423,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Entity array.</p>
+             * <p>An array of entities.</p>
              */
             public Builder tableEntityList(java.util.List<TableEntityList> tableEntityList) {
                 this.tableEntityList = tableEntityList;

@@ -36,6 +36,10 @@ public class QueryPublicModelEngineResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class QueryPublicModelEngineResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<java.util.Map<String, ?>> returnValue; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryPublicModelEngineResponseBody model) {
+            this.requestId = model.requestId;
+            this.returnValue = model.returnValue;
+        } 
 
         /**
          * <p>The request ID.</p>

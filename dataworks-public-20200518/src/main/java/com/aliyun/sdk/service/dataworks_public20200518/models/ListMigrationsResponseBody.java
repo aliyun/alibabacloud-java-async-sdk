@@ -40,6 +40,10 @@ public class ListMigrationsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -65,6 +69,15 @@ public class ListMigrationsResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListMigrationsResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The returned data.</p>
@@ -317,6 +330,28 @@ public class ListMigrationsResponseBody extends TeaModel {
             private Long updateTime; 
             private String updateUser; 
             private String updateUserName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Migrations model) {
+                this.createTime = model.createTime;
+                this.createUser = model.createUser;
+                this.createUserName = model.createUserName;
+                this.description = model.description;
+                this.downloadUrl = model.downloadUrl;
+                this.id = model.id;
+                this.message = model.message;
+                this.migrationType = model.migrationType;
+                this.name = model.name;
+                this.packageType = model.packageType;
+                this.projectId = model.projectId;
+                this.status = model.status;
+                this.tenantId = model.tenantId;
+                this.updateTime = model.updateTime;
+                this.updateUser = model.updateUser;
+                this.updateUserName = model.updateUserName;
+            } 
 
             /**
              * <p>The time when the migration task was created.</p>
@@ -586,6 +621,16 @@ public class ListMigrationsResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.migrations = model.migrations;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The list of migration tasks.</p>

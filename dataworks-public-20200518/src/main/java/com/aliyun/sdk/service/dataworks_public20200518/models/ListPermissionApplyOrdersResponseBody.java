@@ -36,6 +36,10 @@ public class ListPermissionApplyOrdersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return applyOrders
      */
@@ -53,6 +57,14 @@ public class ListPermissionApplyOrdersResponseBody extends TeaModel {
     public static final class Builder {
         private ApplyOrders applyOrders; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListPermissionApplyOrdersResponseBody model) {
+            this.applyOrders = model.applyOrders;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The query results returned by page.</p>
@@ -123,6 +135,14 @@ public class ListPermissionApplyOrdersResponseBody extends TeaModel {
             private java.util.List<String> actions; 
             private String objectName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ObjectMetaList model) {
+                this.actions = model.actions;
+                this.objectName = model.objectName;
+            } 
+
             /**
              * Actions.
              */
@@ -192,6 +212,14 @@ public class ListPermissionApplyOrdersResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<ObjectMetaList> objectMetaList; 
             private String workspaceName; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProjectMeta model) {
+                this.objectMetaList = model.objectMetaList;
+                this.workspaceName = model.workspaceName;
+            } 
 
             /**
              * <p>The information about the object on which you requested permissions.</p>
@@ -274,6 +302,15 @@ public class ListPermissionApplyOrdersResponseBody extends TeaModel {
             private String applyReason; 
             private Integer orderType; 
             private ProjectMeta projectMeta; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApproveContent model) {
+                this.applyReason = model.applyReason;
+                this.orderType = model.orderType;
+                this.projectMeta = model.projectMeta;
+            } 
 
             /**
              * <p>The reason for your request. The administrator determines whether to approve the request based on the reason.</p>
@@ -391,6 +428,17 @@ public class ListPermissionApplyOrdersResponseBody extends TeaModel {
             private ApproveContent approveContent; 
             private String flowId; 
             private Integer flowStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApplyOrder model) {
+                this.applyBaseId = model.applyBaseId;
+                this.applyTimestamp = model.applyTimestamp;
+                this.approveContent = model.approveContent;
+                this.flowId = model.flowId;
+                this.flowStatus = model.flowStatus;
+            } 
 
             /**
              * <p>The ID of the Alibaba Cloud account that was used to submit the permission request order.</p>
@@ -524,6 +572,16 @@ public class ListPermissionApplyOrdersResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApplyOrders model) {
+                this.applyOrder = model.applyOrder;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The list of the permission request orders.</p>

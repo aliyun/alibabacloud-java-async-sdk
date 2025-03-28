@@ -52,6 +52,10 @@ public class ListNodesByOutputResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class ListNodesByOutputResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListNodesByOutputResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The nodes returned.</p>
@@ -419,6 +435,31 @@ public class ListNodesByOutputResponseBody extends TeaModel {
             private String resGroupName; 
             private String schedulerType; 
 
+            private Builder() {
+            } 
+
+            private Builder(NodeList model) {
+                this.baselineId = model.baselineId;
+                this.connection = model.connection;
+                this.cronExpress = model.cronExpress;
+                this.description = model.description;
+                this.dqcDescription = model.dqcDescription;
+                this.dqcType = model.dqcType;
+                this.fileType = model.fileType;
+                this.nodeId = model.nodeId;
+                this.nodeName = model.nodeName;
+                this.ownerId = model.ownerId;
+                this.paramValues = model.paramValues;
+                this.priority = model.priority;
+                this.programType = model.programType;
+                this.projectId = model.projectId;
+                this.relatedFlowId = model.relatedFlowId;
+                this.repeatInterval = model.repeatInterval;
+                this.repeatability = model.repeatability;
+                this.resGroupName = model.resGroupName;
+                this.schedulerType = model.schedulerType;
+            } 
+
             /**
              * <p>The baseline ID.</p>
              * 
@@ -685,6 +726,14 @@ public class ListNodesByOutputResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<NodeList> nodeList; 
             private String output; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.nodeList = model.nodeList;
+                this.output = model.output;
+            } 
 
             /**
              * <p>The information about the nodes returned.</p>

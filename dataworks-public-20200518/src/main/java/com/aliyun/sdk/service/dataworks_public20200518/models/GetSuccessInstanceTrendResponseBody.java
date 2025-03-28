@@ -36,6 +36,10 @@ public class GetSuccessInstanceTrendResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceStatusTrend
      */
@@ -53,6 +57,14 @@ public class GetSuccessInstanceTrendResponseBody extends TeaModel {
     public static final class Builder {
         private InstanceStatusTrend instanceStatusTrend; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSuccessInstanceTrendResponseBody model) {
+            this.instanceStatusTrend = model.instanceStatusTrend;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The trend of statistics on the instance status in different time periods.</p>
@@ -122,6 +134,14 @@ public class GetSuccessInstanceTrendResponseBody extends TeaModel {
         public static final class Builder {
             private Integer count; 
             private String timePoint; 
+
+            private Builder() {
+            } 
+
+            private Builder(AvgTrend model) {
+                this.count = model.count;
+                this.timePoint = model.timePoint;
+            } 
 
             /**
              * <p>The number of instances.</p>
@@ -196,6 +216,14 @@ public class GetSuccessInstanceTrendResponseBody extends TeaModel {
             private Integer count; 
             private String timePoint; 
 
+            private Builder() {
+            } 
+
+            private Builder(TodayTrend model) {
+                this.count = model.count;
+                this.timePoint = model.timePoint;
+            } 
+
             /**
              * <p>The number of instances.</p>
              * 
@@ -268,6 +296,14 @@ public class GetSuccessInstanceTrendResponseBody extends TeaModel {
         public static final class Builder {
             private Integer count; 
             private String timePoint; 
+
+            private Builder() {
+            } 
+
+            private Builder(YesterdayTrend model) {
+                this.count = model.count;
+                this.timePoint = model.timePoint;
+            } 
 
             /**
              * <p>The number of instances.</p>
@@ -353,6 +389,15 @@ public class GetSuccessInstanceTrendResponseBody extends TeaModel {
             private java.util.List<AvgTrend> avgTrend; 
             private java.util.List<TodayTrend> todayTrend; 
             private java.util.List<YesterdayTrend> yesterdayTrend; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceStatusTrend model) {
+                this.avgTrend = model.avgTrend;
+                this.todayTrend = model.todayTrend;
+                this.yesterdayTrend = model.yesterdayTrend;
+            } 
 
             /**
              * <p>The average trend.</p>

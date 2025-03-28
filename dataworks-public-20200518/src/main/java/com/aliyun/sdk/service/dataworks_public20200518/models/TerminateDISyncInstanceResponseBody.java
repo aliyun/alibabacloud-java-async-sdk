@@ -40,6 +40,10 @@ public class TerminateDISyncInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -65,6 +69,15 @@ public class TerminateDISyncInstanceResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(TerminateDISyncInstanceResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The returned results.</p>
@@ -149,6 +162,14 @@ public class TerminateDISyncInstanceResponseBody extends TeaModel {
         public static final class Builder {
             private String message; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.message = model.message;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The reason why the real-time synchronization task fails to be terminated. If the real-time synchronization task is undeployed, the value of this parameter is null.</p>

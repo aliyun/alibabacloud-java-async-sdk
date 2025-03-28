@@ -52,6 +52,10 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMetaTableOutputResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The business data.</p>
@@ -275,6 +291,19 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
             private Long taskInstanceId; 
             private String waitTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataEntityList model) {
+                this.endTime = model.endTime;
+                this.projectId = model.projectId;
+                this.startTime = model.startTime;
+                this.tableGuid = model.tableGuid;
+                this.taskId = model.taskId;
+                this.taskInstanceId = model.taskInstanceId;
+                this.waitTime = model.waitTime;
+            } 
+
             /**
              * <p>The end time.</p>
              * 
@@ -426,6 +455,16 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.dataEntityList = model.dataEntityList;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The list of instances.</p>

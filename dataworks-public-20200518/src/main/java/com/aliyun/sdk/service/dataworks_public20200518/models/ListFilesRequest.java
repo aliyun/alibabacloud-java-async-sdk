@@ -42,6 +42,10 @@ public class ListFilesRequest extends Request {
     private String keyword;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LastEditUser")
+    private String lastEditUser;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("NeedAbsoluteFolderPath")
     private Boolean needAbsoluteFolderPath;
 
@@ -86,6 +90,7 @@ public class ListFilesRequest extends Request {
         this.fileIdIn = builder.fileIdIn;
         this.fileTypes = builder.fileTypes;
         this.keyword = builder.keyword;
+        this.lastEditUser = builder.lastEditUser;
         this.needAbsoluteFolderPath = builder.needAbsoluteFolderPath;
         this.needContent = builder.needContent;
         this.nodeId = builder.nodeId;
@@ -105,7 +110,7 @@ public class ListFilesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -150,6 +155,13 @@ public class ListFilesRequest extends Request {
      */
     public String getKeyword() {
         return this.keyword;
+    }
+
+    /**
+     * @return lastEditUser
+     */
+    public String getLastEditUser() {
+        return this.lastEditUser;
     }
 
     /**
@@ -222,6 +234,7 @@ public class ListFilesRequest extends Request {
         private String fileIdIn; 
         private String fileTypes; 
         private String keyword; 
+        private String lastEditUser; 
         private Boolean needAbsoluteFolderPath; 
         private Boolean needContent; 
         private Long nodeId; 
@@ -244,6 +257,7 @@ public class ListFilesRequest extends Request {
             this.fileIdIn = request.fileIdIn;
             this.fileTypes = request.fileTypes;
             this.keyword = request.keyword;
+            this.lastEditUser = request.lastEditUser;
             this.needAbsoluteFolderPath = request.needAbsoluteFolderPath;
             this.needContent = request.needContent;
             this.nodeId = request.nodeId;
@@ -277,7 +291,7 @@ public class ListFilesRequest extends Request {
         }
 
         /**
-         * <p>The path of the files.</p>
+         * <p>The path of the folder to which files belong.</p>
          * 
          * <strong>example:</strong>
          * <p>Business_process/my_first_business_process/MaxCompute/ods_layer</p>
@@ -322,6 +336,15 @@ public class ListFilesRequest extends Request {
         public Builder keyword(String keyword) {
             this.putBodyParameter("Keyword", keyword);
             this.keyword = keyword;
+            return this;
+        }
+
+        /**
+         * LastEditUser.
+         */
+        public Builder lastEditUser(String lastEditUser) {
+            this.putBodyParameter("LastEditUser", lastEditUser);
+            this.lastEditUser = lastEditUser;
             return this;
         }
 

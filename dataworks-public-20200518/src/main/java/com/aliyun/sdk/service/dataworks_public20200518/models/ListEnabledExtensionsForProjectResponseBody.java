@@ -36,6 +36,10 @@ public class ListEnabledExtensionsForProjectResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return extensions
      */
@@ -53,6 +57,14 @@ public class ListEnabledExtensionsForProjectResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Extensions> extensions; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListEnabledExtensionsForProjectResponseBody model) {
+            this.extensions = model.extensions;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The extensions.</p>
@@ -194,6 +206,20 @@ public class ListEnabledExtensionsForProjectResponseBody extends TeaModel {
             private String owner; 
             private String parameterSetting; 
             private Long tenantId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Extensions model) {
+                this.createUser = model.createUser;
+                this.extensionCode = model.extensionCode;
+                this.extensionDesc = model.extensionDesc;
+                this.extensionName = model.extensionName;
+                this.modifyUser = model.modifyUser;
+                this.owner = model.owner;
+                this.parameterSetting = model.parameterSetting;
+                this.tenantId = model.tenantId;
+            } 
 
             /**
              * <p>The creator of the extension.</p>

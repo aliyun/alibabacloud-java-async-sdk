@@ -36,6 +36,10 @@ public class ListCheckProcessesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pagingInfo
      */
@@ -53,6 +57,14 @@ public class ListCheckProcessesResponseBody extends TeaModel {
     public static final class Builder {
         private PagingInfo pagingInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListCheckProcessesResponseBody model) {
+            this.pagingInfo = model.pagingInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The pagination information.</p>
@@ -206,6 +218,21 @@ public class ListCheckProcessesResponseBody extends TeaModel {
             private String processName; 
             private Long projectId; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(CheckProcesses model) {
+                this.eventCode = model.eventCode;
+                this.eventName = model.eventName;
+                this.eventNameEn = model.eventNameEn;
+                this.messageId = model.messageId;
+                this.operator = model.operator;
+                this.processId = model.processId;
+                this.processName = model.processName;
+                this.projectId = model.projectId;
+                this.status = model.status;
+            } 
 
             /**
              * <p>Extension point event encoding.</p>
@@ -385,6 +412,16 @@ public class ListCheckProcessesResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PagingInfo model) {
+                this.checkProcesses = model.checkProcesses;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The check details of the extension.</p>

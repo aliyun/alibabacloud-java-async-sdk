@@ -52,6 +52,10 @@ public class ListFilesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class ListFilesResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListFilesResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The files returned.</p>
@@ -459,8 +475,36 @@ public class ListFilesResponseBody extends TeaModel {
             private Long parentId; 
             private String useType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Files model) {
+                this.absoluteFolderPath = model.absoluteFolderPath;
+                this.autoParsing = model.autoParsing;
+                this.bizId = model.bizId;
+                this.businessId = model.businessId;
+                this.commitStatus = model.commitStatus;
+                this.connectionName = model.connectionName;
+                this.content = model.content;
+                this.createTime = model.createTime;
+                this.createUser = model.createUser;
+                this.currentVersion = model.currentVersion;
+                this.fileDescription = model.fileDescription;
+                this.fileFolderId = model.fileFolderId;
+                this.fileId = model.fileId;
+                this.fileName = model.fileName;
+                this.fileType = model.fileType;
+                this.isMaxCompute = model.isMaxCompute;
+                this.lastEditTime = model.lastEditTime;
+                this.lastEditUser = model.lastEditUser;
+                this.nodeId = model.nodeId;
+                this.owner = model.owner;
+                this.parentId = model.parentId;
+                this.useType = model.useType;
+            } 
+
             /**
-             * <p>The path of the folder where the file is located.</p>
+             * <p>The path of the folder to which the file belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>Business_process/my_first_business_process/MaxCompute/ods_layer</p>
@@ -789,6 +833,16 @@ public class ListFilesResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.files = model.files;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The details of the files.</p>

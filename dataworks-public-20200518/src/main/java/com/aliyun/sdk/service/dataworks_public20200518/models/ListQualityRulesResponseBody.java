@@ -52,6 +52,10 @@ public class ListQualityRulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class ListQualityRulesResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListQualityRulesResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The list of monitoring rules.</p>
@@ -507,6 +523,38 @@ public class ListQualityRulesResponseBody extends TeaModel {
             private String trend; 
             private String warningThreshold; 
 
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.blockType = model.blockType;
+                this.checkerId = model.checkerId;
+                this.comment = model.comment;
+                this.criticalThreshold = model.criticalThreshold;
+                this.entityId = model.entityId;
+                this.expectValue = model.expectValue;
+                this.fixCheck = model.fixCheck;
+                this.historyCriticalThreshold = model.historyCriticalThreshold;
+                this.historyWarningThreshold = model.historyWarningThreshold;
+                this.id = model.id;
+                this.matchExpression = model.matchExpression;
+                this.methodId = model.methodId;
+                this.methodName = model.methodName;
+                this.onDuty = model.onDuty;
+                this.onDutyAccountName = model.onDutyAccountName;
+                this.projectName = model.projectName;
+                this.property = model.property;
+                this.propertyKey = model.propertyKey;
+                this.ruleCheckerRelationId = model.ruleCheckerRelationId;
+                this.ruleName = model.ruleName;
+                this.ruleType = model.ruleType;
+                this.tableName = model.tableName;
+                this.templateId = model.templateId;
+                this.templateName = model.templateName;
+                this.trend = model.trend;
+                this.warningThreshold = model.warningThreshold;
+            } 
+
             /**
              * <p>The strength of the monitoring rule. The strength of a monitoring rule indicates the importance of the rule. Valid values:</p>
              * <ul>
@@ -534,7 +582,7 @@ public class ListQualityRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the system defense rule.</p>
+             * <p>The description of the monitoring rule.</p>
              * 
              * <strong>example:</strong>
              * <p>Verify table rules</p>
@@ -877,6 +925,16 @@ public class ListQualityRulesResponseBody extends TeaModel {
             private java.util.List<Rules> rules; 
             private Long totalCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.rules = model.rules;
+                this.totalCount = model.totalCount;
+            } 
+
             /**
              * <p>The page number.</p>
              * 
@@ -900,7 +958,7 @@ public class ListQualityRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the monitoring rule.</p>
+             * <p>The details of the monitoring rules.</p>
              */
             public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;

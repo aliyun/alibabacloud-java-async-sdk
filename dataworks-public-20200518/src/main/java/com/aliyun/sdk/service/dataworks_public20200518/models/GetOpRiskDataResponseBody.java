@@ -36,6 +36,10 @@ public class GetOpRiskDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetOpRiskDataResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String riskData; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetOpRiskDataResponseBody model) {
+            this.requestId = model.requestId;
+            this.riskData = model.riskData;
+        } 
 
         /**
          * <p>The request ID.</p>

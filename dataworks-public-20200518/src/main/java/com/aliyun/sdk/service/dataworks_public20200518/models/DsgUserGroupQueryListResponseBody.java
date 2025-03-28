@@ -52,6 +52,10 @@ public class DsgUserGroupQueryListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -101,6 +105,18 @@ public class DsgUserGroupQueryListResponseBody extends TeaModel {
         private PageData pageData; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DsgUserGroupQueryListResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.pageData = model.pageData;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code.</p>
@@ -267,6 +283,18 @@ public class DsgUserGroupQueryListResponseBody extends TeaModel {
             private String name; 
             private String owner; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.accounts = model.accounts;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.name = model.name;
+                this.owner = model.owner;
+            } 
+
             /**
              * <p>The usernames in the user group.</p>
              */
@@ -404,6 +432,16 @@ public class DsgUserGroupQueryListResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageData model) {
+                this.data = model.data;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The user groups.</p>

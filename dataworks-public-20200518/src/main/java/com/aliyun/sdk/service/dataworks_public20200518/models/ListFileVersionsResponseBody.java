@@ -52,6 +52,10 @@ public class ListFileVersionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -102,8 +106,20 @@ public class ListFileVersionsResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListFileVersionsResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * <p>The file versions returned.</p>
+         * <p>The file versions.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -347,6 +363,25 @@ public class ListFileVersionsResponseBody extends TeaModel {
             private String status; 
             private String useType; 
 
+            private Builder() {
+            } 
+
+            private Builder(FileVersions model) {
+                this.changeType = model.changeType;
+                this.comment = model.comment;
+                this.commitTime = model.commitTime;
+                this.commitUser = model.commitUser;
+                this.fileContent = model.fileContent;
+                this.fileName = model.fileName;
+                this.filePropertyContent = model.filePropertyContent;
+                this.fileVersion = model.fileVersion;
+                this.isCurrentProd = model.isCurrentProd;
+                this.nodeContent = model.nodeContent;
+                this.nodeId = model.nodeId;
+                this.status = model.status;
+                this.useType = model.useType;
+            } 
+
             /**
              * <p>The type of the change to the file of the current version. Valid values: CREATE, UPDATE, and DELETE.</p>
              * 
@@ -565,8 +600,18 @@ public class ListFileVersionsResponseBody extends TeaModel {
             private Integer pageSize; 
             private Integer totalCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.fileVersions = model.fileVersions;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
+
             /**
-             * <p>The details of the file version.</p>
+             * <p>The details of file versions.</p>
              */
             public Builder fileVersions(java.util.List<FileVersions> fileVersions) {
                 this.fileVersions = fileVersions;

@@ -36,6 +36,10 @@ public class ListDataServiceApiTestResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class ListDataServiceApiTestResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Data> data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDataServiceApiTestResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The list of test records.</p>
@@ -194,6 +206,20 @@ public class ListDataServiceApiTestResponseBody extends TeaModel {
             private String retResult; 
             private String status; 
             private Long testId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.apiId = model.apiId;
+                this.costTime = model.costTime;
+                this.createTime = model.createTime;
+                this.paramMap = model.paramMap;
+                this.retCode = model.retCode;
+                this.retResult = model.retResult;
+                this.status = model.status;
+                this.testId = model.testId;
+            } 
 
             /**
              * <p>The ID of the DataService Studio API on which the test is performed.</p>

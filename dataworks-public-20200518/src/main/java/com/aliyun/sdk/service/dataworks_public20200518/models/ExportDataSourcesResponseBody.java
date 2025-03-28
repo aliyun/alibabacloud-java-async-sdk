@@ -44,6 +44,10 @@ public class ExportDataSourcesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -77,6 +81,16 @@ public class ExportDataSourcesResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ExportDataSourcesResponseBody model) {
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The information about the exported data sources.</p>
@@ -368,6 +382,30 @@ public class ExportDataSourcesResponseBody extends TeaModel {
             private Integer status; 
             private String subType; 
             private Long tenantId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataSources model) {
+                this.bindingCalcEngineId = model.bindingCalcEngineId;
+                this.connectStatus = model.connectStatus;
+                this.content = model.content;
+                this.dataSourceType = model.dataSourceType;
+                this.defaultEngine = model.defaultEngine;
+                this.description = model.description;
+                this.envType = model.envType;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.name = model.name;
+                this.operator = model.operator;
+                this.projectId = model.projectId;
+                this.sequence = model.sequence;
+                this.shared = model.shared;
+                this.status = model.status;
+                this.subType = model.subType;
+                this.tenantId = model.tenantId;
+            } 
 
             /**
              * <p>The ID of the compute engine that is added as the data source.</p>
@@ -677,6 +715,16 @@ public class ExportDataSourcesResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.dataSources = model.dataSources;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The details of the exported data sources. The value is an array. The following parameters are the elements in the array. The sample values of these parameters show the details of a sample data source.</p>

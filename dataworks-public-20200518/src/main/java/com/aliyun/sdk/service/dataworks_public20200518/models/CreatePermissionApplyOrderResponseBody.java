@@ -36,6 +36,10 @@ public class CreatePermissionApplyOrderResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return flowId
      */
@@ -53,6 +57,14 @@ public class CreatePermissionApplyOrderResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<String> flowId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreatePermissionApplyOrderResponseBody model) {
+            this.flowId = model.flowId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The request order ID.</p>

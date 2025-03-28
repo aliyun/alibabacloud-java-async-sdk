@@ -52,6 +52,10 @@ public class ListLineageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class ListLineageResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListLineageResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The structure returned.</p>
@@ -156,8 +172,10 @@ public class ListLineageResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
-         * <p>true</p>
-         * <p>false</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -241,10 +259,22 @@ public class ListLineageResponseBody extends TeaModel {
             private String guid; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(RelationList model) {
+                this.channel = model.channel;
+                this.datasource = model.datasource;
+                this.guid = model.guid;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The data channel. Valid values:</p>
-             * <pre><code>FIRST_PARTY: DataWorks platformTHIRD_PARTY: user registration
-             * </code></pre>
+             * <ul>
+             * <li><strong>FIRST_PARTY: DataWorks platform</strong></li>
+             * <li><strong>THIRD_PARTY: user registration</strong></li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>THIRD_PARTY</p>
@@ -255,7 +285,7 @@ public class ListLineageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the data source.</p>
+             * <p>The data source.</p>
              * 
              * <strong>example:</strong>
              * <p>mysql</p>
@@ -350,6 +380,15 @@ public class ListLineageResponseBody extends TeaModel {
             private Entity entity; 
             private java.util.List<RelationList> relationList; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataEntityList model) {
+                this.createTimestamp = model.createTimestamp;
+                this.entity = model.entity;
+                this.relationList = model.relationList;
+            } 
+
             /**
              * <p>The time when the lineage was generated.</p>
              * 
@@ -427,6 +466,14 @@ public class ListLineageResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<DataEntityList> dataEntityList; 
             private String nextToken; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.dataEntityList = model.dataEntityList;
+                this.nextToken = model.nextToken;
+            } 
 
             /**
              * <p>The array of the entity structure.</p>

@@ -74,7 +74,7 @@ public class GetMetaTablePartitionRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -326,6 +326,14 @@ public class GetMetaTablePartitionRequest extends Request {
         public static final class Builder {
             private String order; 
             private String sortField; 
+
+            private Builder() {
+            } 
+
+            private Builder(SortCriterion model) {
+                this.order = model.order;
+                this.sortField = model.sortField;
+            } 
 
             /**
              * <p>The order in which partitions in the metatable are sorted. Valid values: asc and desc. Default value: desc.</p>

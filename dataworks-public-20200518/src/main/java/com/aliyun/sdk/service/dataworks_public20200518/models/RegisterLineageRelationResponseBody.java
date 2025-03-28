@@ -52,6 +52,10 @@ public class RegisterLineageRelationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -101,6 +105,18 @@ public class RegisterLineageRelationResponseBody extends TeaModel {
         private LineageRelation lineageRelation; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(RegisterLineageRelationResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.lineageRelation = model.lineageRelation;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code.</p>
@@ -230,6 +246,15 @@ public class RegisterLineageRelationResponseBody extends TeaModel {
             private String destEntityQualifiedName; 
             private String relationshipGuid; 
             private String srcEntityQualifiedName; 
+
+            private Builder() {
+            } 
+
+            private Builder(LineageRelation model) {
+                this.destEntityQualifiedName = model.destEntityQualifiedName;
+                this.relationshipGuid = model.relationshipGuid;
+                this.srcEntityQualifiedName = model.srcEntityQualifiedName;
+            } 
 
             /**
              * <p>The unique identifier of the destination entity.</p>

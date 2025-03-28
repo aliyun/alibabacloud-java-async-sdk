@@ -52,6 +52,10 @@ public class ListDataServiceAuthorizedApisResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class ListDataServiceAuthorizedApisResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDataServiceAuthorizedApisResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The information about the APIs that you are authorized to access.</p>
@@ -347,6 +363,25 @@ public class ListDataServiceAuthorizedApisResponseBody extends TeaModel {
             private Long projectId; 
             private Long tenantId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ApiAuthorizedList model) {
+                this.apiId = model.apiId;
+                this.apiName = model.apiName;
+                this.apiPath = model.apiPath;
+                this.apiStatus = model.apiStatus;
+                this.createdTime = model.createdTime;
+                this.creatorId = model.creatorId;
+                this.grantCreatedTime = model.grantCreatedTime;
+                this.grantEndTime = model.grantEndTime;
+                this.grantOperatorId = model.grantOperatorId;
+                this.groupId = model.groupId;
+                this.modifiedTime = model.modifiedTime;
+                this.projectId = model.projectId;
+                this.tenantId = model.tenantId;
+            } 
+
             /**
              * <p>The API ID.</p>
              * 
@@ -564,6 +599,16 @@ public class ListDataServiceAuthorizedApisResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.apiAuthorizedList = model.apiAuthorizedList;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The APIs that you are authorized to access.</p>

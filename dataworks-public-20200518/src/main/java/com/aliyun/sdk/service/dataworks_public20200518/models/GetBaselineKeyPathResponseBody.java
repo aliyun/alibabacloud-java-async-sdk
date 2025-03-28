@@ -52,6 +52,10 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetBaselineKeyPathResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The information about the key path.</p>
@@ -287,6 +303,20 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
             private Long finishTime; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(Runs model) {
+                this.absTime = model.absTime;
+                this.beginCast = model.beginCast;
+                this.beginRunningTime = model.beginRunningTime;
+                this.beginWaitResTime = model.beginWaitResTime;
+                this.beginWaitTimeTime = model.beginWaitTimeTime;
+                this.endCast = model.endCast;
+                this.finishTime = model.finishTime;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The timestamp obtained by adding the predicted time when the instance started to run to the historical average running duration of the instance.</p>
              * 
@@ -449,6 +479,16 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
             private Long instanceId; 
             private Long topicId; 
             private String topicName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Topics model) {
+                this.addTime = model.addTime;
+                this.instanceId = model.instanceId;
+                this.topicId = model.topicId;
+                this.topicName = model.topicName;
+            } 
 
             /**
              * <p>The timestamp when the event was found.</p>
@@ -640,6 +680,22 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
             private Long projectId; 
             private java.util.List<Runs> runs; 
             private java.util.List<Topics> topics; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.bizdate = model.bizdate;
+                this.inGroupId = model.inGroupId;
+                this.instanceId = model.instanceId;
+                this.nodeId = model.nodeId;
+                this.nodeName = model.nodeName;
+                this.owner = model.owner;
+                this.prgType = model.prgType;
+                this.projectId = model.projectId;
+                this.runs = model.runs;
+                this.topics = model.topics;
+            } 
 
             /**
              * <p>The data timestamp of the instance.</p>

@@ -52,6 +52,10 @@ public class CreateTableLevelResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -101,6 +105,18 @@ public class CreateTableLevelResponseBody extends TeaModel {
         private Long levelId; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateTableLevelResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.levelId = model.levelId;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code.</p>

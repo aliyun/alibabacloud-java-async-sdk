@@ -40,6 +40,10 @@ public class ListInnerNodesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return paging
      */
@@ -65,6 +69,15 @@ public class ListInnerNodesResponseBody extends TeaModel {
         private Paging paging; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListInnerNodesResponseBody model) {
+            this.paging = model.paging;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The pagination information.</p>
@@ -337,6 +350,30 @@ public class ListInnerNodesResponseBody extends TeaModel {
             private Boolean repeatability; 
             private String resGroupName; 
             private String schedulerType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Nodes model) {
+                this.baselineId = model.baselineId;
+                this.businessId = model.businessId;
+                this.connection = model.connection;
+                this.cronExpress = model.cronExpress;
+                this.description = model.description;
+                this.dqcDescription = model.dqcDescription;
+                this.dqcType = model.dqcType;
+                this.nodeId = model.nodeId;
+                this.nodeName = model.nodeName;
+                this.ownerId = model.ownerId;
+                this.paramValues = model.paramValues;
+                this.priority = model.priority;
+                this.programType = model.programType;
+                this.projectId = model.projectId;
+                this.repeatInterval = model.repeatInterval;
+                this.repeatability = model.repeatability;
+                this.resGroupName = model.resGroupName;
+                this.schedulerType = model.schedulerType;
+            } 
 
             /**
              * <p>The baseline ID.</p>
@@ -616,6 +653,16 @@ public class ListInnerNodesResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Paging model) {
+                this.nodes = model.nodes;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The list of inner nodes.</p>

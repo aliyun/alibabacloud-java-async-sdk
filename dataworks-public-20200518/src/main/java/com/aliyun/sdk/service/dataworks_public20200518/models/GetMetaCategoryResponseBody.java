@@ -52,6 +52,10 @@ public class GetMetaCategoryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class GetMetaCategoryResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMetaCategoryResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The business data.</p>
@@ -299,6 +315,21 @@ public class GetMetaCategoryResponseBody extends TeaModel {
             private String ownerId; 
             private Long parentCategoryId; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataEntityList model) {
+                this.categoryId = model.categoryId;
+                this.comment = model.comment;
+                this.createTime = model.createTime;
+                this.depth = model.depth;
+                this.lastOperatorId = model.lastOperatorId;
+                this.modifiedTime = model.modifiedTime;
+                this.name = model.name;
+                this.ownerId = model.ownerId;
+                this.parentCategoryId = model.parentCategoryId;
+            } 
+
             /**
              * <p>The category ID.</p>
              * 
@@ -472,6 +503,16 @@ public class GetMetaCategoryResponseBody extends TeaModel {
             private Integer pageNum; 
             private Integer pageSize; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.dataEntityList = model.dataEntityList;
+                this.pageNum = model.pageNum;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The information about the category tree.</p>

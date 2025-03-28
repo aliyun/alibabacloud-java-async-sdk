@@ -46,7 +46,7 @@ public class UpdateTableAddColumnRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -196,6 +196,16 @@ public class UpdateTableAddColumnRequest extends Request {
             private String columnNameCn; 
             private String columnType; 
             private String comment; 
+
+            private Builder() {
+            } 
+
+            private Builder(Column model) {
+                this.columnName = model.columnName;
+                this.columnNameCn = model.columnNameCn;
+                this.columnType = model.columnType;
+                this.comment = model.comment;
+            } 
 
             /**
              * <p>The name of the field.</p>

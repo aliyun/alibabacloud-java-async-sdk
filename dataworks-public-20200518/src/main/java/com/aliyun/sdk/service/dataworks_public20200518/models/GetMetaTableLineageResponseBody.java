@@ -52,6 +52,10 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMetaTableLineageResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The business data.</p>
@@ -239,6 +255,16 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
             private String tableGuid; 
             private String tableName; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataEntityList model) {
+                this.createTimestamp = model.createTimestamp;
+                this.databaseName = model.databaseName;
+                this.tableGuid = model.tableGuid;
+                this.tableName = model.tableName;
+            } 
+
             /**
              * <p>The time when the table was created.</p>
              * 
@@ -345,6 +371,15 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
             private java.util.List<DataEntityList> dataEntityList; 
             private Boolean hasNext; 
             private String nextPrimaryKey; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.dataEntityList = model.dataEntityList;
+                this.hasNext = model.hasNext;
+                this.nextPrimaryKey = model.nextPrimaryKey;
+            } 
 
             /**
              * <p>The information about the table.</p>

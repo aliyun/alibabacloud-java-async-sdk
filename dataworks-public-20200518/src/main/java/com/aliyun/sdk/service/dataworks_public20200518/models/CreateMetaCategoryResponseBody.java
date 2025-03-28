@@ -52,6 +52,10 @@ public class CreateMetaCategoryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class CreateMetaCategoryResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateMetaCategoryResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The information about the category.</p>
@@ -202,6 +218,13 @@ public class CreateMetaCategoryResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long categoryId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.categoryId = model.categoryId;
+            } 
 
             /**
              * <p>The category ID.</p>

@@ -52,6 +52,10 @@ public class GetBusinessResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class GetBusinessResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetBusinessResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The details of the workflow.</p>
@@ -262,6 +278,18 @@ public class GetBusinessResponseBody extends TeaModel {
             private String owner; 
             private String projectId; 
             private String useType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.businessId = model.businessId;
+                this.businessName = model.businessName;
+                this.description = model.description;
+                this.owner = model.owner;
+                this.projectId = model.projectId;
+                this.useType = model.useType;
+            } 
 
             /**
              * <p>The ID of the workflow.</p>

@@ -36,6 +36,10 @@ public class ListExtensionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pagingInfo
      */
@@ -53,6 +57,14 @@ public class ListExtensionsResponseBody extends TeaModel {
     public static final class Builder {
         private PagingInfo pagingInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListExtensionsResponseBody model) {
+            this.pagingInfo = model.pagingInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The pagination information.</p>
@@ -122,6 +134,14 @@ public class ListExtensionsResponseBody extends TeaModel {
         public static final class Builder {
             private String eventCode; 
             private String eventName; 
+
+            private Builder() {
+            } 
+
+            private Builder(BindEventList model) {
+                this.eventCode = model.eventCode;
+                this.eventName = model.eventName;
+            } 
 
             /**
              * <p>The code of the event.</p>
@@ -243,6 +263,18 @@ public class ListExtensionsResponseBody extends TeaModel {
             private String extensionName; 
             private String owner; 
             private Integer status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Extensions model) {
+                this.bindEventList = model.bindEventList;
+                this.extensionCode = model.extensionCode;
+                this.extensionDesc = model.extensionDesc;
+                this.extensionName = model.extensionName;
+                this.owner = model.owner;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The list of extension point events.</p>
@@ -381,6 +413,16 @@ public class ListExtensionsResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PagingInfo model) {
+                this.extensions = model.extensions;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The list of extensions.</p>

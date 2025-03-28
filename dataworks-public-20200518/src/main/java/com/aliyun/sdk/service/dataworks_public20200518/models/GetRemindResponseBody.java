@@ -52,6 +52,10 @@ public class GetRemindResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class GetRemindResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetRemindResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The details of the custom alert rule.</p>
@@ -215,6 +231,14 @@ public class GetRemindResponseBody extends TeaModel {
             private Long baselineId; 
             private String baselineName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Baselines model) {
+                this.baselineId = model.baselineId;
+                this.baselineName = model.baselineName;
+            } 
+
             /**
              * <p>The baseline ID.</p>
              * 
@@ -287,6 +311,14 @@ public class GetRemindResponseBody extends TeaModel {
         public static final class Builder {
             private Long bizId; 
             private String bizProcessName; 
+
+            private Builder() {
+            } 
+
+            private Builder(BizProcesses model) {
+                this.bizId = model.bizId;
+                this.bizProcessName = model.bizProcessName;
+            } 
 
             /**
              * <p>The ID of the workflow.</p>
@@ -385,6 +417,16 @@ public class GetRemindResponseBody extends TeaModel {
             private String owner; 
             private Long projectId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Nodes model) {
+                this.nodeId = model.nodeId;
+                this.nodeName = model.nodeName;
+                this.owner = model.owner;
+                this.projectId = model.projectId;
+            } 
+
             /**
              * <p>The node ID.</p>
              * 
@@ -468,6 +510,13 @@ public class GetRemindResponseBody extends TeaModel {
         public static final class Builder {
             private Long projectId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Projects model) {
+                this.projectId = model.projectId;
+            } 
+
             /**
              * <p>The workspace ID.</p>
              * 
@@ -529,6 +578,14 @@ public class GetRemindResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> alertTargets; 
             private String alertUnit; 
+
+            private Builder() {
+            } 
+
+            private Builder(Receivers model) {
+                this.alertTargets = model.alertTargets;
+                this.alertUnit = model.alertUnit;
+            } 
 
             /**
              * <p>The alert recipient.</p>
@@ -604,6 +661,14 @@ public class GetRemindResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean atAll; 
             private String webUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(Robots model) {
+                this.atAll = model.atAll;
+                this.webUrl = model.webUrl;
+            } 
 
             /**
              * <p>Indicates whether all group members are notified when the alert notification is sent to a DingTalk group. Valid values: true and false.</p>
@@ -917,6 +982,34 @@ public class GetRemindResponseBody extends TeaModel {
             private java.util.List<Robots> robots; 
             private Boolean useflag; 
             private java.util.List<String> webhooks; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.alertInterval = model.alertInterval;
+                this.alertMethods = model.alertMethods;
+                this.alertTargets = model.alertTargets;
+                this.alertUnit = model.alertUnit;
+                this.allowNodes = model.allowNodes;
+                this.baselines = model.baselines;
+                this.bizProcesses = model.bizProcesses;
+                this.detail = model.detail;
+                this.dndEnd = model.dndEnd;
+                this.dndStart = model.dndStart;
+                this.founder = model.founder;
+                this.maxAlertTimes = model.maxAlertTimes;
+                this.nodes = model.nodes;
+                this.projects = model.projects;
+                this.receivers = model.receivers;
+                this.remindId = model.remindId;
+                this.remindName = model.remindName;
+                this.remindType = model.remindType;
+                this.remindUnit = model.remindUnit;
+                this.robots = model.robots;
+                this.useflag = model.useflag;
+                this.webhooks = model.webhooks;
+            } 
 
             /**
              * <p>The minimum interval at which alerts are reported. Unit: seconds.</p>

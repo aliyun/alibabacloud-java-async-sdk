@@ -52,6 +52,10 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMetaTablePartitionResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The returned result.</p>
@@ -323,6 +339,23 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
             private Long recordCount; 
             private String tableGuid; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataEntityList model) {
+                this.comment = model.comment;
+                this.createTime = model.createTime;
+                this.dataSize = model.dataSize;
+                this.modifiedTime = model.modifiedTime;
+                this.partitionGuid = model.partitionGuid;
+                this.partitionLocation = model.partitionLocation;
+                this.partitionName = model.partitionName;
+                this.partitionPath = model.partitionPath;
+                this.partitionType = model.partitionType;
+                this.recordCount = model.recordCount;
+                this.tableGuid = model.tableGuid;
+            } 
+
             /**
              * <p>The comment.</p>
              * 
@@ -518,6 +551,16 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.dataEntityList = model.dataEntityList;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The list of partitions.</p>

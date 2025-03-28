@@ -40,6 +40,10 @@ public class GetDISyncInstanceInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -65,6 +69,15 @@ public class GetDISyncInstanceInfoResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDISyncInstanceInfoResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status of the real-time synchronization task or data synchronization solution.</p>
@@ -173,6 +186,16 @@ public class GetDISyncInstanceInfoResponseBody extends TeaModel {
             private String status; 
             private Long stepId; 
             private String stepName; 
+
+            private Builder() {
+            } 
+
+            private Builder(StepDetail model) {
+                this.info = model.info;
+                this.status = model.status;
+                this.stepId = model.stepId;
+                this.stepName = model.stepName;
+            } 
 
             /**
              * <p>The information of the data synchronization solution.</p>
@@ -293,6 +316,16 @@ public class GetDISyncInstanceInfoResponseBody extends TeaModel {
             private String status; 
             private java.util.List<StepDetail> stepDetail; 
 
+            private Builder() {
+            } 
+
+            private Builder(SolutionInfo model) {
+                this.creatorName = model.creatorName;
+                this.id = model.id;
+                this.status = model.status;
+                this.stepDetail = model.stepDetail;
+            } 
+
             /**
              * <p>The creator of the data synchronization solution.</p>
              * 
@@ -408,6 +441,16 @@ public class GetDISyncInstanceInfoResponseBody extends TeaModel {
             private String name; 
             private SolutionInfo solutionInfo; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.message = model.message;
+                this.name = model.name;
+                this.solutionInfo = model.solutionInfo;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The cause of the failure to obtain the status of the real-time synchronization task or data synchronization solution. If the status of the real-time synchronization task or data synchronization solution is obtained, the value null is returned.</p>

@@ -44,6 +44,10 @@ public class GetProjectDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -77,6 +81,16 @@ public class GetProjectDetailResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetProjectDetailResponseBody model) {
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The information about the workspace.</p>
@@ -168,6 +182,14 @@ public class GetProjectDetailResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -505,6 +527,36 @@ public class GetProjectDetailResponseBody extends TeaModel {
             private java.util.List<Tags> tags; 
             private Long tenantId; 
             private Boolean useProxyOdpsAccount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.defaultDiResourceGroupIdentifier = model.defaultDiResourceGroupIdentifier;
+                this.developmentType = model.developmentType;
+                this.disableDevelopment = model.disableDevelopment;
+                this.envTypes = model.envTypes;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.isAllowDownload = model.isAllowDownload;
+                this.isDefault = model.isDefault;
+                this.projectDescription = model.projectDescription;
+                this.projectId = model.projectId;
+                this.projectIdentifier = model.projectIdentifier;
+                this.projectMode = model.projectMode;
+                this.projectName = model.projectName;
+                this.projectOwnerBaseId = model.projectOwnerBaseId;
+                this.protectedMode = model.protectedMode;
+                this.residentArea = model.residentArea;
+                this.resourceManagerResourceGroupId = model.resourceManagerResourceGroupId;
+                this.schedulerMaxRetryTimes = model.schedulerMaxRetryTimes;
+                this.schedulerRetryInterval = model.schedulerRetryInterval;
+                this.status = model.status;
+                this.tablePrivacyMode = model.tablePrivacyMode;
+                this.tags = model.tags;
+                this.tenantId = model.tenantId;
+                this.useProxyOdpsAccount = model.useProxyOdpsAccount;
+            } 
 
             /**
              * <p>The identifier of the shared resource group for Data Integration on which nodes are run.</p>

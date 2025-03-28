@@ -36,6 +36,10 @@ public class GetDataServiceFolderResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return folder
      */
@@ -53,6 +57,14 @@ public class GetDataServiceFolderResponseBody extends TeaModel {
     public static final class Builder {
         private Folder folder; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDataServiceFolderResponseBody model) {
+            this.folder = model.folder;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of the folder.</p>
@@ -194,6 +206,20 @@ public class GetDataServiceFolderResponseBody extends TeaModel {
             private Long parentId; 
             private Long projectId; 
             private Long tenantId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Folder model) {
+                this.createdTime = model.createdTime;
+                this.folderId = model.folderId;
+                this.folderName = model.folderName;
+                this.groupId = model.groupId;
+                this.modifiedTime = model.modifiedTime;
+                this.parentId = model.parentId;
+                this.projectId = model.projectId;
+                this.tenantId = model.tenantId;
+            } 
 
             /**
              * <p>The time when the folder was created.</p>

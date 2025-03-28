@@ -36,6 +36,10 @@ public class ListShiftPersonnelsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return paging
      */
@@ -54,8 +58,16 @@ public class ListShiftPersonnelsResponseBody extends TeaModel {
         private Paging paging; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListShiftPersonnelsResponseBody model) {
+            this.paging = model.paging;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>The pagination data.</p>
+         * <p>The pagination information.</p>
          */
         public Builder paging(Paging paging) {
             this.paging = paging;
@@ -146,6 +158,16 @@ public class ListShiftPersonnelsResponseBody extends TeaModel {
             private Long endTime; 
             private String shiftPersonName; 
             private String shiftPersonUID; 
+
+            private Builder() {
+            } 
+
+            private Builder(ShiftPersons model) {
+                this.beginTime = model.beginTime;
+                this.endTime = model.endTime;
+                this.shiftPersonName = model.shiftPersonName;
+                this.shiftPersonUID = model.shiftPersonUID;
+            } 
 
             /**
              * <p>The time when the on-duty engineer starts the shift.</p>
@@ -266,6 +288,16 @@ public class ListShiftPersonnelsResponseBody extends TeaModel {
             private java.util.List<ShiftPersons> shiftPersons; 
             private Integer totalCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(Paging model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.shiftPersons = model.shiftPersons;
+                this.totalCount = model.totalCount;
+            } 
+
             /**
              * <p>The page number. Valid values: 1 to 100. Default value: 1.</p>
              * 
@@ -289,7 +321,7 @@ public class ListShiftPersonnelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A list of on-duty engineers in a shift schedule.</p>
+             * <p>The on-duty engineers in the shift schedule.</p>
              */
             public Builder shiftPersons(java.util.List<ShiftPersons> shiftPersons) {
                 this.shiftPersons = shiftPersons;

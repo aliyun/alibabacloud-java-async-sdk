@@ -40,6 +40,10 @@ public class GenerateDISyncTaskConfigForUpdatingResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -65,6 +69,15 @@ public class GenerateDISyncTaskConfigForUpdatingResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GenerateDISyncTaskConfigForUpdatingResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The information returned for the ID of the asynchronous thread.</p>
@@ -161,6 +174,15 @@ public class GenerateDISyncTaskConfigForUpdatingResponseBody extends TeaModel {
             private String message; 
             private Long processId; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.message = model.message;
+                this.processId = model.processId;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The reason why the ID of the asynchronous thread fails to be generated. If the ID is successfully generated, no value is returned for this parameter.</p>

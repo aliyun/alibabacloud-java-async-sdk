@@ -52,6 +52,10 @@ public class DsgWhiteListQueryListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -101,6 +105,18 @@ public class DsgWhiteListQueryListResponseBody extends TeaModel {
         private PageData pageData; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DsgWhiteListQueryListResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.pageData = model.pageData;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code.</p>
@@ -303,6 +319,21 @@ public class DsgWhiteListQueryListResponseBody extends TeaModel {
             private String type; 
             private java.util.List<String> userGroups; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.endTime = model.endTime;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.ruleId = model.ruleId;
+                this.sceneId = model.sceneId;
+                this.startTime = model.startTime;
+                this.type = model.type;
+                this.userGroups = model.userGroups;
+            } 
+
             /**
              * <p>The expiration time of the data masking whitelist cannot be earlier than the time when the data masking whitelist takes effect. Unit: days.</p>
              * 
@@ -473,6 +504,16 @@ public class DsgWhiteListQueryListResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageData model) {
+                this.data = model.data;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>A collection of whitelists.</p>

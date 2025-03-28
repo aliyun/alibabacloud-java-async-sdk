@@ -206,7 +206,7 @@ public class CreateFileRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -808,7 +808,10 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * ImageId.
+         * <p>Custom image ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-bp1h4b5a8ogkbll2f3tr</p>
          */
         public Builder imageId(String imageId) {
             this.putBodyParameter("ImageId", imageId);

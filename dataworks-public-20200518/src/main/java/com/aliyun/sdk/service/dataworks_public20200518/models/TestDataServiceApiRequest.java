@@ -65,7 +65,7 @@ public class TestDataServiceApiRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -264,6 +264,14 @@ public class TestDataServiceApiRequest extends Request {
             private String paramKey; 
             private String paramValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(BodyParams model) {
+                this.paramKey = model.paramKey;
+                this.paramValue = model.paramValue;
+            } 
+
             /**
              * <p>The name of the parameter.</p>
              * 
@@ -336,6 +344,14 @@ public class TestDataServiceApiRequest extends Request {
         public static final class Builder {
             private String paramKey; 
             private String paramValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(HeadParams model) {
+                this.paramKey = model.paramKey;
+                this.paramValue = model.paramValue;
+            } 
 
             /**
              * <p>The name of the parameter.</p>
@@ -410,6 +426,14 @@ public class TestDataServiceApiRequest extends Request {
             private String paramKey; 
             private String paramValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(PathParams model) {
+                this.paramKey = model.paramKey;
+                this.paramValue = model.paramValue;
+            } 
+
             /**
              * <p>The name of the parameter.</p>
              * 
@@ -482,6 +506,14 @@ public class TestDataServiceApiRequest extends Request {
         public static final class Builder {
             private String paramKey; 
             private String paramValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(QueryParam model) {
+                this.paramKey = model.paramKey;
+                this.paramValue = model.paramValue;
+            } 
 
             /**
              * <p>The name of the parameter.</p>

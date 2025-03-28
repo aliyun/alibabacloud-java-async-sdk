@@ -40,6 +40,10 @@ public class DataDesensPlanTemplateValue extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return name
      */
@@ -65,6 +69,15 @@ public class DataDesensPlanTemplateValue extends TeaModel {
         private String name; 
         private Boolean supportWaterMark; 
         private java.util.List<?> extParamTemplate; 
+
+        private Builder() {
+        } 
+
+        private Builder(DataDesensPlanTemplateValue model) {
+            this.name = model.name;
+            this.supportWaterMark = model.supportWaterMark;
+            this.extParamTemplate = model.extParamTemplate;
+        } 
 
         /**
          * <p>The name of the data masking method.</p>

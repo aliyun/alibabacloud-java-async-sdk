@@ -52,6 +52,10 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return entity
      */
@@ -101,6 +105,18 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMetaTableThemeLevelResponseBody model) {
+            this.entity = model.entity;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The returned data.</p>
@@ -239,6 +255,16 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
             private String name; 
             private Integer type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Level model) {
+                this.description = model.description;
+                this.levelId = model.levelId;
+                this.name = model.name;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The description of the level.</p>
              * 
@@ -362,6 +388,16 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
             private Long parentId; 
             private Long themeId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Theme model) {
+                this.level = model.level;
+                this.name = model.name;
+                this.parentId = model.parentId;
+                this.themeId = model.themeId;
+            } 
+
             /**
              * <p>The level of the theme. Valid values:</p>
              * <ul>
@@ -460,6 +496,14 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Level> level; 
             private java.util.List<Theme> theme; 
+
+            private Builder() {
+            } 
+
+            private Builder(Entity model) {
+                this.level = model.level;
+                this.theme = model.theme;
+            } 
 
             /**
              * <p>The information about the levels of the metatable.</p>

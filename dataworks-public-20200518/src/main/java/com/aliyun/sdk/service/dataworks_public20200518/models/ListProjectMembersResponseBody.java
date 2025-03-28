@@ -36,6 +36,10 @@ public class ListProjectMembersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class ListProjectMembersResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListProjectMembersResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned results.</p>
@@ -146,6 +158,16 @@ public class ListProjectMembersResponseBody extends TeaModel {
             private Integer projectRoleId; 
             private String projectRoleName; 
             private String projectRoleType; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProjectRoleList model) {
+                this.projectRoleCode = model.projectRoleCode;
+                this.projectRoleId = model.projectRoleId;
+                this.projectRoleName = model.projectRoleName;
+                this.projectRoleType = model.projectRoleType;
+            } 
 
             /**
              * <p>The code of the role. DataWorks provides built-in roles and allows you to create custom roles based on your business requirements. For more information about roles, see <a href="https://help.aliyun.com/document_detail/295463.html">Overview of users, roles, and permissions</a>.</p>
@@ -294,6 +316,18 @@ public class ListProjectMembersResponseBody extends TeaModel {
             private java.util.List<ProjectRoleList> projectRoleList; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(ProjectMemberList model) {
+                this.nick = model.nick;
+                this.projectMemberId = model.projectMemberId;
+                this.projectMemberName = model.projectMemberName;
+                this.projectMemberType = model.projectMemberType;
+                this.projectRoleList = model.projectRoleList;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The nickname of the member.</p>
              * 
@@ -441,6 +475,16 @@ public class ListProjectMembersResponseBody extends TeaModel {
             private Integer pageSize; 
             private java.util.List<ProjectMemberList> projectMemberList; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.projectMemberList = model.projectMemberList;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The page number.</p>

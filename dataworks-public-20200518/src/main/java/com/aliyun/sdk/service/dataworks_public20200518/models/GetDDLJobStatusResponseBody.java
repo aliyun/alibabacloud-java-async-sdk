@@ -36,6 +36,10 @@ public class GetDDLJobStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetDDLJobStatusResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDDLJobStatusResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of the task.</p>
@@ -146,6 +158,16 @@ public class GetDDLJobStatusResponseBody extends TeaModel {
             private String nextTaskId; 
             private String status; 
             private String taskId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.content = model.content;
+                this.nextTaskId = model.nextTaskId;
+                this.status = model.status;
+                this.taskId = model.taskId;
+            } 
 
             /**
              * <p>The content of the task.</p>

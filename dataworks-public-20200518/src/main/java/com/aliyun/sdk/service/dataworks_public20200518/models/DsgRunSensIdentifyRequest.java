@@ -45,7 +45,7 @@ public class DsgRunSensIdentifyRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -241,6 +241,20 @@ public class DsgRunSensIdentifyRequest extends Request {
             private String tableName; 
             private java.util.List<String> tableNameList; 
             private String user; 
+
+            private Builder() {
+            } 
+
+            private Builder(EsMetaParams model) {
+                this.clusterId = model.clusterId;
+                this.dbType = model.dbType;
+                this.instanceId = model.instanceId;
+                this.projectName = model.projectName;
+                this.schemaName = model.schemaName;
+                this.tableName = model.tableName;
+                this.tableNameList = model.tableNameList;
+                this.user = model.user;
+            } 
 
             /**
              * <p>The cluster ID. You can obtain the ID based on the data source you use.</p>

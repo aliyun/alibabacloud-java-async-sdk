@@ -52,6 +52,10 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDataServiceApiAuthoritiesResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The APIs on which other users are granted the access permissions.</p>
@@ -238,6 +254,16 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
             private String creatorId; 
             private String endTime; 
             private Long projectId; 
+
+            private Builder() {
+            } 
+
+            private Builder(AuthorizationRecords model) {
+                this.createdTime = model.createdTime;
+                this.creatorId = model.creatorId;
+                this.endTime = model.endTime;
+                this.projectId = model.projectId;
+            } 
 
             /**
              * <p>The time when the access permissions on the API were granted to other users.</p>
@@ -442,6 +468,23 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
             private Long projectId; 
             private Long tenantId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ApiAuthorizationList model) {
+                this.apiId = model.apiId;
+                this.apiName = model.apiName;
+                this.apiPath = model.apiPath;
+                this.apiStatus = model.apiStatus;
+                this.authorizationRecords = model.authorizationRecords;
+                this.createdTime = model.createdTime;
+                this.creatorId = model.creatorId;
+                this.groupId = model.groupId;
+                this.modifiedTime = model.modifiedTime;
+                this.projectId = model.projectId;
+                this.tenantId = model.tenantId;
+            } 
+
             /**
              * <p>The API ID.</p>
              * 
@@ -634,6 +677,16 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.apiAuthorizationList = model.apiAuthorizationList;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The APIs on which other users are granted the access permissions.</p>

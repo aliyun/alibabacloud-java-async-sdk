@@ -46,7 +46,7 @@ public class GetMigrationSummaryRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -99,7 +99,7 @@ public class GetMigrationSummaryRequest extends Request {
 
         /**
          * <p>The migration task ID.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2809123.html">CreateImportMigration</a> operation to obtain the ID of the import task and call the <a href="https://help.aliyun.com/document_detail/3241603.html">CreateExportMigration</a> operation to obtain the ID of the export task.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2780280.html">CreateImportMigration</a> operation to obtain the ID of the import task and call the <a href="https://help.aliyun.com/document_detail/2780281.html">CreateExportMigration</a> operation to obtain the ID of the export task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

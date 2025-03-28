@@ -40,6 +40,10 @@ public class DeleteDISyncTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -65,6 +69,15 @@ public class DeleteDISyncTaskResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteDISyncTaskResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The deletion result.</p>
@@ -149,6 +162,14 @@ public class DeleteDISyncTaskResponseBody extends TeaModel {
         public static final class Builder {
             private String message; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.message = model.message;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The reason why the synchronization task fails to be deleted. If the synchronization task is deleted, the value null is returned for this parameter.</p>

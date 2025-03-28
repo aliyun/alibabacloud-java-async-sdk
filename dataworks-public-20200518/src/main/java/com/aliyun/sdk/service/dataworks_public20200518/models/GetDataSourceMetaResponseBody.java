@@ -40,6 +40,10 @@ public class GetDataSourceMetaResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -65,6 +69,15 @@ public class GetDataSourceMetaResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDataSourceMetaResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The returned result.</p>
@@ -161,6 +174,15 @@ public class GetDataSourceMetaResponseBody extends TeaModel {
             private String message; 
             private String meta; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.message = model.message;
+                this.meta = model.meta;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The reason why the metadata of the data source fails to be obtained. If the metadata of the data source is obtained, no value is returned for this parameter.</p>

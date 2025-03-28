@@ -36,6 +36,10 @@ public class ListDataServiceFoldersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return folderPagingResult
      */
@@ -53,6 +57,14 @@ public class ListDataServiceFoldersResponseBody extends TeaModel {
     public static final class Builder {
         private FolderPagingResult folderPagingResult; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDataServiceFoldersResponseBody model) {
+            this.folderPagingResult = model.folderPagingResult;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The paging result for the folders.</p>
@@ -194,6 +206,20 @@ public class ListDataServiceFoldersResponseBody extends TeaModel {
             private Long parentId; 
             private Long projectId; 
             private Long tenantId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Folders model) {
+                this.createdTime = model.createdTime;
+                this.folderId = model.folderId;
+                this.folderName = model.folderName;
+                this.groupId = model.groupId;
+                this.modifiedTime = model.modifiedTime;
+                this.parentId = model.parentId;
+                this.projectId = model.projectId;
+                this.tenantId = model.tenantId;
+            } 
 
             /**
              * <p>The time when the folder was created.</p>
@@ -357,6 +383,16 @@ public class ListDataServiceFoldersResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(FolderPagingResult model) {
+                this.folders = model.folders;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The folders.</p>

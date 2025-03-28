@@ -52,6 +52,10 @@ public class GetMetaTableIntroWikiResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class GetMetaTableIntroWikiResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMetaTableIntroWikiResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The business data.</p>
@@ -262,6 +278,18 @@ public class GetMetaTableIntroWikiResponseBody extends TeaModel {
             private String creatorName; 
             private Long modifiedTime; 
             private Long version; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.content = model.content;
+                this.createTime = model.createTime;
+                this.creator = model.creator;
+                this.creatorName = model.creatorName;
+                this.modifiedTime = model.modifiedTime;
+                this.version = model.version;
+            } 
 
             /**
              * <p>The description of the metatable.</p>

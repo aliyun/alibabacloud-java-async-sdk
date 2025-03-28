@@ -44,6 +44,10 @@ public class UpdateDataSourceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -77,6 +81,16 @@ public class UpdateDataSourceResponseBody extends TeaModel {
         private String httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateDataSourceResponseBody model) {
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>Indicates whether the data source is updated.</p>

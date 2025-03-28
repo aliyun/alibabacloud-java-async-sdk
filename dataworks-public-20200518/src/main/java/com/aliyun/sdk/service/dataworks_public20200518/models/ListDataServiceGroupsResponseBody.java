@@ -36,6 +36,10 @@ public class ListDataServiceGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return groupPagingResult
      */
@@ -53,6 +57,14 @@ public class ListDataServiceGroupsResponseBody extends TeaModel {
     public static final class Builder {
         private GroupPagingResult groupPagingResult; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDataServiceGroupsResponseBody model) {
+            this.groupPagingResult = model.groupPagingResult;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The paging result for the business processes.</p>
@@ -206,6 +218,21 @@ public class ListDataServiceGroupsResponseBody extends TeaModel {
             private String modifiedTime; 
             private Long projectId; 
             private Long tenantId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Groups model) {
+                this.apiGatewayGroupId = model.apiGatewayGroupId;
+                this.createdTime = model.createdTime;
+                this.creatorId = model.creatorId;
+                this.description = model.description;
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+                this.modifiedTime = model.modifiedTime;
+                this.projectId = model.projectId;
+                this.tenantId = model.tenantId;
+            } 
 
             /**
              * <p>The ID of the API Gateway group to which the workflow is bound.</p>
@@ -380,6 +407,16 @@ public class ListDataServiceGroupsResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(GroupPagingResult model) {
+                this.groups = model.groups;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The business processes.</p>

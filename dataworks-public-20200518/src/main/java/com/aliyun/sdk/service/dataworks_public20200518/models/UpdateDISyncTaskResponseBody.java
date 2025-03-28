@@ -40,6 +40,10 @@ public class UpdateDISyncTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -65,6 +69,15 @@ public class UpdateDISyncTaskResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateDISyncTaskResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The information that indicates whether the data synchronization task is updated.</p>
@@ -149,6 +162,14 @@ public class UpdateDISyncTaskResponseBody extends TeaModel {
         public static final class Builder {
             private String message; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.message = model.message;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The error message returned if the data synchronization task fails to be updated. If the data synchronization task is successfully updated, the value null is returned for this parameter.</p>

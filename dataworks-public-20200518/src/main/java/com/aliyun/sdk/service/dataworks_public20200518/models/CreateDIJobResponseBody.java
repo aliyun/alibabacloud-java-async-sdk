@@ -36,6 +36,10 @@ public class CreateDIJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DIJobId
      */
@@ -53,6 +57,14 @@ public class CreateDIJobResponseBody extends TeaModel {
     public static final class Builder {
         private Long DIJobId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateDIJobResponseBody model) {
+            this.DIJobId = model.DIJobId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The synchronization task ID.</p>

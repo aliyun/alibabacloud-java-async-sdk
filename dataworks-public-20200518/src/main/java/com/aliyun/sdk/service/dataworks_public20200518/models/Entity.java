@@ -40,6 +40,10 @@ public class Entity extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return entityContent
      */
@@ -65,6 +69,15 @@ public class Entity extends TeaModel {
         private java.util.Map<String, ?> entityContent; 
         private String qualifiedName; 
         private Long tenantId; 
+
+        private Builder() {
+        } 
+
+        private Builder(Entity model) {
+            this.entityContent = model.entityContent;
+            this.qualifiedName = model.qualifiedName;
+            this.tenantId = model.tenantId;
+        } 
 
         /**
          * EntityContent.

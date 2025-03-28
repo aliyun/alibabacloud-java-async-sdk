@@ -52,6 +52,10 @@ public class ListRemindsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class ListRemindsResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListRemindsResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -371,6 +387,27 @@ public class ListRemindsResponseBody extends TeaModel {
             private String remindUnit; 
             private Boolean useflag; 
 
+            private Builder() {
+            } 
+
+            private Builder(Reminds model) {
+                this.alertMethods = model.alertMethods;
+                this.alertTargets = model.alertTargets;
+                this.alertUnit = model.alertUnit;
+                this.baselineIds = model.baselineIds;
+                this.bizProcessIds = model.bizProcessIds;
+                this.dndEnd = model.dndEnd;
+                this.dndStart = model.dndStart;
+                this.founder = model.founder;
+                this.nodeIds = model.nodeIds;
+                this.projectIds = model.projectIds;
+                this.remindId = model.remindId;
+                this.remindName = model.remindName;
+                this.remindType = model.remindType;
+                this.remindUnit = model.remindUnit;
+                this.useflag = model.useflag;
+            } 
+
             /**
              * <p>The notification method. Valid values: MAIL, SMS, and PHONE. The value MAIL indicates that the notification is sent by email. Only DataWorks Professional Edition and more advanced editions support the PHONE notification method.</p>
              */
@@ -592,6 +629,16 @@ public class ListRemindsResponseBody extends TeaModel {
             private Integer pageSize; 
             private java.util.List<Reminds> reminds; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.reminds = model.reminds;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The page number of the returned page.</p>

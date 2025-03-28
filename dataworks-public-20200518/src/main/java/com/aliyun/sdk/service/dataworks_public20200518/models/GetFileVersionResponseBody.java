@@ -52,6 +52,10 @@ public class GetFileVersionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class GetFileVersionResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetFileVersionResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The details of the file version.</p>
@@ -346,6 +362,25 @@ public class GetFileVersionResponseBody extends TeaModel {
             private Long nodeId; 
             private String status; 
             private String useType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.changeType = model.changeType;
+                this.comment = model.comment;
+                this.commitTime = model.commitTime;
+                this.commitUser = model.commitUser;
+                this.fileContent = model.fileContent;
+                this.fileName = model.fileName;
+                this.filePropertyContent = model.filePropertyContent;
+                this.fileVersion = model.fileVersion;
+                this.isCurrentProd = model.isCurrentProd;
+                this.nodeContent = model.nodeContent;
+                this.nodeId = model.nodeId;
+                this.status = model.status;
+                this.useType = model.useType;
+            } 
 
             /**
              * <p>The change type of the file version. Valid values: CREATE, UPDATE, and DELETE.</p>

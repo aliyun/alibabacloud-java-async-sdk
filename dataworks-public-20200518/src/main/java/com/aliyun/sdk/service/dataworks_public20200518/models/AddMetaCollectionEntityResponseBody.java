@@ -52,6 +52,10 @@ public class AddMetaCollectionEntityResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -101,6 +105,18 @@ public class AddMetaCollectionEntityResponseBody extends TeaModel {
         private String requestId; 
         private Boolean status; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(AddMetaCollectionEntityResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.status = model.status;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code.</p>

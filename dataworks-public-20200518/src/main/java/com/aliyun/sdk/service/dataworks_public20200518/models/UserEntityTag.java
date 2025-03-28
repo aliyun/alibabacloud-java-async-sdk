@@ -36,6 +36,10 @@ public class UserEntityTag extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return tagKey
      */
@@ -53,6 +57,14 @@ public class UserEntityTag extends TeaModel {
     public static final class Builder {
         private String tagKey; 
         private String tagValue; 
+
+        private Builder() {
+        } 
+
+        private Builder(UserEntityTag model) {
+            this.tagKey = model.tagKey;
+            this.tagValue = model.tagValue;
+        } 
 
         /**
          * TagKey.

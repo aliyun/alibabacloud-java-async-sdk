@@ -52,6 +52,10 @@ public class GetMetaTableBasicInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class GetMetaTableBasicInfoResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMetaTableBasicInfoResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The business data.</p>
@@ -514,6 +530,39 @@ public class GetMetaTableBasicInfoResponseBody extends TeaModel {
             private String tableName; 
             private Long tenantId; 
             private Long viewCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.caption = model.caption;
+                this.clusterId = model.clusterId;
+                this.columnCount = model.columnCount;
+                this.comment = model.comment;
+                this.createTime = model.createTime;
+                this.dataSize = model.dataSize;
+                this.databaseName = model.databaseName;
+                this.envType = model.envType;
+                this.favoriteCount = model.favoriteCount;
+                this.isPartitionTable = model.isPartitionTable;
+                this.isView = model.isView;
+                this.isVisible = model.isVisible;
+                this.lastAccessTime = model.lastAccessTime;
+                this.lastDdlTime = model.lastDdlTime;
+                this.lastModifyTime = model.lastModifyTime;
+                this.lifeCycle = model.lifeCycle;
+                this.location = model.location;
+                this.ownerId = model.ownerId;
+                this.partitionKeys = model.partitionKeys;
+                this.projectId = model.projectId;
+                this.projectName = model.projectName;
+                this.readCount = model.readCount;
+                this.schema = model.schema;
+                this.tableGuid = model.tableGuid;
+                this.tableName = model.tableName;
+                this.tenantId = model.tenantId;
+                this.viewCount = model.viewCount;
+            } 
 
             /**
              * <p>The display name of the metatable.</p>

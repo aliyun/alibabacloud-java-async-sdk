@@ -36,6 +36,10 @@ public class DeleteTableResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DeleteTableResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private TaskInfo taskInfo; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteTableResponseBody model) {
+            this.requestId = model.requestId;
+            this.taskInfo = model.taskInfo;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -146,6 +158,16 @@ public class DeleteTableResponseBody extends TeaModel {
             private String nextTaskId; 
             private String status; 
             private String taskId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TaskInfo model) {
+                this.content = model.content;
+                this.nextTaskId = model.nextTaskId;
+                this.status = model.status;
+                this.taskId = model.taskId;
+            } 
 
             /**
              * <p>The content of the task.</p>

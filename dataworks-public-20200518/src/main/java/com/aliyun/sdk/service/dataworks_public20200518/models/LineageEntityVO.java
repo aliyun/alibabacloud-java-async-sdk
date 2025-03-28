@@ -56,6 +56,10 @@ public class LineageEntityVO extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return attributes
      */
@@ -113,6 +117,19 @@ public class LineageEntityVO extends TeaModel {
         private String owner; 
         private String parentName; 
         private String qualifiedName; 
+
+        private Builder() {
+        } 
+
+        private Builder(LineageEntityVO model) {
+            this.attributes = model.attributes;
+            this.detailUrl = model.detailUrl;
+            this.entityType = model.entityType;
+            this.name = model.name;
+            this.owner = model.owner;
+            this.parentName = model.parentName;
+            this.qualifiedName = model.qualifiedName;
+        } 
 
         /**
          * Attributes.

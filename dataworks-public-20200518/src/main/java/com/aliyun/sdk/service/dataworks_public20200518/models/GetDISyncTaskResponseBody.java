@@ -40,6 +40,10 @@ public class GetDISyncTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -65,6 +69,15 @@ public class GetDISyncTaskResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDISyncTaskResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The returned results.</p>
@@ -186,11 +199,22 @@ public class GetDISyncTaskResponseBody extends TeaModel {
             private String level; 
             private Long threshold; 
 
+            private Builder() {
+            } 
+
+            private Builder(AlarmRuleList model) {
+                this.aggregator = model.aggregator;
+                this.comparator = model.comparator;
+                this.duration = model.duration;
+                this.level = model.level;
+                this.threshold = model.threshold;
+            } 
+
             /**
-             * <p>The calculation method of indicators,</p>
+             * <p>The calculation method of a metric. Valid values:</p>
              * <ul>
-             * <li>avg interval average</li>
-             * <li>max interval takes the maximum value</li>
+             * <li>avg</li>
+             * <li>max</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -202,7 +226,7 @@ public class GetDISyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Comparison method of comparison symbols, indicators and alarm rules</p>
+             * <p>The comparison operator, which indicates the method used to compare a metric with the alert rule.</p>
              * <ul>
              * <li>&quot;=&quot;</li>
              * <li>&quot;&lt;&quot;</li>
@@ -218,7 +242,7 @@ public class GetDISyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Duration: How long does this condition last before an alarm is triggered, in minutes.</p>
+             * <p>The duration that a condition is met before an alert is triggered. Unit: minutes.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -230,8 +254,8 @@ public class GetDISyncTaskResponseBody extends TeaModel {
 
             /**
              * <ul>
-             * <li>WARNING WARNING: alert</li>
-             * <li>CRITICAL CRITICAL: alarm</li>
+             * <li>WARNING</li>
+             * <li>CRITICAL</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -243,7 +267,7 @@ public class GetDISyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Comparison threshold between metrics and alarm rules.</p>
+             * <p>The threshold for the comparison between a metric and the alert rule.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -316,8 +340,17 @@ public class GetDISyncTaskResponseBody extends TeaModel {
             private Long interval; 
             private java.util.List<String> warning; 
 
+            private Builder() {
+            } 
+
+            private Builder(NotifyRule model) {
+                this.critical = model.critical;
+                this.interval = model.interval;
+                this.warning = model.warning;
+            } 
+
             /**
-             * <p>Critical-level alert notification list.</p>
+             * <p>The settings for Critical-level alert notifications.</p>
              */
             public Builder critical(java.util.List<String> critical) {
                 this.critical = critical;
@@ -325,7 +358,7 @@ public class GetDISyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Alarm interval, in minutes.</p>
+             * <p>The alert interval. Unit: minutes.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -336,7 +369,7 @@ public class GetDISyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Warning-level alert notification list.</p>
+             * <p>The settings for Warning-level alert notifications.</p>
              */
             public Builder warning(java.util.List<String> warning) {
                 this.warning = warning;
@@ -454,8 +487,21 @@ public class GetDISyncTaskResponseBody extends TeaModel {
             private NotifyRule notifyRule; 
             private String ruleName; 
 
+            private Builder() {
+            } 
+
+            private Builder(AlarmList model) {
+                this.alarmRuleList = model.alarmRuleList;
+                this.description = model.description;
+                this.enabled = model.enabled;
+                this.id = model.id;
+                this.metric = model.metric;
+                this.notifyRule = model.notifyRule;
+                this.ruleName = model.ruleName;
+            } 
+
             /**
-             * <p>Alarm Notification configuration array.</p>
+             * <p>The alert notification settings. The value of this parameter is an array.</p>
              */
             public Builder alarmRuleList(java.util.List<AlarmRuleList> alarmRuleList) {
                 this.alarmRuleList = alarmRuleList;
@@ -463,7 +509,7 @@ public class GetDISyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Alarm rule description.</p>
+             * <p>The description of the alert rule.</p>
              * 
              * <strong>example:</strong>
              * <p>Description</p>
@@ -474,7 +520,7 @@ public class GetDISyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether alarm rules are enabled.</p>
+             * <p>Indicates whether the alert rule is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -485,7 +531,7 @@ public class GetDISyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Alarm rule id.</p>
+             * <p>The ID of the alert rule.</p>
              * 
              * <strong>example:</strong>
              * <p>45242</p>
@@ -496,14 +542,14 @@ public class GetDISyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Alarm Type:</p>
+             * <p>The alert type. Valid values:</p>
              * <ul>
-             * <li>taskStatus: task status</li>
-             * <li>bizDelay: business latency</li>
-             * <li>taskFailoverCount: monitoring Failover</li>
-             * <li>ddlUnsupport: DDL is not supported</li>
-             * <li>ddlReport: DDL notifications</li>
-             * <li>totalDirtyRecordWriteInLines: dirty data</li>
+             * <li>taskStatus</li>
+             * <li>bizDelay</li>
+             * <li>taskFailoverCount</li>
+             * <li>ddlUnsupport</li>
+             * <li>ddlReport</li>
+             * <li>totalDirtyRecordWriteInLines</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -515,7 +561,7 @@ public class GetDISyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Alert notification rule array.</p>
+             * <p>The settings for alert notification rules. The value of this parameter is an array.</p>
              */
             public Builder notifyRule(NotifyRule notifyRule) {
                 this.notifyRule = notifyRule;
@@ -523,7 +569,7 @@ public class GetDISyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Alarm rule name.</p>
+             * <p>The name of the alert rule.</p>
              * 
              * <strong>example:</strong>
              * <p>Delay alert rule name 1</p>
@@ -691,6 +737,23 @@ public class GetDISyncTaskResponseBody extends TeaModel {
             private String status; 
             private String submitTime; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(SolutionDetail model) {
+                this.creatorName = model.creatorName;
+                this.id = model.id;
+                this.name = model.name;
+                this.processContent = model.processContent;
+                this.processExtra = model.processExtra;
+                this.projectId = model.projectId;
+                this.sourceType = model.sourceType;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.submitTime = model.submitTime;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The creator of the data synchronization solution.</p>
@@ -912,8 +975,19 @@ public class GetDISyncTaskResponseBody extends TeaModel {
             private SolutionDetail solutionDetail; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.alarmList = model.alarmList;
+                this.code = model.code;
+                this.message = model.message;
+                this.solutionDetail = model.solutionDetail;
+                this.status = model.status;
+            } 
+
             /**
-             * <p>Array of alarm rules associated with real-time tasks.</p>
+             * <p>The alert rules that are associated with the real-time synchronization task. The value of this parameter is an array.</p>
              */
             public Builder alarmList(java.util.List<AlarmList> alarmList) {
                 this.alarmList = alarmList;

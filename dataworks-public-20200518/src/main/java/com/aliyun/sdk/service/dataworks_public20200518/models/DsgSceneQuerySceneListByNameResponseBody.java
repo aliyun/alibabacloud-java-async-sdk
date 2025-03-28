@@ -52,6 +52,10 @@ public class DsgSceneQuerySceneListByNameResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class DsgSceneQuerySceneListByNameResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DsgSceneQuerySceneListByNameResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The returned data.</p>
@@ -230,6 +246,15 @@ public class DsgSceneQuerySceneListByNameResponseBody extends TeaModel {
             private String clusterId; 
             private String dbType; 
             private String projectName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Projects model) {
+                this.clusterId = model.clusterId;
+                this.dbType = model.dbType;
+                this.projectName = model.projectName;
+            } 
 
             /**
              * <p>The ID of the EMR cluster. This parameter is returned only when the data scope that takes effect in the data masking scenario is an EMR compute engine.</p>
@@ -391,6 +416,20 @@ public class DsgSceneQuerySceneListByNameResponseBody extends TeaModel {
             private Integer sceneLevel; 
             private String sceneName; 
             private String userGroups; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.children = model.children;
+                this.desc = model.desc;
+                this.id = model.id;
+                this.projects = model.projects;
+                this.sceneCode = model.sceneCode;
+                this.sceneLevel = model.sceneLevel;
+                this.sceneName = model.sceneName;
+                this.userGroups = model.userGroups;
+            } 
 
             /**
              * <p>The information about multiple levels of data masking scenarios.</p>

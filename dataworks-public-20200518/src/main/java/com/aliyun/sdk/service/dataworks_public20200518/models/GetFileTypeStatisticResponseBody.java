@@ -36,6 +36,10 @@ public class GetFileTypeStatisticResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return programTypeAndCounts
      */
@@ -53,6 +57,14 @@ public class GetFileTypeStatisticResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<ProgramTypeAndCounts> programTypeAndCounts; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetFileTypeStatisticResponseBody model) {
+            this.programTypeAndCounts = model.programTypeAndCounts;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>An array of node types and quantity.</p>
@@ -122,6 +134,14 @@ public class GetFileTypeStatisticResponseBody extends TeaModel {
         public static final class Builder {
             private Integer count; 
             private String programType; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProgramTypeAndCounts model) {
+                this.count = model.count;
+                this.programType = model.programType;
+            } 
 
             /**
              * <p>The number of nodes.</p>

@@ -61,7 +61,7 @@ public class ListLineageRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -140,7 +140,11 @@ public class ListLineageRequest extends Request {
         }
 
         /**
-         * <p>The lineage type. Valid values:<br>up: ancestor lineage<br>down: descendant lineage</p>
+         * <p>The lineage type. Valid values:</p>
+         * <ul>
+         * <li>up: ancestor lineage</li>
+         * <li>down: descendant lineage</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -52,6 +52,10 @@ public class GetDataServiceApplicationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class GetDataServiceApplicationResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDataServiceApplicationResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The details of the application.</p>
@@ -262,6 +278,18 @@ public class GetDataServiceApplicationResponseBody extends TeaModel {
             private String applicationName; 
             private String applicationSecret; 
             private Long projectId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.applicationCode = model.applicationCode;
+                this.applicationId = model.applicationId;
+                this.applicationKey = model.applicationKey;
+                this.applicationName = model.applicationName;
+                this.applicationSecret = model.applicationSecret;
+                this.projectId = model.projectId;
+            } 
 
             /**
              * <p>The AppCode for simple authentication. You can select simple authentication or signature authentication when you call an API operation.</p>

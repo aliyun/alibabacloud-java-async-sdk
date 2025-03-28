@@ -36,6 +36,10 @@ public class GetInstanceConsumeTimeRankResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceConsumeTimeRank
      */
@@ -53,6 +57,14 @@ public class GetInstanceConsumeTimeRankResponseBody extends TeaModel {
     public static final class Builder {
         private InstanceConsumeTimeRank instanceConsumeTimeRank; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetInstanceConsumeTimeRankResponseBody model) {
+            this.instanceConsumeTimeRank = model.instanceConsumeTimeRank;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ranking record of the running durations of instances.</p>
@@ -183,6 +195,19 @@ public class GetInstanceConsumeTimeRankResponseBody extends TeaModel {
             private String owner; 
             private Integer prgType; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConsumeTimeRank model) {
+                this.bizdate = model.bizdate;
+                this.consumed = model.consumed;
+                this.instanceId = model.instanceId;
+                this.nodeId = model.nodeId;
+                this.nodeName = model.nodeName;
+                this.owner = model.owner;
+                this.prgType = model.prgType;
+            } 
+
             /**
              * <p>The data timestamp of the instance.</p>
              * 
@@ -307,6 +332,14 @@ public class GetInstanceConsumeTimeRankResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<ConsumeTimeRank> consumeTimeRank; 
             private Long updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceConsumeTimeRank model) {
+                this.consumeTimeRank = model.consumeTimeRank;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The ranking data of the running durations of instances.</p>

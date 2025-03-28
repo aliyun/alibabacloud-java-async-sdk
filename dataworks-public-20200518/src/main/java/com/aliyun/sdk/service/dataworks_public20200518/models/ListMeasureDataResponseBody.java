@@ -52,6 +52,10 @@ public class ListMeasureDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -101,6 +105,18 @@ public class ListMeasureDataResponseBody extends TeaModel {
         private java.util.List<MeasureDatas> measureDatas; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListMeasureDataResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.measureDatas = model.measureDatas;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code.</p>
@@ -254,6 +270,17 @@ public class ListMeasureDataResponseBody extends TeaModel {
             private Long endTime; 
             private Long startTime; 
             private Long usage; 
+
+            private Builder() {
+            } 
+
+            private Builder(MeasureDatas model) {
+                this.componentCode = model.componentCode;
+                this.domainCode = model.domainCode;
+                this.endTime = model.endTime;
+                this.startTime = model.startTime;
+                this.usage = model.usage;
+            } 
 
             /**
              * <p>The measurement component.</p>

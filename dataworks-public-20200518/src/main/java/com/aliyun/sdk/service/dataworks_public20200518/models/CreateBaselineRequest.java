@@ -80,7 +80,7 @@ public class CreateBaselineRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -334,6 +334,14 @@ public class CreateBaselineRequest extends Request {
         public static final class Builder {
             private Integer cycle; 
             private String time; 
+
+            private Builder() {
+            } 
+
+            private Builder(OvertimeSettings model) {
+                this.cycle = model.cycle;
+                this.time = model.time;
+            } 
 
             /**
              * <p>The cycle that corresponds to the committed completion time. For a day-level baseline, set this parameter to 1. For an hour-level baseline, set this parameter to a value that is no more than 24.</p>

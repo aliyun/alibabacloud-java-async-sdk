@@ -52,6 +52,10 @@ public class ListDagsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class ListDagsResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDagsResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The details of DAGs.</p>
@@ -347,6 +363,25 @@ public class ListDagsResponseBody extends TeaModel {
             private String status; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Dags model) {
+                this.bizdate = model.bizdate;
+                this.createTime = model.createTime;
+                this.createUser = model.createUser;
+                this.dagId = model.dagId;
+                this.finishTime = model.finishTime;
+                this.gmtdate = model.gmtdate;
+                this.modifyTime = model.modifyTime;
+                this.name = model.name;
+                this.opSeq = model.opSeq;
+                this.projectId = model.projectId;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The data timestamp.</p>
              * 
@@ -540,6 +575,13 @@ public class ListDagsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Dags> dags; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.dags = model.dags;
+            } 
 
             /**
              * <p>The entities returned.</p>

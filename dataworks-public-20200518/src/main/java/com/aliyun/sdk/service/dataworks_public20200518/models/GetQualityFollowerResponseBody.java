@@ -52,6 +52,10 @@ public class GetQualityFollowerResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class GetQualityFollowerResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetQualityFollowerResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The information about the subscription relationship.</p>
@@ -298,6 +314,21 @@ public class GetQualityFollowerResponseBody extends TeaModel {
             private Long modifyTime; 
             private String projectName; 
             private String tableName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.alarmMode = model.alarmMode;
+                this.createTime = model.createTime;
+                this.entityId = model.entityId;
+                this.follower = model.follower;
+                this.followerAccountName = model.followerAccountName;
+                this.id = model.id;
+                this.modifyTime = model.modifyTime;
+                this.projectName = model.projectName;
+                this.tableName = model.tableName;
+            } 
 
             /**
              * <p>The alert mode. The value is as follows:</p>

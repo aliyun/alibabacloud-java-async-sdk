@@ -52,6 +52,10 @@ public class DeleteFileResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return deploymentId
      */
@@ -101,6 +105,18 @@ public class DeleteFileResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteFileResponseBody model) {
+            this.deploymentId = model.deploymentId;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The ID of the request. You can troubleshoot errors based on the ID.</p>

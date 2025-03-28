@@ -52,6 +52,10 @@ public class LineageRelationRegisterTaskVO extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return attributes
      */
@@ -101,6 +105,18 @@ public class LineageRelationRegisterTaskVO extends TeaModel {
         private String name; 
         private java.util.List<LineageEntityVO> outputEntities; 
         private String qualifiedName; 
+
+        private Builder() {
+        } 
+
+        private Builder(LineageRelationRegisterTaskVO model) {
+            this.attributes = model.attributes;
+            this.createTimestamp = model.createTimestamp;
+            this.inputEntities = model.inputEntities;
+            this.name = model.name;
+            this.outputEntities = model.outputEntities;
+            this.qualifiedName = model.qualifiedName;
+        } 
 
         /**
          * Attributes.

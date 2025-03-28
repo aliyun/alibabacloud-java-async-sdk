@@ -36,6 +36,10 @@ public class GetInstanceErrorRankResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceErrorRank
      */
@@ -53,6 +57,14 @@ public class GetInstanceErrorRankResponseBody extends TeaModel {
     public static final class Builder {
         private InstanceErrorRank instanceErrorRank; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetInstanceErrorRankResponseBody model) {
+            this.instanceErrorRank = model.instanceErrorRank;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ranking data of nodes on which errors occurred.</p>
@@ -171,6 +183,18 @@ public class GetInstanceErrorRankResponseBody extends TeaModel {
             private Integer prgType; 
             private Long projectId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ErrorRank model) {
+                this.count = model.count;
+                this.nodeId = model.nodeId;
+                this.nodeName = model.nodeName;
+                this.owner = model.owner;
+                this.prgType = model.prgType;
+                this.projectId = model.projectId;
+            } 
+
             /**
              * <p>The number of errors that occurred on the node.</p>
              * 
@@ -284,6 +308,14 @@ public class GetInstanceErrorRankResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<ErrorRank> errorRank; 
             private Long updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceErrorRank model) {
+                this.errorRank = model.errorRank;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The ranking data of nodes on which errors occurred within the last month.</p>

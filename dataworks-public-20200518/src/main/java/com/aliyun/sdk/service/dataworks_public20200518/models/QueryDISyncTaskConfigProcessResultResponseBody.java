@@ -40,6 +40,10 @@ public class QueryDISyncTaskConfigProcessResultResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -65,6 +69,15 @@ public class QueryDISyncTaskConfigProcessResultResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryDISyncTaskConfigProcessResultResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The information returned for the parameters that are asynchronously generated and used to create or update a real-time synchronization task in Data Integration.</p>
@@ -161,6 +174,15 @@ public class QueryDISyncTaskConfigProcessResultResponseBody extends TeaModel {
             private String message; 
             private String status; 
             private String taskContent; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.message = model.message;
+                this.status = model.status;
+                this.taskContent = model.taskContent;
+            } 
 
             /**
              * <p>The reason why the parameters fail to be obtained. If the parameters are obtained, the value null is returned.</p>

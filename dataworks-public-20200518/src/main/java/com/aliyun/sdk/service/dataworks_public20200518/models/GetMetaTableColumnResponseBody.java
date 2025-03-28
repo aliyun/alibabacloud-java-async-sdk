@@ -52,6 +52,10 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMetaTableColumnResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The business data.</p>
@@ -311,6 +327,22 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
             private Integer position; 
             private Long relationCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(ColumnList model) {
+                this.caption = model.caption;
+                this.columnGuid = model.columnGuid;
+                this.columnName = model.columnName;
+                this.columnType = model.columnType;
+                this.comment = model.comment;
+                this.isForeignKey = model.isForeignKey;
+                this.isPartitionColumn = model.isPartitionColumn;
+                this.isPrimaryKey = model.isPrimaryKey;
+                this.position = model.position;
+                this.relationCount = model.relationCount;
+            } 
+
             /**
              * <p>The description of the field.</p>
              * 
@@ -507,6 +539,16 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
             private Integer pageNum; 
             private Integer pageSize; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.columnList = model.columnList;
+                this.pageNum = model.pageNum;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The information about fields.</p>

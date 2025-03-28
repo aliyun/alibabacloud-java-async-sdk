@@ -44,6 +44,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -77,6 +81,16 @@ public class ListDataSourcesResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDataSourcesResponseBody model) {
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The query result returned.</p>
@@ -361,6 +375,30 @@ public class ListDataSourcesResponseBody extends TeaModel {
             private String subType; 
             private Long tenantId; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataSources model) {
+                this.bindingCalcEngineId = model.bindingCalcEngineId;
+                this.connectStatus = model.connectStatus;
+                this.content = model.content;
+                this.dataSourceType = model.dataSourceType;
+                this.defaultEngine = model.defaultEngine;
+                this.description = model.description;
+                this.envType = model.envType;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.name = model.name;
+                this.operator = model.operator;
+                this.projectId = model.projectId;
+                this.sequence = model.sequence;
+                this.shared = model.shared;
+                this.status = model.status;
+                this.subType = model.subType;
+                this.tenantId = model.tenantId;
+            } 
+
             /**
              * <p>The ID of the compute engine with which the data source is associated.</p>
              * 
@@ -405,7 +443,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
              * }
              * </code></pre>
              * </li>
-             * <li><p>MySQL</p>
+             * <li><p>mysql</p>
              * <pre><code>{
              *   &quot;configType&quot;: &quot;1&quot;,
              *   &quot;database&quot;: &quot;mysql_d111b&quot;,
@@ -417,7 +455,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
              * }
              * </code></pre>
              * </li>
-             * <li><p>ApsaraDB RDS for SQL Server</p>
+             * <li><p>sqlserver</p>
              * <pre><code>{
              *   &quot;configType&quot;: &quot;1&quot;,
              *   &quot;jdbcUrl&quot;: &quot;jdbc:sqlserver://rm-xxxxx.sqlserver.rds.aliyuncs.com:1433;DatabaseName=sqlserver_db1&quot;,
@@ -427,10 +465,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
              * }
              * </code></pre>
              * </li>
-             * <li><p>Object Storage Service (OSS)</p>
+             * <li><p>oss</p>
              * <pre><code>{
-             *   &quot;accessId&quot;: &quot;LTAINbR9Uxxxx&quot;,
-             *   &quot;accessKey&quot;: &quot;***&quot;,
+             *   &quot;accessId&quot;: &quot;***********&quot;,
+             *   &quot;accessKey&quot;: &quot;***********&quot;,
              *   &quot;bucket&quot;: &quot;bigxxx1223&quot;,
              *   &quot;configType&quot;: &quot;1&quot;,
              *   &quot;endpoint&quot;: &quot;http://oss-cn-hangzhou.aliyuncs.com&quot;,
@@ -438,7 +476,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
              * }
              * </code></pre>
              * </li>
-             * <li><p>ApsaraDB RDS for PostgreSQL</p>
+             * <li><p>postgresql</p>
              * <pre><code>{
              *   &quot;configType&quot;: &quot;1&quot;,
              *   &quot;database&quot;: &quot;cdp_xxx&quot;,
@@ -450,7 +488,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
              * }
              * </code></pre>
              * </li>
-             * <li><p>AnalyticDB for MySQL</p>
+             * <li><p>ads</p>
              * <pre><code>{
              *   &quot;configType&quot;: &quot;1&quot;,
              *   &quot;password&quot;: &quot;***&quot;,
@@ -733,6 +771,16 @@ public class ListDataSourcesResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.dataSources = model.dataSources;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The data sources.</p>

@@ -40,7 +40,7 @@ public class DsgDesensPlanAddOrUpdateRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -144,6 +144,14 @@ public class DsgDesensPlanAddOrUpdateRequest extends Request {
         public static final class Builder {
             private String desensPlanType; 
             private java.util.Map<String, ?> extParam; 
+
+            private Builder() {
+            } 
+
+            private Builder(DesensPlan model) {
+                this.desensPlanType = model.desensPlanType;
+                this.extParam = model.extParam;
+            } 
 
             /**
              * <p>The masking method configured in the data masking rule. Valid values:</p>
@@ -301,6 +309,20 @@ public class DsgDesensPlanAddOrUpdateRequest extends Request {
             private String ruleName; 
             private java.util.List<Integer> sceneIds; 
             private Integer status; 
+
+            private Builder() {
+            } 
+
+            private Builder(DesensRules model) {
+                this.checkWatermark = model.checkWatermark;
+                this.dataType = model.dataType;
+                this.desensPlan = model.desensPlan;
+                this.id = model.id;
+                this.owner = model.owner;
+                this.ruleName = model.ruleName;
+                this.sceneIds = model.sceneIds;
+                this.status = model.status;
+            } 
 
             /**
              * <p>Specifies whether to add a watermark. Valid values:</p>

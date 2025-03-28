@@ -52,6 +52,10 @@ public class GetMetaTableProducingTasksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class GetMetaTableProducingTasksResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMetaTableProducingTasksResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The output tasks of the metatable.</p>
@@ -214,6 +230,14 @@ public class GetMetaTableProducingTasksResponseBody extends TeaModel {
         public static final class Builder {
             private String taskId; 
             private String taskName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.taskId = model.taskId;
+                this.taskName = model.taskName;
+            } 
 
             /**
              * <p>The ID of the output task.</p>

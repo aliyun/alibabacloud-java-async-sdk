@@ -36,6 +36,10 @@ public class GetNodeTypeListInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nodeTypeInfoList
      */
@@ -53,6 +57,14 @@ public class GetNodeTypeListInfoResponseBody extends TeaModel {
     public static final class Builder {
         private NodeTypeInfoList nodeTypeInfoList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetNodeTypeListInfoResponseBody model) {
+            this.nodeTypeInfoList = model.nodeTypeInfoList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The list of node types.</p>
@@ -122,6 +134,14 @@ public class GetNodeTypeListInfoResponseBody extends TeaModel {
         public static final class Builder {
             private Integer nodeType; 
             private String nodeTypeName; 
+
+            private Builder() {
+            } 
+
+            private Builder(NodeTypeInfo model) {
+                this.nodeType = model.nodeType;
+                this.nodeTypeName = model.nodeTypeName;
+            } 
 
             /**
              * <p>The type of the node, which is specified by a number.</p>
@@ -219,6 +239,16 @@ public class GetNodeTypeListInfoResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(NodeTypeInfoList model) {
+                this.nodeTypeInfo = model.nodeTypeInfo;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The information about a node type.</p>

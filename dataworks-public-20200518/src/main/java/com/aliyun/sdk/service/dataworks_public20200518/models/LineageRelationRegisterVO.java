@@ -44,6 +44,10 @@ public class LineageRelationRegisterVO extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createTimestamp
      */
@@ -77,6 +81,16 @@ public class LineageRelationRegisterVO extends TeaModel {
         private LineageEntityVO destEntity; 
         private RelationshipVO relationship; 
         private LineageEntityVO srcEntity; 
+
+        private Builder() {
+        } 
+
+        private Builder(LineageRelationRegisterVO model) {
+            this.createTimestamp = model.createTimestamp;
+            this.destEntity = model.destEntity;
+            this.relationship = model.relationship;
+            this.srcEntity = model.srcEntity;
+        } 
 
         /**
          * CreateTimestamp.

@@ -52,6 +52,10 @@ public class ListBaselinesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class ListBaselinesResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListBaselinesResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -218,6 +234,14 @@ public class ListBaselinesResponseBody extends TeaModel {
         public static final class Builder {
             private Integer cycle; 
             private String time; 
+
+            private Builder() {
+            } 
+
+            private Builder(OverTimeSettings model) {
+                this.cycle = model.cycle;
+                this.time = model.time;
+            } 
 
             /**
              * <p>The cycle that corresponds to the committed completion time. For a day-level baseline, the value of this parameter is 1. For an hour-level baseline, the value of this parameter cannot exceed 24.</p>
@@ -387,6 +411,22 @@ public class ListBaselinesResponseBody extends TeaModel {
             private String owner; 
             private Integer priority; 
             private Long projectId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Baselines model) {
+                this.alertEnabled = model.alertEnabled;
+                this.alertMarginThreshold = model.alertMarginThreshold;
+                this.baselineId = model.baselineId;
+                this.baselineName = model.baselineName;
+                this.baselineType = model.baselineType;
+                this.enabled = model.enabled;
+                this.overTimeSettings = model.overTimeSettings;
+                this.owner = model.owner;
+                this.priority = model.priority;
+                this.projectId = model.projectId;
+            } 
 
             /**
              * <p>Indicates whether the alerting feature is enabled. Valid values: true and false.</p>
@@ -569,6 +609,16 @@ public class ListBaselinesResponseBody extends TeaModel {
             private String pageNumber; 
             private String pageSize; 
             private String totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.baselines = model.baselines;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The baselines.</p>

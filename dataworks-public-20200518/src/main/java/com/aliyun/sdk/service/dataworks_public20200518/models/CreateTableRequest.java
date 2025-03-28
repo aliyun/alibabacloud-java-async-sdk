@@ -140,7 +140,7 @@ public class CreateTableRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -718,6 +718,19 @@ public class CreateTableRequest extends Request {
             private Integer length; 
             private Integer seqNumber; 
 
+            private Builder() {
+            } 
+
+            private Builder(Columns model) {
+                this.columnName = model.columnName;
+                this.columnNameCn = model.columnNameCn;
+                this.columnType = model.columnType;
+                this.comment = model.comment;
+                this.isPartitionCol = model.isPartitionCol;
+                this.length = model.length;
+                this.seqNumber = model.seqNumber;
+            } 
+
             /**
              * <p>The name of the field. You can configure a maximum of 1,000 fields when you call the CreateTable operation to create a table.</p>
              * <p>This parameter is required.</p>
@@ -848,6 +861,14 @@ public class CreateTableRequest extends Request {
         public static final class Builder {
             private Long themeId; 
             private Integer themeLevel; 
+
+            private Builder() {
+            } 
+
+            private Builder(Themes model) {
+                this.themeId = model.themeId;
+                this.themeLevel = model.themeLevel;
+            } 
 
             /**
              * <p>The theme ID.</p>

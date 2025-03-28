@@ -40,6 +40,10 @@ public class ClusterConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return configValue
      */
@@ -65,6 +69,15 @@ public class ClusterConfig extends TeaModel {
         private String configValue; 
         private Boolean enableOverwrite; 
         private String moduleName; 
+
+        private Builder() {
+        } 
+
+        private Builder(ClusterConfig model) {
+            this.configValue = model.configValue;
+            this.enableOverwrite = model.enableOverwrite;
+            this.moduleName = model.moduleName;
+        } 
 
         /**
          * ConfigValue.

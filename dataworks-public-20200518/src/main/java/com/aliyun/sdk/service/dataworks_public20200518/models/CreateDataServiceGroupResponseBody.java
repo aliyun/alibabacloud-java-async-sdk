@@ -36,6 +36,10 @@ public class CreateDataServiceGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return groupId
      */
@@ -53,6 +57,14 @@ public class CreateDataServiceGroupResponseBody extends TeaModel {
     public static final class Builder {
         private String groupId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateDataServiceGroupResponseBody model) {
+            this.groupId = model.groupId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The business process ID.</p>

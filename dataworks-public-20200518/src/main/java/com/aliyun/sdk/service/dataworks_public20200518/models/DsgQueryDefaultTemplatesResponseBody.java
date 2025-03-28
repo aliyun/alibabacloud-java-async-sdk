@@ -52,6 +52,10 @@ public class DsgQueryDefaultTemplatesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class DsgQueryDefaultTemplatesResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DsgQueryDefaultTemplatesResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -218,6 +234,14 @@ public class DsgQueryDefaultTemplatesResponseBody extends TeaModel {
         public static final class Builder {
             private String dataType; 
             private java.util.Map<String, java.util.List<DataDesensPlanTemplateValue>> desensPlanTemplate; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.dataType = model.dataType;
+                this.desensPlanTemplate = model.desensPlanTemplate;
+            } 
 
             /**
              * <p>The sensitive field type.</p>

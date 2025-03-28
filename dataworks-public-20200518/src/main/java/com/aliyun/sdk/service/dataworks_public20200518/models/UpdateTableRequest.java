@@ -139,7 +139,7 @@ public class UpdateTableRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -702,6 +702,19 @@ public class UpdateTableRequest extends Request {
             private Integer length; 
             private Integer seqNumber; 
 
+            private Builder() {
+            } 
+
+            private Builder(Columns model) {
+                this.columnName = model.columnName;
+                this.columnNameCn = model.columnNameCn;
+                this.columnType = model.columnType;
+                this.comment = model.comment;
+                this.isPartitionCol = model.isPartitionCol;
+                this.length = model.length;
+                this.seqNumber = model.seqNumber;
+            } 
+
             /**
              * <p>The name of the field.</p>
              * <p>This parameter is required.</p>
@@ -832,6 +845,14 @@ public class UpdateTableRequest extends Request {
         public static final class Builder {
             private Long themeId; 
             private Integer themeLevel; 
+
+            private Builder() {
+            } 
+
+            private Builder(Themes model) {
+                this.themeId = model.themeId;
+                this.themeLevel = model.themeLevel;
+            } 
 
             /**
              * <p>The ID of the associated topic.</p>

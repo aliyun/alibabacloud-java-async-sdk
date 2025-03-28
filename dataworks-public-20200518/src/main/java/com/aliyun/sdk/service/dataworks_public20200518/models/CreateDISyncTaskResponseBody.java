@@ -40,6 +40,10 @@ public class CreateDISyncTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -65,6 +69,15 @@ public class CreateDISyncTaskResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateDISyncTaskResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The information that indicates whether the data synchronization task is created.</p>
@@ -157,6 +170,15 @@ public class CreateDISyncTaskResponseBody extends TeaModel {
             private Long fileId; 
             private String message; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.fileId = model.fileId;
+                this.message = model.message;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The ID of the data synchronization task that is created.</p>

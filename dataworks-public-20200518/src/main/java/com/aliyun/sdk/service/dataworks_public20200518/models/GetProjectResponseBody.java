@@ -44,6 +44,10 @@ public class GetProjectResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -77,6 +81,16 @@ public class GetProjectResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetProjectResponseBody model) {
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The information about the workspace.</p>
@@ -172,6 +186,14 @@ public class GetProjectResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -581,6 +603,42 @@ public class GetProjectResponseBody extends TeaModel {
             private java.util.List<Tags> tags; 
             private Long tenantId; 
             private Boolean useProxyOdpsAccount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.appkey = model.appkey;
+                this.baseProject = model.baseProject;
+                this.defaultDiResourceGroupIdentifier = model.defaultDiResourceGroupIdentifier;
+                this.destination = model.destination;
+                this.devStorageQuota = model.devStorageQuota;
+                this.developmentType = model.developmentType;
+                this.disableDevelopment = model.disableDevelopment;
+                this.envTypes = model.envTypes;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.isAllowDownload = model.isAllowDownload;
+                this.isDefault = model.isDefault;
+                this.maxFlowNode = model.maxFlowNode;
+                this.prodStorageQuota = model.prodStorageQuota;
+                this.projectDescription = model.projectDescription;
+                this.projectId = model.projectId;
+                this.projectIdentifier = model.projectIdentifier;
+                this.projectMode = model.projectMode;
+                this.projectName = model.projectName;
+                this.projectOwnerBaseId = model.projectOwnerBaseId;
+                this.protectedMode = model.protectedMode;
+                this.residentArea = model.residentArea;
+                this.resourceManagerResourceGroupId = model.resourceManagerResourceGroupId;
+                this.schedulerMaxRetryTimes = model.schedulerMaxRetryTimes;
+                this.schedulerRetryInterval = model.schedulerRetryInterval;
+                this.status = model.status;
+                this.tablePrivacyMode = model.tablePrivacyMode;
+                this.tags = model.tags;
+                this.tenantId = model.tenantId;
+                this.useProxyOdpsAccount = model.useProxyOdpsAccount;
+            } 
 
             /**
              * <p>This parameter is deprecated.</p>

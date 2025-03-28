@@ -40,6 +40,10 @@ public class TestNetworkConnectionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class TestNetworkConnectionResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private TaskList taskList; 
+
+        private Builder() {
+        } 
+
+        private Builder(TestNetworkConnectionResponseBody model) {
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.taskList = model.taskList;
+        } 
 
         /**
          * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
@@ -149,6 +162,14 @@ public class TestNetworkConnectionResponseBody extends TeaModel {
         public static final class Builder {
             private String connectMessage; 
             private Boolean connectStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(TaskList model) {
+                this.connectMessage = model.connectMessage;
+                this.connectStatus = model.connectStatus;
+            } 
 
             /**
              * <p>The reason why the data source and resource group failed the connectivity test. If data source and the resource group passed the connectivity test, this parameter is left empty.</p>

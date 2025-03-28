@@ -40,6 +40,10 @@ public class GetMigrationSummaryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -65,6 +69,15 @@ public class GetMigrationSummaryResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMigrationSummaryResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The details of the migration task.</p>
@@ -233,6 +246,21 @@ public class GetMigrationSummaryResponseBody extends TeaModel {
             private String opUser; 
             private Long projectId; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.createUser = model.createUser;
+                this.downloadUrl = model.downloadUrl;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.migrationId = model.migrationId;
+                this.name = model.name;
+                this.opUser = model.opUser;
+                this.projectId = model.projectId;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The ID of the user who created the task.</p>

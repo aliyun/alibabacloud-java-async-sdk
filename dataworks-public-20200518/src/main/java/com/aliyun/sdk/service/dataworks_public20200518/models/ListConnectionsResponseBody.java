@@ -44,6 +44,10 @@ public class ListConnectionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -77,6 +81,16 @@ public class ListConnectionsResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListConnectionsResponseBody model) {
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The query results for data sources that are returned on multiple pages.</p>
@@ -360,6 +374,30 @@ public class ListConnectionsResponseBody extends TeaModel {
             private Integer status; 
             private String subType; 
             private Long tenantId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Connections model) {
+                this.bindingCalcEngineId = model.bindingCalcEngineId;
+                this.connectStatus = model.connectStatus;
+                this.connectionType = model.connectionType;
+                this.content = model.content;
+                this.defaultEngine = model.defaultEngine;
+                this.description = model.description;
+                this.envType = model.envType;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.name = model.name;
+                this.operator = model.operator;
+                this.projectId = model.projectId;
+                this.sequence = model.sequence;
+                this.shared = model.shared;
+                this.status = model.status;
+                this.subType = model.subType;
+                this.tenantId = model.tenantId;
+            } 
 
             /**
              * <p>The ID of the compute engine with which the data source is associated.</p>
@@ -857,6 +895,16 @@ public class ListConnectionsResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.connections = model.connections;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The data sources.</p>

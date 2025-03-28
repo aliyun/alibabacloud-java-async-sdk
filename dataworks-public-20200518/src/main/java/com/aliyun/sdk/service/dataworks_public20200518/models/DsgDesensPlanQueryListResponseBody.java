@@ -52,6 +52,10 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -101,6 +105,18 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
         private PageData pageData; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DsgDesensPlanQueryListResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.pageData = model.pageData;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code.</p>
@@ -218,6 +234,14 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
         public static final class Builder {
             private String desensPlanType; 
             private java.util.Map<String, ?> extParam; 
+
+            private Builder() {
+            } 
+
+            private Builder(DesensPlan model) {
+                this.desensPlanType = model.desensPlanType;
+                this.extParam = model.extParam;
+            } 
 
             /**
              * <p>The type of the data masking rule.</p>
@@ -432,6 +456,26 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
             private String sceneCode; 
             private String sceneName; 
             private Integer status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.checkWatermark = model.checkWatermark;
+                this.dataType = model.dataType;
+                this.desenMode = model.desenMode;
+                this.desensPlan = model.desensPlan;
+                this.desensRule = model.desensRule;
+                this.desensWay = model.desensWay;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.owner = model.owner;
+                this.ruleName = model.ruleName;
+                this.sceneCode = model.sceneCode;
+                this.sceneName = model.sceneName;
+                this.status = model.status;
+            } 
 
             /**
              * <p>Indicates whether a watermark is added. Valid values:</p>
@@ -674,6 +718,16 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageData model) {
+                this.data = model.data;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The information about the data masking rule.</p>

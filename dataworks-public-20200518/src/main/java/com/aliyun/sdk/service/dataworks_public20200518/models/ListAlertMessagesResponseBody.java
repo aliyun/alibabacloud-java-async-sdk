@@ -52,6 +52,10 @@ public class ListAlertMessagesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class ListAlertMessagesResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAlertMessagesResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The information about returned alerts.</p>
@@ -251,6 +267,17 @@ public class ListAlertMessagesResponseBody extends TeaModel {
             private Long projectId; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(Instances model) {
+                this.instanceId = model.instanceId;
+                this.nodeId = model.nodeId;
+                this.nodeName = model.nodeName;
+                this.projectId = model.projectId;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The instance ID.</p>
              * 
@@ -380,6 +407,16 @@ public class ListAlertMessagesResponseBody extends TeaModel {
             private String nodeName; 
             private String owner; 
             private Long projectId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Nodes model) {
+                this.nodeId = model.nodeId;
+                this.nodeName = model.nodeName;
+                this.owner = model.owner;
+                this.projectId = model.projectId;
+            } 
 
             /**
              * <p>The node ID.</p>
@@ -535,6 +572,19 @@ public class ListAlertMessagesResponseBody extends TeaModel {
             private Integer inGroupId; 
             private Long projectId; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(SlaAlert model) {
+                this.baselineId = model.baselineId;
+                this.baselineName = model.baselineName;
+                this.baselineOwner = model.baselineOwner;
+                this.bizdate = model.bizdate;
+                this.inGroupId = model.inGroupId;
+                this.projectId = model.projectId;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The baseline ID.</p>
@@ -711,6 +761,18 @@ public class ListAlertMessagesResponseBody extends TeaModel {
             private String topicName; 
             private String topicOwner; 
             private String topicStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(Topics model) {
+                this.instanceId = model.instanceId;
+                this.nodeId = model.nodeId;
+                this.topicId = model.topicId;
+                this.topicName = model.topicName;
+                this.topicOwner = model.topicOwner;
+                this.topicStatus = model.topicStatus;
+            } 
 
             /**
              * <p>The ID of the instance that triggered the event.</p>
@@ -961,6 +1023,25 @@ public class ListAlertMessagesResponseBody extends TeaModel {
             private String source; 
             private java.util.List<Topics> topics; 
 
+            private Builder() {
+            } 
+
+            private Builder(AlertMessages model) {
+                this.alertId = model.alertId;
+                this.alertMessageStatus = model.alertMessageStatus;
+                this.alertMethod = model.alertMethod;
+                this.alertTime = model.alertTime;
+                this.alertUser = model.alertUser;
+                this.content = model.content;
+                this.instances = model.instances;
+                this.nodes = model.nodes;
+                this.remindId = model.remindId;
+                this.remindName = model.remindName;
+                this.slaAlert = model.slaAlert;
+                this.source = model.source;
+                this.topics = model.topics;
+            } 
+
             /**
              * <p>The alert ID.</p>
              * 
@@ -1170,6 +1251,16 @@ public class ListAlertMessagesResponseBody extends TeaModel {
             private String pageNumber; 
             private String pageSize; 
             private String totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.alertMessages = model.alertMessages;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The alerts.</p>

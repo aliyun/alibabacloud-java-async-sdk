@@ -52,6 +52,10 @@ public class GetMigrationProcessResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class GetMigrationProcessResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMigrationProcessResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The progress information of the migration task, including the names of all steps in and status of the migration task.</p>
@@ -214,6 +230,14 @@ public class GetMigrationProcessResponseBody extends TeaModel {
         public static final class Builder {
             private String taskName; 
             private String taskStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.taskName = model.taskName;
+                this.taskStatus = model.taskStatus;
+            } 
 
             /**
              * <p>The name of the step in the migration task.</p>

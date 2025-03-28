@@ -52,6 +52,10 @@ public class GetInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class GetInstanceResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetInstanceResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The details of the instance.</p>
@@ -538,6 +554,41 @@ public class GetInstanceResponseBody extends TeaModel {
             private String status; 
             private Integer taskRerunTime; 
             private String taskType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.baselineId = model.baselineId;
+                this.beginRunningTime = model.beginRunningTime;
+                this.beginWaitResTime = model.beginWaitResTime;
+                this.beginWaitTimeTime = model.beginWaitTimeTime;
+                this.bizdate = model.bizdate;
+                this.businessId = model.businessId;
+                this.connection = model.connection;
+                this.createTime = model.createTime;
+                this.createUser = model.createUser;
+                this.cycTime = model.cycTime;
+                this.dagId = model.dagId;
+                this.dagType = model.dagType;
+                this.dqcDescription = model.dqcDescription;
+                this.dqcType = model.dqcType;
+                this.finishTime = model.finishTime;
+                this.instanceId = model.instanceId;
+                this.modifyTime = model.modifyTime;
+                this.nodeId = model.nodeId;
+                this.nodeName = model.nodeName;
+                this.owner = model.owner;
+                this.paramValues = model.paramValues;
+                this.periodNumber = model.periodNumber;
+                this.priority = model.priority;
+                this.relatedFlowId = model.relatedFlowId;
+                this.repeatInterval = model.repeatInterval;
+                this.repeatability = model.repeatability;
+                this.status = model.status;
+                this.taskRerunTime = model.taskRerunTime;
+                this.taskType = model.taskType;
+            } 
 
             /**
              * <p>The baseline ID.</p>

@@ -36,6 +36,10 @@ public class ListProjectIdsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return projectIds
      */
@@ -53,6 +57,14 @@ public class ListProjectIdsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Long> projectIds; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListProjectIdsResponseBody model) {
+            this.projectIds = model.projectIds;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The IDs of the DataWorks workspaces. The IDs of the workspaces on which the desired Alibaba Cloud account has permissions were returned.</p>

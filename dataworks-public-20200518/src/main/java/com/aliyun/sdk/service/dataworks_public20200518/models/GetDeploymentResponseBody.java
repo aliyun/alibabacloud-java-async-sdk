@@ -52,6 +52,10 @@ public class GetDeploymentResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class GetDeploymentResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDeploymentResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The details of the deployment package.</p>
@@ -226,6 +242,15 @@ public class GetDeploymentResponseBody extends TeaModel {
             private Long fileId; 
             private Long fileVersion; 
             private Integer status; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeployedItems model) {
+                this.fileId = model.fileId;
+                this.fileVersion = model.fileVersion;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The file ID.</p>
@@ -415,6 +440,22 @@ public class GetDeploymentResponseBody extends TeaModel {
             private Integer status; 
             private Integer toEnvironment; 
 
+            private Builder() {
+            } 
+
+            private Builder(Deployment model) {
+                this.checkingStatus = model.checkingStatus;
+                this.createTime = model.createTime;
+                this.creatorId = model.creatorId;
+                this.errorMessage = model.errorMessage;
+                this.executeTime = model.executeTime;
+                this.fromEnvironment = model.fromEnvironment;
+                this.handlerId = model.handlerId;
+                this.name = model.name;
+                this.status = model.status;
+                this.toEnvironment = model.toEnvironment;
+            } 
+
             /**
              * <p>The check status of one or more files in the deployment task. If the value of the ToEnvironment parameter is 1, the files can be deployed to the production environment only when the value of the Status parameter is 1 and the CheckingStatus parameter is empty. Valid values:</p>
              * <ul>
@@ -579,6 +620,14 @@ public class GetDeploymentResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<DeployedItems> deployedItems; 
             private Deployment deployment; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.deployedItems = model.deployedItems;
+                this.deployment = model.deployment;
+            } 
 
             /**
              * <p>The deployed items.</p>

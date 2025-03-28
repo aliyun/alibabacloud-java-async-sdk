@@ -52,6 +52,10 @@ public class GetBaselineResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class GetBaselineResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetBaselineResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -218,6 +234,14 @@ public class GetBaselineResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean atAll; 
             private String webUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(DingRobots model) {
+                this.atAll = model.atAll;
+                this.webUrl = model.webUrl;
+            } 
 
             /**
              * <p>Whether @ everyone.</p>
@@ -412,6 +436,24 @@ public class GetBaselineResponseBody extends TeaModel {
             private java.util.List<String> topicTypes; 
             private java.util.List<String> webhooks; 
 
+            private Builder() {
+            } 
+
+            private Builder(AlertSettings model) {
+                this.alertInterval = model.alertInterval;
+                this.alertMaximum = model.alertMaximum;
+                this.alertMethods = model.alertMethods;
+                this.alertRecipient = model.alertRecipient;
+                this.alertRecipientType = model.alertRecipientType;
+                this.alertType = model.alertType;
+                this.baselineAlertEnabled = model.baselineAlertEnabled;
+                this.dingRobots = model.dingRobots;
+                this.silenceEndTime = model.silenceEndTime;
+                this.silenceStartTime = model.silenceStartTime;
+                this.topicTypes = model.topicTypes;
+                this.webhooks = model.webhooks;
+            } 
+
             /**
              * <p>The event alert interval, in seconds.</p>
              * 
@@ -598,6 +640,14 @@ public class GetBaselineResponseBody extends TeaModel {
         public static final class Builder {
             private Integer cycle; 
             private String time; 
+
+            private Builder() {
+            } 
+
+            private Builder(OverTimeSettings model) {
+                this.cycle = model.cycle;
+                this.time = model.time;
+            } 
 
             /**
              * <p>The period corresponding to the commitment time. The space-based line is 1, and the hourly baseline can be configured for up to 24 cycles.</p>
@@ -791,6 +841,24 @@ public class GetBaselineResponseBody extends TeaModel {
             private String owner; 
             private Integer priority; 
             private Long projectId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.alertEnabled = model.alertEnabled;
+                this.alertMarginThreshold = model.alertMarginThreshold;
+                this.alertSettings = model.alertSettings;
+                this.baselineId = model.baselineId;
+                this.baselineName = model.baselineName;
+                this.baselineType = model.baselineType;
+                this.enabled = model.enabled;
+                this.nodeIds = model.nodeIds;
+                this.overTimeSettings = model.overTimeSettings;
+                this.owner = model.owner;
+                this.priority = model.priority;
+                this.projectId = model.projectId;
+            } 
 
             /**
              * <p>Indicates whether the alerting feature is enabled. Valid values:</p>

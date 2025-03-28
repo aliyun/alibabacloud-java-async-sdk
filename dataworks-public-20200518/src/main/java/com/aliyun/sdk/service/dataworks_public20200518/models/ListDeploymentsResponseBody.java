@@ -36,6 +36,10 @@ public class ListDeploymentsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class ListDeploymentsResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDeploymentsResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -194,6 +206,20 @@ public class ListDeploymentsResponseBody extends TeaModel {
             private Long id; 
             private String name; 
             private Integer status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Deployments model) {
+                this.createTime = model.createTime;
+                this.creator = model.creator;
+                this.errorMessage = model.errorMessage;
+                this.executeTime = model.executeTime;
+                this.executor = model.executor;
+                this.id = model.id;
+                this.name = model.name;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The time when the deployment package was created.</p>
@@ -363,6 +389,16 @@ public class ListDeploymentsResponseBody extends TeaModel {
             private Long pageNumber; 
             private Long pageSize; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.deployments = model.deployments;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The deployment packages.</p>

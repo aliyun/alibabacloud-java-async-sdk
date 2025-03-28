@@ -52,6 +52,10 @@ public class GetQualityRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class GetQualityRuleResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetQualityRuleResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The information about the monitoring rule.</p>
@@ -491,6 +507,37 @@ public class GetQualityRuleResponseBody extends TeaModel {
             private String warningThreshold; 
             private String whereCondition; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.blockType = model.blockType;
+                this.checker = model.checker;
+                this.checkerName = model.checkerName;
+                this.comment = model.comment;
+                this.criticalThreshold = model.criticalThreshold;
+                this.entityId = model.entityId;
+                this.expectValue = model.expectValue;
+                this.fixCheck = model.fixCheck;
+                this.id = model.id;
+                this.methodId = model.methodId;
+                this.methodName = model.methodName;
+                this.onDuty = model.onDuty;
+                this.onDutyAccountName = model.onDutyAccountName;
+                this.openSwitch = model.openSwitch;
+                this.operator = model.operator;
+                this.predictType = model.predictType;
+                this.property = model.property;
+                this.ruleName = model.ruleName;
+                this.ruleType = model.ruleType;
+                this.taskSetting = model.taskSetting;
+                this.templateId = model.templateId;
+                this.templateName = model.templateName;
+                this.trend = model.trend;
+                this.warningThreshold = model.warningThreshold;
+                this.whereCondition = model.whereCondition;
+            } 
+
             /**
              * <p>The strength of the monitoring rule. The strength of a monitoring rule indicates the importance of the rule. Valid values:</p>
              * <ul>
@@ -530,6 +577,9 @@ public class GetQualityRuleResponseBody extends TeaModel {
 
             /**
              * <p>The description of the monitoring rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Verify that the primary key is unique</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -687,6 +737,9 @@ public class GetQualityRuleResponseBody extends TeaModel {
 
             /**
              * <p>The name of the monitoring rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>View table fluctuations</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -705,7 +758,10 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * TaskSetting.
+             * <p>The variable settings inserted before the custom rule. Format: x=a,y=b.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>x=a,y=b</p>
              */
             public Builder taskSetting(String taskSetting) {
                 this.taskSetting = taskSetting;

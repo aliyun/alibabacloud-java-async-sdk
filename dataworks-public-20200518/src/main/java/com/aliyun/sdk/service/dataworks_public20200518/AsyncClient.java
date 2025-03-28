@@ -126,6 +126,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateDIJobResponse> createDIJob(CreateDIJobRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>You cannot configure scheduling properties for a task by calling this operation. If you want to configure scheduling properties for a task, you can call the UpdateFile operation.<a href="~~2780137~~"></a></p>
+     * 
      * @param request the request parameters of CreateDISyncTask  CreateDISyncTaskRequest
      * @return CreateDISyncTaskResponse
      */
@@ -1583,12 +1586,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListTopicsResponse> listTopics(ListTopicsRequest request);
 
     /**
-     * @param request the request parameters of MountDirectory  MountDirectoryRequest
-     * @return MountDirectoryResponse
-     */
-    CompletableFuture<MountDirectoryResponse> mountDirectory(MountDirectoryRequest request);
-
-    /**
      * @param request the request parameters of OfflineNode  OfflineNodeRequest
      * @return OfflineNodeResponse
      */
@@ -1696,12 +1693,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ResumeInstanceResponse
      */
     CompletableFuture<ResumeInstanceResponse> resumeInstance(ResumeInstanceRequest request);
-
-    /**
-     * @param request the request parameters of RevokeColumnPermission  RevokeColumnPermissionRequest
-     * @return RevokeColumnPermissionResponse
-     */
-    CompletableFuture<RevokeColumnPermissionResponse> revokeColumnPermission(RevokeColumnPermissionRequest request);
 
     /**
      * @param request the request parameters of RevokeTablePermission  RevokeTablePermissionRequest
@@ -1866,12 +1857,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return TopTenErrorTimesInstanceResponse
      */
     CompletableFuture<TopTenErrorTimesInstanceResponse> topTenErrorTimesInstance(TopTenErrorTimesInstanceRequest request);
-
-    /**
-     * @param request the request parameters of UmountDirectory  UmountDirectoryRequest
-     * @return UmountDirectoryResponse
-     */
-    CompletableFuture<UmountDirectoryResponse> umountDirectory(UmountDirectoryRequest request);
 
     /**
      * @param request the request parameters of UpdateBaseline  UpdateBaselineRequest

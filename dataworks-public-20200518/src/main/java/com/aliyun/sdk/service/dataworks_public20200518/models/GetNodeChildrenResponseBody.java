@@ -52,6 +52,10 @@ public class GetNodeChildrenResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class GetNodeChildrenResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetNodeChildrenResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The information about the descendant nodes.</p>
@@ -323,6 +339,23 @@ public class GetNodeChildrenResponseBody extends TeaModel {
             private String schedulerType; 
             private String stepType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Nodes model) {
+                this.baselineId = model.baselineId;
+                this.cronExpress = model.cronExpress;
+                this.nodeId = model.nodeId;
+                this.nodeName = model.nodeName;
+                this.ownerId = model.ownerId;
+                this.priority = model.priority;
+                this.programType = model.programType;
+                this.projectId = model.projectId;
+                this.repeatability = model.repeatability;
+                this.schedulerType = model.schedulerType;
+                this.stepType = model.stepType;
+            } 
+
             /**
              * <p>The baseline ID.</p>
              * 
@@ -496,6 +529,13 @@ public class GetNodeChildrenResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Nodes> nodes; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.nodes = model.nodes;
+            } 
 
             /**
              * <p>The descendant nodes.</p>

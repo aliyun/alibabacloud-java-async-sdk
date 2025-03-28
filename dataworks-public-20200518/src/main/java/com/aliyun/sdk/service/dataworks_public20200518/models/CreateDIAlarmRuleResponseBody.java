@@ -36,6 +36,10 @@ public class CreateDIAlarmRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DIAlarmRuleId
      */
@@ -53,6 +57,14 @@ public class CreateDIAlarmRuleResponseBody extends TeaModel {
     public static final class Builder {
         private Long DIAlarmRuleId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateDIAlarmRuleResponseBody model) {
+            this.DIAlarmRuleId = model.DIAlarmRuleId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The alert rule ID.</p>

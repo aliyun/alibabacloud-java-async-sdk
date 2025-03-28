@@ -36,6 +36,10 @@ public class ListManualDagInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instances
      */
@@ -53,6 +57,14 @@ public class ListManualDagInstancesResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Instances> instances; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListManualDagInstancesResponseBody model) {
+            this.instances = model.instances;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The instances in the manually triggered workflow.</p>
@@ -302,6 +314,29 @@ public class ListManualDagInstancesResponseBody extends TeaModel {
             private String paramValues; 
             private String status; 
             private String taskType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Instances model) {
+                this.beginRunningTime = model.beginRunningTime;
+                this.beginWaitResTime = model.beginWaitResTime;
+                this.beginWaitTimeTime = model.beginWaitTimeTime;
+                this.bizDate = model.bizDate;
+                this.createTime = model.createTime;
+                this.createUser = model.createUser;
+                this.cycTime = model.cycTime;
+                this.dagId = model.dagId;
+                this.dagType = model.dagType;
+                this.finishTime = model.finishTime;
+                this.instanceId = model.instanceId;
+                this.modifyTime = model.modifyTime;
+                this.nodeId = model.nodeId;
+                this.nodeName = model.nodeName;
+                this.paramValues = model.paramValues;
+                this.status = model.status;
+                this.taskType = model.taskType;
+            } 
 
             /**
              * <p>The time when the instance started to run.</p>

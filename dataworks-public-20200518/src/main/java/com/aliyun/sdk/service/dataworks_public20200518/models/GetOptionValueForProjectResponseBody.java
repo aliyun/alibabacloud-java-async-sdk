@@ -36,6 +36,10 @@ public class GetOptionValueForProjectResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return optionValue
      */
@@ -53,6 +57,14 @@ public class GetOptionValueForProjectResponseBody extends TeaModel {
     public static final class Builder {
         private String optionValue; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetOptionValueForProjectResponseBody model) {
+            this.optionValue = model.optionValue;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The data returned In the example, cuNumber is a custom key.</p>

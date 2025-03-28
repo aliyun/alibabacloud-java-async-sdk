@@ -32,9 +32,17 @@ public class CreatePermissionApplyOrderRequest extends Request {
     private String applyReason;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApplyType")
+    private String applyType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ApplyUserIds")
     @com.aliyun.core.annotation.Validation(required = true)
     private String applyUserIds;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CatalogName")
+    private String catalogName;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Deadline")
@@ -46,7 +54,6 @@ public class CreatePermissionApplyOrderRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxComputeProjectName")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String maxComputeProjectName;
 
     @com.aliyun.core.annotation.Query
@@ -55,7 +62,7 @@ public class CreatePermissionApplyOrderRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
-    @com.aliyun.core.annotation.Validation(required = true, maximum = 999999)
+    @com.aliyun.core.annotation.Validation(maximum = 999999)
     private Integer workspaceId;
 
     private CreatePermissionApplyOrderRequest(Builder builder) {
@@ -63,7 +70,9 @@ public class CreatePermissionApplyOrderRequest extends Request {
         this.regionId = builder.regionId;
         this.applyObject = builder.applyObject;
         this.applyReason = builder.applyReason;
+        this.applyType = builder.applyType;
         this.applyUserIds = builder.applyUserIds;
+        this.catalogName = builder.catalogName;
         this.deadline = builder.deadline;
         this.engineType = builder.engineType;
         this.maxComputeProjectName = builder.maxComputeProjectName;
@@ -79,7 +88,7 @@ public class CreatePermissionApplyOrderRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -106,10 +115,24 @@ public class CreatePermissionApplyOrderRequest extends Request {
     }
 
     /**
+     * @return applyType
+     */
+    public String getApplyType() {
+        return this.applyType;
+    }
+
+    /**
      * @return applyUserIds
      */
     public String getApplyUserIds() {
         return this.applyUserIds;
+    }
+
+    /**
+     * @return catalogName
+     */
+    public String getCatalogName() {
+        return this.catalogName;
     }
 
     /**
@@ -151,7 +174,9 @@ public class CreatePermissionApplyOrderRequest extends Request {
         private String regionId; 
         private java.util.List<ApplyObject> applyObject; 
         private String applyReason; 
+        private String applyType; 
         private String applyUserIds; 
+        private String catalogName; 
         private Long deadline; 
         private String engineType; 
         private String maxComputeProjectName; 
@@ -167,7 +192,9 @@ public class CreatePermissionApplyOrderRequest extends Request {
             this.regionId = request.regionId;
             this.applyObject = request.applyObject;
             this.applyReason = request.applyReason;
+            this.applyType = request.applyType;
             this.applyUserIds = request.applyUserIds;
+            this.catalogName = request.catalogName;
             this.deadline = request.deadline;
             this.engineType = request.engineType;
             this.maxComputeProjectName = request.maxComputeProjectName;
@@ -208,6 +235,15 @@ public class CreatePermissionApplyOrderRequest extends Request {
         }
 
         /**
+         * ApplyType.
+         */
+        public Builder applyType(String applyType) {
+            this.putQueryParameter("ApplyType", applyType);
+            this.applyType = applyType;
+            return this;
+        }
+
+        /**
          * <p>The ID of the Alibaba Cloud account for which you want to request permissions. If you want to request permissions for multiple Alibaba Cloud accounts, separate the IDs of the accounts with commas (,).</p>
          * <p>This parameter is required.</p>
          * 
@@ -217,6 +253,15 @@ public class CreatePermissionApplyOrderRequest extends Request {
         public Builder applyUserIds(String applyUserIds) {
             this.putQueryParameter("ApplyUserIds", applyUserIds);
             this.applyUserIds = applyUserIds;
+            return this;
+        }
+
+        /**
+         * CatalogName.
+         */
+        public Builder catalogName(String catalogName) {
+            this.putQueryParameter("CatalogName", catalogName);
+            this.catalogName = catalogName;
             return this;
         }
 
@@ -246,7 +291,6 @@ public class CreatePermissionApplyOrderRequest extends Request {
 
         /**
          * <p>The name of the MaxCompute project in which you request permissions on the fields of a table.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>aMaxcomputeProjectName</p>
@@ -271,7 +315,6 @@ public class CreatePermissionApplyOrderRequest extends Request {
 
         /**
          * <p>The ID of the DataWorks workspace that is associated with the MaxCompute project in which you want to request permissions on the fields of a table. You can go to the SettingCenter page in the DataWorks console to view the workspace ID.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>12345</p>
@@ -296,11 +339,15 @@ public class CreatePermissionApplyOrderRequest extends Request {
      * <p>CreatePermissionApplyOrderRequest</p>
      */
     public static class ColumnMetaList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Actions")
+        private String actions;
+
         @com.aliyun.core.annotation.NameInMap("Name")
         @com.aliyun.core.annotation.Validation(required = true)
         private String name;
 
         private ColumnMetaList(Builder builder) {
+            this.actions = builder.actions;
             this.name = builder.name;
         }
 
@@ -313,6 +360,13 @@ public class CreatePermissionApplyOrderRequest extends Request {
         }
 
         /**
+         * @return actions
+         */
+        public String getActions() {
+            return this.actions;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
@@ -320,7 +374,24 @@ public class CreatePermissionApplyOrderRequest extends Request {
         }
 
         public static final class Builder {
+            private String actions; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(ColumnMetaList model) {
+                this.actions = model.actions;
+                this.name = model.name;
+            } 
+
+            /**
+             * Actions.
+             */
+            public Builder actions(String actions) {
+                this.actions = actions;
+                return this;
+            }
 
             /**
              * <p>The field on which you want to request permissions. If you want to request permissions on an entire table, enter all fields in the table. You can request permissions on specific fields of a table in a MaxCompute project only after LabelSecurity is enabled for this project. If LabelSecurity is disabled, you can request permissions only on an entire table.</p>
@@ -349,11 +420,9 @@ public class CreatePermissionApplyOrderRequest extends Request {
      */
     public static class ApplyObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Actions")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String actions;
 
         @com.aliyun.core.annotation.NameInMap("ColumnMetaList")
-        @com.aliyun.core.annotation.Validation(required = true)
         private java.util.List<ColumnMetaList> columnMetaList;
 
         @com.aliyun.core.annotation.NameInMap("Name")
@@ -400,9 +469,17 @@ public class CreatePermissionApplyOrderRequest extends Request {
             private java.util.List<ColumnMetaList> columnMetaList; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(ApplyObject model) {
+                this.actions = model.actions;
+                this.columnMetaList = model.columnMetaList;
+                this.name = model.name;
+            } 
+
             /**
              * <p>The permission that you want to request. If you want to request multiple permissions at the same time, separate them with commas (,). You can request only the following permissions: Select, Describe, Drop, Alter, Update, and Download.</p>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>Select,Describe</p>
@@ -414,7 +491,6 @@ public class CreatePermissionApplyOrderRequest extends Request {
 
             /**
              * <p>The fields on which you want to request permissions.</p>
-             * <p>This parameter is required.</p>
              */
             public Builder columnMetaList(java.util.List<ColumnMetaList> columnMetaList) {
                 this.columnMetaList = columnMetaList;

@@ -36,6 +36,10 @@ public class GetDIJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetDIJobResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDIJobResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the synchronization task.</p>
@@ -123,6 +135,14 @@ public class GetDIJobResponseBody extends TeaModel {
             private String dataSourceName; 
             private java.util.Map<String, String> dataSourceProperties; 
 
+            private Builder() {
+            } 
+
+            private Builder(DestinationDataSourceSettings model) {
+                this.dataSourceName = model.dataSourceName;
+                this.dataSourceProperties = model.dataSourceProperties;
+            } 
+
             /**
              * <p>The name of the data source.</p>
              * 
@@ -192,6 +212,14 @@ public class GetDIJobResponseBody extends TeaModel {
         public static final class Builder {
             private String destinationDataType; 
             private String sourceDataType; 
+
+            private Builder() {
+            } 
+
+            private Builder(ColumnDataTypeSettings model) {
+                this.destinationDataType = model.destinationDataType;
+                this.sourceDataType = model.sourceDataType;
+            } 
 
             /**
              * <p>The data type of a destination field.</p>
@@ -265,6 +293,14 @@ public class GetDIJobResponseBody extends TeaModel {
         public static final class Builder {
             private String cycleMigrationType; 
             private String scheduleParameters; 
+
+            private Builder() {
+            } 
+
+            private Builder(CycleScheduleSettings model) {
+                this.cycleMigrationType = model.cycleMigrationType;
+                this.scheduleParameters = model.scheduleParameters;
+            } 
 
             /**
              * <p>The synchronization type that requires periodic scheduling. Valid values:</p>
@@ -342,6 +378,14 @@ public class GetDIJobResponseBody extends TeaModel {
         public static final class Builder {
             private String action; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(DdlHandlingSettings model) {
+                this.action = model.action;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The processing policy. Valid values:</p>
@@ -429,6 +473,14 @@ public class GetDIJobResponseBody extends TeaModel {
         public static final class Builder {
             private String name; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(RuntimeSettings model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The name of the configuration item. Valid values:</p>
@@ -549,6 +601,17 @@ public class GetDIJobResponseBody extends TeaModel {
             private java.util.List<DdlHandlingSettings> ddlHandlingSettings; 
             private java.util.List<RuntimeSettings> runtimeSettings; 
 
+            private Builder() {
+            } 
+
+            private Builder(JobSettings model) {
+                this.channelSettings = model.channelSettings;
+                this.columnDataTypeSettings = model.columnDataTypeSettings;
+                this.cycleScheduleSettings = model.cycleScheduleSettings;
+                this.ddlHandlingSettings = model.ddlHandlingSettings;
+                this.runtimeSettings = model.runtimeSettings;
+            } 
+
             /**
              * <p>The channel control settings for the synchronization task. The value of this parameter is a JSON string.</p>
              * 
@@ -631,6 +694,13 @@ public class GetDIJobResponseBody extends TeaModel {
         public static final class Builder {
             private String resourceGroupIdentifier; 
 
+            private Builder() {
+            } 
+
+            private Builder(OfflineResourceSettings model) {
+                this.resourceGroupIdentifier = model.resourceGroupIdentifier;
+            } 
+
             /**
              * <p>The identifier of the resource group for Data Integration used for batch synchronization.</p>
              * 
@@ -680,6 +750,13 @@ public class GetDIJobResponseBody extends TeaModel {
 
         public static final class Builder {
             private String resourceGroupIdentifier; 
+
+            private Builder() {
+            } 
+
+            private Builder(RealtimeResourceSettings model) {
+                this.resourceGroupIdentifier = model.resourceGroupIdentifier;
+            } 
 
             /**
              * <p>The identifier of the resource group for Data Integration used for real-time synchronization.</p>
@@ -754,6 +831,15 @@ public class GetDIJobResponseBody extends TeaModel {
             private OfflineResourceSettings offlineResourceSettings; 
             private RealtimeResourceSettings realtimeResourceSettings; 
             private Float requestedCu; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceSettings model) {
+                this.offlineResourceSettings = model.offlineResourceSettings;
+                this.realtimeResourceSettings = model.realtimeResourceSettings;
+                this.requestedCu = model.requestedCu;
+            } 
 
             /**
              * <p>The resource used for batch synchronization.</p>
@@ -833,6 +919,14 @@ public class GetDIJobResponseBody extends TeaModel {
             private String dataSourceName; 
             private java.util.Map<String, String> dataSourceProperties; 
 
+            private Builder() {
+            } 
+
+            private Builder(SourceDataSourceSettings model) {
+                this.dataSourceName = model.dataSourceName;
+                this.dataSourceProperties = model.dataSourceProperties;
+            } 
+
             /**
              * <p>The name of the data source.</p>
              * 
@@ -902,6 +996,14 @@ public class GetDIJobResponseBody extends TeaModel {
         public static final class Builder {
             private String expression; 
             private String objectType; 
+
+            private Builder() {
+            } 
+
+            private Builder(SourceObjectSelectionRules model) {
+                this.expression = model.expression;
+                this.objectType = model.objectType;
+            } 
 
             /**
              * <p>The expression.</p>
@@ -991,6 +1093,15 @@ public class GetDIJobResponseBody extends TeaModel {
             private String ruleActionType; 
             private String ruleName; 
             private String ruleTargetType; 
+
+            private Builder() {
+            } 
+
+            private Builder(TransformationRules model) {
+                this.ruleActionType = model.ruleActionType;
+                this.ruleName = model.ruleName;
+                this.ruleTargetType = model.ruleTargetType;
+            } 
 
             /**
              * <p>The action type. Valid values:</p>
@@ -1090,6 +1201,14 @@ public class GetDIJobResponseBody extends TeaModel {
             private java.util.List<SourceObjectSelectionRules> sourceObjectSelectionRules; 
             private java.util.List<TransformationRules> transformationRules; 
 
+            private Builder() {
+            } 
+
+            private Builder(TableMappings model) {
+                this.sourceObjectSelectionRules = model.sourceObjectSelectionRules;
+                this.transformationRules = model.transformationRules;
+            } 
+
             /**
              * <p>The list of rules used to select synchronization objects in the source.</p>
              */
@@ -1180,6 +1299,16 @@ public class GetDIJobResponseBody extends TeaModel {
             private String ruleExpression; 
             private String ruleName; 
             private String ruleTargetType; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataTransformationRules model) {
+                this.ruleActionType = model.ruleActionType;
+                this.ruleExpression = model.ruleExpression;
+                this.ruleName = model.ruleName;
+                this.ruleTargetType = model.ruleTargetType;
+            } 
 
             /**
              * <p>The action type. Valid values:</p>
@@ -1578,6 +1707,34 @@ public class GetDIJobResponseBody extends TeaModel {
             private java.util.List<DataTransformationRules> transformationRules; 
             private Long updatedTime; 
             private String updatedUid; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.createdTime = model.createdTime;
+                this.createdUid = model.createdUid;
+                this.DIJobId = model.DIJobId;
+                this.description = model.description;
+                this.destinationDataSourceSettings = model.destinationDataSourceSettings;
+                this.destinationDataSourceType = model.destinationDataSourceType;
+                this.errorMessage = model.errorMessage;
+                this.jobName = model.jobName;
+                this.jobSettings = model.jobSettings;
+                this.jobStatus = model.jobStatus;
+                this.migrationType = model.migrationType;
+                this.projectId = model.projectId;
+                this.resourceSettings = model.resourceSettings;
+                this.runStats = model.runStats;
+                this.sourceDataSourceSettings = model.sourceDataSourceSettings;
+                this.sourceDataSourceType = model.sourceDataSourceType;
+                this.startedTime = model.startedTime;
+                this.startedUid = model.startedUid;
+                this.tableMappings = model.tableMappings;
+                this.transformationRules = model.transformationRules;
+                this.updatedTime = model.updatedTime;
+                this.updatedUid = model.updatedUid;
+            } 
 
             /**
              * <p>The timestamp when the synchronization task was created. The timestamp is accurate to the second.</p>

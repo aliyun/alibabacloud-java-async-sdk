@@ -36,6 +36,10 @@ public class GetDataServiceApiTestResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetDataServiceApiTestResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDataServiceApiTestResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Return object</p>
@@ -194,6 +206,20 @@ public class GetDataServiceApiTestResponseBody extends TeaModel {
             private Long retCode; 
             private String retResult; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.apiId = model.apiId;
+                this.costTime = model.costTime;
+                this.debugInfo = model.debugInfo;
+                this.nodesDebugInfo = model.nodesDebugInfo;
+                this.paramMap = model.paramMap;
+                this.retCode = model.retCode;
+                this.retResult = model.retResult;
+                this.status = model.status;
+            } 
 
             /**
              * <p>Test API Id</p>

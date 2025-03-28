@@ -363,6 +363,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You cannot configure scheduling properties for a task by calling this operation. If you want to configure scheduling properties for a task, you can call the UpdateFile operation.<a href="~~2780137~~"></a></p>
+     * 
      * @param request the request parameters of CreateDISyncTask  CreateDISyncTaskRequest
      * @return CreateDISyncTaskResponse
      */
@@ -4460,24 +4463,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of MountDirectory  MountDirectoryRequest
-     * @return MountDirectoryResponse
-     */
-    @Override
-    public CompletableFuture<MountDirectoryResponse> mountDirectory(MountDirectoryRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("MountDirectory").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(MountDirectoryResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<MountDirectoryResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
      * @param request the request parameters of OfflineNode  OfflineNodeRequest
      * @return OfflineNodeResponse
      */
@@ -4773,24 +4758,6 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ResumeInstanceResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-     * @param request the request parameters of RevokeColumnPermission  RevokeColumnPermissionRequest
-     * @return RevokeColumnPermissionResponse
-     */
-    @Override
-    public CompletableFuture<RevokeColumnPermissionResponse> revokeColumnPermission(RevokeColumnPermissionRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RevokeColumnPermission").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RevokeColumnPermissionResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<RevokeColumnPermissionResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -5267,24 +5234,6 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<TopTenErrorTimesInstanceResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-     * @param request the request parameters of UmountDirectory  UmountDirectoryRequest
-     * @return UmountDirectoryResponse
-     */
-    @Override
-    public CompletableFuture<UmountDirectoryResponse> umountDirectory(UmountDirectoryRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UmountDirectory").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UmountDirectoryResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<UmountDirectoryResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

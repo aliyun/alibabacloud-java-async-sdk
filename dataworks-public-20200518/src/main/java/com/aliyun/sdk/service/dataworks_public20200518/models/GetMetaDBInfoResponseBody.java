@@ -36,6 +36,10 @@ public class GetMetaDBInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetMetaDBInfoResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMetaDBInfoResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The basic metadata information.</p>
@@ -290,6 +302,28 @@ public class GetMetaDBInfoResponseBody extends TeaModel {
             private String projectNameCn; 
             private Long tenantId; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.appGuid = model.appGuid;
+                this.clusterBizId = model.clusterBizId;
+                this.comment = model.comment;
+                this.createTime = model.createTime;
+                this.endpoint = model.endpoint;
+                this.envType = model.envType;
+                this.location = model.location;
+                this.modifyTime = model.modifyTime;
+                this.name = model.name;
+                this.ownerId = model.ownerId;
+                this.ownerName = model.ownerName;
+                this.projectId = model.projectId;
+                this.projectName = model.projectName;
+                this.projectNameCn = model.projectNameCn;
+                this.tenantId = model.tenantId;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The compute engine instance ID. Specify the ID in the <code>Engine type.Engine name</code> format.</p>

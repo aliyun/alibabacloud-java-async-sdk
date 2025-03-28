@@ -36,6 +36,10 @@ public class DesensitizeDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return desensitizeData
      */
@@ -53,6 +57,14 @@ public class DesensitizeDataResponseBody extends TeaModel {
     public static final class Builder {
         private String desensitizeData; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DesensitizeDataResponseBody model) {
+            this.desensitizeData = model.desensitizeData;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The data returned after masking.</p>

@@ -40,6 +40,10 @@ public class ListRefDISyncTasksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -65,6 +69,15 @@ public class ListRefDISyncTasksResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListRefDISyncTasksResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The returned result.</p>
@@ -186,6 +199,17 @@ public class ListRefDISyncTasksResponseBody extends TeaModel {
             private String nodeName; 
             private String taskType; 
 
+            private Builder() {
+            } 
+
+            private Builder(DISyncTasks model) {
+                this.diDestinationDatasource = model.diDestinationDatasource;
+                this.diSourceDatasource = model.diSourceDatasource;
+                this.nodeId = model.nodeId;
+                this.nodeName = model.nodeName;
+                this.taskType = model.taskType;
+            } 
+
             /**
              * <p>The destination of the synchronization task. If the synchronization task has multiple destinations, the return value is a JSON array, such as \&quot;odps_writer\&quot;, \&quot;mysql\&quot;. If the RefType parameter is set to to, the synchronization tasks that use the specified data source as the destination are returned. In this case, the value of this parameter indicates the specified data source.</p>
              * 
@@ -283,6 +307,13 @@ public class ListRefDISyncTasksResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DISyncTasks> DISyncTasks; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.DISyncTasks = model.DISyncTasks;
+            } 
 
             /**
              * <p>The details of the synchronization tasks. In most cases, a data source is used by multiple synchronization tasks. Therefore, the value of this parameter is an array. The following parameters are the elements in the array. The sample values of these parameters show the details of a synchronization task.</p>

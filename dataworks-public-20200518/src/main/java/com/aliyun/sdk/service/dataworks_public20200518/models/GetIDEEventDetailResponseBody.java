@@ -36,6 +36,10 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return eventDetail
      */
@@ -53,6 +57,14 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
     public static final class Builder {
         private EventDetail eventDetail; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetIDEEventDetailResponseBody model) {
+            this.eventDetail = model.eventDetail;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The data snapshot that is generated when an extension point event is triggered.</p>
@@ -172,6 +184,18 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             private String owner; 
             private Long parentFileId; 
 
+            private Builder() {
+            } 
+
+            private Builder(FilePropertyContent model) {
+                this.businessId = model.businessId;
+                this.currentVersion = model.currentVersion;
+                this.dataSourceName = model.dataSourceName;
+                this.folderId = model.folderId;
+                this.owner = model.owner;
+                this.parentFileId = model.parentFileId;
+            } 
+
             /**
              * <p>The ID of the workflow to which the file belongs.</p>
              * 
@@ -289,6 +313,14 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             private String input; 
             private String parseType; 
 
+            private Builder() {
+            } 
+
+            private Builder(InputList model) {
+                this.input = model.input;
+                this.parseType = model.parseType;
+            } 
+
             /**
              * <p>The output name of the parent file on which the current file depends.</p>
              * <p>This parameter corresponds to the Output Name of Ancestor Node parameter under Parent Nodes in the Dependencies section of the Properties tab in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
@@ -366,6 +398,14 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
         public static final class Builder {
             private String output; 
             private String refTableName; 
+
+            private Builder() {
+            } 
+
+            private Builder(OutputList model) {
+                this.output = model.output;
+                this.refTableName = model.refTableName;
+            } 
 
             /**
              * <p>The output name of the current file.</p>
@@ -561,6 +601,24 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             private String rerunMode; 
             private Long resourceGroupId; 
             private String schedulerType; 
+
+            private Builder() {
+            } 
+
+            private Builder(NodeConfiguration model) {
+                this.autoRerunIntervalMillis = model.autoRerunIntervalMillis;
+                this.autoRerunTimes = model.autoRerunTimes;
+                this.cronExpress = model.cronExpress;
+                this.cycleType = model.cycleType;
+                this.dependentNodeIdList = model.dependentNodeIdList;
+                this.dependentType = model.dependentType;
+                this.inputList = model.inputList;
+                this.outputList = model.outputList;
+                this.paraValue = model.paraValue;
+                this.rerunMode = model.rerunMode;
+                this.resourceGroupId = model.resourceGroupId;
+                this.schedulerType = model.schedulerType;
+            } 
 
             /**
              * <p>The interval at which the node corresponding to the file is rerun. Unit: milliseconds.</p>
@@ -869,6 +927,23 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             private Long nodeId; 
             private String useType; 
 
+            private Builder() {
+            } 
+
+            private Builder(CommittedFile model) {
+                this.changeType = model.changeType;
+                this.comment = model.comment;
+                this.committor = model.committor;
+                this.content = model.content;
+                this.fileId = model.fileId;
+                this.fileName = model.fileName;
+                this.filePropertyContent = model.filePropertyContent;
+                this.fileType = model.fileType;
+                this.nodeConfiguration = model.nodeConfiguration;
+                this.nodeId = model.nodeId;
+                this.useType = model.useType;
+            } 
+
             /**
              * <p>The type of the change to the file of the current version. Valid values: CREATE, UPDATE, and DELETE.</p>
              * 
@@ -1163,6 +1238,24 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             private Long parentFileId; 
             private String useType; 
 
+            private Builder() {
+            } 
+
+            private Builder(DeletedFile model) {
+                this.businessId = model.businessId;
+                this.content = model.content;
+                this.currentVersion = model.currentVersion;
+                this.dataSourceName = model.dataSourceName;
+                this.fileId = model.fileId;
+                this.fileName = model.fileName;
+                this.fileType = model.fileType;
+                this.folderId = model.folderId;
+                this.nodeId = model.nodeId;
+                this.owner = model.owner;
+                this.parentFileId = model.parentFileId;
+                this.useType = model.useType;
+            } 
+
             /**
              * <p>The ID of the workflow to which the file belongs.</p>
              * 
@@ -1378,6 +1471,16 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             private Long fileId; 
             private Long fileType; 
 
+            private Builder() {
+            } 
+
+            private Builder(FileExecutionCommand model) {
+                this.content = model.content;
+                this.dataSourceName = model.dataSourceName;
+                this.fileId = model.fileId;
+                this.fileType = model.fileType;
+            } 
+
             /**
              * <p>The code in the file of the current version.</p>
              * 
@@ -1496,6 +1599,16 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             private String columnType; 
             private String comment; 
             private Boolean isPartitionColumn; 
+
+            private Builder() {
+            } 
+
+            private Builder(Columns model) {
+                this.columnName = model.columnName;
+                this.columnType = model.columnType;
+                this.comment = model.comment;
+                this.isPartitionColumn = model.isPartitionColumn;
+            } 
 
             /**
              * <p>The name of the column.</p>
@@ -1656,6 +1769,19 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             private String location; 
             private String tableName; 
 
+            private Builder() {
+            } 
+
+            private Builder(TableModel model) {
+                this.columns = model.columns;
+                this.comment = model.comment;
+                this.dataSourceName = model.dataSourceName;
+                this.env = model.env;
+                this.lifeCycle = model.lifeCycle;
+                this.location = model.location;
+                this.tableName = model.tableName;
+            } 
+
             /**
              * <p>The columns in the table.</p>
              */
@@ -1808,6 +1934,16 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             private DeletedFile deletedFile; 
             private FileExecutionCommand fileExecutionCommand; 
             private TableModel tableModel; 
+
+            private Builder() {
+            } 
+
+            private Builder(EventDetail model) {
+                this.committedFile = model.committedFile;
+                this.deletedFile = model.deletedFile;
+                this.fileExecutionCommand = model.fileExecutionCommand;
+                this.tableModel = model.tableModel;
+            } 
 
             /**
              * <p>The data snapshot when the file is committed and deployed.</p>

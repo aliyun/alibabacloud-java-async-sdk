@@ -36,6 +36,10 @@ public class GetMetaDBTableListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetMetaDBTableListResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMetaDBTableListResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The metatable information in a compute engine instance.</p>
@@ -134,6 +146,15 @@ public class GetMetaDBTableListResponseBody extends TeaModel {
             private String databaseName; 
             private String tableGuid; 
             private String tableName; 
+
+            private Builder() {
+            } 
+
+            private Builder(TableEntityList model) {
+                this.databaseName = model.databaseName;
+                this.tableGuid = model.tableGuid;
+                this.tableName = model.tableName;
+            } 
 
             /**
              * <p>The name of the metadatabase.</p>
@@ -242,6 +263,16 @@ public class GetMetaDBTableListResponseBody extends TeaModel {
             private Integer pageSize; 
             private java.util.List<TableEntityList> tableEntityList; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.tableEntityList = model.tableEntityList;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The page number.</p>

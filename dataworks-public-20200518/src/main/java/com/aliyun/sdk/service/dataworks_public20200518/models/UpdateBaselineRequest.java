@@ -101,7 +101,7 @@ public class UpdateBaselineRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -456,6 +456,14 @@ public class UpdateBaselineRequest extends Request {
             private Boolean atAll; 
             private String webUrl; 
 
+            private Builder() {
+            } 
+
+            private Builder(DingRobots model) {
+                this.atAll = model.atAll;
+                this.webUrl = model.webUrl;
+            } 
+
             /**
              * <p>Specifies whether to remind all members by using the at sign (@). Valid values: true and false.</p>
              * 
@@ -651,6 +659,24 @@ public class UpdateBaselineRequest extends Request {
             private java.util.List<String> topicTypes; 
             private java.util.List<String> webhooks; 
 
+            private Builder() {
+            } 
+
+            private Builder(AlertSettings model) {
+                this.alertInterval = model.alertInterval;
+                this.alertMaximum = model.alertMaximum;
+                this.alertMethods = model.alertMethods;
+                this.alertRecipient = model.alertRecipient;
+                this.alertRecipientType = model.alertRecipientType;
+                this.alertType = model.alertType;
+                this.baselineAlertEnabled = model.baselineAlertEnabled;
+                this.dingRobots = model.dingRobots;
+                this.silenceEndTime = model.silenceEndTime;
+                this.silenceStartTime = model.silenceStartTime;
+                this.topicTypes = model.topicTypes;
+                this.webhooks = model.webhooks;
+            } 
+
             /**
              * <p>The interval at which an event alert notification is sent. Unit: minutes. Minimum value: 5. Maximum value: 1,440.</p>
              * 
@@ -822,8 +848,16 @@ public class UpdateBaselineRequest extends Request {
             private Integer cycle; 
             private String time; 
 
+            private Builder() {
+            } 
+
+            private Builder(OvertimeSettings model) {
+                this.cycle = model.cycle;
+                this.time = model.time;
+            } 
+
             /**
-             * <p>The cycle that corresponds to the committed completion time. For a day-level baseline, set this parameter to 1. For an hour-level baseline, set this parameter to a value that does not exceed 24.</p>
+             * <p>The cycle that corresponds to the committed completion time. For a day-level baseline, set this parameter to 1. For an hour-level baseline, set this parameter to a value that is no more than 24.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

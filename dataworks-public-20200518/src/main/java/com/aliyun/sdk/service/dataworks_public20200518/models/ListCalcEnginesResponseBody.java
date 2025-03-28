@@ -44,6 +44,10 @@ public class ListCalcEnginesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -77,6 +81,16 @@ public class ListCalcEnginesResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListCalcEnginesResponseBody model) {
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The query results for compute engines that are returned on multiple pages.</p>
@@ -304,6 +318,25 @@ public class ListCalcEnginesResponseBody extends TeaModel {
             private String region; 
             private String taskAuthType; 
             private Long tenantId; 
+
+            private Builder() {
+            } 
+
+            private Builder(CalcEngines model) {
+                this.bindingProjectId = model.bindingProjectId;
+                this.bindingProjectName = model.bindingProjectName;
+                this.calcEngineType = model.calcEngineType;
+                this.dwRegion = model.dwRegion;
+                this.engineId = model.engineId;
+                this.engineInfo = model.engineInfo;
+                this.envType = model.envType;
+                this.gmtCreate = model.gmtCreate;
+                this.isDefault = model.isDefault;
+                this.name = model.name;
+                this.region = model.region;
+                this.taskAuthType = model.taskAuthType;
+                this.tenantId = model.tenantId;
+            } 
 
             /**
              * <p>The ID of the workspace with which the compute engine is associated.</p>
@@ -644,6 +677,16 @@ public class ListCalcEnginesResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.calcEngines = model.calcEngines;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The compute engines.</p>

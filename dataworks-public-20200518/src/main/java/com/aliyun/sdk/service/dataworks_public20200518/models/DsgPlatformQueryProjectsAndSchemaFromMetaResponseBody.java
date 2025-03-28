@@ -52,6 +52,10 @@ public class DsgPlatformQueryProjectsAndSchemaFromMetaResponseBody extends TeaMo
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class DsgPlatformQueryProjectsAndSchemaFromMetaResponseBody extends TeaMo
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DsgPlatformQueryProjectsAndSchemaFromMetaResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -218,6 +234,14 @@ public class DsgPlatformQueryProjectsAndSchemaFromMetaResponseBody extends TeaMo
         public static final class Builder {
             private String clusterId; 
             private String project; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.clusterId = model.clusterId;
+                this.project = model.project;
+            } 
 
             /**
              * <p>The ID of the EMR cluster. This parameter is generated only when the request parameter EngineName is set to EMR.</p>

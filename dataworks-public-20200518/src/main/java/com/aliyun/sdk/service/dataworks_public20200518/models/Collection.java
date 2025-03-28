@@ -64,6 +64,10 @@ public class Collection extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return collectionType
      */
@@ -137,6 +141,21 @@ public class Collection extends TeaModel {
         private String ownerName; 
         private String qualifiedName; 
         private Long updateTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(Collection model) {
+            this.collectionType = model.collectionType;
+            this.comment = model.comment;
+            this.createTime = model.createTime;
+            this.level = model.level;
+            this.name = model.name;
+            this.ownerId = model.ownerId;
+            this.ownerName = model.ownerName;
+            this.qualifiedName = model.qualifiedName;
+            this.updateTime = model.updateTime;
+        } 
 
         /**
          * CollectionType.

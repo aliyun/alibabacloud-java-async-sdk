@@ -52,6 +52,10 @@ public class ListInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class ListInstancesResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListInstancesResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The ID of the node. You can call the <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> operation to query the ID of the node.</p>
@@ -527,6 +543,40 @@ public class ListInstancesResponseBody extends TeaModel {
             private String status; 
             private Integer taskRerunTime; 
             private String taskType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Instances model) {
+                this.baselineId = model.baselineId;
+                this.beginRunningTime = model.beginRunningTime;
+                this.beginWaitResTime = model.beginWaitResTime;
+                this.beginWaitTimeTime = model.beginWaitTimeTime;
+                this.bizdate = model.bizdate;
+                this.businessId = model.businessId;
+                this.connection = model.connection;
+                this.createTime = model.createTime;
+                this.createUser = model.createUser;
+                this.cycTime = model.cycTime;
+                this.dagId = model.dagId;
+                this.dagType = model.dagType;
+                this.dqcDescription = model.dqcDescription;
+                this.dqcType = model.dqcType;
+                this.errorMessage = model.errorMessage;
+                this.finishTime = model.finishTime;
+                this.instanceId = model.instanceId;
+                this.modifyTime = model.modifyTime;
+                this.nodeId = model.nodeId;
+                this.nodeName = model.nodeName;
+                this.paramValues = model.paramValues;
+                this.priority = model.priority;
+                this.relatedFlowId = model.relatedFlowId;
+                this.repeatInterval = model.repeatInterval;
+                this.repeatability = model.repeatability;
+                this.status = model.status;
+                this.taskRerunTime = model.taskRerunTime;
+                this.taskType = model.taskType;
+            } 
 
             /**
              * <p>The type of the workflow. Valid values:</p>
@@ -959,6 +1009,16 @@ public class ListInstancesResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.instances = model.instances;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The name of the node. You can call the <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> operation to query the name of the node.</p>

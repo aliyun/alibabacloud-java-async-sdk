@@ -36,6 +36,10 @@ public class DeleteTableLevelResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return deleteResult
      */
@@ -53,6 +57,14 @@ public class DeleteTableLevelResponseBody extends TeaModel {
     public static final class Builder {
         private Boolean deleteResult; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteTableLevelResponseBody model) {
+            this.deleteResult = model.deleteResult;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Indicates whether the table level was deleted.</p>

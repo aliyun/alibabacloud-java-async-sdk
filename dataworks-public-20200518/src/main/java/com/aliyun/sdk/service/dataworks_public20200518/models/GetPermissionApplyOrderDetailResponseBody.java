@@ -36,6 +36,10 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return applyOrderDetail
      */
@@ -53,6 +57,14 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
     public static final class Builder {
         private ApplyOrderDetail applyOrderDetail; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetPermissionApplyOrderDetailResponseBody model) {
+            this.applyOrderDetail = model.applyOrderDetail;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of the permission request order.</p>
@@ -111,6 +123,13 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
         public static final class Builder {
             private String baseId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ApproveAccountList model) {
+                this.baseId = model.baseId;
+            } 
+
             /**
              * <p>The ID of the Alibaba Cloud account that is used to process the permission request order.</p>
              * 
@@ -136,6 +155,9 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
      * <p>GetPermissionApplyOrderDetailResponseBody</p>
      */
     public static class ColumnMetaList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ColumnActions")
+        private java.util.List<String> columnActions;
+
         @com.aliyun.core.annotation.NameInMap("ColumnComment")
         private String columnComment;
 
@@ -146,6 +168,7 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
         private String securityLevel;
 
         private ColumnMetaList(Builder builder) {
+            this.columnActions = builder.columnActions;
             this.columnComment = builder.columnComment;
             this.columnName = builder.columnName;
             this.securityLevel = builder.securityLevel;
@@ -157,6 +180,13 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
 
         public static ColumnMetaList create() {
             return builder().build();
+        }
+
+        /**
+         * @return columnActions
+         */
+        public java.util.List<String> getColumnActions() {
+            return this.columnActions;
         }
 
         /**
@@ -181,9 +211,28 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List<String> columnActions; 
             private String columnComment; 
             private String columnName; 
             private String securityLevel; 
+
+            private Builder() {
+            } 
+
+            private Builder(ColumnMetaList model) {
+                this.columnActions = model.columnActions;
+                this.columnComment = model.columnComment;
+                this.columnName = model.columnName;
+                this.securityLevel = model.securityLevel;
+            } 
+
+            /**
+             * ColumnActions.
+             */
+            public Builder columnActions(java.util.List<String> columnActions) {
+                this.columnActions = columnActions;
+                return this;
+            }
 
             /**
              * <p>The description of the column on which you request permissions.</p>
@@ -232,6 +281,9 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
      * <p>GetPermissionApplyOrderDetailResponseBody</p>
      */
     public static class ObjectMetaList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Actions")
+        private java.util.List<String> actions;
+
         @com.aliyun.core.annotation.NameInMap("ColumnMetaList")
         private java.util.List<ColumnMetaList> columnMetaList;
 
@@ -239,6 +291,7 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
         private String objectName;
 
         private ObjectMetaList(Builder builder) {
+            this.actions = builder.actions;
             this.columnMetaList = builder.columnMetaList;
             this.objectName = builder.objectName;
         }
@@ -249,6 +302,13 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
 
         public static ObjectMetaList create() {
             return builder().build();
+        }
+
+        /**
+         * @return actions
+         */
+        public java.util.List<String> getActions() {
+            return this.actions;
         }
 
         /**
@@ -266,8 +326,26 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List<String> actions; 
             private java.util.List<ColumnMetaList> columnMetaList; 
             private String objectName; 
+
+            private Builder() {
+            } 
+
+            private Builder(ObjectMetaList model) {
+                this.actions = model.actions;
+                this.columnMetaList = model.columnMetaList;
+                this.objectName = model.objectName;
+            } 
+
+            /**
+             * Actions.
+             */
+            public Builder actions(java.util.List<String> actions) {
+                this.actions = actions;
+                return this;
+            }
 
             /**
              * <p>The information about the column fields in the object on which you request permissions.</p>
@@ -350,6 +428,15 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
             private String maxComputeProjectName; 
             private java.util.List<ObjectMetaList> objectMetaList; 
             private Integer workspaceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProjectMeta model) {
+                this.maxComputeProjectName = model.maxComputeProjectName;
+                this.objectMetaList = model.objectMetaList;
+                this.workspaceId = model.workspaceId;
+            } 
 
             /**
              * <p>The MaxCompute project to which the object on which you request permissions belongs.</p>
@@ -455,6 +542,16 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
             private Long deadline; 
             private Integer orderType; 
             private ProjectMeta projectMeta; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApproveContent model) {
+                this.applyReason = model.applyReason;
+                this.deadline = model.deadline;
+                this.orderType = model.orderType;
+                this.projectMeta = model.projectMeta;
+            } 
 
             /**
              * <p>The reason of the permission request. The administrator processes the request based on the reason.</p>
@@ -571,6 +668,16 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
             private String granteeName; 
             private Integer granteeType; 
             private Integer granteeTypeSub; 
+
+            private Builder() {
+            } 
+
+            private Builder(GranteeObjectList model) {
+                this.granteeId = model.granteeId;
+                this.granteeName = model.granteeName;
+                this.granteeType = model.granteeType;
+                this.granteeTypeSub = model.granteeTypeSub;
+            } 
 
             /**
              * <p>The ID of the account that is used to request permissions.</p>
@@ -735,6 +842,19 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
             private String flowId; 
             private Integer flowStatus; 
             private java.util.List<GranteeObjectList> granteeObjectList; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApplyOrderDetail model) {
+                this.applyBaseId = model.applyBaseId;
+                this.applyTimestamp = model.applyTimestamp;
+                this.approveAccountList = model.approveAccountList;
+                this.approveContent = model.approveContent;
+                this.flowId = model.flowId;
+                this.flowStatus = model.flowStatus;
+                this.granteeObjectList = model.granteeObjectList;
+            } 
 
             /**
              * <p>The ID of the Alibaba Cloud account that was used to submit the permission request order.</p>

@@ -52,6 +52,10 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMetaTableFullInfoResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The business data.</p>
@@ -298,6 +314,21 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
             private Boolean isPartitionColumn; 
             private Boolean isPrimaryKey; 
             private Integer position; 
+
+            private Builder() {
+            } 
+
+            private Builder(ColumnList model) {
+                this.caption = model.caption;
+                this.columnGuid = model.columnGuid;
+                this.columnName = model.columnName;
+                this.columnType = model.columnType;
+                this.comment = model.comment;
+                this.isForeignKey = model.isForeignKey;
+                this.isPartitionColumn = model.isPartitionColumn;
+                this.isPrimaryKey = model.isPrimaryKey;
+                this.position = model.position;
+            } 
 
             /**
              * <p>The description of the field.</p>
@@ -700,6 +731,34 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
             private String tableName; 
             private Long tenantId; 
             private Long totalColumnCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.clusterId = model.clusterId;
+                this.columnList = model.columnList;
+                this.comment = model.comment;
+                this.createTime = model.createTime;
+                this.dataSize = model.dataSize;
+                this.databaseName = model.databaseName;
+                this.envType = model.envType;
+                this.isVisible = model.isVisible;
+                this.lastAccessTime = model.lastAccessTime;
+                this.lastDdlTime = model.lastDdlTime;
+                this.lastModifyTime = model.lastModifyTime;
+                this.lifeCycle = model.lifeCycle;
+                this.location = model.location;
+                this.ownerId = model.ownerId;
+                this.partitionKeys = model.partitionKeys;
+                this.projectId = model.projectId;
+                this.projectName = model.projectName;
+                this.schema = model.schema;
+                this.tableGuid = model.tableGuid;
+                this.tableName = model.tableName;
+                this.tenantId = model.tenantId;
+                this.totalColumnCount = model.totalColumnCount;
+            } 
 
             /**
              * <p>The EMR cluster ID.</p>

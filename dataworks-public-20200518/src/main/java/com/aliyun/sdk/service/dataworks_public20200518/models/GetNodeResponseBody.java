@@ -52,6 +52,10 @@ public class GetNodeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class GetNodeResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetNodeResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The details of the node.</p>
@@ -514,6 +530,39 @@ public class GetNodeResponseBody extends TeaModel {
             private String resGroupIdentifier; 
             private String resGroupName; 
             private String schedulerType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.baselineId = model.baselineId;
+                this.businessId = model.businessId;
+                this.connection = model.connection;
+                this.createTime = model.createTime;
+                this.cronExpress = model.cronExpress;
+                this.deployDate = model.deployDate;
+                this.description = model.description;
+                this.dqcDescription = model.dqcDescription;
+                this.dqcType = model.dqcType;
+                this.fileId = model.fileId;
+                this.fileType = model.fileType;
+                this.fileVersion = model.fileVersion;
+                this.modifyTime = model.modifyTime;
+                this.nodeId = model.nodeId;
+                this.nodeName = model.nodeName;
+                this.ownerId = model.ownerId;
+                this.paramValues = model.paramValues;
+                this.priority = model.priority;
+                this.programType = model.programType;
+                this.projectId = model.projectId;
+                this.relatedFlowId = model.relatedFlowId;
+                this.repeatInterval = model.repeatInterval;
+                this.repeatMode = model.repeatMode;
+                this.repeatability = model.repeatability;
+                this.resGroupIdentifier = model.resGroupIdentifier;
+                this.resGroupName = model.resGroupName;
+                this.schedulerType = model.schedulerType;
+            } 
 
             /**
              * <p>The description of the node.</p>

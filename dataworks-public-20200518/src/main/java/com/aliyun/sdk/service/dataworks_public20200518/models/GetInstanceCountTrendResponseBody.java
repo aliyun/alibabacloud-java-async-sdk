@@ -36,6 +36,10 @@ public class GetInstanceCountTrendResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceCounts
      */
@@ -53,6 +57,14 @@ public class GetInstanceCountTrendResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<InstanceCounts> instanceCounts; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetInstanceCountTrendResponseBody model) {
+            this.instanceCounts = model.instanceCounts;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The quantity trend of instances.</p>
@@ -122,6 +134,14 @@ public class GetInstanceCountTrendResponseBody extends TeaModel {
         public static final class Builder {
             private Integer count; 
             private Long date; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceCounts model) {
+                this.count = model.count;
+                this.date = model.date;
+            } 
 
             /**
              * <p>The number of instances.</p>

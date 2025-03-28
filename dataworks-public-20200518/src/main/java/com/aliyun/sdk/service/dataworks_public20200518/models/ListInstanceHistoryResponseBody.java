@@ -40,6 +40,10 @@ public class ListInstanceHistoryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instances
      */
@@ -65,6 +69,15 @@ public class ListInstanceHistoryResponseBody extends TeaModel {
         private java.util.List<Instances> instances; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListInstanceHistoryResponseBody model) {
+            this.instances = model.instances;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The instances.</p>
@@ -329,6 +342,29 @@ public class ListInstanceHistoryResponseBody extends TeaModel {
             private String nodeName; 
             private String status; 
             private String taskType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Instances model) {
+                this.beginRunningTime = model.beginRunningTime;
+                this.beginWaitResTime = model.beginWaitResTime;
+                this.beginWaitTimeTime = model.beginWaitTimeTime;
+                this.bizdate = model.bizdate;
+                this.createTime = model.createTime;
+                this.cycTime = model.cycTime;
+                this.dagId = model.dagId;
+                this.dagType = model.dagType;
+                this.errorMessage = model.errorMessage;
+                this.finishTime = model.finishTime;
+                this.instanceHistoryId = model.instanceHistoryId;
+                this.instanceId = model.instanceId;
+                this.modifyTime = model.modifyTime;
+                this.nodeId = model.nodeId;
+                this.nodeName = model.nodeName;
+                this.status = model.status;
+                this.taskType = model.taskType;
+            } 
 
             /**
              * <p>The time when the instance started to be run. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>

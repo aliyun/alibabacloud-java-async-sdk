@@ -52,6 +52,10 @@ public class ListTableLevelResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -101,6 +105,18 @@ public class ListTableLevelResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private TableLevelInfo tableLevelInfo; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTableLevelResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.tableLevelInfo = model.tableLevelInfo;
+        } 
 
         /**
          * <p>The error code.</p>
@@ -251,6 +267,17 @@ public class ListTableLevelResponseBody extends TeaModel {
             private String name; 
             private Long projectId; 
 
+            private Builder() {
+            } 
+
+            private Builder(LevelList model) {
+                this.description = model.description;
+                this.levelId = model.levelId;
+                this.levelType = model.levelType;
+                this.name = model.name;
+                this.projectId = model.projectId;
+            } 
+
             /**
              * <p>The description of the table level.</p>
              * 
@@ -356,6 +383,14 @@ public class ListTableLevelResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<LevelList> levelList; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(TableLevelInfo model) {
+                this.levelList = model.levelList;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The list of table levels.</p>

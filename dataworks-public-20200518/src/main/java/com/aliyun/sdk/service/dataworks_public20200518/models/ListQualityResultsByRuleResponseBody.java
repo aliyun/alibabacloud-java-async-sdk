@@ -52,6 +52,10 @@ public class ListQualityResultsByRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class ListQualityResultsByRuleResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListQualityResultsByRuleResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The data structure of the monitoring results returned.</p>
@@ -251,6 +267,17 @@ public class ListQualityResultsByRuleResponseBody extends TeaModel {
             private Float threshold; 
             private Float value; 
 
+            private Builder() {
+            } 
+
+            private Builder(ReferenceValue model) {
+                this.bizDate = model.bizDate;
+                this.discreteProperty = model.discreteProperty;
+                this.singleCheckResult = model.singleCheckResult;
+                this.threshold = model.threshold;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The data timestamp. If the monitored business entity is offline data, the value is usually one day before the monitoring is performed.</p>
              * 
@@ -368,6 +395,15 @@ public class ListQualityResultsByRuleResponseBody extends TeaModel {
             private String bizDate; 
             private String discreteProperty; 
             private Float value; 
+
+            private Builder() {
+            } 
+
+            private Builder(SampleValue model) {
+                this.bizDate = model.bizDate;
+                this.discreteProperty = model.discreteProperty;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The data timestamp. If the monitored business entity is offline data, the value is usually one day before the monitoring is performed.</p>
@@ -933,6 +969,54 @@ public class ListQualityResultsByRuleResponseBody extends TeaModel {
             private Float warningThreshold; 
             private String whereCondition; 
 
+            private Builder() {
+            } 
+
+            private Builder(RuleChecks model) {
+                this.actualExpression = model.actualExpression;
+                this.beginTime = model.beginTime;
+                this.bizDate = model.bizDate;
+                this.blockType = model.blockType;
+                this.checkResult = model.checkResult;
+                this.checkResultStatus = model.checkResultStatus;
+                this.checkerId = model.checkerId;
+                this.checkerName = model.checkerName;
+                this.checkerType = model.checkerType;
+                this.comment = model.comment;
+                this.criticalThreshold = model.criticalThreshold;
+                this.dateType = model.dateType;
+                this.discreteCheck = model.discreteCheck;
+                this.endTime = model.endTime;
+                this.entityId = model.entityId;
+                this.expectValue = model.expectValue;
+                this.externalId = model.externalId;
+                this.externalType = model.externalType;
+                this.fixedCheck = model.fixedCheck;
+                this.id = model.id;
+                this.isPrediction = model.isPrediction;
+                this.lowerValue = model.lowerValue;
+                this.matchExpression = model.matchExpression;
+                this.methodName = model.methodName;
+                this.op = model.op;
+                this.open = model.open;
+                this.projectName = model.projectName;
+                this.property = model.property;
+                this.referenceValue = model.referenceValue;
+                this.resultString = model.resultString;
+                this.ruleId = model.ruleId;
+                this.ruleName = model.ruleName;
+                this.sampleValue = model.sampleValue;
+                this.tableName = model.tableName;
+                this.taskId = model.taskId;
+                this.templateId = model.templateId;
+                this.templateName = model.templateName;
+                this.timeCost = model.timeCost;
+                this.trend = model.trend;
+                this.upperValue = model.upperValue;
+                this.warningThreshold = model.warningThreshold;
+                this.whereCondition = model.whereCondition;
+            } 
+
             /**
              * <p>The partition in the monitored data source table.</p>
              * 
@@ -1480,6 +1564,16 @@ public class ListQualityResultsByRuleResponseBody extends TeaModel {
             private Integer pageSize; 
             private java.util.List<RuleChecks> ruleChecks; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.ruleChecks = model.ruleChecks;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The page number.</p>

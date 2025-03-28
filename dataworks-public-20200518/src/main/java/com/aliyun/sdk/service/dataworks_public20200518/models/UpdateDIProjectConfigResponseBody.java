@@ -40,6 +40,10 @@ public class UpdateDIProjectConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -65,6 +69,15 @@ public class UpdateDIProjectConfigResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateDIProjectConfigResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The information about the modification.</p>
@@ -137,6 +150,13 @@ public class UpdateDIProjectConfigResponseBody extends TeaModel {
 
         public static final class Builder {
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.status = model.status;
+            } 
 
             /**
              * <p>Indicates whether the default global configuration of synchronization solutions is modified. Valid values:</p>

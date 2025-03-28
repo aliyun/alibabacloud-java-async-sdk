@@ -36,6 +36,10 @@ public class ApprovePermissionApplyOrderResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return approveSuccess
      */
@@ -53,6 +57,14 @@ public class ApprovePermissionApplyOrderResponseBody extends TeaModel {
     public static final class Builder {
         private Boolean approveSuccess; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ApprovePermissionApplyOrderResponseBody model) {
+            this.approveSuccess = model.approveSuccess;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Indicates whether the permission request order is processed.</p>

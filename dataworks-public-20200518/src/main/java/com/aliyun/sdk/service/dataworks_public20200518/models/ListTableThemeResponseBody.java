@@ -52,6 +52,10 @@ public class ListTableThemeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class ListTableThemeResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTableThemeResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The returned result.</p>
@@ -275,6 +291,19 @@ public class ListTableThemeResponseBody extends TeaModel {
             private Long projectId; 
             private Long themeId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ThemeList model) {
+                this.createTimeStamp = model.createTimeStamp;
+                this.creator = model.creator;
+                this.level = model.level;
+                this.name = model.name;
+                this.parentId = model.parentId;
+                this.projectId = model.projectId;
+                this.themeId = model.themeId;
+            } 
+
             /**
              * <p>The time when the table level was created.</p>
              * 
@@ -402,6 +431,14 @@ public class ListTableThemeResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<ThemeList> themeList; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.themeList = model.themeList;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The list of table levels.</p>

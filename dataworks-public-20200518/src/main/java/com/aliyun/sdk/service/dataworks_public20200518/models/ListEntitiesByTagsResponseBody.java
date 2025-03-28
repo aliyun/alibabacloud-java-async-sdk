@@ -52,6 +52,10 @@ public class ListEntitiesByTagsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class ListEntitiesByTagsResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListEntitiesByTagsResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -215,6 +231,14 @@ public class ListEntitiesByTagsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Entity> entityList; 
             private String nextToken; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.entityList = model.entityList;
+                this.nextToken = model.nextToken;
+            } 
 
             /**
              * <p>The entities.</p>

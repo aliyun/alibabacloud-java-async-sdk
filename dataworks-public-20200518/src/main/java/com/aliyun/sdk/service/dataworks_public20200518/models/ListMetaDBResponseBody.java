@@ -36,6 +36,10 @@ public class ListMetaDBResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return databaseInfo
      */
@@ -53,6 +57,14 @@ public class ListMetaDBResponseBody extends TeaModel {
     public static final class Builder {
         private DatabaseInfo databaseInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListMetaDBResponseBody model) {
+            this.databaseInfo = model.databaseInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the metadatabases.</p>
@@ -183,6 +195,19 @@ public class ListMetaDBResponseBody extends TeaModel {
             private String type; 
             private String UUID; 
 
+            private Builder() {
+            } 
+
+            private Builder(DbList model) {
+                this.createTimeStamp = model.createTimeStamp;
+                this.location = model.location;
+                this.modifiedTimeStamp = model.modifiedTimeStamp;
+                this.name = model.name;
+                this.ownerId = model.ownerId;
+                this.type = model.type;
+                this.UUID = model.UUID;
+            } 
+
             /**
              * <p>The timestamp at which the metadatabase was created. You can convert the timestamp to the date based on the time zone that you use.</p>
              * 
@@ -310,6 +335,14 @@ public class ListMetaDBResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<DbList> dbList; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(DatabaseInfo model) {
+                this.dbList = model.dbList;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The metadatabases.</p>

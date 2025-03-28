@@ -36,6 +36,10 @@ public class GetDataServiceGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return group
      */
@@ -53,6 +57,14 @@ public class GetDataServiceGroupResponseBody extends TeaModel {
     public static final class Builder {
         private Group group; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDataServiceGroupResponseBody model) {
+            this.group = model.group;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of the business process.</p>
@@ -206,6 +218,21 @@ public class GetDataServiceGroupResponseBody extends TeaModel {
             private String modifiedTime; 
             private Long projectId; 
             private Long tenantId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Group model) {
+                this.apiGatewayGroupId = model.apiGatewayGroupId;
+                this.createdTime = model.createdTime;
+                this.creatorId = model.creatorId;
+                this.description = model.description;
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+                this.modifiedTime = model.modifiedTime;
+                this.projectId = model.projectId;
+                this.tenantId = model.tenantId;
+            } 
 
             /**
              * <p>The ID of the API group that is associated with the business process in the API Gateway console.</p>

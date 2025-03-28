@@ -52,6 +52,10 @@ public class GetMetaColumnLineageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class GetMetaColumnLineageResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMetaColumnLineageResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The business data.</p>
@@ -251,6 +267,17 @@ public class GetMetaColumnLineageResponseBody extends TeaModel {
             private String databaseName; 
             private String tableName; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataEntityList model) {
+                this.clusterId = model.clusterId;
+                this.columnGuid = model.columnGuid;
+                this.columnName = model.columnName;
+                this.databaseName = model.databaseName;
+                this.tableName = model.tableName;
+            } 
+
             /**
              * <p>The EMR cluster ID.</p>
              * 
@@ -380,6 +407,16 @@ public class GetMetaColumnLineageResponseBody extends TeaModel {
             private Integer pageNum; 
             private Integer pageSize; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.dataEntityList = model.dataEntityList;
+                this.pageNum = model.pageNum;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The returned result.</p>

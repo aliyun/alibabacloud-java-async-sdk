@@ -40,7 +40,7 @@ public class DsgUserGroupAddOrUpdateRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -195,6 +195,18 @@ public class DsgUserGroupAddOrUpdateRequest extends Request {
             private String owner; 
             private String projectName; 
             private Integer userGroupType; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserGroups model) {
+                this.accounts = model.accounts;
+                this.id = model.id;
+                this.name = model.name;
+                this.owner = model.owner;
+                this.projectName = model.projectName;
+                this.userGroupType = model.userGroupType;
+            } 
 
             /**
              * <p>The users in the group.</p>

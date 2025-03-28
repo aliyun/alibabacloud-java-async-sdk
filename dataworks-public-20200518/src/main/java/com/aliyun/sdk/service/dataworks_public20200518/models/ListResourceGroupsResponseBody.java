@@ -44,6 +44,10 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -77,6 +81,16 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListResourceGroupsResponseBody model) {
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The resource groups.</p>
@@ -168,6 +182,14 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -421,6 +443,29 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             private java.util.List<Tags> tags; 
             private Long tenantId; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.bizExtKey = model.bizExtKey;
+                this.cluster = model.cluster;
+                this.createTime = model.createTime;
+                this.enableKp = model.enableKp;
+                this.id = model.id;
+                this.identifier = model.identifier;
+                this.isDefault = model.isDefault;
+                this.mode = model.mode;
+                this.name = model.name;
+                this.resourceGroupType = model.resourceGroupType;
+                this.resourceManagerResourceGroupId = model.resourceManagerResourceGroupId;
+                this.sequence = model.sequence;
+                this.specs = model.specs;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.tenantId = model.tenantId;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The category of the resource group. Valid values:</p>

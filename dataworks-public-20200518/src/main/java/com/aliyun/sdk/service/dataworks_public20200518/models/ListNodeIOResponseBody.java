@@ -52,6 +52,10 @@ public class ListNodeIOResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class ListNodeIOResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListNodeIOResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The node information.</p>
@@ -226,6 +242,15 @@ public class ListNodeIOResponseBody extends TeaModel {
             private String data; 
             private Long nodeId; 
             private String tableName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.data = model.data;
+                this.nodeId = model.nodeId;
+                this.tableName = model.tableName;
+            } 
 
             /**
              * <p>The name of the ancestor or descendant node.</p>

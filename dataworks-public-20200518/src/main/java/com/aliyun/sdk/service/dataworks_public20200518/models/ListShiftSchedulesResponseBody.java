@@ -36,6 +36,10 @@ public class ListShiftSchedulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return paging
      */
@@ -54,8 +58,16 @@ public class ListShiftSchedulesResponseBody extends TeaModel {
         private Paging paging; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListShiftSchedulesResponseBody model) {
+            this.paging = model.paging;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>The pagination data.</p>
+         * <p>The pagination information.</p>
          */
         public Builder paging(Paging paging) {
             this.paging = paging;
@@ -122,6 +134,14 @@ public class ListShiftSchedulesResponseBody extends TeaModel {
         public static final class Builder {
             private String shiftScheduleIdentifier; 
             private String shiftScheduleName; 
+
+            private Builder() {
+            } 
+
+            private Builder(ShiftSchedules model) {
+                this.shiftScheduleIdentifier = model.shiftScheduleIdentifier;
+                this.shiftScheduleName = model.shiftScheduleName;
+            } 
 
             /**
              * <p>The unique identifier of the shift schedule. You can use the identifier to query the on-duty engineers in the shift schedule.</p>
@@ -219,6 +239,16 @@ public class ListShiftSchedulesResponseBody extends TeaModel {
             private Integer pageSize; 
             private java.util.List<ShiftSchedules> shiftSchedules; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Paging model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.shiftSchedules = model.shiftSchedules;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The page number. Minimum value: 1. Maximum value: 100.</p>

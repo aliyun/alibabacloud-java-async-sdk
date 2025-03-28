@@ -40,7 +40,7 @@ public class DsgWhiteListAddOrUpdateRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -182,6 +182,17 @@ public class DsgWhiteListAddOrUpdateRequest extends Request {
             private Integer ruleId; 
             private String startTime; 
             private java.util.List<Integer> userGroupIds; 
+
+            private Builder() {
+            } 
+
+            private Builder(WhiteLists model) {
+                this.endTime = model.endTime;
+                this.id = model.id;
+                this.ruleId = model.ruleId;
+                this.startTime = model.startTime;
+                this.userGroupIds = model.userGroupIds;
+            } 
 
             /**
              * <p>The end of the time range to query. If you enter null, the whitelist is valid permanently.</p>

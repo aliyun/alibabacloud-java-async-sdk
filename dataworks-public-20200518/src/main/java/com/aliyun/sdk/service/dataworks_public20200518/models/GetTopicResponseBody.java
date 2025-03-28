@@ -52,6 +52,10 @@ public class GetTopicResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class GetTopicResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTopicResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The details of the event.</p>
@@ -466,6 +482,35 @@ public class GetTopicResponseBody extends TeaModel {
             private String topicName; 
             private String topicStatus; 
             private String topicType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.addTime = model.addTime;
+                this.alertTime = model.alertTime;
+                this.assigner = model.assigner;
+                this.baselineBuffer = model.baselineBuffer;
+                this.baselineId = model.baselineId;
+                this.baselineInGroupId = model.baselineInGroupId;
+                this.baselineName = model.baselineName;
+                this.baselineStatus = model.baselineStatus;
+                this.buffer = model.buffer;
+                this.dealTime = model.dealTime;
+                this.dealUser = model.dealUser;
+                this.fixTime = model.fixTime;
+                this.happenTime = model.happenTime;
+                this.instanceId = model.instanceId;
+                this.nextAlertTime = model.nextAlertTime;
+                this.nodeId = model.nodeId;
+                this.nodeName = model.nodeName;
+                this.owner = model.owner;
+                this.projectId = model.projectId;
+                this.topicId = model.topicId;
+                this.topicName = model.topicName;
+                this.topicStatus = model.topicStatus;
+                this.topicType = model.topicType;
+            } 
 
             /**
              * <p>The timestamp when the event was found.</p>

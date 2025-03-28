@@ -22,12 +22,19 @@ public class ListPermissionApplyOrdersRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApplyType")
+    private String applyType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CatalogName")
+    private String catalogName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndTime")
     private Long endTime;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EngineType")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String engineType;
 
     @com.aliyun.core.annotation.Query
@@ -40,7 +47,7 @@ public class ListPermissionApplyOrdersRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OrderType")
-    @com.aliyun.core.annotation.Validation(required = true, maximum = 1, minimum = 1)
+    @com.aliyun.core.annotation.Validation(maximum = 1, minimum = 1)
     private Integer orderType;
 
     @com.aliyun.core.annotation.Query
@@ -53,7 +60,7 @@ public class ListPermissionApplyOrdersRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("QueryType")
-    @com.aliyun.core.annotation.Validation(required = true, maximum = 1)
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 2)
     private Integer queryType;
 
     @com.aliyun.core.annotation.Query
@@ -71,6 +78,8 @@ public class ListPermissionApplyOrdersRequest extends Request {
     private ListPermissionApplyOrdersRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.applyType = builder.applyType;
+        this.catalogName = builder.catalogName;
         this.endTime = builder.endTime;
         this.engineType = builder.engineType;
         this.flowStatus = builder.flowStatus;
@@ -92,7 +101,7 @@ public class ListPermissionApplyOrdersRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -102,6 +111,20 @@ public class ListPermissionApplyOrdersRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return applyType
+     */
+    public String getApplyType() {
+        return this.applyType;
+    }
+
+    /**
+     * @return catalogName
+     */
+    public String getCatalogName() {
+        return this.catalogName;
     }
 
     /**
@@ -183,6 +206,8 @@ public class ListPermissionApplyOrdersRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListPermissionApplyOrdersRequest, Builder> {
         private String regionId; 
+        private String applyType; 
+        private String catalogName; 
         private Long endTime; 
         private String engineType; 
         private Integer flowStatus; 
@@ -202,6 +227,8 @@ public class ListPermissionApplyOrdersRequest extends Request {
         private Builder(ListPermissionApplyOrdersRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.applyType = request.applyType;
+            this.catalogName = request.catalogName;
             this.endTime = request.endTime;
             this.engineType = request.engineType;
             this.flowStatus = request.flowStatus;
@@ -229,6 +256,24 @@ public class ListPermissionApplyOrdersRequest extends Request {
         }
 
         /**
+         * ApplyType.
+         */
+        public Builder applyType(String applyType) {
+            this.putQueryParameter("ApplyType", applyType);
+            this.applyType = applyType;
+            return this;
+        }
+
+        /**
+         * CatalogName.
+         */
+        public Builder catalogName(String catalogName) {
+            this.putQueryParameter("CatalogName", catalogName);
+            this.catalogName = catalogName;
+            return this;
+        }
+
+        /**
          * <p>The end of the time range to query. You can query all the permissions request orders that have been submitted before the time. The parameter value is a UNIX timestamp. If you do not specify the parameter, all permission request orders that are submitted before the current time are queried.</p>
          * 
          * <strong>example:</strong>
@@ -242,7 +287,6 @@ public class ListPermissionApplyOrdersRequest extends Request {
 
         /**
          * <p>The type of the compute engine with which the permission request order is associated. The parameter value is odps and cannot be changed. This value indicates that you can request permissions only on fields of tables in the MaxCompute compute engine.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>odps</p>
@@ -294,7 +338,6 @@ public class ListPermissionApplyOrdersRequest extends Request {
 
         /**
          * <p>The type of the permission request order. The parameter value is 1 and cannot be changed. This value indicates ACL-based authorization.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

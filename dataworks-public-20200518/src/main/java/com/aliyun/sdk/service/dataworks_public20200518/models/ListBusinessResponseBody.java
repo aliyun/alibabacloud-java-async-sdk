@@ -52,6 +52,10 @@ public class ListBusinessResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class ListBusinessResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListBusinessResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The information about the workflows returned.</p>
@@ -263,6 +279,18 @@ public class ListBusinessResponseBody extends TeaModel {
             private Long projectId; 
             private String useType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Business model) {
+                this.businessId = model.businessId;
+                this.businessName = model.businessName;
+                this.description = model.description;
+                this.owner = model.owner;
+                this.projectId = model.projectId;
+                this.useType = model.useType;
+            } 
+
             /**
              * <p>The ID of the workflow.</p>
              * 
@@ -403,6 +431,16 @@ public class ListBusinessResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.business = model.business;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The details of the workflow.</p>

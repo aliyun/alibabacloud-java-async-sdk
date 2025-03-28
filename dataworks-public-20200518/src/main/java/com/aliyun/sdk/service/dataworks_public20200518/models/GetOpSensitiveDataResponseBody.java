@@ -36,6 +36,10 @@ public class GetOpSensitiveDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return opSensitiveData
      */
@@ -53,6 +57,14 @@ public class GetOpSensitiveDataResponseBody extends TeaModel {
     public static final class Builder {
         private String opSensitiveData; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetOpSensitiveDataResponseBody model) {
+            this.opSensitiveData = model.opSensitiveData;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the access records of the sensitive data. The information includes totalCount and opRiskDatas. opRiskDatas includes the following parameters:</p>

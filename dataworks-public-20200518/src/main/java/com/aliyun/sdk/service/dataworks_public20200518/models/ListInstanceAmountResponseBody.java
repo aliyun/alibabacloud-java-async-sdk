@@ -36,6 +36,10 @@ public class ListInstanceAmountResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceCounts
      */
@@ -53,6 +57,14 @@ public class ListInstanceAmountResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<InstanceCounts> instanceCounts; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListInstanceAmountResponseBody model) {
+            this.instanceCounts = model.instanceCounts;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The trend of the number of auto triggered node instances within the specified period of time.</p>
@@ -122,6 +134,14 @@ public class ListInstanceAmountResponseBody extends TeaModel {
         public static final class Builder {
             private Integer count; 
             private Long date; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceCounts model) {
+                this.count = model.count;
+                this.date = model.date;
+            } 
 
             /**
              * <p>The number of auto triggered node instances.</p>

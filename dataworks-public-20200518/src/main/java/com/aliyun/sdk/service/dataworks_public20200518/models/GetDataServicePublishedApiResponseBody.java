@@ -52,6 +52,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDataServicePublishedApiResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The latest information about the API in the published state.</p>
@@ -226,6 +242,15 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             private String errorCode; 
             private String errorMessage; 
             private String errorSolution; 
+
+            private Builder() {
+            } 
+
+            private Builder(RegistrationErrorCodes model) {
+                this.errorCode = model.errorCode;
+                this.errorMessage = model.errorMessage;
+                this.errorSolution = model.errorSolution;
+            } 
 
             /**
              * <p>The error code.</p>
@@ -382,6 +407,20 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             private String parameterName; 
             private Integer parameterOperator; 
             private Integer parameterPosition; 
+
+            private Builder() {
+            } 
+
+            private Builder(RegistrationRequestParameters model) {
+                this.defaultValue = model.defaultValue;
+                this.exampleValue = model.exampleValue;
+                this.isRequiredParameter = model.isRequiredParameter;
+                this.parameterDataType = model.parameterDataType;
+                this.parameterDescription = model.parameterDescription;
+                this.parameterName = model.parameterName;
+                this.parameterOperator = model.parameterOperator;
+                this.parameterPosition = model.parameterPosition;
+            } 
 
             /**
              * <p>The default value.</p>
@@ -608,6 +647,20 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             private String serviceRequestBodyDescription; 
             private String successfulResultSample; 
 
+            private Builder() {
+            } 
+
+            private Builder(RegistrationDetails model) {
+                this.failedResultSample = model.failedResultSample;
+                this.registrationErrorCodes = model.registrationErrorCodes;
+                this.registrationRequestParameters = model.registrationRequestParameters;
+                this.serviceContentType = model.serviceContentType;
+                this.serviceHost = model.serviceHost;
+                this.servicePath = model.servicePath;
+                this.serviceRequestBodyDescription = model.serviceRequestBodyDescription;
+                this.successfulResultSample = model.successfulResultSample;
+            } 
+
             /**
              * <p>The sample error response of the API.</p>
              * 
@@ -741,6 +794,14 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             private Long connectionId; 
             private String tableName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ScriptConnection model) {
+                this.connectionId = model.connectionId;
+                this.tableName = model.tableName;
+            } 
+
             /**
              * <p>The ID of the data source.</p>
              * 
@@ -825,6 +886,15 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             private String errorCode; 
             private String errorMessage; 
             private String errorSolution; 
+
+            private Builder() {
+            } 
+
+            private Builder(ScriptErrorCodes model) {
+                this.errorCode = model.errorCode;
+                this.errorMessage = model.errorMessage;
+                this.errorSolution = model.errorSolution;
+            } 
 
             /**
              * <p>The error code.</p>
@@ -981,6 +1051,20 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             private String parameterName; 
             private Integer parameterOperator; 
             private Integer parameterPosition; 
+
+            private Builder() {
+            } 
+
+            private Builder(ScriptRequestParameters model) {
+                this.defaultValue = model.defaultValue;
+                this.exampleValue = model.exampleValue;
+                this.isRequiredParameter = model.isRequiredParameter;
+                this.parameterDataType = model.parameterDataType;
+                this.parameterDescription = model.parameterDescription;
+                this.parameterName = model.parameterName;
+                this.parameterOperator = model.parameterOperator;
+                this.parameterPosition = model.parameterPosition;
+            } 
 
             /**
              * <p>The default value.</p>
@@ -1173,6 +1257,16 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             private String parameterDescription; 
             private String parameterName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ScriptResponseParameters model) {
+                this.exampleValue = model.exampleValue;
+                this.parameterDataType = model.parameterDataType;
+                this.parameterDescription = model.parameterDescription;
+                this.parameterName = model.parameterName;
+            } 
+
             /**
              * <p>The sample value.</p>
              * 
@@ -1354,6 +1448,20 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             private java.util.List<ScriptResponseParameters> scriptResponseParameters; 
             private String successfulResultSample; 
 
+            private Builder() {
+            } 
+
+            private Builder(ScriptDetails model) {
+                this.failedResultSample = model.failedResultSample;
+                this.isPagedResponse = model.isPagedResponse;
+                this.script = model.script;
+                this.scriptConnection = model.scriptConnection;
+                this.scriptErrorCodes = model.scriptErrorCodes;
+                this.scriptRequestParameters = model.scriptRequestParameters;
+                this.scriptResponseParameters = model.scriptResponseParameters;
+                this.successfulResultSample = model.successfulResultSample;
+            } 
+
             /**
              * <p>The sample error response of the API.</p>
              * 
@@ -1481,6 +1589,14 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             private Long connectionId; 
             private String tableName; 
 
+            private Builder() {
+            } 
+
+            private Builder(WizardConnection model) {
+                this.connectionId = model.connectionId;
+                this.tableName = model.tableName;
+            } 
+
             /**
              * <p>The ID of the data source.</p>
              * 
@@ -1565,6 +1681,15 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             private String errorCode; 
             private String errorMessage; 
             private String errorSolution; 
+
+            private Builder() {
+            } 
+
+            private Builder(WizardErrorCodes model) {
+                this.errorCode = model.errorCode;
+                this.errorMessage = model.errorMessage;
+                this.errorSolution = model.errorSolution;
+            } 
 
             /**
              * <p>The error code.</p>
@@ -1721,6 +1846,20 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             private String parameterName; 
             private Integer parameterOperator; 
             private Integer parameterPosition; 
+
+            private Builder() {
+            } 
+
+            private Builder(WizardRequestParameters model) {
+                this.defaultValue = model.defaultValue;
+                this.exampleValue = model.exampleValue;
+                this.isRequiredParameter = model.isRequiredParameter;
+                this.parameterDataType = model.parameterDataType;
+                this.parameterDescription = model.parameterDescription;
+                this.parameterName = model.parameterName;
+                this.parameterOperator = model.parameterOperator;
+                this.parameterPosition = model.parameterPosition;
+            } 
 
             /**
              * <p>The default value.</p>
@@ -1899,6 +2038,16 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             private String parameterDescription; 
             private String parameterName; 
 
+            private Builder() {
+            } 
+
+            private Builder(WizardResponseParameters model) {
+                this.exampleValue = model.exampleValue;
+                this.parameterDataType = model.parameterDataType;
+                this.parameterDescription = model.parameterDescription;
+                this.parameterName = model.parameterName;
+            } 
+
             /**
              * <p>The sample value.</p>
              * 
@@ -2067,6 +2216,19 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             private java.util.List<WizardErrorCodes> wizardErrorCodes; 
             private java.util.List<WizardRequestParameters> wizardRequestParameters; 
             private java.util.List<WizardResponseParameters> wizardResponseParameters; 
+
+            private Builder() {
+            } 
+
+            private Builder(WizardDetails model) {
+                this.failedResultSample = model.failedResultSample;
+                this.isPagedResponse = model.isPagedResponse;
+                this.successfulResultSample = model.successfulResultSample;
+                this.wizardConnection = model.wizardConnection;
+                this.wizardErrorCodes = model.wizardErrorCodes;
+                this.wizardRequestParameters = model.wizardRequestParameters;
+                this.wizardResponseParameters = model.wizardResponseParameters;
+            } 
 
             /**
              * <p>The sample error response of the API.</p>
@@ -2411,6 +2573,33 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             private Integer timeout; 
             private Integer visibleRange; 
             private WizardDetails wizardDetails; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.apiId = model.apiId;
+                this.apiMode = model.apiMode;
+                this.apiName = model.apiName;
+                this.apiPath = model.apiPath;
+                this.createdTime = model.createdTime;
+                this.creatorId = model.creatorId;
+                this.description = model.description;
+                this.groupId = model.groupId;
+                this.modifiedTime = model.modifiedTime;
+                this.operatorId = model.operatorId;
+                this.projectId = model.projectId;
+                this.protocols = model.protocols;
+                this.registrationDetails = model.registrationDetails;
+                this.requestMethod = model.requestMethod;
+                this.responseContentType = model.responseContentType;
+                this.scriptDetails = model.scriptDetails;
+                this.status = model.status;
+                this.tenantId = model.tenantId;
+                this.timeout = model.timeout;
+                this.visibleRange = model.visibleRange;
+                this.wizardDetails = model.wizardDetails;
+            } 
 
             /**
              * <p>The ID of the DataService Studio API.</p>

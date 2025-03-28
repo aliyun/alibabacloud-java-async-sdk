@@ -52,6 +52,10 @@ public class SearchMetaTablesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class SearchMetaTablesResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(SearchMetaTablesResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The search results.</p>
@@ -323,6 +339,23 @@ public class SearchMetaTablesResponseBody extends TeaModel {
             private String tableName; 
             private Long tenantId; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataEntityList model) {
+                this.clusterId = model.clusterId;
+                this.databaseName = model.databaseName;
+                this.entityType = model.entityType;
+                this.envType = model.envType;
+                this.ownerId = model.ownerId;
+                this.projectId = model.projectId;
+                this.projectName = model.projectName;
+                this.schema = model.schema;
+                this.tableGuid = model.tableGuid;
+                this.tableName = model.tableName;
+                this.tenantId = model.tenantId;
+            } 
+
             /**
              * <p>The ID of the EMR cluster.</p>
              * 
@@ -526,6 +559,16 @@ public class SearchMetaTablesResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.dataEntityList = model.dataEntityList;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The list of metatables.</p>

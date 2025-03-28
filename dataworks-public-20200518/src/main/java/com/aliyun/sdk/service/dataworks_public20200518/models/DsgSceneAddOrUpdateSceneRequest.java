@@ -40,7 +40,7 @@ public class DsgSceneAddOrUpdateSceneRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -155,6 +155,15 @@ public class DsgSceneAddOrUpdateSceneRequest extends Request {
             private String clusterId; 
             private String dbType; 
             private String projectName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Projects model) {
+                this.clusterId = model.clusterId;
+                this.dbType = model.dbType;
+                this.projectName = model.projectName;
+            } 
 
             /**
              * <p>If the data masking scenario takes effect for an E-MapReduce (EMR) compute engine, enter the ID of an EMR cluster. This parameter is required only when you use an EMR compute engine.</p>
@@ -294,6 +303,18 @@ public class DsgSceneAddOrUpdateSceneRequest extends Request {
             private String sceneCode; 
             private String sceneName; 
             private java.util.List<Long> userGroupIds; 
+
+            private Builder() {
+            } 
+
+            private Builder(Scenes model) {
+                this.desc = model.desc;
+                this.id = model.id;
+                this.projects = model.projects;
+                this.sceneCode = model.sceneCode;
+                this.sceneName = model.sceneName;
+                this.userGroupIds = model.userGroupIds;
+            } 
 
             /**
              * <p>The description.</p>

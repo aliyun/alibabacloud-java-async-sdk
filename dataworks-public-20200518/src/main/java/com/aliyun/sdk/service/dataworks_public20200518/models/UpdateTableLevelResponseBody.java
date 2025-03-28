@@ -52,6 +52,10 @@ public class UpdateTableLevelResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -101,6 +105,18 @@ public class UpdateTableLevelResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Boolean updateResult; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateTableLevelResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.updateResult = model.updateResult;
+        } 
 
         /**
          * <p>The error code.</p>

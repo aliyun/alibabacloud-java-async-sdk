@@ -36,6 +36,10 @@ public class ListProjectRolesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return projectRoleList
      */
@@ -53,6 +57,14 @@ public class ListProjectRolesResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<ProjectRoleList> projectRoleList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListProjectRolesResponseBody model) {
+            this.projectRoleList = model.projectRoleList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The roles in the DataWorks workspace.</p>
@@ -146,6 +158,16 @@ public class ListProjectRolesResponseBody extends TeaModel {
             private Integer projectRoleId; 
             private String projectRoleName; 
             private String projectRoleType; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProjectRoleList model) {
+                this.projectRoleCode = model.projectRoleCode;
+                this.projectRoleId = model.projectRoleId;
+                this.projectRoleName = model.projectRoleName;
+                this.projectRoleType = model.projectRoleType;
+            } 
 
             /**
              * <p>The code of the role in the DataWorks workspace.</p>

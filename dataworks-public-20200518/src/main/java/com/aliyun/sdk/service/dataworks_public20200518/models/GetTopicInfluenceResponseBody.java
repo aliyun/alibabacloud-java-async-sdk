@@ -52,6 +52,10 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -102,8 +106,20 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetTopicInfluenceResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * <p>The list of baseline instances affected by the event.</p>
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -299,6 +315,21 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
             private Long projectId; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(Influences model) {
+                this.baselineId = model.baselineId;
+                this.baselineName = model.baselineName;
+                this.bizdate = model.bizdate;
+                this.buffer = model.buffer;
+                this.inGroupId = model.inGroupId;
+                this.owner = model.owner;
+                this.priority = model.priority;
+                this.projectId = model.projectId;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The ID of the baseline.</p>
              * 
@@ -449,8 +480,16 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
             private java.util.List<Influences> influences; 
             private Long topicId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.influences = model.influences;
+                this.topicId = model.topicId;
+            } 
+
             /**
-             * <p>The list of affected baseline instances.</p>
+             * <p>The affected baseline instances.</p>
              */
             public Builder influences(java.util.List<Influences> influences) {
                 this.influences = influences;

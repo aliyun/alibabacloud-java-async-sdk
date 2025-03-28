@@ -36,6 +36,10 @@ public class GetExtensionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return extension
      */
@@ -53,6 +57,14 @@ public class GetExtensionResponseBody extends TeaModel {
     public static final class Builder {
         private Extension extension; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetExtensionResponseBody model) {
+            this.extension = model.extension;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of the extension.</p>
@@ -122,6 +134,14 @@ public class GetExtensionResponseBody extends TeaModel {
         public static final class Builder {
             private String eventCode; 
             private String eventName; 
+
+            private Builder() {
+            } 
+
+            private Builder(BindEventList model) {
+                this.eventCode = model.eventCode;
+                this.eventName = model.eventName;
+            } 
 
             /**
              * <p>The code of the extension point event.</p>
@@ -195,6 +215,14 @@ public class GetExtensionResponseBody extends TeaModel {
         public static final class Builder {
             private String categoryCode; 
             private String categoryName; 
+
+            private Builder() {
+            } 
+
+            private Builder(EventCategoryList model) {
+                this.categoryCode = model.categoryCode;
+                this.categoryName = model.categoryName;
+            } 
 
             /**
              * <p>The code of the event type.</p>
@@ -376,6 +404,23 @@ public class GetExtensionResponseBody extends TeaModel {
             private String parameterSetting; 
             private Long projectTesting; 
             private Integer status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Extension model) {
+                this.bindEventList = model.bindEventList;
+                this.detailUrl = model.detailUrl;
+                this.eventCategoryList = model.eventCategoryList;
+                this.extensionCode = model.extensionCode;
+                this.extensionDesc = model.extensionDesc;
+                this.extensionName = model.extensionName;
+                this.helpDocUrl = model.helpDocUrl;
+                this.optionSetting = model.optionSetting;
+                this.parameterSetting = model.parameterSetting;
+                this.projectTesting = model.projectTesting;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The list of extension points.</p>

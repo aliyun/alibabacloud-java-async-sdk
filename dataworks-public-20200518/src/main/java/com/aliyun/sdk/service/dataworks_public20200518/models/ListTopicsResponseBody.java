@@ -52,6 +52,10 @@ public class ListTopicsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class ListTopicsResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTopicsResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The information about the events returned.</p>
@@ -335,6 +351,24 @@ public class ListTopicsResponseBody extends TeaModel {
             private String topicStatus; 
             private String topicType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Topics model) {
+                this.addTime = model.addTime;
+                this.fixTime = model.fixTime;
+                this.happenTime = model.happenTime;
+                this.instanceId = model.instanceId;
+                this.nodeId = model.nodeId;
+                this.nodeName = model.nodeName;
+                this.nodeOwner = model.nodeOwner;
+                this.projectId = model.projectId;
+                this.topicId = model.topicId;
+                this.topicName = model.topicName;
+                this.topicStatus = model.topicStatus;
+                this.topicType = model.topicType;
+            } 
+
             /**
              * <p>The timestamp when the event was found.</p>
              * 
@@ -541,6 +575,16 @@ public class ListTopicsResponseBody extends TeaModel {
             private Integer pageSize; 
             private java.util.List<Topics> topics; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.topics = model.topics;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The page number of the returned page.</p>

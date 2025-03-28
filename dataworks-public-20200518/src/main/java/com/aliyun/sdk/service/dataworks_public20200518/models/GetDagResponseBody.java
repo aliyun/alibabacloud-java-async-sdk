@@ -52,6 +52,10 @@ public class GetDagResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class GetDagResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDagResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The details of the DAG.</p>
@@ -346,6 +362,25 @@ public class GetDagResponseBody extends TeaModel {
             private Long startTime; 
             private String status; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.bizdate = model.bizdate;
+                this.createTime = model.createTime;
+                this.createUser = model.createUser;
+                this.dagId = model.dagId;
+                this.finishTime = model.finishTime;
+                this.gmtdate = model.gmtdate;
+                this.modifyTime = model.modifyTime;
+                this.name = model.name;
+                this.opSeq = model.opSeq;
+                this.projectId = model.projectId;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The data timestamp.</p>

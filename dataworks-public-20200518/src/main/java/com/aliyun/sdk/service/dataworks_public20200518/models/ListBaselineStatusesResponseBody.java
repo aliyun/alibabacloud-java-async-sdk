@@ -52,6 +52,10 @@ public class ListBaselineStatusesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class ListBaselineStatusesResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListBaselineStatusesResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -184,6 +200,9 @@ public class ListBaselineStatusesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BaselineName")
         private String baselineName;
 
+        @com.aliyun.core.annotation.NameInMap("BaselineType")
+        private String baselineType;
+
         @com.aliyun.core.annotation.NameInMap("Bizdate")
         private Long bizdate;
 
@@ -223,6 +242,7 @@ public class ListBaselineStatusesResponseBody extends TeaModel {
         private BaselineStatuses(Builder builder) {
             this.baselineId = builder.baselineId;
             this.baselineName = builder.baselineName;
+            this.baselineType = builder.baselineType;
             this.bizdate = builder.bizdate;
             this.buffer = builder.buffer;
             this.endCast = builder.endCast;
@@ -257,6 +277,13 @@ public class ListBaselineStatusesResponseBody extends TeaModel {
          */
         public String getBaselineName() {
             return this.baselineName;
+        }
+
+        /**
+         * @return baselineType
+         */
+        public String getBaselineType() {
+            return this.baselineType;
         }
 
         /**
@@ -346,6 +373,7 @@ public class ListBaselineStatusesResponseBody extends TeaModel {
         public static final class Builder {
             private Long baselineId; 
             private String baselineName; 
+            private String baselineType; 
             private Long bizdate; 
             private Long buffer; 
             private Long endCast; 
@@ -358,6 +386,27 @@ public class ListBaselineStatusesResponseBody extends TeaModel {
             private Long projectId; 
             private Long slaTime; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(BaselineStatuses model) {
+                this.baselineId = model.baselineId;
+                this.baselineName = model.baselineName;
+                this.baselineType = model.baselineType;
+                this.bizdate = model.bizdate;
+                this.buffer = model.buffer;
+                this.endCast = model.endCast;
+                this.expTime = model.expTime;
+                this.finishStatus = model.finishStatus;
+                this.finishTime = model.finishTime;
+                this.inGroupId = model.inGroupId;
+                this.owner = model.owner;
+                this.priority = model.priority;
+                this.projectId = model.projectId;
+                this.slaTime = model.slaTime;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The baseline ID.</p>
@@ -378,6 +427,17 @@ public class ListBaselineStatusesResponseBody extends TeaModel {
              */
             public Builder baselineName(String baselineName) {
                 this.baselineName = baselineName;
+                return this;
+            }
+
+            /**
+             * <p>The type of the baseline, including DAILY and HOURLY. Separate multiple types with commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DAILY,HOURLY</p>
+             */
+            public Builder baselineType(String baselineType) {
+                this.baselineType = baselineType;
                 return this;
             }
 
@@ -587,6 +647,16 @@ public class ListBaselineStatusesResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.baselineStatuses = model.baselineStatuses;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The list of baseline instances.</p>

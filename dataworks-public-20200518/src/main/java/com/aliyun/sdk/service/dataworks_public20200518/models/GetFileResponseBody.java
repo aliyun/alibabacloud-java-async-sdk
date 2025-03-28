@@ -52,6 +52,10 @@ public class GetFileResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class GetFileResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetFileResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The details of the file.</p>
@@ -471,6 +487,35 @@ public class GetFileResponseBody extends TeaModel {
             private Long parentId; 
             private String useType; 
 
+            private Builder() {
+            } 
+
+            private Builder(File model) {
+                this.advancedSettings = model.advancedSettings;
+                this.autoParsing = model.autoParsing;
+                this.bizId = model.bizId;
+                this.businessId = model.businessId;
+                this.commitStatus = model.commitStatus;
+                this.connectionName = model.connectionName;
+                this.content = model.content;
+                this.createTime = model.createTime;
+                this.createUser = model.createUser;
+                this.currentVersion = model.currentVersion;
+                this.deletedStatus = model.deletedStatus;
+                this.fileDescription = model.fileDescription;
+                this.fileFolderId = model.fileFolderId;
+                this.fileId = model.fileId;
+                this.fileName = model.fileName;
+                this.fileType = model.fileType;
+                this.isMaxCompute = model.isMaxCompute;
+                this.lastEditTime = model.lastEditTime;
+                this.lastEditUser = model.lastEditUser;
+                this.nodeId = model.nodeId;
+                this.owner = model.owner;
+                this.parentId = model.parentId;
+                this.useType = model.useType;
+            } 
+
             /**
              * <p>The advanced configurations of the node.</p>
              * <p>This parameter is valid for an EMR node. This parameter corresponds to the Advanced Settings tab in the right-side navigation pane on the configuration tab of the node in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
@@ -799,6 +844,14 @@ public class GetFileResponseBody extends TeaModel {
             private String input; 
             private String parseType; 
 
+            private Builder() {
+            } 
+
+            private Builder(InputList model) {
+                this.input = model.input;
+                this.parseType = model.parseType;
+            } 
+
             /**
              * <p>The output name of the parent file on which the current file depends.</p>
              * <p>This parameter corresponds to the Output Name of Ancestor Node parameter under Parent Nodes after Same Cycle is selected in the Dependencies section of the Properties tab in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
@@ -877,6 +930,14 @@ public class GetFileResponseBody extends TeaModel {
             private String parameterName; 
             private String valueSource; 
 
+            private Builder() {
+            } 
+
+            private Builder(InputParameters model) {
+                this.parameterName = model.parameterName;
+                this.valueSource = model.valueSource;
+            } 
+
             /**
              * <p>The name of the input parameter of the node. In the code, you can use the ${...} method to reference the input parameter of the node.</p>
              * <p>This parameter corresponds to the Parameter Name parameter in the Input Parameters table in the Input and Output Parameters section of the Properties tab in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
@@ -951,6 +1012,14 @@ public class GetFileResponseBody extends TeaModel {
         public static final class Builder {
             private String output; 
             private String refTableName; 
+
+            private Builder() {
+            } 
+
+            private Builder(OutputList model) {
+                this.output = model.output;
+                this.refTableName = model.refTableName;
+            } 
 
             /**
              * <p>The output name of the current file.</p>
@@ -1050,6 +1119,16 @@ public class GetFileResponseBody extends TeaModel {
             private String parameterName; 
             private String type; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(OutputParameters model) {
+                this.description = model.description;
+                this.parameterName = model.parameterName;
+                this.type = model.type;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The description of the output parameter of the node.</p>
@@ -1394,6 +1473,34 @@ public class GetFileResponseBody extends TeaModel {
             private Boolean stop; 
             private Integer timeout; 
 
+            private Builder() {
+            } 
+
+            private Builder(NodeConfiguration model) {
+                this.applyScheduleImmediately = model.applyScheduleImmediately;
+                this.autoRerunIntervalMillis = model.autoRerunIntervalMillis;
+                this.autoRerunTimes = model.autoRerunTimes;
+                this.cronExpress = model.cronExpress;
+                this.cycleType = model.cycleType;
+                this.dependentNodeIdList = model.dependentNodeIdList;
+                this.dependentType = model.dependentType;
+                this.endEffectDate = model.endEffectDate;
+                this.ignoreParentSkipRunningProperty = model.ignoreParentSkipRunningProperty;
+                this.imageId = model.imageId;
+                this.inputList = model.inputList;
+                this.inputParameters = model.inputParameters;
+                this.outputList = model.outputList;
+                this.outputParameters = model.outputParameters;
+                this.paraValue = model.paraValue;
+                this.rerunMode = model.rerunMode;
+                this.resourceGroupId = model.resourceGroupId;
+                this.schedulerType = model.schedulerType;
+                this.startEffectDate = model.startEffectDate;
+                this.startImmediately = model.startImmediately;
+                this.stop = model.stop;
+                this.timeout = model.timeout;
+            } 
+
             /**
              * <p>Indicates whether scheduling configurations immediately take effect after the deployment.</p>
              * 
@@ -1505,7 +1612,10 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * ImageId.
+             * <p>The ID of the custom image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>m-bp1h4b5a8ogkbll2f3tr</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -1694,6 +1804,13 @@ public class GetFileResponseBody extends TeaModel {
         public static final class Builder {
             private String downloadLink; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResourceDownloadLink model) {
+                this.downloadLink = model.downloadLink;
+            } 
+
             /**
              * <p>The download URL of the resource.</p>
              * 
@@ -1767,6 +1884,15 @@ public class GetFileResponseBody extends TeaModel {
             private File file; 
             private NodeConfiguration nodeConfiguration; 
             private ResourceDownloadLink resourceDownloadLink; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.file = model.file;
+                this.nodeConfiguration = model.nodeConfiguration;
+                this.resourceDownloadLink = model.resourceDownloadLink;
+            } 
 
             /**
              * <p>The basic information about the file.</p>
