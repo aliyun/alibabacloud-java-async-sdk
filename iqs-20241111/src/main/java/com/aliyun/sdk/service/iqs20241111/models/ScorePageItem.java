@@ -71,6 +71,9 @@ public class ScorePageItem extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("snippet")
     private String snippet;
 
+    @com.aliyun.core.annotation.NameInMap("summary")
+    private String summary;
+
     @com.aliyun.core.annotation.NameInMap("title")
     @com.aliyun.core.annotation.Validation(required = true)
     private String title;
@@ -92,6 +95,7 @@ public class ScorePageItem extends TeaModel {
         this.score = builder.score;
         this.siteLabel = builder.siteLabel;
         this.snippet = builder.snippet;
+        this.summary = builder.summary;
         this.title = builder.title;
     }
 
@@ -101,6 +105,10 @@ public class ScorePageItem extends TeaModel {
 
     public static ScorePageItem create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -216,6 +224,13 @@ public class ScorePageItem extends TeaModel {
     }
 
     /**
+     * @return summary
+     */
+    public String getSummary() {
+        return this.summary;
+    }
+
+    /**
      * @return title
      */
     public String getTitle() {
@@ -239,7 +254,32 @@ public class ScorePageItem extends TeaModel {
         private Double score; 
         private String siteLabel; 
         private String snippet; 
+        private String summary; 
         private String title; 
+
+        private Builder() {
+        } 
+
+        private Builder(ScorePageItem model) {
+            this.cardType = model.cardType;
+            this.displayLink = model.displayLink;
+            this.hostLogo = model.hostLogo;
+            this.hostname = model.hostname;
+            this.htmlSnippet = model.htmlSnippet;
+            this.htmlTitle = model.htmlTitle;
+            this.images = model.images;
+            this.link = model.link;
+            this.mainText = model.mainText;
+            this.markdownText = model.markdownText;
+            this.mime = model.mime;
+            this.pageMap = model.pageMap;
+            this.publishTime = model.publishTime;
+            this.score = model.score;
+            this.siteLabel = model.siteLabel;
+            this.snippet = model.snippet;
+            this.summary = model.summary;
+            this.title = model.title;
+        } 
 
         /**
          * <p>This parameter is required.</p>
@@ -384,6 +424,14 @@ public class ScorePageItem extends TeaModel {
          */
         public Builder snippet(String snippet) {
             this.snippet = snippet;
+            return this;
+        }
+
+        /**
+         * summary.
+         */
+        public Builder summary(String summary) {
+            this.summary = summary;
             return this;
         }
 

@@ -40,6 +40,10 @@ public class AiSearchResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return header
      */
@@ -65,6 +69,15 @@ public class AiSearchResponseBody extends TeaModel {
         private AiSearchResponseBodyHeader header; 
         private String payload; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AiSearchResponseBody model) {
+            this.header = model.header;
+            this.payload = model.payload;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * header.
@@ -167,6 +180,16 @@ public class AiSearchResponseBody extends TeaModel {
             private String query; 
             private String timeRange; 
 
+            private Builder() {
+            } 
+
+            private Builder(OriginalQuery model) {
+                this.industry = model.industry;
+                this.page = model.page;
+                this.query = model.query;
+                this.timeRange = model.timeRange;
+            } 
+
             /**
              * industry.
              */
@@ -250,6 +273,14 @@ public class AiSearchResponseBody extends TeaModel {
             private Boolean enabled; 
             private String timeRange; 
 
+            private Builder() {
+            } 
+
+            private Builder(Rewrite model) {
+                this.enabled = model.enabled;
+                this.timeRange = model.timeRange;
+            } 
+
             /**
              * enabled.
              */
@@ -316,6 +347,14 @@ public class AiSearchResponseBody extends TeaModel {
         public static final class Builder {
             private OriginalQuery originalQuery; 
             private Rewrite rewrite; 
+
+            private Builder() {
+            } 
+
+            private Builder(QueryContext model) {
+                this.originalQuery = model.originalQuery;
+                this.rewrite = model.rewrite;
+            } 
 
             /**
              * originalQuery.
@@ -407,6 +446,16 @@ public class AiSearchResponseBody extends TeaModel {
             private String eventId; 
             private QueryContext queryContext; 
             private Long responseTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(AiSearchResponseBodyHeader model) {
+                this.event = model.event;
+                this.eventId = model.eventId;
+                this.queryContext = model.queryContext;
+                this.responseTime = model.responseTime;
+            } 
 
             /**
              * event.

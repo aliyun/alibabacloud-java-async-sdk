@@ -36,6 +36,10 @@ public class SceneItem extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return detail
      */
@@ -53,6 +57,14 @@ public class SceneItem extends TeaModel {
     public static final class Builder {
         private String detail; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(SceneItem model) {
+            this.detail = model.detail;
+            this.type = model.type;
+        } 
 
         /**
          * detail.

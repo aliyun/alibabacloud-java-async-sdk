@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GenericSearchRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("enableRerank")
+    private Boolean enableRerank;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("industry")
     private String industry;
 
@@ -31,6 +35,18 @@ public class GenericSearchRequest extends Request {
     private String query;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("returnMainText")
+    private Boolean returnMainText;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("returnMarkdownText")
+    private Boolean returnMarkdownText;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("returnSummary")
+    private Boolean returnSummary;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("sessionId")
     private String sessionId;
 
@@ -40,9 +56,13 @@ public class GenericSearchRequest extends Request {
 
     private GenericSearchRequest(Builder builder) {
         super(builder);
+        this.enableRerank = builder.enableRerank;
         this.industry = builder.industry;
         this.page = builder.page;
         this.query = builder.query;
+        this.returnMainText = builder.returnMainText;
+        this.returnMarkdownText = builder.returnMarkdownText;
+        this.returnSummary = builder.returnSummary;
         this.sessionId = builder.sessionId;
         this.timeRange = builder.timeRange;
     }
@@ -55,9 +75,16 @@ public class GenericSearchRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return enableRerank
+     */
+    public Boolean getEnableRerank() {
+        return this.enableRerank;
     }
 
     /**
@@ -82,6 +109,27 @@ public class GenericSearchRequest extends Request {
     }
 
     /**
+     * @return returnMainText
+     */
+    public Boolean getReturnMainText() {
+        return this.returnMainText;
+    }
+
+    /**
+     * @return returnMarkdownText
+     */
+    public Boolean getReturnMarkdownText() {
+        return this.returnMarkdownText;
+    }
+
+    /**
+     * @return returnSummary
+     */
+    public Boolean getReturnSummary() {
+        return this.returnSummary;
+    }
+
+    /**
      * @return sessionId
      */
     public String getSessionId() {
@@ -96,9 +144,13 @@ public class GenericSearchRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GenericSearchRequest, Builder> {
+        private Boolean enableRerank; 
         private String industry; 
         private Integer page; 
         private String query; 
+        private Boolean returnMainText; 
+        private Boolean returnMarkdownText; 
+        private Boolean returnSummary; 
         private String sessionId; 
         private String timeRange; 
 
@@ -108,12 +160,25 @@ public class GenericSearchRequest extends Request {
 
         private Builder(GenericSearchRequest request) {
             super(request);
+            this.enableRerank = request.enableRerank;
             this.industry = request.industry;
             this.page = request.page;
             this.query = request.query;
+            this.returnMainText = request.returnMainText;
+            this.returnMarkdownText = request.returnMarkdownText;
+            this.returnSummary = request.returnSummary;
             this.sessionId = request.sessionId;
             this.timeRange = request.timeRange;
         } 
+
+        /**
+         * enableRerank.
+         */
+        public Builder enableRerank(Boolean enableRerank) {
+            this.putQueryParameter("enableRerank", enableRerank);
+            this.enableRerank = enableRerank;
+            return this;
+        }
 
         /**
          * industry.
@@ -139,6 +204,33 @@ public class GenericSearchRequest extends Request {
         public Builder query(String query) {
             this.putQueryParameter("query", query);
             this.query = query;
+            return this;
+        }
+
+        /**
+         * returnMainText.
+         */
+        public Builder returnMainText(Boolean returnMainText) {
+            this.putQueryParameter("returnMainText", returnMainText);
+            this.returnMainText = returnMainText;
+            return this;
+        }
+
+        /**
+         * returnMarkdownText.
+         */
+        public Builder returnMarkdownText(Boolean returnMarkdownText) {
+            this.putQueryParameter("returnMarkdownText", returnMarkdownText);
+            this.returnMarkdownText = returnMarkdownText;
+            return this;
+        }
+
+        /**
+         * returnSummary.
+         */
+        public Builder returnSummary(Boolean returnSummary) {
+            this.putQueryParameter("returnSummary", returnSummary);
+            this.returnSummary = returnSummary;
             return this;
         }
 

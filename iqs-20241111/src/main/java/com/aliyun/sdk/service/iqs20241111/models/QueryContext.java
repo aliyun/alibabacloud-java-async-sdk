@@ -36,6 +36,10 @@ public class QueryContext extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return originalQuery
      */
@@ -53,6 +57,14 @@ public class QueryContext extends TeaModel {
     public static final class Builder {
         private OriginalQuery originalQuery; 
         private Rewrite rewrite; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryContext model) {
+            this.originalQuery = model.originalQuery;
+            this.rewrite = model.rewrite;
+        } 
 
         /**
          * originalQuery.
@@ -144,6 +156,16 @@ public class QueryContext extends TeaModel {
             private String query; 
             private String timeRange; 
 
+            private Builder() {
+            } 
+
+            private Builder(OriginalQuery model) {
+                this.industry = model.industry;
+                this.page = model.page;
+                this.query = model.query;
+                this.timeRange = model.timeRange;
+            } 
+
             /**
              * industry.
              */
@@ -226,6 +248,14 @@ public class QueryContext extends TeaModel {
         public static final class Builder {
             private Boolean enabled; 
             private String timeRange; 
+
+            private Builder() {
+            } 
+
+            private Builder(Rewrite model) {
+                this.enabled = model.enabled;
+                this.timeRange = model.timeRange;
+            } 
 
             /**
              * enabled.

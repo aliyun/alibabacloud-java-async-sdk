@@ -40,6 +40,10 @@ public class IncludeImage extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return height
      */
@@ -65,6 +69,15 @@ public class IncludeImage extends TeaModel {
         private Integer height; 
         private String imageLink; 
         private Integer width; 
+
+        private Builder() {
+        } 
+
+        private Builder(IncludeImage model) {
+            this.height = model.height;
+            this.imageLink = model.imageLink;
+            this.width = model.width;
+        } 
 
         /**
          * height.

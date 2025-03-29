@@ -60,6 +60,10 @@ public class WeiboItem extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cardType
      */
@@ -117,6 +121,19 @@ public class WeiboItem extends TeaModel {
         private String link; 
         private String publishDisplayTime; 
         private String username; 
+
+        private Builder() {
+        } 
+
+        private Builder(WeiboItem model) {
+            this.cardType = model.cardType;
+            this.homepageLink = model.homepageLink;
+            this.htmlSnippet = model.htmlSnippet;
+            this.images = model.images;
+            this.link = model.link;
+            this.publishDisplayTime = model.publishDisplayTime;
+            this.username = model.username;
+        } 
 
         /**
          * <p>This parameter is required.</p>

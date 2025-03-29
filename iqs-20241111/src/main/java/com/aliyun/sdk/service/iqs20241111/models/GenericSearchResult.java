@@ -52,6 +52,10 @@ public class GenericSearchResult extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageItems
      */
@@ -101,6 +105,18 @@ public class GenericSearchResult extends TeaModel {
         private java.util.List<SceneItem> sceneItems; 
         private SearchInformation searchInformation; 
         private java.util.List<WeiboItem> weiboItems; 
+
+        private Builder() {
+        } 
+
+        private Builder(GenericSearchResult model) {
+            this.pageItems = model.pageItems;
+            this.queryContext = model.queryContext;
+            this.requestId = model.requestId;
+            this.sceneItems = model.sceneItems;
+            this.searchInformation = model.searchInformation;
+            this.weiboItems = model.weiboItems;
+        } 
 
         /**
          * pageItems.

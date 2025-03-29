@@ -60,6 +60,10 @@ public class AISearchQuery extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return card
      */
@@ -125,6 +129,20 @@ public class AISearchQuery extends TeaModel {
         private String searchPlan; 
         private String sessionId; 
         private String timeRange; 
+
+        private Builder() {
+        } 
+
+        private Builder(AISearchQuery model) {
+            this.card = model.card;
+            this.cardQuery = model.cardQuery;
+            this.page = model.page;
+            this.query = model.query;
+            this.searchEngine = model.searchEngine;
+            this.searchPlan = model.searchPlan;
+            this.sessionId = model.sessionId;
+            this.timeRange = model.timeRange;
+        } 
 
         /**
          * card.

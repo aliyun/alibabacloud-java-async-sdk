@@ -36,6 +36,10 @@ public class SearchInformation extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return searchTime
      */
@@ -53,6 +57,14 @@ public class SearchInformation extends TeaModel {
     public static final class Builder {
         private Long searchTime; 
         private Long total; 
+
+        private Builder() {
+        } 
+
+        private Builder(SearchInformation model) {
+            this.searchTime = model.searchTime;
+            this.total = model.total;
+        } 
 
         /**
          * searchTime.
