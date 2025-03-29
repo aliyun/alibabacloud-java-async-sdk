@@ -110,6 +110,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteCallbackResponse> deleteCallback(DeleteCallbackRequest request);
 
     /**
+     * @param request the request parameters of DeleteFeatureConfig  DeleteFeatureConfigRequest
+     * @return DeleteFeatureConfigResponse
+     */
+    CompletableFuture<DeleteFeatureConfigResponse> deleteFeatureConfig(DeleteFeatureConfigRequest request);
+
+    /**
      * @param request the request parameters of DeleteImagesFromLib  DeleteImagesFromLibRequest
      * @return DeleteImagesFromLibResponse
      */
@@ -210,6 +216,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetExecuteTimeResponse
      */
     CompletableFuture<GetExecuteTimeResponse> getExecuteTime(GetExecuteTimeRequest request);
+
+    /**
+     * @param request the request parameters of GetFeatureConfig  GetFeatureConfigRequest
+     * @return GetFeatureConfigResponse
+     */
+    CompletableFuture<GetFeatureConfigResponse> getFeatureConfig(GetFeatureConfigRequest request);
 
     /**
      * @param request the request parameters of GetImageSceneLabelConf  GetImageSceneLabelConfRequest
@@ -366,6 +378,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyCallbackResponse
      */
     CompletableFuture<ModifyCallbackResponse> modifyCallback(ModifyCallbackRequest request);
+
+    /**
+     * @param request the request parameters of ModifyFeatureConfig  ModifyFeatureConfigRequest
+     * @return ModifyFeatureConfigResponse
+     */
+    CompletableFuture<ModifyFeatureConfigResponse> modifyFeatureConfig(ModifyFeatureConfigRequest request);
 
     /**
      * @param request the request parameters of ModifyServiceInfo  ModifyServiceInfoRequest

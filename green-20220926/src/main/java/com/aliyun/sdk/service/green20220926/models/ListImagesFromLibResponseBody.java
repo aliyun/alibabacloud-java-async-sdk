@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.green20220926.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class ListImagesFromLibResponseBody extends TeaModel {
     private Integer httpStatusCode;
 
     @com.aliyun.core.annotation.NameInMap("Items")
-    private java.util.List < Items> items;
+    private java.util.List<Items> items;
 
     @com.aliyun.core.annotation.NameInMap("Msg")
     private String msg;
@@ -59,6 +64,10 @@ public class ListImagesFromLibResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -83,7 +92,7 @@ public class ListImagesFromLibResponseBody extends TeaModel {
     /**
      * @return items
      */
-    public java.util.List < Items> getItems() {
+    public java.util.List<Items> getItems() {
         return this.items;
     }
 
@@ -126,12 +135,27 @@ public class ListImagesFromLibResponseBody extends TeaModel {
         private Integer code; 
         private Integer currentPage; 
         private Integer httpStatusCode; 
-        private java.util.List < Items> items; 
+        private java.util.List<Items> items; 
         private String msg; 
         private Integer pageSize; 
         private String requestId; 
         private Boolean success; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListImagesFromLibResponseBody model) {
+            this.code = model.code;
+            this.currentPage = model.currentPage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.items = model.items;
+            this.msg = model.msg;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Code.
@@ -160,7 +184,7 @@ public class ListImagesFromLibResponseBody extends TeaModel {
         /**
          * Items.
          */
-        public Builder items(java.util.List < Items> items) {
+        public Builder items(java.util.List<Items> items) {
             this.items = items;
             return this;
         }
@@ -278,6 +302,16 @@ public class ListImagesFromLibResponseBody extends TeaModel {
             private String imageId; 
             private String imageUrl; 
             private String thumbnailUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.gmtCreate = model.gmtCreate;
+                this.imageId = model.imageId;
+                this.imageUrl = model.imageUrl;
+                this.thumbnailUrl = model.thumbnailUrl;
+            } 
 
             /**
              * GmtCreate.

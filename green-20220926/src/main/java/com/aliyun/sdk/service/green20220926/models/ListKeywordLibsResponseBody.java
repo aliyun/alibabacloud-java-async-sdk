@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.green20220926.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListKeywordLibsResponseBody extends TeaModel {
     private Integer code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("Msg")
     private String msg;
@@ -43,6 +48,10 @@ public class ListKeywordLibsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -53,7 +62,7 @@ public class ListKeywordLibsResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -80,10 +89,21 @@ public class ListKeywordLibsResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String msg; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListKeywordLibsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.msg = model.msg;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -96,7 +116,7 @@ public class ListKeywordLibsResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -150,6 +170,9 @@ public class ListKeywordLibsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LibName")
         private String libName;
 
+        @com.aliyun.core.annotation.NameInMap("ServiceCodes")
+        private String serviceCodes;
+
         @com.aliyun.core.annotation.NameInMap("Uid")
         private String uid;
 
@@ -158,6 +181,7 @@ public class ListKeywordLibsResponseBody extends TeaModel {
             this.keywordCount = builder.keywordCount;
             this.libId = builder.libId;
             this.libName = builder.libName;
+            this.serviceCodes = builder.serviceCodes;
             this.uid = builder.uid;
         }
 
@@ -198,6 +222,13 @@ public class ListKeywordLibsResponseBody extends TeaModel {
         }
 
         /**
+         * @return serviceCodes
+         */
+        public String getServiceCodes() {
+            return this.serviceCodes;
+        }
+
+        /**
          * @return uid
          */
         public String getUid() {
@@ -209,7 +240,20 @@ public class ListKeywordLibsResponseBody extends TeaModel {
             private String keywordCount; 
             private String libId; 
             private String libName; 
+            private String serviceCodes; 
             private String uid; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.gmtModified = model.gmtModified;
+                this.keywordCount = model.keywordCount;
+                this.libId = model.libId;
+                this.libName = model.libName;
+                this.serviceCodes = model.serviceCodes;
+                this.uid = model.uid;
+            } 
 
             /**
              * GmtModified.
@@ -240,6 +284,14 @@ public class ListKeywordLibsResponseBody extends TeaModel {
              */
             public Builder libName(String libName) {
                 this.libName = libName;
+                return this;
+            }
+
+            /**
+             * ServiceCodes.
+             */
+            public Builder serviceCodes(String serviceCodes) {
+                this.serviceCodes = serviceCodes;
                 return this;
             }
 

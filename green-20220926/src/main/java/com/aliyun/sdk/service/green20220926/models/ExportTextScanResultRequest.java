@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.green20220926.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class ExportTextScanResultRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Query")
-    private java.util.Map < String, String > query;
+    private java.util.Map<String, String> query;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -44,7 +49,7 @@ public class ExportTextScanResultRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -59,7 +64,7 @@ public class ExportTextScanResultRequest extends Request {
     /**
      * @return query
      */
-    public java.util.Map < String, String > getQuery() {
+    public java.util.Map<String, String> getQuery() {
         return this.query;
     }
 
@@ -79,7 +84,7 @@ public class ExportTextScanResultRequest extends Request {
 
     public static final class Builder extends Request.Builder<ExportTextScanResultRequest, Builder> {
         private String endDate; 
-        private java.util.Map < String, String > query; 
+        private java.util.Map<String, String> query; 
         private String regionId; 
         private String startDate; 
 
@@ -107,7 +112,7 @@ public class ExportTextScanResultRequest extends Request {
         /**
          * Query.
          */
-        public Builder query(java.util.Map < String, String > query) {
+        public Builder query(java.util.Map<String, String> query) {
             String queryShrink = shrink(query, "Query", "json");
             this.putBodyParameter("Query", queryShrink);
             this.query = query;

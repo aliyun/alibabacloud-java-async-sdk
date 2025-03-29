@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.green20220926.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListImageLibResponseBody extends TeaModel {
     private Integer httpStatusCode;
 
     @com.aliyun.core.annotation.NameInMap("LibList")
-    private java.util.List < LibList> libList;
+    private java.util.List<LibList> libList;
 
     @com.aliyun.core.annotation.NameInMap("Msg")
     private String msg;
@@ -47,6 +52,10 @@ public class ListImageLibResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -64,7 +73,7 @@ public class ListImageLibResponseBody extends TeaModel {
     /**
      * @return libList
      */
-    public java.util.List < LibList> getLibList() {
+    public java.util.List<LibList> getLibList() {
         return this.libList;
     }
 
@@ -92,10 +101,22 @@ public class ListImageLibResponseBody extends TeaModel {
     public static final class Builder {
         private Integer code; 
         private Integer httpStatusCode; 
-        private java.util.List < LibList> libList; 
+        private java.util.List<LibList> libList; 
         private String msg; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListImageLibResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.libList = model.libList;
+            this.msg = model.msg;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -116,7 +137,7 @@ public class ListImageLibResponseBody extends TeaModel {
         /**
          * LibList.
          */
-        public Builder libList(java.util.List < LibList> libList) {
+        public Builder libList(java.util.List<LibList> libList) {
             this.libList = libList;
             return this;
         }
@@ -254,6 +275,19 @@ public class ListImageLibResponseBody extends TeaModel {
             private Long imageNum; 
             private String libId; 
             private String libName; 
+
+            private Builder() {
+            } 
+
+            private Builder(LibList model) {
+                this.comment = model.comment;
+                this.freeInspection = model.freeInspection;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.imageNum = model.imageNum;
+                this.libId = model.libId;
+                this.libName = model.libName;
+            } 
 
             /**
              * Comment.

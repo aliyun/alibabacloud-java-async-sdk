@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.green20220926.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListOssCheckResultResponseBody extends TeaModel {
     private Integer currentPage;
 
     @com.aliyun.core.annotation.NameInMap("Items")
-    private java.util.List < Items> items;
+    private java.util.List<Items> items;
 
     @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
@@ -43,6 +48,10 @@ public class ListOssCheckResultResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return currentPage
      */
@@ -53,7 +62,7 @@ public class ListOssCheckResultResponseBody extends TeaModel {
     /**
      * @return items
      */
-    public java.util.List < Items> getItems() {
+    public java.util.List<Items> getItems() {
         return this.items;
     }
 
@@ -80,10 +89,21 @@ public class ListOssCheckResultResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer currentPage; 
-        private java.util.List < Items> items; 
+        private java.util.List<Items> items; 
         private Integer pageSize; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListOssCheckResultResponseBody model) {
+            this.currentPage = model.currentPage;
+            this.items = model.items;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * CurrentPage.
@@ -96,7 +116,7 @@ public class ListOssCheckResultResponseBody extends TeaModel {
         /**
          * Items.
          */
-        public Builder items(java.util.List < Items> items) {
+        public Builder items(java.util.List<Items> items) {
             this.items = items;
             return this;
         }
@@ -166,10 +186,10 @@ public class ListOssCheckResultResponseBody extends TeaModel {
         private String jobName;
 
         @com.aliyun.core.annotation.NameInMap("Labels")
-        private java.util.List < String > labels;
+        private java.util.List<String> labels;
 
         @com.aliyun.core.annotation.NameInMap("Labels2")
-        private java.util.List < String > labels2;
+        private java.util.List<String> labels2;
 
         @com.aliyun.core.annotation.NameInMap("Md5")
         private String md5;
@@ -303,14 +323,14 @@ public class ListOssCheckResultResponseBody extends TeaModel {
         /**
          * @return labels
          */
-        public java.util.List < String > getLabels() {
+        public java.util.List<String> getLabels() {
             return this.labels;
         }
 
         /**
          * @return labels2
          */
-        public java.util.List < String > getLabels2() {
+        public java.util.List<String> getLabels2() {
             return this.labels2;
         }
 
@@ -401,8 +421,8 @@ public class ListOssCheckResultResponseBody extends TeaModel {
             private String imageUrl; 
             private Boolean isCopy; 
             private String jobName; 
-            private java.util.List < String > labels; 
-            private java.util.List < String > labels2; 
+            private java.util.List<String> labels; 
+            private java.util.List<String> labels2; 
             private String md5; 
             private String msg; 
             private String object; 
@@ -414,6 +434,34 @@ public class ListOssCheckResultResponseBody extends TeaModel {
             private String serviceName; 
             private String taskId; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.bucket = model.bucket;
+                this.code = model.code;
+                this.contentType = model.contentType;
+                this.copyFrom = model.copyFrom;
+                this.freezeStatus = model.freezeStatus;
+                this.freezeType = model.freezeType;
+                this.imageUrl = model.imageUrl;
+                this.isCopy = model.isCopy;
+                this.jobName = model.jobName;
+                this.labels = model.labels;
+                this.labels2 = model.labels2;
+                this.md5 = model.md5;
+                this.msg = model.msg;
+                this.object = model.object;
+                this.riskLevel = model.riskLevel;
+                this.riskLevel0 = model.riskLevel0;
+                this.riskLevel2 = model.riskLevel2;
+                this.scanResult = model.scanResult;
+                this.serviceCode = model.serviceCode;
+                this.serviceName = model.serviceName;
+                this.taskId = model.taskId;
+                this.url = model.url;
+            } 
 
             /**
              * Bucket.
@@ -490,7 +538,7 @@ public class ListOssCheckResultResponseBody extends TeaModel {
             /**
              * Labels.
              */
-            public Builder labels(java.util.List < String > labels) {
+            public Builder labels(java.util.List<String> labels) {
                 this.labels = labels;
                 return this;
             }
@@ -498,7 +546,7 @@ public class ListOssCheckResultResponseBody extends TeaModel {
             /**
              * Labels2.
              */
-            public Builder labels2(java.util.List < String > labels2) {
+            public Builder labels2(java.util.List<String> labels2) {
                 this.labels2 = labels2;
                 return this;
             }

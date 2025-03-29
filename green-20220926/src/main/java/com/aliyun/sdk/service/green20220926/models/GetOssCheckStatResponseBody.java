@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.green20220926.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class GetOssCheckStatResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return barChart
      */
@@ -48,6 +57,14 @@ public class GetOssCheckStatResponseBody extends TeaModel {
     public static final class Builder {
         private BarChart barChart; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetOssCheckStatResponseBody model) {
+            this.barChart = model.barChart;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * BarChart.
@@ -79,7 +96,7 @@ public class GetOssCheckStatResponseBody extends TeaModel {
      */
     public static class Y extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
-        private java.util.List < Long > data;
+        private java.util.List<Long> data;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -100,7 +117,7 @@ public class GetOssCheckStatResponseBody extends TeaModel {
         /**
          * @return data
          */
-        public java.util.List < Long > getData() {
+        public java.util.List<Long> getData() {
             return this.data;
         }
 
@@ -112,13 +129,21 @@ public class GetOssCheckStatResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Long > data; 
+            private java.util.List<Long> data; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(Y model) {
+                this.data = model.data;
+                this.name = model.name;
+            } 
 
             /**
              * Data.
              */
-            public Builder data(java.util.List < Long > data) {
+            public Builder data(java.util.List<Long> data) {
                 this.data = data;
                 return this;
             }
@@ -146,10 +171,10 @@ public class GetOssCheckStatResponseBody extends TeaModel {
      */
     public static class BarChart extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("X")
-        private java.util.List < String > x;
+        private java.util.List<String> x;
 
         @com.aliyun.core.annotation.NameInMap("Y")
-        private java.util.List < Y> y;
+        private java.util.List<Y> y;
 
         private BarChart(Builder builder) {
             this.x = builder.x;
@@ -167,25 +192,33 @@ public class GetOssCheckStatResponseBody extends TeaModel {
         /**
          * @return x
          */
-        public java.util.List < String > getX() {
+        public java.util.List<String> getX() {
             return this.x;
         }
 
         /**
          * @return y
          */
-        public java.util.List < Y> getY() {
+        public java.util.List<Y> getY() {
             return this.y;
         }
 
         public static final class Builder {
-            private java.util.List < String > x; 
-            private java.util.List < Y> y; 
+            private java.util.List<String> x; 
+            private java.util.List<Y> y; 
+
+            private Builder() {
+            } 
+
+            private Builder(BarChart model) {
+                this.x = model.x;
+                this.y = model.y;
+            } 
 
             /**
              * X.
              */
-            public Builder x(java.util.List < String > x) {
+            public Builder x(java.util.List<String> x) {
                 this.x = x;
                 return this;
             }
@@ -193,7 +226,7 @@ public class GetOssCheckStatResponseBody extends TeaModel {
             /**
              * Y.
              */
-            public Builder y(java.util.List < Y> y) {
+            public Builder y(java.util.List<Y> y) {
                 this.y = y;
                 return this;
             }

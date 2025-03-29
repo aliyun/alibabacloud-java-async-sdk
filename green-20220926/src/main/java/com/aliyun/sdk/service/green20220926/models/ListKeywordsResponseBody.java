@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.green20220926.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,6 +46,10 @@ public class ListKeywordsResponseBody extends TeaModel {
 
     public static ListKeywordsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class ListKeywordsResponseBody extends TeaModel {
         private String msg; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListKeywordsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.msg = model.msg;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -223,6 +243,18 @@ public class ListKeywordsResponseBody extends TeaModel {
             private Long keywordMd5Id; 
             private String word; 
 
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.keywordLibId = model.keywordLibId;
+                this.keywordMd5Id = model.keywordMd5Id;
+                this.word = model.word;
+            } 
+
             /**
              * GmtCreate.
              */
@@ -289,7 +321,7 @@ public class ListKeywordsResponseBody extends TeaModel {
         private Integer currentPage;
 
         @com.aliyun.core.annotation.NameInMap("Items")
-        private java.util.List < Items> items;
+        private java.util.List<Items> items;
 
         @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
@@ -322,7 +354,7 @@ public class ListKeywordsResponseBody extends TeaModel {
         /**
          * @return items
          */
-        public java.util.List < Items> getItems() {
+        public java.util.List<Items> getItems() {
             return this.items;
         }
 
@@ -342,9 +374,19 @@ public class ListKeywordsResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer currentPage; 
-            private java.util.List < Items> items; 
+            private java.util.List<Items> items; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.currentPage = model.currentPage;
+                this.items = model.items;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * CurrentPage.
@@ -357,7 +399,7 @@ public class ListKeywordsResponseBody extends TeaModel {
             /**
              * Items.
              */
-            public Builder items(java.util.List < Items> items) {
+            public Builder items(java.util.List<Items> items) {
                 this.items = items;
                 return this;
             }

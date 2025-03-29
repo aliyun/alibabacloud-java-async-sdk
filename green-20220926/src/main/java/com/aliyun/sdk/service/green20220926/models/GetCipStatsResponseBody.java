@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.green20220926.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -45,6 +50,10 @@ public class GetCipStatsResponseBody extends TeaModel {
 
     public static GetCipStatsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class GetCipStatsResponseBody extends TeaModel {
         private String msg; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetCipStatsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.msg = model.msg;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -157,14 +178,18 @@ public class GetCipStatsResponseBody extends TeaModel {
      *
      * <p>GetCipStatsResponseBody</p>
      */
-    public static class TreeChart extends TeaModel {
+    public static class ImageTreeChar extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
+
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
-        private TreeChart(Builder builder) {
+        private ImageTreeChar(Builder builder) {
+            this.description = builder.description;
             this.name = builder.name;
             this.value = builder.value;
         }
@@ -173,8 +198,15 @@ public class GetCipStatsResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static TreeChart create() {
+        public static ImageTreeChar create() {
             return builder().build();
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
         }
 
         /**
@@ -192,8 +224,122 @@ public class GetCipStatsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String description; 
             private String name; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(ImageTreeChar model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.value = model.value;
+            } 
+
+            /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public ImageTreeChar build() {
+                return new ImageTreeChar(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetCipStatsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCipStatsResponseBody</p>
+     */
+    public static class TreeChart extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private TreeChart(Builder builder) {
+            this.description = builder.description;
+            this.name = builder.name;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TreeChart create() {
+            return builder().build();
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String description; 
+            private String name; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(TreeChart model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.value = model.value;
+            } 
+
+            /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
 
             /**
              * Name.
@@ -225,6 +371,9 @@ public class GetCipStatsResponseBody extends TeaModel {
      * <p>GetCipStatsResponseBody</p>
      */
     public static class VoiceTreeChart extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
+
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
@@ -232,6 +381,7 @@ public class GetCipStatsResponseBody extends TeaModel {
         private String value;
 
         private VoiceTreeChart(Builder builder) {
+            this.description = builder.description;
             this.name = builder.name;
             this.value = builder.value;
         }
@@ -242,6 +392,13 @@ public class GetCipStatsResponseBody extends TeaModel {
 
         public static VoiceTreeChart create() {
             return builder().build();
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
         }
 
         /**
@@ -259,8 +416,26 @@ public class GetCipStatsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String description; 
             private String name; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(VoiceTreeChart model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.value = model.value;
+            } 
+
+            /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
 
             /**
              * Name.
@@ -293,7 +468,7 @@ public class GetCipStatsResponseBody extends TeaModel {
      */
     public static class Y extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
-        private java.util.List < Long > data;
+        private java.util.List<Long> data;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -314,7 +489,7 @@ public class GetCipStatsResponseBody extends TeaModel {
         /**
          * @return data
          */
-        public java.util.List < Long > getData() {
+        public java.util.List<Long> getData() {
             return this.data;
         }
 
@@ -326,13 +501,21 @@ public class GetCipStatsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Long > data; 
+            private java.util.List<Long> data; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(Y model) {
+                this.data = model.data;
+                this.name = model.name;
+            } 
 
             /**
              * Data.
              */
-            public Builder data(java.util.List < Long > data) {
+            public Builder data(java.util.List<Long> data) {
                 this.data = data;
                 return this;
             }
@@ -359,6 +542,9 @@ public class GetCipStatsResponseBody extends TeaModel {
      * <p>GetCipStatsResponseBody</p>
      */
     public static class LabelStatChart extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ImageTreeChar")
+        private java.util.List<ImageTreeChar> imageTreeChar;
+
         @com.aliyun.core.annotation.NameInMap("ServiceCode")
         private String serviceCode;
 
@@ -366,18 +552,19 @@ public class GetCipStatsResponseBody extends TeaModel {
         private Long totalCount;
 
         @com.aliyun.core.annotation.NameInMap("TreeChart")
-        private java.util.List < TreeChart> treeChart;
+        private java.util.List<TreeChart> treeChart;
 
         @com.aliyun.core.annotation.NameInMap("VoiceTreeChart")
-        private java.util.List < VoiceTreeChart> voiceTreeChart;
+        private java.util.List<VoiceTreeChart> voiceTreeChart;
 
         @com.aliyun.core.annotation.NameInMap("X")
-        private java.util.List < String > x;
+        private java.util.List<String> x;
 
         @com.aliyun.core.annotation.NameInMap("Y")
-        private java.util.List < Y> y;
+        private java.util.List<Y> y;
 
         private LabelStatChart(Builder builder) {
+            this.imageTreeChar = builder.imageTreeChar;
             this.serviceCode = builder.serviceCode;
             this.totalCount = builder.totalCount;
             this.treeChart = builder.treeChart;
@@ -392,6 +579,13 @@ public class GetCipStatsResponseBody extends TeaModel {
 
         public static LabelStatChart create() {
             return builder().build();
+        }
+
+        /**
+         * @return imageTreeChar
+         */
+        public java.util.List<ImageTreeChar> getImageTreeChar() {
+            return this.imageTreeChar;
         }
 
         /**
@@ -411,38 +605,60 @@ public class GetCipStatsResponseBody extends TeaModel {
         /**
          * @return treeChart
          */
-        public java.util.List < TreeChart> getTreeChart() {
+        public java.util.List<TreeChart> getTreeChart() {
             return this.treeChart;
         }
 
         /**
          * @return voiceTreeChart
          */
-        public java.util.List < VoiceTreeChart> getVoiceTreeChart() {
+        public java.util.List<VoiceTreeChart> getVoiceTreeChart() {
             return this.voiceTreeChart;
         }
 
         /**
          * @return x
          */
-        public java.util.List < String > getX() {
+        public java.util.List<String> getX() {
             return this.x;
         }
 
         /**
          * @return y
          */
-        public java.util.List < Y> getY() {
+        public java.util.List<Y> getY() {
             return this.y;
         }
 
         public static final class Builder {
+            private java.util.List<ImageTreeChar> imageTreeChar; 
             private String serviceCode; 
             private Long totalCount; 
-            private java.util.List < TreeChart> treeChart; 
-            private java.util.List < VoiceTreeChart> voiceTreeChart; 
-            private java.util.List < String > x; 
-            private java.util.List < Y> y; 
+            private java.util.List<TreeChart> treeChart; 
+            private java.util.List<VoiceTreeChart> voiceTreeChart; 
+            private java.util.List<String> x; 
+            private java.util.List<Y> y; 
+
+            private Builder() {
+            } 
+
+            private Builder(LabelStatChart model) {
+                this.imageTreeChar = model.imageTreeChar;
+                this.serviceCode = model.serviceCode;
+                this.totalCount = model.totalCount;
+                this.treeChart = model.treeChart;
+                this.voiceTreeChart = model.voiceTreeChart;
+                this.x = model.x;
+                this.y = model.y;
+            } 
+
+            /**
+             * ImageTreeChar.
+             */
+            public Builder imageTreeChar(java.util.List<ImageTreeChar> imageTreeChar) {
+                this.imageTreeChar = imageTreeChar;
+                return this;
+            }
 
             /**
              * ServiceCode.
@@ -463,7 +679,7 @@ public class GetCipStatsResponseBody extends TeaModel {
             /**
              * TreeChart.
              */
-            public Builder treeChart(java.util.List < TreeChart> treeChart) {
+            public Builder treeChart(java.util.List<TreeChart> treeChart) {
                 this.treeChart = treeChart;
                 return this;
             }
@@ -471,7 +687,7 @@ public class GetCipStatsResponseBody extends TeaModel {
             /**
              * VoiceTreeChart.
              */
-            public Builder voiceTreeChart(java.util.List < VoiceTreeChart> voiceTreeChart) {
+            public Builder voiceTreeChart(java.util.List<VoiceTreeChart> voiceTreeChart) {
                 this.voiceTreeChart = voiceTreeChart;
                 return this;
             }
@@ -479,7 +695,7 @@ public class GetCipStatsResponseBody extends TeaModel {
             /**
              * X.
              */
-            public Builder x(java.util.List < String > x) {
+            public Builder x(java.util.List<String> x) {
                 this.x = x;
                 return this;
             }
@@ -487,7 +703,7 @@ public class GetCipStatsResponseBody extends TeaModel {
             /**
              * Y.
              */
-            public Builder y(java.util.List < Y> y) {
+            public Builder y(java.util.List<Y> y) {
                 this.y = y;
                 return this;
             }
@@ -507,7 +723,7 @@ public class GetCipStatsResponseBody extends TeaModel {
      */
     public static class DataY extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
-        private java.util.List < Long > data;
+        private java.util.List<Long> data;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -528,7 +744,7 @@ public class GetCipStatsResponseBody extends TeaModel {
         /**
          * @return data
          */
-        public java.util.List < Long > getData() {
+        public java.util.List<Long> getData() {
             return this.data;
         }
 
@@ -540,13 +756,21 @@ public class GetCipStatsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Long > data; 
+            private java.util.List<Long> data; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataY model) {
+                this.data = model.data;
+                this.name = model.name;
+            } 
 
             /**
              * Data.
              */
-            public Builder data(java.util.List < Long > data) {
+            public Builder data(java.util.List<Long> data) {
                 this.data = data;
                 return this;
             }
@@ -574,7 +798,7 @@ public class GetCipStatsResponseBody extends TeaModel {
      */
     public static class Z extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
-        private java.util.List < Long > data;
+        private java.util.List<Long> data;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -595,7 +819,7 @@ public class GetCipStatsResponseBody extends TeaModel {
         /**
          * @return data
          */
-        public java.util.List < Long > getData() {
+        public java.util.List<Long> getData() {
             return this.data;
         }
 
@@ -607,13 +831,21 @@ public class GetCipStatsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Long > data; 
+            private java.util.List<Long> data; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(Z model) {
+                this.data = model.data;
+                this.name = model.name;
+            } 
 
             /**
              * Data.
              */
-            public Builder data(java.util.List < Long > data) {
+            public Builder data(java.util.List<Long> data) {
                 this.data = data;
                 return this;
             }
@@ -641,22 +873,26 @@ public class GetCipStatsResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LabelStatChart")
-        private java.util.List < LabelStatChart> labelStatChart;
+        private java.util.List<LabelStatChart> labelStatChart;
+
+        @com.aliyun.core.annotation.NameInMap("TotalStat")
+        private java.util.Map<String, ?> totalStat;
 
         @com.aliyun.core.annotation.NameInMap("Uids")
-        private java.util.List < String > uids;
+        private java.util.List<String> uids;
 
         @com.aliyun.core.annotation.NameInMap("X")
-        private java.util.List < String > x;
+        private java.util.List<String> x;
 
         @com.aliyun.core.annotation.NameInMap("Y")
-        private java.util.List < DataY> y;
+        private java.util.List<DataY> y;
 
         @com.aliyun.core.annotation.NameInMap("Z")
-        private java.util.List < Z> z;
+        private java.util.List<Z> z;
 
         private Data(Builder builder) {
             this.labelStatChart = builder.labelStatChart;
+            this.totalStat = builder.totalStat;
             this.uids = builder.uids;
             this.x = builder.x;
             this.y = builder.y;
@@ -674,57 +910,85 @@ public class GetCipStatsResponseBody extends TeaModel {
         /**
          * @return labelStatChart
          */
-        public java.util.List < LabelStatChart> getLabelStatChart() {
+        public java.util.List<LabelStatChart> getLabelStatChart() {
             return this.labelStatChart;
+        }
+
+        /**
+         * @return totalStat
+         */
+        public java.util.Map<String, ?> getTotalStat() {
+            return this.totalStat;
         }
 
         /**
          * @return uids
          */
-        public java.util.List < String > getUids() {
+        public java.util.List<String> getUids() {
             return this.uids;
         }
 
         /**
          * @return x
          */
-        public java.util.List < String > getX() {
+        public java.util.List<String> getX() {
             return this.x;
         }
 
         /**
          * @return y
          */
-        public java.util.List < DataY> getY() {
+        public java.util.List<DataY> getY() {
             return this.y;
         }
 
         /**
          * @return z
          */
-        public java.util.List < Z> getZ() {
+        public java.util.List<Z> getZ() {
             return this.z;
         }
 
         public static final class Builder {
-            private java.util.List < LabelStatChart> labelStatChart; 
-            private java.util.List < String > uids; 
-            private java.util.List < String > x; 
-            private java.util.List < DataY> y; 
-            private java.util.List < Z> z; 
+            private java.util.List<LabelStatChart> labelStatChart; 
+            private java.util.Map<String, ?> totalStat; 
+            private java.util.List<String> uids; 
+            private java.util.List<String> x; 
+            private java.util.List<DataY> y; 
+            private java.util.List<Z> z; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.labelStatChart = model.labelStatChart;
+                this.totalStat = model.totalStat;
+                this.uids = model.uids;
+                this.x = model.x;
+                this.y = model.y;
+                this.z = model.z;
+            } 
 
             /**
              * LabelStatChart.
              */
-            public Builder labelStatChart(java.util.List < LabelStatChart> labelStatChart) {
+            public Builder labelStatChart(java.util.List<LabelStatChart> labelStatChart) {
                 this.labelStatChart = labelStatChart;
+                return this;
+            }
+
+            /**
+             * TotalStat.
+             */
+            public Builder totalStat(java.util.Map<String, ?> totalStat) {
+                this.totalStat = totalStat;
                 return this;
             }
 
             /**
              * Uids.
              */
-            public Builder uids(java.util.List < String > uids) {
+            public Builder uids(java.util.List<String> uids) {
                 this.uids = uids;
                 return this;
             }
@@ -732,7 +996,7 @@ public class GetCipStatsResponseBody extends TeaModel {
             /**
              * X.
              */
-            public Builder x(java.util.List < String > x) {
+            public Builder x(java.util.List<String> x) {
                 this.x = x;
                 return this;
             }
@@ -740,7 +1004,7 @@ public class GetCipStatsResponseBody extends TeaModel {
             /**
              * Y.
              */
-            public Builder y(java.util.List < DataY> y) {
+            public Builder y(java.util.List<DataY> y) {
                 this.y = y;
                 return this;
             }
@@ -748,7 +1012,7 @@ public class GetCipStatsResponseBody extends TeaModel {
             /**
              * Z.
              */
-            public Builder z(java.util.List < Z> z) {
+            public Builder z(java.util.List<Z> z) {
                 this.z = z;
                 return this;
             }

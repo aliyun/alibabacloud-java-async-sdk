@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.green20220926.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -45,6 +50,10 @@ public class GetScanResultResponseBody extends TeaModel {
 
     public static GetScanResultResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class GetScanResultResponseBody extends TeaModel {
         private String msg; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetScanResultResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.msg = model.msg;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -161,11 +182,15 @@ public class GetScanResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Confidence")
         private String confidence;
 
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
+
         @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
         private Result(Builder builder) {
             this.confidence = builder.confidence;
+            this.description = builder.description;
             this.label = builder.label;
         }
 
@@ -185,6 +210,13 @@ public class GetScanResultResponseBody extends TeaModel {
         }
 
         /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
          * @return label
          */
         public String getLabel() {
@@ -193,13 +225,31 @@ public class GetScanResultResponseBody extends TeaModel {
 
         public static final class Builder {
             private String confidence; 
+            private String description; 
             private String label; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.confidence = model.confidence;
+                this.description = model.description;
+                this.label = model.label;
+            } 
 
             /**
              * Confidence.
              */
             public Builder confidence(String confidence) {
                 this.confidence = confidence;
+                return this;
+            }
+
+            /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
                 return this;
             }
 
@@ -225,6 +275,9 @@ public class GetScanResultResponseBody extends TeaModel {
      * <p>GetScanResultResponseBody</p>
      */
     public static class Items extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AttackLevel")
+        private String attackLevel;
+
         @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
@@ -238,7 +291,7 @@ public class GetScanResultResponseBody extends TeaModel {
         private String extFeedback;
 
         @com.aliyun.core.annotation.NameInMap("Extra")
-        private java.util.Map < String, ? > extra;
+        private java.util.Map<String, ?> extra;
 
         @com.aliyun.core.annotation.NameInMap("FrameCount")
         private Long frameCount;
@@ -247,7 +300,7 @@ public class GetScanResultResponseBody extends TeaModel {
         private String gmtCreate;
 
         @com.aliyun.core.annotation.NameInMap("ImageLabels")
-        private java.util.List < java.util.Map<String, ?>> imageLabels;
+        private java.util.List<java.util.Map<String, ?>> imageLabels;
 
         @com.aliyun.core.annotation.NameInMap("ImageService")
         private String imageService;
@@ -259,13 +312,16 @@ public class GetScanResultResponseBody extends TeaModel {
         private String labels;
 
         @com.aliyun.core.annotation.NameInMap("NoLabels")
-        private java.util.List < String > noLabels;
+        private java.util.List<String> noLabels;
 
         @com.aliyun.core.annotation.NameInMap("Offset")
         private Long offset;
 
         @com.aliyun.core.annotation.NameInMap("PageNum")
         private Long pageNum;
+
+        @com.aliyun.core.annotation.NameInMap("RequestFrom")
+        private String requestFrom;
 
         @com.aliyun.core.annotation.NameInMap("RequestId")
         private String requestId;
@@ -274,7 +330,10 @@ public class GetScanResultResponseBody extends TeaModel {
         private String requestTime;
 
         @com.aliyun.core.annotation.NameInMap("Result")
-        private java.util.List < Result> result;
+        private java.util.List<Result> result;
+
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
+        private String riskLevel;
 
         @com.aliyun.core.annotation.NameInMap("RiskTips")
         private String riskTips;
@@ -287,6 +346,9 @@ public class GetScanResultResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("Score")
         private Float score;
+
+        @com.aliyun.core.annotation.NameInMap("SensitiveLevel")
+        private String sensitiveLevel;
 
         @com.aliyun.core.annotation.NameInMap("ServiceCode")
         private String serviceCode;
@@ -301,7 +363,7 @@ public class GetScanResultResponseBody extends TeaModel {
         private String taskId;
 
         @com.aliyun.core.annotation.NameInMap("TextLabels")
-        private java.util.List < java.util.Map<String, ?>> textLabels;
+        private java.util.List<java.util.Map<String, ?>> textLabels;
 
         @com.aliyun.core.annotation.NameInMap("Thumbnail")
         private String thumbnail;
@@ -313,7 +375,7 @@ public class GetScanResultResponseBody extends TeaModel {
         private String url;
 
         @com.aliyun.core.annotation.NameInMap("VoiceLabels")
-        private java.util.List < java.util.Map<String, ?>> voiceLabels;
+        private java.util.List<java.util.Map<String, ?>> voiceLabels;
 
         @com.aliyun.core.annotation.NameInMap("VoiceScanOpened")
         private Boolean voiceScanOpened;
@@ -322,6 +384,7 @@ public class GetScanResultResponseBody extends TeaModel {
         private String voiceService;
 
         private Items(Builder builder) {
+            this.attackLevel = builder.attackLevel;
             this.content = builder.content;
             this.dataId = builder.dataId;
             this.endTime = builder.endTime;
@@ -336,13 +399,16 @@ public class GetScanResultResponseBody extends TeaModel {
             this.noLabels = builder.noLabels;
             this.offset = builder.offset;
             this.pageNum = builder.pageNum;
+            this.requestFrom = builder.requestFrom;
             this.requestId = builder.requestId;
             this.requestTime = builder.requestTime;
             this.result = builder.result;
+            this.riskLevel = builder.riskLevel;
             this.riskTips = builder.riskTips;
             this.riskWords = builder.riskWords;
             this.scanResult = builder.scanResult;
             this.score = builder.score;
+            this.sensitiveLevel = builder.sensitiveLevel;
             this.serviceCode = builder.serviceCode;
             this.startTime = builder.startTime;
             this.suggestion = builder.suggestion;
@@ -362,6 +428,13 @@ public class GetScanResultResponseBody extends TeaModel {
 
         public static Items create() {
             return builder().build();
+        }
+
+        /**
+         * @return attackLevel
+         */
+        public String getAttackLevel() {
+            return this.attackLevel;
         }
 
         /**
@@ -395,7 +468,7 @@ public class GetScanResultResponseBody extends TeaModel {
         /**
          * @return extra
          */
-        public java.util.Map < String, ? > getExtra() {
+        public java.util.Map<String, ?> getExtra() {
             return this.extra;
         }
 
@@ -416,7 +489,7 @@ public class GetScanResultResponseBody extends TeaModel {
         /**
          * @return imageLabels
          */
-        public java.util.List < java.util.Map<String, ?>> getImageLabels() {
+        public java.util.List<java.util.Map<String, ?>> getImageLabels() {
             return this.imageLabels;
         }
 
@@ -444,7 +517,7 @@ public class GetScanResultResponseBody extends TeaModel {
         /**
          * @return noLabels
          */
-        public java.util.List < String > getNoLabels() {
+        public java.util.List<String> getNoLabels() {
             return this.noLabels;
         }
 
@@ -460,6 +533,13 @@ public class GetScanResultResponseBody extends TeaModel {
          */
         public Long getPageNum() {
             return this.pageNum;
+        }
+
+        /**
+         * @return requestFrom
+         */
+        public String getRequestFrom() {
+            return this.requestFrom;
         }
 
         /**
@@ -479,8 +559,15 @@ public class GetScanResultResponseBody extends TeaModel {
         /**
          * @return result
          */
-        public java.util.List < Result> getResult() {
+        public java.util.List<Result> getResult() {
             return this.result;
+        }
+
+        /**
+         * @return riskLevel
+         */
+        public String getRiskLevel() {
+            return this.riskLevel;
         }
 
         /**
@@ -509,6 +596,13 @@ public class GetScanResultResponseBody extends TeaModel {
          */
         public Float getScore() {
             return this.score;
+        }
+
+        /**
+         * @return sensitiveLevel
+         */
+        public String getSensitiveLevel() {
+            return this.sensitiveLevel;
         }
 
         /**
@@ -542,7 +636,7 @@ public class GetScanResultResponseBody extends TeaModel {
         /**
          * @return textLabels
          */
-        public java.util.List < java.util.Map<String, ?>> getTextLabels() {
+        public java.util.List<java.util.Map<String, ?>> getTextLabels() {
             return this.textLabels;
         }
 
@@ -570,7 +664,7 @@ public class GetScanResultResponseBody extends TeaModel {
         /**
          * @return voiceLabels
          */
-        public java.util.List < java.util.Map<String, ?>> getVoiceLabels() {
+        public java.util.List<java.util.Map<String, ?>> getVoiceLabels() {
             return this.voiceLabels;
         }
 
@@ -589,38 +683,92 @@ public class GetScanResultResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String attackLevel; 
             private String content; 
             private String dataId; 
             private String endTime; 
             private String extFeedback; 
-            private java.util.Map < String, ? > extra; 
+            private java.util.Map<String, ?> extra; 
             private Long frameCount; 
             private String gmtCreate; 
-            private java.util.List < java.util.Map<String, ?>> imageLabels; 
+            private java.util.List<java.util.Map<String, ?>> imageLabels; 
             private String imageService; 
             private String imageUrl; 
             private String labels; 
-            private java.util.List < String > noLabels; 
+            private java.util.List<String> noLabels; 
             private Long offset; 
             private Long pageNum; 
+            private String requestFrom; 
             private String requestId; 
             private String requestTime; 
-            private java.util.List < Result> result; 
+            private java.util.List<Result> result; 
+            private String riskLevel; 
             private String riskTips; 
             private String riskWords; 
             private String scanResult; 
             private Float score; 
+            private String sensitiveLevel; 
             private String serviceCode; 
             private String startTime; 
             private String suggestion; 
             private String taskId; 
-            private java.util.List < java.util.Map<String, ?>> textLabels; 
+            private java.util.List<java.util.Map<String, ?>> textLabels; 
             private String thumbnail; 
             private String timeStamp; 
             private String url; 
-            private java.util.List < java.util.Map<String, ?>> voiceLabels; 
+            private java.util.List<java.util.Map<String, ?>> voiceLabels; 
             private Boolean voiceScanOpened; 
             private String voiceService; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.attackLevel = model.attackLevel;
+                this.content = model.content;
+                this.dataId = model.dataId;
+                this.endTime = model.endTime;
+                this.extFeedback = model.extFeedback;
+                this.extra = model.extra;
+                this.frameCount = model.frameCount;
+                this.gmtCreate = model.gmtCreate;
+                this.imageLabels = model.imageLabels;
+                this.imageService = model.imageService;
+                this.imageUrl = model.imageUrl;
+                this.labels = model.labels;
+                this.noLabels = model.noLabels;
+                this.offset = model.offset;
+                this.pageNum = model.pageNum;
+                this.requestFrom = model.requestFrom;
+                this.requestId = model.requestId;
+                this.requestTime = model.requestTime;
+                this.result = model.result;
+                this.riskLevel = model.riskLevel;
+                this.riskTips = model.riskTips;
+                this.riskWords = model.riskWords;
+                this.scanResult = model.scanResult;
+                this.score = model.score;
+                this.sensitiveLevel = model.sensitiveLevel;
+                this.serviceCode = model.serviceCode;
+                this.startTime = model.startTime;
+                this.suggestion = model.suggestion;
+                this.taskId = model.taskId;
+                this.textLabels = model.textLabels;
+                this.thumbnail = model.thumbnail;
+                this.timeStamp = model.timeStamp;
+                this.url = model.url;
+                this.voiceLabels = model.voiceLabels;
+                this.voiceScanOpened = model.voiceScanOpened;
+                this.voiceService = model.voiceService;
+            } 
+
+            /**
+             * AttackLevel.
+             */
+            public Builder attackLevel(String attackLevel) {
+                this.attackLevel = attackLevel;
+                return this;
+            }
 
             /**
              * Content.
@@ -660,7 +808,7 @@ public class GetScanResultResponseBody extends TeaModel {
             /**
              * Extra.
              */
-            public Builder extra(java.util.Map < String, ? > extra) {
+            public Builder extra(java.util.Map<String, ?> extra) {
                 this.extra = extra;
                 return this;
             }
@@ -684,7 +832,7 @@ public class GetScanResultResponseBody extends TeaModel {
             /**
              * ImageLabels.
              */
-            public Builder imageLabels(java.util.List < java.util.Map<String, ?>> imageLabels) {
+            public Builder imageLabels(java.util.List<java.util.Map<String, ?>> imageLabels) {
                 this.imageLabels = imageLabels;
                 return this;
             }
@@ -719,7 +867,7 @@ public class GetScanResultResponseBody extends TeaModel {
             /**
              * NoLabels.
              */
-            public Builder noLabels(java.util.List < String > noLabels) {
+            public Builder noLabels(java.util.List<String> noLabels) {
                 this.noLabels = noLabels;
                 return this;
             }
@@ -737,6 +885,14 @@ public class GetScanResultResponseBody extends TeaModel {
              */
             public Builder pageNum(Long pageNum) {
                 this.pageNum = pageNum;
+                return this;
+            }
+
+            /**
+             * RequestFrom.
+             */
+            public Builder requestFrom(String requestFrom) {
+                this.requestFrom = requestFrom;
                 return this;
             }
 
@@ -759,8 +915,16 @@ public class GetScanResultResponseBody extends TeaModel {
             /**
              * Result.
              */
-            public Builder result(java.util.List < Result> result) {
+            public Builder result(java.util.List<Result> result) {
                 this.result = result;
+                return this;
+            }
+
+            /**
+             * RiskLevel.
+             */
+            public Builder riskLevel(String riskLevel) {
+                this.riskLevel = riskLevel;
                 return this;
             }
 
@@ -793,6 +957,14 @@ public class GetScanResultResponseBody extends TeaModel {
              */
             public Builder score(Float score) {
                 this.score = score;
+                return this;
+            }
+
+            /**
+             * SensitiveLevel.
+             */
+            public Builder sensitiveLevel(String sensitiveLevel) {
+                this.sensitiveLevel = sensitiveLevel;
                 return this;
             }
 
@@ -831,7 +1003,7 @@ public class GetScanResultResponseBody extends TeaModel {
             /**
              * TextLabels.
              */
-            public Builder textLabels(java.util.List < java.util.Map<String, ?>> textLabels) {
+            public Builder textLabels(java.util.List<java.util.Map<String, ?>> textLabels) {
                 this.textLabels = textLabels;
                 return this;
             }
@@ -863,7 +1035,7 @@ public class GetScanResultResponseBody extends TeaModel {
             /**
              * VoiceLabels.
              */
-            public Builder voiceLabels(java.util.List < java.util.Map<String, ?>> voiceLabels) {
+            public Builder voiceLabels(java.util.List<java.util.Map<String, ?>> voiceLabels) {
                 this.voiceLabels = voiceLabels;
                 return this;
             }
@@ -902,7 +1074,7 @@ public class GetScanResultResponseBody extends TeaModel {
         private Integer currentPage;
 
         @com.aliyun.core.annotation.NameInMap("Items")
-        private java.util.List < Items> items;
+        private java.util.List<Items> items;
 
         @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
@@ -935,7 +1107,7 @@ public class GetScanResultResponseBody extends TeaModel {
         /**
          * @return items
          */
-        public java.util.List < Items> getItems() {
+        public java.util.List<Items> getItems() {
             return this.items;
         }
 
@@ -955,9 +1127,19 @@ public class GetScanResultResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer currentPage; 
-            private java.util.List < Items> items; 
+            private java.util.List<Items> items; 
             private Integer pageSize; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.currentPage = model.currentPage;
+                this.items = model.items;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * CurrentPage.
@@ -970,7 +1152,7 @@ public class GetScanResultResponseBody extends TeaModel {
             /**
              * Items.
              */
-            public Builder items(java.util.List < Items> items) {
+            public Builder items(java.util.List<Items> items) {
                 this.items = items;
                 return this;
             }

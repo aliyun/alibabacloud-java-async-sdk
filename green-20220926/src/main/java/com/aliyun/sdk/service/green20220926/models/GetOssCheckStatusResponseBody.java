@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.green20220926.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -49,6 +54,10 @@ public class GetOssCheckStatusResponseBody extends TeaModel {
 
     public static GetOssCheckStatusResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -108,6 +117,19 @@ public class GetOssCheckStatusResponseBody extends TeaModel {
         private String ramStatus; 
         private String requestId; 
         private String slsStatus; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetOssCheckStatusResponseBody model) {
+            this.bid = model.bid;
+            this.buy = model.buy;
+            this.commodityCode = model.commodityCode;
+            this.indebt = model.indebt;
+            this.ramStatus = model.ramStatus;
+            this.requestId = model.requestId;
+            this.slsStatus = model.slsStatus;
+        } 
 
         /**
          * <p>Bid。</p>

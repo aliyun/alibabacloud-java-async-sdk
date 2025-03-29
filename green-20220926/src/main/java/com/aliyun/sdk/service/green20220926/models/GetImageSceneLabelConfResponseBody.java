@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.green20220926.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class GetImageSceneLabelConfResponseBody extends TeaModel {
     private Integer code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < java.util.Map<String, ?>> data;
+    private java.util.List<java.util.Map<String, ?>> data;
 
     @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
@@ -47,6 +52,10 @@ public class GetImageSceneLabelConfResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -57,7 +66,7 @@ public class GetImageSceneLabelConfResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < java.util.Map<String, ?>> getData() {
+    public java.util.List<java.util.Map<String, ?>> getData() {
         return this.data;
     }
 
@@ -91,11 +100,23 @@ public class GetImageSceneLabelConfResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer code; 
-        private java.util.List < java.util.Map<String, ?>> data; 
+        private java.util.List<java.util.Map<String, ?>> data; 
         private Integer httpStatusCode; 
         private String msg; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetImageSceneLabelConfResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.msg = model.msg;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -108,7 +129,7 @@ public class GetImageSceneLabelConfResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < java.util.Map<String, ?>> data) {
+        public Builder data(java.util.List<java.util.Map<String, ?>> data) {
             this.data = data;
             return this;
         }

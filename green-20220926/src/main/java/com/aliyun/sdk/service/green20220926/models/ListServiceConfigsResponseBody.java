@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.green20220926.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListServiceConfigsResponseBody extends TeaModel {
     private Integer code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("Msg")
     private String msg;
@@ -43,6 +48,10 @@ public class ListServiceConfigsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -53,7 +62,7 @@ public class ListServiceConfigsResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -80,10 +89,21 @@ public class ListServiceConfigsResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String msg; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListServiceConfigsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.msg = model.msg;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -96,7 +116,7 @@ public class ListServiceConfigsResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -139,7 +159,7 @@ public class ListServiceConfigsResponseBody extends TeaModel {
      */
     public static class ImageScanRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Services")
-        private java.util.List < String > services;
+        private java.util.List<String> services;
 
         private ImageScanRule(Builder builder) {
             this.services = builder.services;
@@ -156,17 +176,24 @@ public class ListServiceConfigsResponseBody extends TeaModel {
         /**
          * @return services
          */
-        public java.util.List < String > getServices() {
+        public java.util.List<String> getServices() {
             return this.services;
         }
 
         public static final class Builder {
-            private java.util.List < String > services; 
+            private java.util.List<String> services; 
+
+            private Builder() {
+            } 
+
+            private Builder(ImageScanRule model) {
+                this.services = model.services;
+            } 
 
             /**
              * Services.
              */
-            public Builder services(java.util.List < String > services) {
+            public Builder services(java.util.List<String> services) {
                 this.services = services;
                 return this;
             }
@@ -186,7 +213,7 @@ public class ListServiceConfigsResponseBody extends TeaModel {
      */
     public static class TextScanRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Services")
-        private java.util.List < String > services;
+        private java.util.List<String> services;
 
         private TextScanRule(Builder builder) {
             this.services = builder.services;
@@ -203,17 +230,24 @@ public class ListServiceConfigsResponseBody extends TeaModel {
         /**
          * @return services
          */
-        public java.util.List < String > getServices() {
+        public java.util.List<String> getServices() {
             return this.services;
         }
 
         public static final class Builder {
-            private java.util.List < String > services; 
+            private java.util.List<String> services; 
+
+            private Builder() {
+            } 
+
+            private Builder(TextScanRule model) {
+                this.services = model.services;
+            } 
 
             /**
              * Services.
              */
-            public Builder services(java.util.List < String > services) {
+            public Builder services(java.util.List<String> services) {
                 this.services = services;
                 return this;
             }
@@ -281,6 +315,15 @@ public class ListServiceConfigsResponseBody extends TeaModel {
             private Integer index; 
             private TextScanRule textScanRule; 
 
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.imageScanRule = model.imageScanRule;
+                this.index = model.index;
+                this.textScanRule = model.textScanRule;
+            } 
+
             /**
              * ImageScanRule.
              */
@@ -323,19 +366,19 @@ public class ListServiceConfigsResponseBody extends TeaModel {
         private String audioService;
 
         @com.aliyun.core.annotation.NameInMap("ImageService")
-        private java.util.List < String > imageService;
+        private java.util.List<String> imageService;
 
         @com.aliyun.core.annotation.NameInMap("KeywordFilterLibs")
-        private java.util.List < String > keywordFilterLibs;
+        private java.util.List<String> keywordFilterLibs;
 
         @com.aliyun.core.annotation.NameInMap("KeywordHitLibs")
-        private java.util.List < String > keywordHitLibs;
+        private java.util.List<String> keywordHitLibs;
 
         @com.aliyun.core.annotation.NameInMap("Rules")
-        private java.util.List < Rules> rules;
+        private java.util.List<Rules> rules;
 
         @com.aliyun.core.annotation.NameInMap("SimilarTextHitLibs")
-        private java.util.List < String > similarTextHitLibs;
+        private java.util.List<String> similarTextHitLibs;
 
         private CustomServiceConf(Builder builder) {
             this.audioService = builder.audioService;
@@ -364,45 +407,57 @@ public class ListServiceConfigsResponseBody extends TeaModel {
         /**
          * @return imageService
          */
-        public java.util.List < String > getImageService() {
+        public java.util.List<String> getImageService() {
             return this.imageService;
         }
 
         /**
          * @return keywordFilterLibs
          */
-        public java.util.List < String > getKeywordFilterLibs() {
+        public java.util.List<String> getKeywordFilterLibs() {
             return this.keywordFilterLibs;
         }
 
         /**
          * @return keywordHitLibs
          */
-        public java.util.List < String > getKeywordHitLibs() {
+        public java.util.List<String> getKeywordHitLibs() {
             return this.keywordHitLibs;
         }
 
         /**
          * @return rules
          */
-        public java.util.List < Rules> getRules() {
+        public java.util.List<Rules> getRules() {
             return this.rules;
         }
 
         /**
          * @return similarTextHitLibs
          */
-        public java.util.List < String > getSimilarTextHitLibs() {
+        public java.util.List<String> getSimilarTextHitLibs() {
             return this.similarTextHitLibs;
         }
 
         public static final class Builder {
             private String audioService; 
-            private java.util.List < String > imageService; 
-            private java.util.List < String > keywordFilterLibs; 
-            private java.util.List < String > keywordHitLibs; 
-            private java.util.List < Rules> rules; 
-            private java.util.List < String > similarTextHitLibs; 
+            private java.util.List<String> imageService; 
+            private java.util.List<String> keywordFilterLibs; 
+            private java.util.List<String> keywordHitLibs; 
+            private java.util.List<Rules> rules; 
+            private java.util.List<String> similarTextHitLibs; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomServiceConf model) {
+                this.audioService = model.audioService;
+                this.imageService = model.imageService;
+                this.keywordFilterLibs = model.keywordFilterLibs;
+                this.keywordHitLibs = model.keywordHitLibs;
+                this.rules = model.rules;
+                this.similarTextHitLibs = model.similarTextHitLibs;
+            } 
 
             /**
              * AudioService.
@@ -415,7 +470,7 @@ public class ListServiceConfigsResponseBody extends TeaModel {
             /**
              * ImageService.
              */
-            public Builder imageService(java.util.List < String > imageService) {
+            public Builder imageService(java.util.List<String> imageService) {
                 this.imageService = imageService;
                 return this;
             }
@@ -423,7 +478,7 @@ public class ListServiceConfigsResponseBody extends TeaModel {
             /**
              * KeywordFilterLibs.
              */
-            public Builder keywordFilterLibs(java.util.List < String > keywordFilterLibs) {
+            public Builder keywordFilterLibs(java.util.List<String> keywordFilterLibs) {
                 this.keywordFilterLibs = keywordFilterLibs;
                 return this;
             }
@@ -431,7 +486,7 @@ public class ListServiceConfigsResponseBody extends TeaModel {
             /**
              * KeywordHitLibs.
              */
-            public Builder keywordHitLibs(java.util.List < String > keywordHitLibs) {
+            public Builder keywordHitLibs(java.util.List<String> keywordHitLibs) {
                 this.keywordHitLibs = keywordHitLibs;
                 return this;
             }
@@ -439,7 +494,7 @@ public class ListServiceConfigsResponseBody extends TeaModel {
             /**
              * Rules.
              */
-            public Builder rules(java.util.List < Rules> rules) {
+            public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
                 return this;
             }
@@ -447,7 +502,7 @@ public class ListServiceConfigsResponseBody extends TeaModel {
             /**
              * SimilarTextHitLibs.
              */
-            public Builder similarTextHitLibs(java.util.List < String > similarTextHitLibs) {
+            public Builder similarTextHitLibs(java.util.List<String> similarTextHitLibs) {
                 this.similarTextHitLibs = similarTextHitLibs;
                 return this;
             }
@@ -479,7 +534,7 @@ public class ListServiceConfigsResponseBody extends TeaModel {
         private String gmtModified;
 
         @com.aliyun.core.annotation.NameInMap("Option")
-        private java.util.Map < String, ? > option;
+        private java.util.Map<String, ?> option;
 
         @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
@@ -556,7 +611,7 @@ public class ListServiceConfigsResponseBody extends TeaModel {
         /**
          * @return option
          */
-        public java.util.Map < String, ? > getOption() {
+        public java.util.Map<String, ?> getOption() {
             return this.option;
         }
 
@@ -614,7 +669,7 @@ public class ListServiceConfigsResponseBody extends TeaModel {
             private String copyFrom; 
             private CustomServiceConf customServiceConf; 
             private String gmtModified; 
-            private java.util.Map < String, ? > option; 
+            private java.util.Map<String, ?> option; 
             private String resourceType; 
             private String serviceCode; 
             private String serviceDesc; 
@@ -622,6 +677,24 @@ public class ListServiceConfigsResponseBody extends TeaModel {
             private String serviceType; 
             private String uid; 
             private String useStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.classify = model.classify;
+                this.copyFrom = model.copyFrom;
+                this.customServiceConf = model.customServiceConf;
+                this.gmtModified = model.gmtModified;
+                this.option = model.option;
+                this.resourceType = model.resourceType;
+                this.serviceCode = model.serviceCode;
+                this.serviceDesc = model.serviceDesc;
+                this.serviceName = model.serviceName;
+                this.serviceType = model.serviceType;
+                this.uid = model.uid;
+                this.useStatus = model.useStatus;
+            } 
 
             /**
              * Classify.
@@ -658,7 +731,7 @@ public class ListServiceConfigsResponseBody extends TeaModel {
             /**
              * Option.
              */
-            public Builder option(java.util.Map < String, ? > option) {
+            public Builder option(java.util.Map<String, ?> option) {
                 this.option = option;
                 return this;
             }

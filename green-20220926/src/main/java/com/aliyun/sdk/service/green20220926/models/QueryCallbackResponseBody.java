@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.green20220926.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -65,6 +70,10 @@ public class QueryCallbackResponseBody extends TeaModel {
 
     public static QueryCallbackResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -156,6 +165,23 @@ public class QueryCallbackResponseBody extends TeaModel {
         private String seed; 
         private String uid; 
         private String url; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryCallbackResponseBody model) {
+            this.cryptType = model.cryptType;
+            this.existsOssCheckTask = model.existsOssCheckTask;
+            this.gmtCreate = model.gmtCreate;
+            this.gmtModified = model.gmtModified;
+            this.id = model.id;
+            this.name = model.name;
+            this.requestId = model.requestId;
+            this.scope = model.scope;
+            this.seed = model.seed;
+            this.uid = model.uid;
+            this.url = model.url;
+        } 
 
         /**
          * CryptType.

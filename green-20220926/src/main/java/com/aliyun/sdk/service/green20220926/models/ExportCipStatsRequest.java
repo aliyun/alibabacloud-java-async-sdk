@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.green20220926.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -21,6 +26,10 @@ public class ExportCipStatsRequest extends Request {
     private String endDate;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExportType")
+    private String exportType;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Label")
     private String label;
 
@@ -33,6 +42,10 @@ public class ExportCipStatsRequest extends Request {
     private String resourceType;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceCode")
+    private String serviceCode;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("StartDate")
     private String startDate;
 
@@ -40,15 +53,22 @@ public class ExportCipStatsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SubUid")
     private String subUid;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Type")
+    private String type;
+
     private ExportCipStatsRequest(Builder builder) {
         super(builder);
         this.byMonth = builder.byMonth;
         this.endDate = builder.endDate;
+        this.exportType = builder.exportType;
         this.label = builder.label;
         this.regionId = builder.regionId;
         this.resourceType = builder.resourceType;
+        this.serviceCode = builder.serviceCode;
         this.startDate = builder.startDate;
         this.subUid = builder.subUid;
+        this.type = builder.type;
     }
 
     public static Builder builder() {
@@ -59,7 +79,7 @@ public class ExportCipStatsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -76,6 +96,13 @@ public class ExportCipStatsRequest extends Request {
      */
     public String getEndDate() {
         return this.endDate;
+    }
+
+    /**
+     * @return exportType
+     */
+    public String getExportType() {
+        return this.exportType;
     }
 
     /**
@@ -100,6 +127,13 @@ public class ExportCipStatsRequest extends Request {
     }
 
     /**
+     * @return serviceCode
+     */
+    public String getServiceCode() {
+        return this.serviceCode;
+    }
+
+    /**
      * @return startDate
      */
     public String getStartDate() {
@@ -113,14 +147,24 @@ public class ExportCipStatsRequest extends Request {
         return this.subUid;
     }
 
+    /**
+     * @return type
+     */
+    public String getType() {
+        return this.type;
+    }
+
     public static final class Builder extends Request.Builder<ExportCipStatsRequest, Builder> {
         private Boolean byMonth; 
         private String endDate; 
+        private String exportType; 
         private String label; 
         private String regionId; 
         private String resourceType; 
+        private String serviceCode; 
         private String startDate; 
         private String subUid; 
+        private String type; 
 
         private Builder() {
             super();
@@ -130,11 +174,14 @@ public class ExportCipStatsRequest extends Request {
             super(request);
             this.byMonth = request.byMonth;
             this.endDate = request.endDate;
+            this.exportType = request.exportType;
             this.label = request.label;
             this.regionId = request.regionId;
             this.resourceType = request.resourceType;
+            this.serviceCode = request.serviceCode;
             this.startDate = request.startDate;
             this.subUid = request.subUid;
+            this.type = request.type;
         } 
 
         /**
@@ -152,6 +199,15 @@ public class ExportCipStatsRequest extends Request {
         public Builder endDate(String endDate) {
             this.putBodyParameter("EndDate", endDate);
             this.endDate = endDate;
+            return this;
+        }
+
+        /**
+         * ExportType.
+         */
+        public Builder exportType(String exportType) {
+            this.putBodyParameter("ExportType", exportType);
+            this.exportType = exportType;
             return this;
         }
 
@@ -183,6 +239,15 @@ public class ExportCipStatsRequest extends Request {
         }
 
         /**
+         * ServiceCode.
+         */
+        public Builder serviceCode(String serviceCode) {
+            this.putBodyParameter("ServiceCode", serviceCode);
+            this.serviceCode = serviceCode;
+            return this;
+        }
+
+        /**
          * StartDate.
          */
         public Builder startDate(String startDate) {
@@ -197,6 +262,15 @@ public class ExportCipStatsRequest extends Request {
         public Builder subUid(String subUid) {
             this.putBodyParameter("SubUid", subUid);
             this.subUid = subUid;
+            return this;
+        }
+
+        /**
+         * Type.
+         */
+        public Builder type(String type) {
+            this.putBodyParameter("Type", type);
+            this.type = type;
             return this;
         }
 

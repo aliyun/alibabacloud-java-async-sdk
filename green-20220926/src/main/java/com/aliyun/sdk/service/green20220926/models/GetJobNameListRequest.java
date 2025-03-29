@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.green20220926.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -26,7 +31,7 @@ public class GetJobNameListRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Sort")
-    private java.util.Map < String, String > sort;
+    private java.util.Map<String, String> sort;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StartDate")
@@ -49,7 +54,7 @@ public class GetJobNameListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -78,7 +83,7 @@ public class GetJobNameListRequest extends Request {
     /**
      * @return sort
      */
-    public java.util.Map < String, String > getSort() {
+    public java.util.Map<String, String> getSort() {
         return this.sort;
     }
 
@@ -93,7 +98,7 @@ public class GetJobNameListRequest extends Request {
         private String endDate; 
         private String query; 
         private String regionId; 
-        private java.util.Map < String, String > sort; 
+        private java.util.Map<String, String> sort; 
         private String startDate; 
 
         private Builder() {
@@ -139,7 +144,7 @@ public class GetJobNameListRequest extends Request {
         /**
          * Sort.
          */
-        public Builder sort(java.util.Map < String, String > sort) {
+        public Builder sort(java.util.Map<String, String> sort) {
             String sortShrink = shrink(sort, "Sort", "json");
             this.putQueryParameter("Sort", sortShrink);
             this.sort = sort;

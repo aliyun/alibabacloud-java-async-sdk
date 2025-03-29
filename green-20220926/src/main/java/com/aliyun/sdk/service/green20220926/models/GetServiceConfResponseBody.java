@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.green20220926.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,11 +17,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetServiceConfResponseBody</p>
  */
 public class GetServiceConfResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("Classify")
+    private String classify;
+
     @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
     @com.aliyun.core.annotation.NameInMap("CustomServiceConf")
-    private java.util.Map < String, ? > customServiceConf;
+    private java.util.Map<String, ?> customServiceConf;
 
     @com.aliyun.core.annotation.NameInMap("GmtModified")
     private String gmtModified;
@@ -25,7 +33,7 @@ public class GetServiceConfResponseBody extends TeaModel {
     private String msg;
 
     @com.aliyun.core.annotation.NameInMap("Option")
-    private java.util.Map < String, ? > option;
+    private java.util.Map<String, ?> option;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -43,6 +51,7 @@ public class GetServiceConfResponseBody extends TeaModel {
     private String uid;
 
     private GetServiceConfResponseBody(Builder builder) {
+        this.classify = builder.classify;
         this.code = builder.code;
         this.customServiceConf = builder.customServiceConf;
         this.gmtModified = builder.gmtModified;
@@ -63,6 +72,17 @@ public class GetServiceConfResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return classify
+     */
+    public String getClassify() {
+        return this.classify;
+    }
+
     /**
      * @return code
      */
@@ -73,7 +93,7 @@ public class GetServiceConfResponseBody extends TeaModel {
     /**
      * @return customServiceConf
      */
-    public java.util.Map < String, ? > getCustomServiceConf() {
+    public java.util.Map<String, ?> getCustomServiceConf() {
         return this.customServiceConf;
     }
 
@@ -94,7 +114,7 @@ public class GetServiceConfResponseBody extends TeaModel {
     /**
      * @return option
      */
-    public java.util.Map < String, ? > getOption() {
+    public java.util.Map<String, ?> getOption() {
         return this.option;
     }
 
@@ -134,16 +154,42 @@ public class GetServiceConfResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String classify; 
         private Integer code; 
-        private java.util.Map < String, ? > customServiceConf; 
+        private java.util.Map<String, ?> customServiceConf; 
         private String gmtModified; 
         private String msg; 
-        private java.util.Map < String, ? > option; 
+        private java.util.Map<String, ?> option; 
         private String requestId; 
         private String resourceType; 
         private String serviceCode; 
         private Boolean success; 
         private String uid; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetServiceConfResponseBody model) {
+            this.classify = model.classify;
+            this.code = model.code;
+            this.customServiceConf = model.customServiceConf;
+            this.gmtModified = model.gmtModified;
+            this.msg = model.msg;
+            this.option = model.option;
+            this.requestId = model.requestId;
+            this.resourceType = model.resourceType;
+            this.serviceCode = model.serviceCode;
+            this.success = model.success;
+            this.uid = model.uid;
+        } 
+
+        /**
+         * Classify.
+         */
+        public Builder classify(String classify) {
+            this.classify = classify;
+            return this;
+        }
 
         /**
          * Code.
@@ -156,7 +202,7 @@ public class GetServiceConfResponseBody extends TeaModel {
         /**
          * CustomServiceConf.
          */
-        public Builder customServiceConf(java.util.Map < String, ? > customServiceConf) {
+        public Builder customServiceConf(java.util.Map<String, ?> customServiceConf) {
             this.customServiceConf = customServiceConf;
             return this;
         }
@@ -180,7 +226,7 @@ public class GetServiceConfResponseBody extends TeaModel {
         /**
          * Option.
          */
-        public Builder option(java.util.Map < String, ? > option) {
+        public Builder option(java.util.Map<String, ?> option) {
             this.option = option;
             return this;
         }

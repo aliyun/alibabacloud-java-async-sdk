@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.green20220926.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class AddKeywordsToLibResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -48,6 +57,14 @@ public class AddKeywordsToLibResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AddKeywordsToLibResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Data.
@@ -82,13 +99,13 @@ public class AddKeywordsToLibResponseBody extends TeaModel {
         private String i18nKey;
 
         @com.aliyun.core.annotation.NameInMap("IllegalLengthKeywords")
-        private java.util.List < String > illegalLengthKeywords;
+        private java.util.List<String> illegalLengthKeywords;
 
         @com.aliyun.core.annotation.NameInMap("InvalidCount")
         private Integer invalidCount;
 
         @com.aliyun.core.annotation.NameInMap("InvalidKeywords")
-        private java.util.List < String > invalidKeywords;
+        private java.util.List<String> invalidKeywords;
 
         @com.aliyun.core.annotation.NameInMap("LibId")
         private String libId;
@@ -100,7 +117,7 @@ public class AddKeywordsToLibResponseBody extends TeaModel {
         private Integer repeatCount;
 
         @com.aliyun.core.annotation.NameInMap("RepeatKeywords")
-        private java.util.List < String > repeatKeywords;
+        private java.util.List<String> repeatKeywords;
 
         @com.aliyun.core.annotation.NameInMap("SuccessCount")
         private Integer successCount;
@@ -139,7 +156,7 @@ public class AddKeywordsToLibResponseBody extends TeaModel {
         /**
          * @return illegalLengthKeywords
          */
-        public java.util.List < String > getIllegalLengthKeywords() {
+        public java.util.List<String> getIllegalLengthKeywords() {
             return this.illegalLengthKeywords;
         }
 
@@ -153,7 +170,7 @@ public class AddKeywordsToLibResponseBody extends TeaModel {
         /**
          * @return invalidKeywords
          */
-        public java.util.List < String > getInvalidKeywords() {
+        public java.util.List<String> getInvalidKeywords() {
             return this.invalidKeywords;
         }
 
@@ -181,7 +198,7 @@ public class AddKeywordsToLibResponseBody extends TeaModel {
         /**
          * @return repeatKeywords
          */
-        public java.util.List < String > getRepeatKeywords() {
+        public java.util.List<String> getRepeatKeywords() {
             return this.repeatKeywords;
         }
 
@@ -201,15 +218,31 @@ public class AddKeywordsToLibResponseBody extends TeaModel {
 
         public static final class Builder {
             private String i18nKey; 
-            private java.util.List < String > illegalLengthKeywords; 
+            private java.util.List<String> illegalLengthKeywords; 
             private Integer invalidCount; 
-            private java.util.List < String > invalidKeywords; 
+            private java.util.List<String> invalidKeywords; 
             private String libId; 
             private Integer progress; 
             private Integer repeatCount; 
-            private java.util.List < String > repeatKeywords; 
+            private java.util.List<String> repeatKeywords; 
             private Integer successCount; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(KeywordsResult model) {
+                this.i18nKey = model.i18nKey;
+                this.illegalLengthKeywords = model.illegalLengthKeywords;
+                this.invalidCount = model.invalidCount;
+                this.invalidKeywords = model.invalidKeywords;
+                this.libId = model.libId;
+                this.progress = model.progress;
+                this.repeatCount = model.repeatCount;
+                this.repeatKeywords = model.repeatKeywords;
+                this.successCount = model.successCount;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * I18nKey.
@@ -222,7 +255,7 @@ public class AddKeywordsToLibResponseBody extends TeaModel {
             /**
              * IllegalLengthKeywords.
              */
-            public Builder illegalLengthKeywords(java.util.List < String > illegalLengthKeywords) {
+            public Builder illegalLengthKeywords(java.util.List<String> illegalLengthKeywords) {
                 this.illegalLengthKeywords = illegalLengthKeywords;
                 return this;
             }
@@ -238,7 +271,7 @@ public class AddKeywordsToLibResponseBody extends TeaModel {
             /**
              * InvalidKeywords.
              */
-            public Builder invalidKeywords(java.util.List < String > invalidKeywords) {
+            public Builder invalidKeywords(java.util.List<String> invalidKeywords) {
                 this.invalidKeywords = invalidKeywords;
                 return this;
             }
@@ -270,7 +303,7 @@ public class AddKeywordsToLibResponseBody extends TeaModel {
             /**
              * RepeatKeywords.
              */
-            public Builder repeatKeywords(java.util.List < String > repeatKeywords) {
+            public Builder repeatKeywords(java.util.List<String> repeatKeywords) {
                 this.repeatKeywords = repeatKeywords;
                 return this;
             }
@@ -353,6 +386,15 @@ public class AddKeywordsToLibResponseBody extends TeaModel {
             private KeywordsResult keywordsResult; 
             private String libId; 
             private String taskId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.keywordsResult = model.keywordsResult;
+                this.libId = model.libId;
+                this.taskId = model.taskId;
+            } 
 
             /**
              * KeywordsResult.

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.green20220926.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -39,6 +44,10 @@ public class AddAnswerSampleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return libId
      */
@@ -72,6 +81,16 @@ public class AddAnswerSampleResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private String taskId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AddAnswerSampleResponseBody model) {
+            this.libId = model.libId;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.taskId = model.taskId;
+        } 
 
         /**
          * LibId.
@@ -122,7 +141,7 @@ public class AddAnswerSampleResponseBody extends TeaModel {
         private String i18nKey;
 
         @com.aliyun.core.annotation.NameInMap("IllegalLengthSamples")
-        private java.util.List < String > illegalLengthSamples;
+        private java.util.List<String> illegalLengthSamples;
 
         @com.aliyun.core.annotation.NameInMap("InvalidCount")
         private Integer invalidCount;
@@ -137,7 +156,7 @@ public class AddAnswerSampleResponseBody extends TeaModel {
         private Integer repeatCount;
 
         @com.aliyun.core.annotation.NameInMap("RepeatSamples")
-        private java.util.List < String > repeatSamples;
+        private java.util.List<String> repeatSamples;
 
         @com.aliyun.core.annotation.NameInMap("SuccessCount")
         private Integer successCount;
@@ -179,7 +198,7 @@ public class AddAnswerSampleResponseBody extends TeaModel {
         /**
          * @return illegalLengthSamples
          */
-        public java.util.List < String > getIllegalLengthSamples() {
+        public java.util.List<String> getIllegalLengthSamples() {
             return this.illegalLengthSamples;
         }
 
@@ -214,7 +233,7 @@ public class AddAnswerSampleResponseBody extends TeaModel {
         /**
          * @return repeatSamples
          */
-        public java.util.List < String > getRepeatSamples() {
+        public java.util.List<String> getRepeatSamples() {
             return this.repeatSamples;
         }
 
@@ -241,15 +260,31 @@ public class AddAnswerSampleResponseBody extends TeaModel {
 
         public static final class Builder {
             private String i18nKey; 
-            private java.util.List < String > illegalLengthSamples; 
+            private java.util.List<String> illegalLengthSamples; 
             private Integer invalidCount; 
             private String libId; 
             private Integer progress; 
             private Integer repeatCount; 
-            private java.util.List < String > repeatSamples; 
+            private java.util.List<String> repeatSamples; 
             private Integer successCount; 
             private String taskId; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.i18nKey = model.i18nKey;
+                this.illegalLengthSamples = model.illegalLengthSamples;
+                this.invalidCount = model.invalidCount;
+                this.libId = model.libId;
+                this.progress = model.progress;
+                this.repeatCount = model.repeatCount;
+                this.repeatSamples = model.repeatSamples;
+                this.successCount = model.successCount;
+                this.taskId = model.taskId;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * I18nKey.
@@ -262,7 +297,7 @@ public class AddAnswerSampleResponseBody extends TeaModel {
             /**
              * IllegalLengthSamples.
              */
-            public Builder illegalLengthSamples(java.util.List < String > illegalLengthSamples) {
+            public Builder illegalLengthSamples(java.util.List<String> illegalLengthSamples) {
                 this.illegalLengthSamples = illegalLengthSamples;
                 return this;
             }
@@ -302,7 +337,7 @@ public class AddAnswerSampleResponseBody extends TeaModel {
             /**
              * RepeatSamples.
              */
-            public Builder repeatSamples(java.util.List < String > repeatSamples) {
+            public Builder repeatSamples(java.util.List<String> repeatSamples) {
                 this.repeatSamples = repeatSamples;
                 return this;
             }

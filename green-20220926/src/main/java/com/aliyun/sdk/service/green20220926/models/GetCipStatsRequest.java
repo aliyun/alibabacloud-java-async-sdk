@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.green20220926.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -32,6 +37,10 @@ public class GetCipStatsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceType")
     private String resourceType;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceCode")
+    private String serviceCode;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("StartDate")
     private String startDate;
@@ -40,6 +49,10 @@ public class GetCipStatsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SubUid")
     private String subUid;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    private String type;
+
     private GetCipStatsRequest(Builder builder) {
         super(builder);
         this.byMonth = builder.byMonth;
@@ -47,8 +60,10 @@ public class GetCipStatsRequest extends Request {
         this.label = builder.label;
         this.regionId = builder.regionId;
         this.resourceType = builder.resourceType;
+        this.serviceCode = builder.serviceCode;
         this.startDate = builder.startDate;
         this.subUid = builder.subUid;
+        this.type = builder.type;
     }
 
     public static Builder builder() {
@@ -59,7 +74,7 @@ public class GetCipStatsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -100,6 +115,13 @@ public class GetCipStatsRequest extends Request {
     }
 
     /**
+     * @return serviceCode
+     */
+    public String getServiceCode() {
+        return this.serviceCode;
+    }
+
+    /**
      * @return startDate
      */
     public String getStartDate() {
@@ -113,14 +135,23 @@ public class GetCipStatsRequest extends Request {
         return this.subUid;
     }
 
+    /**
+     * @return type
+     */
+    public String getType() {
+        return this.type;
+    }
+
     public static final class Builder extends Request.Builder<GetCipStatsRequest, Builder> {
         private Boolean byMonth; 
         private String endDate; 
         private String label; 
         private String regionId; 
         private String resourceType; 
+        private String serviceCode; 
         private String startDate; 
         private String subUid; 
+        private String type; 
 
         private Builder() {
             super();
@@ -133,8 +164,10 @@ public class GetCipStatsRequest extends Request {
             this.label = request.label;
             this.regionId = request.regionId;
             this.resourceType = request.resourceType;
+            this.serviceCode = request.serviceCode;
             this.startDate = request.startDate;
             this.subUid = request.subUid;
+            this.type = request.type;
         } 
 
         /**
@@ -183,6 +216,15 @@ public class GetCipStatsRequest extends Request {
         }
 
         /**
+         * ServiceCode.
+         */
+        public Builder serviceCode(String serviceCode) {
+            this.putQueryParameter("ServiceCode", serviceCode);
+            this.serviceCode = serviceCode;
+            return this;
+        }
+
+        /**
          * StartDate.
          */
         public Builder startDate(String startDate) {
@@ -197,6 +239,15 @@ public class GetCipStatsRequest extends Request {
         public Builder subUid(String subUid) {
             this.putBodyParameter("SubUid", subUid);
             this.subUid = subUid;
+            return this;
+        }
+
+        /**
+         * Type.
+         */
+        public Builder type(String type) {
+            this.putQueryParameter("Type", type);
+            this.type = type;
             return this;
         }
 

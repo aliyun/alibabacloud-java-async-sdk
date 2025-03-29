@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.green20220926.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -73,6 +78,10 @@ public class GetUploadInfoResponseBody extends TeaModel {
 
     public static GetUploadInfoResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -180,6 +189,25 @@ public class GetUploadInfoResponseBody extends TeaModel {
         private String requestId; 
         private String signature; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetUploadInfoResponseBody model) {
+            this.accessId = model.accessId;
+            this.code = model.code;
+            this.expire = model.expire;
+            this.folder = model.folder;
+            this.host = model.host;
+            this.httpStatusCode = model.httpStatusCode;
+            this.key = model.key;
+            this.msg = model.msg;
+            this.name = model.name;
+            this.policy = model.policy;
+            this.requestId = model.requestId;
+            this.signature = model.signature;
+            this.success = model.success;
+        } 
 
         /**
          * AccessId.

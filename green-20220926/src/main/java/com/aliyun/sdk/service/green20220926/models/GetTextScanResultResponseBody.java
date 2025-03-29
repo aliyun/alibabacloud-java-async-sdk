@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.green20220926.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,6 +46,10 @@ public class GetTextScanResultResponseBody extends TeaModel {
 
     public static GetTextScanResultResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class GetTextScanResultResponseBody extends TeaModel {
         private String msg; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTextScanResultResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.msg = model.msg;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -141,11 +161,15 @@ public class GetTextScanResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Confidence")
         private Float confidence;
 
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
+
         @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
         private Result(Builder builder) {
             this.confidence = builder.confidence;
+            this.description = builder.description;
             this.label = builder.label;
         }
 
@@ -165,6 +189,13 @@ public class GetTextScanResultResponseBody extends TeaModel {
         }
 
         /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
          * @return label
          */
         public String getLabel() {
@@ -173,13 +204,31 @@ public class GetTextScanResultResponseBody extends TeaModel {
 
         public static final class Builder {
             private Float confidence; 
+            private String description; 
             private String label; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.confidence = model.confidence;
+                this.description = model.description;
+                this.label = model.label;
+            } 
 
             /**
              * Confidence.
              */
             public Builder confidence(Float confidence) {
                 this.confidence = confidence;
+                return this;
+            }
+
+            /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
                 return this;
             }
 
@@ -205,6 +254,9 @@ public class GetTextScanResultResponseBody extends TeaModel {
      * <p>GetTextScanResultResponseBody</p>
      */
     public static class Items extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BailianRequestId")
+        private String bailianRequestId;
+
         @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
@@ -212,7 +264,7 @@ public class GetTextScanResultResponseBody extends TeaModel {
         private String extFeedback;
 
         @com.aliyun.core.annotation.NameInMap("Extra")
-        private java.util.Map < String, ? > extra;
+        private java.util.Map<String, ?> extra;
 
         @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
@@ -227,7 +279,10 @@ public class GetTextScanResultResponseBody extends TeaModel {
         private String requestTime;
 
         @com.aliyun.core.annotation.NameInMap("Result")
-        private java.util.List < Result> result;
+        private java.util.List<Result> result;
+
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
+        private String riskLevel;
 
         @com.aliyun.core.annotation.NameInMap("ScanResult")
         private String scanResult;
@@ -245,6 +300,7 @@ public class GetTextScanResultResponseBody extends TeaModel {
         private String taskId;
 
         private Items(Builder builder) {
+            this.bailianRequestId = builder.bailianRequestId;
             this.content = builder.content;
             this.extFeedback = builder.extFeedback;
             this.extra = builder.extra;
@@ -253,6 +309,7 @@ public class GetTextScanResultResponseBody extends TeaModel {
             this.requestId = builder.requestId;
             this.requestTime = builder.requestTime;
             this.result = builder.result;
+            this.riskLevel = builder.riskLevel;
             this.scanResult = builder.scanResult;
             this.score = builder.score;
             this.serviceCode = builder.serviceCode;
@@ -266,6 +323,13 @@ public class GetTextScanResultResponseBody extends TeaModel {
 
         public static Items create() {
             return builder().build();
+        }
+
+        /**
+         * @return bailianRequestId
+         */
+        public String getBailianRequestId() {
+            return this.bailianRequestId;
         }
 
         /**
@@ -285,7 +349,7 @@ public class GetTextScanResultResponseBody extends TeaModel {
         /**
          * @return extra
          */
-        public java.util.Map < String, ? > getExtra() {
+        public java.util.Map<String, ?> getExtra() {
             return this.extra;
         }
 
@@ -320,8 +384,15 @@ public class GetTextScanResultResponseBody extends TeaModel {
         /**
          * @return result
          */
-        public java.util.List < Result> getResult() {
+        public java.util.List<Result> getResult() {
             return this.result;
+        }
+
+        /**
+         * @return riskLevel
+         */
+        public String getRiskLevel() {
+            return this.riskLevel;
         }
 
         /**
@@ -360,19 +431,50 @@ public class GetTextScanResultResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String bailianRequestId; 
             private String content; 
             private String extFeedback; 
-            private java.util.Map < String, ? > extra; 
+            private java.util.Map<String, ?> extra; 
             private String gmtCreate; 
             private String labels; 
             private String requestId; 
             private String requestTime; 
-            private java.util.List < Result> result; 
+            private java.util.List<Result> result; 
+            private String riskLevel; 
             private String scanResult; 
             private Float score; 
             private String serviceCode; 
             private String suggestion; 
             private String taskId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.bailianRequestId = model.bailianRequestId;
+                this.content = model.content;
+                this.extFeedback = model.extFeedback;
+                this.extra = model.extra;
+                this.gmtCreate = model.gmtCreate;
+                this.labels = model.labels;
+                this.requestId = model.requestId;
+                this.requestTime = model.requestTime;
+                this.result = model.result;
+                this.riskLevel = model.riskLevel;
+                this.scanResult = model.scanResult;
+                this.score = model.score;
+                this.serviceCode = model.serviceCode;
+                this.suggestion = model.suggestion;
+                this.taskId = model.taskId;
+            } 
+
+            /**
+             * BailianRequestId.
+             */
+            public Builder bailianRequestId(String bailianRequestId) {
+                this.bailianRequestId = bailianRequestId;
+                return this;
+            }
 
             /**
              * Content.
@@ -393,7 +495,7 @@ public class GetTextScanResultResponseBody extends TeaModel {
             /**
              * Extra.
              */
-            public Builder extra(java.util.Map < String, ? > extra) {
+            public Builder extra(java.util.Map<String, ?> extra) {
                 this.extra = extra;
                 return this;
             }
@@ -433,8 +535,16 @@ public class GetTextScanResultResponseBody extends TeaModel {
             /**
              * Result.
              */
-            public Builder result(java.util.List < Result> result) {
+            public Builder result(java.util.List<Result> result) {
                 this.result = result;
+                return this;
+            }
+
+            /**
+             * RiskLevel.
+             */
+            public Builder riskLevel(String riskLevel) {
+                this.riskLevel = riskLevel;
                 return this;
             }
 
@@ -496,7 +606,7 @@ public class GetTextScanResultResponseBody extends TeaModel {
         private Integer currentPage;
 
         @com.aliyun.core.annotation.NameInMap("Items")
-        private java.util.List < Items> items;
+        private java.util.List<Items> items;
 
         @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
@@ -529,7 +639,7 @@ public class GetTextScanResultResponseBody extends TeaModel {
         /**
          * @return items
          */
-        public java.util.List < Items> getItems() {
+        public java.util.List<Items> getItems() {
             return this.items;
         }
 
@@ -549,9 +659,19 @@ public class GetTextScanResultResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer currentPage; 
-            private java.util.List < Items> items; 
+            private java.util.List<Items> items; 
             private Integer pageSize; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.currentPage = model.currentPage;
+                this.items = model.items;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * CurrentPage.
@@ -564,7 +684,7 @@ public class GetTextScanResultResponseBody extends TeaModel {
             /**
              * Items.
              */
-            public Builder items(java.util.List < Items> items) {
+            public Builder items(java.util.List<Items> items) {
                 this.items = items;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.green20220926.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -38,7 +43,7 @@ public class GetStockOssCheckTasksListRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Sort")
-    private java.util.Map < String, String > sort;
+    private java.util.Map<String, String> sort;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("StartTime")
@@ -69,7 +74,7 @@ public class GetStockOssCheckTasksListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -119,7 +124,7 @@ public class GetStockOssCheckTasksListRequest extends Request {
     /**
      * @return sort
      */
-    public java.util.Map < String, String > getSort() {
+    public java.util.Map<String, String> getSort() {
         return this.sort;
     }
 
@@ -144,7 +149,7 @@ public class GetStockOssCheckTasksListRequest extends Request {
         private Integer mediaType; 
         private Integer pageSize; 
         private String regionId; 
-        private java.util.Map < String, String > sort; 
+        private java.util.Map<String, String> sort; 
         private String startTime; 
         private String taskType; 
 
@@ -222,7 +227,7 @@ public class GetStockOssCheckTasksListRequest extends Request {
         /**
          * Sort.
          */
-        public Builder sort(java.util.Map < String, String > sort) {
+        public Builder sort(java.util.Map<String, String> sort) {
             String sortShrink = shrink(sort, "Sort", "json");
             this.putBodyParameter("Sort", sortShrink);
             this.sort = sort;

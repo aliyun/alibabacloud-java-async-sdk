@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.green20220926.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,12 +17,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetUserBuyStatusRequest</p>
  */
 public class GetUserBuyStatusRequest extends Request {
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CommodityCode")
+    private String commodityCode;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private GetUserBuyStatusRequest(Builder builder) {
         super(builder);
+        this.commodityCode = builder.commodityCode;
         this.regionId = builder.regionId;
     }
 
@@ -29,9 +39,16 @@ public class GetUserBuyStatusRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return commodityCode
+     */
+    public String getCommodityCode() {
+        return this.commodityCode;
     }
 
     /**
@@ -42,6 +59,7 @@ public class GetUserBuyStatusRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetUserBuyStatusRequest, Builder> {
+        private String commodityCode; 
         private String regionId; 
 
         private Builder() {
@@ -50,8 +68,18 @@ public class GetUserBuyStatusRequest extends Request {
 
         private Builder(GetUserBuyStatusRequest request) {
             super(request);
+            this.commodityCode = request.commodityCode;
             this.regionId = request.regionId;
         } 
+
+        /**
+         * CommodityCode.
+         */
+        public Builder commodityCode(String commodityCode) {
+            this.putBodyParameter("CommodityCode", commodityCode);
+            this.commodityCode = commodityCode;
+            return this;
+        }
 
         /**
          * RegionId.

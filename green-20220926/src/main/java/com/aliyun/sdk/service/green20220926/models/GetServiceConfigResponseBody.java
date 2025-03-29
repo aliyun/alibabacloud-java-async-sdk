@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.green20220926.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,6 +46,10 @@ public class GetServiceConfigResponseBody extends TeaModel {
 
     public static GetServiceConfigResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class GetServiceConfigResponseBody extends TeaModel {
         private String msg; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetServiceConfigResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.msg = model.msg;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -139,13 +159,13 @@ public class GetServiceConfigResponseBody extends TeaModel {
      */
     public static class CustomServiceConf extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("KeywordFilterLibs")
-        private java.util.List < String > keywordFilterLibs;
+        private java.util.List<String> keywordFilterLibs;
 
         @com.aliyun.core.annotation.NameInMap("KeywordHitLibs")
-        private java.util.List < String > keywordHitLibs;
+        private java.util.List<String> keywordHitLibs;
 
         @com.aliyun.core.annotation.NameInMap("SimilarTextHitLibs")
-        private java.util.List < String > similarTextHitLibs;
+        private java.util.List<String> similarTextHitLibs;
 
         private CustomServiceConf(Builder builder) {
             this.keywordFilterLibs = builder.keywordFilterLibs;
@@ -164,33 +184,42 @@ public class GetServiceConfigResponseBody extends TeaModel {
         /**
          * @return keywordFilterLibs
          */
-        public java.util.List < String > getKeywordFilterLibs() {
+        public java.util.List<String> getKeywordFilterLibs() {
             return this.keywordFilterLibs;
         }
 
         /**
          * @return keywordHitLibs
          */
-        public java.util.List < String > getKeywordHitLibs() {
+        public java.util.List<String> getKeywordHitLibs() {
             return this.keywordHitLibs;
         }
 
         /**
          * @return similarTextHitLibs
          */
-        public java.util.List < String > getSimilarTextHitLibs() {
+        public java.util.List<String> getSimilarTextHitLibs() {
             return this.similarTextHitLibs;
         }
 
         public static final class Builder {
-            private java.util.List < String > keywordFilterLibs; 
-            private java.util.List < String > keywordHitLibs; 
-            private java.util.List < String > similarTextHitLibs; 
+            private java.util.List<String> keywordFilterLibs; 
+            private java.util.List<String> keywordHitLibs; 
+            private java.util.List<String> similarTextHitLibs; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomServiceConf model) {
+                this.keywordFilterLibs = model.keywordFilterLibs;
+                this.keywordHitLibs = model.keywordHitLibs;
+                this.similarTextHitLibs = model.similarTextHitLibs;
+            } 
 
             /**
              * KeywordFilterLibs.
              */
-            public Builder keywordFilterLibs(java.util.List < String > keywordFilterLibs) {
+            public Builder keywordFilterLibs(java.util.List<String> keywordFilterLibs) {
                 this.keywordFilterLibs = keywordFilterLibs;
                 return this;
             }
@@ -198,7 +227,7 @@ public class GetServiceConfigResponseBody extends TeaModel {
             /**
              * KeywordHitLibs.
              */
-            public Builder keywordHitLibs(java.util.List < String > keywordHitLibs) {
+            public Builder keywordHitLibs(java.util.List<String> keywordHitLibs) {
                 this.keywordHitLibs = keywordHitLibs;
                 return this;
             }
@@ -206,7 +235,7 @@ public class GetServiceConfigResponseBody extends TeaModel {
             /**
              * SimilarTextHitLibs.
              */
-            public Builder similarTextHitLibs(java.util.List < String > similarTextHitLibs) {
+            public Builder similarTextHitLibs(java.util.List<String> similarTextHitLibs) {
                 this.similarTextHitLibs = similarTextHitLibs;
                 return this;
             }
@@ -297,6 +326,17 @@ public class GetServiceConfigResponseBody extends TeaModel {
             private String resourceType; 
             private String serviceCode; 
             private String uid; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.customServiceConf = model.customServiceConf;
+                this.gmtModified = model.gmtModified;
+                this.resourceType = model.resourceType;
+                this.serviceCode = model.serviceCode;
+                this.uid = model.uid;
+            } 
 
             /**
              * CustomServiceConf.

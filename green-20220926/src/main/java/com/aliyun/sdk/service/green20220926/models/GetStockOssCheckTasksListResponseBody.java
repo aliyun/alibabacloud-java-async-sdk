@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.green20220926.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
     private Integer currentPage;
 
     @com.aliyun.core.annotation.NameInMap("Items")
-    private java.util.List < Items> items;
+    private java.util.List<Items> items;
 
     @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
@@ -43,6 +48,10 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return currentPage
      */
@@ -53,7 +62,7 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
     /**
      * @return items
      */
-    public java.util.List < Items> getItems() {
+    public java.util.List<Items> getItems() {
         return this.items;
     }
 
@@ -80,10 +89,21 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer currentPage; 
-        private java.util.List < Items> items; 
+        private java.util.List<Items> items; 
         private Integer pageSize; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetStockOssCheckTasksListResponseBody model) {
+            this.currentPage = model.currentPage;
+            this.items = model.items;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * CurrentPage.
@@ -96,7 +116,7 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
         /**
          * Items.
          */
-        public Builder items(java.util.List < Items> items) {
+        public Builder items(java.util.List<Items> items) {
             this.items = items;
             return this;
         }
@@ -199,6 +219,16 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
             private String serviceCode; 
             private String serviceName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ScanServiceInfos model) {
+                this.copyFrom = model.copyFrom;
+                this.isCopy = model.isCopy;
+                this.serviceCode = model.serviceCode;
+                this.serviceName = model.serviceName;
+            } 
+
             /**
              * CopyFrom.
              */
@@ -282,7 +312,7 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
         private String prefixFilterType;
 
         @com.aliyun.core.annotation.NameInMap("PrefixFilters")
-        private java.util.List < String > prefixFilters;
+        private java.util.List<String> prefixFilters;
 
         @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
@@ -297,10 +327,10 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
         private Integer scanResourceType;
 
         @com.aliyun.core.annotation.NameInMap("ScanService")
-        private java.util.List < String > scanService;
+        private java.util.List<String> scanService;
 
         @com.aliyun.core.annotation.NameInMap("ScanServiceInfos")
-        private java.util.List < ScanServiceInfos> scanServiceInfos;
+        private java.util.List<ScanServiceInfos> scanServiceInfos;
 
         @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
@@ -427,7 +457,7 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
         /**
          * @return prefixFilters
          */
-        public java.util.List < String > getPrefixFilters() {
+        public java.util.List<String> getPrefixFilters() {
             return this.prefixFilters;
         }
 
@@ -462,14 +492,14 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
         /**
          * @return scanService
          */
-        public java.util.List < String > getScanService() {
+        public java.util.List<String> getScanService() {
             return this.scanService;
         }
 
         /**
          * @return scanServiceInfos
          */
-        public java.util.List < ScanServiceInfos> getScanServiceInfos() {
+        public java.util.List<ScanServiceInfos> getScanServiceInfos() {
             return this.scanServiceInfos;
         }
 
@@ -500,15 +530,42 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
             private Boolean freezeMediumRisk2; 
             private String freezeType; 
             private String prefixFilterType; 
-            private java.util.List < String > prefixFilters; 
+            private java.util.List<String> prefixFilters; 
             private Integer priority; 
             private Long scanLimit; 
             private Boolean scanNoFileType; 
             private Integer scanResourceType; 
-            private java.util.List < String > scanService; 
-            private java.util.List < ScanServiceInfos> scanServiceInfos; 
+            private java.util.List<String> scanService; 
+            private java.util.List<ScanServiceInfos> scanServiceInfos; 
             private String startTime; 
             private Integer taskCycle; 
+
+            private Builder() {
+            } 
+
+            private Builder(Config model) {
+                this.callbackId = model.callbackId;
+                this.distinctHistoryTasks = model.distinctHistoryTasks;
+                this.endTime = model.endTime;
+                this.executeDate = model.executeDate;
+                this.executeTime = model.executeTime;
+                this.freeze = model.freeze;
+                this.freezeHighRisk1 = model.freezeHighRisk1;
+                this.freezeHighRisk2 = model.freezeHighRisk2;
+                this.freezeMediumRisk1 = model.freezeMediumRisk1;
+                this.freezeMediumRisk2 = model.freezeMediumRisk2;
+                this.freezeType = model.freezeType;
+                this.prefixFilterType = model.prefixFilterType;
+                this.prefixFilters = model.prefixFilters;
+                this.priority = model.priority;
+                this.scanLimit = model.scanLimit;
+                this.scanNoFileType = model.scanNoFileType;
+                this.scanResourceType = model.scanResourceType;
+                this.scanService = model.scanService;
+                this.scanServiceInfos = model.scanServiceInfos;
+                this.startTime = model.startTime;
+                this.taskCycle = model.taskCycle;
+            } 
 
             /**
              * CallbackId.
@@ -609,7 +666,7 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
             /**
              * PrefixFilters.
              */
-            public Builder prefixFilters(java.util.List < String > prefixFilters) {
+            public Builder prefixFilters(java.util.List<String> prefixFilters) {
                 this.prefixFilters = prefixFilters;
                 return this;
             }
@@ -649,7 +706,7 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
             /**
              * ScanService.
              */
-            public Builder scanService(java.util.List < String > scanService) {
+            public Builder scanService(java.util.List<String> scanService) {
                 this.scanService = scanService;
                 return this;
             }
@@ -657,7 +714,7 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
             /**
              * ScanServiceInfos.
              */
-            public Builder scanServiceInfos(java.util.List < ScanServiceInfos> scanServiceInfos) {
+            public Builder scanServiceInfos(java.util.List<ScanServiceInfos> scanServiceInfos) {
                 this.scanServiceInfos = scanServiceInfos;
                 return this;
             }
@@ -884,6 +941,27 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
             private String taskId; 
             private String taskName; 
             private String taskType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.buckets = model.buckets;
+                this.config = model.config;
+                this.endTime = model.endTime;
+                this.finishNum = model.finishNum;
+                this.isInc = model.isInc;
+                this.lastExecuteDate = model.lastExecuteDate;
+                this.mediaType = model.mediaType;
+                this.nextExecuteDate = model.nextExecuteDate;
+                this.objectNum = model.objectNum;
+                this.searchNum = model.searchNum;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.taskId = model.taskId;
+                this.taskName = model.taskName;
+                this.taskType = model.taskType;
+            } 
 
             /**
              * Buckets.

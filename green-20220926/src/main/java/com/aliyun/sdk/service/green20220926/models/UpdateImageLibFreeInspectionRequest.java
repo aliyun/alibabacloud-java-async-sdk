@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.green20220926.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class UpdateImageLibFreeInspectionRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Config")
-    private java.util.Map < String, Integer > config;
+    private java.util.Map<String, Integer> config;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -34,7 +39,7 @@ public class UpdateImageLibFreeInspectionRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -42,7 +47,7 @@ public class UpdateImageLibFreeInspectionRequest extends Request {
     /**
      * @return config
      */
-    public java.util.Map < String, Integer > getConfig() {
+    public java.util.Map<String, Integer> getConfig() {
         return this.config;
     }
 
@@ -54,7 +59,7 @@ public class UpdateImageLibFreeInspectionRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateImageLibFreeInspectionRequest, Builder> {
-        private java.util.Map < String, Integer > config; 
+        private java.util.Map<String, Integer> config; 
         private String regionId; 
 
         private Builder() {
@@ -70,7 +75,7 @@ public class UpdateImageLibFreeInspectionRequest extends Request {
         /**
          * Config.
          */
-        public Builder config(java.util.Map < String, Integer > config) {
+        public Builder config(java.util.Map<String, Integer> config) {
             String configShrink = shrink(config, "Config", "json");
             this.putBodyParameter("Config", configShrink);
             this.config = config;

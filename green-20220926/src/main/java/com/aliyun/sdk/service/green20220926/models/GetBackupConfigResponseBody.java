@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.green20220926.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -77,6 +82,10 @@ public class GetBackupConfigResponseBody extends TeaModel {
 
     public static GetBackupConfigResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -192,6 +201,26 @@ public class GetBackupConfigResponseBody extends TeaModel {
         private String resourceType; 
         private String serviceCode; 
         private String uid; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetBackupConfigResponseBody model) {
+            this.backupMode = model.backupMode;
+            this.bucket = model.bucket;
+            this.enable = model.enable;
+            this.enableBackup = model.enableBackup;
+            this.enableBackupVoice = model.enableBackupVoice;
+            this.expireSeconds = model.expireSeconds;
+            this.gmtModified = model.gmtModified;
+            this.path = model.path;
+            this.pathVoice = model.pathVoice;
+            this.region = model.region;
+            this.requestId = model.requestId;
+            this.resourceType = model.resourceType;
+            this.serviceCode = model.serviceCode;
+            this.uid = model.uid;
+        } 
 
         /**
          * BackupMode.
