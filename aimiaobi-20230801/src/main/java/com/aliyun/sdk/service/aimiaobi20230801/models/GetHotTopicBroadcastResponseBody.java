@@ -923,6 +923,9 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InputToken")
         private Integer inputToken;
 
+        @com.aliyun.core.annotation.NameInMap("Locations")
+        private java.util.List<String> locations;
+
         @com.aliyun.core.annotation.NameInMap("News")
         private java.util.List<News> news;
 
@@ -946,6 +949,7 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
             this.id = builder.id;
             this.images = builder.images;
             this.inputToken = builder.inputToken;
+            this.locations = builder.locations;
             this.news = builder.news;
             this.outputToken = builder.outputToken;
             this.summary = builder.summary;
@@ -1031,6 +1035,13 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
         }
 
         /**
+         * @return locations
+         */
+        public java.util.List<String> getLocations() {
+            return this.locations;
+        }
+
+        /**
          * @return news
          */
         public java.util.List<News> getNews() {
@@ -1069,6 +1080,7 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
             private String id; 
             private java.util.List<Images> images; 
             private Integer inputToken; 
+            private java.util.List<String> locations; 
             private java.util.List<News> news; 
             private Integer outputToken; 
             private Summary summary; 
@@ -1088,6 +1100,7 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
                 this.id = model.id;
                 this.images = model.images;
                 this.inputToken = model.inputToken;
+                this.locations = model.locations;
                 this.news = model.news;
                 this.outputToken = model.outputToken;
                 this.summary = model.summary;
@@ -1171,6 +1184,14 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
              */
             public Builder inputToken(Integer inputToken) {
                 this.inputToken = inputToken;
+                return this;
+            }
+
+            /**
+             * Locations.
+             */
+            public Builder locations(java.util.List<String> locations) {
+                this.locations = locations;
                 return this;
             }
 

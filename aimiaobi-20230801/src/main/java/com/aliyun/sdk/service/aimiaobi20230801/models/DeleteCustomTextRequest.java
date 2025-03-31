@@ -17,6 +17,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteCustomTextRequest</p>
  */
 public class DeleteCustomTextRequest extends Request {
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AgentKey")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -33,6 +37,7 @@ public class DeleteCustomTextRequest extends Request {
 
     private DeleteCustomTextRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.agentKey = builder.agentKey;
         this.commodityCode = builder.commodityCode;
         this.id = builder.id;
@@ -49,6 +54,13 @@ public class DeleteCustomTextRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -73,6 +85,7 @@ public class DeleteCustomTextRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteCustomTextRequest, Builder> {
+        private String regionId; 
         private String agentKey; 
         private String commodityCode; 
         private Long id; 
@@ -83,10 +96,20 @@ public class DeleteCustomTextRequest extends Request {
 
         private Builder(DeleteCustomTextRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.agentKey = request.agentKey;
             this.commodityCode = request.commodityCode;
             this.id = request.id;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * <p>This parameter is required.</p>

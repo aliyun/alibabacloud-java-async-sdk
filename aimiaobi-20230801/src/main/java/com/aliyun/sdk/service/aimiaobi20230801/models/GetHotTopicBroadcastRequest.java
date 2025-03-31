@@ -38,6 +38,18 @@ public class GetHotTopicBroadcastRequest extends Request {
     private String hotTopicVersion;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LocationQuery")
+    private String locationQuery;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Locations")
+    private java.util.List<String> locations;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Query")
+    private String query;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Size")
     private Integer size;
 
@@ -65,6 +77,9 @@ public class GetHotTopicBroadcastRequest extends Request {
         this.category = builder.category;
         this.current = builder.current;
         this.hotTopicVersion = builder.hotTopicVersion;
+        this.locationQuery = builder.locationQuery;
+        this.locations = builder.locations;
+        this.query = builder.query;
         this.size = builder.size;
         this.stepForCustomSummaryStyleConfig = builder.stepForCustomSummaryStyleConfig;
         this.stepForNewsBroadcastContentConfig = builder.stepForNewsBroadcastContentConfig;
@@ -121,6 +136,27 @@ public class GetHotTopicBroadcastRequest extends Request {
     }
 
     /**
+     * @return locationQuery
+     */
+    public String getLocationQuery() {
+        return this.locationQuery;
+    }
+
+    /**
+     * @return locations
+     */
+    public java.util.List<String> getLocations() {
+        return this.locations;
+    }
+
+    /**
+     * @return query
+     */
+    public String getQuery() {
+        return this.query;
+    }
+
+    /**
      * @return size
      */
     public Integer getSize() {
@@ -161,6 +197,9 @@ public class GetHotTopicBroadcastRequest extends Request {
         private String category; 
         private Integer current; 
         private String hotTopicVersion; 
+        private String locationQuery; 
+        private java.util.List<String> locations; 
+        private String query; 
         private Integer size; 
         private StepForCustomSummaryStyleConfig stepForCustomSummaryStyleConfig; 
         private StepForNewsBroadcastContentConfig stepForNewsBroadcastContentConfig; 
@@ -178,6 +217,9 @@ public class GetHotTopicBroadcastRequest extends Request {
             this.category = request.category;
             this.current = request.current;
             this.hotTopicVersion = request.hotTopicVersion;
+            this.locationQuery = request.locationQuery;
+            this.locations = request.locations;
+            this.query = request.query;
             this.size = request.size;
             this.stepForCustomSummaryStyleConfig = request.stepForCustomSummaryStyleConfig;
             this.stepForNewsBroadcastContentConfig = request.stepForNewsBroadcastContentConfig;
@@ -227,6 +269,34 @@ public class GetHotTopicBroadcastRequest extends Request {
         public Builder hotTopicVersion(String hotTopicVersion) {
             this.putBodyParameter("HotTopicVersion", hotTopicVersion);
             this.hotTopicVersion = hotTopicVersion;
+            return this;
+        }
+
+        /**
+         * LocationQuery.
+         */
+        public Builder locationQuery(String locationQuery) {
+            this.putBodyParameter("LocationQuery", locationQuery);
+            this.locationQuery = locationQuery;
+            return this;
+        }
+
+        /**
+         * Locations.
+         */
+        public Builder locations(java.util.List<String> locations) {
+            String locationsShrink = shrink(locations, "Locations", "json");
+            this.putBodyParameter("Locations", locationsShrink);
+            this.locations = locations;
+            return this;
+        }
+
+        /**
+         * Query.
+         */
+        public Builder query(String query) {
+            this.putBodyParameter("Query", query);
+            this.query = query;
             return this;
         }
 

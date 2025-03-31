@@ -5740,6 +5740,366 @@ public class RunSearchGenerationResponseBody extends TeaModel {
      *
      * <p>RunSearchGenerationResponseBody</p>
      */
+    public static class GeneratedContentTextSearchResultSearchResult extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Content")
+        private String content;
+
+        @com.aliyun.core.annotation.NameInMap("DocId")
+        private String docId;
+
+        @com.aliyun.core.annotation.NameInMap("DocUuid")
+        private String docUuid;
+
+        @com.aliyun.core.annotation.NameInMap("PubTime")
+        private String pubTime;
+
+        @com.aliyun.core.annotation.NameInMap("SearchSource")
+        private String searchSource;
+
+        @com.aliyun.core.annotation.NameInMap("SearchSourceName")
+        private String searchSourceName;
+
+        @com.aliyun.core.annotation.NameInMap("SearchSourceType")
+        private String searchSourceType;
+
+        @com.aliyun.core.annotation.NameInMap("Summary")
+        private String summary;
+
+        @com.aliyun.core.annotation.NameInMap("Title")
+        private String title;
+
+        @com.aliyun.core.annotation.NameInMap("Url")
+        private String url;
+
+        private GeneratedContentTextSearchResultSearchResult(Builder builder) {
+            this.content = builder.content;
+            this.docId = builder.docId;
+            this.docUuid = builder.docUuid;
+            this.pubTime = builder.pubTime;
+            this.searchSource = builder.searchSource;
+            this.searchSourceName = builder.searchSourceName;
+            this.searchSourceType = builder.searchSourceType;
+            this.summary = builder.summary;
+            this.title = builder.title;
+            this.url = builder.url;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static GeneratedContentTextSearchResultSearchResult create() {
+            return builder().build();
+        }
+
+        /**
+         * @return content
+         */
+        public String getContent() {
+            return this.content;
+        }
+
+        /**
+         * @return docId
+         */
+        public String getDocId() {
+            return this.docId;
+        }
+
+        /**
+         * @return docUuid
+         */
+        public String getDocUuid() {
+            return this.docUuid;
+        }
+
+        /**
+         * @return pubTime
+         */
+        public String getPubTime() {
+            return this.pubTime;
+        }
+
+        /**
+         * @return searchSource
+         */
+        public String getSearchSource() {
+            return this.searchSource;
+        }
+
+        /**
+         * @return searchSourceName
+         */
+        public String getSearchSourceName() {
+            return this.searchSourceName;
+        }
+
+        /**
+         * @return searchSourceType
+         */
+        public String getSearchSourceType() {
+            return this.searchSourceType;
+        }
+
+        /**
+         * @return summary
+         */
+        public String getSummary() {
+            return this.summary;
+        }
+
+        /**
+         * @return title
+         */
+        public String getTitle() {
+            return this.title;
+        }
+
+        /**
+         * @return url
+         */
+        public String getUrl() {
+            return this.url;
+        }
+
+        public static final class Builder {
+            private String content; 
+            private String docId; 
+            private String docUuid; 
+            private String pubTime; 
+            private String searchSource; 
+            private String searchSourceName; 
+            private String searchSourceType; 
+            private String summary; 
+            private String title; 
+            private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(GeneratedContentTextSearchResultSearchResult model) {
+                this.content = model.content;
+                this.docId = model.docId;
+                this.docUuid = model.docUuid;
+                this.pubTime = model.pubTime;
+                this.searchSource = model.searchSource;
+                this.searchSourceName = model.searchSourceName;
+                this.searchSourceType = model.searchSourceType;
+                this.summary = model.summary;
+                this.title = model.title;
+                this.url = model.url;
+            } 
+
+            /**
+             * Content.
+             */
+            public Builder content(String content) {
+                this.content = content;
+                return this;
+            }
+
+            /**
+             * DocId.
+             */
+            public Builder docId(String docId) {
+                this.docId = docId;
+                return this;
+            }
+
+            /**
+             * DocUuid.
+             */
+            public Builder docUuid(String docUuid) {
+                this.docUuid = docUuid;
+                return this;
+            }
+
+            /**
+             * PubTime.
+             */
+            public Builder pubTime(String pubTime) {
+                this.pubTime = pubTime;
+                return this;
+            }
+
+            /**
+             * SearchSource.
+             */
+            public Builder searchSource(String searchSource) {
+                this.searchSource = searchSource;
+                return this;
+            }
+
+            /**
+             * SearchSourceName.
+             */
+            public Builder searchSourceName(String searchSourceName) {
+                this.searchSourceName = searchSourceName;
+                return this;
+            }
+
+            /**
+             * SearchSourceType.
+             */
+            public Builder searchSourceType(String searchSourceType) {
+                this.searchSourceType = searchSourceType;
+                return this;
+            }
+
+            /**
+             * Summary.
+             */
+            public Builder summary(String summary) {
+                this.summary = summary;
+                return this;
+            }
+
+            /**
+             * Title.
+             */
+            public Builder title(String title) {
+                this.title = title;
+                return this;
+            }
+
+            /**
+             * Url.
+             */
+            public Builder url(String url) {
+                this.url = url;
+                return this;
+            }
+
+            public GeneratedContentTextSearchResultSearchResult build() {
+                return new GeneratedContentTextSearchResultSearchResult(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link RunSearchGenerationResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunSearchGenerationResponseBody</p>
+     */
+    public static class GeneratedContentTextSearchResult extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Current")
+        private Integer current;
+
+        @com.aliyun.core.annotation.NameInMap("SearchResult")
+        private java.util.List<GeneratedContentTextSearchResultSearchResult> searchResult;
+
+        @com.aliyun.core.annotation.NameInMap("Size")
+        private Integer size;
+
+        @com.aliyun.core.annotation.NameInMap("Total")
+        private Integer total;
+
+        private GeneratedContentTextSearchResult(Builder builder) {
+            this.current = builder.current;
+            this.searchResult = builder.searchResult;
+            this.size = builder.size;
+            this.total = builder.total;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static GeneratedContentTextSearchResult create() {
+            return builder().build();
+        }
+
+        /**
+         * @return current
+         */
+        public Integer getCurrent() {
+            return this.current;
+        }
+
+        /**
+         * @return searchResult
+         */
+        public java.util.List<GeneratedContentTextSearchResultSearchResult> getSearchResult() {
+            return this.searchResult;
+        }
+
+        /**
+         * @return size
+         */
+        public Integer getSize() {
+            return this.size;
+        }
+
+        /**
+         * @return total
+         */
+        public Integer getTotal() {
+            return this.total;
+        }
+
+        public static final class Builder {
+            private Integer current; 
+            private java.util.List<GeneratedContentTextSearchResultSearchResult> searchResult; 
+            private Integer size; 
+            private Integer total; 
+
+            private Builder() {
+            } 
+
+            private Builder(GeneratedContentTextSearchResult model) {
+                this.current = model.current;
+                this.searchResult = model.searchResult;
+                this.size = model.size;
+                this.total = model.total;
+            } 
+
+            /**
+             * Current.
+             */
+            public Builder current(Integer current) {
+                this.current = current;
+                return this;
+            }
+
+            /**
+             * SearchResult.
+             */
+            public Builder searchResult(java.util.List<GeneratedContentTextSearchResultSearchResult> searchResult) {
+                this.searchResult = searchResult;
+                return this;
+            }
+
+            /**
+             * Size.
+             */
+            public Builder size(Integer size) {
+                this.size = size;
+                return this;
+            }
+
+            /**
+             * Total.
+             */
+            public Builder total(Integer total) {
+                this.total = total;
+                return this;
+            }
+
+            public GeneratedContentTextSearchResult build() {
+                return new GeneratedContentTextSearchResult(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link RunSearchGenerationResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunSearchGenerationResponseBody</p>
+     */
     public static class CoordinatesGenerateCoordinate extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("X")
         private Integer x;
@@ -7955,6 +8315,9 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TextGenerateResult")
         private TextGenerateResult textGenerateResult;
 
+        @com.aliyun.core.annotation.NameInMap("TextSearchResult")
+        private GeneratedContentTextSearchResult textSearchResult;
+
         @com.aliyun.core.annotation.NameInMap("TimelineResult")
         private TimelineResult timelineResult;
 
@@ -7967,6 +8330,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             this.imageSearchResult = builder.imageSearchResult;
             this.newsElementResult = builder.newsElementResult;
             this.textGenerateResult = builder.textGenerateResult;
+            this.textSearchResult = builder.textSearchResult;
             this.timelineResult = builder.timelineResult;
             this.videoSearchResult = builder.videoSearchResult;
         }
@@ -8015,6 +8379,13 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         }
 
         /**
+         * @return textSearchResult
+         */
+        public GeneratedContentTextSearchResult getTextSearchResult() {
+            return this.textSearchResult;
+        }
+
+        /**
          * @return timelineResult
          */
         public TimelineResult getTimelineResult() {
@@ -8034,6 +8405,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private GeneratedContentImageSearchResult imageSearchResult; 
             private NewsElementResult newsElementResult; 
             private TextGenerateResult textGenerateResult; 
+            private GeneratedContentTextSearchResult textSearchResult; 
             private TimelineResult timelineResult; 
             private GeneratedContentVideoSearchResult videoSearchResult; 
 
@@ -8046,6 +8418,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
                 this.imageSearchResult = model.imageSearchResult;
                 this.newsElementResult = model.newsElementResult;
                 this.textGenerateResult = model.textGenerateResult;
+                this.textSearchResult = model.textSearchResult;
                 this.timelineResult = model.timelineResult;
                 this.videoSearchResult = model.videoSearchResult;
             } 
@@ -8087,6 +8460,14 @@ public class RunSearchGenerationResponseBody extends TeaModel {
              */
             public Builder textGenerateResult(TextGenerateResult textGenerateResult) {
                 this.textGenerateResult = textGenerateResult;
+                return this;
+            }
+
+            /**
+             * TextSearchResult.
+             */
+            public Builder textSearchResult(GeneratedContentTextSearchResult textSearchResult) {
+                this.textSearchResult = textSearchResult;
                 return this;
             }
 
