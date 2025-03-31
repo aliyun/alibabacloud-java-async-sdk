@@ -41,7 +41,7 @@ public class DisasterDowngradeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -75,6 +75,7 @@ public class DisasterDowngradeRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the ApsaraMQ for MQTT instance for which you want to downgrade the VIP access.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class DisasterDowngradeRequest extends Request {
         }
 
         /**
+         * <p>The ID of the ApsaraMQ for MQTT instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

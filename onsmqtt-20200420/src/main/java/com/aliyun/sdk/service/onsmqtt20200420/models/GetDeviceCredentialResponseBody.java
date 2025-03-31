@@ -36,6 +36,10 @@ public class GetDeviceCredentialResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return deviceCredential
      */
@@ -53,6 +57,14 @@ public class GetDeviceCredentialResponseBody extends TeaModel {
     public static final class Builder {
         private DeviceCredential deviceCredential; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDeviceCredentialResponseBody model) {
+            this.deviceCredential = model.deviceCredential;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the access credential of the device.</p>
@@ -170,6 +182,18 @@ public class GetDeviceCredentialResponseBody extends TeaModel {
             private String deviceAccessKeySecret; 
             private String instanceId; 
             private Long updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeviceCredential model) {
+                this.clientId = model.clientId;
+                this.createTime = model.createTime;
+                this.deviceAccessKeyId = model.deviceAccessKeyId;
+                this.deviceAccessKeySecret = model.deviceAccessKeySecret;
+                this.instanceId = model.instanceId;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The client ID of the device.</p>

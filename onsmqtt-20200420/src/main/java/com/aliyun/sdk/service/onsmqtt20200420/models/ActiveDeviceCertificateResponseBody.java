@@ -36,6 +36,10 @@ public class ActiveDeviceCertificateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return deviceSn
      */
@@ -53,6 +57,14 @@ public class ActiveDeviceCertificateResponseBody extends TeaModel {
     public static final class Builder {
         private String deviceSn; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ActiveDeviceCertificateResponseBody model) {
+            this.deviceSn = model.deviceSn;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The serial number of the device certificate that you reactivated. The serial number is the unique identifier of a device certificate.</p>

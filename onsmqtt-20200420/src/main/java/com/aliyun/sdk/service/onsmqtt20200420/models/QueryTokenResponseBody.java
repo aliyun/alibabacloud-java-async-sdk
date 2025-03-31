@@ -36,6 +36,10 @@ public class QueryTokenResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class QueryTokenResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Boolean tokenStatus; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryTokenResponseBody model) {
+            this.requestId = model.requestId;
+            this.tokenStatus = model.tokenStatus;
+        } 
 
         /**
          * <p>The unique ID that the system generates for the request. This parameter is a common parameter.</p>

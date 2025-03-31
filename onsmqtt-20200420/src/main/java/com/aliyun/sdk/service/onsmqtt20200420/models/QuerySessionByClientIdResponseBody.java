@@ -36,6 +36,10 @@ public class QuerySessionByClientIdResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return onlineStatus
      */
@@ -53,6 +57,14 @@ public class QuerySessionByClientIdResponseBody extends TeaModel {
     public static final class Builder {
         private Boolean onlineStatus; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(QuerySessionByClientIdResponseBody model) {
+            this.onlineStatus = model.onlineStatus;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Indicates whether the ApsaraMQ for MQTT client is connected to the ApsaraMQ for MQTT broker. Valid values:</p>

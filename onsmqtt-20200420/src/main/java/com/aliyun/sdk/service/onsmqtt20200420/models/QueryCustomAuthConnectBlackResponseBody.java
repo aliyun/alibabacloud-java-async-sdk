@@ -48,6 +48,10 @@ public class QueryCustomAuthConnectBlackResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class QueryCustomAuthConnectBlackResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryCustomAuthConnectBlackResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code. The status code 200 indicates that the request is successful. Other status codes indicate that the request failed. For a list of error codes, see Error codes.</p>
@@ -204,6 +219,15 @@ public class QueryCustomAuthConnectBlackResponseBody extends TeaModel {
             private String effect; 
             private String permitAction; 
 
+            private Builder() {
+            } 
+
+            private Builder(Results model) {
+                this.clientId = model.clientId;
+                this.effect = model.effect;
+                this.permitAction = model.permitAction;
+            } 
+
             /**
              * <p>The client ID.</p>
              * 
@@ -287,6 +311,14 @@ public class QueryCustomAuthConnectBlackResponseBody extends TeaModel {
         public static final class Builder {
             private String nextToken; 
             private java.util.List<Results> results; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.nextToken = model.nextToken;
+                this.results = model.results;
+            } 
 
             /**
              * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>

@@ -36,6 +36,10 @@ public class GetRegisterCodeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return registerCode
      */
@@ -53,6 +57,14 @@ public class GetRegisterCodeResponseBody extends TeaModel {
     public static final class Builder {
         private String registerCode; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetRegisterCodeResponseBody model) {
+            this.registerCode = model.registerCode;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The registration code of the CA certificate.</p>

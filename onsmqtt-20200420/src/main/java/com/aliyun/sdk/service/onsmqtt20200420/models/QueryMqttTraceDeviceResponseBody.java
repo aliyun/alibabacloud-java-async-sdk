@@ -48,6 +48,10 @@ public class QueryMqttTraceDeviceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return currentPage
      */
@@ -89,6 +93,17 @@ public class QueryMqttTraceDeviceResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Long total; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryMqttTraceDeviceResponseBody model) {
+            this.currentPage = model.currentPage;
+            this.deviceInfoList = model.deviceInfoList;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.total = model.total;
+        } 
 
         /**
          * <p>The page number of the returned page.</p>
@@ -227,6 +242,17 @@ public class QueryMqttTraceDeviceResponseBody extends TeaModel {
             private String actionInfo; 
             private String channelId; 
             private String time; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeviceInfoList model) {
+                this.action = model.action;
+                this.actionCode = model.actionCode;
+                this.actionInfo = model.actionInfo;
+                this.channelId = model.channelId;
+                this.time = model.time;
+            } 
 
             /**
              * <p>The action on the device. Valid values:</p>

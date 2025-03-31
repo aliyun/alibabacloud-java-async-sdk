@@ -36,6 +36,10 @@ public class ListDeviceCredentialClientIdResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return deviceCredentialClientIdList
      */
@@ -53,6 +57,14 @@ public class ListDeviceCredentialClientIdResponseBody extends TeaModel {
     public static final class Builder {
         private DeviceCredentialClientIdList deviceCredentialClientIdList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDeviceCredentialClientIdResponseBody model) {
+            this.deviceCredentialClientIdList = model.deviceCredentialClientIdList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Returns the information list.</p>
@@ -158,6 +170,17 @@ public class ListDeviceCredentialClientIdResponseBody extends TeaModel {
             private String pageNo; 
             private String pageSize; 
             private String total; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeviceCredentialClientIdList model) {
+                this.clientIdList = model.clientIdList;
+                this.nextToken = model.nextToken;
+                this.pageNo = model.pageNo;
+                this.pageSize = model.pageSize;
+                this.total = model.total;
+            } 
 
             /**
              * <p>Client list.</p>

@@ -52,6 +52,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListTagResourcesResponseBody extends TeaModel {
         private String requestId; 
         private String success; 
         private java.util.List<TagResources> tagResources; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTagResourcesResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.tagResources = model.tagResources;
+        } 
 
         /**
          * Code.
@@ -226,6 +242,16 @@ public class ListTagResourcesResponseBody extends TeaModel {
             private String resourceType; 
             private String tagKey; 
             private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(TagResources model) {
+                this.resourceId = model.resourceId;
+                this.resourceType = model.resourceType;
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
 
             /**
              * ResourceId.

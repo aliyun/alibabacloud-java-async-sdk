@@ -36,6 +36,10 @@ public class ActiveCaCertificateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class ActiveCaCertificateResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String sn; 
+
+        private Builder() {
+        } 
+
+        private Builder(ActiveCaCertificateResponseBody model) {
+            this.requestId = model.requestId;
+            this.sn = model.sn;
+        } 
 
         /**
          * <p>Public parameters, each request ID is unique and can be used for troubleshooting and problem localization.</p>

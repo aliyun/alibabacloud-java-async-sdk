@@ -22,9 +22,14 @@ public class ListGroupIdRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private String tags;
+
     private ListGroupIdRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.tags = builder.tags;
     }
 
     public static Builder builder() {
@@ -35,7 +40,7 @@ public class ListGroupIdRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -47,8 +52,16 @@ public class ListGroupIdRequest extends Request {
         return this.instanceId;
     }
 
+    /**
+     * @return tags
+     */
+    public String getTags() {
+        return this.tags;
+    }
+
     public static final class Builder extends Request.Builder<ListGroupIdRequest, Builder> {
         private String instanceId; 
+        private String tags; 
 
         private Builder() {
             super();
@@ -57,6 +70,7 @@ public class ListGroupIdRequest extends Request {
         private Builder(ListGroupIdRequest request) {
             super(request);
             this.instanceId = request.instanceId;
+            this.tags = request.tags;
         } 
 
         /**
@@ -69,6 +83,15 @@ public class ListGroupIdRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * Tags.
+         */
+        public Builder tags(String tags) {
+            this.putQueryParameter("Tags", tags);
+            this.tags = tags;
             return this;
         }
 

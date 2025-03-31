@@ -36,6 +36,10 @@ public class QueryMqttTraceMessagePublishResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return messageTraceLists
      */
@@ -53,6 +57,14 @@ public class QueryMqttTraceMessagePublishResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<MessageTraceLists> messageTraceLists; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryMqttTraceMessagePublishResponseBody model) {
+            this.messageTraceLists = model.messageTraceLists;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The message traces.</p>
@@ -170,6 +182,18 @@ public class QueryMqttTraceMessagePublishResponseBody extends TeaModel {
             private String clientId; 
             private String msgId; 
             private String time; 
+
+            private Builder() {
+            } 
+
+            private Builder(MessageTraceLists model) {
+                this.action = model.action;
+                this.actionCode = model.actionCode;
+                this.actionInfo = model.actionInfo;
+                this.clientId = model.clientId;
+                this.msgId = model.msgId;
+                this.time = model.time;
+            } 
 
             /**
              * <p>The action on the message. Valid values:</p>

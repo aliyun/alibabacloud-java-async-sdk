@@ -36,6 +36,10 @@ public class SendMessageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return msgId
      */
@@ -53,6 +57,14 @@ public class SendMessageResponseBody extends TeaModel {
     public static final class Builder {
         private String msgId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(SendMessageResponseBody model) {
+            this.msgId = model.msgId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The unique message ID that is returned by the ApsaraMQ for MQTT broker after the message is sent.</p>

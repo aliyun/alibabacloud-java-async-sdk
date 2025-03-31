@@ -36,6 +36,10 @@ public class BatchQuerySessionByClientIdsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return onlineStatusList
      */
@@ -53,6 +57,14 @@ public class BatchQuerySessionByClientIdsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<OnlineStatusList> onlineStatusList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(BatchQuerySessionByClientIdsResponseBody model) {
+            this.onlineStatusList = model.onlineStatusList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The status list of all queried ApsaraMQ for MQTT clients.</p>
@@ -122,6 +134,14 @@ public class BatchQuerySessionByClientIdsResponseBody extends TeaModel {
         public static final class Builder {
             private String clientId; 
             private Boolean onlineStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(OnlineStatusList model) {
+                this.clientId = model.clientId;
+                this.onlineStatus = model.onlineStatus;
+            } 
 
             /**
              * <p>The ID of the ApsaraMQ for MQTT client. For more information about client IDs, see <a href="https://help.aliyun.com/document_detail/42420.html">Terms</a>.</p>

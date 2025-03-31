@@ -48,6 +48,10 @@ public class QueryMqttTraceMessageSubscribeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return currentPage
      */
@@ -89,6 +93,17 @@ public class QueryMqttTraceMessageSubscribeResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Long total; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryMqttTraceMessageSubscribeResponseBody model) {
+            this.currentPage = model.currentPage;
+            this.messageTraceLists = model.messageTraceLists;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.total = model.total;
+        } 
 
         /**
          * <p>The page number of the returned page.</p>
@@ -239,6 +254,18 @@ public class QueryMqttTraceMessageSubscribeResponseBody extends TeaModel {
             private String clientId; 
             private String msgId; 
             private String time; 
+
+            private Builder() {
+            } 
+
+            private Builder(MessageTraceLists model) {
+                this.action = model.action;
+                this.actionCode = model.actionCode;
+                this.actionInfo = model.actionInfo;
+                this.clientId = model.clientId;
+                this.msgId = model.msgId;
+                this.time = model.time;
+            } 
 
             /**
              * <p>The action on the message. Valid values:</p>

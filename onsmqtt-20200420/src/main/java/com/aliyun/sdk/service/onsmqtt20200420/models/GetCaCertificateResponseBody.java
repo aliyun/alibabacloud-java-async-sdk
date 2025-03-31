@@ -36,6 +36,10 @@ public class GetCaCertificateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetCaCertificateResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetCaCertificateResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Certificate details.</p>
@@ -194,6 +206,20 @@ public class GetCaCertificateResponseBody extends TeaModel {
             private String validBegin; 
             private String validEnd; 
             private String verificationContent; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.caContent = model.caContent;
+                this.caName = model.caName;
+                this.registrationCode = model.registrationCode;
+                this.sn = model.sn;
+                this.status = model.status;
+                this.validBegin = model.validBegin;
+                this.validEnd = model.validEnd;
+                this.verificationContent = model.verificationContent;
+            } 
 
             /**
              * <p>Content of the CA certificate.</p>

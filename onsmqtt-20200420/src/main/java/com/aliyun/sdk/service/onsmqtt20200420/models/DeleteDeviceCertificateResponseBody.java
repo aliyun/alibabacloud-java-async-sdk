@@ -36,6 +36,10 @@ public class DeleteDeviceCertificateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return deviceSn
      */
@@ -53,6 +57,14 @@ public class DeleteDeviceCertificateResponseBody extends TeaModel {
     public static final class Builder {
         private String deviceSn; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteDeviceCertificateResponseBody model) {
+            this.deviceSn = model.deviceSn;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The serial number of the device certificate whose registration information is deleted. The serial number is the unique identifier of a device certificate.</p>

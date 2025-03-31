@@ -36,6 +36,10 @@ public class ListDeviceCertificateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class ListDeviceCertificateResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDeviceCertificateResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Query result.</p>
@@ -182,6 +194,19 @@ public class ListDeviceCertificateResponseBody extends TeaModel {
             private String status; 
             private String validBegin; 
             private String validEnd; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeviceCertificateVOS model) {
+                this.caSn = model.caSn;
+                this.deviceContent = model.deviceContent;
+                this.deviceName = model.deviceName;
+                this.deviceSn = model.deviceSn;
+                this.status = model.status;
+                this.validBegin = model.validBegin;
+                this.validEnd = model.validEnd;
+            } 
 
             /**
              * <p>The SN serial number of the CA certificate to which the device certificate belongs, used to uniquely identify a CA certificate.</p>
@@ -339,6 +364,16 @@ public class ListDeviceCertificateResponseBody extends TeaModel {
             private Integer pageNo; 
             private Integer pageSize; 
             private Integer total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.deviceCertificateVOS = model.deviceCertificateVOS;
+                this.pageNo = model.pageNo;
+                this.pageSize = model.pageSize;
+                this.total = model.total;
+            } 
 
             /**
              * <p>Details of the device certificate.</p>

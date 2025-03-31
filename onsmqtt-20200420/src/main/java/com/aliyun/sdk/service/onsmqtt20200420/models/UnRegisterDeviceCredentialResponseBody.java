@@ -32,6 +32,10 @@ public class UnRegisterDeviceCredentialResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -41,6 +45,13 @@ public class UnRegisterDeviceCredentialResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UnRegisterDeviceCredentialResponseBody model) {
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The unique ID that the system generates for the request. This parameter is a common parameter.</p>

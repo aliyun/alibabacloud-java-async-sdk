@@ -36,6 +36,10 @@ public class ListCaCertificateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class ListCaCertificateResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListCaCertificateResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Query result.</p>
@@ -194,6 +206,20 @@ public class ListCaCertificateResponseBody extends TeaModel {
             private String validBegin; 
             private String validEnd; 
             private String verificationContent; 
+
+            private Builder() {
+            } 
+
+            private Builder(CaCertificateVOS model) {
+                this.caContent = model.caContent;
+                this.caName = model.caName;
+                this.registrationCode = model.registrationCode;
+                this.sn = model.sn;
+                this.status = model.status;
+                this.validBegin = model.validBegin;
+                this.validEnd = model.validEnd;
+                this.verificationContent = model.verificationContent;
+            } 
 
             /**
              * <p>Content of the CA certificate. </p>
@@ -369,6 +395,16 @@ public class ListCaCertificateResponseBody extends TeaModel {
             private Integer pageNo; 
             private Integer pageSize; 
             private Integer total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.caCertificateVOS = model.caCertificateVOS;
+                this.pageNo = model.pageNo;
+                this.pageSize = model.pageSize;
+                this.total = model.total;
+            } 
 
             /**
              * <p>Details of the CA certificate</p>

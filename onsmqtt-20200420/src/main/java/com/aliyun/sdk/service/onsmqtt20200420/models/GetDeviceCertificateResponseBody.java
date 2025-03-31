@@ -36,6 +36,10 @@ public class GetDeviceCertificateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetDeviceCertificateResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDeviceCertificateResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Certificate details.</p>
@@ -182,6 +194,19 @@ public class GetDeviceCertificateResponseBody extends TeaModel {
             private String status; 
             private String validBegin; 
             private String validEnd; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.caSn = model.caSn;
+                this.deviceContent = model.deviceContent;
+                this.deviceName = model.deviceName;
+                this.deviceSn = model.deviceSn;
+                this.status = model.status;
+                this.validBegin = model.validBegin;
+                this.validEnd = model.validEnd;
+            } 
 
             /**
              * <p>The SN serial number of the CA certificate to which the device certificate belongs, used to uniquely identify a CA certificate.</p>

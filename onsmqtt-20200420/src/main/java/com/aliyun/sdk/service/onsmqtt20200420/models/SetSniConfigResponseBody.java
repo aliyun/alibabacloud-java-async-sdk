@@ -40,6 +40,10 @@ public class SetSniConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -65,6 +69,15 @@ public class SetSniConfigResponseBody extends TeaModel {
         private AccessDeniedDetail accessDeniedDetail; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(SetSniConfigResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * AccessDeniedDetail.
@@ -202,6 +215,19 @@ public class SetSniConfigResponseBody extends TeaModel {
             private String encodedDiagnosticMessage; 
             private String noPermissionType; 
             private String policyType; 
+
+            private Builder() {
+            } 
+
+            private Builder(AccessDeniedDetail model) {
+                this.authAction = model.authAction;
+                this.authPrincipalDisplayName = model.authPrincipalDisplayName;
+                this.authPrincipalOwnerId = model.authPrincipalOwnerId;
+                this.authPrincipalType = model.authPrincipalType;
+                this.encodedDiagnosticMessage = model.encodedDiagnosticMessage;
+                this.noPermissionType = model.noPermissionType;
+                this.policyType = model.policyType;
+            } 
 
             /**
              * AuthAction.

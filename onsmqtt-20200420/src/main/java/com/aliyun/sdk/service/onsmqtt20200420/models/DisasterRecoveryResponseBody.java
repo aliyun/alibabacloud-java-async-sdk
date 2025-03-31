@@ -48,6 +48,10 @@ public class DisasterRecoveryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -89,6 +93,17 @@ public class DisasterRecoveryResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DisasterRecoveryResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * AccessDeniedDetail.

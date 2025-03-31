@@ -48,6 +48,10 @@ public class QueryCustomAuthPermissionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class QueryCustomAuthPermissionResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryCustomAuthPermissionResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code.</p>
@@ -228,6 +243,17 @@ public class QueryCustomAuthPermissionResponseBody extends TeaModel {
             private String permitAction; 
             private String topic; 
 
+            private Builder() {
+            } 
+
+            private Builder(Results model) {
+                this.effect = model.effect;
+                this.identity = model.identity;
+                this.identityType = model.identityType;
+                this.permitAction = model.permitAction;
+                this.topic = model.topic;
+            } 
+
             /**
              * <p>Indicates whether to allow or deny access.</p>
              * 
@@ -337,6 +363,14 @@ public class QueryCustomAuthPermissionResponseBody extends TeaModel {
         public static final class Builder {
             private String nextToken; 
             private java.util.List<Results> results; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.nextToken = model.nextToken;
+                this.results = model.results;
+            } 
 
             /**
              * <p>The token that marks the end position of the previous returned page. To obtain the next batch of data, call the operation again by using the value of NextToken returned by the previous request. If you call this operation for the first time or want to query all results, set NextToken to an empty string.</p>

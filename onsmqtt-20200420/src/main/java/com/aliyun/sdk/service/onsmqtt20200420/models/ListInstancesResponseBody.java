@@ -48,6 +48,10 @@ public class ListInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class ListInstancesResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListInstancesResponseBody model) {
+            this.code = model.code;
+            this.instances = model.instances;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -182,6 +197,14 @@ public class ListInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private String tagKey; 
             private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(MqttTags model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
 
             /**
              * TagKey.
@@ -357,6 +380,23 @@ public class ListInstancesResponseBody extends TeaModel {
             private String orderId; 
             private String regionId; 
             private String specific; 
+
+            private Builder() {
+            } 
+
+            private Builder(Instances model) {
+                this.createTime = model.createTime;
+                this.expireTime = model.expireTime;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.instanceStatus = model.instanceStatus;
+                this.instanceType = model.instanceType;
+                this.kernelVersion = model.kernelVersion;
+                this.mqttTags = model.mqttTags;
+                this.orderId = model.orderId;
+                this.regionId = model.regionId;
+                this.specific = model.specific;
+            } 
 
             /**
              * CreateTime.
