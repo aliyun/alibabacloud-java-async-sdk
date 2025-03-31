@@ -52,6 +52,10 @@ public class DescribeAvailableAdvicesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -101,6 +105,18 @@ public class DescribeAvailableAdvicesResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<String> schemaTableNames; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAvailableAdvicesResponseBody model) {
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.schemaTableNames = model.schemaTableNames;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The queried suggestions.</p>
@@ -325,8 +341,25 @@ public class DescribeAvailableAdvicesResponseBody extends TeaModel {
             private String tableName; 
             private Long totalCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.adviceDate = model.adviceDate;
+                this.adviceId = model.adviceId;
+                this.adviceType = model.adviceType;
+                this.benefit = model.benefit;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.reason = model.reason;
+                this.SQL = model.SQL;
+                this.schemaName = model.schemaName;
+                this.tableName = model.tableName;
+                this.totalCount = model.totalCount;
+            } 
+
             /**
-             * <p>The date when the suggestion is generated.The date is in the yyyyMMdd format.</p>
+             * <p>The date when the suggestion is generated. The date is in the yyyyMMdd format.</p>
              * 
              * <strong>example:</strong>
              * <p>20221124</p>

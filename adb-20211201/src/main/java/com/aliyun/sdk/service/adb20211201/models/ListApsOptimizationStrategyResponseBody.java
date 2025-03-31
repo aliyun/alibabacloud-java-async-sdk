@@ -52,6 +52,10 @@ public class ListApsOptimizationStrategyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -102,8 +106,23 @@ public class ListApsOptimizationStrategyResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListApsOptimizationStrategyResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidInput</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -111,7 +130,12 @@ public class ListApsOptimizationStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -119,7 +143,10 @@ public class ListApsOptimizationStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The response code. The status code 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -127,7 +154,14 @@ public class ListApsOptimizationStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message. Valid values:</p>
+         * <ul>
+         * <li>If the request was successful, a success message is returned.****</li>
+         * <li>If the request failed, an error message is returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -135,7 +169,10 @@ public class ListApsOptimizationStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>-3EEC-</strong></strong></strong>-9F06-******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -143,7 +180,14 @@ public class ListApsOptimizationStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -236,8 +280,22 @@ public class ListApsOptimizationStrategyResponseBody extends TeaModel {
             private String strategyName; 
             private String strategyType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.DBClusterId = model.DBClusterId;
+                this.status = model.status;
+                this.strategyDesc = model.strategyDesc;
+                this.strategyName = model.strategyName;
+                this.strategyType = model.strategyType;
+            } 
+
             /**
-             * DBClusterId.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>amv-23xxxx</p>
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -245,7 +303,14 @@ public class ListApsOptimizationStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the lifecycle management policy. Valid values:</p>
+             * <ol>
+             * <li>on: enabled.</li>
+             * <li>off: disabled.</li>
+             * </ol>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -253,7 +318,10 @@ public class ListApsOptimizationStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * StrategyDesc.
+             * <p>The description of the lifecycle management policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder strategyDesc(String strategyDesc) {
                 this.strategyDesc = strategyDesc;
@@ -261,7 +329,10 @@ public class ListApsOptimizationStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * StrategyName.
+             * <p>The name of the lifecycle management policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder strategyName(String strategyName) {
                 this.strategyName = strategyName;
@@ -269,7 +340,10 @@ public class ListApsOptimizationStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * StrategyType.
+             * <p>The type of the lifecycle management policy. Only StrategyValue is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>StrategyValue</p>
              */
             public Builder strategyType(String strategyType) {
                 this.strategyType = strategyType;

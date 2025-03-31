@@ -40,6 +40,10 @@ public class DescribeClusterResourceDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -65,6 +69,15 @@ public class DescribeClusterResourceDetailResponseBody extends TeaModel {
         private Integer code; 
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeClusterResourceDetailResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The HTTP status code.</p>
@@ -278,6 +291,25 @@ public class DescribeClusterResourceDetailResponseBody extends TeaModel {
             private String poolUsers; 
             private Integer runningClusterCount; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceGroupList model) {
+                this.clusterMode = model.clusterMode;
+                this.clusterSizeResource = model.clusterSizeResource;
+                this.enableSpot = model.enableSpot;
+                this.maxClusterCount = model.maxClusterCount;
+                this.maxComputeResource = model.maxComputeResource;
+                this.minClusterCount = model.minClusterCount;
+                this.minComputeResource = model.minComputeResource;
+                this.poolId = model.poolId;
+                this.poolName = model.poolName;
+                this.poolType = model.poolType;
+                this.poolUsers = model.poolUsers;
+                this.runningClusterCount = model.runningClusterCount;
+                this.status = model.status;
+            } 
 
             /**
              * <p>A reserved parameter.</p>
@@ -519,6 +551,17 @@ public class DescribeClusterResourceDetailResponseBody extends TeaModel {
             private String freeComputeResource; 
             private java.util.List<ResourceGroupList> resourceGroupList; 
             private String storageResource; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.computeResource = model.computeResource;
+                this.DBClusterId = model.DBClusterId;
+                this.freeComputeResource = model.freeComputeResource;
+                this.resourceGroupList = model.resourceGroupList;
+                this.storageResource = model.storageResource;
+            } 
 
             /**
              * <p>The amount of reserved computing resources. Unit: AnalyticDB compute units (ACUs). Valid values: 0 to 4096. The value must be in increments of 16 ACUs. Each ACU is equivalent to 1 core and 4 GB memory.</p>

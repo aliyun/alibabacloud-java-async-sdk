@@ -64,6 +64,10 @@ public class StorageDescriptorModel extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return compressed
      */
@@ -137,6 +141,21 @@ public class StorageDescriptorModel extends TeaModel {
         private Long sdId; 
         private SerDeInfoModel serDeInfo; 
         private Boolean storedAsSubDirectories; 
+
+        private Builder() {
+        } 
+
+        private Builder(StorageDescriptorModel model) {
+            this.compressed = model.compressed;
+            this.inputFormat = model.inputFormat;
+            this.location = model.location;
+            this.numBuckets = model.numBuckets;
+            this.outputFormat = model.outputFormat;
+            this.parameters = model.parameters;
+            this.sdId = model.sdId;
+            this.serDeInfo = model.serDeInfo;
+            this.storedAsSubDirectories = model.storedAsSubDirectories;
+        } 
 
         /**
          * Compressed.

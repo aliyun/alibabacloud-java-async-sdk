@@ -64,6 +64,10 @@ public class ListApsOptimizationTasksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -137,6 +141,21 @@ public class ListApsOptimizationTasksResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListApsOptimizationTasksResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.items = model.items;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The HTTP status code or the error code.</p>
@@ -392,6 +411,22 @@ public class ListApsOptimizationTasksResponseBody extends TeaModel {
             private String taskId; 
             private String taskMessage; 
             private String taskStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.computeUnit = model.computeUnit;
+                this.createdTime = model.createdTime;
+                this.DBClusterId = model.DBClusterId;
+                this.modifiedTime = model.modifiedTime;
+                this.strategyType = model.strategyType;
+                this.taskDesc = model.taskDesc;
+                this.taskDuration = model.taskDuration;
+                this.taskId = model.taskId;
+                this.taskMessage = model.taskMessage;
+                this.taskStatus = model.taskStatus;
+            } 
 
             /**
              * <p>The computing resources used by the optimization job.</p>

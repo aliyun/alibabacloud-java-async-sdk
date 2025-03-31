@@ -48,6 +48,10 @@ public class DescribeAccountPrivilegesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -89,6 +93,17 @@ public class DescribeAccountPrivilegesResponseBody extends TeaModel {
         private Long pageSize; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAccountPrivilegesResponseBody model) {
+            this.data = model.data;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>Details of the permissions.</p>
@@ -216,6 +231,16 @@ public class DescribeAccountPrivilegesResponseBody extends TeaModel {
             private String description; 
             private String table; 
 
+            private Builder() {
+            } 
+
+            private Builder(PrivilegeObject model) {
+                this.column = model.column;
+                this.database = model.database;
+                this.description = model.description;
+                this.table = model.table;
+            } 
+
             /**
              * <p>The name of the column.</p>
              * 
@@ -322,6 +347,15 @@ public class DescribeAccountPrivilegesResponseBody extends TeaModel {
             private PrivilegeObject privilegeObject; 
             private String privilegeType; 
             private java.util.List<String> privileges; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.privilegeObject = model.privilegeObject;
+                this.privilegeType = model.privilegeType;
+                this.privileges = model.privileges;
+            } 
 
             /**
              * <p>The objects on which the permission takes effect, including databases, tables, columns, and additional descriptions.</p>

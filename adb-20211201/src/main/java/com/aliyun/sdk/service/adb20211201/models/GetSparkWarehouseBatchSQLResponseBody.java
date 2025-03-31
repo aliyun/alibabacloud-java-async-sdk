@@ -36,6 +36,10 @@ public class GetSparkWarehouseBatchSQLResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -54,8 +58,19 @@ public class GetSparkWarehouseBatchSQLResponseBody extends TeaModel {
         private SparkBatchSQL data; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetSparkWarehouseBatchSQLResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * Data.
+         * <p>The returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;DBClusterId&quot;: &quot;amv-uf6485635fz852mn&quot;, &quot;Statements&quot;: [{&quot;Code&quot;: &quot;show databases&quot;, &quot;State&quot;: &quot;FINISHED&quot;, &quot;StatementId&quot;: &quot;sq202501141001sh8e12e080006846-0000&quot;, &quot;Result&quot;: &quot;+--------------------+n</p>
          */
         public Builder data(SparkBatchSQL data) {
             this.data = data;

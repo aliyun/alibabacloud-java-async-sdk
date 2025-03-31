@@ -44,6 +44,10 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return columns
      */
@@ -77,6 +81,16 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
         private String requestId; 
         private Schemas schemas; 
         private Tables tables; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAllDataSourceResponseBody model) {
+            this.columns = model.columns;
+            this.requestId = model.requestId;
+            this.schemas = model.schemas;
+            this.tables = model.tables;
+        } 
 
         /**
          * <p>The queried columns.</p>
@@ -223,6 +237,19 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
             private String tableName; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Column model) {
+                this.autoIncrementColumn = model.autoIncrementColumn;
+                this.columnName = model.columnName;
+                this.DBClusterId = model.DBClusterId;
+                this.primaryKey = model.primaryKey;
+                this.schemaName = model.schemaName;
+                this.tableName = model.tableName;
+                this.type = model.type;
+            } 
+
             /**
              * <p>Indicates whether the column is an auto-increment column. Valid values:</p>
              * <ul>
@@ -347,6 +374,13 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Column> column; 
 
+            private Builder() {
+            } 
+
+            private Builder(Columns model) {
+                this.column = model.column;
+            } 
+
             /**
              * Column.
              */
@@ -405,6 +439,14 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
         public static final class Builder {
             private String DBClusterId; 
             private String schemaName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Schema model) {
+                this.DBClusterId = model.DBClusterId;
+                this.schemaName = model.schemaName;
+            } 
 
             /**
              * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
@@ -466,6 +508,13 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Schema> schema; 
+
+            private Builder() {
+            } 
+
+            private Builder(Schemas model) {
+                this.schema = model.schema;
+            } 
 
             /**
              * Schema.
@@ -538,6 +587,15 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
             private String schemaName; 
             private String tableName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Table model) {
+                this.DBClusterId = model.DBClusterId;
+                this.schemaName = model.schemaName;
+                this.tableName = model.tableName;
+            } 
+
             /**
              * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
              * 
@@ -609,6 +667,13 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Table> table; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tables model) {
+                this.table = model.table;
+            } 
 
             /**
              * Table.

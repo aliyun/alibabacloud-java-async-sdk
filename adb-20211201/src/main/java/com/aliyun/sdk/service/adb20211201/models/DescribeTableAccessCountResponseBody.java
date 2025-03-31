@@ -48,6 +48,10 @@ public class DescribeTableAccessCountResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -89,6 +93,17 @@ public class DescribeTableAccessCountResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTableAccessCountResponseBody model) {
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The queried tables.</p>
@@ -227,6 +242,17 @@ public class DescribeTableAccessCountResponseBody extends TeaModel {
             private String reportDate; 
             private String tableName; 
             private String tableSchema; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.accessCount = model.accessCount;
+                this.instanceName = model.instanceName;
+                this.reportDate = model.reportDate;
+                this.tableName = model.tableName;
+                this.tableSchema = model.tableSchema;
+            } 
 
             /**
              * <p>The number of accesses to the table.</p>

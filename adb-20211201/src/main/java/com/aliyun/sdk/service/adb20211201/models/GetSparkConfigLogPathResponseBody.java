@@ -36,6 +36,10 @@ public class GetSparkConfigLogPathResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetSparkConfigLogPathResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSparkConfigLogPathResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The queried Spark log configuration.</p>
@@ -158,6 +170,17 @@ public class GetSparkConfigLogPathResponseBody extends TeaModel {
             private String modifiedTimestamp; 
             private String modifiedUid; 
             private String recordedLogPath; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.defaultLogPath = model.defaultLogPath;
+                this.isLogPathExists = model.isLogPathExists;
+                this.modifiedTimestamp = model.modifiedTimestamp;
+                this.modifiedUid = model.modifiedUid;
+                this.recordedLogPath = model.recordedLogPath;
+            } 
 
             /**
              * <p>The default log path.</p>

@@ -36,6 +36,10 @@ public class DescribeApsJobDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return APSJobDetail
      */
@@ -53,6 +57,14 @@ public class DescribeApsJobDetailResponseBody extends TeaModel {
     public static final class Builder {
         private APSJobDetail APSJobDetail; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeApsJobDetailResponseBody model) {
+            this.APSJobDetail = model.APSJobDetail;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The queried job.</p>
@@ -199,6 +211,20 @@ public class DescribeApsJobDetailResponseBody extends TeaModel {
             private String sourceEndpointRegion; 
             private String status; 
             private String targetTableMode; 
+
+            private Builder() {
+            } 
+
+            private Builder(APSJobDetail model) {
+                this.dbList = model.dbList;
+                this.destinationEndpointInstanceID = model.destinationEndpointInstanceID;
+                this.destinationEndpointRegion = model.destinationEndpointRegion;
+                this.partitionList = model.partitionList;
+                this.sourceEndpointInstanceID = model.sourceEndpointInstanceID;
+                this.sourceEndpointRegion = model.sourceEndpointRegion;
+                this.status = model.status;
+                this.targetTableMode = model.targetTableMode;
+            } 
 
             /**
              * <p>The objects that are synchronized.</p>

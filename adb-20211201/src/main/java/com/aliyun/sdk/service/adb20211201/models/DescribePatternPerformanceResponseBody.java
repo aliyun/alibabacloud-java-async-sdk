@@ -68,6 +68,10 @@ public class DescribePatternPerformanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessIp
      */
@@ -149,6 +153,22 @@ public class DescribePatternPerformanceResponseBody extends TeaModel {
         private String startTime; 
         private String tables; 
         private String user; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePatternPerformanceResponseBody model) {
+            this.accessIp = model.accessIp;
+            this.endTime = model.endTime;
+            this.failedCount = model.failedCount;
+            this.performances = model.performances;
+            this.queryCount = model.queryCount;
+            this.requestId = model.requestId;
+            this.SQLPattern = model.SQLPattern;
+            this.startTime = model.startTime;
+            this.tables = model.tables;
+            this.user = model.user;
+        } 
 
         /**
          * AccessIp.
@@ -289,6 +309,14 @@ public class DescribePatternPerformanceResponseBody extends TeaModel {
             private String name; 
             private java.util.List<String> values; 
 
+            private Builder() {
+            } 
+
+            private Builder(Series model) {
+                this.name = model.name;
+                this.values = model.values;
+            } 
+
             /**
              * <p>The name of the performance metric value. Valid values:</p>
              * <ul>
@@ -398,6 +426,15 @@ public class DescribePatternPerformanceResponseBody extends TeaModel {
             private String key; 
             private java.util.List<Series> series; 
             private String unit; 
+
+            private Builder() {
+            } 
+
+            private Builder(Performances model) {
+                this.key = model.key;
+                this.series = model.series;
+                this.unit = model.unit;
+            } 
 
             /**
              * <p>The queried performance metric. Valid values:</p>

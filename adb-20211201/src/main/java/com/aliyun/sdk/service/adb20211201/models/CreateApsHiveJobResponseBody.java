@@ -52,6 +52,10 @@ public class CreateApsHiveJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -102,8 +106,23 @@ public class CreateApsHiveJobResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateApsHiveJobResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidInput</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -111,7 +130,12 @@ public class CreateApsHiveJobResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder data(String data) {
             this.data = data;
@@ -119,7 +143,10 @@ public class CreateApsHiveJobResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The response code. The status code 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -127,7 +154,14 @@ public class CreateApsHiveJobResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message. Valid values:</p>
+         * <ul>
+         * <li>If the request was successful, a success message is returned.</li>
+         * <li>If the request failed, an error message is returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -135,7 +169,10 @@ public class CreateApsHiveJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2895BB82-B2C1-408E-AA73-DB8D59******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -143,7 +180,14 @@ public class CreateApsHiveJobResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

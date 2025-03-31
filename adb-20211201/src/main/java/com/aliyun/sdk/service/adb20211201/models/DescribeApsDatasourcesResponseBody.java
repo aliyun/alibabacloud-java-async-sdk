@@ -48,6 +48,10 @@ public class DescribeApsDatasourcesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return apsDatasources
      */
@@ -89,6 +93,17 @@ public class DescribeApsDatasourcesResponseBody extends TeaModel {
         private String pageSize; 
         private String requestId; 
         private String totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeApsDatasourcesResponseBody model) {
+            this.apsDatasources = model.apsDatasources;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <ul>
@@ -246,6 +261,18 @@ public class DescribeApsDatasourcesResponseBody extends TeaModel {
             private String datasourceName; 
             private String datasourceType; 
             private Boolean hasJob; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApsDatasources model) {
+                this.createTime = model.createTime;
+                this.datasourceDescription = model.datasourceDescription;
+                this.datasourceId = model.datasourceId;
+                this.datasourceName = model.datasourceName;
+                this.datasourceType = model.datasourceType;
+                this.hasJob = model.hasJob;
+            } 
 
             /**
              * <p>The time when the data source was created.</p>

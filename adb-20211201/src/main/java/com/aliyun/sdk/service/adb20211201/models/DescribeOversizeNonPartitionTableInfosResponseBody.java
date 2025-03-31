@@ -56,6 +56,10 @@ public class DescribeOversizeNonPartitionTableInfosResponseBody extends TeaModel
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBClusterId
      */
@@ -113,6 +117,19 @@ public class DescribeOversizeNonPartitionTableInfosResponseBody extends TeaModel
         private String requestId; 
         private java.util.List<Tables> tables; 
         private String totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeOversizeNonPartitionTableInfosResponseBody model) {
+            this.DBClusterId = model.DBClusterId;
+            this.detectionItems = model.detectionItems;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.tables = model.tables;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The cluster ID.</p>
@@ -251,6 +268,15 @@ public class DescribeOversizeNonPartitionTableInfosResponseBody extends TeaModel
             private String message; 
             private String name; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(DetectionItems model) {
+                this.message = model.message;
+                this.name = model.name;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The information about the detection result.</p>
@@ -415,6 +441,21 @@ public class DescribeOversizeNonPartitionTableInfosResponseBody extends TeaModel
             private String schemaName; 
             private Double spaceRatio; 
             private String tableName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tables model) {
+                this.dataSize = model.dataSize;
+                this.indexSize = model.indexSize;
+                this.localDataSize = model.localDataSize;
+                this.primaryKeySize = model.primaryKeySize;
+                this.remoteDataSize = model.remoteDataSize;
+                this.rowCount = model.rowCount;
+                this.schemaName = model.schemaName;
+                this.spaceRatio = model.spaceRatio;
+                this.tableName = model.tableName;
+            } 
 
             /**
              * <p>The data size of the table. Unit: bytes.</p>

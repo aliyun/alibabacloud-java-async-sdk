@@ -48,6 +48,10 @@ public class DescribeAdbMySqlTablesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return message
      */
@@ -89,6 +93,17 @@ public class DescribeAdbMySqlTablesResponseBody extends TeaModel {
         private String schema; 
         private Boolean success; 
         private java.util.List<String> tables; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAdbMySqlTablesResponseBody model) {
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.schema = model.schema;
+            this.success = model.success;
+            this.tables = model.tables;
+        } 
 
         /**
          * <p>The message returned for the operation. Valid values:</p>

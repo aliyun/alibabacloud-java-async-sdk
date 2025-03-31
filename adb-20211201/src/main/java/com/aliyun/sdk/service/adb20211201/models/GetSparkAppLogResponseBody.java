@@ -36,6 +36,10 @@ public class GetSparkAppLogResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetSparkAppLogResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSparkAppLogResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The queried log.</p>
@@ -146,6 +158,16 @@ public class GetSparkAppLogResponseBody extends TeaModel {
             private String logContent; 
             private Integer logSize; 
             private String message; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.DBClusterId = model.DBClusterId;
+                this.logContent = model.logContent;
+                this.logSize = model.logSize;
+                this.message = model.message;
+            } 
 
             /**
              * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>

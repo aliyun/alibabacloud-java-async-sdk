@@ -36,6 +36,10 @@ public class GetSparkAppStateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetSparkAppStateResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSparkAppStateResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned data.</p>
@@ -158,6 +170,17 @@ public class GetSparkAppStateResponseBody extends TeaModel {
             private String DBClusterId; 
             private String message; 
             private String state; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.appId = model.appId;
+                this.appName = model.appName;
+                this.DBClusterId = model.DBClusterId;
+                this.message = model.message;
+                this.state = model.state;
+            } 
 
             /**
              * <p>The Spark application ID.</p>

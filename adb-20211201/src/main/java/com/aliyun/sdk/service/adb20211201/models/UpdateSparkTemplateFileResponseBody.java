@@ -36,6 +36,10 @@ public class UpdateSparkTemplateFileResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class UpdateSparkTemplateFileResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateSparkTemplateFileResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The update result.</p>
@@ -110,6 +122,13 @@ public class UpdateSparkTemplateFileResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean succeeded; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.succeeded = model.succeeded;
+            } 
 
             /**
              * <p>Indicates whether the application template is updated.</p>

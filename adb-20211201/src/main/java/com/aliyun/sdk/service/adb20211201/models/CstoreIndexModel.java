@@ -64,6 +64,10 @@ public class CstoreIndexModel extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return columnOrds
      */
@@ -137,6 +141,21 @@ public class CstoreIndexModel extends TeaModel {
         private java.util.Map<String, String> options; 
         private String physicalTableName; 
         private String updateTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(CstoreIndexModel model) {
+            this.columnOrds = model.columnOrds;
+            this.createTime = model.createTime;
+            this.databaseName = model.databaseName;
+            this.indexColumns = model.indexColumns;
+            this.indexName = model.indexName;
+            this.indexType = model.indexType;
+            this.options = model.options;
+            this.physicalTableName = model.physicalTableName;
+            this.updateTime = model.updateTime;
+        } 
 
         /**
          * ColumnOrds.

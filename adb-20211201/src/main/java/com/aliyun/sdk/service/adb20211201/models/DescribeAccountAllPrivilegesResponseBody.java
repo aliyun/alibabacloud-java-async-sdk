@@ -36,6 +36,10 @@ public class DescribeAccountAllPrivilegesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DescribeAccountAllPrivilegesResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAccountAllPrivilegesResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Details of the permissions.</p>
@@ -146,6 +158,16 @@ public class DescribeAccountAllPrivilegesResponseBody extends TeaModel {
             private String database; 
             private String description; 
             private String table; 
+
+            private Builder() {
+            } 
+
+            private Builder(PrivilegeObject model) {
+                this.column = model.column;
+                this.database = model.database;
+                this.description = model.description;
+                this.table = model.table;
+            } 
 
             /**
              * <p>The name of the column.</p>
@@ -254,6 +276,15 @@ public class DescribeAccountAllPrivilegesResponseBody extends TeaModel {
             private String privilegeType; 
             private java.util.List<String> privileges; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.privilegeObject = model.privilegeObject;
+                this.privilegeType = model.privilegeType;
+                this.privileges = model.privileges;
+            } 
+
             /**
              * <p>The objects on which the permission takes effect, including databases, tables, and columns. If Global is returned for the PrivilegeType parameter, an empty string is returned for this parameter.</p>
              */
@@ -343,6 +374,15 @@ public class DescribeAccountAllPrivilegesResponseBody extends TeaModel {
             private String marker; 
             private java.util.List<Result> result; 
             private Boolean truncated; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.marker = model.marker;
+                this.result = model.result;
+                this.truncated = model.truncated;
+            } 
 
             /**
              * <p>Indicates the position where the results are truncated. When a value of <code>true</code> is returned for the <code>Truncated</code> parameter, this parameter is present and contains the value to use for the Marker parameter in a subsequent call.</p>

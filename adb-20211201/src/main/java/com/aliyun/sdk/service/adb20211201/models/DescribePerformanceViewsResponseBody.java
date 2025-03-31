@@ -40,6 +40,10 @@ public class DescribePerformanceViewsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -65,6 +69,15 @@ public class DescribePerformanceViewsResponseBody extends TeaModel {
         private String accessDeniedDetail; 
         private String requestId; 
         private java.util.List<Views> views; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePerformanceViewsResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.requestId = model.requestId;
+            this.views = model.views;
+        } 
 
         /**
          * <p>The details about the access denial.</p>
@@ -168,6 +181,15 @@ public class DescribePerformanceViewsResponseBody extends TeaModel {
             private String createTime; 
             private String updateTime; 
             private String viewName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Views model) {
+                this.createTime = model.createTime;
+                this.updateTime = model.updateTime;
+                this.viewName = model.viewName;
+            } 
 
             /**
              * <p>The time when created.</p>

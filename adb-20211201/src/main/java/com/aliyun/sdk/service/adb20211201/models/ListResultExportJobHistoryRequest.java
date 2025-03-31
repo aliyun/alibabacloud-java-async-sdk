@@ -81,7 +81,7 @@ public class ListResultExportJobHistoryRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -387,6 +387,14 @@ public class ListResultExportJobHistoryRequest extends Request {
         public static final class Builder {
             private String field; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Order model) {
+                this.field = model.field;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The field that is used to sort the SQL statements. Valid values:</p>

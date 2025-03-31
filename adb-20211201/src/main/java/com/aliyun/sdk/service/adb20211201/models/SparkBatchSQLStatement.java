@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SparkBatchSQLStatement</p>
  */
 public class SparkBatchSQLStatement extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    private String appId;
+
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
@@ -42,6 +45,7 @@ public class SparkBatchSQLStatement extends TeaModel {
     private String statementId;
 
     private SparkBatchSQLStatement(Builder builder) {
+        this.appId = builder.appId;
         this.code = builder.code;
         this.endTime = builder.endTime;
         this.error = builder.error;
@@ -58,6 +62,17 @@ public class SparkBatchSQLStatement extends TeaModel {
 
     public static SparkBatchSQLStatement create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return appId
+     */
+    public String getAppId() {
+        return this.appId;
     }
 
     /**
@@ -117,6 +132,7 @@ public class SparkBatchSQLStatement extends TeaModel {
     }
 
     public static final class Builder {
+        private String appId; 
         private String code; 
         private Long endTime; 
         private String error; 
@@ -125,6 +141,29 @@ public class SparkBatchSQLStatement extends TeaModel {
         private Long startTime; 
         private String state; 
         private String statementId; 
+
+        private Builder() {
+        } 
+
+        private Builder(SparkBatchSQLStatement model) {
+            this.appId = model.appId;
+            this.code = model.code;
+            this.endTime = model.endTime;
+            this.error = model.error;
+            this.result = model.result;
+            this.resultUri = model.resultUri;
+            this.startTime = model.startTime;
+            this.state = model.state;
+            this.statementId = model.statementId;
+        } 
+
+        /**
+         * AppId.
+         */
+        public Builder appId(String appId) {
+            this.appId = appId;
+            return this;
+        }
 
         /**
          * Code.

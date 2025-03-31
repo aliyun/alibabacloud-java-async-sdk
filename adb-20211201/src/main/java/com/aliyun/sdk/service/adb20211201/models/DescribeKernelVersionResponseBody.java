@@ -44,6 +44,10 @@ public class DescribeKernelVersionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return availableKernelVersions
      */
@@ -77,6 +81,16 @@ public class DescribeKernelVersionResponseBody extends TeaModel {
         private String expireDate; 
         private String kernelVersion; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeKernelVersionResponseBody model) {
+            this.availableKernelVersions = model.availableKernelVersions;
+            this.expireDate = model.expireDate;
+            this.kernelVersion = model.kernelVersion;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The minor versions to which you can update the current minor version of the cluster.</p>
@@ -180,6 +194,15 @@ public class DescribeKernelVersionResponseBody extends TeaModel {
             private String expireDate; 
             private String kernelVersion; 
             private String releaseDate; 
+
+            private Builder() {
+            } 
+
+            private Builder(AvailableKernelVersions model) {
+                this.expireDate = model.expireDate;
+                this.kernelVersion = model.kernelVersion;
+                this.releaseDate = model.releaseDate;
+            } 
 
             /**
              * <p>The maintenance expiration time of the version. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. After the time arrives, the system no longer maintains the version. If any issues occur, update the minor version of the cluster to a later version.</p>

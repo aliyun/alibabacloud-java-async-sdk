@@ -40,6 +40,10 @@ public class LogAnalyzeResult extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return appErrorAdvice
      */
@@ -65,6 +69,15 @@ public class LogAnalyzeResult extends TeaModel {
         private String appErrorAdvice; 
         private String appErrorCode; 
         private String appErrorLog; 
+
+        private Builder() {
+        } 
+
+        private Builder(LogAnalyzeResult model) {
+            this.appErrorAdvice = model.appErrorAdvice;
+            this.appErrorCode = model.appErrorCode;
+            this.appErrorLog = model.appErrorLog;
+        } 
 
         /**
          * AppErrorAdvice.

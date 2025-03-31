@@ -40,6 +40,10 @@ public class DescribeAdviceServiceEnabledResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return message
      */
@@ -65,6 +69,15 @@ public class DescribeAdviceServiceEnabledResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean result; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAdviceServiceEnabledResponseBody model) {
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * <p>The returned message. Valid values:</p>

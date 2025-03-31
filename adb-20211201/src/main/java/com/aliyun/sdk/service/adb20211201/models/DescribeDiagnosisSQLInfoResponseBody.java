@@ -40,6 +40,10 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return diagnosisSQLInfo
      */
@@ -65,6 +69,15 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
         private String diagnosisSQLInfo; 
         private String requestId; 
         private java.util.List<StageInfos> stageInfos; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDiagnosisSQLInfoResponseBody model) {
+            this.diagnosisSQLInfo = model.diagnosisSQLInfo;
+            this.requestId = model.requestId;
+            this.stageInfos = model.stageInfos;
+        } 
 
         /**
          * <p>The queried execution information, including the SQL statement, statistics, execution plan, and operator information.</p>
@@ -226,6 +239,21 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
             private Double progress; 
             private String stageId; 
             private String state; 
+
+            private Builder() {
+            } 
+
+            private Builder(StageInfos model) {
+                this.inputDataSize = model.inputDataSize;
+                this.inputRows = model.inputRows;
+                this.operatorCost = model.operatorCost;
+                this.outputDataSize = model.outputDataSize;
+                this.outputRows = model.outputRows;
+                this.peakMemory = model.peakMemory;
+                this.progress = model.progress;
+                this.stageId = model.stageId;
+                this.state = model.state;
+            } 
 
             /**
              * <p>The total amount of input data in the stage. Unit: bytes.</p>

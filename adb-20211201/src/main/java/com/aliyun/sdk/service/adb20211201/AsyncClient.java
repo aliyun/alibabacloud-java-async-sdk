@@ -101,6 +101,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CheckSampleDataSetResponse> checkSampleDataSet(CheckSampleDataSetRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
      * @param request the request parameters of CreateAPSJob  CreateAPSJobRequest
      * @return CreateAPSJobResponse
      */
@@ -122,12 +125,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateApsCopyWorkloadResponse> createApsCopyWorkload(CreateApsCopyWorkloadRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
      * @param request the request parameters of CreateApsDatasoure  CreateApsDatasoureRequest
      * @return CreateApsDatasoureResponse
      */
     CompletableFuture<CreateApsDatasoureResponse> createApsDatasoure(CreateApsDatasoureRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
      * @param request the request parameters of CreateApsHiveJob  CreateApsHiveJobRequest
      * @return CreateApsHiveJobResponse
      */
@@ -225,6 +234,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteApsDatasoureResponse> deleteApsDatasoure(DeleteApsDatasoureRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>  Deleting backup sets is an asynchronous operation and may require 10 to 20 minutes to complete.</p>
+     * <ul>
+     * <li>You can delete up to 100 backup sets at a time. If you want to delete more than 100 backup sets, call this operation twice.</li>
+     * <li>To ensure data security, the system forcibly retains one valid backup set. If you want to delete the last backup set, the system prohibits your operation.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DeleteApsJob  DeleteApsJobRequest
      * @return DeleteApsJobResponse
      */
@@ -332,6 +348,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteSparkTemplateFileResponse> deleteSparkTemplateFile(DeleteSparkTemplateFileRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to query the performance data of a cluster over a time range based on performance metrics. The collection granularity is 30 seconds. This operation allows you to query information about slow queries, such as the SQL query duration, number of scanned rows, and amount of scanned data.</p>
+     * 
      * @param request the request parameters of DescribeAPSADBInstances  DescribeAPSADBInstancesRequest
      * @return DescribeAPSADBInstancesResponse
      */
@@ -1434,6 +1453,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListApsLifecycleStrategyResponse> listApsLifecycleStrategy(ListApsLifecycleStrategyRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
      * @param request the request parameters of ListApsOptimizationStrategy  ListApsOptimizationStrategyRequest
      * @return ListApsOptimizationStrategyResponse
      */
@@ -1561,6 +1583,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyApsDatasoureResponse> modifyApsDatasoure(ModifyApsDatasoureRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
      * @param request the request parameters of ModifyApsJob  ModifyApsJobRequest
      * @return ModifyApsJobResponse
      */
@@ -1573,6 +1598,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyApsSlsADBJobResponse> modifyApsSlsADBJob(ModifyApsSlsADBJobRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
      * @param request the request parameters of ModifyApsWorkloadName  ModifyApsWorkloadNameRequest
      * @return ModifyApsWorkloadNameResponse
      */
@@ -1876,5 +1904,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateSparkTemplateFileResponse
      */
     CompletableFuture<UpdateSparkTemplateFileResponse> updateSparkTemplateFile(UpdateSparkTemplateFileRequest request);
+
+    /**
+     * @param request the request parameters of UpgradeKernelVersion  UpgradeKernelVersionRequest
+     * @return UpgradeKernelVersionResponse
+     */
+    CompletableFuture<UpgradeKernelVersionResponse> upgradeKernelVersion(UpgradeKernelVersionRequest request);
 
 }

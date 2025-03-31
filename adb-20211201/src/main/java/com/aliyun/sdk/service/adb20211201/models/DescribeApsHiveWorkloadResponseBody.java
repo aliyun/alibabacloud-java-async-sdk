@@ -36,6 +36,10 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return apsWorkload
      */
@@ -54,8 +58,21 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
         private ApsWorkload apsWorkload; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeApsHiveWorkloadResponseBody model) {
+            this.apsWorkload = model.apsWorkload;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * ApsWorkload.
+         * <p>The queried job.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder apsWorkload(ApsWorkload apsWorkload) {
             this.apsWorkload = apsWorkload;
@@ -63,7 +80,10 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86F92D26-B774-5FA1-8E53-******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -348,8 +368,38 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
             private String workloadName; 
             private String workloadTypeName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ApsWorkload model) {
+                this.advancedConfig = model.advancedConfig;
+                this.conflictStrategy = model.conflictStrategy;
+                this.createTime = model.createTime;
+                this.DBClusterId = model.DBClusterId;
+                this.datasourceId = model.datasourceId;
+                this.datasourceName = model.datasourceName;
+                this.emrClusterId = model.emrClusterId;
+                this.fullComputeUnit = model.fullComputeUnit;
+                this.metaStoreUri = model.metaStoreUri;
+                this.ossLocation = model.ossLocation;
+                this.parallelism = model.parallelism;
+                this.regionId = model.regionId;
+                this.resourceGroup = model.resourceGroup;
+                this.state = model.state;
+                this.syncAllowExpression = model.syncAllowExpression;
+                this.syncDenyExpression = model.syncDenyExpression;
+                this.targetType = model.targetType;
+                this.vswitch = model.vswitch;
+                this.workloadId = model.workloadId;
+                this.workloadName = model.workloadName;
+                this.workloadTypeName = model.workloadTypeName;
+            } 
+
             /**
-             * AdvancedConfig.
+             * <p>The advanced configurations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test.adv.config=value</p>
              */
             public Builder advancedConfig(String advancedConfig) {
                 this.advancedConfig = advancedConfig;
@@ -357,7 +407,10 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
             }
 
             /**
-             * ConflictStrategy.
+             * <p>The policy to handle tables with the same name in the destination cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Intercept</p>
              */
             public Builder conflictStrategy(String conflictStrategy) {
                 this.conflictStrategy = conflictStrategy;
@@ -365,7 +418,12 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the workload was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -373,7 +431,10 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
             }
 
             /**
-             * DBClusterId.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>amv-*******</p>
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -381,7 +442,10 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
             }
 
             /**
-             * DatasourceId.
+             * <p>The data source ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder datasourceId(Long datasourceId) {
                 this.datasourceId = datasourceId;
@@ -389,7 +453,10 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
             }
 
             /**
-             * DatasourceName.
+             * <p>The name of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sls-******</p>
              */
             public Builder datasourceName(String datasourceName) {
                 this.datasourceName = datasourceName;
@@ -397,7 +464,12 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
             }
 
             /**
-             * EmrClusterId.
+             * <p>The ID of the E-MapReduce (EMR) cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder emrClusterId(String emrClusterId) {
                 this.emrClusterId = emrClusterId;
@@ -405,7 +477,10 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
             }
 
             /**
-             * FullComputeUnit.
+             * <p>The number of AnalyticDB compute units (ACUs) required for migration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder fullComputeUnit(String fullComputeUnit) {
                 this.fullComputeUnit = fullComputeUnit;
@@ -413,7 +488,7 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
             }
 
             /**
-             * <p>hive meta store url。</p>
+             * <p>The URL of the Hive Metastore.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -426,7 +501,10 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
             }
 
             /**
-             * OssLocation.
+             * <p>The Object Storage Service (OSS) URL of the AnalyticDB for MySQL cluster data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://******</p>
              */
             public Builder ossLocation(String ossLocation) {
                 this.ossLocation = ossLocation;
@@ -434,7 +512,10 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
             }
 
             /**
-             * Parallelism.
+             * <p>The number of tasks that are allowed in parallel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder parallelism(Long parallelism) {
                 this.parallelism = parallelism;
@@ -442,7 +523,10 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -450,7 +534,10 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroup.
+             * <p>The resource group to which the SQL statement belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder resourceGroup(String resourceGroup) {
                 this.resourceGroup = resourceGroup;
@@ -458,7 +545,10 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * <p>The status of the workload.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>COMPLETED</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -466,7 +556,10 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
             }
 
             /**
-             * SyncAllowExpression.
+             * <p>The expression that manually matches the source database table whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder syncAllowExpression(String syncAllowExpression) {
                 this.syncAllowExpression = syncAllowExpression;
@@ -474,7 +567,10 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
             }
 
             /**
-             * SyncDenyExpression.
+             * <p>Manually match the blacklist expressions for source database tables.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>def</p>
              */
             public Builder syncDenyExpression(String syncDenyExpression) {
                 this.syncDenyExpression = syncDenyExpression;
@@ -482,7 +578,10 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
             }
 
             /**
-             * TargetType.
+             * <p>The destination type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -490,7 +589,10 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
             }
 
             /**
-             * Vswitch.
+             * <p>The name of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-******</p>
              */
             public Builder vswitch(String vswitch) {
                 this.vswitch = vswitch;
@@ -498,7 +600,10 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
             }
 
             /**
-             * WorkloadId.
+             * <p>The job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aps-******</p>
              */
             public Builder workloadId(String workloadId) {
                 this.workloadId = workloadId;
@@ -506,7 +611,10 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
             }
 
             /**
-             * WorkloadName.
+             * <p>The name of the workload.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder workloadName(String workloadName) {
                 this.workloadName = workloadName;
@@ -514,7 +622,10 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
             }
 
             /**
-             * WorkloadTypeName.
+             * <p>The name of the workload.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder workloadTypeName(String workloadTypeName) {
                 this.workloadTypeName = workloadTypeName;

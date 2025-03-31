@@ -48,6 +48,10 @@ public class ModifyUserEniVswitchOptionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -90,6 +94,17 @@ public class ModifyUserEniVswitchOptionsResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(ModifyUserEniVswitchOptionsResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
          * <p>The HTTP status code or the error code.</p>
          * 
@@ -115,7 +130,7 @@ public class ModifyUserEniVswitchOptionsResponseBody extends TeaModel {
         /**
          * <p>The returned message. Valid values:</p>
          * <ul>
-         * <li>If the request was successful, a <strong>SUCCESS</strong> message is returned.</li>
+         * <li>If the request was successful, a success message is returned.****</li>
          * <li>If the request failed, an error message is returned.</li>
          * </ul>
          * 

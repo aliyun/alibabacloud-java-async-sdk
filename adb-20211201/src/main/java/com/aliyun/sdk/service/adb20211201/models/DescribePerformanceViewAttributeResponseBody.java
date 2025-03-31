@@ -56,6 +56,10 @@ public class DescribePerformanceViewAttributeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -113,6 +117,19 @@ public class DescribePerformanceViewAttributeResponseBody extends TeaModel {
         private String requestId; 
         private ViewDetail viewDetail; 
         private String viewName; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePerformanceViewAttributeResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.createFromViewType = model.createFromViewType;
+            this.DBClusterId = model.DBClusterId;
+            this.fillOriginViewKeys = model.fillOriginViewKeys;
+            this.requestId = model.requestId;
+            this.viewDetail = model.viewDetail;
+            this.viewName = model.viewName;
+        } 
 
         /**
          * <p>The details about the access denial.</p>
@@ -292,6 +309,17 @@ public class DescribePerformanceViewAttributeResponseBody extends TeaModel {
             private String keyName; 
             private Boolean selected; 
 
+            private Builder() {
+            } 
+
+            private Builder(Keys model) {
+                this.enableAutoMc = model.enableAutoMc;
+                this.engine = model.engine;
+                this.groupType = model.groupType;
+                this.keyName = model.keyName;
+                this.selected = model.selected;
+            } 
+
             /**
              * EnableAutoMc.
              */
@@ -393,6 +421,14 @@ public class DescribePerformanceViewAttributeResponseBody extends TeaModel {
             private String category; 
             private java.util.List<Keys> keys; 
 
+            private Builder() {
+            } 
+
+            private Builder(Categories model) {
+                this.category = model.category;
+                this.keys = model.keys;
+            } 
+
             /**
              * <p>The name of the metric category. Valid values:</p>
              * <ul>
@@ -480,6 +516,15 @@ public class DescribePerformanceViewAttributeResponseBody extends TeaModel {
             private java.util.List<Categories> categories; 
             private Boolean chartLinked; 
             private Integer chartsPerLine; 
+
+            private Builder() {
+            } 
+
+            private Builder(ViewDetail model) {
+                this.categories = model.categories;
+                this.chartLinked = model.chartLinked;
+                this.chartsPerLine = model.chartsPerLine;
+            } 
 
             /**
              * <p>The metric category.</p>

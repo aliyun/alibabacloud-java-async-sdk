@@ -80,6 +80,10 @@ public class Detail extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return appType
      */
@@ -185,6 +189,25 @@ public class Detail extends TeaModel {
         private Long submittedTimeInMillis; 
         private Long terminatedTimeInMillis; 
         private String webUiAddress; 
+
+        private Builder() {
+        } 
+
+        private Builder(Detail model) {
+            this.appType = model.appType;
+            this.DBClusterId = model.DBClusterId;
+            this.data = model.data;
+            this.durationInMillis = model.durationInMillis;
+            this.estimateExecutionCpuTimeInSeconds = model.estimateExecutionCpuTimeInSeconds;
+            this.lastAttemptId = model.lastAttemptId;
+            this.lastUpdatedTimeInMillis = model.lastUpdatedTimeInMillis;
+            this.logRootPath = model.logRootPath;
+            this.resourceGroupName = model.resourceGroupName;
+            this.startedTimeInMillis = model.startedTimeInMillis;
+            this.submittedTimeInMillis = model.submittedTimeInMillis;
+            this.terminatedTimeInMillis = model.terminatedTimeInMillis;
+            this.webUiAddress = model.webUiAddress;
+        } 
 
         /**
          * AppType.

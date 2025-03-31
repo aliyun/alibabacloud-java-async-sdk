@@ -40,6 +40,10 @@ public class DescribeDownloadRecordsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -65,6 +69,15 @@ public class DescribeDownloadRecordsResponseBody extends TeaModel {
         private String accessDeniedDetail; 
         private java.util.List<Records> records; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDownloadRecordsResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.records = model.records;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * AccessDeniedDetail.
@@ -178,6 +191,17 @@ public class DescribeDownloadRecordsResponseBody extends TeaModel {
             private String fileName; 
             private String status; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(Records model) {
+                this.downloadId = model.downloadId;
+                this.exceptionMsg = model.exceptionMsg;
+                this.fileName = model.fileName;
+                this.status = model.status;
+                this.url = model.url;
+            } 
 
             /**
              * <p>The download job ID.</p>

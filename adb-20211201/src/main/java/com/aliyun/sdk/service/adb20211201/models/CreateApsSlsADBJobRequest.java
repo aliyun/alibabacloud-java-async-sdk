@@ -199,7 +199,7 @@ public class CreateApsSlsADBJobRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -503,7 +503,10 @@ public class CreateApsSlsADBJobRequest extends Request {
         } 
 
         /**
-         * AcrossRole.
+         * <p>The name of the cross-account role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-role</p>
          */
         public Builder acrossRole(String acrossRole) {
             this.putBodyParameter("AcrossRole", acrossRole);
@@ -512,7 +515,10 @@ public class CreateApsSlsADBJobRequest extends Request {
         }
 
         /**
-         * AcrossUid.
+         * <p>The cross-account UID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder acrossUid(String acrossUid) {
             this.putBodyParameter("AcrossUid", acrossUid);
@@ -521,7 +527,12 @@ public class CreateApsSlsADBJobRequest extends Request {
         }
 
         /**
-         * AdvancedConfig.
+         * <p>The advanced configurations.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder advancedConfig(String advancedConfig) {
             this.putBodyParameter("AdvancedConfig", advancedConfig);
@@ -530,6 +541,7 @@ public class CreateApsSlsADBJobRequest extends Request {
         }
 
         /**
+         * <p>The information about columns.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -545,6 +557,7 @@ public class CreateApsSlsADBJobRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -557,7 +570,10 @@ public class CreateApsSlsADBJobRequest extends Request {
         }
 
         /**
-         * DatasourceId.
+         * <p>The data source ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>327</p>
          */
         public Builder datasourceId(Long datasourceId) {
             this.putBodyParameter("DatasourceId", datasourceId);
@@ -566,6 +582,7 @@ public class CreateApsSlsADBJobRequest extends Request {
         }
 
         /**
+         * <p>The name of the database.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -578,6 +595,7 @@ public class CreateApsSlsADBJobRequest extends Request {
         }
 
         /**
+         * <p>The dirty data processing mode.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -592,7 +610,10 @@ public class CreateApsSlsADBJobRequest extends Request {
         }
 
         /**
-         * DirtyDataProcessPattern.
+         * <p>The dirty data processing mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STOP</p>
          */
         public Builder dirtyDataProcessPattern(String dirtyDataProcessPattern) {
             this.putBodyParameter("DirtyDataProcessPattern", dirtyDataProcessPattern);
@@ -601,7 +622,10 @@ public class CreateApsSlsADBJobRequest extends Request {
         }
 
         /**
-         * ExactlyOnce.
+         * <p>Specifies whether to enable the consistency check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder exactlyOnce(String exactlyOnce) {
             this.putBodyParameter("ExactlyOnce", exactlyOnce);
@@ -610,7 +634,10 @@ public class CreateApsSlsADBJobRequest extends Request {
         }
 
         /**
-         * FullComputeUnit.
+         * <p>The number of full AnalyticDB compute units (ACUs).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
          */
         public Builder fullComputeUnit(String fullComputeUnit) {
             this.putBodyParameter("FullComputeUnit", fullComputeUnit);
@@ -619,7 +646,12 @@ public class CreateApsSlsADBJobRequest extends Request {
         }
 
         /**
-         * HudiAdvancedConfig.
+         * <p>The advanced configurations of Hudi.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder hudiAdvancedConfig(String hudiAdvancedConfig) {
             this.putBodyParameter("HudiAdvancedConfig", hudiAdvancedConfig);
@@ -628,7 +660,10 @@ public class CreateApsSlsADBJobRequest extends Request {
         }
 
         /**
-         * IncrementalComputeUnit.
+         * <p>The number of increment ACUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>168</p>
          */
         public Builder incrementalComputeUnit(String incrementalComputeUnit) {
             this.putBodyParameter("IncrementalComputeUnit", incrementalComputeUnit);
@@ -637,7 +672,7 @@ public class CreateApsSlsADBJobRequest extends Request {
         }
 
         /**
-         * <p>lakehosue ID。</p>
+         * <p>The lakehouse ID.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -649,7 +684,12 @@ public class CreateApsSlsADBJobRequest extends Request {
         }
 
         /**
-         * MaxOffsetsPerTrigger.
+         * <p>The latest offset.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder maxOffsetsPerTrigger(Long maxOffsetsPerTrigger) {
             this.putBodyParameter("MaxOffsetsPerTrigger", maxOffsetsPerTrigger);
@@ -658,7 +698,10 @@ public class CreateApsSlsADBJobRequest extends Request {
         }
 
         /**
-         * OssLocation.
+         * <p>The Object Storage Service (OSS) URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://test*</p>
          */
         public Builder ossLocation(String ossLocation) {
             this.putBodyParameter("OssLocation", ossLocation);
@@ -667,7 +710,12 @@ public class CreateApsSlsADBJobRequest extends Request {
         }
 
         /**
-         * OutputFormat.
+         * <p>The format of the output file.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder outputFormat(String outputFormat) {
             this.putBodyParameter("OutputFormat", outputFormat);
@@ -676,7 +724,12 @@ public class CreateApsSlsADBJobRequest extends Request {
         }
 
         /**
-         * PartitionSpecs.
+         * <p>The information about partition.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder partitionSpecs(java.util.List<java.util.Map<String, ?>> partitionSpecs) {
             String partitionSpecsShrink = shrink(partitionSpecs, "PartitionSpecs", "json");
@@ -686,6 +739,7 @@ public class CreateApsSlsADBJobRequest extends Request {
         }
 
         /**
+         * <p>The password of the database account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -698,7 +752,12 @@ public class CreateApsSlsADBJobRequest extends Request {
         }
 
         /**
-         * PrimaryKeyDefinition.
+         * <p>The definition of the primary key.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder primaryKeyDefinition(String primaryKeyDefinition) {
             this.putBodyParameter("PrimaryKeyDefinition", primaryKeyDefinition);
@@ -707,7 +766,10 @@ public class CreateApsSlsADBJobRequest extends Request {
         }
 
         /**
-         * Project.
+         * <p>The name of the SLS project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder project(String project) {
             this.putBodyParameter("Project", project);
@@ -716,6 +778,7 @@ public class CreateApsSlsADBJobRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -728,7 +791,10 @@ public class CreateApsSlsADBJobRequest extends Request {
         }
 
         /**
-         * ResourceGroup.
+         * <p>The name of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder resourceGroup(String resourceGroup) {
             this.putBodyParameter("ResourceGroup", resourceGroup);
@@ -737,7 +803,10 @@ public class CreateApsSlsADBJobRequest extends Request {
         }
 
         /**
-         * SourceRegionId.
+         * <p>源集群所处地域ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder sourceRegionId(String sourceRegionId) {
             this.putBodyParameter("SourceRegionId", sourceRegionId);
@@ -746,6 +815,7 @@ public class CreateApsSlsADBJobRequest extends Request {
         }
 
         /**
+         * <p>The start offset.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -758,7 +828,7 @@ public class CreateApsSlsADBJobRequest extends Request {
         }
 
         /**
-         * <p>sls Store。</p>
+         * <p>The SLS Logstore.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -770,6 +840,7 @@ public class CreateApsSlsADBJobRequest extends Request {
         }
 
         /**
+         * <p>The name of the table.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -782,7 +853,12 @@ public class CreateApsSlsADBJobRequest extends Request {
         }
 
         /**
-         * TargetGenerateRule.
+         * <p>The rules for generating the destination database.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder targetGenerateRule(String targetGenerateRule) {
             this.putBodyParameter("TargetGenerateRule", targetGenerateRule);
@@ -791,7 +867,10 @@ public class CreateApsSlsADBJobRequest extends Request {
         }
 
         /**
-         * TargetType.
+         * <p>The destination type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ADB</p>
          */
         public Builder targetType(String targetType) {
             this.putBodyParameter("TargetType", targetType);
@@ -800,7 +879,12 @@ public class CreateApsSlsADBJobRequest extends Request {
         }
 
         /**
-         * UnixTimestampConvert.
+         * <p>The timestamp conversion.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder unixTimestampConvert(UnixTimestampConvert unixTimestampConvert) {
             String unixTimestampConvertShrink = shrink(unixTimestampConvert, "UnixTimestampConvert", "json");
@@ -810,6 +894,7 @@ public class CreateApsSlsADBJobRequest extends Request {
         }
 
         /**
+         * <p>The name of the database account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -822,6 +907,7 @@ public class CreateApsSlsADBJobRequest extends Request {
         }
 
         /**
+         * <p>The name of the workload.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -908,8 +994,21 @@ public class CreateApsSlsADBJobRequest extends Request {
             private String name; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Columns model) {
+                this.mapName = model.mapName;
+                this.mapType = model.mapType;
+                this.name = model.name;
+                this.type = model.type;
+            } 
+
             /**
-             * MapName.
+             * <p>The name of the mapping.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder mapName(String mapName) {
                 this.mapName = mapName;
@@ -917,7 +1016,10 @@ public class CreateApsSlsADBJobRequest extends Request {
             }
 
             /**
-             * MapType.
+             * <p>The type of the mapping.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>int</p>
              */
             public Builder mapType(String mapType) {
                 this.mapType = mapType;
@@ -925,7 +1027,10 @@ public class CreateApsSlsADBJobRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The name of the column.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>id</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -933,7 +1038,10 @@ public class CreateApsSlsADBJobRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>The data type of the column.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bigint</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1003,8 +1111,20 @@ public class CreateApsSlsADBJobRequest extends Request {
             private String format; 
             private Boolean transform; 
 
+            private Builder() {
+            } 
+
+            private Builder(UnixTimestampConvert model) {
+                this.convert = model.convert;
+                this.format = model.format;
+                this.transform = model.transform;
+            } 
+
             /**
-             * Convert.
+             * <p>Specifies whether to enable the conversion of timestamps.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder convert(String convert) {
                 this.convert = convert;
@@ -1012,7 +1132,10 @@ public class CreateApsSlsADBJobRequest extends Request {
             }
 
             /**
-             * Format.
+             * <p>The format of the timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p> APSyyyyMMdd</p>
              */
             public Builder format(String format) {
                 this.format = format;
@@ -1020,7 +1143,10 @@ public class CreateApsSlsADBJobRequest extends Request {
             }
 
             /**
-             * Transform.
+             * <p>Specifies whether to enable the timestamp conversion.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder transform(Boolean transform) {
                 this.transform = transform;

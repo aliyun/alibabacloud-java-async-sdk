@@ -36,6 +36,10 @@ public class GetSparkAppAttemptLogResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetSparkAppAttemptLogResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSparkAppAttemptLogResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The queried log.</p>
@@ -158,6 +170,17 @@ public class GetSparkAppAttemptLogResponseBody extends TeaModel {
             private String logContent; 
             private Integer logSize; 
             private String message; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.appId = model.appId;
+                this.DBClusterId = model.DBClusterId;
+                this.logContent = model.logContent;
+                this.logSize = model.logSize;
+                this.message = model.message;
+            } 
 
             /**
              * <p>The application ID.</p>

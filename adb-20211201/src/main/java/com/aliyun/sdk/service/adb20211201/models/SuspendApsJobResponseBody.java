@@ -52,6 +52,10 @@ public class SuspendApsJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return apsJobId
      */
@@ -102,8 +106,23 @@ public class SuspendApsJobResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(SuspendApsJobResponseBody model) {
+            this.apsJobId = model.apsJobId;
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * ApsJobId.
+         * <p>The job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aps-bj1xxxxxx</p>
          */
         public Builder apsJobId(String apsJobId) {
             this.apsJobId = apsJobId;
@@ -111,7 +130,10 @@ public class SuspendApsJobResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * <p>The HTTP status code or the error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -119,7 +141,10 @@ public class SuspendApsJobResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * <p>The error code returned when the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -127,7 +152,10 @@ public class SuspendApsJobResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The response code. The status code 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +163,10 @@ public class SuspendApsJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>-3EEC-</strong></strong></strong>-9F06-******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -143,7 +174,14 @@ public class SuspendApsJobResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

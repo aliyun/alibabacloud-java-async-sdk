@@ -36,6 +36,10 @@ public class ExecuteSparkReplStatementResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class ExecuteSparkReplStatementResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ExecuteSparkReplStatementResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned data.</p>
@@ -230,6 +242,23 @@ public class ExecuteSparkReplStatementResponseBody extends TeaModel {
             private String outputType; 
             private Long startTime; 
             private Long statementId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.aliyunUid = model.aliyunUid;
+                this.code = model.code;
+                this.codeState = model.codeState;
+                this.codeType = model.codeType;
+                this.columns = model.columns;
+                this.endTime = model.endTime;
+                this.error = model.error;
+                this.output = model.output;
+                this.outputType = model.outputType;
+                this.startTime = model.startTime;
+                this.statementId = model.statementId;
+            } 
 
             /**
              * <p>The ID of the Alibaba Cloud account that owns the cluster.</p>

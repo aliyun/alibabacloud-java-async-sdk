@@ -44,6 +44,10 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBClusterId
      */
@@ -77,6 +81,16 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
         private java.util.List<DetectionItems> detectionItems; 
         private String requestId; 
         private String totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeWorkerDetectionResponseBody model) {
+            this.DBClusterId = model.DBClusterId;
+            this.detectionItems = model.detectionItems;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The cluster ID.</p>
@@ -205,6 +219,17 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
             private String operatorName; 
             private Long totalValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(SearchResults model) {
+                this.avgValue = model.avgValue;
+                this.maxValue = model.maxValue;
+                this.operatorCount = model.operatorCount;
+                this.operatorName = model.operatorName;
+                this.totalValue = model.totalValue;
+            } 
+
             /**
              * <p>The average value of the operator metric.</p>
              * 
@@ -310,6 +335,14 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
         public static final class Builder {
             private String metricName; 
             private java.util.List<SearchResults> searchResults; 
+
+            private Builder() {
+            } 
+
+            private Builder(OperatorAgg model) {
+                this.metricName = model.metricName;
+                this.searchResults = model.searchResults;
+            } 
 
             /**
              * <p>The detection result items of operator metric aggregation.</p>
@@ -474,6 +507,22 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
             private String processId; 
             private String stageId; 
 
+            private Builder() {
+            } 
+
+            private Builder(OperatorDetailsSearchResults model) {
+                this.inputRows = model.inputRows;
+                this.inputSize = model.inputSize;
+                this.operatorCost = model.operatorCost;
+                this.operatorInfo = model.operatorInfo;
+                this.operatorName = model.operatorName;
+                this.outputRows = model.outputRows;
+                this.outputSize = model.outputSize;
+                this.peakMemory = model.peakMemory;
+                this.processId = model.processId;
+                this.stageId = model.stageId;
+            } 
+
             /**
              * <p>The number of rows input by the operator.</p>
              * 
@@ -632,6 +681,14 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
             private String metricName; 
             private java.util.List<OperatorDetailsSearchResults> searchResults; 
 
+            private Builder() {
+            } 
+
+            private Builder(OperatorDetails model) {
+                this.metricName = model.metricName;
+                this.searchResults = model.searchResults;
+            } 
+
             /**
              * <p>The name of the detection metric.</p>
              * 
@@ -749,6 +806,18 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
             private String schemaName; 
             private String tableName; 
             private Long totalDataSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(PartitionedTables model) {
+                this.DDL = model.DDL;
+                this.partitionCount = model.partitionCount;
+                this.partitionIds = model.partitionIds;
+                this.schemaName = model.schemaName;
+                this.tableName = model.tableName;
+                this.totalDataSize = model.totalDataSize;
+            } 
 
             /**
              * <p>The SQL statement that is used to create the table.</p>
@@ -963,6 +1032,22 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
             private Long totalRemoteDataSize; 
             private Long totalRowCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(SkewedTables model) {
+                this.DDL = model.DDL;
+                this.partitionCount = model.partitionCount;
+                this.schemaName = model.schemaName;
+                this.shardSkewedRows = model.shardSkewedRows;
+                this.tableName = model.tableName;
+                this.totalDataSize = model.totalDataSize;
+                this.totalLocalDataSize = model.totalLocalDataSize;
+                this.totalPkSize = model.totalPkSize;
+                this.totalRemoteDataSize = model.totalRemoteDataSize;
+                this.totalRowCount = model.totalRowCount;
+            } 
+
             /**
              * <p>The SQL statement that is used to create the table.</p>
              * 
@@ -1172,6 +1257,18 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
             private Long maxScanSize; 
             private String tableName; 
 
+            private Builder() {
+            } 
+
+            private Builder(TopAccessTablesSearchResults model) {
+                this.accessCount = model.accessCount;
+                this.avgScanCost = model.avgScanCost;
+                this.avgScanSize = model.avgScanSize;
+                this.maxScanCost = model.maxScanCost;
+                this.maxScanSize = model.maxScanSize;
+                this.tableName = model.tableName;
+            } 
+
             /**
              * <p>The number of accesses to the table.</p>
              * 
@@ -1289,6 +1386,14 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
             private String metricName; 
             private java.util.List<TopAccessTablesSearchResults> searchResults; 
 
+            private Builder() {
+            } 
+
+            private Builder(TopAccessTables model) {
+                this.metricName = model.metricName;
+                this.searchResults = model.searchResults;
+            } 
+
             /**
              * <p>The name of the detection metric.</p>
              */
@@ -1391,6 +1496,17 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
             private java.util.List<PartitionedTables> partitionedTables; 
             private java.util.List<SkewedTables> skewedTables; 
             private java.util.List<TopAccessTables> topAccessTables; 
+
+            private Builder() {
+            } 
+
+            private Builder(Results model) {
+                this.operatorAgg = model.operatorAgg;
+                this.operatorDetails = model.operatorDetails;
+                this.partitionedTables = model.partitionedTables;
+                this.skewedTables = model.skewedTables;
+                this.topAccessTables = model.topAccessTables;
+            } 
 
             /**
              * <p>The detection result items of operator metric aggregation.</p>
@@ -1506,6 +1622,16 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
             private String name; 
             private Results results; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(DetectionItems model) {
+                this.message = model.message;
+                this.name = model.name;
+                this.results = model.results;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The information about the detection result.</p>

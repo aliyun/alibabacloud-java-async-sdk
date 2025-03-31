@@ -44,6 +44,10 @@ public class DescribeControllerDetectionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBClusterId
      */
@@ -77,6 +81,16 @@ public class DescribeControllerDetectionResponseBody extends TeaModel {
         private java.util.List<DetectionItems> detectionItems; 
         private String requestId; 
         private String totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeControllerDetectionResponseBody model) {
+            this.DBClusterId = model.DBClusterId;
+            this.detectionItems = model.detectionItems;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The cluster ID.</p>
@@ -180,6 +194,15 @@ public class DescribeControllerDetectionResponseBody extends TeaModel {
             private String message; 
             private String name; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(DetectionItems model) {
+                this.message = model.message;
+                this.name = model.name;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The information about the detection result.</p>

@@ -36,6 +36,10 @@ public class GetSparkAppMetricsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetSparkAppMetricsResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSparkAppMetricsResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned data.</p>
@@ -122,6 +134,14 @@ public class GetSparkAppMetricsResponseBody extends TeaModel {
         public static final class Builder {
             private Long outputRowsCount; 
             private Long totalReadFileSizeInByte; 
+
+            private Builder() {
+            } 
+
+            private Builder(ScanMetrics model) {
+                this.outputRowsCount = model.outputRowsCount;
+                this.totalReadFileSizeInByte = model.totalReadFileSizeInByte;
+            } 
 
             /**
              * <p>The number of scanned rows.</p>
@@ -231,6 +251,17 @@ public class GetSparkAppMetricsResponseBody extends TeaModel {
             private String eventLogPath; 
             private Boolean finished; 
             private ScanMetrics scanMetrics; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.appId = model.appId;
+                this.attemptId = model.attemptId;
+                this.eventLogPath = model.eventLogPath;
+                this.finished = model.finished;
+                this.scanMetrics = model.scanMetrics;
+            } 
 
             /**
              * <p>The ID of the Spark application.</p>

@@ -36,6 +36,10 @@ public class GetSparkTemplateFullTreeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetSparkTemplateFullTreeResponseBody extends TeaModel {
     public static final class Builder {
         private String data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSparkTemplateFullTreeResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The directory structure of Spark applications. Fields in the response parameter:</p>

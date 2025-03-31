@@ -56,6 +56,10 @@ public class DescribeTableDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -113,6 +117,19 @@ public class DescribeTableDetailResponseBody extends TeaModel {
         private String pageSize; 
         private String requestId; 
         private String totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTableDetailResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.avgSize = model.avgSize;
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The detailed reason why the access was denied.</p>
@@ -246,6 +263,14 @@ public class DescribeTableDetailResponseBody extends TeaModel {
             private Integer id; 
             private Long size; 
 
+            private Builder() {
+            } 
+
+            private Builder(Shard model) {
+                this.id = model.id;
+                this.size = model.size;
+            } 
+
             /**
              * <p>The shard ID. Only the numeric part of the shard name is returned.</p>
              * 
@@ -306,6 +331,13 @@ public class DescribeTableDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Shard> shard; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.shard = model.shard;
+            } 
 
             /**
              * <p>The queried shards.</p>

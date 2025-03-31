@@ -48,6 +48,10 @@ public class DescribeApsMigrationWorkloadsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return migrationWorkloads
      */
@@ -89,6 +93,17 @@ public class DescribeApsMigrationWorkloadsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeApsMigrationWorkloadsResponseBody model) {
+            this.migrationWorkloads = model.migrationWorkloads;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <ul>
@@ -301,6 +316,23 @@ public class DescribeApsMigrationWorkloadsResponseBody extends TeaModel {
             private String state; 
             private String targetType; 
             private String workloadSubType; 
+
+            private Builder() {
+            } 
+
+            private Builder(MigrationWorkloads model) {
+                this.acuCount = model.acuCount;
+                this.createTime = model.createTime;
+                this.failedMsg = model.failedMsg;
+                this.id = model.id;
+                this.maxRT = model.maxRT;
+                this.modifyTime = model.modifyTime;
+                this.name = model.name;
+                this.ossLocation = model.ossLocation;
+                this.state = model.state;
+                this.targetType = model.targetType;
+                this.workloadSubType = model.workloadSubType;
+            } 
 
             /**
              * <p>The number of AnalyticDB compute units (ACUs).</p>

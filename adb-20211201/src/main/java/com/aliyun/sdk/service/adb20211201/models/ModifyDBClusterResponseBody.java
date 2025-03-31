@@ -40,6 +40,10 @@ public class ModifyDBClusterResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBClusterId
      */
@@ -65,6 +69,15 @@ public class ModifyDBClusterResponseBody extends TeaModel {
         private String DBClusterId; 
         private String orderId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyDBClusterResponseBody model) {
+            this.DBClusterId = model.DBClusterId;
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>

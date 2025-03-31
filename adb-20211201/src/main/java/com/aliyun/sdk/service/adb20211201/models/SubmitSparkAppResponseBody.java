@@ -36,6 +36,10 @@ public class SubmitSparkAppResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class SubmitSparkAppResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(SubmitSparkAppResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned data.</p>
@@ -146,6 +158,16 @@ public class SubmitSparkAppResponseBody extends TeaModel {
             private String appName; 
             private String message; 
             private String state; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.appId = model.appId;
+                this.appName = model.appName;
+                this.message = model.message;
+                this.state = model.state;
+            } 
 
             /**
              * <p>The application ID.</p>

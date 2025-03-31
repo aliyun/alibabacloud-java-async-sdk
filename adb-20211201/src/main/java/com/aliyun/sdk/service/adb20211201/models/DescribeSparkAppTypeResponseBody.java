@@ -40,6 +40,10 @@ public class DescribeSparkAppTypeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -65,6 +69,15 @@ public class DescribeSparkAppTypeResponseBody extends TeaModel {
         private String accessDeniedDetail; 
         private String requestId; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSparkAppTypeResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.requestId = model.requestId;
+            this.type = model.type;
+        } 
 
         /**
          * <p>The detailed reason why the access was denied.</p>

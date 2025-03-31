@@ -40,6 +40,10 @@ public class CreatePerformanceViewResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -65,6 +69,15 @@ public class CreatePerformanceViewResponseBody extends TeaModel {
         private String accessDeniedDetail; 
         private String createStatus; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreatePerformanceViewResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.createStatus = model.createStatus;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details about the access denial.</p>

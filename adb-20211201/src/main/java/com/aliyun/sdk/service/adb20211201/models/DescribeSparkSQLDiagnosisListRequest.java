@@ -72,7 +72,7 @@ public class DescribeSparkSQLDiagnosisListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -160,6 +160,10 @@ public class DescribeSparkSQLDiagnosisListRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the information about all AnalyticDB for MySQL Data Lakehouse Edition clusters within a region, including cluster IDs.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -172,7 +176,10 @@ public class DescribeSparkSQLDiagnosisListRequest extends Request {
         }
 
         /**
-         * MaxStartTime.
+         * <p>The latest start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-11-28 23:00:00</p>
          */
         public Builder maxStartTime(String maxStartTime) {
             this.putQueryParameter("MaxStartTime", maxStartTime);
@@ -181,7 +188,10 @@ public class DescribeSparkSQLDiagnosisListRequest extends Request {
         }
 
         /**
-         * MinStartTime.
+         * <p>The earliest start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-11-28 22:00:00</p>
          */
         public Builder minStartTime(String minStartTime) {
             this.putQueryParameter("MinStartTime", minStartTime);
@@ -190,7 +200,31 @@ public class DescribeSparkSQLDiagnosisListRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The order by which to sort query results. Specify the parameter value in the JSON format. Example: <code>[{&quot;Field&quot;:&quot;MaxExclusiveTime&quot;,&quot;Type&quot;:&quot;Asc&quot;}]</code>.</p>
+         * <ul>
+         * <li><p><code>Field</code> specifies the field by which to sort the query results. Valid values:</p>
+         * <ul>
+         * <li><code>MaxExclusiveTime</code>: the maximum execution duration.</li>
+         * <li><code>PeakMemory</code>: the peak memory.</li>
+         * <li><code>QueryStartTime</code>: the start time of the query.</li>
+         * <li><code>QueryWallclockTime</code>: the execution duration of the query.</li>
+         * </ul>
+         * </li>
+         * <li><p><code>Type</code> specifies the sorting order. Valid values:</p>
+         * <ul>
+         * <li><code>Asc</code>: ascending order.</li>
+         * <li><code>Desc</code>: descending order.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li>If you do not specify this parameter, query results are sorted by <code>MaxExclusiveTime</code> in ascending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;Field&quot;:&quot;QueryStartTime&quot;,&quot;Type&quot;:&quot;Desc&quot;}]</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -199,7 +233,10 @@ public class DescribeSparkSQLDiagnosisListRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -208,7 +245,10 @@ public class DescribeSparkSQLDiagnosisListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -217,6 +257,10 @@ public class DescribeSparkSQLDiagnosisListRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -229,7 +273,10 @@ public class DescribeSparkSQLDiagnosisListRequest extends Request {
         }
 
         /**
-         * StatementId.
+         * <p>The unique ID of the code block in the Spark job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder statementId(Long statementId) {
             this.putQueryParameter("StatementId", statementId);

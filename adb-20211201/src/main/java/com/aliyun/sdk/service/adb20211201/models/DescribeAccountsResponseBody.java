@@ -36,6 +36,10 @@ public class DescribeAccountsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accountList
      */
@@ -53,6 +57,14 @@ public class DescribeAccountsResponseBody extends TeaModel {
     public static final class Builder {
         private AccountList accountList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAccountsResponseBody model) {
+            this.accountList = model.accountList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The queried database accounts.</p>
@@ -171,6 +183,18 @@ public class DescribeAccountsResponseBody extends TeaModel {
             private String engine; 
             private String ramUsers; 
 
+            private Builder() {
+            } 
+
+            private Builder(DBAccount model) {
+                this.accountDescription = model.accountDescription;
+                this.accountName = model.accountName;
+                this.accountStatus = model.accountStatus;
+                this.accountType = model.accountType;
+                this.engine = model.engine;
+                this.ramUsers = model.ramUsers;
+            } 
+
             /**
              * <p>The description of the database account.</p>
              * 
@@ -288,6 +312,13 @@ public class DescribeAccountsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DBAccount> DBAccount; 
+
+            private Builder() {
+            } 
+
+            private Builder(AccountList model) {
+                this.DBAccount = model.DBAccount;
+            } 
 
             /**
              * DBAccount.

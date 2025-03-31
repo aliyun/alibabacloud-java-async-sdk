@@ -48,6 +48,10 @@ public class SparkAttemptInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return attemptId
      */
@@ -89,6 +93,17 @@ public class SparkAttemptInfo extends TeaModel {
         private String message; 
         private String priority; 
         private String state; 
+
+        private Builder() {
+        } 
+
+        private Builder(SparkAttemptInfo model) {
+            this.attemptId = model.attemptId;
+            this.detail = model.detail;
+            this.message = model.message;
+            this.priority = model.priority;
+            this.state = model.state;
+        } 
 
         /**
          * AttemptId.

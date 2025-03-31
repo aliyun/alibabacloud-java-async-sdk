@@ -48,6 +48,10 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -89,6 +93,17 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBClustersResponseBody model) {
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The queried clusters.</p>
@@ -192,6 +207,14 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The tag key.</p>
              * <blockquote>
@@ -255,6 +278,13 @@ public class DescribeDBClustersResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
@@ -362,6 +392,18 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             private String stepName; 
             private String stepProgress; 
             private String stepStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(StepList model) {
+                this.endTime = model.endTime;
+                this.startTime = model.startTime;
+                this.stepDesc = model.stepDesc;
+                this.stepName = model.stepName;
+                this.stepProgress = model.stepProgress;
+                this.stepStatus = model.stepStatus;
+            } 
 
             /**
              * <p>The end time of the job step. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
@@ -473,6 +515,13 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<StepList> stepList; 
 
+            private Builder() {
+            } 
+
+            private Builder(TaskInfoStepList model) {
+                this.stepList = model.stepList;
+            } 
+
             /**
              * StepList.
              */
@@ -555,6 +604,16 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             private String progress; 
             private String status; 
             private TaskInfoStepList stepList; 
+
+            private Builder() {
+            } 
+
+            private Builder(TaskInfo model) {
+                this.name = model.name;
+                this.progress = model.progress;
+                this.status = model.status;
+                this.stepList = model.stepList;
+            } 
 
             /**
              * <p>The name of the job.</p>
@@ -1144,6 +1203,55 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             private String VPCId; 
             private String vSwitchId; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DBCluster model) {
+                this.category = model.category;
+                this.commodityCode = model.commodityCode;
+                this.computeResource = model.computeResource;
+                this.connectionString = model.connectionString;
+                this.createTime = model.createTime;
+                this.DBClusterDescription = model.DBClusterDescription;
+                this.DBClusterId = model.DBClusterId;
+                this.DBClusterNetworkType = model.DBClusterNetworkType;
+                this.DBClusterStatus = model.DBClusterStatus;
+                this.DBClusterType = model.DBClusterType;
+                this.DBNodeClass = model.DBNodeClass;
+                this.DBNodeCount = model.DBNodeCount;
+                this.DBNodeStorage = model.DBNodeStorage;
+                this.DBVersion = model.DBVersion;
+                this.diskType = model.diskType;
+                this.dtsJobId = model.dtsJobId;
+                this.elasticIOResource = model.elasticIOResource;
+                this.engine = model.engine;
+                this.executorCount = model.executorCount;
+                this.expireTime = model.expireTime;
+                this.expired = model.expired;
+                this.innerIp = model.innerIp;
+                this.innerPort = model.innerPort;
+                this.lockMode = model.lockMode;
+                this.lockReason = model.lockReason;
+                this.mode = model.mode;
+                this.payType = model.payType;
+                this.port = model.port;
+                this.productForm = model.productForm;
+                this.productVersion = model.productVersion;
+                this.rdsInstanceId = model.rdsInstanceId;
+                this.regionId = model.regionId;
+                this.reservedACU = model.reservedACU;
+                this.reservedNodeCount = model.reservedNodeCount;
+                this.reservedNodeSize = model.reservedNodeSize;
+                this.resourceGroupId = model.resourceGroupId;
+                this.storageResource = model.storageResource;
+                this.tags = model.tags;
+                this.taskInfo = model.taskInfo;
+                this.VPCCloudInstanceId = model.VPCCloudInstanceId;
+                this.VPCId = model.VPCId;
+                this.vSwitchId = model.vSwitchId;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>The mode of the cluster. This parameter is returned only for Data Warehouse Edition clusters. Valid values:</p>
@@ -1740,6 +1848,13 @@ public class DescribeDBClustersResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DBCluster> DBCluster; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.DBCluster = model.DBCluster;
+            } 
 
             /**
              * DBCluster.

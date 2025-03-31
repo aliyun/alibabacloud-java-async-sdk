@@ -53,7 +53,7 @@ public class ModifyApsWorkloadNameRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -105,6 +105,7 @@ public class ModifyApsWorkloadNameRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,6 +118,7 @@ public class ModifyApsWorkloadNameRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,6 +131,7 @@ public class ModifyApsWorkloadNameRequest extends Request {
         }
 
         /**
+         * <p>The job ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,6 +144,7 @@ public class ModifyApsWorkloadNameRequest extends Request {
         }
 
         /**
+         * <p>The name of the workload.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

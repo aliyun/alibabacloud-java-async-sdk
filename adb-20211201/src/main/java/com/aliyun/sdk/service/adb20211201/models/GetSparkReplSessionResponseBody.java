@@ -36,6 +36,10 @@ public class GetSparkReplSessionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetSparkReplSessionResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSparkReplSessionResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned data.</p>
@@ -182,6 +194,19 @@ public class GetSparkReplSessionResponseBody extends TeaModel {
             private Long sessionId; 
             private String state; 
             private String webUiAddress; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.active = model.active;
+                this.aliyunUid = model.aliyunUid;
+                this.attemptId = model.attemptId;
+                this.error = model.error;
+                this.sessionId = model.sessionId;
+                this.state = model.state;
+                this.webUiAddress = model.webUiAddress;
+            } 
 
             /**
              * <p>Indicates whether the session is active. Valid values:</p>

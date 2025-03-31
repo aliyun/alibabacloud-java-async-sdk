@@ -44,6 +44,10 @@ public class DescribeAdbMySqlSchemasResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return message
      */
@@ -77,6 +81,16 @@ public class DescribeAdbMySqlSchemasResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<String> schemas; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAdbMySqlSchemasResponseBody model) {
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.schemas = model.schemas;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The returned message.</p>

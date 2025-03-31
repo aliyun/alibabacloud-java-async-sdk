@@ -48,6 +48,10 @@ public class DescribeAccountPrivilegeObjectsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -89,6 +93,17 @@ public class DescribeAccountPrivilegeObjectsResponseBody extends TeaModel {
         private Long pageSize; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAccountPrivilegeObjectsResponseBody model) {
+            this.data = model.data;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The permissions.</p>
@@ -215,6 +230,16 @@ public class DescribeAccountPrivilegeObjectsResponseBody extends TeaModel {
             private String database; 
             private String description; 
             private String table; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.column = model.column;
+                this.database = model.database;
+                this.description = model.description;
+                this.table = model.table;
+            } 
 
             /**
              * <p>The name of the column. This parameter is returned when PrivilegeType is set to Column.</p>

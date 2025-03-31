@@ -51,7 +51,7 @@ public class ListSparkWarehouseBatchSQLRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -115,7 +115,10 @@ public class ListSparkWarehouseBatchSQLRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -124,7 +127,10 @@ public class ListSparkWarehouseBatchSQLRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(String pageSize) {
             this.putBodyParameter("PageSize", pageSize);

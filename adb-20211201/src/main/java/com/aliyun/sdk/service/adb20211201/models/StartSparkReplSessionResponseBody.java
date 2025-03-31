@@ -36,6 +36,10 @@ public class StartSparkReplSessionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class StartSparkReplSessionResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(StartSparkReplSessionResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned data.</p>
@@ -170,6 +182,18 @@ public class StartSparkReplSessionResponseBody extends TeaModel {
             private Long sessionId; 
             private String state; 
             private String webUiAddress; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.aliyunUid = model.aliyunUid;
+                this.attemptId = model.attemptId;
+                this.error = model.error;
+                this.sessionId = model.sessionId;
+                this.state = model.state;
+                this.webUiAddress = model.webUiAddress;
+            } 
 
             /**
              * <p>The ID of the Alibaba Cloud account that owns the cluster.</p>

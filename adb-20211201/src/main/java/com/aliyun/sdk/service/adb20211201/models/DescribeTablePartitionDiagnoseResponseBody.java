@@ -68,6 +68,10 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -149,6 +153,22 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
         private Long suggestMaxRecordsPerPartition; 
         private Long suggestMinRecordsPerPartition; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTablePartitionDiagnoseResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.DBClusterId = model.DBClusterId;
+            this.detectionItems = model.detectionItems;
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.suggestMaxRecordsPerPartition = model.suggestMaxRecordsPerPartition;
+            this.suggestMinRecordsPerPartition = model.suggestMinRecordsPerPartition;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The information about the request denial.</p>
@@ -324,6 +344,15 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
             private String name; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(DetectionItems model) {
+                this.message = model.message;
+                this.name = model.name;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The detection result.</p>
              */
@@ -454,6 +483,18 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
             private Double spaceRatio; 
             private String tableName; 
             private Long totalSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.partitionDetail = model.partitionDetail;
+                this.partitionNumber = model.partitionNumber;
+                this.schemaName = model.schemaName;
+                this.spaceRatio = model.spaceRatio;
+                this.tableName = model.tableName;
+                this.totalSize = model.totalSize;
+            } 
 
             /**
              * <p>The improper partitions.</p>

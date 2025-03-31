@@ -36,6 +36,10 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return apsDatasource
      */
@@ -53,6 +57,14 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
     public static final class Builder {
         private ApsDatasource apsDatasource; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeApsDatasourceResponseBody model) {
+            this.apsDatasource = model.apsDatasource;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <ul>
@@ -124,6 +136,14 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
         public static final class Builder {
             private String accessToken; 
             private String workspaceURL; 
+
+            private Builder() {
+            } 
+
+            private Builder(DatabricksInfo model) {
+                this.accessToken = model.accessToken;
+                this.workspaceURL = model.workspaceURL;
+            } 
 
             /**
              * <p>The token that is used to access Databricks.</p>
@@ -224,6 +244,16 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
             private String securityGroup; 
             private String vswitch; 
 
+            private Builder() {
+            } 
+
+            private Builder(HiveInfo model) {
+                this.emrClusterId = model.emrClusterId;
+                this.metaStoreUri = model.metaStoreUri;
+                this.securityGroup = model.securityGroup;
+                this.vswitch = model.vswitch;
+            } 
+
             /**
              * <p>The ID of the E-MapReduce (EMR) cluster.</p>
              * 
@@ -322,6 +352,14 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
         public static final class Builder {
             private String kafkaClusterId; 
             private String kafkaTopic; 
+
+            private Builder() {
+            } 
+
+            private Builder(KafkaInfo model) {
+                this.kafkaClusterId = model.kafkaClusterId;
+                this.kafkaTopic = model.kafkaTopic;
+            } 
 
             /**
              * <p>The ID of the Kafka instance.</p>
@@ -469,6 +507,20 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
             private String regionId; 
             private String securityGroup; 
             private String userName; 
+
+            private Builder() {
+            } 
+
+            private Builder(PolarDBMysqlInfo model) {
+                this.across = model.across;
+                this.acrossRole = model.acrossRole;
+                this.acrossUid = model.acrossUid;
+                this.connectUrl = model.connectUrl;
+                this.instanceId = model.instanceId;
+                this.regionId = model.regionId;
+                this.securityGroup = model.securityGroup;
+                this.userName = model.userName;
+            } 
 
             /**
              * <ul>
@@ -677,6 +729,17 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
             private String securityGroup; 
             private String userName; 
 
+            private Builder() {
+            } 
+
+            private Builder(RdsMysqlInfo model) {
+                this.connectUrl = model.connectUrl;
+                this.instanceId = model.instanceId;
+                this.regionId = model.regionId;
+                this.securityGroup = model.securityGroup;
+                this.userName = model.userName;
+            } 
+
             /**
              * <ul>
              * <li></li>
@@ -850,6 +913,18 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
             private String project; 
             private String sourceRegionId; 
             private String store; 
+
+            private Builder() {
+            } 
+
+            private Builder(SlsInfo model) {
+                this.across = model.across;
+                this.acrossRole = model.acrossRole;
+                this.acrossUid = model.acrossUid;
+                this.project = model.project;
+                this.sourceRegionId = model.sourceRegionId;
+                this.store = model.store;
+            } 
 
             /**
              * <p>Indicates whether the data source is a cross-account resource. Valid values:</p>
@@ -1079,6 +1154,23 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
             private PolarDBMysqlInfo polarDBMysqlInfo; 
             private RdsMysqlInfo rdsMysqlInfo; 
             private SlsInfo slsInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApsDatasource model) {
+                this.createTime = model.createTime;
+                this.DBClusterId = model.DBClusterId;
+                this.databricksInfo = model.databricksInfo;
+                this.datasourceDescription = model.datasourceDescription;
+                this.datasourceName = model.datasourceName;
+                this.datasourceType = model.datasourceType;
+                this.hiveInfo = model.hiveInfo;
+                this.kafkaInfo = model.kafkaInfo;
+                this.polarDBMysqlInfo = model.polarDBMysqlInfo;
+                this.rdsMysqlInfo = model.rdsMysqlInfo;
+                this.slsInfo = model.slsInfo;
+            } 
 
             /**
              * <p>The time when the data source was created.</p>

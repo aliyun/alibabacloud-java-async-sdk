@@ -52,6 +52,10 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -101,6 +105,18 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
         private String instanceStatus; 
         private String requestId; 
         private Worker worker; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBClusterHealthStatusResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.cs = model.cs;
+            this.executor = model.executor;
+            this.instanceStatus = model.instanceStatus;
+            this.requestId = model.requestId;
+            this.worker = model.worker;
+        } 
 
         /**
          * AccessDeniedDetail.
@@ -250,6 +266,17 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
             private String status; 
             private Long unavailableCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(Cs model) {
+                this.activeCount = model.activeCount;
+                this.expectedCount = model.expectedCount;
+                this.riskCount = model.riskCount;
+                this.status = model.status;
+                this.unavailableCount = model.unavailableCount;
+            } 
+
             /**
              * <p>The number of healthy access nodes.</p>
              * 
@@ -397,6 +424,17 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
             private String status; 
             private Long unavailableCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(Executor model) {
+                this.activeCount = model.activeCount;
+                this.expectedCount = model.expectedCount;
+                this.riskCount = model.riskCount;
+                this.status = model.status;
+                this.unavailableCount = model.unavailableCount;
+            } 
+
             /**
              * <p>The number of healthy access nodes.</p>
              * 
@@ -543,6 +581,17 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
             private Long riskCount; 
             private String status; 
             private Long unavailableCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Worker model) {
+                this.activeCount = model.activeCount;
+                this.expectedCount = model.expectedCount;
+                this.riskCount = model.riskCount;
+                this.status = model.status;
+                this.unavailableCount = model.unavailableCount;
+            } 
 
             /**
              * <p>The number of healthy storage node groups.</p>

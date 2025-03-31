@@ -40,6 +40,10 @@ public class DescribeClusterNetInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clusterNetworkType
      */
@@ -65,6 +69,15 @@ public class DescribeClusterNetInfoResponseBody extends TeaModel {
         private String clusterNetworkType; 
         private Items items; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeClusterNetInfoResponseBody model) {
+            this.clusterNetworkType = model.clusterNetworkType;
+            this.items = model.items;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The network type of the cluster. Only the Virtual Private Cloud (VPC) network type is supported. <strong>VPC</strong> is returned.</p>
@@ -146,6 +159,14 @@ public class DescribeClusterNetInfoResponseBody extends TeaModel {
             private String port; 
             private String protocol; 
 
+            private Builder() {
+            } 
+
+            private Builder(Ports model) {
+                this.port = model.port;
+                this.protocol = model.protocol;
+            } 
+
             /**
              * <p>The port.</p>
              * 
@@ -212,6 +233,13 @@ public class DescribeClusterNetInfoResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Ports> ports; 
+
+            private Builder() {
+            } 
+
+            private Builder(AddressPorts model) {
+                this.ports = model.ports;
+            } 
 
             /**
              * ports.
@@ -343,6 +371,20 @@ public class DescribeClusterNetInfoResponseBody extends TeaModel {
             private AddressPorts ports; 
             private String VPCId; 
             private String vSwitchId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Address model) {
+                this.connectionString = model.connectionString;
+                this.connectionStringPrefix = model.connectionStringPrefix;
+                this.IPAddress = model.IPAddress;
+                this.netType = model.netType;
+                this.port = model.port;
+                this.ports = model.ports;
+                this.VPCId = model.VPCId;
+                this.vSwitchId = model.vSwitchId;
+            } 
 
             /**
              * <p>The endpoint of the cluster.</p>
@@ -489,6 +531,13 @@ public class DescribeClusterNetInfoResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Address> address; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.address = model.address;
+            } 
 
             /**
              * Address.

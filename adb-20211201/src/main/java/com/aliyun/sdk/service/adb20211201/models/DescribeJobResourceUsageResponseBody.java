@@ -40,6 +40,10 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -65,6 +69,15 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
         private Integer code; 
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeJobResourceUsageResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The HTTP status code.</p>
@@ -181,6 +194,17 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
             private Float spotAcuNumber; 
             private Float spotAcuPercentage; 
             private Float totalAcuNumber; 
+
+            private Builder() {
+            } 
+
+            private Builder(AcuUsageDetail model) {
+                this.elasticAcuNumber = model.elasticAcuNumber;
+                this.reservedAcuNumber = model.reservedAcuNumber;
+                this.spotAcuNumber = model.spotAcuNumber;
+                this.spotAcuPercentage = model.spotAcuPercentage;
+                this.totalAcuNumber = model.totalAcuNumber;
+            } 
 
             /**
              * <p>The number of ACUs for the elastic resources.</p>
@@ -324,6 +348,17 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
             private String jobStartTime; 
             private String resourceGroupName; 
 
+            private Builder() {
+            } 
+
+            private Builder(JobAcuUsage model) {
+                this.acuUsageDetail = model.acuUsageDetail;
+                this.jobEndTime = model.jobEndTime;
+                this.jobId = model.jobId;
+                this.jobStartTime = model.jobStartTime;
+                this.resourceGroupName = model.resourceGroupName;
+            } 
+
             /**
              * <p>The ACU usage.</p>
              */
@@ -450,6 +485,16 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
             private String endTime; 
             private java.util.List<JobAcuUsage> jobAcuUsage; 
             private String startTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.DBClusterId = model.DBClusterId;
+                this.endTime = model.endTime;
+                this.jobAcuUsage = model.jobAcuUsage;
+                this.startTime = model.startTime;
+            } 
 
             /**
              * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>

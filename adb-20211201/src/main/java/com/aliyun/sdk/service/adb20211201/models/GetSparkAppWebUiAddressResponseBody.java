@@ -36,6 +36,10 @@ public class GetSparkAppWebUiAddressResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetSparkAppWebUiAddressResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSparkAppWebUiAddressResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned data.</p>
@@ -146,6 +158,16 @@ public class GetSparkAppWebUiAddressResponseBody extends TeaModel {
             private String DBClusterId; 
             private Long expirationTimeInMillis; 
             private String webUiAddress; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.appId = model.appId;
+                this.DBClusterId = model.DBClusterId;
+                this.expirationTimeInMillis = model.expirationTimeInMillis;
+                this.webUiAddress = model.webUiAddress;
+            } 
 
             /**
              * <p>The Spark application ID.</p>

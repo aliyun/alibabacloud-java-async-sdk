@@ -48,6 +48,10 @@ public class DescribeElasticPlanSpecificationsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribeElasticPlanSpecificationsResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<String> specifications; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeElasticPlanSpecificationsResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.specifications = model.specifications;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number.</p>

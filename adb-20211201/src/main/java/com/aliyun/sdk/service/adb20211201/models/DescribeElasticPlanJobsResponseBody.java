@@ -48,6 +48,10 @@ public class DescribeElasticPlanJobsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return jobs
      */
@@ -89,6 +93,17 @@ public class DescribeElasticPlanJobsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeElasticPlanJobsResponseBody model) {
+            this.jobs = model.jobs;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The queried scaling plan jobs.</p>
@@ -299,6 +314,23 @@ public class DescribeElasticPlanJobsResponseBody extends TeaModel {
             private String targetSize; 
             private String totalAcu; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Jobs model) {
+                this.elasticAcu = model.elasticAcu;
+                this.elasticPlanName = model.elasticPlanName;
+                this.endTime = model.endTime;
+                this.instanceSize = model.instanceSize;
+                this.reserveAcu = model.reserveAcu;
+                this.resourceGroupName = model.resourceGroupName;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.targetSize = model.targetSize;
+                this.totalAcu = model.totalAcu;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The amount of elastic resources.</p>

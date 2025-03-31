@@ -52,6 +52,10 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -101,6 +105,18 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<String> schemaTableNames; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAppliedAdvicesResponseBody model) {
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.schemaTableNames = model.schemaTableNames;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The queried applied optimization suggestions.</p>
@@ -348,6 +364,25 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
             private String submitTime; 
             private String tableName; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.adviceId = model.adviceId;
+                this.benefit = model.benefit;
+                this.buildSQL = model.buildSQL;
+                this.jobStatus = model.jobStatus;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.rollbackSQL = model.rollbackSQL;
+                this.SQL = model.SQL;
+                this.schemaName = model.schemaName;
+                this.submitStatus = model.submitStatus;
+                this.submitTime = model.submitTime;
+                this.tableName = model.tableName;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The suggestion ID.</p>

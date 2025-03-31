@@ -56,6 +56,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return freeBackupSize
      */
@@ -113,6 +117,19 @@ public class DescribeBackupsResponseBody extends TeaModel {
         private String requestId; 
         private Long totalBackupSize; 
         private String totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeBackupsResponseBody model) {
+            this.freeBackupSize = model.freeBackupSize;
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalBackupSize = model.totalBackupSize;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * FreeBackupSize.
@@ -304,6 +321,20 @@ public class DescribeBackupsResponseBody extends TeaModel {
             private String backupType; 
             private String DBClusterId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Backup model) {
+                this.backupEndTime = model.backupEndTime;
+                this.backupExpiredTime = model.backupExpiredTime;
+                this.backupId = model.backupId;
+                this.backupMethod = model.backupMethod;
+                this.backupSize = model.backupSize;
+                this.backupStartTime = model.backupStartTime;
+                this.backupType = model.backupType;
+                this.DBClusterId = model.DBClusterId;
+            } 
+
             /**
              * <p>The end time of the backup.</p>
              * 
@@ -431,6 +462,13 @@ public class DescribeBackupsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Backup> backup; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.backup = model.backup;
+            } 
 
             /**
              * Backup.

@@ -56,6 +56,10 @@ public class CreateApsDatasoureResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -114,8 +118,24 @@ public class CreateApsDatasoureResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateApsDatasoureResponseBody model) {
+            this.code = model.code;
+            this.DBClusterId = model.DBClusterId;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The HTTP status code or the error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -123,7 +143,10 @@ public class CreateApsDatasoureResponseBody extends TeaModel {
         }
 
         /**
-         * DBClusterId.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amv-7xxxxx</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -131,7 +154,10 @@ public class CreateApsDatasoureResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The information about the cluster resource usage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>69</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -139,7 +165,10 @@ public class CreateApsDatasoureResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The response code. The status code 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -147,7 +176,14 @@ public class CreateApsDatasoureResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message. Valid values:</p>
+         * <ul>
+         * <li>If the request was successful, a success message is returned.****</li>
+         * <li>If the request failed, an error message is returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -155,7 +191,10 @@ public class CreateApsDatasoureResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>65D2***-45C1-5C18-**********</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -163,7 +202,14 @@ public class CreateApsDatasoureResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the dry run succeeds. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

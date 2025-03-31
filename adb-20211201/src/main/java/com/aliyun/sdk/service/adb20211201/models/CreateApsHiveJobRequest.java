@@ -100,7 +100,7 @@ public class CreateApsHiveJobRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -233,7 +233,12 @@ public class CreateApsHiveJobRequest extends Request {
         } 
 
         /**
-         * AdvancedConfig.
+         * <p>The advanced configurations.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder advancedConfig(String advancedConfig) {
             this.putBodyParameter("AdvancedConfig", advancedConfig);
@@ -242,7 +247,7 @@ public class CreateApsHiveJobRequest extends Request {
         }
 
         /**
-         * ConflictStrategy.
+         * <p>The policy to handle tables with the same name in the destination cluster.</p>
          */
         public Builder conflictStrategy(String conflictStrategy) {
             this.putBodyParameter("ConflictStrategy", conflictStrategy);
@@ -251,6 +256,7 @@ public class CreateApsHiveJobRequest extends Request {
         }
 
         /**
+         * <p>The ID of the AnalyticDB for MySQL cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -263,7 +269,10 @@ public class CreateApsHiveJobRequest extends Request {
         }
 
         /**
-         * DatasourceId.
+         * <p>The data source ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40</p>
          */
         public Builder datasourceId(Long datasourceId) {
             this.putBodyParameter("DatasourceId", datasourceId);
@@ -272,6 +281,7 @@ public class CreateApsHiveJobRequest extends Request {
         }
 
         /**
+         * <p>The number of AnalyticDB compute units (ACUs) required for data migration.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -284,6 +294,7 @@ public class CreateApsHiveJobRequest extends Request {
         }
 
         /**
+         * <p>The path of the destination data lakehouse in an Object Storage Service (OSS) bucket.</p>
          * <p>This parameter is required.</p>
          */
         public Builder ossLocation(String ossLocation) {
@@ -293,7 +304,10 @@ public class CreateApsHiveJobRequest extends Request {
         }
 
         /**
-         * Parallelism.
+         * <p>The number of tasks that are allowed in parallel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder parallelism(Integer parallelism) {
             this.putBodyParameter("Parallelism", parallelism);
@@ -302,6 +316,10 @@ public class CreateApsHiveJobRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -314,6 +332,7 @@ public class CreateApsHiveJobRequest extends Request {
         }
 
         /**
+         * <p>The name of the resource group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -326,7 +345,12 @@ public class CreateApsHiveJobRequest extends Request {
         }
 
         /**
-         * SyncAllowExpression.
+         * <p>The expression that allows objects to be synchronized.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder syncAllowExpression(String syncAllowExpression) {
             this.putBodyParameter("SyncAllowExpression", syncAllowExpression);
@@ -335,7 +359,10 @@ public class CreateApsHiveJobRequest extends Request {
         }
 
         /**
-         * SyncDenyExpression.
+         * <p>The expression that denies objects to be synchronized.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder syncDenyExpression(String syncDenyExpression) {
             this.putBodyParameter("SyncDenyExpression", syncDenyExpression);
@@ -344,7 +371,10 @@ public class CreateApsHiveJobRequest extends Request {
         }
 
         /**
-         * TargetType.
+         * <p>The destination type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS</p>
          */
         public Builder targetType(String targetType) {
             this.putBodyParameter("TargetType", targetType);
@@ -353,6 +383,7 @@ public class CreateApsHiveJobRequest extends Request {
         }
 
         /**
+         * <p>The name of the workload.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

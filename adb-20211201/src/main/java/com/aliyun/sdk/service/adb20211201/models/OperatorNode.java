@@ -60,6 +60,10 @@ public class OperatorNode extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return children
      */
@@ -125,6 +129,20 @@ public class OperatorNode extends TeaModel {
         private Integer nodeWidth; 
         private Integer parentId; 
         private Stats stats; 
+
+        private Builder() {
+        } 
+
+        private Builder(OperatorNode model) {
+            this.children = model.children;
+            this.id = model.id;
+            this.levelWidth = model.levelWidth;
+            this.nodeDepth = model.nodeDepth;
+            this.nodeName = model.nodeName;
+            this.nodeWidth = model.nodeWidth;
+            this.parentId = model.parentId;
+            this.stats = model.stats;
+        } 
 
         /**
          * children.
@@ -275,6 +293,17 @@ public class OperatorNode extends TeaModel {
             private String parameters; 
             private Long peakMemory; 
             private Long timeCost; 
+
+            private Builder() {
+            } 
+
+            private Builder(Stats model) {
+                this.bytes = model.bytes;
+                this.outputRows = model.outputRows;
+                this.parameters = model.parameters;
+                this.peakMemory = model.peakMemory;
+                this.timeCost = model.timeCost;
+            } 
 
             /**
              * bytes.

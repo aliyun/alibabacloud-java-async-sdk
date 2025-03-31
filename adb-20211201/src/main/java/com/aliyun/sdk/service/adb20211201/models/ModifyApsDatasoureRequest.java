@@ -82,7 +82,7 @@ public class ModifyApsDatasoureRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -376,6 +376,14 @@ public class ModifyApsDatasoureRequest extends Request {
             private String kafkaClusterId; 
             private String kafkaTopic; 
 
+            private Builder() {
+            } 
+
+            private Builder(KafkaInfo model) {
+                this.kafkaClusterId = model.kafkaClusterId;
+                this.kafkaTopic = model.kafkaTopic;
+            } 
+
             /**
              * <p>The ID of the Kafka instance.</p>
              * 
@@ -462,6 +470,15 @@ public class ModifyApsDatasoureRequest extends Request {
             private String securityGroup; 
             private String vpcId; 
             private String vswitch; 
+
+            private Builder() {
+            } 
+
+            private Builder(LakehouseId model) {
+                this.securityGroup = model.securityGroup;
+                this.vpcId = model.vpcId;
+                this.vswitch = model.vswitch;
+            } 
 
             /**
              * <p>The name of the security group.</p>
@@ -570,6 +587,16 @@ public class ModifyApsDatasoureRequest extends Request {
             private String password; 
             private String regionId; 
             private String userName; 
+
+            private Builder() {
+            } 
+
+            private Builder(PolarDBMysqlInfo model) {
+                this.connectUrl = model.connectUrl;
+                this.password = model.password;
+                this.regionId = model.regionId;
+                this.userName = model.userName;
+            } 
 
             /**
              * <ul>
@@ -706,6 +733,16 @@ public class ModifyApsDatasoureRequest extends Request {
             private String regionId; 
             private String userName; 
 
+            private Builder() {
+            } 
+
+            private Builder(RdsMysqlInfo model) {
+                this.connectUrl = model.connectUrl;
+                this.password = model.password;
+                this.regionId = model.regionId;
+                this.userName = model.userName;
+            } 
+
             /**
              * <ul>
              * <li></li>
@@ -840,6 +877,16 @@ public class ModifyApsDatasoureRequest extends Request {
             private String acrossRole; 
             private String acrossUid; 
             private String sourceRegionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(SlsInfo model) {
+                this.across = model.across;
+                this.acrossRole = model.acrossRole;
+                this.acrossUid = model.acrossUid;
+                this.sourceRegionId = model.sourceRegionId;
+            } 
 
             /**
              * <p>Specifies whether to use a cross-account resource as the data source. Valid values:</p>

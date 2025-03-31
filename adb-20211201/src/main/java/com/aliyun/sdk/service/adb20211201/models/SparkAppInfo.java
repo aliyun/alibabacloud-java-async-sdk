@@ -56,6 +56,10 @@ public class SparkAppInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return appId
      */
@@ -113,6 +117,19 @@ public class SparkAppInfo extends TeaModel {
         private String message; 
         private String priority; 
         private String state; 
+
+        private Builder() {
+        } 
+
+        private Builder(SparkAppInfo model) {
+            this.appId = model.appId;
+            this.appName = model.appName;
+            this.DBClusterId = model.DBClusterId;
+            this.detail = model.detail;
+            this.message = model.message;
+            this.priority = model.priority;
+            this.state = model.state;
+        } 
 
         /**
          * AppId.

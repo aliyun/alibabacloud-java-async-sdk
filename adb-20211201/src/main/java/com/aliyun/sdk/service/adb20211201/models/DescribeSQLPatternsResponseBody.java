@@ -52,6 +52,10 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -101,6 +105,18 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
         private java.util.List<PatternDetails> patternDetails; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSQLPatternsResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.patternDetails = model.patternDetails;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The details about the access denial. This parameter is returned only if Resource Access Management (RAM) permission verification failed.</p>
@@ -570,6 +586,43 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             private Double scanSizeSum; 
             private String tables; 
             private String user; 
+
+            private Builder() {
+            } 
+
+            private Builder(PatternDetails model) {
+                this.accessIp = model.accessIp;
+                this.averageExecutionTime = model.averageExecutionTime;
+                this.averageOperatorCost = model.averageOperatorCost;
+                this.averagePeakMemory = model.averagePeakMemory;
+                this.averageQueryTime = model.averageQueryTime;
+                this.averageScanCost = model.averageScanCost;
+                this.averageScanSize = model.averageScanSize;
+                this.blockable = model.blockable;
+                this.failedCount = model.failedCount;
+                this.maxExecutionTime = model.maxExecutionTime;
+                this.maxOperatorCost = model.maxOperatorCost;
+                this.maxPeakMemory = model.maxPeakMemory;
+                this.maxQueryTime = model.maxQueryTime;
+                this.maxScanCost = model.maxScanCost;
+                this.maxScanSize = model.maxScanSize;
+                this.operatorCostPercentage = model.operatorCostPercentage;
+                this.operatorCostSum = model.operatorCostSum;
+                this.patternCreationTime = model.patternCreationTime;
+                this.patternId = model.patternId;
+                this.peakMemoryPercentage = model.peakMemoryPercentage;
+                this.peakMemorySum = model.peakMemorySum;
+                this.queryCount = model.queryCount;
+                this.queryTimePercentage = model.queryTimePercentage;
+                this.queryTimeSum = model.queryTimeSum;
+                this.SQLPattern = model.SQLPattern;
+                this.scanCostPercentage = model.scanCostPercentage;
+                this.scanCostSum = model.scanCostSum;
+                this.scanSizePercentage = model.scanSizePercentage;
+                this.scanSizeSum = model.scanSizeSum;
+                this.tables = model.tables;
+                this.user = model.user;
+            } 
 
             /**
              * <p>The IP address of the SQL client that commits the SQL pattern.</p>

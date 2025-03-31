@@ -67,7 +67,7 @@ public class CreateApsCopyWorkloadRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -146,6 +146,7 @@ public class CreateApsCopyWorkloadRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,7 +159,10 @@ public class CreateApsCopyWorkloadRequest extends Request {
         }
 
         /**
-         * DatasourceId.
+         * <p>The data source ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder datasourceId(Integer datasourceId) {
             this.putBodyParameter("DatasourceId", datasourceId);
@@ -167,7 +171,10 @@ public class CreateApsCopyWorkloadRequest extends Request {
         }
 
         /**
-         * DbName.
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dbName</p>
          */
         public Builder dbName(String dbName) {
             this.putBodyParameter("DbName", dbName);
@@ -176,7 +183,10 @@ public class CreateApsCopyWorkloadRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -185,7 +195,10 @@ public class CreateApsCopyWorkloadRequest extends Request {
         }
 
         /**
-         * TableName.
+         * <p>The name of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder tableName(String tableName) {
             this.putBodyParameter("TableName", tableName);
@@ -194,6 +207,7 @@ public class CreateApsCopyWorkloadRequest extends Request {
         }
 
         /**
+         * <p>The job ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -206,6 +220,7 @@ public class CreateApsCopyWorkloadRequest extends Request {
         }
 
         /**
+         * <p>The type of the job.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

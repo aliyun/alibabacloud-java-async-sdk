@@ -44,6 +44,10 @@ public class Adb4MysqlSparkDiagnosisInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return diagnosisCode
      */
@@ -77,6 +81,16 @@ public class Adb4MysqlSparkDiagnosisInfo extends TeaModel {
         private String diagnosisCodeLabel; 
         private String diagnosisMsg; 
         private String diagnosisType; 
+
+        private Builder() {
+        } 
+
+        private Builder(Adb4MysqlSparkDiagnosisInfo model) {
+            this.diagnosisCode = model.diagnosisCode;
+            this.diagnosisCodeLabel = model.diagnosisCodeLabel;
+            this.diagnosisMsg = model.diagnosisMsg;
+            this.diagnosisType = model.diagnosisType;
+        } 
 
         /**
          * DiagnosisCode.

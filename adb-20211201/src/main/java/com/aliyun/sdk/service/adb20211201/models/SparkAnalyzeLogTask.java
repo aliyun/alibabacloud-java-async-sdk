@@ -68,6 +68,10 @@ public class SparkAnalyzeLogTask extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBClusterId
      */
@@ -149,6 +153,22 @@ public class SparkAnalyzeLogTask extends TeaModel {
         private String taskState; 
         private Long terminatedTimeInMillis; 
         private Long userId; 
+
+        private Builder() {
+        } 
+
+        private Builder(SparkAnalyzeLogTask model) {
+            this.DBClusterId = model.DBClusterId;
+            this.result = model.result;
+            this.ruleMatched = model.ruleMatched;
+            this.startedTimeInMillis = model.startedTimeInMillis;
+            this.submittedTimeInMillis = model.submittedTimeInMillis;
+            this.taskErrMsg = model.taskErrMsg;
+            this.taskId = model.taskId;
+            this.taskState = model.taskState;
+            this.terminatedTimeInMillis = model.terminatedTimeInMillis;
+            this.userId = model.userId;
+        } 
 
         /**
          * DBClusterId.

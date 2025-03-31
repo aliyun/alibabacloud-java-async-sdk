@@ -44,6 +44,10 @@ public class DescribeAbnormalPatternDetectionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBClusterId
      */
@@ -77,6 +81,16 @@ public class DescribeAbnormalPatternDetectionResponseBody extends TeaModel {
         private java.util.List<DetectionItems> detectionItems; 
         private String requestId; 
         private String totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAbnormalPatternDetectionResponseBody model) {
+            this.DBClusterId = model.DBClusterId;
+            this.detectionItems = model.detectionItems;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The cluster ID.</p>
@@ -253,6 +267,21 @@ public class DescribeAbnormalPatternDetectionResponseBody extends TeaModel {
             private String tables; 
             private String user; 
 
+            private Builder() {
+            } 
+
+            private Builder(Results model) {
+                this.accessIp = model.accessIp;
+                this.detail = model.detail;
+                this.failedCount = model.failedCount;
+                this.patternId = model.patternId;
+                this.queryCount = model.queryCount;
+                this.relatedMetrics = model.relatedMetrics;
+                this.SQLPattern = model.SQLPattern;
+                this.tables = model.tables;
+                this.user = model.user;
+            } 
+
             /**
              * <p>The IP address of the SQL client that submits the SQL pattern.</p>
              * 
@@ -396,6 +425,14 @@ public class DescribeAbnormalPatternDetectionResponseBody extends TeaModel {
         public static final class Builder {
             private String name; 
             private java.util.List<Results> results; 
+
+            private Builder() {
+            } 
+
+            private Builder(DetectionItems model) {
+                this.name = model.name;
+                this.results = model.results;
+            } 
 
             /**
              * <p>The name of the detection item.</p>

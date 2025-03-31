@@ -40,6 +40,10 @@ public class ModifyLakeCacheSizeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -65,6 +69,15 @@ public class ModifyLakeCacheSizeResponseBody extends TeaModel {
         private Integer code; 
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyLakeCacheSizeResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The status code. The value 200 indicates that the request is successful.</p>
@@ -157,6 +170,15 @@ public class ModifyLakeCacheSizeResponseBody extends TeaModel {
             private Long capacity; 
             private Long dataSize; 
             private java.util.List<String> instances; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.capacity = model.capacity;
+                this.dataSize = model.dataSize;
+                this.instances = model.instances;
+            } 
 
             /**
              * <p>The size of the lake cache space. Unit: GB.</p>

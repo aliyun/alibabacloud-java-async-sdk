@@ -62,6 +62,10 @@ public class DescribeExcessivePrimaryKeysResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -127,6 +131,20 @@ public class DescribeExcessivePrimaryKeysResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Tables> tables; 
         private String totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeExcessivePrimaryKeysResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.DBClusterId = model.DBClusterId;
+            this.detectionItems = model.detectionItems;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.tables = model.tables;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The queried information about the request denial.</p>
@@ -285,6 +303,15 @@ public class DescribeExcessivePrimaryKeysResponseBody extends TeaModel {
             private String name; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(DetectionItems model) {
+                this.message = model.message;
+                this.name = model.name;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The detection result.</p>
              * 
@@ -442,6 +469,20 @@ public class DescribeExcessivePrimaryKeysResponseBody extends TeaModel {
             private Double spaceRatio; 
             private String tableName; 
             private Long totalSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tables model) {
+                this.columnCount = model.columnCount;
+                this.primaryKeyColumns = model.primaryKeyColumns;
+                this.primaryKeyCount = model.primaryKeyCount;
+                this.primaryKeyIndexSize = model.primaryKeyIndexSize;
+                this.schemaName = model.schemaName;
+                this.spaceRatio = model.spaceRatio;
+                this.tableName = model.tableName;
+                this.totalSize = model.totalSize;
+            } 
 
             /**
              * <p>The total number of columns.</p>

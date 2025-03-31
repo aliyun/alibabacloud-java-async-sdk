@@ -60,6 +60,10 @@ public class ModifyApsJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return apsJobId
      */
@@ -126,8 +130,25 @@ public class ModifyApsJobResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(ModifyApsJobResponseBody model) {
+            this.apsJobId = model.apsJobId;
+            this.code = model.code;
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * ApsJobId.
+         * <p>The job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aps-bj1xxxxxx</p>
          */
         public Builder apsJobId(String apsJobId) {
             this.apsJobId = apsJobId;
@@ -135,7 +156,10 @@ public class ModifyApsJobResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The status code. A value of 200 indicates that the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidInput</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -143,7 +167,10 @@ public class ModifyApsJobResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -151,7 +178,10 @@ public class ModifyApsJobResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -159,7 +189,10 @@ public class ModifyApsJobResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The status code. A value of 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -167,7 +200,14 @@ public class ModifyApsJobResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message. Valid values:</p>
+         * <ul>
+         * <li>If the request was successful, a success message is returned.****</li>
+         * <li>If the request failed, an error message is returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -175,7 +215,10 @@ public class ModifyApsJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>-3EEC-</strong></strong></strong>-9F06-******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -183,7 +226,14 @@ public class ModifyApsJobResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

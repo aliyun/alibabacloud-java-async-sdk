@@ -56,6 +56,10 @@ public class Filters extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return appIdRegex
      */
@@ -113,6 +117,19 @@ public class Filters extends TeaModel {
         private ExecutionTimeRange executionTimeRange; 
         private SubmitTimeRange submitTimeRange; 
         private TermiatedTimeRange termiatedTimeRange; 
+
+        private Builder() {
+        } 
+
+        private Builder(Filters model) {
+            this.appIdRegex = model.appIdRegex;
+            this.appNameRegex = model.appNameRegex;
+            this.appState = model.appState;
+            this.appType = model.appType;
+            this.executionTimeRange = model.executionTimeRange;
+            this.submitTimeRange = model.submitTimeRange;
+            this.termiatedTimeRange = model.termiatedTimeRange;
+        } 
 
         /**
          * AppIdRegex.
@@ -220,6 +237,14 @@ public class Filters extends TeaModel {
             private Long maxTimeInSeconds; 
             private Long minTimeInSeconds; 
 
+            private Builder() {
+            } 
+
+            private Builder(ExecutionTimeRange model) {
+                this.maxTimeInSeconds = model.maxTimeInSeconds;
+                this.minTimeInSeconds = model.minTimeInSeconds;
+            } 
+
             /**
              * MaxTimeInSeconds.
              */
@@ -287,6 +312,14 @@ public class Filters extends TeaModel {
             private Long maxTimeInMills; 
             private Long minTimeInMills; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubmitTimeRange model) {
+                this.maxTimeInMills = model.maxTimeInMills;
+                this.minTimeInMills = model.minTimeInMills;
+            } 
+
             /**
              * MaxTimeInMills.
              */
@@ -353,6 +386,14 @@ public class Filters extends TeaModel {
         public static final class Builder {
             private Long maxTimeInMills; 
             private Long minTimeInMills; 
+
+            private Builder() {
+            } 
+
+            private Builder(TermiatedTimeRange model) {
+                this.maxTimeInMills = model.maxTimeInMills;
+                this.minTimeInMills = model.minTimeInMills;
+            } 
 
             /**
              * MaxTimeInMills.

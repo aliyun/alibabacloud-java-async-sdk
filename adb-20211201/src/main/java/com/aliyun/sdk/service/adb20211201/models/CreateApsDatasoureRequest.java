@@ -98,7 +98,7 @@ public class CreateApsDatasoureRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -231,6 +231,7 @@ public class CreateApsDatasoureRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -243,7 +244,12 @@ public class CreateApsDatasoureRequest extends Request {
         }
 
         /**
-         * DatabricksInfo.
+         * <p>The information about the Databricks data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder databricksInfo(DatabricksInfo databricksInfo) {
             String databricksInfoShrink = shrink(databricksInfo, "DatabricksInfo", "json");
@@ -253,7 +259,10 @@ public class CreateApsDatasoureRequest extends Request {
         }
 
         /**
-         * DatasourceDescription.
+         * <p>The description of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>description</p>
          */
         public Builder datasourceDescription(String datasourceDescription) {
             this.putBodyParameter("DatasourceDescription", datasourceDescription);
@@ -262,6 +271,7 @@ public class CreateApsDatasoureRequest extends Request {
         }
 
         /**
+         * <p>The name of the data source.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -274,6 +284,7 @@ public class CreateApsDatasoureRequest extends Request {
         }
 
         /**
+         * <p>The type of the data source.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -286,7 +297,12 @@ public class CreateApsDatasoureRequest extends Request {
         }
 
         /**
-         * HiveInfo.
+         * <p>The information about the Hive data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder hiveInfo(HiveInfo hiveInfo) {
             String hiveInfoShrink = shrink(hiveInfo, "HiveInfo", "json");
@@ -296,7 +312,12 @@ public class CreateApsDatasoureRequest extends Request {
         }
 
         /**
-         * KafkaInfo.
+         * <p>The information about the source Apache Kafka instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder kafkaInfo(KafkaInfo kafkaInfo) {
             String kafkaInfoShrink = shrink(kafkaInfo, "KafkaInfo", "json");
@@ -306,7 +327,10 @@ public class CreateApsDatasoureRequest extends Request {
         }
 
         /**
-         * Mode.
+         * <p>The mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALI_CLOUD_INSTANCE</p>
          */
         public Builder mode(String mode) {
             this.putBodyParameter("Mode", mode);
@@ -315,7 +339,12 @@ public class CreateApsDatasoureRequest extends Request {
         }
 
         /**
-         * PolarDBMysqlInfo.
+         * <p>The information about the source PolarDB for MySQL cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder polarDBMysqlInfo(PolarDBMysqlInfo polarDBMysqlInfo) {
             String polarDBMysqlInfoShrink = shrink(polarDBMysqlInfo, "PolarDBMysqlInfo", "json");
@@ -325,7 +354,12 @@ public class CreateApsDatasoureRequest extends Request {
         }
 
         /**
-         * PolarDBXInfo.
+         * <p>The information about the source PolarDB-X instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder polarDBXInfo(PolarDBXInfo polarDBXInfo) {
             String polarDBXInfoShrink = shrink(polarDBXInfo, "PolarDBXInfo", "json");
@@ -335,7 +369,12 @@ public class CreateApsDatasoureRequest extends Request {
         }
 
         /**
-         * RdsMysqlInfo.
+         * <p>The information about the source ApsaraDB RDS for MySQL instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder rdsMysqlInfo(RdsMysqlInfo rdsMysqlInfo) {
             String rdsMysqlInfoShrink = shrink(rdsMysqlInfo, "RdsMysqlInfo", "json");
@@ -345,6 +384,7 @@ public class CreateApsDatasoureRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -357,7 +397,12 @@ public class CreateApsDatasoureRequest extends Request {
         }
 
         /**
-         * SlsInfo.
+         * <p>The information about the source Simple Log Service (SLS) instance or cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder slsInfo(SlsInfo slsInfo) {
             String slsInfoShrink = shrink(slsInfo, "SlsInfo", "json");
@@ -417,8 +462,19 @@ public class CreateApsDatasoureRequest extends Request {
             private String accessToken; 
             private String workspaceURL; 
 
+            private Builder() {
+            } 
+
+            private Builder(DatabricksInfo model) {
+                this.accessToken = model.accessToken;
+                this.workspaceURL = model.workspaceURL;
+            } 
+
             /**
-             * AccessToken.
+             * <p>The token that is used to access Databricks.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder accessToken(String accessToken) {
                 this.accessToken = accessToken;
@@ -426,7 +482,10 @@ public class CreateApsDatasoureRequest extends Request {
             }
 
             /**
-             * WorkspaceURL.
+             * <p>The URL of the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxxx</p>
              */
             public Builder workspaceURL(String workspaceURL) {
                 this.workspaceURL = workspaceURL;
@@ -520,8 +579,22 @@ public class CreateApsDatasoureRequest extends Request {
             private String securityGroup; 
             private String vswitch; 
 
+            private Builder() {
+            } 
+
+            private Builder(HiveInfo model) {
+                this.clusterId = model.clusterId;
+                this.hostConfig = model.hostConfig;
+                this.metaStoreUri = model.metaStoreUri;
+                this.securityGroup = model.securityGroup;
+                this.vswitch = model.vswitch;
+            } 
+
             /**
-             * ClusterId.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -529,7 +602,10 @@ public class CreateApsDatasoureRequest extends Request {
             }
 
             /**
-             * HostConfig.
+             * <p>The configuration of the host.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder hostConfig(String hostConfig) {
                 this.hostConfig = hostConfig;
@@ -537,7 +613,10 @@ public class CreateApsDatasoureRequest extends Request {
             }
 
             /**
-             * MetaStoreUri.
+             * <p>The URL of the Hive Metastore.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder metaStoreUri(String metaStoreUri) {
                 this.metaStoreUri = metaStoreUri;
@@ -545,7 +624,10 @@ public class CreateApsDatasoureRequest extends Request {
             }
 
             /**
-             * SecurityGroup.
+             * <p>The security group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-uf*******h</p>
              */
             public Builder securityGroup(String securityGroup) {
                 this.securityGroup = securityGroup;
@@ -553,7 +635,10 @@ public class CreateApsDatasoureRequest extends Request {
             }
 
             /**
-             * Vswitch.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp1*****k</p>
              */
             public Builder vswitch(String vswitch) {
                 this.vswitch = vswitch;
@@ -611,8 +696,19 @@ public class CreateApsDatasoureRequest extends Request {
             private String kafkaClusterId; 
             private String kafkaTopic; 
 
+            private Builder() {
+            } 
+
+            private Builder(KafkaInfo model) {
+                this.kafkaClusterId = model.kafkaClusterId;
+                this.kafkaTopic = model.kafkaTopic;
+            } 
+
             /**
-             * KafkaClusterId.
+             * <p>The ID of the Apache Kafka instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder kafkaClusterId(String kafkaClusterId) {
                 this.kafkaClusterId = kafkaClusterId;
@@ -620,7 +716,10 @@ public class CreateApsDatasoureRequest extends Request {
             }
 
             /**
-             * KafkaTopic.
+             * <p>The topic of the Apache Kafka instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder kafkaTopic(String kafkaTopic) {
                 this.kafkaTopic = kafkaTopic;
@@ -762,8 +861,30 @@ public class CreateApsDatasoureRequest extends Request {
             private String securityGroup; 
             private String userName; 
 
+            private Builder() {
+            } 
+
+            private Builder(PolarDBMysqlInfo model) {
+                this.across = model.across;
+                this.acrossRole = model.acrossRole;
+                this.acrossUid = model.acrossUid;
+                this.connectUrl = model.connectUrl;
+                this.instanceId = model.instanceId;
+                this.password = model.password;
+                this.regionId = model.regionId;
+                this.securityGroup = model.securityGroup;
+                this.userName = model.userName;
+            } 
+
             /**
-             * Across.
+             * <p>Specifies whether the data source is a cross-account resource. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder across(Boolean across) {
                 this.across = across;
@@ -771,7 +892,10 @@ public class CreateApsDatasoureRequest extends Request {
             }
 
             /**
-             * AcrossRole.
+             * <p>The name of the cross-account role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-role</p>
              */
             public Builder acrossRole(String acrossRole) {
                 this.acrossRole = acrossRole;
@@ -779,7 +903,10 @@ public class CreateApsDatasoureRequest extends Request {
             }
 
             /**
-             * AcrossUid.
+             * <p>The cross-account UID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456789*</p>
              */
             public Builder acrossUid(String acrossUid) {
                 this.acrossUid = acrossUid;
@@ -787,7 +914,10 @@ public class CreateApsDatasoureRequest extends Request {
             }
 
             /**
-             * ConnectUrl.
+             * <p>The URL used to connect to the custom ApsaraDB RDS for MySQL instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder connectUrl(String connectUrl) {
                 this.connectUrl = connectUrl;
@@ -795,7 +925,10 @@ public class CreateApsDatasoureRequest extends Request {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pc-bp*********</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -803,7 +936,10 @@ public class CreateApsDatasoureRequest extends Request {
             }
 
             /**
-             * Password.
+             * <p>The password.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder password(String password) {
                 this.password = password;
@@ -811,7 +947,7 @@ public class CreateApsDatasoureRequest extends Request {
             }
 
             /**
-             * <p>This parameter is required.</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-shanghai</p>
@@ -822,7 +958,10 @@ public class CreateApsDatasoureRequest extends Request {
             }
 
             /**
-             * SecurityGroup.
+             * <p>The security group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-******</p>
              */
             public Builder securityGroup(String securityGroup) {
                 this.securityGroup = securityGroup;
@@ -830,7 +969,10 @@ public class CreateApsDatasoureRequest extends Request {
             }
 
             /**
-             * UserName.
+             * <p>The username used to access the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-user-name</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -876,8 +1018,20 @@ public class CreateApsDatasoureRequest extends Request {
         public static final class Builder {
             private String instanceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(PolarDBXInfo model) {
+                this.instanceId = model.instanceId;
+            } 
+
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -983,8 +1137,23 @@ public class CreateApsDatasoureRequest extends Request {
             private String securityGroup; 
             private String userName; 
 
+            private Builder() {
+            } 
+
+            private Builder(RdsMysqlInfo model) {
+                this.connectUrl = model.connectUrl;
+                this.instanceId = model.instanceId;
+                this.password = model.password;
+                this.regionId = model.regionId;
+                this.securityGroup = model.securityGroup;
+                this.userName = model.userName;
+            } 
+
             /**
-             * ConnectUrl.
+             * <p>The URL used to connect to the read-only instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder connectUrl(String connectUrl) {
                 this.connectUrl = connectUrl;
@@ -992,7 +1161,10 @@ public class CreateApsDatasoureRequest extends Request {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-xxxxxxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1000,7 +1172,10 @@ public class CreateApsDatasoureRequest extends Request {
             }
 
             /**
-             * Password.
+             * <p>The password of the database account of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder password(String password) {
                 this.password = password;
@@ -1008,7 +1183,7 @@ public class CreateApsDatasoureRequest extends Request {
             }
 
             /**
-             * <p>This parameter is required.</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-shanghai</p>
@@ -1019,7 +1194,10 @@ public class CreateApsDatasoureRequest extends Request {
             }
 
             /**
-             * SecurityGroup.
+             * <p>The security group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-******</p>
              */
             public Builder securityGroup(String securityGroup) {
                 this.securityGroup = securityGroup;
@@ -1027,7 +1205,7 @@ public class CreateApsDatasoureRequest extends Request {
             }
 
             /**
-             * UserName.
+             * <p>The name of the database account of the instance.</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -1133,8 +1311,23 @@ public class CreateApsDatasoureRequest extends Request {
             private String sourceRegionId; 
             private String store; 
 
+            private Builder() {
+            } 
+
+            private Builder(SlsInfo model) {
+                this.across = model.across;
+                this.acrossRole = model.acrossRole;
+                this.acrossUid = model.acrossUid;
+                this.project = model.project;
+                this.sourceRegionId = model.sourceRegionId;
+                this.store = model.store;
+            } 
+
             /**
-             * Across.
+             * <p>Specifies whether the data source is a cross-account resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder across(Boolean across) {
                 this.across = across;
@@ -1142,7 +1335,10 @@ public class CreateApsDatasoureRequest extends Request {
             }
 
             /**
-             * AcrossRole.
+             * <p>The name of the cross-account role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yyy</p>
              */
             public Builder acrossRole(String acrossRole) {
                 this.acrossRole = acrossRole;
@@ -1150,7 +1346,10 @@ public class CreateApsDatasoureRequest extends Request {
             }
 
             /**
-             * AcrossUid.
+             * <p>The cross-account UID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxx</p>
              */
             public Builder acrossUid(String acrossUid) {
                 this.acrossUid = acrossUid;
@@ -1158,7 +1357,10 @@ public class CreateApsDatasoureRequest extends Request {
             }
 
             /**
-             * Project.
+             * <p>The SLS project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-project</p>
              */
             public Builder project(String project) {
                 this.project = project;
@@ -1166,7 +1368,10 @@ public class CreateApsDatasoureRequest extends Request {
             }
 
             /**
-             * SourceRegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder sourceRegionId(String sourceRegionId) {
                 this.sourceRegionId = sourceRegionId;
@@ -1174,7 +1379,7 @@ public class CreateApsDatasoureRequest extends Request {
             }
 
             /**
-             * <p>sls logstore。</p>
+             * <p>The name of the SLS Logstore.</p>
              * 
              * <strong>example:</strong>
              * <p>test-store</p>

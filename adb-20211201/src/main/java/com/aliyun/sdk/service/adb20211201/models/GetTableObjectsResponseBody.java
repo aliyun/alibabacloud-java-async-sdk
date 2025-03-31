@@ -48,6 +48,10 @@ public class GetTableObjectsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -89,6 +93,17 @@ public class GetTableObjectsResponseBody extends TeaModel {
         private Long pageSize; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTableObjectsResponseBody model) {
+            this.data = model.data;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -220,6 +235,16 @@ public class GetTableObjectsResponseBody extends TeaModel {
             private Long pageSize; 
             private java.util.List<TableSummaryModel> tableSummaryModels; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.tableSummaryModels = model.tableSummaryModels;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The number of the returned page. The value is an integer that is greater than 0. Default value: <strong>1</strong>.</p>

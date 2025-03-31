@@ -64,6 +64,10 @@ public class ListResultExportJobHistoryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -137,6 +141,21 @@ public class ListResultExportJobHistoryResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListResultExportJobHistoryResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.items = model.items;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The HTTP status code.</p>
@@ -507,6 +526,32 @@ public class ListResultExportJobHistoryResponseBody extends TeaModel {
             private String startTime; 
             private String status; 
             private Long timeCost; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.aliUid = model.aliUid;
+                this.createTime = model.createTime;
+                this.DBClusterId = model.DBClusterId;
+                this.databaseUser = model.databaseUser;
+                this.endTime = model.endTime;
+                this.engine = model.engine;
+                this.exportJobId = model.exportJobId;
+                this.exportPath = model.exportPath;
+                this.exportRows = model.exportRows;
+                this.exportType = model.exportType;
+                this.isExpired = model.isExpired;
+                this.message = model.message;
+                this.processId = model.processId;
+                this.progress = model.progress;
+                this.resourceGroup = model.resourceGroup;
+                this.schema = model.schema;
+                this.sql = model.sql;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.timeCost = model.timeCost;
+            } 
 
             /**
              * <p>The RAM user ID.</p>

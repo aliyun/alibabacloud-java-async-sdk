@@ -136,6 +136,10 @@ public class FieldSchemaModel extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return autoIncrement
      */
@@ -353,6 +357,39 @@ public class FieldSchemaModel extends TeaModel {
         private String type; 
         private String updateTime; 
         private String valueType; 
+
+        private Builder() {
+        } 
+
+        private Builder(FieldSchemaModel model) {
+            this.autoIncrement = model.autoIncrement;
+            this.columnRawName = model.columnRawName;
+            this.comment = model.comment;
+            this.compressFloatUseShort = model.compressFloatUseShort;
+            this.compression = model.compression;
+            this.createTime = model.createTime;
+            this.dataType = model.dataType;
+            this.databaseName = model.databaseName;
+            this.defaultValue = model.defaultValue;
+            this.delimiter = model.delimiter;
+            this.encode = model.encode;
+            this.isPartitionKey = model.isPartitionKey;
+            this.mappedName = model.mappedName;
+            this.name = model.name;
+            this.nullable = model.nullable;
+            this.onUpdate = model.onUpdate;
+            this.ordinalPosition = model.ordinalPosition;
+            this.physicalColumnName = model.physicalColumnName;
+            this.pkPosition = model.pkPosition;
+            this.precision = model.precision;
+            this.primarykey = model.primarykey;
+            this.scale = model.scale;
+            this.tableName = model.tableName;
+            this.tokenizer = model.tokenizer;
+            this.type = model.type;
+            this.updateTime = model.updateTime;
+            this.valueType = model.valueType;
+        } 
 
         /**
          * AutoIncrement.

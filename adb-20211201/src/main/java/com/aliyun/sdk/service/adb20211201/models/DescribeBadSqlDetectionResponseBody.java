@@ -48,6 +48,10 @@ public class DescribeBadSqlDetectionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -89,6 +93,17 @@ public class DescribeBadSqlDetectionResponseBody extends TeaModel {
         private java.util.List<DetectionItems> detectionItems; 
         private String requestId; 
         private String totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeBadSqlDetectionResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.DBClusterId = model.DBClusterId;
+            this.detectionItems = model.detectionItems;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The information about the request denial.</p>
@@ -223,6 +238,16 @@ public class DescribeBadSqlDetectionResponseBody extends TeaModel {
             private String detail; 
             private String operatorId; 
             private String stageId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DiagnosisResults model) {
+                this.code = model.code;
+                this.detail = model.detail;
+                this.operatorId = model.operatorId;
+                this.stageId = model.stageId;
+            } 
 
             /**
              * <p>The diagnostic code.</p>
@@ -420,6 +445,23 @@ public class DescribeBadSqlDetectionResponseBody extends TeaModel {
             private Long scanSize; 
             private String startTime; 
             private Integer totalStages; 
+
+            private Builder() {
+            } 
+
+            private Builder(Results model) {
+                this.cost = model.cost;
+                this.diagnosisResults = model.diagnosisResults;
+                this.operatorCost = model.operatorCost;
+                this.outputDataSize = model.outputDataSize;
+                this.patternId = model.patternId;
+                this.peakMemory = model.peakMemory;
+                this.processId = model.processId;
+                this.SQL = model.SQL;
+                this.scanSize = model.scanSize;
+                this.startTime = model.startTime;
+                this.totalStages = model.totalStages;
+            } 
 
             /**
              * <p>The total execution duration. Unit: milliseconds.</p>
@@ -619,6 +661,16 @@ public class DescribeBadSqlDetectionResponseBody extends TeaModel {
             private String name; 
             private java.util.List<Results> results; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(DetectionItems model) {
+                this.message = model.message;
+                this.name = model.name;
+                this.results = model.results;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The information about the detection result.</p>

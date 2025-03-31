@@ -64,6 +64,10 @@ public class DescribeAPSADBInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -138,8 +142,26 @@ public class DescribeAPSADBInstancesResponseBody extends TeaModel {
         private Boolean success; 
         private String totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeAPSADBInstancesResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.items = model.items;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * Code.
+         * <p>The HTTP status code or the error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -147,7 +169,10 @@ public class DescribeAPSADBInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -155,7 +180,12 @@ public class DescribeAPSADBInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * <p>The queried clusters.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -163,7 +193,14 @@ public class DescribeAPSADBInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message. Valid values:</p>
+         * <ul>
+         * <li>If the request was successful, a success message is returned.****</li>
+         * <li>If the request failed, an error message is returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -171,7 +208,10 @@ public class DescribeAPSADBInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -179,7 +219,10 @@ public class DescribeAPSADBInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -187,7 +230,10 @@ public class DescribeAPSADBInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -195,7 +241,14 @@ public class DescribeAPSADBInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -203,7 +256,10 @@ public class DescribeAPSADBInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -320,8 +376,24 @@ public class DescribeAPSADBInstancesResponseBody extends TeaModel {
             private Long storageResource; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.computeResource = model.computeResource;
+                this.DBClusterDescription = model.DBClusterDescription;
+                this.DBClusterId = model.DBClusterId;
+                this.DBClusterStatus = model.DBClusterStatus;
+                this.reservedACU = model.reservedACU;
+                this.storageResource = model.storageResource;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
-             * ComputeResource.
+             * <p>The specifications of the reserved computing resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16ACU</p>
              */
             public Builder computeResource(String computeResource) {
                 this.computeResource = computeResource;
@@ -329,7 +401,10 @@ public class DescribeAPSADBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DBClusterDescription.
+             * <p>The description of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>adb_test</p>
              */
             public Builder DBClusterDescription(String DBClusterDescription) {
                 this.DBClusterDescription = DBClusterDescription;
@@ -337,7 +412,10 @@ public class DescribeAPSADBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DBClusterId.
+             * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>am-bp1********</p>
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -345,7 +423,10 @@ public class DescribeAPSADBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DBClusterStatus.
+             * <p>The status of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder DBClusterStatus(String DBClusterStatus) {
                 this.DBClusterStatus = DBClusterStatus;
@@ -353,7 +434,10 @@ public class DescribeAPSADBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ReservedACU.
+             * <p>The amount of remaining reserved computing resources that are available in the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>24ACU</p>
              */
             public Builder reservedACU(String reservedACU) {
                 this.reservedACU = reservedACU;
@@ -361,7 +445,10 @@ public class DescribeAPSADBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * StorageResource.
+             * <p>The specifications of the reserved storage resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>24ACU</p>
              */
             public Builder storageResource(Long storageResource) {
                 this.storageResource = storageResource;
@@ -369,7 +456,10 @@ public class DescribeAPSADBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * <p>The zone ID of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-h</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

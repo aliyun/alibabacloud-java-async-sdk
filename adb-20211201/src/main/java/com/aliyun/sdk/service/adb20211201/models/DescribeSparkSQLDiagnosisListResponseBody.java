@@ -52,6 +52,10 @@ public class DescribeSparkSQLDiagnosisListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -102,8 +106,23 @@ public class DescribeSparkSQLDiagnosisListResponseBody extends TeaModel {
         private java.util.List<SQLDiagnosisList> SQLDiagnosisList; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeSparkSQLDiagnosisListResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.SQLDiagnosisList = model.SQLDiagnosisList;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * AccessDeniedDetail.
+         * <p>The information about the request denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -111,7 +130,10 @@ public class DescribeSparkSQLDiagnosisListResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -119,7 +141,10 @@ public class DescribeSparkSQLDiagnosisListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -127,7 +152,10 @@ public class DescribeSparkSQLDiagnosisListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A91C9D07-7462-5F35-BB47-83629CE6CCAC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -135,7 +163,7 @@ public class DescribeSparkSQLDiagnosisListResponseBody extends TeaModel {
         }
 
         /**
-         * SQLDiagnosisList.
+         * <p>The queried diagnostic information.</p>
          */
         public Builder SQLDiagnosisList(java.util.List<SQLDiagnosisList> SQLDiagnosisList) {
             this.SQLDiagnosisList = SQLDiagnosisList;
@@ -143,7 +171,10 @@ public class DescribeSparkSQLDiagnosisListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1343</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -296,8 +327,30 @@ public class DescribeSparkSQLDiagnosisListResponseBody extends TeaModel {
             private String state; 
             private Long statementId; 
 
+            private Builder() {
+            } 
+
+            private Builder(SQLDiagnosisList model) {
+                this.appId = model.appId;
+                this.elapsedTime = model.elapsedTime;
+                this.innerQueryId = model.innerQueryId;
+                this.maxExclusiveTime = model.maxExclusiveTime;
+                this.peakMemory = model.peakMemory;
+                this.SQL = model.SQL;
+                this.scanRowCount = model.scanRowCount;
+                this.startTime = model.startTime;
+                this.state = model.state;
+                this.statementId = model.statementId;
+            } 
+
             /**
-             * AppId.
+             * <p>The application ID.</p>
+             * <blockquote>
+             * <p> You can call the <a href="https://help.aliyun.com/document_detail/612475.html">ListSparkApps</a> operation to query a list of Spark application IDs.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>s202404291020bjd448ad40002122</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -305,7 +358,10 @@ public class DescribeSparkSQLDiagnosisListResponseBody extends TeaModel {
             }
 
             /**
-             * ElapsedTime.
+             * <p>The execution duration of the query. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder elapsedTime(Long elapsedTime) {
                 this.elapsedTime = elapsedTime;
@@ -313,7 +369,10 @@ public class DescribeSparkSQLDiagnosisListResponseBody extends TeaModel {
             }
 
             /**
-             * InnerQueryId.
+             * <p>The ID of the query executed within the Spark application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder innerQueryId(Long innerQueryId) {
                 this.innerQueryId = innerQueryId;
@@ -321,7 +380,10 @@ public class DescribeSparkSQLDiagnosisListResponseBody extends TeaModel {
             }
 
             /**
-             * MaxExclusiveTime.
+             * <p>The maximum operator execution duration. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>90</p>
              */
             public Builder maxExclusiveTime(Long maxExclusiveTime) {
                 this.maxExclusiveTime = maxExclusiveTime;
@@ -329,7 +391,10 @@ public class DescribeSparkSQLDiagnosisListResponseBody extends TeaModel {
             }
 
             /**
-             * PeakMemory.
+             * <p>The maximum operator memory used. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder peakMemory(Long peakMemory) {
                 this.peakMemory = peakMemory;
@@ -337,7 +402,10 @@ public class DescribeSparkSQLDiagnosisListResponseBody extends TeaModel {
             }
 
             /**
-             * SQL.
+             * <p>The SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>select * from device where name = &quot;105506012112790031&quot;</p>
              */
             public Builder SQL(String SQL) {
                 this.SQL = SQL;
@@ -345,7 +413,10 @@ public class DescribeSparkSQLDiagnosisListResponseBody extends TeaModel {
             }
 
             /**
-             * ScanRowCount.
+             * <p>The number of entries scanned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder scanRowCount(Long scanRowCount) {
                 this.scanRowCount = scanRowCount;
@@ -353,7 +424,10 @@ public class DescribeSparkSQLDiagnosisListResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the query. The time follows the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mmZ</em> format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-11-20 09:09:00</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -361,7 +435,16 @@ public class DescribeSparkSQLDiagnosisListResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * <p>The execution status of the query. Valid values:</p>
+             * <ul>
+             * <li>COMPLETED</li>
+             * <li>CANCELED</li>
+             * <li>ABORTED</li>
+             * <li>FAILED</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>COMPLETED</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -369,7 +452,10 @@ public class DescribeSparkSQLDiagnosisListResponseBody extends TeaModel {
             }
 
             /**
-             * StatementId.
+             * <p>The unique ID of the code block in the Spark job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder statementId(Long statementId) {
                 this.statementId = statementId;

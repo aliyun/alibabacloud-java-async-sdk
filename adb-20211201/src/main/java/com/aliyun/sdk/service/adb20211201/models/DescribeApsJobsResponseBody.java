@@ -64,6 +64,10 @@ public class DescribeApsJobsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return APSJobs
      */
@@ -138,8 +142,28 @@ public class DescribeApsJobsResponseBody extends TeaModel {
         private Boolean success; 
         private String totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeApsJobsResponseBody model) {
+            this.APSJobs = model.APSJobs;
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * APSJobs.
+         * <p>The queried APS jobs.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder APSJobs(java.util.List<APSJobs> APSJobs) {
             this.APSJobs = APSJobs;
@@ -147,7 +171,10 @@ public class DescribeApsJobsResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -155,7 +182,10 @@ public class DescribeApsJobsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The status code. A value of 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -163,7 +193,14 @@ public class DescribeApsJobsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message. Valid values:</p>
+         * <ul>
+         * <li>If the request was successful, a success message is returned.****</li>
+         * <li>If the request failed, an error message is returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -171,7 +208,10 @@ public class DescribeApsJobsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -179,7 +219,10 @@ public class DescribeApsJobsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -187,7 +230,10 @@ public class DescribeApsJobsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>-7F9D-5DBD-993E-</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -195,7 +241,14 @@ public class DescribeApsJobsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -203,7 +256,10 @@ public class DescribeApsJobsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -356,8 +412,27 @@ public class DescribeApsJobsResponseBody extends TeaModel {
             private String status; 
             private String subStatus; 
 
+            private Builder() {
+            } 
+
+            private Builder(APSJobs model) {
+                this.apsJobId = model.apsJobId;
+                this.apsJobName = model.apsJobName;
+                this.createTime = model.createTime;
+                this.delay = model.delay;
+                this.destinationInstanceID = model.destinationInstanceID;
+                this.errMessage = model.errMessage;
+                this.projress = model.projress;
+                this.sourceInstanceID = model.sourceInstanceID;
+                this.status = model.status;
+                this.subStatus = model.subStatus;
+            } 
+
             /**
-             * ApsJobId.
+             * <p>The job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aps-******</p>
              */
             public Builder apsJobId(String apsJobId) {
                 this.apsJobId = apsJobId;
@@ -365,7 +440,10 @@ public class DescribeApsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ApsJobName.
+             * <p>The name of the APS job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>data-sync-******</p>
              */
             public Builder apsJobName(String apsJobName) {
                 this.apsJobName = apsJobName;
@@ -373,7 +451,10 @@ public class DescribeApsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the APS job was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-06-28 15:00:04</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -381,7 +462,10 @@ public class DescribeApsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Delay.
+             * <p>The synchronization latency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder delay(Long delay) {
                 this.delay = delay;
@@ -389,7 +473,10 @@ public class DescribeApsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * DestinationInstanceID.
+             * <p>The destination cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>amv-*******</p>
              */
             public Builder destinationInstanceID(String destinationInstanceID) {
                 this.destinationInstanceID = destinationInstanceID;
@@ -397,7 +484,10 @@ public class DescribeApsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ErrMessage.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OK</p>
              */
             public Builder errMessage(String errMessage) {
                 this.errMessage = errMessage;
@@ -405,7 +495,7 @@ public class DescribeApsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Projress.
+             * <p>The progress.</p>
              */
             public Builder projress(String projress) {
                 this.projress = projress;
@@ -413,7 +503,10 @@ public class DescribeApsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceInstanceID.
+             * <p>The ID of the source instance or cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pc-******</p>
              */
             public Builder sourceInstanceID(String sourceInstanceID) {
                 this.sourceInstanceID = sourceInstanceID;
@@ -421,7 +514,12 @@ public class DescribeApsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the APS job.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -429,7 +527,12 @@ public class DescribeApsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * SubStatus.
+             * <p>The status of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder subStatus(String subStatus) {
                 this.subStatus = subStatus;

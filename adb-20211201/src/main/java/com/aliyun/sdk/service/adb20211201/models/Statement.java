@@ -80,6 +80,10 @@ public class Statement extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return aliyunUid
      */
@@ -185,6 +189,25 @@ public class Statement extends TeaModel {
         private Long startTime; 
         private Long statementId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(Statement model) {
+            this.aliyunUid = model.aliyunUid;
+            this.code = model.code;
+            this.codeState = model.codeState;
+            this.codeType = model.codeType;
+            this.endTime = model.endTime;
+            this.error = model.error;
+            this.haveRows = model.haveRows;
+            this.output = model.output;
+            this.resourceGroup = model.resourceGroup;
+            this.sessionId = model.sessionId;
+            this.startTime = model.startTime;
+            this.statementId = model.statementId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * AliyunUid.

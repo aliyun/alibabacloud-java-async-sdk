@@ -48,6 +48,10 @@ public class DescribeApsProgressResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return apsHiveProgress
      */
@@ -90,8 +94,24 @@ public class DescribeApsProgressResponseBody extends TeaModel {
         private Integer successTableCount; 
         private Integer totalTableCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeApsProgressResponseBody model) {
+            this.apsHiveProgress = model.apsHiveProgress;
+            this.requestId = model.requestId;
+            this.successPercentage = model.successPercentage;
+            this.successTableCount = model.successTableCount;
+            this.totalTableCount = model.totalTableCount;
+        } 
+
         /**
-         * ApsHiveProgress.
+         * <p>The migration progress.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder apsHiveProgress(java.util.List<ApsHiveProgress> apsHiveProgress) {
             this.apsHiveProgress = apsHiveProgress;
@@ -99,7 +119,10 @@ public class DescribeApsProgressResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>-3EEC-</strong></strong></strong>-9F06-******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -107,7 +130,10 @@ public class DescribeApsProgressResponseBody extends TeaModel {
         }
 
         /**
-         * SuccessPercentage.
+         * <p>The success rate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder successPercentage(Integer successPercentage) {
             this.successPercentage = successPercentage;
@@ -115,7 +141,10 @@ public class DescribeApsProgressResponseBody extends TeaModel {
         }
 
         /**
-         * SuccessTableCount.
+         * <p>The total number of migrated tables returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder successTableCount(Integer successTableCount) {
             this.successTableCount = successTableCount;
@@ -123,7 +152,10 @@ public class DescribeApsProgressResponseBody extends TeaModel {
         }
 
         /**
-         * TotalTableCount.
+         * <p>The total number of tables to be migrated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalTableCount(Integer totalTableCount) {
             this.totalTableCount = totalTableCount;
@@ -204,8 +236,21 @@ public class DescribeApsProgressResponseBody extends TeaModel {
             private String speed; 
             private String tbName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ApsHiveProgress model) {
+                this.dbName = model.dbName;
+                this.progress = model.progress;
+                this.speed = model.speed;
+                this.tbName = model.tbName;
+            } 
+
             /**
-             * DbName.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder dbName(String dbName) {
                 this.dbName = dbName;
@@ -213,7 +258,10 @@ public class DescribeApsProgressResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * <p>The migration progress.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>95</p>
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -221,7 +269,10 @@ public class DescribeApsProgressResponseBody extends TeaModel {
             }
 
             /**
-             * Speed.
+             * <p>The migration speed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder speed(String speed) {
                 this.speed = speed;
@@ -229,7 +280,10 @@ public class DescribeApsProgressResponseBody extends TeaModel {
             }
 
             /**
-             * TbName.
+             * <p>The name of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder tbName(String tbName) {
                 this.tbName = tbName;

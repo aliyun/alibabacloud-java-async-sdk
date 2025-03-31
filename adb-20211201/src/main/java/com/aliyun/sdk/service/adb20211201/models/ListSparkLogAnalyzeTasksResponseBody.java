@@ -36,6 +36,10 @@ public class ListSparkLogAnalyzeTasksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class ListSparkLogAnalyzeTasksResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSparkLogAnalyzeTasksResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned data.</p>
@@ -146,6 +158,16 @@ public class ListSparkLogAnalyzeTasksResponseBody extends TeaModel {
             private Long pageSize; 
             private java.util.List<SparkAnalyzeLogTask> taskList; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.taskList = model.taskList;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The page number.</p>

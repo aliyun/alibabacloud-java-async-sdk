@@ -48,6 +48,10 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
         private java.util.List<Querys> querys; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDiagnosisRecordsResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.querys = model.querys;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number. Pages start from page 1. Default value: <strong>1</strong>.</p>
@@ -196,6 +211,14 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
         public static final class Builder {
             private String name; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(QueryProperties model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
 
             /**
              * Name.
@@ -539,6 +562,37 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             private Long totalPlanningTime; 
             private Integer totalStages; 
             private String userName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Querys model) {
+                this.clientIp = model.clientIp;
+                this.cost = model.cost;
+                this.database = model.database;
+                this.etlWriteRows = model.etlWriteRows;
+                this.executionTime = model.executionTime;
+                this.outputDataSize = model.outputDataSize;
+                this.outputRows = model.outputRows;
+                this.patternId = model.patternId;
+                this.peakMemory = model.peakMemory;
+                this.processId = model.processId;
+                this.queryProperties = model.queryProperties;
+                this.queueTime = model.queueTime;
+                this.rcHost = model.rcHost;
+                this.resourceCostRank = model.resourceCostRank;
+                this.resourceGroup = model.resourceGroup;
+                this.SQL = model.SQL;
+                this.SQLTruncated = model.SQLTruncated;
+                this.SQLTruncatedThreshold = model.SQLTruncatedThreshold;
+                this.scanRows = model.scanRows;
+                this.scanSize = model.scanSize;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.totalPlanningTime = model.totalPlanningTime;
+                this.totalStages = model.totalStages;
+                this.userName = model.userName;
+            } 
 
             /**
              * <p>The source IP address.</p>

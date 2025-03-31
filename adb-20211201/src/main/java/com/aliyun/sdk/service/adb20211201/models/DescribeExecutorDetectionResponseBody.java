@@ -44,6 +44,10 @@ public class DescribeExecutorDetectionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBClusterId
      */
@@ -77,6 +81,16 @@ public class DescribeExecutorDetectionResponseBody extends TeaModel {
         private java.util.List<DetectionItems> detectionItems; 
         private String requestId; 
         private String totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeExecutorDetectionResponseBody model) {
+            this.DBClusterId = model.DBClusterId;
+            this.detectionItems = model.detectionItems;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition cluster.</p>
@@ -205,6 +219,17 @@ public class DescribeExecutorDetectionResponseBody extends TeaModel {
             private String operatorName; 
             private Long totalValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(SearchResults model) {
+                this.avgValue = model.avgValue;
+                this.maxValue = model.maxValue;
+                this.operatorCount = model.operatorCount;
+                this.operatorName = model.operatorName;
+                this.totalValue = model.totalValue;
+            } 
+
             /**
              * <p>The average value of the operator metric.</p>
              * 
@@ -310,6 +335,14 @@ public class DescribeExecutorDetectionResponseBody extends TeaModel {
         public static final class Builder {
             private String metricName; 
             private java.util.List<SearchResults> searchResults; 
+
+            private Builder() {
+            } 
+
+            private Builder(OperatorAgg model) {
+                this.metricName = model.metricName;
+                this.searchResults = model.searchResults;
+            } 
 
             /**
              * <p>The name of the detection metric.</p>
@@ -477,6 +510,22 @@ public class DescribeExecutorDetectionResponseBody extends TeaModel {
             private String processId; 
             private String stageId; 
 
+            private Builder() {
+            } 
+
+            private Builder(OperatorDetailsSearchResults model) {
+                this.inputRows = model.inputRows;
+                this.inputSize = model.inputSize;
+                this.operatorCost = model.operatorCost;
+                this.operatorInfo = model.operatorInfo;
+                this.operatorName = model.operatorName;
+                this.outputRows = model.outputRows;
+                this.outputSize = model.outputSize;
+                this.peakMemory = model.peakMemory;
+                this.processId = model.processId;
+                this.stageId = model.stageId;
+            } 
+
             /**
              * <p>The number of rows input by the operator.</p>
              * 
@@ -635,6 +684,14 @@ public class DescribeExecutorDetectionResponseBody extends TeaModel {
             private String metricName; 
             private java.util.List<OperatorDetailsSearchResults> searchResults; 
 
+            private Builder() {
+            } 
+
+            private Builder(OperatorDetails model) {
+                this.metricName = model.metricName;
+                this.searchResults = model.searchResults;
+            } 
+
             /**
              * <p>The name of the detection metric.</p>
              * 
@@ -704,6 +761,14 @@ public class DescribeExecutorDetectionResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<OperatorAgg> operatorAgg; 
             private java.util.List<OperatorDetails> operatorDetails; 
+
+            private Builder() {
+            } 
+
+            private Builder(Results model) {
+                this.operatorAgg = model.operatorAgg;
+                this.operatorDetails = model.operatorDetails;
+            } 
 
             /**
              * <p>The detection result items of operator metric aggregation.</p>
@@ -795,6 +860,16 @@ public class DescribeExecutorDetectionResponseBody extends TeaModel {
             private String name; 
             private Results results; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(DetectionItems model) {
+                this.message = model.message;
+                this.name = model.name;
+                this.results = model.results;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The information about the detection result.</p>

@@ -44,6 +44,10 @@ public class SerDeInfoModel extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return name
      */
@@ -77,6 +81,16 @@ public class SerDeInfoModel extends TeaModel {
         private java.util.Map<String, String> parameters; 
         private Long serDeId; 
         private String serializationLib; 
+
+        private Builder() {
+        } 
+
+        private Builder(SerDeInfoModel model) {
+            this.name = model.name;
+            this.parameters = model.parameters;
+            this.serDeId = model.serDeId;
+            this.serializationLib = model.serializationLib;
+        } 
 
         /**
          * Name.

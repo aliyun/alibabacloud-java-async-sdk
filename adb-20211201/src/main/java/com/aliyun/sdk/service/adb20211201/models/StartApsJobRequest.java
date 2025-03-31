@@ -41,7 +41,7 @@ public class StartApsJobRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -75,6 +75,7 @@ public class StartApsJobRequest extends Request {
         } 
 
         /**
+         * <p>The job ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class StartApsJobRequest extends Request {
         }
 
         /**
+         * <p>The region ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -44,6 +44,10 @@ public class DescribeSparkCodeOutputResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return message
      */
@@ -77,6 +81,16 @@ public class DescribeSparkCodeOutputResponseBody extends TeaModel {
         private String output; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSparkCodeOutputResponseBody model) {
+            this.message = model.message;
+            this.output = model.output;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The returned message.</p>

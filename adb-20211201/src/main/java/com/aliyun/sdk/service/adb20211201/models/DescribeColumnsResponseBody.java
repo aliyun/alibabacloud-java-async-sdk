@@ -36,6 +36,10 @@ public class DescribeColumnsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -53,6 +57,14 @@ public class DescribeColumnsResponseBody extends TeaModel {
     public static final class Builder {
         private Items items; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeColumnsResponseBody model) {
+            this.items = model.items;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The queried columns.</p>
@@ -183,6 +195,19 @@ public class DescribeColumnsResponseBody extends TeaModel {
             private String tableName; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Column model) {
+                this.autoIncrementColumn = model.autoIncrementColumn;
+                this.columnName = model.columnName;
+                this.DBClusterId = model.DBClusterId;
+                this.primaryKey = model.primaryKey;
+                this.schemaName = model.schemaName;
+                this.tableName = model.tableName;
+                this.type = model.type;
+            } 
+
             /**
              * <p>Indicates whether the column is an auto-increment column. Valid values:</p>
              * <ul>
@@ -306,6 +331,13 @@ public class DescribeColumnsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Column> column; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.column = model.column;
+            } 
 
             /**
              * Column.

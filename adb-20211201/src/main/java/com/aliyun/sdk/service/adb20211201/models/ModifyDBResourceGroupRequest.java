@@ -77,6 +77,10 @@ public class ModifyDBResourceGroupRequest extends Request {
     private Integer minGpuQuantity;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RayConfig")
+    private RayConfig rayConfig;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
@@ -112,6 +116,7 @@ public class ModifyDBResourceGroupRequest extends Request {
         this.minClusterCount = builder.minClusterCount;
         this.minComputeResource = builder.minComputeResource;
         this.minGpuQuantity = builder.minGpuQuantity;
+        this.rayConfig = builder.rayConfig;
         this.regionId = builder.regionId;
         this.rules = builder.rules;
         this.specName = builder.specName;
@@ -127,7 +132,7 @@ public class ModifyDBResourceGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -231,6 +236,13 @@ public class ModifyDBResourceGroupRequest extends Request {
     }
 
     /**
+     * @return rayConfig
+     */
+    public RayConfig getRayConfig() {
+        return this.rayConfig;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -280,6 +292,7 @@ public class ModifyDBResourceGroupRequest extends Request {
         private Integer minClusterCount; 
         private String minComputeResource; 
         private Integer minGpuQuantity; 
+        private RayConfig rayConfig; 
         private String regionId; 
         private java.util.List<Rules> rules; 
         private String specName; 
@@ -306,6 +319,7 @@ public class ModifyDBResourceGroupRequest extends Request {
             this.minClusterCount = request.minClusterCount;
             this.minComputeResource = request.minComputeResource;
             this.minGpuQuantity = request.minGpuQuantity;
+            this.rayConfig = request.rayConfig;
             this.regionId = request.regionId;
             this.rules = request.rules;
             this.specName = request.specName;
@@ -496,6 +510,16 @@ public class ModifyDBResourceGroupRequest extends Request {
         }
 
         /**
+         * RayConfig.
+         */
+        public Builder rayConfig(RayConfig rayConfig) {
+            String rayConfigShrink = shrink(rayConfig, "RayConfig", "json");
+            this.putQueryParameter("RayConfig", rayConfigShrink);
+            this.rayConfig = rayConfig;
+            return this;
+        }
+
+        /**
          * <p>The region ID of the cluster.</p>
          * <blockquote>
          * <p> You can call the <a href="https://help.aliyun.com/document_detail/454314.html">DescribeRegions</a> operation to query the most recent region list.</p>
@@ -560,6 +584,289 @@ public class ModifyDBResourceGroupRequest extends Request {
      *
      * <p>ModifyDBResourceGroupRequest</p>
      */
+    public static class WorkerGroups extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AllocateUnit")
+        private String allocateUnit;
+
+        @com.aliyun.core.annotation.NameInMap("GroupName")
+        private String groupName;
+
+        @com.aliyun.core.annotation.NameInMap("MaxWorkerQuantity")
+        private Integer maxWorkerQuantity;
+
+        @com.aliyun.core.annotation.NameInMap("MinWorkerQuantity")
+        private Integer minWorkerQuantity;
+
+        @com.aliyun.core.annotation.NameInMap("WorkerDiskCapacity")
+        private String workerDiskCapacity;
+
+        @com.aliyun.core.annotation.NameInMap("WorkerSpecName")
+        private String workerSpecName;
+
+        @com.aliyun.core.annotation.NameInMap("WorkerSpecType")
+        private String workerSpecType;
+
+        private WorkerGroups(Builder builder) {
+            this.allocateUnit = builder.allocateUnit;
+            this.groupName = builder.groupName;
+            this.maxWorkerQuantity = builder.maxWorkerQuantity;
+            this.minWorkerQuantity = builder.minWorkerQuantity;
+            this.workerDiskCapacity = builder.workerDiskCapacity;
+            this.workerSpecName = builder.workerSpecName;
+            this.workerSpecType = builder.workerSpecType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static WorkerGroups create() {
+            return builder().build();
+        }
+
+        /**
+         * @return allocateUnit
+         */
+        public String getAllocateUnit() {
+            return this.allocateUnit;
+        }
+
+        /**
+         * @return groupName
+         */
+        public String getGroupName() {
+            return this.groupName;
+        }
+
+        /**
+         * @return maxWorkerQuantity
+         */
+        public Integer getMaxWorkerQuantity() {
+            return this.maxWorkerQuantity;
+        }
+
+        /**
+         * @return minWorkerQuantity
+         */
+        public Integer getMinWorkerQuantity() {
+            return this.minWorkerQuantity;
+        }
+
+        /**
+         * @return workerDiskCapacity
+         */
+        public String getWorkerDiskCapacity() {
+            return this.workerDiskCapacity;
+        }
+
+        /**
+         * @return workerSpecName
+         */
+        public String getWorkerSpecName() {
+            return this.workerSpecName;
+        }
+
+        /**
+         * @return workerSpecType
+         */
+        public String getWorkerSpecType() {
+            return this.workerSpecType;
+        }
+
+        public static final class Builder {
+            private String allocateUnit; 
+            private String groupName; 
+            private Integer maxWorkerQuantity; 
+            private Integer minWorkerQuantity; 
+            private String workerDiskCapacity; 
+            private String workerSpecName; 
+            private String workerSpecType; 
+
+            private Builder() {
+            } 
+
+            private Builder(WorkerGroups model) {
+                this.allocateUnit = model.allocateUnit;
+                this.groupName = model.groupName;
+                this.maxWorkerQuantity = model.maxWorkerQuantity;
+                this.minWorkerQuantity = model.minWorkerQuantity;
+                this.workerDiskCapacity = model.workerDiskCapacity;
+                this.workerSpecName = model.workerSpecName;
+                this.workerSpecType = model.workerSpecType;
+            } 
+
+            /**
+             * AllocateUnit.
+             */
+            public Builder allocateUnit(String allocateUnit) {
+                this.allocateUnit = allocateUnit;
+                return this;
+            }
+
+            /**
+             * <p>The name of the resource group.</p>
+             * <blockquote>
+             * <p>You can call the <a href="https://help.aliyun.com/document_detail/459446.html">DescribeDBResourceGroup</a> operation to query the name of a resource group in a cluster.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
+             */
+            public Builder groupName(String groupName) {
+                this.groupName = groupName;
+                return this;
+            }
+
+            /**
+             * MaxWorkerQuantity.
+             */
+            public Builder maxWorkerQuantity(Integer maxWorkerQuantity) {
+                this.maxWorkerQuantity = maxWorkerQuantity;
+                return this;
+            }
+
+            /**
+             * MinWorkerQuantity.
+             */
+            public Builder minWorkerQuantity(Integer minWorkerQuantity) {
+                this.minWorkerQuantity = minWorkerQuantity;
+                return this;
+            }
+
+            /**
+             * WorkerDiskCapacity.
+             */
+            public Builder workerDiskCapacity(String workerDiskCapacity) {
+                this.workerDiskCapacity = workerDiskCapacity;
+                return this;
+            }
+
+            /**
+             * WorkerSpecName.
+             */
+            public Builder workerSpecName(String workerSpecName) {
+                this.workerSpecName = workerSpecName;
+                return this;
+            }
+
+            /**
+             * WorkerSpecType.
+             */
+            public Builder workerSpecType(String workerSpecType) {
+                this.workerSpecType = workerSpecType;
+                return this;
+            }
+
+            public WorkerGroups build() {
+                return new WorkerGroups(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ModifyDBResourceGroupRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyDBResourceGroupRequest</p>
+     */
+    public static class RayConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Category")
+        private String category;
+
+        @com.aliyun.core.annotation.NameInMap("HeadSpec")
+        private String headSpec;
+
+        @com.aliyun.core.annotation.NameInMap("WorkerGroups")
+        private java.util.List<WorkerGroups> workerGroups;
+
+        private RayConfig(Builder builder) {
+            this.category = builder.category;
+            this.headSpec = builder.headSpec;
+            this.workerGroups = builder.workerGroups;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RayConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return category
+         */
+        public String getCategory() {
+            return this.category;
+        }
+
+        /**
+         * @return headSpec
+         */
+        public String getHeadSpec() {
+            return this.headSpec;
+        }
+
+        /**
+         * @return workerGroups
+         */
+        public java.util.List<WorkerGroups> getWorkerGroups() {
+            return this.workerGroups;
+        }
+
+        public static final class Builder {
+            private String category; 
+            private String headSpec; 
+            private java.util.List<WorkerGroups> workerGroups; 
+
+            private Builder() {
+            } 
+
+            private Builder(RayConfig model) {
+                this.category = model.category;
+                this.headSpec = model.headSpec;
+                this.workerGroups = model.workerGroups;
+            } 
+
+            /**
+             * Category.
+             */
+            public Builder category(String category) {
+                this.category = category;
+                return this;
+            }
+
+            /**
+             * HeadSpec.
+             */
+            public Builder headSpec(String headSpec) {
+                this.headSpec = headSpec;
+                return this;
+            }
+
+            /**
+             * WorkerGroups.
+             */
+            public Builder workerGroups(java.util.List<WorkerGroups> workerGroups) {
+                this.workerGroups = workerGroups;
+                return this;
+            }
+
+            public RayConfig build() {
+                return new RayConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ModifyDBResourceGroupRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyDBResourceGroupRequest</p>
+     */
     public static class Rules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
@@ -609,6 +916,15 @@ public class ModifyDBResourceGroupRequest extends Request {
             private String groupName; 
             private String queryTime; 
             private String targetGroupName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.groupName = model.groupName;
+                this.queryTime = model.queryTime;
+                this.targetGroupName = model.targetGroupName;
+            } 
 
             /**
              * <p>The name of the resource group.</p>

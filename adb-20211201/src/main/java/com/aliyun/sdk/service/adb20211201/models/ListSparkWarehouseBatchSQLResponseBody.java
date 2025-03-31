@@ -36,6 +36,10 @@ public class ListSparkWarehouseBatchSQLResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -54,8 +58,16 @@ public class ListSparkWarehouseBatchSQLResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListSparkWarehouseBatchSQLResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -144,6 +156,16 @@ public class ListSparkWarehouseBatchSQLResponseBody extends TeaModel {
             private java.util.List<SparkBatchSQL> queries; 
             private Long total; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.queries = model.queries;
+                this.total = model.total;
+            } 
+
             /**
              * PageNumber.
              */
@@ -161,7 +183,7 @@ public class ListSparkWarehouseBatchSQLResponseBody extends TeaModel {
             }
 
             /**
-             * Queries.
+             * <p>The queried Spark SQL statements.</p>
              */
             public Builder queries(java.util.List<SparkBatchSQL> queries) {
                 this.queries = queries;

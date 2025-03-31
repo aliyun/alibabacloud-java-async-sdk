@@ -36,6 +36,10 @@ public class KillSparkLogAnalyzeTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class KillSparkLogAnalyzeTaskResponseBody extends TeaModel {
     public static final class Builder {
         private SparkAnalyzeLogTask data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(KillSparkLogAnalyzeTaskResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the Spark log analysis task.</p>

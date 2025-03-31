@@ -60,6 +60,10 @@ public class DescribeApsActionLogsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -125,6 +129,20 @@ public class DescribeApsActionLogsResponseBody extends TeaModel {
         private String requestId; 
         private String totalCount; 
         private String workloadId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeApsActionLogsResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.actionLogs = model.actionLogs;
+            this.DBClusterId = model.DBClusterId;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.workloadId = model.workloadId;
+        } 
 
         /**
          * <p>The information about the request denial.</p>
@@ -292,6 +310,16 @@ public class DescribeApsActionLogsResponseBody extends TeaModel {
             private String stage; 
             private String state; 
             private String time; 
+
+            private Builder() {
+            } 
+
+            private Builder(ActionLogs model) {
+                this.context = model.context;
+                this.stage = model.stage;
+                this.state = model.state;
+                this.time = model.time;
+            } 
 
             /**
              * <p>The content of the log.</p>

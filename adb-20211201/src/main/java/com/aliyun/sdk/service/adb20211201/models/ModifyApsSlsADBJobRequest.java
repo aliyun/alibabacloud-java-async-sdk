@@ -97,7 +97,7 @@ public class ModifyApsSlsADBJobRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -230,7 +230,12 @@ public class ModifyApsSlsADBJobRequest extends Request {
         } 
 
         /**
-         * Columns.
+         * <p>The information about columns.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder columns(java.util.List<Columns> columns) {
             String columnsShrink = shrink(columns, "Columns", "json");
@@ -240,6 +245,7 @@ public class ModifyApsSlsADBJobRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -252,7 +258,10 @@ public class ModifyApsSlsADBJobRequest extends Request {
         }
 
         /**
-         * DbName.
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dbName</p>
          */
         public Builder dbName(String dbName) {
             this.putBodyParameter("DbName", dbName);
@@ -261,7 +270,10 @@ public class ModifyApsSlsADBJobRequest extends Request {
         }
 
         /**
-         * DirtyDataProcessPattern.
+         * <p>The dirty data processing mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STOP</p>
          */
         public Builder dirtyDataProcessPattern(String dirtyDataProcessPattern) {
             this.putBodyParameter("DirtyDataProcessPattern", dirtyDataProcessPattern);
@@ -270,7 +282,10 @@ public class ModifyApsSlsADBJobRequest extends Request {
         }
 
         /**
-         * ExactlyOnce.
+         * <p>Specifies whether to enable the consistency check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder exactlyOnce(String exactlyOnce) {
             this.putBodyParameter("ExactlyOnce", exactlyOnce);
@@ -279,7 +294,10 @@ public class ModifyApsSlsADBJobRequest extends Request {
         }
 
         /**
-         * Password.
+         * <p>The password of the database account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_123</p>
          */
         public Builder password(String password) {
             this.putBodyParameter("Password", password);
@@ -288,6 +306,7 @@ public class ModifyApsSlsADBJobRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -300,7 +319,10 @@ public class ModifyApsSlsADBJobRequest extends Request {
         }
 
         /**
-         * StartingOffsets.
+         * <p>The start offset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>end_cursor</p>
          */
         public Builder startingOffsets(String startingOffsets) {
             this.putBodyParameter("StartingOffsets", startingOffsets);
@@ -309,7 +331,10 @@ public class ModifyApsSlsADBJobRequest extends Request {
         }
 
         /**
-         * TableName.
+         * <p>The name of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder tableName(String tableName) {
             this.putBodyParameter("TableName", tableName);
@@ -318,7 +343,12 @@ public class ModifyApsSlsADBJobRequest extends Request {
         }
 
         /**
-         * UnixTimestampConvert.
+         * <p>The timestamp conversion.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder unixTimestampConvert(String unixTimestampConvert) {
             this.putBodyParameter("UnixTimestampConvert", unixTimestampConvert);
@@ -327,7 +357,10 @@ public class ModifyApsSlsADBJobRequest extends Request {
         }
 
         /**
-         * UserName.
+         * <p>The name of the database account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user-name</p>
          */
         public Builder userName(String userName) {
             this.putBodyParameter("UserName", userName);
@@ -336,6 +369,7 @@ public class ModifyApsSlsADBJobRequest extends Request {
         }
 
         /**
+         * <p>The job ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -348,7 +382,10 @@ public class ModifyApsSlsADBJobRequest extends Request {
         }
 
         /**
-         * WorkloadName.
+         * <p>The name of the workload.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-name</p>
          */
         public Builder workloadName(String workloadName) {
             this.putBodyParameter("WorkloadName", workloadName);
@@ -431,8 +468,21 @@ public class ModifyApsSlsADBJobRequest extends Request {
             private String name; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Columns model) {
+                this.mapName = model.mapName;
+                this.mapType = model.mapType;
+                this.name = model.name;
+                this.type = model.type;
+            } 
+
             /**
-             * MapName.
+             * <p>The name of the mapping.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>map_name</p>
              */
             public Builder mapName(String mapName) {
                 this.mapName = mapName;
@@ -440,7 +490,10 @@ public class ModifyApsSlsADBJobRequest extends Request {
             }
 
             /**
-             * MapType.
+             * <p>The type of the mapping.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bigint</p>
              */
             public Builder mapType(String mapType) {
                 this.mapType = mapType;
@@ -448,7 +501,10 @@ public class ModifyApsSlsADBJobRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The name of the column.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -456,7 +512,10 @@ public class ModifyApsSlsADBJobRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>The data type of the column.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bigint</p>
              */
             public Builder type(String type) {
                 this.type = type;

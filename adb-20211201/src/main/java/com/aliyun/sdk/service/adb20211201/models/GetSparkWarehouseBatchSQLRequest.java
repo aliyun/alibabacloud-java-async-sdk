@@ -45,7 +45,7 @@ public class GetSparkWarehouseBatchSQLRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -88,7 +88,10 @@ public class GetSparkWarehouseBatchSQLRequest extends Request {
         } 
 
         /**
-         * Agency.
+         * <p>The name of the client, which can be up to 16 characters in length. Specify a descriptive name that makes it easy to identify.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DMS</p>
          */
         public Builder agency(String agency) {
             this.putBodyParameter("Agency", agency);

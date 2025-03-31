@@ -53,7 +53,7 @@ public class ModifyAccountPrivilegesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -217,6 +217,15 @@ public class ModifyAccountPrivilegesRequest extends Request {
             private String database; 
             private String table; 
 
+            private Builder() {
+            } 
+
+            private Builder(PrivilegeObject model) {
+                this.column = model.column;
+                this.database = model.database;
+                this.table = model.table;
+            } 
+
             /**
              * <p>The columns on which you want to grant permissions. This parameter must be specified when the PrivilegeType parameter is set to Column.</p>
              * 
@@ -312,6 +321,15 @@ public class ModifyAccountPrivilegesRequest extends Request {
             private PrivilegeObject privilegeObject; 
             private String privilegeType; 
             private java.util.List<String> privileges; 
+
+            private Builder() {
+            } 
+
+            private Builder(AccountPrivileges model) {
+                this.privilegeObject = model.privilegeObject;
+                this.privilegeType = model.privilegeType;
+                this.privileges = model.privileges;
+            } 
 
             /**
              * <p>The objects on which you want to grant permissions, including databases, tables, and columns.</p>

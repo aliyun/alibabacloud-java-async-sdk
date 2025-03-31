@@ -36,6 +36,10 @@ public class StartSparkSQLEngineResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class StartSparkSQLEngineResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(StartSparkSQLEngineResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned data.</p>
@@ -134,6 +146,15 @@ public class StartSparkSQLEngineResponseBody extends TeaModel {
             private String appId; 
             private String appName; 
             private String state; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.appId = model.appId;
+                this.appName = model.appName;
+                this.state = model.state;
+            } 
 
             /**
              * <p>The ID of the Spark job.</p>

@@ -76,6 +76,10 @@ public class SparkBatchSQL extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBClusterId
      */
@@ -173,6 +177,24 @@ public class SparkBatchSQL extends TeaModel {
         private String schema; 
         private java.util.List<SparkBatchSQLStatement> statements; 
         private Long uid; 
+
+        private Builder() {
+        } 
+
+        private Builder(SparkBatchSQL model) {
+            this.DBClusterId = model.DBClusterId;
+            this.errMessage = model.errMessage;
+            this.query = model.query;
+            this.queryEndTime = model.queryEndTime;
+            this.queryId = model.queryId;
+            this.queryStartTime = model.queryStartTime;
+            this.queryState = model.queryState;
+            this.querySubmissionTime = model.querySubmissionTime;
+            this.resourceGroupName = model.resourceGroupName;
+            this.schema = model.schema;
+            this.statements = model.statements;
+            this.uid = model.uid;
+        } 
 
         /**
          * DBClusterId.

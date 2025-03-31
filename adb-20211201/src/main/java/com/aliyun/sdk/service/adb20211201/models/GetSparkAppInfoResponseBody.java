@@ -36,6 +36,10 @@ public class GetSparkAppInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetSparkAppInfoResponseBody extends TeaModel {
     public static final class Builder {
         private SparkAppInfo data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSparkAppInfoResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The queried Spark application. Fields in the response parameter:</p>

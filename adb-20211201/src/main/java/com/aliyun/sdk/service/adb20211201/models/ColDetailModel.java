@@ -72,6 +72,10 @@ public class ColDetailModel extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return columnName
      */
@@ -161,6 +165,23 @@ public class ColDetailModel extends TeaModel {
         private String tableName; 
         private String type; 
         private String updateTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(ColDetailModel model) {
+            this.columnName = model.columnName;
+            this.createTime = model.createTime;
+            this.description = model.description;
+            this.distributeKey = model.distributeKey;
+            this.nullable = model.nullable;
+            this.partitionKey = model.partitionKey;
+            this.primaryKey = model.primaryKey;
+            this.schemaName = model.schemaName;
+            this.tableName = model.tableName;
+            this.type = model.type;
+            this.updateTime = model.updateTime;
+        } 
 
         /**
          * ColumnName.

@@ -36,6 +36,10 @@ public class GetSparkTemplateFileContentResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetSparkTemplateFileContentResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSparkTemplateFileContentResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned data.</p>
@@ -158,6 +170,17 @@ public class GetSparkTemplateFileContentResponseBody extends TeaModel {
             private Long id; 
             private String resourceGroupName; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.appType = model.appType;
+                this.content = model.content;
+                this.id = model.id;
+                this.resourceGroupName = model.resourceGroupName;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The application type. Valid values:</p>

@@ -60,6 +60,10 @@ public class DeleteApsJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return apsJobId
      */
@@ -126,8 +130,25 @@ public class DeleteApsJobResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(DeleteApsJobResponseBody model) {
+            this.apsJobId = model.apsJobId;
+            this.code = model.code;
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * ApsJobId.
+         * <p>The job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aps-*****</p>
          */
         public Builder apsJobId(String apsJobId) {
             this.apsJobId = apsJobId;
@@ -135,7 +156,10 @@ public class DeleteApsJobResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The HTTP status code or the error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -143,7 +167,10 @@ public class DeleteApsJobResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * <p>The error code returned when the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -151,7 +178,10 @@ public class DeleteApsJobResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * <p>The error code returned when the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -159,7 +189,10 @@ public class DeleteApsJobResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -167,7 +200,14 @@ public class DeleteApsJobResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message. Valid values:</p>
+         * <ul>
+         * <li>If the request was successful, a success message is returned.****</li>
+         * <li>If the request failed, an error message is returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -175,7 +215,10 @@ public class DeleteApsJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>-</strong></strong>-5D14-AC9F-*********</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -183,7 +226,10 @@ public class DeleteApsJobResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

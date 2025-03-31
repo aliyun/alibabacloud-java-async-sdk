@@ -36,6 +36,10 @@ public class GetViewDDLResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetViewDDLResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String SQL; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetViewDDLResponseBody model) {
+            this.requestId = model.requestId;
+            this.SQL = model.SQL;
+        } 
 
         /**
          * <p>The request ID.</p>

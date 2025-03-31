@@ -36,6 +36,10 @@ public class DescribeEssdCacheConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DescribeEssdCacheConfigResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeEssdCacheConfigResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Data.
@@ -119,6 +131,14 @@ public class DescribeEssdCacheConfigResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean enableEssdCache; 
             private Integer essdCacheSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.enableEssdCache = model.enableEssdCache;
+                this.essdCacheSize = model.essdCacheSize;
+            } 
 
             /**
              * EnableEssdCache.

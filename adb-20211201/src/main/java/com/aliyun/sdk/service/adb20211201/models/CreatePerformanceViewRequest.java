@@ -83,7 +83,7 @@ public class CreatePerformanceViewRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -359,6 +359,14 @@ public class CreatePerformanceViewRequest extends Request {
             private String keyName; 
             private Boolean selected; 
 
+            private Builder() {
+            } 
+
+            private Builder(Keys model) {
+                this.keyName = model.keyName;
+                this.selected = model.selected;
+            } 
+
             /**
              * <p>The name of the metric.</p>
              * 
@@ -435,6 +443,14 @@ public class CreatePerformanceViewRequest extends Request {
         public static final class Builder {
             private String category; 
             private java.util.List<Keys> keys; 
+
+            private Builder() {
+            } 
+
+            private Builder(Categories model) {
+                this.category = model.category;
+                this.keys = model.keys;
+            } 
 
             /**
              * <p>The name of the metric category. Valid values:</p>
@@ -523,6 +539,15 @@ public class CreatePerformanceViewRequest extends Request {
             private java.util.List<Categories> categories; 
             private Boolean chartLinked; 
             private Integer chartsPerLine; 
+
+            private Builder() {
+            } 
+
+            private Builder(ViewDetail model) {
+                this.categories = model.categories;
+                this.chartLinked = model.chartLinked;
+                this.chartsPerLine = model.chartsPerLine;
+            } 
 
             /**
              * <p>The metric categories.</p>

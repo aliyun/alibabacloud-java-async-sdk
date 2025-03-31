@@ -48,6 +48,10 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return elasticACU
      */
@@ -89,6 +93,17 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
         private String reserverdCompteACU; 
         private String reserverdStorageACU; 
         private String resourceGroupCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeUserQuotaResponseBody model) {
+            this.elasticACU = model.elasticACU;
+            this.requestId = model.requestId;
+            this.reserverdCompteACU = model.reserverdCompteACU;
+            this.reserverdStorageACU = model.reserverdStorageACU;
+            this.resourceGroupCount = model.resourceGroupCount;
+        } 
 
         /**
          * <p>The available elastic AnalyticDB compute units (ACUs).</p>

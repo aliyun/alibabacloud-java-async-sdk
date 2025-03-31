@@ -48,6 +48,10 @@ public class DescribeElasticPlansResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return elasticPlans
      */
@@ -89,6 +93,17 @@ public class DescribeElasticPlansResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeElasticPlansResponseBody model) {
+            this.elasticPlans = model.elasticPlans;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The queried scaling plans.</p>
@@ -251,6 +266,19 @@ public class DescribeElasticPlansResponseBody extends TeaModel {
             private String resourceGroupName; 
             private String targetSize; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(ElasticPlans model) {
+                this.autoScale = model.autoScale;
+                this.elasticPlanName = model.elasticPlanName;
+                this.enabled = model.enabled;
+                this.nextScheduleTime = model.nextScheduleTime;
+                this.resourceGroupName = model.resourceGroupName;
+                this.targetSize = model.targetSize;
+                this.type = model.type;
+            } 
 
             /**
              * <p>Indicates whether <strong>Proportional Default Scaling for EIUs</strong> is enabled. Valid values:</p>

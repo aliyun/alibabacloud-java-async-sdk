@@ -48,6 +48,10 @@ public class GetTableColumnsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -89,6 +93,17 @@ public class GetTableColumnsResponseBody extends TeaModel {
         private Long pageSize; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTableColumnsResponseBody model) {
+            this.data = model.data;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The queried data.</p>
@@ -220,6 +235,16 @@ public class GetTableColumnsResponseBody extends TeaModel {
             private Long pageSize; 
             private TableDetailModel table; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.table = model.table;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The page number. Pages start from page 1. Default value: 1.</p>

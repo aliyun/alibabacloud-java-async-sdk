@@ -54,7 +54,7 @@ public class CreateLakeStorageRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -253,6 +253,16 @@ public class CreateLakeStorageRequest extends Request {
             private Boolean read; 
             private String type; 
             private Boolean write; 
+
+            private Builder() {
+            } 
+
+            private Builder(Permissions model) {
+                this.account = model.account;
+                this.read = model.read;
+                this.type = model.type;
+                this.write = model.write;
+            } 
 
             /**
              * <p>The account ID.</p>

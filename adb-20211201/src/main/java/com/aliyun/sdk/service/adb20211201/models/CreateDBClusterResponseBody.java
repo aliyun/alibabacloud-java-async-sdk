@@ -44,6 +44,10 @@ public class CreateDBClusterResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBClusterId
      */
@@ -78,8 +82,21 @@ public class CreateDBClusterResponseBody extends TeaModel {
         private String requestId; 
         private String resourceGroupId; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateDBClusterResponseBody model) {
+            this.DBClusterId = model.DBClusterId;
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+        } 
+
         /**
-         * DBClusterId.
+         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amv-bp1r053byu48p****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -87,7 +104,10 @@ public class CreateDBClusterResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>202353278****</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -95,7 +115,10 @@ public class CreateDBClusterResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -103,7 +126,10 @@ public class CreateDBClusterResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The default resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-4690g37929****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;

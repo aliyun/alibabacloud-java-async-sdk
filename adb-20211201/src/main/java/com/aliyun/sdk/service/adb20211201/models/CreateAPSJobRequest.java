@@ -94,7 +94,7 @@ public class CreateAPSJobRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -218,6 +218,7 @@ public class CreateAPSJobRequest extends Request {
         } 
 
         /**
+         * <p>The name of the synchronization job.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -230,6 +231,7 @@ public class CreateAPSJobRequest extends Request {
         }
 
         /**
+         * <p>The objects to be synchronized.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -242,6 +244,7 @@ public class CreateAPSJobRequest extends Request {
         }
 
         /**
+         * <p>The name of the database account of the destination cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -254,7 +257,10 @@ public class CreateAPSJobRequest extends Request {
         }
 
         /**
-         * DestinationEndpointPassword.
+         * <p>The password of the database account of the destination cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder destinationEndpointPassword(String destinationEndpointPassword) {
             this.putBodyParameter("DestinationEndpointPassword", destinationEndpointPassword);
@@ -263,7 +269,10 @@ public class CreateAPSJobRequest extends Request {
         }
 
         /**
-         * DestinationEndpointUserName.
+         * <p>The name of the database account of the destination cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder destinationEndpointUserName(String destinationEndpointUserName) {
             this.putBodyParameter("DestinationEndpointUserName", destinationEndpointUserName);
@@ -272,7 +281,10 @@ public class CreateAPSJobRequest extends Request {
         }
 
         /**
-         * PartitionList.
+         * <p>The partitions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder partitionList(String partitionList) {
             this.putBodyParameter("PartitionList", partitionList);
@@ -281,6 +293,10 @@ public class CreateAPSJobRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -293,6 +309,7 @@ public class CreateAPSJobRequest extends Request {
         }
 
         /**
+         * <p>The ID of the source instance or cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -305,7 +322,10 @@ public class CreateAPSJobRequest extends Request {
         }
 
         /**
-         * SourceEndpointPassword.
+         * <p>The password of the database account of the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder sourceEndpointPassword(String sourceEndpointPassword) {
             this.putBodyParameter("SourceEndpointPassword", sourceEndpointPassword);
@@ -314,7 +334,10 @@ public class CreateAPSJobRequest extends Request {
         }
 
         /**
-         * SourceEndpointRegion.
+         * <p>The region ID of the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder sourceEndpointRegion(String sourceEndpointRegion) {
             this.putBodyParameter("SourceEndpointRegion", sourceEndpointRegion);
@@ -323,7 +346,10 @@ public class CreateAPSJobRequest extends Request {
         }
 
         /**
-         * SourceEndpointUserName.
+         * <p>The name of the database account of the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx</p>
          */
         public Builder sourceEndpointUserName(String sourceEndpointUserName) {
             this.putBodyParameter("SourceEndpointUserName", sourceEndpointUserName);
@@ -332,7 +358,10 @@ public class CreateAPSJobRequest extends Request {
         }
 
         /**
-         * TargetTableMode.
+         * <p>The mode of the destination table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder targetTableMode(String targetTableMode) {
             this.putBodyParameter("TargetTableMode", targetTableMode);

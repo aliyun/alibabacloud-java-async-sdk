@@ -36,6 +36,10 @@ public class GetSparkSQLEngineStateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetSparkSQLEngineStateResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSparkSQLEngineStateResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The state information about the Spark SQL engine.</p>
@@ -194,6 +206,20 @@ public class GetSparkSQLEngineStateResponseBody extends TeaModel {
             private String slotNum; 
             private String state; 
             private String submittedTimeInMillis; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.appId = model.appId;
+                this.config = model.config;
+                this.jars = model.jars;
+                this.maxExecutor = model.maxExecutor;
+                this.minExecutor = model.minExecutor;
+                this.slotNum = model.slotNum;
+                this.state = model.state;
+                this.submittedTimeInMillis = model.submittedTimeInMillis;
+            } 
 
             /**
              * <p>The ID of the Spark application.</p>

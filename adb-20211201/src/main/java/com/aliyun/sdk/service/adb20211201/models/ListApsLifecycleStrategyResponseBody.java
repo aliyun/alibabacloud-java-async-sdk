@@ -64,6 +64,10 @@ public class ListApsLifecycleStrategyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -137,6 +141,21 @@ public class ListApsLifecycleStrategyResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListApsLifecycleStrategyResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.items = model.items;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The HTTP status code or the error code.</p>
@@ -303,6 +322,15 @@ public class ListApsLifecycleStrategyResponseBody extends TeaModel {
             private String databaseName; 
             private String processAll; 
             private java.util.List<String> tableNames; 
+
+            private Builder() {
+            } 
+
+            private Builder(OperationTables model) {
+                this.databaseName = model.databaseName;
+                this.processAll = model.processAll;
+                this.tableNames = model.tableNames;
+            } 
 
             /**
              * <p>The name of the database.</p>
@@ -504,6 +532,24 @@ public class ListApsLifecycleStrategyResponseBody extends TeaModel {
             private Long strategyTables; 
             private String strategyType; 
             private String strategyValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.apsJobId = model.apsJobId;
+                this.createdTime = model.createdTime;
+                this.DBClusterId = model.DBClusterId;
+                this.modifiedTime = model.modifiedTime;
+                this.operationTables = model.operationTables;
+                this.status = model.status;
+                this.strategyDatabases = model.strategyDatabases;
+                this.strategyDesc = model.strategyDesc;
+                this.strategyName = model.strategyName;
+                this.strategyTables = model.strategyTables;
+                this.strategyType = model.strategyType;
+                this.strategyValue = model.strategyValue;
+            } 
 
             /**
              * <p>The job ID.</p>

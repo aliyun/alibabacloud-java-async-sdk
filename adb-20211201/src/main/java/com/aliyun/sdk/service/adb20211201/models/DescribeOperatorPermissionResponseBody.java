@@ -48,6 +48,10 @@ public class DescribeOperatorPermissionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createdTime
      */
@@ -89,6 +93,17 @@ public class DescribeOperatorPermissionResponseBody extends TeaModel {
         private String expiredTime; 
         private String privileges; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeOperatorPermissionResponseBody model) {
+            this.createdTime = model.createdTime;
+            this.DBClusterId = model.DBClusterId;
+            this.expiredTime = model.expiredTime;
+            this.privileges = model.privileges;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The time when the permissions take effect.</p>

@@ -48,6 +48,10 @@ public class DatabaseSummaryModel extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createTime
      */
@@ -89,6 +93,17 @@ public class DatabaseSummaryModel extends TeaModel {
         private String owner; 
         private String schemaName; 
         private String updateTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(DatabaseSummaryModel model) {
+            this.createTime = model.createTime;
+            this.description = model.description;
+            this.owner = model.owner;
+            this.schemaName = model.schemaName;
+            this.updateTime = model.updateTime;
+        } 
 
         /**
          * CreateTime.

@@ -36,6 +36,10 @@ public class ListSparkTemplateFileIdsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class ListSparkTemplateFileIdsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Long> data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSparkTemplateFileIdsResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The IDs of Spark template files.</p>

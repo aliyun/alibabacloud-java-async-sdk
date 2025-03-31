@@ -44,6 +44,10 @@ public class SparkSession extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return active
      */
@@ -77,6 +81,16 @@ public class SparkSession extends TeaModel {
         private Long aliyunUid; 
         private Long sessionId; 
         private String state; 
+
+        private Builder() {
+        } 
+
+        private Builder(SparkSession model) {
+            this.active = model.active;
+            this.aliyunUid = model.aliyunUid;
+            this.sessionId = model.sessionId;
+            this.state = model.state;
+        } 
 
         /**
          * Active.

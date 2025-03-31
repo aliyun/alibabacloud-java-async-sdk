@@ -40,6 +40,10 @@ public class DeletePerformanceViewResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -65,6 +69,15 @@ public class DeletePerformanceViewResponseBody extends TeaModel {
         private String accessDeniedDetail; 
         private Boolean deleteStatus; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeletePerformanceViewResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.deleteStatus = model.deleteStatus;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details about the access denial.</p>

@@ -61,7 +61,7 @@ public class DescribeApsJobsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -131,7 +131,10 @@ public class DescribeApsJobsRequest extends Request {
         } 
 
         /**
-         * ApsJobName.
+         * <p>The name of the APS job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aps-xxxxx</p>
          */
         public Builder apsJobName(String apsJobName) {
             this.putBodyParameter("ApsJobName", apsJobName);
@@ -140,7 +143,10 @@ public class DescribeApsJobsRequest extends Request {
         }
 
         /**
-         * CreateTimeEnd.
+         * <p>The end of the time range to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-04-23T01:10Z</p>
          */
         public Builder createTimeEnd(String createTimeEnd) {
             this.putBodyParameter("CreateTimeEnd", createTimeEnd);
@@ -149,7 +155,10 @@ public class DescribeApsJobsRequest extends Request {
         }
 
         /**
-         * CreateTimeStart.
+         * <p>The beginning of the time range to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-03-23T01:10Z</p>
          */
         public Builder createTimeStart(String createTimeStart) {
             this.putBodyParameter("CreateTimeStart", createTimeStart);
@@ -158,6 +167,7 @@ public class DescribeApsJobsRequest extends Request {
         }
 
         /**
+         * <p>The page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,6 +180,7 @@ public class DescribeApsJobsRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -182,7 +193,10 @@ public class DescribeApsJobsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);

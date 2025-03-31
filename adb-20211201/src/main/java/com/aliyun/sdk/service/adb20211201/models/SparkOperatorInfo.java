@@ -36,6 +36,10 @@ public class SparkOperatorInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return metricValue
      */
@@ -53,6 +57,14 @@ public class SparkOperatorInfo extends TeaModel {
     public static final class Builder {
         private Long metricValue; 
         private byte[] operatorName; 
+
+        private Builder() {
+        } 
+
+        private Builder(SparkOperatorInfo model) {
+            this.metricValue = model.metricValue;
+            this.operatorName = model.operatorName;
+        } 
 
         /**
          * MetricValue.

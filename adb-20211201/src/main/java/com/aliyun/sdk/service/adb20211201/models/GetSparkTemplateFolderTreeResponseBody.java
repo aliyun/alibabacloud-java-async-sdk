@@ -36,6 +36,10 @@ public class GetSparkTemplateFolderTreeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetSparkTemplateFolderTreeResponseBody extends TeaModel {
     public static final class Builder {
         private String data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSparkTemplateFolderTreeResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The directory structure of Spark applications, which is in the tree format. Fields in the response parameter:</p>

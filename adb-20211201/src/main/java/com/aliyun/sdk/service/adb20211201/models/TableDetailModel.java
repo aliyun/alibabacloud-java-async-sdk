@@ -64,6 +64,10 @@ public class TableDetailModel extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return catalog
      */
@@ -137,6 +141,21 @@ public class TableDetailModel extends TeaModel {
         private String tableName; 
         private String tableType; 
         private String updateTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(TableDetailModel model) {
+            this.catalog = model.catalog;
+            this.columns = model.columns;
+            this.createTime = model.createTime;
+            this.description = model.description;
+            this.owner = model.owner;
+            this.schemaName = model.schemaName;
+            this.tableName = model.tableName;
+            this.tableType = model.tableType;
+            this.updateTime = model.updateTime;
+        } 
 
         /**
          * Catalog.

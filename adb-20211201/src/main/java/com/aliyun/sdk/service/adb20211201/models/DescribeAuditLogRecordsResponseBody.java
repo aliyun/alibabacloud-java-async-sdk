@@ -52,6 +52,10 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBClusterId
      */
@@ -101,6 +105,18 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
         private String pageSize; 
         private String requestId; 
         private String totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAuditLogRecordsResponseBody model) {
+            this.DBClusterId = model.DBClusterId;
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
@@ -310,6 +326,22 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
             private String succeed; 
             private String totalTime; 
             private String user; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.connId = model.connId;
+                this.DBName = model.DBName;
+                this.executeTime = model.executeTime;
+                this.hostAddress = model.hostAddress;
+                this.processID = model.processID;
+                this.SQLText = model.SQLText;
+                this.SQLType = model.SQLType;
+                this.succeed = model.succeed;
+                this.totalTime = model.totalTime;
+                this.user = model.user;
+            } 
 
             /**
              * <p>The connection ID.</p>

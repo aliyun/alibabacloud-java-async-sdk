@@ -56,6 +56,10 @@ public class DescribeAdbMySqlColumnsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return columnCount
      */
@@ -113,6 +117,19 @@ public class DescribeAdbMySqlColumnsResponseBody extends TeaModel {
         private String schema; 
         private Boolean success; 
         private String tableName; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAdbMySqlColumnsResponseBody model) {
+            this.columnCount = model.columnCount;
+            this.columns = model.columns;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.schema = model.schema;
+            this.success = model.success;
+            this.tableName = model.tableName;
+        } 
 
         /**
          * <p>The total number of columns.</p>
@@ -257,6 +274,15 @@ public class DescribeAdbMySqlColumnsResponseBody extends TeaModel {
             private String comment; 
             private String name; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Columns model) {
+                this.comment = model.comment;
+                this.name = model.name;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The comments of the column.</p>

@@ -36,6 +36,10 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -53,6 +57,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     public static final class Builder {
         private Items items; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBClusterAttributeResponseBody model) {
+            this.items = model.items;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The queried cluster.</p>
@@ -123,6 +135,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The tag key.</p>
              * <blockquote>
@@ -186,6 +206,13 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
@@ -294,8 +321,23 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             private String stepProgress; 
             private String stepStatus; 
 
+            private Builder() {
+            } 
+
+            private Builder(StepList model) {
+                this.endTime = model.endTime;
+                this.startTime = model.startTime;
+                this.stepDesc = model.stepDesc;
+                this.stepName = model.stepName;
+                this.stepProgress = model.stepProgress;
+                this.stepStatus = model.stepStatus;
+            } 
+
             /**
-             * EndTime.
+             * <p>The end time of the job step. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-03-10T10:28:34Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -303,7 +345,10 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the job step. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-03-10T09:28:34Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -311,7 +356,10 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * StepDesc.
+             * <p>The description of the job step.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Prepare resources</p>
              */
             public Builder stepDesc(String stepDesc) {
                 this.stepDesc = stepDesc;
@@ -319,7 +367,10 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * StepName.
+             * <p>The name of the job step.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PrepareResources</p>
              */
             public Builder stepName(String stepName) {
                 this.stepName = stepName;
@@ -327,7 +378,10 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * StepProgress.
+             * <p>The progress of the job step. Unit: %.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder stepProgress(String stepProgress) {
                 this.stepProgress = stepProgress;
@@ -335,7 +389,15 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * StepStatus.
+             * <p>The status of the job step. Valid values:</p>
+             * <ul>
+             * <li>NOT_RUN</li>
+             * <li>RUNNING</li>
+             * <li>SUCCEED</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder stepStatus(String stepStatus) {
                 this.stepStatus = stepStatus;
@@ -380,6 +442,13 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<StepList> stepList; 
+
+            private Builder() {
+            } 
+
+            private Builder(TaskInfoStepList model) {
+                this.stepList = model.stepList;
+            } 
 
             /**
              * StepList.
@@ -464,8 +533,21 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             private String status; 
             private TaskInfoStepList stepList; 
 
+            private Builder() {
+            } 
+
+            private Builder(TaskInfo model) {
+                this.name = model.name;
+                this.progress = model.progress;
+                this.status = model.status;
+                this.stepList = model.stepList;
+            } 
+
             /**
-             * Name.
+             * <p>The name of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ScaleUpDBCluster</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -473,7 +555,10 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * <p>The progress of the job. Unit: %.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -481,7 +566,15 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the job. Valid values:</p>
+             * <ul>
+             * <li>NOT_RUN</li>
+             * <li>RUNNING</li>
+             * <li>SUCCEED</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -489,7 +582,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * StepList.
+             * <p>The job steps.</p>
              */
             public Builder stepList(TaskInfoStepList stepList) {
                 this.stepList = stepList;
@@ -549,6 +642,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBVersion")
         private String DBVersion;
 
+        @com.aliyun.core.annotation.NameInMap("DiskEncryption")
+        private Boolean diskEncryption;
+
         @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
 
@@ -603,6 +699,12 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
+        @com.aliyun.core.annotation.NameInMap("SecondaryVSwitchId")
+        private String secondaryVSwitchId;
+
+        @com.aliyun.core.annotation.NameInMap("SecondaryZoneId")
+        private String secondaryZoneId;
+
         @com.aliyun.core.annotation.NameInMap("StorageResource")
         private String storageResource;
 
@@ -653,6 +755,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             this.DBClusterStatus = builder.DBClusterStatus;
             this.DBClusterType = builder.DBClusterType;
             this.DBVersion = builder.DBVersion;
+            this.diskEncryption = builder.diskEncryption;
             this.engine = builder.engine;
             this.engineVersion = builder.engineVersion;
             this.expireTime = builder.expireTime;
@@ -671,6 +774,8 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             this.reservedNodeCount = builder.reservedNodeCount;
             this.reservedNodeSize = builder.reservedNodeSize;
             this.resourceGroupId = builder.resourceGroupId;
+            this.secondaryVSwitchId = builder.secondaryVSwitchId;
+            this.secondaryZoneId = builder.secondaryZoneId;
             this.storageResource = builder.storageResource;
             this.storageResourceTotal = builder.storageResourceTotal;
             this.supportedFeatures = builder.supportedFeatures;
@@ -782,6 +887,13 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
          */
         public String getDBVersion() {
             return this.DBVersion;
+        }
+
+        /**
+         * @return diskEncryption
+         */
+        public Boolean getDiskEncryption() {
+            return this.diskEncryption;
         }
 
         /**
@@ -911,6 +1023,20 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return secondaryVSwitchId
+         */
+        public String getSecondaryVSwitchId() {
+            return this.secondaryVSwitchId;
+        }
+
+        /**
+         * @return secondaryZoneId
+         */
+        public String getSecondaryZoneId() {
+            return this.secondaryZoneId;
+        }
+
+        /**
          * @return storageResource
          */
         public String getStorageResource() {
@@ -1008,6 +1134,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             private String DBClusterStatus; 
             private String DBClusterType; 
             private String DBVersion; 
+            private Boolean diskEncryption; 
             private String engine; 
             private String engineVersion; 
             private String expireTime; 
@@ -1026,6 +1153,8 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             private Integer reservedNodeCount; 
             private String reservedNodeSize; 
             private String resourceGroupId; 
+            private String secondaryVSwitchId; 
+            private String secondaryZoneId; 
             private String storageResource; 
             private String storageResourceTotal; 
             private java.util.Map<String, String> supportedFeatures; 
@@ -1038,6 +1167,58 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             private String VPCId; 
             private String vSwitchId; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DBCluster model) {
+                this.clickhouseEngineCacheSize = model.clickhouseEngineCacheSize;
+                this.clickhouseEngineEnabled = model.clickhouseEngineEnabled;
+                this.commodityCode = model.commodityCode;
+                this.computeResource = model.computeResource;
+                this.computeResourceTotal = model.computeResourceTotal;
+                this.connectionString = model.connectionString;
+                this.creationTime = model.creationTime;
+                this.DBClusterDescription = model.DBClusterDescription;
+                this.DBClusterId = model.DBClusterId;
+                this.DBClusterNetworkType = model.DBClusterNetworkType;
+                this.DBClusterStatus = model.DBClusterStatus;
+                this.DBClusterType = model.DBClusterType;
+                this.DBVersion = model.DBVersion;
+                this.diskEncryption = model.diskEncryption;
+                this.engine = model.engine;
+                this.engineVersion = model.engineVersion;
+                this.expireTime = model.expireTime;
+                this.expired = model.expired;
+                this.kmsId = model.kmsId;
+                this.lockMode = model.lockMode;
+                this.lockReason = model.lockReason;
+                this.maintainTime = model.maintainTime;
+                this.mode = model.mode;
+                this.payType = model.payType;
+                this.port = model.port;
+                this.productForm = model.productForm;
+                this.productVersion = model.productVersion;
+                this.regionId = model.regionId;
+                this.reservedACU = model.reservedACU;
+                this.reservedNodeCount = model.reservedNodeCount;
+                this.reservedNodeSize = model.reservedNodeSize;
+                this.resourceGroupId = model.resourceGroupId;
+                this.secondaryVSwitchId = model.secondaryVSwitchId;
+                this.secondaryZoneId = model.secondaryZoneId;
+                this.storageResource = model.storageResource;
+                this.storageResourceTotal = model.storageResourceTotal;
+                this.supportedFeatures = model.supportedFeatures;
+                this.tags = model.tags;
+                this.taskInfo = model.taskInfo;
+                this.userENIStatus = model.userENIStatus;
+                this.userENIVSwitchOptions = model.userENIVSwitchOptions;
+                this.userENIVpcId = model.userENIVpcId;
+                this.userENIZoneOptions = model.userENIZoneOptions;
+                this.VPCId = model.VPCId;
+                this.vSwitchId = model.vSwitchId;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>The cache size of the ClickHouse wide table engine. Unit: GB. If a value of -1 is returned, the ClickHouse wide table engine is disabled. If a value other than -1 is returned, this parameter indicates the disk cache size.</p>
@@ -1198,6 +1379,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
              */
             public Builder DBVersion(String DBVersion) {
                 this.DBVersion = DBVersion;
+                return this;
+            }
+
+            /**
+             * DiskEncryption.
+             */
+            public Builder diskEncryption(Boolean diskEncryption) {
+                this.diskEncryption = diskEncryption;
                 return this;
             }
 
@@ -1438,6 +1627,22 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
+             * SecondaryVSwitchId.
+             */
+            public Builder secondaryVSwitchId(String secondaryVSwitchId) {
+                this.secondaryVSwitchId = secondaryVSwitchId;
+                return this;
+            }
+
+            /**
+             * SecondaryZoneId.
+             */
+            public Builder secondaryZoneId(String secondaryZoneId) {
+                this.secondaryZoneId = secondaryZoneId;
+                return this;
+            }
+
+            /**
              * <p>The specifications of reserved storage resources. Each AnalyticDB compute unit (ACU) is approximately equal to 1 core and 4 GB memory. Storage resources are used to read and write data. The increase in the storage resources can improve the read and write performance of the cluster.</p>
              * 
              * <strong>example:</strong>
@@ -1476,7 +1681,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * TaskInfo.
+             * <p>The job information.</p>
              */
             public Builder taskInfo(TaskInfo taskInfo) {
                 this.taskInfo = taskInfo;
@@ -1499,7 +1704,10 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * UserENIVSwitchOptions.
+             * <p>The vSwitch connected to the ENI. Separate multiple vSwitches with commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-rj9ixufmywqq98z******,vsw-rj95ij6wcz656v7******</p>
              */
             public Builder userENIVSwitchOptions(String userENIVSwitchOptions) {
                 this.userENIVSwitchOptions = userENIVSwitchOptions;
@@ -1507,7 +1715,10 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * UserENIVpcId.
+             * <p>The VPC information of the ENI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-rj9hnedlfm645uj******</p>
              */
             public Builder userENIVpcId(String userENIVpcId) {
                 this.userENIVpcId = userENIVpcId;
@@ -1515,7 +1726,10 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * UserENIZoneOptions.
+             * <p>The zone associated with the ENI. Separate multiple zones with commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-k,cn-hangzhou-h</p>
              */
             public Builder userENIZoneOptions(String userENIZoneOptions) {
                 this.userENIZoneOptions = userENIZoneOptions;
@@ -1593,6 +1807,13 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DBCluster> DBCluster; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.DBCluster = model.DBCluster;
+            } 
 
             /**
              * DBCluster.

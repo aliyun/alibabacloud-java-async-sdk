@@ -48,6 +48,10 @@ public class DescribeDiagnosisDimensionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clientIps
      */
@@ -89,6 +93,17 @@ public class DescribeDiagnosisDimensionsResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<String> resourceGroups; 
         private java.util.List<String> userNames; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDiagnosisDimensionsResponseBody model) {
+            this.clientIps = model.clientIps;
+            this.databases = model.databases;
+            this.requestId = model.requestId;
+            this.resourceGroups = model.resourceGroups;
+            this.userNames = model.userNames;
+        } 
 
         /**
          * <p>The queried source IP addresses.</p>

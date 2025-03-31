@@ -36,6 +36,10 @@ public class DescribeTablesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -53,6 +57,14 @@ public class DescribeTablesResponseBody extends TeaModel {
     public static final class Builder {
         private Items items; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTablesResponseBody model) {
+            this.items = model.items;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The queried tables.</p>
@@ -135,6 +147,15 @@ public class DescribeTablesResponseBody extends TeaModel {
             private String schemaName; 
             private String tableName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Table model) {
+                this.DBClusterId = model.DBClusterId;
+                this.schemaName = model.schemaName;
+                this.tableName = model.tableName;
+            } 
+
             /**
              * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
              * 
@@ -206,6 +227,13 @@ public class DescribeTablesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Table> table; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.table = model.table;
+            } 
 
             /**
              * Table.

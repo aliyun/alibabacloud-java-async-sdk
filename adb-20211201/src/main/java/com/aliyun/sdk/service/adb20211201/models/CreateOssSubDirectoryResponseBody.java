@@ -48,6 +48,10 @@ public class CreateOssSubDirectoryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -89,6 +93,17 @@ public class CreateOssSubDirectoryResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateOssSubDirectoryResponseBody model) {
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The returned data.</p>
@@ -223,6 +238,16 @@ public class CreateOssSubDirectoryResponseBody extends TeaModel {
             private String eTag; 
             private String requestId; 
             private Long serverCRC; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.clientCRC = model.clientCRC;
+                this.eTag = model.eTag;
+                this.requestId = model.requestId;
+                this.serverCRC = model.serverCRC;
+            } 
 
             /**
              * <p>The cyclic redundancy check (CRC) value on the client.</p>

@@ -48,6 +48,10 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -89,6 +93,17 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSqlPatternResponseBody model) {
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The queried SQL pattern.</p>
@@ -359,6 +374,28 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
             private String queryCount; 
             private String reportDate; 
             private String user; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.accessIP = model.accessIP;
+                this.avgCpuTime = model.avgCpuTime;
+                this.avgPeakMemory = model.avgPeakMemory;
+                this.avgScanSize = model.avgScanSize;
+                this.avgStageCount = model.avgStageCount;
+                this.avgTaskCount = model.avgTaskCount;
+                this.instanceName = model.instanceName;
+                this.maxCpuTime = model.maxCpuTime;
+                this.maxPeakMemory = model.maxPeakMemory;
+                this.maxScanSize = model.maxScanSize;
+                this.maxStageCount = model.maxStageCount;
+                this.maxTaskCount = model.maxTaskCount;
+                this.pattern = model.pattern;
+                this.queryCount = model.queryCount;
+                this.reportDate = model.reportDate;
+                this.user = model.user;
+            } 
 
             /**
              * <p>The IP address of the client.</p>

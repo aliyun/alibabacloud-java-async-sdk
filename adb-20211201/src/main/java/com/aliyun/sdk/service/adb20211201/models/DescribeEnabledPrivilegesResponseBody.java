@@ -36,6 +36,10 @@ public class DescribeEnabledPrivilegesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DescribeEnabledPrivilegesResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Data> data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeEnabledPrivilegesResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The queried permission level and permissions.</p>
@@ -122,6 +134,14 @@ public class DescribeEnabledPrivilegesResponseBody extends TeaModel {
         public static final class Builder {
             private String description; 
             private String key; 
+
+            private Builder() {
+            } 
+
+            private Builder(Privileges model) {
+                this.description = model.description;
+                this.key = model.key;
+            } 
 
             /**
              * <p>The description of the permission.</p>
@@ -207,6 +227,15 @@ public class DescribeEnabledPrivilegesResponseBody extends TeaModel {
             private String description; 
             private java.util.List<Privileges> privileges; 
             private String scope; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.description = model.description;
+                this.privileges = model.privileges;
+                this.scope = model.scope;
+            } 
 
             /**
              * <p>The description of the permission level.</p>

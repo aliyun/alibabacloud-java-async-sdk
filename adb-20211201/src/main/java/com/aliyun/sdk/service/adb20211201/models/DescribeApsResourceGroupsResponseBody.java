@@ -48,6 +48,10 @@ public class DescribeApsResourceGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -89,6 +93,17 @@ public class DescribeApsResourceGroupsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeApsResourceGroupsResponseBody model) {
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The queried resource groups.</p>
@@ -260,6 +275,19 @@ public class DescribeApsResourceGroupsResponseBody extends TeaModel {
             private Integer maxComputeResource; 
             private Integer minComputeResource; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResourceGroups model) {
+                this.available = model.available;
+                this.cuOptions = model.cuOptions;
+                this.groupName = model.groupName;
+                this.groupType = model.groupType;
+                this.leftComputeResource = model.leftComputeResource;
+                this.maxComputeResource = model.maxComputeResource;
+                this.minComputeResource = model.minComputeResource;
+            } 
+
             /**
              * <p>Indicates whether the resource group is available. Valid values:</p>
              * <ul>
@@ -403,6 +431,14 @@ public class DescribeApsResourceGroupsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<ResourceGroups> resourceGroups; 
             private Long step; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.resourceGroups = model.resourceGroups;
+                this.step = model.step;
+            } 
 
             /**
              * <p>The queried resource groups.</p>

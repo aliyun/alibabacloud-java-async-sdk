@@ -36,6 +36,10 @@ public class DescribeElasticPlanAttributeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return elasticPlan
      */
@@ -53,6 +57,14 @@ public class DescribeElasticPlanAttributeResponseBody extends TeaModel {
     public static final class Builder {
         private ElasticPlan elasticPlan; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeElasticPlanAttributeResponseBody model) {
+            this.elasticPlan = model.elasticPlan;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The queried scaling plan.</p>
@@ -206,6 +218,21 @@ public class DescribeElasticPlanAttributeResponseBody extends TeaModel {
             private String startTime; 
             private String targetSize; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(ElasticPlan model) {
+                this.autoScale = model.autoScale;
+                this.cronExpression = model.cronExpression;
+                this.elasticPlanName = model.elasticPlanName;
+                this.enabled = model.enabled;
+                this.endTime = model.endTime;
+                this.resourceGroupName = model.resourceGroupName;
+                this.startTime = model.startTime;
+                this.targetSize = model.targetSize;
+                this.type = model.type;
+            } 
 
             /**
              * <p>Indicates whether <strong>Default Proportional Scaling for EIUs</strong> is enabled. Valid values: true: Default Proportional Scaling for EIUs is enabled. If you set this parameter to true, storage resources are scaled along with computing resources. false: Default Proportional Scaling for EIUs is not enabled.</p>

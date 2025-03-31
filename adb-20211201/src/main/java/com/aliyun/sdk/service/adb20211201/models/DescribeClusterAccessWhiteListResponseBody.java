@@ -36,6 +36,10 @@ public class DescribeClusterAccessWhiteListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -53,6 +57,14 @@ public class DescribeClusterAccessWhiteListResponseBody extends TeaModel {
     public static final class Builder {
         private Items items; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeClusterAccessWhiteListResponseBody model) {
+            this.items = model.items;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The queried IP address whitelists.</p>
@@ -135,6 +147,15 @@ public class DescribeClusterAccessWhiteListResponseBody extends TeaModel {
             private String DBClusterIPArrayName; 
             private String securityIPList; 
 
+            private Builder() {
+            } 
+
+            private Builder(IPArray model) {
+                this.DBClusterIPArrayAttribute = model.DBClusterIPArrayAttribute;
+                this.DBClusterIPArrayName = model.DBClusterIPArrayName;
+                this.securityIPList = model.securityIPList;
+            } 
+
             /**
              * <p>The attribute of the whitelist.</p>
              * <blockquote>
@@ -210,6 +231,13 @@ public class DescribeClusterAccessWhiteListResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<IPArray> IPArray; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.IPArray = model.IPArray;
+            } 
 
             /**
              * IPArray.

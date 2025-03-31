@@ -40,6 +40,10 @@ public class DescribeStorageResourceUsageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -65,6 +69,15 @@ public class DescribeStorageResourceUsageResponseBody extends TeaModel {
         private Integer code; 
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeStorageResourceUsageResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The HTTP status code.</p>
@@ -145,6 +158,14 @@ public class DescribeStorageResourceUsageResponseBody extends TeaModel {
         public static final class Builder {
             private String name; 
             private java.util.List<String> values; 
+
+            private Builder() {
+            } 
+
+            private Builder(AcuInfo model) {
+                this.name = model.name;
+                this.values = model.values;
+            } 
 
             /**
              * <p>The resource usage metric. Valid values:</p>
@@ -243,6 +264,16 @@ public class DescribeStorageResourceUsageResponseBody extends TeaModel {
             private String DBClusterId; 
             private String endTime; 
             private String startTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.acuInfo = model.acuInfo;
+                this.DBClusterId = model.DBClusterId;
+                this.endTime = model.endTime;
+                this.startTime = model.startTime;
+            } 
 
             /**
              * <p>The AnalyticDB compute unit (ACU) usage of the cluster.</p>

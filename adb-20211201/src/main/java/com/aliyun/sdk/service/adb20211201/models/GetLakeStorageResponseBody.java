@@ -52,6 +52,10 @@ public class GetLakeStorageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetLakeStorageResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetLakeStorageResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code or the error code.</p>
@@ -251,6 +267,16 @@ public class GetLakeStorageResponseBody extends TeaModel {
             private Boolean read; 
             private String type; 
             private Boolean write; 
+
+            private Builder() {
+            } 
+
+            private Builder(Permissions model) {
+                this.account = model.account;
+                this.read = model.read;
+                this.type = model.type;
+                this.write = model.write;
+            } 
 
             /**
              * <p>The account ID.</p>
@@ -492,6 +518,26 @@ public class GetLakeStorageResponseBody extends TeaModel {
             private Long rowCount; 
             private Integer tableCount; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.createTime = model.createTime;
+                this.creatorUid = model.creatorUid;
+                this.DBClusterId = model.DBClusterId;
+                this.description = model.description;
+                this.fileSize = model.fileSize;
+                this.lakeStorageId = model.lakeStorageId;
+                this.operatorUid = model.operatorUid;
+                this.ownerUid = model.ownerUid;
+                this.partitionCount = model.partitionCount;
+                this.permissions = model.permissions;
+                this.regionId = model.regionId;
+                this.rowCount = model.rowCount;
+                this.tableCount = model.tableCount;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The time when the lake storage was created.</p>

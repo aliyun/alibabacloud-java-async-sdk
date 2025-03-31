@@ -36,6 +36,10 @@ public class DownloadInstanceCACertificateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return downloadUrl
      */
@@ -53,6 +57,14 @@ public class DownloadInstanceCACertificateResponseBody extends TeaModel {
     public static final class Builder {
         private String downloadUrl; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DownloadInstanceCACertificateResponseBody model) {
+            this.downloadUrl = model.downloadUrl;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The OSS URL of the downloaded certificate.</p>

@@ -80,6 +80,10 @@ public class DescribeSparkAppDiagnosisInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -185,6 +189,25 @@ public class DescribeSparkAppDiagnosisInfoResponseBody extends TeaModel {
         private Long spillInByte; 
         private Long startedTime; 
         private String state; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSparkAppDiagnosisInfoResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.appId = model.appId;
+            this.cpuUtilization = model.cpuUtilization;
+            this.diagnosisInfoList = model.diagnosisInfoList;
+            this.durationInMillis = model.durationInMillis;
+            this.JVMGcCostInMillis = model.JVMGcCostInMillis;
+            this.peakMemoryInByte = model.peakMemoryInByte;
+            this.requestId = model.requestId;
+            this.shuffleReadInByte = model.shuffleReadInByte;
+            this.shuffleWriteInByte = model.shuffleWriteInByte;
+            this.spillInByte = model.spillInByte;
+            this.startedTime = model.startedTime;
+            this.state = model.state;
+        } 
 
         /**
          * <p>The information about the request denial.</p>

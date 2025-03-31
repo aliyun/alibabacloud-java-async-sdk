@@ -64,6 +64,10 @@ public class ListLakeStoragesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -138,8 +142,26 @@ public class ListLakeStoragesResponseBody extends TeaModel {
         private Boolean success; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListLakeStoragesResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.items = model.items;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * Code.
+         * <p>The HTTP status code or the error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -147,7 +169,10 @@ public class ListLakeStoragesResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The response code. The status code 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -155,7 +180,12 @@ public class ListLakeStoragesResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * <p>The queried lake storages.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -163,7 +193,14 @@ public class ListLakeStoragesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message. Valid values:</p>
+         * <ul>
+         * <li>If the request was successful, a success message is returned.****</li>
+         * <li>If the request failed, an error message is returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -171,7 +208,10 @@ public class ListLakeStoragesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The token that is used for paging when the number of results is greater than the value of MaxResults.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -179,7 +219,10 @@ public class ListLakeStoragesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -187,7 +230,10 @@ public class ListLakeStoragesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>-964D-</strong></strong>-9D31-****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -195,7 +241,14 @@ public class ListLakeStoragesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the dry run succeeds. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -203,7 +256,10 @@ public class ListLakeStoragesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -284,8 +340,18 @@ public class ListLakeStoragesResponseBody extends TeaModel {
             private String type; 
             private Boolean write; 
 
+            private Builder() {
+            } 
+
+            private Builder(Permissions model) {
+                this.account = model.account;
+                this.read = model.read;
+                this.type = model.type;
+                this.write = model.write;
+            } 
+
             /**
-             * <p>具有该权限的账户或RAM用户ID</p>
+             * <p>The database account ID.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -298,7 +364,7 @@ public class ListLakeStoragesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>表示是否允许读取湖存储的权限</p>
+             * <p>The read permissions.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -309,7 +375,7 @@ public class ListLakeStoragesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>指定权限的账户类型</p>
+             * <p>The type of the database account.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -322,7 +388,7 @@ public class ListLakeStoragesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>表示是否允许向湖存储写入数据的权限</p>
+             * <p>The write permissions.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -527,8 +593,28 @@ public class ListLakeStoragesResponseBody extends TeaModel {
             private String totalStorage; 
             private String updateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.createTime = model.createTime;
+                this.creatorUid = model.creatorUid;
+                this.DBClusterId = model.DBClusterId;
+                this.description = model.description;
+                this.fileSize = model.fileSize;
+                this.lakeStorageId = model.lakeStorageId;
+                this.operatorUid = model.operatorUid;
+                this.ownerUid = model.ownerUid;
+                this.permissions = model.permissions;
+                this.regionId = model.regionId;
+                this.tableCount = model.tableCount;
+                this.totalRows = model.totalRows;
+                this.totalStorage = model.totalStorage;
+                this.updateTime = model.updateTime;
+            } 
+
             /**
-             * <p>湖存储被创建的时间</p>
+             * <p>The time when the lake storage was created.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-04-01T09:50:18Z</p>
@@ -539,7 +625,7 @@ public class ListLakeStoragesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>创建湖存储的用户账号的唯一标识符</p>
+             * <p>The creator UID.</p>
              * 
              * <strong>example:</strong>
              * <p>123456</p>
@@ -550,7 +636,7 @@ public class ListLakeStoragesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>用于指定和挂载到特定ADB主实例的湖存储</p>
+             * <p>The ID of the AnalyticDB for MySQL cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>amv-*******</p>
@@ -561,7 +647,7 @@ public class ListLakeStoragesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>对湖存储的描述信息</p>
+             * <p>The description of the lake storage.</p>
              * 
              * <strong>example:</strong>
              * <p>Create a role to run ROS StackGroups.</p>
@@ -572,7 +658,10 @@ public class ListLakeStoragesResponseBody extends TeaModel {
             }
 
             /**
-             * FileSize.
+             * <p>The size of data files.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>651</p>
              */
             public Builder fileSize(String fileSize) {
                 this.fileSize = fileSize;
@@ -580,7 +669,7 @@ public class ListLakeStoragesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>用于识别特定湖存储的唯一标识符</p>
+             * <p>The unique identifier of the lake storage.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -593,7 +682,7 @@ public class ListLakeStoragesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>最后操作湖存储的用户账号的唯一标识符</p>
+             * <p>The operator UID.</p>
              * 
              * <strong>example:</strong>
              * <p>123456</p>
@@ -604,7 +693,7 @@ public class ListLakeStoragesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>拥有湖存储资源的用户账号的唯一标识符</p>
+             * <p>The queried lake storage.</p>
              * 
              * <strong>example:</strong>
              * <p>123456</p>
@@ -615,7 +704,7 @@ public class ListLakeStoragesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>设置湖存储的读/写权限和账户级别权限的数组</p>
+             * <p>The permissions on the lake storage.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -628,7 +717,7 @@ public class ListLakeStoragesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>指定要操作的湖存储所在区域的ID</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -639,7 +728,7 @@ public class ListLakeStoragesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>湖存储中库表的总数量</p>
+             * <p>The number of tables.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -650,7 +739,7 @@ public class ListLakeStoragesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>湖存储中所有库表的总数据行数</p>
+             * <p>The total number of entries returned.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -661,7 +750,7 @@ public class ListLakeStoragesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>湖存储中数据的总存储量</p>
+             * <p>The total storage size.</p>
              * 
              * <strong>example:</strong>
              * <p>111333</p>
@@ -672,7 +761,7 @@ public class ListLakeStoragesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>湖存储最后一次更新的时间</p>
+             * <p>The time when the lake storage was last updated.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-03-15T02:24:32</p>

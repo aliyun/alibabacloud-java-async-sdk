@@ -56,6 +56,10 @@ public class StatementInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -113,6 +117,19 @@ public class StatementInfo extends TeaModel {
         private Long startedTimeInMills; 
         private String state; 
         private String statementId; 
+
+        private Builder() {
+        } 
+
+        private Builder(StatementInfo model) {
+            this.code = model.code;
+            this.completedTimeInMills = model.completedTimeInMills;
+            this.output = model.output;
+            this.process = model.process;
+            this.startedTimeInMills = model.startedTimeInMills;
+            this.state = model.state;
+            this.statementId = model.statementId;
+        } 
 
         /**
          * Code.

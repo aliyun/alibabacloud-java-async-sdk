@@ -36,6 +36,10 @@ public class DeleteDBClusterResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBClusterId
      */
@@ -53,6 +57,14 @@ public class DeleteDBClusterResponseBody extends TeaModel {
     public static final class Builder {
         private String DBClusterId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteDBClusterResponseBody model) {
+            this.DBClusterId = model.DBClusterId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>

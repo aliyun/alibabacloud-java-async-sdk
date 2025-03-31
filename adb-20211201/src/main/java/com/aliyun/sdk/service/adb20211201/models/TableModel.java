@@ -220,6 +220,10 @@ public class TableModel extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return archiveType
      */
@@ -605,6 +609,60 @@ public class TableModel extends TeaModel {
         private String viewExpandedText; 
         private String viewOriginalText; 
         private String viewSecurityMode; 
+
+        private Builder() {
+        } 
+
+        private Builder(TableModel model) {
+            this.archiveType = model.archiveType;
+            this.blockSize = model.blockSize;
+            this.bucket = model.bucket;
+            this.bucketCount = model.bucketCount;
+            this.cols = model.cols;
+            this.comment = model.comment;
+            this.compression = model.compression;
+            this.createTime = model.createTime;
+            this.currentVersion = model.currentVersion;
+            this.dbName = model.dbName;
+            this.dictEncode = model.dictEncode;
+            this.distributeColumns = model.distributeColumns;
+            this.distributeType = model.distributeType;
+            this.enableDfs = model.enableDfs;
+            this.hotPartitionCount = model.hotPartitionCount;
+            this.indexes = model.indexes;
+            this.isAllIndex = model.isAllIndex;
+            this.isFulltextDict = model.isFulltextDict;
+            this.maxColumnId = model.maxColumnId;
+            this.parameters = model.parameters;
+            this.partitionColumn = model.partitionColumn;
+            this.partitionCount = model.partitionCount;
+            this.partitionKeys = model.partitionKeys;
+            this.partitionType = model.partitionType;
+            this.physicalDatabaseName = model.physicalDatabaseName;
+            this.physicalTableName = model.physicalTableName;
+            this.previousVersion = model.previousVersion;
+            this.rawTableName = model.rawTableName;
+            this.routeColumns = model.routeColumns;
+            this.routeEffectiveColumn = model.routeEffectiveColumn;
+            this.routeType = model.routeType;
+            this.rtEngineType = model.rtEngineType;
+            this.rtIndexAll = model.rtIndexAll;
+            this.rtModeType = model.rtModeType;
+            this.sd = model.sd;
+            this.storagePolicy = model.storagePolicy;
+            this.subpartitionColumn = model.subpartitionColumn;
+            this.subpartitionCount = model.subpartitionCount;
+            this.subpartitionType = model.subpartitionType;
+            this.tableEngineName = model.tableEngineName;
+            this.tableName = model.tableName;
+            this.tableType = model.tableType;
+            this.tblId = model.tblId;
+            this.temporary = model.temporary;
+            this.updateTime = model.updateTime;
+            this.viewExpandedText = model.viewExpandedText;
+            this.viewOriginalText = model.viewOriginalText;
+            this.viewSecurityMode = model.viewSecurityMode;
+        } 
 
         /**
          * ArchiveType.

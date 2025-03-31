@@ -36,6 +36,10 @@ public class ModifyAuditLogConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class ModifyAuditLogConfigResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Boolean updateSucceed; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyAuditLogConfigResponseBody model) {
+            this.requestId = model.requestId;
+            this.updateSucceed = model.updateSucceed;
+        } 
 
         /**
          * <p>The request ID.</p>

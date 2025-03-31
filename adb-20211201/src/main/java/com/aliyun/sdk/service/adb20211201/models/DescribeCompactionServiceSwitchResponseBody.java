@@ -36,6 +36,10 @@ public class DescribeCompactionServiceSwitchResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DescribeCompactionServiceSwitchResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCompactionServiceSwitchResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned data.</p>
@@ -110,6 +122,13 @@ public class DescribeCompactionServiceSwitchResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean enableCompactionService; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.enableCompactionService = model.enableCompactionService;
+            } 
 
             /**
              * <p>Indicates whether the remote build feature is enabled.</p>
