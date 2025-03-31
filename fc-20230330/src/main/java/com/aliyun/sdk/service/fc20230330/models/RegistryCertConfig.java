@@ -36,6 +36,10 @@ public class RegistryCertConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return insecure
      */
@@ -53,6 +57,14 @@ public class RegistryCertConfig extends TeaModel {
     public static final class Builder {
         private Boolean insecure; 
         private String rootCaCertBase64; 
+
+        private Builder() {
+        } 
+
+        private Builder(RegistryCertConfig model) {
+            this.insecure = model.insecure;
+            this.rootCaCertBase64 = model.rootCaCertBase64;
+        } 
 
         /**
          * insecure.

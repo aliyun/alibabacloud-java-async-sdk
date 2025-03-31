@@ -36,6 +36,10 @@ public class TracingConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return params
      */
@@ -53,6 +57,14 @@ public class TracingConfig extends TeaModel {
     public static final class Builder {
         private java.util.Map<String, String> params; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(TracingConfig model) {
+            this.params = model.params;
+            this.type = model.type;
+        } 
 
         /**
          * params.

@@ -74,6 +74,10 @@ public class Layer extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return acl
      */
@@ -163,6 +167,23 @@ public class Layer extends TeaModel {
         private String layerVersionArn; 
         private String license; 
         private Integer version; 
+
+        private Builder() {
+        } 
+
+        private Builder(Layer model) {
+            this.acl = model.acl;
+            this.code = model.code;
+            this.codeChecksum = model.codeChecksum;
+            this.codeSize = model.codeSize;
+            this.compatibleRuntime = model.compatibleRuntime;
+            this.createTime = model.createTime;
+            this.description = model.description;
+            this.layerName = model.layerName;
+            this.layerVersionArn = model.layerVersionArn;
+            this.license = model.license;
+            this.version = model.version;
+        } 
 
         /**
          * acl.

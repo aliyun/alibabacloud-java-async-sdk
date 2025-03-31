@@ -36,6 +36,10 @@ public class ListConcurrencyConfigsOutput extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return configs
      */
@@ -53,6 +57,14 @@ public class ListConcurrencyConfigsOutput extends TeaModel {
     public static final class Builder {
         private java.util.List<ConcurrencyConfig> configs; 
         private String nextToken; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListConcurrencyConfigsOutput model) {
+            this.configs = model.configs;
+            this.nextToken = model.nextToken;
+        } 
 
         /**
          * configs.

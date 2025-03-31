@@ -64,6 +64,10 @@ public class ProvisionConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return alwaysAllocateCPU
      */
@@ -137,6 +141,21 @@ public class ProvisionConfig extends TeaModel {
         private java.util.List<ScheduledAction> scheduledActions; 
         private Long target; 
         private java.util.List<TargetTrackingPolicy> targetTrackingPolicies; 
+
+        private Builder() {
+        } 
+
+        private Builder(ProvisionConfig model) {
+            this.alwaysAllocateCPU = model.alwaysAllocateCPU;
+            this.alwaysAllocateGPU = model.alwaysAllocateGPU;
+            this.current = model.current;
+            this.currentError = model.currentError;
+            this.defaultTarget = model.defaultTarget;
+            this.functionArn = model.functionArn;
+            this.scheduledActions = model.scheduledActions;
+            this.target = model.target;
+            this.targetTrackingPolicies = model.targetTrackingPolicies;
+        } 
 
         /**
          * alwaysAllocateCPU.

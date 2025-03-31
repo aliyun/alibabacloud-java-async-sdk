@@ -36,6 +36,10 @@ public class OutputCodeLocation extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return location
      */
@@ -53,6 +57,14 @@ public class OutputCodeLocation extends TeaModel {
     public static final class Builder {
         private String location; 
         private String repositoryType; 
+
+        private Builder() {
+        } 
+
+        private Builder(OutputCodeLocation model) {
+            this.location = model.location;
+            this.repositoryType = model.repositoryType;
+        } 
 
         /**
          * location.

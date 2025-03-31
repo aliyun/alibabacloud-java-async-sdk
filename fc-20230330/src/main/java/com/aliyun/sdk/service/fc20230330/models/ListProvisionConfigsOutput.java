@@ -36,6 +36,10 @@ public class ListProvisionConfigsOutput extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextToken
      */
@@ -53,6 +57,14 @@ public class ListProvisionConfigsOutput extends TeaModel {
     public static final class Builder {
         private String nextToken; 
         private java.util.List<ProvisionConfig> provisionConfigs; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListProvisionConfigsOutput model) {
+            this.nextToken = model.nextToken;
+            this.provisionConfigs = model.provisionConfigs;
+        } 
 
         /**
          * nextToken.

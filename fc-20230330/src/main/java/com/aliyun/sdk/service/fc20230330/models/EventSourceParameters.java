@@ -52,6 +52,10 @@ public class EventSourceParameters extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return sourceDTSParameters
      */
@@ -101,6 +105,18 @@ public class EventSourceParameters extends TeaModel {
         private SourceMQTTParameters sourceMQTTParameters; 
         private SourceRabbitMQParameters sourceRabbitMQParameters; 
         private SourceRocketMQParameters sourceRocketMQParameters; 
+
+        private Builder() {
+        } 
+
+        private Builder(EventSourceParameters model) {
+            this.sourceDTSParameters = model.sourceDTSParameters;
+            this.sourceKafkaParameters = model.sourceKafkaParameters;
+            this.sourceMNSParameters = model.sourceMNSParameters;
+            this.sourceMQTTParameters = model.sourceMQTTParameters;
+            this.sourceRabbitMQParameters = model.sourceRabbitMQParameters;
+            this.sourceRocketMQParameters = model.sourceRocketMQParameters;
+        } 
 
         /**
          * sourceDTSParameters.

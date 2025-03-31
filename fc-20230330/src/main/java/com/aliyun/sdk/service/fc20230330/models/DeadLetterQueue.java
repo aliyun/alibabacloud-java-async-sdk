@@ -32,6 +32,10 @@ public class DeadLetterQueue extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return arn
      */
@@ -41,6 +45,13 @@ public class DeadLetterQueue extends TeaModel {
 
     public static final class Builder {
         private String arn; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeadLetterQueue model) {
+            this.arn = model.arn;
+        } 
 
         /**
          * Arn.

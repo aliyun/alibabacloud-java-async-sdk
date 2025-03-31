@@ -36,6 +36,10 @@ public class ConcurrencyConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return functionArn
      */
@@ -53,6 +57,14 @@ public class ConcurrencyConfig extends TeaModel {
     public static final class Builder {
         private String functionArn; 
         private Long reservedConcurrency; 
+
+        private Builder() {
+        } 
+
+        private Builder(ConcurrencyConfig model) {
+            this.functionArn = model.functionArn;
+            this.reservedConcurrency = model.reservedConcurrency;
+        } 
 
         /**
          * functionArn.

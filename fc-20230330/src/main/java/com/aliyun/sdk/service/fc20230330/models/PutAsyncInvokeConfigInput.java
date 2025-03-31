@@ -44,6 +44,10 @@ public class PutAsyncInvokeConfigInput extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return asyncTask
      */
@@ -77,6 +81,16 @@ public class PutAsyncInvokeConfigInput extends TeaModel {
         private DestinationConfig destinationConfig; 
         private Long maxAsyncEventAgeInSeconds; 
         private Long maxAsyncRetryAttempts; 
+
+        private Builder() {
+        } 
+
+        private Builder(PutAsyncInvokeConfigInput model) {
+            this.asyncTask = model.asyncTask;
+            this.destinationConfig = model.destinationConfig;
+            this.maxAsyncEventAgeInSeconds = model.maxAsyncEventAgeInSeconds;
+            this.maxAsyncRetryAttempts = model.maxAsyncRetryAttempts;
+        } 
 
         /**
          * asyncTask.

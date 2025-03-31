@@ -36,6 +36,10 @@ public class HTTPTrigger extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return urlInternet
      */
@@ -53,6 +57,14 @@ public class HTTPTrigger extends TeaModel {
     public static final class Builder {
         private String urlInternet; 
         private String urlIntranet; 
+
+        private Builder() {
+        } 
+
+        private Builder(HTTPTrigger model) {
+            this.urlInternet = model.urlInternet;
+            this.urlIntranet = model.urlIntranet;
+        } 
 
         /**
          * urlInternet.

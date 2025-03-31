@@ -52,6 +52,10 @@ public class InstanceInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createdTimeMs
      */
@@ -101,6 +105,18 @@ public class InstanceInfo extends TeaModel {
         private String qualifier; 
         private String status; 
         private String versionId; 
+
+        private Builder() {
+        } 
+
+        private Builder(InstanceInfo model) {
+            this.createdTimeMs = model.createdTimeMs;
+            this.destroyedTimeMs = model.destroyedTimeMs;
+            this.instanceId = model.instanceId;
+            this.qualifier = model.qualifier;
+            this.status = model.status;
+            this.versionId = model.versionId;
+        } 
 
         /**
          * createdTimeMs.

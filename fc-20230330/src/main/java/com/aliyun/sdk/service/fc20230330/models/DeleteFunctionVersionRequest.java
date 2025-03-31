@@ -41,7 +41,7 @@ public class DeleteFunctionVersionRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -75,7 +75,7 @@ public class DeleteFunctionVersionRequest extends Request {
         } 
 
         /**
-         * <p>The function name.</p>
+         * <p>函数版本。</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,6 @@ public class DeleteFunctionVersionRequest extends Request {
         }
 
         /**
-         * <p>The function version.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

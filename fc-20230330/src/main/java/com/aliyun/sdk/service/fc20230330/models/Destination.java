@@ -33,6 +33,10 @@ public class Destination extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return destination
      */
@@ -42,6 +46,13 @@ public class Destination extends TeaModel {
 
     public static final class Builder {
         private String destination; 
+
+        private Builder() {
+        } 
+
+        private Builder(Destination model) {
+            this.destination = model.destination;
+        } 
 
         /**
          * destination.

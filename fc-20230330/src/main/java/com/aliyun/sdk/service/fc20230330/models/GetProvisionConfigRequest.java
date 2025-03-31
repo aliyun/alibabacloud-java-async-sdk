@@ -40,7 +40,7 @@ public class GetProvisionConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -87,7 +87,7 @@ public class GetProvisionConfigRequest extends Request {
         }
 
         /**
-         * <p>The function alias or LATEST.</p>
+         * <p>The function alias.</p>
          * 
          * <strong>example:</strong>
          * <p>LATEST</p>

@@ -54,6 +54,10 @@ public class PutProvisionConfigInput extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return alwaysAllocateCPU
      */
@@ -103,6 +107,18 @@ public class PutProvisionConfigInput extends TeaModel {
         private java.util.List<ScheduledAction> scheduledActions; 
         private Long target; 
         private java.util.List<TargetTrackingPolicy> targetTrackingPolicies; 
+
+        private Builder() {
+        } 
+
+        private Builder(PutProvisionConfigInput model) {
+            this.alwaysAllocateCPU = model.alwaysAllocateCPU;
+            this.alwaysAllocateGPU = model.alwaysAllocateGPU;
+            this.defaultTarget = model.defaultTarget;
+            this.scheduledActions = model.scheduledActions;
+            this.target = model.target;
+            this.targetTrackingPolicies = model.targetTrackingPolicies;
+        } 
 
         /**
          * alwaysAllocateCPU.

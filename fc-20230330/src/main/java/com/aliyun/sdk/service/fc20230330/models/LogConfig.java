@@ -50,6 +50,10 @@ public class LogConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return enableInstanceMetrics
      */
@@ -91,6 +95,17 @@ public class LogConfig extends TeaModel {
         private String logBeginRule; 
         private String logstore; 
         private String project; 
+
+        private Builder() {
+        } 
+
+        private Builder(LogConfig model) {
+            this.enableInstanceMetrics = model.enableInstanceMetrics;
+            this.enableRequestMetrics = model.enableRequestMetrics;
+            this.logBeginRule = model.logBeginRule;
+            this.logstore = model.logstore;
+            this.project = model.project;
+        } 
 
         /**
          * enableInstanceMetrics.

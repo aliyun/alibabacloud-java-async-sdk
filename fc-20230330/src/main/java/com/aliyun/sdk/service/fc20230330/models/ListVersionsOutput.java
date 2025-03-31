@@ -40,6 +40,10 @@ public class ListVersionsOutput extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return direction
      */
@@ -65,6 +69,15 @@ public class ListVersionsOutput extends TeaModel {
         private String direction; 
         private String nextToken; 
         private java.util.List<Version> versions; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListVersionsOutput model) {
+            this.direction = model.direction;
+            this.nextToken = model.nextToken;
+            this.versions = model.versions;
+        } 
 
         /**
          * direction.

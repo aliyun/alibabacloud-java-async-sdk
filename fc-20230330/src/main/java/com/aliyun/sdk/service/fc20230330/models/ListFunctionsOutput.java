@@ -36,6 +36,10 @@ public class ListFunctionsOutput extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return functions
      */
@@ -53,6 +57,14 @@ public class ListFunctionsOutput extends TeaModel {
     public static final class Builder {
         private java.util.List<Function> functions; 
         private String nextToken; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListFunctionsOutput model) {
+            this.functions = model.functions;
+            this.nextToken = model.nextToken;
+        } 
 
         /**
          * functions.

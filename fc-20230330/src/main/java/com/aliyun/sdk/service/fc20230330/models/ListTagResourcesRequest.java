@@ -55,7 +55,7 @@ public class ListTagResourcesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -150,7 +150,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The resource type.</p>
+         * <p>The type of the resource.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -223,6 +223,14 @@ public class ListTagResourcesRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>

@@ -48,6 +48,10 @@ public class SLSTriggerConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return enable
      */
@@ -89,6 +93,17 @@ public class SLSTriggerConfig extends TeaModel {
         private JobConfig jobConfig; 
         private SLSTriggerLogConfig logConfig; 
         private SourceConfig sourceConfig; 
+
+        private Builder() {
+        } 
+
+        private Builder(SLSTriggerConfig model) {
+            this.enable = model.enable;
+            this.functionParameter = model.functionParameter;
+            this.jobConfig = model.jobConfig;
+            this.logConfig = model.logConfig;
+            this.sourceConfig = model.sourceConfig;
+        } 
 
         /**
          * enable.

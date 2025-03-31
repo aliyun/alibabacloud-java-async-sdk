@@ -40,6 +40,10 @@ public class GetResourceTagsOutput extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return resouceType
      */
@@ -65,6 +69,15 @@ public class GetResourceTagsOutput extends TeaModel {
         private String resouceType; 
         private String resourceArn; 
         private java.util.Map<String, String> tags; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetResourceTagsOutput model) {
+            this.resouceType = model.resouceType;
+            this.resourceArn = model.resourceArn;
+            this.tags = model.tags;
+        } 
 
         /**
          * resouceType.

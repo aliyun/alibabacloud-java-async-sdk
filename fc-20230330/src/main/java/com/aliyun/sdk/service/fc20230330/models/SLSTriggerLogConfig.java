@@ -36,6 +36,10 @@ public class SLSTriggerLogConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return logstore
      */
@@ -53,6 +57,14 @@ public class SLSTriggerLogConfig extends TeaModel {
     public static final class Builder {
         private String logstore; 
         private String project; 
+
+        private Builder() {
+        } 
+
+        private Builder(SLSTriggerLogConfig model) {
+            this.logstore = model.logstore;
+            this.project = model.project;
+        } 
 
         /**
          * logstore.

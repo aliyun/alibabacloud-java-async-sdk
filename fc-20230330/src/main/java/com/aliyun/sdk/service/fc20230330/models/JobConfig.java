@@ -36,6 +36,10 @@ public class JobConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxRetryTime
      */
@@ -53,6 +57,14 @@ public class JobConfig extends TeaModel {
     public static final class Builder {
         private Integer maxRetryTime; 
         private Integer triggerInterval; 
+
+        private Builder() {
+        } 
+
+        private Builder(JobConfig model) {
+            this.maxRetryTime = model.maxRetryTime;
+            this.triggerInterval = model.triggerInterval;
+        } 
 
         /**
          * maxRetryTime.

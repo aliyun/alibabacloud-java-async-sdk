@@ -44,6 +44,10 @@ public class CDNTriggerConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return eventName
      */
@@ -77,6 +81,16 @@ public class CDNTriggerConfig extends TeaModel {
         private String eventVersion; 
         private java.util.Map<String, java.util.List<String>> filter; 
         private String notes; 
+
+        private Builder() {
+        } 
+
+        private Builder(CDNTriggerConfig model) {
+            this.eventName = model.eventName;
+            this.eventVersion = model.eventVersion;
+            this.filter = model.filter;
+            this.notes = model.notes;
+        } 
 
         /**
          * eventName.

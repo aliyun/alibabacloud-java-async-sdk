@@ -62,6 +62,10 @@ public class CreateTriggerInput extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return description
      */
@@ -119,6 +123,19 @@ public class CreateTriggerInput extends TeaModel {
         private String triggerConfig; 
         private String triggerName; 
         private String triggerType; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateTriggerInput model) {
+            this.description = model.description;
+            this.invocationRole = model.invocationRole;
+            this.qualifier = model.qualifier;
+            this.sourceArn = model.sourceArn;
+            this.triggerConfig = model.triggerConfig;
+            this.triggerName = model.triggerName;
+            this.triggerType = model.triggerType;
+        } 
 
         /**
          * description.

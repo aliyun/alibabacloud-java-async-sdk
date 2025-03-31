@@ -36,6 +36,10 @@ public class ListAliasesOutput extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return aliases
      */
@@ -53,6 +57,14 @@ public class ListAliasesOutput extends TeaModel {
     public static final class Builder {
         private java.util.List<Alias> aliases; 
         private String nextToken; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAliasesOutput model) {
+            this.aliases = model.aliases;
+            this.nextToken = model.nextToken;
+        } 
 
         /**
          * aliases.

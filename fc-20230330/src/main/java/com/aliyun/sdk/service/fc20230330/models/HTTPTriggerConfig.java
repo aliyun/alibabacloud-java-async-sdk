@@ -44,6 +44,10 @@ public class HTTPTriggerConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return authConfig
      */
@@ -77,6 +81,16 @@ public class HTTPTriggerConfig extends TeaModel {
         private String authType; 
         private Boolean disableURLInternet; 
         private java.util.List<String> methods; 
+
+        private Builder() {
+        } 
+
+        private Builder(HTTPTriggerConfig model) {
+            this.authConfig = model.authConfig;
+            this.authType = model.authType;
+            this.disableURLInternet = model.disableURLInternet;
+            this.methods = model.methods;
+        } 
 
         /**
          * authConfig.

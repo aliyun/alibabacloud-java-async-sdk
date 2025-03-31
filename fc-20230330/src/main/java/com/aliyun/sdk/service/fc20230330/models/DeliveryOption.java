@@ -36,6 +36,10 @@ public class DeliveryOption extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return concurrency
      */
@@ -53,6 +57,14 @@ public class DeliveryOption extends TeaModel {
     public static final class Builder {
         private Long concurrency; 
         private String eventSchema; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeliveryOption model) {
+            this.concurrency = model.concurrency;
+            this.eventSchema = model.eventSchema;
+        } 
 
         /**
          * concurrency.

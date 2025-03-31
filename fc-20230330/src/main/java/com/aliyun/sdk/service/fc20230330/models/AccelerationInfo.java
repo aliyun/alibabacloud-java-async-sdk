@@ -32,6 +32,10 @@ public class AccelerationInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return status
      */
@@ -41,6 +45,13 @@ public class AccelerationInfo extends TeaModel {
 
     public static final class Builder {
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(AccelerationInfo model) {
+            this.status = model.status;
+        } 
 
         /**
          * status.

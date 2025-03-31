@@ -40,6 +40,10 @@ public class RewriteConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return equalRules
      */
@@ -65,6 +69,15 @@ public class RewriteConfig extends TeaModel {
         private java.util.List<EqualRule> equalRules; 
         private java.util.List<RegexRule> regexRules; 
         private java.util.List<WildcardRule> wildcardRules; 
+
+        private Builder() {
+        } 
+
+        private Builder(RewriteConfig model) {
+            this.equalRules = model.equalRules;
+            this.regexRules = model.regexRules;
+            this.wildcardRules = model.wildcardRules;
+        } 
 
         /**
          * equalRules.

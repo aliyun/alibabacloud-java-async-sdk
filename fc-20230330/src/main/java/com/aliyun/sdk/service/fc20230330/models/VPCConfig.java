@@ -46,6 +46,10 @@ public class VPCConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return role
      */
@@ -79,6 +83,16 @@ public class VPCConfig extends TeaModel {
         private String securityGroupId; 
         private java.util.List<String> vSwitchIds; 
         private String vpcId; 
+
+        private Builder() {
+        } 
+
+        private Builder(VPCConfig model) {
+            this.role = model.role;
+            this.securityGroupId = model.securityGroupId;
+            this.vSwitchIds = model.vSwitchIds;
+            this.vpcId = model.vpcId;
+        } 
 
         /**
          * role.

@@ -36,6 +36,10 @@ public class InstanceLifecycleConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return initializer
      */
@@ -53,6 +57,14 @@ public class InstanceLifecycleConfig extends TeaModel {
     public static final class Builder {
         private LifecycleHook initializer; 
         private LifecycleHook preStop; 
+
+        private Builder() {
+        } 
+
+        private Builder(InstanceLifecycleConfig model) {
+            this.initializer = model.initializer;
+            this.preStop = model.preStop;
+        } 
 
         /**
          * initializer.

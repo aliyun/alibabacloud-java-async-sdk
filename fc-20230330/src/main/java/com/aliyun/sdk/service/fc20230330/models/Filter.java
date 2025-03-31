@@ -32,6 +32,10 @@ public class Filter extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return key
      */
@@ -41,6 +45,13 @@ public class Filter extends TeaModel {
 
     public static final class Builder {
         private Key key; 
+
+        private Builder() {
+        } 
+
+        private Builder(Filter model) {
+            this.key = model.key;
+        } 
 
         /**
          * key.

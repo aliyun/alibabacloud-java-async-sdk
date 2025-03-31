@@ -42,6 +42,10 @@ public class UpdateAliasInput extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return additionalVersionWeight
      */
@@ -67,6 +71,15 @@ public class UpdateAliasInput extends TeaModel {
         private java.util.Map<String, Float> additionalVersionWeight; 
         private String description; 
         private String versionId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateAliasInput model) {
+            this.additionalVersionWeight = model.additionalVersionWeight;
+            this.description = model.description;
+            this.versionId = model.versionId;
+        } 
 
         /**
          * additionalVersionWeight.

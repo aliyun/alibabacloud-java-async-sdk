@@ -40,6 +40,10 @@ public class MNSTopicTriggerConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return filterTag
      */
@@ -65,6 +69,15 @@ public class MNSTopicTriggerConfig extends TeaModel {
         private String filterTag; 
         private String notifyContentFormat; 
         private String notifyStrategy; 
+
+        private Builder() {
+        } 
+
+        private Builder(MNSTopicTriggerConfig model) {
+            this.filterTag = model.filterTag;
+            this.notifyContentFormat = model.notifyContentFormat;
+            this.notifyStrategy = model.notifyStrategy;
+        } 
 
         /**
          * filterTag.

@@ -36,6 +36,10 @@ public class ListTriggersOutput extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextToken
      */
@@ -53,6 +57,14 @@ public class ListTriggersOutput extends TeaModel {
     public static final class Builder {
         private String nextToken; 
         private java.util.List<Trigger> triggers; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTriggersOutput model) {
+            this.nextToken = model.nextToken;
+            this.triggers = model.triggers;
+        } 
 
         /**
          * nextToken.

@@ -50,6 +50,10 @@ public class PathConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return functionName
      */
@@ -91,6 +95,17 @@ public class PathConfig extends TeaModel {
         private String path; 
         private String qualifier; 
         private RewriteConfig rewriteConfig; 
+
+        private Builder() {
+        } 
+
+        private Builder(PathConfig model) {
+            this.functionName = model.functionName;
+            this.methods = model.methods;
+            this.path = model.path;
+            this.qualifier = model.qualifier;
+            this.rewriteConfig = model.rewriteConfig;
+        } 
 
         /**
          * <p>This parameter is required.</p>

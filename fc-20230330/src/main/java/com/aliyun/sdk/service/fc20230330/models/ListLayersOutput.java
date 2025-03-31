@@ -36,6 +36,10 @@ public class ListLayersOutput extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return layers
      */
@@ -53,6 +57,14 @@ public class ListLayersOutput extends TeaModel {
     public static final class Builder {
         private java.util.List<Layer> layers; 
         private String nextToken; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListLayersOutput model) {
+            this.layers = model.layers;
+            this.nextToken = model.nextToken;
+        } 
 
         /**
          * layers.

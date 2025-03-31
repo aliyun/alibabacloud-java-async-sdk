@@ -47,6 +47,10 @@ public class CreateAliasInput extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return additionalVersionWeight
      */
@@ -80,6 +84,16 @@ public class CreateAliasInput extends TeaModel {
         private String aliasName; 
         private String description; 
         private String versionId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateAliasInput model) {
+            this.additionalVersionWeight = model.additionalVersionWeight;
+            this.aliasName = model.aliasName;
+            this.description = model.description;
+            this.versionId = model.versionId;
+        } 
 
         /**
          * additionalVersionWeight.

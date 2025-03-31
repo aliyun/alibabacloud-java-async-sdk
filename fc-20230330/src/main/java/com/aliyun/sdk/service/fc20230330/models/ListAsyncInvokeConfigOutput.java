@@ -36,6 +36,10 @@ public class ListAsyncInvokeConfigOutput extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return configs
      */
@@ -53,6 +57,14 @@ public class ListAsyncInvokeConfigOutput extends TeaModel {
     public static final class Builder {
         private java.util.List<AsyncConfig> configs; 
         private String nextToken; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAsyncInvokeConfigOutput model) {
+            this.configs = model.configs;
+            this.nextToken = model.nextToken;
+        } 
 
         /**
          * configs.

@@ -36,6 +36,10 @@ public class ListAsyncTaskOutput extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextToken
      */
@@ -53,6 +57,14 @@ public class ListAsyncTaskOutput extends TeaModel {
     public static final class Builder {
         private String nextToken; 
         private java.util.List<AsyncTask> tasks; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAsyncTaskOutput model) {
+            this.nextToken = model.nextToken;
+            this.tasks = model.tasks;
+        } 
 
         /**
          * nextToken.

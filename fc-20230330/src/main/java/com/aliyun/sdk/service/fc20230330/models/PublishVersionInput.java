@@ -33,6 +33,10 @@ public class PublishVersionInput extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return description
      */
@@ -42,6 +46,13 @@ public class PublishVersionInput extends TeaModel {
 
     public static final class Builder {
         private String description; 
+
+        private Builder() {
+        } 
+
+        private Builder(PublishVersionInput model) {
+            this.description = model.description;
+        } 
 
         /**
          * description.

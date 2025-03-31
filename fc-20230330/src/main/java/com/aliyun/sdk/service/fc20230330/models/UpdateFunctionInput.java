@@ -36,6 +36,9 @@ public class UpdateFunctionInput extends TeaModel {
     @com.aliyun.core.annotation.Validation(maxLength = 256)
     private String description;
 
+    @com.aliyun.core.annotation.NameInMap("disableOndemand")
+    private Boolean disableOndemand;
+
     @com.aliyun.core.annotation.NameInMap("diskSize")
     private Integer diskSize;
 
@@ -96,6 +99,7 @@ public class UpdateFunctionInput extends TeaModel {
         this.customDNS = builder.customDNS;
         this.customRuntimeConfig = builder.customRuntimeConfig;
         this.description = builder.description;
+        this.disableOndemand = builder.disableOndemand;
         this.diskSize = builder.diskSize;
         this.environmentVariables = builder.environmentVariables;
         this.gpuConfig = builder.gpuConfig;
@@ -121,6 +125,10 @@ public class UpdateFunctionInput extends TeaModel {
 
     public static UpdateFunctionInput create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -163,6 +171,13 @@ public class UpdateFunctionInput extends TeaModel {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return disableOndemand
+     */
+    public Boolean getDisableOndemand() {
+        return this.disableOndemand;
     }
 
     /**
@@ -291,6 +306,7 @@ public class UpdateFunctionInput extends TeaModel {
         private CustomDNS customDNS; 
         private CustomRuntimeConfig customRuntimeConfig; 
         private String description; 
+        private Boolean disableOndemand; 
         private Integer diskSize; 
         private java.util.Map<String, String> environmentVariables; 
         private GPUConfig gpuConfig; 
@@ -308,6 +324,36 @@ public class UpdateFunctionInput extends TeaModel {
         private Integer timeout; 
         private TracingConfig tracingConfig; 
         private VPCConfig vpcConfig; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateFunctionInput model) {
+            this.code = model.code;
+            this.cpu = model.cpu;
+            this.customContainerConfig = model.customContainerConfig;
+            this.customDNS = model.customDNS;
+            this.customRuntimeConfig = model.customRuntimeConfig;
+            this.description = model.description;
+            this.disableOndemand = model.disableOndemand;
+            this.diskSize = model.diskSize;
+            this.environmentVariables = model.environmentVariables;
+            this.gpuConfig = model.gpuConfig;
+            this.handler = model.handler;
+            this.instanceConcurrency = model.instanceConcurrency;
+            this.instanceLifecycleConfig = model.instanceLifecycleConfig;
+            this.internetAccess = model.internetAccess;
+            this.layers = model.layers;
+            this.logConfig = model.logConfig;
+            this.memorySize = model.memorySize;
+            this.nasConfig = model.nasConfig;
+            this.ossMountConfig = model.ossMountConfig;
+            this.role = model.role;
+            this.runtime = model.runtime;
+            this.timeout = model.timeout;
+            this.tracingConfig = model.tracingConfig;
+            this.vpcConfig = model.vpcConfig;
+        } 
 
         /**
          * code.
@@ -354,6 +400,14 @@ public class UpdateFunctionInput extends TeaModel {
          */
         public Builder description(String description) {
             this.description = description;
+            return this;
+        }
+
+        /**
+         * disableOndemand.
+         */
+        public Builder disableOndemand(Boolean disableOndemand) {
+            this.disableOndemand = disableOndemand;
             return this;
         }
 

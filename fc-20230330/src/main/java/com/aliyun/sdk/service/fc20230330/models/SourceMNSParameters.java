@@ -40,6 +40,10 @@ public class SourceMNSParameters extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return isBase64Decode
      */
@@ -65,6 +69,15 @@ public class SourceMNSParameters extends TeaModel {
         private Boolean isBase64Decode; 
         private String queueName; 
         private String regionId; 
+
+        private Builder() {
+        } 
+
+        private Builder(SourceMNSParameters model) {
+            this.isBase64Decode = model.isBase64Decode;
+            this.queueName = model.queueName;
+            this.regionId = model.regionId;
+        } 
 
         /**
          * IsBase64Decode.

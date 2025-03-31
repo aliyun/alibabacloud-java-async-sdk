@@ -48,6 +48,10 @@ public class InstanceEventItem extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return children
      */
@@ -89,6 +93,17 @@ public class InstanceEventItem extends TeaModel {
         private String message; 
         private String time; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(InstanceEventItem model) {
+            this.children = model.children;
+            this.level = model.level;
+            this.message = model.message;
+            this.time = model.time;
+            this.type = model.type;
+        } 
 
         /**
          * children.

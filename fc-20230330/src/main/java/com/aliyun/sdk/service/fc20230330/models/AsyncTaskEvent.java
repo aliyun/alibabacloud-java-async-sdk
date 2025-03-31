@@ -44,6 +44,10 @@ public class AsyncTaskEvent extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return eventDetail
      */
@@ -77,6 +81,16 @@ public class AsyncTaskEvent extends TeaModel {
         private Long eventId; 
         private String status; 
         private Long timestamp; 
+
+        private Builder() {
+        } 
+
+        private Builder(AsyncTaskEvent model) {
+            this.eventDetail = model.eventDetail;
+            this.eventId = model.eventId;
+            this.status = model.status;
+            this.timestamp = model.timestamp;
+        } 
 
         /**
          * eventDetail.

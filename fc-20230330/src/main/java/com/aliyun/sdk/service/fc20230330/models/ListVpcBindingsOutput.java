@@ -32,6 +32,10 @@ public class ListVpcBindingsOutput extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return vpcIds
      */
@@ -41,6 +45,13 @@ public class ListVpcBindingsOutput extends TeaModel {
 
     public static final class Builder {
         private java.util.List<String> vpcIds; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListVpcBindingsOutput model) {
+            this.vpcIds = model.vpcIds;
+        } 
 
         /**
          * vpcIds.

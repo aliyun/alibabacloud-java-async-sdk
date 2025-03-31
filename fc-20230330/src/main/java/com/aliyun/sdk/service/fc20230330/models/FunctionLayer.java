@@ -36,6 +36,10 @@ public class FunctionLayer extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return arn
      */
@@ -53,6 +57,14 @@ public class FunctionLayer extends TeaModel {
     public static final class Builder {
         private String arn; 
         private Long size; 
+
+        private Builder() {
+        } 
+
+        private Builder(FunctionLayer model) {
+            this.arn = model.arn;
+            this.size = model.size;
+        } 
 
         /**
          * arn.

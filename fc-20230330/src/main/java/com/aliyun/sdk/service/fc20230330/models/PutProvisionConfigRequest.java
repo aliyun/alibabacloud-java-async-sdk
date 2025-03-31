@@ -46,7 +46,7 @@ public class PutProvisionConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -102,7 +102,7 @@ public class PutProvisionConfigRequest extends Request {
         }
 
         /**
-         * <p>The provisioned instance configurations.</p>
+         * <p>The provisioned configuration information.</p>
          * <p>This parameter is required.</p>
          */
         public Builder body(PutProvisionConfigInput body) {
@@ -112,7 +112,7 @@ public class PutProvisionConfigRequest extends Request {
         }
 
         /**
-         * <p>The function alias or LATEST.</p>
+         * <p>The function alias.</p>
          * 
          * <strong>example:</strong>
          * <p>LATEST</p>

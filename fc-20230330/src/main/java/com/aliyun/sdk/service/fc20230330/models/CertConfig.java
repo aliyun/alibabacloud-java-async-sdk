@@ -43,6 +43,10 @@ public class CertConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return certName
      */
@@ -68,6 +72,15 @@ public class CertConfig extends TeaModel {
         private String certName; 
         private String certificate; 
         private String privateKey; 
+
+        private Builder() {
+        } 
+
+        private Builder(CertConfig model) {
+            this.certName = model.certName;
+            this.certificate = model.certificate;
+            this.privateKey = model.privateKey;
+        } 
 
         /**
          * <p>This parameter is required.</p>

@@ -32,6 +32,10 @@ public class EventSinkConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return deliveryOption
      */
@@ -41,6 +45,13 @@ public class EventSinkConfig extends TeaModel {
 
     public static final class Builder {
         private DeliveryOption deliveryOption; 
+
+        private Builder() {
+        } 
+
+        private Builder(EventSinkConfig model) {
+            this.deliveryOption = model.deliveryOption;
+        } 
 
         /**
          * deliveryOption.

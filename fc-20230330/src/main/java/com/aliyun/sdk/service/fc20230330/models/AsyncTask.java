@@ -88,6 +88,10 @@ public class AsyncTask extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return alreadyRetriedTimes
      */
@@ -209,6 +213,27 @@ public class AsyncTask extends TeaModel {
         private String taskErrorMessage; 
         private String taskId; 
         private String taskPayload; 
+
+        private Builder() {
+        } 
+
+        private Builder(AsyncTask model) {
+            this.alreadyRetriedTimes = model.alreadyRetriedTimes;
+            this.destinationStatus = model.destinationStatus;
+            this.durationMs = model.durationMs;
+            this.endTime = model.endTime;
+            this.events = model.events;
+            this.functionArn = model.functionArn;
+            this.instanceId = model.instanceId;
+            this.qualifier = model.qualifier;
+            this.requestId = model.requestId;
+            this.returnPayload = model.returnPayload;
+            this.startedTime = model.startedTime;
+            this.status = model.status;
+            this.taskErrorMessage = model.taskErrorMessage;
+            this.taskId = model.taskId;
+            this.taskPayload = model.taskPayload;
+        } 
 
         /**
          * alreadyRetriedTimes.

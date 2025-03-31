@@ -36,6 +36,10 @@ public class ListInstancesOutput extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instances
      */
@@ -53,6 +57,14 @@ public class ListInstancesOutput extends TeaModel {
     public static final class Builder {
         private java.util.List<InstanceInfo> instances; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListInstancesOutput model) {
+            this.instances = model.instances;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * instances.

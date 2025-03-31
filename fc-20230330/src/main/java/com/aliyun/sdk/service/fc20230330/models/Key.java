@@ -36,6 +36,10 @@ public class Key extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return prefix
      */
@@ -53,6 +57,14 @@ public class Key extends TeaModel {
     public static final class Builder {
         private String prefix; 
         private String suffix; 
+
+        private Builder() {
+        } 
+
+        private Builder(Key model) {
+            this.prefix = model.prefix;
+            this.suffix = model.suffix;
+        } 
 
         /**
          * prefix.

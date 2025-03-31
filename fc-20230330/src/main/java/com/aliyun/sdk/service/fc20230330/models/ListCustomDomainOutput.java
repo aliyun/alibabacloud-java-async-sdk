@@ -36,6 +36,10 @@ public class ListCustomDomainOutput extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return customDomains
      */
@@ -53,6 +57,14 @@ public class ListCustomDomainOutput extends TeaModel {
     public static final class Builder {
         private java.util.List<CustomDomain> customDomains; 
         private String nextToken; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListCustomDomainOutput model) {
+            this.customDomains = model.customDomains;
+            this.nextToken = model.nextToken;
+        } 
 
         /**
          * customDomains.

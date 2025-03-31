@@ -36,6 +36,10 @@ public class SourceConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return logstore
      */
@@ -53,6 +57,14 @@ public class SourceConfig extends TeaModel {
     public static final class Builder {
         private String logstore; 
         private Long startTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(SourceConfig model) {
+            this.logstore = model.logstore;
+            this.startTime = model.startTime;
+        } 
 
         /**
          * logstore.

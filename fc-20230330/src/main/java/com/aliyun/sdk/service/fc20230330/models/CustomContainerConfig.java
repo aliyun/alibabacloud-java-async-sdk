@@ -68,6 +68,10 @@ public class CustomContainerConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accelerationInfo
      */
@@ -149,6 +153,22 @@ public class CustomContainerConfig extends TeaModel {
         private Integer port; 
         private RegistryConfig registryConfig; 
         private String resolvedImageUri; 
+
+        private Builder() {
+        } 
+
+        private Builder(CustomContainerConfig model) {
+            this.accelerationInfo = model.accelerationInfo;
+            this.accelerationType = model.accelerationType;
+            this.acrInstanceId = model.acrInstanceId;
+            this.command = model.command;
+            this.entrypoint = model.entrypoint;
+            this.healthCheckConfig = model.healthCheckConfig;
+            this.image = model.image;
+            this.port = model.port;
+            this.registryConfig = model.registryConfig;
+            this.resolvedImageUri = model.resolvedImageUri;
+        } 
 
         /**
          * accelerationInfo.

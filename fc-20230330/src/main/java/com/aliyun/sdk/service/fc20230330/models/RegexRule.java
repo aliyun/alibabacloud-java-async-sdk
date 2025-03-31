@@ -38,6 +38,10 @@ public class RegexRule extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return match
      */
@@ -55,6 +59,14 @@ public class RegexRule extends TeaModel {
     public static final class Builder {
         private String match; 
         private String replacement; 
+
+        private Builder() {
+        } 
+
+        private Builder(RegexRule model) {
+            this.match = model.match;
+            this.replacement = model.replacement;
+        } 
 
         /**
          * <p>This parameter is required.</p>

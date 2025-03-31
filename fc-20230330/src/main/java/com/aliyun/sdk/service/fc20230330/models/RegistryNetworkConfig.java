@@ -40,6 +40,10 @@ public class RegistryNetworkConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return securityGroupId
      */
@@ -65,6 +69,15 @@ public class RegistryNetworkConfig extends TeaModel {
         private String securityGroupId; 
         private String vSwitchId; 
         private String vpcId; 
+
+        private Builder() {
+        } 
+
+        private Builder(RegistryNetworkConfig model) {
+            this.securityGroupId = model.securityGroupId;
+            this.vSwitchId = model.vSwitchId;
+            this.vpcId = model.vpcId;
+        } 
 
         /**
          * securityGroupId.

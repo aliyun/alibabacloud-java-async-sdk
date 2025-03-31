@@ -40,6 +40,10 @@ public class ListTagResourcesOutput extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextToken
      */
@@ -65,6 +69,15 @@ public class ListTagResourcesOutput extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private java.util.List<TagResource> tagResources; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTagResourcesOutput model) {
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.tagResources = model.tagResources;
+        } 
 
         /**
          * NextToken.

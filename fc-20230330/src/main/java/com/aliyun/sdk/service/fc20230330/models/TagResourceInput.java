@@ -38,6 +38,10 @@ public class TagResourceInput extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return resourceArn
      */
@@ -55,6 +59,14 @@ public class TagResourceInput extends TeaModel {
     public static final class Builder {
         private String resourceArn; 
         private java.util.Map<String, String> tags; 
+
+        private Builder() {
+        } 
+
+        private Builder(TagResourceInput model) {
+            this.resourceArn = model.resourceArn;
+            this.tags = model.tags;
+        } 
 
         /**
          * <p>This parameter is required.</p>

@@ -40,6 +40,10 @@ public class RegistryConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return authConfig
      */
@@ -65,6 +69,15 @@ public class RegistryConfig extends TeaModel {
         private RegistryAuthConfig authConfig; 
         private RegistryCertConfig certConfig; 
         private RegistryNetworkConfig networkConfig; 
+
+        private Builder() {
+        } 
+
+        private Builder(RegistryConfig model) {
+            this.authConfig = model.authConfig;
+            this.certConfig = model.certConfig;
+            this.networkConfig = model.networkConfig;
+        } 
 
         /**
          * authConfig.

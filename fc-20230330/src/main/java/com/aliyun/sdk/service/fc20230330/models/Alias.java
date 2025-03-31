@@ -52,6 +52,10 @@ public class Alias extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return additionalVersionWeight
      */
@@ -101,6 +105,18 @@ public class Alias extends TeaModel {
         private String description; 
         private String lastModifiedTime; 
         private String versionId; 
+
+        private Builder() {
+        } 
+
+        private Builder(Alias model) {
+            this.additionalVersionWeight = model.additionalVersionWeight;
+            this.aliasName = model.aliasName;
+            this.createdTime = model.createdTime;
+            this.description = model.description;
+            this.lastModifiedTime = model.lastModifiedTime;
+            this.versionId = model.versionId;
+        } 
 
         /**
          * additionalVersionWeight.

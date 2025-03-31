@@ -44,6 +44,10 @@ public class SourceRabbitMQParameters extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceId
      */
@@ -77,6 +81,16 @@ public class SourceRabbitMQParameters extends TeaModel {
         private String queueName; 
         private String regionId; 
         private String virtualHostName; 
+
+        private Builder() {
+        } 
+
+        private Builder(SourceRabbitMQParameters model) {
+            this.instanceId = model.instanceId;
+            this.queueName = model.queueName;
+            this.regionId = model.regionId;
+            this.virtualHostName = model.virtualHostName;
+        } 
 
         /**
          * InstanceId.

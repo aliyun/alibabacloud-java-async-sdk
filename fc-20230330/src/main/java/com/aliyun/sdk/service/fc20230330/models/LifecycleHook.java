@@ -37,6 +37,10 @@ public class LifecycleHook extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return handler
      */
@@ -54,6 +58,14 @@ public class LifecycleHook extends TeaModel {
     public static final class Builder {
         private String handler; 
         private Integer timeout; 
+
+        private Builder() {
+        } 
+
+        private Builder(LifecycleHook model) {
+            this.handler = model.handler;
+            this.timeout = model.timeout;
+        } 
 
         /**
          * handler.

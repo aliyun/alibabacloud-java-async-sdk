@@ -46,7 +46,7 @@ public class PutAsyncInvokeConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -102,7 +102,7 @@ public class PutAsyncInvokeConfigRequest extends Request {
         }
 
         /**
-         * <p>The asynchronous invocation configurations.</p>
+         * <p>The configurations of asynchronous function invocations.</p>
          * <p>This parameter is required.</p>
          */
         public Builder body(PutAsyncInvokeConfigInput body) {

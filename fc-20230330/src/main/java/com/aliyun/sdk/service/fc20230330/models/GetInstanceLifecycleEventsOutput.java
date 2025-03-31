@@ -36,6 +36,10 @@ public class GetInstanceLifecycleEventsOutput extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return events
      */
@@ -53,6 +57,14 @@ public class GetInstanceLifecycleEventsOutput extends TeaModel {
     public static final class Builder {
         private java.util.List<InstanceEventItem> events; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetInstanceLifecycleEventsOutput model) {
+            this.events = model.events;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * events.

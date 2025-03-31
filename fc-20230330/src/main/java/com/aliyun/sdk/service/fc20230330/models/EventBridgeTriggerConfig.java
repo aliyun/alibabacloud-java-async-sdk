@@ -52,6 +52,10 @@ public class EventBridgeTriggerConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return asyncInvocationType
      */
@@ -101,6 +105,18 @@ public class EventBridgeTriggerConfig extends TeaModel {
         private EventSourceConfig eventSourceConfig; 
         private RunOptions runOptions; 
         private Boolean triggerEnable; 
+
+        private Builder() {
+        } 
+
+        private Builder(EventBridgeTriggerConfig model) {
+            this.asyncInvocationType = model.asyncInvocationType;
+            this.eventRuleFilterPattern = model.eventRuleFilterPattern;
+            this.eventSinkConfig = model.eventSinkConfig;
+            this.eventSourceConfig = model.eventSourceConfig;
+            this.runOptions = model.runOptions;
+            this.triggerEnable = model.triggerEnable;
+        } 
 
         /**
          * asyncInvocationType.

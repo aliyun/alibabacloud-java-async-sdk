@@ -33,6 +33,10 @@ public class PutConcurrencyInput extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return reservedConcurrency
      */
@@ -42,6 +46,13 @@ public class PutConcurrencyInput extends TeaModel {
 
     public static final class Builder {
         private Long reservedConcurrency; 
+
+        private Builder() {
+        } 
+
+        private Builder(PutConcurrencyInput model) {
+            this.reservedConcurrency = model.reservedConcurrency;
+        } 
 
         /**
          * <p>This parameter is required.</p>

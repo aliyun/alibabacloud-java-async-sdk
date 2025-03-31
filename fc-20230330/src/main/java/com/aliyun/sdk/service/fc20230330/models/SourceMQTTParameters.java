@@ -40,6 +40,10 @@ public class SourceMQTTParameters extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceId
      */
@@ -65,6 +69,15 @@ public class SourceMQTTParameters extends TeaModel {
         private String instanceId; 
         private String regionId; 
         private String topic; 
+
+        private Builder() {
+        } 
+
+        private Builder(SourceMQTTParameters model) {
+            this.instanceId = model.instanceId;
+            this.regionId = model.regionId;
+            this.topic = model.topic;
+        } 
 
         /**
          * InstanceId.

@@ -45,6 +45,10 @@ public class InputCodeLocation extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return checksum
      */
@@ -78,6 +82,16 @@ public class InputCodeLocation extends TeaModel {
         private String ossBucketName; 
         private String ossObjectName; 
         private String zipFile; 
+
+        private Builder() {
+        } 
+
+        private Builder(InputCodeLocation model) {
+            this.checksum = model.checksum;
+            this.ossBucketName = model.ossBucketName;
+            this.ossObjectName = model.ossObjectName;
+            this.zipFile = model.zipFile;
+        } 
 
         /**
          * checksum.

@@ -80,6 +80,10 @@ public class Trigger extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createdTime
      */
@@ -185,6 +189,25 @@ public class Trigger extends TeaModel {
         private String triggerId; 
         private String triggerName; 
         private String triggerType; 
+
+        private Builder() {
+        } 
+
+        private Builder(Trigger model) {
+            this.createdTime = model.createdTime;
+            this.description = model.description;
+            this.httpTrigger = model.httpTrigger;
+            this.invocationRole = model.invocationRole;
+            this.lastModifiedTime = model.lastModifiedTime;
+            this.qualifier = model.qualifier;
+            this.sourceArn = model.sourceArn;
+            this.status = model.status;
+            this.targetArn = model.targetArn;
+            this.triggerConfig = model.triggerConfig;
+            this.triggerId = model.triggerId;
+            this.triggerName = model.triggerName;
+            this.triggerType = model.triggerType;
+        } 
 
         /**
          * createdTime.

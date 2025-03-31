@@ -40,6 +40,10 @@ public class TimerTriggerConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cronExpression
      */
@@ -65,6 +69,15 @@ public class TimerTriggerConfig extends TeaModel {
         private String cronExpression; 
         private Boolean enable; 
         private String payload; 
+
+        private Builder() {
+        } 
+
+        private Builder(TimerTriggerConfig model) {
+            this.cronExpression = model.cronExpression;
+            this.enable = model.enable;
+            this.payload = model.payload;
+        } 
 
         /**
          * cronExpression.

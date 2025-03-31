@@ -36,6 +36,10 @@ public class EventSourceConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return eventSourceParameters
      */
@@ -53,6 +57,14 @@ public class EventSourceConfig extends TeaModel {
     public static final class Builder {
         private EventSourceParameters eventSourceParameters; 
         private String eventSourceType; 
+
+        private Builder() {
+        } 
+
+        private Builder(EventSourceConfig model) {
+            this.eventSourceParameters = model.eventSourceParameters;
+            this.eventSourceType = model.eventSourceType;
+        } 
 
         /**
          * eventSourceParameters.

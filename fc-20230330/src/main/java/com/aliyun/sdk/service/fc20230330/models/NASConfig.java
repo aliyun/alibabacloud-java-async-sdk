@@ -40,6 +40,10 @@ public class NASConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return groupId
      */
@@ -65,6 +69,15 @@ public class NASConfig extends TeaModel {
         private Integer groupId; 
         private java.util.List<NASMountConfig> mountPoints; 
         private Integer userId; 
+
+        private Builder() {
+        } 
+
+        private Builder(NASConfig model) {
+            this.groupId = model.groupId;
+            this.mountPoints = model.mountPoints;
+            this.userId = model.userId;
+        } 
 
         /**
          * groupId.

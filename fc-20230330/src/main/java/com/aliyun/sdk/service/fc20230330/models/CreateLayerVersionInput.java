@@ -45,6 +45,10 @@ public class CreateLayerVersionInput extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -78,6 +82,16 @@ public class CreateLayerVersionInput extends TeaModel {
         private java.util.List<String> compatibleRuntime; 
         private String description; 
         private String license; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateLayerVersionInput model) {
+            this.code = model.code;
+            this.compatibleRuntime = model.compatibleRuntime;
+            this.description = model.description;
+            this.license = model.license;
+        } 
 
         /**
          * code.

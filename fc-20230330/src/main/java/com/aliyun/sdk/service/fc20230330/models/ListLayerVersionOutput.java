@@ -36,6 +36,10 @@ public class ListLayerVersionOutput extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return layers
      */
@@ -53,6 +57,14 @@ public class ListLayerVersionOutput extends TeaModel {
     public static final class Builder {
         private java.util.List<Layer> layers; 
         private Integer nextVersion; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListLayerVersionOutput model) {
+            this.layers = model.layers;
+            this.nextVersion = model.nextVersion;
+        } 
 
         /**
          * layers.

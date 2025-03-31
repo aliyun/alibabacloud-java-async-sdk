@@ -38,6 +38,10 @@ public class DNSOption extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return name
      */
@@ -55,6 +59,14 @@ public class DNSOption extends TeaModel {
     public static final class Builder {
         private String name; 
         private String value; 
+
+        private Builder() {
+        } 
+
+        private Builder(DNSOption model) {
+            this.name = model.name;
+            this.value = model.value;
+        } 
 
         /**
          * name.

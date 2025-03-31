@@ -52,6 +52,10 @@ public class OSSMountPoint extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bucketName
      */
@@ -93,6 +97,17 @@ public class OSSMountPoint extends TeaModel {
         private String endpoint; 
         private String mountDir; 
         private Boolean readOnly; 
+
+        private Builder() {
+        } 
+
+        private Builder(OSSMountPoint model) {
+            this.bucketName = model.bucketName;
+            this.bucketPath = model.bucketPath;
+            this.endpoint = model.endpoint;
+            this.mountDir = model.mountDir;
+            this.readOnly = model.readOnly;
+        } 
 
         /**
          * bucketName.

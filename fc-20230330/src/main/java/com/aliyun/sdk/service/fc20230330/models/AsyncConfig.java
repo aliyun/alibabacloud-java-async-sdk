@@ -56,6 +56,10 @@ public class AsyncConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return asyncTask
      */
@@ -113,6 +117,19 @@ public class AsyncConfig extends TeaModel {
         private String lastModifiedTime; 
         private Long maxAsyncEventAgeInSeconds; 
         private Long maxAsyncRetryAttempts; 
+
+        private Builder() {
+        } 
+
+        private Builder(AsyncConfig model) {
+            this.asyncTask = model.asyncTask;
+            this.createdTime = model.createdTime;
+            this.destinationConfig = model.destinationConfig;
+            this.functionArn = model.functionArn;
+            this.lastModifiedTime = model.lastModifiedTime;
+            this.maxAsyncEventAgeInSeconds = model.maxAsyncEventAgeInSeconds;
+            this.maxAsyncRetryAttempts = model.maxAsyncRetryAttempts;
+        } 
 
         /**
          * asyncTask.

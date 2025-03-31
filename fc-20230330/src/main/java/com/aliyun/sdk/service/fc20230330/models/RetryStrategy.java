@@ -32,6 +32,10 @@ public class RetryStrategy extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pushRetryStrategy
      */
@@ -41,6 +45,13 @@ public class RetryStrategy extends TeaModel {
 
     public static final class Builder {
         private String pushRetryStrategy; 
+
+        private Builder() {
+        } 
+
+        private Builder(RetryStrategy model) {
+            this.pushRetryStrategy = model.pushRetryStrategy;
+        } 
 
         /**
          * PushRetryStrategy.

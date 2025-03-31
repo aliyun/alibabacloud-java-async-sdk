@@ -36,6 +36,10 @@ public class OutputFuncCode extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return checksum
      */
@@ -53,6 +57,14 @@ public class OutputFuncCode extends TeaModel {
     public static final class Builder {
         private String checksum; 
         private String url; 
+
+        private Builder() {
+        } 
+
+        private Builder(OutputFuncCode model) {
+            this.checksum = model.checksum;
+            this.url = model.url;
+        } 
 
         /**
          * checksum.

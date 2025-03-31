@@ -48,6 +48,10 @@ public class RunOptions extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return batchWindow
      */
@@ -89,6 +93,17 @@ public class RunOptions extends TeaModel {
         private String errorsTolerance; 
         private String mode; 
         private RetryStrategy retryStrategy; 
+
+        private Builder() {
+        } 
+
+        private Builder(RunOptions model) {
+            this.batchWindow = model.batchWindow;
+            this.deadLetterQueue = model.deadLetterQueue;
+            this.errorsTolerance = model.errorsTolerance;
+            this.mode = model.mode;
+            this.retryStrategy = model.retryStrategy;
+        } 
 
         /**
          * batchWindow.

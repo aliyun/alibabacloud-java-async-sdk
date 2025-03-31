@@ -36,6 +36,10 @@ public class OSSTriggerConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return events
      */
@@ -53,6 +57,14 @@ public class OSSTriggerConfig extends TeaModel {
     public static final class Builder {
         private java.util.List<String> events; 
         private Filter filter; 
+
+        private Builder() {
+        } 
+
+        private Builder(OSSTriggerConfig model) {
+            this.events = model.events;
+            this.filter = model.filter;
+        } 
 
         /**
          * events.

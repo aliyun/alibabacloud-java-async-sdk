@@ -32,6 +32,10 @@ public class OpenStructDescribeRegionsOutput extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return regions
      */
@@ -41,6 +45,13 @@ public class OpenStructDescribeRegionsOutput extends TeaModel {
 
     public static final class Builder {
         private Regions regions; 
+
+        private Builder() {
+        } 
+
+        private Builder(OpenStructDescribeRegionsOutput model) {
+            this.regions = model.regions;
+        } 
 
         /**
          * Regions.
@@ -100,6 +111,14 @@ public class OpenStructDescribeRegionsOutput extends TeaModel {
             private String localName; 
             private String regionId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Region model) {
+                this.localName = model.localName;
+                this.regionId = model.regionId;
+            } 
+
             /**
              * LocalName.
              */
@@ -154,6 +173,13 @@ public class OpenStructDescribeRegionsOutput extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Region> region; 
+
+            private Builder() {
+            } 
+
+            private Builder(Regions model) {
+                this.region = model.region;
+            } 
 
             /**
              * Region.

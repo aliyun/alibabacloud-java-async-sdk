@@ -64,6 +64,10 @@ public class SourceKafkaParameters extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return consumerGroup
      */
@@ -137,6 +141,21 @@ public class SourceKafkaParameters extends TeaModel {
         private String topic; 
         private String vSwitchIds; 
         private String vpcId; 
+
+        private Builder() {
+        } 
+
+        private Builder(SourceKafkaParameters model) {
+            this.consumerGroup = model.consumerGroup;
+            this.instanceId = model.instanceId;
+            this.network = model.network;
+            this.offsetReset = model.offsetReset;
+            this.regionId = model.regionId;
+            this.securityGroupId = model.securityGroupId;
+            this.topic = model.topic;
+            this.vSwitchIds = model.vSwitchIds;
+            this.vpcId = model.vpcId;
+        } 
 
         /**
          * ConsumerGroup.

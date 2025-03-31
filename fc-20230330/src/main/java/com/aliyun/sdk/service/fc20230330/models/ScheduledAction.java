@@ -55,6 +55,10 @@ public class ScheduledAction extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return endTime
      */
@@ -104,6 +108,18 @@ public class ScheduledAction extends TeaModel {
         private String startTime; 
         private Long target; 
         private String timeZone; 
+
+        private Builder() {
+        } 
+
+        private Builder(ScheduledAction model) {
+            this.endTime = model.endTime;
+            this.name = model.name;
+            this.scheduleExpression = model.scheduleExpression;
+            this.startTime = model.startTime;
+            this.target = model.target;
+            this.timeZone = model.timeZone;
+        } 
 
         /**
          * endTime.

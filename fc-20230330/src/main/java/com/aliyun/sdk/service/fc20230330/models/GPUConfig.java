@@ -37,6 +37,10 @@ public class GPUConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return gpuMemorySize
      */
@@ -54,6 +58,14 @@ public class GPUConfig extends TeaModel {
     public static final class Builder {
         private Integer gpuMemorySize; 
         private String gpuType; 
+
+        private Builder() {
+        } 
+
+        private Builder(GPUConfig model) {
+            this.gpuMemorySize = model.gpuMemorySize;
+            this.gpuType = model.gpuType;
+        } 
 
         /**
          * gpuMemorySize.

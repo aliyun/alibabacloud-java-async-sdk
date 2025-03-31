@@ -65,6 +65,10 @@ public class TargetTrackingPolicy extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return endTime
      */
@@ -130,6 +134,20 @@ public class TargetTrackingPolicy extends TeaModel {
         private String name; 
         private String startTime; 
         private String timeZone; 
+
+        private Builder() {
+        } 
+
+        private Builder(TargetTrackingPolicy model) {
+            this.endTime = model.endTime;
+            this.maxCapacity = model.maxCapacity;
+            this.metricTarget = model.metricTarget;
+            this.metricType = model.metricType;
+            this.minCapacity = model.minCapacity;
+            this.name = model.name;
+            this.startTime = model.startTime;
+            this.timeZone = model.timeZone;
+        } 
 
         /**
          * endTime.

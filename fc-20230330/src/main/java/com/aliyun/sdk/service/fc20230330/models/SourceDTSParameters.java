@@ -60,6 +60,10 @@ public class SourceDTSParameters extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return brokerUrl
      */
@@ -125,6 +129,20 @@ public class SourceDTSParameters extends TeaModel {
         private String taskId; 
         private String topic; 
         private String username; 
+
+        private Builder() {
+        } 
+
+        private Builder(SourceDTSParameters model) {
+            this.brokerUrl = model.brokerUrl;
+            this.initCheckPoint = model.initCheckPoint;
+            this.password = model.password;
+            this.regionId = model.regionId;
+            this.sid = model.sid;
+            this.taskId = model.taskId;
+            this.topic = model.topic;
+            this.username = model.username;
+        } 
 
         /**
          * BrokerUrl.

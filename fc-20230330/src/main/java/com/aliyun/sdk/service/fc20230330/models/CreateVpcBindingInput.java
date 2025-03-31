@@ -33,6 +33,10 @@ public class CreateVpcBindingInput extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return vpcId
      */
@@ -42,6 +46,13 @@ public class CreateVpcBindingInput extends TeaModel {
 
     public static final class Builder {
         private String vpcId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateVpcBindingInput model) {
+            this.vpcId = model.vpcId;
+        } 
 
         /**
          * <p>This parameter is required.</p>

@@ -96,6 +96,10 @@ public class SourceRocketMQParameters extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return authType
      */
@@ -233,6 +237,29 @@ public class SourceRocketMQParameters extends TeaModel {
         private String tag; 
         private Integer timestamp; 
         private String topic; 
+
+        private Builder() {
+        } 
+
+        private Builder(SourceRocketMQParameters model) {
+            this.authType = model.authType;
+            this.filterType = model.filterType;
+            this.groupID = model.groupID;
+            this.instanceEndpoint = model.instanceEndpoint;
+            this.instanceId = model.instanceId;
+            this.instanceNetwork = model.instanceNetwork;
+            this.instancePassword = model.instancePassword;
+            this.instanceSecurityGroupId = model.instanceSecurityGroupId;
+            this.instanceType = model.instanceType;
+            this.instanceUsername = model.instanceUsername;
+            this.instanceVSwitchIds = model.instanceVSwitchIds;
+            this.instanceVpcId = model.instanceVpcId;
+            this.offset = model.offset;
+            this.regionId = model.regionId;
+            this.tag = model.tag;
+            this.timestamp = model.timestamp;
+            this.topic = model.topic;
+        } 
 
         /**
          * AuthType.

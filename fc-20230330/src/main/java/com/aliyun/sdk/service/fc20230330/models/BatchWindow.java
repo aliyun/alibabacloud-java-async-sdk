@@ -36,6 +36,10 @@ public class BatchWindow extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return countBasedWindow
      */
@@ -53,6 +57,14 @@ public class BatchWindow extends TeaModel {
     public static final class Builder {
         private Integer countBasedWindow; 
         private Integer timeBasedWindow; 
+
+        private Builder() {
+        } 
+
+        private Builder(BatchWindow model) {
+            this.countBasedWindow = model.countBasedWindow;
+            this.timeBasedWindow = model.timeBasedWindow;
+        } 
 
         /**
          * CountBasedWindow.

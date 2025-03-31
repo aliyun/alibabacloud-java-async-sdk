@@ -52,6 +52,10 @@ public class CustomHealthCheckConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return failureThreshold
      */
@@ -101,6 +105,18 @@ public class CustomHealthCheckConfig extends TeaModel {
         private Integer periodSeconds; 
         private Integer successThreshold; 
         private Integer timeoutSeconds; 
+
+        private Builder() {
+        } 
+
+        private Builder(CustomHealthCheckConfig model) {
+            this.failureThreshold = model.failureThreshold;
+            this.httpGetUrl = model.httpGetUrl;
+            this.initialDelaySeconds = model.initialDelaySeconds;
+            this.periodSeconds = model.periodSeconds;
+            this.successThreshold = model.successThreshold;
+            this.timeoutSeconds = model.timeoutSeconds;
+        } 
 
         /**
          * failureThreshold.

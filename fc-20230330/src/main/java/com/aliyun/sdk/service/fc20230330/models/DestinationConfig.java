@@ -36,6 +36,10 @@ public class DestinationConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return onFailure
      */
@@ -53,6 +57,14 @@ public class DestinationConfig extends TeaModel {
     public static final class Builder {
         private Destination onFailure; 
         private Destination onSuccess; 
+
+        private Builder() {
+        } 
+
+        private Builder(DestinationConfig model) {
+            this.onFailure = model.onFailure;
+            this.onSuccess = model.onSuccess;
+        } 
 
         /**
          * onFailure.
