@@ -160,7 +160,7 @@ public class ModifyReplicationJobAttributeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -831,6 +831,15 @@ public class ModifyReplicationJobAttributeRequest extends Request {
             private String device; 
             private Long sizeBytes; 
 
+            private Builder() {
+            } 
+
+            private Builder(Part model) {
+                this.block = model.block;
+                this.device = model.device;
+                this.sizeBytes = model.sizeBytes;
+            } 
+
             /**
              * <p>Specifies whether to enable block replication for partition N in the destination data disk. Valid values:</p>
              * <ul>
@@ -937,6 +946,15 @@ public class ModifyReplicationJobAttributeRequest extends Request {
             private java.util.List<Part> part; 
             private Integer size; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataDisk model) {
+                this.index = model.index;
+                this.part = model.part;
+                this.size = model.size;
+            } 
+
             /**
              * <p>The index of data disk N on the destination ECS instance. Valid values of N: 1 to 16.</p>
              * <p>Data disks on a destination ECS instance are arranged in a sequential order that starts from 1.</p>
@@ -1036,6 +1054,15 @@ public class ModifyReplicationJobAttributeRequest extends Request {
             private Boolean block; 
             private String device; 
             private Long sizeBytes; 
+
+            private Builder() {
+            } 
+
+            private Builder(SystemDiskPart model) {
+                this.block = model.block;
+                this.device = model.device;
+                this.sizeBytes = model.sizeBytes;
+            } 
 
             /**
              * <p>Specifies whether to enable block replication for partition N in the destination system disk. Valid values:</p>

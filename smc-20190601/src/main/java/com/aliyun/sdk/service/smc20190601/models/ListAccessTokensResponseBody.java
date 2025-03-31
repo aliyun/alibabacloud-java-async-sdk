@@ -48,6 +48,10 @@ public class ListAccessTokensResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessTokens
      */
@@ -89,6 +93,17 @@ public class ListAccessTokensResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAccessTokensResponseBody model) {
+            this.accessTokens = model.accessTokens;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The activation codes returned.</p>
@@ -270,6 +285,20 @@ public class ListAccessTokensResponseBody extends TeaModel {
             private String status; 
             private String timeToLiveInDays; 
 
+            private Builder() {
+            } 
+
+            private Builder(AccessToken model) {
+                this.accessTokenId = model.accessTokenId;
+                this.count = model.count;
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.name = model.name;
+                this.registeredCount = model.registeredCount;
+                this.status = model.status;
+                this.timeToLiveInDays = model.timeToLiveInDays;
+            } 
+
             /**
              * <p>The ID of the activation code.</p>
              * 
@@ -402,6 +431,13 @@ public class ListAccessTokensResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<AccessToken> accessToken; 
+
+            private Builder() {
+            } 
+
+            private Builder(AccessTokens model) {
+                this.accessToken = model.accessToken;
+            } 
 
             /**
              * AccessToken.

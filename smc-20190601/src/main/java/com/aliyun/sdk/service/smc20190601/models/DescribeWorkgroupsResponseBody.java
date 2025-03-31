@@ -48,6 +48,10 @@ public class DescribeWorkgroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribeWorkgroupsResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
         private Workgroups workgroups; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeWorkgroupsResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.workgroups = model.workgroups;
+        } 
 
         /**
          * <p>The page number.</p>
@@ -192,6 +207,14 @@ public class DescribeWorkgroupsResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The tag key of the workgroup.</p>
              * <p>You can specify an empty string as a tag key. The tag key can be up to 64 characters in length and cannot contain http:// or https://.</p>
@@ -255,6 +278,13 @@ public class DescribeWorkgroupsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Tag> tag; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
+
             /**
              * Tag.
              */
@@ -301,6 +331,13 @@ public class DescribeWorkgroupsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> sourceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(SourceIds model) {
+                this.sourceId = model.sourceId;
+            } 
 
             /**
              * SourceId.
@@ -360,6 +397,14 @@ public class DescribeWorkgroupsResponseBody extends TeaModel {
         public static final class Builder {
             private SourceIds sourceIds; 
             private String warningType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Warning model) {
+                this.sourceIds = model.sourceIds;
+                this.warningType = model.warningType;
+            } 
 
             /**
              * <p>The migration sources for which alerts are generated.</p>
@@ -423,6 +468,13 @@ public class DescribeWorkgroupsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Warning> warning; 
+
+            private Builder() {
+            } 
+
+            private Builder(Warnings model) {
+                this.warning = model.warning;
+            } 
 
             /**
              * Warning.
@@ -531,6 +583,18 @@ public class DescribeWorkgroupsResponseBody extends TeaModel {
             private Warnings warnings; 
             private String workgroupId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Workgroup model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.warnings = model.warnings;
+                this.workgroupId = model.workgroupId;
+            } 
+
             /**
              * <p>The description of the workgroup.</p>
              * 
@@ -635,6 +699,13 @@ public class DescribeWorkgroupsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Workgroup> workgroup; 
+
+            private Builder() {
+            } 
+
+            private Builder(Workgroups model) {
+                this.workgroup = model.workgroup;
+            } 
 
             /**
              * Workgroup.

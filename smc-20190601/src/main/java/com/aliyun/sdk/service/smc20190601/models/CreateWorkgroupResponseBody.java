@@ -36,6 +36,10 @@ public class CreateWorkgroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class CreateWorkgroupResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String workgroupId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateWorkgroupResponseBody model) {
+            this.requestId = model.requestId;
+            this.workgroupId = model.workgroupId;
+        } 
 
         /**
          * <p>The request ID.</p>

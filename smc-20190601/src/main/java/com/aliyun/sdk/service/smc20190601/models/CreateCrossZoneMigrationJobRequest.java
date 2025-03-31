@@ -85,7 +85,7 @@ public class CreateCrossZoneMigrationJobRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -390,6 +390,15 @@ public class CreateCrossZoneMigrationJobRequest extends Request {
             private String category; 
             private String diskId; 
             private String performanceLevel; 
+
+            private Builder() {
+            } 
+
+            private Builder(Disk model) {
+                this.category = model.category;
+                this.diskId = model.diskId;
+                this.performanceLevel = model.performanceLevel;
+            } 
 
             /**
              * <p>The disk category. A value of cloud_essd indicates enhanced SSD (ESSD).</p>

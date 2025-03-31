@@ -48,6 +48,10 @@ public class DescribeSourceServersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribeSourceServersResponseBody extends TeaModel {
         private String requestId; 
         private SourceServers sourceServers; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSourceServersResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.sourceServers = model.sourceServers;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number.</p>
@@ -228,6 +243,17 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             private String path; 
             private Long sizeBytes; 
 
+            private Builder() {
+            } 
+
+            private Builder(Part model) {
+                this.canBlock = model.canBlock;
+                this.device = model.device;
+                this.need = model.need;
+                this.path = model.path;
+                this.sizeBytes = model.sizeBytes;
+            } 
+
             /**
              * <p>Indicates whether block replication is enabled for the data disk partition.</p>
              * 
@@ -322,6 +348,13 @@ public class DescribeSourceServersResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Part> part; 
 
+            private Builder() {
+            } 
+
+            private Builder(Parts model) {
+                this.part = model.part;
+            } 
+
             /**
              * Part.
              */
@@ -405,6 +438,16 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             private String path; 
             private Integer size; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataDisk model) {
+                this.index = model.index;
+                this.parts = model.parts;
+                this.path = model.path;
+                this.size = model.size;
+            } 
+
             /**
              * <p>The index number of the data disk.</p>
              * 
@@ -484,6 +527,13 @@ public class DescribeSourceServersResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DataDisk> dataDisk; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataDisks model) {
+                this.dataDisk = model.dataDisk;
+            } 
 
             /**
              * DataDisk.
@@ -567,6 +617,16 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             private String path; 
             private Long sizeBytes; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(PartsPart model) {
+                this.canBlock = model.canBlock;
+                this.path = model.path;
+                this.sizeBytes = model.sizeBytes;
+                this.type = model.type;
+            } 
 
             /**
              * <p>Whether block replication is enabled for the data disk partition. Valid values:</p>
@@ -660,6 +720,13 @@ public class DescribeSourceServersResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<PartsPart> part; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataParts model) {
+                this.part = model.part;
+            } 
+
             /**
              * Part.
              */
@@ -731,6 +798,15 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             private DataParts parts; 
             private Integer size; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.offset = model.offset;
+                this.parts = model.parts;
+                this.size = model.size;
+            } 
+
             /**
              * <p>The start offset of the first partition of the data disk. Unit: bytes.</p>
              * 
@@ -799,6 +875,13 @@ public class DescribeSourceServersResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Data> data; 
+
+            private Builder() {
+            } 
+
+            private Builder(DisksData model) {
+                this.data = model.data;
+            } 
 
             /**
              * Data.
@@ -882,6 +965,16 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             private String path; 
             private Long sizeBytes; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(SystemPartsPart model) {
+                this.canBlock = model.canBlock;
+                this.path = model.path;
+                this.sizeBytes = model.sizeBytes;
+                this.type = model.type;
+            } 
 
             /**
              * <p>Indicates whether block replication is enabled for the system disk partition. Valid values:</p>
@@ -975,6 +1068,13 @@ public class DescribeSourceServersResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<SystemPartsPart> part; 
 
+            private Builder() {
+            } 
+
+            private Builder(SystemParts model) {
+                this.part = model.part;
+            } 
+
             /**
              * Part.
              */
@@ -1045,6 +1145,15 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             private Long offset; 
             private SystemParts parts; 
             private Integer size; 
+
+            private Builder() {
+            } 
+
+            private Builder(System model) {
+                this.offset = model.offset;
+                this.parts = model.parts;
+                this.size = model.size;
+            } 
 
             /**
              * <p>The start offset of the first partition of the system disk. Unit: bytes.</p>
@@ -1129,6 +1238,14 @@ public class DescribeSourceServersResponseBody extends TeaModel {
         public static final class Builder {
             private DisksData data; 
             private System system; 
+
+            private Builder() {
+            } 
+
+            private Builder(Disks model) {
+                this.data = model.data;
+                this.system = model.system;
+            } 
 
             /**
              * <p>The list of data disk information.</p>
@@ -1233,6 +1350,17 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             private String path; 
             private Long sizeBytes; 
 
+            private Builder() {
+            } 
+
+            private Builder(SystemDiskPart model) {
+                this.canBlock = model.canBlock;
+                this.device = model.device;
+                this.need = model.need;
+                this.path = model.path;
+                this.sizeBytes = model.sizeBytes;
+            } 
+
             /**
              * <p>Indicates whether block replication is enabled for the system disk partition.</p>
              * 
@@ -1327,6 +1455,13 @@ public class DescribeSourceServersResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<SystemDiskPart> systemDiskPart; 
 
+            private Builder() {
+            } 
+
+            private Builder(SystemDiskParts model) {
+                this.systemDiskPart = model.systemDiskPart;
+            } 
+
             /**
              * SystemDiskPart.
              */
@@ -1385,6 +1520,14 @@ public class DescribeSourceServersResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of tag N that is attached to the SMC resource. Valid values of N: 1 to 20.</p>
@@ -1448,6 +1591,13 @@ public class DescribeSourceServersResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
@@ -1748,6 +1898,34 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             private Tags tags; 
             private String workgroupId; 
 
+            private Builder() {
+            } 
+
+            private Builder(SourceServer model) {
+                this.agentVersion = model.agentVersion;
+                this.architecture = model.architecture;
+                this.creationTime = model.creationTime;
+                this.dataDisks = model.dataDisks;
+                this.description = model.description;
+                this.disks = model.disks;
+                this.errorCode = model.errorCode;
+                this.heartbeatRate = model.heartbeatRate;
+                this.jobId = model.jobId;
+                this.kernelLevel = model.kernelLevel;
+                this.name = model.name;
+                this.platform = model.platform;
+                this.replicationDriver = model.replicationDriver;
+                this.resourceGroupId = model.resourceGroupId;
+                this.sourceId = model.sourceId;
+                this.state = model.state;
+                this.statusInfo = model.statusInfo;
+                this.systemDiskParts = model.systemDiskParts;
+                this.systemDiskSize = model.systemDiskSize;
+                this.systemInfo = model.systemInfo;
+                this.tags = model.tags;
+                this.workgroupId = model.workgroupId;
+            } 
+
             /**
              * <p>The version number of the SMC client.</p>
              * 
@@ -2030,6 +2208,13 @@ public class DescribeSourceServersResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SourceServer> sourceServer; 
+
+            private Builder() {
+            } 
+
+            private Builder(SourceServers model) {
+                this.sourceServer = model.sourceServer;
+            } 
 
             /**
              * SourceServer.

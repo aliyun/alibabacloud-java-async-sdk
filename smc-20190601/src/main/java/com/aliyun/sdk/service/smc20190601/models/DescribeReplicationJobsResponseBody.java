@@ -48,6 +48,10 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
         private ReplicationJobs replicationJobs; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeReplicationJobsResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.replicationJobs = model.replicationJobs;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number of the returned page.</p>
@@ -204,6 +219,15 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             private String device; 
             private Long sizeBytes; 
 
+            private Builder() {
+            } 
+
+            private Builder(Part model) {
+                this.block = model.block;
+                this.device = model.device;
+                this.sizeBytes = model.sizeBytes;
+            } 
+
             /**
              * <p>Indicates whether block replication is enabled for the data disk partition.</p>
              * 
@@ -276,6 +300,13 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Part> part; 
 
+            private Builder() {
+            } 
+
+            private Builder(Parts model) {
+                this.part = model.part;
+            } 
+
             /**
              * Part.
              */
@@ -347,6 +378,15 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             private Parts parts; 
             private Integer size; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataDisk model) {
+                this.index = model.index;
+                this.parts = model.parts;
+                this.size = model.size;
+            } 
+
             /**
              * <p>The index number of the data disk.</p>
              * 
@@ -415,6 +455,13 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DataDisk> dataDisk; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataDisks model) {
+                this.dataDisk = model.dataDisk;
+            } 
 
             /**
              * DataDisk.
@@ -486,6 +533,15 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             private Boolean block; 
             private String path; 
             private Long sizeBytes; 
+
+            private Builder() {
+            } 
+
+            private Builder(PartsPart model) {
+                this.block = model.block;
+                this.path = model.path;
+                this.sizeBytes = model.sizeBytes;
+            } 
 
             /**
              * <p>Whether block replication is enabled for the data disk partition. Valid values:</p>
@@ -562,6 +618,13 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<PartsPart> part; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataParts model) {
+                this.part = model.part;
+            } 
 
             /**
              * Part.
@@ -645,6 +708,16 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             private Boolean LVM; 
             private DataParts parts; 
             private Integer size; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.diskId = model.diskId;
+                this.LVM = model.LVM;
+                this.parts = model.parts;
+                this.size = model.size;
+            } 
 
             /**
              * <p>The ID of the data disk.</p>
@@ -733,6 +806,13 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Data> data; 
 
+            private Builder() {
+            } 
+
+            private Builder(DisksData model) {
+                this.data = model.data;
+            } 
+
             /**
              * Data.
              */
@@ -803,6 +883,15 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             private Boolean block; 
             private String path; 
             private Long sizeBytes; 
+
+            private Builder() {
+            } 
+
+            private Builder(SystemPartsPart model) {
+                this.block = model.block;
+                this.path = model.path;
+                this.sizeBytes = model.sizeBytes;
+            } 
 
             /**
              * <p>Specifies whether block replication is enabled for the system disk partition. Valid values:</p>
@@ -879,6 +968,13 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SystemPartsPart> part; 
+
+            private Builder() {
+            } 
+
+            private Builder(SystemParts model) {
+                this.part = model.part;
+            } 
 
             /**
              * Part.
@@ -962,6 +1058,16 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             private Boolean LVM; 
             private SystemParts parts; 
             private Integer size; 
+
+            private Builder() {
+            } 
+
+            private Builder(System model) {
+                this.diskId = model.diskId;
+                this.LVM = model.LVM;
+                this.parts = model.parts;
+                this.size = model.size;
+            } 
 
             /**
              * <p>The ID of the system disk.</p>
@@ -1062,6 +1168,14 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             private DisksData data; 
             private System system; 
 
+            private Builder() {
+            } 
+
+            private Builder(Disks model) {
+                this.data = model.data;
+                this.system = model.system;
+            } 
+
             /**
              * <p>The information about the data disk.</p>
              */
@@ -1152,6 +1266,16 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             private String imageId; 
             private String startTime; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(ReplicationJobRun model) {
+                this.endTime = model.endTime;
+                this.imageId = model.imageId;
+                this.startTime = model.startTime;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The time when the migration job ended. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
@@ -1246,6 +1370,13 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<ReplicationJobRun> replicationJobRun; 
 
+            private Builder() {
+            } 
+
+            private Builder(ReplicationJobRuns model) {
+                this.replicationJobRun = model.replicationJobRun;
+            } 
+
             /**
              * ReplicationJobRun.
              */
@@ -1316,6 +1447,15 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             private Boolean block; 
             private String device; 
             private Long sizeBytes; 
+
+            private Builder() {
+            } 
+
+            private Builder(SystemDiskPart model) {
+                this.block = model.block;
+                this.device = model.device;
+                this.sizeBytes = model.sizeBytes;
+            } 
 
             /**
              * <p>Indicates whether block replication is enabled for the system disk partition.</p>
@@ -1389,6 +1529,13 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<SystemDiskPart> systemDiskPart; 
 
+            private Builder() {
+            } 
+
+            private Builder(SystemDiskParts model) {
+                this.systemDiskPart = model.systemDiskPart;
+            } 
+
             /**
              * SystemDiskPart.
              */
@@ -1447,6 +1594,14 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of the tag N that is added to the SMC resource. Valid values of N: 1 to 20.</p>
@@ -1510,6 +1665,13 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
@@ -2062,6 +2224,55 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             private String validTime; 
             private String vpcId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ReplicationJob model) {
+                this.businessStatus = model.businessStatus;
+                this.containerNamespace = model.containerNamespace;
+                this.containerRepository = model.containerRepository;
+                this.containerTag = model.containerTag;
+                this.creationTime = model.creationTime;
+                this.dataDisks = model.dataDisks;
+                this.description = model.description;
+                this.disks = model.disks;
+                this.endTime = model.endTime;
+                this.errorCode = model.errorCode;
+                this.frequency = model.frequency;
+                this.imageId = model.imageId;
+                this.imageName = model.imageName;
+                this.instanceId = model.instanceId;
+                this.instanceRamRole = model.instanceRamRole;
+                this.instanceType = model.instanceType;
+                this.jobId = model.jobId;
+                this.jobType = model.jobType;
+                this.launchTemplateId = model.launchTemplateId;
+                this.launchTemplateVersion = model.launchTemplateVersion;
+                this.licenseType = model.licenseType;
+                this.maxNumberOfImageToKeep = model.maxNumberOfImageToKeep;
+                this.name = model.name;
+                this.netMode = model.netMode;
+                this.progress = model.progress;
+                this.regionId = model.regionId;
+                this.replicationJobRuns = model.replicationJobRuns;
+                this.replicationParameters = model.replicationParameters;
+                this.resourceGroupId = model.resourceGroupId;
+                this.runOnce = model.runOnce;
+                this.scheduledStartTime = model.scheduledStartTime;
+                this.sourceId = model.sourceId;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.statusInfo = model.statusInfo;
+                this.systemDiskParts = model.systemDiskParts;
+                this.systemDiskSize = model.systemDiskSize;
+                this.tags = model.tags;
+                this.targetType = model.targetType;
+                this.transitionInstanceId = model.transitionInstanceId;
+                this.vSwitchId = model.vSwitchId;
+                this.validTime = model.validTime;
+                this.vpcId = model.vpcId;
+            } 
+
             /**
              * <p>The business status of the migration job. Valid values:</p>
              * <ul>
@@ -2606,6 +2817,13 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ReplicationJob> replicationJob; 
+
+            private Builder() {
+            } 
+
+            private Builder(ReplicationJobs model) {
+                this.replicationJob = model.replicationJob;
+            } 
 
             /**
              * ReplicationJob.

@@ -201,7 +201,7 @@ public class CreateReplicationJobRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -1051,6 +1051,15 @@ public class CreateReplicationJobRequest extends Request {
             private String device; 
             private Long sizeBytes; 
 
+            private Builder() {
+            } 
+
+            private Builder(Part model) {
+                this.block = model.block;
+                this.device = model.device;
+                this.sizeBytes = model.sizeBytes;
+            } 
+
             /**
              * <p>Specifies whether to enable block replication for partition N in the destination data disk. Valid values:</p>
              * <ul>
@@ -1163,6 +1172,15 @@ public class CreateReplicationJobRequest extends Request {
             private java.util.List<Part> part; 
             private Integer size; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataDisk model) {
+                this.index = model.index;
+                this.part = model.part;
+                this.size = model.size;
+            } 
+
             /**
              * <p>The index of data disk N on the destination ECS instance. Data disks on a destination ECS instance are arranged in a sequential order that starts from 1. Valid values: 1 to 16.</p>
              * <blockquote>
@@ -1261,6 +1279,15 @@ public class CreateReplicationJobRequest extends Request {
             private Boolean block; 
             private String path; 
             private Long sizeBytes; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataPart model) {
+                this.block = model.block;
+                this.path = model.path;
+                this.sizeBytes = model.sizeBytes;
+            } 
 
             /**
              * <p>Whether block replication is enabled for the data disk partition. Valid values:</p>
@@ -1374,6 +1401,16 @@ public class CreateReplicationJobRequest extends Request {
             private java.util.List<DataPart> part; 
             private Integer size; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.diskId = model.diskId;
+                this.LVM = model.LVM;
+                this.part = model.part;
+                this.size = model.size;
+            } 
+
             /**
              * <p>The ID of the data disk.</p>
              * 
@@ -1479,6 +1516,15 @@ public class CreateReplicationJobRequest extends Request {
             private String path; 
             private Long sizeBytes; 
 
+            private Builder() {
+            } 
+
+            private Builder(SystemPart model) {
+                this.block = model.block;
+                this.path = model.path;
+                this.sizeBytes = model.sizeBytes;
+            } 
+
             /**
              * <p>Specifies whether block replication is enabled for the system disk partition.</p>
              * 
@@ -1574,6 +1620,15 @@ public class CreateReplicationJobRequest extends Request {
             private Boolean LVM; 
             private java.util.List<SystemPart> part; 
             private Integer size; 
+
+            private Builder() {
+            } 
+
+            private Builder(System model) {
+                this.LVM = model.LVM;
+                this.part = model.part;
+                this.size = model.size;
+            } 
 
             /**
              * <p>Specifies whether to use LVM. Valid values:</p>
@@ -1673,6 +1728,14 @@ public class CreateReplicationJobRequest extends Request {
             private java.util.List<Data> data; 
             private System system; 
 
+            private Builder() {
+            } 
+
+            private Builder(Disks model) {
+                this.data = model.data;
+                this.system = model.system;
+            } 
+
             /**
              * <p>The information about the data disk partition.</p>
              */
@@ -1751,6 +1814,15 @@ public class CreateReplicationJobRequest extends Request {
             private Boolean block; 
             private String device; 
             private Long sizeBytes; 
+
+            private Builder() {
+            } 
+
+            private Builder(SystemDiskPart model) {
+                this.block = model.block;
+                this.device = model.device;
+                this.sizeBytes = model.sizeBytes;
+            } 
 
             /**
              * <p>Specifies whether to enable block replication for partition N in the destination system disk. Valid values:</p>
@@ -1851,6 +1923,14 @@ public class CreateReplicationJobRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of the tag for the migration job. Valid values of N: 1 to 20.</p>

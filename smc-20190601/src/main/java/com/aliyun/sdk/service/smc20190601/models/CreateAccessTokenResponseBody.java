@@ -40,6 +40,10 @@ public class CreateAccessTokenResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessTokenCode
      */
@@ -65,6 +69,15 @@ public class CreateAccessTokenResponseBody extends TeaModel {
         private String accessTokenCode; 
         private String accessTokenId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateAccessTokenResponseBody model) {
+            this.accessTokenCode = model.accessTokenCode;
+            this.accessTokenId = model.accessTokenId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The value of the activation code. The value is returned only once after the CreateAccessToken operation is called and cannot be subsequently queried. Make sure that you properly save the returned value.</p>
