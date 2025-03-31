@@ -1,64 +1,69 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cr20181201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRepoTagScanResultRequest} extends {@link RequestModel}
  *
  * <p>ListRepoTagScanResultRequest</p>
  */
 public class ListRepoTagScanResultRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Digest")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Digest")
     private String digest;
 
-    @Query
-    @NameInMap("FilterValue")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FilterValue")
     private String filterValue;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private Integer pageNo;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RepoId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RepoId")
     private String repoId;
 
-    @Query
-    @NameInMap("ScanTaskId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScanTaskId")
     private String scanTaskId;
 
-    @Query
-    @NameInMap("ScanType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScanType")
     private String scanType;
 
-    @Query
-    @NameInMap("Severity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Severity")
     private String severity;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private String tag;
 
-    @Query
-    @NameInMap("VulQueryKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VulQueryKey")
     private String vulQueryKey;
 
     private ListRepoTagScanResultRequest(Builder builder) {
@@ -85,7 +90,7 @@ public class ListRepoTagScanResultRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -209,7 +214,7 @@ public class ListRepoTagScanResultRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -218,7 +223,10 @@ public class ListRepoTagScanResultRequest extends Request {
         }
 
         /**
-         * The digest of the image.
+         * <p>The digest of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sha256:6b0b094f8a904f8fb6602427aed0d1fa</p>
          */
         public Builder digest(String digest) {
             this.putQueryParameter("Digest", digest);
@@ -227,7 +235,10 @@ public class ListRepoTagScanResultRequest extends Request {
         }
 
         /**
-         * The parameter whose value that you want to query. Fox example, if the value is `FixCmd`, only the `FixCmd` parameter is returned.
+         * <p>The parameter whose value that you want to query. Fox example, if the value is <code>FixCmd</code>, only the <code>FixCmd</code> parameter is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FixCmd</p>
          */
         public Builder filterValue(String filterValue) {
             this.putQueryParameter("FilterValue", filterValue);
@@ -236,7 +247,11 @@ public class ListRepoTagScanResultRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cri-2j88dtld8yel****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -245,7 +260,10 @@ public class ListRepoTagScanResultRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -254,7 +272,10 @@ public class ListRepoTagScanResultRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -263,7 +284,10 @@ public class ListRepoTagScanResultRequest extends Request {
         }
 
         /**
-         * The ID of the image repository.
+         * <p>The ID of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>crr-uf082u9dg8do****</p>
          */
         public Builder repoId(String repoId) {
             this.putQueryParameter("RepoId", repoId);
@@ -272,7 +296,10 @@ public class ListRepoTagScanResultRequest extends Request {
         }
 
         /**
-         * The ID of the security scan task.
+         * <p>The ID of the security scan task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6b0b094f-8a90-4f8f-b660-2427aed0****</p>
          */
         public Builder scanTaskId(String scanTaskId) {
             this.putQueryParameter("ScanTaskId", scanTaskId);
@@ -281,11 +308,14 @@ public class ListRepoTagScanResultRequest extends Request {
         }
 
         /**
-         * The type of the vulnerability. Valid values:
-         * <p>
+         * <p>The type of the vulnerability. Valid values:</p>
+         * <ul>
+         * <li><code>cve</code>: image system vulnerability</li>
+         * <li><code>sca</code>: image application vulnerability</li>
+         * </ul>
          * 
-         * *   `cve`: image system vulnerability
-         * *   `sca`: image application vulnerability
+         * <strong>example:</strong>
+         * <p>sca</p>
          */
         public Builder scanType(String scanType) {
             this.putQueryParameter("ScanType", scanType);
@@ -294,13 +324,16 @@ public class ListRepoTagScanResultRequest extends Request {
         }
 
         /**
-         * The severity of the vulnerability. Valid values:
-         * <p>
+         * <p>The severity of the vulnerability. Valid values:</p>
+         * <ul>
+         * <li><code>High</code></li>
+         * <li><code>Medium</code></li>
+         * <li><code>Low</code></li>
+         * <li><code>Unknown</code></li>
+         * </ul>
          * 
-         * *   `High`
-         * *   `Medium`
-         * *   `Low`
-         * *   `Unknown`
+         * <strong>example:</strong>
+         * <p>High</p>
          */
         public Builder severity(String severity) {
             this.putQueryParameter("Severity", severity);
@@ -309,7 +342,10 @@ public class ListRepoTagScanResultRequest extends Request {
         }
 
         /**
-         * The name of the image tag.
+         * <p>The name of the image tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder tag(String tag) {
             this.putQueryParameter("Tag", tag);
@@ -318,7 +354,10 @@ public class ListRepoTagScanResultRequest extends Request {
         }
 
         /**
-         * The keyword for fuzzy search used in scanning. The value can be a CVE name.
+         * <p>The keyword for fuzzy search used in scanning. The value can be a CVE name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CVE-2021</p>
          */
         public Builder vulQueryKey(String vulQueryKey) {
             this.putQueryParameter("VulQueryKey", vulQueryKey);

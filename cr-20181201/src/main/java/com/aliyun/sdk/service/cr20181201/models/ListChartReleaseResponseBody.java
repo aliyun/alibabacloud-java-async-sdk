@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cr20181201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListChartReleaseResponseBody} extends {@link TeaModel}
  *
  * <p>ListChartReleaseResponseBody</p>
  */
 public class ListChartReleaseResponseBody extends TeaModel {
-    @NameInMap("ChartReleases")
-    private java.util.List < ChartReleases> chartReleases;
+    @com.aliyun.core.annotation.NameInMap("ChartReleases")
+    private java.util.List<ChartReleases> chartReleases;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("IsSuccess")
+    @com.aliyun.core.annotation.NameInMap("IsSuccess")
     private Boolean isSuccess;
 
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private Integer pageNo;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
 
     private ListChartReleaseResponseBody(Builder builder) {
@@ -51,10 +56,14 @@ public class ListChartReleaseResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return chartReleases
      */
-    public java.util.List < ChartReleases> getChartReleases() {
+    public java.util.List<ChartReleases> getChartReleases() {
         return this.chartReleases;
     }
 
@@ -101,7 +110,7 @@ public class ListChartReleaseResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ChartReleases> chartReleases; 
+        private java.util.List<ChartReleases> chartReleases; 
         private String code; 
         private Boolean isSuccess; 
         private Integer pageNo; 
@@ -109,16 +118,32 @@ public class ListChartReleaseResponseBody extends TeaModel {
         private String requestId; 
         private String totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListChartReleaseResponseBody model) {
+            this.chartReleases = model.chartReleases;
+            this.code = model.code;
+            this.isSuccess = model.isSuccess;
+            this.pageNo = model.pageNo;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * The list of chart versions.
+         * <p>The list of chart versions.</p>
          */
-        public Builder chartReleases(java.util.List < ChartReleases> chartReleases) {
+        public Builder chartReleases(java.util.List<ChartReleases> chartReleases) {
             this.chartReleases = chartReleases;
             return this;
         }
 
         /**
-         * The return value.
+         * <p>The return value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -126,7 +151,10 @@ public class ListChartReleaseResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -134,7 +162,10 @@ public class ListChartReleaseResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.pageNo = pageNo;
@@ -142,7 +173,10 @@ public class ListChartReleaseResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -150,7 +184,10 @@ public class ListChartReleaseResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F68823F6-F1B5-4A4E-8421-A83CAB8F2963</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +195,10 @@ public class ListChartReleaseResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -171,26 +211,32 @@ public class ListChartReleaseResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListChartReleaseResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListChartReleaseResponseBody</p>
+     */
     public static class ChartReleases extends TeaModel {
-        @NameInMap("Chart")
+        @com.aliyun.core.annotation.NameInMap("Chart")
         private String chart;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private Long modifiedTime;
 
-        @NameInMap("Release")
+        @com.aliyun.core.annotation.NameInMap("Release")
         private String release;
 
-        @NameInMap("RepoId")
+        @com.aliyun.core.annotation.NameInMap("RepoId")
         private String repoId;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private String size;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private ChartReleases(Builder builder) {
@@ -269,8 +315,24 @@ public class ListChartReleaseResponseBody extends TeaModel {
             private String size; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(ChartReleases model) {
+                this.chart = model.chart;
+                this.instanceId = model.instanceId;
+                this.modifiedTime = model.modifiedTime;
+                this.release = model.release;
+                this.repoId = model.repoId;
+                this.size = model.size;
+                this.status = model.status;
+            } 
+
             /**
-             * The name of the chart version.
+             * <p>The name of the chart version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>chart1</p>
              */
             public Builder chart(String chart) {
                 this.chart = chart;
@@ -278,7 +340,10 @@ public class ListChartReleaseResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cri-xkx6vujuhay0****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -286,7 +351,10 @@ public class ListChartReleaseResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the chart was last modified.
+             * <p>The time when the chart was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1571930323000</p>
              */
             public Builder modifiedTime(Long modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -294,7 +362,10 @@ public class ListChartReleaseResponseBody extends TeaModel {
             }
 
             /**
-             * The version number of the chart.
+             * <p>The version number of the chart.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.1.0</p>
              */
             public Builder release(String release) {
                 this.release = release;
@@ -302,7 +373,10 @@ public class ListChartReleaseResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the chart repository.
+             * <p>The ID of the chart repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>crcr-gpsu7b8chmxk****</p>
              */
             public Builder repoId(String repoId) {
                 this.repoId = repoId;
@@ -310,7 +384,10 @@ public class ListChartReleaseResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the chart of the version. Unit: bytes.
+             * <p>The size of the chart of the version. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2826</p>
              */
             public Builder size(String size) {
                 this.size = size;
@@ -318,7 +395,10 @@ public class ListChartReleaseResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the chart.
+             * <p>The status of the chart.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ENABLED</p>
              */
             public Builder status(String status) {
                 this.status = status;

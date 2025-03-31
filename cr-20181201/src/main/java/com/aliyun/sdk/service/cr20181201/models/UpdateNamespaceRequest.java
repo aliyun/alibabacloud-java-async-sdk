@@ -1,37 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cr20181201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateNamespaceRequest} extends {@link RequestModel}
  *
  * <p>UpdateNamespaceRequest</p>
  */
 public class UpdateNamespaceRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("AutoCreateRepo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoCreateRepo")
     private Boolean autoCreateRepo;
 
-    @Query
-    @NameInMap("DefaultRepoType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DefaultRepoType")
     private String defaultRepoType;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("NamespaceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NamespaceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespaceName;
 
     private UpdateNamespaceRequest(Builder builder) {
@@ -51,7 +56,7 @@ public class UpdateNamespaceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -112,7 +117,11 @@ public class UpdateNamespaceRequest extends Request {
         } 
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -121,7 +130,10 @@ public class UpdateNamespaceRequest extends Request {
         }
 
         /**
-         * Specifies whether to automatically create a repository when an image is pushed to the namespace.
+         * <p>Specifies whether to automatically create a repository when an image is pushed to the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoCreateRepo(Boolean autoCreateRepo) {
             this.putQueryParameter("AutoCreateRepo", autoCreateRepo);
@@ -130,11 +142,14 @@ public class UpdateNamespaceRequest extends Request {
         }
 
         /**
-         * The default type of the repository. Valid values:
-         * <p>
+         * <p>The default type of the repository. Valid values:</p>
+         * <ul>
+         * <li><code>PUBLIC</code>: The repository is a public repository.</li>
+         * <li><code>PRIVATE</code>: The repository is a private repository.</li>
+         * </ul>
          * 
-         * *   `PUBLIC`: The repository is a public repository.
-         * *   `PRIVATE`: The repository is a private repository.
+         * <strong>example:</strong>
+         * <p>PRIVATE</p>
          */
         public Builder defaultRepoType(String defaultRepoType) {
             this.putQueryParameter("DefaultRepoType", defaultRepoType);
@@ -143,7 +158,11 @@ public class UpdateNamespaceRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cri-kmsiwlxxdcva****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -152,7 +171,11 @@ public class UpdateNamespaceRequest extends Request {
         }
 
         /**
-         * The name of the namespace.
+         * <p>The name of the namespace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder namespaceName(String namespaceName) {
             this.putQueryParameter("NamespaceName", namespaceName);

@@ -1,49 +1,60 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cr20181201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInstanceUsageResponseBody} extends {@link TeaModel}
  *
  * <p>GetInstanceUsageResponseBody</p>
  */
 public class GetInstanceUsageResponseBody extends TeaModel {
-    @NameInMap("ChartNamespaceQuota")
+    @com.aliyun.core.annotation.NameInMap("ChartNamespaceQuota")
     private String chartNamespaceQuota;
 
-    @NameInMap("ChartNamespaceUsage")
+    @com.aliyun.core.annotation.NameInMap("ChartNamespaceUsage")
     private String chartNamespaceUsage;
 
-    @NameInMap("ChartRepoQuota")
+    @com.aliyun.core.annotation.NameInMap("ChartRepoQuota")
     private String chartRepoQuota;
 
-    @NameInMap("ChartRepoUsage")
+    @com.aliyun.core.annotation.NameInMap("ChartRepoUsage")
     private String chartRepoUsage;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("IsSuccess")
+    @com.aliyun.core.annotation.NameInMap("IsSuccess")
     private Boolean isSuccess;
 
-    @NameInMap("NamespaceQuota")
+    @com.aliyun.core.annotation.NameInMap("NamespaceQuota")
     private String namespaceQuota;
 
-    @NameInMap("NamespaceUsage")
+    @com.aliyun.core.annotation.NameInMap("NamespaceUsage")
     private String namespaceUsage;
 
-    @NameInMap("RepoQuota")
+    @com.aliyun.core.annotation.NameInMap("RepoQuota")
     private String repoQuota;
 
-    @NameInMap("RepoUsage")
+    @com.aliyun.core.annotation.NameInMap("RepoUsage")
     private String repoUsage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
+
+    @com.aliyun.core.annotation.NameInMap("VpcQuota")
+    private String vpcQuota;
+
+    @com.aliyun.core.annotation.NameInMap("VpcUsage")
+    private String vpcUsage;
 
     private GetInstanceUsageResponseBody(Builder builder) {
         this.chartNamespaceQuota = builder.chartNamespaceQuota;
@@ -57,6 +68,8 @@ public class GetInstanceUsageResponseBody extends TeaModel {
         this.repoQuota = builder.repoQuota;
         this.repoUsage = builder.repoUsage;
         this.requestId = builder.requestId;
+        this.vpcQuota = builder.vpcQuota;
+        this.vpcUsage = builder.vpcUsage;
     }
 
     public static Builder builder() {
@@ -65,6 +78,10 @@ public class GetInstanceUsageResponseBody extends TeaModel {
 
     public static GetInstanceUsageResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -144,6 +161,20 @@ public class GetInstanceUsageResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return vpcQuota
+     */
+    public String getVpcQuota() {
+        return this.vpcQuota;
+    }
+
+    /**
+     * @return vpcUsage
+     */
+    public String getVpcUsage() {
+        return this.vpcUsage;
+    }
+
     public static final class Builder {
         private String chartNamespaceQuota; 
         private String chartNamespaceUsage; 
@@ -156,9 +187,33 @@ public class GetInstanceUsageResponseBody extends TeaModel {
         private String repoQuota; 
         private String repoUsage; 
         private String requestId; 
+        private String vpcQuota; 
+        private String vpcUsage; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetInstanceUsageResponseBody model) {
+            this.chartNamespaceQuota = model.chartNamespaceQuota;
+            this.chartNamespaceUsage = model.chartNamespaceUsage;
+            this.chartRepoQuota = model.chartRepoQuota;
+            this.chartRepoUsage = model.chartRepoUsage;
+            this.code = model.code;
+            this.isSuccess = model.isSuccess;
+            this.namespaceQuota = model.namespaceQuota;
+            this.namespaceUsage = model.namespaceUsage;
+            this.repoQuota = model.repoQuota;
+            this.repoUsage = model.repoUsage;
+            this.requestId = model.requestId;
+            this.vpcQuota = model.vpcQuota;
+            this.vpcUsage = model.vpcUsage;
+        } 
 
         /**
-         * The quota of chart namespaces.
+         * <p>The quota of chart namespaces.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder chartNamespaceQuota(String chartNamespaceQuota) {
             this.chartNamespaceQuota = chartNamespaceQuota;
@@ -166,7 +221,10 @@ public class GetInstanceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * The number of chart namespaces that are created in the instance.
+         * <p>The number of chart namespaces that are created in the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder chartNamespaceUsage(String chartNamespaceUsage) {
             this.chartNamespaceUsage = chartNamespaceUsage;
@@ -174,7 +232,10 @@ public class GetInstanceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * The quota of chart repositories for the instance.
+         * <p>The quota of chart repositories for the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5000</p>
          */
         public Builder chartRepoQuota(String chartRepoQuota) {
             this.chartRepoQuota = chartRepoQuota;
@@ -182,7 +243,10 @@ public class GetInstanceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * The number of chart repositories that are created.
+         * <p>The number of chart repositories that are created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder chartRepoUsage(String chartRepoUsage) {
             this.chartRepoUsage = chartRepoUsage;
@@ -190,7 +254,10 @@ public class GetInstanceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * The return value.
+         * <p>The return value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -198,11 +265,14 @@ public class GetInstanceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request is successful.</li>
+         * <li><code>false</code>: The request fails.</li>
+         * </ul>
          * 
-         * *   `true`: The request is successful.
-         * *   `false`: The request fails.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -210,7 +280,10 @@ public class GetInstanceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * The quota of image namespaces for the instance.
+         * <p>The quota of image namespaces for the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder namespaceQuota(String namespaceQuota) {
             this.namespaceQuota = namespaceQuota;
@@ -218,7 +291,10 @@ public class GetInstanceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * The number of image namespaces that are created in the instance.
+         * <p>The number of image namespaces that are created in the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder namespaceUsage(String namespaceUsage) {
             this.namespaceUsage = namespaceUsage;
@@ -226,7 +302,10 @@ public class GetInstanceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * The quota of image repositories for the instance.
+         * <p>The quota of image repositories for the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder repoQuota(String repoQuota) {
             this.repoQuota = repoQuota;
@@ -234,7 +313,10 @@ public class GetInstanceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * The number of image repositories that are created in the instance.
+         * <p>The number of image repositories that are created in the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder repoUsage(String repoUsage) {
             this.repoUsage = repoUsage;
@@ -242,10 +324,35 @@ public class GetInstanceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A726E801-7FCF-43F9-AF1C-51B3E65D3E7A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * <p>VPC quota</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
+        public Builder vpcQuota(String vpcQuota) {
+            this.vpcQuota = vpcQuota;
+            return this;
+        }
+
+        /**
+         * <p>Number of bound VPCs</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
+        public Builder vpcUsage(String vpcUsage) {
+            this.vpcUsage = vpcUsage;
             return this;
         }
 

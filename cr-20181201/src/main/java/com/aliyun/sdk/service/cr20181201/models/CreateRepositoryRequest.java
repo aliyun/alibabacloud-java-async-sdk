@@ -1,52 +1,57 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cr20181201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateRepositoryRequest} extends {@link RequestModel}
  *
  * <p>CreateRepositoryRequest</p>
  */
 public class CreateRepositoryRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Detail")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Detail")
     private String detail;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("RepoName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RepoName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String repoName;
 
-    @Query
-    @NameInMap("RepoNamespaceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RepoNamespaceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String repoNamespaceName;
 
-    @Query
-    @NameInMap("RepoType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RepoType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String repoType;
 
-    @Query
-    @NameInMap("Summary")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Summary")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String summary;
 
-    @Query
-    @NameInMap("TagImmutability")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TagImmutability")
     private Boolean tagImmutability;
 
     private CreateRepositoryRequest(Builder builder) {
@@ -69,7 +74,7 @@ public class CreateRepositoryRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -157,7 +162,11 @@ public class CreateRepositoryRequest extends Request {
         } 
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -166,7 +175,10 @@ public class CreateRepositoryRequest extends Request {
         }
 
         /**
-         * The description of the repository.
+         * <p>The description of the repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>repo1</p>
          */
         public Builder detail(String detail) {
             this.putQueryParameter("Detail", detail);
@@ -175,7 +187,11 @@ public class CreateRepositoryRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cri-xkx6vujuhay0****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -184,7 +200,11 @@ public class CreateRepositoryRequest extends Request {
         }
 
         /**
-         * The name of the image repository.
+         * <p>The name of the image repository.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>repo1</p>
          */
         public Builder repoName(String repoName) {
             this.putQueryParameter("RepoName", repoName);
@@ -193,7 +213,11 @@ public class CreateRepositoryRequest extends Request {
         }
 
         /**
-         * The name of the namespace to which the image repository belongs.
+         * <p>The name of the namespace to which the image repository belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>namespace01</p>
          */
         public Builder repoNamespaceName(String repoNamespaceName) {
             this.putQueryParameter("RepoNamespaceName", repoNamespaceName);
@@ -202,11 +226,15 @@ public class CreateRepositoryRequest extends Request {
         }
 
         /**
-         * The type of the repository. Valid values:
-         * <p>
+         * <p>The type of the repository. Valid values:</p>
+         * <ul>
+         * <li><code>PUBLIC</code>: The repository is a public repository.</li>
+         * <li><code>PRIVATE</code>: The repository is a private repository.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   `PUBLIC`: The repository is a public repository.
-         * *   `PRIVATE`: The repository is a private repository.
+         * <strong>example:</strong>
+         * <p>PRIVATE</p>
          */
         public Builder repoType(String repoType) {
             this.putQueryParameter("RepoType", repoType);
@@ -215,7 +243,11 @@ public class CreateRepositoryRequest extends Request {
         }
 
         /**
-         * The summary about the repository.
+         * <p>The summary about the repository.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>repo1</p>
          */
         public Builder summary(String summary) {
             this.putQueryParameter("Summary", summary);
@@ -224,11 +256,14 @@ public class CreateRepositoryRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the feature of image tag immutability. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the feature of image tag immutability. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: enables the feature of image tag immutability.</li>
+         * <li><code>false</code>: disables the feature of image tag immutability.</li>
+         * </ul>
          * 
-         * *   `true`: enables the feature of image tag immutability.
-         * *   `false`: disables the feature of image tag immutability.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder tagImmutability(Boolean tagImmutability) {
             this.putQueryParameter("TagImmutability", tagImmutability);

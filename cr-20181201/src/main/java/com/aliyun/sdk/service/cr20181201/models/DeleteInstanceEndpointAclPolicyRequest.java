@@ -1,38 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cr20181201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteInstanceEndpointAclPolicyRequest} extends {@link RequestModel}
  *
  * <p>DeleteInstanceEndpointAclPolicyRequest</p>
  */
 public class DeleteInstanceEndpointAclPolicyRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("EndpointType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndpointType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endpointType;
 
-    @Query
-    @NameInMap("Entry")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Entry")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String entry;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("ModuleName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ModuleName")
     private String moduleName;
 
     private DeleteInstanceEndpointAclPolicyRequest(Builder builder) {
@@ -52,7 +57,7 @@ public class DeleteInstanceEndpointAclPolicyRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -113,7 +118,7 @@ public class DeleteInstanceEndpointAclPolicyRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -122,7 +127,11 @@ public class DeleteInstanceEndpointAclPolicyRequest extends Request {
         }
 
         /**
-         * The type of the endpoint. Set the value to Internet.
+         * <p>The type of the endpoint. Set the value to Internet.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internet</p>
          */
         public Builder endpointType(String endpointType) {
             this.putQueryParameter("EndpointType", endpointType);
@@ -131,7 +140,11 @@ public class DeleteInstanceEndpointAclPolicyRequest extends Request {
         }
 
         /**
-         * The CIDR block.
+         * <p>The CIDR block.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1/32</p>
          */
         public Builder entry(String entry) {
             this.putQueryParameter("Entry", entry);
@@ -140,7 +153,11 @@ public class DeleteInstanceEndpointAclPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cri-xkx6vujuhay0****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -149,11 +166,14 @@ public class DeleteInstanceEndpointAclPolicyRequest extends Request {
         }
 
         /**
-         * The name of the module that you want to access. Valid values:
-         * <p>
+         * <p>The name of the module that you want to access. Valid values:</p>
+         * <ul>
+         * <li><code>Registry</code>: the image repository.</li>
+         * <li><code>Chart</code>: a Helm chart.</li>
+         * </ul>
          * 
-         * *   `Registry`: the image repository.
-         * *   `Chart`: a Helm chart.
+         * <strong>example:</strong>
+         * <p>Chart</p>
          */
         public Builder moduleName(String moduleName) {
             this.putQueryParameter("ModuleName", moduleName);

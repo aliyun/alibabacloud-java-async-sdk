@@ -1,37 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cr20181201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateNamespaceRequest} extends {@link RequestModel}
  *
  * <p>CreateNamespaceRequest</p>
  */
 public class CreateNamespaceRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("AutoCreateRepo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoCreateRepo")
     private Boolean autoCreateRepo;
 
-    @Query
-    @NameInMap("DefaultRepoType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DefaultRepoType")
     private String defaultRepoType;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("NamespaceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NamespaceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespaceName;
 
     private CreateNamespaceRequest(Builder builder) {
@@ -51,7 +56,7 @@ public class CreateNamespaceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -112,7 +117,7 @@ public class CreateNamespaceRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -121,7 +126,10 @@ public class CreateNamespaceRequest extends Request {
         }
 
         /**
-         * Specifies whether to automatically create an image repository in the namespace.
+         * <p>Specifies whether to automatically create an image repository in the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoCreateRepo(Boolean autoCreateRepo) {
             this.putQueryParameter("AutoCreateRepo", autoCreateRepo);
@@ -130,11 +138,14 @@ public class CreateNamespaceRequest extends Request {
         }
 
         /**
-         * The default type of the repository that is automatically created. Valid values:
-         * <p>
+         * <p>The default type of the repository that is automatically created. Valid values:</p>
+         * <ul>
+         * <li><code>PUBLIC</code>: a public repository</li>
+         * <li><code>PRIVATE</code>: a private repository</li>
+         * </ul>
          * 
-         * *   `PUBLIC`: a public repository
-         * *   `PRIVATE`: a private repository
+         * <strong>example:</strong>
+         * <p>PUBLIC</p>
          */
         public Builder defaultRepoType(String defaultRepoType) {
             this.putQueryParameter("DefaultRepoType", defaultRepoType);
@@ -143,7 +154,11 @@ public class CreateNamespaceRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cri-xkx6vujuhay0****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -152,7 +167,11 @@ public class CreateNamespaceRequest extends Request {
         }
 
         /**
-         * The name of the namespace. The name must be 2 to 120 characters in length, and can contain lowercase letters, digits, and the following delimiters: underscores (\_), hyphens (-), and periods (.). The name cannot start or end with a delimiter.
+         * <p>The name of the namespace. The name must be 2 to 120 characters in length, and can contain lowercase letters, digits, and the following delimiters: underscores (_), hyphens (-), and periods (.). The name cannot start or end with a delimiter.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>namespace1</p>
          */
         public Builder namespaceName(String namespaceName) {
             this.putQueryParameter("NamespaceName", namespaceName);

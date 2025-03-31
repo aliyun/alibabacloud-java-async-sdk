@@ -1,75 +1,84 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cr20181201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateRepoSyncRuleRequest} extends {@link RequestModel}
  *
  * <p>CreateRepoSyncRuleRequest</p>
  */
 public class CreateRepoSyncRuleRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("NamespaceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NamespaceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespaceName;
 
-    @Query
-    @NameInMap("RepoName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RepoName")
     private String repoName;
 
-    @Query
-    @NameInMap("SyncRuleName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RepoNameFilter")
+    private String repoNameFilter;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SyncRuleName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String syncRuleName;
 
-    @Query
-    @NameInMap("SyncScope")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SyncScope")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String syncScope;
 
-    @Query
-    @NameInMap("SyncTrigger")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SyncTrigger")
     private String syncTrigger;
 
-    @Query
-    @NameInMap("TagFilter")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TagFilter")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tagFilter;
 
-    @Query
-    @NameInMap("TargetInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String targetInstanceId;
 
-    @Query
-    @NameInMap("TargetNamespaceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetNamespaceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String targetNamespaceName;
 
-    @Query
-    @NameInMap("TargetRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String targetRegionId;
 
-    @Query
-    @NameInMap("TargetRepoName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetRepoName")
     private String targetRepoName;
 
-    @Query
-    @NameInMap("TargetUserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetUserId")
     private String targetUserId;
 
     private CreateRepoSyncRuleRequest(Builder builder) {
@@ -78,6 +87,7 @@ public class CreateRepoSyncRuleRequest extends Request {
         this.instanceId = builder.instanceId;
         this.namespaceName = builder.namespaceName;
         this.repoName = builder.repoName;
+        this.repoNameFilter = builder.repoNameFilter;
         this.syncRuleName = builder.syncRuleName;
         this.syncScope = builder.syncScope;
         this.syncTrigger = builder.syncTrigger;
@@ -97,7 +107,7 @@ public class CreateRepoSyncRuleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -128,6 +138,13 @@ public class CreateRepoSyncRuleRequest extends Request {
      */
     public String getRepoName() {
         return this.repoName;
+    }
+
+    /**
+     * @return repoNameFilter
+     */
+    public String getRepoNameFilter() {
+        return this.repoNameFilter;
     }
 
     /**
@@ -198,6 +215,7 @@ public class CreateRepoSyncRuleRequest extends Request {
         private String instanceId; 
         private String namespaceName; 
         private String repoName; 
+        private String repoNameFilter; 
         private String syncRuleName; 
         private String syncScope; 
         private String syncTrigger; 
@@ -218,6 +236,7 @@ public class CreateRepoSyncRuleRequest extends Request {
             this.instanceId = request.instanceId;
             this.namespaceName = request.namespaceName;
             this.repoName = request.repoName;
+            this.repoNameFilter = request.repoNameFilter;
             this.syncRuleName = request.syncRuleName;
             this.syncScope = request.syncScope;
             this.syncTrigger = request.syncTrigger;
@@ -230,7 +249,7 @@ public class CreateRepoSyncRuleRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -239,7 +258,10 @@ public class CreateRepoSyncRuleRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cri-hpdfkc6utbaq****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -248,7 +270,10 @@ public class CreateRepoSyncRuleRequest extends Request {
         }
 
         /**
-         * NamespaceName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ns1</p>
          */
         public Builder namespaceName(String namespaceName) {
             this.putQueryParameter("NamespaceName", namespaceName);
@@ -266,7 +291,25 @@ public class CreateRepoSyncRuleRequest extends Request {
         }
 
         /**
-         * SyncRuleName.
+         * <p>The rule that is used to filter repositories.</p>
+         * <blockquote>
+         * <p> This parameter is valid only when SyncScope is set to <code>NAMESPACE</code>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>.*</p>
+         */
+        public Builder repoNameFilter(String repoNameFilter) {
+            this.putQueryParameter("RepoNameFilter", repoNameFilter);
+            this.repoNameFilter = repoNameFilter;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rule</p>
          */
         public Builder syncRuleName(String syncRuleName) {
             this.putQueryParameter("SyncRuleName", syncRuleName);
@@ -275,7 +318,10 @@ public class CreateRepoSyncRuleRequest extends Request {
         }
 
         /**
-         * SyncScope.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>REPO</p>
          */
         public Builder syncScope(String syncScope) {
             this.putQueryParameter("SyncScope", syncScope);
@@ -293,7 +339,10 @@ public class CreateRepoSyncRuleRequest extends Request {
         }
 
         /**
-         * TagFilter.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>.*</p>
          */
         public Builder tagFilter(String tagFilter) {
             this.putQueryParameter("TagFilter", tagFilter);
@@ -302,7 +351,10 @@ public class CreateRepoSyncRuleRequest extends Request {
         }
 
         /**
-         * TargetInstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cri-ibxs3piklys3****</p>
          */
         public Builder targetInstanceId(String targetInstanceId) {
             this.putQueryParameter("TargetInstanceId", targetInstanceId);
@@ -311,7 +363,10 @@ public class CreateRepoSyncRuleRequest extends Request {
         }
 
         /**
-         * TargetNamespaceName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ns1</p>
          */
         public Builder targetNamespaceName(String targetNamespaceName) {
             this.putQueryParameter("TargetNamespaceName", targetNamespaceName);
@@ -320,7 +375,10 @@ public class CreateRepoSyncRuleRequest extends Request {
         }
 
         /**
-         * TargetRegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder targetRegionId(String targetRegionId) {
             this.putQueryParameter("TargetRegionId", targetRegionId);

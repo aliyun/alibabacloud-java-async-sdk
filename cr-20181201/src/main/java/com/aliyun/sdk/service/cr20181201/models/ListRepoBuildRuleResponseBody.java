@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cr20181201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRepoBuildRuleResponseBody} extends {@link TeaModel}
  *
  * <p>ListRepoBuildRuleResponseBody</p>
  */
 public class ListRepoBuildRuleResponseBody extends TeaModel {
-    @NameInMap("BuildRules")
-    private java.util.List < BuildRules> buildRules;
+    @com.aliyun.core.annotation.NameInMap("BuildRules")
+    private java.util.List<BuildRules> buildRules;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("IsSuccess")
+    @com.aliyun.core.annotation.NameInMap("IsSuccess")
     private Boolean isSuccess;
 
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private Integer pageNo;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
 
     private ListRepoBuildRuleResponseBody(Builder builder) {
@@ -51,10 +56,14 @@ public class ListRepoBuildRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return buildRules
      */
-    public java.util.List < BuildRules> getBuildRules() {
+    public java.util.List<BuildRules> getBuildRules() {
         return this.buildRules;
     }
 
@@ -101,7 +110,7 @@ public class ListRepoBuildRuleResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < BuildRules> buildRules; 
+        private java.util.List<BuildRules> buildRules; 
         private String code; 
         private Boolean isSuccess; 
         private Integer pageNo; 
@@ -109,16 +118,32 @@ public class ListRepoBuildRuleResponseBody extends TeaModel {
         private String requestId; 
         private String totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListRepoBuildRuleResponseBody model) {
+            this.buildRules = model.buildRules;
+            this.code = model.code;
+            this.isSuccess = model.isSuccess;
+            this.pageNo = model.pageNo;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * The list of image building rules.
+         * <p>The list of image building rules.</p>
          */
-        public Builder buildRules(java.util.List < BuildRules> buildRules) {
+        public Builder buildRules(java.util.List<BuildRules> buildRules) {
             this.buildRules = buildRules;
             return this;
         }
 
         /**
-         * The return value.
+         * <p>The return value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -126,11 +151,14 @@ public class ListRepoBuildRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request is successful.</li>
+         * <li><code>false</code>: The request fails.</li>
+         * </ul>
          * 
-         * *   `true`: The request is successful.
-         * *   `false`: The request fails.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -138,7 +166,10 @@ public class ListRepoBuildRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.pageNo = pageNo;
@@ -146,7 +177,10 @@ public class ListRepoBuildRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -154,7 +188,10 @@ public class ListRepoBuildRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>42D782C8-E8F6-4A32-BEA0-6A6AC854C22A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -162,7 +199,10 @@ public class ListRepoBuildRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -175,29 +215,35 @@ public class ListRepoBuildRuleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListRepoBuildRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRepoBuildRuleResponseBody</p>
+     */
     public static class BuildRules extends TeaModel {
-        @NameInMap("BuildArgs")
-        private java.util.List < String > buildArgs;
+        @com.aliyun.core.annotation.NameInMap("BuildArgs")
+        private java.util.List<String> buildArgs;
 
-        @NameInMap("BuildRuleId")
+        @com.aliyun.core.annotation.NameInMap("BuildRuleId")
         private String buildRuleId;
 
-        @NameInMap("DockerfileLocation")
+        @com.aliyun.core.annotation.NameInMap("DockerfileLocation")
         private String dockerfileLocation;
 
-        @NameInMap("DockerfileName")
+        @com.aliyun.core.annotation.NameInMap("DockerfileName")
         private String dockerfileName;
 
-        @NameInMap("ImageTag")
+        @com.aliyun.core.annotation.NameInMap("ImageTag")
         private String imageTag;
 
-        @NameInMap("Platforms")
-        private java.util.List < String > platforms;
+        @com.aliyun.core.annotation.NameInMap("Platforms")
+        private java.util.List<String> platforms;
 
-        @NameInMap("PushName")
+        @com.aliyun.core.annotation.NameInMap("PushName")
         private String pushName;
 
-        @NameInMap("PushType")
+        @com.aliyun.core.annotation.NameInMap("PushType")
         private String pushType;
 
         private BuildRules(Builder builder) {
@@ -222,7 +268,7 @@ public class ListRepoBuildRuleResponseBody extends TeaModel {
         /**
          * @return buildArgs
          */
-        public java.util.List < String > getBuildArgs() {
+        public java.util.List<String> getBuildArgs() {
             return this.buildArgs;
         }
 
@@ -257,7 +303,7 @@ public class ListRepoBuildRuleResponseBody extends TeaModel {
         /**
          * @return platforms
          */
-        public java.util.List < String > getPlatforms() {
+        public java.util.List<String> getPlatforms() {
             return this.platforms;
         }
 
@@ -276,25 +322,42 @@ public class ListRepoBuildRuleResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > buildArgs; 
+            private java.util.List<String> buildArgs; 
             private String buildRuleId; 
             private String dockerfileLocation; 
             private String dockerfileName; 
             private String imageTag; 
-            private java.util.List < String > platforms; 
+            private java.util.List<String> platforms; 
             private String pushName; 
             private String pushType; 
+
+            private Builder() {
+            } 
+
+            private Builder(BuildRules model) {
+                this.buildArgs = model.buildArgs;
+                this.buildRuleId = model.buildRuleId;
+                this.dockerfileLocation = model.dockerfileLocation;
+                this.dockerfileName = model.dockerfileName;
+                this.imageTag = model.imageTag;
+                this.platforms = model.platforms;
+                this.pushName = model.pushName;
+                this.pushType = model.pushType;
+            } 
 
             /**
              * BuildArgs.
              */
-            public Builder buildArgs(java.util.List < String > buildArgs) {
+            public Builder buildArgs(java.util.List<String> buildArgs) {
                 this.buildArgs = buildArgs;
                 return this;
             }
 
             /**
-             * The ID of the image building rule.
+             * <p>The ID of the image building rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>crbr-khys0nd3asbe****</p>
              */
             public Builder buildRuleId(String buildRuleId) {
                 this.buildRuleId = buildRuleId;
@@ -302,7 +365,10 @@ public class ListRepoBuildRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The directory of the Dockerfile.
+             * <p>The directory of the Dockerfile.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/</p>
              */
             public Builder dockerfileLocation(String dockerfileLocation) {
                 this.dockerfileLocation = dockerfileLocation;
@@ -310,7 +376,10 @@ public class ListRepoBuildRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Dockerfile.
+             * <p>The name of the Dockerfile.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Dockerfile</p>
              */
             public Builder dockerfileName(String dockerfileName) {
                 this.dockerfileName = dockerfileName;
@@ -318,7 +387,10 @@ public class ListRepoBuildRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The tag of the image.
+             * <p>The tag of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v0.1</p>
              */
             public Builder imageTag(String imageTag) {
                 this.imageTag = imageTag;
@@ -328,13 +400,16 @@ public class ListRepoBuildRuleResponseBody extends TeaModel {
             /**
              * Platforms.
              */
-            public Builder platforms(java.util.List < String > platforms) {
+            public Builder platforms(java.util.List<String> platforms) {
                 this.platforms = platforms;
                 return this;
             }
 
             /**
-             * The name of the push that triggers the building rule.
+             * <p>The name of the push that triggers the building rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v0.1</p>
              */
             public Builder pushName(String pushName) {
                 this.pushName = pushName;
@@ -342,11 +417,14 @@ public class ListRepoBuildRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the push that triggers the image building rule. Valid values:
-             * <p>
+             * <p>The type of the push that triggers the image building rule. Valid values:</p>
+             * <ul>
+             * <li>GIT_BRANCH: branch push</li>
+             * <li>GIT_TAG: tag push</li>
+             * </ul>
              * 
-             * *   GIT_BRANCH: branch push
-             * *   GIT_TAG: tag push
+             * <strong>example:</strong>
+             * <p>GIT_BRANCH</p>
              */
             public Builder pushType(String pushType) {
                 this.pushType = pushType;

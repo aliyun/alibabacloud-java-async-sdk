@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cr20181201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRepoTagScanSummaryResponseBody} extends {@link TeaModel}
  *
  * <p>GetRepoTagScanSummaryResponseBody</p>
  */
 public class GetRepoTagScanSummaryResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HighSeverity")
+    @com.aliyun.core.annotation.NameInMap("HighSeverity")
     private Integer highSeverity;
 
-    @NameInMap("IsSuccess")
+    @com.aliyun.core.annotation.NameInMap("IsSuccess")
     private Boolean isSuccess;
 
-    @NameInMap("LowSeverity")
+    @com.aliyun.core.annotation.NameInMap("LowSeverity")
     private Integer lowSeverity;
 
-    @NameInMap("MediumSeverity")
+    @com.aliyun.core.annotation.NameInMap("MediumSeverity")
     private Integer mediumSeverity;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalSeverity")
+    @com.aliyun.core.annotation.NameInMap("TotalSeverity")
     private Integer totalSeverity;
 
-    @NameInMap("UnknownSeverity")
+    @com.aliyun.core.annotation.NameInMap("UnknownSeverity")
     private Integer unknownSeverity;
 
     private GetRepoTagScanSummaryResponseBody(Builder builder) {
@@ -53,6 +58,10 @@ public class GetRepoTagScanSummaryResponseBody extends TeaModel {
 
     public static GetRepoTagScanSummaryResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -121,8 +130,25 @@ public class GetRepoTagScanSummaryResponseBody extends TeaModel {
         private Integer totalSeverity; 
         private Integer unknownSeverity; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetRepoTagScanSummaryResponseBody model) {
+            this.code = model.code;
+            this.highSeverity = model.highSeverity;
+            this.isSuccess = model.isSuccess;
+            this.lowSeverity = model.lowSeverity;
+            this.mediumSeverity = model.mediumSeverity;
+            this.requestId = model.requestId;
+            this.totalSeverity = model.totalSeverity;
+            this.unknownSeverity = model.unknownSeverity;
+        } 
+
         /**
-         * The number of medium-severity vulnerabilities.
+         * <p>The number of medium-severity vulnerabilities.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -130,7 +156,10 @@ public class GetRepoTagScanSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The number of low-severity vulnerabilities.
+         * <p>The number of low-severity vulnerabilities.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22</p>
          */
         public Builder highSeverity(Integer highSeverity) {
             this.highSeverity = highSeverity;
@@ -138,7 +167,10 @@ public class GetRepoTagScanSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The number of high-severity vulnerabilities.
+         * <p>The number of high-severity vulnerabilities.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -154,11 +186,14 @@ public class GetRepoTagScanSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request is successful.</li>
+         * <li><code>false</code>: The request fails.</li>
+         * </ul>
          * 
-         * *   `true`: The request is successful.
-         * *   `false`: The request fails.
+         * <strong>example:</strong>
+         * <p>81</p>
          */
         public Builder mediumSeverity(Integer mediumSeverity) {
             this.mediumSeverity = mediumSeverity;
@@ -166,7 +201,10 @@ public class GetRepoTagScanSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of vulnerabilities detected on images.
+         * <p>The total number of vulnerabilities detected on images.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BC648259-91A7-4502-BED3-EDF64361FA83</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -174,7 +212,10 @@ public class GetRepoTagScanSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The return value.
+         * <p>The return value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>196</p>
          */
         public Builder totalSeverity(Integer totalSeverity) {
             this.totalSeverity = totalSeverity;
@@ -182,7 +223,10 @@ public class GetRepoTagScanSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder unknownSeverity(Integer unknownSeverity) {
             this.unknownSeverity = unknownSeverity;

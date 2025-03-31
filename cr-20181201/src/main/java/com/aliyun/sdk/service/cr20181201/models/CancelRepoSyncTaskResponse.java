@@ -1,38 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cr20181201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetRepoTagLayersResponse} extends {@link TeaModel}
+ * 
+ * {@link CancelRepoSyncTaskResponse} extends {@link TeaModel}
  *
- * <p>GetRepoTagLayersResponse</p>
+ * <p>CancelRepoSyncTaskResponse</p>
  */
-public class GetRepoTagLayersResponse extends Response {
-    @NameInMap("headers")
-    private java.util.Map < String, String > headers;
+public class CancelRepoSyncTaskResponse extends Response {
+    @com.aliyun.core.annotation.NameInMap("headers")
+    private java.util.Map<String, String> headers;
 
-    @NameInMap("statusCode")
+    @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
-    @NameInMap("body")
-    private GetRepoTagLayersResponseBody body;
+    @com.aliyun.core.annotation.NameInMap("body")
+    private CancelRepoSyncTaskResponseBody body;
 
-    private GetRepoTagLayersResponse(BuilderImpl builder) {
+    private CancelRepoSyncTaskResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static GetRepoTagLayersResponse create() {
+    public static CancelRepoSyncTaskResponse create() {
         return new BuilderImpl().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new BuilderImpl(this);
     }
@@ -40,7 +45,7 @@ public class GetRepoTagLayersResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > getHeaders() {
+    public java.util.Map<String, String> getHeaders() {
         return this.headers;
     }
 
@@ -54,35 +59,35 @@ public class GetRepoTagLayersResponse extends Response {
     /**
      * @return body
      */
-    public GetRepoTagLayersResponseBody getBody() {
+    public CancelRepoSyncTaskResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<GetRepoTagLayersResponse, Builder> {
+    public interface Builder extends Response.Builder<CancelRepoSyncTaskResponse, Builder> {
 
-        Builder headers(java.util.Map < String, String > headers);
+        Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(GetRepoTagLayersResponseBody body);
+        Builder body(CancelRepoSyncTaskResponseBody body);
 
         @Override
-        GetRepoTagLayersResponse build();
+        CancelRepoSyncTaskResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<GetRepoTagLayersResponse, Builder>
+            extends Response.BuilderImpl<CancelRepoSyncTaskResponse, Builder>
             implements Builder {
-        private java.util.Map < String, String > headers; 
+        private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private GetRepoTagLayersResponseBody body; 
+        private CancelRepoSyncTaskResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(GetRepoTagLayersResponse response) {
+        private BuilderImpl(CancelRepoSyncTaskResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -93,7 +98,7 @@ public class GetRepoTagLayersResponse extends Response {
          * headers.
          */
         @Override
-        public Builder headers(java.util.Map < String, String > headers) {
+        public Builder headers(java.util.Map<String, String> headers) {
             this.headers = headers;
             return this;
         }
@@ -111,14 +116,14 @@ public class GetRepoTagLayersResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(GetRepoTagLayersResponseBody body) {
+        public Builder body(CancelRepoSyncTaskResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public GetRepoTagLayersResponse build() {
-            return new GetRepoTagLayersResponse(this);
+        public CancelRepoSyncTaskResponse build() {
+            return new CancelRepoSyncTaskResponse(this);
         } 
 
     } 

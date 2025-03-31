@@ -1,44 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cr20181201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListChartRepositoryRequest} extends {@link RequestModel}
  *
  * <p>ListChartRepositoryRequest</p>
  */
 public class ListChartRepositoryRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private Integer pageNo;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RepoName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RepoName")
     private String repoName;
 
-    @Query
-    @NameInMap("RepoNamespaceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RepoNamespaceName")
     private String repoNamespaceName;
 
-    @Query
-    @NameInMap("RepoStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RepoStatus")
     private String repoStatus;
 
     private ListChartRepositoryRequest(Builder builder) {
@@ -60,7 +65,7 @@ public class ListChartRepositoryRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -139,7 +144,7 @@ public class ListChartRepositoryRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -148,7 +153,11 @@ public class ListChartRepositoryRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cri-xkx6vujuhay0****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -157,7 +166,10 @@ public class ListChartRepositoryRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -166,7 +178,10 @@ public class ListChartRepositoryRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -175,7 +190,10 @@ public class ListChartRepositoryRequest extends Request {
         }
 
         /**
-         * The name of the repository.
+         * <p>The name of the repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ns1</p>
          */
         public Builder repoName(String repoName) {
             this.putQueryParameter("RepoName", repoName);
@@ -184,7 +202,10 @@ public class ListChartRepositoryRequest extends Request {
         }
 
         /**
-         * The name of the namespace to which the repository belongs.
+         * <p>The name of the namespace to which the repository belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>repo1</p>
          */
         public Builder repoNamespaceName(String repoNamespaceName) {
             this.putQueryParameter("RepoNamespaceName", repoNamespaceName);
@@ -193,12 +214,15 @@ public class ListChartRepositoryRequest extends Request {
         }
 
         /**
-         * The status of the chart repositories that you want to query. Valid values:
-         * <p>
+         * <p>The status of the chart repositories that you want to query. Valid values:</p>
+         * <ul>
+         * <li><code>ALL</code>: query repositories of all status.</li>
+         * <li><code>NORMAL</code>: query normal repositories.</li>
+         * <li><code>DELETING</code>: query repositories that are being deleted.</li>
+         * </ul>
          * 
-         * *   `ALL`: query repositories of all status.
-         * *   `NORMAL`: query normal repositories.
-         * *   `DELETING`: query repositories that are being deleted.
+         * <strong>example:</strong>
+         * <p>ALL</p>
          */
         public Builder repoStatus(String repoStatus) {
             this.putQueryParameter("RepoStatus", repoStatus);

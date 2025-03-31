@@ -1,51 +1,56 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cr20181201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListScanMaliciousFileByTaskRequest} extends {@link RequestModel}
  *
  * <p>ListScanMaliciousFileByTaskRequest</p>
  */
 public class ListScanMaliciousFileByTaskRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Digest")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Digest")
     private String digest;
 
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("Level")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Level")
     private String level;
 
-    @Query
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private Integer pageNo;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RepoId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RepoId")
     private String repoId;
 
-    @Query
-    @NameInMap("ScanTaskId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScanTaskId")
     private String scanTaskId;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private String tag;
 
     private ListScanMaliciousFileByTaskRequest(Builder builder) {
@@ -69,7 +74,7 @@ public class ListScanMaliciousFileByTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -175,7 +180,10 @@ public class ListScanMaliciousFileByTaskRequest extends Request {
         }
 
         /**
-         * Digest.
+         * <p>The image digest.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sha256:aa4bffff6406785e930dab1f94c9a1297ba22xxxx71d71504a015764*********</p>
          */
         public Builder digest(String digest) {
             this.putQueryParameter("Digest", digest);
@@ -184,7 +192,10 @@ public class ListScanMaliciousFileByTaskRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cri-gu94qynvpwk*****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -193,7 +204,10 @@ public class ListScanMaliciousFileByTaskRequest extends Request {
         }
 
         /**
-         * Level.
+         * <p>The severity of the malicious file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>High</p>
          */
         public Builder level(String level) {
             this.putQueryParameter("Level", level);
@@ -202,7 +216,10 @@ public class ListScanMaliciousFileByTaskRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -211,7 +228,10 @@ public class ListScanMaliciousFileByTaskRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Maximum value: 100. If you specify a value greater than 100 for this parameter, the system reports a parameter error or uses 100 as the maximum value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -220,7 +240,10 @@ public class ListScanMaliciousFileByTaskRequest extends Request {
         }
 
         /**
-         * RepoId.
+         * <p>The image repository ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>crr-h1y4l279wb8*****</p>
          */
         public Builder repoId(String repoId) {
             this.putQueryParameter("RepoId", repoId);
@@ -229,7 +252,10 @@ public class ListScanMaliciousFileByTaskRequest extends Request {
         }
 
         /**
-         * ScanTaskId.
+         * <p>The ID of the image scan task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>79ee6bc2-3288-4c56-b967-**********</p>
          */
         public Builder scanTaskId(String scanTaskId) {
             this.putQueryParameter("ScanTaskId", scanTaskId);
@@ -238,7 +264,10 @@ public class ListScanMaliciousFileByTaskRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The image tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>V6.11</p>
          */
         public Builder tag(String tag) {
             this.putQueryParameter("Tag", tag);

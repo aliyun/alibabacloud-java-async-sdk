@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cr20181201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListNamespaceResponseBody} extends {@link TeaModel}
  *
  * <p>ListNamespaceResponseBody</p>
  */
 public class ListNamespaceResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("IsSuccess")
+    @com.aliyun.core.annotation.NameInMap("IsSuccess")
     private Boolean isSuccess;
 
-    @NameInMap("Namespaces")
-    private java.util.List < Namespaces> namespaces;
+    @com.aliyun.core.annotation.NameInMap("Namespaces")
+    private java.util.List<Namespaces> namespaces;
 
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private Integer pageNo;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
 
     private ListNamespaceResponseBody(Builder builder) {
@@ -51,6 +56,10 @@ public class ListNamespaceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -68,7 +77,7 @@ public class ListNamespaceResponseBody extends TeaModel {
     /**
      * @return namespaces
      */
-    public java.util.List < Namespaces> getNamespaces() {
+    public java.util.List<Namespaces> getNamespaces() {
         return this.namespaces;
     }
 
@@ -103,11 +112,24 @@ public class ListNamespaceResponseBody extends TeaModel {
     public static final class Builder {
         private String code; 
         private Boolean isSuccess; 
-        private java.util.List < Namespaces> namespaces; 
+        private java.util.List<Namespaces> namespaces; 
         private Integer pageNo; 
         private Integer pageSize; 
         private String requestId; 
         private String totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListNamespaceResponseBody model) {
+            this.code = model.code;
+            this.isSuccess = model.isSuccess;
+            this.namespaces = model.namespaces;
+            this.pageNo = model.pageNo;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Code.
@@ -128,7 +150,7 @@ public class ListNamespaceResponseBody extends TeaModel {
         /**
          * Namespaces.
          */
-        public Builder namespaces(java.util.List < Namespaces> namespaces) {
+        public Builder namespaces(java.util.List<Namespaces> namespaces) {
             this.namespaces = namespaces;
             return this;
         }
@@ -150,7 +172,10 @@ public class ListNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B7E5FCA5-55ED-451C-9649-0BB2B93387D0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -171,26 +196,32 @@ public class ListNamespaceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListNamespaceResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListNamespaceResponseBody</p>
+     */
     public static class Namespaces extends TeaModel {
-        @NameInMap("AutoCreateRepo")
+        @com.aliyun.core.annotation.NameInMap("AutoCreateRepo")
         private Boolean autoCreateRepo;
 
-        @NameInMap("DefaultRepoType")
+        @com.aliyun.core.annotation.NameInMap("DefaultRepoType")
         private String defaultRepoType;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("NamespaceId")
+        @com.aliyun.core.annotation.NameInMap("NamespaceId")
         private String namespaceId;
 
-        @NameInMap("NamespaceName")
+        @com.aliyun.core.annotation.NameInMap("NamespaceName")
         private String namespaceName;
 
-        @NameInMap("NamespaceStatus")
+        @com.aliyun.core.annotation.NameInMap("NamespaceStatus")
         private String namespaceStatus;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
         private Namespaces(Builder builder) {
@@ -268,6 +299,19 @@ public class ListNamespaceResponseBody extends TeaModel {
             private String namespaceName; 
             private String namespaceStatus; 
             private String resourceGroupId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Namespaces model) {
+                this.autoCreateRepo = model.autoCreateRepo;
+                this.defaultRepoType = model.defaultRepoType;
+                this.instanceId = model.instanceId;
+                this.namespaceId = model.namespaceId;
+                this.namespaceName = model.namespaceName;
+                this.namespaceStatus = model.namespaceStatus;
+                this.resourceGroupId = model.resourceGroupId;
+            } 
 
             /**
              * AutoCreateRepo.

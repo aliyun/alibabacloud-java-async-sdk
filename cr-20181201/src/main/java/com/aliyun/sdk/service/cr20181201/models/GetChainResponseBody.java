@@ -1,54 +1,59 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cr20181201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetChainResponseBody} extends {@link TeaModel}
  *
  * <p>GetChainResponseBody</p>
  */
 public class GetChainResponseBody extends TeaModel {
-    @NameInMap("ChainConfig")
+    @com.aliyun.core.annotation.NameInMap("ChainConfig")
     private ChainConfig chainConfig;
 
-    @NameInMap("ChainId")
+    @com.aliyun.core.annotation.NameInMap("ChainId")
     private String chainId;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private Long createTime;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("IsSuccess")
+    @com.aliyun.core.annotation.NameInMap("IsSuccess")
     private Boolean isSuccess;
 
-    @NameInMap("ModifiedTime")
+    @com.aliyun.core.annotation.NameInMap("ModifiedTime")
     private Long modifiedTime;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ScopeExclude")
-    private java.util.List < String > scopeExclude;
+    @com.aliyun.core.annotation.NameInMap("ScopeExclude")
+    private java.util.List<String> scopeExclude;
 
-    @NameInMap("ScopeId")
+    @com.aliyun.core.annotation.NameInMap("ScopeId")
     private String scopeId;
 
-    @NameInMap("ScopeType")
+    @com.aliyun.core.annotation.NameInMap("ScopeType")
     private String scopeType;
 
     private GetChainResponseBody(Builder builder) {
@@ -73,6 +78,10 @@ public class GetChainResponseBody extends TeaModel {
 
     public static GetChainResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -148,7 +157,7 @@ public class GetChainResponseBody extends TeaModel {
     /**
      * @return scopeExclude
      */
-    public java.util.List < String > getScopeExclude() {
+    public java.util.List<String> getScopeExclude() {
         return this.scopeExclude;
     }
 
@@ -177,9 +186,28 @@ public class GetChainResponseBody extends TeaModel {
         private Long modifiedTime; 
         private String name; 
         private String requestId; 
-        private java.util.List < String > scopeExclude; 
+        private java.util.List<String> scopeExclude; 
         private String scopeId; 
         private String scopeType; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetChainResponseBody model) {
+            this.chainConfig = model.chainConfig;
+            this.chainId = model.chainId;
+            this.code = model.code;
+            this.createTime = model.createTime;
+            this.description = model.description;
+            this.instanceId = model.instanceId;
+            this.isSuccess = model.isSuccess;
+            this.modifiedTime = model.modifiedTime;
+            this.name = model.name;
+            this.requestId = model.requestId;
+            this.scopeExclude = model.scopeExclude;
+            this.scopeId = model.scopeId;
+            this.scopeType = model.scopeType;
+        } 
 
         /**
          * ChainConfig.
@@ -264,7 +292,7 @@ public class GetChainResponseBody extends TeaModel {
         /**
          * ScopeExclude.
          */
-        public Builder scopeExclude(java.util.List < String > scopeExclude) {
+        public Builder scopeExclude(java.util.List<String> scopeExclude) {
             this.scopeExclude = scopeExclude;
             return this;
         }
@@ -291,26 +319,32 @@ public class GetChainResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetChainResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetChainResponseBody</p>
+     */
     public static class DenyPolicy extends TeaModel {
-        @NameInMap("Action")
+        @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
 
-        @NameInMap("BaselineList")
+        @com.aliyun.core.annotation.NameInMap("BaselineList")
         private String baselineList;
 
-        @NameInMap("IssueCount")
+        @com.aliyun.core.annotation.NameInMap("IssueCount")
         private String issueCount;
 
-        @NameInMap("IssueLevel")
+        @com.aliyun.core.annotation.NameInMap("IssueLevel")
         private String issueLevel;
 
-        @NameInMap("IssueList")
+        @com.aliyun.core.annotation.NameInMap("IssueList")
         private String issueList;
 
-        @NameInMap("Logic")
+        @com.aliyun.core.annotation.NameInMap("Logic")
         private String logic;
 
-        @NameInMap("MaliciousList")
+        @com.aliyun.core.annotation.NameInMap("MaliciousList")
         private String maliciousList;
 
         private DenyPolicy(Builder builder) {
@@ -389,6 +423,19 @@ public class GetChainResponseBody extends TeaModel {
             private String logic; 
             private String maliciousList; 
 
+            private Builder() {
+            } 
+
+            private Builder(DenyPolicy model) {
+                this.action = model.action;
+                this.baselineList = model.baselineList;
+                this.issueCount = model.issueCount;
+                this.issueLevel = model.issueLevel;
+                this.issueList = model.issueList;
+                this.logic = model.logic;
+                this.maliciousList = model.maliciousList;
+            } 
+
             /**
              * Action.
              */
@@ -452,17 +499,23 @@ public class GetChainResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetChainResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetChainResponseBody</p>
+     */
     public static class NodeConfig extends TeaModel {
-        @NameInMap("DenyPolicy")
+        @com.aliyun.core.annotation.NameInMap("DenyPolicy")
         private DenyPolicy denyPolicy;
 
-        @NameInMap("Retry")
+        @com.aliyun.core.annotation.NameInMap("Retry")
         private Integer retry;
 
-        @NameInMap("ScanEngine")
+        @com.aliyun.core.annotation.NameInMap("ScanEngine")
         private String scanEngine;
 
-        @NameInMap("Timeout")
+        @com.aliyun.core.annotation.NameInMap("Timeout")
         private Long timeout;
 
         private NodeConfig(Builder builder) {
@@ -514,6 +567,16 @@ public class GetChainResponseBody extends TeaModel {
             private String scanEngine; 
             private Long timeout; 
 
+            private Builder() {
+            } 
+
+            private Builder(NodeConfig model) {
+                this.denyPolicy = model.denyPolicy;
+                this.retry = model.retry;
+                this.scanEngine = model.scanEngine;
+                this.timeout = model.timeout;
+            } 
+
             /**
              * DenyPolicy.
              */
@@ -553,14 +616,20 @@ public class GetChainResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetChainResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetChainResponseBody</p>
+     */
     public static class Nodes extends TeaModel {
-        @NameInMap("Enable")
+        @com.aliyun.core.annotation.NameInMap("Enable")
         private Boolean enable;
 
-        @NameInMap("NodeConfig")
+        @com.aliyun.core.annotation.NameInMap("NodeConfig")
         private NodeConfig nodeConfig;
 
-        @NameInMap("NodeName")
+        @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
 
         private Nodes(Builder builder) {
@@ -603,6 +672,15 @@ public class GetChainResponseBody extends TeaModel {
             private NodeConfig nodeConfig; 
             private String nodeName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Nodes model) {
+                this.enable = model.enable;
+                this.nodeConfig = model.nodeConfig;
+                this.nodeName = model.nodeName;
+            } 
+
             /**
              * Enable.
              */
@@ -634,8 +712,14 @@ public class GetChainResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetChainResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetChainResponseBody</p>
+     */
     public static class From extends TeaModel {
-        @NameInMap("NodeName")
+        @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
 
         private From(Builder builder) {
@@ -660,6 +744,13 @@ public class GetChainResponseBody extends TeaModel {
         public static final class Builder {
             private String nodeName; 
 
+            private Builder() {
+            } 
+
+            private Builder(From model) {
+                this.nodeName = model.nodeName;
+            } 
+
             /**
              * NodeName.
              */
@@ -675,8 +766,14 @@ public class GetChainResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetChainResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetChainResponseBody</p>
+     */
     public static class To extends TeaModel {
-        @NameInMap("NodeName")
+        @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
 
         private To(Builder builder) {
@@ -701,6 +798,13 @@ public class GetChainResponseBody extends TeaModel {
         public static final class Builder {
             private String nodeName; 
 
+            private Builder() {
+            } 
+
+            private Builder(To model) {
+                this.nodeName = model.nodeName;
+            } 
+
             /**
              * NodeName.
              */
@@ -716,11 +820,17 @@ public class GetChainResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetChainResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetChainResponseBody</p>
+     */
     public static class Routers extends TeaModel {
-        @NameInMap("From")
+        @com.aliyun.core.annotation.NameInMap("From")
         private From from;
 
-        @NameInMap("To")
+        @com.aliyun.core.annotation.NameInMap("To")
         private To to;
 
         private Routers(Builder builder) {
@@ -754,6 +864,14 @@ public class GetChainResponseBody extends TeaModel {
             private From from; 
             private To to; 
 
+            private Builder() {
+            } 
+
+            private Builder(Routers model) {
+                this.from = model.from;
+                this.to = model.to;
+            } 
+
             /**
              * From.
              */
@@ -777,20 +895,26 @@ public class GetChainResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetChainResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetChainResponseBody</p>
+     */
     public static class ChainConfig extends TeaModel {
-        @NameInMap("ChainConfigId")
+        @com.aliyun.core.annotation.NameInMap("ChainConfigId")
         private String chainConfigId;
 
-        @NameInMap("IsActive")
+        @com.aliyun.core.annotation.NameInMap("IsActive")
         private Boolean isActive;
 
-        @NameInMap("Nodes")
-        private java.util.List < Nodes> nodes;
+        @com.aliyun.core.annotation.NameInMap("Nodes")
+        private java.util.List<Nodes> nodes;
 
-        @NameInMap("Routers")
-        private java.util.List < Routers> routers;
+        @com.aliyun.core.annotation.NameInMap("Routers")
+        private java.util.List<Routers> routers;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private ChainConfig(Builder builder) {
@@ -826,14 +950,14 @@ public class GetChainResponseBody extends TeaModel {
         /**
          * @return nodes
          */
-        public java.util.List < Nodes> getNodes() {
+        public java.util.List<Nodes> getNodes() {
             return this.nodes;
         }
 
         /**
          * @return routers
          */
-        public java.util.List < Routers> getRouters() {
+        public java.util.List<Routers> getRouters() {
             return this.routers;
         }
 
@@ -847,9 +971,20 @@ public class GetChainResponseBody extends TeaModel {
         public static final class Builder {
             private String chainConfigId; 
             private Boolean isActive; 
-            private java.util.List < Nodes> nodes; 
-            private java.util.List < Routers> routers; 
+            private java.util.List<Nodes> nodes; 
+            private java.util.List<Routers> routers; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(ChainConfig model) {
+                this.chainConfigId = model.chainConfigId;
+                this.isActive = model.isActive;
+                this.nodes = model.nodes;
+                this.routers = model.routers;
+                this.version = model.version;
+            } 
 
             /**
              * ChainConfigId.
@@ -870,7 +1005,7 @@ public class GetChainResponseBody extends TeaModel {
             /**
              * Nodes.
              */
-            public Builder nodes(java.util.List < Nodes> nodes) {
+            public Builder nodes(java.util.List<Nodes> nodes) {
                 this.nodes = nodes;
                 return this;
             }
@@ -878,7 +1013,7 @@ public class GetChainResponseBody extends TeaModel {
             /**
              * Routers.
              */
-            public Builder routers(java.util.List < Routers> routers) {
+            public Builder routers(java.util.List<Routers> routers) {
                 this.routers = routers;
                 return this;
             }

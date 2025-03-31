@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cr20181201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAuthorizationTokenResponseBody} extends {@link TeaModel}
  *
  * <p>GetAuthorizationTokenResponseBody</p>
  */
 public class GetAuthorizationTokenResponseBody extends TeaModel {
-    @NameInMap("AuthorizationToken")
+    @com.aliyun.core.annotation.NameInMap("AuthorizationToken")
     private String authorizationToken;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("ExpireTime")
+    @com.aliyun.core.annotation.NameInMap("ExpireTime")
     private Long expireTime;
 
-    @NameInMap("IsSuccess")
+    @com.aliyun.core.annotation.NameInMap("IsSuccess")
     private Boolean isSuccess;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TempUsername")
+    @com.aliyun.core.annotation.NameInMap("TempUsername")
     private String tempUsername;
 
     private GetAuthorizationTokenResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class GetAuthorizationTokenResponseBody extends TeaModel {
 
     public static GetAuthorizationTokenResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -97,13 +106,28 @@ public class GetAuthorizationTokenResponseBody extends TeaModel {
         private String requestId; 
         private String tempUsername; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetAuthorizationTokenResponseBody model) {
+            this.authorizationToken = model.authorizationToken;
+            this.code = model.code;
+            this.expireTime = model.expireTime;
+            this.isSuccess = model.isSuccess;
+            this.requestId = model.requestId;
+            this.tempUsername = model.tempUsername;
+        } 
+
         /**
-         * The temporary password returned after you call this API operation is a Security Token Service (STS) token whose validity period is 1 hour. Take note of the following items when you log on to Container Registry instances by using an STS token:
-         * <p>
+         * <p>The temporary password returned after you call this API operation is a Security Token Service (STS) token whose validity period is 1 hour. Take note of the following items when you log on to Container Registry instances by using an STS token:</p>
+         * <ul>
+         * <li>If the STS token belongs to an Alibaba Cloud account, you can use the STS token to log on to all Container Registry instances that belong to the Alibaba Cloud account.</li>
+         * <li>If the STS token belongs to a Resource Access Management (RAM) user, you can use the STS token to log on to all Container Registry instances that belong to the RAM user.</li>
+         * <li>You can use an STS token to access only Container Registry instances to which the STS token is scoped.</li>
+         * </ul>
          * 
-         * *   If the STS token belongs to an Alibaba Cloud account, you can use the STS token to log on to all Container Registry instances that belong to the Alibaba Cloud account.
-         * *   If the STS token belongs to a Resource Access Management (RAM) user, you can use the STS token to log on to all Container Registry instances that belong to the RAM user.
-         * *   You can use an STS token to access only Container Registry instances to which the STS token is scoped.
+         * <strong>example:</strong>
+         * <p>shaunadadakks:uuczxnjcyeyhdjadkkajsjdjadhyucb</p>
          */
         public Builder authorizationToken(String authorizationToken) {
             this.authorizationToken = authorizationToken;
@@ -111,11 +135,14 @@ public class GetAuthorizationTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the API call is successful.
-         * <p>
+         * <p>Indicates whether the API call is successful.</p>
+         * <ul>
+         * <li><code>true</code>: successful</li>
+         * <li><code>false</code>: failed</li>
+         * </ul>
          * 
-         * *   `true`: successful
-         * *   `false`: failed
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -123,7 +150,10 @@ public class GetAuthorizationTokenResponseBody extends TeaModel {
         }
 
         /**
-         * The return value.
+         * <p>The return value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1571242083000</p>
          */
         public Builder expireTime(Long expireTime) {
             this.expireTime = expireTime;
@@ -131,7 +161,10 @@ public class GetAuthorizationTokenResponseBody extends TeaModel {
         }
 
         /**
-         * The username that is used to log on to the Container Registry instance.
+         * <p>The username that is used to log on to the Container Registry instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -139,7 +172,10 @@ public class GetAuthorizationTokenResponseBody extends TeaModel {
         }
 
         /**
-         * The timestamp when the temporary password expires. Unit: milliseconds.
+         * <p>The timestamp when the temporary password expires. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E069EB86-E6AD-4A98-ADDE-0E993390239A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -147,7 +183,10 @@ public class GetAuthorizationTokenResponseBody extends TeaModel {
         }
 
         /**
-         * The password that is used to log on to the Container Registry instance.
+         * <p>The password that is used to log on to the Container Registry instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>temp_user_cr</p>
          */
         public Builder tempUsername(String tempUsername) {
             this.tempUsername = tempUsername;

@@ -1,48 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cr20181201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRepoSourceCodeRepoResponseBody} extends {@link TeaModel}
  *
  * <p>GetRepoSourceCodeRepoResponseBody</p>
  */
 public class GetRepoSourceCodeRepoResponseBody extends TeaModel {
-    @NameInMap("AutoBuild")
+    @com.aliyun.core.annotation.NameInMap("AutoBuild")
     private String autoBuild;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("CodeRepoDomain")
+    @com.aliyun.core.annotation.NameInMap("CodeRepoDomain")
     private String codeRepoDomain;
 
-    @NameInMap("CodeRepoName")
+    @com.aliyun.core.annotation.NameInMap("CodeRepoName")
     private String codeRepoName;
 
-    @NameInMap("CodeRepoNamespaceName")
+    @com.aliyun.core.annotation.NameInMap("CodeRepoNamespaceName")
     private String codeRepoNamespaceName;
 
-    @NameInMap("CodeRepoType")
+    @com.aliyun.core.annotation.NameInMap("CodeRepoType")
     private String codeRepoType;
 
-    @NameInMap("DisableCacheBuild")
+    @com.aliyun.core.annotation.NameInMap("DisableCacheBuild")
     private String disableCacheBuild;
 
-    @NameInMap("IsSuccess")
+    @com.aliyun.core.annotation.NameInMap("IsSuccess")
     private Boolean isSuccess;
 
-    @NameInMap("OverseaBuild")
+    @com.aliyun.core.annotation.NameInMap("OverseaBuild")
     private String overseaBuild;
 
-    @NameInMap("RepoId")
+    @com.aliyun.core.annotation.NameInMap("RepoId")
     private String repoId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetRepoSourceCodeRepoResponseBody(Builder builder) {
@@ -65,6 +70,10 @@ public class GetRepoSourceCodeRepoResponseBody extends TeaModel {
 
     public static GetRepoSourceCodeRepoResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -157,12 +166,32 @@ public class GetRepoSourceCodeRepoResponseBody extends TeaModel {
         private String repoId; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetRepoSourceCodeRepoResponseBody model) {
+            this.autoBuild = model.autoBuild;
+            this.code = model.code;
+            this.codeRepoDomain = model.codeRepoDomain;
+            this.codeRepoName = model.codeRepoName;
+            this.codeRepoNamespaceName = model.codeRepoNamespaceName;
+            this.codeRepoType = model.codeRepoType;
+            this.disableCacheBuild = model.disableCacheBuild;
+            this.isSuccess = model.isSuccess;
+            this.overseaBuild = model.overseaBuild;
+            this.repoId = model.repoId;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * Indicates whether image building is automatically triggered when source code is committed. Valid values:
-         * <p>
+         * <p>Indicates whether image building is automatically triggered when source code is committed. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: Image building is automatically triggered when source code is committed.</li>
+         * <li><code>false</code>: Image building is not triggered when source code is committed.</li>
+         * </ul>
          * 
-         * *   `true`: Image building is automatically triggered when source code is committed.
-         * *   `false`: Image building is not triggered when source code is committed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoBuild(String autoBuild) {
             this.autoBuild = autoBuild;
@@ -170,7 +199,10 @@ public class GetRepoSourceCodeRepoResponseBody extends TeaModel {
         }
 
         /**
-         * The response code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -178,7 +210,10 @@ public class GetRepoSourceCodeRepoResponseBody extends TeaModel {
         }
 
         /**
-         * The address of the source code repository.
+         * <p>The address of the source code repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://github.com">https://github.com</a></p>
          */
         public Builder codeRepoDomain(String codeRepoDomain) {
             this.codeRepoDomain = codeRepoDomain;
@@ -186,7 +221,10 @@ public class GetRepoSourceCodeRepoResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the source code repository.
+         * <p>The name of the source code repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>repo</p>
          */
         public Builder codeRepoName(String codeRepoName) {
             this.codeRepoName = codeRepoName;
@@ -194,7 +232,10 @@ public class GetRepoSourceCodeRepoResponseBody extends TeaModel {
         }
 
         /**
-         * The namespace to which the source code repository belongs.
+         * <p>The namespace to which the source code repository belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>namespace</p>
          */
         public Builder codeRepoNamespaceName(String codeRepoNamespaceName) {
             this.codeRepoNamespaceName = codeRepoNamespaceName;
@@ -202,7 +243,10 @@ public class GetRepoSourceCodeRepoResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the code hosting platform. Valid values: `GITHUB`, `GITLAB`, `GITEE`, `CODE`, and `CODEUP`.
+         * <p>The type of the code hosting platform. Valid values: <code>GITHUB</code>, <code>GITLAB</code>, <code>GITEE</code>, <code>CODE</code>, and <code>CODEUP</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GITHUB</p>
          */
         public Builder codeRepoType(String codeRepoType) {
             this.codeRepoType = codeRepoType;
@@ -210,11 +254,14 @@ public class GetRepoSourceCodeRepoResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether build cache is disabled. Valid values:
-         * <p>
+         * <p>Indicates whether build cache is disabled. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: Build cache is disabled.</li>
+         * <li><code>false</code>: Build cache is enabled.</li>
+         * </ul>
          * 
-         * *   `true`: Build cache is disabled.
-         * *   `false`: Build cache is enabled.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder disableCacheBuild(String disableCacheBuild) {
             this.disableCacheBuild = disableCacheBuild;
@@ -222,11 +269,14 @@ public class GetRepoSourceCodeRepoResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the API call is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the API call is successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: successful</li>
+         * <li><code>false</code>: failed</li>
+         * </ul>
          * 
-         * *   `true`: successful
-         * *   `false`: failed
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -234,11 +284,14 @@ public class GetRepoSourceCodeRepoResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether image building is accelerated for servers outside the Chinese mainland. Valid values:
-         * <p>
+         * <p>Indicates whether image building is accelerated for servers outside the Chinese mainland. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: Image building is accelerated for servers outside the Chinese mainland.</li>
+         * <li><code>false</code>: Image building is not accelerated for servers outside the Chinese mainland.</li>
+         * </ul>
          * 
-         * *   `true`: Image building is accelerated for servers outside the Chinese mainland.
-         * *   `false`: Image building is not accelerated for servers outside the Chinese mainland.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder overseaBuild(String overseaBuild) {
             this.overseaBuild = overseaBuild;
@@ -246,7 +299,10 @@ public class GetRepoSourceCodeRepoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the repository.
+         * <p>The ID of the repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>crr-gzsrlevmvoaq****</p>
          */
         public Builder repoId(String repoId) {
             this.repoId = repoId;
@@ -254,7 +310,10 @@ public class GetRepoSourceCodeRepoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4CE1F661-75DD-4EBD-A4AD-057B26834ABB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

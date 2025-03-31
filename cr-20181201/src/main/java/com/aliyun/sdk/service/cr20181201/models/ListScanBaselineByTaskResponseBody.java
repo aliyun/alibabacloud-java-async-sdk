@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cr20181201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListScanBaselineByTaskResponseBody} extends {@link TeaModel}
  *
  * <p>ListScanBaselineByTaskResponseBody</p>
  */
 public class ListScanBaselineByTaskResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("IsSuccess")
+    @com.aliyun.core.annotation.NameInMap("IsSuccess")
     private Boolean isSuccess;
 
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private Integer pageNo;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ScanBaselines")
-    private java.util.List < ScanBaselines> scanBaselines;
+    @com.aliyun.core.annotation.NameInMap("ScanBaselines")
+    private java.util.List<ScanBaselines> scanBaselines;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListScanBaselineByTaskResponseBody(Builder builder) {
@@ -49,6 +54,10 @@ public class ListScanBaselineByTaskResponseBody extends TeaModel {
 
     public static ListScanBaselineByTaskResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -89,7 +98,7 @@ public class ListScanBaselineByTaskResponseBody extends TeaModel {
     /**
      * @return scanBaselines
      */
-    public java.util.List < ScanBaselines> getScanBaselines() {
+    public java.util.List<ScanBaselines> getScanBaselines() {
         return this.scanBaselines;
     }
 
@@ -106,11 +115,27 @@ public class ListScanBaselineByTaskResponseBody extends TeaModel {
         private Integer pageNo; 
         private Integer pageSize; 
         private String requestId; 
-        private java.util.List < ScanBaselines> scanBaselines; 
+        private java.util.List<ScanBaselines> scanBaselines; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListScanBaselineByTaskResponseBody model) {
+            this.code = model.code;
+            this.isSuccess = model.isSuccess;
+            this.pageNo = model.pageNo;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.scanBaselines = model.scanBaselines;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * Code.
+         * <p>The return value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -118,7 +143,14 @@ public class ListScanBaselineByTaskResponseBody extends TeaModel {
         }
 
         /**
-         * IsSuccess.
+         * <p>Indicates whether the API request is successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: successful</li>
+         * <li><code>false</code>: failed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -126,7 +158,10 @@ public class ListScanBaselineByTaskResponseBody extends TeaModel {
         }
 
         /**
-         * PageNo.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.pageNo = pageNo;
@@ -134,7 +169,10 @@ public class ListScanBaselineByTaskResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -142,7 +180,10 @@ public class ListScanBaselineByTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5259118F-79E2-57E9-9AEA-551586F4FAED</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,15 +191,18 @@ public class ListScanBaselineByTaskResponseBody extends TeaModel {
         }
 
         /**
-         * ScanBaselines.
+         * <p>The queried baseline risks.</p>
          */
-        public Builder scanBaselines(java.util.List < ScanBaselines> scanBaselines) {
+        public Builder scanBaselines(java.util.List<ScanBaselines> scanBaselines) {
             this.scanBaselines = scanBaselines;
             return this;
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -171,50 +215,56 @@ public class ListScanBaselineByTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListScanBaselineByTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListScanBaselineByTaskResponseBody</p>
+     */
     public static class ScanBaselines extends TeaModel {
-        @NameInMap("BaselineClassAlias")
+        @com.aliyun.core.annotation.NameInMap("BaselineClassAlias")
         private String baselineClassAlias;
 
-        @NameInMap("BaselineDetailAdvice")
+        @com.aliyun.core.annotation.NameInMap("BaselineDetailAdvice")
         private String baselineDetailAdvice;
 
-        @NameInMap("BaselineDetailDescription")
+        @com.aliyun.core.annotation.NameInMap("BaselineDetailDescription")
         private String baselineDetailDescription;
 
-        @NameInMap("BaselineDetailPrompt")
+        @com.aliyun.core.annotation.NameInMap("BaselineDetailPrompt")
         private String baselineDetailPrompt;
 
-        @NameInMap("BaselineItemCount")
+        @com.aliyun.core.annotation.NameInMap("BaselineItemCount")
         private Integer baselineItemCount;
 
-        @NameInMap("BaselineNameAlias")
+        @com.aliyun.core.annotation.NameInMap("BaselineNameAlias")
         private String baselineNameAlias;
 
-        @NameInMap("BaselineNameKey")
+        @com.aliyun.core.annotation.NameInMap("BaselineNameKey")
         private String baselineNameKey;
 
-        @NameInMap("BaselineNameLevel")
+        @com.aliyun.core.annotation.NameInMap("BaselineNameLevel")
         private String baselineNameLevel;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("FirstScanTime")
+        @com.aliyun.core.annotation.NameInMap("FirstScanTime")
         private Long firstScanTime;
 
-        @NameInMap("HighRiskItemCount")
+        @com.aliyun.core.annotation.NameInMap("HighRiskItemCount")
         private Integer highRiskItemCount;
 
-        @NameInMap("LowRiskItemCount")
+        @com.aliyun.core.annotation.NameInMap("LowRiskItemCount")
         private Integer lowRiskItemCount;
 
-        @NameInMap("MiddleRiskItemCount")
+        @com.aliyun.core.annotation.NameInMap("MiddleRiskItemCount")
         private Integer middleRiskItemCount;
 
-        @NameInMap("ScanTaskId")
+        @com.aliyun.core.annotation.NameInMap("ScanTaskId")
         private String scanTaskId;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
         private ScanBaselines(Builder builder) {
@@ -365,8 +415,29 @@ public class ListScanBaselineByTaskResponseBody extends TeaModel {
             private String scanTaskId; 
             private Long updateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(ScanBaselines model) {
+                this.baselineClassAlias = model.baselineClassAlias;
+                this.baselineDetailAdvice = model.baselineDetailAdvice;
+                this.baselineDetailDescription = model.baselineDetailDescription;
+                this.baselineDetailPrompt = model.baselineDetailPrompt;
+                this.baselineItemCount = model.baselineItemCount;
+                this.baselineNameAlias = model.baselineNameAlias;
+                this.baselineNameKey = model.baselineNameKey;
+                this.baselineNameLevel = model.baselineNameLevel;
+                this.createTime = model.createTime;
+                this.firstScanTime = model.firstScanTime;
+                this.highRiskItemCount = model.highRiskItemCount;
+                this.lowRiskItemCount = model.lowRiskItemCount;
+                this.middleRiskItemCount = model.middleRiskItemCount;
+                this.scanTaskId = model.scanTaskId;
+                this.updateTime = model.updateTime;
+            } 
+
             /**
-             * BaselineClassAlias.
+             * <p>The category of the baseline risk.</p>
              */
             public Builder baselineClassAlias(String baselineClassAlias) {
                 this.baselineClassAlias = baselineClassAlias;
@@ -374,7 +445,7 @@ public class ListScanBaselineByTaskResponseBody extends TeaModel {
             }
 
             /**
-             * BaselineDetailAdvice.
+             * <p>The suggestion on handling the baseline risk.</p>
              */
             public Builder baselineDetailAdvice(String baselineDetailAdvice) {
                 this.baselineDetailAdvice = baselineDetailAdvice;
@@ -382,7 +453,7 @@ public class ListScanBaselineByTaskResponseBody extends TeaModel {
             }
 
             /**
-             * BaselineDetailDescription.
+             * <p>The description of the baseline risk.</p>
              */
             public Builder baselineDetailDescription(String baselineDetailDescription) {
                 this.baselineDetailDescription = baselineDetailDescription;
@@ -390,7 +461,10 @@ public class ListScanBaselineByTaskResponseBody extends TeaModel {
             }
 
             /**
-             * BaselineDetailPrompt.
+             * <p>The path and content of the baseline risk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>usr/local/www/project/environments/dev/common/config/paramsxxx</p>
              */
             public Builder baselineDetailPrompt(String baselineDetailPrompt) {
                 this.baselineDetailPrompt = baselineDetailPrompt;
@@ -398,7 +472,10 @@ public class ListScanBaselineByTaskResponseBody extends TeaModel {
             }
 
             /**
-             * BaselineItemCount.
+             * <p>The number of baseline risks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder baselineItemCount(Integer baselineItemCount) {
                 this.baselineItemCount = baselineItemCount;
@@ -406,7 +483,7 @@ public class ListScanBaselineByTaskResponseBody extends TeaModel {
             }
 
             /**
-             * BaselineNameAlias.
+             * <p>The name of the baseline risk.</p>
              */
             public Builder baselineNameAlias(String baselineNameAlias) {
                 this.baselineNameAlias = baselineNameAlias;
@@ -414,7 +491,10 @@ public class ListScanBaselineByTaskResponseBody extends TeaModel {
             }
 
             /**
-             * BaselineNameKey.
+             * <p>The name of the baseline risk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ak_leak</p>
              */
             public Builder baselineNameKey(String baselineNameKey) {
                 this.baselineNameKey = baselineNameKey;
@@ -422,7 +502,10 @@ public class ListScanBaselineByTaskResponseBody extends TeaModel {
             }
 
             /**
-             * BaselineNameLevel.
+             * <p>The severity of the baseline risk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>high</p>
              */
             public Builder baselineNameLevel(String baselineNameLevel) {
                 this.baselineNameLevel = baselineNameLevel;
@@ -430,7 +513,10 @@ public class ListScanBaselineByTaskResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the image was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1695090008000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -438,7 +524,10 @@ public class ListScanBaselineByTaskResponseBody extends TeaModel {
             }
 
             /**
-             * FirstScanTime.
+             * <p>The time when the image was first scanned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-04-10 15:33:26</p>
              */
             public Builder firstScanTime(Long firstScanTime) {
                 this.firstScanTime = firstScanTime;
@@ -446,7 +535,10 @@ public class ListScanBaselineByTaskResponseBody extends TeaModel {
             }
 
             /**
-             * HighRiskItemCount.
+             * <p>The quantity of baseline risks whose severity is high.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder highRiskItemCount(Integer highRiskItemCount) {
                 this.highRiskItemCount = highRiskItemCount;
@@ -454,7 +546,10 @@ public class ListScanBaselineByTaskResponseBody extends TeaModel {
             }
 
             /**
-             * LowRiskItemCount.
+             * <p>The quantity of baseline risks whose severity is low.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder lowRiskItemCount(Integer lowRiskItemCount) {
                 this.lowRiskItemCount = lowRiskItemCount;
@@ -462,7 +557,10 @@ public class ListScanBaselineByTaskResponseBody extends TeaModel {
             }
 
             /**
-             * MiddleRiskItemCount.
+             * <p>The quantity of baseline risks whose severity is medium.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder middleRiskItemCount(Integer middleRiskItemCount) {
                 this.middleRiskItemCount = middleRiskItemCount;
@@ -470,7 +568,10 @@ public class ListScanBaselineByTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ScanTaskId.
+             * <p>The ID of the image scan task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2328fcaa-f28a-405d-a357-asdvfrew23</p>
              */
             public Builder scanTaskId(String scanTaskId) {
                 this.scanTaskId = scanTaskId;
@@ -478,7 +579,10 @@ public class ListScanBaselineByTaskResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The time when the image was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1684220824226</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

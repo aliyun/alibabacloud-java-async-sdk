@@ -1,48 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cr20181201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEventCenterRecordRequest} extends {@link RequestModel}
  *
  * <p>ListEventCenterRecordRequest</p>
  */
 public class ListEventCenterRecordRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("EventType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EventType")
     private String eventType;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private Integer pageNo;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RepoName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RepoName")
     private String repoName;
 
-    @Query
-    @NameInMap("RepoNamespaceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RepoNamespaceName")
     private String repoNamespaceName;
 
-    @Query
-    @NameInMap("RuleId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleId")
     private String ruleId;
 
     private ListEventCenterRecordRequest(Builder builder) {
@@ -65,7 +70,7 @@ public class ListEventCenterRecordRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -162,14 +167,17 @@ public class ListEventCenterRecordRequest extends Request {
         }
 
         /**
-         * The type of the event. Valid values:
-         * <p>
+         * <p>The type of the event. Valid values:</p>
+         * <ul>
+         * <li><code>cr:Artifact:DeliveryChainCompleted</code>: The delivery chain is processed.</li>
+         * <li><code>cr:Artifact:SynchronizationCompleted</code>: The image is replicated.</li>
+         * <li><code>cr:Artifact:BuildCompleted</code>: The image is built.</li>
+         * <li><code>cr:Artifact:ScanCompleted</code>: The image is scanned.</li>
+         * <li><code>cr:Artifact:SigningCompleted</code>: The image is signed.</li>
+         * </ul>
          * 
-         * *   `cr:Artifact:DeliveryChainCompleted`: The delivery chain is processed.
-         * *   `cr:Artifact:SynchronizationCompleted`: The image is replicated.
-         * *   `cr:Artifact:BuildCompleted`: The image is built.
-         * *   `cr:Artifact:ScanCompleted`: The image is scanned.
-         * *   `cr:Artifact:SigningCompleted`: The image is signed.
+         * <strong>example:</strong>
+         * <p>cr:Artifact:DeliveryChainCompleted</p>
          */
         public Builder eventType(String eventType) {
             this.putQueryParameter("EventType", eventType);
@@ -178,7 +186,11 @@ public class ListEventCenterRecordRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cri-kmsiwlxxdcva****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -187,7 +199,10 @@ public class ListEventCenterRecordRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -196,7 +211,10 @@ public class ListEventCenterRecordRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -205,7 +223,10 @@ public class ListEventCenterRecordRequest extends Request {
         }
 
         /**
-         * RepoName.
+         * <p>The name of the repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder repoName(String repoName) {
             this.putQueryParameter("RepoName", repoName);
@@ -214,7 +235,10 @@ public class ListEventCenterRecordRequest extends Request {
         }
 
         /**
-         * RepoNamespaceName.
+         * <p>The name of the namespace to which the repository belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder repoNamespaceName(String repoNamespaceName) {
             this.putQueryParameter("RepoNamespaceName", repoNamespaceName);
@@ -223,7 +247,10 @@ public class ListEventCenterRecordRequest extends Request {
         }
 
         /**
-         * The ID of the event notification rule.
+         * <p>The ID of the event notification rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>crecr-n6pbhgjxtla***</p>
          */
         public Builder ruleId(String ruleId) {
             this.putQueryParameter("RuleId", ruleId);

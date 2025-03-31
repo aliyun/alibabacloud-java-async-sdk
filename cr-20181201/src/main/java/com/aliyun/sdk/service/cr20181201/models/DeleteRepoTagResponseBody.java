@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cr20181201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteRepoTagResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteRepoTagResponseBody</p>
  */
 public class DeleteRepoTagResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("IsSuccess")
+    @com.aliyun.core.annotation.NameInMap("IsSuccess")
     private Boolean isSuccess;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeleteRepoTagResponseBody(Builder builder) {
@@ -33,6 +38,10 @@ public class DeleteRepoTagResponseBody extends TeaModel {
 
     public static DeleteRepoTagResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -61,8 +70,20 @@ public class DeleteRepoTagResponseBody extends TeaModel {
         private Boolean isSuccess; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DeleteRepoTagResponseBody model) {
+            this.code = model.code;
+            this.isSuccess = model.isSuccess;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The return value.
+         * <p>The return value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -70,7 +91,10 @@ public class DeleteRepoTagResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -78,7 +102,10 @@ public class DeleteRepoTagResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>96E66B3A-C81A-48BE-ACD6-C0AB1F9313C0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

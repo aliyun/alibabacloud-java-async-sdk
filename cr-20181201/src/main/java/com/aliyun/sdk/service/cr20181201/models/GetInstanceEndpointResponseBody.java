@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cr20181201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInstanceEndpointResponseBody} extends {@link TeaModel}
  *
  * <p>GetInstanceEndpointResponseBody</p>
  */
 public class GetInstanceEndpointResponseBody extends TeaModel {
-    @NameInMap("AclEnable")
+    @com.aliyun.core.annotation.NameInMap("AclEnable")
     private Boolean aclEnable;
 
-    @NameInMap("AclEntries")
-    private java.util.List < AclEntries> aclEntries;
+    @com.aliyun.core.annotation.NameInMap("AclEntries")
+    private java.util.List<AclEntries> aclEntries;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Domains")
-    private java.util.List < Domains> domains;
+    @com.aliyun.core.annotation.NameInMap("Domains")
+    private java.util.List<Domains> domains;
 
-    @NameInMap("Enable")
+    @com.aliyun.core.annotation.NameInMap("Enable")
     private Boolean enable;
 
-    @NameInMap("IsSuccess")
+    @com.aliyun.core.annotation.NameInMap("IsSuccess")
     private Boolean isSuccess;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private GetInstanceEndpointResponseBody(Builder builder) {
@@ -55,6 +60,10 @@ public class GetInstanceEndpointResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return aclEnable
      */
@@ -65,7 +74,7 @@ public class GetInstanceEndpointResponseBody extends TeaModel {
     /**
      * @return aclEntries
      */
-    public java.util.List < AclEntries> getAclEntries() {
+    public java.util.List<AclEntries> getAclEntries() {
         return this.aclEntries;
     }
 
@@ -79,7 +88,7 @@ public class GetInstanceEndpointResponseBody extends TeaModel {
     /**
      * @return domains
      */
-    public java.util.List < Domains> getDomains() {
+    public java.util.List<Domains> getDomains() {
         return this.domains;
     }
 
@@ -113,16 +122,33 @@ public class GetInstanceEndpointResponseBody extends TeaModel {
 
     public static final class Builder {
         private Boolean aclEnable; 
-        private java.util.List < AclEntries> aclEntries; 
+        private java.util.List<AclEntries> aclEntries; 
         private String code; 
-        private java.util.List < Domains> domains; 
+        private java.util.List<Domains> domains; 
         private Boolean enable; 
         private Boolean isSuccess; 
         private String requestId; 
         private String status; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetInstanceEndpointResponseBody model) {
+            this.aclEnable = model.aclEnable;
+            this.aclEntries = model.aclEntries;
+            this.code = model.code;
+            this.domains = model.domains;
+            this.enable = model.enable;
+            this.isSuccess = model.isSuccess;
+            this.requestId = model.requestId;
+            this.status = model.status;
+        } 
+
         /**
-         * Indicates whether the access control list (ACL) feature is enabled.
+         * <p>Indicates whether the access control list (ACL) feature is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder aclEnable(Boolean aclEnable) {
             this.aclEnable = aclEnable;
@@ -130,15 +156,18 @@ public class GetInstanceEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * The ACLs.
+         * <p>The ACLs.</p>
          */
-        public Builder aclEntries(java.util.List < AclEntries> aclEntries) {
+        public Builder aclEntries(java.util.List<AclEntries> aclEntries) {
             this.aclEntries = aclEntries;
             return this;
         }
 
         /**
-         * The return value.
+         * <p>The return value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -146,15 +175,18 @@ public class GetInstanceEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * Domain names.
+         * <p>Domain names.</p>
          */
-        public Builder domains(java.util.List < Domains> domains) {
+        public Builder domains(java.util.List<Domains> domains) {
             this.domains = domains;
             return this;
         }
 
         /**
-         * Indicates whether the ACL feature is enabled.
+         * <p>Indicates whether the ACL feature is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enable(Boolean enable) {
             this.enable = enable;
@@ -162,7 +194,10 @@ public class GetInstanceEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -170,7 +205,10 @@ public class GetInstanceEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8F3D5EC5-39D1-4C53-A198-48C54C658FA3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -178,7 +216,10 @@ public class GetInstanceEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the instance.
+         * <p>The status of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -191,11 +232,17 @@ public class GetInstanceEndpointResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetInstanceEndpointResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceEndpointResponseBody</p>
+     */
     public static class AclEntries extends TeaModel {
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("Entry")
+        @com.aliyun.core.annotation.NameInMap("Entry")
         private String entry;
 
         private AclEntries(Builder builder) {
@@ -229,8 +276,19 @@ public class GetInstanceEndpointResponseBody extends TeaModel {
             private String comment; 
             private String entry; 
 
+            private Builder() {
+            } 
+
+            private Builder(AclEntries model) {
+                this.comment = model.comment;
+                this.entry = model.entry;
+            } 
+
             /**
-             * Remarks for public IP address whitelists.
+             * <p>Remarks for public IP address whitelists.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -238,7 +296,10 @@ public class GetInstanceEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address whitelist.
+             * <p>The public IP address whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.1.0/24</p>
              */
             public Builder entry(String entry) {
                 this.entry = entry;
@@ -252,11 +313,17 @@ public class GetInstanceEndpointResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceEndpointResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceEndpointResponseBody</p>
+     */
     public static class Domains extends TeaModel {
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Domains(Builder builder) {
@@ -290,8 +357,19 @@ public class GetInstanceEndpointResponseBody extends TeaModel {
             private String domain; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Domains model) {
+                this.domain = model.domain;
+                this.type = model.type;
+            } 
+
             /**
-             * The domain name that is used to access the Container Registry Enterprise Edition instance.
+             * <p>The domain name that is used to access the Container Registry Enterprise Edition instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>shanghai-instance1-registry.cn-shanghai.cr.aliyuncs.com</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -299,11 +377,14 @@ public class GetInstanceEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the domain name. Valid values:
-             * <p>
+             * <p>The type of the domain name. Valid values:</p>
+             * <ul>
+             * <li><code>SYSTEM</code>: a system domain name.</li>
+             * <li><code>USER</code>: a user domain name.</li>
+             * </ul>
              * 
-             * *   `SYSTEM`: a system domain name.
-             * *   `USER`: a user domain name.
+             * <strong>example:</strong>
+             * <p>SYSTEM</p>
              */
             public Builder type(String type) {
                 this.type = type;

@@ -1,50 +1,55 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cr20181201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateRepoTriggerRequest} extends {@link RequestModel}
  *
  * <p>UpdateRepoTriggerRequest</p>
  */
 public class UpdateRepoTriggerRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("RepoId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RepoId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String repoId;
 
-    @Query
-    @NameInMap("TriggerId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TriggerId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String triggerId;
 
-    @Query
-    @NameInMap("TriggerName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TriggerName")
     private String triggerName;
 
-    @Query
-    @NameInMap("TriggerTag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TriggerTag")
     private String triggerTag;
 
-    @Query
-    @NameInMap("TriggerType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TriggerType")
     private String triggerType;
 
-    @Query
-    @NameInMap("TriggerUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TriggerUrl")
     private String triggerUrl;
 
     private UpdateRepoTriggerRequest(Builder builder) {
@@ -67,7 +72,7 @@ public class UpdateRepoTriggerRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -155,7 +160,7 @@ public class UpdateRepoTriggerRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -164,7 +169,11 @@ public class UpdateRepoTriggerRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cri-kmsiwlxxdcva****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -173,7 +182,11 @@ public class UpdateRepoTriggerRequest extends Request {
         }
 
         /**
-         * The ID of the image repository.
+         * <p>The ID of the image repository.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>crr-tquyps22md8p****</p>
          */
         public Builder repoId(String repoId) {
             this.putQueryParameter("RepoId", repoId);
@@ -182,7 +195,11 @@ public class UpdateRepoTriggerRequest extends Request {
         }
 
         /**
-         * The ID of the trigger.
+         * <p>The ID of the trigger.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>crw-k7bdx4kt52ty****</p>
          */
         public Builder triggerId(String triggerId) {
             this.putQueryParameter("TriggerId", triggerId);
@@ -191,10 +208,11 @@ public class UpdateRepoTriggerRequest extends Request {
         }
 
         /**
-         * The name of the trigger.
-         * <p>
+         * <p>The name of the trigger.</p>
+         * <p>You can specify the TriggerName or TriggerUrl parameter. The TriggerName parameter is optional.</p>
          * 
-         * You can specify the TriggerName or TriggerUrl parameter. The TriggerName parameter is optional.
+         * <strong>example:</strong>
+         * <p>test_trigger</p>
          */
         public Builder triggerName(String triggerName) {
             this.putQueryParameter("TriggerName", triggerName);
@@ -203,7 +221,10 @@ public class UpdateRepoTriggerRequest extends Request {
         }
 
         /**
-         * The image tag based on which the trigger is set.
+         * <p>The image tag based on which the trigger is set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>master</p>
          */
         public Builder triggerTag(String triggerTag) {
             this.putQueryParameter("TriggerTag", triggerTag);
@@ -212,12 +233,15 @@ public class UpdateRepoTriggerRequest extends Request {
         }
 
         /**
-         * The type of the trigger. Valid values:
-         * <p>
+         * <p>The type of the trigger. Valid values:</p>
+         * <ul>
+         * <li><code>ALL</code>: a trigger that supports both tags and regular expressions.</li>
+         * <li><code>TAG_LISTTAG</code>: a tag-based trigger.</li>
+         * <li><code>TAG_REG_EXP</code>: a regular expression-based trigger.</li>
+         * </ul>
          * 
-         * *   `ALL`: a trigger that supports both tags and regular expressions.
-         * *   `TAG_LISTTAG`: a tag-based trigger.
-         * *   `TAG_REG_EXP`: a regular expression-based trigger.
+         * <strong>example:</strong>
+         * <p>TAG_LIST</p>
          */
         public Builder triggerType(String triggerType) {
             this.putQueryParameter("TriggerType", triggerType);
@@ -226,7 +250,10 @@ public class UpdateRepoTriggerRequest extends Request {
         }
 
         /**
-         * The URL of the trigger.
+         * <p>The URL of the trigger.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://www.test.com">https://www.test.com</a></p>
          */
         public Builder triggerUrl(String triggerUrl) {
             this.putQueryParameter("TriggerUrl", triggerUrl);

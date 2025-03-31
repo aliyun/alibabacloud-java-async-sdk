@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cr20181201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateBuildRecordByRecordRequest} extends {@link RequestModel}
  *
  * <p>CreateBuildRecordByRecordRequest</p>
  */
 public class CreateBuildRecordByRecordRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("BuildRecordId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BuildRecordId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String buildRecordId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("RepoId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RepoId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String repoId;
 
     private CreateBuildRecordByRecordRequest(Builder builder) {
@@ -47,7 +52,7 @@ public class CreateBuildRecordByRecordRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -99,7 +104,7 @@ public class CreateBuildRecordByRecordRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -108,7 +113,10 @@ public class CreateBuildRecordByRecordRequest extends Request {
         }
 
         /**
-         * BuildRecordId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0A311FC5-B8C6-4332-80E4-539EB73****</p>
          */
         public Builder buildRecordId(String buildRecordId) {
             this.putQueryParameter("BuildRecordId", buildRecordId);
@@ -117,7 +125,10 @@ public class CreateBuildRecordByRecordRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cri-hpdfkc6utbaq****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -126,7 +137,10 @@ public class CreateBuildRecordByRecordRequest extends Request {
         }
 
         /**
-         * RepoId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>crr-hnoq7j93or3k****</p>
          */
         public Builder repoId(String repoId) {
             this.putQueryParameter("RepoId", repoId);

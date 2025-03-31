@@ -1,63 +1,68 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cr20181201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRepositoryResponseBody} extends {@link TeaModel}
  *
  * <p>GetRepositoryResponseBody</p>
  */
 public class GetRepositoryResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private Long createTime;
 
-    @NameInMap("Detail")
+    @com.aliyun.core.annotation.NameInMap("Detail")
     private String detail;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("IsSuccess")
+    @com.aliyun.core.annotation.NameInMap("IsSuccess")
     private Boolean isSuccess;
 
-    @NameInMap("ModifiedTime")
+    @com.aliyun.core.annotation.NameInMap("ModifiedTime")
     private Long modifiedTime;
 
-    @NameInMap("RepoBuildType")
+    @com.aliyun.core.annotation.NameInMap("RepoBuildType")
     private String repoBuildType;
 
-    @NameInMap("RepoId")
+    @com.aliyun.core.annotation.NameInMap("RepoId")
     private String repoId;
 
-    @NameInMap("RepoName")
+    @com.aliyun.core.annotation.NameInMap("RepoName")
     private String repoName;
 
-    @NameInMap("RepoNamespaceName")
+    @com.aliyun.core.annotation.NameInMap("RepoNamespaceName")
     private String repoNamespaceName;
 
-    @NameInMap("RepoStatus")
+    @com.aliyun.core.annotation.NameInMap("RepoStatus")
     private String repoStatus;
 
-    @NameInMap("RepoType")
+    @com.aliyun.core.annotation.NameInMap("RepoType")
     private String repoType;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @NameInMap("Summary")
+    @com.aliyun.core.annotation.NameInMap("Summary")
     private String summary;
 
-    @NameInMap("TagImmutability")
+    @com.aliyun.core.annotation.NameInMap("TagImmutability")
     private Boolean tagImmutability;
 
     private GetRepositoryResponseBody(Builder builder) {
@@ -85,6 +90,10 @@ public class GetRepositoryResponseBody extends TeaModel {
 
     public static GetRepositoryResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -217,8 +226,33 @@ public class GetRepositoryResponseBody extends TeaModel {
         private String summary; 
         private Boolean tagImmutability; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetRepositoryResponseBody model) {
+            this.code = model.code;
+            this.createTime = model.createTime;
+            this.detail = model.detail;
+            this.instanceId = model.instanceId;
+            this.isSuccess = model.isSuccess;
+            this.modifiedTime = model.modifiedTime;
+            this.repoBuildType = model.repoBuildType;
+            this.repoId = model.repoId;
+            this.repoName = model.repoName;
+            this.repoNamespaceName = model.repoNamespaceName;
+            this.repoStatus = model.repoStatus;
+            this.repoType = model.repoType;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+            this.summary = model.summary;
+            this.tagImmutability = model.tagImmutability;
+        } 
+
         /**
-         * The return value.
+         * <p>The return value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -226,7 +260,10 @@ public class GetRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the repository was created.
+         * <p>The time when the repository was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1570759546000</p>
          */
         public Builder createTime(Long createTime) {
             this.createTime = createTime;
@@ -234,7 +271,10 @@ public class GetRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the repository.
+         * <p>The details of the repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder detail(String detail) {
             this.detail = detail;
@@ -242,7 +282,10 @@ public class GetRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cri-kmsiwlxxdcva****</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -250,7 +293,10 @@ public class GetRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -258,7 +304,10 @@ public class GetRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the repository was last modified.
+         * <p>The time when the repository was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1570759546100</p>
          */
         public Builder modifiedTime(Long modifiedTime) {
             this.modifiedTime = modifiedTime;
@@ -266,11 +315,14 @@ public class GetRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates how the repository was created. Valid values:
-         * <p>
+         * <p>Indicates how the repository was created. Valid values:</p>
+         * <ul>
+         * <li><code>MANUAL</code>: The repository was manually created.</li>
+         * <li><code>AUTO</code>: The repository was automatically created.</li>
+         * </ul>
          * 
-         * *   `MANUAL`: The repository was manually created.
-         * *   `AUTO`: The repository was automatically created.
+         * <strong>example:</strong>
+         * <p>MANUAL</p>
          */
         public Builder repoBuildType(String repoBuildType) {
             this.repoBuildType = repoBuildType;
@@ -278,7 +330,10 @@ public class GetRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the repository.
+         * <p>The ID of the repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>crr-l5eoubonp0l****</p>
          */
         public Builder repoId(String repoId) {
             this.repoId = repoId;
@@ -286,7 +341,10 @@ public class GetRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the repository.
+         * <p>The name of the repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder repoName(String repoName) {
             this.repoName = repoName;
@@ -294,7 +352,10 @@ public class GetRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the namespace.
+         * <p>The name of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder repoNamespaceName(String repoNamespaceName) {
             this.repoNamespaceName = repoNamespaceName;
@@ -302,7 +363,10 @@ public class GetRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the repository.
+         * <p>The status of the repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         public Builder repoStatus(String repoStatus) {
             this.repoStatus = repoStatus;
@@ -310,11 +374,14 @@ public class GetRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the repository. Valid values:
-         * <p>
+         * <p>The type of the repository. Valid values:</p>
+         * <ul>
+         * <li><code>PUBLIC</code>: public repository.</li>
+         * <li><code>PRIVATE</code>: private repository.</li>
+         * </ul>
          * 
-         * *   `PUBLIC`: public repository.
-         * *   `PRIVATE`: private repository.
+         * <strong>example:</strong>
+         * <p>PRIVATE</p>
          */
         public Builder repoType(String repoType) {
             this.repoType = repoType;
@@ -322,7 +389,10 @@ public class GetRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>915E6734-3E50-4640-8DBA-126D2D94DE29</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -330,7 +400,10 @@ public class GetRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmv36i4is****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -338,7 +411,10 @@ public class GetRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * The summary of the repository.
+         * <p>The summary of the repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Automatically created repository</p>
          */
         public Builder summary(String summary) {
             this.summary = summary;
@@ -346,11 +422,14 @@ public class GetRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the feature of image tag immutability is enabled. Valid values:
-         * <p>
+         * <p>Indicates whether the feature of image tag immutability is enabled. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The feature of image tag immutability is enabled.</li>
+         * <li><code>false</code>: The feature of image tag immutability is disabled.</li>
+         * </ul>
          * 
-         * *   `true`: The feature of image tag immutability is enabled.
-         * *   `false`: The feature of image tag immutability is disabled.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder tagImmutability(Boolean tagImmutability) {
             this.tagImmutability = tagImmutability;

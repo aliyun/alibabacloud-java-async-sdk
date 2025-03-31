@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cr20181201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEventCenterRuleNameResponseBody} extends {@link TeaModel}
  *
  * <p>ListEventCenterRuleNameResponseBody</p>
  */
 public class ListEventCenterRuleNameResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("IsSuccess")
+    @com.aliyun.core.annotation.NameInMap("IsSuccess")
     private Boolean isSuccess;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RuleNames")
-    private java.util.List < RuleNames> ruleNames;
+    @com.aliyun.core.annotation.NameInMap("RuleNames")
+    private java.util.List<RuleNames> ruleNames;
 
     private ListEventCenterRuleNameResponseBody(Builder builder) {
         this.code = builder.code;
@@ -37,6 +42,10 @@ public class ListEventCenterRuleNameResponseBody extends TeaModel {
 
     public static ListEventCenterRuleNameResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -63,7 +72,7 @@ public class ListEventCenterRuleNameResponseBody extends TeaModel {
     /**
      * @return ruleNames
      */
-    public java.util.List < RuleNames> getRuleNames() {
+    public java.util.List<RuleNames> getRuleNames() {
         return this.ruleNames;
     }
 
@@ -71,10 +80,23 @@ public class ListEventCenterRuleNameResponseBody extends TeaModel {
         private String code; 
         private Boolean isSuccess; 
         private String requestId; 
-        private java.util.List < RuleNames> ruleNames; 
+        private java.util.List<RuleNames> ruleNames; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListEventCenterRuleNameResponseBody model) {
+            this.code = model.code;
+            this.isSuccess = model.isSuccess;
+            this.requestId = model.requestId;
+            this.ruleNames = model.ruleNames;
+        } 
 
         /**
-         * The return value.
+         * <p>The return value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +104,10 @@ public class ListEventCenterRuleNameResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -90,7 +115,10 @@ public class ListEventCenterRuleNameResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>031572FA-7D8F-4C05-B790-1071E0E05DE6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,9 +126,12 @@ public class ListEventCenterRuleNameResponseBody extends TeaModel {
         }
 
         /**
-         * The list of names of event notification rules.
+         * <p>The list of names of event notification rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;RuleName&quot;: &quot;mlf&quot;, &quot;RuleId&quot;: &quot;crecr-73q93pgljm1pc2fp&quot;}]</p>
          */
-        public Builder ruleNames(java.util.List < RuleNames> ruleNames) {
+        public Builder ruleNames(java.util.List<RuleNames> ruleNames) {
             this.ruleNames = ruleNames;
             return this;
         }
@@ -111,11 +142,17 @@ public class ListEventCenterRuleNameResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListEventCenterRuleNameResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEventCenterRuleNameResponseBody</p>
+     */
     public static class RuleNames extends TeaModel {
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private String ruleId;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
         private RuleNames(Builder builder) {
@@ -149,8 +186,19 @@ public class ListEventCenterRuleNameResponseBody extends TeaModel {
             private String ruleId; 
             private String ruleName; 
 
+            private Builder() {
+            } 
+
+            private Builder(RuleNames model) {
+                this.ruleId = model.ruleId;
+                this.ruleName = model.ruleName;
+            } 
+
             /**
-             * The ID of the event notification rule.
+             * <p>The ID of the event notification rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>crecr-n6pbhgjxtl*****</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -158,7 +206,10 @@ public class ListEventCenterRuleNameResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the event notification rule.
+             * <p>The name of the event notification rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-chain</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;

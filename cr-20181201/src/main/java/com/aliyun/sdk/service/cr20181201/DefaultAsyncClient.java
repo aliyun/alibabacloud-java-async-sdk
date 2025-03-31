@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of CancelArtifactBuildTask  CancelArtifactBuildTaskRequest
+     * @return CancelArtifactBuildTaskResponse
+     */
     @Override
     public CompletableFuture<CancelArtifactBuildTaskResponse> cancelArtifactBuildTask(CancelArtifactBuildTaskRequest request) {
         try {
@@ -53,6 +57,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CancelRepoBuildRecord  CancelRepoBuildRecordRequest
+     * @return CancelRepoBuildRecordResponse
+     */
     @Override
     public CompletableFuture<CancelRepoBuildRecordResponse> cancelRepoBuildRecord(CancelRepoBuildRecordRequest request) {
         try {
@@ -67,6 +75,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CancelRepoSyncTask  CancelRepoSyncTaskRequest
+     * @return CancelRepoSyncTaskResponse
+     */
+    @Override
+    public CompletableFuture<CancelRepoSyncTaskResponse> cancelRepoSyncTask(CancelRepoSyncTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CancelRepoSyncTask").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CancelRepoSyncTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CancelRepoSyncTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ChangeResourceGroup  ChangeResourceGroupRequest
+     * @return ChangeResourceGroupResponse
+     */
     @Override
     public CompletableFuture<ChangeResourceGroupResponse> changeResourceGroup(ChangeResourceGroupRequest request) {
         try {
@@ -82,9 +112,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can create building rules of accelerated images only for image repositories of Container Registry Advanced Edition instances. You cannot create building rules of accelerated images for image repositories of Container Registry Basic Edition instances. For more information, see [Specifications of different editions](https://www.alibabacloud.com/help/zh/container-registry/latest/what-is-container-registry#section-go7-lhg-qbc).
-      * Accelerated images can be built in the following regions: China (Hangzhou), China (Shanghai), China (Beijing), China (Shenzhen), China (Guangzhou), China (Zhangjiakou), China (Hong Kong), US (Virginia), US (Silicon Valley), Singapore, Japan (Tokyo), and Malaysia (Kuala Lumpur).
-      *
+     * <b>description</b> :
+     * <p>You can create building rules of accelerated images only for image repositories of Container Registry Advanced Edition instances. You cannot create building rules of accelerated images for image repositories of Container Registry Basic Edition instances. For more information, see <a href="https://www.alibabacloud.com/help/en/acr/product-overview/what-is-container-registry?spm=openapi-amp.newDocPublishment.0.0.bf82281fRj7rmV#section-n3q-ps7-x6k">Specifications of different editions</a>.
+     * Accelerated images are not supported in Alibaba Finance Cloud regions or Alibaba Gov Cloud regions.</p>
+     * 
+     * @param request the request parameters of CreateArtifactBuildRule  CreateArtifactBuildRuleRequest
+     * @return CreateArtifactBuildRuleResponse
      */
     @Override
     public CompletableFuture<CreateArtifactBuildRuleResponse> createArtifactBuildRule(CreateArtifactBuildRuleRequest request) {
@@ -100,6 +133,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateArtifactLifecycleRule  CreateArtifactLifecycleRuleRequest
+     * @return CreateArtifactLifecycleRuleResponse
+     */
     @Override
     public CompletableFuture<CreateArtifactLifecycleRuleResponse> createArtifactLifecycleRule(CreateArtifactLifecycleRuleRequest request) {
         try {
@@ -114,6 +151,46 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateArtifactSubscriptionRule  CreateArtifactSubscriptionRuleRequest
+     * @return CreateArtifactSubscriptionRuleResponse
+     */
+    @Override
+    public CompletableFuture<CreateArtifactSubscriptionRuleResponse> createArtifactSubscriptionRule(CreateArtifactSubscriptionRuleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateArtifactSubscriptionRule").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateArtifactSubscriptionRuleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateArtifactSubscriptionRuleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateArtifactSubscriptionTask  CreateArtifactSubscriptionTaskRequest
+     * @return CreateArtifactSubscriptionTaskResponse
+     */
+    @Override
+    public CompletableFuture<CreateArtifactSubscriptionTaskResponse> createArtifactSubscriptionTask(CreateArtifactSubscriptionTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateArtifactSubscriptionTask").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateArtifactSubscriptionTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateArtifactSubscriptionTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateBuildRecordByRecord  CreateBuildRecordByRecordRequest
+     * @return CreateBuildRecordByRecordResponse
+     */
     @Override
     public CompletableFuture<CreateBuildRecordByRecordResponse> createBuildRecordByRecord(CreateBuildRecordByRecordRequest request) {
         try {
@@ -128,6 +205,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateBuildRecordByRule  CreateBuildRecordByRuleRequest
+     * @return CreateBuildRecordByRuleResponse
+     */
     @Override
     public CompletableFuture<CreateBuildRecordByRuleResponse> createBuildRecordByRule(CreateBuildRecordByRuleRequest request) {
         try {
@@ -142,6 +223,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateChain  CreateChainRequest
+     * @return CreateChainResponse
+     */
     @Override
     public CompletableFuture<CreateChainResponse> createChain(CreateChainRequest request) {
         try {
@@ -156,6 +241,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateChartNamespace  CreateChartNamespaceRequest
+     * @return CreateChartNamespaceResponse
+     */
     @Override
     public CompletableFuture<CreateChartNamespaceResponse> createChartNamespace(CreateChartNamespaceRequest request) {
         try {
@@ -170,6 +259,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateChartRepository  CreateChartRepositoryRequest
+     * @return CreateChartRepositoryResponse
+     */
     @Override
     public CompletableFuture<CreateChartRepositoryResponse> createChartRepository(CreateChartRepositoryRequest request) {
         try {
@@ -184,6 +277,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateInstanceEndpointAclPolicy  CreateInstanceEndpointAclPolicyRequest
+     * @return CreateInstanceEndpointAclPolicyResponse
+     */
     @Override
     public CompletableFuture<CreateInstanceEndpointAclPolicyResponse> createInstanceEndpointAclPolicy(CreateInstanceEndpointAclPolicyRequest request) {
         try {
@@ -199,8 +296,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * A maximum of three VPCs can be associated with a Container Registry instance. If you want to associate more VPCs, contact Alibaba Cloud technical support.
-      *
+     * <b>description</b> :
+     * <p>The VPC quota must be purchased separately.</p>
+     * 
+     * @param request the request parameters of CreateInstanceVpcEndpointLinkedVpc  CreateInstanceVpcEndpointLinkedVpcRequest
+     * @return CreateInstanceVpcEndpointLinkedVpcResponse
      */
     @Override
     public CompletableFuture<CreateInstanceVpcEndpointLinkedVpcResponse> createInstanceVpcEndpointLinkedVpc(CreateInstanceVpcEndpointLinkedVpcRequest request) {
@@ -216,6 +316,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateNamespace  CreateNamespaceRequest
+     * @return CreateNamespaceResponse
+     */
     @Override
     public CompletableFuture<CreateNamespaceResponse> createNamespace(CreateNamespaceRequest request) {
         try {
@@ -230,6 +334,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateRepoBuildRule  CreateRepoBuildRuleRequest
+     * @return CreateRepoBuildRuleResponse
+     */
     @Override
     public CompletableFuture<CreateRepoBuildRuleResponse> createRepoBuildRule(CreateRepoBuildRuleRequest request) {
         try {
@@ -244,6 +352,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateRepoSourceCodeRepo  CreateRepoSourceCodeRepoRequest
+     * @return CreateRepoSourceCodeRepoResponse
+     */
     @Override
     public CompletableFuture<CreateRepoSourceCodeRepoResponse> createRepoSourceCodeRepo(CreateRepoSourceCodeRepoRequest request) {
         try {
@@ -258,6 +370,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateRepoSyncRule  CreateRepoSyncRuleRequest
+     * @return CreateRepoSyncRuleResponse
+     */
     @Override
     public CompletableFuture<CreateRepoSyncRuleResponse> createRepoSyncRule(CreateRepoSyncRuleRequest request) {
         try {
@@ -272,6 +388,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateRepoSyncTask  CreateRepoSyncTaskRequest
+     * @return CreateRepoSyncTaskResponse
+     */
     @Override
     public CompletableFuture<CreateRepoSyncTaskResponse> createRepoSyncTask(CreateRepoSyncTaskRequest request) {
         try {
@@ -286,6 +406,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateRepoSyncTaskByRule  CreateRepoSyncTaskByRuleRequest
+     * @return CreateRepoSyncTaskByRuleResponse
+     */
     @Override
     public CompletableFuture<CreateRepoSyncTaskByRuleResponse> createRepoSyncTaskByRule(CreateRepoSyncTaskByRuleRequest request) {
         try {
@@ -300,6 +424,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateRepoTag  CreateRepoTagRequest
+     * @return CreateRepoTagResponse
+     */
     @Override
     public CompletableFuture<CreateRepoTagResponse> createRepoTag(CreateRepoTagRequest request) {
         try {
@@ -314,6 +442,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateRepoTagScanTask  CreateRepoTagScanTaskRequest
+     * @return CreateRepoTagScanTaskResponse
+     */
     @Override
     public CompletableFuture<CreateRepoTagScanTaskResponse> createRepoTagScanTask(CreateRepoTagScanTaskRequest request) {
         try {
@@ -328,6 +460,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateRepoTrigger  CreateRepoTriggerRequest
+     * @return CreateRepoTriggerResponse
+     */
     @Override
     public CompletableFuture<CreateRepoTriggerResponse> createRepoTrigger(CreateRepoTriggerRequest request) {
         try {
@@ -342,6 +478,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateRepository  CreateRepositoryRequest
+     * @return CreateRepositoryResponse
+     */
     @Override
     public CompletableFuture<CreateRepositoryResponse> createRepository(CreateRepositoryRequest request) {
         try {
@@ -356,6 +496,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteArtifactLifecycleRule  DeleteArtifactLifecycleRuleRequest
+     * @return DeleteArtifactLifecycleRuleResponse
+     */
     @Override
     public CompletableFuture<DeleteArtifactLifecycleRuleResponse> deleteArtifactLifecycleRule(DeleteArtifactLifecycleRuleRequest request) {
         try {
@@ -370,6 +514,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteArtifactSubscriptionRule  DeleteArtifactSubscriptionRuleRequest
+     * @return DeleteArtifactSubscriptionRuleResponse
+     */
+    @Override
+    public CompletableFuture<DeleteArtifactSubscriptionRuleResponse> deleteArtifactSubscriptionRule(DeleteArtifactSubscriptionRuleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteArtifactSubscriptionRule").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteArtifactSubscriptionRuleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteArtifactSubscriptionRuleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteChain  DeleteChainRequest
+     * @return DeleteChainResponse
+     */
     @Override
     public CompletableFuture<DeleteChainResponse> deleteChain(DeleteChainRequest request) {
         try {
@@ -385,8 +551,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * >  If you delete a chart namespace, all repositories in the namespace and the charts in all repositories are deleted.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> If you delete a chart namespace, all repositories in the namespace and the charts in all repositories are deleted.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of DeleteChartNamespace  DeleteChartNamespaceRequest
+     * @return DeleteChartNamespaceResponse
      */
     @Override
     public CompletableFuture<DeleteChartNamespaceResponse> deleteChartNamespace(DeleteChartNamespaceRequest request) {
@@ -402,6 +573,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteChartRelease  DeleteChartReleaseRequest
+     * @return DeleteChartReleaseResponse
+     */
     @Override
     public CompletableFuture<DeleteChartReleaseResponse> deleteChartRelease(DeleteChartReleaseRequest request) {
         try {
@@ -416,6 +591,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteChartRepository  DeleteChartRepositoryRequest
+     * @return DeleteChartRepositoryResponse
+     */
     @Override
     public CompletableFuture<DeleteChartRepositoryResponse> deleteChartRepository(DeleteChartRepositoryRequest request) {
         try {
@@ -430,6 +609,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteEventCenterRule  DeleteEventCenterRuleRequest
+     * @return DeleteEventCenterRuleResponse
+     */
     @Override
     public CompletableFuture<DeleteEventCenterRuleResponse> deleteEventCenterRule(DeleteEventCenterRuleRequest request) {
         try {
@@ -444,6 +627,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteInstanceEndpointAclPolicy  DeleteInstanceEndpointAclPolicyRequest
+     * @return DeleteInstanceEndpointAclPolicyResponse
+     */
     @Override
     public CompletableFuture<DeleteInstanceEndpointAclPolicyResponse> deleteInstanceEndpointAclPolicy(DeleteInstanceEndpointAclPolicyRequest request) {
         try {
@@ -458,6 +645,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteInstanceVpcEndpointLinkedVpc  DeleteInstanceVpcEndpointLinkedVpcRequest
+     * @return DeleteInstanceVpcEndpointLinkedVpcResponse
+     */
     @Override
     public CompletableFuture<DeleteInstanceVpcEndpointLinkedVpcResponse> deleteInstanceVpcEndpointLinkedVpc(DeleteInstanceVpcEndpointLinkedVpcRequest request) {
         try {
@@ -473,8 +664,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > After you delete a namespace, all repositories in the namespace and all images in these repositories are deleted as well.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>After you delete a namespace, all repositories in the namespace and all images in these repositories are deleted as well.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of DeleteNamespace  DeleteNamespaceRequest
+     * @return DeleteNamespaceResponse
      */
     @Override
     public CompletableFuture<DeleteNamespaceResponse> deleteNamespace(DeleteNamespaceRequest request) {
@@ -490,6 +686,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteRepoBuildRule  DeleteRepoBuildRuleRequest
+     * @return DeleteRepoBuildRuleResponse
+     */
     @Override
     public CompletableFuture<DeleteRepoBuildRuleResponse> deleteRepoBuildRule(DeleteRepoBuildRuleRequest request) {
         try {
@@ -504,6 +704,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteRepoSyncRule  DeleteRepoSyncRuleRequest
+     * @return DeleteRepoSyncRuleResponse
+     */
     @Override
     public CompletableFuture<DeleteRepoSyncRuleResponse> deleteRepoSyncRule(DeleteRepoSyncRuleRequest request) {
         try {
@@ -518,6 +722,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteRepoTag  DeleteRepoTagRequest
+     * @return DeleteRepoTagResponse
+     */
     @Override
     public CompletableFuture<DeleteRepoTagResponse> deleteRepoTag(DeleteRepoTagRequest request) {
         try {
@@ -532,6 +740,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteRepoTrigger  DeleteRepoTriggerRequest
+     * @return DeleteRepoTriggerResponse
+     */
     @Override
     public CompletableFuture<DeleteRepoTriggerResponse> deleteRepoTrigger(DeleteRepoTriggerRequest request) {
         try {
@@ -547,8 +759,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * If you delete a repository, all images in the repository are also deleted.
-      *
+     * <b>description</b> :
+     * <p>If you delete a repository, all images in the repository are also deleted.</p>
+     * 
+     * @param request the request parameters of DeleteRepository  DeleteRepositoryRequest
+     * @return DeleteRepositoryResponse
      */
     @Override
     public CompletableFuture<DeleteRepositoryResponse> deleteRepository(DeleteRepositoryRequest request) {
@@ -564,6 +779,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetArtifactBuildRule  GetArtifactBuildRuleRequest
+     * @return GetArtifactBuildRuleResponse
+     */
     @Override
     public CompletableFuture<GetArtifactBuildRuleResponse> getArtifactBuildRule(GetArtifactBuildRuleRequest request) {
         try {
@@ -578,6 +797,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetArtifactBuildTask  GetArtifactBuildTaskRequest
+     * @return GetArtifactBuildTaskResponse
+     */
     @Override
     public CompletableFuture<GetArtifactBuildTaskResponse> getArtifactBuildTask(GetArtifactBuildTaskRequest request) {
         try {
@@ -592,6 +815,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetArtifactLifecycleRule  GetArtifactLifecycleRuleRequest
+     * @return GetArtifactLifecycleRuleResponse
+     */
     @Override
     public CompletableFuture<GetArtifactLifecycleRuleResponse> getArtifactLifecycleRule(GetArtifactLifecycleRuleRequest request) {
         try {
@@ -607,8 +834,65 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The ID of the Container Registry instance.
-      *
+     * @param request the request parameters of GetArtifactSubscriptionRule  GetArtifactSubscriptionRuleRequest
+     * @return GetArtifactSubscriptionRuleResponse
+     */
+    @Override
+    public CompletableFuture<GetArtifactSubscriptionRuleResponse> getArtifactSubscriptionRule(GetArtifactSubscriptionRuleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetArtifactSubscriptionRule").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetArtifactSubscriptionRuleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetArtifactSubscriptionRuleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetArtifactSubscriptionTask  GetArtifactSubscriptionTaskRequest
+     * @return GetArtifactSubscriptionTaskResponse
+     */
+    @Override
+    public CompletableFuture<GetArtifactSubscriptionTaskResponse> getArtifactSubscriptionTask(GetArtifactSubscriptionTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetArtifactSubscriptionTask").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetArtifactSubscriptionTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetArtifactSubscriptionTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetArtifactSubscriptionTaskResult  GetArtifactSubscriptionTaskResultRequest
+     * @return GetArtifactSubscriptionTaskResultResponse
+     */
+    @Override
+    public CompletableFuture<GetArtifactSubscriptionTaskResultResponse> getArtifactSubscriptionTaskResult(GetArtifactSubscriptionTaskResultRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetArtifactSubscriptionTaskResult").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetArtifactSubscriptionTaskResultResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetArtifactSubscriptionTaskResultResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>The ID of the Container Registry instance.</p>
+     * 
+     * @param request the request parameters of GetAuthorizationToken  GetAuthorizationTokenRequest
+     * @return GetAuthorizationTokenResponse
      */
     @Override
     public CompletableFuture<GetAuthorizationTokenResponse> getAuthorizationToken(GetAuthorizationTokenRequest request) {
@@ -624,6 +908,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetChain  GetChainRequest
+     * @return GetChainResponse
+     */
     @Override
     public CompletableFuture<GetChainResponse> getChain(GetChainRequest request) {
         try {
@@ -638,6 +926,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetChartNamespace  GetChartNamespaceRequest
+     * @return GetChartNamespaceResponse
+     */
     @Override
     public CompletableFuture<GetChartNamespaceResponse> getChartNamespace(GetChartNamespaceRequest request) {
         try {
@@ -652,6 +944,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetChartRepository  GetChartRepositoryRequest
+     * @return GetChartRepositoryResponse
+     */
     @Override
     public CompletableFuture<GetChartRepositoryResponse> getChartRepository(GetChartRepositoryRequest request) {
         try {
@@ -666,6 +962,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetInstance  GetInstanceRequest
+     * @return GetInstanceResponse
+     */
     @Override
     public CompletableFuture<GetInstanceResponse> getInstance(GetInstanceRequest request) {
         try {
@@ -680,6 +980,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetInstanceCount  GetInstanceCountRequest
+     * @return GetInstanceCountResponse
+     */
     @Override
     public CompletableFuture<GetInstanceCountResponse> getInstanceCount(GetInstanceCountRequest request) {
         try {
@@ -694,6 +998,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetInstanceEndpoint  GetInstanceEndpointRequest
+     * @return GetInstanceEndpointResponse
+     */
     @Override
     public CompletableFuture<GetInstanceEndpointResponse> getInstanceEndpoint(GetInstanceEndpointRequest request) {
         try {
@@ -708,6 +1016,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetInstanceUsage  GetInstanceUsageRequest
+     * @return GetInstanceUsageResponse
+     */
     @Override
     public CompletableFuture<GetInstanceUsageResponse> getInstanceUsage(GetInstanceUsageRequest request) {
         try {
@@ -722,6 +1034,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetInstanceVpcEndpoint  GetInstanceVpcEndpointRequest
+     * @return GetInstanceVpcEndpointResponse
+     */
     @Override
     public CompletableFuture<GetInstanceVpcEndpointResponse> getInstanceVpcEndpoint(GetInstanceVpcEndpointRequest request) {
         try {
@@ -736,6 +1052,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetNamespace  GetNamespaceRequest
+     * @return GetNamespaceResponse
+     */
     @Override
     public CompletableFuture<GetNamespaceResponse> getNamespace(GetNamespaceRequest request) {
         try {
@@ -751,8 +1071,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ****
-      *
+     * <b>description</b> :
+     * <hr>
+     * 
+     * @param request the request parameters of GetRepoBuildRecord  GetRepoBuildRecordRequest
+     * @return GetRepoBuildRecordResponse
      */
     @Override
     public CompletableFuture<GetRepoBuildRecordResponse> getRepoBuildRecord(GetRepoBuildRecordRequest request) {
@@ -768,6 +1091,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetRepoBuildRecordStatus  GetRepoBuildRecordStatusRequest
+     * @return GetRepoBuildRecordStatusResponse
+     */
     @Override
     public CompletableFuture<GetRepoBuildRecordStatusResponse> getRepoBuildRecordStatus(GetRepoBuildRecordStatusRequest request) {
         try {
@@ -782,6 +1109,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetRepoSourceCodeRepo  GetRepoSourceCodeRepoRequest
+     * @return GetRepoSourceCodeRepoResponse
+     */
     @Override
     public CompletableFuture<GetRepoSourceCodeRepoResponse> getRepoSourceCodeRepo(GetRepoSourceCodeRepoRequest request) {
         try {
@@ -796,6 +1127,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetRepoSyncTask  GetRepoSyncTaskRequest
+     * @return GetRepoSyncTaskResponse
+     */
     @Override
     public CompletableFuture<GetRepoSyncTaskResponse> getRepoSyncTask(GetRepoSyncTaskRequest request) {
         try {
@@ -810,6 +1145,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetRepoTag  GetRepoTagRequest
+     * @return GetRepoTagResponse
+     */
     @Override
     public CompletableFuture<GetRepoTagResponse> getRepoTag(GetRepoTagRequest request) {
         try {
@@ -824,34 +1163,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<GetRepoTagLayersResponse> getRepoTagLayers(GetRepoTagLayersRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetRepoTagLayers").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetRepoTagLayersResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<GetRepoTagLayersResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<GetRepoTagManifestResponse> getRepoTagManifest(GetRepoTagManifestRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetRepoTagManifest").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetRepoTagManifestResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<GetRepoTagManifestResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of GetRepoTagScanStatus  GetRepoTagScanStatusRequest
+     * @return GetRepoTagScanStatusResponse
+     */
     @Override
     public CompletableFuture<GetRepoTagScanStatusResponse> getRepoTagScanStatus(GetRepoTagScanStatusRequest request) {
         try {
@@ -866,6 +1181,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetRepoTagScanSummary  GetRepoTagScanSummaryRequest
+     * @return GetRepoTagScanSummaryResponse
+     */
     @Override
     public CompletableFuture<GetRepoTagScanSummaryResponse> getRepoTagScanSummary(GetRepoTagScanSummaryRequest request) {
         try {
@@ -880,6 +1199,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetRepository  GetRepositoryRequest
+     * @return GetRepositoryResponse
+     */
     @Override
     public CompletableFuture<GetRepositoryResponse> getRepository(GetRepositoryRequest request) {
         try {
@@ -894,6 +1217,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListArtifactBuildTaskLog  ListArtifactBuildTaskLogRequest
+     * @return ListArtifactBuildTaskLogResponse
+     */
     @Override
     public CompletableFuture<ListArtifactBuildTaskLogResponse> listArtifactBuildTaskLog(ListArtifactBuildTaskLogRequest request) {
         try {
@@ -908,6 +1235,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListArtifactLifecycleRule  ListArtifactLifecycleRuleRequest
+     * @return ListArtifactLifecycleRuleResponse
+     */
     @Override
     public CompletableFuture<ListArtifactLifecycleRuleResponse> listArtifactLifecycleRule(ListArtifactLifecycleRuleRequest request) {
         try {
@@ -922,6 +1253,46 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListArtifactSubscriptionRule  ListArtifactSubscriptionRuleRequest
+     * @return ListArtifactSubscriptionRuleResponse
+     */
+    @Override
+    public CompletableFuture<ListArtifactSubscriptionRuleResponse> listArtifactSubscriptionRule(ListArtifactSubscriptionRuleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListArtifactSubscriptionRule").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListArtifactSubscriptionRuleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListArtifactSubscriptionRuleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListArtifactSubscriptionTask  ListArtifactSubscriptionTaskRequest
+     * @return ListArtifactSubscriptionTaskResponse
+     */
+    @Override
+    public CompletableFuture<ListArtifactSubscriptionTaskResponse> listArtifactSubscriptionTask(ListArtifactSubscriptionTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListArtifactSubscriptionTask").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListArtifactSubscriptionTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListArtifactSubscriptionTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListChain  ListChainRequest
+     * @return ListChainResponse
+     */
     @Override
     public CompletableFuture<ListChainResponse> listChain(ListChainRequest request) {
         try {
@@ -936,6 +1307,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListChainInstance  ListChainInstanceRequest
+     * @return ListChainInstanceResponse
+     */
     @Override
     public CompletableFuture<ListChainInstanceResponse> listChainInstance(ListChainInstanceRequest request) {
         try {
@@ -950,6 +1325,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListChartNamespace  ListChartNamespaceRequest
+     * @return ListChartNamespaceResponse
+     */
     @Override
     public CompletableFuture<ListChartNamespaceResponse> listChartNamespace(ListChartNamespaceRequest request) {
         try {
@@ -964,6 +1343,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListChartRelease  ListChartReleaseRequest
+     * @return ListChartReleaseResponse
+     */
     @Override
     public CompletableFuture<ListChartReleaseResponse> listChartRelease(ListChartReleaseRequest request) {
         try {
@@ -978,6 +1361,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListChartRepository  ListChartRepositoryRequest
+     * @return ListChartRepositoryResponse
+     */
     @Override
     public CompletableFuture<ListChartRepositoryResponse> listChartRepository(ListChartRepositoryRequest request) {
         try {
@@ -992,6 +1379,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListEventCenterRecord  ListEventCenterRecordRequest
+     * @return ListEventCenterRecordResponse
+     */
     @Override
     public CompletableFuture<ListEventCenterRecordResponse> listEventCenterRecord(ListEventCenterRecordRequest request) {
         try {
@@ -1006,6 +1397,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListEventCenterRuleName  ListEventCenterRuleNameRequest
+     * @return ListEventCenterRuleNameResponse
+     */
     @Override
     public CompletableFuture<ListEventCenterRuleNameResponse> listEventCenterRuleName(ListEventCenterRuleNameRequest request) {
         try {
@@ -1020,6 +1415,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListInstance  ListInstanceRequest
+     * @return ListInstanceResponse
+     */
     @Override
     public CompletableFuture<ListInstanceResponse> listInstance(ListInstanceRequest request) {
         try {
@@ -1034,6 +1433,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListInstanceEndpoint  ListInstanceEndpointRequest
+     * @return ListInstanceEndpointResponse
+     */
     @Override
     public CompletableFuture<ListInstanceEndpointResponse> listInstanceEndpoint(ListInstanceEndpointRequest request) {
         try {
@@ -1048,6 +1451,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListInstanceRegion  ListInstanceRegionRequest
+     * @return ListInstanceRegionResponse
+     */
     @Override
     public CompletableFuture<ListInstanceRegionResponse> listInstanceRegion(ListInstanceRegionRequest request) {
         try {
@@ -1062,6 +1469,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListNamespace  ListNamespaceRequest
+     * @return ListNamespaceResponse
+     */
     @Override
     public CompletableFuture<ListNamespaceResponse> listNamespace(ListNamespaceRequest request) {
         try {
@@ -1076,6 +1487,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListRepoBuildRecord  ListRepoBuildRecordRequest
+     * @return ListRepoBuildRecordResponse
+     */
     @Override
     public CompletableFuture<ListRepoBuildRecordResponse> listRepoBuildRecord(ListRepoBuildRecordRequest request) {
         try {
@@ -1090,6 +1505,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListRepoBuildRecordLog  ListRepoBuildRecordLogRequest
+     * @return ListRepoBuildRecordLogResponse
+     */
     @Override
     public CompletableFuture<ListRepoBuildRecordLogResponse> listRepoBuildRecordLog(ListRepoBuildRecordLogRequest request) {
         try {
@@ -1104,6 +1523,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListRepoBuildRule  ListRepoBuildRuleRequest
+     * @return ListRepoBuildRuleResponse
+     */
     @Override
     public CompletableFuture<ListRepoBuildRuleResponse> listRepoBuildRule(ListRepoBuildRuleRequest request) {
         try {
@@ -1118,6 +1541,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListRepoSyncRule  ListRepoSyncRuleRequest
+     * @return ListRepoSyncRuleResponse
+     */
     @Override
     public CompletableFuture<ListRepoSyncRuleResponse> listRepoSyncRule(ListRepoSyncRuleRequest request) {
         try {
@@ -1132,6 +1559,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListRepoSyncTask  ListRepoSyncTaskRequest
+     * @return ListRepoSyncTaskResponse
+     */
     @Override
     public CompletableFuture<ListRepoSyncTaskResponse> listRepoSyncTask(ListRepoSyncTaskRequest request) {
         try {
@@ -1146,6 +1577,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListRepoTag  ListRepoTagRequest
+     * @return ListRepoTagResponse
+     */
     @Override
     public CompletableFuture<ListRepoTagResponse> listRepoTag(ListRepoTagRequest request) {
         try {
@@ -1160,6 +1595,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListRepoTagScanResult  ListRepoTagScanResultRequest
+     * @return ListRepoTagScanResultResponse
+     */
     @Override
     public CompletableFuture<ListRepoTagScanResultResponse> listRepoTagScanResult(ListRepoTagScanResultRequest request) {
         try {
@@ -1174,6 +1613,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListRepoTrigger  ListRepoTriggerRequest
+     * @return ListRepoTriggerResponse
+     */
     @Override
     public CompletableFuture<ListRepoTriggerResponse> listRepoTrigger(ListRepoTriggerRequest request) {
         try {
@@ -1188,6 +1631,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListRepository  ListRepositoryRequest
+     * @return ListRepositoryResponse
+     */
     @Override
     public CompletableFuture<ListRepositoryResponse> listRepository(ListRepositoryRequest request) {
         try {
@@ -1202,6 +1649,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>Before you call this operation, use a Security Center scan engine to scan the image.</p>
+     * 
+     * @param request the request parameters of ListScanBaselineByTask  ListScanBaselineByTaskRequest
+     * @return ListScanBaselineByTaskResponse
+     */
     @Override
     public CompletableFuture<ListScanBaselineByTaskResponse> listScanBaselineByTask(ListScanBaselineByTaskRequest request) {
         try {
@@ -1216,6 +1670,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>Before you call this operation, use a Security Center scan engine to scan the image.</p>
+     * 
+     * @param request the request parameters of ListScanMaliciousFileByTask  ListScanMaliciousFileByTaskRequest
+     * @return ListScanMaliciousFileByTaskResponse
+     */
     @Override
     public CompletableFuture<ListScanMaliciousFileByTaskResponse> listScanMaliciousFileByTask(ListScanMaliciousFileByTaskRequest request) {
         try {
@@ -1230,6 +1691,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTagResources  ListTagResourcesRequest
+     * @return ListTagResourcesResponse
+     */
     @Override
     public CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request) {
         try {
@@ -1244,6 +1709,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ResetLoginPassword  ResetLoginPasswordRequest
+     * @return ResetLoginPasswordResponse
+     */
     @Override
     public CompletableFuture<ResetLoginPasswordResponse> resetLoginPassword(ResetLoginPasswordRequest request) {
         try {
@@ -1258,6 +1727,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TagResources  TagResourcesRequest
+     * @return TagResourcesResponse
+     */
     @Override
     public CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request) {
         try {
@@ -1272,6 +1745,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UntagResources  UntagResourcesRequest
+     * @return UntagResourcesResponse
+     */
     @Override
     public CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request) {
         try {
@@ -1286,6 +1763,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateArtifactLifecycleRule  UpdateArtifactLifecycleRuleRequest
+     * @return UpdateArtifactLifecycleRuleResponse
+     */
     @Override
     public CompletableFuture<UpdateArtifactLifecycleRuleResponse> updateArtifactLifecycleRule(UpdateArtifactLifecycleRuleRequest request) {
         try {
@@ -1300,6 +1781,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateArtifactSubscriptionRule  UpdateArtifactSubscriptionRuleRequest
+     * @return UpdateArtifactSubscriptionRuleResponse
+     */
+    @Override
+    public CompletableFuture<UpdateArtifactSubscriptionRuleResponse> updateArtifactSubscriptionRule(UpdateArtifactSubscriptionRuleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateArtifactSubscriptionRule").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateArtifactSubscriptionRuleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateArtifactSubscriptionRuleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateChain  UpdateChainRequest
+     * @return UpdateChainResponse
+     */
     @Override
     public CompletableFuture<UpdateChainResponse> updateChain(UpdateChainRequest request) {
         try {
@@ -1314,6 +1817,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateChartNamespace  UpdateChartNamespaceRequest
+     * @return UpdateChartNamespaceResponse
+     */
     @Override
     public CompletableFuture<UpdateChartNamespaceResponse> updateChartNamespace(UpdateChartNamespaceRequest request) {
         try {
@@ -1328,6 +1835,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateChartRepository  UpdateChartRepositoryRequest
+     * @return UpdateChartRepositoryResponse
+     */
     @Override
     public CompletableFuture<UpdateChartRepositoryResponse> updateChartRepository(UpdateChartRepositoryRequest request) {
         try {
@@ -1342,6 +1853,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateEventCenterRule  UpdateEventCenterRuleRequest
+     * @return UpdateEventCenterRuleResponse
+     */
     @Override
     public CompletableFuture<UpdateEventCenterRuleResponse> updateEventCenterRule(UpdateEventCenterRuleRequest request) {
         try {
@@ -1356,6 +1871,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateInstanceEndpointStatus  UpdateInstanceEndpointStatusRequest
+     * @return UpdateInstanceEndpointStatusResponse
+     */
     @Override
     public CompletableFuture<UpdateInstanceEndpointStatusResponse> updateInstanceEndpointStatus(UpdateInstanceEndpointStatusRequest request) {
         try {
@@ -1370,6 +1889,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateNamespace  UpdateNamespaceRequest
+     * @return UpdateNamespaceResponse
+     */
     @Override
     public CompletableFuture<UpdateNamespaceResponse> updateNamespace(UpdateNamespaceRequest request) {
         try {
@@ -1384,6 +1907,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateRepoBuildRule  UpdateRepoBuildRuleRequest
+     * @return UpdateRepoBuildRuleResponse
+     */
     @Override
     public CompletableFuture<UpdateRepoBuildRuleResponse> updateRepoBuildRule(UpdateRepoBuildRuleRequest request) {
         try {
@@ -1398,6 +1925,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateRepoSourceCodeRepo  UpdateRepoSourceCodeRepoRequest
+     * @return UpdateRepoSourceCodeRepoResponse
+     */
     @Override
     public CompletableFuture<UpdateRepoSourceCodeRepoResponse> updateRepoSourceCodeRepo(UpdateRepoSourceCodeRepoRequest request) {
         try {
@@ -1412,6 +1943,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateRepoTrigger  UpdateRepoTriggerRequest
+     * @return UpdateRepoTriggerResponse
+     */
     @Override
     public CompletableFuture<UpdateRepoTriggerResponse> updateRepoTrigger(UpdateRepoTriggerRequest request) {
         try {
@@ -1426,6 +1961,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateRepository  UpdateRepositoryRequest
+     * @return UpdateRepositoryResponse
+     */
     @Override
     public CompletableFuture<UpdateRepositoryResponse> updateRepository(UpdateRepositoryRequest request) {
         try {

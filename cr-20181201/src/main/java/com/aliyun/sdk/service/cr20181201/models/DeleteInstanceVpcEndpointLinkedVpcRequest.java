@@ -1,38 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cr20181201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteInstanceVpcEndpointLinkedVpcRequest} extends {@link RequestModel}
  *
  * <p>DeleteInstanceVpcEndpointLinkedVpcRequest</p>
  */
 public class DeleteInstanceVpcEndpointLinkedVpcRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("ModuleName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ModuleName")
     private String moduleName;
 
-    @Query
-    @NameInMap("VpcId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpcId;
 
-    @Query
-    @NameInMap("VswitchId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VswitchId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vswitchId;
 
     private DeleteInstanceVpcEndpointLinkedVpcRequest(Builder builder) {
@@ -52,7 +57,7 @@ public class DeleteInstanceVpcEndpointLinkedVpcRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -113,7 +118,7 @@ public class DeleteInstanceVpcEndpointLinkedVpcRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -122,7 +127,11 @@ public class DeleteInstanceVpcEndpointLinkedVpcRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cri-xkx6vujuhay0****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -131,11 +140,14 @@ public class DeleteInstanceVpcEndpointLinkedVpcRequest extends Request {
         }
 
         /**
-         * The name of the module that you want to access. Valid values:
-         * <p>
+         * <p>The name of the module that you want to access. Valid values:</p>
+         * <ul>
+         * <li><code>Registry</code>: the image repository.</li>
+         * <li><code>Chart</code>: a Helm chart.</li>
+         * </ul>
          * 
-         * *   `Registry`: the image repository.
-         * *   `Chart`: a Helm chart.
+         * <strong>example:</strong>
+         * <p>Chart</p>
          */
         public Builder moduleName(String moduleName) {
             this.putQueryParameter("ModuleName", moduleName);
@@ -144,7 +156,11 @@ public class DeleteInstanceVpcEndpointLinkedVpcRequest extends Request {
         }
 
         /**
-         * The ID of the VPC.
+         * <p>The ID of the VPC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-uf6pa68zxnnlc48dd****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -153,7 +169,11 @@ public class DeleteInstanceVpcEndpointLinkedVpcRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch.
+         * <p>The ID of the vSwitch.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-uf6pa68zxnnlc48dd****</p>
          */
         public Builder vswitchId(String vswitchId) {
             this.putQueryParameter("VswitchId", vswitchId);

@@ -1,39 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cr20181201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstanceRequest} extends {@link RequestModel}
  *
  * <p>ListInstanceRequest</p>
  */
 public class ListInstanceRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("InstanceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
+    @Deprecated
     private String instanceName;
 
-    @Query
-    @NameInMap("InstanceStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceStatus")
     private String instanceStatus;
 
-    @Query
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private Integer pageNo;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
     private ListInstanceRequest(Builder builder) {
@@ -54,7 +60,7 @@ public class ListInstanceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -124,7 +130,7 @@ public class ListInstanceRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -133,7 +139,10 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * The instance name.
+         * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -142,17 +151,20 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * The status of the instance. Valid values:
-         * <p>
+         * <p>The status of the instance. Valid values:</p>
+         * <ul>
+         * <li><code>PENDING</code>: The instance is being initialized.</li>
+         * <li><code>INIT_ERROR</code>: The initialization of the instance fails.</li>
+         * <li><code>STARTING</code>: The instance is being started.</li>
+         * <li><code>RUNNING</code>: The instance is running.</li>
+         * <li><code>STOPPING</code>: The instance is being stopped.</li>
+         * <li><code>STOPPED</code>: The instance is stopped.</li>
+         * <li><code>DELETING</code>: The instance is being deleted.</li>
+         * <li><code>DELETED</code>: The instance is deleted.</li>
+         * </ul>
          * 
-         * *   `PENDING`: The instance is being initialized.
-         * *   `INIT_ERROR`: The initialization of the instance fails.
-         * *   `STARTING`: The instance is being started.
-         * *   `RUNNING`: The instance is running.
-         * *   `STOPPING`: The instance is being stopped.
-         * *   `STOPPED`: The instance is stopped.
-         * *   `DELETING`: The instance is being deleted.
-         * *   `DELETED`: The instance is deleted.
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
          */
         public Builder instanceStatus(String instanceStatus) {
             this.putQueryParameter("InstanceStatus", instanceStatus);
@@ -161,7 +173,10 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -170,7 +185,10 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -179,7 +197,10 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the instance belongs.
+         * <p>The ID of the resource group to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmv36i4is****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

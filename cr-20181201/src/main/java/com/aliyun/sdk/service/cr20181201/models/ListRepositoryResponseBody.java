@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cr20181201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRepositoryResponseBody} extends {@link TeaModel}
  *
  * <p>ListRepositoryResponseBody</p>
  */
 public class ListRepositoryResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("IsSuccess")
+    @com.aliyun.core.annotation.NameInMap("IsSuccess")
     private Boolean isSuccess;
 
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private Integer pageNo;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("Repositories")
-    private java.util.List < Repositories> repositories;
+    @com.aliyun.core.annotation.NameInMap("Repositories")
+    private java.util.List<Repositories> repositories;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
 
     private ListRepositoryResponseBody(Builder builder) {
@@ -49,6 +54,10 @@ public class ListRepositoryResponseBody extends TeaModel {
 
     public static ListRepositoryResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -82,7 +91,7 @@ public class ListRepositoryResponseBody extends TeaModel {
     /**
      * @return repositories
      */
-    public java.util.List < Repositories> getRepositories() {
+    public java.util.List<Repositories> getRepositories() {
         return this.repositories;
     }
 
@@ -105,9 +114,22 @@ public class ListRepositoryResponseBody extends TeaModel {
         private Boolean isSuccess; 
         private Integer pageNo; 
         private Integer pageSize; 
-        private java.util.List < Repositories> repositories; 
+        private java.util.List<Repositories> repositories; 
         private String requestId; 
         private String totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListRepositoryResponseBody model) {
+            this.code = model.code;
+            this.isSuccess = model.isSuccess;
+            this.pageNo = model.pageNo;
+            this.pageSize = model.pageSize;
+            this.repositories = model.repositories;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Code.
@@ -144,7 +166,7 @@ public class ListRepositoryResponseBody extends TeaModel {
         /**
          * Repositories.
          */
-        public Builder repositories(java.util.List < Repositories> repositories) {
+        public Builder repositories(java.util.List<Repositories> repositories) {
             this.repositories = repositories;
             return this;
         }
@@ -171,41 +193,47 @@ public class ListRepositoryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListRepositoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRepositoryResponseBody</p>
+     */
     public static class Repositories extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private Long modifiedTime;
 
-        @NameInMap("RepoBuildType")
+        @com.aliyun.core.annotation.NameInMap("RepoBuildType")
         private String repoBuildType;
 
-        @NameInMap("RepoId")
+        @com.aliyun.core.annotation.NameInMap("RepoId")
         private String repoId;
 
-        @NameInMap("RepoName")
+        @com.aliyun.core.annotation.NameInMap("RepoName")
         private String repoName;
 
-        @NameInMap("RepoNamespaceName")
+        @com.aliyun.core.annotation.NameInMap("RepoNamespaceName")
         private String repoNamespaceName;
 
-        @NameInMap("RepoStatus")
+        @com.aliyun.core.annotation.NameInMap("RepoStatus")
         private String repoStatus;
 
-        @NameInMap("RepoType")
+        @com.aliyun.core.annotation.NameInMap("RepoType")
         private String repoType;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("Summary")
+        @com.aliyun.core.annotation.NameInMap("Summary")
         private String summary;
 
-        @NameInMap("TagImmutability")
+        @com.aliyun.core.annotation.NameInMap("TagImmutability")
         private Boolean tagImmutability;
 
         private Repositories(Builder builder) {
@@ -328,6 +356,24 @@ public class ListRepositoryResponseBody extends TeaModel {
             private String resourceGroupId; 
             private String summary; 
             private Boolean tagImmutability; 
+
+            private Builder() {
+            } 
+
+            private Builder(Repositories model) {
+                this.createTime = model.createTime;
+                this.instanceId = model.instanceId;
+                this.modifiedTime = model.modifiedTime;
+                this.repoBuildType = model.repoBuildType;
+                this.repoId = model.repoId;
+                this.repoName = model.repoName;
+                this.repoNamespaceName = model.repoNamespaceName;
+                this.repoStatus = model.repoStatus;
+                this.repoType = model.repoType;
+                this.resourceGroupId = model.resourceGroupId;
+                this.summary = model.summary;
+                this.tagImmutability = model.tagImmutability;
+            } 
 
             /**
              * CreateTime.

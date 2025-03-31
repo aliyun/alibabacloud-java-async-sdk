@@ -1,60 +1,68 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cr20181201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRepoSyncTaskResponseBody} extends {@link TeaModel}
  *
  * <p>GetRepoSyncTaskResponseBody</p>
  */
 public class GetRepoSyncTaskResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("CrossUser")
+    @com.aliyun.core.annotation.NameInMap("CrossUser")
     private Boolean crossUser;
 
-    @NameInMap("ImageFrom")
+    @com.aliyun.core.annotation.NameInMap("ImageFrom")
     private ImageFrom imageFrom;
 
-    @NameInMap("ImageTo")
+    @com.aliyun.core.annotation.NameInMap("ImageTo")
     private ImageTo imageTo;
 
-    @NameInMap("IsSuccess")
+    @com.aliyun.core.annotation.NameInMap("IsSuccess")
     private Boolean isSuccess;
 
-    @NameInMap("LayerTasks")
-    private java.util.List < LayerTasks> layerTasks;
+    @com.aliyun.core.annotation.NameInMap("LayerTasks")
+    private java.util.List<LayerTasks> layerTasks;
 
-    @NameInMap("Progress")
+    @com.aliyun.core.annotation.NameInMap("Progress")
     private Long progress;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SyncBatchTaskId")
+    @com.aliyun.core.annotation.NameInMap("SyncBatchTaskId")
     private String syncBatchTaskId;
 
-    @NameInMap("SyncRuleId")
+    @com.aliyun.core.annotation.NameInMap("SyncRuleId")
     private String syncRuleId;
 
-    @NameInMap("SyncTaskId")
+    @com.aliyun.core.annotation.NameInMap("SyncTaskId")
     private String syncTaskId;
 
-    @NameInMap("SyncTransAccelerate")
+    @com.aliyun.core.annotation.NameInMap("SyncTransAccelerate")
     private Boolean syncTransAccelerate;
 
-    @NameInMap("SyncedSize")
+    @com.aliyun.core.annotation.NameInMap("SyncedSize")
     private Long syncedSize;
 
-    @NameInMap("TaskStatus")
+    @com.aliyun.core.annotation.NameInMap("TaskIssue")
+    private String taskIssue;
+
+    @com.aliyun.core.annotation.NameInMap("TaskStatus")
     private String taskStatus;
 
-    @NameInMap("TaskTrigger")
+    @com.aliyun.core.annotation.NameInMap("TaskTrigger")
     private String taskTrigger;
 
     private GetRepoSyncTaskResponseBody(Builder builder) {
@@ -71,6 +79,7 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
         this.syncTaskId = builder.syncTaskId;
         this.syncTransAccelerate = builder.syncTransAccelerate;
         this.syncedSize = builder.syncedSize;
+        this.taskIssue = builder.taskIssue;
         this.taskStatus = builder.taskStatus;
         this.taskTrigger = builder.taskTrigger;
     }
@@ -81,6 +90,10 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
 
     public static GetRepoSyncTaskResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -121,7 +134,7 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
     /**
      * @return layerTasks
      */
-    public java.util.List < LayerTasks> getLayerTasks() {
+    public java.util.List<LayerTasks> getLayerTasks() {
         return this.layerTasks;
     }
 
@@ -175,6 +188,13 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
     }
 
     /**
+     * @return taskIssue
+     */
+    public String getTaskIssue() {
+        return this.taskIssue;
+    }
+
+    /**
      * @return taskStatus
      */
     public String getTaskStatus() {
@@ -194,7 +214,7 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
         private ImageFrom imageFrom; 
         private ImageTo imageTo; 
         private Boolean isSuccess; 
-        private java.util.List < LayerTasks> layerTasks; 
+        private java.util.List<LayerTasks> layerTasks; 
         private Long progress; 
         private String requestId; 
         private String syncBatchTaskId; 
@@ -202,11 +222,37 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
         private String syncTaskId; 
         private Boolean syncTransAccelerate; 
         private Long syncedSize; 
+        private String taskIssue; 
         private String taskStatus; 
         private String taskTrigger; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetRepoSyncTaskResponseBody model) {
+            this.code = model.code;
+            this.crossUser = model.crossUser;
+            this.imageFrom = model.imageFrom;
+            this.imageTo = model.imageTo;
+            this.isSuccess = model.isSuccess;
+            this.layerTasks = model.layerTasks;
+            this.progress = model.progress;
+            this.requestId = model.requestId;
+            this.syncBatchTaskId = model.syncBatchTaskId;
+            this.syncRuleId = model.syncRuleId;
+            this.syncTaskId = model.syncTaskId;
+            this.syncTransAccelerate = model.syncTransAccelerate;
+            this.syncedSize = model.syncedSize;
+            this.taskIssue = model.taskIssue;
+            this.taskStatus = model.taskStatus;
+            this.taskTrigger = model.taskTrigger;
+        } 
+
         /**
-         * The return value.
+         * <p>The return value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -214,7 +260,10 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the synchronization task is performed across Alibaba Cloud accounts.
+         * <p>Indicates whether the synchronization task is performed across Alibaba Cloud accounts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder crossUser(Boolean crossUser) {
             this.crossUser = crossUser;
@@ -222,7 +271,7 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The source address of the image.
+         * <p>The source address of the image.</p>
          */
         public Builder imageFrom(ImageFrom imageFrom) {
             this.imageFrom = imageFrom;
@@ -230,7 +279,7 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The destination address of the image.
+         * <p>The destination address of the image.</p>
          */
         public Builder imageTo(ImageTo imageTo) {
             this.imageTo = imageTo;
@@ -238,7 +287,10 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -246,19 +298,22 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The synchronization tasks for the image layer.
+         * <p>The synchronization tasks for the image layer.</p>
          */
-        public Builder layerTasks(java.util.List < LayerTasks> layerTasks) {
+        public Builder layerTasks(java.util.List<LayerTasks> layerTasks) {
             this.layerTasks = layerTasks;
             return this;
         }
 
         /**
-         * The synchronization progress. Valid values:
-         * <p>
+         * <p>The synchronization progress. Valid values:</p>
+         * <ul>
+         * <li><code>0</code>: The synchronization starts or failed.</li>
+         * <li><code>1</code>: The synchronization is successful.</li>
+         * </ul>
          * 
-         * *   `0`: The synchronization starts or failed.
-         * *   `1`: The synchronization is successful.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder progress(Long progress) {
             this.progress = progress;
@@ -266,7 +321,10 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A6DEF8B0-5D45-46D6-867D-8C7FF0966B07</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -274,7 +332,10 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the synchronization task in which multiple images are synchronized at a time.
+         * <p>The ID of the synchronization task in which multiple images are synchronized at a time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a9434731-95ef-4087-9cf4-369c8e90****</p>
          */
         public Builder syncBatchTaskId(String syncBatchTaskId) {
             this.syncBatchTaskId = syncBatchTaskId;
@@ -282,7 +343,10 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the synchronization rule.
+         * <p>The ID of the synchronization rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>crsr-cllro6ho3wne****</p>
          */
         public Builder syncRuleId(String syncRuleId) {
             this.syncRuleId = syncRuleId;
@@ -290,7 +354,10 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the synchronization task.
+         * <p>The ID of the synchronization task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rst-zxjkiv5oil6f****</p>
          */
         public Builder syncTaskId(String syncTaskId) {
             this.syncTaskId = syncTaskId;
@@ -298,7 +365,10 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether transfer acceleration is enabled in the synchronization process.
+         * <p>Indicates whether transfer acceleration is enabled in the synchronization process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder syncTransAccelerate(Boolean syncTransAccelerate) {
             this.syncTransAccelerate = syncTransAccelerate;
@@ -306,7 +376,10 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The size of the image layer that is synchronized. Unit: bytes.
+         * <p>The size of the image layer that is synchronized. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23655489</p>
          */
         public Builder syncedSize(Long syncedSize) {
             this.syncedSize = syncedSize;
@@ -314,7 +387,18 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the task. Valid values:
+         * TaskIssue.
+         */
+        public Builder taskIssue(String taskIssue) {
+            this.taskIssue = taskIssue;
+            return this;
+        }
+
+        /**
+         * <p>The status of the task. Valid values:</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder taskStatus(String taskStatus) {
             this.taskStatus = taskStatus;
@@ -322,7 +406,10 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The policy that is used to trigger the synchronization task.
+         * <p>The policy that is used to trigger the synchronization task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder taskTrigger(String taskTrigger) {
             this.taskTrigger = taskTrigger;
@@ -335,20 +422,26 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetRepoSyncTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRepoSyncTaskResponseBody</p>
+     */
     public static class ImageFrom extends TeaModel {
-        @NameInMap("ImageTag")
+        @com.aliyun.core.annotation.NameInMap("ImageTag")
         private String imageTag;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RepoName")
+        @com.aliyun.core.annotation.NameInMap("RepoName")
         private String repoName;
 
-        @NameInMap("RepoNamespaceName")
+        @com.aliyun.core.annotation.NameInMap("RepoNamespaceName")
         private String repoNamespaceName;
 
         private ImageFrom(Builder builder) {
@@ -409,8 +502,22 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
             private String repoName; 
             private String repoNamespaceName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ImageFrom model) {
+                this.imageTag = model.imageTag;
+                this.instanceId = model.instanceId;
+                this.regionId = model.regionId;
+                this.repoName = model.repoName;
+                this.repoNamespaceName = model.repoNamespaceName;
+            } 
+
             /**
-             * The tag of the image.
+             * <p>The tag of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>master</p>
              */
             public Builder imageTag(String imageTag) {
                 this.imageTag = imageTag;
@@ -418,7 +525,10 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cri-sgedpenzw80e****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -426,7 +536,10 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -434,7 +547,10 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the image repository.
+             * <p>The name of the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder repoName(String repoName) {
                 this.repoName = repoName;
@@ -442,7 +558,10 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the namespace.
+             * <p>The name of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder repoNamespaceName(String repoNamespaceName) {
                 this.repoNamespaceName = repoNamespaceName;
@@ -456,20 +575,26 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRepoSyncTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRepoSyncTaskResponseBody</p>
+     */
     public static class ImageTo extends TeaModel {
-        @NameInMap("ImageTag")
+        @com.aliyun.core.annotation.NameInMap("ImageTag")
         private String imageTag;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RepoName")
+        @com.aliyun.core.annotation.NameInMap("RepoName")
         private String repoName;
 
-        @NameInMap("RepoNamespaceName")
+        @com.aliyun.core.annotation.NameInMap("RepoNamespaceName")
         private String repoNamespaceName;
 
         private ImageTo(Builder builder) {
@@ -530,8 +655,22 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
             private String repoName; 
             private String repoNamespaceName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ImageTo model) {
+                this.imageTag = model.imageTag;
+                this.instanceId = model.instanceId;
+                this.regionId = model.regionId;
+                this.repoName = model.repoName;
+                this.repoNamespaceName = model.repoNamespaceName;
+            } 
+
             /**
-             * The tag of the image.
+             * <p>The tag of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>master</p>
              */
             public Builder imageTag(String imageTag) {
                 this.imageTag = imageTag;
@@ -539,7 +678,10 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cri-leqzomz5vijc****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -547,7 +689,10 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eu-west-1</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -555,7 +700,10 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the image repository.
+             * <p>The name of the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder repoName(String repoName) {
                 this.repoName = repoName;
@@ -563,7 +711,10 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the namespace.
+             * <p>The name of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder repoNamespaceName(String repoNamespaceName) {
                 this.repoNamespaceName = repoNamespaceName;
@@ -577,23 +728,29 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRepoSyncTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRepoSyncTaskResponseBody</p>
+     */
     public static class LayerTasks extends TeaModel {
-        @NameInMap("ArtifactDigest")
+        @com.aliyun.core.annotation.NameInMap("ArtifactDigest")
         private String artifactDigest;
 
-        @NameInMap("Digest")
+        @com.aliyun.core.annotation.NameInMap("Digest")
         private String digest;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Long size;
 
-        @NameInMap("SyncLayerTaskId")
+        @com.aliyun.core.annotation.NameInMap("SyncLayerTaskId")
         private String syncLayerTaskId;
 
-        @NameInMap("SyncedSize")
+        @com.aliyun.core.annotation.NameInMap("SyncedSize")
         private Long syncedSize;
 
-        @NameInMap("TaskStatus")
+        @com.aliyun.core.annotation.NameInMap("TaskStatus")
         private String taskStatus;
 
         private LayerTasks(Builder builder) {
@@ -663,8 +820,23 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
             private Long syncedSize; 
             private String taskStatus; 
 
+            private Builder() {
+            } 
+
+            private Builder(LayerTasks model) {
+                this.artifactDigest = model.artifactDigest;
+                this.digest = model.digest;
+                this.size = model.size;
+                this.syncLayerTaskId = model.syncLayerTaskId;
+                this.syncedSize = model.syncedSize;
+                this.taskStatus = model.taskStatus;
+            } 
+
             /**
-             * The digest of the artifact.
+             * <p>The digest of the artifact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sha256:36fb85fcb5e919cb60e782397a6be04201868fe7b38ef7669fc01caec1c8fc4e</p>
              */
             public Builder artifactDigest(String artifactDigest) {
                 this.artifactDigest = artifactDigest;
@@ -672,7 +844,10 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The digest of the image layer.
+             * <p>The digest of the image layer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sha256:36fb85fcb5e919cb60e782397a6be04201868fe7b38ef7669fc01caec1c8fc4e</p>
              */
             public Builder digest(String digest) {
                 this.digest = digest;
@@ -680,7 +855,10 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The size of synchronized image layers.
+             * <p>The size of synchronized image layers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23655489</p>
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -688,7 +866,10 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the synchronization task for the image layer.
+             * <p>The ID of the synchronization task for the image layer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rslt-074x4q20fx2d****</p>
              */
             public Builder syncLayerTaskId(String syncLayerTaskId) {
                 this.syncLayerTaskId = syncLayerTaskId;
@@ -696,7 +877,10 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the image layer that is synchronized.
+             * <p>The size of the image layer that is synchronized.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23655489</p>
              */
             public Builder syncedSize(Long syncedSize) {
                 this.syncedSize = syncedSize;
@@ -704,7 +888,10 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the synchronization task. Valid values:
+             * <p>The status of the synchronization task. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder taskStatus(String taskStatus) {
                 this.taskStatus = taskStatus;

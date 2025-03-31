@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cr20181201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRepoTagResponseBody} extends {@link TeaModel}
  *
  * <p>ListRepoTagResponseBody</p>
  */
 public class ListRepoTagResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Images")
-    private java.util.List < Images> images;
+    @com.aliyun.core.annotation.NameInMap("Images")
+    private java.util.List<Images> images;
 
-    @NameInMap("IsSuccess")
+    @com.aliyun.core.annotation.NameInMap("IsSuccess")
     private Boolean isSuccess;
 
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private Integer pageNo;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
 
     private ListRepoTagResponseBody(Builder builder) {
@@ -51,6 +56,10 @@ public class ListRepoTagResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -61,7 +70,7 @@ public class ListRepoTagResponseBody extends TeaModel {
     /**
      * @return images
      */
-    public java.util.List < Images> getImages() {
+    public java.util.List<Images> getImages() {
         return this.images;
     }
 
@@ -102,15 +111,31 @@ public class ListRepoTagResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < Images> images; 
+        private java.util.List<Images> images; 
         private Boolean isSuccess; 
         private Integer pageNo; 
         private Integer pageSize; 
         private String requestId; 
         private String totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListRepoTagResponseBody model) {
+            this.code = model.code;
+            this.images = model.images;
+            this.isSuccess = model.isSuccess;
+            this.pageNo = model.pageNo;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * The return value.
+         * <p>The return value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,15 +143,18 @@ public class ListRepoTagResponseBody extends TeaModel {
         }
 
         /**
-         * The images.
+         * <p>The images.</p>
          */
-        public Builder images(java.util.List < Images> images) {
+        public Builder images(java.util.List<Images> images) {
             this.images = images;
             return this;
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -134,7 +162,10 @@ public class ListRepoTagResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.pageNo = pageNo;
@@ -142,7 +173,10 @@ public class ListRepoTagResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -150,7 +184,10 @@ public class ListRepoTagResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>031572FA-7D8F-4C05-B790-1071E0E05DE6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +195,10 @@ public class ListRepoTagResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -171,26 +211,32 @@ public class ListRepoTagResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListRepoTagResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRepoTagResponseBody</p>
+     */
     public static class Images extends TeaModel {
-        @NameInMap("Digest")
+        @com.aliyun.core.annotation.NameInMap("Digest")
         private String digest;
 
-        @NameInMap("ImageCreate")
+        @com.aliyun.core.annotation.NameInMap("ImageCreate")
         private String imageCreate;
 
-        @NameInMap("ImageId")
+        @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
-        @NameInMap("ImageSize")
+        @com.aliyun.core.annotation.NameInMap("ImageSize")
         private Long imageSize;
 
-        @NameInMap("ImageUpdate")
+        @com.aliyun.core.annotation.NameInMap("ImageUpdate")
         private String imageUpdate;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private String tag;
 
         private Images(Builder builder) {
@@ -269,8 +315,24 @@ public class ListRepoTagResponseBody extends TeaModel {
             private String status; 
             private String tag; 
 
+            private Builder() {
+            } 
+
+            private Builder(Images model) {
+                this.digest = model.digest;
+                this.imageCreate = model.imageCreate;
+                this.imageId = model.imageId;
+                this.imageSize = model.imageSize;
+                this.imageUpdate = model.imageUpdate;
+                this.status = model.status;
+                this.tag = model.tag;
+            } 
+
             /**
-             * The digest of the image.
+             * <p>The digest of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>67bfbcc12b67936ec7f867927817cbb071832b873dbcaed312a1930ba5f1****</p>
              */
             public Builder digest(String digest) {
                 this.digest = digest;
@@ -278,7 +340,10 @@ public class ListRepoTagResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the image was created.
+             * <p>The time when the image was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1572839125000</p>
              */
             public Builder imageCreate(String imageCreate) {
                 this.imageCreate = imageCreate;
@@ -286,7 +351,10 @@ public class ListRepoTagResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the image.
+             * <p>The ID of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>45023655bf39c382e26a8607d057c27871dee163c1ecf48cc1ebf2a1****</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -294,7 +362,10 @@ public class ListRepoTagResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the image.
+             * <p>The size of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>27107966</p>
              */
             public Builder imageSize(Long imageSize) {
                 this.imageSize = imageSize;
@@ -302,7 +373,10 @@ public class ListRepoTagResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the image was last updated.
+             * <p>The time when the image was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1572875608000</p>
              */
             public Builder imageUpdate(String imageUpdate) {
                 this.imageUpdate = imageUpdate;
@@ -310,7 +384,10 @@ public class ListRepoTagResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the image.
+             * <p>The status of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -318,7 +395,10 @@ public class ListRepoTagResponseBody extends TeaModel {
             }
 
             /**
-             * The tag of the image.
+             * <p>The tag of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v0.1</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;

@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cr20181201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRepoBuildRecordLogResponseBody} extends {@link TeaModel}
  *
  * <p>ListRepoBuildRecordLogResponseBody</p>
  */
 public class ListRepoBuildRecordLogResponseBody extends TeaModel {
-    @NameInMap("BuildRecordLogs")
-    private java.util.List < BuildRecordLogs> buildRecordLogs;
+    @com.aliyun.core.annotation.NameInMap("BuildRecordLogs")
+    private java.util.List<BuildRecordLogs> buildRecordLogs;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("IsSuccess")
+    @com.aliyun.core.annotation.NameInMap("IsSuccess")
     private Boolean isSuccess;
 
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private Integer pageNo;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
 
     private ListRepoBuildRecordLogResponseBody(Builder builder) {
@@ -51,10 +56,14 @@ public class ListRepoBuildRecordLogResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return buildRecordLogs
      */
-    public java.util.List < BuildRecordLogs> getBuildRecordLogs() {
+    public java.util.List<BuildRecordLogs> getBuildRecordLogs() {
         return this.buildRecordLogs;
     }
 
@@ -101,7 +110,7 @@ public class ListRepoBuildRecordLogResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < BuildRecordLogs> buildRecordLogs; 
+        private java.util.List<BuildRecordLogs> buildRecordLogs; 
         private String code; 
         private Boolean isSuccess; 
         private Integer pageNo; 
@@ -109,16 +118,32 @@ public class ListRepoBuildRecordLogResponseBody extends TeaModel {
         private String requestId; 
         private String totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListRepoBuildRecordLogResponseBody model) {
+            this.buildRecordLogs = model.buildRecordLogs;
+            this.code = model.code;
+            this.isSuccess = model.isSuccess;
+            this.pageNo = model.pageNo;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * The log content of the image building record.
+         * <p>The log content of the image building record.</p>
          */
-        public Builder buildRecordLogs(java.util.List < BuildRecordLogs> buildRecordLogs) {
+        public Builder buildRecordLogs(java.util.List<BuildRecordLogs> buildRecordLogs) {
             this.buildRecordLogs = buildRecordLogs;
             return this;
         }
 
         /**
-         * The return value.
+         * <p>The return value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -126,7 +151,10 @@ public class ListRepoBuildRecordLogResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -134,7 +162,10 @@ public class ListRepoBuildRecordLogResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.pageNo = pageNo;
@@ -142,7 +173,10 @@ public class ListRepoBuildRecordLogResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -150,7 +184,10 @@ public class ListRepoBuildRecordLogResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4CE1F661-75DD-4EBD-A4AD-057B26834ABB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +195,10 @@ public class ListRepoBuildRecordLogResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -171,14 +211,20 @@ public class ListRepoBuildRecordLogResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListRepoBuildRecordLogResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRepoBuildRecordLogResponseBody</p>
+     */
     public static class BuildRecordLogs extends TeaModel {
-        @NameInMap("BuildStage")
+        @com.aliyun.core.annotation.NameInMap("BuildStage")
         private String buildStage;
 
-        @NameInMap("LineNumber")
+        @com.aliyun.core.annotation.NameInMap("LineNumber")
         private Integer lineNumber;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
         private BuildRecordLogs(Builder builder) {
@@ -221,8 +267,20 @@ public class ListRepoBuildRecordLogResponseBody extends TeaModel {
             private Integer lineNumber; 
             private String message; 
 
+            private Builder() {
+            } 
+
+            private Builder(BuildRecordLogs model) {
+                this.buildStage = model.buildStage;
+                this.lineNumber = model.lineNumber;
+                this.message = model.message;
+            } 
+
             /**
-             * The stage of the building that is recorded in the log entry.
+             * <p>The stage of the building that is recorded in the log entry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GIT_CLONE</p>
              */
             public Builder buildStage(String buildStage) {
                 this.buildStage = buildStage;
@@ -230,7 +288,10 @@ public class ListRepoBuildRecordLogResponseBody extends TeaModel {
             }
 
             /**
-             * The line number of the log entry.
+             * <p>The line number of the log entry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder lineNumber(Integer lineNumber) {
                 this.lineNumber = lineNumber;
@@ -238,7 +299,10 @@ public class ListRepoBuildRecordLogResponseBody extends TeaModel {
             }
 
             /**
-             * The content of the log.
+             * <p>The content of the log.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fetch stage begin</p>
              */
             public Builder message(String message) {
                 this.message = message;

@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cr20181201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInstanceVpcEndpointResponseBody} extends {@link TeaModel}
  *
  * <p>GetInstanceVpcEndpointResponseBody</p>
  */
 public class GetInstanceVpcEndpointResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Domains")
-    private java.util.List < String > domains;
+    @com.aliyun.core.annotation.NameInMap("Domains")
+    private java.util.List<String> domains;
 
-    @NameInMap("Enable")
+    @com.aliyun.core.annotation.NameInMap("Enable")
     private Boolean enable;
 
-    @NameInMap("IsSuccess")
+    @com.aliyun.core.annotation.NameInMap("IsSuccess")
     private Boolean isSuccess;
 
-    @NameInMap("LinkedVpcs")
-    private java.util.List < LinkedVpcs> linkedVpcs;
+    @com.aliyun.core.annotation.NameInMap("LinkedVpcs")
+    private java.util.List<LinkedVpcs> linkedVpcs;
 
-    @NameInMap("ModuleName")
+    @com.aliyun.core.annotation.NameInMap("ModuleName")
     private String moduleName;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetInstanceVpcEndpointResponseBody(Builder builder) {
@@ -51,6 +56,10 @@ public class GetInstanceVpcEndpointResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -61,7 +70,7 @@ public class GetInstanceVpcEndpointResponseBody extends TeaModel {
     /**
      * @return domains
      */
-    public java.util.List < String > getDomains() {
+    public java.util.List<String> getDomains() {
         return this.domains;
     }
 
@@ -82,7 +91,7 @@ public class GetInstanceVpcEndpointResponseBody extends TeaModel {
     /**
      * @return linkedVpcs
      */
-    public java.util.List < LinkedVpcs> getLinkedVpcs() {
+    public java.util.List<LinkedVpcs> getLinkedVpcs() {
         return this.linkedVpcs;
     }
 
@@ -102,15 +111,31 @@ public class GetInstanceVpcEndpointResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < String > domains; 
+        private java.util.List<String> domains; 
         private Boolean enable; 
         private Boolean isSuccess; 
-        private java.util.List < LinkedVpcs> linkedVpcs; 
+        private java.util.List<LinkedVpcs> linkedVpcs; 
         private String moduleName; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetInstanceVpcEndpointResponseBody model) {
+            this.code = model.code;
+            this.domains = model.domains;
+            this.enable = model.enable;
+            this.isSuccess = model.isSuccess;
+            this.linkedVpcs = model.linkedVpcs;
+            this.moduleName = model.moduleName;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The return value.
+         * <p>The return value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,19 +143,22 @@ public class GetInstanceVpcEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * Domains.
+         * <p>Domain names.</p>
          */
-        public Builder domains(java.util.List < String > domains) {
+        public Builder domains(java.util.List<String> domains) {
             this.domains = domains;
             return this;
         }
 
         /**
-         * Indicates whether the access control list (ACL) feature is enabled. Valid values:
-         * <p>
+         * <p>Indicates whether the VPC endpoint is enabled. Valid values:</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
          * 
-         * *   `true`: The ACL feature is enabled.
-         * *   `false`: The ACL feature is disabled.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enable(Boolean enable) {
             this.enable = enable;
@@ -138,11 +166,14 @@ public class GetInstanceVpcEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request is successful.</li>
+         * <li><code>false</code>: The request fails.</li>
+         * </ul>
          * 
-         * *   `true`: The request is successful.
-         * *   `false`: The request fails.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -150,15 +181,22 @@ public class GetInstanceVpcEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * The VPCs in which the instance is deployed.
+         * <p>The VPCs that are added to the access control list.</p>
          */
-        public Builder linkedVpcs(java.util.List < LinkedVpcs> linkedVpcs) {
+        public Builder linkedVpcs(java.util.List<LinkedVpcs> linkedVpcs) {
             this.linkedVpcs = linkedVpcs;
             return this;
         }
 
         /**
-         * ModuleName.
+         * <p>The name of the modules that can be accessed. Valid values:</p>
+         * <ul>
+         * <li><code>Registry</code>: image repositories.</li>
+         * <li><code>Chart</code>: Helm charts.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Registry</p>
          */
         public Builder moduleName(String moduleName) {
             this.moduleName = moduleName;
@@ -166,7 +204,10 @@ public class GetInstanceVpcEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BAE9349D-A587-4F9A-B574-9DA0EF2638D1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -179,20 +220,26 @@ public class GetInstanceVpcEndpointResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetInstanceVpcEndpointResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceVpcEndpointResponseBody</p>
+     */
     public static class LinkedVpcs extends TeaModel {
-        @NameInMap("DefaultAccess")
+        @com.aliyun.core.annotation.NameInMap("DefaultAccess")
         private Boolean defaultAccess;
 
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("VswitchId")
+        @com.aliyun.core.annotation.NameInMap("VswitchId")
         private String vswitchId;
 
         private LinkedVpcs(Builder builder) {
@@ -253,8 +300,22 @@ public class GetInstanceVpcEndpointResponseBody extends TeaModel {
             private String vpcId; 
             private String vswitchId; 
 
+            private Builder() {
+            } 
+
+            private Builder(LinkedVpcs model) {
+                this.defaultAccess = model.defaultAccess;
+                this.ip = model.ip;
+                this.status = model.status;
+                this.vpcId = model.vpcId;
+                this.vswitchId = model.vswitchId;
+            } 
+
             /**
-             * Indicates whether the default ACL is used.
+             * <p>Indicates whether the VPC is the default VPC over which the Container Registry instance is accessed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder defaultAccess(Boolean defaultAccess) {
                 this.defaultAccess = defaultAccess;
@@ -262,7 +323,10 @@ public class GetInstanceVpcEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * IP address.
+             * <p>IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.10.11</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -270,11 +334,14 @@ public class GetInstanceVpcEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the VPC. Valid values:
-             * <p>
+             * <p>The status of the VPC. Valid values:</p>
+             * <ul>
+             * <li><code>CREATING</code></li>
+             * <li><code>RUNNING</code></li>
+             * </ul>
              * 
-             * *   `CREATING`: The VPC is being created.
-             * *   `RUNNING`: The VPC is running.
+             * <strong>example:</strong>
+             * <p>CREATING</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -282,7 +349,10 @@ public class GetInstanceVpcEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * VPC ID
+             * <p>VPC ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-uf6aamu2nomfr1thd****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -290,7 +360,10 @@ public class GetInstanceVpcEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch.
+             * <p>The ID of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-uf62m5vmxl2e72dk7****</p>
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;

@@ -1,56 +1,61 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cr20181201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateArtifactLifecycleRuleRequest} extends {@link RequestModel}
  *
  * <p>CreateArtifactLifecycleRuleRequest</p>
  */
 public class CreateArtifactLifecycleRuleRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Auto")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Auto")
     private Boolean auto;
 
-    @Query
-    @NameInMap("EnableDeleteTag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableDeleteTag")
     private Boolean enableDeleteTag;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("NamespaceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NamespaceName")
     private String namespaceName;
 
-    @Query
-    @NameInMap("RepoName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RepoName")
     private String repoName;
 
-    @Query
-    @NameInMap("RetentionTagCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RetentionTagCount")
     private Long retentionTagCount;
 
-    @Query
-    @NameInMap("ScheduleTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScheduleTime")
     private String scheduleTime;
 
-    @Query
-    @NameInMap("Scope")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Scope")
     private String scope;
 
-    @Query
-    @NameInMap("TagRegexp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TagRegexp")
     private String tagRegexp;
 
     private CreateArtifactLifecycleRuleRequest(Builder builder) {
@@ -75,7 +80,7 @@ public class CreateArtifactLifecycleRuleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -181,7 +186,7 @@ public class CreateArtifactLifecycleRuleRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -190,7 +195,10 @@ public class CreateArtifactLifecycleRuleRequest extends Request {
         }
 
         /**
-         * Auto.
+         * <p>Specify whether to automatically execute the lifecycle management rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder auto(Boolean auto) {
             this.putQueryParameter("Auto", auto);
@@ -199,7 +207,10 @@ public class CreateArtifactLifecycleRuleRequest extends Request {
         }
 
         /**
-         * EnableDeleteTag.
+         * <p>Specify whether to enable lifecycle management for the artifact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableDeleteTag(Boolean enableDeleteTag) {
             this.putQueryParameter("EnableDeleteTag", enableDeleteTag);
@@ -208,7 +219,11 @@ public class CreateArtifactLifecycleRuleRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cri-gbwfk7qbgrxe****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -217,7 +232,10 @@ public class CreateArtifactLifecycleRuleRequest extends Request {
         }
 
         /**
-         * NamespaceName.
+         * <p>The name of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dev-backend</p>
          */
         public Builder namespaceName(String namespaceName) {
             this.putQueryParameter("NamespaceName", namespaceName);
@@ -226,7 +244,10 @@ public class CreateArtifactLifecycleRuleRequest extends Request {
         }
 
         /**
-         * RepoName.
+         * <p>The name of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_1</p>
          */
         public Builder repoName(String repoName) {
             this.putQueryParameter("RepoName", repoName);
@@ -235,7 +256,10 @@ public class CreateArtifactLifecycleRuleRequest extends Request {
         }
 
         /**
-         * RetentionTagCount.
+         * <p>The number of images that you want to retain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder retentionTagCount(Long retentionTagCount) {
             this.putQueryParameter("RetentionTagCount", retentionTagCount);
@@ -244,7 +268,10 @@ public class CreateArtifactLifecycleRuleRequest extends Request {
         }
 
         /**
-         * ScheduleTime.
+         * <p>The execution cycle of the lifecycle management rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WEEK</p>
          */
         public Builder scheduleTime(String scheduleTime) {
             this.putQueryParameter("ScheduleTime", scheduleTime);
@@ -253,7 +280,10 @@ public class CreateArtifactLifecycleRuleRequest extends Request {
         }
 
         /**
-         * Scope.
+         * <p>The deletion scope.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INSTANCE</p>
          */
         public Builder scope(String scope) {
             this.putQueryParameter("Scope", scope);
@@ -262,7 +292,10 @@ public class CreateArtifactLifecycleRuleRequest extends Request {
         }
 
         /**
-         * TagRegexp.
+         * <p>The regular expression that is used to indicate which image tags are retained.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>release-.*</p>
          */
         public Builder tagRegexp(String tagRegexp) {
             this.putQueryParameter("TagRegexp", tagRegexp);

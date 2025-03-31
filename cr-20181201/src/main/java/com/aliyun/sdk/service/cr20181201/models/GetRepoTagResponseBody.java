@@ -1,45 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cr20181201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRepoTagResponseBody} extends {@link TeaModel}
  *
  * <p>GetRepoTagResponseBody</p>
  */
 public class GetRepoTagResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Digest")
+    @com.aliyun.core.annotation.NameInMap("Digest")
     private String digest;
 
-    @NameInMap("ImageCreate")
+    @com.aliyun.core.annotation.NameInMap("ImageCreate")
     private Long imageCreate;
 
-    @NameInMap("ImageId")
+    @com.aliyun.core.annotation.NameInMap("ImageId")
     private String imageId;
 
-    @NameInMap("ImageSize")
+    @com.aliyun.core.annotation.NameInMap("ImageSize")
     private Long imageSize;
 
-    @NameInMap("ImageUpdate")
+    @com.aliyun.core.annotation.NameInMap("ImageUpdate")
     private Long imageUpdate;
 
-    @NameInMap("IsSuccess")
+    @com.aliyun.core.annotation.NameInMap("IsSuccess")
     private Boolean isSuccess;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private String tag;
 
     private GetRepoTagResponseBody(Builder builder) {
@@ -61,6 +66,10 @@ public class GetRepoTagResponseBody extends TeaModel {
 
     public static GetRepoTagResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -145,8 +154,27 @@ public class GetRepoTagResponseBody extends TeaModel {
         private String status; 
         private String tag; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetRepoTagResponseBody model) {
+            this.code = model.code;
+            this.digest = model.digest;
+            this.imageCreate = model.imageCreate;
+            this.imageId = model.imageId;
+            this.imageSize = model.imageSize;
+            this.imageUpdate = model.imageUpdate;
+            this.isSuccess = model.isSuccess;
+            this.requestId = model.requestId;
+            this.status = model.status;
+            this.tag = model.tag;
+        } 
+
         /**
-         * The ID of the image.
+         * <p>The ID of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -154,7 +182,10 @@ public class GetRepoTagResponseBody extends TeaModel {
         }
 
         /**
-         * The size of the image. Unit: Bytes.
+         * <p>The size of the image. Unit: Bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>67bfbcc12b67936ec7f867927817cbb071832b873dbcaed312a1930ba5f1****</p>
          */
         public Builder digest(String digest) {
             this.digest = digest;
@@ -162,7 +193,10 @@ public class GetRepoTagResponseBody extends TeaModel {
         }
 
         /**
-         * crr-tquyps22md8p****
+         * <p>crr-tquyps22md8p****</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1572839125000</p>
          */
         public Builder imageCreate(Long imageCreate) {
             this.imageCreate = imageCreate;
@@ -178,7 +212,10 @@ public class GetRepoTagResponseBody extends TeaModel {
         }
 
         /**
-         * The number of milliseconds that have elapsed since the image was last updated.
+         * <p>The number of milliseconds that have elapsed since the image was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>27107966</p>
          */
         public Builder imageSize(Long imageSize) {
             this.imageSize = imageSize;
@@ -186,7 +223,10 @@ public class GetRepoTagResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1572875608000</p>
          */
         public Builder imageUpdate(Long imageUpdate) {
             this.imageUpdate = imageUpdate;
@@ -194,11 +234,14 @@ public class GetRepoTagResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the image. Valid values:
-         * <p>
+         * <p>The status of the image. Valid values:</p>
+         * <ul>
+         * <li><code>NORMAL</code>: The image is normal.</li>
+         * <li><code>DELETING</code>: The image is being deleted.</li>
+         * </ul>
          * 
-         * *   `NORMAL`: The image is normal.
-         * *   `DELETING`: The image is being deleted.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -206,7 +249,10 @@ public class GetRepoTagResponseBody extends TeaModel {
         }
 
         /**
-         * 1.0
+         * <p>1.0</p>
+         * 
+         * <strong>example:</strong>
+         * <p>031572FA-7D8F-4C05-B790-1071E0E05DE6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -214,7 +260,10 @@ public class GetRepoTagResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -222,7 +271,10 @@ public class GetRepoTagResponseBody extends TeaModel {
         }
 
         /**
-         * The version of the repository.
+         * <p>The version of the repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0</p>
          */
         public Builder tag(String tag) {
             this.tag = tag;

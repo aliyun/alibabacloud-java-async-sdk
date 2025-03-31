@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cr20181201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateArtifactBuildRuleResponseBody} extends {@link TeaModel}
  *
  * <p>CreateArtifactBuildRuleResponseBody</p>
  */
 public class CreateArtifactBuildRuleResponseBody extends TeaModel {
-    @NameInMap("BuildRuleId")
+    @com.aliyun.core.annotation.NameInMap("BuildRuleId")
     private String buildRuleId;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("IsSuccess")
+    @com.aliyun.core.annotation.NameInMap("IsSuccess")
     private Boolean isSuccess;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateArtifactBuildRuleResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class CreateArtifactBuildRuleResponseBody extends TeaModel {
 
     public static CreateArtifactBuildRuleResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -73,8 +82,21 @@ public class CreateArtifactBuildRuleResponseBody extends TeaModel {
         private Boolean isSuccess; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateArtifactBuildRuleResponseBody model) {
+            this.buildRuleId = model.buildRuleId;
+            this.code = model.code;
+            this.isSuccess = model.isSuccess;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The ID of the accelerated image building rule.
+         * <p>The ID of the accelerated image building rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>crabr-7dfa5qye5****</p>
          */
         public Builder buildRuleId(String buildRuleId) {
             this.buildRuleId = buildRuleId;
@@ -82,7 +104,10 @@ public class CreateArtifactBuildRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The return value.
+         * <p>The return value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -90,7 +115,10 @@ public class CreateArtifactBuildRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -98,7 +126,10 @@ public class CreateArtifactBuildRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C8E90AB5-0A96-5D12-9E59-11EE46360642</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

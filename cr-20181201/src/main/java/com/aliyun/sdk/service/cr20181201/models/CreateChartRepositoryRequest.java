@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cr20181201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateChartRepositoryRequest} extends {@link RequestModel}
  *
  * <p>CreateChartRepositoryRequest</p>
  */
 public class CreateChartRepositoryRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("RepoName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RepoName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String repoName;
 
-    @Query
-    @NameInMap("RepoNamespaceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RepoNamespaceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String repoNamespaceName;
 
-    @Query
-    @NameInMap("RepoType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RepoType")
     private String repoType;
 
-    @Query
-    @NameInMap("Summary")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Summary")
     private String summary;
 
     private CreateChartRepositoryRequest(Builder builder) {
@@ -57,7 +62,7 @@ public class CreateChartRepositoryRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -127,7 +132,7 @@ public class CreateChartRepositoryRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -136,7 +141,11 @@ public class CreateChartRepositoryRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cri-xkx6vujuhay0****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -145,7 +154,11 @@ public class CreateChartRepositoryRequest extends Request {
         }
 
         /**
-         * The name of the repository.
+         * <p>The name of the repository.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>repo01</p>
          */
         public Builder repoName(String repoName) {
             this.putQueryParameter("RepoName", repoName);
@@ -154,7 +167,11 @@ public class CreateChartRepositoryRequest extends Request {
         }
 
         /**
-         * The name of the namespace to which the repository belongs.
+         * <p>The name of the namespace to which the repository belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>namespace01</p>
          */
         public Builder repoNamespaceName(String repoNamespaceName) {
             this.putQueryParameter("RepoNamespaceName", repoNamespaceName);
@@ -163,13 +180,15 @@ public class CreateChartRepositoryRequest extends Request {
         }
 
         /**
-         * The default repository type. Valid values:
-         * <p>
+         * <p>The default repository type. Valid values:</p>
+         * <ul>
+         * <li><code>PUBLIC</code>: a public repository.</li>
+         * <li><code>PRIVATE</code>: a private repository.</li>
+         * </ul>
+         * <p>You can specify the RepoType or Summary parameter. The RepoType parameter is optional.</p>
          * 
-         * *   `PUBLIC`: a public repository.
-         * *   `PRIVATE`: a private repository.
-         * 
-         * You can specify the RepoType or Summary parameter. The RepoType parameter is optional.
+         * <strong>example:</strong>
+         * <p>PUBLIC</p>
          */
         public Builder repoType(String repoType) {
             this.putQueryParameter("RepoType", repoType);
@@ -178,7 +197,10 @@ public class CreateChartRepositoryRequest extends Request {
         }
 
         /**
-         * The summary of the repository.
+         * <p>The summary of the repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>summary</p>
          */
         public Builder summary(String summary) {
             this.putQueryParameter("Summary", summary);

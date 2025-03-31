@@ -1,56 +1,61 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cr20181201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateRepoSourceCodeRepoRequest} extends {@link RequestModel}
  *
  * <p>CreateRepoSourceCodeRepoRequest</p>
  */
 public class CreateRepoSourceCodeRepoRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("AutoBuild")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoBuild")
     private Boolean autoBuild;
 
-    @Query
-    @NameInMap("CodeRepoName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CodeRepoName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String codeRepoName;
 
-    @Query
-    @NameInMap("CodeRepoNamespaceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CodeRepoNamespaceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String codeRepoNamespaceName;
 
-    @Query
-    @NameInMap("CodeRepoType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CodeRepoType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String codeRepoType;
 
-    @Query
-    @NameInMap("DisableCacheBuild")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DisableCacheBuild")
     private Boolean disableCacheBuild;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("OverseaBuild")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OverseaBuild")
     private Boolean overseaBuild;
 
-    @Query
-    @NameInMap("RepoId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RepoId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String repoId;
 
     private CreateRepoSourceCodeRepoRequest(Builder builder) {
@@ -74,7 +79,7 @@ public class CreateRepoSourceCodeRepoRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -171,7 +176,10 @@ public class CreateRepoSourceCodeRepoRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -180,11 +188,14 @@ public class CreateRepoSourceCodeRepoRequest extends Request {
         }
 
         /**
-         * Specifies whether to trigger image building when source code is committed. Valid values:
-         * <p>
+         * <p>Specifies whether to trigger image building when source code is committed. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: triggers image building when source code is committed.</li>
+         * <li><code>false</code>: does not trigger image building when source code is committed.</li>
+         * </ul>
          * 
-         * *   `true`: triggers image building when source code is committed.
-         * *   `false`: does not trigger image building when source code is committed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoBuild(Boolean autoBuild) {
             this.putQueryParameter("AutoBuild", autoBuild);
@@ -193,7 +204,11 @@ public class CreateRepoSourceCodeRepoRequest extends Request {
         }
 
         /**
-         * The name of the source code repository.
+         * <p>The name of the source code repository.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>repo</p>
          */
         public Builder codeRepoName(String codeRepoName) {
             this.putQueryParameter("CodeRepoName", codeRepoName);
@@ -202,7 +217,11 @@ public class CreateRepoSourceCodeRepoRequest extends Request {
         }
 
         /**
-         * The namespace to which the source code repository belongs.
+         * <p>The namespace to which the source code repository belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>namespace</p>
          */
         public Builder codeRepoNamespaceName(String codeRepoNamespaceName) {
             this.putQueryParameter("CodeRepoNamespaceName", codeRepoNamespaceName);
@@ -211,7 +230,11 @@ public class CreateRepoSourceCodeRepoRequest extends Request {
         }
 
         /**
-         * The type of the source code hosting platform. Valid values: `GITHUB`, `GITLAB`, `GITEE`, `CODE`, and `CODEUP`.
+         * <p>The type of the source code hosting platform. Valid values: <code>GITHUB</code>, <code>GITLAB</code>, <code>GITEE</code>, <code>CODE</code>, and <code>CODEUP</code>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GITHUB</p>
          */
         public Builder codeRepoType(String codeRepoType) {
             this.putQueryParameter("CodeRepoType", codeRepoType);
@@ -220,11 +243,14 @@ public class CreateRepoSourceCodeRepoRequest extends Request {
         }
 
         /**
-         * Specifies whether to disable building caches. Valid values:
-         * <p>
+         * <p>Specifies whether to disable building caches. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: disables building caches.</li>
+         * <li><code>false</code>: enables building caches.</li>
+         * </ul>
          * 
-         * *   `true`: disables building caches.
-         * *   `false`: enables building caches.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder disableCacheBuild(Boolean disableCacheBuild) {
             this.putQueryParameter("DisableCacheBuild", disableCacheBuild);
@@ -233,7 +259,11 @@ public class CreateRepoSourceCodeRepoRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cri-shac42yvqzvq****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -242,11 +272,14 @@ public class CreateRepoSourceCodeRepoRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable Build With Servers Deployed Outside Chinese Mainland. Valid values:
-         * <p>
+         * <p>Specifies whether to enable Build With Servers Deployed Outside Chinese Mainland. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: enables Build With Servers Deployed Outside Chinese Mainland.</li>
+         * <li><code>false</code>: does not enable Build With Servers Deployed Outside Chinese Mainland.</li>
+         * </ul>
          * 
-         * *   `true`: enables Build With Servers Deployed Outside Chinese Mainland.
-         * *   `false`: does not enable Build With Servers Deployed Outside Chinese Mainland.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder overseaBuild(Boolean overseaBuild) {
             this.putQueryParameter("OverseaBuild", overseaBuild);
@@ -255,7 +288,11 @@ public class CreateRepoSourceCodeRepoRequest extends Request {
         }
 
         /**
-         * The ID of the image repository.
+         * <p>The ID of the image repository.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>crr-gzsrlevmvoaq****</p>
          */
         public Builder repoId(String repoId) {
             this.putQueryParameter("RepoId", repoId);

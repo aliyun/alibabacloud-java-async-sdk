@@ -1,61 +1,66 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cr20181201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateEventCenterRuleRequest} extends {@link RequestModel}
  *
  * <p>UpdateEventCenterRuleRequest</p>
  */
 public class UpdateEventCenterRuleRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("EventChannel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EventChannel")
     private String eventChannel;
 
-    @Query
-    @NameInMap("EventConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EventConfig")
     private String eventConfig;
 
-    @Query
-    @NameInMap("EventScope")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EventScope")
     private String eventScope;
 
-    @Query
-    @NameInMap("EventType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EventType")
     private String eventType;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("Namespaces")
-    private java.util.List < String > namespaces;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespaces")
+    private java.util.List<String> namespaces;
 
-    @Query
-    @NameInMap("RepoNames")
-    private java.util.List < String > repoNames;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RepoNames")
+    private java.util.List<String> repoNames;
 
-    @Query
-    @NameInMap("RepoTagFilterPattern")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RepoTagFilterPattern")
     private String repoTagFilterPattern;
 
-    @Query
-    @NameInMap("RuleId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ruleId;
 
-    @Query
-    @NameInMap("RuleName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleName")
     private String ruleName;
 
     private UpdateEventCenterRuleRequest(Builder builder) {
@@ -81,7 +86,7 @@ public class UpdateEventCenterRuleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -131,14 +136,14 @@ public class UpdateEventCenterRuleRequest extends Request {
     /**
      * @return namespaces
      */
-    public java.util.List < String > getNamespaces() {
+    public java.util.List<String> getNamespaces() {
         return this.namespaces;
     }
 
     /**
      * @return repoNames
      */
-    public java.util.List < String > getRepoNames() {
+    public java.util.List<String> getRepoNames() {
         return this.repoNames;
     }
 
@@ -170,8 +175,8 @@ public class UpdateEventCenterRuleRequest extends Request {
         private String eventScope; 
         private String eventType; 
         private String instanceId; 
-        private java.util.List < String > namespaces; 
-        private java.util.List < String > repoNames; 
+        private java.util.List<String> namespaces; 
+        private java.util.List<String> repoNames; 
         private String repoTagFilterPattern; 
         private String ruleId; 
         private String ruleName; 
@@ -205,7 +210,10 @@ public class UpdateEventCenterRuleRequest extends Request {
         }
 
         /**
-         * The event notification channel.
+         * <p>The event notification channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EVENT_BRIDGE</p>
          */
         public Builder eventChannel(String eventChannel) {
             this.putQueryParameter("EventChannel", eventChannel);
@@ -214,7 +222,17 @@ public class UpdateEventCenterRuleRequest extends Request {
         }
 
         /**
-         * The event configuration.
+         * <p>The event configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *         &quot;notifyMethod&quot;:&quot;http&quot;,
+         *         &quot;notifyConfig&quot;:{
+         *             &quot;Url&quot;:&quot;<a href="http://www.aliyundoc.com">http://www.aliyundoc.com</a>&quot;,
+         *             &quot;id&quot;:&quot;MaAV3HgTkO5Fh8l1V********&quot;,
+         *         },
+         *         &quot;notifyFilter&quot;:{}
+         *     }</p>
          */
         public Builder eventConfig(String eventConfig) {
             this.putQueryParameter("EventConfig", eventConfig);
@@ -223,14 +241,16 @@ public class UpdateEventCenterRuleRequest extends Request {
         }
 
         /**
-         * The event scope. Valid values:
-         * <p>
+         * <p>The event scope. Valid values:</p>
+         * <ul>
+         * <li><code>INSTANCE</code></li>
+         * <li><code>NAMESPACE</code></li>
+         * <li><code>REPO</code></li>
+         * </ul>
+         * <p>Default value: <code>INSTANCE</code></p>
          * 
-         * *   `INSTANCE`
-         * *   `NAMESPACE`
-         * *   `REPO`
-         * 
-         * Default value: `INSTANCE`
+         * <strong>example:</strong>
+         * <p>INSTANCE</p>
          */
         public Builder eventScope(String eventScope) {
             this.putQueryParameter("EventScope", eventScope);
@@ -239,14 +259,17 @@ public class UpdateEventCenterRuleRequest extends Request {
         }
 
         /**
-         * The type of the event. Valid values:
-         * <p>
+         * <p>The type of the event. Valid values:</p>
+         * <ul>
+         * <li><code>cr:Artifact:DeliveryChainCompleted</code>: The delivery chain is processed.</li>
+         * <li><code>cr:Artifact:SynchronizationCompleted</code>: The image is replicated.</li>
+         * <li><code>cr:Artifact:BuildCompleted</code>: The image is built.</li>
+         * <li><code>cr:Artifact:ScanCompleted</code>: The image is scanned.</li>
+         * <li><code>cr:Artifact:SigningCompleted</code>: The image is signed.</li>
+         * </ul>
          * 
-         * *   `cr:Artifact:DeliveryChainCompleted`: The delivery chain is processed.
-         * *   `cr:Artifact:SynchronizationCompleted`: The image is replicated.
-         * *   `cr:Artifact:BuildCompleted`: The image is built.
-         * *   `cr:Artifact:ScanCompleted`: The image is scanned.
-         * *   `cr:Artifact:SigningCompleted`: The image is signed.
+         * <strong>example:</strong>
+         * <p>cr:Artifact:DeliveryChainCompleted</p>
          */
         public Builder eventType(String eventType) {
             this.putQueryParameter("EventType", eventType);
@@ -255,7 +278,11 @@ public class UpdateEventCenterRuleRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cri-kmsiwlxxdcva****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -264,9 +291,12 @@ public class UpdateEventCenterRuleRequest extends Request {
         }
 
         /**
-         * The namespaces to which the event notification rule applies.
+         * <p>The namespaces to which the event notification rule applies.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ns</p>
          */
-        public Builder namespaces(java.util.List < String > namespaces) {
+        public Builder namespaces(java.util.List<String> namespaces) {
             String namespacesShrink = shrink(namespaces, "Namespaces", "json");
             this.putQueryParameter("Namespaces", namespacesShrink);
             this.namespaces = namespaces;
@@ -274,9 +304,12 @@ public class UpdateEventCenterRuleRequest extends Request {
         }
 
         /**
-         * The names of the repositories to which the event notification rule applies.
+         * <p>The names of the repositories to which the event notification rule applies.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>reponame</p>
          */
-        public Builder repoNames(java.util.List < String > repoNames) {
+        public Builder repoNames(java.util.List<String> repoNames) {
             String repoNamesShrink = shrink(repoNames, "RepoNames", "json");
             this.putQueryParameter("RepoNames", repoNamesShrink);
             this.repoNames = repoNames;
@@ -284,7 +317,10 @@ public class UpdateEventCenterRuleRequest extends Request {
         }
 
         /**
-         * The regular expression for image tags.
+         * <p>The regular expression for image tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>.*</p>
          */
         public Builder repoTagFilterPattern(String repoTagFilterPattern) {
             this.putQueryParameter("RepoTagFilterPattern", repoTagFilterPattern);
@@ -293,7 +329,11 @@ public class UpdateEventCenterRuleRequest extends Request {
         }
 
         /**
-         * The ID of the event notification rule.
+         * <p>The ID of the event notification rule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>crecr-n6pbhgjxt*****</p>
          */
         public Builder ruleId(String ruleId) {
             this.putQueryParameter("RuleId", ruleId);
@@ -302,7 +342,10 @@ public class UpdateEventCenterRuleRequest extends Request {
         }
 
         /**
-         * The name of the event notification rule.
+         * <p>The name of the event notification rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>chain-demo</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);

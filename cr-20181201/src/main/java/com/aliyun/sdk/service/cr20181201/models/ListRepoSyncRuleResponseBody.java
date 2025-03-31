@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cr20181201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRepoSyncRuleResponseBody} extends {@link TeaModel}
  *
  * <p>ListRepoSyncRuleResponseBody</p>
  */
 public class ListRepoSyncRuleResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("IsSuccess")
+    @com.aliyun.core.annotation.NameInMap("IsSuccess")
     private Boolean isSuccess;
 
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private Integer pageNo;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SyncRules")
-    private java.util.List < SyncRules> syncRules;
+    @com.aliyun.core.annotation.NameInMap("SyncRules")
+    private java.util.List<SyncRules> syncRules;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListRepoSyncRuleResponseBody(Builder builder) {
@@ -49,6 +54,10 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
 
     public static ListRepoSyncRuleResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -89,7 +98,7 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
     /**
      * @return syncRules
      */
-    public java.util.List < SyncRules> getSyncRules() {
+    public java.util.List<SyncRules> getSyncRules() {
         return this.syncRules;
     }
 
@@ -106,11 +115,27 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
         private Integer pageNo; 
         private Integer pageSize; 
         private String requestId; 
-        private java.util.List < SyncRules> syncRules; 
+        private java.util.List<SyncRules> syncRules; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListRepoSyncRuleResponseBody model) {
+            this.code = model.code;
+            this.isSuccess = model.isSuccess;
+            this.pageNo = model.pageNo;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.syncRules = model.syncRules;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * The return value.
+         * <p>The return value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +143,10 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -126,7 +154,10 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.pageNo = pageNo;
@@ -134,7 +165,10 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -142,7 +176,10 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>838D1602-6D8F-47FB-B60A-656645D2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,15 +187,18 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The synchronization rules.
+         * <p>The queried synchronization rules.</p>
          */
-        public Builder syncRules(java.util.List < SyncRules> syncRules) {
+        public Builder syncRules(java.util.List<SyncRules> syncRules) {
             this.syncRules = syncRules;
             return this;
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -171,56 +211,65 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListRepoSyncRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRepoSyncRuleResponseBody</p>
+     */
     public static class SyncRules extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("CrossUser")
+        @com.aliyun.core.annotation.NameInMap("CrossUser")
         private Boolean crossUser;
 
-        @NameInMap("LocalInstanceId")
+        @com.aliyun.core.annotation.NameInMap("LocalInstanceId")
         private String localInstanceId;
 
-        @NameInMap("LocalNamespaceName")
+        @com.aliyun.core.annotation.NameInMap("LocalNamespaceName")
         private String localNamespaceName;
 
-        @NameInMap("LocalRegionId")
+        @com.aliyun.core.annotation.NameInMap("LocalRegionId")
         private String localRegionId;
 
-        @NameInMap("LocalRepoName")
+        @com.aliyun.core.annotation.NameInMap("LocalRepoName")
         private String localRepoName;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private Long modifiedTime;
 
-        @NameInMap("SyncDirection")
+        @com.aliyun.core.annotation.NameInMap("RepoNameFilter")
+        private String repoNameFilter;
+
+        @com.aliyun.core.annotation.NameInMap("SyncDirection")
         private String syncDirection;
 
-        @NameInMap("SyncRuleId")
+        @com.aliyun.core.annotation.NameInMap("SyncRuleId")
         private String syncRuleId;
 
-        @NameInMap("SyncRuleName")
+        @com.aliyun.core.annotation.NameInMap("SyncRuleName")
         private String syncRuleName;
 
-        @NameInMap("SyncScope")
+        @com.aliyun.core.annotation.NameInMap("SyncScope")
         private String syncScope;
 
-        @NameInMap("SyncTrigger")
+        @com.aliyun.core.annotation.NameInMap("SyncTrigger")
         private String syncTrigger;
 
-        @NameInMap("TagFilter")
+        @com.aliyun.core.annotation.NameInMap("TagFilter")
         private String tagFilter;
 
-        @NameInMap("TargetInstanceId")
+        @com.aliyun.core.annotation.NameInMap("TargetInstanceId")
         private String targetInstanceId;
 
-        @NameInMap("TargetNamespaceName")
+        @com.aliyun.core.annotation.NameInMap("TargetNamespaceName")
         private String targetNamespaceName;
 
-        @NameInMap("TargetRegionId")
+        @com.aliyun.core.annotation.NameInMap("TargetRegionId")
         private String targetRegionId;
 
-        @NameInMap("TargetRepoName")
+        @com.aliyun.core.annotation.NameInMap("TargetRepoName")
         private String targetRepoName;
 
         private SyncRules(Builder builder) {
@@ -231,6 +280,7 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
             this.localRegionId = builder.localRegionId;
             this.localRepoName = builder.localRepoName;
             this.modifiedTime = builder.modifiedTime;
+            this.repoNameFilter = builder.repoNameFilter;
             this.syncDirection = builder.syncDirection;
             this.syncRuleId = builder.syncRuleId;
             this.syncRuleName = builder.syncRuleName;
@@ -298,6 +348,13 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
          */
         public Long getModifiedTime() {
             return this.modifiedTime;
+        }
+
+        /**
+         * @return repoNameFilter
+         */
+        public String getRepoNameFilter() {
+            return this.repoNameFilter;
         }
 
         /**
@@ -378,6 +435,7 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
             private String localRegionId; 
             private String localRepoName; 
             private Long modifiedTime; 
+            private String repoNameFilter; 
             private String syncDirection; 
             private String syncRuleId; 
             private String syncRuleName; 
@@ -389,8 +447,35 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
             private String targetRegionId; 
             private String targetRepoName; 
 
+            private Builder() {
+            } 
+
+            private Builder(SyncRules model) {
+                this.createTime = model.createTime;
+                this.crossUser = model.crossUser;
+                this.localInstanceId = model.localInstanceId;
+                this.localNamespaceName = model.localNamespaceName;
+                this.localRegionId = model.localRegionId;
+                this.localRepoName = model.localRepoName;
+                this.modifiedTime = model.modifiedTime;
+                this.repoNameFilter = model.repoNameFilter;
+                this.syncDirection = model.syncDirection;
+                this.syncRuleId = model.syncRuleId;
+                this.syncRuleName = model.syncRuleName;
+                this.syncScope = model.syncScope;
+                this.syncTrigger = model.syncTrigger;
+                this.tagFilter = model.tagFilter;
+                this.targetInstanceId = model.targetInstanceId;
+                this.targetNamespaceName = model.targetNamespaceName;
+                this.targetRegionId = model.targetRegionId;
+                this.targetRepoName = model.targetRepoName;
+            } 
+
             /**
-             * The time when the synchronization rule was created.
+             * <p>The time when the synchronization rule was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1572604642000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -398,13 +483,15 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether images are synchronized across Alibaba Cloud accounts. Valid values:
-             * <p>
+             * <p>Indicates whether the synchronization is performed across Alibaba Cloud accounts. Valid values:</p>
+             * <ul>
+             * <li><code>true</code>: Images are synchronized across Alibaba Cloud accounts.</li>
+             * <li><code>false</code>: Images are synchronized within the same Alibaba Cloud account.</li>
+             * </ul>
+             * <p>Default value: <code>false</code>.</p>
              * 
-             * *   `true`: Images are synchronized across Alibaba Cloud accounts.
-             * *   `false`: Images are synchronized within the same Alibaba Cloud account.
-             * 
-             * Default value: `false`
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder crossUser(Boolean crossUser) {
                 this.crossUser = crossUser;
@@ -412,7 +499,10 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the source instance.
+             * <p>The ID of the source instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cri-kmsiwlxxdcva****</p>
              */
             public Builder localInstanceId(String localInstanceId) {
                 this.localInstanceId = localInstanceId;
@@ -420,7 +510,10 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace name of the source instance.
+             * <p>The name of the namespace in the source instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder localNamespaceName(String localNamespaceName) {
                 this.localNamespaceName = localNamespaceName;
@@ -428,7 +521,10 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the source instance.
+             * <p>The region ID of the source instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder localRegionId(String localRegionId) {
                 this.localRegionId = localRegionId;
@@ -436,7 +532,10 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The image repository name of the source instance.
+             * <p>The name of the repository in the source instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-repo-local</p>
              */
             public Builder localRepoName(String localRepoName) {
                 this.localRepoName = localRepoName;
@@ -444,7 +543,10 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the synchronization rule was last modified.
+             * <p>The time when the synchronization rule was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1572604642000</p>
              */
             public Builder modifiedTime(Long modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -452,11 +554,28 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The synchronization direction. Valid values:
-             * <p>
+             * <p>The regular expression that is used to filter repositories.</p>
+             * <blockquote>
+             * <p> This parameter is valid only when SyncScope is set to <code>NAMESPACE</code>.</p>
+             * </blockquote>
              * 
-             * *   `FROM`: Images are synchronized from the source instance to the destination instance.
-             * *   `TO`: Images are synchronized from the destination instance to the source instance.
+             * <strong>example:</strong>
+             * <p>.*</p>
+             */
+            public Builder repoNameFilter(String repoNameFilter) {
+                this.repoNameFilter = repoNameFilter;
+                return this;
+            }
+
+            /**
+             * <p>The synchronization direction. Valid values:</p>
+             * <ul>
+             * <li><code>FROM</code>: Images are synchronized from the source instance to the destination instance.</li>
+             * <li><code>TO</code>: Images are synchronized from the destination instance to the source instance.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>FROM</p>
              */
             public Builder syncDirection(String syncDirection) {
                 this.syncDirection = syncDirection;
@@ -464,7 +583,10 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the synchronization rule.
+             * <p>The ID of the synchronization rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>crsr-7lph66uloi6h****</p>
              */
             public Builder syncRuleId(String syncRuleId) {
                 this.syncRuleId = syncRuleId;
@@ -472,7 +594,10 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the synchronization rule.
+             * <p>The name of the synchronization rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sync-rule-1</p>
              */
             public Builder syncRuleName(String syncRuleName) {
                 this.syncRuleName = syncRuleName;
@@ -480,11 +605,14 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The synchronization scope. Valid values:
-             * <p>
+             * <p>The synchronization scope. Valid values:</p>
+             * <ul>
+             * <li><code>NAMESPACE</code>: synchronizes the image tags in a namespace that meet the synchronization rule.</li>
+             * <li><code>REPO</code>: synchronizes the image tags in an image repository that meet the synchronization rule.</li>
+             * </ul>
              * 
-             * *   `NAMESPACE`: synchronizes the image tags in a namespace that meet the synchronization rule.
-             * *   `REPO`: synchronizes the image tags in an image repository that meet the synchronization rule.
+             * <strong>example:</strong>
+             * <p>NAMESPACE</p>
              */
             public Builder syncScope(String syncScope) {
                 this.syncScope = syncScope;
@@ -492,11 +620,14 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The policy that is applied to trigger the synchronization rule. Valid values:
-             * <p>
+             * <p>The policy that is applied to trigger the synchronization rule. Valid values:</p>
+             * <ul>
+             * <li><code>INITIATIVE</code>: The synchronization rule is positively triggered.</li>
+             * <li><code>PASSIVE</code>: The synchronization rule is passively triggered.</li>
+             * </ul>
              * 
-             * *   `INITIATIVE`: The synchronization rule is positively triggered.
-             * *   `PASSIVE`: The synchronization rule is passively triggered.
+             * <strong>example:</strong>
+             * <p>PASSIVE</p>
              */
             public Builder syncTrigger(String syncTrigger) {
                 this.syncTrigger = syncTrigger;
@@ -504,7 +635,10 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The regular expression that is used to filter image tags.
+             * <p>The regular expression that is used to filter image tags.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>.*</p>
              */
             public Builder tagFilter(String tagFilter) {
                 this.tagFilter = tagFilter;
@@ -512,7 +646,10 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the destination instance.
+             * <p>The ID of the destination instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cri-k77rd2eo9ztt****</p>
              */
             public Builder targetInstanceId(String targetInstanceId) {
                 this.targetInstanceId = targetInstanceId;
@@ -520,7 +657,10 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace name of the destination instance.
+             * <p>The name of the namespace in the destination instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder targetNamespaceName(String targetNamespaceName) {
                 this.targetNamespaceName = targetNamespaceName;
@@ -528,7 +668,10 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the destination instance.
+             * <p>The region ID of the destination instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shenzhen</p>
              */
             public Builder targetRegionId(String targetRegionId) {
                 this.targetRegionId = targetRegionId;
@@ -536,7 +679,10 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The image repository name of the destination instance.
+             * <p>The name of the repository in the destination instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-repo-target</p>
              */
             public Builder targetRepoName(String targetRepoName) {
                 this.targetRepoName = targetRepoName;

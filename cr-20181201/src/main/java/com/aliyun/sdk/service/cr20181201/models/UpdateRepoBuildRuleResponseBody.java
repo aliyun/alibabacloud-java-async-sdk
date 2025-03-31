@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cr20181201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateRepoBuildRuleResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateRepoBuildRuleResponseBody</p>
  */
 public class UpdateRepoBuildRuleResponseBody extends TeaModel {
-    @NameInMap("BuildRuleId")
+    @com.aliyun.core.annotation.NameInMap("BuildRuleId")
     private String buildRuleId;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("IsSuccess")
+    @com.aliyun.core.annotation.NameInMap("IsSuccess")
     private Boolean isSuccess;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private UpdateRepoBuildRuleResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class UpdateRepoBuildRuleResponseBody extends TeaModel {
 
     public static UpdateRepoBuildRuleResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -73,8 +82,21 @@ public class UpdateRepoBuildRuleResponseBody extends TeaModel {
         private Boolean isSuccess; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(UpdateRepoBuildRuleResponseBody model) {
+            this.buildRuleId = model.buildRuleId;
+            this.code = model.code;
+            this.isSuccess = model.isSuccess;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The ID of the building rule.
+         * <p>The ID of the building rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>crbr-ly77w5i3t31f****</p>
          */
         public Builder buildRuleId(String buildRuleId) {
             this.buildRuleId = buildRuleId;
@@ -82,7 +104,10 @@ public class UpdateRepoBuildRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The return value.
+         * <p>The return value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -90,11 +115,14 @@ public class UpdateRepoBuildRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request is successful.</li>
+         * <li><code>false</code>: The request fails.</li>
+         * </ul>
          * 
-         * *   `true`: The request is successful.
-         * *   `false`: The request fails.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -102,7 +130,10 @@ public class UpdateRepoBuildRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BC648259-91A7-4502-BED3-EDF64361FA83</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

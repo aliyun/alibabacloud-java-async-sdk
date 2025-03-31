@@ -1,48 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cr20181201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetArtifactBuildTaskResponseBody} extends {@link TeaModel}
  *
  * <p>GetArtifactBuildTaskResponseBody</p>
  */
 public class GetArtifactBuildTaskResponseBody extends TeaModel {
-    @NameInMap("ArtifactBuildType")
+    @com.aliyun.core.annotation.NameInMap("ArtifactBuildType")
     private String artifactBuildType;
 
-    @NameInMap("BuildTaskId")
+    @com.aliyun.core.annotation.NameInMap("BuildTaskId")
     private String buildTaskId;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private Integer endTime;
 
-    @NameInMap("Instructions")
-    private java.util.List < String > instructions;
+    @com.aliyun.core.annotation.NameInMap("Instructions")
+    private java.util.List<String> instructions;
 
-    @NameInMap("IsSuccess")
+    @com.aliyun.core.annotation.NameInMap("IsSuccess")
     private Boolean isSuccess;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SourceArtifact")
+    @com.aliyun.core.annotation.NameInMap("SourceArtifact")
     private SourceArtifact sourceArtifact;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private Integer startTime;
 
-    @NameInMap("TargetArtifact")
+    @com.aliyun.core.annotation.NameInMap("TargetArtifact")
     private TargetArtifact targetArtifact;
 
-    @NameInMap("TaskStatus")
+    @com.aliyun.core.annotation.NameInMap("TaskStatus")
     private String taskStatus;
 
     private GetArtifactBuildTaskResponseBody(Builder builder) {
@@ -65,6 +70,10 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
 
     public static GetArtifactBuildTaskResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -98,7 +107,7 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
     /**
      * @return instructions
      */
-    public java.util.List < String > getInstructions() {
+    public java.util.List<String> getInstructions() {
         return this.instructions;
     }
 
@@ -149,7 +158,7 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
         private String buildTaskId; 
         private String code; 
         private Integer endTime; 
-        private java.util.List < String > instructions; 
+        private java.util.List<String> instructions; 
         private Boolean isSuccess; 
         private String requestId; 
         private SourceArtifact sourceArtifact; 
@@ -157,12 +166,32 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
         private TargetArtifact targetArtifact; 
         private String taskStatus; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetArtifactBuildTaskResponseBody model) {
+            this.artifactBuildType = model.artifactBuildType;
+            this.buildTaskId = model.buildTaskId;
+            this.code = model.code;
+            this.endTime = model.endTime;
+            this.instructions = model.instructions;
+            this.isSuccess = model.isSuccess;
+            this.requestId = model.requestId;
+            this.sourceArtifact = model.sourceArtifact;
+            this.startTime = model.startTime;
+            this.targetArtifact = model.targetArtifact;
+            this.taskStatus = model.taskStatus;
+        } 
+
         /**
-         * The type of the artifact building task. Valid values:
-         * <p>
+         * <p>The type of the artifact building task. Valid values:</p>
+         * <ul>
+         * <li><code>IMAGE_TO_ACCELERATED_IMAGE</code>: builds accelerated images for Container Service for Kubernetes (ACK) clusters.</li>
+         * <li><code>IMAGE_TO_ECI_ACCELERATED_IMAGE</code>: builds accelerated images for elastic container instances.</li>
+         * </ul>
          * 
-         * *   `IMAGE_TO_ACCELERATED_IMAGE`: builds accelerated images for Container Service for Kubernetes (ACK) clusters.
-         * *   `IMAGE_TO_ECI_ACCELERATED_IMAGE`: builds accelerated images for elastic container instances.
+         * <strong>example:</strong>
+         * <p>IMAGE_TO_ACCELERATED_IMAGE</p>
          */
         public Builder artifactBuildType(String artifactBuildType) {
             this.artifactBuildType = artifactBuildType;
@@ -170,7 +199,10 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the artifact building task.
+         * <p>The ID of the artifact building task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i2a-1yu****</p>
          */
         public Builder buildTaskId(String buildTaskId) {
             this.buildTaskId = buildTaskId;
@@ -178,7 +210,10 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The return value.
+         * <p>The return value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -186,7 +221,10 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the artifact building task ends.
+         * <p>The time when the artifact building task ends.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>156871880</p>
          */
         public Builder endTime(Integer endTime) {
             this.endTime = endTime;
@@ -196,13 +234,16 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
         /**
          * Instructions.
          */
-        public Builder instructions(java.util.List < String > instructions) {
+        public Builder instructions(java.util.List<String> instructions) {
             this.instructions = instructions;
             return this;
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -210,7 +251,10 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C4C7DD0C-C9D6-437A-A7EE-121EFD70D002</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -218,7 +262,7 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the source artifact.
+         * <p>The information about the source artifact.</p>
          */
         public Builder sourceArtifact(SourceArtifact sourceArtifact) {
             this.sourceArtifact = sourceArtifact;
@@ -226,7 +270,10 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the artifact building task starts.
+         * <p>The time when the artifact building task starts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>156871881</p>
          */
         public Builder startTime(Integer startTime) {
             this.startTime = startTime;
@@ -234,7 +281,7 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The artifact that is built in the task.
+         * <p>The artifact that is built in the task.</p>
          */
         public Builder targetArtifact(TargetArtifact targetArtifact) {
             this.targetArtifact = targetArtifact;
@@ -242,13 +289,16 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the artifact that is built in the task. Valid values:
-         * <p>
+         * <p>The status of the artifact that is built in the task. Valid values:</p>
+         * <ul>
+         * <li><code>PENDING</code>: The artifact is being scheduled.</li>
+         * <li><code>BUILDING</code>: The artifact is being built.</li>
+         * <li><code>SUCCESS</code>: The artifact is built.</li>
+         * <li><code>FAILED</code>: The artifact fails to be built.</li>
+         * </ul>
          * 
-         * *   `PENDING`: The artifact is being scheduled.
-         * *   `BUILDING`: The artifact is being built.
-         * *   `SUCCESS`: The artifact is built.
-         * *   `FAILED`: The artifact fails to be built.
+         * <strong>example:</strong>
+         * <p>BUILDING</p>
          */
         public Builder taskStatus(String taskStatus) {
             this.taskStatus = taskStatus;
@@ -261,14 +311,20 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetArtifactBuildTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetArtifactBuildTaskResponseBody</p>
+     */
     public static class SourceArtifact extends TeaModel {
-        @NameInMap("ArtifactType")
+        @com.aliyun.core.annotation.NameInMap("ArtifactType")
         private String artifactType;
 
-        @NameInMap("RepoId")
+        @com.aliyun.core.annotation.NameInMap("RepoId")
         private String repoId;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private SourceArtifact(Builder builder) {
@@ -311,8 +367,20 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
             private String repoId; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(SourceArtifact model) {
+                this.artifactType = model.artifactType;
+                this.repoId = model.repoId;
+                this.version = model.version;
+            } 
+
             /**
-             * The type of the artifact that is built in the task. The value can only be IMAGE.
+             * <p>The type of the artifact that is built in the task. The value can only be IMAGE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IMAGE</p>
              */
             public Builder artifactType(String artifactType) {
                 this.artifactType = artifactType;
@@ -320,7 +388,10 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the repository to which the source artifact belongs. The repository can only be an image repository.
+             * <p>The ID of the repository to which the source artifact belongs. The repository can only be an image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cri-shac42yvqzvq****</p>
              */
             public Builder repoId(String repoId) {
                 this.repoId = repoId;
@@ -328,7 +399,10 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the artifact. The artifact can only be an image.
+             * <p>The version of the artifact. The artifact can only be an image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>latest</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -342,14 +416,20 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetArtifactBuildTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetArtifactBuildTaskResponseBody</p>
+     */
     public static class TargetArtifact extends TeaModel {
-        @NameInMap("ArtifactType")
+        @com.aliyun.core.annotation.NameInMap("ArtifactType")
         private String artifactType;
 
-        @NameInMap("RepoId")
+        @com.aliyun.core.annotation.NameInMap("RepoId")
         private String repoId;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private TargetArtifact(Builder builder) {
@@ -392,8 +472,20 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
             private String repoId; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(TargetArtifact model) {
+                this.artifactType = model.artifactType;
+                this.repoId = model.repoId;
+                this.version = model.version;
+            } 
+
             /**
-             * The type of the artifact that is built in the task. The value can only be IMAGE.
+             * <p>The type of the artifact that is built in the task. The value can only be IMAGE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IMAGE</p>
              */
             public Builder artifactType(String artifactType) {
                 this.artifactType = artifactType;
@@ -401,7 +493,10 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the repository to which the artifact that is built in the task belongs. The repository can only be an image repository. The value is the same as the ID of the repository to which the source artifact belongs.
+             * <p>The ID of the repository to which the artifact that is built in the task belongs. The repository can only be an image repository. The value is the same as the ID of the repository to which the source artifact belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>crr-1234567</p>
              */
             public Builder repoId(String repoId) {
                 this.repoId = repoId;
@@ -409,7 +504,10 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the artifact that is built in the task. The artifact can only be an image.
+             * <p>The version of the artifact that is built in the task. The artifact can only be an image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>latest_accelerated</p>
              */
             public Builder version(String version) {
                 this.version = version;

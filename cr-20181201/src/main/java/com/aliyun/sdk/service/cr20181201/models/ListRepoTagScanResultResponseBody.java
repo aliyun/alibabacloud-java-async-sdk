@@ -1,37 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cr20181201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRepoTagScanResultResponseBody} extends {@link TeaModel}
  *
  * <p>ListRepoTagScanResultResponseBody</p>
  */
 public class ListRepoTagScanResultResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("IsSuccess")
+    @com.aliyun.core.annotation.NameInMap("IsSuccess")
     private Boolean isSuccess;
 
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private Integer pageNo;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("Vulnerabilities")
-    private java.util.List < Vulnerabilities> vulnerabilities;
+    @com.aliyun.core.annotation.NameInMap("Vulnerabilities")
+    private java.util.List<Vulnerabilities> vulnerabilities;
 
     private ListRepoTagScanResultResponseBody(Builder builder) {
         this.code = builder.code;
@@ -49,6 +54,10 @@ public class ListRepoTagScanResultResponseBody extends TeaModel {
 
     public static ListRepoTagScanResultResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,7 +105,7 @@ public class ListRepoTagScanResultResponseBody extends TeaModel {
     /**
      * @return vulnerabilities
      */
-    public java.util.List < Vulnerabilities> getVulnerabilities() {
+    public java.util.List<Vulnerabilities> getVulnerabilities() {
         return this.vulnerabilities;
     }
 
@@ -107,10 +116,26 @@ public class ListRepoTagScanResultResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
-        private java.util.List < Vulnerabilities> vulnerabilities; 
+        private java.util.List<Vulnerabilities> vulnerabilities; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListRepoTagScanResultResponseBody model) {
+            this.code = model.code;
+            this.isSuccess = model.isSuccess;
+            this.pageNo = model.pageNo;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.vulnerabilities = model.vulnerabilities;
+        } 
 
         /**
-         * The return value.
+         * <p>The return value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,11 +143,14 @@ public class ListRepoTagScanResultResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request is successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request is successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -130,7 +158,10 @@ public class ListRepoTagScanResultResponseBody extends TeaModel {
         }
 
         /**
-         * The number of the returned page.
+         * <p>The number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.pageNo = pageNo;
@@ -138,7 +169,10 @@ public class ListRepoTagScanResultResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -146,7 +180,10 @@ public class ListRepoTagScanResultResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>56B5C92F-F5D9-46E0-823F-EC71D1892DAA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +191,10 @@ public class ListRepoTagScanResultResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of vulnerabilities detected on images.
+         * <p>The total number of vulnerabilities detected on images.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>196</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -162,9 +202,9 @@ public class ListRepoTagScanResultResponseBody extends TeaModel {
         }
 
         /**
-         * The details about the detected vulnerabilities.
+         * <p>The details about the detected vulnerabilities.</p>
          */
-        public Builder vulnerabilities(java.util.List < Vulnerabilities> vulnerabilities) {
+        public Builder vulnerabilities(java.util.List<Vulnerabilities> vulnerabilities) {
             this.vulnerabilities = vulnerabilities;
             return this;
         }
@@ -175,44 +215,50 @@ public class ListRepoTagScanResultResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListRepoTagScanResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRepoTagScanResultResponseBody</p>
+     */
     public static class Vulnerabilities extends TeaModel {
-        @NameInMap("AddedBy")
+        @com.aliyun.core.annotation.NameInMap("AddedBy")
         private String addedBy;
 
-        @NameInMap("AliasName")
+        @com.aliyun.core.annotation.NameInMap("AliasName")
         private String aliasName;
 
-        @NameInMap("CveLink")
+        @com.aliyun.core.annotation.NameInMap("CveLink")
         private String cveLink;
 
-        @NameInMap("CveLocation")
+        @com.aliyun.core.annotation.NameInMap("CveLocation")
         private String cveLocation;
 
-        @NameInMap("CveName")
+        @com.aliyun.core.annotation.NameInMap("CveName")
         private String cveName;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Feature")
+        @com.aliyun.core.annotation.NameInMap("Feature")
         private String feature;
 
-        @NameInMap("FixCmd")
+        @com.aliyun.core.annotation.NameInMap("FixCmd")
         private String fixCmd;
 
-        @NameInMap("ScanType")
+        @com.aliyun.core.annotation.NameInMap("ScanType")
         private String scanType;
 
-        @NameInMap("Severity")
+        @com.aliyun.core.annotation.NameInMap("Severity")
         private String severity;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
-        @NameInMap("VersionFixed")
+        @com.aliyun.core.annotation.NameInMap("VersionFixed")
         private String versionFixed;
 
-        @NameInMap("VersionFormat")
+        @com.aliyun.core.annotation.NameInMap("VersionFormat")
         private String versionFormat;
 
         private Vulnerabilities(Builder builder) {
@@ -345,8 +391,30 @@ public class ListRepoTagScanResultResponseBody extends TeaModel {
             private String versionFixed; 
             private String versionFormat; 
 
+            private Builder() {
+            } 
+
+            private Builder(Vulnerabilities model) {
+                this.addedBy = model.addedBy;
+                this.aliasName = model.aliasName;
+                this.cveLink = model.cveLink;
+                this.cveLocation = model.cveLocation;
+                this.cveName = model.cveName;
+                this.description = model.description;
+                this.feature = model.feature;
+                this.fixCmd = model.fixCmd;
+                this.scanType = model.scanType;
+                this.severity = model.severity;
+                this.version = model.version;
+                this.versionFixed = model.versionFixed;
+                this.versionFormat = model.versionFormat;
+            } 
+
             /**
-             * The ID of the image layer where the vulnerability was detected.
+             * <p>The ID of the image layer where the vulnerability was detected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sha256:123456717b8e40b6480979b739010d8d549989602bcdd07922119aec6f9dbe57</p>
              */
             public Builder addedBy(String addedBy) {
                 this.addedBy = addedBy;
@@ -354,7 +422,10 @@ public class ListRepoTagScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the vulnerability.
+             * <p>The name of the vulnerability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Vulnerability</p>
              */
             public Builder aliasName(String aliasName) {
                 this.aliasName = aliasName;
@@ -362,7 +433,10 @@ public class ListRepoTagScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the vulnerability.
+             * <p>The URL of the vulnerability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://security-tracker.debian.org/tracker/CVE-2009-5155">https://security-tracker.debian.org/tracker/CVE-2009-5155</a></p>
              */
             public Builder cveLink(String cveLink) {
                 this.cveLink = cveLink;
@@ -370,7 +444,10 @@ public class ListRepoTagScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * The directory of the vulnerability.
+             * <p>The directory of the vulnerability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/test.txt</p>
              */
             public Builder cveLocation(String cveLocation) {
                 this.cveLocation = cveLocation;
@@ -378,7 +455,10 @@ public class ListRepoTagScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the vulnerability.
+             * <p>The name of the vulnerability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CVE-2009-5155</p>
              */
             public Builder cveName(String cveName) {
                 this.cveName = cveName;
@@ -386,7 +466,10 @@ public class ListRepoTagScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the vulnerability.
+             * <p>The description of the vulnerability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>description.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -394,7 +477,10 @@ public class ListRepoTagScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * The cause of the vulnerability.
+             * <p>The cause of the vulnerability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eglibc</p>
              */
             public Builder feature(String feature) {
                 this.feature = feature;
@@ -402,7 +488,10 @@ public class ListRepoTagScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * The command used to fix the vulnerability.
+             * <p>The command used to fix the vulnerability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yum install -y xxx</p>
              */
             public Builder fixCmd(String fixCmd) {
                 this.fixCmd = fixCmd;
@@ -410,11 +499,14 @@ public class ListRepoTagScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the vulnerability. Valid values:
-             * <p>
+             * <p>The type of the vulnerability. Valid values:</p>
+             * <ul>
+             * <li><code>cve</code>: image system vulnerability</li>
+             * <li><code>sca</code>: image application vulnerability</li>
+             * </ul>
              * 
-             * *   `cve`: image system vulnerability
-             * *   `sca`: image application vulnerability
+             * <strong>example:</strong>
+             * <p>cve</p>
              */
             public Builder scanType(String scanType) {
                 this.scanType = scanType;
@@ -422,7 +514,10 @@ public class ListRepoTagScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * The severity of the vulnerability.
+             * <p>The severity of the vulnerability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Medium</p>
              */
             public Builder severity(String severity) {
                 this.severity = severity;
@@ -430,7 +525,10 @@ public class ListRepoTagScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the vulnerability.
+             * <p>The version of the vulnerability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.19-6.9</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -438,7 +536,10 @@ public class ListRepoTagScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * The version where the vulnerability was fixed.
+             * <p>The version where the vulnerability was fixed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.19-18+deb8u5</p>
              */
             public Builder versionFixed(String versionFixed) {
                 this.versionFixed = versionFixed;
@@ -446,7 +547,10 @@ public class ListRepoTagScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * The format of the vulnerability.
+             * <p>The format of the vulnerability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dpkg</p>
              */
             public Builder versionFormat(String versionFormat) {
                 this.versionFormat = versionFormat;

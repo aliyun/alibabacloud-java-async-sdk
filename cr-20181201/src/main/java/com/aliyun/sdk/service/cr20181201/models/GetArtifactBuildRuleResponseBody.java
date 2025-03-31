@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cr20181201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetArtifactBuildRuleResponseBody} extends {@link TeaModel}
  *
  * <p>GetArtifactBuildRuleResponseBody</p>
  */
 public class GetArtifactBuildRuleResponseBody extends TeaModel {
-    @NameInMap("ArtifactType")
+    @com.aliyun.core.annotation.NameInMap("ArtifactType")
     private String artifactType;
 
-    @NameInMap("BuildRuleId")
+    @com.aliyun.core.annotation.NameInMap("BuildRuleId")
     private String buildRuleId;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("IsSuccess")
+    @com.aliyun.core.annotation.NameInMap("IsSuccess")
     private Boolean isSuccess;
 
-    @NameInMap("Parameters")
+    @com.aliyun.core.annotation.NameInMap("Parameters")
     private Parameters parameters;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ScopeId")
+    @com.aliyun.core.annotation.NameInMap("ScopeId")
     private String scopeId;
 
-    @NameInMap("ScopeType")
+    @com.aliyun.core.annotation.NameInMap("ScopeType")
     private String scopeType;
 
     private GetArtifactBuildRuleResponseBody(Builder builder) {
@@ -53,6 +58,10 @@ public class GetArtifactBuildRuleResponseBody extends TeaModel {
 
     public static GetArtifactBuildRuleResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -120,6 +129,20 @@ public class GetArtifactBuildRuleResponseBody extends TeaModel {
         private String requestId; 
         private String scopeId; 
         private String scopeType; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetArtifactBuildRuleResponseBody model) {
+            this.artifactType = model.artifactType;
+            this.buildRuleId = model.buildRuleId;
+            this.code = model.code;
+            this.isSuccess = model.isSuccess;
+            this.parameters = model.parameters;
+            this.requestId = model.requestId;
+            this.scopeId = model.scopeId;
+            this.scopeType = model.scopeType;
+        } 
 
         /**
          * ArtifactType.
@@ -191,12 +214,22 @@ public class GetArtifactBuildRuleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetArtifactBuildRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetArtifactBuildRuleResponseBody</p>
+     */
     public static class Parameters extends TeaModel {
-        @NameInMap("ImageIndexOnly")
+        @com.aliyun.core.annotation.NameInMap("ImageIndexOnly")
         private Boolean imageIndexOnly;
+
+        @com.aliyun.core.annotation.NameInMap("PriorityFile")
+        private String priorityFile;
 
         private Parameters(Builder builder) {
             this.imageIndexOnly = builder.imageIndexOnly;
+            this.priorityFile = builder.priorityFile;
         }
 
         public static Builder builder() {
@@ -214,14 +247,38 @@ public class GetArtifactBuildRuleResponseBody extends TeaModel {
             return this.imageIndexOnly;
         }
 
+        /**
+         * @return priorityFile
+         */
+        public String getPriorityFile() {
+            return this.priorityFile;
+        }
+
         public static final class Builder {
             private Boolean imageIndexOnly; 
+            private String priorityFile; 
+
+            private Builder() {
+            } 
+
+            private Builder(Parameters model) {
+                this.imageIndexOnly = model.imageIndexOnly;
+                this.priorityFile = model.priorityFile;
+            } 
 
             /**
              * ImageIndexOnly.
              */
             public Builder imageIndexOnly(Boolean imageIndexOnly) {
                 this.imageIndexOnly = imageIndexOnly;
+                return this;
+            }
+
+            /**
+             * PriorityFile.
+             */
+            public Builder priorityFile(String priorityFile) {
+                this.priorityFile = priorityFile;
                 return this;
             }
 

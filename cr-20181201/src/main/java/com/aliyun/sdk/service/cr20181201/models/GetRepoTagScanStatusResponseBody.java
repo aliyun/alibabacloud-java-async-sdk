@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cr20181201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRepoTagScanStatusResponseBody} extends {@link TeaModel}
  *
  * <p>GetRepoTagScanStatusResponseBody</p>
  */
 public class GetRepoTagScanStatusResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("IsSuccess")
+    @com.aliyun.core.annotation.NameInMap("IsSuccess")
     private Boolean isSuccess;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ScanService")
+    @com.aliyun.core.annotation.NameInMap("ScanService")
     private String scanService;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private GetRepoTagScanStatusResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class GetRepoTagScanStatusResponseBody extends TeaModel {
 
     public static GetRepoTagScanStatusResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class GetRepoTagScanStatusResponseBody extends TeaModel {
         private String requestId; 
         private String scanService; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetRepoTagScanStatusResponseBody model) {
+            this.code = model.code;
+            this.isSuccess = model.isSuccess;
+            this.requestId = model.requestId;
+            this.scanService = model.scanService;
+            this.status = model.status;
+        } 
 
         /**
          * Code.

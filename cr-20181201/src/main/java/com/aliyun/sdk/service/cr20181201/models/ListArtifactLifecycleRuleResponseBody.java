@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cr20181201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListArtifactLifecycleRuleResponseBody} extends {@link TeaModel}
  *
  * <p>ListArtifactLifecycleRuleResponseBody</p>
  */
 public class ListArtifactLifecycleRuleResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("IsSuccess")
+    @com.aliyun.core.annotation.NameInMap("IsSuccess")
     private Boolean isSuccess;
 
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private Integer pageNo;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Rules")
-    private java.util.List < Rules> rules;
+    @com.aliyun.core.annotation.NameInMap("Rules")
+    private java.util.List<Rules> rules;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListArtifactLifecycleRuleResponseBody(Builder builder) {
@@ -49,6 +54,10 @@ public class ListArtifactLifecycleRuleResponseBody extends TeaModel {
 
     public static ListArtifactLifecycleRuleResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -89,7 +98,7 @@ public class ListArtifactLifecycleRuleResponseBody extends TeaModel {
     /**
      * @return rules
      */
-    public java.util.List < Rules> getRules() {
+    public java.util.List<Rules> getRules() {
         return this.rules;
     }
 
@@ -106,11 +115,27 @@ public class ListArtifactLifecycleRuleResponseBody extends TeaModel {
         private Integer pageNo; 
         private Integer pageSize; 
         private String requestId; 
-        private java.util.List < Rules> rules; 
+        private java.util.List<Rules> rules; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListArtifactLifecycleRuleResponseBody model) {
+            this.code = model.code;
+            this.isSuccess = model.isSuccess;
+            this.pageNo = model.pageNo;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.rules = model.rules;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * Code.
+         * <p>The return value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +143,14 @@ public class ListArtifactLifecycleRuleResponseBody extends TeaModel {
         }
 
         /**
-         * IsSuccess.
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request is successful.</li>
+         * <li><code>false</code>: The request fails.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -126,7 +158,10 @@ public class ListArtifactLifecycleRuleResponseBody extends TeaModel {
         }
 
         /**
-         * PageNo.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.pageNo = pageNo;
@@ -134,7 +169,10 @@ public class ListArtifactLifecycleRuleResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -142,7 +180,10 @@ public class ListArtifactLifecycleRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F92D82F9-A4C4-5A4A-97B9-E495BF1B****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,15 +191,18 @@ public class ListArtifactLifecycleRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Rules.
+         * <p>_</p>
          */
-        public Builder rules(java.util.List < Rules> rules) {
+        public Builder rules(java.util.List<Rules> rules) {
             this.rules = rules;
             return this;
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>39</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -171,44 +215,50 @@ public class ListArtifactLifecycleRuleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListArtifactLifecycleRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListArtifactLifecycleRuleResponseBody</p>
+     */
     public static class Rules extends TeaModel {
-        @NameInMap("Auto")
+        @com.aliyun.core.annotation.NameInMap("Auto")
         private Boolean auto;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("EnableDeleteTag")
+        @com.aliyun.core.annotation.NameInMap("EnableDeleteTag")
         private Boolean enableDeleteTag;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private Long modifiedTime;
 
-        @NameInMap("NamespaceName")
+        @com.aliyun.core.annotation.NameInMap("NamespaceName")
         private String namespaceName;
 
-        @NameInMap("NextTime")
+        @com.aliyun.core.annotation.NameInMap("NextTime")
         private Long nextTime;
 
-        @NameInMap("RepoName")
+        @com.aliyun.core.annotation.NameInMap("RepoName")
         private String repoName;
 
-        @NameInMap("RetentionTagCount")
+        @com.aliyun.core.annotation.NameInMap("RetentionTagCount")
         private Long retentionTagCount;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private String ruleId;
 
-        @NameInMap("ScheduleTime")
+        @com.aliyun.core.annotation.NameInMap("ScheduleTime")
         private String scheduleTime;
 
-        @NameInMap("Scope")
+        @com.aliyun.core.annotation.NameInMap("Scope")
         private String scope;
 
-        @NameInMap("TagRegexp")
+        @com.aliyun.core.annotation.NameInMap("TagRegexp")
         private String tagRegexp;
 
         private Rules(Builder builder) {
@@ -341,8 +391,30 @@ public class ListArtifactLifecycleRuleResponseBody extends TeaModel {
             private String scope; 
             private String tagRegexp; 
 
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.auto = model.auto;
+                this.createTime = model.createTime;
+                this.enableDeleteTag = model.enableDeleteTag;
+                this.instanceId = model.instanceId;
+                this.modifiedTime = model.modifiedTime;
+                this.namespaceName = model.namespaceName;
+                this.nextTime = model.nextTime;
+                this.repoName = model.repoName;
+                this.retentionTagCount = model.retentionTagCount;
+                this.ruleId = model.ruleId;
+                this.scheduleTime = model.scheduleTime;
+                this.scope = model.scope;
+                this.tagRegexp = model.tagRegexp;
+            } 
+
             /**
-             * Auto.
+             * <p>Indicates whether the lifecycle management rule is automatically executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder auto(Boolean auto) {
                 this.auto = auto;
@@ -350,7 +422,10 @@ public class ListArtifactLifecycleRuleResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the lifecycle management rule was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1638187989000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -358,7 +433,10 @@ public class ListArtifactLifecycleRuleResponseBody extends TeaModel {
             }
 
             /**
-             * EnableDeleteTag.
+             * <p>Indicates whether lifecycle management is enabled for the artifact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableDeleteTag(Boolean enableDeleteTag) {
                 this.enableDeleteTag = enableDeleteTag;
@@ -366,7 +444,10 @@ public class ListArtifactLifecycleRuleResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cri-brlg4cbj2yl****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -374,7 +455,10 @@ public class ListArtifactLifecycleRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * <p>The time when the lifecycle management rule was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1678341923385</p>
              */
             public Builder modifiedTime(Long modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -382,7 +466,10 @@ public class ListArtifactLifecycleRuleResponseBody extends TeaModel {
             }
 
             /**
-             * NamespaceName.
+             * <p>The name of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-ns</p>
              */
             public Builder namespaceName(String namespaceName) {
                 this.namespaceName = namespaceName;
@@ -390,7 +477,10 @@ public class ListArtifactLifecycleRuleResponseBody extends TeaModel {
             }
 
             /**
-             * NextTime.
+             * <p>The time when the lifecycle management rule is next executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1638187989000</p>
              */
             public Builder nextTime(Long nextTime) {
                 this.nextTime = nextTime;
@@ -398,7 +488,10 @@ public class ListArtifactLifecycleRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RepoName.
+             * <p>The name of the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_1</p>
              */
             public Builder repoName(String repoName) {
                 this.repoName = repoName;
@@ -406,7 +499,10 @@ public class ListArtifactLifecycleRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RetentionTagCount.
+             * <p>The number of retained images.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder retentionTagCount(Long retentionTagCount) {
                 this.retentionTagCount = retentionTagCount;
@@ -414,7 +510,10 @@ public class ListArtifactLifecycleRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RuleId.
+             * <p>The rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cralr-yqx1q5sir6d****</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -422,7 +521,10 @@ public class ListArtifactLifecycleRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ScheduleTime.
+             * <p>The execution cycle of the lifecycle management rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WEEK</p>
              */
             public Builder scheduleTime(String scheduleTime) {
                 this.scheduleTime = scheduleTime;
@@ -430,7 +532,10 @@ public class ListArtifactLifecycleRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Scope.
+             * <p>The deletion scope of artifacts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>INSTANCE</p>
              */
             public Builder scope(String scope) {
                 this.scope = scope;
@@ -438,7 +543,10 @@ public class ListArtifactLifecycleRuleResponseBody extends TeaModel {
             }
 
             /**
-             * TagRegexp.
+             * <p>The regular expression that indicates which image tags are retained.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>.*-alpine</p>
              */
             public Builder tagRegexp(String tagRegexp) {
                 this.tagRegexp = tagRegexp;

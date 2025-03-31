@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cr20181201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRepoBuildRecordResponseBody} extends {@link TeaModel}
  *
  * <p>ListRepoBuildRecordResponseBody</p>
  */
 public class ListRepoBuildRecordResponseBody extends TeaModel {
-    @NameInMap("BuildRecords")
-    private java.util.List < BuildRecords> buildRecords;
+    @com.aliyun.core.annotation.NameInMap("BuildRecords")
+    private java.util.List<BuildRecords> buildRecords;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("IsSuccess")
+    @com.aliyun.core.annotation.NameInMap("IsSuccess")
     private Boolean isSuccess;
 
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private Integer pageNo;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
 
     private ListRepoBuildRecordResponseBody(Builder builder) {
@@ -51,10 +56,14 @@ public class ListRepoBuildRecordResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return buildRecords
      */
-    public java.util.List < BuildRecords> getBuildRecords() {
+    public java.util.List<BuildRecords> getBuildRecords() {
         return this.buildRecords;
     }
 
@@ -101,7 +110,7 @@ public class ListRepoBuildRecordResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < BuildRecords> buildRecords; 
+        private java.util.List<BuildRecords> buildRecords; 
         private String code; 
         private Boolean isSuccess; 
         private Integer pageNo; 
@@ -109,16 +118,32 @@ public class ListRepoBuildRecordResponseBody extends TeaModel {
         private String requestId; 
         private String totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListRepoBuildRecordResponseBody model) {
+            this.buildRecords = model.buildRecords;
+            this.code = model.code;
+            this.isSuccess = model.isSuccess;
+            this.pageNo = model.pageNo;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * The list of image building records.
+         * <p>The list of image building records.</p>
          */
-        public Builder buildRecords(java.util.List < BuildRecords> buildRecords) {
+        public Builder buildRecords(java.util.List<BuildRecords> buildRecords) {
             this.buildRecords = buildRecords;
             return this;
         }
 
         /**
-         * The return value.
+         * <p>The return value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -126,11 +151,14 @@ public class ListRepoBuildRecordResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request is successful.</li>
+         * <li><code>false</code>: The request fails.</li>
+         * </ul>
          * 
-         * *   `true`: The request is successful.
-         * *   `false`: The request fails.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -138,7 +166,10 @@ public class ListRepoBuildRecordResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.pageNo = pageNo;
@@ -146,7 +177,10 @@ public class ListRepoBuildRecordResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -154,7 +188,10 @@ public class ListRepoBuildRecordResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9D23DEDF-E91D-434B-B7D5-9D12C648D166</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -162,7 +199,10 @@ public class ListRepoBuildRecordResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -175,17 +215,23 @@ public class ListRepoBuildRecordResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListRepoBuildRecordResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRepoBuildRecordResponseBody</p>
+     */
     public static class Image extends TeaModel {
-        @NameInMap("ImageTag")
+        @com.aliyun.core.annotation.NameInMap("ImageTag")
         private String imageTag;
 
-        @NameInMap("RepoId")
+        @com.aliyun.core.annotation.NameInMap("RepoId")
         private String repoId;
 
-        @NameInMap("RepoName")
+        @com.aliyun.core.annotation.NameInMap("RepoName")
         private String repoName;
 
-        @NameInMap("RepoNamespaceName")
+        @com.aliyun.core.annotation.NameInMap("RepoNamespaceName")
         private String repoNamespaceName;
 
         private Image(Builder builder) {
@@ -237,8 +283,21 @@ public class ListRepoBuildRecordResponseBody extends TeaModel {
             private String repoName; 
             private String repoNamespaceName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Image model) {
+                this.imageTag = model.imageTag;
+                this.repoId = model.repoId;
+                this.repoName = model.repoName;
+                this.repoNamespaceName = model.repoNamespaceName;
+            } 
+
             /**
-             * The tag of the image.
+             * <p>The tag of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v0.1</p>
              */
             public Builder imageTag(String imageTag) {
                 this.imageTag = imageTag;
@@ -246,7 +305,10 @@ public class ListRepoBuildRecordResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the repository.
+             * <p>The ID of the repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>crr-gzsrlevmvoaq****</p>
              */
             public Builder repoId(String repoId) {
                 this.repoId = repoId;
@@ -254,7 +316,10 @@ public class ListRepoBuildRecordResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the repository.
+             * <p>The name of the repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder repoName(String repoName) {
                 this.repoName = repoName;
@@ -262,7 +327,10 @@ public class ListRepoBuildRecordResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the namespace to which the repository belongs.
+             * <p>The name of the namespace to which the repository belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder repoNamespaceName(String repoNamespaceName) {
                 this.repoNamespaceName = repoNamespaceName;
@@ -276,20 +344,26 @@ public class ListRepoBuildRecordResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListRepoBuildRecordResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRepoBuildRecordResponseBody</p>
+     */
     public static class BuildRecords extends TeaModel {
-        @NameInMap("BuildRecordId")
+        @com.aliyun.core.annotation.NameInMap("BuildRecordId")
         private String buildRecordId;
 
-        @NameInMap("BuildStatus")
+        @com.aliyun.core.annotation.NameInMap("BuildStatus")
         private String buildStatus;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("Image")
+        @com.aliyun.core.annotation.NameInMap("Image")
         private Image image;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
         private BuildRecords(Builder builder) {
@@ -350,8 +424,22 @@ public class ListRepoBuildRecordResponseBody extends TeaModel {
             private Image image; 
             private String startTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(BuildRecords model) {
+                this.buildRecordId = model.buildRecordId;
+                this.buildStatus = model.buildStatus;
+                this.endTime = model.endTime;
+                this.image = model.image;
+                this.startTime = model.startTime;
+            } 
+
             /**
-             * The ID of the image building record.
+             * <p>The ID of the image building record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>537e08ab-735e-415f-b7c2-160eb87f8****</p>
              */
             public Builder buildRecordId(String buildRecordId) {
                 this.buildRecordId = buildRecordId;
@@ -359,7 +447,10 @@ public class ListRepoBuildRecordResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the image building.
+             * <p>The status of the image building.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder buildStatus(String buildStatus) {
                 this.buildStatus = buildStatus;
@@ -367,7 +458,10 @@ public class ListRepoBuildRecordResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the image building ended.
+             * <p>The time when the image building ended.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1572875610000</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -375,7 +469,7 @@ public class ListRepoBuildRecordResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the image.
+             * <p>The information about the image.</p>
              */
             public Builder image(Image image) {
                 this.image = image;
@@ -383,7 +477,10 @@ public class ListRepoBuildRecordResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the image building started.
+             * <p>The time when the image building started.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1572872207000</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;

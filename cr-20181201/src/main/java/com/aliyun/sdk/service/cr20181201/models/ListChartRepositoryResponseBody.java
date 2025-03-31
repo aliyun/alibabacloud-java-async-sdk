@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cr20181201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListChartRepositoryResponseBody} extends {@link TeaModel}
  *
  * <p>ListChartRepositoryResponseBody</p>
  */
 public class ListChartRepositoryResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("IsSuccess")
+    @com.aliyun.core.annotation.NameInMap("IsSuccess")
     private Boolean isSuccess;
 
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private Integer pageNo;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("Repositories")
-    private java.util.List < Repositories> repositories;
+    @com.aliyun.core.annotation.NameInMap("Repositories")
+    private java.util.List<Repositories> repositories;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
 
     private ListChartRepositoryResponseBody(Builder builder) {
@@ -49,6 +54,10 @@ public class ListChartRepositoryResponseBody extends TeaModel {
 
     public static ListChartRepositoryResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -82,7 +91,7 @@ public class ListChartRepositoryResponseBody extends TeaModel {
     /**
      * @return repositories
      */
-    public java.util.List < Repositories> getRepositories() {
+    public java.util.List<Repositories> getRepositories() {
         return this.repositories;
     }
 
@@ -105,12 +114,28 @@ public class ListChartRepositoryResponseBody extends TeaModel {
         private Boolean isSuccess; 
         private Integer pageNo; 
         private Integer pageSize; 
-        private java.util.List < Repositories> repositories; 
+        private java.util.List<Repositories> repositories; 
         private String requestId; 
         private String totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListChartRepositoryResponseBody model) {
+            this.code = model.code;
+            this.isSuccess = model.isSuccess;
+            this.pageNo = model.pageNo;
+            this.pageSize = model.pageSize;
+            this.repositories = model.repositories;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * The return value.
+         * <p>The return value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +143,10 @@ public class ListChartRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -126,7 +154,10 @@ public class ListChartRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.pageNo = pageNo;
@@ -134,7 +165,10 @@ public class ListChartRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -142,15 +176,18 @@ public class ListChartRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * The queried repositories.
+         * <p>The queried repositories.</p>
          */
-        public Builder repositories(java.util.List < Repositories> repositories) {
+        public Builder repositories(java.util.List<Repositories> repositories) {
             this.repositories = repositories;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0AB62FB8-6873-4032-8515-4578D27523B7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +195,10 @@ public class ListChartRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -171,35 +211,41 @@ public class ListChartRepositoryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListChartRepositoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListChartRepositoryResponseBody</p>
+     */
     public static class Repositories extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private Long modifiedTime;
 
-        @NameInMap("RepoId")
+        @com.aliyun.core.annotation.NameInMap("RepoId")
         private String repoId;
 
-        @NameInMap("RepoName")
+        @com.aliyun.core.annotation.NameInMap("RepoName")
         private String repoName;
 
-        @NameInMap("RepoNamespaceName")
+        @com.aliyun.core.annotation.NameInMap("RepoNamespaceName")
         private String repoNamespaceName;
 
-        @NameInMap("RepoStatus")
+        @com.aliyun.core.annotation.NameInMap("RepoStatus")
         private String repoStatus;
 
-        @NameInMap("RepoType")
+        @com.aliyun.core.annotation.NameInMap("RepoType")
         private String repoType;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("Summary")
+        @com.aliyun.core.annotation.NameInMap("Summary")
         private String summary;
 
         private Repositories(Builder builder) {
@@ -305,8 +351,27 @@ public class ListChartRepositoryResponseBody extends TeaModel {
             private String resourceGroupId; 
             private String summary; 
 
+            private Builder() {
+            } 
+
+            private Builder(Repositories model) {
+                this.createTime = model.createTime;
+                this.instanceId = model.instanceId;
+                this.modifiedTime = model.modifiedTime;
+                this.repoId = model.repoId;
+                this.repoName = model.repoName;
+                this.repoNamespaceName = model.repoNamespaceName;
+                this.repoStatus = model.repoStatus;
+                this.repoType = model.repoType;
+                this.resourceGroupId = model.resourceGroupId;
+                this.summary = model.summary;
+            } 
+
             /**
-             * The time when the repository was created.
+             * <p>The time when the repository was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1571926644000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -314,7 +379,10 @@ public class ListChartRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cri-xkx6vujuhay0****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -322,7 +390,10 @@ public class ListChartRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the repository was last modified.
+             * <p>The time when the repository was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1571930329000</p>
              */
             public Builder modifiedTime(Long modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -330,7 +401,10 @@ public class ListChartRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the repository.
+             * <p>The ID of the repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>crcr-gpsu7b8chmxk****</p>
              */
             public Builder repoId(String repoId) {
                 this.repoId = repoId;
@@ -338,7 +412,10 @@ public class ListChartRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the repository.
+             * <p>The name of the repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>repo1</p>
              */
             public Builder repoName(String repoName) {
                 this.repoName = repoName;
@@ -346,7 +423,10 @@ public class ListChartRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the namespace to which the repository belongs.
+             * <p>The name of the namespace to which the repository belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ns1</p>
              */
             public Builder repoNamespaceName(String repoNamespaceName) {
                 this.repoNamespaceName = repoNamespaceName;
@@ -354,11 +434,14 @@ public class ListChartRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the repository. Valid values:
-             * <p>
+             * <p>The status of the repository. Valid values:</p>
+             * <ul>
+             * <li><code>NORMAL</code>: The repository is normal.</li>
+             * <li><code>DELETING</code>: The repository is being deleted.</li>
+             * </ul>
              * 
-             * *   `NORMAL`: The repository is normal.
-             * *   `DELETING`: The repository is being deleted.
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder repoStatus(String repoStatus) {
                 this.repoStatus = repoStatus;
@@ -366,11 +449,14 @@ public class ListChartRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the repository. Valid values:
-             * <p>
+             * <p>The type of the repository. Valid values:</p>
+             * <ul>
+             * <li><code>PRIVATE</code>: a private repository</li>
+             * <li><code>PUBLIC</code>: a public repository</li>
+             * </ul>
              * 
-             * *   `PRIVATE`: a private repository
-             * *   `PUBLIC`: a public repository
+             * <strong>example:</strong>
+             * <p>PUBLIC</p>
              */
             public Builder repoType(String repoType) {
                 this.repoType = repoType;
@@ -378,7 +464,10 @@ public class ListChartRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group to which the repository belongs.
+             * <p>The ID of the resource group to which the repository belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aek2ikd5rxxxxxx</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -386,7 +475,10 @@ public class ListChartRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * The summary about the repository.
+             * <p>The summary about the repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder summary(String summary) {
                 this.summary = summary;

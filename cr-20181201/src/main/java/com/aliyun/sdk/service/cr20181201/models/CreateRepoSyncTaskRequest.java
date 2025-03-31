@@ -1,67 +1,72 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cr20181201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateRepoSyncTaskRequest} extends {@link RequestModel}
  *
  * <p>CreateRepoSyncTaskRequest</p>
  */
 public class CreateRepoSyncTaskRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("Override")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Override")
     private Boolean override;
 
-    @Query
-    @NameInMap("RepoId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RepoId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String repoId;
 
-    @Query
-    @NameInMap("Tag")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tag;
 
-    @Query
-    @NameInMap("TargetInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String targetInstanceId;
 
-    @Query
-    @NameInMap("TargetNamespace")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetNamespace")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String targetNamespace;
 
-    @Query
-    @NameInMap("TargetRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String targetRegionId;
 
-    @Query
-    @NameInMap("TargetRepoName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetRepoName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String targetRepoName;
 
-    @Query
-    @NameInMap("TargetTag")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetTag")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String targetTag;
 
-    @Query
-    @NameInMap("TargetUserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetUserId")
     private String targetUserId;
 
     private CreateRepoSyncTaskRequest(Builder builder) {
@@ -87,7 +92,7 @@ public class CreateRepoSyncTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -202,7 +207,7 @@ public class CreateRepoSyncTaskRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -211,7 +216,10 @@ public class CreateRepoSyncTaskRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cri-hpdfkc6utbaq****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -229,7 +237,10 @@ public class CreateRepoSyncTaskRequest extends Request {
         }
 
         /**
-         * RepoId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>crr-iql7jalx4g0****</p>
          */
         public Builder repoId(String repoId) {
             this.putQueryParameter("RepoId", repoId);
@@ -238,7 +249,10 @@ public class CreateRepoSyncTaskRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag1</p>
          */
         public Builder tag(String tag) {
             this.putQueryParameter("Tag", tag);
@@ -247,7 +261,10 @@ public class CreateRepoSyncTaskRequest extends Request {
         }
 
         /**
-         * TargetInstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cri-ibxs3piklys3****</p>
          */
         public Builder targetInstanceId(String targetInstanceId) {
             this.putQueryParameter("TargetInstanceId", targetInstanceId);
@@ -256,7 +273,10 @@ public class CreateRepoSyncTaskRequest extends Request {
         }
 
         /**
-         * TargetNamespace.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ns1</p>
          */
         public Builder targetNamespace(String targetNamespace) {
             this.putQueryParameter("TargetNamespace", targetNamespace);
@@ -265,7 +285,10 @@ public class CreateRepoSyncTaskRequest extends Request {
         }
 
         /**
-         * TargetRegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder targetRegionId(String targetRegionId) {
             this.putQueryParameter("TargetRegionId", targetRegionId);
@@ -274,7 +297,10 @@ public class CreateRepoSyncTaskRequest extends Request {
         }
 
         /**
-         * TargetRepoName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>repo1</p>
          */
         public Builder targetRepoName(String targetRepoName) {
             this.putQueryParameter("TargetRepoName", targetRepoName);
@@ -283,7 +309,10 @@ public class CreateRepoSyncTaskRequest extends Request {
         }
 
         /**
-         * TargetTag.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag1</p>
          */
         public Builder targetTag(String targetTag) {
             this.putQueryParameter("TargetTag", targetTag);

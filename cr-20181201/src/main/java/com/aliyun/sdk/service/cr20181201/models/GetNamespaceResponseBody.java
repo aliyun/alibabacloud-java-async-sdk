@@ -1,45 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cr20181201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetNamespaceResponseBody} extends {@link TeaModel}
  *
  * <p>GetNamespaceResponseBody</p>
  */
 public class GetNamespaceResponseBody extends TeaModel {
-    @NameInMap("AutoCreateRepo")
+    @com.aliyun.core.annotation.NameInMap("AutoCreateRepo")
     private Boolean autoCreateRepo;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("DefaultRepoType")
+    @com.aliyun.core.annotation.NameInMap("DefaultRepoType")
     private String defaultRepoType;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("IsSuccess")
+    @com.aliyun.core.annotation.NameInMap("IsSuccess")
     private Boolean isSuccess;
 
-    @NameInMap("NamespaceId")
+    @com.aliyun.core.annotation.NameInMap("NamespaceId")
     private String namespaceId;
 
-    @NameInMap("NamespaceName")
+    @com.aliyun.core.annotation.NameInMap("NamespaceName")
     private String namespaceName;
 
-    @NameInMap("NamespaceStatus")
+    @com.aliyun.core.annotation.NameInMap("NamespaceStatus")
     private String namespaceStatus;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
     private GetNamespaceResponseBody(Builder builder) {
@@ -61,6 +66,10 @@ public class GetNamespaceResponseBody extends TeaModel {
 
     public static GetNamespaceResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -145,8 +154,27 @@ public class GetNamespaceResponseBody extends TeaModel {
         private String requestId; 
         private String resourceGroupId; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetNamespaceResponseBody model) {
+            this.autoCreateRepo = model.autoCreateRepo;
+            this.code = model.code;
+            this.defaultRepoType = model.defaultRepoType;
+            this.instanceId = model.instanceId;
+            this.isSuccess = model.isSuccess;
+            this.namespaceId = model.namespaceId;
+            this.namespaceName = model.namespaceName;
+            this.namespaceStatus = model.namespaceStatus;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+        } 
+
         /**
-         * Indicates whether a repository is automatically created when an image is pushed to the namespace.
+         * <p>Indicates whether a repository is automatically created when an image is pushed to the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoCreateRepo(Boolean autoCreateRepo) {
             this.autoCreateRepo = autoCreateRepo;
@@ -154,7 +182,10 @@ public class GetNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The return value.
+         * <p>The return value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -162,11 +193,14 @@ public class GetNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The default type of the repository. Valid values:
-         * <p>
+         * <p>The default type of repositories. Valid values:</p>
+         * <ul>
+         * <li>PUBLIC: The repositories are public repositories.</li>
+         * <li>PRIVATE: The repositories are private repositories.</li>
+         * </ul>
          * 
-         * *   PUBLIC: The repository is a public repository.
-         * *   PRIVATE: The repository is a private repository.
+         * <strong>example:</strong>
+         * <p>PUBLIC</p>
          */
         public Builder defaultRepoType(String defaultRepoType) {
             this.defaultRepoType = defaultRepoType;
@@ -174,7 +208,10 @@ public class GetNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the Container Registry instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cri-kmsiwlxxdcva****</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -182,7 +219,10 @@ public class GetNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -190,7 +230,10 @@ public class GetNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the namespace.
+         * <p>The ID of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>crn-tiw8t3f8i5lt****</p>
          */
         public Builder namespaceId(String namespaceId) {
             this.namespaceId = namespaceId;
@@ -198,7 +241,10 @@ public class GetNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the namespace.
+         * <p>The name of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder namespaceName(String namespaceName) {
             this.namespaceName = namespaceName;
@@ -206,7 +252,14 @@ public class GetNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the namespace.
+         * <p>The status of the namespace.</p>
+         * <ul>
+         * <li>NORMAL</li>
+         * <li>DELETING</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         public Builder namespaceStatus(String namespaceStatus) {
             this.namespaceStatus = namespaceStatus;
@@ -214,7 +267,10 @@ public class GetNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E4BC9E21-8AA5-4582-83C1-C1209AB8196F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -222,7 +278,10 @@ public class GetNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group to which the namespace belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmv36i4is****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;

@@ -1,38 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cr20181201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetRepoTagManifestResponse} extends {@link TeaModel}
+ * 
+ * {@link GetArtifactSubscriptionRuleResponse} extends {@link TeaModel}
  *
- * <p>GetRepoTagManifestResponse</p>
+ * <p>GetArtifactSubscriptionRuleResponse</p>
  */
-public class GetRepoTagManifestResponse extends Response {
-    @NameInMap("headers")
-    private java.util.Map < String, String > headers;
+public class GetArtifactSubscriptionRuleResponse extends Response {
+    @com.aliyun.core.annotation.NameInMap("headers")
+    private java.util.Map<String, String> headers;
 
-    @NameInMap("statusCode")
+    @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
-    @NameInMap("body")
-    private GetRepoTagManifestResponseBody body;
+    @com.aliyun.core.annotation.NameInMap("body")
+    private GetArtifactSubscriptionRuleResponseBody body;
 
-    private GetRepoTagManifestResponse(BuilderImpl builder) {
+    private GetArtifactSubscriptionRuleResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static GetRepoTagManifestResponse create() {
+    public static GetArtifactSubscriptionRuleResponse create() {
         return new BuilderImpl().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new BuilderImpl(this);
     }
@@ -40,7 +45,7 @@ public class GetRepoTagManifestResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > getHeaders() {
+    public java.util.Map<String, String> getHeaders() {
         return this.headers;
     }
 
@@ -54,35 +59,35 @@ public class GetRepoTagManifestResponse extends Response {
     /**
      * @return body
      */
-    public GetRepoTagManifestResponseBody getBody() {
+    public GetArtifactSubscriptionRuleResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<GetRepoTagManifestResponse, Builder> {
+    public interface Builder extends Response.Builder<GetArtifactSubscriptionRuleResponse, Builder> {
 
-        Builder headers(java.util.Map < String, String > headers);
+        Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(GetRepoTagManifestResponseBody body);
+        Builder body(GetArtifactSubscriptionRuleResponseBody body);
 
         @Override
-        GetRepoTagManifestResponse build();
+        GetArtifactSubscriptionRuleResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<GetRepoTagManifestResponse, Builder>
+            extends Response.BuilderImpl<GetArtifactSubscriptionRuleResponse, Builder>
             implements Builder {
-        private java.util.Map < String, String > headers; 
+        private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private GetRepoTagManifestResponseBody body; 
+        private GetArtifactSubscriptionRuleResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(GetRepoTagManifestResponse response) {
+        private BuilderImpl(GetArtifactSubscriptionRuleResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -93,7 +98,7 @@ public class GetRepoTagManifestResponse extends Response {
          * headers.
          */
         @Override
-        public Builder headers(java.util.Map < String, String > headers) {
+        public Builder headers(java.util.Map<String, String> headers) {
             this.headers = headers;
             return this;
         }
@@ -111,14 +116,14 @@ public class GetRepoTagManifestResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(GetRepoTagManifestResponseBody body) {
+        public Builder body(GetArtifactSubscriptionRuleResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public GetRepoTagManifestResponse build() {
-            return new GetRepoTagManifestResponse(this);
+        public GetArtifactSubscriptionRuleResponse build() {
+            return new GetArtifactSubscriptionRuleResponse(this);
         } 
 
     } 

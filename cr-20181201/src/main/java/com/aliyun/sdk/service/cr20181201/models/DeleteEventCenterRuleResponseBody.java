@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cr20181201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteEventCenterRuleResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteEventCenterRuleResponseBody</p>
  */
 public class DeleteEventCenterRuleResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeleteEventCenterRuleResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class DeleteEventCenterRuleResponseBody extends TeaModel {
 
     public static DeleteEventCenterRuleResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -49,8 +58,19 @@ public class DeleteEventCenterRuleResponseBody extends TeaModel {
         private String code; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DeleteEventCenterRuleResponseBody model) {
+            this.code = model.code;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The return value.
+         * <p>The return value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -58,7 +78,10 @@ public class DeleteEventCenterRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>031572FA-7D8F-4C05-B790-1071E0E05DE6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

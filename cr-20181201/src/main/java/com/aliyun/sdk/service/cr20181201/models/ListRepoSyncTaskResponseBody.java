@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cr20181201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRepoSyncTaskResponseBody} extends {@link TeaModel}
  *
  * <p>ListRepoSyncTaskResponseBody</p>
  */
 public class ListRepoSyncTaskResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("IsSuccess")
+    @com.aliyun.core.annotation.NameInMap("IsSuccess")
     private Boolean isSuccess;
 
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private Integer pageNo;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SyncTasks")
-    private java.util.List < SyncTasks> syncTasks;
+    @com.aliyun.core.annotation.NameInMap("SyncTasks")
+    private java.util.List<SyncTasks> syncTasks;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
 
     private ListRepoSyncTaskResponseBody(Builder builder) {
@@ -49,6 +54,10 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
 
     public static ListRepoSyncTaskResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -89,7 +98,7 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
     /**
      * @return syncTasks
      */
-    public java.util.List < SyncTasks> getSyncTasks() {
+    public java.util.List<SyncTasks> getSyncTasks() {
         return this.syncTasks;
     }
 
@@ -106,8 +115,21 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
         private Integer pageNo; 
         private Integer pageSize; 
         private String requestId; 
-        private java.util.List < SyncTasks> syncTasks; 
+        private java.util.List<SyncTasks> syncTasks; 
         private String totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListRepoSyncTaskResponseBody model) {
+            this.code = model.code;
+            this.isSuccess = model.isSuccess;
+            this.pageNo = model.pageNo;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.syncTasks = model.syncTasks;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Code.
@@ -150,9 +172,9 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * SyncTasks.
+         * <p>Details about synchronization tasks.</p>
          */
-        public Builder syncTasks(java.util.List < SyncTasks> syncTasks) {
+        public Builder syncTasks(java.util.List<SyncTasks> syncTasks) {
             this.syncTasks = syncTasks;
             return this;
         }
@@ -171,20 +193,26 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListRepoSyncTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRepoSyncTaskResponseBody</p>
+     */
     public static class ImageFrom extends TeaModel {
-        @NameInMap("ImageTag")
+        @com.aliyun.core.annotation.NameInMap("ImageTag")
         private String imageTag;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RepoName")
+        @com.aliyun.core.annotation.NameInMap("RepoName")
         private String repoName;
 
-        @NameInMap("RepoNamespaceName")
+        @com.aliyun.core.annotation.NameInMap("RepoNamespaceName")
         private String repoNamespaceName;
 
         private ImageFrom(Builder builder) {
@@ -245,6 +273,17 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
             private String repoName; 
             private String repoNamespaceName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ImageFrom model) {
+                this.imageTag = model.imageTag;
+                this.instanceId = model.instanceId;
+                this.regionId = model.regionId;
+                this.repoName = model.repoName;
+                this.repoNamespaceName = model.repoNamespaceName;
+            } 
+
             /**
              * ImageTag.
              */
@@ -292,20 +331,26 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListRepoSyncTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRepoSyncTaskResponseBody</p>
+     */
     public static class ImageTo extends TeaModel {
-        @NameInMap("ImageTag")
+        @com.aliyun.core.annotation.NameInMap("ImageTag")
         private String imageTag;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RepoName")
+        @com.aliyun.core.annotation.NameInMap("RepoName")
         private String repoName;
 
-        @NameInMap("RepoNamespaceName")
+        @com.aliyun.core.annotation.NameInMap("RepoNamespaceName")
         private String repoNamespaceName;
 
         private ImageTo(Builder builder) {
@@ -366,6 +411,17 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
             private String repoName; 
             private String repoNamespaceName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ImageTo model) {
+                this.imageTag = model.imageTag;
+                this.instanceId = model.instanceId;
+                this.regionId = model.regionId;
+                this.repoName = model.repoName;
+                this.repoNamespaceName = model.repoNamespaceName;
+            } 
+
             /**
              * ImageTag.
              */
@@ -413,41 +469,50 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListRepoSyncTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRepoSyncTaskResponseBody</p>
+     */
     public static class SyncTasks extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("CrossUser")
+        @com.aliyun.core.annotation.NameInMap("CrossUser")
         private Boolean crossUser;
 
-        @NameInMap("CustomLink")
+        @com.aliyun.core.annotation.NameInMap("CustomLink")
         private Boolean customLink;
 
-        @NameInMap("ImageFrom")
+        @com.aliyun.core.annotation.NameInMap("ImageFrom")
         private ImageFrom imageFrom;
 
-        @NameInMap("ImageTo")
+        @com.aliyun.core.annotation.NameInMap("ImageTo")
         private ImageTo imageTo;
 
-        @NameInMap("ModifedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifedTime")
         private Long modifedTime;
 
-        @NameInMap("SyncBatchTaskId")
+        @com.aliyun.core.annotation.NameInMap("SyncBatchTaskId")
         private String syncBatchTaskId;
 
-        @NameInMap("SyncRuleId")
+        @com.aliyun.core.annotation.NameInMap("SyncRuleId")
         private String syncRuleId;
 
-        @NameInMap("SyncTaskId")
+        @com.aliyun.core.annotation.NameInMap("SyncTaskId")
         private String syncTaskId;
 
-        @NameInMap("SyncTransAccelerate")
+        @com.aliyun.core.annotation.NameInMap("SyncTransAccelerate")
         private Boolean syncTransAccelerate;
 
-        @NameInMap("TaskStatus")
+        @com.aliyun.core.annotation.NameInMap("TaskIssue")
+        private String taskIssue;
+
+        @com.aliyun.core.annotation.NameInMap("TaskStatus")
         private String taskStatus;
 
-        @NameInMap("TaskTrigger")
+        @com.aliyun.core.annotation.NameInMap("TaskTrigger")
         private String taskTrigger;
 
         private SyncTasks(Builder builder) {
@@ -461,6 +526,7 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
             this.syncRuleId = builder.syncRuleId;
             this.syncTaskId = builder.syncTaskId;
             this.syncTransAccelerate = builder.syncTransAccelerate;
+            this.taskIssue = builder.taskIssue;
             this.taskStatus = builder.taskStatus;
             this.taskTrigger = builder.taskTrigger;
         }
@@ -544,6 +610,13 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
         }
 
         /**
+         * @return taskIssue
+         */
+        public String getTaskIssue() {
+            return this.taskIssue;
+        }
+
+        /**
          * @return taskStatus
          */
         public String getTaskStatus() {
@@ -568,8 +641,28 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
             private String syncRuleId; 
             private String syncTaskId; 
             private Boolean syncTransAccelerate; 
+            private String taskIssue; 
             private String taskStatus; 
             private String taskTrigger; 
+
+            private Builder() {
+            } 
+
+            private Builder(SyncTasks model) {
+                this.createTime = model.createTime;
+                this.crossUser = model.crossUser;
+                this.customLink = model.customLink;
+                this.imageFrom = model.imageFrom;
+                this.imageTo = model.imageTo;
+                this.modifedTime = model.modifedTime;
+                this.syncBatchTaskId = model.syncBatchTaskId;
+                this.syncRuleId = model.syncRuleId;
+                this.syncTaskId = model.syncTaskId;
+                this.syncTransAccelerate = model.syncTransAccelerate;
+                this.taskIssue = model.taskIssue;
+                this.taskStatus = model.taskStatus;
+                this.taskTrigger = model.taskTrigger;
+            } 
 
             /**
              * CreateTime.
@@ -652,7 +745,33 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskStatus.
+             * <p>The error message that is returned if the synchronization task fails.</p>
+             * <blockquote>
+             * <p> The system uses this parameter to return an error message if the synchronization task fails.</p>
+             * </blockquote>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>OSS_POLICY_UNAUTHORIZED: Container Registry is not granted permissions to use Object Storage Service (OSS).</li>
+             * <li>TAG_CONFLICT: The destination repository contains an image that has the same tag as the source image, and image tag immutability is enabled for the destination repository.</li>
+             * <li>UNSUPPORTED_FORMAT: The manifest and config formats of the image to be synchronized are not supported.</li>
+             * <li>INTERNAL_ERROR: The synchronization task failed due to internal issues on the server.</li>
+             * <li>NETWORK_ERROR: The synchronization task failed due to unstable network connection.</li>
+             * <li>DATA_LENGTH_EXCEEDED: The manifest or config of the image is oversized.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>NETWORK_ERROR</p>
+             */
+            public Builder taskIssue(String taskIssue) {
+                this.taskIssue = taskIssue;
+                return this;
+            }
+
+            /**
+             * <p>The status of the synchronization task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder taskStatus(String taskStatus) {
                 this.taskStatus = taskStatus;

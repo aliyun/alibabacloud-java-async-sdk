@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cr20181201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRepoBuildRecordStatusResponseBody} extends {@link TeaModel}
  *
  * <p>GetRepoBuildRecordStatusResponseBody</p>
  */
 public class GetRepoBuildRecordStatusResponseBody extends TeaModel {
-    @NameInMap("BuildStatus")
+    @com.aliyun.core.annotation.NameInMap("BuildStatus")
     private String buildStatus;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("IsSuccess")
+    @com.aliyun.core.annotation.NameInMap("IsSuccess")
     private Boolean isSuccess;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetRepoBuildRecordStatusResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class GetRepoBuildRecordStatusResponseBody extends TeaModel {
 
     public static GetRepoBuildRecordStatusResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -73,8 +82,21 @@ public class GetRepoBuildRecordStatusResponseBody extends TeaModel {
         private Boolean isSuccess; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetRepoBuildRecordStatusResponseBody model) {
+            this.buildStatus = model.buildStatus;
+            this.code = model.code;
+            this.isSuccess = model.isSuccess;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The status of the image building.
+         * <p>The status of the image building.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder buildStatus(String buildStatus) {
             this.buildStatus = buildStatus;
@@ -82,7 +104,10 @@ public class GetRepoBuildRecordStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The return value.
+         * <p>The return value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -90,7 +115,10 @@ public class GetRepoBuildRecordStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -98,7 +126,10 @@ public class GetRepoBuildRecordStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>79174CBA-8556-443A-8976-22C922D7BE37</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

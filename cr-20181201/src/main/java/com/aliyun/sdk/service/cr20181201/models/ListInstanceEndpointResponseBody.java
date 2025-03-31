@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cr20181201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstanceEndpointResponseBody} extends {@link TeaModel}
  *
  * <p>ListInstanceEndpointResponseBody</p>
  */
 public class ListInstanceEndpointResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Endpoints")
-    private java.util.List < Endpoints> endpoints;
+    @com.aliyun.core.annotation.NameInMap("Endpoints")
+    private java.util.List<Endpoints> endpoints;
 
-    @NameInMap("IsSuccess")
+    @com.aliyun.core.annotation.NameInMap("IsSuccess")
     private Boolean isSuccess;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListInstanceEndpointResponseBody(Builder builder) {
@@ -39,6 +44,10 @@ public class ListInstanceEndpointResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -49,7 +58,7 @@ public class ListInstanceEndpointResponseBody extends TeaModel {
     /**
      * @return endpoints
      */
-    public java.util.List < Endpoints> getEndpoints() {
+    public java.util.List<Endpoints> getEndpoints() {
         return this.endpoints;
     }
 
@@ -69,12 +78,25 @@ public class ListInstanceEndpointResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < Endpoints> endpoints; 
+        private java.util.List<Endpoints> endpoints; 
         private Boolean isSuccess; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListInstanceEndpointResponseBody model) {
+            this.code = model.code;
+            this.endpoints = model.endpoints;
+            this.isSuccess = model.isSuccess;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The return value.
+         * <p>The return value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,15 +104,18 @@ public class ListInstanceEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * The endpoints of the instance.
+         * <p>The endpoints of the instance.</p>
          */
-        public Builder endpoints(java.util.List < Endpoints> endpoints) {
+        public Builder endpoints(java.util.List<Endpoints> endpoints) {
             this.endpoints = endpoints;
             return this;
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -98,7 +123,10 @@ public class ListInstanceEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1B21A877-66A2-4095-90EB-20A7781A4A67</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,8 +139,14 @@ public class ListInstanceEndpointResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListInstanceEndpointResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstanceEndpointResponseBody</p>
+     */
     public static class AclEntries extends TeaModel {
-        @NameInMap("Entry")
+        @com.aliyun.core.annotation.NameInMap("Entry")
         private String entry;
 
         private AclEntries(Builder builder) {
@@ -137,8 +171,18 @@ public class ListInstanceEndpointResponseBody extends TeaModel {
         public static final class Builder {
             private String entry; 
 
+            private Builder() {
+            } 
+
+            private Builder(AclEntries model) {
+                this.entry = model.entry;
+            } 
+
             /**
-             * Details about the ACL.
+             * <p>The information about the ACL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder entry(String entry) {
                 this.entry = entry;
@@ -152,11 +196,17 @@ public class ListInstanceEndpointResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstanceEndpointResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstanceEndpointResponseBody</p>
+     */
     public static class Domains extends TeaModel {
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Domains(Builder builder) {
@@ -190,8 +240,19 @@ public class ListInstanceEndpointResponseBody extends TeaModel {
             private String domain; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Domains model) {
+                this.domain = model.domain;
+                this.type = model.type;
+            } 
+
             /**
-             * The domain name.
+             * <p>The domain name of the Container Registry instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t****-registry.cn-shanghai.cr.aliyuncs.com</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -199,7 +260,14 @@ public class ListInstanceEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * Type
+             * <p>The type of the domain name. Valid values:</p>
+             * <ul>
+             * <li>SYSTEM: system domain name.</li>
+             * <li>USER: user domain name.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SYSTEM</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -213,8 +281,14 @@ public class ListInstanceEndpointResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstanceEndpointResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstanceEndpointResponseBody</p>
+     */
     public static class LinkedVpcs extends TeaModel {
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private LinkedVpcs(Builder builder) {
@@ -239,8 +313,18 @@ public class ListInstanceEndpointResponseBody extends TeaModel {
         public static final class Builder {
             private String vpcId; 
 
+            private Builder() {
+            } 
+
+            private Builder(LinkedVpcs model) {
+                this.vpcId = model.vpcId;
+            } 
+
             /**
-             * VPC ID
+             * <p>VPC ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -254,26 +338,32 @@ public class ListInstanceEndpointResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstanceEndpointResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstanceEndpointResponseBody</p>
+     */
     public static class Endpoints extends TeaModel {
-        @NameInMap("AclEnable")
+        @com.aliyun.core.annotation.NameInMap("AclEnable")
         private Boolean aclEnable;
 
-        @NameInMap("AclEntries")
-        private java.util.List < AclEntries> aclEntries;
+        @com.aliyun.core.annotation.NameInMap("AclEntries")
+        private java.util.List<AclEntries> aclEntries;
 
-        @NameInMap("Domains")
-        private java.util.List < Domains> domains;
+        @com.aliyun.core.annotation.NameInMap("Domains")
+        private java.util.List<Domains> domains;
 
-        @NameInMap("Enable")
+        @com.aliyun.core.annotation.NameInMap("Enable")
         private Boolean enable;
 
-        @NameInMap("EndpointType")
+        @com.aliyun.core.annotation.NameInMap("EndpointType")
         private String endpointType;
 
-        @NameInMap("LinkedVpcs")
-        private java.util.List < LinkedVpcs> linkedVpcs;
+        @com.aliyun.core.annotation.NameInMap("LinkedVpcs")
+        private java.util.List<LinkedVpcs> linkedVpcs;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Endpoints(Builder builder) {
@@ -304,14 +394,14 @@ public class ListInstanceEndpointResponseBody extends TeaModel {
         /**
          * @return aclEntries
          */
-        public java.util.List < AclEntries> getAclEntries() {
+        public java.util.List<AclEntries> getAclEntries() {
             return this.aclEntries;
         }
 
         /**
          * @return domains
          */
-        public java.util.List < Domains> getDomains() {
+        public java.util.List<Domains> getDomains() {
             return this.domains;
         }
 
@@ -332,7 +422,7 @@ public class ListInstanceEndpointResponseBody extends TeaModel {
         /**
          * @return linkedVpcs
          */
-        public java.util.List < LinkedVpcs> getLinkedVpcs() {
+        public java.util.List<LinkedVpcs> getLinkedVpcs() {
             return this.linkedVpcs;
         }
 
@@ -345,15 +435,31 @@ public class ListInstanceEndpointResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean aclEnable; 
-            private java.util.List < AclEntries> aclEntries; 
-            private java.util.List < Domains> domains; 
+            private java.util.List<AclEntries> aclEntries; 
+            private java.util.List<Domains> domains; 
             private Boolean enable; 
             private String endpointType; 
-            private java.util.List < LinkedVpcs> linkedVpcs; 
+            private java.util.List<LinkedVpcs> linkedVpcs; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(Endpoints model) {
+                this.aclEnable = model.aclEnable;
+                this.aclEntries = model.aclEntries;
+                this.domains = model.domains;
+                this.enable = model.enable;
+                this.endpointType = model.endpointType;
+                this.linkedVpcs = model.linkedVpcs;
+                this.status = model.status;
+            } 
+
             /**
-             * Indicates whether the access control list (ACL) feature is enabled.
+             * <p>Indicates whether the endpoint is added to an access control list (ACL).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder aclEnable(Boolean aclEnable) {
                 this.aclEnable = aclEnable;
@@ -361,23 +467,26 @@ public class ListInstanceEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * The ACL configured for the instance.
+             * <p>The ACLs that are configured for the instance.</p>
              */
-            public Builder aclEntries(java.util.List < AclEntries> aclEntries) {
+            public Builder aclEntries(java.util.List<AclEntries> aclEntries) {
                 this.aclEntries = aclEntries;
                 return this;
             }
 
             /**
-             * Domain names.
+             * <p>The list of domain names of the Container Registry instance.</p>
              */
-            public Builder domains(java.util.List < Domains> domains) {
+            public Builder domains(java.util.List<Domains> domains) {
                 this.domains = domains;
                 return this;
             }
 
             /**
-             * Indicates whether the ACL feature is enabled.
+             * <p>Indicates whether the endpoint is added to an ACL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -385,7 +494,10 @@ public class ListInstanceEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the endpoint.
+             * <p>The type of the endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>internet</p>
              */
             public Builder endpointType(String endpointType) {
                 this.endpointType = endpointType;
@@ -393,15 +505,18 @@ public class ListInstanceEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * The virtual private clouds (VPCs) that are associated with the instance.
+             * <p>The VPCs associated with the instance.</p>
              */
-            public Builder linkedVpcs(java.util.List < LinkedVpcs> linkedVpcs) {
+            public Builder linkedVpcs(java.util.List<LinkedVpcs> linkedVpcs) {
                 this.linkedVpcs = linkedVpcs;
                 return this;
             }
 
             /**
-             * The status of the instance.
+             * <p>The status of the endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder status(String status) {
                 this.status = status;

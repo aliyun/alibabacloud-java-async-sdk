@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cr20181201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateInstanceVpcEndpointLinkedVpcRequest} extends {@link RequestModel}
  *
  * <p>CreateInstanceVpcEndpointLinkedVpcRequest</p>
  */
 public class CreateInstanceVpcEndpointLinkedVpcRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("EnableCreateDNSRecordInPvzt")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableCreateDNSRecordInPvzt")
     private Boolean enableCreateDNSRecordInPvzt;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("ModuleName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ModuleName")
     private String moduleName;
 
-    @Query
-    @NameInMap("VpcId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpcId;
 
-    @Query
-    @NameInMap("VswitchId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VswitchId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vswitchId;
 
     private CreateInstanceVpcEndpointLinkedVpcRequest(Builder builder) {
@@ -57,7 +62,7 @@ public class CreateInstanceVpcEndpointLinkedVpcRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -127,7 +132,7 @@ public class CreateInstanceVpcEndpointLinkedVpcRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -136,13 +141,17 @@ public class CreateInstanceVpcEndpointLinkedVpcRequest extends Request {
         }
 
         /**
-         * Specifies whether to automatically create Alibaba Cloud DNS PrivateZone records. Valid values:
-         * <p>
+         * <p>Specifies whether to automatically create Alibaba Cloud DNS PrivateZone records. Valid values:</p>
+         * <blockquote>
+         * <p> If you enable automatic creation of PrivateZone records, a PrivateZone record is automatically created when you associate a VPC with the instance.</p>
+         * </blockquote>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
          * 
-         * >  If you enable automatic creation of PrivateZone records, a PrivateZone record is automatically created when you associate a VPC with the instance.
-         * 
-         * *   `true`
-         * *   `false`
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableCreateDNSRecordInPvzt(Boolean enableCreateDNSRecordInPvzt) {
             this.putQueryParameter("EnableCreateDNSRecordInPvzt", enableCreateDNSRecordInPvzt);
@@ -151,7 +160,11 @@ public class CreateInstanceVpcEndpointLinkedVpcRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cri-xkx6vujuhay0****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -160,11 +173,14 @@ public class CreateInstanceVpcEndpointLinkedVpcRequest extends Request {
         }
 
         /**
-         * The name of the module that you want to access. Valid values:
-         * <p>
+         * <p>The name of the module that you want to access. Valid values:</p>
+         * <ul>
+         * <li><code>Registry</code>: image repositories.</li>
+         * <li><code>Chart</code>: Helm charts.</li>
+         * </ul>
          * 
-         * *   `Registry`: image repositories.
-         * *   `Chart`: Helm charts.
+         * <strong>example:</strong>
+         * <p>Registry</p>
          */
         public Builder moduleName(String moduleName) {
             this.putQueryParameter("ModuleName", moduleName);
@@ -173,7 +189,11 @@ public class CreateInstanceVpcEndpointLinkedVpcRequest extends Request {
         }
 
         /**
-         * The VPC ID.
+         * <p>The VPC ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-uf6pa68zxnnlc48dd****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -182,7 +202,11 @@ public class CreateInstanceVpcEndpointLinkedVpcRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch that is associated with the specified VPC.
+         * <p>The ID of the vSwitch that is associated with the specified VPC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-uf6u0kn8x2gbzxfn2****</p>
          */
         public Builder vswitchId(String vswitchId) {
             this.putQueryParameter("VswitchId", vswitchId);

@@ -1,37 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cr20181201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateChartNamespaceRequest} extends {@link RequestModel}
  *
  * <p>UpdateChartNamespaceRequest</p>
  */
 public class UpdateChartNamespaceRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("AutoCreateRepo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoCreateRepo")
     private Boolean autoCreateRepo;
 
-    @Query
-    @NameInMap("DefaultRepoType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DefaultRepoType")
     private String defaultRepoType;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("NamespaceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NamespaceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespaceName;
 
     private UpdateChartNamespaceRequest(Builder builder) {
@@ -51,7 +56,7 @@ public class UpdateChartNamespaceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -112,7 +117,7 @@ public class UpdateChartNamespaceRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -121,11 +126,14 @@ public class UpdateChartNamespaceRequest extends Request {
         }
 
         /**
-         * Specifies whether to automatically create repositories in the namespace. Valid values:
-         * <p>
+         * <p>Specifies whether to automatically create repositories in the namespace. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: automatically creates repositories in the namespace.</li>
+         * <li><code>false</code>: does not automatically create repositories in the namespace.</li>
+         * </ul>
          * 
-         * *   `true`: automatically creates repositories in the namespace.
-         * *   `false`: does not automatically create repositories in the namespace.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoCreateRepo(Boolean autoCreateRepo) {
             this.putQueryParameter("AutoCreateRepo", autoCreateRepo);
@@ -134,11 +142,14 @@ public class UpdateChartNamespaceRequest extends Request {
         }
 
         /**
-         * The default type of the repository. Valid values:
-         * <p>
+         * <p>The default type of the repository. Valid values:</p>
+         * <ul>
+         * <li><code>PUBLIC</code>: a public repository</li>
+         * <li><code>PRIVATE</code>: a private repository</li>
+         * </ul>
          * 
-         * *   `PUBLIC`: a public repository
-         * *   `PRIVATE`: a private repository
+         * <strong>example:</strong>
+         * <p>PUBLIC</p>
          */
         public Builder defaultRepoType(String defaultRepoType) {
             this.putQueryParameter("DefaultRepoType", defaultRepoType);
@@ -147,7 +158,11 @@ public class UpdateChartNamespaceRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cri-kmsiwlxxdcva****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -156,7 +171,11 @@ public class UpdateChartNamespaceRequest extends Request {
         }
 
         /**
-         * The name of the namespace to which the repository belongs.
+         * <p>The name of the namespace to which the repository belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder namespaceName(String namespaceName) {
             this.putQueryParameter("NamespaceName", namespaceName);

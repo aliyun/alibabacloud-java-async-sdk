@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cr20181201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListChainInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>ListChainInstanceResponseBody</p>
  */
 public class ListChainInstanceResponseBody extends TeaModel {
-    @NameInMap("ChainInstances")
-    private java.util.List < ChainInstances> chainInstances;
+    @com.aliyun.core.annotation.NameInMap("ChainInstances")
+    private java.util.List<ChainInstances> chainInstances;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("IsSuccess")
+    @com.aliyun.core.annotation.NameInMap("IsSuccess")
     private Boolean isSuccess;
 
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private Integer pageNo;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListChainInstanceResponseBody(Builder builder) {
@@ -55,10 +60,14 @@ public class ListChainInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return chainInstances
      */
-    public java.util.List < ChainInstances> getChainInstances() {
+    public java.util.List<ChainInstances> getChainInstances() {
         return this.chainInstances;
     }
 
@@ -112,7 +121,7 @@ public class ListChainInstanceResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ChainInstances> chainInstances; 
+        private java.util.List<ChainInstances> chainInstances; 
         private String code; 
         private String instanceId; 
         private Boolean isSuccess; 
@@ -121,16 +130,33 @@ public class ListChainInstanceResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListChainInstanceResponseBody model) {
+            this.chainInstances = model.chainInstances;
+            this.code = model.code;
+            this.instanceId = model.instanceId;
+            this.isSuccess = model.isSuccess;
+            this.pageNo = model.pageNo;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
          */
-        public Builder chainInstances(java.util.List < ChainInstances> chainInstances) {
+        public Builder chainInstances(java.util.List<ChainInstances> chainInstances) {
             this.chainInstances = chainInstances;
             return this;
         }
 
         /**
-         * The version of the delivery chain.
+         * <p>The version of the delivery chain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -138,7 +164,10 @@ public class ListChainInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the page to return.
+         * <p>The page number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cri-kmsiwlxxdcva****</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -146,7 +175,10 @@ public class ListChainInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The execution record of the delivery chain.
+         * <p>The execution record of the delivery chain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -154,7 +186,10 @@ public class ListChainInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 30
+         * <p>30</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.pageNo = pageNo;
@@ -162,7 +197,10 @@ public class ListChainInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the operation is successful.
+         * <p>Indicates whether the operation is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -170,7 +208,10 @@ public class ListChainInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the Container Registry instance.
+         * <p>The ID of the Container Registry instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>838D1602-6D8F-47FB-B60A-656645D2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -178,7 +219,10 @@ public class ListChainInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the repository.
+         * <p>The name of the repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -191,14 +235,20 @@ public class ListChainInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListChainInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListChainInstanceResponseBody</p>
+     */
     public static class Chain extends TeaModel {
-        @NameInMap("ChainId")
+        @com.aliyun.core.annotation.NameInMap("ChainId")
         private String chainId;
 
-        @NameInMap("ChainName")
+        @com.aliyun.core.annotation.NameInMap("ChainName")
         private String chainName;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private Long version;
 
         private Chain(Builder builder) {
@@ -241,8 +291,20 @@ public class ListChainInstanceResponseBody extends TeaModel {
             private String chainName; 
             private Long version; 
 
+            private Builder() {
+            } 
+
+            private Builder(Chain model) {
+                this.chainId = model.chainId;
+                this.chainName = model.chainName;
+                this.version = model.version;
+            } 
+
             /**
-             * The name of the namespace.
+             * <p>The name of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>chi-m42gbku0****</p>
              */
             public Builder chainId(String chainId) {
                 this.chainId = chainId;
@@ -250,7 +312,10 @@ public class ListChainInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned on each page.
+             * <p>The number of entries returned on each page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-chain</p>
              */
             public Builder chainName(String chainName) {
                 this.chainName = chainName;
@@ -258,7 +323,10 @@ public class ListChainInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request.
+             * <p>The ID of the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder version(Long version) {
                 this.version = version;
@@ -272,29 +340,35 @@ public class ListChainInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListChainInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListChainInstanceResponseBody</p>
+     */
     public static class ChainInstances extends TeaModel {
-        @NameInMap("Chain")
+        @com.aliyun.core.annotation.NameInMap("Chain")
         private Chain chain;
 
-        @NameInMap("ChainInstanceId")
+        @com.aliyun.core.annotation.NameInMap("ChainInstanceId")
         private String chainInstanceId;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("RepoName")
+        @com.aliyun.core.annotation.NameInMap("RepoName")
         private String repoName;
 
-        @NameInMap("RepoNamespaceName")
+        @com.aliyun.core.annotation.NameInMap("RepoNamespaceName")
         private String repoNamespaceName;
 
-        @NameInMap("Result")
+        @com.aliyun.core.annotation.NameInMap("Result")
         private String result;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private ChainInstances(Builder builder) {
@@ -382,8 +456,22 @@ public class ListChainInstanceResponseBody extends TeaModel {
             private Long startTime; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(ChainInstances model) {
+                this.chain = model.chain;
+                this.chainInstanceId = model.chainInstanceId;
+                this.endTime = model.endTime;
+                this.repoName = model.repoName;
+                this.repoNamespaceName = model.repoNamespaceName;
+                this.result = model.result;
+                this.startTime = model.startTime;
+                this.status = model.status;
+            } 
+
             /**
-             * The name of the namespace.
+             * <p>The name of the namespace.</p>
              */
             public Builder chain(Chain chain) {
                 this.chain = chain;
@@ -391,7 +479,10 @@ public class ListChainInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 1
+             * <p>1</p>
+             * 
+             * <strong>example:</strong>
+             * <p>F4CF4DDB-BEF2-5575-<strong><strong>-</strong></strong>***</p>
              */
             public Builder chainInstanceId(String chainInstanceId) {
                 this.chainInstanceId = chainInstanceId;
@@ -399,7 +490,10 @@ public class ListChainInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Container Registry instance.
+             * <p>The ID of the Container Registry instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1636685856000</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -407,7 +501,10 @@ public class ListChainInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the delivery chain.
+             * <p>The ID of the delivery chain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-repo</p>
              */
             public Builder repoName(String repoName) {
                 this.repoName = repoName;
@@ -415,13 +512,16 @@ public class ListChainInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The execution result of the delivery chain. Valid values:
-             * <p>
+             * <p>The execution result of the delivery chain. Valid values:</p>
+             * <ul>
+             * <li><code>SUCCESS</code></li>
+             * <li><code>FAILED</code></li>
+             * <li><code>CANCELED</code></li>
+             * <li><code>DENIED</code></li>
+             * </ul>
              * 
-             * *   `SUCCESS`
-             * *   `FAILED`
-             * *   `CANCELED`
-             * *   `DENIED`
+             * <strong>example:</strong>
+             * <p>test-ns</p>
              */
             public Builder repoNamespaceName(String repoNamespaceName) {
                 this.repoNamespaceName = repoNamespaceName;
@@ -429,7 +529,10 @@ public class ListChainInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The list of the execution records of delivery chains.
+             * <p>The list of the execution records of delivery chains.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder result(String result) {
                 this.result = result;
@@ -437,7 +540,10 @@ public class ListChainInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * test-repo
+             * <p>test-repo</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1636685776000</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -445,13 +551,16 @@ public class ListChainInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the delivery chain. Valid values:
-             * <p>
+             * <p>The status of the delivery chain. Valid values:</p>
+             * <ul>
+             * <li><code>RUNNING</code></li>
+             * <li><code>COMPLETE</code></li>
+             * <li><code>CANCELING</code></li>
+             * <li><code>CANCELED</code></li>
+             * </ul>
              * 
-             * *   `RUNNING`
-             * *   `COMPLETE`
-             * *   `CANCELING`
-             * *   `CANCELED`
+             * <strong>example:</strong>
+             * <p>COMPLETE</p>
              */
             public Builder status(String status) {
                 this.status = status;

@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cr20181201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateBuildRecordByRecordResponseBody} extends {@link TeaModel}
  *
  * <p>CreateBuildRecordByRecordResponseBody</p>
  */
 public class CreateBuildRecordByRecordResponseBody extends TeaModel {
-    @NameInMap("BuildRecordId")
+    @com.aliyun.core.annotation.NameInMap("BuildRecordId")
     private String buildRecordId;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("IsSuccess")
+    @com.aliyun.core.annotation.NameInMap("IsSuccess")
     private Boolean isSuccess;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateBuildRecordByRecordResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class CreateBuildRecordByRecordResponseBody extends TeaModel {
 
     public static CreateBuildRecordByRecordResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -72,6 +81,16 @@ public class CreateBuildRecordByRecordResponseBody extends TeaModel {
         private String code; 
         private Boolean isSuccess; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateBuildRecordByRecordResponseBody model) {
+            this.buildRecordId = model.buildRecordId;
+            this.code = model.code;
+            this.isSuccess = model.isSuccess;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * BuildRecordId.

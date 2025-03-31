@@ -1,43 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cr20181201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateArtifactBuildRuleRequest} extends {@link RequestModel}
  *
  * <p>CreateArtifactBuildRuleRequest</p>
  */
 public class CreateArtifactBuildRuleRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ArtifactType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ArtifactType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String artifactType;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("Parameters")
-    private java.util.Map < String, ? > parameters;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Parameters")
+    private java.util.Map<String, ?> parameters;
 
-    @Query
-    @NameInMap("ScopeId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScopeId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scopeId;
 
-    @Query
-    @NameInMap("ScopeType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScopeType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scopeType;
 
     private CreateArtifactBuildRuleRequest(Builder builder) {
@@ -58,7 +63,7 @@ public class CreateArtifactBuildRuleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -87,7 +92,7 @@ public class CreateArtifactBuildRuleRequest extends Request {
     /**
      * @return parameters
      */
-    public java.util.Map < String, ? > getParameters() {
+    public java.util.Map<String, ?> getParameters() {
         return this.parameters;
     }
 
@@ -109,7 +114,7 @@ public class CreateArtifactBuildRuleRequest extends Request {
         private String regionId; 
         private String artifactType; 
         private String instanceId; 
-        private java.util.Map < String, ? > parameters; 
+        private java.util.Map<String, ?> parameters; 
         private String scopeId; 
         private String scopeType; 
 
@@ -128,7 +133,7 @@ public class CreateArtifactBuildRuleRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -137,10 +142,14 @@ public class CreateArtifactBuildRuleRequest extends Request {
         }
 
         /**
-         * The type of the artifact.
-         * <p>
+         * <p>The type of the artifact.</p>
+         * <ul>
+         * <li><code>ACCELERATED_IMAGE</code>: accelerated images.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   `ACCELERATED_IMAGE`: accelerated images.
+         * <strong>example:</strong>
+         * <p>ACCELERATED_IMAGE</p>
          */
         public Builder artifactType(String artifactType) {
             this.putQueryParameter("ArtifactType", artifactType);
@@ -149,7 +158,11 @@ public class CreateArtifactBuildRuleRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cri-cxreylqvcyje****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -158,9 +171,12 @@ public class CreateArtifactBuildRuleRequest extends Request {
         }
 
         /**
-         * Additional parameters.
+         * <p>Additional parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
-        public Builder parameters(java.util.Map < String, ? > parameters) {
+        public Builder parameters(java.util.Map<String, ?> parameters) {
             String parametersShrink = shrink(parameters, "Parameters", "json");
             this.putQueryParameter("Parameters", parametersShrink);
             this.parameters = parameters;
@@ -168,10 +184,14 @@ public class CreateArtifactBuildRuleRequest extends Request {
         }
 
         /**
-         * The ID of the effective range of the rule.
-         * <p>
+         * <p>The ID of the effective range of the rule.</p>
+         * <ul>
+         * <li>Set the value to the ID of the image repository.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Set the value to the ID of the image repository.
+         * <strong>example:</strong>
+         * <p>crr-pmajihou6cg0****</p>
          */
         public Builder scopeId(String scopeId) {
             this.putQueryParameter("ScopeId", scopeId);
@@ -180,10 +200,14 @@ public class CreateArtifactBuildRuleRequest extends Request {
         }
 
         /**
-         * The effective range of the rule. Valid values:
-         * <p>
+         * <p>The effective range of the rule. Valid values:</p>
+         * <ul>
+         * <li><code>REPOSITORY</code></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   `REPOSITORY`
+         * <strong>example:</strong>
+         * <p>REPOSITORY</p>
          */
         public Builder scopeType(String scopeType) {
             this.putQueryParameter("ScopeType", scopeType);

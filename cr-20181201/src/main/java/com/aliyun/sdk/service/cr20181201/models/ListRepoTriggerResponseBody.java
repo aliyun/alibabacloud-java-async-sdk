@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cr20181201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRepoTriggerResponseBody} extends {@link TeaModel}
  *
  * <p>ListRepoTriggerResponseBody</p>
  */
 public class ListRepoTriggerResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("IsSuccess")
+    @com.aliyun.core.annotation.NameInMap("IsSuccess")
     private Boolean isSuccess;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Triggers")
-    private java.util.List < Triggers> triggers;
+    @com.aliyun.core.annotation.NameInMap("Triggers")
+    private java.util.List<Triggers> triggers;
 
     private ListRepoTriggerResponseBody(Builder builder) {
         this.code = builder.code;
@@ -37,6 +42,10 @@ public class ListRepoTriggerResponseBody extends TeaModel {
 
     public static ListRepoTriggerResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -63,7 +72,7 @@ public class ListRepoTriggerResponseBody extends TeaModel {
     /**
      * @return triggers
      */
-    public java.util.List < Triggers> getTriggers() {
+    public java.util.List<Triggers> getTriggers() {
         return this.triggers;
     }
 
@@ -71,10 +80,23 @@ public class ListRepoTriggerResponseBody extends TeaModel {
         private String code; 
         private Boolean isSuccess; 
         private String requestId; 
-        private java.util.List < Triggers> triggers; 
+        private java.util.List<Triggers> triggers; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListRepoTriggerResponseBody model) {
+            this.code = model.code;
+            this.isSuccess = model.isSuccess;
+            this.requestId = model.requestId;
+            this.triggers = model.triggers;
+        } 
 
         /**
-         * The return value.
+         * <p>The return value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,11 +104,14 @@ public class ListRepoTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request is successful.</li>
+         * <li><code>false</code>: The request fails.</li>
+         * </ul>
          * 
-         * *   `true`: The request is successful.
-         * *   `false`: The request fails.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -94,7 +119,10 @@ public class ListRepoTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2CA76D52-A8F0-4D0B-854E-FBD9F6C99049</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -102,9 +130,9 @@ public class ListRepoTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * The triggers of the repository.
+         * <p>The triggers of the repository.</p>
          */
-        public Builder triggers(java.util.List < Triggers> triggers) {
+        public Builder triggers(java.util.List<Triggers> triggers) {
             this.triggers = triggers;
             return this;
         }
@@ -115,23 +143,29 @@ public class ListRepoTriggerResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListRepoTriggerResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRepoTriggerResponseBody</p>
+     */
     public static class Triggers extends TeaModel {
-        @NameInMap("RepoEvent")
+        @com.aliyun.core.annotation.NameInMap("RepoEvent")
         private String repoEvent;
 
-        @NameInMap("TriggerId")
+        @com.aliyun.core.annotation.NameInMap("TriggerId")
         private String triggerId;
 
-        @NameInMap("TriggerName")
+        @com.aliyun.core.annotation.NameInMap("TriggerName")
         private String triggerName;
 
-        @NameInMap("TriggerTag")
+        @com.aliyun.core.annotation.NameInMap("TriggerTag")
         private String triggerTag;
 
-        @NameInMap("TriggerType")
+        @com.aliyun.core.annotation.NameInMap("TriggerType")
         private String triggerType;
 
-        @NameInMap("TriggerUrl")
+        @com.aliyun.core.annotation.NameInMap("TriggerUrl")
         private String triggerUrl;
 
         private Triggers(Builder builder) {
@@ -201,12 +235,27 @@ public class ListRepoTriggerResponseBody extends TeaModel {
             private String triggerType; 
             private String triggerUrl; 
 
+            private Builder() {
+            } 
+
+            private Builder(Triggers model) {
+                this.repoEvent = model.repoEvent;
+                this.triggerId = model.triggerId;
+                this.triggerName = model.triggerName;
+                this.triggerTag = model.triggerTag;
+                this.triggerType = model.triggerType;
+                this.triggerUrl = model.triggerUrl;
+            } 
+
             /**
-             * The type of the event that activates the trigger. Valid values:
-             * <p>
+             * <p>The type of the event that activates the trigger. Valid values:</p>
+             * <ul>
+             * <li><code>BUILD_SUCCESS</code>: The trigger is activated when an image building task is successful.</li>
+             * <li><code>BUILD_Fail</code>: The trigger is activated when an image building task fails.</li>
+             * </ul>
              * 
-             * *   `BUILD_SUCCESS`: The trigger is activated when an image building task is successful.
-             * *   `BUILD_Fail`: The trigger is activated when an image building task fails.
+             * <strong>example:</strong>
+             * <p>BUILD_SUCCESS</p>
              */
             public Builder repoEvent(String repoEvent) {
                 this.repoEvent = repoEvent;
@@ -214,7 +263,10 @@ public class ListRepoTriggerResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the trigger.
+             * <p>The ID of the trigger.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>crw-vriyql9eq7ep****</p>
              */
             public Builder triggerId(String triggerId) {
                 this.triggerId = triggerId;
@@ -222,7 +274,10 @@ public class ListRepoTriggerResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the trigger.
+             * <p>The name of the trigger.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder triggerName(String triggerName) {
                 this.triggerName = triggerName;
@@ -230,7 +285,12 @@ public class ListRepoTriggerResponseBody extends TeaModel {
             }
 
             /**
-             * The image tag based on which the trigger is set.
+             * <p>The image tag based on which the trigger is set.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder triggerTag(String triggerTag) {
                 this.triggerTag = triggerTag;
@@ -238,12 +298,15 @@ public class ListRepoTriggerResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the trigger. Valid values:
-             * <p>
+             * <p>The type of the trigger. Valid values:</p>
+             * <ul>
+             * <li><code>ALL</code>: a trigger that supports both tags and regular expressions.</li>
+             * <li><code>TAG_LISTTAG</code>: a tag-based trigger.</li>
+             * <li><code>TAG_REG_EXP</code>: a regular expression-based trigger.</li>
+             * </ul>
              * 
-             * *   `ALL`: a trigger that supports both tags and regular expressions.
-             * *   `TAG_LISTTAG`: a tag-based trigger.
-             * *   `TAG_REG_EXP`: a regular expression-based trigger.
+             * <strong>example:</strong>
+             * <p>ALL</p>
              */
             public Builder triggerType(String triggerType) {
                 this.triggerType = triggerType;
@@ -251,7 +314,10 @@ public class ListRepoTriggerResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the trigger.
+             * <p>The URL of the trigger.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://www.test.com">https://www.test.com</a></p>
              */
             public Builder triggerUrl(String triggerUrl) {
                 this.triggerUrl = triggerUrl;

@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cr20181201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListChartNamespaceResponseBody} extends {@link TeaModel}
  *
  * <p>ListChartNamespaceResponseBody</p>
  */
 public class ListChartNamespaceResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("IsSuccess")
+    @com.aliyun.core.annotation.NameInMap("IsSuccess")
     private Boolean isSuccess;
 
-    @NameInMap("Namespaces")
-    private java.util.List < Namespaces> namespaces;
+    @com.aliyun.core.annotation.NameInMap("Namespaces")
+    private java.util.List<Namespaces> namespaces;
 
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private Integer pageNo;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
 
     private ListChartNamespaceResponseBody(Builder builder) {
@@ -51,6 +56,10 @@ public class ListChartNamespaceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -68,7 +77,7 @@ public class ListChartNamespaceResponseBody extends TeaModel {
     /**
      * @return namespaces
      */
-    public java.util.List < Namespaces> getNamespaces() {
+    public java.util.List<Namespaces> getNamespaces() {
         return this.namespaces;
     }
 
@@ -103,14 +112,30 @@ public class ListChartNamespaceResponseBody extends TeaModel {
     public static final class Builder {
         private String code; 
         private Boolean isSuccess; 
-        private java.util.List < Namespaces> namespaces; 
+        private java.util.List<Namespaces> namespaces; 
         private Integer pageNo; 
         private Integer pageSize; 
         private String requestId; 
         private String totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListChartNamespaceResponseBody model) {
+            this.code = model.code;
+            this.isSuccess = model.isSuccess;
+            this.namespaces = model.namespaces;
+            this.pageNo = model.pageNo;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * The return value.
+         * <p>The return value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +143,10 @@ public class ListChartNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -126,15 +154,18 @@ public class ListChartNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The namespaces.
+         * <p>The namespaces.</p>
          */
-        public Builder namespaces(java.util.List < Namespaces> namespaces) {
+        public Builder namespaces(java.util.List<Namespaces> namespaces) {
             this.namespaces = namespaces;
             return this;
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.pageNo = pageNo;
@@ -142,7 +173,10 @@ public class ListChartNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -150,7 +184,10 @@ public class ListChartNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F56D589D-AF7F-4900-BA46-62C780AC2C10</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +195,10 @@ public class ListChartNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -171,26 +211,32 @@ public class ListChartNamespaceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListChartNamespaceResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListChartNamespaceResponseBody</p>
+     */
     public static class Namespaces extends TeaModel {
-        @NameInMap("AutoCreateRepo")
+        @com.aliyun.core.annotation.NameInMap("AutoCreateRepo")
         private Boolean autoCreateRepo;
 
-        @NameInMap("DefaultRepoType")
+        @com.aliyun.core.annotation.NameInMap("DefaultRepoType")
         private String defaultRepoType;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("NamespaceId")
+        @com.aliyun.core.annotation.NameInMap("NamespaceId")
         private String namespaceId;
 
-        @NameInMap("NamespaceName")
+        @com.aliyun.core.annotation.NameInMap("NamespaceName")
         private String namespaceName;
 
-        @NameInMap("NamespaceStatus")
+        @com.aliyun.core.annotation.NameInMap("NamespaceStatus")
         private String namespaceStatus;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
         private Namespaces(Builder builder) {
@@ -269,8 +315,24 @@ public class ListChartNamespaceResponseBody extends TeaModel {
             private String namespaceStatus; 
             private String resourceGroupId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Namespaces model) {
+                this.autoCreateRepo = model.autoCreateRepo;
+                this.defaultRepoType = model.defaultRepoType;
+                this.instanceId = model.instanceId;
+                this.namespaceId = model.namespaceId;
+                this.namespaceName = model.namespaceName;
+                this.namespaceStatus = model.namespaceStatus;
+                this.resourceGroupId = model.resourceGroupId;
+            } 
+
             /**
-             * Indicates whether a repository was automatically created when a chart is pushed to the namespace.
+             * <p>Indicates whether a repository was automatically created when a chart is pushed to the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder autoCreateRepo(Boolean autoCreateRepo) {
                 this.autoCreateRepo = autoCreateRepo;
@@ -278,11 +340,14 @@ public class ListChartNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * The default repository type. Valid values:
-             * <p>
+             * <p>The default repository type. Valid values:</p>
+             * <ul>
+             * <li><code>PUBLIC</code>: a public repository</li>
+             * <li><code>PRIVATE</code>: a private repository</li>
+             * </ul>
              * 
-             * *   `PUBLIC`: a public repository
-             * *   `PRIVATE`: a private repository
+             * <strong>example:</strong>
+             * <p>PUBLIC</p>
              */
             public Builder defaultRepoType(String defaultRepoType) {
                 this.defaultRepoType = defaultRepoType;
@@ -290,7 +355,10 @@ public class ListChartNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cri-kmsiwlxxdcva****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -298,7 +366,10 @@ public class ListChartNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the namespace.
+             * <p>The ID of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder namespaceId(String namespaceId) {
                 this.namespaceId = namespaceId;
@@ -306,7 +377,10 @@ public class ListChartNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the namespace.
+             * <p>The name of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder namespaceName(String namespaceName) {
                 this.namespaceName = namespaceName;
@@ -314,11 +388,14 @@ public class ListChartNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the namespace. Valid values:
-             * <p>
+             * <p>The status of the namespace. Valid values:</p>
+             * <ul>
+             * <li><code>NORMAL</code>: The namespace is normal.</li>
+             * <li><code>DELETING</code>: The namespace is being deleted.</li>
+             * </ul>
              * 
-             * *   `NORMAL`: The namespace is normal.
-             * *   `DELETING`: The namespace is being deleted.
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder namespaceStatus(String namespaceStatus) {
                 this.namespaceStatus = namespaceStatus;
@@ -326,7 +403,10 @@ public class ListChartNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The ID of the resource group to which the instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfm4n5kzyf****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;

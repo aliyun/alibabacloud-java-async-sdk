@@ -1,48 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cr20181201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateChainRequest} extends {@link RequestModel}
  *
  * <p>UpdateChainRequest</p>
  */
 public class UpdateChainRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ChainConfig")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChainConfig")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String chainConfig;
 
-    @Query
-    @NameInMap("ChainId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChainId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String chainId;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("ScopeExclude")
-    private java.util.List < String > scopeExclude;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScopeExclude")
+    private java.util.List<String> scopeExclude;
 
     private UpdateChainRequest(Builder builder) {
         super(builder);
@@ -63,7 +68,7 @@ public class UpdateChainRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -113,7 +118,7 @@ public class UpdateChainRequest extends Request {
     /**
      * @return scopeExclude
      */
-    public java.util.List < String > getScopeExclude() {
+    public java.util.List<String> getScopeExclude() {
         return this.scopeExclude;
     }
 
@@ -124,7 +129,7 @@ public class UpdateChainRequest extends Request {
         private String description; 
         private String instanceId; 
         private String name; 
-        private java.util.List < String > scopeExclude; 
+        private java.util.List<String> scopeExclude; 
 
         private Builder() {
             super();
@@ -142,7 +147,7 @@ public class UpdateChainRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -151,7 +156,11 @@ public class UpdateChainRequest extends Request {
         }
 
         /**
-         * The configuration of the delivery chain in the JSON format.
+         * <p>The configuration of the delivery chain in the JSON format.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>chainconfig</p>
          */
         public Builder chainConfig(String chainConfig) {
             this.putQueryParameter("ChainConfig", chainConfig);
@@ -160,7 +169,11 @@ public class UpdateChainRequest extends Request {
         }
 
         /**
-         * The ID of the delivery chain.
+         * <p>The ID of the delivery chain.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>chi-02ymhtwl3cq8****</p>
          */
         public Builder chainId(String chainId) {
             this.putQueryParameter("ChainId", chainId);
@@ -169,7 +182,10 @@ public class UpdateChainRequest extends Request {
         }
 
         /**
-         * The description of the delivery chain.
+         * <p>The description of the delivery chain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>description</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -178,7 +194,11 @@ public class UpdateChainRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cri-4cdrlqmhn4gm****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -187,7 +207,11 @@ public class UpdateChainRequest extends Request {
         }
 
         /**
-         * The name of the delivery chain.
+         * <p>The name of the delivery chain.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -196,9 +220,9 @@ public class UpdateChainRequest extends Request {
         }
 
         /**
-         * Repositories in which the delivery chain does not take effect.
+         * <p>Repositories in which the delivery chain does not take effect.</p>
          */
-        public Builder scopeExclude(java.util.List < String > scopeExclude) {
+        public Builder scopeExclude(java.util.List<String> scopeExclude) {
             this.putQueryParameter("ScopeExclude", scopeExclude);
             this.scopeExclude = scopeExclude;
             return this;
