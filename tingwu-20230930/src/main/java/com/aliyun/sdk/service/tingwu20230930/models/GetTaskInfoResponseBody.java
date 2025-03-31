@@ -140,8 +140,14 @@ public class GetTaskInfoResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AutoChapters")
         private String autoChapters;
 
+        @com.aliyun.core.annotation.NameInMap("ContentExtraction")
+        private String contentExtraction;
+
         @com.aliyun.core.annotation.NameInMap("CustomPrompt")
         private String customPrompt;
+
+        @com.aliyun.core.annotation.NameInMap("IdentityRecognition")
+        private String identityRecognition;
 
         @com.aliyun.core.annotation.NameInMap("MeetingAssistance")
         private String meetingAssistance;
@@ -166,7 +172,9 @@ public class GetTaskInfoResponseBody extends TeaModel {
 
         private Result(Builder builder) {
             this.autoChapters = builder.autoChapters;
+            this.contentExtraction = builder.contentExtraction;
             this.customPrompt = builder.customPrompt;
+            this.identityRecognition = builder.identityRecognition;
             this.meetingAssistance = builder.meetingAssistance;
             this.pptExtraction = builder.pptExtraction;
             this.serviceInspection = builder.serviceInspection;
@@ -192,10 +200,24 @@ public class GetTaskInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return contentExtraction
+         */
+        public String getContentExtraction() {
+            return this.contentExtraction;
+        }
+
+        /**
          * @return customPrompt
          */
         public String getCustomPrompt() {
             return this.customPrompt;
+        }
+
+        /**
+         * @return identityRecognition
+         */
+        public String getIdentityRecognition() {
+            return this.identityRecognition;
         }
 
         /**
@@ -249,7 +271,9 @@ public class GetTaskInfoResponseBody extends TeaModel {
 
         public static final class Builder {
             private String autoChapters; 
+            private String contentExtraction; 
             private String customPrompt; 
+            private String identityRecognition; 
             private String meetingAssistance; 
             private String pptExtraction; 
             private String serviceInspection; 
@@ -263,7 +287,9 @@ public class GetTaskInfoResponseBody extends TeaModel {
 
             private Builder(Result model) {
                 this.autoChapters = model.autoChapters;
+                this.contentExtraction = model.contentExtraction;
                 this.customPrompt = model.customPrompt;
+                this.identityRecognition = model.identityRecognition;
                 this.meetingAssistance = model.meetingAssistance;
                 this.pptExtraction = model.pptExtraction;
                 this.serviceInspection = model.serviceInspection;
@@ -282,10 +308,26 @@ public class GetTaskInfoResponseBody extends TeaModel {
             }
 
             /**
+             * ContentExtraction.
+             */
+            public Builder contentExtraction(String contentExtraction) {
+                this.contentExtraction = contentExtraction;
+                return this;
+            }
+
+            /**
              * CustomPrompt.
              */
             public Builder customPrompt(String customPrompt) {
                 this.customPrompt = customPrompt;
+                return this;
+            }
+
+            /**
+             * IdentityRecognition.
+             */
+            public Builder identityRecognition(String identityRecognition) {
+                this.identityRecognition = identityRecognition;
                 return this;
             }
 
