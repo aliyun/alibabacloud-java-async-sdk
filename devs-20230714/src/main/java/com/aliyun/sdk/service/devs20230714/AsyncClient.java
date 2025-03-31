@@ -68,10 +68,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteProjectResponse> deleteProject(DeleteProjectRequest request);
 
     /**
+     * @param request the request parameters of DeployEnvironment  DeployEnvironmentRequest
+     * @return DeployEnvironmentResponse
+     */
+    CompletableFuture<DeployEnvironmentResponse> deployEnvironment(DeployEnvironmentRequest request);
+
+    /**
      * @param request the request parameters of GetEnvironment  GetEnvironmentRequest
      * @return GetEnvironmentResponse
      */
     CompletableFuture<GetEnvironmentResponse> getEnvironment(GetEnvironmentRequest request);
+
+    /**
+     * @param request the request parameters of GetEnvironmentDeployment  GetEnvironmentDeploymentRequest
+     * @return GetEnvironmentDeploymentResponse
+     */
+    CompletableFuture<GetEnvironmentDeploymentResponse> getEnvironmentDeployment(GetEnvironmentDeploymentRequest request);
 
     /**
      * @param request the request parameters of GetPipeline  GetPipelineRequest

@@ -184,6 +184,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeployEnvironment  DeployEnvironmentRequest
+     * @return DeployEnvironmentResponse
+     */
+    @Override
+    public CompletableFuture<DeployEnvironmentResponse> deployEnvironment(DeployEnvironmentRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeployEnvironment").setMethod(HttpMethod.PATCH).setPathRegex("/2023-07-14/projects/{projectName}/environments/{name}/deploy").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeployEnvironmentResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeployEnvironmentResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetEnvironment  GetEnvironmentRequest
      * @return GetEnvironmentResponse
      */
@@ -196,6 +214,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetEnvironmentResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetEnvironmentDeployment  GetEnvironmentDeploymentRequest
+     * @return GetEnvironmentDeploymentResponse
+     */
+    @Override
+    public CompletableFuture<GetEnvironmentDeploymentResponse> getEnvironmentDeployment(GetEnvironmentDeploymentRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetEnvironmentDeployment").setMethod(HttpMethod.GET).setPathRegex("/2023-07-14/environmentdeployments/{name}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetEnvironmentDeploymentResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetEnvironmentDeploymentResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
