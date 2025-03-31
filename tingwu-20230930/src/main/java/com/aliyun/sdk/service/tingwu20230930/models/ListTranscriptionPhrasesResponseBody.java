@@ -44,6 +44,10 @@ public class ListTranscriptionPhrasesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class ListTranscriptionPhrasesResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTranscriptionPhrasesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -174,6 +188,15 @@ public class ListTranscriptionPhrasesResponseBody extends TeaModel {
             private String description; 
             private String name; 
             private String phraseId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Phrases model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.phraseId = model.phraseId;
+            } 
 
             /**
              * Description.
@@ -273,6 +296,16 @@ public class ListTranscriptionPhrasesResponseBody extends TeaModel {
             private String errorMessage; 
             private java.util.List<Phrases> phrases; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.errorCode = model.errorCode;
+                this.errorMessage = model.errorMessage;
+                this.phrases = model.phrases;
+                this.status = model.status;
+            } 
 
             /**
              * ErrorCode.

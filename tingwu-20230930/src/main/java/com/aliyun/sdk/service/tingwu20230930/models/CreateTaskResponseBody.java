@@ -44,6 +44,10 @@ public class CreateTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class CreateTaskResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateTaskResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -183,6 +197,16 @@ public class CreateTaskResponseBody extends TeaModel {
             private String taskId; 
             private String taskKey; 
             private String taskStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.meetingJoinUrl = model.meetingJoinUrl;
+                this.taskId = model.taskId;
+                this.taskKey = model.taskKey;
+                this.taskStatus = model.taskStatus;
+            } 
 
             /**
              * MeetingJoinUrl.

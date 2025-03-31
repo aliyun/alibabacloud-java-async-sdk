@@ -55,7 +55,7 @@ public class CreateTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -323,6 +323,23 @@ public class CreateTaskRequest extends Request {
             private String taskId; 
             private String taskKey; 
 
+            private Builder() {
+            } 
+
+            private Builder(Input model) {
+                this.audioChannelMode = model.audioChannelMode;
+                this.fileUrl = model.fileUrl;
+                this.format = model.format;
+                this.languageHints = model.languageHints;
+                this.multipleStreamsEnabled = model.multipleStreamsEnabled;
+                this.outputPath = model.outputPath;
+                this.progressiveCallbacksEnabled = model.progressiveCallbacksEnabled;
+                this.sampleRate = model.sampleRate;
+                this.sourceLanguage = model.sourceLanguage;
+                this.taskId = model.taskId;
+                this.taskKey = model.taskKey;
+            } 
+
             /**
              * AudioChannelMode.
              */
@@ -431,11 +448,15 @@ public class CreateTaskRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
+        @com.aliyun.core.annotation.NameInMap("Identity")
+        private String identity;
+
         @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
         private ExtractionContents(Builder builder) {
             this.content = builder.content;
+            this.identity = builder.identity;
             this.title = builder.title;
         }
 
@@ -455,6 +476,13 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
+         * @return identity
+         */
+        public String getIdentity() {
+            return this.identity;
+        }
+
+        /**
          * @return title
          */
         public String getTitle() {
@@ -463,13 +491,31 @@ public class CreateTaskRequest extends Request {
 
         public static final class Builder {
             private String content; 
+            private String identity; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(ExtractionContents model) {
+                this.content = model.content;
+                this.identity = model.identity;
+                this.title = model.title;
+            } 
 
             /**
              * Content.
              */
             public Builder content(String content) {
                 this.content = content;
+                return this;
+            }
+
+            /**
+             * Identity.
+             */
+            public Builder identity(String identity) {
+                this.identity = identity;
                 return this;
             }
 
@@ -543,6 +589,15 @@ public class CreateTaskRequest extends Request {
             private java.util.List<ExtractionContents> extractionContents; 
             private String sceneIntroduction; 
             private java.util.Map<String, ?> speakerMap; 
+
+            private Builder() {
+            } 
+
+            private Builder(ContentExtraction model) {
+                this.extractionContents = model.extractionContents;
+                this.sceneIntroduction = model.sceneIntroduction;
+                this.speakerMap = model.speakerMap;
+            } 
 
             /**
              * ExtractionContents.
@@ -645,6 +700,16 @@ public class CreateTaskRequest extends Request {
             private String prompt; 
             private String transType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Contents model) {
+                this.model = model.model;
+                this.name = model.name;
+                this.prompt = model.prompt;
+                this.transType = model.transType;
+            } 
+
             /**
              * Model.
              */
@@ -715,6 +780,13 @@ public class CreateTaskRequest extends Request {
 
         public static final class Builder {
             private java.util.List<Contents> contents; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomPrompt model) {
+                this.contents = model.contents;
+            } 
 
             /**
              * Contents.
@@ -811,6 +883,17 @@ public class CreateTaskRequest extends Request {
             private Boolean ocrAuxiliaryEnabled; 
             private Boolean translateLlmSceneEnabled; 
 
+            private Builder() {
+            } 
+
+            private Builder(ExtraParams model) {
+                this.domainEducationEnabled = model.domainEducationEnabled;
+                this.maxKeywords = model.maxKeywords;
+                this.nfixEnabled = model.nfixEnabled;
+                this.ocrAuxiliaryEnabled = model.ocrAuxiliaryEnabled;
+                this.translateLlmSceneEnabled = model.translateLlmSceneEnabled;
+            } 
+
             /**
              * DomainEducationEnabled.
              */
@@ -864,6 +947,156 @@ public class CreateTaskRequest extends Request {
      *
      * <p>CreateTaskRequest</p>
      */
+    public static class IdentityContents extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        private IdentityContents(Builder builder) {
+            this.description = builder.description;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static IdentityContents create() {
+            return builder().build();
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private String description; 
+            private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(IdentityContents model) {
+                this.description = model.description;
+                this.name = model.name;
+            } 
+
+            /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public IdentityContents build() {
+                return new IdentityContents(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateTaskRequest</p>
+     */
+    public static class IdentityRecognition extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("IdentityContents")
+        private java.util.List<IdentityContents> identityContents;
+
+        @com.aliyun.core.annotation.NameInMap("SceneIntroduction")
+        private String sceneIntroduction;
+
+        private IdentityRecognition(Builder builder) {
+            this.identityContents = builder.identityContents;
+            this.sceneIntroduction = builder.sceneIntroduction;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static IdentityRecognition create() {
+            return builder().build();
+        }
+
+        /**
+         * @return identityContents
+         */
+        public java.util.List<IdentityContents> getIdentityContents() {
+            return this.identityContents;
+        }
+
+        /**
+         * @return sceneIntroduction
+         */
+        public String getSceneIntroduction() {
+            return this.sceneIntroduction;
+        }
+
+        public static final class Builder {
+            private java.util.List<IdentityContents> identityContents; 
+            private String sceneIntroduction; 
+
+            private Builder() {
+            } 
+
+            private Builder(IdentityRecognition model) {
+                this.identityContents = model.identityContents;
+                this.sceneIntroduction = model.sceneIntroduction;
+            } 
+
+            /**
+             * IdentityContents.
+             */
+            public Builder identityContents(java.util.List<IdentityContents> identityContents) {
+                this.identityContents = identityContents;
+                return this;
+            }
+
+            /**
+             * SceneIntroduction.
+             */
+            public Builder sceneIntroduction(String sceneIntroduction) {
+                this.sceneIntroduction = sceneIntroduction;
+                return this;
+            }
+
+            public IdentityRecognition build() {
+                return new IdentityRecognition(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateTaskRequest</p>
+     */
     public static class MeetingAssistance extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Types")
         private java.util.List<String> types;
@@ -889,6 +1122,13 @@ public class CreateTaskRequest extends Request {
 
         public static final class Builder {
             private java.util.List<String> types; 
+
+            private Builder() {
+            } 
+
+            private Builder(MeetingAssistance model) {
+                this.types = model.types;
+            } 
 
             /**
              * Types.
@@ -948,6 +1188,14 @@ public class CreateTaskRequest extends Request {
         public static final class Builder {
             private String content; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(InspectionContents model) {
+                this.content = model.content;
+                this.title = model.title;
+            } 
 
             /**
              * Content.
@@ -1040,6 +1288,16 @@ public class CreateTaskRequest extends Request {
             private String sceneIntroduction; 
             private java.util.Map<String, ?> speakerMap; 
 
+            private Builder() {
+            } 
+
+            private Builder(ServiceInspection model) {
+                this.inspectionContents = model.inspectionContents;
+                this.inspectionIntroduction = model.inspectionIntroduction;
+                this.sceneIntroduction = model.sceneIntroduction;
+                this.speakerMap = model.speakerMap;
+            } 
+
             /**
              * InspectionContents.
              */
@@ -1110,6 +1368,13 @@ public class CreateTaskRequest extends Request {
 
         public static final class Builder {
             private java.util.List<String> types; 
+
+            private Builder() {
+            } 
+
+            private Builder(Summarization model) {
+                this.types = model.types;
+            } 
 
             /**
              * Types.
@@ -1194,6 +1459,16 @@ public class CreateTaskRequest extends Request {
             private String targetVideoFormat; 
             private Boolean videoThumbnailEnabled; 
 
+            private Builder() {
+            } 
+
+            private Builder(Transcoding model) {
+                this.spectrumEnabled = model.spectrumEnabled;
+                this.targetAudioFormat = model.targetAudioFormat;
+                this.targetVideoFormat = model.targetVideoFormat;
+                this.videoThumbnailEnabled = model.videoThumbnailEnabled;
+            } 
+
             /**
              * SpectrumEnabled.
              */
@@ -1264,6 +1539,13 @@ public class CreateTaskRequest extends Request {
 
         public static final class Builder {
             private Integer speakerCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Diarization model) {
+                this.speakerCount = model.speakerCount;
+            } 
 
             /**
              * SpeakerCount.
@@ -1396,6 +1678,20 @@ public class CreateTaskRequest extends Request {
             private String phraseId; 
             private Boolean realtimeDiarizationEnabled; 
 
+            private Builder() {
+            } 
+
+            private Builder(Transcription model) {
+                this.additionalStreamOutputLevel = model.additionalStreamOutputLevel;
+                this.audioEventDetectionEnabled = model.audioEventDetectionEnabled;
+                this.diarization = model.diarization;
+                this.diarizationEnabled = model.diarizationEnabled;
+                this.model = model.model;
+                this.outputLevel = model.outputLevel;
+                this.phraseId = model.phraseId;
+                this.realtimeDiarizationEnabled = model.realtimeDiarizationEnabled;
+            } 
+
             /**
              * AdditionalStreamOutputLevel.
              */
@@ -1523,6 +1819,15 @@ public class CreateTaskRequest extends Request {
             private Integer outputLevel; 
             private java.util.List<String> targetLanguages; 
 
+            private Builder() {
+            } 
+
+            private Builder(Translation model) {
+                this.additionalStreamOutputLevel = model.additionalStreamOutputLevel;
+                this.outputLevel = model.outputLevel;
+                this.targetLanguages = model.targetLanguages;
+            } 
+
             /**
              * AdditionalStreamOutputLevel.
              */
@@ -1579,6 +1884,12 @@ public class CreateTaskRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("ExtraParams")
         private ExtraParams extraParams;
 
+        @com.aliyun.core.annotation.NameInMap("IdentityRecognition")
+        private IdentityRecognition identityRecognition;
+
+        @com.aliyun.core.annotation.NameInMap("IdentityRecognitionEnabled")
+        private Boolean identityRecognitionEnabled;
+
         @com.aliyun.core.annotation.NameInMap("MeetingAssistance")
         private MeetingAssistance meetingAssistance;
 
@@ -1622,6 +1933,8 @@ public class CreateTaskRequest extends Request {
             this.customPrompt = builder.customPrompt;
             this.customPromptEnabled = builder.customPromptEnabled;
             this.extraParams = builder.extraParams;
+            this.identityRecognition = builder.identityRecognition;
+            this.identityRecognitionEnabled = builder.identityRecognitionEnabled;
             this.meetingAssistance = builder.meetingAssistance;
             this.meetingAssistanceEnabled = builder.meetingAssistanceEnabled;
             this.pptExtractionEnabled = builder.pptExtractionEnabled;
@@ -1684,6 +1997,20 @@ public class CreateTaskRequest extends Request {
          */
         public ExtraParams getExtraParams() {
             return this.extraParams;
+        }
+
+        /**
+         * @return identityRecognition
+         */
+        public IdentityRecognition getIdentityRecognition() {
+            return this.identityRecognition;
+        }
+
+        /**
+         * @return identityRecognitionEnabled
+         */
+        public Boolean getIdentityRecognitionEnabled() {
+            return this.identityRecognitionEnabled;
         }
 
         /**
@@ -1777,6 +2104,8 @@ public class CreateTaskRequest extends Request {
             private CustomPrompt customPrompt; 
             private Boolean customPromptEnabled; 
             private ExtraParams extraParams; 
+            private IdentityRecognition identityRecognition; 
+            private Boolean identityRecognitionEnabled; 
             private MeetingAssistance meetingAssistance; 
             private Boolean meetingAssistanceEnabled; 
             private Boolean pptExtractionEnabled; 
@@ -1789,6 +2118,32 @@ public class CreateTaskRequest extends Request {
             private Transcription transcription; 
             private Translation translation; 
             private Boolean translationEnabled; 
+
+            private Builder() {
+            } 
+
+            private Builder(Parameters model) {
+                this.autoChaptersEnabled = model.autoChaptersEnabled;
+                this.contentExtraction = model.contentExtraction;
+                this.contentExtractionEnabled = model.contentExtractionEnabled;
+                this.customPrompt = model.customPrompt;
+                this.customPromptEnabled = model.customPromptEnabled;
+                this.extraParams = model.extraParams;
+                this.identityRecognition = model.identityRecognition;
+                this.identityRecognitionEnabled = model.identityRecognitionEnabled;
+                this.meetingAssistance = model.meetingAssistance;
+                this.meetingAssistanceEnabled = model.meetingAssistanceEnabled;
+                this.pptExtractionEnabled = model.pptExtractionEnabled;
+                this.serviceInspection = model.serviceInspection;
+                this.serviceInspectionEnabled = model.serviceInspectionEnabled;
+                this.summarization = model.summarization;
+                this.summarizationEnabled = model.summarizationEnabled;
+                this.textPolishEnabled = model.textPolishEnabled;
+                this.transcoding = model.transcoding;
+                this.transcription = model.transcription;
+                this.translation = model.translation;
+                this.translationEnabled = model.translationEnabled;
+            } 
 
             /**
              * AutoChaptersEnabled.
@@ -1835,6 +2190,22 @@ public class CreateTaskRequest extends Request {
              */
             public Builder extraParams(ExtraParams extraParams) {
                 this.extraParams = extraParams;
+                return this;
+            }
+
+            /**
+             * IdentityRecognition.
+             */
+            public Builder identityRecognition(IdentityRecognition identityRecognition) {
+                this.identityRecognition = identityRecognition;
+                return this;
+            }
+
+            /**
+             * IdentityRecognitionEnabled.
+             */
+            public Builder identityRecognitionEnabled(Boolean identityRecognitionEnabled) {
+                this.identityRecognitionEnabled = identityRecognitionEnabled;
                 return this;
             }
 

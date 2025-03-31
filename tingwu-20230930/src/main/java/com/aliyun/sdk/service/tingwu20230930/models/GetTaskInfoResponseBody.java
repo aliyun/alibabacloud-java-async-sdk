@@ -44,6 +44,10 @@ public class GetTaskInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class GetTaskInfoResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTaskInfoResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -243,6 +257,21 @@ public class GetTaskInfoResponseBody extends TeaModel {
             private String textPolish; 
             private String transcription; 
             private String translation; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.autoChapters = model.autoChapters;
+                this.customPrompt = model.customPrompt;
+                this.meetingAssistance = model.meetingAssistance;
+                this.pptExtraction = model.pptExtraction;
+                this.serviceInspection = model.serviceInspection;
+                this.summarization = model.summarization;
+                this.textPolish = model.textPolish;
+                this.transcription = model.transcription;
+                this.translation = model.translation;
+            } 
 
             /**
              * AutoChapters.
@@ -462,6 +491,22 @@ public class GetTaskInfoResponseBody extends TeaModel {
             private String taskId; 
             private String taskKey; 
             private String taskStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.errorCode = model.errorCode;
+                this.errorMessage = model.errorMessage;
+                this.outputMp3Path = model.outputMp3Path;
+                this.outputMp4Path = model.outputMp4Path;
+                this.outputSpectrumPath = model.outputSpectrumPath;
+                this.outputThumbnailPath = model.outputThumbnailPath;
+                this.result = model.result;
+                this.taskId = model.taskId;
+                this.taskKey = model.taskKey;
+                this.taskStatus = model.taskStatus;
+            } 
 
             /**
              * ErrorCode.

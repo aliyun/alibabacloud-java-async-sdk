@@ -44,6 +44,10 @@ public class CreateTranscriptionPhrasesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class CreateTranscriptionPhrasesResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateTranscriptionPhrasesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -186,6 +200,16 @@ public class CreateTranscriptionPhrasesResponseBody extends TeaModel {
             private String errorMessage; 
             private String phraseId; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.errorCode = model.errorCode;
+                this.errorMessage = model.errorMessage;
+                this.phraseId = model.phraseId;
+                this.status = model.status;
+            } 
 
             /**
              * ErrorCode.

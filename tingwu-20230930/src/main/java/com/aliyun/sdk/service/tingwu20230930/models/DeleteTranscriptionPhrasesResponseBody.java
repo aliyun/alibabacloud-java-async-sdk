@@ -44,6 +44,10 @@ public class DeleteTranscriptionPhrasesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -77,6 +81,16 @@ public class DeleteTranscriptionPhrasesResponseBody extends TeaModel {
         private String errorCode; 
         private String errorMessage; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteTranscriptionPhrasesResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.status = model.status;
+        } 
 
         /**
          * Data.
@@ -171,6 +185,15 @@ public class DeleteTranscriptionPhrasesResponseBody extends TeaModel {
             private String errorCode; 
             private String errorMessage; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.errorCode = model.errorCode;
+                this.errorMessage = model.errorMessage;
+                this.status = model.status;
+            } 
 
             /**
              * ErrorCode.
