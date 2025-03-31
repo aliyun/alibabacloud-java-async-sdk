@@ -86,6 +86,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateAppResponse> createApp(CreateAppRequest request);
 
     /**
+     * @param request the request parameters of CreateCloudPhoneNode  CreateCloudPhoneNodeRequest
+     * @return CreateCloudPhoneNodeResponse
+     */
+    CompletableFuture<CreateCloudPhoneNodeResponse> createCloudPhoneNode(CreateCloudPhoneNodeRequest request);
+
+    /**
      * @param request the request parameters of CreateCustomImage  CreateCustomImageRequest
      * @return CreateCustomImageResponse
      */
@@ -131,6 +137,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteAppsResponse
      */
     CompletableFuture<DeleteAppsResponse> deleteApps(DeleteAppsRequest request);
+
+    /**
+     * @param request the request parameters of DeleteCloudPhoneNodes  DeleteCloudPhoneNodesRequest
+     * @return DeleteCloudPhoneNodesResponse
+     */
+    CompletableFuture<DeleteCloudPhoneNodesResponse> deleteCloudPhoneNodes(DeleteCloudPhoneNodesRequest request);
 
     /**
      * <b>description</b> :
@@ -185,6 +197,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeBackupFilesResponse
      */
     CompletableFuture<DescribeBackupFilesResponse> describeBackupFiles(DescribeBackupFilesRequest request);
+
+    /**
+     * @param request the request parameters of DescribeCloudPhoneNodes  DescribeCloudPhoneNodesRequest
+     * @return DescribeCloudPhoneNodesResponse
+     */
+    CompletableFuture<DescribeCloudPhoneNodesResponse> describeCloudPhoneNodes(DescribeCloudPhoneNodesRequest request);
 
     /**
      * @param request the request parameters of DescribeImageList  DescribeImageListRequest
@@ -328,6 +346,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyAppResponse> modifyApp(ModifyAppRequest request);
 
     /**
+     * @param request the request parameters of ModifyCloudPhoneNode  ModifyCloudPhoneNodeRequest
+     * @return ModifyCloudPhoneNodeResponse
+     */
+    CompletableFuture<ModifyCloudPhoneNodeResponse> modifyCloudPhoneNode(ModifyCloudPhoneNodeRequest request);
+
+    /**
      * @param request the request parameters of ModifyInstanceChargeType  ModifyInstanceChargeTypeRequest
      * @return ModifyInstanceChargeTypeResponse
      */
@@ -374,6 +398,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RenewAndroidInstanceGroupsResponse
      */
     CompletableFuture<RenewAndroidInstanceGroupsResponse> renewAndroidInstanceGroups(RenewAndroidInstanceGroupsRequest request);
+
+    /**
+     * @param request the request parameters of RenewCloudPhoneNodes  RenewCloudPhoneNodesRequest
+     * @return RenewCloudPhoneNodesResponse
+     */
+    CompletableFuture<RenewCloudPhoneNodesResponse> renewCloudPhoneNodes(RenewCloudPhoneNodesRequest request);
 
     /**
      * <b>description</b> :
