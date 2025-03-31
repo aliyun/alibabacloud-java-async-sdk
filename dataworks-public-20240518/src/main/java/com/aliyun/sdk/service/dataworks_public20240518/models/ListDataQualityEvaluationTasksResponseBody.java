@@ -720,6 +720,9 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
      * <p>ListDataQualityEvaluationTasksResponseBody</p>
      */
     public static class DataQualityEvaluationTasks extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DataSourceId")
+        private Long dataSourceId;
+
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
@@ -748,6 +751,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
         private Trigger trigger;
 
         private DataQualityEvaluationTasks(Builder builder) {
+            this.dataSourceId = builder.dataSourceId;
             this.description = builder.description;
             this.hooks = builder.hooks;
             this.id = builder.id;
@@ -765,6 +769,13 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
 
         public static DataQualityEvaluationTasks create() {
             return builder().build();
+        }
+
+        /**
+         * @return dataSourceId
+         */
+        public Long getDataSourceId() {
+            return this.dataSourceId;
         }
 
         /**
@@ -831,6 +842,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Long dataSourceId; 
             private String description; 
             private java.util.List<Hooks> hooks; 
             private Long id; 
@@ -845,6 +857,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
             } 
 
             private Builder(DataQualityEvaluationTasks model) {
+                this.dataSourceId = model.dataSourceId;
                 this.description = model.description;
                 this.hooks = model.hooks;
                 this.id = model.id;
@@ -855,6 +868,14 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
                 this.target = model.target;
                 this.trigger = model.trigger;
             } 
+
+            /**
+             * DataSourceId.
+             */
+            public Builder dataSourceId(Long dataSourceId) {
+                this.dataSourceId = dataSourceId;
+                return this;
+            }
 
             /**
              * <p>The description of the data quality monitoring task. The description can be up to 65,535 characters in length.</p>

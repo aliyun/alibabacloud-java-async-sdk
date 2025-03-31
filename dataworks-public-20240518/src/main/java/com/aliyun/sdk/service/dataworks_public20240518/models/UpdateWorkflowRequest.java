@@ -1666,7 +1666,6 @@ public class UpdateWorkflowRequest extends Request {
         private String envType;
 
         @com.aliyun.core.annotation.NameInMap("Id")
-        @com.aliyun.core.annotation.Validation(required = true)
         private Long id;
 
         @com.aliyun.core.annotation.NameInMap("Inputs")
@@ -1999,7 +1998,6 @@ public class UpdateWorkflowRequest extends Request {
 
             /**
              * <p>The task ID. If you configure this parameter, full update is performed on the task. If you do not configure this parameter, another task is created.</p>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>1234</p>
