@@ -93,7 +93,7 @@ public class GetHttpApiRouteResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Response status code.</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>Ok</p>
@@ -104,7 +104,7 @@ public class GetHttpApiRouteResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Route detail data.</p>
+         * <p>The route details.</p>
          */
         public Builder data(HttpRoute data) {
             this.data = data;
@@ -112,7 +112,7 @@ public class GetHttpApiRouteResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Response message.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -123,7 +123,7 @@ public class GetHttpApiRouteResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3ACFC7A7-45A9-58CF-B2D5-765B60254695</p>

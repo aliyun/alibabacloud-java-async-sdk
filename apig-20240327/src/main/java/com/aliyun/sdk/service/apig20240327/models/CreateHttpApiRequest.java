@@ -237,7 +237,10 @@ public class CreateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The AI protocols list.</p>
+         * <p>The AI API protocols. Valid value:</p>
+         * <ul>
+         * <li>OpenAI/v1</li>
+         * </ul>
          */
         public Builder aiProtocols(java.util.List<String> aiProtocols) {
             this.putBodyParameter("aiProtocols", aiProtocols);
@@ -246,7 +249,7 @@ public class CreateHttpApiRequest extends Request {
         }
 
         /**
-         * authConfig.
+         * <p>The authentication configurations.</p>
          */
         public Builder authConfig(AuthConfig authConfig) {
             this.putBodyParameter("authConfig", authConfig);
@@ -255,7 +258,7 @@ public class CreateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>Base path of the API, which must start with a &quot;/&quot;.</p>
+         * <p>The API base path, which must start with a forward slash (/).</p>
          * 
          * <strong>example:</strong>
          * <p>/v1</p>
@@ -267,7 +270,7 @@ public class CreateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The deploy configs.</p>
+         * <p>The API deployment configurations. Currently, only AI APIs support deployment configurations, and only a single deployment configuration can be passed.</p>
          */
         public Builder deployConfigs(java.util.List<HttpApiDeployConfig> deployConfigs) {
             this.putBodyParameter("deployConfigs", deployConfigs);
@@ -276,10 +279,10 @@ public class CreateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>Description of the API.</p>
+         * <p>The API description.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试专用API。</p>
+         * <p>API for testing</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -288,7 +291,7 @@ public class CreateHttpApiRequest extends Request {
         }
 
         /**
-         * enableAuth.
+         * <p>Specifies whether to enable authentication.</p>
          */
         public Builder enableAuth(Boolean enableAuth) {
             this.putBodyParameter("enableAuth", enableAuth);
@@ -297,7 +300,7 @@ public class CreateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>Configuration information for the HTTP Ingress API.</p>
+         * <p>The HTTP Ingress configurations.</p>
          */
         public Builder ingressConfig(IngressConfig ingressConfig) {
             this.putBodyParameter("ingressConfig", ingressConfig);
@@ -306,7 +309,7 @@ public class CreateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>Name of the API.</p>
+         * <p>The API name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -319,7 +322,7 @@ public class CreateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>List of API access protocols.</p>
+         * <p>The protocols that are used to call the API.</p>
          */
         public Builder protocols(java.util.List<String> protocols) {
             this.putBodyParameter("protocols", protocols);
@@ -328,7 +331,7 @@ public class CreateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aekzgvmlotionbi</p>
@@ -340,7 +343,7 @@ public class CreateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>Type of the HTTP API.</p>
+         * <p>The API type. Valid values:</p>
          * <ul>
          * <li>Http</li>
          * <li>Rest</li>
@@ -358,7 +361,7 @@ public class CreateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>Versioning configuration for the API.</p>
+         * <p>The versioning configuration of the API.</p>
          */
         public Builder versionConfig(HttpApiVersionConfig versionConfig) {
             this.putBodyParameter("versionConfig", versionConfig);
@@ -465,7 +468,7 @@ public class CreateHttpApiRequest extends Request {
             } 
 
             /**
-             * <p>Environment ID.</p>
+             * <p>The environment ID.</p>
              * 
              * <strong>example:</strong>
              * <p>env-cq146allhtgk***</p>
@@ -476,7 +479,7 @@ public class CreateHttpApiRequest extends Request {
             }
 
             /**
-             * <p>Ingress Class being listened to.</p>
+             * <p>The Ingress Class for listening.</p>
              * 
              * <strong>example:</strong>
              * <p>mse</p>
@@ -487,7 +490,7 @@ public class CreateHttpApiRequest extends Request {
             }
 
             /**
-             * <p>Whether to update the address in the Ingress Status.</p>
+             * <p>Specifies whether to update the address in Ingress Status.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -498,7 +501,7 @@ public class CreateHttpApiRequest extends Request {
             }
 
             /**
-             * <p>Source ID.</p>
+             * <p>The source ID.</p>
              * 
              * <strong>example:</strong>
              * <p>src-crdddallhtgtr***</p>
@@ -509,7 +512,7 @@ public class CreateHttpApiRequest extends Request {
             }
 
             /**
-             * <p>Namespace being watched.</p>
+             * <p>The namespace for listening.</p>
              * 
              * <strong>example:</strong>
              * <p>default</p>

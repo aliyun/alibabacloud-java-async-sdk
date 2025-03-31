@@ -119,7 +119,7 @@ public class GetDashboardResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Response code</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -130,7 +130,7 @@ public class GetDashboardResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Response data</p>
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -138,7 +138,7 @@ public class GetDashboardResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Backend error code</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>Ok</p>
@@ -149,7 +149,7 @@ public class GetDashboardResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error message</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -160,7 +160,7 @@ public class GetDashboardResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2F46B9E7-67EF-5C8A-BA52-D38D5B32AF2C</p>
@@ -171,7 +171,7 @@ public class GetDashboardResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether the request was successful</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -266,7 +266,7 @@ public class GetDashboardResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Gateway unique identifier</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>gw-co370icmjeu****</p>
@@ -277,7 +277,7 @@ public class GetDashboardResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Dashboard name</p>
+             * <p>The dashboard name.</p>
              * 
              * <strong>example:</strong>
              * <p>PLUGIN</p>
@@ -288,7 +288,7 @@ public class GetDashboardResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Dashboard title</p>
+             * <p>The dashboard title.</p>
              * 
              * <strong>example:</strong>
              * <p>APIG Plugin</p>
@@ -299,7 +299,7 @@ public class GetDashboardResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Dashboard URL link</p>
+             * <p>The dashboard URL.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://sls.console.aliyun.com/lognext/project/xxxxx">https://sls.console.aliyun.com/lognext/project/xxxxx</a></p>

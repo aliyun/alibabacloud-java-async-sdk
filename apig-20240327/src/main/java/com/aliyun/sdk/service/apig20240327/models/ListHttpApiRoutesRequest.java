@@ -241,7 +241,7 @@ public class ListHttpApiRoutesRequest extends Request {
         } 
 
         /**
-         * <p>HTTP API ID.</p>
+         * <p>The HTTP API ID.</p>
          * 
          * <strong>example:</strong>
          * <p>api-cr68g1dlhtgm31f***</p>
@@ -253,7 +253,7 @@ public class ListHttpApiRoutesRequest extends Request {
         }
 
         /**
-         * <p>Filter the interface list based on a specific consumer authorization rule ID. The interface list in the response will only include authorized interfaces.</p>
+         * <p>The string that is used to filter routes based on consumer authentication rules. Only authorized APIs are returned.</p>
          * 
          * <strong>example:</strong>
          * <p>cas-xxx</p>
@@ -265,7 +265,17 @@ public class ListHttpApiRoutesRequest extends Request {
         }
 
         /**
-         * <p>Deployment status of the route.</p>
+         * <p>The deployment state of the route.</p>
+         * <p>Enumerated values:</p>
+         * <ul>
+         * <li>Deploying: The route is being deployed.</li>
+         * <li>DeployedWithChanges: The route is deployed and modified.</li>
+         * <li>Undeploying: The route is being undeployed.</li>
+         * <li>NotDeployed: The route is not deployed.</li>
+         * <li>Deployed: The route is deployed.</li>
+         * <li>UndeployFailed: The route failed to be undeployed.</li>
+         * <li>DeployFailed: The route failed to be deployed.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>NotDeployed</p>
@@ -277,7 +287,7 @@ public class ListHttpApiRoutesRequest extends Request {
         }
 
         /**
-         * <p>Filter route information by domain ID.</p>
+         * <p>Specifies to filter routes by domain ID.</p>
          * 
          * <strong>example:</strong>
          * <p>d-xxx</p>
@@ -289,7 +299,7 @@ public class ListHttpApiRoutesRequest extends Request {
         }
 
         /**
-         * <p>Environment ID.</p>
+         * <p>The environment ID.</p>
          * 
          * <strong>example:</strong>
          * <p>env-cpqnr6tlhtgubc***</p>
@@ -301,7 +311,7 @@ public class ListHttpApiRoutesRequest extends Request {
         }
 
         /**
-         * <p>Cloud-native API Gateway ID.</p>
+         * <p>The ID of the Cloud-native API Gateway instance.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-cpv4sqdl****</p>
@@ -313,7 +323,7 @@ public class ListHttpApiRoutesRequest extends Request {
         }
 
         /**
-         * <p>Route name.</p>
+         * <p>The route name.</p>
          * 
          * <strong>example:</strong>
          * <p>itemcenter-gateway</p>
@@ -325,7 +335,7 @@ public class ListHttpApiRoutesRequest extends Request {
         }
 
         /**
-         * <p>Fuzzy search by route name.</p>
+         * <p>The route name keyword for a fuzzy search.</p>
          * 
          * <strong>example:</strong>
          * <p>item</p>
@@ -337,7 +347,7 @@ public class ListHttpApiRoutesRequest extends Request {
         }
 
         /**
-         * <p>Page number, starting from 1. Default is 1 if not specified.</p>
+         * <p>The page number of the page to return. Pages start from page 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -349,7 +359,7 @@ public class ListHttpApiRoutesRequest extends Request {
         }
 
         /**
-         * <p>Page size, valid range [1, 100]. Default is 10 if not specified.</p>
+         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -361,7 +371,7 @@ public class ListHttpApiRoutesRequest extends Request {
         }
 
         /**
-         * <p>Fuzzy search by route path.</p>
+         * <p>The route path keyword for a fuzzy search.</p>
          * 
          * <strong>example:</strong>
          * <p>/v1</p>
@@ -373,7 +383,7 @@ public class ListHttpApiRoutesRequest extends Request {
         }
 
         /**
-         * <p>The response includes consumer authorization information.</p>
+         * <p>The consumer authorization information in the response.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -385,7 +395,7 @@ public class ListHttpApiRoutesRequest extends Request {
         }
 
         /**
-         * <p>Each route information in the response carries the list of authorization rules for the specified consumer ID.</p>
+         * <p>The authentication rules of the specified consumer in each route returned.</p>
          * 
          * <strong>example:</strong>
          * <p>cs-xxx</p>
@@ -397,7 +407,7 @@ public class ListHttpApiRoutesRequest extends Request {
         }
 
         /**
-         * <p>Each route information in the response carries the attachment information for the specified plugin ID.</p>
+         * <p>The mounting information of the specified plug-in in each route returned.</p>
          * 
          * <strong>example:</strong>
          * <p>pl-xxx</p>

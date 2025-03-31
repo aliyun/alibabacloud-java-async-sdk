@@ -93,7 +93,7 @@ public class GetPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Response code.</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>Ok</p>
@@ -104,7 +104,7 @@ public class GetPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Response data.</p>
+         * <p>The data returned.</p>
          */
         public Builder data(PolicyDetailInfo data) {
             this.data = data;
@@ -112,7 +112,7 @@ public class GetPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Response message.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -123,7 +123,7 @@ public class GetPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2F46B9E7-67EF-5C8A-BA52-D38D5B32A***</p>

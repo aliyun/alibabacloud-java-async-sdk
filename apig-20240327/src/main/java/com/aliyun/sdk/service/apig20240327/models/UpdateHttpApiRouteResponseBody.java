@@ -80,7 +80,7 @@ public class UpdateHttpApiRouteResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Response status code.</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>Ok</p>
@@ -91,7 +91,7 @@ public class UpdateHttpApiRouteResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Response message.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -102,7 +102,7 @@ public class UpdateHttpApiRouteResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>CBEEB8C1-108E-50F0-9BEA-DED79553C309</p>

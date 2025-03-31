@@ -80,7 +80,10 @@ public class UndeployHttpApiResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -88,7 +91,10 @@ public class UndeployHttpApiResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -96,7 +102,10 @@ public class UndeployHttpApiResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3ACFC7A7-45A9-58CF-B2D5-765B60254695</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

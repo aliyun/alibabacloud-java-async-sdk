@@ -99,7 +99,10 @@ public class UndeployHttpApiRequest extends Request {
         }
 
         /**
-         * environmentId.
+         * <p>The environment ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env-cqsmtellhtgvo***</p>
          */
         public Builder environmentId(String environmentId) {
             this.putBodyParameter("environmentId", environmentId);
@@ -108,7 +111,10 @@ public class UndeployHttpApiRequest extends Request {
         }
 
         /**
-         * routeId.
+         * <p>Route ID. This must be provided when publishing the route of an HTTP API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hr-cr82undlhtgrle***</p>
          */
         public Builder routeId(String routeId) {
             this.putBodyParameter("routeId", routeId);

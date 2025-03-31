@@ -74,7 +74,7 @@ public class GetDomainRequest extends Request {
         } 
 
         /**
-         * <p>Domain ID.</p>
+         * <p>The ID of the domain name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,7 +87,7 @@ public class GetDomainRequest extends Request {
         }
 
         /**
-         * <p>Indicates whether include domain related resource information.</p>
+         * <p>Specifies whether to return online resource information.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

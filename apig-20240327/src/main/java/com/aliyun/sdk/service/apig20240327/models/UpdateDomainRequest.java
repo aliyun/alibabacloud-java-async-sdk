@@ -201,7 +201,7 @@ public class UpdateDomainRequest extends Request {
         } 
 
         /**
-         * <p>Domain ID.</p>
+         * <p>The domain ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -214,7 +214,7 @@ public class UpdateDomainRequest extends Request {
         }
 
         /**
-         * <p>CA certificate identifier</p>
+         * <p>The CA certificate ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1ef1da5f-38ed-69b3-****-037781890265</p>
@@ -226,7 +226,7 @@ public class UpdateDomainRequest extends Request {
         }
 
         /**
-         * <p>Certificate identifier</p>
+         * <p>The certificate ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1ef1da5f-38ed-69b3-****-037781890265</p>
@@ -238,7 +238,7 @@ public class UpdateDomainRequest extends Request {
         }
 
         /**
-         * <p>Client CA Certificate</p>
+         * <p>The client CA certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>-----BEGIN CERTIFICATE-----
@@ -254,7 +254,7 @@ public class UpdateDomainRequest extends Request {
         }
 
         /**
-         * <p>Set the HTTPS protocol type, whether to enable forced HTTPS redirection.</p>
+         * <p>Specifies whether to enable HTTPS redirection. If protocol is set to HTTPS, forceHttps is required.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -266,7 +266,13 @@ public class UpdateDomainRequest extends Request {
         }
 
         /**
-         * <p>HTTP/2 settings.</p>
+         * <p>The HTTP/2 configuration.</p>
+         * <p>Enumerated values:</p>
+         * <ul>
+         * <li>GlobalConfig</li>
+         * <li>Close</li>
+         * <li>Open</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Open</p>
@@ -278,7 +284,7 @@ public class UpdateDomainRequest extends Request {
         }
 
         /**
-         * <p>Whether to enable mTLS mutual authentication</p>
+         * <p>Specifies whether to enable mutual TLS (mTLS) authentication.</p>
          */
         public Builder mTLSEnabled(Boolean mTLSEnabled) {
             this.putBodyParameter("mTLSEnabled", mTLSEnabled);
@@ -287,10 +293,10 @@ public class UpdateDomainRequest extends Request {
         }
 
         /**
-         * <p>The protocol type supported by the domain.</p>
+         * <p>The protocol type to be supported by the domain name. Valid values:</p>
          * <ul>
-         * <li>HTTP: Supports only HTTP protocol.</li>
-         * <li>HTTPS: Supports only HTTPS protocol.</li>
+         * <li>HTTP</li>
+         * <li>HTTPS</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -304,7 +310,7 @@ public class UpdateDomainRequest extends Request {
         }
 
         /**
-         * <p>TLS Cipher Suite Configuration.</p>
+         * <p>The cipher suite configuration.</p>
          */
         public Builder tlsCipherSuitesConfig(TlsCipherSuitesConfig tlsCipherSuitesConfig) {
             this.putBodyParameter("tlsCipherSuitesConfig", tlsCipherSuitesConfig);
@@ -313,7 +319,7 @@ public class UpdateDomainRequest extends Request {
         }
 
         /**
-         * <p>Maximum TLS protocol version, supports up to TLS 1.3.</p>
+         * <p>The maximum TLS version. Up to TLS 1.3 is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>TLS 1.3</p>
@@ -325,7 +331,7 @@ public class UpdateDomainRequest extends Request {
         }
 
         /**
-         * <p>Minimum TLS protocol version, supports down to TLS 1.0.</p>
+         * <p>The minimum TLS version. Down to TLS 1.0 is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>TLS 1.0</p>

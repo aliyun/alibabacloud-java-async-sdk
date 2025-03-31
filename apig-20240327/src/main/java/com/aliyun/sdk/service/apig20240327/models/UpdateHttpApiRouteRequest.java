@@ -143,7 +143,7 @@ public class UpdateHttpApiRouteRequest extends Request {
         } 
 
         /**
-         * <p>The HTTP API ID to which the route belongs.</p>
+         * <p>The ID of the HTTP API for which you want to update the route.</p>
          * 
          * <strong>example:</strong>
          * <p>api-cqoub6tlhtgvof7***</p>
@@ -155,7 +155,7 @@ public class UpdateHttpApiRouteRequest extends Request {
         }
 
         /**
-         * <p>Route ID.</p>
+         * <p>The route ID.</p>
          * 
          * <strong>example:</strong>
          * <p>hr-cr82undlhtgrl***</p>
@@ -167,7 +167,7 @@ public class UpdateHttpApiRouteRequest extends Request {
         }
 
         /**
-         * <p>Backend service configuration for the route.</p>
+         * <p>The backend service configurations of the route.</p>
          */
         public Builder backendConfig(BackendConfig backendConfig) {
             this.putBodyParameter("backendConfig", backendConfig);
@@ -176,7 +176,7 @@ public class UpdateHttpApiRouteRequest extends Request {
         }
 
         /**
-         * <p>Route description.</p>
+         * <p>The route description.</p>
          * 
          * <strong>example:</strong>
          * <p>test route</p>
@@ -188,7 +188,7 @@ public class UpdateHttpApiRouteRequest extends Request {
         }
 
         /**
-         * <p>List of domain IDs.</p>
+         * <p>The domain IDs.</p>
          */
         public Builder domainIds(java.util.List<String> domainIds) {
             this.putBodyParameter("domainIds", domainIds);
@@ -197,7 +197,7 @@ public class UpdateHttpApiRouteRequest extends Request {
         }
 
         /**
-         * <p>Environment ID.</p>
+         * <p>The environment ID.</p>
          * 
          * <strong>example:</strong>
          * <p>env-cquqsollhtgid***</p>
@@ -209,7 +209,7 @@ public class UpdateHttpApiRouteRequest extends Request {
         }
 
         /**
-         * <p>Route match rule.</p>
+         * <p>The rules for matching the route.</p>
          */
         public Builder match(HttpRouteMatch match) {
             this.putBodyParameter("match", match);
@@ -316,7 +316,7 @@ public class UpdateHttpApiRouteRequest extends Request {
             } 
 
             /**
-             * <p>Service port, do not pass in for dynamic ports.</p>
+             * <p>The service port. If you want to use a dynamic port, do not pass this parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>8080</p>
@@ -327,10 +327,10 @@ public class UpdateHttpApiRouteRequest extends Request {
             }
 
             /**
-             * <p>Service protocol:</p>
+             * <p>The protocol. Valid values:</p>
              * <ul>
-             * <li>HTTP.</li>
-             * <li>HTTPS.</li>
+             * <li>HTTP</li>
+             * <li>HTTPS</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -342,7 +342,7 @@ public class UpdateHttpApiRouteRequest extends Request {
             }
 
             /**
-             * <p>Service ID.</p>
+             * <p>The service ID.</p>
              * 
              * <strong>example:</strong>
              * <p>svc-cr6pk4tlhtgm58e***</p>
@@ -353,7 +353,7 @@ public class UpdateHttpApiRouteRequest extends Request {
             }
 
             /**
-             * <p>Service version.</p>
+             * <p>The service version.</p>
              * 
              * <strong>example:</strong>
              * <p>v1</p>
@@ -364,7 +364,7 @@ public class UpdateHttpApiRouteRequest extends Request {
             }
 
             /**
-             * <p>Percentage value of traffic ratio.</p>
+             * <p>The percentage value of traffic.</p>
              * 
              * <strong>example:</strong>
              * <p>49</p>
@@ -434,7 +434,14 @@ public class UpdateHttpApiRouteRequest extends Request {
             } 
 
             /**
-             * <p>Backend service scenario.</p>
+             * <p>The backend service scenario.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>SingleService</li>
+             * <li>MultiServiceByRatio</li>
+             * <li>Redirect</li>
+             * <li>Mock</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>SingleService</p>
@@ -445,7 +452,7 @@ public class UpdateHttpApiRouteRequest extends Request {
             }
 
             /**
-             * <p>List of backend services.</p>
+             * <p>The backend services.</p>
              */
             public Builder services(java.util.List<Services> services) {
                 this.services = services;

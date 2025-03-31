@@ -129,7 +129,7 @@ public class ListServicesRequest extends Request {
         } 
 
         /**
-         * <p>Cloud-native API Gateway ID.</p>
+         * <p>The ID of the Cloud-native API Gateway instance.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-cpv4sqdl*****</p>
@@ -141,7 +141,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * <p>Exact query by service name.</p>
+         * <p>The service name.</p>
          * 
          * <strong>example:</strong>
          * <p>user-service</p>
@@ -153,7 +153,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * <p>Page number, starting from 1. Default is 1 if not specified.</p>
+         * <p>The page number to return. Pages start from page 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -165,7 +165,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * <p>Page size, valid range [1, 100]. Default is 10 if not specified.</p>
+         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -177,7 +177,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * <p>Resource group ID.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmxxe5rc6cvla</p>
@@ -189,13 +189,21 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * <p>Query by service source type. Service sources:</p>
+         * <p>The service source. Valid values:</p>
          * <ul>
-         * <li>MSE_NACOS: Services from MSE Nacos.</li>
-         * <li>K8S: Services from K8S clusters in container services.</li>
-         * <li>FC3: Services from function computing.</li>
-         * <li>VIP: Services from a fixed address.</li>
-         * <li>DNS: Services from a domain name.</li>
+         * <li>MSE_NACOS: a service in an MSE Nacos instance</li>
+         * <li>K8S: a service in a Kubernetes (K8s) cluster in Container Service for Kubernetes (ACK)</li>
+         * <li>FC3: a service in Function Compute</li>
+         * <li>VIP: a fixed address</li>
+         * <li>DNS: a domain name</li>
+         * </ul>
+         * <p>Enumerated values:</p>
+         * <ul>
+         * <li>K8S</li>
+         * <li>FC3</li>
+         * <li>DNS</li>
+         * <li>VIP</li>
+         * <li>MSE_NACOS</li>
          * </ul>
          * 
          * <strong>example:</strong>

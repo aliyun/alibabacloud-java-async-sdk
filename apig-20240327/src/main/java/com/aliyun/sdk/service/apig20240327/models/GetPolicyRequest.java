@@ -60,7 +60,7 @@ public class GetPolicyRequest extends Request {
         } 
 
         /**
-         * <p>Policy ID.</p>
+         * <p>The policy ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

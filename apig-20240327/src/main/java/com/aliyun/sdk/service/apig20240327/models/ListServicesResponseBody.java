@@ -93,7 +93,7 @@ public class ListServicesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Response status code.</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>Ok</p>
@@ -104,7 +104,7 @@ public class ListServicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Response data.</p>
+         * <p>The response parameters.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -112,7 +112,7 @@ public class ListServicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Response message.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -123,7 +123,7 @@ public class ListServicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>585657D2-1C20-5B8A-AF17-D727C6490BE4</p>
@@ -218,7 +218,7 @@ public class ListServicesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Service list.</p>
+             * <p>The services.</p>
              */
             public Builder items(java.util.List<Service> items) {
                 this.items = items;
@@ -226,7 +226,7 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Page number.</p>
+             * <p>The page number of the returned page.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -237,7 +237,7 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Page size.</p>
+             * <p>The number of entries per page.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -248,7 +248,7 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Total count.</p>
+             * <p>The total number of entries returned.</p>
              * 
              * <strong>example:</strong>
              * <p>18</p>

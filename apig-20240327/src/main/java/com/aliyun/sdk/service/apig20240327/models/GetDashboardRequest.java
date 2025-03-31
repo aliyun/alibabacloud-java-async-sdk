@@ -42,8 +42,16 @@ public class GetDashboardRequest extends Request {
     private String pluginClassId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pluginId")
+    private String pluginId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("source")
     private String source;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("upstreamCluster")
+    private String upstreamCluster;
 
     private GetDashboardRequest(Builder builder) {
         super(builder);
@@ -53,7 +61,9 @@ public class GetDashboardRequest extends Request {
         this.filter = builder.filter;
         this.name = builder.name;
         this.pluginClassId = builder.pluginClassId;
+        this.pluginId = builder.pluginId;
         this.source = builder.source;
+        this.upstreamCluster = builder.upstreamCluster;
     }
 
     public static Builder builder() {
@@ -112,10 +122,24 @@ public class GetDashboardRequest extends Request {
     }
 
     /**
+     * @return pluginId
+     */
+    public String getPluginId() {
+        return this.pluginId;
+    }
+
+    /**
      * @return source
      */
     public String getSource() {
         return this.source;
+    }
+
+    /**
+     * @return upstreamCluster
+     */
+    public String getUpstreamCluster() {
+        return this.upstreamCluster;
     }
 
     public static final class Builder extends Request.Builder<GetDashboardRequest, Builder> {
@@ -125,7 +149,9 @@ public class GetDashboardRequest extends Request {
         private Filter filter; 
         private String name; 
         private String pluginClassId; 
+        private String pluginId; 
         private String source; 
+        private String upstreamCluster; 
 
         private Builder() {
             super();
@@ -139,11 +165,13 @@ public class GetDashboardRequest extends Request {
             this.filter = request.filter;
             this.name = request.name;
             this.pluginClassId = request.pluginClassId;
+            this.pluginId = request.pluginId;
             this.source = request.source;
+            this.upstreamCluster = request.upstreamCluster;
         } 
 
         /**
-         * <p>Gateway unique identifier</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-co370icmjeu****</p>
@@ -155,8 +183,7 @@ public class GetDashboardRequest extends Request {
         }
 
         /**
-         * <p>zh: Chinese
-         * en: English</p>
+         * <p>The language. Valid values: zh (Chinese) and en (English).</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>
@@ -180,7 +207,7 @@ public class GetDashboardRequest extends Request {
         }
 
         /**
-         * <p>Filter configuration</p>
+         * <p>The filter configurations.</p>
          */
         public Builder filter(Filter filter) {
             String filterShrink = shrink(filter, "filter", "json");
@@ -190,10 +217,10 @@ public class GetDashboardRequest extends Request {
         }
 
         /**
-         * <p>Dashboard name:</p>
+         * <p>The dashboard name.</p>
          * <ul>
-         * <li>LOG: Access log</li>
-         * <li>PLUGIN: Plugin log</li>
+         * <li>LOG: access logs</li>
+         * <li>PLUGIN: plug-in logs</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -206,7 +233,7 @@ public class GetDashboardRequest extends Request {
         }
 
         /**
-         * <p>Plugin ID.</p>
+         * <p>The plug-in ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pls-dn82a9djd8z****</p>
@@ -218,9 +245,18 @@ public class GetDashboardRequest extends Request {
         }
 
         /**
-         * <p>Dashboard source:</p>
+         * pluginId.
+         */
+        public Builder pluginId(String pluginId) {
+            this.putQueryParameter("pluginId", pluginId);
+            this.pluginId = pluginId;
+            return this;
+        }
+
+        /**
+         * <p>The dashboard source. Valid values:</p>
          * <ul>
-         * <li>SLS: Log dashboard</li>
+         * <li>SLS: Simple Log Service</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -229,6 +265,15 @@ public class GetDashboardRequest extends Request {
         public Builder source(String source) {
             this.putQueryParameter("source", source);
             this.source = source;
+            return this;
+        }
+
+        /**
+         * upstreamCluster.
+         */
+        public Builder upstreamCluster(String upstreamCluster) {
+            this.putQueryParameter("upstreamCluster", upstreamCluster);
+            this.upstreamCluster = upstreamCluster;
             return this;
         }
 
@@ -279,7 +324,7 @@ public class GetDashboardRequest extends Request {
             } 
 
             /**
-             * <p>Route name</p>
+             * <p>The route name.</p>
              * 
              * <strong>example:</strong>
              * <p>test-route</p>

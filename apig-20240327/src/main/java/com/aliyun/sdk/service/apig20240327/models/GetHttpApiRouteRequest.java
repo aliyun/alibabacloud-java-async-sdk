@@ -73,7 +73,7 @@ public class GetHttpApiRouteRequest extends Request {
         } 
 
         /**
-         * <p>HTTP API ID.</p>
+         * <p>The HTTP API ID.</p>
          * 
          * <strong>example:</strong>
          * <p>api-cqu95allhtgii6***</p>
@@ -85,7 +85,7 @@ public class GetHttpApiRouteRequest extends Request {
         }
 
         /**
-         * <p>Route ID.</p>
+         * <p>The route ID.</p>
          * 
          * <strong>example:</strong>
          * <p>hr-cr82undlhtgrl***</p>

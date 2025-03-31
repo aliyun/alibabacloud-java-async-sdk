@@ -93,7 +93,7 @@ public class ListHttpApiRoutesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Response status code.</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>Ok</p>
@@ -104,7 +104,7 @@ public class ListHttpApiRoutesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Response data.</p>
+         * <p>The response parameters.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -112,7 +112,7 @@ public class ListHttpApiRoutesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Response message.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -123,7 +123,7 @@ public class ListHttpApiRoutesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>CBEEB8C1-108E-50F0-9BEA-DED79553C309</p>
@@ -218,7 +218,7 @@ public class ListHttpApiRoutesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>List of routes.</p>
+             * <p>The routes.</p>
              */
             public Builder items(java.util.List<HttpRoute> items) {
                 this.items = items;
@@ -226,7 +226,7 @@ public class ListHttpApiRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Page number.</p>
+             * <p>The page number of the returned page.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -237,7 +237,7 @@ public class ListHttpApiRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Page size.</p>
+             * <p>The number of entries per page.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -248,7 +248,7 @@ public class ListHttpApiRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Total number of items.</p>
+             * <p>The total number of entries returned.</p>
              * 
              * <strong>example:</strong>
              * <p>9</p>
