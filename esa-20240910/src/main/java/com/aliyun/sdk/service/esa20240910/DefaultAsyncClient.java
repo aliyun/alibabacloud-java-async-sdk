@@ -2291,6 +2291,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetCrossBorderOptimization  GetCrossBorderOptimizationRequest
+     * @return GetCrossBorderOptimizationResponse
+     */
+    @Override
+    public CompletableFuture<GetCrossBorderOptimizationResponse> getCrossBorderOptimization(GetCrossBorderOptimizationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetCrossBorderOptimization").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetCrossBorderOptimizationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetCrossBorderOptimizationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetDevelopmentMode  GetDevelopmentModeRequest
      * @return GetDevelopmentModeResponse
      */
@@ -4826,6 +4844,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateCompressionRuleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateCrossBorderOptimization  UpdateCrossBorderOptimizationRequest
+     * @return UpdateCrossBorderOptimizationResponse
+     */
+    @Override
+    public CompletableFuture<UpdateCrossBorderOptimizationResponse> updateCrossBorderOptimization(UpdateCrossBorderOptimizationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateCrossBorderOptimization").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateCrossBorderOptimizationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateCrossBorderOptimizationResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

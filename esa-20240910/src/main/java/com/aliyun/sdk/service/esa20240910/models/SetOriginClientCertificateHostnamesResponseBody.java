@@ -27,7 +27,7 @@ public class SetOriginClientCertificateHostnamesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SiteId")
-    private String siteId;
+    private Long siteId;
 
     @com.aliyun.core.annotation.NameInMap("SiteName")
     private String siteName;
@@ -76,7 +76,7 @@ public class SetOriginClientCertificateHostnamesResponseBody extends TeaModel {
     /**
      * @return siteId
      */
-    public String getSiteId() {
+    public Long getSiteId() {
         return this.siteId;
     }
 
@@ -91,7 +91,7 @@ public class SetOriginClientCertificateHostnamesResponseBody extends TeaModel {
         private java.util.List<String> hostnames; 
         private String id; 
         private String requestId; 
-        private String siteId; 
+        private Long siteId; 
         private String siteName; 
 
         private Builder() {
@@ -141,7 +141,7 @@ public class SetOriginClientCertificateHostnamesResponseBody extends TeaModel {
          * <strong>example:</strong>
          * <p>123456789****</p>
          */
-        public Builder siteId(String siteId) {
+        public Builder siteId(Long siteId) {
             this.siteId = siteId;
             return this;
         }

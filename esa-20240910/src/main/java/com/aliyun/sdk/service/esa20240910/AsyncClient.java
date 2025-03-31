@@ -807,6 +807,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetCompressionRuleResponse> getCompressionRule(GetCompressionRuleRequest request);
 
     /**
+     * @param request the request parameters of GetCrossBorderOptimization  GetCrossBorderOptimizationRequest
+     * @return GetCrossBorderOptimizationResponse
+     */
+    CompletableFuture<GetCrossBorderOptimizationResponse> getCrossBorderOptimization(GetCrossBorderOptimizationRequest request);
+
+    /**
      * @param request the request parameters of GetDevelopmentMode  GetDevelopmentModeRequest
      * @return GetDevelopmentModeResponse
      */
@@ -1702,6 +1708,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateCompressionRuleResponse
      */
     CompletableFuture<UpdateCompressionRuleResponse> updateCompressionRule(UpdateCompressionRuleRequest request);
+
+    /**
+     * @param request the request parameters of UpdateCrossBorderOptimization  UpdateCrossBorderOptimizationRequest
+     * @return UpdateCrossBorderOptimizationResponse
+     */
+    CompletableFuture<UpdateCrossBorderOptimizationResponse> updateCrossBorderOptimization(UpdateCrossBorderOptimizationRequest request);
 
     /**
      * @param request the request parameters of UpdateCustomScenePolicy  UpdateCustomScenePolicyRequest
