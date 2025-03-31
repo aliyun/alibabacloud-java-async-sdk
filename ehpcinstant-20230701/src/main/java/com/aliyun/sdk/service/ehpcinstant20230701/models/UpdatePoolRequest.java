@@ -45,7 +45,7 @@ public class UpdatePoolRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -156,6 +156,13 @@ public class UpdatePoolRequest extends Request {
 
         public static final class Builder {
             private Integer maxExectorNum; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceLimits model) {
+                this.maxExectorNum = model.maxExectorNum;
+            } 
 
             /**
              * MaxExectorNum.

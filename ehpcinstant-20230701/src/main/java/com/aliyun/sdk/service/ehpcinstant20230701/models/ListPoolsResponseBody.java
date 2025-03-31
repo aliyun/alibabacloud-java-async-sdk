@@ -48,6 +48,10 @@ public class ListPoolsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class ListPoolsResponseBody extends TeaModel {
         private java.util.List<PoolList> poolList; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListPoolsResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.poolList = model.poolList;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * PageNumber.
@@ -218,6 +233,17 @@ public class ListPoolsResponseBody extends TeaModel {
             private String poolName; 
             private Integer priority; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(PoolList model) {
+                this.isDefault = model.isDefault;
+                this.maxExectorNum = model.maxExectorNum;
+                this.poolName = model.poolName;
+                this.priority = model.priority;
+                this.status = model.status;
+            } 
 
             /**
              * IsDefault.

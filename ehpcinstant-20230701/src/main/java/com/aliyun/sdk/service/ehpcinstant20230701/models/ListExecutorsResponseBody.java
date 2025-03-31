@@ -48,6 +48,10 @@ public class ListExecutorsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return executors
      */
@@ -89,6 +93,17 @@ public class ListExecutorsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private String totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListExecutorsResponseBody model) {
+            this.executors = model.executors;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Executors.
@@ -180,6 +195,14 @@ public class ListExecutorsResponseBody extends TeaModel {
             private Integer size; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Disks model) {
+                this.size = model.size;
+                this.type = model.type;
+            } 
+
             /**
              * Size.
              */
@@ -259,6 +282,15 @@ public class ListExecutorsResponseBody extends TeaModel {
             private java.util.List<Disks> disks; 
             private Float memory; 
 
+            private Builder() {
+            } 
+
+            private Builder(Resource model) {
+                this.cores = model.cores;
+                this.disks = model.disks;
+                this.memory = model.memory;
+            } 
+
             /**
              * Cores.
              */
@@ -333,6 +365,14 @@ public class ListExecutorsResponseBody extends TeaModel {
         public static final class Builder {
             private String tagKey; 
             private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
 
             /**
              * TagKey.
@@ -628,6 +668,33 @@ public class ListExecutorsResponseBody extends TeaModel {
             private String taskName; 
             private Boolean taskSustainable; 
             private String vswitchId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Executors model) {
+                this.appName = model.appName;
+                this.arrayIndex = model.arrayIndex;
+                this.createTime = model.createTime;
+                this.endTime = model.endTime;
+                this.executorId = model.executorId;
+                this.expirationTime = model.expirationTime;
+                this.externalIpAddress = model.externalIpAddress;
+                this.hostName = model.hostName;
+                this.image = model.image;
+                this.ipAddress = model.ipAddress;
+                this.jobId = model.jobId;
+                this.jobName = model.jobName;
+                this.resource = model.resource;
+                this.resourceType = model.resourceType;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.statusReason = model.statusReason;
+                this.tags = model.tags;
+                this.taskName = model.taskName;
+                this.taskSustainable = model.taskSustainable;
+                this.vswitchId = model.vswitchId;
+            } 
 
             /**
              * AppName.

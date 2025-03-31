@@ -52,6 +52,10 @@ public class GetAppVersionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return appVersions
      */
@@ -101,6 +105,18 @@ public class GetAppVersionsResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAppVersionsResponseBody model) {
+            this.appVersions = model.appVersions;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * AppVersions.
@@ -212,6 +228,15 @@ public class GetAppVersionsResponseBody extends TeaModel {
             private String imageId; 
             private String name; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(AppVersions model) {
+                this.imageId = model.imageId;
+                this.name = model.name;
+                this.version = model.version;
+            } 
 
             /**
              * <p>This parameter is required.</p>

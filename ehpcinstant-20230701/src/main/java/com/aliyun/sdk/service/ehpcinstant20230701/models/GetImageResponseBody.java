@@ -44,6 +44,10 @@ public class GetImageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return image
      */
@@ -77,6 +81,16 @@ public class GetImageResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetImageResponseBody model) {
+            this.image = model.image;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Image.
@@ -171,6 +185,15 @@ public class GetImageResponseBody extends TeaModel {
             private String password; 
             private String server; 
             private String userName; 
+
+            private Builder() {
+            } 
+
+            private Builder(RegistryCredential model) {
+                this.password = model.password;
+                this.server = model.server;
+                this.userName = model.userName;
+            } 
 
             /**
              * Password.
@@ -319,6 +342,20 @@ public class GetImageResponseBody extends TeaModel {
             private String registryCriId; 
             private String registryUrl; 
 
+            private Builder() {
+            } 
+
+            private Builder(ContainerImageSpec model) {
+                this.architecture = model.architecture;
+                this.isACREnterprise = model.isACREnterprise;
+                this.isACRRegistry = model.isACRRegistry;
+                this.osTag = model.osTag;
+                this.platform = model.platform;
+                this.registryCredential = model.registryCredential;
+                this.registryCriId = model.registryCriId;
+                this.registryUrl = model.registryUrl;
+            } 
+
             /**
              * Architecture.
              */
@@ -446,6 +483,15 @@ public class GetImageResponseBody extends TeaModel {
             private String documentId; 
             private String encodingMode; 
 
+            private Builder() {
+            } 
+
+            private Builder(DocumentInfo model) {
+                this.document = model.document;
+                this.documentId = model.documentId;
+                this.encodingMode = model.encodingMode;
+            } 
+
             /**
              * Document.
              */
@@ -544,6 +590,16 @@ public class GetImageResponseBody extends TeaModel {
             private String imageId; 
             private String osTag; 
             private String platform; 
+
+            private Builder() {
+            } 
+
+            private Builder(VMImageSpec model) {
+                this.architecture = model.architecture;
+                this.imageId = model.imageId;
+                this.osTag = model.osTag;
+                this.platform = model.platform;
+            } 
 
             /**
              * Architecture.
@@ -736,6 +792,23 @@ public class GetImageResponseBody extends TeaModel {
             private String status; 
             private VMImageSpec VMImageSpec; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(Image model) {
+                this.appId = model.appId;
+                this.containerImageSpec = model.containerImageSpec;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.documentInfo = model.documentInfo;
+                this.imageType = model.imageType;
+                this.name = model.name;
+                this.size = model.size;
+                this.status = model.status;
+                this.VMImageSpec = model.VMImageSpec;
+                this.version = model.version;
+            } 
 
             /**
              * AppId.

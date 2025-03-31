@@ -36,6 +36,10 @@ public class DescribeJobMetricLastResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return metrics
      */
@@ -53,6 +57,14 @@ public class DescribeJobMetricLastResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Metrics> metrics; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeJobMetricLastResponseBody model) {
+            this.metrics = model.metrics;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Metrics.
@@ -119,6 +131,14 @@ public class DescribeJobMetricLastResponseBody extends TeaModel {
         public static final class Builder {
             private Integer arrayIndex; 
             private String metric; 
+
+            private Builder() {
+            } 
+
+            private Builder(Metrics model) {
+                this.arrayIndex = model.arrayIndex;
+                this.metric = model.metric;
+            } 
 
             /**
              * ArrayIndex.

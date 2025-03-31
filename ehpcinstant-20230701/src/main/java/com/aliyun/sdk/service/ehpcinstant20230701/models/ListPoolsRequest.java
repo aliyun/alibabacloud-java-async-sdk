@@ -44,7 +44,7 @@ public class ListPoolsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -188,6 +188,16 @@ public class ListPoolsRequest extends Request {
             private java.util.List<String> status; 
             private Integer timeCreatedAfter; 
             private Integer timeCreatedBefore; 
+
+            private Builder() {
+            } 
+
+            private Builder(Filter model) {
+                this.poolName = model.poolName;
+                this.status = model.status;
+                this.timeCreatedAfter = model.timeCreatedAfter;
+                this.timeCreatedBefore = model.timeCreatedBefore;
+            } 
 
             /**
              * PoolName.

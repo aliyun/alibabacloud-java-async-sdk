@@ -60,7 +60,7 @@ public class AddImageRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -251,6 +251,15 @@ public class AddImageRequest extends Request {
             private String server; 
             private String userName; 
 
+            private Builder() {
+            } 
+
+            private Builder(RegistryCredential model) {
+                this.password = model.password;
+                this.server = model.server;
+                this.userName = model.userName;
+            } 
+
             /**
              * Password.
              */
@@ -362,6 +371,17 @@ public class AddImageRequest extends Request {
             private String registryCriId; 
             private String registryUrl; 
 
+            private Builder() {
+            } 
+
+            private Builder(ContainerImageSpec model) {
+                this.isACREnterprise = model.isACREnterprise;
+                this.isACRRegistry = model.isACRRegistry;
+                this.registryCredential = model.registryCredential;
+                this.registryCriId = model.registryCriId;
+                this.registryUrl = model.registryUrl;
+            } 
+
             /**
              * IsACREnterprise.
              */
@@ -440,6 +460,13 @@ public class AddImageRequest extends Request {
 
         public static final class Builder {
             private String imageId; 
+
+            private Builder() {
+            } 
+
+            private Builder(VMImageSpec model) {
+                this.imageId = model.imageId;
+            } 
 
             /**
              * ImageId.

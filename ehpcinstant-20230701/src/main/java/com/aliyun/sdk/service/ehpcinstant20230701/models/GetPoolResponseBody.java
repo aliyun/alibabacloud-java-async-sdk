@@ -36,6 +36,10 @@ public class GetPoolResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return poolInfo
      */
@@ -53,6 +57,14 @@ public class GetPoolResponseBody extends TeaModel {
     public static final class Builder {
         private PoolInfo poolInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetPoolResponseBody model) {
+            this.poolInfo = model.poolInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * PoolInfo.
@@ -206,6 +218,21 @@ public class GetPoolResponseBody extends TeaModel {
             private String reason; 
             private String status; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(PoolInfo model) {
+                this.createTime = model.createTime;
+                this.exectorUsage = model.exectorUsage;
+                this.isDefault = model.isDefault;
+                this.maxExectorNum = model.maxExectorNum;
+                this.poolName = model.poolName;
+                this.priority = model.priority;
+                this.reason = model.reason;
+                this.status = model.status;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * CreateTime.

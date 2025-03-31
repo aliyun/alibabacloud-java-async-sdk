@@ -40,6 +40,10 @@ public class DescribeJobMetricDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataPoints
      */
@@ -65,6 +69,15 @@ public class DescribeJobMetricDataResponseBody extends TeaModel {
         private String dataPoints; 
         private Integer period; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeJobMetricDataResponseBody model) {
+            this.dataPoints = model.dataPoints;
+            this.period = model.period;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * DataPoints.

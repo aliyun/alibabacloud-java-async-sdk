@@ -36,6 +36,10 @@ public class GetJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return jobInfo
      */
@@ -53,6 +57,14 @@ public class GetJobResponseBody extends TeaModel {
     public static final class Builder {
         private JobInfo jobInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetJobResponseBody model) {
+            this.jobInfo = model.jobInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * JobInfo.
@@ -132,6 +144,15 @@ public class GetJobResponseBody extends TeaModel {
             private Boolean enableExternalIpAddress; 
             private java.util.List<String> vswitch; 
 
+            private Builder() {
+            } 
+
+            private Builder(Network model) {
+                this.enableENIMapping = model.enableENIMapping;
+                this.enableExternalIpAddress = model.enableExternalIpAddress;
+                this.vswitch = model.vswitch;
+            } 
+
             /**
              * EnableENIMapping.
              */
@@ -207,6 +228,14 @@ public class GetJobResponseBody extends TeaModel {
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
              * TagKey.
              */
@@ -240,6 +269,9 @@ public class GetJobResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllocationSpec")
         private String allocationSpec;
 
+        @com.aliyun.core.annotation.NameInMap("Level")
+        private String level;
+
         @com.aliyun.core.annotation.NameInMap("Network")
         private Network network;
 
@@ -248,6 +280,7 @@ public class GetJobResponseBody extends TeaModel {
 
         private DeploymentPolicy(Builder builder) {
             this.allocationSpec = builder.allocationSpec;
+            this.level = builder.level;
             this.network = builder.network;
             this.tags = builder.tags;
         }
@@ -268,6 +301,13 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
+         * @return level
+         */
+        public String getLevel() {
+            return this.level;
+        }
+
+        /**
          * @return network
          */
         public Network getNetwork() {
@@ -283,14 +323,33 @@ public class GetJobResponseBody extends TeaModel {
 
         public static final class Builder {
             private String allocationSpec; 
+            private String level; 
             private Network network; 
             private java.util.List<Tags> tags; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeploymentPolicy model) {
+                this.allocationSpec = model.allocationSpec;
+                this.level = model.level;
+                this.network = model.network;
+                this.tags = model.tags;
+            } 
 
             /**
              * AllocationSpec.
              */
             public Builder allocationSpec(String allocationSpec) {
                 this.allocationSpec = allocationSpec;
+                return this;
+            }
+
+            /**
+             * Level.
+             */
+            public Builder level(String level) {
+                this.level = level;
                 return this;
             }
 
@@ -373,6 +432,15 @@ public class GetJobResponseBody extends TeaModel {
             private Integer indexStart; 
             private Integer indexStep; 
 
+            private Builder() {
+            } 
+
+            private Builder(ArraySpec model) {
+                this.indexEnd = model.indexEnd;
+                this.indexStart = model.indexStart;
+                this.indexStep = model.indexStep;
+            } 
+
             /**
              * IndexEnd.
              */
@@ -447,6 +515,14 @@ public class GetJobResponseBody extends TeaModel {
         public static final class Builder {
             private ArraySpec arraySpec; 
             private Integer maxCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(ExecutorPolicy model) {
+                this.arraySpec = model.arraySpec;
+                this.maxCount = model.maxCount;
+            } 
 
             /**
              * ArraySpec.
@@ -563,6 +639,18 @@ public class GetJobResponseBody extends TeaModel {
             private String status; 
             private String statusReason; 
 
+            private Builder() {
+            } 
+
+            private Builder(ExecutorStatus model) {
+                this.arrayId = model.arrayId;
+                this.createTime = model.createTime;
+                this.endTime = model.endTime;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.statusReason = model.statusReason;
+            } 
+
             /**
              * ArrayId.
              */
@@ -662,6 +750,14 @@ public class GetJobResponseBody extends TeaModel {
             private Integer size; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Disks model) {
+                this.size = model.size;
+                this.type = model.type;
+            } 
+
             /**
              * Size.
              */
@@ -740,6 +836,15 @@ public class GetJobResponseBody extends TeaModel {
             private Float cores; 
             private java.util.List<Disks> disks; 
             private Integer memory; 
+
+            private Builder() {
+            } 
+
+            private Builder(Resource model) {
+                this.cores = model.cores;
+                this.disks = model.disks;
+                this.memory = model.memory;
+            } 
 
             /**
              * Cores.
@@ -828,6 +933,15 @@ public class GetJobResponseBody extends TeaModel {
             private String prologScript; 
             private String script; 
 
+            private Builder() {
+            } 
+
+            private Builder(Vm model) {
+                this.image = model.image;
+                this.prologScript = model.prologScript;
+                this.script = model.script;
+            } 
+
             /**
              * Image.
              */
@@ -891,6 +1005,13 @@ public class GetJobResponseBody extends TeaModel {
         public static final class Builder {
             private Vm vm; 
 
+            private Builder() {
+            } 
+
+            private Builder(TaskExecutor model) {
+                this.vm = model.vm;
+            } 
+
             /**
              * VM.
              */
@@ -949,6 +1070,14 @@ public class GetJobResponseBody extends TeaModel {
         public static final class Builder {
             private Resource resource; 
             private java.util.List<TaskExecutor> taskExecutor; 
+
+            private Builder() {
+            } 
+
+            private Builder(TaskSpec model) {
+                this.resource = model.resource;
+                this.taskExecutor = model.taskExecutor;
+            } 
 
             /**
              * Resource.
@@ -1052,6 +1181,17 @@ public class GetJobResponseBody extends TeaModel {
             private String taskName; 
             private TaskSpec taskSpec; 
             private Boolean taskSustainable; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tasks model) {
+                this.executorPolicy = model.executorPolicy;
+                this.executorStatus = model.executorStatus;
+                this.taskName = model.taskName;
+                this.taskSpec = model.taskSpec;
+                this.taskSustainable = model.taskSustainable;
+            } 
 
             /**
              * ExecutorPolicy.
@@ -1239,6 +1379,22 @@ public class GetJobResponseBody extends TeaModel {
             private String startTime; 
             private String status; 
             private java.util.List<Tasks> tasks; 
+
+            private Builder() {
+            } 
+
+            private Builder(JobInfo model) {
+                this.createTime = model.createTime;
+                this.deploymentPolicy = model.deploymentPolicy;
+                this.endTime = model.endTime;
+                this.jobDescription = model.jobDescription;
+                this.jobId = model.jobId;
+                this.jobName = model.jobName;
+                this.jobScheduler = model.jobScheduler;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.tasks = model.tasks;
+            } 
 
             /**
              * CreateTime.

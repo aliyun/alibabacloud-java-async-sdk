@@ -49,7 +49,7 @@ public class ListJobsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -225,6 +225,17 @@ public class ListJobsRequest extends Request {
             private Integer timeCreatedAfter; 
             private Integer timeCreatedBefore; 
 
+            private Builder() {
+            } 
+
+            private Builder(Filter model) {
+                this.jobId = model.jobId;
+                this.jobName = model.jobName;
+                this.status = model.status;
+                this.timeCreatedAfter = model.timeCreatedAfter;
+                this.timeCreatedBefore = model.timeCreatedBefore;
+            } 
+
             /**
              * JobId.
              */
@@ -315,6 +326,14 @@ public class ListJobsRequest extends Request {
         public static final class Builder {
             private String label; 
             private String order; 
+
+            private Builder() {
+            } 
+
+            private Builder(SortBy model) {
+                this.label = model.label;
+                this.order = model.order;
+            } 
 
             /**
              * Label.

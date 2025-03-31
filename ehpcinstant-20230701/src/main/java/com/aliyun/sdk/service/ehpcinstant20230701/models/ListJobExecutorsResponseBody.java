@@ -60,6 +60,10 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return executorStatus
      */
@@ -125,6 +129,20 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         private String requestId; 
         private String taskName; 
         private String totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListJobExecutorsResponseBody model) {
+            this.executorStatus = model.executorStatus;
+            this.executors = model.executors;
+            this.jobId = model.jobId;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.taskName = model.taskName;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * ExecutorStatus.
@@ -300,6 +318,19 @@ public class ListJobExecutorsResponseBody extends TeaModel {
             private Integer running; 
             private Integer succeeded; 
 
+            private Builder() {
+            } 
+
+            private Builder(ExecutorStatus model) {
+                this.deleted = model.deleted;
+                this.exception = model.exception;
+                this.failed = model.failed;
+                this.initing = model.initing;
+                this.pending = model.pending;
+                this.running = model.running;
+                this.succeeded = model.succeeded;
+            } 
+
             /**
              * Deleted.
              */
@@ -406,6 +437,14 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         public static final class Builder {
             private String tagKey; 
             private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
 
             /**
              * TagKey.
@@ -593,6 +632,24 @@ public class ListJobExecutorsResponseBody extends TeaModel {
             private String status; 
             private String statusReason; 
             private java.util.List<Tags> tags; 
+
+            private Builder() {
+            } 
+
+            private Builder(Executors model) {
+                this.arrayIndex = model.arrayIndex;
+                this.createTime = model.createTime;
+                this.endTime = model.endTime;
+                this.executorId = model.executorId;
+                this.expirationTime = model.expirationTime;
+                this.externalIpAddress = model.externalIpAddress;
+                this.hostName = model.hostName;
+                this.ipAddress = model.ipAddress;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.statusReason = model.statusReason;
+                this.tags = model.tags;
+            } 
 
             /**
              * ArrayIndex.

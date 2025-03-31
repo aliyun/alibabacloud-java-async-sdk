@@ -40,6 +40,10 @@ public class AddImageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return imageId
      */
@@ -65,6 +69,15 @@ public class AddImageResponseBody extends TeaModel {
         private String imageId; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(AddImageResponseBody model) {
+            this.imageId = model.imageId;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * ImageId.

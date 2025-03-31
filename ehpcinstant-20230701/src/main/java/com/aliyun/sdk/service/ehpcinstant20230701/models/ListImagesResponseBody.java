@@ -52,6 +52,10 @@ public class ListImagesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return images
      */
@@ -101,6 +105,18 @@ public class ListImagesResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListImagesResponseBody model) {
+            this.images = model.images;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Images.
@@ -310,6 +326,23 @@ public class ListImagesResponseBody extends TeaModel {
             private String updateTime; 
             private String version; 
             private Integer weight; 
+
+            private Builder() {
+            } 
+
+            private Builder(Images model) {
+                this.appId = model.appId;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.documentId = model.documentId;
+                this.imageId = model.imageId;
+                this.imageType = model.imageType;
+                this.name = model.name;
+                this.osTag = model.osTag;
+                this.updateTime = model.updateTime;
+                this.version = model.version;
+                this.weight = model.weight;
+            } 
 
             /**
              * <p>This parameter is required.</p>

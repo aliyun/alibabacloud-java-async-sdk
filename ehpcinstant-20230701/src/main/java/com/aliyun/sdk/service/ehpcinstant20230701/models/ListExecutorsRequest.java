@@ -44,7 +44,7 @@ public class ListExecutorsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -212,6 +212,18 @@ public class ListExecutorsRequest extends Request {
             private java.util.List<String> status; 
             private Integer timeCreatedAfter; 
             private Integer timeCreatedBefore; 
+
+            private Builder() {
+            } 
+
+            private Builder(Filter model) {
+                this.executorIds = model.executorIds;
+                this.ipAddresses = model.ipAddresses;
+                this.jobName = model.jobName;
+                this.status = model.status;
+                this.timeCreatedAfter = model.timeCreatedAfter;
+                this.timeCreatedBefore = model.timeCreatedBefore;
+            } 
 
             /**
              * ExecutorIds.

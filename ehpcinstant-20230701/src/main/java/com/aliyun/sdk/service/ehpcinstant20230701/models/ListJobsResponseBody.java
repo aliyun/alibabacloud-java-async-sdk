@@ -48,6 +48,10 @@ public class ListJobsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return jobList
      */
@@ -89,6 +93,17 @@ public class ListJobsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListJobsResponseBody model) {
+            this.jobList = model.jobList;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * JobList.
@@ -179,6 +194,14 @@ public class ListJobsResponseBody extends TeaModel {
         public static final class Builder {
             private String tagKey; 
             private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
 
             /**
              * TagKey.
@@ -378,6 +401,25 @@ public class ListJobsResponseBody extends TeaModel {
             private java.util.List<Tags> tags; 
             private Integer taskCount; 
             private Boolean taskSustainable; 
+
+            private Builder() {
+            } 
+
+            private Builder(JobList model) {
+                this.appName = model.appName;
+                this.createTime = model.createTime;
+                this.endTime = model.endTime;
+                this.executorCount = model.executorCount;
+                this.jobDescription = model.jobDescription;
+                this.jobId = model.jobId;
+                this.jobName = model.jobName;
+                this.ownerUid = model.ownerUid;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.taskCount = model.taskCount;
+                this.taskSustainable = model.taskSustainable;
+            } 
 
             /**
              * AppName.

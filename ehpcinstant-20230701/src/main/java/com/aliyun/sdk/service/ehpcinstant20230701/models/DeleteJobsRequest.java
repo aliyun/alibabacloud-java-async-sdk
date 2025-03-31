@@ -39,7 +39,7 @@ public class DeleteJobsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -143,6 +143,14 @@ public class DeleteJobsRequest extends Request {
             private java.util.List<Integer> arrayIndex; 
             private String taskName; 
 
+            private Builder() {
+            } 
+
+            private Builder(TaskSpec model) {
+                this.arrayIndex = model.arrayIndex;
+                this.taskName = model.taskName;
+            } 
+
             /**
              * ArrayIndex.
              */
@@ -209,6 +217,14 @@ public class DeleteJobsRequest extends Request {
         public static final class Builder {
             private String jobId; 
             private java.util.List<TaskSpec> taskSpec; 
+
+            private Builder() {
+            } 
+
+            private Builder(JobSpec model) {
+                this.jobId = model.jobId;
+                this.taskSpec = model.taskSpec;
+            } 
 
             /**
              * JobId.

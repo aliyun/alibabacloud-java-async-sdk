@@ -61,7 +61,7 @@ public class CreateJobRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -241,6 +241,14 @@ public class CreateJobRequest extends Request {
             private Boolean enableExternalIpAddress; 
             private java.util.List<String> vswitch; 
 
+            private Builder() {
+            } 
+
+            private Builder(Network model) {
+                this.enableExternalIpAddress = model.enableExternalIpAddress;
+                this.vswitch = model.vswitch;
+            } 
+
             /**
              * EnableExternalIpAddress.
              */
@@ -309,6 +317,14 @@ public class CreateJobRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              */
@@ -342,6 +358,9 @@ public class CreateJobRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("AllocationSpec")
         private String allocationSpec;
 
+        @com.aliyun.core.annotation.NameInMap("Level")
+        private String level;
+
         @com.aliyun.core.annotation.NameInMap("Network")
         private Network network;
 
@@ -350,6 +369,7 @@ public class CreateJobRequest extends Request {
 
         private DeploymentPolicy(Builder builder) {
             this.allocationSpec = builder.allocationSpec;
+            this.level = builder.level;
             this.network = builder.network;
             this.tag = builder.tag;
         }
@@ -370,6 +390,13 @@ public class CreateJobRequest extends Request {
         }
 
         /**
+         * @return level
+         */
+        public String getLevel() {
+            return this.level;
+        }
+
+        /**
          * @return network
          */
         public Network getNetwork() {
@@ -385,14 +412,33 @@ public class CreateJobRequest extends Request {
 
         public static final class Builder {
             private String allocationSpec; 
+            private String level; 
             private Network network; 
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeploymentPolicy model) {
+                this.allocationSpec = model.allocationSpec;
+                this.level = model.level;
+                this.network = model.network;
+                this.tag = model.tag;
+            } 
 
             /**
              * AllocationSpec.
              */
             public Builder allocationSpec(String allocationSpec) {
                 this.allocationSpec = allocationSpec;
+                return this;
+            }
+
+            /**
+             * Level.
+             */
+            public Builder level(String level) {
+                this.level = level;
                 return this;
             }
 
@@ -451,6 +497,13 @@ public class CreateJobRequest extends Request {
         public static final class Builder {
             private java.util.List<String> securityGroupIds; 
 
+            private Builder() {
+            } 
+
+            private Builder(SecurityGroup model) {
+                this.securityGroupIds = model.securityGroupIds;
+            } 
+
             /**
              * SecurityGroupIds.
              */
@@ -497,6 +550,13 @@ public class CreateJobRequest extends Request {
 
         public static final class Builder {
             private SecurityGroup securityGroup; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecurityPolicy model) {
+                this.securityGroup = model.securityGroup;
+            } 
 
             /**
              * SecurityGroup.
@@ -568,6 +628,15 @@ public class CreateJobRequest extends Request {
             private Integer indexEnd; 
             private Integer indexStart; 
             private Integer indexStep; 
+
+            private Builder() {
+            } 
+
+            private Builder(ArraySpec model) {
+                this.indexEnd = model.indexEnd;
+                this.indexStart = model.indexStart;
+                this.indexStep = model.indexStep;
+            } 
 
             /**
              * IndexEnd.
@@ -644,6 +713,14 @@ public class CreateJobRequest extends Request {
             private ArraySpec arraySpec; 
             private Integer maxCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(ExecutorPolicy model) {
+                this.arraySpec = model.arraySpec;
+                this.maxCount = model.maxCount;
+            } 
+
             /**
              * ArraySpec.
              */
@@ -710,6 +787,14 @@ public class CreateJobRequest extends Request {
         public static final class Builder {
             private Integer size; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Disks model) {
+                this.size = model.size;
+                this.type = model.type;
+            } 
 
             /**
              * Size.
@@ -790,6 +875,15 @@ public class CreateJobRequest extends Request {
             private java.util.List<Disks> disks; 
             private Float memory; 
 
+            private Builder() {
+            } 
+
+            private Builder(Resource model) {
+                this.cores = model.cores;
+                this.disks = model.disks;
+                this.memory = model.memory;
+            } 
+
             /**
              * Cores.
              */
@@ -864,6 +958,14 @@ public class CreateJobRequest extends Request {
         public static final class Builder {
             private String name; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(EnvironmentVars model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
 
             /**
              * Name.
@@ -968,6 +1070,17 @@ public class CreateJobRequest extends Request {
             private java.util.List<EnvironmentVars> environmentVars; 
             private String image; 
             private String workingDir; 
+
+            private Builder() {
+            } 
+
+            private Builder(Container model) {
+                this.appId = model.appId;
+                this.command = model.command;
+                this.environmentVars = model.environmentVars;
+                this.image = model.image;
+                this.workingDir = model.workingDir;
+            } 
 
             /**
              * AppId.
@@ -1088,6 +1201,16 @@ public class CreateJobRequest extends Request {
             private String prologScript; 
             private String script; 
 
+            private Builder() {
+            } 
+
+            private Builder(Vm model) {
+                this.appId = model.appId;
+                this.image = model.image;
+                this.prologScript = model.prologScript;
+                this.script = model.script;
+            } 
+
             /**
              * AppId.
              */
@@ -1174,6 +1297,14 @@ public class CreateJobRequest extends Request {
             private Container container; 
             private Vm vm; 
 
+            private Builder() {
+            } 
+
+            private Builder(TaskExecutor model) {
+                this.container = model.container;
+                this.vm = model.vm;
+            } 
+
             /**
              * Container.
              */
@@ -1252,6 +1383,15 @@ public class CreateJobRequest extends Request {
             private String mountOptions; 
             private String mountPath; 
             private String volumeDriver; 
+
+            private Builder() {
+            } 
+
+            private Builder(VolumeMount model) {
+                this.mountOptions = model.mountOptions;
+                this.mountPath = model.mountPath;
+                this.volumeDriver = model.volumeDriver;
+            } 
 
             /**
              * MountOptions.
@@ -1340,6 +1480,15 @@ public class CreateJobRequest extends Request {
             private Resource resource; 
             private java.util.List<TaskExecutor> taskExecutor; 
             private java.util.List<VolumeMount> volumeMount; 
+
+            private Builder() {
+            } 
+
+            private Builder(TaskSpec model) {
+                this.resource = model.resource;
+                this.taskExecutor = model.taskExecutor;
+                this.volumeMount = model.volumeMount;
+            } 
 
             /**
              * Resource.
@@ -1439,6 +1588,16 @@ public class CreateJobRequest extends Request {
             private String taskName; 
             private TaskSpec taskSpec; 
             private Boolean taskSustainable; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tasks model) {
+                this.executorPolicy = model.executorPolicy;
+                this.taskName = model.taskName;
+                this.taskSpec = model.taskSpec;
+                this.taskSustainable = model.taskSustainable;
+            } 
 
             /**
              * ExecutorPolicy.
