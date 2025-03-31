@@ -22,6 +22,10 @@ public class RunTitleGenerationRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DeduplicatedTitles")
+    private java.util.List<String> deduplicatedTitles;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ReferenceData")
     @com.aliyun.core.annotation.Validation(required = true)
     private ReferenceData referenceData;
@@ -31,6 +35,10 @@ public class RunTitleGenerationRequest extends Request {
     private String taskId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TitleCount")
+    private String titleCount;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceId;
@@ -38,8 +46,10 @@ public class RunTitleGenerationRequest extends Request {
     private RunTitleGenerationRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.deduplicatedTitles = builder.deduplicatedTitles;
         this.referenceData = builder.referenceData;
         this.taskId = builder.taskId;
+        this.titleCount = builder.titleCount;
         this.workspaceId = builder.workspaceId;
     }
 
@@ -64,6 +74,13 @@ public class RunTitleGenerationRequest extends Request {
     }
 
     /**
+     * @return deduplicatedTitles
+     */
+    public java.util.List<String> getDeduplicatedTitles() {
+        return this.deduplicatedTitles;
+    }
+
+    /**
      * @return referenceData
      */
     public ReferenceData getReferenceData() {
@@ -78,6 +95,13 @@ public class RunTitleGenerationRequest extends Request {
     }
 
     /**
+     * @return titleCount
+     */
+    public String getTitleCount() {
+        return this.titleCount;
+    }
+
+    /**
      * @return workspaceId
      */
     public String getWorkspaceId() {
@@ -86,8 +110,10 @@ public class RunTitleGenerationRequest extends Request {
 
     public static final class Builder extends Request.Builder<RunTitleGenerationRequest, Builder> {
         private String regionId; 
+        private java.util.List<String> deduplicatedTitles; 
         private ReferenceData referenceData; 
         private String taskId; 
+        private String titleCount; 
         private String workspaceId; 
 
         private Builder() {
@@ -97,8 +123,10 @@ public class RunTitleGenerationRequest extends Request {
         private Builder(RunTitleGenerationRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.deduplicatedTitles = request.deduplicatedTitles;
             this.referenceData = request.referenceData;
             this.taskId = request.taskId;
+            this.titleCount = request.titleCount;
             this.workspaceId = request.workspaceId;
         } 
 
@@ -108,6 +136,16 @@ public class RunTitleGenerationRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * DeduplicatedTitles.
+         */
+        public Builder deduplicatedTitles(java.util.List<String> deduplicatedTitles) {
+            String deduplicatedTitlesShrink = shrink(deduplicatedTitles, "DeduplicatedTitles", "json");
+            this.putBodyParameter("DeduplicatedTitles", deduplicatedTitlesShrink);
+            this.deduplicatedTitles = deduplicatedTitles;
             return this;
         }
 
@@ -127,6 +165,15 @@ public class RunTitleGenerationRequest extends Request {
         public Builder taskId(String taskId) {
             this.putBodyParameter("TaskId", taskId);
             this.taskId = taskId;
+            return this;
+        }
+
+        /**
+         * TitleCount.
+         */
+        public Builder titleCount(String titleCount) {
+            this.putBodyParameter("TitleCount", titleCount);
+            this.titleCount = titleCount;
             return this;
         }
 

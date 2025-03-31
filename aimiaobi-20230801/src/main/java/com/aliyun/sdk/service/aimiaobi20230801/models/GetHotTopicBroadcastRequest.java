@@ -540,6 +540,7 @@ public class GetHotTopicBroadcastRequest extends Request {
         private java.util.List<String> categories;
 
         @com.aliyun.core.annotation.NameInMap("CustomHotValueWeights")
+        @Deprecated
         private java.util.List<CustomHotValueWeights> customHotValueWeights;
 
         @com.aliyun.core.annotation.NameInMap("TopicCount")
