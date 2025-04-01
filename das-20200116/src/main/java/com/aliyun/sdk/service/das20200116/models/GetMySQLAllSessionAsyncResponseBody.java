@@ -48,6 +48,10 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMySQLAllSessionAsyncResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code returned.</p>
@@ -235,6 +250,17 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
             private Long totalCount; 
             private java.util.List<String> userList; 
 
+            private Builder() {
+            } 
+
+            private Builder(ClientStats model) {
+                this.activeCount = model.activeCount;
+                this.key = model.key;
+                this.threadIdList = model.threadIdList;
+                this.totalCount = model.totalCount;
+                this.userList = model.userList;
+            } 
+
             /**
              * <p>The number of active sessions that belong to the client IP address.</p>
              * <blockquote>
@@ -373,6 +399,17 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
             private java.util.List<Long> threadIdList; 
             private Long totalCount; 
             private java.util.List<String> userList; 
+
+            private Builder() {
+            } 
+
+            private Builder(DbStats model) {
+                this.activeCount = model.activeCount;
+                this.key = model.key;
+                this.threadIdList = model.threadIdList;
+                this.totalCount = model.totalCount;
+                this.userList = model.userList;
+            } 
 
             /**
              * <p>The number of active sessions of the database.</p>
@@ -597,6 +634,24 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
             private String user; 
             private String userClientAlias; 
 
+            private Builder() {
+            } 
+
+            private Builder(SessionList model) {
+                this.client = model.client;
+                this.command = model.command;
+                this.dbName = model.dbName;
+                this.sessionId = model.sessionId;
+                this.sqlTemplateId = model.sqlTemplateId;
+                this.sqlText = model.sqlText;
+                this.state = model.state;
+                this.time = model.time;
+                this.trxDuration = model.trxDuration;
+                this.trxId = model.trxId;
+                this.user = model.user;
+                this.userClientAlias = model.userClientAlias;
+            } 
+
             /**
              * <p>The IP address of the client.</p>
              * 
@@ -819,6 +874,17 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
             private Long totalCount; 
             private java.util.List<String> userList; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserStats model) {
+                this.activeCount = model.activeCount;
+                this.key = model.key;
+                this.threadIdList = model.threadIdList;
+                this.totalCount = model.totalCount;
+                this.userList = model.userList;
+            } 
+
             /**
              * <p>The number of active sessions within the account.</p>
              * <blockquote>
@@ -993,6 +1059,20 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
             private Long timeStamp; 
             private Long totalSessionCount; 
             private java.util.List<UserStats> userStats; 
+
+            private Builder() {
+            } 
+
+            private Builder(SessionData model) {
+                this.activeSessionCount = model.activeSessionCount;
+                this.clientStats = model.clientStats;
+                this.dbStats = model.dbStats;
+                this.maxActiveTime = model.maxActiveTime;
+                this.sessionList = model.sessionList;
+                this.timeStamp = model.timeStamp;
+                this.totalSessionCount = model.totalSessionCount;
+                this.userStats = model.userStats;
+            } 
 
             /**
              * <p>The total number of active sessions.</p>
@@ -1180,6 +1260,19 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
             private SessionData sessionData; 
             private String state; 
             private Long timestamp; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.complete = model.complete;
+                this.fail = model.fail;
+                this.isFinish = model.isFinish;
+                this.resultId = model.resultId;
+                this.sessionData = model.sessionData;
+                this.state = model.state;
+                this.timestamp = model.timestamp;
+            } 
 
             /**
              * <p>Indicates whether the asynchronous request was complete. Valid values:</p>

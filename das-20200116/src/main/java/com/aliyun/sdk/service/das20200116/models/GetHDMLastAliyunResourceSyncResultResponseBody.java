@@ -52,6 +52,10 @@ public class GetHDMLastAliyunResourceSyncResultResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetHDMLastAliyunResourceSyncResultResponseBody extends TeaModel {
         private String requestId; 
         private String success; 
         private String synchro; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetHDMLastAliyunResourceSyncResultResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.synchro = model.synchro;
+        } 
 
         /**
          * Code.
@@ -224,6 +240,16 @@ public class GetHDMLastAliyunResourceSyncResultResponseBody extends TeaModel {
             private Boolean success; 
             private Integer syncCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResourceSyncSubResult model) {
+                this.errMsg = model.errMsg;
+                this.resourceType = model.resourceType;
+                this.success = model.success;
+                this.syncCount = model.syncCount;
+            } 
+
             /**
              * ErrMsg.
              */
@@ -294,6 +320,13 @@ public class GetHDMLastAliyunResourceSyncResultResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ResourceSyncSubResult> resourceSyncSubResult; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubResults model) {
+                this.resourceSyncSubResult = model.resourceSyncSubResult;
+            } 
 
             /**
              * ResourceSyncSubResult.
@@ -377,6 +410,16 @@ public class GetHDMLastAliyunResourceSyncResultResponseBody extends TeaModel {
             private String results; 
             private SubResults subResults; 
             private String syncStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.errorMsg = model.errorMsg;
+                this.results = model.results;
+                this.subResults = model.subResults;
+                this.syncStatus = model.syncStatus;
+            } 
 
             /**
              * ErrorMsg.

@@ -36,6 +36,10 @@ public class DataValue extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return timestamp
      */
@@ -53,6 +57,14 @@ public class DataValue extends TeaModel {
     public static final class Builder {
         private String timestamp; 
         private Object value; 
+
+        private Builder() {
+        } 
+
+        private Builder(DataValue model) {
+            this.timestamp = model.timestamp;
+            this.value = model.value;
+        } 
 
         /**
          * <p>The timestamp. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>

@@ -40,6 +40,10 @@ public class DataResultValue extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return sqlId
      */
@@ -65,6 +69,15 @@ public class DataResultValue extends TeaModel {
         private String sqlId; 
         private String instanceId; 
         private Integer count; 
+
+        private Builder() {
+        } 
+
+        private Builder(DataResultValue model) {
+            this.sqlId = model.sqlId;
+            this.instanceId = model.instanceId;
+            this.count = model.count;
+        } 
 
         /**
          * sqlId.

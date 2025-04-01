@@ -48,6 +48,10 @@ public class GetRedisAllSessionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetRedisAllSessionResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetRedisAllSessionResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code returned.</p>
@@ -427,6 +442,33 @@ public class GetRedisAllSessionResponseBody extends TeaModel {
             private Long qbufFree; 
             private Long sub; 
 
+            private Builder() {
+            } 
+
+            private Builder(Sessions model) {
+                this.addr = model.addr;
+                this.age = model.age;
+                this.client = model.client;
+                this.clientDesc = model.clientDesc;
+                this.cmd = model.cmd;
+                this.db = model.db;
+                this.events = model.events;
+                this.fd = model.fd;
+                this.flags = model.flags;
+                this.id = model.id;
+                this.idle = model.idle;
+                this.multi = model.multi;
+                this.name = model.name;
+                this.nodeId = model.nodeId;
+                this.obl = model.obl;
+                this.oll = model.oll;
+                this.omem = model.omem;
+                this.psub = model.psub;
+                this.qbuf = model.qbuf;
+                this.qbufFree = model.qbufFree;
+                this.sub = model.sub;
+            } 
+
             /**
              * <p>The IP address and port number of the client.</p>
              * 
@@ -740,6 +782,15 @@ public class GetRedisAllSessionResponseBody extends TeaModel {
             private java.util.List<Long> ids; 
             private String key; 
 
+            private Builder() {
+            } 
+
+            private Builder(SourceStats model) {
+                this.count = model.count;
+                this.ids = model.ids;
+                this.key = model.key;
+            } 
+
             /**
              * <p>The total number of sessions from the access source.</p>
              * 
@@ -844,6 +895,16 @@ public class GetRedisAllSessionResponseBody extends TeaModel {
             private java.util.List<SourceStats> sourceStats; 
             private Long timestamp; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.sessions = model.sessions;
+                this.sourceStats = model.sourceStats;
+                this.timestamp = model.timestamp;
+                this.total = model.total;
+            } 
 
             /**
              * <p>The information about the sessions.</p>

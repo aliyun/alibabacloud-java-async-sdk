@@ -48,6 +48,10 @@ public class GetRunningSqlConcurrencyControlRulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetRunningSqlConcurrencyControlRulesResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetRunningSqlConcurrencyControlRulesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code returned.</p>
@@ -295,6 +310,22 @@ public class GetRunningSqlConcurrencyControlRulesResponseBody extends TeaModel {
             private String status; 
             private String userId; 
 
+            private Builder() {
+            } 
+
+            private Builder(RunningRules model) {
+                this.concurrencyControlTime = model.concurrencyControlTime;
+                this.instanceId = model.instanceId;
+                this.itemId = model.itemId;
+                this.keywordsHash = model.keywordsHash;
+                this.maxConcurrency = model.maxConcurrency;
+                this.sqlKeywords = model.sqlKeywords;
+                this.sqlType = model.sqlType;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.userId = model.userId;
+            } 
+
             /**
              * <p>The duration within which the SQL throttling rule takes effect. Unit: seconds.</p>
              * <blockquote>
@@ -458,6 +489,13 @@ public class GetRunningSqlConcurrencyControlRulesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<RunningRules> runningRules; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.runningRules = model.runningRules;
+            } 
+
             /**
              * runningRules.
              */
@@ -516,6 +554,14 @@ public class GetRunningSqlConcurrencyControlRulesResponseBody extends TeaModel {
         public static final class Builder {
             private List list; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.list = model.list;
+                this.total = model.total;
+            } 
 
             /**
              * <p>The returned data.</p>

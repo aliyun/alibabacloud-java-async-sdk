@@ -48,6 +48,10 @@ public class CreateSqlLogTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class CreateSqlLogTaskResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateSqlLogTaskResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The response code.</p>
@@ -258,6 +273,19 @@ public class CreateSqlLogTaskResponseBody extends TeaModel {
             private Long start; 
             private String status; 
             private String taskId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.createTime = model.createTime;
+                this.end = model.end;
+                this.instanceId = model.instanceId;
+                this.name = model.name;
+                this.start = model.start;
+                this.status = model.status;
+                this.taskId = model.taskId;
+            } 
 
             /**
              * <p>The time when the task was created. This value is a UNIX timestamp. Unit: milliseconds.</p>

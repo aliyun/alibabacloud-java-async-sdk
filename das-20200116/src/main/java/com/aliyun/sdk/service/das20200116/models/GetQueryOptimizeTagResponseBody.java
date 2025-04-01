@@ -48,6 +48,10 @@ public class GetQueryOptimizeTagResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetQueryOptimizeTagResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetQueryOptimizeTagResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code returned.</p>
@@ -210,6 +225,15 @@ public class GetQueryOptimizeTagResponseBody extends TeaModel {
             private String comments; 
             private String sqlId; 
             private String tags; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.comments = model.comments;
+                this.sqlId = model.sqlId;
+                this.tags = model.tags;
+            } 
 
             /**
              * <p>The remarks.</p>

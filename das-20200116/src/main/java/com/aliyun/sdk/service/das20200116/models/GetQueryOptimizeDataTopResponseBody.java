@@ -48,6 +48,10 @@ public class GetQueryOptimizeDataTopResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetQueryOptimizeDataTopResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetQueryOptimizeDataTopResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code returned.</p>
@@ -207,6 +222,15 @@ public class GetQueryOptimizeDataTopResponseBody extends TeaModel {
             private String instanceId; 
             private String type; 
             private Double value; 
+
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.instanceId = model.instanceId;
+                this.type = model.type;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The instance ID.</p>
@@ -331,6 +355,17 @@ public class GetQueryOptimizeDataTopResponseBody extends TeaModel {
             private Integer pageNo; 
             private Integer pageSize; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.extra = model.extra;
+                this.list = model.list;
+                this.pageNo = model.pageNo;
+                this.pageSize = model.pageSize;
+                this.total = model.total;
+            } 
 
             /**
              * <p>The reserved parameter.</p>

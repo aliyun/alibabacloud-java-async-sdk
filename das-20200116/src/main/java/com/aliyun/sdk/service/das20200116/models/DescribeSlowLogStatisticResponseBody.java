@@ -48,6 +48,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSlowLogStatisticResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -179,6 +194,14 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Long> count; 
             private String nodeId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Item model) {
+                this.count = model.count;
+                this.nodeId = model.nodeId;
+            } 
 
             /**
              * Count.
@@ -427,6 +450,29 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             private java.util.List<Long> ts; 
             private java.util.List<Long> tsEnd; 
 
+            private Builder() {
+            } 
+
+            private Builder(Histogram model) {
+                this.avgLockTime = model.avgLockTime;
+                this.avgRowsExamined = model.avgRowsExamined;
+                this.avgRowsSent = model.avgRowsSent;
+                this.avgRt = model.avgRt;
+                this.count = model.count;
+                this.item = model.item;
+                this.lockTime = model.lockTime;
+                this.maxLockTime = model.maxLockTime;
+                this.maxRowsExamined = model.maxRowsExamined;
+                this.maxRowsSent = model.maxRowsSent;
+                this.maxRt = model.maxRt;
+                this.rowsExamined = model.rowsExamined;
+                this.rowsSent = model.rowsSent;
+                this.rt = model.rt;
+                this.total = model.total;
+                this.ts = model.ts;
+                this.tsEnd = model.tsEnd;
+            } 
+
             /**
              * AvgLockTime.
              */
@@ -626,6 +672,15 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             private String sqlId; 
             private String tags; 
 
+            private Builder() {
+            } 
+
+            private Builder(SqlTag model) {
+                this.comments = model.comments;
+                this.sqlId = model.sqlId;
+                this.tags = model.tags;
+            } 
+
             /**
              * Comments.
              */
@@ -703,6 +758,14 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public static final class Builder {
             private Long timestamp; 
             private Object value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Trend model) {
+                this.timestamp = model.timestamp;
+                this.value = model.value;
+            } 
 
             /**
              * Timestamp.
@@ -968,6 +1031,9 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RowsSent")
         private Long rowsSent;
 
+        @com.aliyun.core.annotation.NameInMap("RuleId")
+        private String ruleId;
+
         @com.aliyun.core.annotation.NameInMap("SQLText")
         private String SQLText;
 
@@ -1083,6 +1149,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             this.rowsCountAffected = builder.rowsCountAffected;
             this.rowsExamined = builder.rowsExamined;
             this.rowsSent = builder.rowsSent;
+            this.ruleId = builder.ruleId;
             this.SQLText = builder.SQLText;
             this.scheme = builder.scheme;
             this.scnt = builder.scnt;
@@ -1652,6 +1719,13 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         }
 
         /**
+         * @return ruleId
+         */
+        public String getRuleId() {
+            return this.ruleId;
+        }
+
+        /**
          * @return SQLText
          */
         public String getSQLText() {
@@ -1814,6 +1888,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             private Long rowsCountAffected; 
             private Long rowsExamined; 
             private Long rowsSent; 
+            private String ruleId; 
             private String SQLText; 
             private String scheme; 
             private Long scnt; 
@@ -1826,6 +1901,103 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             private Long timestamp; 
             private java.util.List<Trend> trend; 
             private String user; 
+
+            private Builder() {
+            } 
+
+            private Builder(Logs model) {
+                this.accountName = model.accountName;
+                this.avgCPUTime = model.avgCPUTime;
+                this.avgCPUTimeSeconds = model.avgCPUTimeSeconds;
+                this.avgDocExamined = model.avgDocExamined;
+                this.avgFrows = model.avgFrows;
+                this.avgIOWrites = model.avgIOWrites;
+                this.avgKeysExamined = model.avgKeysExamined;
+                this.avgLastRowsCountAffected = model.avgLastRowsCountAffected;
+                this.avgLockTime = model.avgLockTime;
+                this.avgLockTimeSeconds = model.avgLockTimeSeconds;
+                this.avgLogicalIOReads = model.avgLogicalIOReads;
+                this.avgPhysicalIOReads = model.avgPhysicalIOReads;
+                this.avgQueryTime = model.avgQueryTime;
+                this.avgQueryTimeSeconds = model.avgQueryTimeSeconds;
+                this.avgReturnNum = model.avgReturnNum;
+                this.avgRows = model.avgRows;
+                this.avgRowsCountAffected = model.avgRowsCountAffected;
+                this.avgRowsExamined = model.avgRowsExamined;
+                this.avgRowsSent = model.avgRowsSent;
+                this.avgScnt = model.avgScnt;
+                this.CPUTime = model.CPUTime;
+                this.CPUTimeSeconds = model.CPUTimeSeconds;
+                this.command = model.command;
+                this.count = model.count;
+                this.countRate = model.countRate;
+                this.DBName = model.DBName;
+                this.database = model.database;
+                this.dbInstanceName = model.dbInstanceName;
+                this.docExamined = model.docExamined;
+                this.docsExamined = model.docsExamined;
+                this.frows = model.frows;
+                this.histogram = model.histogram;
+                this.hostAddress = model.hostAddress;
+                this.hostInsId = model.hostInsId;
+                this.IOWrites = model.IOWrites;
+                this.insName = model.insName;
+                this.insRole = model.insRole;
+                this.keysExamined = model.keysExamined;
+                this.lastRowsCountAffected = model.lastRowsCountAffected;
+                this.lockTime = model.lockTime;
+                this.lockTimeSeconds = model.lockTimeSeconds;
+                this.logicalIOReads = model.logicalIOReads;
+                this.maxCPUTime = model.maxCPUTime;
+                this.maxCPUTimeSeconds = model.maxCPUTimeSeconds;
+                this.maxDocExamined = model.maxDocExamined;
+                this.maxFrows = model.maxFrows;
+                this.maxIOWrites = model.maxIOWrites;
+                this.maxKeysExamined = model.maxKeysExamined;
+                this.maxLastRowsCountAffected = model.maxLastRowsCountAffected;
+                this.maxLockTime = model.maxLockTime;
+                this.maxLockTimeSeconds = model.maxLockTimeSeconds;
+                this.maxLogicalIOReads = model.maxLogicalIOReads;
+                this.maxPhysicalIOReads = model.maxPhysicalIOReads;
+                this.maxQueryTime = model.maxQueryTime;
+                this.maxQueryTimeSeconds = model.maxQueryTimeSeconds;
+                this.maxReturnNum = model.maxReturnNum;
+                this.maxRows = model.maxRows;
+                this.maxRowsCountAffected = model.maxRowsCountAffected;
+                this.maxRowsExamined = model.maxRowsExamined;
+                this.maxRowsSent = model.maxRowsSent;
+                this.maxScnt = model.maxScnt;
+                this.namespace = model.namespace;
+                this.nodeType = model.nodeType;
+                this.opType = model.opType;
+                this.originAlias = model.originAlias;
+                this.physicalIOReads = model.physicalIOReads;
+                this.psql = model.psql;
+                this.queryId = model.queryId;
+                this.queryStartTime = model.queryStartTime;
+                this.queryTime = model.queryTime;
+                this.queryTimeRate = model.queryTimeRate;
+                this.queryTimeSeconds = model.queryTimeSeconds;
+                this.returnItemNumbers = model.returnItemNumbers;
+                this.returnNum = model.returnNum;
+                this.rows = model.rows;
+                this.rowsCountAffected = model.rowsCountAffected;
+                this.rowsExamined = model.rowsExamined;
+                this.rowsSent = model.rowsSent;
+                this.ruleId = model.ruleId;
+                this.SQLText = model.SQLText;
+                this.scheme = model.scheme;
+                this.scnt = model.scnt;
+                this.sqlId = model.sqlId;
+                this.sqlTag = model.sqlTag;
+                this.sqlType = model.sqlType;
+                this.subInstanceId = model.subInstanceId;
+                this.tableName = model.tableName;
+                this.threadId = model.threadId;
+                this.timestamp = model.timestamp;
+                this.trend = model.trend;
+                this.user = model.user;
+            } 
 
             /**
              * AccountName.
@@ -2452,6 +2624,14 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
+             * RuleId.
+             */
+            public Builder ruleId(String ruleId) {
+                this.ruleId = ruleId;
+                return this;
+            }
+
+            /**
              * SQLText.
              */
             public Builder SQLText(String SQLText) {
@@ -2697,6 +2877,22 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             private String startTime; 
             private Long totalRecords; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataData model) {
+                this.dbInstanceId = model.dbInstanceId;
+                this.dbInstanceName = model.dbInstanceName;
+                this.endTime = model.endTime;
+                this.itemsNumbers = model.itemsNumbers;
+                this.logs = model.logs;
+                this.maxRecordsPerPage = model.maxRecordsPerPage;
+                this.nodeId = model.nodeId;
+                this.pageNumbers = model.pageNumbers;
+                this.startTime = model.startTime;
+                this.totalRecords = model.totalRecords;
+            } 
+
             /**
              * DbInstanceId.
              */
@@ -2899,6 +3095,20 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             private String resultId; 
             private String state; 
             private Long timestamp; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.data = model.data;
+                this.errorCode = model.errorCode;
+                this.isFinish = model.isFinish;
+                this.message = model.message;
+                this.requestKey = model.requestKey;
+                this.resultId = model.resultId;
+                this.state = model.state;
+                this.timestamp = model.timestamp;
+            } 
 
             /**
              * <p>AsyncResult&lt;DBLogRecords<SlowLogStat>&gt;</p>

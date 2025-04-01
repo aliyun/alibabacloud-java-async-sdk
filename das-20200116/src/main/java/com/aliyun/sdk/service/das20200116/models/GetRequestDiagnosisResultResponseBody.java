@@ -48,6 +48,10 @@ public class GetRequestDiagnosisResultResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetRequestDiagnosisResultResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetRequestDiagnosisResultResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code returned.</p>
@@ -306,6 +321,23 @@ public class GetRequestDiagnosisResultResponseBody extends TeaModel {
             private String sqlId; 
             private Integer state; 
             private String uuid; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.accountId = model.accountId;
+                this.dbSchema = model.dbSchema;
+                this.engine = model.engine;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.messageId = model.messageId;
+                this.param = model.param;
+                this.result = model.result;
+                this.sqlId = model.sqlId;
+                this.state = model.state;
+                this.uuid = model.uuid;
+            } 
 
             /**
              * <p>The user ID.</p>

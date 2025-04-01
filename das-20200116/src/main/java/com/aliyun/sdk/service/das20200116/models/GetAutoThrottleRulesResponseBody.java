@@ -48,6 +48,10 @@ public class GetAutoThrottleRulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetAutoThrottleRulesResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAutoThrottleRulesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code returned.</p>
@@ -306,6 +321,23 @@ public class GetAutoThrottleRulesResponseBody extends TeaModel {
             private Double maxThrottleTime; 
             private String userId; 
             private Boolean visible; 
+
+            private Builder() {
+            } 
+
+            private Builder(EnableAutoThrottleList model) {
+                this.abnormalDuration = model.abnormalDuration;
+                this.activeSessions = model.activeSessions;
+                this.allowThrottleEndTime = model.allowThrottleEndTime;
+                this.allowThrottleStartTime = model.allowThrottleStartTime;
+                this.autoKillSession = model.autoKillSession;
+                this.cpuSessionRelation = model.cpuSessionRelation;
+                this.cpuUsage = model.cpuUsage;
+                this.instanceId = model.instanceId;
+                this.maxThrottleTime = model.maxThrottleTime;
+                this.userId = model.userId;
+                this.visible = model.visible;
+            } 
 
             /**
              * <p>The maximum period of time during which an exception occurs when automatic SQL throttling is triggered. Unit: minutes.</p>
@@ -602,6 +634,23 @@ public class GetAutoThrottleRulesResponseBody extends TeaModel {
             private String userId; 
             private Boolean visible; 
 
+            private Builder() {
+            } 
+
+            private Builder(TurnOffAutoThrottleList model) {
+                this.abnormalDuration = model.abnormalDuration;
+                this.activeSessions = model.activeSessions;
+                this.allowThrottleEndTime = model.allowThrottleEndTime;
+                this.allowThrottleStartTime = model.allowThrottleStartTime;
+                this.autoKillSession = model.autoKillSession;
+                this.cpuSessionRelation = model.cpuSessionRelation;
+                this.cpuUsage = model.cpuUsage;
+                this.instanceId = model.instanceId;
+                this.maxThrottleTime = model.maxThrottleTime;
+                this.userId = model.userId;
+                this.visible = model.visible;
+            } 
+
             /**
              * <p>The maximum period of time during which the automatic SQL throttling feature is triggered. Unit: minutes.</p>
              * 
@@ -848,6 +897,19 @@ public class GetAutoThrottleRulesResponseBody extends TeaModel {
             private Long totalAutoThrottleRulesCount; 
             private Long turnOffAutoThrottleCount; 
             private java.util.List<TurnOffAutoThrottleList> turnOffAutoThrottleList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.enableAutoThrottleCount = model.enableAutoThrottleCount;
+                this.enableAutoThrottleList = model.enableAutoThrottleList;
+                this.neverEnableAutoThrottleOrReleasedInstanceCount = model.neverEnableAutoThrottleOrReleasedInstanceCount;
+                this.neverEnableAutoThrottleOrReleasedInstanceIdList = model.neverEnableAutoThrottleOrReleasedInstanceIdList;
+                this.totalAutoThrottleRulesCount = model.totalAutoThrottleRulesCount;
+                this.turnOffAutoThrottleCount = model.turnOffAutoThrottleCount;
+                this.turnOffAutoThrottleList = model.turnOffAutoThrottleList;
+            } 
 
             /**
              * <p>The number of database instances for which the automatic SQL throttling feature is currently enabled.</p>

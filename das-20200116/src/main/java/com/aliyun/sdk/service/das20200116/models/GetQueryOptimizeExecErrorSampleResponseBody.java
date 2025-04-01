@@ -48,6 +48,10 @@ public class GetQueryOptimizeExecErrorSampleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetQueryOptimizeExecErrorSampleResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetQueryOptimizeExecErrorSampleResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code returned.</p>
@@ -256,6 +271,19 @@ public class GetQueryOptimizeExecErrorSampleResponseBody extends TeaModel {
             private Long timestamp; 
             private String user; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.dbname = model.dbname;
+                this.errorCode = model.errorCode;
+                this.origHost = model.origHost;
+                this.sqlId = model.sqlId;
+                this.sqlText = model.sqlText;
+                this.timestamp = model.timestamp;
+                this.user = model.user;
+            } 
+
             /**
              * <p>The name of the database.</p>
              * 
@@ -419,6 +447,17 @@ public class GetQueryOptimizeExecErrorSampleResponseBody extends TeaModel {
             private Integer pageNo; 
             private Integer pageSize; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.extra = model.extra;
+                this.list = model.list;
+                this.pageNo = model.pageNo;
+                this.pageSize = model.pageSize;
+                this.total = model.total;
+            } 
 
             /**
              * <p>A reserved parameter.</p>

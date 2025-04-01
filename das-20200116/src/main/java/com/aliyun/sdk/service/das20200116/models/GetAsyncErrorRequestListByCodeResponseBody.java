@@ -48,6 +48,10 @@ public class GetAsyncErrorRequestListByCodeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetAsyncErrorRequestListByCodeResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAsyncErrorRequestListByCodeResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code returned.</p>
@@ -201,6 +216,14 @@ public class GetAsyncErrorRequestListByCodeResponseBody extends TeaModel {
         public static final class Builder {
             private String instanceId; 
             private String sqlId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.instanceId = model.instanceId;
+                this.sqlId = model.sqlId;
+            } 
 
             /**
              * <p>The instance ID</p>
@@ -334,6 +357,19 @@ public class GetAsyncErrorRequestListByCodeResponseBody extends TeaModel {
             private String resultId; 
             private String state; 
             private Long timestamp; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.complete = model.complete;
+                this.fail = model.fail;
+                this.isFinish = model.isFinish;
+                this.result = model.result;
+                this.resultId = model.resultId;
+                this.state = model.state;
+                this.timestamp = model.timestamp;
+            } 
 
             /**
              * <p>Indicates whether the asynchronous request was complete.</p>

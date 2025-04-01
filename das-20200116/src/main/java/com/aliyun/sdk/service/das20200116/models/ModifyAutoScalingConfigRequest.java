@@ -60,7 +60,7 @@ public class ModifyAutoScalingConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -288,6 +288,18 @@ public class ModifyAutoScalingConfigRequest extends Request {
             private String observationWindowSize; 
             private Boolean upgrade; 
 
+            private Builder() {
+            } 
+
+            private Builder(Bandwidth model) {
+                this.apply = model.apply;
+                this.bandwidthUsageLowerThreshold = model.bandwidthUsageLowerThreshold;
+                this.bandwidthUsageUpperThreshold = model.bandwidthUsageUpperThreshold;
+                this.downgrade = model.downgrade;
+                this.observationWindowSize = model.observationWindowSize;
+                this.upgrade = model.upgrade;
+            } 
+
             /**
              * <p>Specifies whether to apply the <strong>Bandwidth</strong> configuration of the bandwidth auto scaling feature. Valid values:</p>
              * <ul>
@@ -472,6 +484,17 @@ public class ModifyAutoScalingConfigRequest extends Request {
             private String downgradeObservationWindowSize; 
             private Boolean enable; 
             private String upgradeObservationWindowSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(Resource model) {
+                this.apply = model.apply;
+                this.cpuUsageUpperThreshold = model.cpuUsageUpperThreshold;
+                this.downgradeObservationWindowSize = model.downgradeObservationWindowSize;
+                this.enable = model.enable;
+                this.upgradeObservationWindowSize = model.upgradeObservationWindowSize;
+            } 
 
             /**
              * <p>Specifies whether to apply the <strong>Resource</strong> configuration of the resource auto scaling feature. Valid values:</p>
@@ -693,6 +716,21 @@ public class ModifyAutoScalingConfigRequest extends Request {
             private Integer minShards; 
             private Boolean upgrade; 
             private String upgradeObservationWindowSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(Shard model) {
+                this.apply = model.apply;
+                this.downgrade = model.downgrade;
+                this.downgradeObservationWindowSize = model.downgradeObservationWindowSize;
+                this.maxShards = model.maxShards;
+                this.memUsageLowerThreshold = model.memUsageLowerThreshold;
+                this.memUsageUpperThreshold = model.memUsageUpperThreshold;
+                this.minShards = model.minShards;
+                this.upgrade = model.upgrade;
+                this.upgradeObservationWindowSize = model.upgradeObservationWindowSize;
+            } 
 
             /**
              * <p>Specifies whether to apply the <strong>Shard</strong> configuration of the shard auto scaling feature. Valid values:</p>
@@ -972,6 +1010,21 @@ public class ModifyAutoScalingConfigRequest extends Request {
             private String observationWindowSize; 
             private Boolean upgrade; 
 
+            private Builder() {
+            } 
+
+            private Builder(Spec model) {
+                this.apply = model.apply;
+                this.coolDownTime = model.coolDownTime;
+                this.cpuUsageUpperThreshold = model.cpuUsageUpperThreshold;
+                this.downgrade = model.downgrade;
+                this.maxReadOnlyNodes = model.maxReadOnlyNodes;
+                this.maxSpec = model.maxSpec;
+                this.memUsageUpperThreshold = model.memUsageUpperThreshold;
+                this.observationWindowSize = model.observationWindowSize;
+                this.upgrade = model.upgrade;
+            } 
+
             /**
              * <p>Specifies whether to apply the <strong>Spec</strong> configuration of the specification auto scaling feature. Valid values:</p>
              * <ul>
@@ -1197,6 +1250,16 @@ public class ModifyAutoScalingConfigRequest extends Request {
             private Integer diskUsageUpperThreshold; 
             private Integer maxStorage; 
             private Boolean upgrade; 
+
+            private Builder() {
+            } 
+
+            private Builder(Storage model) {
+                this.apply = model.apply;
+                this.diskUsageUpperThreshold = model.diskUsageUpperThreshold;
+                this.maxStorage = model.maxStorage;
+                this.upgrade = model.upgrade;
+            } 
 
             /**
              * <p>Specifies whether to apply the <strong>Storage</strong> configuration of the automatic storage expansion feature. Valid values:</p>

@@ -48,6 +48,10 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAutoResourceOptimizeRulesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code returned.</p>
@@ -246,6 +261,18 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
             private Double tableFragmentationRatio; 
             private Double tableSpaceSize; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(EnableAutoResourceOptimizeList model) {
+                this.autoDefragment = model.autoDefragment;
+                this.dasProOn = model.dasProOn;
+                this.instanceId = model.instanceId;
+                this.tableFragmentationRatio = model.tableFragmentationRatio;
+                this.tableSpaceSize = model.tableSpaceSize;
+                this.userId = model.userId;
+            } 
 
             /**
              * <p>Indicates whether the automatic fragment recycling feature is enabled. Valid values:</p>
@@ -420,6 +447,18 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
             private Double tableSpaceSize; 
             private String userId; 
 
+            private Builder() {
+            } 
+
+            private Builder(HasEnableRuleButNotDasProList model) {
+                this.autoDefragment = model.autoDefragment;
+                this.dasProOn = model.dasProOn;
+                this.instanceId = model.instanceId;
+                this.tableFragmentationRatio = model.tableFragmentationRatio;
+                this.tableSpaceSize = model.tableSpaceSize;
+                this.userId = model.userId;
+            } 
+
             /**
              * <p>Indicates whether the automatic fragment recycling feature is enabled. Valid values:</p>
              * <ul>
@@ -592,6 +631,18 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
             private Double tableFragmentationRatio; 
             private Double tableSpaceSize; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TurnOffAutoResourceOptimizeList model) {
+                this.autoDefragment = model.autoDefragment;
+                this.dasProOn = model.dasProOn;
+                this.instanceId = model.instanceId;
+                this.tableFragmentationRatio = model.tableFragmentationRatio;
+                this.tableSpaceSize = model.tableSpaceSize;
+                this.userId = model.userId;
+            } 
 
             /**
              * <p>Indicates whether the automatic fragment recycling feature is enabled. Valid values:</p>
@@ -801,6 +852,21 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
             private Long totalAutoResourceOptimizeRulesCount; 
             private Long turnOffAutoResourceOptimizeCount; 
             private java.util.List<TurnOffAutoResourceOptimizeList> turnOffAutoResourceOptimizeList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.enableAutoResourceOptimizeCount = model.enableAutoResourceOptimizeCount;
+                this.enableAutoResourceOptimizeList = model.enableAutoResourceOptimizeList;
+                this.hasEnableRuleButNotDasProCount = model.hasEnableRuleButNotDasProCount;
+                this.hasEnableRuleButNotDasProList = model.hasEnableRuleButNotDasProList;
+                this.neverEnableAutoResourceOptimizeOrReleasedInstanceCount = model.neverEnableAutoResourceOptimizeOrReleasedInstanceCount;
+                this.neverEnableAutoResourceOptimizeOrReleasedInstanceIdList = model.neverEnableAutoResourceOptimizeOrReleasedInstanceIdList;
+                this.totalAutoResourceOptimizeRulesCount = model.totalAutoResourceOptimizeRulesCount;
+                this.turnOffAutoResourceOptimizeCount = model.turnOffAutoResourceOptimizeCount;
+                this.turnOffAutoResourceOptimizeList = model.turnOffAutoResourceOptimizeList;
+            } 
 
             /**
              * <p>The number of database instances for which the automatic fragment recycling feature is currently enabled.</p>

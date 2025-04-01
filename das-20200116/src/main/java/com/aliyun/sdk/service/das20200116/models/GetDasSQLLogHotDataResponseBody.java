@@ -48,6 +48,10 @@ public class GetDasSQLLogHotDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetDasSQLLogHotDataResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDasSQLLogHotDataResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code returned.</p>
@@ -403,6 +418,31 @@ public class GetDasSQLLogHotDataResponseBody extends TeaModel {
             private String transactionId; 
             private Long updateRows; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.accountName = model.accountName;
+                this.DBName = model.DBName;
+                this.executeTime = model.executeTime;
+                this.ext = model.ext;
+                this.hostAddress = model.hostAddress;
+                this.latancy = model.latancy;
+                this.lockTime = model.lockTime;
+                this.logicRead = model.logicRead;
+                this.originTime = model.originTime;
+                this.physicAsyncRead = model.physicAsyncRead;
+                this.physicSyncRead = model.physicSyncRead;
+                this.returnRows = model.returnRows;
+                this.SQLText = model.SQLText;
+                this.scanRows = model.scanRows;
+                this.sqlType = model.sqlType;
+                this.state = model.state;
+                this.threadID = model.threadID;
+                this.transactionId = model.transactionId;
+                this.updateRows = model.updateRows;
+            } 
+
             /**
              * <p>The account of the database.</p>
              * 
@@ -703,6 +743,17 @@ public class GetDasSQLLogHotDataResponseBody extends TeaModel {
             private Long pageNo; 
             private Long pageSize; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.extra = model.extra;
+                this.list = model.list;
+                this.pageNo = model.pageNo;
+                this.pageSize = model.pageSize;
+                this.total = model.total;
+            } 
 
             /**
              * <p>The reserved parameter.</p>

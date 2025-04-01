@@ -48,6 +48,10 @@ public class GetSqlOptimizeAdviceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetSqlOptimizeAdviceResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSqlOptimizeAdviceResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code returned.</p>
@@ -246,6 +261,18 @@ public class GetSqlOptimizeAdviceResponseBody extends TeaModel {
             private String status; 
             private String statusCode; 
             private String taskId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.createTime = model.createTime;
+                this.downloadUrl = model.downloadUrl;
+                this.expireTime = model.expireTime;
+                this.status = model.status;
+                this.statusCode = model.statusCode;
+                this.taskId = model.taskId;
+            } 
 
             /**
              * <p>The time when the task was created. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>

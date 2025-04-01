@@ -48,6 +48,10 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetStorageAnalysisResultResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code returned.</p>
@@ -234,6 +249,17 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             private String optimizeAdvice; 
             private String optimizeItemName; 
             private String tableName; 
+
+            private Builder() {
+            } 
+
+            private Builder(NeedOptimizeItemList model) {
+                this.associatedData = model.associatedData;
+                this.dbName = model.dbName;
+                this.optimizeAdvice = model.optimizeAdvice;
+                this.optimizeItemName = model.optimizeItemName;
+                this.tableName = model.tableName;
+            } 
 
             /**
              * <p>The data associated with the items to be optimized, which is in the JSON format.</p>
@@ -513,6 +539,25 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             private Long tableRows; 
             private String tableType; 
             private Long totalSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(TableStats model) {
+                this.avgRowLength = model.avgRowLength;
+                this.dataFree = model.dataFree;
+                this.dataSize = model.dataSize;
+                this.dbName = model.dbName;
+                this.engine = model.engine;
+                this.fragmentSize = model.fragmentSize;
+                this.indexSize = model.indexSize;
+                this.phyTotalSize = model.phyTotalSize;
+                this.physicalFileSize = model.physicalFileSize;
+                this.tableName = model.tableName;
+                this.tableRows = model.tableRows;
+                this.tableType = model.tableType;
+                this.totalSize = model.totalSize;
+            } 
 
             /**
              * <p>The average length of rows. Unit: bytes.</p>
@@ -816,6 +861,21 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             private Long totalStorageSize; 
             private Long totalUsedStorageSize; 
 
+            private Builder() {
+            } 
+
+            private Builder(StorageAnalysisResult model) {
+                this.analysisErrorType = model.analysisErrorType;
+                this.analysisSuccess = model.analysisSuccess;
+                this.dailyIncrement = model.dailyIncrement;
+                this.estimateAvailableDays = model.estimateAvailableDays;
+                this.needOptimizeItemList = model.needOptimizeItemList;
+                this.tableStats = model.tableStats;
+                this.totalFreeStorageSize = model.totalFreeStorageSize;
+                this.totalStorageSize = model.totalStorageSize;
+                this.totalUsedStorageSize = model.totalUsedStorageSize;
+            } 
+
             /**
              * <p>The reason why the analysis on the database and table fails.</p>
              * <ul>
@@ -1044,6 +1104,20 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             private String taskState; 
             private Boolean taskSuccess; 
             private Long totalDbCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.analyzedDbCount = model.analyzedDbCount;
+                this.storageAnalysisResult = model.storageAnalysisResult;
+                this.taskFinish = model.taskFinish;
+                this.taskId = model.taskId;
+                this.taskProgress = model.taskProgress;
+                this.taskState = model.taskState;
+                this.taskSuccess = model.taskSuccess;
+                this.totalDbCount = model.totalDbCount;
+            } 
 
             /**
              * <p>The number of databases that have been analyzed.</p>

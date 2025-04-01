@@ -48,6 +48,10 @@ public class CreateStorageAnalysisTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class CreateStorageAnalysisTaskResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateStorageAnalysisTaskResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code returned.</p>
@@ -210,6 +225,15 @@ public class CreateStorageAnalysisTaskResponseBody extends TeaModel {
             private Boolean createTaskSuccess; 
             private String errorMessage; 
             private String taskId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.createTaskSuccess = model.createTaskSuccess;
+                this.errorMessage = model.errorMessage;
+                this.taskId = model.taskId;
+            } 
 
             /**
              * <p>Indicates whether the task is created. Valid values:</p>

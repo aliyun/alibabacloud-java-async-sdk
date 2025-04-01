@@ -48,6 +48,10 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCloudBenchTasksResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code returned.</p>
@@ -666,6 +681,53 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
             private String userId; 
             private String version; 
             private String workDir; 
+
+            private Builder() {
+            } 
+
+            private Builder(CloudbenchTasks model) {
+                this.archiveJobId = model.archiveJobId;
+                this.archiveOssTableName = model.archiveOssTableName;
+                this.archiveState = model.archiveState;
+                this.backupId = model.backupId;
+                this.backupType = model.backupType;
+                this.benchStep = model.benchStep;
+                this.benchStepStatus = model.benchStepStatus;
+                this.clientGatewayId = model.clientGatewayId;
+                this.clientType = model.clientType;
+                this.description = model.description;
+                this.dstInstanceUuid = model.dstInstanceUuid;
+                this.dstIp = model.dstIp;
+                this.dstPort = model.dstPort;
+                this.dstType = model.dstType;
+                this.dtsJobClass = model.dtsJobClass;
+                this.dtsJobId = model.dtsJobId;
+                this.dtsJobName = model.dtsJobName;
+                this.dtsJobState = model.dtsJobState;
+                this.dtsJobStatus = model.dtsJobStatus;
+                this.ecsInstanceId = model.ecsInstanceId;
+                this.endState = model.endState;
+                this.errorCode = model.errorCode;
+                this.errorMessage = model.errorMessage;
+                this.external = model.external;
+                this.rate = model.rate;
+                this.requestDuration = model.requestDuration;
+                this.smartPressureTime = model.smartPressureTime;
+                this.source = model.source;
+                this.sqlCompleteReuse = model.sqlCompleteReuse;
+                this.srcInstanceArea = model.srcInstanceArea;
+                this.srcInstanceUuid = model.srcInstanceUuid;
+                this.srcPublicIp = model.srcPublicIp;
+                this.state = model.state;
+                this.status = model.status;
+                this.tableSchema = model.tableSchema;
+                this.taskId = model.taskId;
+                this.taskType = model.taskType;
+                this.topic = model.topic;
+                this.userId = model.userId;
+                this.version = model.version;
+                this.workDir = model.workDir;
+            } 
 
             /**
              * <p>The archiving task ID.</p>
@@ -1268,6 +1330,13 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<CloudbenchTasks> cloudbenchTasks; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.cloudbenchTasks = model.cloudbenchTasks;
+            } 
+
             /**
              * cloudbenchTasks.
              */
@@ -1362,6 +1431,17 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
             private Integer pageNo; 
             private Integer pageSize; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.extra = model.extra;
+                this.list = model.list;
+                this.pageNo = model.pageNo;
+                this.pageSize = model.pageSize;
+                this.total = model.total;
+            } 
 
             /**
              * <p>The reserved parameter.</p>

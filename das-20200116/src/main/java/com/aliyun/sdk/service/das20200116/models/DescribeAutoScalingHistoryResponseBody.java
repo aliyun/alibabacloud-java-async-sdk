@@ -48,6 +48,10 @@ public class DescribeAutoScalingHistoryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class DescribeAutoScalingHistoryResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAutoScalingHistoryResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code returned. The status code 200 indicates that the request was successful.</p>
@@ -294,6 +309,22 @@ public class DescribeAutoScalingHistoryResponseBody extends TeaModel {
             private Double targetMemory; 
             private Boolean taskExcuteStatus; 
             private Long taskTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(SpecHistory model) {
+                this.errorCode = model.errorCode;
+                this.originCore = model.originCore;
+                this.originInstanceClass = model.originInstanceClass;
+                this.originMemory = model.originMemory;
+                this.scaleType = model.scaleType;
+                this.targetCore = model.targetCore;
+                this.targetInstanceClass = model.targetInstanceClass;
+                this.targetMemory = model.targetMemory;
+                this.taskExcuteStatus = model.taskExcuteStatus;
+                this.taskTime = model.taskTime;
+            } 
 
             /**
              * <p>The error code returned by the scaling task. Valid values:</p>
@@ -517,6 +548,18 @@ public class DescribeAutoScalingHistoryResponseBody extends TeaModel {
             private java.util.List<java.util.Map<String, ?>> shard; 
             private java.util.List<SpecHistory> specHistory; 
             private java.util.List<java.util.Map<String, ?>> storage; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.bandwidth = model.bandwidth;
+                this.instanceId = model.instanceId;
+                this.resource = model.resource;
+                this.shard = model.shard;
+                this.specHistory = model.specHistory;
+                this.storage = model.storage;
+            } 
 
             /**
              * <p>The history of automatic bandwidth scaling of ApsaraDB for Redis instances. This feature is not supported.</p>

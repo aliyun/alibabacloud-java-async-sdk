@@ -48,6 +48,10 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetPfsSqlSummariesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code returned.</p>
@@ -931,6 +946,75 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             private String userId; 
             private Long warnCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.avgLatency = model.avgLatency;
+                this.count = model.count;
+                this.countRate = model.countRate;
+                this.cpuRate = model.cpuRate;
+                this.cpuTime = model.cpuTime;
+                this.dataReadTime = model.dataReadTime;
+                this.dataReads = model.dataReads;
+                this.dataWriteTime = model.dataWriteTime;
+                this.dataWrites = model.dataWrites;
+                this.db = model.db;
+                this.elapsedTime = model.elapsedTime;
+                this.errCount = model.errCount;
+                this.firstTime = model.firstTime;
+                this.fullScan = model.fullScan;
+                this.id = model.id;
+                this.instanceId = model.instanceId;
+                this.lastTime = model.lastTime;
+                this.lockLatencyAvg = model.lockLatencyAvg;
+                this.logicId = model.logicId;
+                this.logicReads = model.logicReads;
+                this.maxLatency = model.maxLatency;
+                this.mutexSpins = model.mutexSpins;
+                this.mutexWaits = model.mutexWaits;
+                this.nodeId = model.nodeId;
+                this.physicalAsyncReads = model.physicalAsyncReads;
+                this.physicalReads = model.physicalReads;
+                this.psql = model.psql;
+                this.redoWrites = model.redoWrites;
+                this.rowsAffected = model.rowsAffected;
+                this.rowsAffectedAvg = model.rowsAffectedAvg;
+                this.rowsExamined = model.rowsExamined;
+                this.rowsExaminedAvg = model.rowsExaminedAvg;
+                this.rowsSendAvg = model.rowsSendAvg;
+                this.rowsSent = model.rowsSent;
+                this.rowsSentAvg = model.rowsSentAvg;
+                this.rowsSorted = model.rowsSorted;
+                this.rtRate = model.rtRate;
+                this.rwlockOsWaits = model.rwlockOsWaits;
+                this.rwlockSpinRounds = model.rwlockSpinRounds;
+                this.rwlockSpinWaits = model.rwlockSpinWaits;
+                this.selectFullJoinAvg = model.selectFullJoinAvg;
+                this.selectFullRangeJoinAvg = model.selectFullRangeJoinAvg;
+                this.selectRangeAvg = model.selectRangeAvg;
+                this.selectScanAvg = model.selectScanAvg;
+                this.semisyncDelayTime = model.semisyncDelayTime;
+                this.serverLockTime = model.serverLockTime;
+                this.sortMergePasses = model.sortMergePasses;
+                this.sortRangeAvg = model.sortRangeAvg;
+                this.sortRowsAvg = model.sortRowsAvg;
+                this.sortScanAvg = model.sortScanAvg;
+                this.sqlId = model.sqlId;
+                this.sqlType = model.sqlType;
+                this.tables = model.tables;
+                this.timerWaitAvg = model.timerWaitAvg;
+                this.timestamp = model.timestamp;
+                this.tmpDiskTables = model.tmpDiskTables;
+                this.tmpDiskTablesAvg = model.tmpDiskTablesAvg;
+                this.tmpTables = model.tmpTables;
+                this.tmpTablesAvg = model.tmpTablesAvg;
+                this.totalLatency = model.totalLatency;
+                this.transactionLockTime = model.transactionLockTime;
+                this.userId = model.userId;
+                this.warnCount = model.warnCount;
+            } 
+
             /**
              * <p>The average execution latency. Unit: millisecond.</p>
              * 
@@ -1730,6 +1814,17 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             private Long pageNo; 
             private Long pageSize; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.extra = model.extra;
+                this.list = model.list;
+                this.pageNo = model.pageNo;
+                this.pageSize = model.pageSize;
+                this.total = model.total;
+            } 
 
             /**
              * <p>The reserved parameter.</p>

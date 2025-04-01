@@ -48,6 +48,10 @@ public class GetFullRequestOriginStatByInstanceIdResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetFullRequestOriginStatByInstanceIdResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetFullRequestOriginStatByInstanceIdResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code returned.</p>
@@ -559,6 +574,44 @@ public class GetFullRequestOriginStatByInstanceIdResponseBody extends TeaModel {
             private Long version; 
             private String vpcId; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.avgExaminedRows = model.avgExaminedRows;
+                this.avgFetchRows = model.avgFetchRows;
+                this.avgLockWaitTime = model.avgLockWaitTime;
+                this.avgLogicalRead = model.avgLogicalRead;
+                this.avgPhysicalAsyncRead = model.avgPhysicalAsyncRead;
+                this.avgPhysicalSyncRead = model.avgPhysicalSyncRead;
+                this.avgReturnedRows = model.avgReturnedRows;
+                this.avgRows = model.avgRows;
+                this.avgRt = model.avgRt;
+                this.avgSqlCount = model.avgSqlCount;
+                this.avgUpdatedRows = model.avgUpdatedRows;
+                this.count = model.count;
+                this.countRate = model.countRate;
+                this.database = model.database;
+                this.errorCount = model.errorCount;
+                this.examinedRows = model.examinedRows;
+                this.fetchRows = model.fetchRows;
+                this.ip = model.ip;
+                this.key = model.key;
+                this.lockWaitTime = model.lockWaitTime;
+                this.logicalRead = model.logicalRead;
+                this.originHost = model.originHost;
+                this.physicalAsyncRead = model.physicalAsyncRead;
+                this.physicalSyncRead = model.physicalSyncRead;
+                this.port = model.port;
+                this.rows = model.rows;
+                this.rtGreaterThanOneSecondCount = model.rtGreaterThanOneSecondCount;
+                this.rtRate = model.rtRate;
+                this.sqlCount = model.sqlCount;
+                this.sumUpdatedRows = model.sumUpdatedRows;
+                this.version = model.version;
+                this.vpcId = model.vpcId;
+            } 
+
             /**
              * <p>The average number of scanned rows.</p>
              * <blockquote>
@@ -970,6 +1023,14 @@ public class GetFullRequestOriginStatByInstanceIdResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<List> list; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.list = model.list;
+                this.total = model.total;
+            } 
 
             /**
              * <p>The details of the full request data.</p>

@@ -48,6 +48,10 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetInstanceInspectionsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code returned.</p>
@@ -234,6 +249,17 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             private Integer autoResourceOptimize; 
             private Integer autoScale; 
             private Integer eventSubscription; 
+
+            private Builder() {
+            } 
+
+            private Builder(AutoFunction model) {
+                this.autoIndex = model.autoIndex;
+                this.autoLimitedSql = model.autoLimitedSql;
+                this.autoResourceOptimize = model.autoResourceOptimize;
+                this.autoScale = model.autoScale;
+                this.eventSubscription = model.eventSubscription;
+            } 
 
             /**
              * <p>Indicates whether the feature of automatically creating and deleting indexes is enabled. Valid values:</p>
@@ -533,6 +559,28 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             private Integer storage; 
             private String uuid; 
             private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Instance model) {
+                this.accountId = model.accountId;
+                this.category = model.category;
+                this.cpu = model.cpu;
+                this.engine = model.engine;
+                this.engineVersion = model.engineVersion;
+                this.instanceAlias = model.instanceAlias;
+                this.instanceArea = model.instanceArea;
+                this.instanceClass = model.instanceClass;
+                this.instanceId = model.instanceId;
+                this.memory = model.memory;
+                this.networkType = model.networkType;
+                this.nodeId = model.nodeId;
+                this.region = model.region;
+                this.storage = model.storage;
+                this.uuid = model.uuid;
+                this.vpcId = model.vpcId;
+            } 
 
             /**
              * <p>The account ID. You can view the ID of the logon account by moving the pointer over the profile in the Alibaba Cloud management console.</p>
@@ -886,6 +934,23 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             private Integer state; 
             private Integer taskType; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.autoFunction = model.autoFunction;
+                this.data = model.data;
+                this.enableDasPro = model.enableDasPro;
+                this.endTime = model.endTime;
+                this.gmtCreate = model.gmtCreate;
+                this.instance = model.instance;
+                this.score = model.score;
+                this.scoreMap = model.scoreMap;
+                this.startTime = model.startTime;
+                this.state = model.state;
+                this.taskType = model.taskType;
+            } 
+
             /**
              * <p>Indicates whether the autonomy service is enabled.</p>
              */
@@ -1089,6 +1154,16 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             private Long pageNo; 
             private Long pageSize; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.list = model.list;
+                this.pageNo = model.pageNo;
+                this.pageSize = model.pageSize;
+                this.total = model.total;
+            } 
 
             /**
              * <p>The detailed information.</p>

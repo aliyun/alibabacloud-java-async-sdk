@@ -48,6 +48,10 @@ public class GetQueryOptimizeDataTrendResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetQueryOptimizeDataTrendResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetQueryOptimizeDataTrendResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code returned.</p>
@@ -207,6 +222,15 @@ public class GetQueryOptimizeDataTrendResponseBody extends TeaModel {
             private String kpi; 
             private Long timestamp; 
             private Double value; 
+
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.kpi = model.kpi;
+                this.timestamp = model.timestamp;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The name of the metric. Valid values:</p>
@@ -337,6 +361,17 @@ public class GetQueryOptimizeDataTrendResponseBody extends TeaModel {
             private Integer pageNo; 
             private Integer pageSize; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.extra = model.extra;
+                this.list = model.list;
+                this.pageNo = model.pageNo;
+                this.pageSize = model.pageSize;
+                this.total = model.total;
+            } 
 
             /**
              * <p>The reserved parameter.</p>

@@ -48,6 +48,10 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateCacheAnalysisJobResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code returned.</p>
@@ -271,6 +286,20 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
             private String nodeId; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(KeyInfo model) {
+                this.bytes = model.bytes;
+                this.count = model.count;
+                this.db = model.db;
+                this.encoding = model.encoding;
+                this.expirationTimeMillis = model.expirationTimeMillis;
+                this.key = model.key;
+                this.nodeId = model.nodeId;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The number of bytes that are occupied by the key.</p>
              * 
@@ -398,6 +427,13 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<KeyInfo> keyInfo; 
 
+            private Builder() {
+            } 
+
+            private Builder(BigKeys model) {
+                this.keyInfo = model.keyInfo;
+            } 
+
             /**
              * KeyInfo.
              */
@@ -504,6 +540,18 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
             private String message; 
             private String nodeId; 
             private String taskState; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.bigKeys = model.bigKeys;
+                this.instanceId = model.instanceId;
+                this.jobId = model.jobId;
+                this.message = model.message;
+                this.nodeId = model.nodeId;
+                this.taskState = model.taskState;
+            } 
 
             /**
              * <p>The number of elements in the key.</p>

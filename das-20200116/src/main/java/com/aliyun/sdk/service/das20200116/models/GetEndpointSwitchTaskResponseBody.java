@@ -52,6 +52,10 @@ public class GetEndpointSwitchTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetEndpointSwitchTaskResponseBody extends TeaModel {
         private String requestId; 
         private String success; 
         private String synchro; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetEndpointSwitchTaskResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.synchro = model.synchro;
+        } 
 
         /**
          * Code.
@@ -259,6 +275,19 @@ public class GetEndpointSwitchTaskResponseBody extends TeaModel {
             private String status; 
             private String taskId; 
             private String uuid; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.accountId = model.accountId;
+                this.dbLinkId = model.dbLinkId;
+                this.errMsg = model.errMsg;
+                this.oriUuid = model.oriUuid;
+                this.status = model.status;
+                this.taskId = model.taskId;
+                this.uuid = model.uuid;
+            } 
 
             /**
              * AccountId.

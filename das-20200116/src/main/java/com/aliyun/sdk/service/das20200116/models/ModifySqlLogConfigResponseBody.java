@@ -48,6 +48,10 @@ public class ModifySqlLogConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class ModifySqlLogConfigResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifySqlLogConfigResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The response code.</p>
@@ -378,6 +393,29 @@ public class ModifySqlLogConfigResponseBody extends TeaModel {
             private Long sqlLogVisibleTime; 
             private String supportVersion; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.coldEnable = model.coldEnable;
+                this.coldRetention = model.coldRetention;
+                this.coldStartTime = model.coldStartTime;
+                this.collectorVersion = model.collectorVersion;
+                this.hotEnable = model.hotEnable;
+                this.hotRetention = model.hotRetention;
+                this.hotStartTime = model.hotStartTime;
+                this.logFilter = model.logFilter;
+                this.requestEnable = model.requestEnable;
+                this.requestStartTime = model.requestStartTime;
+                this.requestStopTime = model.requestStopTime;
+                this.retention = model.retention;
+                this.sqlLogEnable = model.sqlLogEnable;
+                this.sqlLogState = model.sqlLogState;
+                this.sqlLogVisibleTime = model.sqlLogVisibleTime;
+                this.supportVersion = model.supportVersion;
+                this.version = model.version;
+            } 
 
             /**
              * <p>Indicates whether the cold data storage is enabled. Valid values:</p>

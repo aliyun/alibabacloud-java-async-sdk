@@ -48,6 +48,10 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetFullRequestStatResultByInstanceIdResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code returned.</p>
@@ -559,6 +574,44 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             private Long version; 
             private String vpcId; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.avgExaminedRows = model.avgExaminedRows;
+                this.avgFetchRows = model.avgFetchRows;
+                this.avgLockWaitTime = model.avgLockWaitTime;
+                this.avgLogicalRead = model.avgLogicalRead;
+                this.avgPhysicalAsyncRead = model.avgPhysicalAsyncRead;
+                this.avgPhysicalSyncRead = model.avgPhysicalSyncRead;
+                this.avgReturnedRows = model.avgReturnedRows;
+                this.avgRt = model.avgRt;
+                this.avgSqlCount = model.avgSqlCount;
+                this.avgUpdatedRows = model.avgUpdatedRows;
+                this.count = model.count;
+                this.countRate = model.countRate;
+                this.database = model.database;
+                this.errorCount = model.errorCount;
+                this.examinedRows = model.examinedRows;
+                this.fetchRows = model.fetchRows;
+                this.ip = model.ip;
+                this.lockWaitTime = model.lockWaitTime;
+                this.logicalRead = model.logicalRead;
+                this.physicalAsyncRead = model.physicalAsyncRead;
+                this.physicalSyncRead = model.physicalSyncRead;
+                this.port = model.port;
+                this.psql = model.psql;
+                this.rows = model.rows;
+                this.rtGreaterThanOneSecondCount = model.rtGreaterThanOneSecondCount;
+                this.rtRate = model.rtRate;
+                this.sqlCount = model.sqlCount;
+                this.sqlId = model.sqlId;
+                this.sumUpdatedRows = model.sumUpdatedRows;
+                this.tables = model.tables;
+                this.version = model.version;
+                this.vpcId = model.vpcId;
+            } 
+
             /**
              * <p>The average number of scanned rows.</p>
              * <blockquote>
@@ -968,6 +1021,14 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             private java.util.List<List> list; 
             private Long total; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.list = model.list;
+                this.total = model.total;
+            } 
+
             /**
              * <p>The full request data.</p>
              */
@@ -1085,6 +1146,18 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             private String resultId; 
             private String state; 
             private Long timestamp; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.fail = model.fail;
+                this.isFinish = model.isFinish;
+                this.result = model.result;
+                this.resultId = model.resultId;
+                this.state = model.state;
+                this.timestamp = model.timestamp;
+            } 
 
             /**
              * <p>Indicates whether the asynchronous request failed. Valid values:</p>

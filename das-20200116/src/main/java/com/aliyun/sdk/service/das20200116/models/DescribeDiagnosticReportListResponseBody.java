@@ -52,6 +52,10 @@ public class DescribeDiagnosticReportListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class DescribeDiagnosticReportListResponseBody extends TeaModel {
         private String requestId; 
         private String success; 
         private String synchro; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDiagnosticReportListResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.synchro = model.synchro;
+        } 
 
         /**
          * <p>The HTTP status code returned.</p>

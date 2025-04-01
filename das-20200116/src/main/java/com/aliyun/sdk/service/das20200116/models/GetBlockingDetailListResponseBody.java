@@ -48,6 +48,10 @@ public class GetBlockingDetailListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetBlockingDetailListResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetBlockingDetailListResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code returned.</p>
@@ -319,6 +334,24 @@ public class GetBlockingDetailListResponseBody extends TeaModel {
             private Long waitTimeMs; 
             private String waitType; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.batchId = model.batchId;
+                this.clientAppName = model.clientAppName;
+                this.currentCollectionTime = model.currentCollectionTime;
+                this.dataBase = model.dataBase;
+                this.hostName = model.hostName;
+                this.loginId = model.loginId;
+                this.queryHash = model.queryHash;
+                this.spid = model.spid;
+                this.sqlText = model.sqlText;
+                this.startTime = model.startTime;
+                this.waitTimeMs = model.waitTimeMs;
+                this.waitType = model.waitType;
+            } 
+
             /**
              * <p>The batch ID.</p>
              * 
@@ -525,6 +558,16 @@ public class GetBlockingDetailListResponseBody extends TeaModel {
             private Long pageNo; 
             private Long pageSize; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.list = model.list;
+                this.pageNo = model.pageNo;
+                this.pageSize = model.pageSize;
+                this.total = model.total;
+            } 
 
             /**
              * <p>The details of the data returned.</p>

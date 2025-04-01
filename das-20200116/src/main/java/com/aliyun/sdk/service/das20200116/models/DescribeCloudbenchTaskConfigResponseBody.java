@@ -48,6 +48,10 @@ public class DescribeCloudbenchTaskConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class DescribeCloudbenchTaskConfigResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCloudbenchTaskConfigResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code returned.</p>
@@ -378,6 +393,29 @@ public class DescribeCloudbenchTaskConfigResponseBody extends TeaModel {
             private String taskId; 
             private String userId; 
             private String workDir; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.archiveFolder = model.archiveFolder;
+                this.benchCmd = model.benchCmd;
+                this.clientJarPath = model.clientJarPath;
+                this.jarOnOss = model.jarOnOss;
+                this.loadCmd = model.loadCmd;
+                this.metaFileName = model.metaFileName;
+                this.metaFileOnOss = model.metaFileOnOss;
+                this.metaFilePath = model.metaFilePath;
+                this.parseCmd = model.parseCmd;
+                this.parseFilePath = model.parseFilePath;
+                this.rocksDbPath = model.rocksDbPath;
+                this.sqlFileName = model.sqlFileName;
+                this.sqlFileOnOss = model.sqlFileOnOss;
+                this.sqlFilePath = model.sqlFilePath;
+                this.taskId = model.taskId;
+                this.userId = model.userId;
+                this.workDir = model.workDir;
+            } 
 
             /**
              * <p>The path in which the files are archived.</p>

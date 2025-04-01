@@ -48,6 +48,10 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAutoScalingConfigResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code returned.</p>
@@ -234,6 +249,17 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
             private Boolean downgrade; 
             private String observationWindowSize; 
             private Boolean upgrade; 
+
+            private Builder() {
+            } 
+
+            private Builder(Bandwidth model) {
+                this.bandwidthUsageLowerThreshold = model.bandwidthUsageLowerThreshold;
+                this.bandwidthUsageUpperThreshold = model.bandwidthUsageUpperThreshold;
+                this.downgrade = model.downgrade;
+                this.observationWindowSize = model.observationWindowSize;
+                this.upgrade = model.upgrade;
+            } 
 
             /**
              * <p>The average bandwidth usage threshold that triggers automatic bandwidth downgrade. Unit: %.</p>
@@ -393,6 +419,17 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
             private String downgradeObservationWindowSize; 
             private Boolean enable; 
             private String upgradeObservationWindowSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(Resource model) {
+                this.cpuStep = model.cpuStep;
+                this.cpuUsageUpperThreshold = model.cpuUsageUpperThreshold;
+                this.downgradeObservationWindowSize = model.downgradeObservationWindowSize;
+                this.enable = model.enable;
+                this.upgradeObservationWindowSize = model.upgradeObservationWindowSize;
+            } 
 
             /**
              * <p>The scale-out step size of CPU.</p>
@@ -593,6 +630,20 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
             private Integer minShards; 
             private Boolean upgrade; 
             private String upgradeObservationWindowSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(Shard model) {
+                this.downgrade = model.downgrade;
+                this.downgradeObservationWindowSize = model.downgradeObservationWindowSize;
+                this.maxShards = model.maxShards;
+                this.memUsageLowerThreshold = model.memUsageLowerThreshold;
+                this.memUsageUpperThreshold = model.memUsageUpperThreshold;
+                this.minShards = model.minShards;
+                this.upgrade = model.upgrade;
+                this.upgradeObservationWindowSize = model.upgradeObservationWindowSize;
+            } 
 
             /**
              * <p>Indicates whether the feature of automatically removing shards is enabled. Valid values:</p>
@@ -831,6 +882,20 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
             private String observationWindowSize; 
             private Boolean upgrade; 
 
+            private Builder() {
+            } 
+
+            private Builder(Spec model) {
+                this.coolDownTime = model.coolDownTime;
+                this.cpuUsageUpperThreshold = model.cpuUsageUpperThreshold;
+                this.downgrade = model.downgrade;
+                this.maxReadOnlyNodes = model.maxReadOnlyNodes;
+                this.maxSpec = model.maxSpec;
+                this.memUsageUpperThreshold = model.memUsageUpperThreshold;
+                this.observationWindowSize = model.observationWindowSize;
+                this.upgrade = model.upgrade;
+            } 
+
             /**
              * <p>The quiescent period. The return value consists of a numeric value and a time unit suffix. Valid values of the time unit suffix:</p>
              * <ul>
@@ -1012,6 +1077,15 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
             private Integer maxStorage; 
             private Boolean upgrade; 
 
+            private Builder() {
+            } 
+
+            private Builder(Storage model) {
+                this.diskUsageUpperThreshold = model.diskUsageUpperThreshold;
+                this.maxStorage = model.maxStorage;
+                this.upgrade = model.upgrade;
+            } 
+
             /**
              * <p>The average storage usage threshold that triggers automatic storage expansion. Unit: %.</p>
              * 
@@ -1135,6 +1209,17 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
             private Shard shard; 
             private Spec spec; 
             private Storage storage; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.bandwidth = model.bandwidth;
+                this.resource = model.resource;
+                this.shard = model.shard;
+                this.spec = model.spec;
+                this.storage = model.storage;
+            } 
 
             /**
              * <p>The configurations of the automatic bandwidth adjustment feature.</p>

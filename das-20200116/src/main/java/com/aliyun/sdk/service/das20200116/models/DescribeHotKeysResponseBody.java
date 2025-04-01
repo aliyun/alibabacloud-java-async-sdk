@@ -48,6 +48,10 @@ public class DescribeHotKeysResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class DescribeHotKeysResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeHotKeysResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code returned.</p>
@@ -235,6 +250,17 @@ public class DescribeHotKeysResponseBody extends TeaModel {
             private String keyType; 
             private Long size; 
 
+            private Builder() {
+            } 
+
+            private Builder(HotKey model) {
+                this.db = model.db;
+                this.hot = model.hot;
+                this.key = model.key;
+                this.keyType = model.keyType;
+                this.size = model.size;
+            } 
+
             /**
              * <p>The database in which the key is stored.</p>
              * 
@@ -328,6 +354,13 @@ public class DescribeHotKeysResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<HotKey> hotKey; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.hotKey = model.hotKey;
+            } 
 
             /**
              * HotKey.

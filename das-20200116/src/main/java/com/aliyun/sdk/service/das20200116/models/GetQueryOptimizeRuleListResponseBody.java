@@ -48,6 +48,10 @@ public class GetQueryOptimizeRuleListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetQueryOptimizeRuleListResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetQueryOptimizeRuleListResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code returned.</p>
@@ -207,6 +222,15 @@ public class GetQueryOptimizeRuleListResponseBody extends TeaModel {
             private String name; 
             private String ruleId; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.name = model.name;
+                this.ruleId = model.ruleId;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The name of the tag.</p>
@@ -327,6 +351,17 @@ public class GetQueryOptimizeRuleListResponseBody extends TeaModel {
             private Integer pageNo; 
             private Integer pageSize; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.extra = model.extra;
+                this.list = model.list;
+                this.pageNo = model.pageNo;
+                this.pageSize = model.pageSize;
+                this.total = model.total;
+            } 
 
             /**
              * <p>A reserved parameter.</p>

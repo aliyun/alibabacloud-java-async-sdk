@@ -48,6 +48,10 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSqlLogTaskResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The response code.</p>
@@ -199,6 +214,14 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
             private String key; 
             private Object value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Filters model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The name of the filter parameter.</p>
              * <blockquote>
@@ -304,6 +327,9 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Scnt")
         private Long scnt;
 
+        @com.aliyun.core.annotation.NameInMap("SqlCommand")
+        private Long sqlCommand;
+
         @com.aliyun.core.annotation.NameInMap("SqlId")
         private String sqlId;
 
@@ -360,6 +386,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
             this.rows = builder.rows;
             this.scanRows = builder.scanRows;
             this.scnt = builder.scnt;
+            this.sqlCommand = builder.sqlCommand;
             this.sqlId = builder.sqlId;
             this.sqlText = builder.sqlText;
             this.sqlType = builder.sqlType;
@@ -536,6 +563,13 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
         }
 
         /**
+         * @return sqlCommand
+         */
+        public Long getSqlCommand() {
+            return this.sqlCommand;
+        }
+
+        /**
          * @return sqlId
          */
         public String getSqlId() {
@@ -635,6 +669,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
             private Long rows; 
             private Long scanRows; 
             private Long scnt; 
+            private Long sqlCommand; 
             private String sqlId; 
             private String sqlText; 
             private String sqlType; 
@@ -646,6 +681,46 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
             private String useImciEngine; 
             private String vip; 
             private Long writes; 
+
+            private Builder() {
+            } 
+
+            private Builder(Queries model) {
+                this.accountName = model.accountName;
+                this.collection = model.collection;
+                this.consume = model.consume;
+                this.cpuTime = model.cpuTime;
+                this.DBName = model.DBName;
+                this.executeTime = model.executeTime;
+                this.ext = model.ext;
+                this.frows = model.frows;
+                this.hostAddress = model.hostAddress;
+                this.lockTime = model.lockTime;
+                this.logicRead = model.logicRead;
+                this.nodeId = model.nodeId;
+                this.originTime = model.originTime;
+                this.parallelDegree = model.parallelDegree;
+                this.parallelQueueTime = model.parallelQueueTime;
+                this.physicAsyncRead = model.physicAsyncRead;
+                this.physicRead = model.physicRead;
+                this.physicSyncRead = model.physicSyncRead;
+                this.returnRows = model.returnRows;
+                this.rows = model.rows;
+                this.scanRows = model.scanRows;
+                this.scnt = model.scnt;
+                this.sqlCommand = model.sqlCommand;
+                this.sqlId = model.sqlId;
+                this.sqlText = model.sqlText;
+                this.sqlType = model.sqlType;
+                this.state = model.state;
+                this.threadId = model.threadId;
+                this.traceId = model.traceId;
+                this.trxId = model.trxId;
+                this.updateRows = model.updateRows;
+                this.useImciEngine = model.useImciEngine;
+                this.vip = model.vip;
+                this.writes = model.writes;
+            } 
 
             /**
              * <p>The database account.</p>
@@ -883,6 +958,14 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
              */
             public Builder scnt(Long scnt) {
                 this.scnt = scnt;
+                return this;
+            }
+
+            /**
+             * SqlCommand.
+             */
+            public Builder sqlCommand(Long sqlCommand) {
+                this.sqlCommand = sqlCommand;
                 return this;
             }
 
@@ -1190,6 +1273,24 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
             private String taskId; 
             private String taskType; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.createTime = model.createTime;
+                this.end = model.end;
+                this.expire = model.expire;
+                this.export = model.export;
+                this.filters = model.filters;
+                this.name = model.name;
+                this.queries = model.queries;
+                this.start = model.start;
+                this.status = model.status;
+                this.taskId = model.taskId;
+                this.taskType = model.taskType;
+                this.total = model.total;
+            } 
 
             /**
              * <p>The time when the task was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>

@@ -48,6 +48,10 @@ public class GetEventSubscriptionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetEventSubscriptionResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetEventSubscriptionResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code returned.</p>
@@ -222,6 +237,16 @@ public class GetEventSubscriptionResponseBody extends TeaModel {
             private String description; 
             private String name; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ContactGroups model) {
+                this.contacts = model.contacts;
+                this.description = model.description;
+                this.name = model.name;
+                this.userId = model.userId;
+            } 
 
             /**
              * <p>The members of the alert contact group.</p>
@@ -377,6 +402,19 @@ public class GetEventSubscriptionResponseBody extends TeaModel {
             private String name; 
             private String phone; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Contacts model) {
+                this.dingtalkHook = model.dingtalkHook;
+                this.email = model.email;
+                this.groups = model.groups;
+                this.isCmsReduplicated = model.isCmsReduplicated;
+                this.name = model.name;
+                this.phone = model.phone;
+                this.userId = model.userId;
+            } 
 
             /**
              * <p>The webhook URL of the DingTalk chatbot.</p>
@@ -674,6 +712,28 @@ public class GetEventSubscriptionResponseBody extends TeaModel {
             private String level; 
             private String minInterval; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.active = model.active;
+                this.channelType = model.channelType;
+                this.contactGroupName = model.contactGroupName;
+                this.contactGroups = model.contactGroups;
+                this.contactName = model.contactName;
+                this.contacts = model.contacts;
+                this.eventContext = model.eventContext;
+                this.eventSendGroup = model.eventSendGroup;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.instanceId = model.instanceId;
+                this.lang = model.lang;
+                this.level = model.level;
+                this.minInterval = model.minInterval;
+                this.userId = model.userId;
+            } 
 
             /**
              * <p>Indicates whether the event subscription feature is enabled. Valid values:</p>

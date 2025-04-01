@@ -48,6 +48,10 @@ public class GetInstanceMissingIndexListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetInstanceMissingIndexListResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetInstanceMissingIndexListResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code returned.</p>
@@ -400,6 +415,31 @@ public class GetInstanceMissingIndexListResponseBody extends TeaModel {
             private Long userScans; 
             private Long userSeeks; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.avgTotalUserCost = model.avgTotalUserCost;
+                this.avgUserImpact = model.avgUserImpact;
+                this.createIndex = model.createIndex;
+                this.databaseName = model.databaseName;
+                this.equalityColumns = model.equalityColumns;
+                this.includedColumns = model.includedColumns;
+                this.indexCount = model.indexCount;
+                this.inequalityColumns = model.inequalityColumns;
+                this.lastUserSeek = model.lastUserSeek;
+                this.objectName = model.objectName;
+                this.reservedPages = model.reservedPages;
+                this.reservedSize = model.reservedSize;
+                this.rowCount = model.rowCount;
+                this.schemaName = model.schemaName;
+                this.systemScans = model.systemScans;
+                this.systemSeeks = model.systemSeeks;
+                this.uniqueCompiles = model.uniqueCompiles;
+                this.userScans = model.userScans;
+                this.userSeeks = model.userSeeks;
+            } 
+
             /**
              * <p>The average cost savings.</p>
              * 
@@ -683,6 +723,16 @@ public class GetInstanceMissingIndexListResponseBody extends TeaModel {
             private Long pageNo; 
             private Long pageSize; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.list = model.list;
+                this.pageNo = model.pageNo;
+                this.pageSize = model.pageSize;
+                this.total = model.total;
+            } 
 
             /**
              * <p>The returned data.</p>

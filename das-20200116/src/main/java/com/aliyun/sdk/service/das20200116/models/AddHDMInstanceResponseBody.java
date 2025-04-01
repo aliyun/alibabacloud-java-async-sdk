@@ -52,6 +52,10 @@ public class AddHDMInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class AddHDMInstanceResponseBody extends TeaModel {
         private String requestId; 
         private String success; 
         private String synchro; 
+
+        private Builder() {
+        } 
+
+        private Builder(AddHDMInstanceResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.synchro = model.synchro;
+        } 
 
         /**
          * <p>The HTTP status code returned.</p>
@@ -341,6 +357,24 @@ public class AddHDMInstanceResponseBody extends TeaModel {
             private String token; 
             private String uuid; 
             private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.callerUid = model.callerUid;
+                this.code = model.code;
+                this.error = model.error;
+                this.instanceId = model.instanceId;
+                this.ip = model.ip;
+                this.ownerId = model.ownerId;
+                this.port = model.port;
+                this.role = model.role;
+                this.tenantId = model.tenantId;
+                this.token = model.token;
+                this.uuid = model.uuid;
+                this.vpcId = model.vpcId;
+            } 
 
             /**
              * <p>The user ID of the caller.</p>

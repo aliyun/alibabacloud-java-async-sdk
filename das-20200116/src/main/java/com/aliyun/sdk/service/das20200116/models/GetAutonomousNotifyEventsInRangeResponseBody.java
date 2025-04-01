@@ -48,6 +48,10 @@ public class GetAutonomousNotifyEventsInRangeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetAutonomousNotifyEventsInRangeResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAutonomousNotifyEventsInRangeResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code returned.</p>
@@ -187,6 +202,13 @@ public class GetAutonomousNotifyEventsInRangeResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> t; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.t = model.t;
+            } 
+
             /**
              * T.
              */
@@ -281,6 +303,17 @@ public class GetAutonomousNotifyEventsInRangeResponseBody extends TeaModel {
             private Long pageNo; 
             private Long pageSize; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.extra = model.extra;
+                this.list = model.list;
+                this.pageNo = model.pageNo;
+                this.pageSize = model.pageSize;
+                this.total = model.total;
+            } 
 
             /**
              * <p>The reserved parameter.</p>

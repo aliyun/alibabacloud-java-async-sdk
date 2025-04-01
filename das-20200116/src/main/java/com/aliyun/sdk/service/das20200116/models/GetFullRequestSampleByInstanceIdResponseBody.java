@@ -48,6 +48,10 @@ public class GetFullRequestSampleByInstanceIdResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetFullRequestSampleByInstanceIdResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetFullRequestSampleByInstanceIdResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code returned.</p>
@@ -402,6 +417,31 @@ public class GetFullRequestSampleByInstanceIdResponseBody extends TeaModel {
             private Long timestamp; 
             private Long updateRows; 
             private String user; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.database = model.database;
+                this.frows = model.frows;
+                this.lockWaitTime = model.lockWaitTime;
+                this.logicalRead = model.logicalRead;
+                this.originHost = model.originHost;
+                this.physicalAsyncRead = model.physicalAsyncRead;
+                this.physicalSyncRead = model.physicalSyncRead;
+                this.rows = model.rows;
+                this.rowsExamined = model.rowsExamined;
+                this.rowsReturned = model.rowsReturned;
+                this.rt = model.rt;
+                this.scanRows = model.scanRows;
+                this.scnt = model.scnt;
+                this.sql = model.sql;
+                this.sqlId = model.sqlId;
+                this.sqlType = model.sqlType;
+                this.timestamp = model.timestamp;
+                this.updateRows = model.updateRows;
+                this.user = model.user;
+            } 
 
             /**
              * <p>The name of the database.</p>

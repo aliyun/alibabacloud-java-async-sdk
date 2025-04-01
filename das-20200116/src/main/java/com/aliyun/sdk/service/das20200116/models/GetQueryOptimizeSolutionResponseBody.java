@@ -48,6 +48,10 @@ public class GetQueryOptimizeSolutionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetQueryOptimizeSolutionResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetQueryOptimizeSolutionResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code returned.</p>
@@ -219,6 +234,16 @@ public class GetQueryOptimizeSolutionResponseBody extends TeaModel {
             private String ruleId; 
             private String solution; 
             private String solutionExt; 
+
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.level = model.level;
+                this.ruleId = model.ruleId;
+                this.solution = model.solution;
+                this.solutionExt = model.solutionExt;
+            } 
 
             /**
              * <p>The severity level. Valid values:</p>
@@ -354,6 +379,17 @@ public class GetQueryOptimizeSolutionResponseBody extends TeaModel {
             private Integer pageNo; 
             private Integer pageSize; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.extra = model.extra;
+                this.list = model.list;
+                this.pageNo = model.pageNo;
+                this.pageSize = model.pageSize;
+                this.total = model.total;
+            } 
 
             /**
              * <p>The reserved parameter.</p>

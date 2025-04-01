@@ -36,6 +36,10 @@ public class DataSessionStatClientStatsValue extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return activeCount
      */
@@ -53,6 +57,14 @@ public class DataSessionStatClientStatsValue extends TeaModel {
     public static final class Builder {
         private Long activeCount; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DataSessionStatClientStatsValue model) {
+            this.activeCount = model.activeCount;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The number of clients whose IP addresses are active.</p>

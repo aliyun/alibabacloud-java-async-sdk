@@ -48,6 +48,10 @@ public class GetInstanceSqlOptimizeStatisticResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetInstanceSqlOptimizeStatisticResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetInstanceSqlOptimizeStatisticResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code returned.</p>
@@ -198,6 +213,14 @@ public class GetInstanceSqlOptimizeStatisticResponseBody extends TeaModel {
         public static final class Builder {
             private Integer count; 
             private Double improvement; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.count = model.count;
+                this.improvement = model.improvement;
+            } 
 
             /**
              * <p>The total number of automatic SQL optimization events.</p>

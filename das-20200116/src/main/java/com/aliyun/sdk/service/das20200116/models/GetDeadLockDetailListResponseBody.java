@@ -48,6 +48,10 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDeadLockDetailListResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code returned.</p>
@@ -378,6 +393,29 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
             private String waitMode; 
             private String waitResource; 
             private String waitResourceDescription; 
+
+            private Builder() {
+            } 
+
+            private Builder(BlockProcessList model) {
+                this.clientApp = model.clientApp;
+                this.databaseName = model.databaseName;
+                this.hostName = model.hostName;
+                this.lastTranStarted = model.lastTranStarted;
+                this.lockMode = model.lockMode;
+                this.logUsed = model.logUsed;
+                this.loginName = model.loginName;
+                this.objectOwned = model.objectOwned;
+                this.objectRequested = model.objectRequested;
+                this.ownMode = model.ownMode;
+                this.spid = model.spid;
+                this.sqlText = model.sqlText;
+                this.status = model.status;
+                this.victim = model.victim;
+                this.waitMode = model.waitMode;
+                this.waitResource = model.waitResource;
+                this.waitResourceDescription = model.waitResourceDescription;
+            } 
 
             /**
              * <p>The name of the client that initiates the transaction in the session.</p>
@@ -825,6 +863,31 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
             private String waitResource; 
             private String waitResourceDescription; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.batchId = model.batchId;
+                this.blockProcessList = model.blockProcessList;
+                this.clientApp = model.clientApp;
+                this.databaseName = model.databaseName;
+                this.hostName = model.hostName;
+                this.lastTranStarted = model.lastTranStarted;
+                this.lockMode = model.lockMode;
+                this.logUsed = model.logUsed;
+                this.loginName = model.loginName;
+                this.objectOwned = model.objectOwned;
+                this.objectRequested = model.objectRequested;
+                this.ownMode = model.ownMode;
+                this.spid = model.spid;
+                this.sqlText = model.sqlText;
+                this.status = model.status;
+                this.victim = model.victim;
+                this.waitMode = model.waitMode;
+                this.waitResource = model.waitResource;
+                this.waitResourceDescription = model.waitResourceDescription;
+            } 
+
             /**
              * <p>The time when the data was collected. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
              * 
@@ -1109,6 +1172,16 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
             private Long pageNo; 
             private Long pageSize; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.list = model.list;
+                this.pageNo = model.pageNo;
+                this.pageSize = model.pageSize;
+                this.total = model.total;
+            } 
 
             /**
              * <p>The details of the data returned.</p>

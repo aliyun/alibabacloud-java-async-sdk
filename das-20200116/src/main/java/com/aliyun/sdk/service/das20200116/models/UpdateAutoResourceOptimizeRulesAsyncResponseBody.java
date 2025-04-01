@@ -48,6 +48,10 @@ public class UpdateAutoResourceOptimizeRulesAsyncResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class UpdateAutoResourceOptimizeRulesAsyncResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateAutoResourceOptimizeRulesAsyncResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code returned.</p>
@@ -211,6 +226,15 @@ public class UpdateAutoResourceOptimizeRulesAsyncResponseBody extends TeaModel {
             private String errorMessage; 
             private String instanceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConfigFailInstanceList model) {
+                this.configSuccess = model.configSuccess;
+                this.errorMessage = model.errorMessage;
+                this.instanceId = model.instanceId;
+            } 
+
             /**
              * <p>Indicates whether the parameters are configured. Valid values:</p>
              * <ul>
@@ -300,6 +324,14 @@ public class UpdateAutoResourceOptimizeRulesAsyncResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean configSuccess; 
             private String instanceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConfigSuccessInstanceList model) {
+                this.configSuccess = model.configSuccess;
+                this.instanceId = model.instanceId;
+            } 
 
             /**
              * <p>Indicates whether the parameters are configured. Valid values:</p>
@@ -415,6 +447,17 @@ public class UpdateAutoResourceOptimizeRulesAsyncResponseBody extends TeaModel {
             private Long configSuccessInstanceCount; 
             private java.util.List<ConfigSuccessInstanceList> configSuccessInstanceList; 
             private Long totalInstanceCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConfigResponse model) {
+                this.configFailInstanceCount = model.configFailInstanceCount;
+                this.configFailInstanceList = model.configFailInstanceList;
+                this.configSuccessInstanceCount = model.configSuccessInstanceCount;
+                this.configSuccessInstanceList = model.configSuccessInstanceList;
+                this.totalInstanceCount = model.totalInstanceCount;
+            } 
 
             /**
              * <p>The number of database instances for which the parameters failed to be configured.</p>
@@ -575,6 +618,19 @@ public class UpdateAutoResourceOptimizeRulesAsyncResponseBody extends TeaModel {
             private String resultId; 
             private String state; 
             private Long timestamp; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.complete = model.complete;
+                this.configResponse = model.configResponse;
+                this.fail = model.fail;
+                this.isFinish = model.isFinish;
+                this.resultId = model.resultId;
+                this.state = model.state;
+                this.timestamp = model.timestamp;
+            } 
 
             /**
              * <p>Indicates whether the asynchronous request was complete. Valid values:</p>

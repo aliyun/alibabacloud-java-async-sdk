@@ -48,6 +48,10 @@ public class DescribeSqlLogTasksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class DescribeSqlLogTasksResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSqlLogTasksResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The response code.</p>
@@ -198,6 +213,14 @@ public class DescribeSqlLogTasksResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Filters model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The name of the filter parameter.</p>
@@ -442,6 +465,28 @@ public class DescribeSqlLogTasksResponseBody extends TeaModel {
             private String status; 
             private String taskId; 
             private String taskType; 
+
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.analysisTaskFinishTime = model.analysisTaskFinishTime;
+                this.analysisTaskStatus = model.analysisTaskStatus;
+                this.createTime = model.createTime;
+                this.end = model.end;
+                this.expire = model.expire;
+                this.filters = model.filters;
+                this.instanceId = model.instanceId;
+                this.logCount = model.logCount;
+                this.name = model.name;
+                this.progress = model.progress;
+                this.result = model.result;
+                this.scanFileSize = model.scanFileSize;
+                this.start = model.start;
+                this.status = model.status;
+                this.taskId = model.taskId;
+                this.taskType = model.taskType;
+            } 
 
             /**
              * <p>The time when the analysis task was complete. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
@@ -711,6 +756,16 @@ public class DescribeSqlLogTasksResponseBody extends TeaModel {
             private Long pageNo; 
             private Long pageSize; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.list = model.list;
+                this.pageNo = model.pageNo;
+                this.pageSize = model.pageSize;
+                this.total = model.total;
+            } 
 
             /**
              * <p>The details of the data returned.</p>

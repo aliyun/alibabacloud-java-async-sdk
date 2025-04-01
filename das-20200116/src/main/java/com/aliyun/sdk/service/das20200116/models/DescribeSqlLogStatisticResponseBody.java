@@ -48,6 +48,10 @@ public class DescribeSqlLogStatisticResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class DescribeSqlLogStatisticResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSqlLogStatisticResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The response code.</p>
@@ -246,6 +261,18 @@ public class DescribeSqlLogStatisticResponseBody extends TeaModel {
             private Long hotSqlSize; 
             private Long importSqlSize; 
             private Long timestamp; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.coldSqlSize = model.coldSqlSize;
+                this.freeColdSqlSize = model.freeColdSqlSize;
+                this.freeHotSqlSize = model.freeHotSqlSize;
+                this.hotSqlSize = model.hotSqlSize;
+                this.importSqlSize = model.importSqlSize;
+                this.timestamp = model.timestamp;
+            } 
 
             /**
              * <p>The size of the SQL Explorer and Audit data that is stored in cold storage. Unit: bytes.</p>

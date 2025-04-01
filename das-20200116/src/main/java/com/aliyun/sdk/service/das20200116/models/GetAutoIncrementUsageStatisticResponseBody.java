@@ -48,6 +48,10 @@ public class GetAutoIncrementUsageStatisticResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetAutoIncrementUsageStatisticResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAutoIncrementUsageStatisticResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code returned.</p>
@@ -247,6 +262,18 @@ public class GetAutoIncrementUsageStatisticResponseBody extends TeaModel {
             private Long maximumValue; 
             private String tableName; 
 
+            private Builder() {
+            } 
+
+            private Builder(AutoIncrementUsageList model) {
+                this.autoIncrementCurrentValue = model.autoIncrementCurrentValue;
+                this.autoIncrementRatio = model.autoIncrementRatio;
+                this.columnName = model.columnName;
+                this.dbName = model.dbName;
+                this.maximumValue = model.maximumValue;
+                this.tableName = model.tableName;
+            } 
+
             /**
              * <p>The latest auto-increment ID.</p>
              * 
@@ -399,6 +426,17 @@ public class GetAutoIncrementUsageStatisticResponseBody extends TeaModel {
             private Boolean finish; 
             private String taskStatus; 
             private Long timestamp; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.autoIncrementUsageList = model.autoIncrementUsageList;
+                this.errorInfo = model.errorInfo;
+                this.finish = model.finish;
+                this.taskStatus = model.taskStatus;
+                this.timestamp = model.timestamp;
+            } 
 
             /**
              * <p>The usage details of auto-increment IDs.</p>

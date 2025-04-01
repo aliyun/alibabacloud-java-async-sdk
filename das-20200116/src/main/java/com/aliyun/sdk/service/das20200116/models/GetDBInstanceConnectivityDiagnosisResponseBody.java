@@ -48,6 +48,10 @@ public class GetDBInstanceConnectivityDiagnosisResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetDBInstanceConnectivityDiagnosisResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDBInstanceConnectivityDiagnosisResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code returned.</p>
@@ -234,6 +249,17 @@ public class GetDBInstanceConnectivityDiagnosisResponseBody extends TeaModel {
             private String failType; 
             private String instanceId; 
             private Boolean success; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.connCheckErrorCode = model.connCheckErrorCode;
+                this.connCheckErrorMessage = model.connCheckErrorMessage;
+                this.failType = model.failType;
+                this.instanceId = model.instanceId;
+                this.success = model.success;
+            } 
 
             /**
              * <p>The exception detection items:</p>

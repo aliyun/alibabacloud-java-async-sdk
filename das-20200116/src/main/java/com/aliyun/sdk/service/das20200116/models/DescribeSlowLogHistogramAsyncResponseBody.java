@@ -48,6 +48,10 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSlowLogHistogramAsyncResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -192,6 +207,15 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
             private String insId; 
             private String insRole; 
 
+            private Builder() {
+            } 
+
+            private Builder(InsItems model) {
+                this.count = model.count;
+                this.insId = model.insId;
+                this.insRole = model.insRole;
+            } 
+
             /**
              * Count.
              */
@@ -278,6 +302,15 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
             private java.util.List<Long> count; 
             private java.util.List<InsItems> insItems; 
             private String nodeId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Item model) {
+                this.count = model.count;
+                this.insItems = model.insItems;
+                this.nodeId = model.nodeId;
+            } 
 
             /**
              * Count.
@@ -966,6 +999,65 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
             private java.util.List<Long> ts; 
             private java.util.List<Long> tsEnd; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataData model) {
+                this.avgCPUTime = model.avgCPUTime;
+                this.avgDocExamined = model.avgDocExamined;
+                this.avgFrows = model.avgFrows;
+                this.avgIOWrites = model.avgIOWrites;
+                this.avgKeysExamined = model.avgKeysExamined;
+                this.avgLastRowsCountAffected = model.avgLastRowsCountAffected;
+                this.avgLockTime = model.avgLockTime;
+                this.avgLogicalIOReads = model.avgLogicalIOReads;
+                this.avgPhysicalIOReads = model.avgPhysicalIOReads;
+                this.avgReturnNum = model.avgReturnNum;
+                this.avgRows = model.avgRows;
+                this.avgRowsCountAffected = model.avgRowsCountAffected;
+                this.avgRowsExamined = model.avgRowsExamined;
+                this.avgRowsSent = model.avgRowsSent;
+                this.avgRt = model.avgRt;
+                this.avgScnt = model.avgScnt;
+                this.CPUTime = model.CPUTime;
+                this.count = model.count;
+                this.docExamined = model.docExamined;
+                this.frows = model.frows;
+                this.IOWrites = model.IOWrites;
+                this.item = model.item;
+                this.keysExamined = model.keysExamined;
+                this.lastRowsCountAffected = model.lastRowsCountAffected;
+                this.lockTime = model.lockTime;
+                this.logicalIOReads = model.logicalIOReads;
+                this.maxCPUTime = model.maxCPUTime;
+                this.maxDocExamined = model.maxDocExamined;
+                this.maxFrows = model.maxFrows;
+                this.maxIOWrites = model.maxIOWrites;
+                this.maxKeysExamined = model.maxKeysExamined;
+                this.maxLastRowsCountAffected = model.maxLastRowsCountAffected;
+                this.maxLockTime = model.maxLockTime;
+                this.maxLogicalIOReads = model.maxLogicalIOReads;
+                this.maxPhysicalIOReads = model.maxPhysicalIOReads;
+                this.maxReturnNum = model.maxReturnNum;
+                this.maxRows = model.maxRows;
+                this.maxRowsCountAffected = model.maxRowsCountAffected;
+                this.maxRowsExamined = model.maxRowsExamined;
+                this.maxRowsSent = model.maxRowsSent;
+                this.maxRt = model.maxRt;
+                this.maxScnt = model.maxScnt;
+                this.physicalIOReads = model.physicalIOReads;
+                this.returnNum = model.returnNum;
+                this.rows = model.rows;
+                this.rowsCountAffected = model.rowsCountAffected;
+                this.rowsExamined = model.rowsExamined;
+                this.rowsSent = model.rowsSent;
+                this.rt = model.rt;
+                this.scnt = model.scnt;
+                this.total = model.total;
+                this.ts = model.ts;
+                this.tsEnd = model.tsEnd;
+            } 
+
             /**
              * AvgCPUTime.
              */
@@ -1512,6 +1604,20 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
             private String resultId; 
             private String state; 
             private Long timestamp; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.data = model.data;
+                this.errorCode = model.errorCode;
+                this.isFinish = model.isFinish;
+                this.message = model.message;
+                this.requestKey = model.requestKey;
+                this.resultId = model.resultId;
+                this.state = model.state;
+                this.timestamp = model.timestamp;
+            } 
 
             /**
              * <p>AsyncResult<Histogram>。</p>

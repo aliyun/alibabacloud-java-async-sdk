@@ -48,6 +48,10 @@ public class SetEventSubscriptionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class SetEventSubscriptionResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(SetEventSubscriptionResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code returned.</p>
@@ -294,6 +309,22 @@ public class SetEventSubscriptionResponseBody extends TeaModel {
             private String level; 
             private Integer minInterval; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.active = model.active;
+                this.channelType = model.channelType;
+                this.contactGroupName = model.contactGroupName;
+                this.contactName = model.contactName;
+                this.eventContext = model.eventContext;
+                this.instanceId = model.instanceId;
+                this.lang = model.lang;
+                this.level = model.level;
+                this.minInterval = model.minInterval;
+                this.userId = model.userId;
+            } 
 
             /**
              * <p>Indicates whether the event subscription feature is enabled. Valid values:</p>

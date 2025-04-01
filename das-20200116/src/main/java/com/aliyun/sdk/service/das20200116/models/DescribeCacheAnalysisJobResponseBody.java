@@ -48,6 +48,10 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCacheAnalysisJobResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code returned.</p>
@@ -271,6 +286,20 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             private String nodeId; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(KeyInfo model) {
+                this.bytes = model.bytes;
+                this.count = model.count;
+                this.db = model.db;
+                this.encoding = model.encoding;
+                this.expirationTimeMillis = model.expirationTimeMillis;
+                this.key = model.key;
+                this.nodeId = model.nodeId;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The number of bytes that are occupied by the key.</p>
              * 
@@ -397,6 +426,13 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<KeyInfo> keyInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(BigKeys model) {
+                this.keyInfo = model.keyInfo;
+            } 
 
             /**
              * KeyInfo.
@@ -529,6 +565,20 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             private String nodeId; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(BigKeysOfNumKeyInfo model) {
+                this.bytes = model.bytes;
+                this.count = model.count;
+                this.db = model.db;
+                this.encoding = model.encoding;
+                this.expirationTimeMillis = model.expirationTimeMillis;
+                this.key = model.key;
+                this.nodeId = model.nodeId;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The number of bytes that are occupied by the key.</p>
              * 
@@ -656,6 +706,13 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<BigKeysOfNumKeyInfo> keyInfo; 
 
+            private Builder() {
+            } 
+
+            private Builder(BigKeysOfNum model) {
+                this.keyInfo = model.keyInfo;
+            } 
+
             /**
              * KeyInfo.
              */
@@ -738,6 +795,16 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             private Integer level; 
             private Long totalBytes; 
             private Long totalKeys; 
+
+            private Builder() {
+            } 
+
+            private Builder(ExpiryLevel model) {
+                this.analysisTs = model.analysisTs;
+                this.level = model.level;
+                this.totalBytes = model.totalBytes;
+                this.totalKeys = model.totalKeys;
+            } 
 
             /**
              * <p>The time when the cache analysis task was complete. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
@@ -832,6 +899,13 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ExpiryLevel> expiryLevel; 
+
+            private Builder() {
+            } 
+
+            private Builder(ExpiryKeysLevelCount model) {
+                this.expiryLevel = model.expiryLevel;
+            } 
 
             /**
              * ExpiryLevel.
@@ -928,6 +1002,17 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             private String prefix; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Prefix model) {
+                this.bytes = model.bytes;
+                this.count = model.count;
+                this.keyNum = model.keyNum;
+                this.prefix = model.prefix;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The number of bytes that are occupied by the key.</p>
              * 
@@ -1021,6 +1106,13 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Prefix> prefix; 
+
+            private Builder() {
+            } 
+
+            private Builder(KeyPrefixes model) {
+                this.prefix = model.prefix;
+            } 
 
             /**
              * <p>The prefix of the key.</p>
@@ -1156,6 +1248,20 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             private String nodeId; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(UnexBigKeysOfBytesKeyInfo model) {
+                this.bytes = model.bytes;
+                this.count = model.count;
+                this.db = model.db;
+                this.encoding = model.encoding;
+                this.expirationTimeMillis = model.expirationTimeMillis;
+                this.key = model.key;
+                this.nodeId = model.nodeId;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The number of bytes that are occupied by the key.</p>
              * 
@@ -1282,6 +1388,13 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<UnexBigKeysOfBytesKeyInfo> keyInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(UnexBigKeysOfBytes model) {
+                this.keyInfo = model.keyInfo;
+            } 
 
             /**
              * KeyInfo.
@@ -1414,6 +1527,20 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             private String nodeId; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(UnexBigKeysOfNumKeyInfo model) {
+                this.bytes = model.bytes;
+                this.count = model.count;
+                this.db = model.db;
+                this.encoding = model.encoding;
+                this.expirationTimeMillis = model.expirationTimeMillis;
+                this.key = model.key;
+                this.nodeId = model.nodeId;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The number of bytes that are occupied by the key.</p>
              * 
@@ -1540,6 +1667,13 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<UnexBigKeysOfNumKeyInfo> keyInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(UnexBigKeysOfNum model) {
+                this.keyInfo = model.keyInfo;
+            } 
 
             /**
              * KeyInfo.
@@ -1707,6 +1841,23 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             private String taskState; 
             private UnexBigKeysOfBytes unexBigKeysOfBytes; 
             private UnexBigKeysOfNum unexBigKeysOfNum; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.bigKeys = model.bigKeys;
+                this.bigKeysOfNum = model.bigKeysOfNum;
+                this.expiryKeysLevelCount = model.expiryKeysLevelCount;
+                this.instanceId = model.instanceId;
+                this.jobId = model.jobId;
+                this.keyPrefixes = model.keyPrefixes;
+                this.message = model.message;
+                this.nodeId = model.nodeId;
+                this.taskState = model.taskState;
+                this.unexBigKeysOfBytes = model.unexBigKeysOfBytes;
+                this.unexBigKeysOfNum = model.unexBigKeysOfNum;
+            } 
 
             /**
              * <p>The details of the large keys. The returned large keys are sorted in descending order based on the number of bytes occupied by the keys.</p>

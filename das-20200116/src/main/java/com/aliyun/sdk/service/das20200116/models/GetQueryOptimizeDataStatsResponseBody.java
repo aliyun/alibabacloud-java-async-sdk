@@ -48,6 +48,10 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetQueryOptimizeDataStatsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code returned.</p>
@@ -195,6 +210,14 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
         public static final class Builder {
             private String name; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(RuleList model) {
+                this.name = model.name;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The rule name.</p>
@@ -476,6 +499,31 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
             private String sqlSample; 
             private String sqlType; 
             private String user; 
+
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.avgLockTime = model.avgLockTime;
+                this.avgQueryTime = model.avgQueryTime;
+                this.avgRowsAffected = model.avgRowsAffected;
+                this.avgRowsExamined = model.avgRowsExamined;
+                this.avgRowsSent = model.avgRowsSent;
+                this.count = model.count;
+                this.dbname = model.dbname;
+                this.instanceId = model.instanceId;
+                this.maxLockTime = model.maxLockTime;
+                this.maxQueryTime = model.maxQueryTime;
+                this.maxRowsAffected = model.maxRowsAffected;
+                this.maxRowsExamined = model.maxRowsExamined;
+                this.maxRowsSent = model.maxRowsSent;
+                this.psql = model.psql;
+                this.ruleList = model.ruleList;
+                this.sqlId = model.sqlId;
+                this.sqlSample = model.sqlSample;
+                this.sqlType = model.sqlType;
+                this.user = model.user;
+            } 
 
             /**
              * <p>The average lock wait time. Unit: seconds.</p>
@@ -775,6 +823,17 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
             private Integer pageNo; 
             private Integer pageSize; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.extra = model.extra;
+                this.list = model.list;
+                this.pageNo = model.pageNo;
+                this.pageSize = model.pageSize;
+                this.total = model.total;
+            } 
 
             /**
              * <p>The reserved parameter.</p>

@@ -48,6 +48,10 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMongoDBCurrentOpResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The response code.</p>
@@ -390,6 +405,30 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
             private String platform; 
             private Long secsRunning; 
             private String shard; 
+
+            private Builder() {
+            } 
+
+            private Builder(SessionList model) {
+                this.active = model.active;
+                this.client = model.client;
+                this.command = model.command;
+                this.connectionId = model.connectionId;
+                this.desc = model.desc;
+                this.driver = model.driver;
+                this.host = model.host;
+                this.killPending = model.killPending;
+                this.ns = model.ns;
+                this.op = model.op;
+                this.opId = model.opId;
+                this.osArch = model.osArch;
+                this.osName = model.osName;
+                this.osType = model.osType;
+                this.planSummary = model.planSummary;
+                this.platform = model.platform;
+                this.secsRunning = model.secsRunning;
+                this.shard = model.shard;
+            } 
 
             /**
              * <p>Indicates whether the operation is active. Valid values:</p>
@@ -694,6 +733,17 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
             private Long longestSecsRunning; 
             private Long totalCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(SessionStat model) {
+                this.activeCount = model.activeCount;
+                this.clientStats = model.clientStats;
+                this.dbStats = model.dbStats;
+                this.longestSecsRunning = model.longestSecsRunning;
+                this.totalCount = model.totalCount;
+            } 
+
             /**
              * <p>The number of active sessions.</p>
              * 
@@ -805,6 +855,15 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
             private java.util.List<SessionList> sessionList; 
             private SessionStat sessionStat; 
             private Long timestamp; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.sessionList = model.sessionList;
+                this.sessionStat = model.sessionStat;
+                this.timestamp = model.timestamp;
+            } 
 
             /**
              * <p>The sessions.</p>

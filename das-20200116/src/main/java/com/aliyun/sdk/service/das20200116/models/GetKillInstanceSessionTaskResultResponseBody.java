@@ -48,6 +48,10 @@ public class GetKillInstanceSessionTaskResultResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetKillInstanceSessionTaskResultResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetKillInstanceSessionTaskResultResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code returned.</p>
@@ -306,6 +321,23 @@ public class GetKillInstanceSessionTaskResultResponseBody extends TeaModel {
             private String taskId; 
             private Long time; 
             private String user; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.active = model.active;
+                this.command = model.command;
+                this.db = model.db;
+                this.host = model.host;
+                this.id = model.id;
+                this.info = model.info;
+                this.reason = model.reason;
+                this.state = model.state;
+                this.taskId = model.taskId;
+                this.time = model.time;
+                this.user = model.user;
+            } 
 
             /**
              * <p>Indicates whether the session is active.</p>
@@ -587,6 +619,22 @@ public class GetKillInstanceSessionTaskResultResponseBody extends TeaModel {
             private String taskId; 
             private String taskState; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.ignoredUserSessionCount = model.ignoredUserSessionCount;
+                this.instanceId = model.instanceId;
+                this.killFailCount = model.killFailCount;
+                this.killSuccessCount = model.killSuccessCount;
+                this.nodeId = model.nodeId;
+                this.result = model.result;
+                this.sessions = model.sessions;
+                this.taskId = model.taskId;
+                this.taskState = model.taskState;
+                this.userId = model.userId;
+            } 
 
             /**
              * <p>The number of ignored sessions, including sessions of the accounts that are specified by IgnoredUsers, sessions of internal O&amp;M accounts of Alibaba Cloud, and <strong>Binlog Dump</strong> sessions.</p>

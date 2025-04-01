@@ -48,6 +48,10 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetPfsSqlSampleResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code returned.</p>
@@ -558,6 +573,44 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
             private Long timestamp; 
             private String userId; 
             private Integer warnings; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.createTmpDiskTables = model.createTmpDiskTables;
+                this.createTmpTables = model.createTmpTables;
+                this.db = model.db;
+                this.endEventId = model.endEventId;
+                this.errors = model.errors;
+                this.eventId = model.eventId;
+                this.eventName = model.eventName;
+                this.instanceId = model.instanceId;
+                this.latency = model.latency;
+                this.lockLatency = model.lockLatency;
+                this.logicId = model.logicId;
+                this.noGoodIndexUsed = model.noGoodIndexUsed;
+                this.noIndexUsed = model.noIndexUsed;
+                this.nodeId = model.nodeId;
+                this.rowsAffected = model.rowsAffected;
+                this.rowsExamined = model.rowsExamined;
+                this.rowsSent = model.rowsSent;
+                this.selectFullJoin = model.selectFullJoin;
+                this.selectFullRangeJoin = model.selectFullRangeJoin;
+                this.selectRange = model.selectRange;
+                this.selectRangeCheck = model.selectRangeCheck;
+                this.selectScan = model.selectScan;
+                this.sortMergePasses = model.sortMergePasses;
+                this.sortRange = model.sortRange;
+                this.sortRows = model.sortRows;
+                this.sortScan = model.sortScan;
+                this.sql = model.sql;
+                this.sqlId = model.sqlId;
+                this.threadId = model.threadId;
+                this.timestamp = model.timestamp;
+                this.userId = model.userId;
+                this.warnings = model.warnings;
+            } 
 
             /**
              * <p>The number of internal on-disk temporary tables that were created when the SQL statement was executed.</p>

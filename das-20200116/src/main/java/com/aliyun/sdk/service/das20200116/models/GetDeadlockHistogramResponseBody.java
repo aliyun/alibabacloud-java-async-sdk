@@ -48,6 +48,10 @@ public class GetDeadlockHistogramResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetDeadlockHistogramResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDeadlockHistogramResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -251,6 +266,20 @@ public class GetDeadlockHistogramResponseBody extends TeaModel {
             private String status; 
             private String taskId; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.endTime = model.endTime;
+                this.instanceId = model.instanceId;
+                this.lockNumber = model.lockNumber;
+                this.nodeId = model.nodeId;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.taskId = model.taskId;
+                this.userId = model.userId;
+            } 
 
             /**
              * EndTime.

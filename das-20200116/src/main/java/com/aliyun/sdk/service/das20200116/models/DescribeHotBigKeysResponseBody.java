@@ -48,6 +48,10 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeHotBigKeysResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code returned.</p>
@@ -232,6 +247,17 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
             private String nodeId; 
             private Long size; 
 
+            private Builder() {
+            } 
+
+            private Builder(BigKey model) {
+                this.db = model.db;
+                this.key = model.key;
+                this.keyType = model.keyType;
+                this.nodeId = model.nodeId;
+                this.size = model.size;
+            } 
+
             /**
              * <p>The database in which the key is stored.</p>
              * 
@@ -325,6 +351,13 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<BigKey> bigKey; 
+
+            private Builder() {
+            } 
+
+            private Builder(BigKeys model) {
+                this.bigKey = model.bigKey;
+            } 
 
             /**
              * BigKey.
@@ -433,6 +466,18 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
             private Integer lfu; 
             private String nodeId; 
 
+            private Builder() {
+            } 
+
+            private Builder(HotKey model) {
+                this.db = model.db;
+                this.hot = model.hot;
+                this.key = model.key;
+                this.keyType = model.keyType;
+                this.lfu = model.lfu;
+                this.nodeId = model.nodeId;
+            } 
+
             /**
              * <p>The database in which the key is stored.</p>
              * 
@@ -538,6 +583,13 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<HotKey> hotKey; 
 
+            private Builder() {
+            } 
+
+            private Builder(HotKeys model) {
+                this.hotKey = model.hotKey;
+            } 
+
             /**
              * HotKey.
              */
@@ -620,6 +672,16 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
             private BigKeys bigKeys; 
             private String hotKeyMsg; 
             private HotKeys hotKeys; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.bigKeyMsg = model.bigKeyMsg;
+                this.bigKeys = model.bigKeys;
+                this.hotKeyMsg = model.hotKeyMsg;
+                this.hotKeys = model.hotKeys;
+            } 
 
             /**
              * <p>The reason why the large key failed to be queried.</p>

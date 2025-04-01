@@ -48,6 +48,10 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSqlLogRecordsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code that is returned.</p>
@@ -571,6 +586,45 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             private String vip; 
             private Long writes; 
 
+            private Builder() {
+            } 
+
+            private Builder(SQLLogRecord model) {
+                this.accountName = model.accountName;
+                this.collection = model.collection;
+                this.consume = model.consume;
+                this.cpuTime = model.cpuTime;
+                this.DBName = model.DBName;
+                this.executeTime = model.executeTime;
+                this.ext = model.ext;
+                this.frows = model.frows;
+                this.hostAddress = model.hostAddress;
+                this.lockTime = model.lockTime;
+                this.logicRead = model.logicRead;
+                this.nodeId = model.nodeId;
+                this.originTime = model.originTime;
+                this.parallelDegree = model.parallelDegree;
+                this.parallelQueueTime = model.parallelQueueTime;
+                this.physicAsyncRead = model.physicAsyncRead;
+                this.physicRead = model.physicRead;
+                this.physicSyncRead = model.physicSyncRead;
+                this.returnRows = model.returnRows;
+                this.rows = model.rows;
+                this.scanRows = model.scanRows;
+                this.scnt = model.scnt;
+                this.sqlId = model.sqlId;
+                this.sqlText = model.sqlText;
+                this.sqlType = model.sqlType;
+                this.state = model.state;
+                this.threadId = model.threadId;
+                this.traceId = model.traceId;
+                this.trxId = model.trxId;
+                this.updateRows = model.updateRows;
+                this.useImciEngine = model.useImciEngine;
+                this.vip = model.vip;
+                this.writes = model.writes;
+            } 
+
             /**
              * <p>The account of the database.</p>
              * 
@@ -981,6 +1035,13 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<SQLLogRecord> SQLLogRecord; 
 
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.SQLLogRecord = model.SQLLogRecord;
+            } 
+
             /**
              * <p>The SQL log data.</p>
              */
@@ -1087,6 +1148,18 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             private String jobId; 
             private Long startTime; 
             private Long totalRecords; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.endTime = model.endTime;
+                this.finish = model.finish;
+                this.items = model.items;
+                this.jobId = model.jobId;
+                this.startTime = model.startTime;
+                this.totalRecords = model.totalRecords;
+            } 
 
             /**
              * <p>The end of the time range to query. This value is a UNIX timestamp. Unit: millisecond.</p>

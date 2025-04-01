@@ -48,6 +48,10 @@ public class RunCloudBenchTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class RunCloudBenchTaskResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(RunCloudBenchTaskResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code returned.</p>
@@ -247,6 +262,18 @@ public class RunCloudBenchTaskResponseBody extends TeaModel {
             private Integer order; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(PreCheckItem model) {
+                this.code = model.code;
+                this.details = model.details;
+                this.message = model.message;
+                this.name = model.name;
+                this.order = model.order;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The HTTP status code returned.</p>
              * 
@@ -367,6 +394,13 @@ public class RunCloudBenchTaskResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<PreCheckItem> preCheckItem; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.preCheckItem = model.preCheckItem;
+            } 
 
             /**
              * PreCheckItem.
