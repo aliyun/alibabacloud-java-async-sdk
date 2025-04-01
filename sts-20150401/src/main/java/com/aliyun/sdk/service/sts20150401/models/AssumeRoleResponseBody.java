@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sts20150401.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,6 +40,10 @@ public class AssumeRoleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return assumedRoleUser
      */
@@ -60,6 +69,15 @@ public class AssumeRoleResponseBody extends TeaModel {
         private AssumedRoleUser assumedRoleUser; 
         private Credentials credentials; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AssumeRoleResponseBody model) {
+            this.assumedRoleUser = model.assumedRoleUser;
+            this.credentials = model.credentials;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The temporary identity that you use to assume the RAM role.</p>
@@ -137,6 +155,14 @@ public class AssumeRoleResponseBody extends TeaModel {
         public static final class Builder {
             private String arn; 
             private String assumedRoleId; 
+
+            private Builder() {
+            } 
+
+            private Builder(AssumedRoleUser model) {
+                this.arn = model.arn;
+                this.assumedRoleId = model.assumedRoleId;
+            } 
 
             /**
              * <p>The ARN of the temporary identity that you use to assume the RAM role.</p>
@@ -234,6 +260,16 @@ public class AssumeRoleResponseBody extends TeaModel {
             private String accessKeySecret; 
             private String expiration; 
             private String securityToken; 
+
+            private Builder() {
+            } 
+
+            private Builder(Credentials model) {
+                this.accessKeyId = model.accessKeyId;
+                this.accessKeySecret = model.accessKeySecret;
+                this.expiration = model.expiration;
+                this.securityToken = model.securityToken;
+            } 
 
             /**
              * <p>The AccessKey ID.</p>

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sts20150401.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -39,6 +44,10 @@ public class AssumeRoleWithSAMLResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return assumedRoleUser
      */
@@ -72,6 +81,16 @@ public class AssumeRoleWithSAMLResponseBody extends TeaModel {
         private Credentials credentials; 
         private String requestId; 
         private SAMLAssertionInfo SAMLAssertionInfo; 
+
+        private Builder() {
+        } 
+
+        private Builder(AssumeRoleWithSAMLResponseBody model) {
+            this.assumedRoleUser = model.assumedRoleUser;
+            this.credentials = model.credentials;
+            this.requestId = model.requestId;
+            this.SAMLAssertionInfo = model.SAMLAssertionInfo;
+        } 
 
         /**
          * <p>The temporary identity that you use to assume the RAM role.</p>
@@ -157,6 +176,14 @@ public class AssumeRoleWithSAMLResponseBody extends TeaModel {
         public static final class Builder {
             private String arn; 
             private String assumedRoleId; 
+
+            private Builder() {
+            } 
+
+            private Builder(AssumedRoleUser model) {
+                this.arn = model.arn;
+                this.assumedRoleId = model.assumedRoleId;
+            } 
 
             /**
              * <p>The ARN of the temporary identity that you use to assume the RAM role.</p>
@@ -254,6 +281,16 @@ public class AssumeRoleWithSAMLResponseBody extends TeaModel {
             private String accessKeySecret; 
             private String expiration; 
             private String securityToken; 
+
+            private Builder() {
+            } 
+
+            private Builder(Credentials model) {
+                this.accessKeyId = model.accessKeyId;
+                this.accessKeySecret = model.accessKeySecret;
+                this.expiration = model.expiration;
+                this.securityToken = model.securityToken;
+            } 
 
             /**
              * <p>The AccessKey ID.</p>
@@ -376,6 +413,16 @@ public class AssumeRoleWithSAMLResponseBody extends TeaModel {
             private String recipient; 
             private String subject; 
             private String subjectType; 
+
+            private Builder() {
+            } 
+
+            private Builder(SAMLAssertionInfo model) {
+                this.issuer = model.issuer;
+                this.recipient = model.recipient;
+                this.subject = model.subject;
+                this.subjectType = model.subjectType;
+            } 
 
             /**
              * <p>The value in the <code>Issuer</code> element in the SAML assertion.</p>

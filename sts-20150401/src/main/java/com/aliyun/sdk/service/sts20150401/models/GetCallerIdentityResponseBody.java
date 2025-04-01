@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sts20150401.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -49,6 +54,10 @@ public class GetCallerIdentityResponseBody extends TeaModel {
 
     public static GetCallerIdentityResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -108,6 +117,19 @@ public class GetCallerIdentityResponseBody extends TeaModel {
         private String requestId; 
         private String roleId; 
         private String userId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetCallerIdentityResponseBody model) {
+            this.accountId = model.accountId;
+            this.arn = model.arn;
+            this.identityType = model.identityType;
+            this.principalId = model.principalId;
+            this.requestId = model.requestId;
+            this.roleId = model.roleId;
+            this.userId = model.userId;
+        } 
 
         /**
          * AccountId.

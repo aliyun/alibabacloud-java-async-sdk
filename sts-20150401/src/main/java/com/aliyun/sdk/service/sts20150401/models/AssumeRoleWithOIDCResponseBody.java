@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sts20150401.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -39,6 +44,10 @@ public class AssumeRoleWithOIDCResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return assumedRoleUser
      */
@@ -72,6 +81,16 @@ public class AssumeRoleWithOIDCResponseBody extends TeaModel {
         private Credentials credentials; 
         private OIDCTokenInfo OIDCTokenInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AssumeRoleWithOIDCResponseBody model) {
+            this.assumedRoleUser = model.assumedRoleUser;
+            this.credentials = model.credentials;
+            this.OIDCTokenInfo = model.OIDCTokenInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The temporary identity that you use to assume the RAM role.</p>
@@ -157,6 +176,14 @@ public class AssumeRoleWithOIDCResponseBody extends TeaModel {
         public static final class Builder {
             private String arn; 
             private String assumedRoleId; 
+
+            private Builder() {
+            } 
+
+            private Builder(AssumedRoleUser model) {
+                this.arn = model.arn;
+                this.assumedRoleId = model.assumedRoleId;
+            } 
 
             /**
              * <p>The ARN of the temporary identity that you use to assume the RAM role.</p>
@@ -254,6 +281,16 @@ public class AssumeRoleWithOIDCResponseBody extends TeaModel {
             private String accessKeySecret; 
             private String expiration; 
             private String securityToken; 
+
+            private Builder() {
+            } 
+
+            private Builder(Credentials model) {
+                this.accessKeyId = model.accessKeyId;
+                this.accessKeySecret = model.accessKeySecret;
+                this.expiration = model.expiration;
+                this.securityToken = model.securityToken;
+            } 
 
             /**
              * <p>The AccessKey ID.</p>
@@ -400,6 +437,18 @@ public class AssumeRoleWithOIDCResponseBody extends TeaModel {
             private String issuer; 
             private String subject; 
             private String verificationInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(OIDCTokenInfo model) {
+                this.clientIds = model.clientIds;
+                this.expirationTime = model.expirationTime;
+                this.issuanceTime = model.issuanceTime;
+                this.issuer = model.issuer;
+                this.subject = model.subject;
+                this.verificationInfo = model.verificationInfo;
+            } 
 
             /**
              * <p>The audience. If multiple audiences are returned, the audiences are separated by commas (,).</p>
