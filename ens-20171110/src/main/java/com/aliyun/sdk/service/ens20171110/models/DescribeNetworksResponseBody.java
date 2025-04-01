@@ -106,7 +106,7 @@ public class DescribeNetworksResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of networks.</p>
+         * <p>The VPCs.</p>
          */
         public Builder networks(Networks networks) {
             this.networks = networks;
@@ -511,7 +511,13 @@ public class DescribeNetworksResponseBody extends TeaModel {
             }
 
             /**
-             * GatewayRouteTableId.
+             * <p>The ID of the gateway route table associated with the IPv6 gateway.</p>
+             * <blockquote>
+             * <p> This parameter is available only when the IPv6 gateway is associated with a gateway route table.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>rt-5*****tbs</p>
              */
             public Builder gatewayRouteTableId(String gatewayRouteTableId) {
                 this.gatewayRouteTableId = gatewayRouteTableId;
@@ -552,7 +558,10 @@ public class DescribeNetworksResponseBody extends TeaModel {
             }
 
             /**
-             * RouteTableId.
+             * <p>The ID of the route table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rt-5*****pks</p>
              */
             public Builder routeTableId(String routeTableId) {
                 this.routeTableId = routeTableId;
@@ -560,7 +569,7 @@ public class DescribeNetworksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the route table. Valid values of <strong>N</strong> are <strong>1</strong> to <strong>20</strong>, which specifies that you can disassociate a gateway endpoint from at most 20 route tables at a time.</p>
+             * <p>The IDs of the route tables.</p>
              */
             public Builder routeTableIds(RouteTableIds routeTableIds) {
                 this.routeTableIds = routeTableIds;

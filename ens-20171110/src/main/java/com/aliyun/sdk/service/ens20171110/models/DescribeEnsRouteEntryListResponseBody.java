@@ -425,7 +425,10 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
             } 
 
             /**
-             * CreationTime.
+             * <p>The time when the entry was created. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-02-16T03:50:05Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -496,7 +499,10 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
             }
 
             /**
-             * SourceCidrBlock.
+             * <p>The new source CIDR block of the inbound or outbound traffic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.XXX.XXX.0/24</p>
              */
             public Builder sourceCidrBlock(String sourceCidrBlock) {
                 this.sourceCidrBlock = sourceCidrBlock;

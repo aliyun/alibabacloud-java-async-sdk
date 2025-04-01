@@ -119,7 +119,10 @@ public class DescribeLoadBalancerListenersRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The description of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -128,7 +131,10 @@ public class DescribeLoadBalancerListenersRequest extends Request {
         }
 
         /**
-         * ListenerPort.
+         * <p>The listener port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder listenerPort(Integer listenerPort) {
             this.putQueryParameter("ListenerPort", listenerPort);

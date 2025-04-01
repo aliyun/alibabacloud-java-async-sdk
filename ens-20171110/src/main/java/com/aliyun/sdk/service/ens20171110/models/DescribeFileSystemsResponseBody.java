@@ -311,6 +311,9 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
+
         @com.aliyun.core.annotation.NameInMap("EnsRegionId")
         private String ensRegionId;
 
@@ -341,6 +344,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         private FileSystems(Builder builder) {
             this.capacity = builder.capacity;
             this.creationTime = builder.creationTime;
+            this.description = builder.description;
             this.ensRegionId = builder.ensRegionId;
             this.fileSystemId = builder.fileSystemId;
             this.fileSystemName = builder.fileSystemName;
@@ -372,6 +376,13 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
          */
         public String getCreationTime() {
             return this.creationTime;
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
         }
 
         /**
@@ -440,6 +451,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         public static final class Builder {
             private Long capacity; 
             private String creationTime; 
+            private String description; 
             private String ensRegionId; 
             private String fileSystemId; 
             private String fileSystemName; 
@@ -456,6 +468,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             private Builder(FileSystems model) {
                 this.capacity = model.capacity;
                 this.creationTime = model.creationTime;
+                this.description = model.description;
                 this.ensRegionId = model.ensRegionId;
                 this.fileSystemId = model.fileSystemId;
                 this.fileSystemName = model.fileSystemName;
@@ -486,6 +499,14 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
+                return this;
+            }
+
+            /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
                 return this;
             }
 

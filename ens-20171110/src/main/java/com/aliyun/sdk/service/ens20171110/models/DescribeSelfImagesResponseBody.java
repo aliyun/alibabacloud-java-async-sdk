@@ -138,7 +138,10 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -146,7 +149,10 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Maximum value: 50. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -165,7 +171,10 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;

@@ -191,9 +191,11 @@ public class CreateEnsRouteEntryRequest extends Request {
         }
 
         /**
-         * <p>The type of next hop of the custom route entry. Valid values:</p>
+         * <p>The next hop type of the custom route. Valid values:</p>
          * <ul>
-         * <li>Instance (default): an ENS instance.</li>
+         * <li>Instance: an ENS instance.</li>
+         * <li>HaVip: a high-availability virtual IP address (HAVIP).</li>
+         * <li>NetworkPeer: VPC peering connection.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -231,7 +233,10 @@ public class CreateEnsRouteEntryRequest extends Request {
         }
 
         /**
-         * SourceCidrBlock.
+         * <p>The new source CIDR block of the inbound or outbound traffic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.XXX.XXX.0/24</p>
          */
         public Builder sourceCidrBlock(String sourceCidrBlock) {
             this.putQueryParameter("SourceCidrBlock", sourceCidrBlock);

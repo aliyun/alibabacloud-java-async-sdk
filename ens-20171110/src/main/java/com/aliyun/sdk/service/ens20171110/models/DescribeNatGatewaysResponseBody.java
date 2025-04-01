@@ -106,7 +106,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Details about the NAT gateways.</p>
+         * <p>The details of the NAT gateways.</p>
          */
         public Builder natGateways(java.util.List<NatGateways> natGateways) {
             this.natGateways = natGateways;
@@ -229,7 +229,10 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             } 
 
             /**
-             * AllocationId.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eip-50g****</p>
              */
             public Builder allocationId(String allocationId) {
                 this.allocationId = allocationId;
@@ -237,7 +240,10 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * IpAddress.
+             * <p>The IP address of the EIP associated with the NAT gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8.XX.XX.162</p>
              */
             public Builder ipAddress(String ipAddress) {
                 this.ipAddress = ipAddress;
@@ -245,7 +251,16 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * UsingStatus.
+             * <p>The association between the EIP and the Internet NAT gateway. Valid values:</p>
+             * <ul>
+             * <li><strong>UsedByForwardTable</strong>: The EIP is specified in a DNAT entry.</li>
+             * <li><strong>UsedBySnatTable</strong>: The EIP is specified in an SNAT entry.</li>
+             * <li><strong>UsedByForwardSnatTable</strong>: The EIP is specified in both an SNAT entry and a DNAT entry.</li>
+             * <li><strong>Idle</strong>: The EIP is not specified in a DNAT or SNAT entry.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Idle</p>
              */
             public Builder usingStatus(String usingStatus) {
                 this.usingStatus = usingStatus;
@@ -425,7 +440,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * IpLists.
+             * <p>The list of elastic IP addresses (EIPs) that are associated with the Internet NAT gateway.</p>
              */
             public Builder ipLists(java.util.List<IpLists> ipLists) {
                 this.ipLists = ipLists;
@@ -477,7 +492,15 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the SNAT entry.</p>
+             * <ul>
+             * <li>Pending: The SNAT entry is being created or modified.</li>
+             * <li>Available: The SNAT entry is available.</li>
+             * <li>Deleting: The SNAT entry is being deleted.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;

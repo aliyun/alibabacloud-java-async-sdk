@@ -353,7 +353,13 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * GatewayRouteTableId.
+         * <p>The ID of the gateway route table associated with the IPv6 gateway.</p>
+         * <blockquote>
+         * <p> This parameter is available only when the IPv6 gateway is associated with a gateway route table.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>rt-539***tbs</p>
          */
         public Builder gatewayRouteTableId(String gatewayRouteTableId) {
             this.gatewayRouteTableId = gatewayRouteTableId;
@@ -445,7 +451,10 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * RouteTableId.
+         * <p>The ID of the route table that you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rt-539***fpu</p>
          */
         public Builder routeTableId(String routeTableId) {
             this.routeTableId = routeTableId;
@@ -945,7 +954,10 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * RouteTableId.
+             * <p>The ID of the route table that you want to query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rt-539***fpu</p>
              */
             public Builder routeTableId(java.util.List<String> routeTableId) {
                 this.routeTableId = routeTableId;

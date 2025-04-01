@@ -234,7 +234,7 @@ public class DescribeSnatTableEntriesRequest extends Request {
         }
 
         /**
-         * SnatIps.
+         * <p>The information about the EIP specified in the SNAT entry.</p>
          */
         public Builder snatIps(java.util.List<String> snatIps) {
             this.putQueryParameter("SnatIps", snatIps);

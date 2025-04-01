@@ -333,7 +333,14 @@ public class DescribeEnsRouteTablesResponseBody extends TeaModel {
             } 
 
             /**
-             * AssociateType.
+             * <p>The type of the route table. Valid values:</p>
+             * <ul>
+             * <li><strong>VSwitch</strong> (default): vSwitch route table</li>
+             * <li><strong>Gateway</strong>: gateway route table</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>VSwitch</p>
              */
             public Builder associateType(String associateType) {
                 this.associateType = associateType;
@@ -352,7 +359,11 @@ public class DescribeEnsRouteTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the network.</p>
+             * <p>The description must be 2 to 256 characters in length. It must start with a letter but cannot start with http:// or https://.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -371,7 +382,10 @@ public class DescribeEnsRouteTablesResponseBody extends TeaModel {
             }
 
             /**
-             * IsDefaultGatewayRouteTable.
+             * <p>Is the gateway routing table the default.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isDefaultGatewayRouteTable(Boolean isDefaultGatewayRouteTable) {
                 this.isDefaultGatewayRouteTable = isDefaultGatewayRouteTable;
@@ -401,7 +415,11 @@ public class DescribeEnsRouteTablesResponseBody extends TeaModel {
             }
 
             /**
-             * RouteTableName.
+             * <p>The name of the route table that you want to query.</p>
+             * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-tf-vtb7</p>
              */
             public Builder routeTableName(String routeTableName) {
                 this.routeTableName = routeTableName;
@@ -423,7 +441,7 @@ public class DescribeEnsRouteTablesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the route table. Valid values:</p>
+             * <p>The type of the route table. Examples:</p>
              * <ul>
              * <li>Custom: custom route table.</li>
              * <li>System: system route table.</li>

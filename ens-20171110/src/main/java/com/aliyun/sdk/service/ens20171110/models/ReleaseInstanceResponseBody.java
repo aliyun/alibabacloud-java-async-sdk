@@ -78,7 +78,19 @@ public class ReleaseInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceType.
+         * <p>The type of the resource.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>instance</li>
+         * <li>eip</li>
+         * <li>disk</li>
+         * <li>network</li>
+         * <li>natgateway</li>
+         * <li>vswitch</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>eip</p>
          */
         public Builder resourceType(String resourceType) {
             this.resourceType = resourceType;

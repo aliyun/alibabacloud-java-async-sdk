@@ -173,7 +173,14 @@ public class DescribeEnsRouteTablesRequest extends Request {
         } 
 
         /**
-         * AssociateType.
+         * <p>The type of the route table. Valid values:</p>
+         * <ul>
+         * <li><strong>VSwitch</strong> (default): vSwitch route table</li>
+         * <li><strong>Gateway</strong>: gateway route table</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Gateway</p>
          */
         public Builder associateType(String associateType) {
             this.putQueryParameter("AssociateType", associateType);
@@ -194,7 +201,7 @@ public class DescribeEnsRouteTablesRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the Edge Node Service (ENS) nodes.</p>
+         * <p>The IDs of edge nodes. You can specify 1 to 100 IDs.</p>
          */
         public Builder ensRegionIds(java.util.List<String> ensRegionIds) {
             this.putQueryParameter("EnsRegionIds", ensRegionIds);
@@ -251,7 +258,11 @@ public class DescribeEnsRouteTablesRequest extends Request {
         }
 
         /**
-         * RouteTableName.
+         * <p>The name of the route table that you want to query.</p>
+         * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tftest-nat04</p>
          */
         public Builder routeTableName(String routeTableName) {
             this.putQueryParameter("RouteTableName", routeTableName);
@@ -260,7 +271,14 @@ public class DescribeEnsRouteTablesRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The type of the NAT.</p>
+         * <ul>
+         * <li>Empty: symmetric NAT.</li>
+         * <li>FullCone: full cone NAT.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FullCone</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

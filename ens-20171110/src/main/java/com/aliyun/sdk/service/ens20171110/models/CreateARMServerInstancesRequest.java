@@ -31,6 +31,10 @@ public class CreateARMServerInstancesRequest extends Request {
     private Boolean autoUseCoupon;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Cidr")
+    private String cidr;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EnsRegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String ensRegionId;
@@ -96,6 +100,7 @@ public class CreateARMServerInstancesRequest extends Request {
         this.amount = builder.amount;
         this.autoRenew = builder.autoRenew;
         this.autoUseCoupon = builder.autoUseCoupon;
+        this.cidr = builder.cidr;
         this.ensRegionId = builder.ensRegionId;
         this.environmentVar = builder.environmentVar;
         this.frequency = builder.frequency;
@@ -143,6 +148,13 @@ public class CreateARMServerInstancesRequest extends Request {
      */
     public Boolean getAutoUseCoupon() {
         return this.autoUseCoupon;
+    }
+
+    /**
+     * @return cidr
+     */
+    public String getCidr() {
+        return this.cidr;
     }
 
     /**
@@ -240,6 +252,7 @@ public class CreateARMServerInstancesRequest extends Request {
         private Integer amount; 
         private Boolean autoRenew; 
         private Boolean autoUseCoupon; 
+        private String cidr; 
         private String ensRegionId; 
         private String environmentVar; 
         private Integer frequency; 
@@ -263,6 +276,7 @@ public class CreateARMServerInstancesRequest extends Request {
             this.amount = request.amount;
             this.autoRenew = request.autoRenew;
             this.autoUseCoupon = request.autoUseCoupon;
+            this.cidr = request.cidr;
             this.ensRegionId = request.ensRegionId;
             this.environmentVar = request.environmentVar;
             this.frequency = request.frequency;
@@ -320,6 +334,15 @@ public class CreateARMServerInstancesRequest extends Request {
         public Builder autoUseCoupon(Boolean autoUseCoupon) {
             this.putQueryParameter("AutoUseCoupon", autoUseCoupon);
             this.autoUseCoupon = autoUseCoupon;
+            return this;
+        }
+
+        /**
+         * Cidr.
+         */
+        public Builder cidr(String cidr) {
+            this.putQueryParameter("Cidr", cidr);
+            this.cidr = cidr;
             return this;
         }
 

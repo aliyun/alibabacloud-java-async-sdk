@@ -155,7 +155,7 @@ public class DescribeNetworksRequest extends Request {
         }
 
         /**
-         * <p>The node information.</p>
+         * <p>The IDs of edge nodes. You can specify 1 to 100 IDs.</p>
          */
         public Builder ensRegionIds(java.util.List<String> ensRegionIds) {
             this.putQueryParameter("EnsRegionIds", ensRegionIds);
@@ -176,7 +176,7 @@ public class DescribeNetworksRequest extends Request {
         }
 
         /**
-         * <p>The ID of Network.</p>
+         * <p>The IDs of VPCs You can specify 1 to 100 IDs.</p>
          */
         public Builder networkIds(java.util.List<String> networkIds) {
             this.putQueryParameter("NetworkIds", networkIds);
