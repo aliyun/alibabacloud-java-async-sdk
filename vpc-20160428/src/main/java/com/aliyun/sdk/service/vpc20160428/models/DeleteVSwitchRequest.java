@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DeleteVSwitchRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -44,6 +48,7 @@ public class DeleteVSwitchRequest extends Request {
 
     private DeleteVSwitchRequest(Builder builder) {
         super(builder);
+        this.dryRun = builder.dryRun;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
@@ -63,6 +68,13 @@ public class DeleteVSwitchRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -108,6 +120,7 @@ public class DeleteVSwitchRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteVSwitchRequest, Builder> {
+        private Boolean dryRun; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
@@ -121,6 +134,7 @@ public class DeleteVSwitchRequest extends Request {
 
         private Builder(DeleteVSwitchRequest request) {
             super(request);
+            this.dryRun = request.dryRun;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
@@ -128,6 +142,15 @@ public class DeleteVSwitchRequest extends Request {
             this.resourceOwnerId = request.resourceOwnerId;
             this.vSwitchId = request.vSwitchId;
         } 
+
+        /**
+         * DryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
 
         /**
          * OwnerAccount.

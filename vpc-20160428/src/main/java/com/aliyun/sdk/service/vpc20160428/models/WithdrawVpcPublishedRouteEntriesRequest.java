@@ -173,7 +173,14 @@ public class WithdrawVpcPublishedRouteEntriesRequest extends Request {
         } 
 
         /**
-         * DryRun.
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -200,7 +207,10 @@ public class WithdrawVpcPublishedRouteEntriesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The ID of the region. Call the DescribeRegions operation to access it.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -227,7 +237,7 @@ public class WithdrawVpcPublishedRouteEntriesRequest extends Request {
         }
 
         /**
-         * RouteEntries.
+         * <p>The route entries to be withdrawn. Maximum value: 50.</p>
          */
         public Builder routeEntries(java.util.List<RouteEntries> routeEntries) {
             this.putQueryParameter("RouteEntries", routeEntries);
@@ -236,6 +246,7 @@ public class WithdrawVpcPublishedRouteEntriesRequest extends Request {
         }
 
         /**
+         * <p>Target instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -248,6 +259,7 @@ public class WithdrawVpcPublishedRouteEntriesRequest extends Request {
         }
 
         /**
+         * <p>The type of target instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -321,6 +333,7 @@ public class WithdrawVpcPublishedRouteEntriesRequest extends Request {
             } 
 
             /**
+             * <p>The destination CIDR block</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -332,6 +345,7 @@ public class WithdrawVpcPublishedRouteEntriesRequest extends Request {
             }
 
             /**
+             * <p>The ID of the route table.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

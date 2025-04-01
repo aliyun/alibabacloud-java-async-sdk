@@ -106,7 +106,7 @@ public class DescribeBgpNetworksResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The BGP network.</p>
+         * <p>BGP networks.</p>
          */
         public Builder bgpNetworks(BgpNetworks bgpNetworks) {
             this.bgpNetworks = bgpNetworks;
