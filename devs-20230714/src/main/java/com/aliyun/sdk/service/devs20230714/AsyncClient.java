@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of ActivateConnection  ActivateConnectionRequest
+     * @return ActivateConnectionResponse
+     */
+    CompletableFuture<ActivateConnectionResponse> activateConnection(ActivateConnectionRequest request);
+
+    /**
      * @param request the request parameters of CancelPipeline  CancelPipelineRequest
      * @return CancelPipelineResponse
      */
@@ -68,6 +74,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteArtifactResponse> deleteArtifact(DeleteArtifactRequest request);
 
     /**
+     * @param request the request parameters of DeleteConnection  DeleteConnectionRequest
+     * @return DeleteConnectionResponse
+     */
+    CompletableFuture<DeleteConnectionResponse> deleteConnection(DeleteConnectionRequest request);
+
+    /**
      * @param request the request parameters of DeleteEnvironment  DeleteEnvironmentRequest
      * @return DeleteEnvironmentResponse
      */
@@ -96,6 +108,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return FetchArtifactTempBucketTokenResponse
      */
     CompletableFuture<FetchArtifactTempBucketTokenResponse> fetchArtifactTempBucketToken(FetchArtifactTempBucketTokenRequest request);
+
+    /**
+     * @param request the request parameters of FetchConnectionCredential  FetchConnectionCredentialRequest
+     * @return FetchConnectionCredentialResponse
+     */
+    CompletableFuture<FetchConnectionCredentialResponse> fetchConnectionCredential(FetchConnectionCredentialRequest request);
 
     /**
      * @param request the request parameters of GetArtifact  GetArtifactRequest
@@ -144,6 +162,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetTaskResponse
      */
     CompletableFuture<GetTaskResponse> getTask(GetTaskRequest request);
+
+    /**
+     * @param request the request parameters of ListConnections  ListConnectionsRequest
+     * @return ListConnectionsResponse
+     */
+    CompletableFuture<ListConnectionsResponse> listConnections(ListConnectionsRequest request);
 
     /**
      * @param request the request parameters of ListEnvironments  ListEnvironmentsRequest
