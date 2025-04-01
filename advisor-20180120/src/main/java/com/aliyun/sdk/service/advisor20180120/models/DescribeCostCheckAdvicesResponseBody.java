@@ -48,6 +48,10 @@ public class DescribeCostCheckAdvicesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -90,6 +94,17 @@ public class DescribeCostCheckAdvicesResponseBody extends TeaModel {
         private String requestId; 
         private String success; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeCostCheckAdvicesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
          * Code.
          */
@@ -115,7 +130,10 @@ public class DescribeCostCheckAdvicesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>566331F9-****-550F-B745-A730331F97A9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -179,6 +197,14 @@ public class DescribeCostCheckAdvicesResponseBody extends TeaModel {
         public static final class Builder {
             private String tagKey; 
             private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
 
             /**
              * TagKey.
@@ -427,6 +453,29 @@ public class DescribeCostCheckAdvicesResponseBody extends TeaModel {
             private String userName; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(AdviceList model) {
+                this.accountFolderId = model.accountFolderId;
+                this.accountFolderName = model.accountFolderName;
+                this.aliyunId = model.aliyunId;
+                this.content = model.content;
+                this.email = model.email;
+                this.endTime = model.endTime;
+                this.gmtDeleted = model.gmtDeleted;
+                this.product = model.product;
+                this.regionId = model.regionId;
+                this.resourceId = model.resourceId;
+                this.resourceName = model.resourceName;
+                this.severity = model.severity;
+                this.startTime = model.startTime;
+                this.tags = model.tags;
+                this.url = model.url;
+                this.userName = model.userName;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
              * AccountFolderId.
              */
@@ -460,7 +509,10 @@ public class DescribeCostCheckAdvicesResponseBody extends TeaModel {
             }
 
             /**
-             * Email.
+             * <p>Email</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -649,6 +701,17 @@ public class DescribeCostCheckAdvicesResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.adviceList = model.adviceList;
+                this.checkId = model.checkId;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * AdviceList.

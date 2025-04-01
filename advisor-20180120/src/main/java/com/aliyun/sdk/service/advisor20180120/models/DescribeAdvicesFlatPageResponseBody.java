@@ -36,6 +36,10 @@ public class DescribeAdvicesFlatPageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DescribeAdvicesFlatPageResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAdvicesFlatPageResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Data.
@@ -252,6 +264,25 @@ public class DescribeAdvicesFlatPageResponseBody extends TeaModel {
             private String resourceId; 
             private Long severity; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.aliyunId = model.aliyunId;
+                this.checkId = model.checkId;
+                this.checkName = model.checkName;
+                this.content = model.content;
+                this.description = model.description;
+                this.gmtCreated = model.gmtCreated;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.isExpired = model.isExpired;
+                this.product = model.product;
+                this.resource = model.resource;
+                this.resourceId = model.resourceId;
+                this.severity = model.severity;
+            } 
+
             /**
              * AliyunId.
              */
@@ -430,6 +461,16 @@ public class DescribeAdvicesFlatPageResponseBody extends TeaModel {
             private Long pageSize; 
             private java.util.List<Result> result; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.pageNo = model.pageNo;
+                this.pageSize = model.pageSize;
+                this.result = model.result;
+                this.total = model.total;
+            } 
 
             /**
              * PageNo.

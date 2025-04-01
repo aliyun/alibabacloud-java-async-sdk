@@ -36,6 +36,10 @@ public class GetTaskStatusByIdResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetTaskStatusByIdResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTaskStatusByIdResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Data.
@@ -119,6 +131,14 @@ public class GetTaskStatusByIdResponseBody extends TeaModel {
         public static final class Builder {
             private Long taskId; 
             private Integer taskStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.taskId = model.taskId;
+                this.taskStatus = model.taskStatus;
+            } 
 
             /**
              * TaskId.

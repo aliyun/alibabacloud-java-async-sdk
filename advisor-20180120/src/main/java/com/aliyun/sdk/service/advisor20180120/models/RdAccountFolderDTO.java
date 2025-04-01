@@ -64,6 +64,10 @@ public class RdAccountFolderDTO extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accountCount
      */
@@ -137,6 +141,21 @@ public class RdAccountFolderDTO extends TeaModel {
         private String resourceDirectoryPath; 
         private String resourceDirectoryPathName; 
         private Integer selectedCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(RdAccountFolderDTO model) {
+            this.accountCount = model.accountCount;
+            this.accountList = model.accountList;
+            this.folderId = model.folderId;
+            this.folderList = model.folderList;
+            this.folderName = model.folderName;
+            this.resourceDirectoryId = model.resourceDirectoryId;
+            this.resourceDirectoryPath = model.resourceDirectoryPath;
+            this.resourceDirectoryPathName = model.resourceDirectoryPathName;
+            this.selectedCount = model.selectedCount;
+        } 
 
         /**
          * AccountCount.

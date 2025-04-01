@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link RefreshAdvisorCostCheckResponseBody} extends {@link TeaModel}
+ * {@link GetInspectProgressResponseBody} extends {@link TeaModel}
  *
- * <p>RefreshAdvisorCostCheckResponseBody</p>
+ * <p>GetInspectProgressResponseBody</p>
  */
-public class RefreshAdvisorCostCheckResponseBody extends TeaModel {
+public class GetInspectProgressResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
@@ -32,7 +32,7 @@ public class RefreshAdvisorCostCheckResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private RefreshAdvisorCostCheckResponseBody(Builder builder) {
+    private GetInspectProgressResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -44,7 +44,7 @@ public class RefreshAdvisorCostCheckResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static RefreshAdvisorCostCheckResponseBody create() {
+    public static GetInspectProgressResponseBody create() {
         return builder().build();
     }
 
@@ -97,7 +97,7 @@ public class RefreshAdvisorCostCheckResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(RefreshAdvisorCostCheckResponseBody model) {
+        private Builder(GetInspectProgressResponseBody model) {
             this.code = model.code;
             this.data = model.data;
             this.message = model.message;
@@ -148,36 +148,48 @@ public class RefreshAdvisorCostCheckResponseBody extends TeaModel {
             return this;
         }
 
-        public RefreshAdvisorCostCheckResponseBody build() {
-            return new RefreshAdvisorCostCheckResponseBody(this);
+        public GetInspectProgressResponseBody build() {
+            return new GetInspectProgressResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link RefreshAdvisorCostCheckResponseBody} extends {@link TeaModel}
+     * {@link GetInspectProgressResponseBody} extends {@link TeaModel}
      *
-     * <p>RefreshAdvisorCostCheckResponseBody</p>
+     * <p>GetInspectProgressResponseBody</p>
      */
     public static class Data extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("CommandId")
-        private String commandId;
+        @com.aliyun.core.annotation.NameInMap("AllSubtaskCount")
+        private Integer allSubtaskCount;
 
-        @com.aliyun.core.annotation.NameInMap("ManagerTaskId")
-        private Long managerTaskId;
+        @com.aliyun.core.annotation.NameInMap("Finish")
+        private Boolean finish;
 
-        @com.aliyun.core.annotation.NameInMap("Success")
-        private Boolean success;
+        @com.aliyun.core.annotation.NameInMap("FinishRate")
+        private Double finishRate;
+
+        @com.aliyun.core.annotation.NameInMap("FinishSubtaskCount")
+        private Integer finishSubtaskCount;
+
+        @com.aliyun.core.annotation.NameInMap("LastInspectDate")
+        private Long lastInspectDate;
 
         @com.aliyun.core.annotation.NameInMap("TaskId")
         private Long taskId;
 
+        @com.aliyun.core.annotation.NameInMap("UsedTime")
+        private Long usedTime;
+
         private Data(Builder builder) {
-            this.commandId = builder.commandId;
-            this.managerTaskId = builder.managerTaskId;
-            this.success = builder.success;
+            this.allSubtaskCount = builder.allSubtaskCount;
+            this.finish = builder.finish;
+            this.finishRate = builder.finishRate;
+            this.finishSubtaskCount = builder.finishSubtaskCount;
+            this.lastInspectDate = builder.lastInspectDate;
             this.taskId = builder.taskId;
+            this.usedTime = builder.usedTime;
         }
 
         public static Builder builder() {
@@ -189,24 +201,38 @@ public class RefreshAdvisorCostCheckResponseBody extends TeaModel {
         }
 
         /**
-         * @return commandId
+         * @return allSubtaskCount
          */
-        public String getCommandId() {
-            return this.commandId;
+        public Integer getAllSubtaskCount() {
+            return this.allSubtaskCount;
         }
 
         /**
-         * @return managerTaskId
+         * @return finish
          */
-        public Long getManagerTaskId() {
-            return this.managerTaskId;
+        public Boolean getFinish() {
+            return this.finish;
         }
 
         /**
-         * @return success
+         * @return finishRate
          */
-        public Boolean getSuccess() {
-            return this.success;
+        public Double getFinishRate() {
+            return this.finishRate;
+        }
+
+        /**
+         * @return finishSubtaskCount
+         */
+        public Integer getFinishSubtaskCount() {
+            return this.finishSubtaskCount;
+        }
+
+        /**
+         * @return lastInspectDate
+         */
+        public Long getLastInspectDate() {
+            return this.lastInspectDate;
         }
 
         /**
@@ -216,43 +242,72 @@ public class RefreshAdvisorCostCheckResponseBody extends TeaModel {
             return this.taskId;
         }
 
+        /**
+         * @return usedTime
+         */
+        public Long getUsedTime() {
+            return this.usedTime;
+        }
+
         public static final class Builder {
-            private String commandId; 
-            private Long managerTaskId; 
-            private Boolean success; 
+            private Integer allSubtaskCount; 
+            private Boolean finish; 
+            private Double finishRate; 
+            private Integer finishSubtaskCount; 
+            private Long lastInspectDate; 
             private Long taskId; 
+            private Long usedTime; 
 
             private Builder() {
             } 
 
             private Builder(Data model) {
-                this.commandId = model.commandId;
-                this.managerTaskId = model.managerTaskId;
-                this.success = model.success;
+                this.allSubtaskCount = model.allSubtaskCount;
+                this.finish = model.finish;
+                this.finishRate = model.finishRate;
+                this.finishSubtaskCount = model.finishSubtaskCount;
+                this.lastInspectDate = model.lastInspectDate;
                 this.taskId = model.taskId;
+                this.usedTime = model.usedTime;
             } 
 
             /**
-             * CommandId.
+             * AllSubtaskCount.
              */
-            public Builder commandId(String commandId) {
-                this.commandId = commandId;
+            public Builder allSubtaskCount(Integer allSubtaskCount) {
+                this.allSubtaskCount = allSubtaskCount;
                 return this;
             }
 
             /**
-             * ManagerTaskId.
+             * Finish.
              */
-            public Builder managerTaskId(Long managerTaskId) {
-                this.managerTaskId = managerTaskId;
+            public Builder finish(Boolean finish) {
+                this.finish = finish;
                 return this;
             }
 
             /**
-             * Success.
+             * FinishRate.
              */
-            public Builder success(Boolean success) {
-                this.success = success;
+            public Builder finishRate(Double finishRate) {
+                this.finishRate = finishRate;
+                return this;
+            }
+
+            /**
+             * FinishSubtaskCount.
+             */
+            public Builder finishSubtaskCount(Integer finishSubtaskCount) {
+                this.finishSubtaskCount = finishSubtaskCount;
+                return this;
+            }
+
+            /**
+             * LastInspectDate.
+             */
+            public Builder lastInspectDate(Long lastInspectDate) {
+                this.lastInspectDate = lastInspectDate;
                 return this;
             }
 
@@ -261,6 +316,14 @@ public class RefreshAdvisorCostCheckResponseBody extends TeaModel {
              */
             public Builder taskId(Long taskId) {
                 this.taskId = taskId;
+                return this;
+            }
+
+            /**
+             * UsedTime.
+             */
+            public Builder usedTime(Long usedTime) {
+                this.usedTime = usedTime;
                 return this;
             }
 

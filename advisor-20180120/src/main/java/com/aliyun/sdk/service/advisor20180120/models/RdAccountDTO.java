@@ -52,6 +52,10 @@ public class RdAccountDTO extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accountType
      */
@@ -101,6 +105,18 @@ public class RdAccountDTO extends TeaModel {
         private Long id; 
         private String name; 
         private java.util.List<Tags> tags; 
+
+        private Builder() {
+        } 
+
+        private Builder(RdAccountDTO model) {
+            this.accountType = model.accountType;
+            this.checked = model.checked;
+            this.displayName = model.displayName;
+            this.id = model.id;
+            this.name = model.name;
+            this.tags = model.tags;
+        } 
 
         /**
          * AccountType.
@@ -199,6 +215,14 @@ public class RdAccountDTO extends TeaModel {
         public static final class Builder {
             private String tagKey; 
             private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
 
             /**
              * TagKey.

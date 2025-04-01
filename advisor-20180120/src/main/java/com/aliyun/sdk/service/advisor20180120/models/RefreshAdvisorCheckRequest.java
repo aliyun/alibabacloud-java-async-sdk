@@ -69,7 +69,7 @@ public class RefreshAdvisorCheckRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -339,6 +339,19 @@ public class RefreshAdvisorCheckRequest extends Request {
             private Boolean reliablility; 
             private Boolean security; 
             private Boolean service; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceDimensionList model) {
+                this.cost = model.cost;
+                this.performance = model.performance;
+                this.product = model.product;
+                this.productName = model.productName;
+                this.reliablility = model.reliablility;
+                this.security = model.security;
+                this.service = model.service;
+            } 
 
             /**
              * Cost.

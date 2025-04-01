@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetHistoryAdvicesResponse} extends {@link TeaModel}
+ * {@link GetInspectProgressResponse} extends {@link TeaModel}
  *
- * <p>GetHistoryAdvicesResponse</p>
+ * <p>GetInspectProgressResponse</p>
  */
-public class GetHistoryAdvicesResponse extends Response {
+public class GetInspectProgressResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class GetHistoryAdvicesResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private GetHistoryAdvicesResponseBody body;
+    private GetInspectProgressResponseBody body;
 
-    private GetHistoryAdvicesResponse(BuilderImpl builder) {
+    private GetInspectProgressResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static GetHistoryAdvicesResponse create() {
+    public static GetInspectProgressResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class GetHistoryAdvicesResponse extends Response {
     /**
      * @return body
      */
-    public GetHistoryAdvicesResponseBody getBody() {
+    public GetInspectProgressResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<GetHistoryAdvicesResponse, Builder> {
+    public interface Builder extends Response.Builder<GetInspectProgressResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(GetHistoryAdvicesResponseBody body);
+        Builder body(GetInspectProgressResponseBody body);
 
         @Override
-        GetHistoryAdvicesResponse build();
+        GetInspectProgressResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<GetHistoryAdvicesResponse, Builder>
+            extends Response.BuilderImpl<GetInspectProgressResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private GetHistoryAdvicesResponseBody body; 
+        private GetInspectProgressResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(GetHistoryAdvicesResponse response) {
+        private BuilderImpl(GetInspectProgressResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class GetHistoryAdvicesResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(GetHistoryAdvicesResponseBody body) {
+        public Builder body(GetInspectProgressResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public GetHistoryAdvicesResponse build() {
-            return new GetHistoryAdvicesResponse(this);
+        public GetInspectProgressResponse build() {
+            return new GetInspectProgressResponse(this);
         } 
 
     } 

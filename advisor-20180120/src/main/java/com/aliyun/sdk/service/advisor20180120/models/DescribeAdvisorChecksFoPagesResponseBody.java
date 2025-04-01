@@ -12,31 +12,39 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DescribeAdvisorChecksResponseBody} extends {@link TeaModel}
+ * {@link DescribeAdvisorChecksFoPagesResponseBody} extends {@link TeaModel}
  *
- * <p>DescribeAdvisorChecksResponseBody</p>
+ * <p>DescribeAdvisorChecksFoPagesResponseBody</p>
  */
-public class DescribeAdvisorChecksResponseBody extends TeaModel {
+public class DescribeAdvisorChecksFoPagesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private Data data;
+    private java.util.List<Data> data;
+
+    @com.aliyun.core.annotation.NameInMap("Message")
+    private String message;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private DescribeAdvisorChecksResponseBody(Builder builder) {
+    @com.aliyun.core.annotation.NameInMap("Success")
+    private Boolean success;
+
+    private DescribeAdvisorChecksFoPagesResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
+        this.message = builder.message;
         this.requestId = builder.requestId;
+        this.success = builder.success;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DescribeAdvisorChecksResponseBody create() {
+    public static DescribeAdvisorChecksFoPagesResponseBody create() {
         return builder().build();
     }
 
@@ -54,8 +62,15 @@ public class DescribeAdvisorChecksResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public Data getData() {
+    public java.util.List<Data> getData() {
         return this.data;
+    }
+
+    /**
+     * @return message
+     */
+    public String getMessage() {
+        return this.message;
     }
 
     /**
@@ -65,18 +80,29 @@ public class DescribeAdvisorChecksResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return success
+     */
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public static final class Builder {
         private String code; 
-        private Data data; 
+        private java.util.List<Data> data; 
+        private String message; 
         private String requestId; 
+        private Boolean success; 
 
         private Builder() {
         } 
 
-        private Builder(DescribeAdvisorChecksResponseBody model) {
+        private Builder(DescribeAdvisorChecksFoPagesResponseBody model) {
             this.code = model.code;
             this.data = model.data;
+            this.message = model.message;
             this.requestId = model.requestId;
+            this.success = model.success;
         } 
 
         /**
@@ -90,46 +116,65 @@ public class DescribeAdvisorChecksResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(Data data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * RequestId.
+         * Message.
+         */
+        public Builder message(String message) {
+            this.message = message;
+            return this;
+        }
+
+        /**
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>566331F9-5AB3-550F-B745-A730331F97A9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public DescribeAdvisorChecksResponseBody build() {
-            return new DescribeAdvisorChecksResponseBody(this);
+        /**
+         * Success.
+         */
+        public Builder success(Boolean success) {
+            this.success = success;
+            return this;
+        }
+
+        public DescribeAdvisorChecksFoPagesResponseBody build() {
+            return new DescribeAdvisorChecksFoPagesResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link DescribeAdvisorChecksResponseBody} extends {@link TeaModel}
+     * {@link DescribeAdvisorChecksFoPagesResponseBody} extends {@link TeaModel}
      *
-     * <p>DescribeAdvisorChecksResponseBody</p>
+     * <p>DescribeAdvisorChecksFoPagesResponseBody</p>
      */
-    public static class AdvisorCheck extends TeaModel {
+    public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
+        @com.aliyun.core.annotation.NameInMap("ConfigSupport")
+        private String configSupport;
+
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @com.aliyun.core.annotation.NameInMap("GmtCreated")
-        private String gmtCreated;
-
-        @com.aliyun.core.annotation.NameInMap("GmtModified")
-        private String gmtModified;
+        @com.aliyun.core.annotation.NameInMap("InspectionScope")
+        private String inspectionScope;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -140,8 +185,14 @@ public class DescribeAdvisorChecksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Product")
         private String product;
 
+        @com.aliyun.core.annotation.NameInMap("Source")
+        private String source;
+
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
+
+        @com.aliyun.core.annotation.NameInMap("SubCategory")
+        private java.util.List<Long> subCategory;
 
         @com.aliyun.core.annotation.NameInMap("Tips")
         private String tips;
@@ -149,16 +200,18 @@ public class DescribeAdvisorChecksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ViewColumn")
         private String viewColumn;
 
-        private AdvisorCheck(Builder builder) {
+        private Result(Builder builder) {
             this.category = builder.category;
             this.code = builder.code;
+            this.configSupport = builder.configSupport;
             this.description = builder.description;
-            this.gmtCreated = builder.gmtCreated;
-            this.gmtModified = builder.gmtModified;
+            this.inspectionScope = builder.inspectionScope;
             this.name = builder.name;
             this.operateColumn = builder.operateColumn;
             this.product = builder.product;
+            this.source = builder.source;
             this.status = builder.status;
+            this.subCategory = builder.subCategory;
             this.tips = builder.tips;
             this.viewColumn = builder.viewColumn;
         }
@@ -167,7 +220,7 @@ public class DescribeAdvisorChecksResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static AdvisorCheck create() {
+        public static Result create() {
             return builder().build();
         }
 
@@ -186,6 +239,13 @@ public class DescribeAdvisorChecksResponseBody extends TeaModel {
         }
 
         /**
+         * @return configSupport
+         */
+        public String getConfigSupport() {
+            return this.configSupport;
+        }
+
+        /**
          * @return description
          */
         public String getDescription() {
@@ -193,17 +253,10 @@ public class DescribeAdvisorChecksResponseBody extends TeaModel {
         }
 
         /**
-         * @return gmtCreated
+         * @return inspectionScope
          */
-        public String getGmtCreated() {
-            return this.gmtCreated;
-        }
-
-        /**
-         * @return gmtModified
-         */
-        public String getGmtModified() {
-            return this.gmtModified;
+        public String getInspectionScope() {
+            return this.inspectionScope;
         }
 
         /**
@@ -228,10 +281,24 @@ public class DescribeAdvisorChecksResponseBody extends TeaModel {
         }
 
         /**
+         * @return source
+         */
+        public String getSource() {
+            return this.source;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
             return this.status;
+        }
+
+        /**
+         * @return subCategory
+         */
+        public java.util.List<Long> getSubCategory() {
+            return this.subCategory;
         }
 
         /**
@@ -251,29 +318,33 @@ public class DescribeAdvisorChecksResponseBody extends TeaModel {
         public static final class Builder {
             private String category; 
             private String code; 
+            private String configSupport; 
             private String description; 
-            private String gmtCreated; 
-            private String gmtModified; 
+            private String inspectionScope; 
             private String name; 
             private String operateColumn; 
             private String product; 
+            private String source; 
             private String status; 
+            private java.util.List<Long> subCategory; 
             private String tips; 
             private String viewColumn; 
 
             private Builder() {
             } 
 
-            private Builder(AdvisorCheck model) {
+            private Builder(Result model) {
                 this.category = model.category;
                 this.code = model.code;
+                this.configSupport = model.configSupport;
                 this.description = model.description;
-                this.gmtCreated = model.gmtCreated;
-                this.gmtModified = model.gmtModified;
+                this.inspectionScope = model.inspectionScope;
                 this.name = model.name;
                 this.operateColumn = model.operateColumn;
                 this.product = model.product;
+                this.source = model.source;
                 this.status = model.status;
+                this.subCategory = model.subCategory;
                 this.tips = model.tips;
                 this.viewColumn = model.viewColumn;
             } 
@@ -295,6 +366,14 @@ public class DescribeAdvisorChecksResponseBody extends TeaModel {
             }
 
             /**
+             * ConfigSupport.
+             */
+            public Builder configSupport(String configSupport) {
+                this.configSupport = configSupport;
+                return this;
+            }
+
+            /**
              * Description.
              */
             public Builder description(String description) {
@@ -303,18 +382,10 @@ public class DescribeAdvisorChecksResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreated.
+             * InspectionScope.
              */
-            public Builder gmtCreated(String gmtCreated) {
-                this.gmtCreated = gmtCreated;
-                return this;
-            }
-
-            /**
-             * GmtModified.
-             */
-            public Builder gmtModified(String gmtModified) {
-                this.gmtModified = gmtModified;
+            public Builder inspectionScope(String inspectionScope) {
+                this.inspectionScope = inspectionScope;
                 return this;
             }
 
@@ -343,10 +414,26 @@ public class DescribeAdvisorChecksResponseBody extends TeaModel {
             }
 
             /**
+             * Source.
+             */
+            public Builder source(String source) {
+                this.source = source;
+                return this;
+            }
+
+            /**
              * Status.
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * SubCategory.
+             */
+            public Builder subCategory(java.util.List<Long> subCategory) {
+                this.subCategory = subCategory;
                 return this;
             }
 
@@ -366,8 +453,8 @@ public class DescribeAdvisorChecksResponseBody extends TeaModel {
                 return this;
             }
 
-            public AdvisorCheck build() {
-                return new AdvisorCheck(this);
+            public Result build() {
+                return new Result(this);
             } 
 
         } 
@@ -375,16 +462,28 @@ public class DescribeAdvisorChecksResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link DescribeAdvisorChecksResponseBody} extends {@link TeaModel}
+     * {@link DescribeAdvisorChecksFoPagesResponseBody} extends {@link TeaModel}
      *
-     * <p>DescribeAdvisorChecksResponseBody</p>
+     * <p>DescribeAdvisorChecksFoPagesResponseBody</p>
      */
     public static class Data extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("AdvisorCheck")
-        private java.util.List<AdvisorCheck> advisorCheck;
+        @com.aliyun.core.annotation.NameInMap("PageNo")
+        private Integer pageNo;
+
+        @com.aliyun.core.annotation.NameInMap("PageSize")
+        private Integer pageSize;
+
+        @com.aliyun.core.annotation.NameInMap("Result")
+        private java.util.List<Result> result;
+
+        @com.aliyun.core.annotation.NameInMap("Total")
+        private Integer total;
 
         private Data(Builder builder) {
-            this.advisorCheck = builder.advisorCheck;
+            this.pageNo = builder.pageNo;
+            this.pageSize = builder.pageSize;
+            this.result = builder.result;
+            this.total = builder.total;
         }
 
         public static Builder builder() {
@@ -396,27 +495,78 @@ public class DescribeAdvisorChecksResponseBody extends TeaModel {
         }
 
         /**
-         * @return advisorCheck
+         * @return pageNo
          */
-        public java.util.List<AdvisorCheck> getAdvisorCheck() {
-            return this.advisorCheck;
+        public Integer getPageNo() {
+            return this.pageNo;
+        }
+
+        /**
+         * @return pageSize
+         */
+        public Integer getPageSize() {
+            return this.pageSize;
+        }
+
+        /**
+         * @return result
+         */
+        public java.util.List<Result> getResult() {
+            return this.result;
+        }
+
+        /**
+         * @return total
+         */
+        public Integer getTotal() {
+            return this.total;
         }
 
         public static final class Builder {
-            private java.util.List<AdvisorCheck> advisorCheck; 
+            private Integer pageNo; 
+            private Integer pageSize; 
+            private java.util.List<Result> result; 
+            private Integer total; 
 
             private Builder() {
             } 
 
             private Builder(Data model) {
-                this.advisorCheck = model.advisorCheck;
+                this.pageNo = model.pageNo;
+                this.pageSize = model.pageSize;
+                this.result = model.result;
+                this.total = model.total;
             } 
 
             /**
-             * AdvisorCheck.
+             * PageNo.
              */
-            public Builder advisorCheck(java.util.List<AdvisorCheck> advisorCheck) {
-                this.advisorCheck = advisorCheck;
+            public Builder pageNo(Integer pageNo) {
+                this.pageNo = pageNo;
+                return this;
+            }
+
+            /**
+             * PageSize.
+             */
+            public Builder pageSize(Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+            }
+
+            /**
+             * Result.
+             */
+            public Builder result(java.util.List<Result> result) {
+                this.result = result;
+                return this;
+            }
+
+            /**
+             * Total.
+             */
+            public Builder total(Integer total) {
+                this.total = total;
                 return this;
             }
 

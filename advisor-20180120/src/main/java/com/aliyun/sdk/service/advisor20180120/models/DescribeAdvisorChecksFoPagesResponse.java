@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetHistoryAdvicesResponse} extends {@link TeaModel}
+ * {@link DescribeAdvisorChecksFoPagesResponse} extends {@link TeaModel}
  *
- * <p>GetHistoryAdvicesResponse</p>
+ * <p>DescribeAdvisorChecksFoPagesResponse</p>
  */
-public class GetHistoryAdvicesResponse extends Response {
+public class DescribeAdvisorChecksFoPagesResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class GetHistoryAdvicesResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private GetHistoryAdvicesResponseBody body;
+    private DescribeAdvisorChecksFoPagesResponseBody body;
 
-    private GetHistoryAdvicesResponse(BuilderImpl builder) {
+    private DescribeAdvisorChecksFoPagesResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static GetHistoryAdvicesResponse create() {
+    public static DescribeAdvisorChecksFoPagesResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class GetHistoryAdvicesResponse extends Response {
     /**
      * @return body
      */
-    public GetHistoryAdvicesResponseBody getBody() {
+    public DescribeAdvisorChecksFoPagesResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<GetHistoryAdvicesResponse, Builder> {
+    public interface Builder extends Response.Builder<DescribeAdvisorChecksFoPagesResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(GetHistoryAdvicesResponseBody body);
+        Builder body(DescribeAdvisorChecksFoPagesResponseBody body);
 
         @Override
-        GetHistoryAdvicesResponse build();
+        DescribeAdvisorChecksFoPagesResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<GetHistoryAdvicesResponse, Builder>
+            extends Response.BuilderImpl<DescribeAdvisorChecksFoPagesResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private GetHistoryAdvicesResponseBody body; 
+        private DescribeAdvisorChecksFoPagesResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(GetHistoryAdvicesResponse response) {
+        private BuilderImpl(DescribeAdvisorChecksFoPagesResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class GetHistoryAdvicesResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(GetHistoryAdvicesResponseBody body) {
+        public Builder body(DescribeAdvisorChecksFoPagesResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public GetHistoryAdvicesResponse build() {
-            return new GetHistoryAdvicesResponse(this);
+        public DescribeAdvisorChecksFoPagesResponse build() {
+            return new DescribeAdvisorChecksFoPagesResponse(this);
         } 
 
     } 

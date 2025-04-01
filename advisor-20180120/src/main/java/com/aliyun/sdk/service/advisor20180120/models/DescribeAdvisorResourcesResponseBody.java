@@ -36,6 +36,10 @@ public class DescribeAdvisorResourcesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DescribeAdvisorResourcesResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAdvisorResourcesResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Data.
@@ -156,6 +168,17 @@ public class DescribeAdvisorResourcesResponseBody extends TeaModel {
             private String resourceId; 
             private String resourceName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Resource model) {
+                this.data = model.data;
+                this.product = model.product;
+                this.regionId = model.regionId;
+                this.resourceId = model.resourceId;
+                this.resourceName = model.resourceName;
+            } 
+
             /**
              * Data.
              */
@@ -234,6 +257,13 @@ public class DescribeAdvisorResourcesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Resource> resource; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.resource = model.resource;
+            } 
 
             /**
              * Resource.
@@ -317,6 +347,16 @@ public class DescribeAdvisorResourcesResponseBody extends TeaModel {
             private Integer pageSize; 
             private Result result; 
             private Integer total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.pageNo = model.pageNo;
+                this.pageSize = model.pageSize;
+                this.result = model.result;
+                this.total = model.total;
+            } 
 
             /**
              * PageNo.

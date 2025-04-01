@@ -36,6 +36,10 @@ public class GetHistoryAdvicesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetHistoryAdvicesResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetHistoryAdvicesResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Data.
@@ -192,6 +204,20 @@ public class GetHistoryAdvicesResponseBody extends TeaModel {
             private Integer severity; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.checkId = model.checkId;
+                this.checkName = model.checkName;
+                this.description = model.description;
+                this.gmtCreated = model.gmtCreated;
+                this.product = model.product;
+                this.resourceId = model.resourceId;
+                this.severity = model.severity;
+                this.url = model.url;
+            } 
+
             /**
              * CheckId.
              */
@@ -318,6 +344,15 @@ public class GetHistoryAdvicesResponseBody extends TeaModel {
             private Integer pageNo; 
             private java.util.List<Result> result; 
             private Integer total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.pageNo = model.pageNo;
+                this.result = model.result;
+                this.total = model.total;
+            } 
 
             /**
              * PageNo.

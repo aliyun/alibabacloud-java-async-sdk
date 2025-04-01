@@ -48,6 +48,10 @@ public class DescribeCostCheckResultsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -90,6 +94,17 @@ public class DescribeCostCheckResultsResponseBody extends TeaModel {
         private String requestId; 
         private String success; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeCostCheckResultsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
          * Code.
          */
@@ -115,7 +130,10 @@ public class DescribeCostCheckResultsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>566331F9-****-550F-B745-A730331F97A9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -312,6 +330,25 @@ public class DescribeCostCheckResultsResponseBody extends TeaModel {
             private String summary; 
             private String tips; 
 
+            private Builder() {
+            } 
+
+            private Builder(CheckItems model) {
+                this.adviceCount = model.adviceCount;
+                this.adviceResourceCount = model.adviceResourceCount;
+                this.category = model.category;
+                this.checkId = model.checkId;
+                this.checkName = model.checkName;
+                this.currentCost = model.currentCost;
+                this.description = model.description;
+                this.expectedSavingCost = model.expectedSavingCost;
+                this.optimizedCost = model.optimizedCost;
+                this.product = model.product;
+                this.severity = model.severity;
+                this.summary = model.summary;
+                this.tips = model.tips;
+            } 
+
             /**
              * AdviceCount.
              */
@@ -503,6 +540,17 @@ public class DescribeCostCheckResultsResponseBody extends TeaModel {
             private Float groupExpectedSavingCost; 
             private String groupName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ViewGroup model) {
+                this.checkItems = model.checkItems;
+                this.groupCode = model.groupCode;
+                this.groupCount = model.groupCount;
+                this.groupExpectedSavingCost = model.groupExpectedSavingCost;
+                this.groupName = model.groupName;
+            } 
+
             /**
              * CheckItems.
              */
@@ -653,6 +701,19 @@ public class DescribeCostCheckResultsResponseBody extends TeaModel {
             private Integer totalCount; 
             private java.util.List<ViewGroup> viewGroup; 
             private Integer warningCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.adviceResourceCount = model.adviceResourceCount;
+                this.groupBy = model.groupBy;
+                this.normalCount = model.normalCount;
+                this.resourceCount = model.resourceCount;
+                this.totalCount = model.totalCount;
+                this.viewGroup = model.viewGroup;
+                this.warningCount = model.warningCount;
+            } 
 
             /**
              * AdviceResourceCount.

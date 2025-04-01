@@ -36,6 +36,10 @@ public class DescribeAdvicesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DescribeAdvicesResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAdvicesResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Data.
@@ -264,6 +276,26 @@ public class DescribeAdvicesResponseBody extends TeaModel {
             private String resourceId; 
             private Integer severity; 
 
+            private Builder() {
+            } 
+
+            private Builder(Advice model) {
+                this.aliyunId = model.aliyunId;
+                this.checkId = model.checkId;
+                this.checkName = model.checkName;
+                this.checkPlanId = model.checkPlanId;
+                this.content = model.content;
+                this.description = model.description;
+                this.gmtCreated = model.gmtCreated;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.isExpired = model.isExpired;
+                this.product = model.product;
+                this.resource = model.resource;
+                this.resourceId = model.resourceId;
+                this.severity = model.severity;
+            } 
+
             /**
              * AliyunId.
              */
@@ -417,6 +449,13 @@ public class DescribeAdvicesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Advice> advice; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.advice = model.advice;
+            } 
 
             /**
              * Advice.

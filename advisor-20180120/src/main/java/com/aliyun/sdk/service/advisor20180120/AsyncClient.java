@@ -44,6 +44,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeAdvisorChecksResponse> describeAdvisorChecks(DescribeAdvisorChecksRequest request);
 
     /**
+     * @param request the request parameters of DescribeAdvisorChecksFoPages  DescribeAdvisorChecksFoPagesRequest
+     * @return DescribeAdvisorChecksFoPagesResponse
+     */
+    CompletableFuture<DescribeAdvisorChecksFoPagesResponse> describeAdvisorChecksFoPages(DescribeAdvisorChecksFoPagesRequest request);
+
+    /**
      * @param request the request parameters of DescribeAdvisorResources  DescribeAdvisorResourcesRequest
      * @return DescribeAdvisorResourcesResponse
      */
@@ -62,10 +68,28 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeCostCheckResultsResponse> describeCostCheckResults(DescribeCostCheckResultsRequest request);
 
     /**
+     * @param request the request parameters of DescribeCostOptimizationOverview  DescribeCostOptimizationOverviewRequest
+     * @return DescribeCostOptimizationOverviewResponse
+     */
+    CompletableFuture<DescribeCostOptimizationOverviewResponse> describeCostOptimizationOverview(DescribeCostOptimizationOverviewRequest request);
+
+    /**
      * @param request the request parameters of GetHistoryAdvices  GetHistoryAdvicesRequest
      * @return GetHistoryAdvicesResponse
      */
     CompletableFuture<GetHistoryAdvicesResponse> getHistoryAdvices(GetHistoryAdvicesRequest request);
+
+    /**
+     * @param request the request parameters of GetInspectProgress  GetInspectProgressRequest
+     * @return GetInspectProgressResponse
+     */
+    CompletableFuture<GetInspectProgressResponse> getInspectProgress(GetInspectProgressRequest request);
+
+    /**
+     * @param request the request parameters of GetProductList  GetProductListRequest
+     * @return GetProductListResponse
+     */
+    CompletableFuture<GetProductListResponse> getProductList(GetProductListRequest request);
 
     /**
      * @param request the request parameters of GetTaskStatusById  GetTaskStatusByIdRequest
