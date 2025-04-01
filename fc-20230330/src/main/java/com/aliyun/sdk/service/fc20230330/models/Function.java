@@ -74,6 +74,9 @@ public class Function extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("internetAccess")
     private Boolean internetAccess;
 
+    @com.aliyun.core.annotation.NameInMap("invocationRestriction")
+    private OpenStructFunctionRestriction invocationRestriction;
+
     @com.aliyun.core.annotation.NameInMap("lastModifiedTime")
     private String lastModifiedTime;
 
@@ -148,6 +151,7 @@ public class Function extends TeaModel {
         this.instanceConcurrency = builder.instanceConcurrency;
         this.instanceLifecycleConfig = builder.instanceLifecycleConfig;
         this.internetAccess = builder.internetAccess;
+        this.invocationRestriction = builder.invocationRestriction;
         this.lastModifiedTime = builder.lastModifiedTime;
         this.lastUpdateStatus = builder.lastUpdateStatus;
         this.lastUpdateStatusReason = builder.lastUpdateStatusReason;
@@ -314,6 +318,13 @@ public class Function extends TeaModel {
     }
 
     /**
+     * @return invocationRestriction
+     */
+    public OpenStructFunctionRestriction getInvocationRestriction() {
+        return this.invocationRestriction;
+    }
+
+    /**
      * @return lastModifiedTime
      */
     public String getLastModifiedTime() {
@@ -459,6 +470,7 @@ public class Function extends TeaModel {
         private Integer instanceConcurrency; 
         private InstanceLifecycleConfig instanceLifecycleConfig; 
         private Boolean internetAccess; 
+        private OpenStructFunctionRestriction invocationRestriction; 
         private String lastModifiedTime; 
         private String lastUpdateStatus; 
         private String lastUpdateStatusReason; 
@@ -501,6 +513,7 @@ public class Function extends TeaModel {
             this.instanceConcurrency = model.instanceConcurrency;
             this.instanceLifecycleConfig = model.instanceLifecycleConfig;
             this.internetAccess = model.internetAccess;
+            this.invocationRestriction = model.invocationRestriction;
             this.lastModifiedTime = model.lastModifiedTime;
             this.lastUpdateStatus = model.lastUpdateStatus;
             this.lastUpdateStatusReason = model.lastUpdateStatusReason;
@@ -670,6 +683,14 @@ public class Function extends TeaModel {
          */
         public Builder internetAccess(Boolean internetAccess) {
             this.internetAccess = internetAccess;
+            return this;
+        }
+
+        /**
+         * invocationRestriction.
+         */
+        public Builder invocationRestriction(OpenStructFunctionRestriction invocationRestriction) {
+            this.invocationRestriction = invocationRestriction;
             return this;
         }
 

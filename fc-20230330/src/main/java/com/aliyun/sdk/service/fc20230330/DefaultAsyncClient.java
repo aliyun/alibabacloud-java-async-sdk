@@ -334,6 +334,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DisableFunctionInvocation  DisableFunctionInvocationRequest
+     * @return DisableFunctionInvocationResponse
+     */
+    @Override
+    public CompletableFuture<DisableFunctionInvocationResponse> disableFunctionInvocation(DisableFunctionInvocationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DisableFunctionInvocation").setMethod(HttpMethod.POST).setPathRegex("/2023-03-30/functions/{functionName}/invoke/disable").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DisableFunctionInvocationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DisableFunctionInvocationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of EnableFunctionInvocation  EnableFunctionInvocationRequest
+     * @return EnableFunctionInvocationResponse
+     */
+    @Override
+    public CompletableFuture<EnableFunctionInvocationResponse> enableFunctionInvocation(EnableFunctionInvocationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("EnableFunctionInvocation").setMethod(HttpMethod.POST).setPathRegex("/2023-03-30/functions/{functionName}/invoke/enable").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EnableFunctionInvocationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<EnableFunctionInvocationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetAlias  GetAliasRequest
      * @return GetAliasResponse
      */

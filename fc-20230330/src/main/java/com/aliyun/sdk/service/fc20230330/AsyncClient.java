@@ -124,6 +124,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteVpcBindingResponse> deleteVpcBinding(DeleteVpcBindingRequest request);
 
     /**
+     * @param request the request parameters of DisableFunctionInvocation  DisableFunctionInvocationRequest
+     * @return DisableFunctionInvocationResponse
+     */
+    CompletableFuture<DisableFunctionInvocationResponse> disableFunctionInvocation(DisableFunctionInvocationRequest request);
+
+    /**
+     * @param request the request parameters of EnableFunctionInvocation  EnableFunctionInvocationRequest
+     * @return EnableFunctionInvocationResponse
+     */
+    CompletableFuture<EnableFunctionInvocationResponse> enableFunctionInvocation(EnableFunctionInvocationRequest request);
+
+    /**
      * @param request the request parameters of GetAlias  GetAliasRequest
      * @return GetAliasResponse
      */
