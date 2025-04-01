@@ -48,6 +48,10 @@ public class GetPackageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -89,6 +93,17 @@ public class GetPackageResponseBody extends TeaModel {
         private String errorMsg; 
         private Integer httpCode; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetPackageResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMsg = model.errorMsg;
+            this.httpCode = model.httpCode;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned data.</p>
@@ -192,6 +207,14 @@ public class GetPackageResponseBody extends TeaModel {
             private String label; 
             private String project; 
 
+            private Builder() {
+            } 
+
+            private Builder(AllowedProjectList model) {
+                this.label = model.label;
+                this.project = model.project;
+            } 
+
             /**
              * <p>The security level for sensitive data.</p>
              * 
@@ -276,6 +299,15 @@ public class GetPackageResponseBody extends TeaModel {
             private java.util.List<String> actions; 
             private String name; 
             private String schemaName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Function model) {
+                this.actions = model.actions;
+                this.name = model.name;
+                this.schemaName = model.schemaName;
+            } 
 
             /**
              * <p>The operations that were performed on the function.</p>
@@ -370,6 +402,15 @@ public class GetPackageResponseBody extends TeaModel {
             private String name; 
             private String schemaName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Resource model) {
+                this.actions = model.actions;
+                this.name = model.name;
+                this.schemaName = model.schemaName;
+            } 
+
             /**
              * <p>The operations that were performed on the resource.</p>
              */
@@ -462,6 +503,15 @@ public class GetPackageResponseBody extends TeaModel {
             private java.util.List<String> actions; 
             private String name; 
             private String schemaName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Table model) {
+                this.actions = model.actions;
+                this.name = model.name;
+                this.schemaName = model.schemaName;
+            } 
 
             /**
              * <p>The operations that were performed on the table.</p>
@@ -556,6 +606,15 @@ public class GetPackageResponseBody extends TeaModel {
             private java.util.List<Resource> resource; 
             private java.util.List<Table> table; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResourceList model) {
+                this.function = model.function;
+                this.resource = model.resource;
+                this.table = model.table;
+            } 
+
             /**
              * <p>The functions.</p>
              */
@@ -630,6 +689,14 @@ public class GetPackageResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<AllowedProjectList> allowedProjectList; 
             private ResourceList resourceList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.allowedProjectList = model.allowedProjectList;
+                this.resourceList = model.resourceList;
+            } 
 
             /**
              * <p>The projects in which the package is installed.</p>

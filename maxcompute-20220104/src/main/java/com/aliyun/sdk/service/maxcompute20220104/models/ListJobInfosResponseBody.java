@@ -40,6 +40,10 @@ public class ListJobInfosResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -65,6 +69,15 @@ public class ListJobInfosResponseBody extends TeaModel {
         private Data data; 
         private Integer httpCode; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListJobInfosResponseBody model) {
+            this.data = model.data;
+            this.httpCode = model.httpCode;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -193,6 +206,18 @@ public class ListJobInfosResponseBody extends TeaModel {
             private String sceneTag; 
             private String summary; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(SceneResults model) {
+                this.description = model.description;
+                this.params = model.params;
+                this.scene = model.scene;
+                this.sceneTag = model.sceneTag;
+                this.summary = model.summary;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The intelligent diagnostics result description.</p>
@@ -632,6 +657,41 @@ public class ListJobInfosResponseBody extends TeaModel {
             private Long totalTime; 
             private Long waitingTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(JobInfoList model) {
+                this.cluster = model.cluster;
+                this.cuSnapshot = model.cuSnapshot;
+                this.cuUsage = model.cuUsage;
+                this.endAtTime = model.endAtTime;
+                this.extNodeId = model.extNodeId;
+                this.extNodeOnDuty = model.extNodeOnDuty;
+                this.extPlantFrom = model.extPlantFrom;
+                this.inputBytes = model.inputBytes;
+                this.instanceId = model.instanceId;
+                this.jobOwner = model.jobOwner;
+                this.jobType = model.jobType;
+                this.memorySnapshot = model.memorySnapshot;
+                this.memoryUsage = model.memoryUsage;
+                this.priority = model.priority;
+                this.project = model.project;
+                this.quotaNickname = model.quotaNickname;
+                this.quotaType = model.quotaType;
+                this.region = model.region;
+                this.runningAtTime = model.runningAtTime;
+                this.runningTime = model.runningTime;
+                this.sceneResults = model.sceneResults;
+                this.signature = model.signature;
+                this.status = model.status;
+                this.statusSnapshot = model.statusSnapshot;
+                this.submittedAtTime = model.submittedAtTime;
+                this.tags = model.tags;
+                this.tenantId = model.tenantId;
+                this.totalTime = model.totalTime;
+                this.waitingTime = model.waitingTime;
+            } 
+
             /**
              * <p>The cluster ID.</p>
              * 
@@ -1022,6 +1082,16 @@ public class ListJobInfosResponseBody extends TeaModel {
             private Long pageNumber; 
             private Long pageSize; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.jobInfoList = model.jobInfoList;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The information about the jobs.</p>

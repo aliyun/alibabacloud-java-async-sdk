@@ -48,6 +48,10 @@ public class ListComputeMetricsByInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -89,6 +93,17 @@ public class ListComputeMetricsByInstanceResponseBody extends TeaModel {
         private String errorMsg; 
         private Integer httpCode; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListComputeMetricsByInstanceResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMsg = model.errorMsg;
+            this.httpCode = model.httpCode;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -294,6 +309,22 @@ public class ListComputeMetricsByInstanceResponseBody extends TeaModel {
             private String type; 
             private String unit; 
             private Double usage; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceComputeMetrics model) {
+                this.endTime = model.endTime;
+                this.instanceId = model.instanceId;
+                this.jobOwner = model.jobOwner;
+                this.projectName = model.projectName;
+                this.signature = model.signature;
+                this.specCode = model.specCode;
+                this.submitTime = model.submitTime;
+                this.type = model.type;
+                this.unit = model.unit;
+                this.usage = model.usage;
+            } 
 
             /**
              * <p>The end time of the job execution.</p>
@@ -505,6 +536,16 @@ public class ListComputeMetricsByInstanceResponseBody extends TeaModel {
             private Long pageNumber; 
             private Long pageSize; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.instanceComputeMetrics = model.instanceComputeMetrics;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>List of pay-as-you-go job compute usage.</p>

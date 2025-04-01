@@ -45,7 +45,7 @@ public class UpdateComputeQuotaScheduleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -158,6 +158,13 @@ public class UpdateComputeQuotaScheduleRequest extends Request {
         public static final class Builder {
             private String at; 
 
+            private Builder() {
+            } 
+
+            private Builder(Condition model) {
+                this.at = model.at;
+            } 
+
             /**
              * <p>The start time when the quota plan takes effect.</p>
              * <p>This parameter is required.</p>
@@ -234,6 +241,15 @@ public class UpdateComputeQuotaScheduleRequest extends Request {
             private Condition condition; 
             private String plan; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(UpdateComputeQuotaScheduleRequestBody model) {
+                this.condition = model.condition;
+                this.plan = model.plan;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The value of effective condition.</p>

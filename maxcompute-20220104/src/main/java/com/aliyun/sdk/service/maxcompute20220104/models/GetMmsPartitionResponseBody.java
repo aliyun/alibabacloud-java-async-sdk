@@ -36,6 +36,10 @@ public class GetMmsPartitionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetMmsPartitionResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMmsPartitionResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * data.
@@ -251,6 +263,25 @@ public class GetMmsPartitionResponseBody extends TeaModel {
             private String tableName; 
             private Boolean updated; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.dbId = model.dbId;
+                this.dbName = model.dbName;
+                this.id = model.id;
+                this.lastDdlTime = model.lastDdlTime;
+                this.numRows = model.numRows;
+                this.size = model.size;
+                this.sourceId = model.sourceId;
+                this.sourceName = model.sourceName;
+                this.status = model.status;
+                this.tableId = model.tableId;
+                this.tableName = model.tableName;
+                this.updated = model.updated;
+                this.value = model.value;
+            } 
 
             /**
              * DbId.

@@ -48,6 +48,10 @@ public class GetRunningJobsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -89,6 +93,17 @@ public class GetRunningJobsResponseBody extends TeaModel {
         private String errorMsg; 
         private Integer httpCode; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetRunningJobsResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMsg = model.errorMsg;
+            this.httpCode = model.httpCode;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned data.</p>
@@ -279,6 +294,21 @@ public class GetRunningJobsResponseBody extends TeaModel {
             private Long runningAtTime; 
             private Long submittedAtTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(RunningJobInfoList model) {
+                this.cuSnapshot = model.cuSnapshot;
+                this.instanceId = model.instanceId;
+                this.jobOwner = model.jobOwner;
+                this.memorySnapshot = model.memorySnapshot;
+                this.progress = model.progress;
+                this.project = model.project;
+                this.quotaNickname = model.quotaNickname;
+                this.runningAtTime = model.runningAtTime;
+                this.submittedAtTime = model.submittedAtTime;
+            } 
+
             /**
              * <p>The compute unit (CU) snapshot proportion of the job.</p>
              * 
@@ -452,6 +482,16 @@ public class GetRunningJobsResponseBody extends TeaModel {
             private Long pageSize; 
             private java.util.List<RunningJobInfoList> runningJobInfoList; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.runningJobInfoList = model.runningJobInfoList;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The page number.</p>

@@ -36,6 +36,10 @@ public class GetMmsTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetMmsTaskResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMmsTaskResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * data.
@@ -347,6 +359,33 @@ public class GetMmsTaskResponseBody extends TeaModel {
             private Boolean stopped; 
             private Long tableId; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.createTime = model.createTime;
+                this.dbId = model.dbId;
+                this.dstDbName = model.dstDbName;
+                this.dstSchemaName = model.dstSchemaName;
+                this.dstTableName = model.dstTableName;
+                this.endTime = model.endTime;
+                this.id = model.id;
+                this.jobId = model.jobId;
+                this.jobName = model.jobName;
+                this.retriedTimes = model.retriedTimes;
+                this.running = model.running;
+                this.sourceId = model.sourceId;
+                this.sourceName = model.sourceName;
+                this.srcDbName = model.srcDbName;
+                this.srcSchemaName = model.srcSchemaName;
+                this.srcTableName = model.srcTableName;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.stopped = model.stopped;
+                this.tableId = model.tableId;
+                this.type = model.type;
+            } 
 
             /**
              * createTime.

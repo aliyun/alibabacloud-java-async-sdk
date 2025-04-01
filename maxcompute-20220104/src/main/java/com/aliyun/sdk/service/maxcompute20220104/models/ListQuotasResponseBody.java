@@ -52,6 +52,10 @@ public class ListQuotasResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextToken
      */
@@ -101,6 +105,18 @@ public class ListQuotasResponseBody extends TeaModel {
         private Long maxItem; 
         private java.util.List<QuotaInfoList> quotaInfoList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListQuotasResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.data = model.data;
+            this.marker = model.marker;
+            this.maxItem = model.maxItem;
+            this.quotaInfoList = model.quotaInfoList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>A pagination token. Only continuous page turning is supported. If NextToken is not empty, the next page exists. The value of NextToken can be used in the next request to retrieve a new page of results.</p>
@@ -212,6 +228,14 @@ public class ListQuotasResponseBody extends TeaModel {
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
              * <p>The key of the tag.</p>
              * 
@@ -296,6 +320,15 @@ public class ListQuotasResponseBody extends TeaModel {
             private String billingMethod; 
             private String odpsSpecCode; 
             private String orderId; 
+
+            private Builder() {
+            } 
+
+            private Builder(BillingPolicy model) {
+                this.billingMethod = model.billingMethod;
+                this.odpsSpecCode = model.odpsSpecCode;
+                this.orderId = model.orderId;
+            } 
 
             /**
              * <p>The billing method of the quota. Valid values:</p>
@@ -384,6 +417,14 @@ public class ListQuotasResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> resourceIds; 
             private String resourceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(SaleTag model) {
+                this.resourceIds = model.resourceIds;
+                this.resourceType = model.resourceType;
+            } 
 
             /**
              * <p>The identifier of an object in a MaxCompute quota. This identifier exists in the sales bill of Alibaba Cloud. You can use this identifier to associate the cost of a quota object with a tag.</p>
@@ -526,6 +567,20 @@ public class ListQuotasResponseBody extends TeaModel {
             private String onceTime; 
             private String operatorName; 
             private String timezone; 
+
+            private Builder() {
+            } 
+
+            private Builder(ScheduleInfo model) {
+                this.currPlan = model.currPlan;
+                this.currTime = model.currTime;
+                this.nextPlan = model.nextPlan;
+                this.nextTime = model.nextTime;
+                this.oncePlan = model.oncePlan;
+                this.onceTime = model.onceTime;
+                this.operatorName = model.operatorName;
+                this.timezone = model.timezone;
+            } 
 
             /**
              * <p>The quota plan that takes effect based on the scheduling plan.</p>
@@ -678,6 +733,15 @@ public class ListQuotasResponseBody extends TeaModel {
             private String odpsSpecCode; 
             private String orderId; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubQuotaInfoListBillingPolicy model) {
+                this.billingMethod = model.billingMethod;
+                this.odpsSpecCode = model.odpsSpecCode;
+                this.orderId = model.orderId;
+            } 
+
             /**
              * <p>The billing method of the quota. Valid values:</p>
              * <ul>
@@ -728,6 +792,188 @@ public class ListQuotasResponseBody extends TeaModel {
      *
      * <p>ListQuotasResponseBody</p>
      */
+    public static class Parameter extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("elasticReservedCU")
+        private Long elasticReservedCU;
+
+        @com.aliyun.core.annotation.NameInMap("enablePriority")
+        private Boolean enablePriority;
+
+        @com.aliyun.core.annotation.NameInMap("forceReservedMin")
+        private Boolean forceReservedMin;
+
+        @com.aliyun.core.annotation.NameInMap("maxCU")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private Long maxCU;
+
+        @com.aliyun.core.annotation.NameInMap("minCU")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private Long minCU;
+
+        @com.aliyun.core.annotation.NameInMap("schedulerType")
+        private String schedulerType;
+
+        @com.aliyun.core.annotation.NameInMap("singleJobCULimit")
+        private Long singleJobCULimit;
+
+        private Parameter(Builder builder) {
+            this.elasticReservedCU = builder.elasticReservedCU;
+            this.enablePriority = builder.enablePriority;
+            this.forceReservedMin = builder.forceReservedMin;
+            this.maxCU = builder.maxCU;
+            this.minCU = builder.minCU;
+            this.schedulerType = builder.schedulerType;
+            this.singleJobCULimit = builder.singleJobCULimit;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Parameter create() {
+            return builder().build();
+        }
+
+        /**
+         * @return elasticReservedCU
+         */
+        public Long getElasticReservedCU() {
+            return this.elasticReservedCU;
+        }
+
+        /**
+         * @return enablePriority
+         */
+        public Boolean getEnablePriority() {
+            return this.enablePriority;
+        }
+
+        /**
+         * @return forceReservedMin
+         */
+        public Boolean getForceReservedMin() {
+            return this.forceReservedMin;
+        }
+
+        /**
+         * @return maxCU
+         */
+        public Long getMaxCU() {
+            return this.maxCU;
+        }
+
+        /**
+         * @return minCU
+         */
+        public Long getMinCU() {
+            return this.minCU;
+        }
+
+        /**
+         * @return schedulerType
+         */
+        public String getSchedulerType() {
+            return this.schedulerType;
+        }
+
+        /**
+         * @return singleJobCULimit
+         */
+        public Long getSingleJobCULimit() {
+            return this.singleJobCULimit;
+        }
+
+        public static final class Builder {
+            private Long elasticReservedCU; 
+            private Boolean enablePriority; 
+            private Boolean forceReservedMin; 
+            private Long maxCU; 
+            private Long minCU; 
+            private String schedulerType; 
+            private Long singleJobCULimit; 
+
+            private Builder() {
+            } 
+
+            private Builder(Parameter model) {
+                this.elasticReservedCU = model.elasticReservedCU;
+                this.enablePriority = model.enablePriority;
+                this.forceReservedMin = model.forceReservedMin;
+                this.maxCU = model.maxCU;
+                this.minCU = model.minCU;
+                this.schedulerType = model.schedulerType;
+                this.singleJobCULimit = model.singleJobCULimit;
+            } 
+
+            /**
+             * elasticReservedCU.
+             */
+            public Builder elasticReservedCU(Long elasticReservedCU) {
+                this.elasticReservedCU = elasticReservedCU;
+                return this;
+            }
+
+            /**
+             * enablePriority.
+             */
+            public Builder enablePriority(Boolean enablePriority) {
+                this.enablePriority = enablePriority;
+                return this;
+            }
+
+            /**
+             * forceReservedMin.
+             */
+            public Builder forceReservedMin(Boolean forceReservedMin) {
+                this.forceReservedMin = forceReservedMin;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             */
+            public Builder maxCU(Long maxCU) {
+                this.maxCU = maxCU;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             */
+            public Builder minCU(Long minCU) {
+                this.minCU = minCU;
+                return this;
+            }
+
+            /**
+             * schedulerType.
+             */
+            public Builder schedulerType(String schedulerType) {
+                this.schedulerType = schedulerType;
+                return this;
+            }
+
+            /**
+             * singleJobCULimit.
+             */
+            public Builder singleJobCULimit(Long singleJobCULimit) {
+                this.singleJobCULimit = singleJobCULimit;
+                return this;
+            }
+
+            public Parameter build() {
+                return new Parameter(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListQuotasResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListQuotasResponseBody</p>
+     */
     public static class SubQuotaInfoListSaleTag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("resourceIds")
         private java.util.List<String> resourceIds;
@@ -765,6 +1011,14 @@ public class ListQuotasResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> resourceIds; 
             private String resourceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubQuotaInfoListSaleTag model) {
+                this.resourceIds = model.resourceIds;
+                this.resourceType = model.resourceType;
+            } 
 
             /**
              * <p>The identifier of an object in a MaxCompute quota. This identifier exists in the sales bill of Alibaba Cloud. You can use this identifier to associate the cost of a quota object with a tag.</p>
@@ -908,6 +1162,20 @@ public class ListQuotasResponseBody extends TeaModel {
             private String operatorName; 
             private String timezone; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubQuotaInfoListScheduleInfo model) {
+                this.currPlan = model.currPlan;
+                this.currTime = model.currTime;
+                this.nextPlan = model.nextPlan;
+                this.nextTime = model.nextTime;
+                this.oncePlan = model.oncePlan;
+                this.onceTime = model.onceTime;
+                this.operatorName = model.operatorName;
+                this.timezone = model.timezone;
+            } 
+
             /**
              * <p>The quota plan that takes effect based on the scheduling plan.</p>
              * 
@@ -1032,7 +1300,7 @@ public class ListQuotasResponseBody extends TeaModel {
         private String nickName;
 
         @com.aliyun.core.annotation.NameInMap("parameter")
-        private java.util.Map<String, ?> parameter;
+        private Parameter parameter;
 
         @com.aliyun.core.annotation.NameInMap("parentId")
         private String parentId;
@@ -1141,7 +1409,7 @@ public class ListQuotasResponseBody extends TeaModel {
         /**
          * @return parameter
          */
-        public java.util.Map<String, ?> getParameter() {
+        public Parameter getParameter() {
             return this.parameter;
         }
 
@@ -1216,7 +1484,7 @@ public class ListQuotasResponseBody extends TeaModel {
             private String id; 
             private String name; 
             private String nickName; 
-            private java.util.Map<String, ?> parameter; 
+            private Parameter parameter; 
             private String parentId; 
             private String regionId; 
             private SubQuotaInfoListSaleTag saleTag; 
@@ -1226,6 +1494,29 @@ public class ListQuotasResponseBody extends TeaModel {
             private String tenantId; 
             private String type; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubQuotaInfoList model) {
+                this.billingPolicy = model.billingPolicy;
+                this.cluster = model.cluster;
+                this.createTime = model.createTime;
+                this.creatorId = model.creatorId;
+                this.id = model.id;
+                this.name = model.name;
+                this.nickName = model.nickName;
+                this.parameter = model.parameter;
+                this.parentId = model.parentId;
+                this.regionId = model.regionId;
+                this.saleTag = model.saleTag;
+                this.scheduleInfo = model.scheduleInfo;
+                this.status = model.status;
+                this.tag = model.tag;
+                this.tenantId = model.tenantId;
+                this.type = model.type;
+                this.version = model.version;
+            } 
 
             /**
              * <p>The information of the order.</p>
@@ -1311,7 +1602,7 @@ public class ListQuotasResponseBody extends TeaModel {
              * &quot;schedulerType&quot;:&quot;Fair&quot;,
              * }</p>
              */
-            public Builder parameter(java.util.Map<String, ?> parameter) {
+            public Builder parameter(Parameter parameter) {
                 this.parameter = parameter;
                 return this;
             }
@@ -1664,6 +1955,31 @@ public class ListQuotasResponseBody extends TeaModel {
             private String type; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataQuotaInfoList model) {
+                this.tags = model.tags;
+                this.billingPolicy = model.billingPolicy;
+                this.cluster = model.cluster;
+                this.createTime = model.createTime;
+                this.creatorId = model.creatorId;
+                this.id = model.id;
+                this.name = model.name;
+                this.nickName = model.nickName;
+                this.parameter = model.parameter;
+                this.parentId = model.parentId;
+                this.regionId = model.regionId;
+                this.saleTag = model.saleTag;
+                this.scheduleInfo = model.scheduleInfo;
+                this.status = model.status;
+                this.subQuotaInfoList = model.subQuotaInfoList;
+                this.tag = model.tag;
+                this.tenantId = model.tenantId;
+                this.type = model.type;
+                this.version = model.version;
+            } 
+
             /**
              * <p>The tags.</p>
              */
@@ -1937,6 +2253,16 @@ public class ListQuotasResponseBody extends TeaModel {
             private Long maxItem; 
             private java.util.List<DataQuotaInfoList> quotaInfoList; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.nextToken = model.nextToken;
+                this.marker = model.marker;
+                this.maxItem = model.maxItem;
+                this.quotaInfoList = model.quotaInfoList;
+            } 
+
             /**
              * <p>A pagination token. Only continuous page turning is supported. If NextToken is not empty, the next page exists. The value of NextToken can be used in the next request to retrieve a new page of results.</p>
              * 
@@ -2029,6 +2355,14 @@ public class ListQuotasResponseBody extends TeaModel {
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(QuotaInfoListTags model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
              * <p>The key of the tag.</p>
              * 
@@ -2113,6 +2447,15 @@ public class ListQuotasResponseBody extends TeaModel {
             private String billingMethod; 
             private String odpsSpecCode; 
             private String orderId; 
+
+            private Builder() {
+            } 
+
+            private Builder(QuotaInfoListBillingPolicy model) {
+                this.billingMethod = model.billingMethod;
+                this.odpsSpecCode = model.odpsSpecCode;
+                this.orderId = model.orderId;
+            } 
 
             /**
              * <p>The billing method of the quota. Valid values:</p>
@@ -2201,6 +2544,14 @@ public class ListQuotasResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> resourceIds; 
             private String resourceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(QuotaInfoListSaleTag model) {
+                this.resourceIds = model.resourceIds;
+                this.resourceType = model.resourceType;
+            } 
 
             /**
              * <p>The identifier of an object in a MaxCompute quota. This identifier exists in the sales bill of Alibaba Cloud. You can use this identifier to associate the cost of a quota object with a tag.</p>
@@ -2343,6 +2694,20 @@ public class ListQuotasResponseBody extends TeaModel {
             private String onceTime; 
             private String operatorName; 
             private String timezone; 
+
+            private Builder() {
+            } 
+
+            private Builder(QuotaInfoListScheduleInfo model) {
+                this.currPlan = model.currPlan;
+                this.currTime = model.currTime;
+                this.nextPlan = model.nextPlan;
+                this.nextTime = model.nextTime;
+                this.oncePlan = model.oncePlan;
+                this.onceTime = model.onceTime;
+                this.operatorName = model.operatorName;
+                this.timezone = model.timezone;
+            } 
 
             /**
              * <p>The quota plan that takes effect based on the scheduling plan.</p>
@@ -2495,6 +2860,15 @@ public class ListQuotasResponseBody extends TeaModel {
             private String odpsSpecCode; 
             private String orderId; 
 
+            private Builder() {
+            } 
+
+            private Builder(QuotaInfoListSubQuotaInfoListBillingPolicy model) {
+                this.billingMethod = model.billingMethod;
+                this.odpsSpecCode = model.odpsSpecCode;
+                this.orderId = model.orderId;
+            } 
+
             /**
              * <p>The billing method of the quota. Valid values:</p>
              * <ul>
@@ -2545,6 +2919,188 @@ public class ListQuotasResponseBody extends TeaModel {
      *
      * <p>ListQuotasResponseBody</p>
      */
+    public static class SubQuotaInfoListParameter extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("elasticReservedCU")
+        private Long elasticReservedCU;
+
+        @com.aliyun.core.annotation.NameInMap("enablePriority")
+        private Boolean enablePriority;
+
+        @com.aliyun.core.annotation.NameInMap("forceReservedMin")
+        private Boolean forceReservedMin;
+
+        @com.aliyun.core.annotation.NameInMap("maxCU")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private Long maxCU;
+
+        @com.aliyun.core.annotation.NameInMap("minCU")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private Long minCU;
+
+        @com.aliyun.core.annotation.NameInMap("schedulerType")
+        private String schedulerType;
+
+        @com.aliyun.core.annotation.NameInMap("singleJobCULimit")
+        private Long singleJobCULimit;
+
+        private SubQuotaInfoListParameter(Builder builder) {
+            this.elasticReservedCU = builder.elasticReservedCU;
+            this.enablePriority = builder.enablePriority;
+            this.forceReservedMin = builder.forceReservedMin;
+            this.maxCU = builder.maxCU;
+            this.minCU = builder.minCU;
+            this.schedulerType = builder.schedulerType;
+            this.singleJobCULimit = builder.singleJobCULimit;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SubQuotaInfoListParameter create() {
+            return builder().build();
+        }
+
+        /**
+         * @return elasticReservedCU
+         */
+        public Long getElasticReservedCU() {
+            return this.elasticReservedCU;
+        }
+
+        /**
+         * @return enablePriority
+         */
+        public Boolean getEnablePriority() {
+            return this.enablePriority;
+        }
+
+        /**
+         * @return forceReservedMin
+         */
+        public Boolean getForceReservedMin() {
+            return this.forceReservedMin;
+        }
+
+        /**
+         * @return maxCU
+         */
+        public Long getMaxCU() {
+            return this.maxCU;
+        }
+
+        /**
+         * @return minCU
+         */
+        public Long getMinCU() {
+            return this.minCU;
+        }
+
+        /**
+         * @return schedulerType
+         */
+        public String getSchedulerType() {
+            return this.schedulerType;
+        }
+
+        /**
+         * @return singleJobCULimit
+         */
+        public Long getSingleJobCULimit() {
+            return this.singleJobCULimit;
+        }
+
+        public static final class Builder {
+            private Long elasticReservedCU; 
+            private Boolean enablePriority; 
+            private Boolean forceReservedMin; 
+            private Long maxCU; 
+            private Long minCU; 
+            private String schedulerType; 
+            private Long singleJobCULimit; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubQuotaInfoListParameter model) {
+                this.elasticReservedCU = model.elasticReservedCU;
+                this.enablePriority = model.enablePriority;
+                this.forceReservedMin = model.forceReservedMin;
+                this.maxCU = model.maxCU;
+                this.minCU = model.minCU;
+                this.schedulerType = model.schedulerType;
+                this.singleJobCULimit = model.singleJobCULimit;
+            } 
+
+            /**
+             * elasticReservedCU.
+             */
+            public Builder elasticReservedCU(Long elasticReservedCU) {
+                this.elasticReservedCU = elasticReservedCU;
+                return this;
+            }
+
+            /**
+             * enablePriority.
+             */
+            public Builder enablePriority(Boolean enablePriority) {
+                this.enablePriority = enablePriority;
+                return this;
+            }
+
+            /**
+             * forceReservedMin.
+             */
+            public Builder forceReservedMin(Boolean forceReservedMin) {
+                this.forceReservedMin = forceReservedMin;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             */
+            public Builder maxCU(Long maxCU) {
+                this.maxCU = maxCU;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             */
+            public Builder minCU(Long minCU) {
+                this.minCU = minCU;
+                return this;
+            }
+
+            /**
+             * schedulerType.
+             */
+            public Builder schedulerType(String schedulerType) {
+                this.schedulerType = schedulerType;
+                return this;
+            }
+
+            /**
+             * singleJobCULimit.
+             */
+            public Builder singleJobCULimit(Long singleJobCULimit) {
+                this.singleJobCULimit = singleJobCULimit;
+                return this;
+            }
+
+            public SubQuotaInfoListParameter build() {
+                return new SubQuotaInfoListParameter(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListQuotasResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListQuotasResponseBody</p>
+     */
     public static class QuotaInfoListSubQuotaInfoListSaleTag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("resourceIds")
         private java.util.List<String> resourceIds;
@@ -2582,6 +3138,14 @@ public class ListQuotasResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> resourceIds; 
             private String resourceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(QuotaInfoListSubQuotaInfoListSaleTag model) {
+                this.resourceIds = model.resourceIds;
+                this.resourceType = model.resourceType;
+            } 
 
             /**
              * <p>The identifier of an object in a MaxCompute quota. This identifier exists in the sales bill of Alibaba Cloud. You can use this identifier to associate the cost of a quota object with a tag.</p>
@@ -2725,6 +3289,20 @@ public class ListQuotasResponseBody extends TeaModel {
             private String operatorName; 
             private String timezone; 
 
+            private Builder() {
+            } 
+
+            private Builder(QuotaInfoListSubQuotaInfoListScheduleInfo model) {
+                this.currPlan = model.currPlan;
+                this.currTime = model.currTime;
+                this.nextPlan = model.nextPlan;
+                this.nextTime = model.nextTime;
+                this.oncePlan = model.oncePlan;
+                this.onceTime = model.onceTime;
+                this.operatorName = model.operatorName;
+                this.timezone = model.timezone;
+            } 
+
             /**
              * <p>The quota plan that takes effect based on the scheduling plan.</p>
              * 
@@ -2849,7 +3427,7 @@ public class ListQuotasResponseBody extends TeaModel {
         private String nickName;
 
         @com.aliyun.core.annotation.NameInMap("parameter")
-        private java.util.Map<String, ?> parameter;
+        private SubQuotaInfoListParameter parameter;
 
         @com.aliyun.core.annotation.NameInMap("parentId")
         private String parentId;
@@ -2958,7 +3536,7 @@ public class ListQuotasResponseBody extends TeaModel {
         /**
          * @return parameter
          */
-        public java.util.Map<String, ?> getParameter() {
+        public SubQuotaInfoListParameter getParameter() {
             return this.parameter;
         }
 
@@ -3033,7 +3611,7 @@ public class ListQuotasResponseBody extends TeaModel {
             private String id; 
             private String name; 
             private String nickName; 
-            private java.util.Map<String, ?> parameter; 
+            private SubQuotaInfoListParameter parameter; 
             private String parentId; 
             private String regionId; 
             private QuotaInfoListSubQuotaInfoListSaleTag saleTag; 
@@ -3043,6 +3621,29 @@ public class ListQuotasResponseBody extends TeaModel {
             private String tenantId; 
             private String type; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(QuotaInfoListSubQuotaInfoList model) {
+                this.billingPolicy = model.billingPolicy;
+                this.cluster = model.cluster;
+                this.createTime = model.createTime;
+                this.creatorId = model.creatorId;
+                this.id = model.id;
+                this.name = model.name;
+                this.nickName = model.nickName;
+                this.parameter = model.parameter;
+                this.parentId = model.parentId;
+                this.regionId = model.regionId;
+                this.saleTag = model.saleTag;
+                this.scheduleInfo = model.scheduleInfo;
+                this.status = model.status;
+                this.tag = model.tag;
+                this.tenantId = model.tenantId;
+                this.type = model.type;
+                this.version = model.version;
+            } 
 
             /**
              * <p>The information of the order.</p>
@@ -3128,7 +3729,7 @@ public class ListQuotasResponseBody extends TeaModel {
              * &quot;schedulerType&quot;:&quot;Fair&quot;,
              * }</p>
              */
-            public Builder parameter(java.util.Map<String, ?> parameter) {
+            public Builder parameter(SubQuotaInfoListParameter parameter) {
                 this.parameter = parameter;
                 return this;
             }
@@ -3480,6 +4081,31 @@ public class ListQuotasResponseBody extends TeaModel {
             private String tenantId; 
             private String type; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(QuotaInfoList model) {
+                this.tags = model.tags;
+                this.billingPolicy = model.billingPolicy;
+                this.cluster = model.cluster;
+                this.createTime = model.createTime;
+                this.creatorId = model.creatorId;
+                this.id = model.id;
+                this.name = model.name;
+                this.nickName = model.nickName;
+                this.parameter = model.parameter;
+                this.parentId = model.parentId;
+                this.regionId = model.regionId;
+                this.saleTag = model.saleTag;
+                this.scheduleInfo = model.scheduleInfo;
+                this.status = model.status;
+                this.subQuotaInfoList = model.subQuotaInfoList;
+                this.tag = model.tag;
+                this.tenantId = model.tenantId;
+                this.type = model.type;
+                this.version = model.version;
+            } 
 
             /**
              * <p>The tags.</p>

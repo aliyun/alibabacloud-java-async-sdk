@@ -85,7 +85,7 @@ public class ListMmsJobsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -339,6 +339,13 @@ public class ListMmsJobsRequest extends Request {
 
         public static final class Builder {
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Sorter model) {
+                this.status = model.status;
+            } 
 
             /**
              * status.

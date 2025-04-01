@@ -46,7 +46,7 @@ public class CreateComputeQuotaPlanRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -163,6 +163,13 @@ public class CreateComputeQuotaPlanRequest extends Request {
         public static final class Builder {
             private Long elasticReservedCU; 
 
+            private Builder() {
+            } 
+
+            private Builder(Parameter model) {
+                this.elasticReservedCU = model.elasticReservedCU;
+            } 
+
             /**
              * <p>The value of elastic Reserved CUs in the level-1 quota.</p>
              * <blockquote>
@@ -243,6 +250,15 @@ public class CreateComputeQuotaPlanRequest extends Request {
             private Long elasticReservedCU; 
             private Long maxCU; 
             private Long minCU; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubQuotaInfoListParameter model) {
+                this.elasticReservedCU = model.elasticReservedCU;
+                this.maxCU = model.maxCU;
+                this.minCU = model.minCU;
+            } 
 
             /**
              * <p>The value of elastic Reserved CUs.</p>
@@ -344,6 +360,14 @@ public class CreateComputeQuotaPlanRequest extends Request {
             private String nickName; 
             private SubQuotaInfoListParameter parameter; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubQuotaInfoList model) {
+                this.nickName = model.nickName;
+                this.parameter = model.parameter;
+            } 
+
             /**
              * <p>The nickname of the level-2 quota.</p>
              * <p>This parameter is required.</p>
@@ -414,6 +438,14 @@ public class CreateComputeQuotaPlanRequest extends Request {
         public static final class Builder {
             private Parameter parameter; 
             private java.util.List<SubQuotaInfoList> subQuotaInfoList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Quota model) {
+                this.parameter = model.parameter;
+                this.subQuotaInfoList = model.subQuotaInfoList;
+            } 
 
             /**
              * <p>The parameters of level-1 quota.</p>

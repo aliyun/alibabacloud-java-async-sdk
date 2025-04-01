@@ -48,6 +48,10 @@ public class QueryQuotaResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -90,8 +94,19 @@ public class QueryQuotaResponseBody extends TeaModel {
         private Integer httpCode; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(QueryQuotaResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMsg = model.errorMsg;
+            this.httpCode = model.httpCode;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -99,7 +114,10 @@ public class QueryQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * errorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -107,7 +125,10 @@ public class QueryQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * errorMsg.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Exception information</p>
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -115,7 +136,10 @@ public class QueryQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * httpCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpCode(Integer httpCode) {
             this.httpCode = httpCode;
@@ -123,7 +147,10 @@ public class QueryQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc1eeed16675342848904412e08dd</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -204,8 +231,25 @@ public class QueryQuotaResponseBody extends TeaModel {
             private String odpsSpecCode; 
             private String orderId; 
 
+            private Builder() {
+            } 
+
+            private Builder(BillingPolicy model) {
+                this.billingMethod = model.billingMethod;
+                this.instanceId = model.instanceId;
+                this.odpsSpecCode = model.odpsSpecCode;
+                this.orderId = model.orderId;
+            } 
+
             /**
-             * billingMethod.
+             * <p>The billing method. Valid values:</p>
+             * <ul>
+             * <li>subscription: the subscription quota.</li>
+             * <li>payasyougo: the pay-as-you-go quota.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>subscription</p>
              */
             public Builder billingMethod(String billingMethod) {
                 this.billingMethod = billingMethod;
@@ -213,7 +257,10 @@ public class QueryQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * instanceId.
+             * <p>In MaxCompute, instanceId and orderId are considered the same.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>880c0d0d-5d79-4217-b683-8e8bdd2a2523</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -221,7 +268,10 @@ public class QueryQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * odpsSpecCode.
+             * <p>The order specifications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OdpsStandard</p>
              */
             public Builder odpsSpecCode(String odpsSpecCode) {
                 this.odpsSpecCode = odpsSpecCode;
@@ -229,7 +279,10 @@ public class QueryQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * orderId.
+             * <p>The order ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>880c0d0d-5d79-4217-b683-8e8bdd2a2523</p>
              */
             public Builder orderId(String orderId) {
                 this.orderId = orderId;
@@ -287,8 +340,16 @@ public class QueryQuotaResponseBody extends TeaModel {
             private java.util.List<String> resourceIds; 
             private String resourceType; 
 
+            private Builder() {
+            } 
+
+            private Builder(SaleTag model) {
+                this.resourceIds = model.resourceIds;
+                this.resourceType = model.resourceType;
+            } 
+
             /**
-             * resourceIds.
+             * <p>The identifier of a MaxCompute quota object. This identifier exists in the Alibaba Cloud sales bill. You can use this identifier to associate the cost of a quota object with a tag.</p>
              */
             public Builder resourceIds(java.util.List<String> resourceIds) {
                 this.resourceIds = resourceIds;
@@ -296,7 +357,10 @@ public class QueryQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * resourceType.
+             * <p>The object type. Valid values: quota and project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>project</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -426,8 +490,25 @@ public class QueryQuotaResponseBody extends TeaModel {
             private String operatorName; 
             private String timezone; 
 
+            private Builder() {
+            } 
+
+            private Builder(ScheduleInfo model) {
+                this.currPlan = model.currPlan;
+                this.currTime = model.currTime;
+                this.nextPlan = model.nextPlan;
+                this.nextTime = model.nextTime;
+                this.oncePlan = model.oncePlan;
+                this.onceTime = model.onceTime;
+                this.operatorName = model.operatorName;
+                this.timezone = model.timezone;
+            } 
+
             /**
-             * currPlan.
+             * <p>The current quota plan that has taken effect based on the scheduling plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>planA</p>
              */
             public Builder currPlan(String currPlan) {
                 this.currPlan = currPlan;
@@ -435,7 +516,10 @@ public class QueryQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * currTime.
+             * <p>The time when the plan specified by currPlan is scheduled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0800</p>
              */
             public Builder currTime(String currTime) {
                 this.currTime = currTime;
@@ -443,7 +527,10 @@ public class QueryQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * nextPlan.
+             * <p>The quota plan that will take effect based on the scheduling plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>planB</p>
              */
             public Builder nextPlan(String nextPlan) {
                 this.nextPlan = nextPlan;
@@ -451,7 +538,10 @@ public class QueryQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * nextTime.
+             * <p>The time when the plan specified by nextPlan is scheduled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1700</p>
              */
             public Builder nextTime(String nextTime) {
                 this.nextTime = nextTime;
@@ -459,7 +549,10 @@ public class QueryQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * oncePlan.
+             * <p>The quota plan that immediately takes effect. If the quota plan specified by this parameter is triggered and the plan is different from the plan specified by currPlan, this parameter is not empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>planC</p>
              */
             public Builder oncePlan(String oncePlan) {
                 this.oncePlan = oncePlan;
@@ -467,7 +560,10 @@ public class QueryQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * onceTime.
+             * <p>The time when the quota plan specified by oncePlan is scheduled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1500</p>
              */
             public Builder onceTime(String onceTime) {
                 this.onceTime = onceTime;
@@ -475,7 +571,10 @@ public class QueryQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * operatorName.
+             * <p>The operator name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>userA</p>
              */
             public Builder operatorName(String operatorName) {
                 this.operatorName = operatorName;
@@ -483,7 +582,10 @@ public class QueryQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * timezone.
+             * <p>The time zone of the project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UTC+8</p>
              */
             public Builder timezone(String timezone) {
                 this.timezone = timezone;
@@ -565,8 +667,25 @@ public class QueryQuotaResponseBody extends TeaModel {
             private String odpsSpecCode; 
             private String orderId; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubQuotaInfoListBillingPolicy model) {
+                this.billingMethod = model.billingMethod;
+                this.instanceId = model.instanceId;
+                this.odpsSpecCode = model.odpsSpecCode;
+                this.orderId = model.orderId;
+            } 
+
             /**
-             * billingMethod.
+             * <p>The billing method. Valid values:</p>
+             * <ul>
+             * <li>subscription: the subscription quota.</li>
+             * <li>payasyougo: the pay-as-you-go quota.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>subscription</p>
              */
             public Builder billingMethod(String billingMethod) {
                 this.billingMethod = billingMethod;
@@ -574,7 +693,10 @@ public class QueryQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * instanceId.
+             * <p>In MaxCompute, instanceId and orderId are considered the same.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>880c0d0d-5d79-4217-b683-8e8bdd2a2523</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -582,7 +704,10 @@ public class QueryQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * odpsSpecCode.
+             * <p>The order specifications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OdpsStandard</p>
              */
             public Builder odpsSpecCode(String odpsSpecCode) {
                 this.odpsSpecCode = odpsSpecCode;
@@ -590,7 +715,10 @@ public class QueryQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * orderId.
+             * <p>The order ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>880c0d0d-5d79-4217-b683-8e8bdd2a2523</p>
              */
             public Builder orderId(String orderId) {
                 this.orderId = orderId;
@@ -648,8 +776,16 @@ public class QueryQuotaResponseBody extends TeaModel {
             private java.util.List<String> resourceIds; 
             private String resourceType; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubQuotaInfoListSaleTag model) {
+                this.resourceIds = model.resourceIds;
+                this.resourceType = model.resourceType;
+            } 
+
             /**
-             * resourceIds.
+             * <p>The identifier of a MaxCompute quota object. This identifier exists in the Alibaba Cloud sales bill. You can use this identifier to associate the cost of a quota object with a tag.</p>
              */
             public Builder resourceIds(java.util.List<String> resourceIds) {
                 this.resourceIds = resourceIds;
@@ -657,7 +793,10 @@ public class QueryQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * resourceType.
+             * <p>The object type. Valid values: quota and project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;quota&quot;</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -787,8 +926,25 @@ public class QueryQuotaResponseBody extends TeaModel {
             private String operatorName; 
             private String timezone; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubQuotaInfoListScheduleInfo model) {
+                this.currPlan = model.currPlan;
+                this.currTime = model.currTime;
+                this.nextPlan = model.nextPlan;
+                this.nextTime = model.nextTime;
+                this.oncePlan = model.oncePlan;
+                this.onceTime = model.onceTime;
+                this.operatorName = model.operatorName;
+                this.timezone = model.timezone;
+            } 
+
             /**
-             * currPlan.
+             * <p>The current quota plan that has taken effect based on the scheduling plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>planA</p>
              */
             public Builder currPlan(String currPlan) {
                 this.currPlan = currPlan;
@@ -796,7 +952,10 @@ public class QueryQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * currTime.
+             * <p>The time when the plan specified by currPlan is scheduled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0800</p>
              */
             public Builder currTime(String currTime) {
                 this.currTime = currTime;
@@ -804,7 +963,10 @@ public class QueryQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * nextPlan.
+             * <p>The quota plan that will take effect based on the scheduling plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>planB</p>
              */
             public Builder nextPlan(String nextPlan) {
                 this.nextPlan = nextPlan;
@@ -812,7 +974,10 @@ public class QueryQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * nextTime.
+             * <p>The time when the plan specified by nextPlan is scheduled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1700</p>
              */
             public Builder nextTime(String nextTime) {
                 this.nextTime = nextTime;
@@ -820,7 +985,10 @@ public class QueryQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * oncePlan.
+             * <p>The quota plan that immediately takes effect. If the quota plan specified by this parameter is triggered and the plan is different from the plan specified by currPlan, this parameter is not empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>planC</p>
              */
             public Builder oncePlan(String oncePlan) {
                 this.oncePlan = oncePlan;
@@ -828,7 +996,10 @@ public class QueryQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * onceTime.
+             * <p>The time when the quota plan specified by oncePlan is scheduled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1500</p>
              */
             public Builder onceTime(String onceTime) {
                 this.onceTime = onceTime;
@@ -836,7 +1007,10 @@ public class QueryQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * operatorName.
+             * <p>The operator name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>userA</p>
              */
             public Builder operatorName(String operatorName) {
                 this.operatorName = operatorName;
@@ -844,7 +1018,10 @@ public class QueryQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * timezone.
+             * <p>The time zone of the project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UTC+8</p>
              */
             public Builder timezone(String timezone) {
                 this.timezone = timezone;
@@ -1094,8 +1271,32 @@ public class QueryQuotaResponseBody extends TeaModel {
             private String type; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubQuotaInfoList model) {
+                this.billingPolicy = model.billingPolicy;
+                this.cluster = model.cluster;
+                this.createTime = model.createTime;
+                this.creatorId = model.creatorId;
+                this.groupName = model.groupName;
+                this.id = model.id;
+                this.name = model.name;
+                this.nickName = model.nickName;
+                this.parameter = model.parameter;
+                this.parentId = model.parentId;
+                this.regionId = model.regionId;
+                this.saleTag = model.saleTag;
+                this.scheduleInfo = model.scheduleInfo;
+                this.status = model.status;
+                this.tag = model.tag;
+                this.tenantId = model.tenantId;
+                this.type = model.type;
+                this.version = model.version;
+            } 
+
             /**
-             * billingPolicy.
+             * <p>The order information.</p>
              */
             public Builder billingPolicy(SubQuotaInfoListBillingPolicy billingPolicy) {
                 this.billingPolicy = billingPolicy;
@@ -1103,7 +1304,10 @@ public class QueryQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * cluster.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AT-120N</p>
              */
             public Builder cluster(String cluster) {
                 this.cluster = cluster;
@@ -1111,7 +1315,10 @@ public class QueryQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * createTime.
+             * <p>The time when the resource was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1688653978768</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -1119,7 +1326,10 @@ public class QueryQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * creatorId.
+             * <p>The ID of the Alibaba Cloud account that is used to create the quota plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>672863518</p>
              */
             public Builder creatorId(String creatorId) {
                 this.creatorId = creatorId;
@@ -1127,7 +1337,10 @@ public class QueryQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * groupName.
+             * <p>The role group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -1135,7 +1348,10 @@ public class QueryQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * <p>The ID of the level-2 quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000048</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -1143,7 +1359,10 @@ public class QueryQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The name of the level-2 quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>subquotaA</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1151,7 +1370,10 @@ public class QueryQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * nickName.
+             * <p>The nickname of the level-2 quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>subquotaA</p>
              */
             public Builder nickName(String nickName) {
                 this.nickName = nickName;
@@ -1159,7 +1381,10 @@ public class QueryQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * parameter.
+             * <p>The quota description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;maxCU&quot;: 10, &quot;minCU&quot;: 10, &quot;adhocCU&quot;: 0, &quot;schedulerType&quot;: &quot;Fifo&quot;}</p>
              */
             public Builder parameter(java.util.Map<String, ?> parameter) {
                 this.parameter = parameter;
@@ -1167,7 +1392,10 @@ public class QueryQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * parentId.
+             * <p>The parent resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder parentId(String parentId) {
                 this.parentId = parentId;
@@ -1175,7 +1403,10 @@ public class QueryQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * regionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1183,7 +1414,7 @@ public class QueryQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * saleTag.
+             * <p>The identifiers of MaxCompute quota objects. The identifiers are the same as those in the Alibaba Cloud sales bill. This parameter is used for tags.</p>
              */
             public Builder saleTag(SubQuotaInfoListSaleTag saleTag) {
                 this.saleTag = saleTag;
@@ -1191,7 +1422,7 @@ public class QueryQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * scheduleInfo.
+             * <p>The information about the scheduling plan.</p>
              */
             public Builder scheduleInfo(SubQuotaInfoListScheduleInfo scheduleInfo) {
                 this.scheduleInfo = scheduleInfo;
@@ -1199,7 +1430,10 @@ public class QueryQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The status of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ON</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1207,7 +1441,10 @@ public class QueryQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * tag.
+             * <p>The resource tag of a quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -1215,7 +1452,10 @@ public class QueryQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * tenantId.
+             * <p>The tenant ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>478403690625249</p>
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
@@ -1223,7 +1463,10 @@ public class QueryQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>This parameter corresponds to the resourceSystemType field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FUXI_ONLINE</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1231,7 +1474,10 @@ public class QueryQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * <p>The version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -1493,8 +1739,33 @@ public class QueryQuotaResponseBody extends TeaModel {
             private String type; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.billingPolicy = model.billingPolicy;
+                this.cluster = model.cluster;
+                this.createTime = model.createTime;
+                this.creatorId = model.creatorId;
+                this.groupName = model.groupName;
+                this.id = model.id;
+                this.name = model.name;
+                this.nickName = model.nickName;
+                this.parameter = model.parameter;
+                this.parentId = model.parentId;
+                this.regionId = model.regionId;
+                this.saleTag = model.saleTag;
+                this.scheduleInfo = model.scheduleInfo;
+                this.status = model.status;
+                this.subQuotaInfoList = model.subQuotaInfoList;
+                this.tag = model.tag;
+                this.tenantId = model.tenantId;
+                this.type = model.type;
+                this.version = model.version;
+            } 
+
             /**
-             * billingPolicy.
+             * <p>The order information.</p>
              */
             public Builder billingPolicy(BillingPolicy billingPolicy) {
                 this.billingPolicy = billingPolicy;
@@ -1502,7 +1773,10 @@ public class QueryQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * cluster.
+             * <p>The ID of the Managed Service for Prometheus cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AT-120N</p>
              */
             public Builder cluster(String cluster) {
                 this.cluster = cluster;
@@ -1510,7 +1784,10 @@ public class QueryQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * createTime.
+             * <p>The time when the resource was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1714356241163</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -1518,7 +1795,10 @@ public class QueryQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * creatorId.
+             * <p>The ID of the Alibaba Cloud account that is used to create the quota plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1248953767546358</p>
              */
             public Builder creatorId(String creatorId) {
                 this.creatorId = creatorId;
@@ -1526,7 +1806,10 @@ public class QueryQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * groupName.
+             * <p>The group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -1534,7 +1817,7 @@ public class QueryQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>quota ID</p>
+             * <p>The quota ID.</p>
              * 
              * <strong>example:</strong>
              * <p>2523</p>
@@ -1545,7 +1828,10 @@ public class QueryQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The quota name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>quota_a</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1553,7 +1839,10 @@ public class QueryQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * nickName.
+             * <p>The quota alias.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>quota_nickname</p>
              */
             public Builder nickName(String nickName) {
                 this.nickName = nickName;
@@ -1561,7 +1850,14 @@ public class QueryQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * parameter.
+             * <p>The quota description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;minCU&quot;:10,	
+             * &quot;adhocCU&quot;:0,
+             * &quot;maxCU&quot;:10,
+             * &quot;schedulerType&quot;:&quot;Fair&quot;,
+             * }</p>
              */
             public Builder parameter(java.util.Map<String, ?> parameter) {
                 this.parameter = parameter;
@@ -1569,7 +1865,10 @@ public class QueryQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * parentId.
+             * <p>The parent resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder parentId(String parentId) {
                 this.parentId = parentId;
@@ -1577,7 +1876,10 @@ public class QueryQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * regionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1585,7 +1887,7 @@ public class QueryQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * saleTag.
+             * <p>The identifiers of MaxCompute quota objects. The identifiers are the same as those in the Alibaba Cloud sales bill. This parameter is used for tags.</p>
              */
             public Builder saleTag(SaleTag saleTag) {
                 this.saleTag = saleTag;
@@ -1593,7 +1895,7 @@ public class QueryQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * scheduleInfo.
+             * <p>The information about the scheduling plan.</p>
              */
             public Builder scheduleInfo(ScheduleInfo scheduleInfo) {
                 this.scheduleInfo = scheduleInfo;
@@ -1601,7 +1903,10 @@ public class QueryQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The status of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ON</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1609,7 +1914,7 @@ public class QueryQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * subQuotaInfoList.
+             * <p>The level-2 quotas.</p>
              */
             public Builder subQuotaInfoList(java.util.List<SubQuotaInfoList> subQuotaInfoList) {
                 this.subQuotaInfoList = subQuotaInfoList;
@@ -1617,7 +1922,10 @@ public class QueryQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * tag.
+             * <p>The resource tag of a quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -1625,7 +1933,10 @@ public class QueryQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * tenantId.
+             * <p>The tenant ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>478403690625249</p>
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
@@ -1633,7 +1944,10 @@ public class QueryQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>This parameter corresponds to the resourceSystemType field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FUXI_OFFLINE</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1641,7 +1955,10 @@ public class QueryQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * <p>The version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder version(String version) {
                 this.version = version;

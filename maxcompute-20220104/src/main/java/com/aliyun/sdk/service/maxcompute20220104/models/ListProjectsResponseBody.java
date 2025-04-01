@@ -36,6 +36,10 @@ public class ListProjectsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class ListProjectsResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListProjectsResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -122,6 +134,14 @@ public class ListProjectsResponseBody extends TeaModel {
         public static final class Builder {
             private String ipList; 
             private String vpcIpList; 
+
+            private Builder() {
+            } 
+
+            private Builder(IpWhiteList model) {
+                this.ipList = model.ipList;
+                this.vpcIpList = model.vpcIpList;
+            } 
 
             /**
              * <p>The IP address whitelist for access over the Internet or the network for interconnecting with other Alibaba Cloud services.</p>
@@ -214,6 +234,15 @@ public class ListProjectsResponseBody extends TeaModel {
             private Boolean enable; 
             private String key; 
 
+            private Builder() {
+            } 
+
+            private Builder(Encryption model) {
+                this.algorithm = model.algorithm;
+                this.enable = model.enable;
+                this.key = model.key;
+            } 
+
             /**
              * <p>The data encryption algorithm that is supported by the key. Valid values: AES256, AESCTR, and RC4.</p>
              * 
@@ -287,6 +316,13 @@ public class ListProjectsResponseBody extends TeaModel {
         public static final class Builder {
             private String isExternalCatalogBound; 
 
+            private Builder() {
+            } 
+
+            private Builder(ExternalProjectProperties model) {
+                this.isExternalCatalogBound = model.isExternalCatalogBound;
+            } 
+
             /**
              * <p>Indicates whether the external project is an external project for <a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/lake-warehouse-integrated-2-0-use-guide">data lakehouse solution 2.0</a>.</p>
              * 
@@ -348,6 +384,14 @@ public class ListProjectsResponseBody extends TeaModel {
         public static final class Builder {
             private String type; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(TableLifecycle model) {
+                this.type = model.type;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The lifecycle type. Valid values:</p>
@@ -535,6 +579,23 @@ public class ListProjectsResponseBody extends TeaModel {
             private String tunnelQuota; 
             private String typeSystem; 
 
+            private Builder() {
+            } 
+
+            private Builder(Properties model) {
+                this.allowFullScan = model.allowFullScan;
+                this.enableDecimal2 = model.enableDecimal2;
+                this.enableTunnelQuotaRoute = model.enableTunnelQuotaRoute;
+                this.encryption = model.encryption;
+                this.externalProjectProperties = model.externalProjectProperties;
+                this.retentionDays = model.retentionDays;
+                this.sqlMeteringMax = model.sqlMeteringMax;
+                this.tableLifecycle = model.tableLifecycle;
+                this.timezone = model.timezone;
+                this.tunnelQuota = model.tunnelQuota;
+                this.typeSystem = model.typeSystem;
+            } 
+
             /**
              * <p>Indicates whether a full table scan is allowed in the project. A full table scan occupies a large number of resources, which reduces data processing efficiency. By default, the full table scan feature is disabled.</p>
              * 
@@ -712,6 +773,14 @@ public class ListProjectsResponseBody extends TeaModel {
             private String resourceId; 
             private String resourceType; 
 
+            private Builder() {
+            } 
+
+            private Builder(SaleTag model) {
+                this.resourceId = model.resourceId;
+                this.resourceType = model.resourceType;
+            } 
+
             /**
              * <p>The instance ID of the default computing quota.</p>
              * 
@@ -784,6 +853,14 @@ public class ListProjectsResponseBody extends TeaModel {
         public static final class Builder {
             private String exceptionPolicy; 
             private Boolean _protected; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProjectProtection model) {
+                this.exceptionPolicy = model.exceptionPolicy;
+                this._protected = model._protected;
+            } 
 
             /**
              * <p>If you enable the project data protection mechanism, you can configure exception or trusted projects. This allows specified users to transfer data of a specified object to a specified project. The project data protection mechanism does not take effect in all the situations that are specified in the exception policy.</p>
@@ -936,6 +1013,19 @@ public class ListProjectsResponseBody extends TeaModel {
             private ProjectProtection projectProtection; 
             private Boolean usingAcl; 
             private Boolean usingPolicy; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecurityProperties model) {
+                this.enableDownloadPrivilege = model.enableDownloadPrivilege;
+                this.labelSecurity = model.labelSecurity;
+                this.objectCreatorHasAccessPermission = model.objectCreatorHasAccessPermission;
+                this.objectCreatorHasGrantPermission = model.objectCreatorHasGrantPermission;
+                this.projectProtection = model.projectProtection;
+                this.usingAcl = model.usingAcl;
+                this.usingPolicy = model.usingPolicy;
+            } 
 
             /**
              * <p>Indicates whether the <a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/label-based-access-control">download control</a> feature is enabled. By default, this feature is disabled.</p>
@@ -1206,6 +1296,26 @@ public class ListProjectsResponseBody extends TeaModel {
             private Boolean threeTierModel; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Projects model) {
+                this.comment = model.comment;
+                this.costStorage = model.costStorage;
+                this.createdTime = model.createdTime;
+                this.defaultQuota = model.defaultQuota;
+                this.ipWhiteList = model.ipWhiteList;
+                this.name = model.name;
+                this.owner = model.owner;
+                this.properties = model.properties;
+                this.regionId = model.regionId;
+                this.saleTag = model.saleTag;
+                this.securityProperties = model.securityProperties;
+                this.status = model.status;
+                this.threeTierModel = model.threeTierModel;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The project description.</p>
              * 
@@ -1437,6 +1547,16 @@ public class ListProjectsResponseBody extends TeaModel {
             private String marker; 
             private Integer maxItem; 
             private java.util.List<Projects> projects; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.nextToken = model.nextToken;
+                this.marker = model.marker;
+                this.maxItem = model.maxItem;
+                this.projects = model.projects;
+            } 
 
             /**
              * <p>A pagination token. Only continuous page turning is supported. If NextToken is not empty, the next page exists. The value of NextToken can be used in the next request to retrieve a new page of results.</p>

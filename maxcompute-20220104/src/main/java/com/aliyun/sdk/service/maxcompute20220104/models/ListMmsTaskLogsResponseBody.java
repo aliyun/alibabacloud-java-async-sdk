@@ -36,6 +36,10 @@ public class ListMmsTaskLogsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class ListMmsTaskLogsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Data> data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListMmsTaskLogsResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * data.
@@ -179,6 +191,19 @@ public class ListMmsTaskLogsResponseBody extends TeaModel {
             private Long sourceId; 
             private String status; 
             private Long taskId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.action = model.action;
+                this.createTime = model.createTime;
+                this.id = model.id;
+                this.msg = model.msg;
+                this.sourceId = model.sourceId;
+                this.status = model.status;
+                this.taskId = model.taskId;
+            } 
 
             /**
              * action.

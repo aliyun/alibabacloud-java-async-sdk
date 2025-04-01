@@ -36,6 +36,10 @@ public class UpdateMmsDataSourceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class UpdateMmsDataSourceResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateMmsDataSourceResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * data.
@@ -119,6 +131,14 @@ public class UpdateMmsDataSourceResponseBody extends TeaModel {
         public static final class Builder {
             private Long asyncTaskId; 
             private Long sourceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.asyncTaskId = model.asyncTaskId;
+                this.sourceId = model.sourceId;
+            } 
 
             /**
              * asyncTaskId.

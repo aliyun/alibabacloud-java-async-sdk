@@ -36,6 +36,10 @@ public class GetMmsTableResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetMmsTableResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMmsTableResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * data.
@@ -155,6 +167,17 @@ public class GetMmsTableResponseBody extends TeaModel {
             private String name; 
             private Boolean nullable; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Columns model) {
+                this.comment = model.comment;
+                this.defaultValue = model.defaultValue;
+                this.name = model.name;
+                this.nullable = model.nullable;
+                this.type = model.type;
+            } 
 
             /**
              * comment.
@@ -283,6 +306,17 @@ public class GetMmsTableResponseBody extends TeaModel {
             private Boolean nullable; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Partitions model) {
+                this.comment = model.comment;
+                this.defaultValue = model.defaultValue;
+                this.name = model.name;
+                this.nullable = model.nullable;
+                this.type = model.type;
+            } 
+
             /**
              * comment.
              */
@@ -397,6 +431,16 @@ public class GetMmsTableResponseBody extends TeaModel {
             private String comment; 
             private String name; 
             private java.util.List<Partitions> partitions; 
+
+            private Builder() {
+            } 
+
+            private Builder(Schema model) {
+                this.columns = model.columns;
+                this.comment = model.comment;
+                this.name = model.name;
+                this.partitions = model.partitions;
+            } 
 
             /**
              * columns.
@@ -744,6 +788,36 @@ public class GetMmsTableResponseBody extends TeaModel {
             private String status; 
             private String type; 
             private Boolean updated; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.dbId = model.dbId;
+                this.dbName = model.dbName;
+                this.extra = model.extra;
+                this.hasPartitions = model.hasPartitions;
+                this.id = model.id;
+                this.inputFormat = model.inputFormat;
+                this.lastDdlTime = model.lastDdlTime;
+                this.location = model.location;
+                this.name = model.name;
+                this.numRows = model.numRows;
+                this.outputFormat = model.outputFormat;
+                this.owner = model.owner;
+                this.partitions = model.partitions;
+                this.partitionsDoing = model.partitionsDoing;
+                this.partitionsDone = model.partitionsDone;
+                this.partitionsFailed = model.partitionsFailed;
+                this.schema = model.schema;
+                this.serde = model.serde;
+                this.size = model.size;
+                this.sourceId = model.sourceId;
+                this.sourceName = model.sourceName;
+                this.status = model.status;
+                this.type = model.type;
+                this.updated = model.updated;
+            } 
 
             /**
              * dbId.

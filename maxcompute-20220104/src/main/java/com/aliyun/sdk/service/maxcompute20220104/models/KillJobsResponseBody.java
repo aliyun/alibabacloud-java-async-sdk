@@ -40,6 +40,10 @@ public class KillJobsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -65,6 +69,15 @@ public class KillJobsResponseBody extends TeaModel {
         private String data; 
         private Integer httpCode; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(KillJobsResponseBody model) {
+            this.data = model.data;
+            this.httpCode = model.httpCode;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned data.</p>

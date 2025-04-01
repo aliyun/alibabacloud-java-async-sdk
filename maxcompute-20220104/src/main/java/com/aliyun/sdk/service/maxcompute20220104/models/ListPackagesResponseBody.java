@@ -36,6 +36,10 @@ public class ListPackagesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class ListPackagesResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListPackagesResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned data.</p>
@@ -122,6 +134,14 @@ public class ListPackagesResponseBody extends TeaModel {
         public static final class Builder {
             private Long createTime; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(CreatedPackages model) {
+                this.createTime = model.createTime;
+                this.name = model.name;
+            } 
 
             /**
              * <p>The time when the package was created.</p>
@@ -220,6 +240,16 @@ public class ListPackagesResponseBody extends TeaModel {
             private String sourceProject; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstalledPackages model) {
+                this.installTime = model.installTime;
+                this.name = model.name;
+                this.sourceProject = model.sourceProject;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The time when the package was installed.</p>
              * 
@@ -314,6 +344,14 @@ public class ListPackagesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<CreatedPackages> createdPackages; 
             private java.util.List<InstalledPackages> installedPackages; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.createdPackages = model.createdPackages;
+                this.installedPackages = model.installedPackages;
+            } 
 
             /**
              * <p>The packages that were created.</p>

@@ -90,7 +90,7 @@ public class ListMmsTasksRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -374,6 +374,14 @@ public class ListMmsTasksRequest extends Request {
         public static final class Builder {
             private String startTime; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Sorter model) {
+                this.startTime = model.startTime;
+                this.status = model.status;
+            } 
 
             /**
              * startTime.

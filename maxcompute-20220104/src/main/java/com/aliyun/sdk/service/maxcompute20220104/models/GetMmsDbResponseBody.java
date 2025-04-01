@@ -36,6 +36,10 @@ public class GetMmsDbResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetMmsDbResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMmsDbResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * data.
@@ -359,6 +371,34 @@ public class GetMmsDbResponseBody extends TeaModel {
             private Integer tablesFailed; 
             private Integer tablesPartDone; 
             private Boolean updated; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.description = model.description;
+                this.extra = model.extra;
+                this.id = model.id;
+                this.lastDdlTime = model.lastDdlTime;
+                this.location = model.location;
+                this.name = model.name;
+                this.numRows = model.numRows;
+                this.owner = model.owner;
+                this.partitions = model.partitions;
+                this.partitionsDoing = model.partitionsDoing;
+                this.partitionsDone = model.partitionsDone;
+                this.partitionsFailed = model.partitionsFailed;
+                this.size = model.size;
+                this.sourceId = model.sourceId;
+                this.sourceName = model.sourceName;
+                this.status = model.status;
+                this.tables = model.tables;
+                this.tablesDoing = model.tablesDoing;
+                this.tablesDone = model.tablesDone;
+                this.tablesFailed = model.tablesFailed;
+                this.tablesPartDone = model.tablesPartDone;
+                this.updated = model.updated;
+            } 
 
             /**
              * description.

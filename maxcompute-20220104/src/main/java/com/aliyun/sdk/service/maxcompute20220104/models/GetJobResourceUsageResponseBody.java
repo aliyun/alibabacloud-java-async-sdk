@@ -48,6 +48,10 @@ public class GetJobResourceUsageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -89,6 +93,17 @@ public class GetJobResourceUsageResponseBody extends TeaModel {
         private String errorMsg; 
         private Integer httpCode; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetJobResourceUsageResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMsg = model.errorMsg;
+            this.httpCode = model.httpCode;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -228,6 +243,17 @@ public class GetJobResourceUsageResponseBody extends TeaModel {
             private Long memoryUsage; 
             private String quotaNickname; 
 
+            private Builder() {
+            } 
+
+            private Builder(JobResourceUsageList model) {
+                this.cuUsage = model.cuUsage;
+                this.date = model.date;
+                this.jobOwner = model.jobOwner;
+                this.memoryUsage = model.memoryUsage;
+                this.quotaNickname = model.quotaNickname;
+            } 
+
             /**
              * <p>The total number of used compute units (CUs).</p>
              * 
@@ -357,6 +383,16 @@ public class GetJobResourceUsageResponseBody extends TeaModel {
             private Long pageNumber; 
             private Long pageSize; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.jobResourceUsageList = model.jobResourceUsageList;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The data list returned.</p>

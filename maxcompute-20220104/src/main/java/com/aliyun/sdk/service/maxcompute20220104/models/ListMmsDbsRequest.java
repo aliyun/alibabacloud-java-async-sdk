@@ -60,7 +60,7 @@ public class ListMmsDbsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -249,6 +249,15 @@ public class ListMmsDbsRequest extends Request {
             private String numRows; 
             private String size; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Sorter model) {
+                this.numRows = model.numRows;
+                this.size = model.size;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * numRows.

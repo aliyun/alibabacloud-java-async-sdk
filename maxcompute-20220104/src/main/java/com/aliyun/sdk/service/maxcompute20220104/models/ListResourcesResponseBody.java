@@ -36,6 +36,10 @@ public class ListResourcesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class ListResourcesResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListResourcesResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned data.</p>
@@ -230,6 +242,23 @@ public class ListResourcesResponseBody extends TeaModel {
             private String schema; 
             private Long size; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Resources model) {
+                this.comment = model.comment;
+                this.contentMD5 = model.contentMD5;
+                this.creationTime = model.creationTime;
+                this.displayName = model.displayName;
+                this.lastModifiedTime = model.lastModifiedTime;
+                this.lastUpdator = model.lastUpdator;
+                this.name = model.name;
+                this.owner = model.owner;
+                this.schema = model.schema;
+                this.size = model.size;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The remarks.</p>
@@ -451,6 +480,15 @@ public class ListResourcesResponseBody extends TeaModel {
             private String marker; 
             private Integer maxItem; 
             private java.util.List<Resources> resources; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.marker = model.marker;
+                this.maxItem = model.maxItem;
+                this.resources = model.resources;
+            } 
 
             /**
              * <p>Indicates the marker after which the returned list begins.</p>

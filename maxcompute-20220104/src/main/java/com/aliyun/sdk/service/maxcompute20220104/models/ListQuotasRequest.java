@@ -30,30 +30,15 @@ public class ListQuotasRequest extends Request {
     private Long maxItem;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("productId")
-    private String productId;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("region")
-    private String region;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("saleTags")
     private String saleTags;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("tenantId")
-    private String tenantId;
 
     private ListQuotasRequest(Builder builder) {
         super(builder);
         this.billingType = builder.billingType;
         this.marker = builder.marker;
         this.maxItem = builder.maxItem;
-        this.productId = builder.productId;
-        this.region = builder.region;
         this.saleTags = builder.saleTags;
-        this.tenantId = builder.tenantId;
     }
 
     public static Builder builder() {
@@ -64,7 +49,7 @@ public class ListQuotasRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -91,41 +76,17 @@ public class ListQuotasRequest extends Request {
     }
 
     /**
-     * @return productId
-     */
-    public String getProductId() {
-        return this.productId;
-    }
-
-    /**
-     * @return region
-     */
-    public String getRegion() {
-        return this.region;
-    }
-
-    /**
      * @return saleTags
      */
     public String getSaleTags() {
         return this.saleTags;
     }
 
-    /**
-     * @return tenantId
-     */
-    public String getTenantId() {
-        return this.tenantId;
-    }
-
     public static final class Builder extends Request.Builder<ListQuotasRequest, Builder> {
         private String billingType; 
         private String marker; 
         private Long maxItem; 
-        private String productId; 
-        private String region; 
         private String saleTags; 
-        private String tenantId; 
 
         private Builder() {
             super();
@@ -136,10 +97,7 @@ public class ListQuotasRequest extends Request {
             this.billingType = request.billingType;
             this.marker = request.marker;
             this.maxItem = request.maxItem;
-            this.productId = request.productId;
-            this.region = request.region;
             this.saleTags = request.saleTags;
-            this.tenantId = request.tenantId;
         } 
 
         /**
@@ -179,30 +137,6 @@ public class ListQuotasRequest extends Request {
         }
 
         /**
-         * <p>The service ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ODPS</p>
-         */
-        public Builder productId(String productId) {
-            this.putQueryParameter("productId", productId);
-            this.productId = productId;
-            return this;
-        }
-
-        /**
-         * <p>The ID of the region.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-beijing</p>
-         */
-        public Builder region(String region) {
-            this.putQueryParameter("region", region);
-            this.region = region;
-            return this;
-        }
-
-        /**
          * <p>The cost tag. You can filter out quota objects based on the cost tag. The cost tag is created when you tag a service.</p>
          * 
          * <strong>example:</strong>
@@ -211,18 +145,6 @@ public class ListQuotasRequest extends Request {
         public Builder saleTags(String saleTags) {
             this.putQueryParameter("saleTags", saleTags);
             this.saleTags = saleTags;
-            return this;
-        }
-
-        /**
-         * <p>The ID of the tenant.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>280747109771520</p>
-         */
-        public Builder tenantId(String tenantId) {
-            this.putQueryParameter("tenantId", tenantId);
-            this.tenantId = tenantId;
             return this;
         }
 

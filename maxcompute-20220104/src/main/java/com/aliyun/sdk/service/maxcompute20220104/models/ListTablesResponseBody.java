@@ -36,6 +36,10 @@ public class ListTablesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class ListTablesResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTablesResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned data.</p>
@@ -170,6 +182,18 @@ public class ListTablesResponseBody extends TeaModel {
             private String owner; 
             private String schema; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tables model) {
+                this.creationTime = model.creationTime;
+                this.displayName = model.displayName;
+                this.name = model.name;
+                this.owner = model.owner;
+                this.schema = model.schema;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The time when the table was created.</p>
@@ -299,6 +323,15 @@ public class ListTablesResponseBody extends TeaModel {
             private String marker; 
             private Integer maxItem; 
             private java.util.List<Tables> tables; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.marker = model.marker;
+                this.maxItem = model.maxItem;
+                this.tables = model.tables;
+            } 
 
             /**
              * <p>Indicates the marker after which the returned list begins.</p>

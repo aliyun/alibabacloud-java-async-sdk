@@ -92,7 +92,7 @@ public class ListStoragePartitionsInfoRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -306,7 +306,7 @@ public class ListStoragePartitionsInfoRequest extends Request {
          * <p>The name of the partition that you want to use for fuzzy match.</p>
          * 
          * <strong>example:</strong>
-         * <p>20241201</p>
+         * <p>ds=20241201</p>
          */
         public Builder partitionPrefix(String partitionPrefix) {
             this.putQueryParameter("partitionPrefix", partitionPrefix);

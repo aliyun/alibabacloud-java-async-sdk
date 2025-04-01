@@ -36,6 +36,10 @@ public class GetRoleAclOnObjectResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetRoleAclOnObjectResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetRoleAclOnObjectResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned data</p>
@@ -110,6 +122,13 @@ public class GetRoleAclOnObjectResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> actions; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.actions = model.actions;
+            } 
 
             /**
              * <p>The operations that were performed on the object.</p>

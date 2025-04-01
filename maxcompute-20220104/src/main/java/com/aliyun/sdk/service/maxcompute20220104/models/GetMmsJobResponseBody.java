@@ -36,6 +36,10 @@ public class GetMmsJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetMmsJobResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMmsJobResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * data.
@@ -251,6 +263,25 @@ public class GetMmsJobResponseBody extends TeaModel {
             private java.util.List<String> tables; 
             private String taskType; 
             private String tunnelQuota; 
+
+            private Builder() {
+            } 
+
+            private Builder(Config model) {
+                this.columnMapping = model.columnMapping;
+                this.enableVerification = model.enableVerification;
+                this.increment = model.increment;
+                this.others = model.others;
+                this.partitionFilters = model.partitionFilters;
+                this.partitions = model.partitions;
+                this.schemaOnly = model.schemaOnly;
+                this.tableBlackList = model.tableBlackList;
+                this.tableMapping = model.tableMapping;
+                this.tableWhiteList = model.tableWhiteList;
+                this.tables = model.tables;
+                this.taskType = model.taskType;
+                this.tunnelQuota = model.tunnelQuota;
+            } 
 
             /**
              * columnMapping.
@@ -586,6 +617,29 @@ public class GetMmsJobResponseBody extends TeaModel {
             private Integer taskDone; 
             private Integer taskNum; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.config = model.config;
+                this.createTime = model.createTime;
+                this.dbId = model.dbId;
+                this.dstDbName = model.dstDbName;
+                this.dstSchemaName = model.dstSchemaName;
+                this.eta = model.eta;
+                this.id = model.id;
+                this.name = model.name;
+                this.sourceId = model.sourceId;
+                this.sourceName = model.sourceName;
+                this.srcDbName = model.srcDbName;
+                this.srcSchemaName = model.srcSchemaName;
+                this.status = model.status;
+                this.stopped = model.stopped;
+                this.taskDone = model.taskDone;
+                this.taskNum = model.taskNum;
+                this.type = model.type;
+            } 
 
             /**
              * config.

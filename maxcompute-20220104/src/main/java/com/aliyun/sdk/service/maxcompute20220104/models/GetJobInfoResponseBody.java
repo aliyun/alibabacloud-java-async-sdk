@@ -48,6 +48,10 @@ public class GetJobInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -89,6 +93,17 @@ public class GetJobInfoResponseBody extends TeaModel {
         private String errorMsg; 
         private Integer httpCode; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetJobInfoResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMsg = model.errorMsg;
+            this.httpCode = model.httpCode;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned data.</p>
@@ -210,6 +225,15 @@ public class GetJobInfoResponseBody extends TeaModel {
             private Integer code; 
             private String description; 
             private String startTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(JobSubStatusList model) {
+                this.code = model.code;
+                this.description = model.description;
+                this.startTime = model.startTime;
+            } 
 
             /**
              * <p>The code of the sub-status.</p>
@@ -342,6 +366,18 @@ public class GetJobInfoResponseBody extends TeaModel {
             private String sceneTag; 
             private String summary; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(SceneResults model) {
+                this.description = model.description;
+                this.params = model.params;
+                this.scene = model.scene;
+                this.sceneTag = model.sceneTag;
+                this.summary = model.summary;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The intelligent diagnostics result description.</p>
@@ -732,6 +768,37 @@ public class GetJobInfoResponseBody extends TeaModel {
             private String tenantId; 
             private Long totalTime; 
             private Long waitingTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.cuUsage = model.cuUsage;
+                this.endAtTime = model.endAtTime;
+                this.extNodeId = model.extNodeId;
+                this.extNodeOnDuty = model.extNodeOnDuty;
+                this.extPlantFrom = model.extPlantFrom;
+                this.inputBytes = model.inputBytes;
+                this.instanceId = model.instanceId;
+                this.jobOwner = model.jobOwner;
+                this.jobSubStatusList = model.jobSubStatusList;
+                this.jobType = model.jobType;
+                this.memoryUsage = model.memoryUsage;
+                this.priority = model.priority;
+                this.project = model.project;
+                this.quotaNickname = model.quotaNickname;
+                this.quotaType = model.quotaType;
+                this.region = model.region;
+                this.runningAtTime = model.runningAtTime;
+                this.runningTime = model.runningTime;
+                this.sceneResults = model.sceneResults;
+                this.signature = model.signature;
+                this.status = model.status;
+                this.submittedAtTime = model.submittedAtTime;
+                this.tenantId = model.tenantId;
+                this.totalTime = model.totalTime;
+                this.waitingTime = model.waitingTime;
+            } 
 
             /**
              * <p>CPU usage of the job at the snapshot time. Unit: Core.</p>

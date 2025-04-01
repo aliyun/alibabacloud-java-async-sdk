@@ -36,6 +36,10 @@ public class GetTableInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetTableInfoResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTableInfoResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -122,6 +134,14 @@ public class GetTableInfoResponseBody extends TeaModel {
         public static final class Builder {
             private String name; 
             private String order; 
+
+            private Builder() {
+            } 
+
+            private Builder(SortCols model) {
+                this.name = model.name;
+                this.order = model.order;
+            } 
 
             /**
              * <p>The name of the sorting field.</p>
@@ -219,6 +239,16 @@ public class GetTableInfoResponseBody extends TeaModel {
             private java.util.List<String> clusterCols; 
             private String clusterType; 
             private java.util.List<SortCols> sortCols; 
+
+            private Builder() {
+            } 
+
+            private Builder(ClusterInfo model) {
+                this.bucketNum = model.bucketNum;
+                this.clusterCols = model.clusterCols;
+                this.clusterType = model.clusterType;
+                this.sortCols = model.sortCols;
+            } 
 
             /**
              * <p>Optional. The number of buckets in the clustered table. The value 0 indicates that the number of buckets dynamically changes when a job is running.</p>
@@ -333,6 +363,16 @@ public class GetTableInfoResponseBody extends TeaModel {
             private String label; 
             private String name; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(NativeColumns model) {
+                this.comment = model.comment;
+                this.label = model.label;
+                this.name = model.name;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The column comments.</p>
@@ -452,6 +492,16 @@ public class GetTableInfoResponseBody extends TeaModel {
             private String label; 
             private String name; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(PartitionColumns model) {
+                this.comment = model.comment;
+                this.label = model.label;
+                this.name = model.name;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The comments of the partition key column.</p>
@@ -919,6 +969,45 @@ public class GetTableInfoResponseBody extends TeaModel {
             private String tablestoreColumnsMapping; 
             private String type; 
             private String viewText; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.autoRefreshEnabled = model.autoRefreshEnabled;
+                this.clusterInfo = model.clusterInfo;
+                this.comment = model.comment;
+                this.createTableDDL = model.createTableDDL;
+                this.creationTime = model.creationTime;
+                this.displayName = model.displayName;
+                this.fileNum = model.fileNum;
+                this.isExternalTable = model.isExternalTable;
+                this.isOutdated = model.isOutdated;
+                this.lastAccessTime = model.lastAccessTime;
+                this.lastDDLTime = model.lastDDLTime;
+                this.lastModifiedTime = model.lastModifiedTime;
+                this.lifecycle = model.lifecycle;
+                this.location = model.location;
+                this.materializedView = model.materializedView;
+                this.name = model.name;
+                this.nativeColumns = model.nativeColumns;
+                this.odpsPropertiesRolearn = model.odpsPropertiesRolearn;
+                this.odpsSqlTextOptionFlushHeader = model.odpsSqlTextOptionFlushHeader;
+                this.odpsTextOptionHeaderLinesCount = model.odpsTextOptionHeaderLinesCount;
+                this.owner = model.owner;
+                this.partitionColumns = model.partitionColumns;
+                this.physicalSize = model.physicalSize;
+                this.projectName = model.projectName;
+                this.rewriteEnabled = model.rewriteEnabled;
+                this.schema = model.schema;
+                this.size = model.size;
+                this.storageHandler = model.storageHandler;
+                this.tableLabel = model.tableLabel;
+                this.tablesotreTableName = model.tablesotreTableName;
+                this.tablestoreColumnsMapping = model.tablestoreColumnsMapping;
+                this.type = model.type;
+                this.viewText = model.viewText;
+            } 
 
             /**
              * <p>Indicates whether the materialized view is automatically refreshed. This response parameter is returned when type is set to materializedView.</p>

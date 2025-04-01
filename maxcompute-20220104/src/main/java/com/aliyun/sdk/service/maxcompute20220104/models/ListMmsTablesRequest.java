@@ -95,7 +95,7 @@ public class ListMmsTablesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -410,6 +410,15 @@ public class ListMmsTablesRequest extends Request {
             private String lastDdlTime; 
             private String numRows; 
             private String size; 
+
+            private Builder() {
+            } 
+
+            private Builder(Sorter model) {
+                this.lastDdlTime = model.lastDdlTime;
+                this.numRows = model.numRows;
+                this.size = model.size;
+            } 
 
             /**
              * lastDdlTime.

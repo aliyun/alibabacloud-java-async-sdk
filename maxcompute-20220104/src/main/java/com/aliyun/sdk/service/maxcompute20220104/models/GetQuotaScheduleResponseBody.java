@@ -48,6 +48,10 @@ public class GetQuotaScheduleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -89,6 +93,17 @@ public class GetQuotaScheduleResponseBody extends TeaModel {
         private String errorMsg; 
         private Integer httpCode; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetQuotaScheduleResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMsg = model.errorMsg;
+            this.httpCode = model.httpCode;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned data.</p>
@@ -194,6 +209,14 @@ public class GetQuotaScheduleResponseBody extends TeaModel {
         public static final class Builder {
             private String after; 
             private String at; 
+
+            private Builder() {
+            } 
+
+            private Builder(Condition model) {
+                this.after = model.after;
+                this.at = model.at;
+            } 
 
             /**
              * <p>The start time when the quota plan takes effect.</p>
@@ -315,6 +338,18 @@ public class GetQuotaScheduleResponseBody extends TeaModel {
             private String plan; 
             private String timezone; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.condition = model.condition;
+                this.id = model.id;
+                this.operator = model.operator;
+                this.plan = model.plan;
+                this.timezone = model.timezone;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The condition value.</p>

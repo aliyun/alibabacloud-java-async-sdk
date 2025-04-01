@@ -36,6 +36,10 @@ public class ListProjectUsersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class ListProjectUsersResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListProjectUsersResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned data.</p>
@@ -111,6 +123,13 @@ public class ListProjectUsersResponseBody extends TeaModel {
         public static final class Builder {
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(Users model) {
+                this.name = model.name;
+            } 
+
             /**
              * <p>The name of the user.</p>
              * 
@@ -160,6 +179,13 @@ public class ListProjectUsersResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Users> users; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.users = model.users;
+            } 
 
             /**
              * <p>An array that contains users.</p>

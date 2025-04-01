@@ -48,6 +48,10 @@ public class GetComputeQuotaPlanResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -89,6 +93,17 @@ public class GetComputeQuotaPlanResponseBody extends TeaModel {
         private String errorMsg; 
         private Integer httpCode; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetComputeQuotaPlanResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMsg = model.errorMsg;
+            this.httpCode = model.httpCode;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -210,6 +225,15 @@ public class GetComputeQuotaPlanResponseBody extends TeaModel {
             private Long elasticReservedCU; 
             private Long maxCU; 
             private Long minCU; 
+
+            private Builder() {
+            } 
+
+            private Builder(Parameter model) {
+                this.elasticReservedCU = model.elasticReservedCU;
+                this.maxCU = model.maxCU;
+                this.minCU = model.minCU;
+            } 
 
             /**
              * <p>The value of elastic Reserved CUs.</p>
@@ -354,6 +378,19 @@ public class GetComputeQuotaPlanResponseBody extends TeaModel {
             private Long minCU; 
             private String schedulerType; 
             private Long singleJobCULimit; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubQuotaInfoListParameter model) {
+                this.elasticReservedCU = model.elasticReservedCU;
+                this.enablePriority = model.enablePriority;
+                this.forceReservedMin = model.forceReservedMin;
+                this.maxCU = model.maxCU;
+                this.minCU = model.minCU;
+                this.schedulerType = model.schedulerType;
+                this.singleJobCULimit = model.singleJobCULimit;
+            } 
 
             /**
              * <p>The value of elastic Reserved CUs.</p>
@@ -602,6 +639,24 @@ public class GetComputeQuotaPlanResponseBody extends TeaModel {
             private String tenantId; 
             private String type; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubQuotaInfoList model) {
+                this.cluster = model.cluster;
+                this.createTime = model.createTime;
+                this.creatorId = model.creatorId;
+                this.id = model.id;
+                this.name = model.name;
+                this.nickName = model.nickName;
+                this.parameter = model.parameter;
+                this.regionId = model.regionId;
+                this.status = model.status;
+                this.tenantId = model.tenantId;
+                this.type = model.type;
+                this.version = model.version;
+            } 
 
             /**
              * <p>Cluster ID.</p>
@@ -915,6 +970,25 @@ public class GetComputeQuotaPlanResponseBody extends TeaModel {
             private String type; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(Quota model) {
+                this.cluster = model.cluster;
+                this.createTime = model.createTime;
+                this.creatorId = model.creatorId;
+                this.id = model.id;
+                this.name = model.name;
+                this.nickName = model.nickName;
+                this.parameter = model.parameter;
+                this.regionId = model.regionId;
+                this.status = model.status;
+                this.subQuotaInfoList = model.subQuotaInfoList;
+                this.tenantId = model.tenantId;
+                this.type = model.type;
+                this.version = model.version;
+            } 
+
             /**
              * <p>Cluster ID.</p>
              * 
@@ -1126,6 +1200,16 @@ public class GetComputeQuotaPlanResponseBody extends TeaModel {
             private Boolean isEffective; 
             private String name; 
             private Quota quota; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.createTime = model.createTime;
+                this.isEffective = model.isEffective;
+                this.name = model.name;
+                this.quota = model.quota;
+            } 
 
             /**
              * <p>The time when the quota plan was created.</p>

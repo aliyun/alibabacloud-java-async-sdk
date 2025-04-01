@@ -36,6 +36,10 @@ public class ListUsersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class ListUsersResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListUsersResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned data.</p>
@@ -158,6 +170,17 @@ public class ListUsersResponseBody extends TeaModel {
             private String accountType; 
             private String displayName; 
             private String tenantId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Users model) {
+                this.accountId = model.accountId;
+                this.accountName = model.accountName;
+                this.accountType = model.accountType;
+                this.displayName = model.displayName;
+                this.tenantId = model.tenantId;
+            } 
 
             /**
              * <p>The ID of the Alibaba Cloud account.</p>
@@ -288,6 +311,16 @@ public class ListUsersResponseBody extends TeaModel {
             private Integer pageSize; 
             private Integer totalCount; 
             private java.util.List<Users> users; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+                this.users = model.users;
+            } 
 
             /**
              * <p>The page number of the returned page.</p>

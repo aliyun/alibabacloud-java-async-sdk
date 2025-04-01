@@ -40,7 +40,7 @@ public class UpdateComputeSubQuotaRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -196,6 +196,18 @@ public class UpdateComputeSubQuotaRequest extends Request {
             private String schedulerType; 
             private Long singleJobCULimit; 
 
+            private Builder() {
+            } 
+
+            private Builder(Parameter model) {
+                this.enablePriority = model.enablePriority;
+                this.forceReservedMin = model.forceReservedMin;
+                this.maxCU = model.maxCU;
+                this.minCU = model.minCU;
+                this.schedulerType = model.schedulerType;
+                this.singleJobCULimit = model.singleJobCULimit;
+            } 
+
             /**
              * <p>Specifies whether to enable the priority feature.</p>
              * 
@@ -336,6 +348,15 @@ public class UpdateComputeSubQuotaRequest extends Request {
             private String nickName; 
             private Parameter parameter; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubQuotaInfoList model) {
+                this.nickName = model.nickName;
+                this.parameter = model.parameter;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The nickname of the level-2 quota.</p>

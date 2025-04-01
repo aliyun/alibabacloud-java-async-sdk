@@ -48,6 +48,10 @@ public class ListTunnelQuotaTimerResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -89,6 +93,17 @@ public class ListTunnelQuotaTimerResponseBody extends TeaModel {
         private String errorMsg; 
         private Integer httpCode; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTunnelQuotaTimerResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMsg = model.errorMsg;
+            this.httpCode = model.httpCode;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -199,6 +214,14 @@ public class ListTunnelQuotaTimerResponseBody extends TeaModel {
             private Long elasticReservedSlotNum; 
             private Long slotNum; 
 
+            private Builder() {
+            } 
+
+            private Builder(TunnelQuotaParameter model) {
+                this.elasticReservedSlotNum = model.elasticReservedSlotNum;
+                this.slotNum = model.slotNum;
+            } 
+
             /**
              * <p>The number of elastically reserved slots.</p>
              * 
@@ -295,6 +318,16 @@ public class ListTunnelQuotaTimerResponseBody extends TeaModel {
             private String endTime; 
             private String timezone; 
             private TunnelQuotaParameter tunnelQuotaParameter; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.beginTime = model.beginTime;
+                this.endTime = model.endTime;
+                this.timezone = model.timezone;
+                this.tunnelQuotaParameter = model.tunnelQuotaParameter;
+            } 
 
             /**
              * <p>The start time of the time-specific configuration.</p>

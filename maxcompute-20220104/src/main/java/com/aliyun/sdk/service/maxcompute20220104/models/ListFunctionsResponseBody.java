@@ -36,6 +36,10 @@ public class ListFunctionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class ListFunctionsResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListFunctionsResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned data.</p>
@@ -182,6 +194,19 @@ public class ListFunctionsResponseBody extends TeaModel {
             private String owner; 
             private String resources; 
             private String schema; 
+
+            private Builder() {
+            } 
+
+            private Builder(Functions model) {
+                this._class = model._class;
+                this.creationTime = model.creationTime;
+                this.displayName = model.displayName;
+                this.name = model.name;
+                this.owner = model.owner;
+                this.resources = model.resources;
+                this.schema = model.schema;
+            } 
 
             /**
              * <p>The class in which the function was defined.</p>
@@ -322,6 +347,15 @@ public class ListFunctionsResponseBody extends TeaModel {
             private java.util.List<Functions> functions; 
             private String marker; 
             private Integer maxItem; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.functions = model.functions;
+                this.marker = model.marker;
+                this.maxItem = model.maxItem;
+            } 
 
             /**
              * <p>The information about each function.</p>

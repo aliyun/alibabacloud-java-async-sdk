@@ -45,7 +45,7 @@ public class UpdateTunnelQuotaTimerRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -169,6 +169,14 @@ public class UpdateTunnelQuotaTimerRequest extends Request {
             private Long elasticReservedSlotNum; 
             private Long slotNum; 
 
+            private Builder() {
+            } 
+
+            private Builder(TunnelQuotaParameter model) {
+                this.elasticReservedSlotNum = model.elasticReservedSlotNum;
+                this.slotNum = model.slotNum;
+            } 
+
             /**
              * <p>The number of elastically reserved slots.</p>
              * 
@@ -253,6 +261,15 @@ public class UpdateTunnelQuotaTimerRequest extends Request {
             private String beginTime; 
             private String endTime; 
             private TunnelQuotaParameter tunnelQuotaParameter; 
+
+            private Builder() {
+            } 
+
+            private Builder(UpdateTunnelQuotaTimerRequestBody model) {
+                this.beginTime = model.beginTime;
+                this.endTime = model.endTime;
+                this.tunnelQuotaParameter = model.tunnelQuotaParameter;
+            } 
 
             /**
              * <p>The start time of the time-specific configuration.</p>

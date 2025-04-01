@@ -36,6 +36,10 @@ public class CreateMmsFetchMetadataJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class CreateMmsFetchMetadataJobResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateMmsFetchMetadataJobResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * data.
@@ -107,6 +119,13 @@ public class CreateMmsFetchMetadataJobResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long scanId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.scanId = model.scanId;
+            } 
 
             /**
              * scanId.

@@ -48,6 +48,10 @@ public class ListStorageTablesInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -89,6 +93,17 @@ public class ListStorageTablesInfoResponseBody extends TeaModel {
         private String errorMsg; 
         private Integer httpCode; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListStorageTablesInfoResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMsg = model.errorMsg;
+            this.httpCode = model.httpCode;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -450,6 +465,35 @@ public class ListStorageTablesInfoResponseBody extends TeaModel {
             private Double totalStorage; 
             private Long totalStorageFileCount; 
             private String totalStorageUnit; 
+
+            private Builder() {
+            } 
+
+            private Builder(StorageTableInfoList model) {
+                this.date = model.date;
+                this.isPartitioned = model.isPartitioned;
+                this.lastAccessTime = model.lastAccessTime;
+                this.longTermStorage = model.longTermStorage;
+                this.longTermStorageFileCount = model.longTermStorageFileCount;
+                this.longTermStorageUnit = model.longTermStorageUnit;
+                this.lowFreqStorage = model.lowFreqStorage;
+                this.lowFreqStorageFileCount = model.lowFreqStorageFileCount;
+                this.lowFreqStorageUnit = model.lowFreqStorageUnit;
+                this.projectName = model.projectName;
+                this.rate = model.rate;
+                this.schemaName = model.schemaName;
+                this.standardStorage = model.standardStorage;
+                this.standardStorageFileCount = model.standardStorageFileCount;
+                this.standardStorageUnit = model.standardStorageUnit;
+                this.storageType = model.storageType;
+                this.tableName = model.tableName;
+                this.totalFrequency = model.totalFrequency;
+                this.totalInputAmount = model.totalInputAmount;
+                this.totalInputAmountUnit = model.totalInputAmountUnit;
+                this.totalStorage = model.totalStorage;
+                this.totalStorageFileCount = model.totalStorageFileCount;
+                this.totalStorageUnit = model.totalStorageUnit;
+            } 
 
             /**
              * <p>The date on which the statistics are collected. This value is not returned.</p>
@@ -816,6 +860,17 @@ public class ListStorageTablesInfoResponseBody extends TeaModel {
             private Long pageSize; 
             private java.util.List<StorageTableInfoList> storageTableInfoList; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.date = model.date;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.storageTableInfoList = model.storageTableInfoList;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The date on which the statistics are collected.</p>

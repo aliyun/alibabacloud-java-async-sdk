@@ -48,6 +48,10 @@ public class GetComputeQuotaScheduleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -89,6 +93,17 @@ public class GetComputeQuotaScheduleResponseBody extends TeaModel {
         private String errorMsg; 
         private Integer httpCode; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetComputeQuotaScheduleResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMsg = model.errorMsg;
+            this.httpCode = model.httpCode;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -187,6 +202,13 @@ public class GetComputeQuotaScheduleResponseBody extends TeaModel {
         public static final class Builder {
             private String at; 
 
+            private Builder() {
+            } 
+
+            private Builder(Condition model) {
+                this.at = model.at;
+            } 
+
             /**
              * <p>The start time when the quota plan takes effect.</p>
              * 
@@ -284,6 +306,17 @@ public class GetComputeQuotaScheduleResponseBody extends TeaModel {
             private String plan; 
             private String timezone; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.condition = model.condition;
+                this.id = model.id;
+                this.plan = model.plan;
+                this.timezone = model.timezone;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The value of effective condition.</p>

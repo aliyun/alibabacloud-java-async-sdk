@@ -45,7 +45,7 @@ public class UpdateProjectBasicMetaRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -184,6 +184,15 @@ public class UpdateProjectBasicMetaRequest extends Request {
             private Boolean enable; 
             private String key; 
 
+            private Builder() {
+            } 
+
+            private Builder(Encryption model) {
+                this.algorithm = model.algorithm;
+                this.enable = model.enable;
+                this.key = model.key;
+            } 
+
             /**
              * <p>The data encryption algorithm that is supported by the key. Valid values: AES256, AESCTR, and RC4.</p>
              * 
@@ -269,6 +278,14 @@ public class UpdateProjectBasicMetaRequest extends Request {
         public static final class Builder {
             private String type; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(TableLifecycle model) {
+                this.type = model.type;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The lifecycle type. Valid values:</p>
@@ -455,6 +472,23 @@ public class UpdateProjectBasicMetaRequest extends Request {
             private String timezone; 
             private String tunnelQuota; 
             private String typeSystem; 
+
+            private Builder() {
+            } 
+
+            private Builder(Properties model) {
+                this.allowFullScan = model.allowFullScan;
+                this.enableDecimal2 = model.enableDecimal2;
+                this.enableDr = model.enableDr;
+                this.enableTunnelQuotaRoute = model.enableTunnelQuotaRoute;
+                this.encryption = model.encryption;
+                this.retentionDays = model.retentionDays;
+                this.sqlMeteringMax = model.sqlMeteringMax;
+                this.tableLifecycle = model.tableLifecycle;
+                this.timezone = model.timezone;
+                this.tunnelQuota = model.tunnelQuota;
+                this.typeSystem = model.typeSystem;
+            } 
 
             /**
              * <p>Indicates whether a full table scan is allowed in the project. A full table scan occupies a large number of resources, which reduces data processing efficiency. By default, the full table scan feature is disabled.</p>

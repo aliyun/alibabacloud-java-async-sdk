@@ -48,6 +48,10 @@ public class ListJobMetricResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -89,6 +93,17 @@ public class ListJobMetricResponseBody extends TeaModel {
         private String errorMsg; 
         private Integer httpCode; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListJobMetricResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMsg = model.errorMsg;
+            this.httpCode = model.httpCode;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -199,6 +214,14 @@ public class ListJobMetricResponseBody extends TeaModel {
             private java.util.Map<String, String> metric; 
             private java.util.List<java.util.List<Double>> values; 
 
+            private Builder() {
+            } 
+
+            private Builder(Metrics model) {
+                this.metric = model.metric;
+                this.values = model.values;
+            } 
+
             /**
              * <p>Metric related information.</p>
              */
@@ -289,6 +312,16 @@ public class ListJobMetricResponseBody extends TeaModel {
             private java.util.List<Metrics> metrics; 
             private String name; 
             private Long period; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.category = model.category;
+                this.metrics = model.metrics;
+                this.name = model.name;
+                this.period = model.period;
+            } 
 
             /**
              * <p>The category of the metrics.</p>

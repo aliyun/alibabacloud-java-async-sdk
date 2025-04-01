@@ -48,6 +48,10 @@ public class ListJobSnapshotInfosResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -89,6 +93,17 @@ public class ListJobSnapshotInfosResponseBody extends TeaModel {
         private String errorMsg; 
         private Integer httpCode; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListJobSnapshotInfosResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMsg = model.errorMsg;
+            this.httpCode = model.httpCode;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned data.</p>
@@ -535,6 +550,42 @@ public class ListJobSnapshotInfosResponseBody extends TeaModel {
             private Long totalTime; 
             private Long waitingTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(JobInfoList model) {
+                this.cpuRequest = model.cpuRequest;
+                this.cpuUsage = model.cpuUsage;
+                this.cpuUsageToRequestRatio = model.cpuUsageToRequestRatio;
+                this.extNodeId = model.extNodeId;
+                this.extNodeOnDuty = model.extNodeOnDuty;
+                this.extPlantFrom = model.extPlantFrom;
+                this.instanceId = model.instanceId;
+                this.jobOwner = model.jobOwner;
+                this.jobType = model.jobType;
+                this.maxCpuPct = model.maxCpuPct;
+                this.maxMemoryPct = model.maxMemoryPct;
+                this.memoryRequest = model.memoryRequest;
+                this.memoryUsage = model.memoryUsage;
+                this.memoryUsageToRequestRatio = model.memoryUsageToRequestRatio;
+                this.minCpuPct = model.minCpuPct;
+                this.minMemoryPct = model.minMemoryPct;
+                this.priority = model.priority;
+                this.project = model.project;
+                this.quotaNickname = model.quotaNickname;
+                this.quotaType = model.quotaType;
+                this.region = model.region;
+                this.runningAtTime = model.runningAtTime;
+                this.runningTime = model.runningTime;
+                this.signature = model.signature;
+                this.snapshotTime = model.snapshotTime;
+                this.status = model.status;
+                this.submittedAtTime = model.submittedAtTime;
+                this.tenantId = model.tenantId;
+                this.totalTime = model.totalTime;
+                this.waitingTime = model.waitingTime;
+            } 
+
             /**
              * <p>The CPU request amount of the job at the snapshot time point. Unit: Core.</p>
              * 
@@ -945,6 +996,16 @@ public class ListJobSnapshotInfosResponseBody extends TeaModel {
             private Long pageNumber; 
             private Long pageSize; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.jobInfoList = model.jobInfoList;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The job snapshots.</p>

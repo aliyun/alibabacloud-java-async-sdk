@@ -48,6 +48,10 @@ public class GetRoleAclResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -89,6 +93,17 @@ public class GetRoleAclResponseBody extends TeaModel {
         private String errorMsg; 
         private Integer httpCode; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetRoleAclResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMsg = model.errorMsg;
+            this.httpCode = model.httpCode;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned data.</p>
@@ -204,6 +219,15 @@ public class GetRoleAclResponseBody extends TeaModel {
             private String name; 
             private String schemaName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Function model) {
+                this.actions = model.actions;
+                this.name = model.name;
+                this.schemaName = model.schemaName;
+            } 
+
             /**
              * <p>The operations that were performed on the function.</p>
              */
@@ -296,6 +320,15 @@ public class GetRoleAclResponseBody extends TeaModel {
             private java.util.List<String> actions; 
             private String name; 
             private String schemaName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Instance model) {
+                this.actions = model.actions;
+                this.name = model.name;
+                this.schemaName = model.schemaName;
+            } 
 
             /**
              * <p>The operations that were performed on the instance.</p>
@@ -390,6 +423,15 @@ public class GetRoleAclResponseBody extends TeaModel {
             private String name; 
             private String schemaName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Package model) {
+                this.actions = model.actions;
+                this.name = model.name;
+                this.schemaName = model.schemaName;
+            } 
+
             /**
              * <p>The operations that were performed on the package.</p>
              */
@@ -482,6 +524,15 @@ public class GetRoleAclResponseBody extends TeaModel {
             private java.util.List<String> actions; 
             private String name; 
             private String schemaName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Project model) {
+                this.actions = model.actions;
+                this.name = model.name;
+                this.schemaName = model.schemaName;
+            } 
 
             /**
              * <p>The operations that were performed on the project.</p>
@@ -576,6 +627,15 @@ public class GetRoleAclResponseBody extends TeaModel {
             private String name; 
             private String schemaName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Resource model) {
+                this.actions = model.actions;
+                this.name = model.name;
+                this.schemaName = model.schemaName;
+            } 
+
             /**
              * <p>The operations that were performed on the resource.</p>
              */
@@ -668,6 +728,15 @@ public class GetRoleAclResponseBody extends TeaModel {
             private java.util.List<String> actions; 
             private String name; 
             private String schemaName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Table model) {
+                this.actions = model.actions;
+                this.name = model.name;
+                this.schemaName = model.schemaName;
+            } 
 
             /**
              * <p>The operations that were performed on the table.</p>
@@ -797,6 +866,18 @@ public class GetRoleAclResponseBody extends TeaModel {
             private java.util.List<Project> project; 
             private java.util.List<Resource> resource; 
             private java.util.List<Table> table; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.function = model.function;
+                this.instance = model.instance;
+                this._package = model._package;
+                this.project = model.project;
+                this.resource = model.resource;
+                this.table = model.table;
+            } 
 
             /**
              * <p>The function.</p>

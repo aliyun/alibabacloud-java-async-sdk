@@ -48,6 +48,10 @@ public class ListStoragePartitionsInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -89,6 +93,17 @@ public class ListStoragePartitionsInfoResponseBody extends TeaModel {
         private String errorMsg; 
         private Integer httpCode; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListStoragePartitionsInfoResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMsg = model.errorMsg;
+            this.httpCode = model.httpCode;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -354,6 +369,27 @@ public class ListStoragePartitionsInfoResponseBody extends TeaModel {
             private Double totalInputAmount; 
             private String totalInputAmountUnit; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(StoragePartitionInfoList model) {
+                this.fileCount = model.fileCount;
+                this.fileSize = model.fileSize;
+                this.fileSizeUnit = model.fileSizeUnit;
+                this.isPartitioned = model.isPartitioned;
+                this.lastAccessTime = model.lastAccessTime;
+                this.partition = model.partition;
+                this.projectName = model.projectName;
+                this.rate = model.rate;
+                this.schemaName = model.schemaName;
+                this.storageType = model.storageType;
+                this.tableName = model.tableName;
+                this.totalFrequency = model.totalFrequency;
+                this.totalInputAmount = model.totalInputAmount;
+                this.totalInputAmountUnit = model.totalInputAmountUnit;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The number of files.</p>
@@ -631,6 +667,17 @@ public class ListStoragePartitionsInfoResponseBody extends TeaModel {
             private Long pageSize; 
             private java.util.List<StoragePartitionInfoList> storagePartitionInfoList; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.date = model.date;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.storagePartitionInfoList = model.storagePartitionInfoList;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The date on which the statistics are collected.</p>

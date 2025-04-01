@@ -48,6 +48,10 @@ public class GetQuotaUsageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -89,6 +93,17 @@ public class GetQuotaUsageResponseBody extends TeaModel {
         private String errorMsg; 
         private Integer httpCode; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetQuotaUsageResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMsg = model.errorMsg;
+            this.httpCode = model.httpCode;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -211,6 +226,15 @@ public class GetQuotaUsageResponseBody extends TeaModel {
             private String type; 
             private java.util.List<String> yAxis; 
 
+            private Builder() {
+            } 
+
+            private Builder(Plot model) {
+                this.title = model.title;
+                this.type = model.type;
+                this.yAxis = model.yAxis;
+            } 
+
             /**
              * <p>The title of the chart.</p>
              * 
@@ -291,6 +315,14 @@ public class GetQuotaUsageResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.Map<String, ?> metrics; 
             private java.util.List<Plot> plot; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.metrics = model.metrics;
+                this.plot = model.plot;
+            } 
 
             /**
              * <p>The metric results.</p>

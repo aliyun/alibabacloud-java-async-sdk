@@ -48,6 +48,10 @@ public class ListComputeQuotaPlanResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -89,6 +93,17 @@ public class ListComputeQuotaPlanResponseBody extends TeaModel {
         private String errorMsg; 
         private Integer httpCode; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListComputeQuotaPlanResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMsg = model.errorMsg;
+            this.httpCode = model.httpCode;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -211,6 +226,15 @@ public class ListComputeQuotaPlanResponseBody extends TeaModel {
             private Long maxCU; 
             private Long minCU; 
 
+            private Builder() {
+            } 
+
+            private Builder(Parameter model) {
+                this.elasticReservedCU = model.elasticReservedCU;
+                this.maxCU = model.maxCU;
+                this.minCU = model.minCU;
+            } 
+
             /**
              * elasticReservedCU.
              */
@@ -297,6 +321,15 @@ public class ListComputeQuotaPlanResponseBody extends TeaModel {
             private Long elasticReservedCU; 
             private Long maxCU; 
             private Long minCU; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubQuotaInfoListParameter model) {
+                this.elasticReservedCU = model.elasticReservedCU;
+                this.maxCU = model.maxCU;
+                this.minCU = model.minCU;
+            } 
 
             /**
              * elasticReservedCU.
@@ -492,6 +525,24 @@ public class ListComputeQuotaPlanResponseBody extends TeaModel {
             private String tenantId; 
             private String type; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubQuotaInfoList model) {
+                this.cluster = model.cluster;
+                this.createTime = model.createTime;
+                this.creatorId = model.creatorId;
+                this.id = model.id;
+                this.name = model.name;
+                this.nickName = model.nickName;
+                this.parameter = model.parameter;
+                this.regionId = model.regionId;
+                this.status = model.status;
+                this.tenantId = model.tenantId;
+                this.type = model.type;
+                this.version = model.version;
+            } 
 
             /**
              * <p>Cluster ID.</p>
@@ -816,6 +867,25 @@ public class ListComputeQuotaPlanResponseBody extends TeaModel {
             private String type; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(Quota model) {
+                this.cluster = model.cluster;
+                this.createTime = model.createTime;
+                this.creatorId = model.creatorId;
+                this.id = model.id;
+                this.name = model.name;
+                this.nickName = model.nickName;
+                this.parameter = model.parameter;
+                this.regionId = model.regionId;
+                this.status = model.status;
+                this.subQuotaInfoList = model.subQuotaInfoList;
+                this.tenantId = model.tenantId;
+                this.type = model.type;
+                this.version = model.version;
+            } 
+
             /**
              * <p>Cluster ID.</p>
              * 
@@ -1027,6 +1097,15 @@ public class ListComputeQuotaPlanResponseBody extends TeaModel {
             private String name; 
             private Quota quota; 
 
+            private Builder() {
+            } 
+
+            private Builder(PlanList model) {
+                this.createTime = model.createTime;
+                this.name = model.name;
+                this.quota = model.quota;
+            } 
+
             /**
              * <p>The time when the quota plan was created.</p>
              * 
@@ -1095,6 +1174,13 @@ public class ListComputeQuotaPlanResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<PlanList> planList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.planList = model.planList;
+            } 
 
             /**
              * <p>The list of quota plan.</p>

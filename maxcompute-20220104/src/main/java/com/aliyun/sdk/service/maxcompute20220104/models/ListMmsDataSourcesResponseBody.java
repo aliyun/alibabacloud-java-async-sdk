@@ -36,6 +36,10 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListMmsDataSourcesResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * data.
@@ -215,6 +227,22 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             private String subType; 
             private String type; 
             private Object value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Config model) {
+                this.desc = model.desc;
+                this.enums = model.enums;
+                this.group = model.group;
+                this.key = model.key;
+                this.name = model.name;
+                this.placeHolder = model.placeHolder;
+                this.required = model.required;
+                this.subType = model.subType;
+                this.type = model.type;
+                this.value = model.value;
+            } 
 
             /**
              * desc.
@@ -587,6 +615,34 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             private Integer tablesPartDoneNum; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(ObjectList model) {
+                this.agentIsOnline = model.agentIsOnline;
+                this.config = model.config;
+                this.createTime = model.createTime;
+                this.dbNum = model.dbNum;
+                this.errMsg = model.errMsg;
+                this.id = model.id;
+                this.lastUpdateTime = model.lastUpdateTime;
+                this.name = model.name;
+                this.networklink = model.networklink;
+                this.partitionNum = model.partitionNum;
+                this.partitionsDoingNum = model.partitionsDoingNum;
+                this.partitionsDoneNum = model.partitionsDoneNum;
+                this.partitionsFailedNum = model.partitionsFailedNum;
+                this.region = model.region;
+                this.scanId = model.scanId;
+                this.status = model.status;
+                this.tableNum = model.tableNum;
+                this.tablesDoingNum = model.tablesDoingNum;
+                this.tablesDoneNum = model.tablesDoneNum;
+                this.tablesFailedNum = model.tablesFailedNum;
+                this.tablesPartDoneNum = model.tablesPartDoneNum;
+                this.type = model.type;
+            } 
+
             /**
              * agentIsOnline.
              */
@@ -837,6 +893,16 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             private Integer pageNum; 
             private Integer pageSize; 
             private Integer total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.objectList = model.objectList;
+                this.pageNum = model.pageNum;
+                this.pageSize = model.pageSize;
+                this.total = model.total;
+            } 
 
             /**
              * objectList.

@@ -36,6 +36,10 @@ public class GetMmsAsyncTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetMmsAsyncTaskResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMmsAsyncTaskResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * data.
@@ -239,6 +251,24 @@ public class GetMmsAsyncTaskResponseBody extends TeaModel {
             private String startTime; 
             private String status; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.createTime = model.createTime;
+                this.endTime = model.endTime;
+                this.errorMsg = model.errorMsg;
+                this.id = model.id;
+                this.objectId = model.objectId;
+                this.progress = model.progress;
+                this.result = model.result;
+                this.running = model.running;
+                this.sourceId = model.sourceId;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.type = model.type;
+            } 
 
             /**
              * createTime.

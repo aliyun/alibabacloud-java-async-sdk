@@ -48,6 +48,10 @@ public class GetProjectResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -89,6 +93,17 @@ public class GetProjectResponseBody extends TeaModel {
         private String errorMsg; 
         private Integer httpCode; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetProjectResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMsg = model.errorMsg;
+            this.httpCode = model.httpCode;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -199,6 +214,14 @@ public class GetProjectResponseBody extends TeaModel {
             private String ipList; 
             private String vpcIpList; 
 
+            private Builder() {
+            } 
+
+            private Builder(IpWhiteList model) {
+                this.ipList = model.ipList;
+                this.vpcIpList = model.vpcIpList;
+            } 
+
             /**
              * <p>The IP address whitelist for access over the Internet or the network for interconnecting with other Alibaba Cloud services.</p>
              * <blockquote>
@@ -290,6 +313,15 @@ public class GetProjectResponseBody extends TeaModel {
             private Boolean enable; 
             private String key; 
 
+            private Builder() {
+            } 
+
+            private Builder(Encryption model) {
+                this.algorithm = model.algorithm;
+                this.enable = model.enable;
+                this.key = model.key;
+            } 
+
             /**
              * <p>The data encryption algorithm that is supported by the key. Valid values: AES256, AESCTR, and RC4.</p>
              * 
@@ -362,6 +394,13 @@ public class GetProjectResponseBody extends TeaModel {
 
         public static final class Builder {
             private String isExternalCatalogBound; 
+
+            private Builder() {
+            } 
+
+            private Builder(ExternalProjectProperties model) {
+                this.isExternalCatalogBound = model.isExternalCatalogBound;
+            } 
 
             /**
              * <p>Indicates whether the external project is an external project for <a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/lake-warehouse-integrated-2-0-use-guide">data lakehouse solution 2.0</a>.</p>
@@ -436,6 +475,15 @@ public class GetProjectResponseBody extends TeaModel {
             private Long longTermSize; 
             private Long lowFrequencySize; 
             private Long standardSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(StorageTierSize model) {
+                this.longTermSize = model.longTermSize;
+                this.lowFrequencySize = model.lowFrequencySize;
+                this.standardSize = model.standardSize;
+            } 
 
             /**
              * <p>The storage usage at the long-term storage tier.</p>
@@ -533,6 +581,15 @@ public class GetProjectResponseBody extends TeaModel {
             private Long projectTotalSize; 
             private StorageTierSize storageTierSize; 
 
+            private Builder() {
+            } 
+
+            private Builder(StorageTierInfo model) {
+                this.projectBackupSize = model.projectBackupSize;
+                this.projectTotalSize = model.projectTotalSize;
+                this.storageTierSize = model.storageTierSize;
+            } 
+
             /**
              * <p>The backup storage usage.</p>
              * 
@@ -613,6 +670,14 @@ public class GetProjectResponseBody extends TeaModel {
         public static final class Builder {
             private String type; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(TableLifecycle model) {
+                this.type = model.type;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The lifecycle type. Valid values:</p>
@@ -703,6 +768,15 @@ public class GetProjectResponseBody extends TeaModel {
             private Long daysAfterLastAccessGreaterThan; 
             private Long daysAfterLastModificationGreaterThan; 
             private Long daysAfterLastTierModificationGreaterThan; 
+
+            private Builder() {
+            } 
+
+            private Builder(TierToLongterm model) {
+                this.daysAfterLastAccessGreaterThan = model.daysAfterLastAccessGreaterThan;
+                this.daysAfterLastModificationGreaterThan = model.daysAfterLastModificationGreaterThan;
+                this.daysAfterLastTierModificationGreaterThan = model.daysAfterLastTierModificationGreaterThan;
+            } 
 
             /**
              * <p>The system triggers an automatic storage tier change N days after the last access time of data. N is specified by this parameter and corresponds to <code>LastAccessTime</code> that is configured for the table or partition.</p>
@@ -809,6 +883,15 @@ public class GetProjectResponseBody extends TeaModel {
             private Long daysAfterLastModificationGreaterThan; 
             private Long daysAfterLastTierModificationGreaterThan; 
 
+            private Builder() {
+            } 
+
+            private Builder(TierToLowFrequency model) {
+                this.daysAfterLastAccessGreaterThan = model.daysAfterLastAccessGreaterThan;
+                this.daysAfterLastModificationGreaterThan = model.daysAfterLastModificationGreaterThan;
+                this.daysAfterLastTierModificationGreaterThan = model.daysAfterLastTierModificationGreaterThan;
+            } 
+
             /**
              * <p>The system triggers an automatic storage tier change N days after the last access time of data. N is specified by this parameter and corresponds to <code>LastAccessTime</code> that is configured for the table or partition.</p>
              * <blockquote>
@@ -901,6 +984,14 @@ public class GetProjectResponseBody extends TeaModel {
         public static final class Builder {
             private TierToLongterm tierToLongterm; 
             private TierToLowFrequency tierToLowFrequency; 
+
+            private Builder() {
+            } 
+
+            private Builder(TableLifecycleConfig model) {
+                this.tierToLongterm = model.tierToLongterm;
+                this.tierToLowFrequency = model.tierToLowFrequency;
+            } 
 
             /**
              * <p>The information about the long-term storage tier.</p>
@@ -1185,6 +1276,32 @@ public class GetProjectResponseBody extends TeaModel {
             private String tunnelQuota; 
             private String typeSystem; 
 
+            private Builder() {
+            } 
+
+            private Builder(Properties model) {
+                this.allowFullScan = model.allowFullScan;
+                this.autoMvQuotaGb = model.autoMvQuotaGb;
+                this.elderTunnelQuota = model.elderTunnelQuota;
+                this.enableAutoMv = model.enableAutoMv;
+                this.enableDecimal2 = model.enableDecimal2;
+                this.enableDr = model.enableDr;
+                this.enableFdcCacheForce = model.enableFdcCacheForce;
+                this.enableTieredStorage = model.enableTieredStorage;
+                this.enableTunnelQuotaRoute = model.enableTunnelQuotaRoute;
+                this.encryption = model.encryption;
+                this.externalProjectProperties = model.externalProjectProperties;
+                this.fdcQuota = model.fdcQuota;
+                this.retentionDays = model.retentionDays;
+                this.sqlMeteringMax = model.sqlMeteringMax;
+                this.storageTierInfo = model.storageTierInfo;
+                this.tableLifecycle = model.tableLifecycle;
+                this.tableLifecycleConfig = model.tableLifecycleConfig;
+                this.timezone = model.timezone;
+                this.tunnelQuota = model.tunnelQuota;
+                this.typeSystem = model.typeSystem;
+            } 
+
             /**
              * <p>Indicates whether a full table scan is allowed in the project. A full table scan occupies a large number of resources, which reduces data processing efficiency. By default, the full table scan feature is disabled.</p>
              * 
@@ -1446,6 +1563,14 @@ public class GetProjectResponseBody extends TeaModel {
             private String resourceId; 
             private String resourceType; 
 
+            private Builder() {
+            } 
+
+            private Builder(SaleTag model) {
+                this.resourceId = model.resourceId;
+                this.resourceType = model.resourceType;
+            } 
+
             /**
              * <p>The instance ID of the default computing quota.</p>
              * 
@@ -1518,6 +1643,14 @@ public class GetProjectResponseBody extends TeaModel {
         public static final class Builder {
             private String exceptionPolicy; 
             private Boolean _protected; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProjectProtection model) {
+                this.exceptionPolicy = model.exceptionPolicy;
+                this._protected = model._protected;
+            } 
 
             /**
              * <p>If you enable the project data protection mechanism, you can configure exception or trusted projects. This allows specified users to transfer data of a specified object to a specified project. The project data protection mechanism does not take effect in all the situations that are specified in the exception policy.</p>
@@ -1665,6 +1798,19 @@ public class GetProjectResponseBody extends TeaModel {
             private ProjectProtection projectProtection; 
             private Boolean usingAcl; 
             private Boolean usingPolicy; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecurityProperties model) {
+                this.enableDownloadPrivilege = model.enableDownloadPrivilege;
+                this.labelSecurity = model.labelSecurity;
+                this.objectCreatorHasAccessPermission = model.objectCreatorHasAccessPermission;
+                this.objectCreatorHasGrantPermission = model.objectCreatorHasGrantPermission;
+                this.projectProtection = model.projectProtection;
+                this.usingAcl = model.usingAcl;
+                this.usingPolicy = model.usingPolicy;
+            } 
 
             /**
              * <p>Indicates whether the <a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/label-based-access-control">download control</a> feature is enabled. By default, this feature is disabled.</p>
@@ -1958,6 +2104,28 @@ public class GetProjectResponseBody extends TeaModel {
             private java.util.List<String> superAdmins; 
             private Boolean threeTierModel; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.comment = model.comment;
+                this.costStorage = model.costStorage;
+                this.createdTime = model.createdTime;
+                this.defaultQuota = model.defaultQuota;
+                this.ipWhiteList = model.ipWhiteList;
+                this.name = model.name;
+                this.owner = model.owner;
+                this.productType = model.productType;
+                this.properties = model.properties;
+                this.regionId = model.regionId;
+                this.saleTag = model.saleTag;
+                this.securityProperties = model.securityProperties;
+                this.status = model.status;
+                this.superAdmins = model.superAdmins;
+                this.threeTierModel = model.threeTierModel;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The project description.</p>
