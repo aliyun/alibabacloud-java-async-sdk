@@ -816,6 +816,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of UpdateDocumentChunk  UpdateDocumentChunkRequest
+     * @return UpdateDocumentChunkResponse
+     */
+    @Override
+    public CompletableFuture<UpdateDocumentChunkResponse> updateDocumentChunk(UpdateDocumentChunkRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateDocumentChunk").setMethod(HttpMethod.PUT).setPathRegex("/{workspaceId}/api/library/updateDocumentChunk").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateDocumentChunkResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateDocumentChunkResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of UpdateLibrary  UpdateLibraryRequest
      * @return UpdateLibraryResponse
      */

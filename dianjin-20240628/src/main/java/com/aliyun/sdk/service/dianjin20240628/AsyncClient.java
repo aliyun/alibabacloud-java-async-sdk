@@ -270,6 +270,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateDocumentResponse> updateDocument(UpdateDocumentRequest request);
 
     /**
+     * @param request the request parameters of UpdateDocumentChunk  UpdateDocumentChunkRequest
+     * @return UpdateDocumentChunkResponse
+     */
+    CompletableFuture<UpdateDocumentChunkResponse> updateDocumentChunk(UpdateDocumentChunkRequest request);
+
+    /**
      * @param request the request parameters of UpdateLibrary  UpdateLibraryRequest
      * @return UpdateLibraryResponse
      */
