@@ -76,6 +76,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateArtifact  CreateArtifactRequest
+     * @return CreateArtifactResponse
+     */
+    @Override
+    public CompletableFuture<CreateArtifactResponse> createArtifact(CreateArtifactRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateArtifact").setMethod(HttpMethod.POST).setPathRegex("/2023-07-14/artifacts").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateArtifactResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateArtifactResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateEnvironment  CreateEnvironmentRequest
      * @return CreateEnvironmentResponse
      */
@@ -148,6 +166,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeleteArtifact  DeleteArtifactRequest
+     * @return DeleteArtifactResponse
+     */
+    @Override
+    public CompletableFuture<DeleteArtifactResponse> deleteArtifact(DeleteArtifactRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteArtifact").setMethod(HttpMethod.DELETE).setPathRegex("/2023-07-14/artifacts/{name}").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteArtifactResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteArtifactResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DeleteEnvironment  DeleteEnvironmentRequest
      * @return DeleteEnvironmentResponse
      */
@@ -196,6 +232,60 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeployEnvironmentResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of FetchArtifactDownloadUrl  FetchArtifactDownloadUrlRequest
+     * @return FetchArtifactDownloadUrlResponse
+     */
+    @Override
+    public CompletableFuture<FetchArtifactDownloadUrlResponse> fetchArtifactDownloadUrl(FetchArtifactDownloadUrlRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("FetchArtifactDownloadUrl").setMethod(HttpMethod.GET).setPathRegex("/2023-07-14/artifacts/{name}/fetchCode").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(FetchArtifactDownloadUrlResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<FetchArtifactDownloadUrlResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of FetchArtifactTempBucketToken  FetchArtifactTempBucketTokenRequest
+     * @return FetchArtifactTempBucketTokenResponse
+     */
+    @Override
+    public CompletableFuture<FetchArtifactTempBucketTokenResponse> fetchArtifactTempBucketToken(FetchArtifactTempBucketTokenRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("FetchArtifactTempBucketToken").setMethod(HttpMethod.GET).setPathRegex("/2023-07-14/artifacts/action/fetchTempBucketToken").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(FetchArtifactTempBucketTokenResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<FetchArtifactTempBucketTokenResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetArtifact  GetArtifactRequest
+     * @return GetArtifactResponse
+     */
+    @Override
+    public CompletableFuture<GetArtifactResponse> getArtifact(GetArtifactRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetArtifact").setMethod(HttpMethod.GET).setPathRegex("/2023-07-14/artifacts/{name}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetArtifactResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetArtifactResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -292,6 +382,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetServiceDeployment  GetServiceDeploymentRequest
+     * @return GetServiceDeploymentResponse
+     */
+    @Override
+    public CompletableFuture<GetServiceDeploymentResponse> getServiceDeployment(GetServiceDeploymentRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetServiceDeployment").setMethod(HttpMethod.GET).setPathRegex("/2023-07-14/servicedeployments/{name}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetServiceDeploymentResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetServiceDeploymentResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetTask  GetTaskRequest
      * @return GetTaskResponse
      */
@@ -364,6 +472,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListServiceDeployments  ListServiceDeploymentsRequest
+     * @return ListServiceDeploymentsResponse
+     */
+    @Override
+    public CompletableFuture<ListServiceDeploymentsResponse> listServiceDeployments(ListServiceDeploymentsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListServiceDeployments").setMethod(HttpMethod.GET).setPathRegex("/2023-07-14/servicedeployments").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListServiceDeploymentsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListServiceDeploymentsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListTasks  ListTasksRequest
      * @return ListTasksResponse
      */
@@ -376,6 +502,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListTasksResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of PreviewEnvironment  PreviewEnvironmentRequest
+     * @return PreviewEnvironmentResponse
+     */
+    @Override
+    public CompletableFuture<PreviewEnvironmentResponse> previewEnvironment(PreviewEnvironmentRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("PreviewEnvironment").setMethod(HttpMethod.GET).setPathRegex("/2023-07-14/projects/{projectName}/environments/{name}/preview").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(PreviewEnvironmentResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<PreviewEnvironmentResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of PutArtifact  PutArtifactRequest
+     * @return PutArtifactResponse
+     */
+    @Override
+    public CompletableFuture<PutArtifactResponse> putArtifact(PutArtifactRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("PutArtifact").setMethod(HttpMethod.PUT).setPathRegex("/2023-07-14/artifacts/{name}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(PutArtifactResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<PutArtifactResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -412,6 +574,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<PutTaskStatusResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of RenderServicesByTemplate  RenderServicesByTemplateRequest
+     * @return RenderServicesByTemplateResponse
+     */
+    @Override
+    public CompletableFuture<RenderServicesByTemplateResponse> renderServicesByTemplate(RenderServicesByTemplateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RenderServicesByTemplate").setMethod(HttpMethod.POST).setPathRegex("/2023-07-14/templates/action/renderServices").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RenderServicesByTemplateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RenderServicesByTemplateResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

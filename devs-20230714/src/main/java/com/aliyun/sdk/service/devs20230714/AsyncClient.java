@@ -32,6 +32,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CancelTaskResponse> cancelTask(CancelTaskRequest request);
 
     /**
+     * @param request the request parameters of CreateArtifact  CreateArtifactRequest
+     * @return CreateArtifactResponse
+     */
+    CompletableFuture<CreateArtifactResponse> createArtifact(CreateArtifactRequest request);
+
+    /**
      * @param request the request parameters of CreateEnvironment  CreateEnvironmentRequest
      * @return CreateEnvironmentResponse
      */
@@ -56,6 +62,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateTaskResponse> createTask(CreateTaskRequest request);
 
     /**
+     * @param request the request parameters of DeleteArtifact  DeleteArtifactRequest
+     * @return DeleteArtifactResponse
+     */
+    CompletableFuture<DeleteArtifactResponse> deleteArtifact(DeleteArtifactRequest request);
+
+    /**
      * @param request the request parameters of DeleteEnvironment  DeleteEnvironmentRequest
      * @return DeleteEnvironmentResponse
      */
@@ -72,6 +84,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeployEnvironmentResponse
      */
     CompletableFuture<DeployEnvironmentResponse> deployEnvironment(DeployEnvironmentRequest request);
+
+    /**
+     * @param request the request parameters of FetchArtifactDownloadUrl  FetchArtifactDownloadUrlRequest
+     * @return FetchArtifactDownloadUrlResponse
+     */
+    CompletableFuture<FetchArtifactDownloadUrlResponse> fetchArtifactDownloadUrl(FetchArtifactDownloadUrlRequest request);
+
+    /**
+     * @param request the request parameters of FetchArtifactTempBucketToken  FetchArtifactTempBucketTokenRequest
+     * @return FetchArtifactTempBucketTokenResponse
+     */
+    CompletableFuture<FetchArtifactTempBucketTokenResponse> fetchArtifactTempBucketToken(FetchArtifactTempBucketTokenRequest request);
+
+    /**
+     * @param request the request parameters of GetArtifact  GetArtifactRequest
+     * @return GetArtifactResponse
+     */
+    CompletableFuture<GetArtifactResponse> getArtifact(GetArtifactRequest request);
 
     /**
      * @param request the request parameters of GetEnvironment  GetEnvironmentRequest
@@ -104,6 +134,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetRepositoryResponse> getRepository(GetRepositoryRequest request);
 
     /**
+     * @param request the request parameters of GetServiceDeployment  GetServiceDeploymentRequest
+     * @return GetServiceDeploymentResponse
+     */
+    CompletableFuture<GetServiceDeploymentResponse> getServiceDeployment(GetServiceDeploymentRequest request);
+
+    /**
      * @param request the request parameters of GetTask  GetTaskRequest
      * @return GetTaskResponse
      */
@@ -128,10 +164,28 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListProjectsResponse> listProjects(ListProjectsRequest request);
 
     /**
+     * @param request the request parameters of ListServiceDeployments  ListServiceDeploymentsRequest
+     * @return ListServiceDeploymentsResponse
+     */
+    CompletableFuture<ListServiceDeploymentsResponse> listServiceDeployments(ListServiceDeploymentsRequest request);
+
+    /**
      * @param request the request parameters of ListTasks  ListTasksRequest
      * @return ListTasksResponse
      */
     CompletableFuture<ListTasksResponse> listTasks(ListTasksRequest request);
+
+    /**
+     * @param request the request parameters of PreviewEnvironment  PreviewEnvironmentRequest
+     * @return PreviewEnvironmentResponse
+     */
+    CompletableFuture<PreviewEnvironmentResponse> previewEnvironment(PreviewEnvironmentRequest request);
+
+    /**
+     * @param request the request parameters of PutArtifact  PutArtifactRequest
+     * @return PutArtifactResponse
+     */
+    CompletableFuture<PutArtifactResponse> putArtifact(PutArtifactRequest request);
 
     /**
      * @param request the request parameters of PutPipelineStatus  PutPipelineStatusRequest
@@ -144,6 +198,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return PutTaskStatusResponse
      */
     CompletableFuture<PutTaskStatusResponse> putTaskStatus(PutTaskStatusRequest request);
+
+    /**
+     * @param request the request parameters of RenderServicesByTemplate  RenderServicesByTemplateRequest
+     * @return RenderServicesByTemplateResponse
+     */
+    CompletableFuture<RenderServicesByTemplateResponse> renderServicesByTemplate(RenderServicesByTemplateRequest request);
 
     /**
      * @param request the request parameters of ResumeTask  ResumeTaskRequest
