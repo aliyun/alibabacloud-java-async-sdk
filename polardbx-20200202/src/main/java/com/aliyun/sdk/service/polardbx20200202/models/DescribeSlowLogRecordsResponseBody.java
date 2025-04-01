@@ -52,6 +52,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBInstanceId
      */
@@ -101,6 +105,18 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         private String pageRecordCount; 
         private String requestId; 
         private String totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSlowLogRecordsResponseBody model) {
+            this.DBInstanceId = model.DBInstanceId;
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageRecordCount = model.pageRecordCount;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * DBInstanceId.
@@ -226,6 +242,9 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SqlType")
         private String sqlType;
 
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
+        private String templateId;
+
         @com.aliyun.core.annotation.NameInMap("TooLong")
         private String tooLong;
 
@@ -262,6 +281,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             this.SQLHash = builder.SQLHash;
             this.SQLText = builder.SQLText;
             this.sqlType = builder.sqlType;
+            this.templateId = builder.templateId;
             this.tooLong = builder.tooLong;
             this.traceId = builder.traceId;
             this.transactionPolicy = builder.transactionPolicy;
@@ -418,6 +438,13 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         }
 
         /**
+         * @return templateId
+         */
+        public String getTemplateId() {
+            return this.templateId;
+        }
+
+        /**
          * @return tooLong
          */
         public String getTooLong() {
@@ -473,11 +500,44 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             private String SQLHash; 
             private String SQLText; 
             private String sqlType; 
+            private String templateId; 
             private String tooLong; 
             private String traceId; 
             private String transactionPolicy; 
             private String trxId; 
             private String wt; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.cNname = model.cNname;
+                this.DBName = model.DBName;
+                this.extension = model.extension;
+                this.fail = model.fail;
+                this.frows = model.frows;
+                this.hostAddress = model.hostAddress;
+                this.insName = model.insName;
+                this.isBind = model.isBind;
+                this.lockTimeMS = model.lockTimeMS;
+                this.params = model.params;
+                this.parseRowCounts = model.parseRowCounts;
+                this.queryStartTime = model.queryStartTime;
+                this.queryTime = model.queryTime;
+                this.queryTimeMS = model.queryTimeMS;
+                this.returnRowCounts = model.returnRowCounts;
+                this.rows = model.rows;
+                this.SCNT = model.SCNT;
+                this.SQLHash = model.SQLHash;
+                this.SQLText = model.SQLText;
+                this.sqlType = model.sqlType;
+                this.templateId = model.templateId;
+                this.tooLong = model.tooLong;
+                this.traceId = model.traceId;
+                this.transactionPolicy = model.transactionPolicy;
+                this.trxId = model.trxId;
+                this.wt = model.wt;
+            } 
 
             /**
              * CNname.
@@ -636,6 +696,14 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
              */
             public Builder sqlType(String sqlType) {
                 this.sqlType = sqlType;
+                return this;
+            }
+
+            /**
+             * TemplateId.
+             */
+            public Builder templateId(String templateId) {
+                this.templateId = templateId;
                 return this;
             }
 

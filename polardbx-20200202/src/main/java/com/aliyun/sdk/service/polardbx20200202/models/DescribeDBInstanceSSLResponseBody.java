@@ -36,6 +36,10 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBInstanceSSLResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Data.
@@ -131,6 +143,15 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
             private String certCommonName; 
             private Boolean SSLEnabled; 
             private String SSLExpiredTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.certCommonName = model.certCommonName;
+                this.SSLEnabled = model.SSLEnabled;
+                this.SSLExpiredTime = model.SSLExpiredTime;
+            } 
 
             /**
              * CertCommonName.

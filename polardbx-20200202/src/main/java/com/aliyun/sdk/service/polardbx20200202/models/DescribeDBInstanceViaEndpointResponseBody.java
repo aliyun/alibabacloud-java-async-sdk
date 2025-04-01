@@ -36,6 +36,10 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBInstance
      */
@@ -53,6 +57,14 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
     public static final class Builder {
         private DBInstance DBInstance; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBInstanceViaEndpointResponseBody model) {
+            this.DBInstance = model.DBInstance;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * DBInstance.
@@ -167,6 +179,18 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
             private String VPCId; 
             private String vSwitchId; 
             private String vpcInstanceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConnAddrs model) {
+                this.connectionString = model.connectionString;
+                this.port = model.port;
+                this.type = model.type;
+                this.VPCId = model.VPCId;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcInstanceId = model.vpcInstanceId;
+            } 
 
             /**
              * ConnectionString.
@@ -318,6 +342,18 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
             private String regionId; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(DBNodes model) {
+                this.computeNodeId = model.computeNodeId;
+                this.dataNodeId = model.dataNodeId;
+                this.id = model.id;
+                this.nodeClass = model.nodeClass;
+                this.regionId = model.regionId;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
              * ComputeNodeId.
              */
@@ -416,6 +452,14 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(TagSet model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * Key.
@@ -964,6 +1008,54 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
             private String VPCId; 
             private String vSwitchId; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DBInstance model) {
+                this.cnNodeClassCode = model.cnNodeClassCode;
+                this.cnNodeCount = model.cnNodeCount;
+                this.commodityCode = model.commodityCode;
+                this.connAddrs = model.connAddrs;
+                this.connectionString = model.connectionString;
+                this.createTime = model.createTime;
+                this.DBInstanceType = model.DBInstanceType;
+                this.DBNodeClass = model.DBNodeClass;
+                this.DBNodeCount = model.DBNodeCount;
+                this.DBNodes = model.DBNodes;
+                this.DBType = model.DBType;
+                this.DBVersion = model.DBVersion;
+                this.description = model.description;
+                this.dnNodeClassCode = model.dnNodeClassCode;
+                this.dnNodeCount = model.dnNodeCount;
+                this.engine = model.engine;
+                this.expireDate = model.expireDate;
+                this.expired = model.expired;
+                this.id = model.id;
+                this.kindCode = model.kindCode;
+                this.LTSVersions = model.LTSVersions;
+                this.latestMinorVersion = model.latestMinorVersion;
+                this.lockMode = model.lockMode;
+                this.maintainEndTime = model.maintainEndTime;
+                this.maintainStartTime = model.maintainStartTime;
+                this.minorVersion = model.minorVersion;
+                this.network = model.network;
+                this.payType = model.payType;
+                this.port = model.port;
+                this.readDBInstances = model.readDBInstances;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.rightsSeparationEnabled = model.rightsSeparationEnabled;
+                this.rightsSeparationStatus = model.rightsSeparationStatus;
+                this.series = model.series;
+                this.status = model.status;
+                this.storageUsed = model.storageUsed;
+                this.tagSet = model.tagSet;
+                this.type = model.type;
+                this.VPCId = model.VPCId;
+                this.vSwitchId = model.vSwitchId;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * CnNodeClassCode.

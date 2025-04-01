@@ -23,7 +23,8 @@ public class CreateDBInstanceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CNNodeCount")
-    private String CNNodeCount;
+    @com.aliyun.core.annotation.Validation(maximum = 99)
+    private Integer CNNodeCount;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
@@ -39,11 +40,13 @@ public class CreateDBInstanceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBNodeCount")
+    @com.aliyun.core.annotation.Validation(maximum = 99)
     private Integer DBNodeCount;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DNNodeCount")
-    private String DNNodeCount;
+    @com.aliyun.core.annotation.Validation(maximum = 99)
+    private Integer DNNodeCount;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DnClass")
@@ -173,7 +176,7 @@ public class CreateDBInstanceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -188,7 +191,7 @@ public class CreateDBInstanceRequest extends Request {
     /**
      * @return CNNodeCount
      */
-    public String getCNNodeCount() {
+    public Integer getCNNodeCount() {
         return this.CNNodeCount;
     }
 
@@ -223,7 +226,7 @@ public class CreateDBInstanceRequest extends Request {
     /**
      * @return DNNodeCount
      */
-    public String getDNNodeCount() {
+    public Integer getDNNodeCount() {
         return this.DNNodeCount;
     }
 
@@ -376,12 +379,12 @@ public class CreateDBInstanceRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateDBInstanceRequest, Builder> {
         private Boolean autoRenew; 
-        private String CNNodeCount; 
+        private Integer CNNodeCount; 
         private String clientToken; 
         private String cnClass; 
         private String DBNodeClass; 
         private Integer DBNodeCount; 
-        private String DNNodeCount; 
+        private Integer DNNodeCount; 
         private String dnClass; 
         private String dnStorageSpace; 
         private String engineVersion; 
@@ -452,7 +455,7 @@ public class CreateDBInstanceRequest extends Request {
         /**
          * CNNodeCount.
          */
-        public Builder CNNodeCount(String CNNodeCount) {
+        public Builder CNNodeCount(Integer CNNodeCount) {
             this.putQueryParameter("CNNodeCount", CNNodeCount);
             this.CNNodeCount = CNNodeCount;
             return this;
@@ -497,7 +500,7 @@ public class CreateDBInstanceRequest extends Request {
         /**
          * DNNodeCount.
          */
-        public Builder DNNodeCount(String DNNodeCount) {
+        public Builder DNNodeCount(Integer DNNodeCount) {
             this.putQueryParameter("DNNodeCount", DNNodeCount);
             this.DNNodeCount = DNNodeCount;
             return this;

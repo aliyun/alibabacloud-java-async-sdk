@@ -158,6 +158,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeBinaryLogListResponse> describeBinaryLogList(DescribeBinaryLogListRequest request);
 
     /**
+     * @param request the request parameters of DescribeCdcInfo  DescribeCdcInfoRequest
+     * @return DescribeCdcInfoResponse
+     */
+    CompletableFuture<DescribeCdcInfoResponse> describeCdcInfo(DescribeCdcInfoRequest request);
+
+    /**
      * @param request the request parameters of DescribeCharacterSet  DescribeCharacterSetRequest
      * @return DescribeCharacterSetResponse
      */

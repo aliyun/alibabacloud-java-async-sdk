@@ -44,6 +44,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -77,6 +81,16 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeBackupPolicyResponseBody model) {
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Data.
@@ -363,6 +377,31 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             private Integer localLogRetentionNumber; 
             private Integer logLocalRetentionSpace; 
             private Integer removeLogRetention; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.backupPeriod = model.backupPeriod;
+                this.backupPlanBegin = model.backupPlanBegin;
+                this.backupSetRetention = model.backupSetRetention;
+                this.backupType = model.backupType;
+                this.backupWay = model.backupWay;
+                this.coldDataBackupInterval = model.coldDataBackupInterval;
+                this.coldDataBackupRetention = model.coldDataBackupRetention;
+                this.crossRegionDataBackupRetention = model.crossRegionDataBackupRetention;
+                this.crossRegionLogBackupRetention = model.crossRegionLogBackupRetention;
+                this.DBInstanceName = model.DBInstanceName;
+                this.destCrossRegion = model.destCrossRegion;
+                this.forceCleanOnHighSpaceUsage = model.forceCleanOnHighSpaceUsage;
+                this.isCrossRegionDataBackupEnabled = model.isCrossRegionDataBackupEnabled;
+                this.isCrossRegionLogBackupEnabled = model.isCrossRegionLogBackupEnabled;
+                this.isEnabled = model.isEnabled;
+                this.localLogRetention = model.localLogRetention;
+                this.localLogRetentionNumber = model.localLogRetentionNumber;
+                this.logLocalRetentionSpace = model.logLocalRetentionSpace;
+                this.removeLogRetention = model.removeLogRetention;
+            } 
 
             /**
              * BackupPeriod.

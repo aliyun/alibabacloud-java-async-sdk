@@ -23,7 +23,8 @@ public class UpdatePolarDBXInstanceNodeRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CNNodeCount")
-    private String CNNodeCount;
+    @com.aliyun.core.annotation.Validation(maximum = 99)
+    private Integer CNNodeCount;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
@@ -36,11 +37,13 @@ public class UpdatePolarDBXInstanceNodeRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DNNodeCount")
-    private String DNNodeCount;
+    @com.aliyun.core.annotation.Validation(maximum = 99)
+    private Integer DNNodeCount;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DbInstanceNodeCount")
-    private String dbInstanceNodeCount;
+    @com.aliyun.core.annotation.Validation(maximum = 99)
+    private Integer dbInstanceNodeCount;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DeleteDNIds")
@@ -76,7 +79,7 @@ public class UpdatePolarDBXInstanceNodeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -91,7 +94,7 @@ public class UpdatePolarDBXInstanceNodeRequest extends Request {
     /**
      * @return CNNodeCount
      */
-    public String getCNNodeCount() {
+    public Integer getCNNodeCount() {
         return this.CNNodeCount;
     }
 
@@ -112,14 +115,14 @@ public class UpdatePolarDBXInstanceNodeRequest extends Request {
     /**
      * @return DNNodeCount
      */
-    public String getDNNodeCount() {
+    public Integer getDNNodeCount() {
         return this.DNNodeCount;
     }
 
     /**
      * @return dbInstanceNodeCount
      */
-    public String getDbInstanceNodeCount() {
+    public Integer getDbInstanceNodeCount() {
         return this.dbInstanceNodeCount;
     }
 
@@ -146,11 +149,11 @@ public class UpdatePolarDBXInstanceNodeRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdatePolarDBXInstanceNodeRequest, Builder> {
         private String addDNSpec; 
-        private String CNNodeCount; 
+        private Integer CNNodeCount; 
         private String clientToken; 
         private String DBInstanceName; 
-        private String DNNodeCount; 
-        private String dbInstanceNodeCount; 
+        private Integer DNNodeCount; 
+        private Integer dbInstanceNodeCount; 
         private String deleteDNIds; 
         private String regionId; 
         private String storagePoolName; 
@@ -184,7 +187,7 @@ public class UpdatePolarDBXInstanceNodeRequest extends Request {
         /**
          * CNNodeCount.
          */
-        public Builder CNNodeCount(String CNNodeCount) {
+        public Builder CNNodeCount(Integer CNNodeCount) {
             this.putQueryParameter("CNNodeCount", CNNodeCount);
             this.CNNodeCount = CNNodeCount;
             return this;
@@ -214,7 +217,7 @@ public class UpdatePolarDBXInstanceNodeRequest extends Request {
         /**
          * DNNodeCount.
          */
-        public Builder DNNodeCount(String DNNodeCount) {
+        public Builder DNNodeCount(Integer DNNodeCount) {
             this.putQueryParameter("DNNodeCount", DNNodeCount);
             this.DNNodeCount = DNNodeCount;
             return this;
@@ -223,7 +226,7 @@ public class UpdatePolarDBXInstanceNodeRequest extends Request {
         /**
          * DbInstanceNodeCount.
          */
-        public Builder dbInstanceNodeCount(String dbInstanceNodeCount) {
+        public Builder dbInstanceNodeCount(Integer dbInstanceNodeCount) {
             this.putQueryParameter("DbInstanceNodeCount", dbInstanceNodeCount);
             this.dbInstanceNodeCount = dbInstanceNodeCount;
             return this;

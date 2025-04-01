@@ -44,6 +44,10 @@ public class DescribeAccountListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -77,6 +81,16 @@ public class DescribeAccountListResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAccountListResponseBody model) {
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Data.
@@ -219,6 +233,19 @@ public class DescribeAccountListResponseBody extends TeaModel {
             private String DBInstanceName; 
             private String DBName; 
             private String gmtCreated; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.accountDescription = model.accountDescription;
+                this.accountName = model.accountName;
+                this.accountPrivilege = model.accountPrivilege;
+                this.accountType = model.accountType;
+                this.DBInstanceName = model.DBInstanceName;
+                this.DBName = model.DBName;
+                this.gmtCreated = model.gmtCreated;
+            } 
 
             /**
              * AccountDescription.

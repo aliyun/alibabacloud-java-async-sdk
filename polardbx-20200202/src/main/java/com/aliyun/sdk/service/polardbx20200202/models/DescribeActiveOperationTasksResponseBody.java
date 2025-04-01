@@ -48,6 +48,10 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -89,6 +93,17 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         private Long pageSize; 
         private String requestId; 
         private Long totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeActiveOperationTasksResponseBody model) {
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * Items.
@@ -479,6 +494,39 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             private String taskType; 
             private String taskTypeEn; 
             private String taskTypeZh; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.allowCancel = model.allowCancel;
+                this.allowChange = model.allowChange;
+                this.changeLevel = model.changeLevel;
+                this.changeLevelEn = model.changeLevelEn;
+                this.changeLevelZh = model.changeLevelZh;
+                this.createdTime = model.createdTime;
+                this.currentAVZ = model.currentAVZ;
+                this.dbType = model.dbType;
+                this.dbVersion = model.dbVersion;
+                this.deadline = model.deadline;
+                this.id = model.id;
+                this.impact = model.impact;
+                this.impactEn = model.impactEn;
+                this.impactZh = model.impactZh;
+                this.insComment = model.insComment;
+                this.insName = model.insName;
+                this.modifiedTime = model.modifiedTime;
+                this.prepareInterval = model.prepareInterval;
+                this.region = model.region;
+                this.resultInfo = model.resultInfo;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.subInsNames = model.subInsNames;
+                this.switchTime = model.switchTime;
+                this.taskType = model.taskType;
+                this.taskTypeEn = model.taskTypeEn;
+                this.taskTypeZh = model.taskTypeZh;
+            } 
 
             /**
              * AllowCancel.

@@ -36,6 +36,10 @@ public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeUserEncryptionKeyListResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Data.
@@ -107,6 +119,13 @@ public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> keyIds; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.keyIds = model.keyIds;
+            } 
 
             /**
              * KeyIds.

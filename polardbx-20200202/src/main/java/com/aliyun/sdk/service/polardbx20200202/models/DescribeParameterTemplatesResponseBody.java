@@ -36,6 +36,10 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeParameterTemplatesResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Data.
@@ -167,6 +179,18 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             private String parameterName; 
             private String parameterValue; 
             private Integer revisable; 
+
+            private Builder() {
+            } 
+
+            private Builder(Parameters model) {
+                this.checkingCode = model.checkingCode;
+                this.dynamic = model.dynamic;
+                this.parameterDescription = model.parameterDescription;
+                this.parameterName = model.parameterName;
+                this.parameterValue = model.parameterValue;
+                this.revisable = model.revisable;
+            } 
 
             /**
              * CheckingCode.
@@ -290,6 +314,16 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             private String engineVersion; 
             private Integer parameterCount; 
             private java.util.List<Parameters> parameters; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.engine = model.engine;
+                this.engineVersion = model.engineVersion;
+                this.parameterCount = model.parameterCount;
+                this.parameters = model.parameters;
+            } 
 
             /**
              * Engine.

@@ -44,6 +44,10 @@ public class CreateBackupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -77,6 +81,16 @@ public class CreateBackupResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateBackupResponseBody model) {
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Data.
@@ -147,6 +161,13 @@ public class CreateBackupResponseBody extends TeaModel {
 
         public static final class Builder {
             private String backupSetId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.backupSetId = model.backupSetId;
+            } 
 
             /**
              * BackupSetId.

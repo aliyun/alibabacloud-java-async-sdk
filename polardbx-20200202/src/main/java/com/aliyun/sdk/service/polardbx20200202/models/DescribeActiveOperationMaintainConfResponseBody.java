@@ -40,6 +40,10 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return config
      */
@@ -65,6 +69,15 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
         private Config config; 
         private Long hasConfig; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeActiveOperationMaintainConfResponseBody model) {
+            this.config = model.config;
+            this.hasConfig = model.hasConfig;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Config.
@@ -199,6 +212,19 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
             private String maintainStartTime; 
             private String modifiedTime; 
             private Long status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Config model) {
+                this.createdTime = model.createdTime;
+                this.cycleTime = model.cycleTime;
+                this.cycleType = model.cycleType;
+                this.maintainEndTime = model.maintainEndTime;
+                this.maintainStartTime = model.maintainStartTime;
+                this.modifiedTime = model.modifiedTime;
+                this.status = model.status;
+            } 
 
             /**
              * CreatedTime.

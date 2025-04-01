@@ -44,6 +44,10 @@ public class DescribeBackupSetListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -77,6 +81,16 @@ public class DescribeBackupSetListResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeBackupSetListResponseBody model) {
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Data.
@@ -219,6 +233,19 @@ public class DescribeBackupSetListResponseBody extends TeaModel {
             private Long beginTime; 
             private Long endTime; 
             private Integer status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.backupModel = model.backupModel;
+                this.backupSetId = model.backupSetId;
+                this.backupSetSize = model.backupSetSize;
+                this.backupType = model.backupType;
+                this.beginTime = model.beginTime;
+                this.endTime = model.endTime;
+                this.status = model.status;
+            } 
 
             /**
              * BackupModel.

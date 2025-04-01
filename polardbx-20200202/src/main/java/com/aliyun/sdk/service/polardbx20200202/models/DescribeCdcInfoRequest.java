@@ -12,34 +12,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DescribeBackupSetRequest} extends {@link RequestModel}
+ * {@link DescribeCdcInfoRequest} extends {@link RequestModel}
  *
- * <p>DescribeBackupSetRequest</p>
+ * <p>DescribeCdcInfoRequest</p>
  */
-public class DescribeBackupSetRequest extends Request {
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("BackupSetId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String backupSetId;
-
+public class DescribeCdcInfoRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBInstanceName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceName;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("DestCrossRegion")
-    private String destCrossRegion;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    private DescribeBackupSetRequest(Builder builder) {
+    private DescribeCdcInfoRequest(Builder builder) {
         super(builder);
-        this.backupSetId = builder.backupSetId;
         this.DBInstanceName = builder.DBInstanceName;
-        this.destCrossRegion = builder.destCrossRegion;
         this.regionId = builder.regionId;
     }
 
@@ -47,20 +37,13 @@ public class DescribeBackupSetRequest extends Request {
         return new Builder();
     }
 
-    public static DescribeBackupSetRequest create() {
+    public static DescribeCdcInfoRequest create() {
         return builder().build();
     }
 
 @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return backupSetId
-     */
-    public String getBackupSetId() {
-        return this.backupSetId;
     }
 
     /**
@@ -71,34 +54,23 @@ public class DescribeBackupSetRequest extends Request {
     }
 
     /**
-     * @return destCrossRegion
-     */
-    public String getDestCrossRegion() {
-        return this.destCrossRegion;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
     }
 
-    public static final class Builder extends Request.Builder<DescribeBackupSetRequest, Builder> {
-        private String backupSetId; 
+    public static final class Builder extends Request.Builder<DescribeCdcInfoRequest, Builder> {
         private String DBInstanceName; 
-        private String destCrossRegion; 
         private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeBackupSetRequest request) {
+        private Builder(DescribeCdcInfoRequest request) {
             super(request);
-            this.backupSetId = request.backupSetId;
             this.DBInstanceName = request.DBInstanceName;
-            this.destCrossRegion = request.destCrossRegion;
             this.regionId = request.regionId;
         } 
 
@@ -106,19 +78,7 @@ public class DescribeBackupSetRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>111</p>
-         */
-        public Builder backupSetId(String backupSetId) {
-            this.putQueryParameter("BackupSetId", backupSetId);
-            this.backupSetId = backupSetId;
-            return this;
-        }
-
-        /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>pxc-htri0ori2r****</p>
+         * <p>pxc-********</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.putQueryParameter("DBInstanceName", DBInstanceName);
@@ -127,16 +87,10 @@ public class DescribeBackupSetRequest extends Request {
         }
 
         /**
-         * DestCrossRegion.
-         */
-        public Builder destCrossRegion(String destCrossRegion) {
-            this.putQueryParameter("DestCrossRegion", destCrossRegion);
-            this.destCrossRegion = destCrossRegion;
-            return this;
-        }
-
-        /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -145,8 +99,8 @@ public class DescribeBackupSetRequest extends Request {
         }
 
         @Override
-        public DescribeBackupSetRequest build() {
-            return new DescribeBackupSetRequest(this);
+        public DescribeCdcInfoRequest build() {
+            return new DescribeCdcInfoRequest(this);
         } 
 
     } 

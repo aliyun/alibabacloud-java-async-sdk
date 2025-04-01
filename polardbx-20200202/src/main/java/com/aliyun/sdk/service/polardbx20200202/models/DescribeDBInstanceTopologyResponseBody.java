@@ -36,6 +36,10 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBInstanceTopologyResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Data.
@@ -192,6 +204,20 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             private String region; 
             private String role; 
 
+            private Builder() {
+            } 
+
+            private Builder(HistoryItems model) {
+                this.activated = model.activated;
+                this.azone = model.azone;
+                this.characterType = model.characterType;
+                this.DBInstanceId = model.DBInstanceId;
+                this.DBInstanceName = model.DBInstanceName;
+                this.phyInstanceName = model.phyInstanceName;
+                this.region = model.region;
+                this.role = model.role;
+            } 
+
             /**
              * Activated.
              */
@@ -307,6 +333,14 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             private String azone; 
             private String role; 
 
+            private Builder() {
+            } 
+
+            private Builder(AzoneRoleList model) {
+                this.azone = model.azone;
+                this.role = model.role;
+            } 
+
             /**
              * Azone.
              */
@@ -385,6 +419,15 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             private String connectionString; 
             private Integer DBInstanceNetType; 
             private String port; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConnectionIp model) {
+                this.connectionString = model.connectionString;
+                this.DBInstanceNetType = model.DBInstanceNetType;
+                this.port = model.port;
+            } 
 
             /**
              * ConnectionString.
@@ -772,6 +815,40 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             private String status; 
             private String storageUsed; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.activated = model.activated;
+                this.azone = model.azone;
+                this.azoneRoleList = model.azoneRoleList;
+                this.characterType = model.characterType;
+                this.connectionIp = model.connectionIp;
+                this.DBInstanceConnType = model.DBInstanceConnType;
+                this.DBInstanceCreateTime = model.DBInstanceCreateTime;
+                this.DBInstanceDescription = model.DBInstanceDescription;
+                this.DBInstanceId = model.DBInstanceId;
+                this.DBInstanceName = model.DBInstanceName;
+                this.DBInstanceStatus = model.DBInstanceStatus;
+                this.DBInstanceStatusDescription = model.DBInstanceStatusDescription;
+                this.diskSize = model.diskSize;
+                this.engine = model.engine;
+                this.engineVersion = model.engineVersion;
+                this.lockMode = model.lockMode;
+                this.lockReason = model.lockReason;
+                this.maintainEndTime = model.maintainEndTime;
+                this.maintainStartTime = model.maintainStartTime;
+                this.maxConnections = model.maxConnections;
+                this.maxIops = model.maxIops;
+                this.nodeClass = model.nodeClass;
+                this.phyInstanceName = model.phyInstanceName;
+                this.region = model.region;
+                this.role = model.role;
+                this.status = model.status;
+                this.storageUsed = model.storageUsed;
+                this.version = model.version;
+            } 
 
             /**
              * Activated.
@@ -1216,6 +1293,28 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             private String maintainEndTime; 
             private String maintainStartTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(LogicInstanceTopology model) {
+                this.DBInstanceConnType = model.DBInstanceConnType;
+                this.DBInstanceCreateTime = model.DBInstanceCreateTime;
+                this.DBInstanceDescription = model.DBInstanceDescription;
+                this.DBInstanceId = model.DBInstanceId;
+                this.DBInstanceName = model.DBInstanceName;
+                this.DBInstanceStatus = model.DBInstanceStatus;
+                this.DBInstanceStatusDescription = model.DBInstanceStatusDescription;
+                this.DBInstanceStorage = model.DBInstanceStorage;
+                this.engine = model.engine;
+                this.engineVersion = model.engineVersion;
+                this.historyItems = model.historyItems;
+                this.items = model.items;
+                this.lockMode = model.lockMode;
+                this.lockReason = model.lockReason;
+                this.maintainEndTime = model.maintainEndTime;
+                this.maintainStartTime = model.maintainStartTime;
+            } 
+
             /**
              * DBInstanceConnType.
              */
@@ -1382,6 +1481,13 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
 
         public static final class Builder {
             private LogicInstanceTopology logicInstanceTopology; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.logicInstanceTopology = model.logicInstanceTopology;
+            } 
 
             /**
              * LogicInstanceTopology.

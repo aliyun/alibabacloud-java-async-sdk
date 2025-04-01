@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DescribeBackupSetResponse} extends {@link TeaModel}
+ * {@link DescribeCdcInfoResponse} extends {@link TeaModel}
  *
- * <p>DescribeBackupSetResponse</p>
+ * <p>DescribeCdcInfoResponse</p>
  */
-public class DescribeBackupSetResponse extends Response {
+public class DescribeCdcInfoResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class DescribeBackupSetResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private DescribeBackupSetResponseBody body;
+    private DescribeCdcInfoResponseBody body;
 
-    private DescribeBackupSetResponse(BuilderImpl builder) {
+    private DescribeCdcInfoResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DescribeBackupSetResponse create() {
+    public static DescribeCdcInfoResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class DescribeBackupSetResponse extends Response {
     /**
      * @return body
      */
-    public DescribeBackupSetResponseBody getBody() {
+    public DescribeCdcInfoResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DescribeBackupSetResponse, Builder> {
+    public interface Builder extends Response.Builder<DescribeCdcInfoResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DescribeBackupSetResponseBody body);
+        Builder body(DescribeCdcInfoResponseBody body);
 
         @Override
-        DescribeBackupSetResponse build();
+        DescribeCdcInfoResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DescribeBackupSetResponse, Builder>
+            extends Response.BuilderImpl<DescribeCdcInfoResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private DescribeBackupSetResponseBody body; 
+        private DescribeCdcInfoResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DescribeBackupSetResponse response) {
+        private BuilderImpl(DescribeCdcInfoResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class DescribeBackupSetResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DescribeBackupSetResponseBody body) {
+        public Builder body(DescribeCdcInfoResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DescribeBackupSetResponse build() {
-            return new DescribeBackupSetResponse(this);
+        public DescribeCdcInfoResponse build() {
+            return new DescribeCdcInfoResponse(this);
         } 
 
     } 

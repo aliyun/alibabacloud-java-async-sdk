@@ -36,6 +36,10 @@ public class DescribeScaleOutMigrateTaskListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return progress
      */
@@ -53,6 +57,14 @@ public class DescribeScaleOutMigrateTaskListResponseBody extends TeaModel {
     public static final class Builder {
         private Integer progress; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeScaleOutMigrateTaskListResponseBody model) {
+            this.progress = model.progress;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Progress.

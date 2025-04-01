@@ -44,6 +44,10 @@ public class DescribeDistributeTableListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -77,6 +81,16 @@ public class DescribeDistributeTableListResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDistributeTableListResponseBody model) {
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Data.
@@ -184,6 +198,16 @@ public class DescribeDistributeTableListResponseBody extends TeaModel {
             private String tableType; 
             private String tbKey; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tables model) {
+                this.dbKey = model.dbKey;
+                this.tableName = model.tableName;
+                this.tableType = model.tableType;
+                this.tbKey = model.tbKey;
+            } 
+
             /**
              * DbKey.
              */
@@ -254,6 +278,13 @@ public class DescribeDistributeTableListResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tables> tables; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.tables = model.tables;
+            } 
 
             /**
              * Tables.

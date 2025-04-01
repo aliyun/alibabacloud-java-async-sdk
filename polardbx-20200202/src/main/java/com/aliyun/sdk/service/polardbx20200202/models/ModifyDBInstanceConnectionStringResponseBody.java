@@ -44,6 +44,10 @@ public class ModifyDBInstanceConnectionStringResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class ModifyDBInstanceConnectionStringResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyDBInstanceConnectionStringResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -183,6 +197,16 @@ public class ModifyDBInstanceConnectionStringResponseBody extends TeaModel {
             private String DBInstanceName; 
             private String DBInstanceNetType; 
             private String port; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.connectionString = model.connectionString;
+                this.DBInstanceName = model.DBInstanceName;
+                this.DBInstanceNetType = model.DBInstanceNetType;
+                this.port = model.port;
+            } 
 
             /**
              * ConnectionString.

@@ -40,6 +40,10 @@ public class ResetAccountPasswordResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return message
      */
@@ -65,6 +69,15 @@ public class ResetAccountPasswordResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ResetAccountPasswordResponseBody model) {
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Message.

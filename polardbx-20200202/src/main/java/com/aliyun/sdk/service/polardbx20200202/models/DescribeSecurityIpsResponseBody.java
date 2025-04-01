@@ -44,6 +44,10 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -77,6 +81,16 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSecurityIpsResponseBody model) {
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Data.
@@ -160,6 +174,14 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
             private String groupName; 
             private String securityIPList; 
 
+            private Builder() {
+            } 
+
+            private Builder(GroupItems model) {
+                this.groupName = model.groupName;
+                this.securityIPList = model.securityIPList;
+            } 
+
             /**
              * GroupName.
              */
@@ -226,6 +248,14 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
         public static final class Builder {
             private String DBInstanceName; 
             private java.util.List<GroupItems> groupItems; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.DBInstanceName = model.DBInstanceName;
+                this.groupItems = model.groupItems;
+            } 
 
             /**
              * DBInstanceName.

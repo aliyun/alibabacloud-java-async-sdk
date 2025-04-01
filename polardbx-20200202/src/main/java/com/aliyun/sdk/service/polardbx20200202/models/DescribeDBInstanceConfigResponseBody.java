@@ -36,6 +36,10 @@ public class DescribeDBInstanceConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DescribeDBInstanceConfigResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBInstanceConfigResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Data.
@@ -131,6 +143,15 @@ public class DescribeDBInstanceConfigResponseBody extends TeaModel {
             private String configName; 
             private String configValue; 
             private String dbInstanceName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.configName = model.configName;
+                this.configValue = model.configValue;
+                this.dbInstanceName = model.dbInstanceName;
+            } 
 
             /**
              * ConfigName.

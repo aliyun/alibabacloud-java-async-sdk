@@ -40,6 +40,10 @@ public class SwitchDBInstanceHAResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return message
      */
@@ -65,6 +69,15 @@ public class SwitchDBInstanceHAResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(SwitchDBInstanceHAResponseBody model) {
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Message.

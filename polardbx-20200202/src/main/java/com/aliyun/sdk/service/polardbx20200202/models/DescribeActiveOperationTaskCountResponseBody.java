@@ -40,6 +40,10 @@ public class DescribeActiveOperationTaskCountResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return needPop
      */
@@ -65,6 +69,15 @@ public class DescribeActiveOperationTaskCountResponseBody extends TeaModel {
         private Long needPop; 
         private String requestId; 
         private Long taskCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeActiveOperationTaskCountResponseBody model) {
+            this.needPop = model.needPop;
+            this.requestId = model.requestId;
+            this.taskCount = model.taskCount;
+        } 
 
         /**
          * NeedPop.

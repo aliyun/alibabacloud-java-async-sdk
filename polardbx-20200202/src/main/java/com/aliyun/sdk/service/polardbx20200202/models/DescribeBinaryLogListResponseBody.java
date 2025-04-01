@@ -48,6 +48,10 @@ public class DescribeBinaryLogListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return logList
      */
@@ -89,6 +93,17 @@ public class DescribeBinaryLogListResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalNumber; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeBinaryLogListResponseBody model) {
+            this.logList = model.logList;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalNumber = model.totalNumber;
+        } 
 
         /**
          * LogList.
@@ -287,6 +302,23 @@ public class DescribeBinaryLogListResponseBody extends TeaModel {
             private Integer purgeStatus; 
             private String uploadHost; 
             private Integer uploadStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(LogList model) {
+                this.beginTime = model.beginTime;
+                this.createdTime = model.createdTime;
+                this.downloadLink = model.downloadLink;
+                this.endTime = model.endTime;
+                this.fileName = model.fileName;
+                this.id = model.id;
+                this.logSize = model.logSize;
+                this.modifiedTime = model.modifiedTime;
+                this.purgeStatus = model.purgeStatus;
+                this.uploadHost = model.uploadHost;
+                this.uploadStatus = model.uploadStatus;
+            } 
 
             /**
              * BeginTime.

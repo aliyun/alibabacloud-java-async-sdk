@@ -44,6 +44,10 @@ public class DescribeBackupSetResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -77,6 +81,16 @@ public class DescribeBackupSetResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeBackupSetResponseBody model) {
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Data.
@@ -183,6 +197,16 @@ public class DescribeBackupSetResponseBody extends TeaModel {
             private String downloadLink; 
             private String intranetDownloadLink; 
             private String linkExpiredTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(OSSList model) {
+                this.backupSetFile = model.backupSetFile;
+                this.downloadLink = model.downloadLink;
+                this.intranetDownloadLink = model.intranetDownloadLink;
+                this.linkExpiredTime = model.linkExpiredTime;
+            } 
 
             /**
              * BackupSetFile.
@@ -338,6 +362,20 @@ public class DescribeBackupSetResponseBody extends TeaModel {
             private Long endTime; 
             private java.util.List<OSSList> OSSList; 
             private Integer status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.backupModel = model.backupModel;
+                this.backupSetId = model.backupSetId;
+                this.backupSetSize = model.backupSetSize;
+                this.backupType = model.backupType;
+                this.beginTime = model.beginTime;
+                this.endTime = model.endTime;
+                this.OSSList = model.OSSList;
+                this.status = model.status;
+            } 
 
             /**
              * BackupModel.

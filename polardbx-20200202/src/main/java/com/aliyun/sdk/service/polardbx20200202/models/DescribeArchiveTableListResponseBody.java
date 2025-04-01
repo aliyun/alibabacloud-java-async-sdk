@@ -36,6 +36,10 @@ public class DescribeArchiveTableListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DescribeArchiveTableListResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeArchiveTableListResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Data.
@@ -179,6 +191,19 @@ public class DescribeArchiveTableListResponseBody extends TeaModel {
             private String schemaName; 
             private Double spaceSize; 
             private String tableName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tables model) {
+                this.archiveStatus = model.archiveStatus;
+                this.createdDate = model.createdDate;
+                this.fileCount = model.fileCount;
+                this.lastSuccessArchiveTime = model.lastSuccessArchiveTime;
+                this.schemaName = model.schemaName;
+                this.spaceSize = model.spaceSize;
+                this.tableName = model.tableName;
+            } 
 
             /**
              * ArchiveStatus.
@@ -358,6 +383,20 @@ public class DescribeArchiveTableListResponseBody extends TeaModel {
             private java.util.List<Tables> tables; 
             private Integer tobeArchivedConut; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.pageIndex = model.pageIndex;
+                this.pageSize = model.pageSize;
+                this.pausedCount = model.pausedCount;
+                this.runningCount = model.runningCount;
+                this.successCount = model.successCount;
+                this.tables = model.tables;
+                this.tobeArchivedConut = model.tobeArchivedConut;
+                this.total = model.total;
+            } 
 
             /**
              * PageIndex.

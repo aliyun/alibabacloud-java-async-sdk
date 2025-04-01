@@ -44,6 +44,10 @@ public class DescribeCharacterSetResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -77,6 +81,16 @@ public class DescribeCharacterSetResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCharacterSetResponseBody model) {
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Data.
@@ -159,6 +173,14 @@ public class DescribeCharacterSetResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> characterSet; 
             private String engine; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.characterSet = model.characterSet;
+                this.engine = model.engine;
+            } 
 
             /**
              * CharacterSet.

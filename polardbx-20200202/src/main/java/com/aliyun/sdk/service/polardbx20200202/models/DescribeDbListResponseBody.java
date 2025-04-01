@@ -44,6 +44,10 @@ public class DescribeDbListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -77,6 +81,16 @@ public class DescribeDbListResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDbListResponseBody model) {
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Data.
@@ -159,6 +173,14 @@ public class DescribeDbListResponseBody extends TeaModel {
         public static final class Builder {
             private String accountName; 
             private String accountPrivilege; 
+
+            private Builder() {
+            } 
+
+            private Builder(Accounts model) {
+                this.accountName = model.accountName;
+                this.accountPrivilege = model.accountPrivilege;
+            } 
 
             /**
              * AccountName.
@@ -262,6 +284,17 @@ public class DescribeDbListResponseBody extends TeaModel {
             private String DBDescription; 
             private String DBInstanceName; 
             private String DBName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.accounts = model.accounts;
+                this.characterSetName = model.characterSetName;
+                this.DBDescription = model.DBDescription;
+                this.DBInstanceName = model.DBInstanceName;
+                this.DBName = model.DBName;
+            } 
 
             /**
              * Accounts.

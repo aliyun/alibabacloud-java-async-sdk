@@ -48,6 +48,10 @@ public class DescribeTasksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -89,6 +93,17 @@ public class DescribeTasksResponseBody extends TeaModel {
         private Integer pageRecordCount; 
         private String requestId; 
         private Integer totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTasksResponseBody model) {
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageRecordCount = model.pageRecordCount;
+            this.requestId = model.requestId;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * Items.
@@ -287,6 +302,23 @@ public class DescribeTasksResponseBody extends TeaModel {
             private String taskErrorCode; 
             private String taskErrorMessage; 
             private String taskId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.beginTime = model.beginTime;
+                this.DBName = model.DBName;
+                this.finishTime = model.finishTime;
+                this.progress = model.progress;
+                this.progressInfo = model.progressInfo;
+                this.scaleOutToken = model.scaleOutToken;
+                this.status = model.status;
+                this.taskAction = model.taskAction;
+                this.taskErrorCode = model.taskErrorCode;
+                this.taskErrorMessage = model.taskErrorMessage;
+                this.taskId = model.taskId;
+            } 
 
             /**
              * BeginTime.

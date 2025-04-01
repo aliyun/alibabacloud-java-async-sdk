@@ -48,6 +48,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBInstances
      */
@@ -89,6 +93,17 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalNumber; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBInstancesResponseBody model) {
+            this.DBInstances = model.DBInstances;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalNumber = model.totalNumber;
+        } 
 
         /**
          * DBInstances.
@@ -204,6 +219,16 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             private String regionId; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Nodes model) {
+                this.classCode = model.classCode;
+                this.id = model.id;
+                this.regionId = model.regionId;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
              * ClassCode.
              */
@@ -286,6 +311,14 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(TagSet model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * Key.
@@ -871,6 +904,57 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             private String zoneId; 
             private String gdnRole; 
             private Boolean isInGdn; 
+
+            private Builder() {
+            } 
+
+            private Builder(DBInstances model) {
+                this.cdcInstanceName = model.cdcInstanceName;
+                this.cnNodeClassCode = model.cnNodeClassCode;
+                this.cnNodeCount = model.cnNodeCount;
+                this.columnarInstanceName = model.columnarInstanceName;
+                this.columnarReadDBInstances = model.columnarReadDBInstances;
+                this.commodityCode = model.commodityCode;
+                this.containBinlogX = model.containBinlogX;
+                this.cpuType = model.cpuType;
+                this.createTime = model.createTime;
+                this.DBInstanceName = model.DBInstanceName;
+                this.DBType = model.DBType;
+                this.DBVersion = model.DBVersion;
+                this.description = model.description;
+                this.dnNodeClassCode = model.dnNodeClassCode;
+                this.dnNodeCount = model.dnNodeCount;
+                this.engine = model.engine;
+                this.expireTime = model.expireTime;
+                this.expired = model.expired;
+                this.id = model.id;
+                this.lockMode = model.lockMode;
+                this.lockReason = model.lockReason;
+                this.minorVersion = model.minorVersion;
+                this.network = model.network;
+                this.nodeClass = model.nodeClass;
+                this.nodeCount = model.nodeCount;
+                this.nodes = model.nodes;
+                this.payType = model.payType;
+                this.primaryInstanceId = model.primaryInstanceId;
+                this.primaryZone = model.primaryZone;
+                this.readDBInstances = model.readDBInstances;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.secondaryZone = model.secondaryZone;
+                this.series = model.series;
+                this.status = model.status;
+                this.storageUsed = model.storageUsed;
+                this.supportBinlogX = model.supportBinlogX;
+                this.tagSet = model.tagSet;
+                this.tertiaryZone = model.tertiaryZone;
+                this.topologyType = model.topologyType;
+                this.type = model.type;
+                this.VPCId = model.VPCId;
+                this.zoneId = model.zoneId;
+                this.gdnRole = model.gdnRole;
+                this.isInGdn = model.isInGdn;
+            } 
 
             /**
              * CdcInstanceName.

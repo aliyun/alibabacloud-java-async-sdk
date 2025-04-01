@@ -36,6 +36,10 @@ public class DescribeColdDataBasicInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DescribeColdDataBasicInfoResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeColdDataBasicInfoResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Data.
@@ -215,6 +227,22 @@ public class DescribeColdDataBasicInfoResponseBody extends TeaModel {
             private String regionId; 
             private String volumeName; 
             private Double writeAccessNum; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.backupSetCount = model.backupSetCount;
+                this.backupSetSpaceSize = model.backupSetSpaceSize;
+                this.cloudProduct = model.cloudProduct;
+                this.currentSpaceSize = model.currentSpaceSize;
+                this.dataRedundancyType = model.dataRedundancyType;
+                this.enableStatus = model.enableStatus;
+                this.readAccessNum = model.readAccessNum;
+                this.regionId = model.regionId;
+                this.volumeName = model.volumeName;
+                this.writeAccessNum = model.writeAccessNum;
+            } 
 
             /**
              * BackupSetCount.

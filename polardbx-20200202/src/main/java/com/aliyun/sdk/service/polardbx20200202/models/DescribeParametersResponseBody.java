@@ -36,6 +36,10 @@ public class DescribeParametersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DescribeParametersResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeParametersResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Data.
@@ -131,6 +143,15 @@ public class DescribeParametersResponseBody extends TeaModel {
             private String parameterDescription; 
             private String parameterName; 
             private String parameterValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConfigParameters model) {
+                this.parameterDescription = model.parameterDescription;
+                this.parameterName = model.parameterName;
+                this.parameterValue = model.parameterValue;
+            } 
 
             /**
              * ParameterDescription.
@@ -218,6 +239,15 @@ public class DescribeParametersResponseBody extends TeaModel {
             private String parameterDescription; 
             private String parameterName; 
             private String parameterValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(RunningParameters model) {
+                this.parameterDescription = model.parameterDescription;
+                this.parameterName = model.parameterName;
+                this.parameterValue = model.parameterValue;
+            } 
 
             /**
              * ParameterDescription.
@@ -329,6 +359,17 @@ public class DescribeParametersResponseBody extends TeaModel {
             private String engine; 
             private String engineVersion; 
             private java.util.List<RunningParameters> runningParameters; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.configParameters = model.configParameters;
+                this.DBInstanceId = model.DBInstanceId;
+                this.engine = model.engine;
+                this.engineVersion = model.engineVersion;
+                this.runningParameters = model.runningParameters;
+            } 
 
             /**
              * ConfigParameters.

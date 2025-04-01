@@ -48,6 +48,10 @@ public class DescribeEventsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return eventItems
      */
@@ -89,6 +93,17 @@ public class DescribeEventsResponseBody extends TeaModel {
         private Long pageSize; 
         private String requestId; 
         private Long totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeEventsResponseBody model) {
+            this.eventItems = model.eventItems;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * EventItems.
@@ -287,6 +302,23 @@ public class DescribeEventsResponseBody extends TeaModel {
             private String regionId; 
             private String resourceName; 
             private String resourceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(EventItems model) {
+                this.eventId = model.eventId;
+                this.eventName = model.eventName;
+                this.eventPayload = model.eventPayload;
+                this.eventReason = model.eventReason;
+                this.eventRecordTime = model.eventRecordTime;
+                this.eventTime = model.eventTime;
+                this.eventType = model.eventType;
+                this.eventUserType = model.eventUserType;
+                this.regionId = model.regionId;
+                this.resourceName = model.resourceName;
+                this.resourceType = model.resourceType;
+            } 
 
             /**
              * EventId.

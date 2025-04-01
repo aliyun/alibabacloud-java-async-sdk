@@ -44,6 +44,10 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -77,6 +81,16 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeGdnInstancesResponseBody model) {
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Data.
@@ -364,6 +378,31 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
             private String tertiaryZone; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(MemberList model) {
+                this.classCode = model.classCode;
+                this.cnNodeClassCode = model.cnNodeClassCode;
+                this.cnNodeCount = model.cnNodeCount;
+                this.commodityCode = model.commodityCode;
+                this.dnNodeClassCode = model.dnNodeClassCode;
+                this.dnNodeCount = model.dnNodeCount;
+                this.expireTime = model.expireTime;
+                this.gmtCreated = model.gmtCreated;
+                this.memberName = model.memberName;
+                this.payType = model.payType;
+                this.primaryZone = model.primaryZone;
+                this.regionId = model.regionId;
+                this.role = model.role;
+                this.secondaryZone = model.secondaryZone;
+                this.secondsBehindMaster = model.secondsBehindMaster;
+                this.status = model.status;
+                this.taskStatus = model.taskStatus;
+                this.tertiaryZone = model.tertiaryZone;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
              * ClassCode.
              */
@@ -627,6 +666,19 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
             private String status; 
             private String switchHistory; 
 
+            private Builder() {
+            } 
+
+            private Builder(GdnInstanceList model) {
+                this.description = model.description;
+                this.gdnInstanceName = model.gdnInstanceName;
+                this.gmtCreated = model.gmtCreated;
+                this.memberList = model.memberList;
+                this.mysqlVersion = model.mysqlVersion;
+                this.status = model.status;
+                this.switchHistory = model.switchHistory;
+            } 
+
             /**
              * Description.
              */
@@ -757,6 +809,16 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
             private String pageNumber; 
             private String pageSize; 
             private String totalNumber; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.gdnInstanceList = model.gdnInstanceList;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalNumber = model.totalNumber;
+            } 
 
             /**
              * GdnInstanceList.

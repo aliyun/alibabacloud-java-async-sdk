@@ -44,6 +44,10 @@ public class DescribeDBInstanceHAResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -77,6 +81,16 @@ public class DescribeDBInstanceHAResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBInstanceHAResponseBody model) {
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Data.
@@ -195,6 +209,17 @@ public class DescribeDBInstanceHAResponseBody extends TeaModel {
             private String secondaryAzoneId; 
             private String secondaryRegionId; 
             private String topologyType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.primaryAzoneId = model.primaryAzoneId;
+                this.primaryRegionId = model.primaryRegionId;
+                this.secondaryAzoneId = model.secondaryAzoneId;
+                this.secondaryRegionId = model.secondaryRegionId;
+                this.topologyType = model.topologyType;
+            } 
 
             /**
              * PrimaryAzoneId.
