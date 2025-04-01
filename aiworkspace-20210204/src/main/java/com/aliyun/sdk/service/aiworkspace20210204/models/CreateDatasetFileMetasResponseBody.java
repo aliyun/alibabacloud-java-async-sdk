@@ -44,6 +44,10 @@ public class CreateDatasetFileMetasResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return failedDetails
      */
@@ -77,6 +81,16 @@ public class CreateDatasetFileMetasResponseBody extends TeaModel {
         private String requestId; 
         private Boolean status; 
         private java.util.List<DatasetFileMetaResponse> succeedDetails; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateDatasetFileMetasResponseBody model) {
+            this.failedDetails = model.failedDetails;
+            this.requestId = model.requestId;
+            this.status = model.status;
+            this.succeedDetails = model.succeedDetails;
+        } 
 
         /**
          * FailedDetails.

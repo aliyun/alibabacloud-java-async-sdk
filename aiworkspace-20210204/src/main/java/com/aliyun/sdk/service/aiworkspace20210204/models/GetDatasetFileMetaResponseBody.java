@@ -48,6 +48,10 @@ public class GetDatasetFileMetaResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return datasetFileMeta
      */
@@ -89,6 +93,17 @@ public class GetDatasetFileMetaResponseBody extends TeaModel {
         private String datasetVersion; 
         private String requestId; 
         private String workspaceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDatasetFileMetaResponseBody model) {
+            this.datasetFileMeta = model.datasetFileMeta;
+            this.datasetId = model.datasetId;
+            this.datasetVersion = model.datasetVersion;
+            this.requestId = model.requestId;
+            this.workspaceId = model.workspaceId;
+        } 
 
         /**
          * DatasetFileMeta.

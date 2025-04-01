@@ -84,6 +84,10 @@ public class CodeSourceItem extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessibility
      */
@@ -197,6 +201,26 @@ public class CodeSourceItem extends TeaModel {
         private String mountPath; 
         private String userId; 
         private String workspaceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CodeSourceItem model) {
+            this.accessibility = model.accessibility;
+            this.codeBranch = model.codeBranch;
+            this.codeCommit = model.codeCommit;
+            this.codeRepo = model.codeRepo;
+            this.codeRepoAccessToken = model.codeRepoAccessToken;
+            this.codeRepoUserName = model.codeRepoUserName;
+            this.codeSourceId = model.codeSourceId;
+            this.description = model.description;
+            this.displayName = model.displayName;
+            this.gmtCreateTime = model.gmtCreateTime;
+            this.gmtModifyTime = model.gmtModifyTime;
+            this.mountPath = model.mountPath;
+            this.userId = model.userId;
+            this.workspaceId = model.workspaceId;
+        } 
 
         /**
          * Accessibility.

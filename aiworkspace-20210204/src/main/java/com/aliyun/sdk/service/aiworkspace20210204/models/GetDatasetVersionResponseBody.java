@@ -99,6 +99,10 @@ public class GetDatasetVersionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataCount
      */
@@ -236,6 +240,29 @@ public class GetDatasetVersionResponseBody extends TeaModel {
         private String sourceType; 
         private String uri; 
         private String versionName; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDatasetVersionResponseBody model) {
+            this.dataCount = model.dataCount;
+            this.dataSize = model.dataSize;
+            this.dataSourceType = model.dataSourceType;
+            this.datasetId = model.datasetId;
+            this.description = model.description;
+            this.gmtCreateTime = model.gmtCreateTime;
+            this.gmtModifiedTime = model.gmtModifiedTime;
+            this.importInfo = model.importInfo;
+            this.labels = model.labels;
+            this.mountAccess = model.mountAccess;
+            this.options = model.options;
+            this.property = model.property;
+            this.requestId = model.requestId;
+            this.sourceId = model.sourceId;
+            this.sourceType = model.sourceType;
+            this.uri = model.uri;
+            this.versionName = model.versionName;
+        } 
 
         /**
          * <p>数据集的数据量</p>

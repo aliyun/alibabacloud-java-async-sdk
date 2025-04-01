@@ -56,6 +56,10 @@ public class GetMemberResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return displayName
      */
@@ -113,6 +117,19 @@ public class GetMemberResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<String> roles; 
         private String userId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMemberResponseBody model) {
+            this.displayName = model.displayName;
+            this.gmtCreateTime = model.gmtCreateTime;
+            this.memberId = model.memberId;
+            this.memberName = model.memberName;
+            this.requestId = model.requestId;
+            this.roles = model.roles;
+            this.userId = model.userId;
+        } 
 
         /**
          * DisplayName.

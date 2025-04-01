@@ -32,6 +32,10 @@ public class RemoveMemberRoleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -41,6 +45,13 @@ public class RemoveMemberRoleResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(RemoveMemberRoleResponseBody model) {
+            this.requestId = model.requestId;
+        } 
 
         /**
          * RequestId.

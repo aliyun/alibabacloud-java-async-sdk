@@ -76,6 +76,10 @@ public class GetDefaultWorkspaceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return conditions
      */
@@ -173,6 +177,24 @@ public class GetDefaultWorkspaceResponseBody extends TeaModel {
         private String status; 
         private String workspaceId; 
         private String workspaceName; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDefaultWorkspaceResponseBody model) {
+            this.conditions = model.conditions;
+            this.creator = model.creator;
+            this.description = model.description;
+            this.displayName = model.displayName;
+            this.envTypes = model.envTypes;
+            this.gmtCreateTime = model.gmtCreateTime;
+            this.gmtModifiedTime = model.gmtModifiedTime;
+            this.owner = model.owner;
+            this.requestId = model.requestId;
+            this.status = model.status;
+            this.workspaceId = model.workspaceId;
+            this.workspaceName = model.workspaceName;
+        } 
 
         /**
          * Conditions.
@@ -332,6 +354,15 @@ public class GetDefaultWorkspaceResponseBody extends TeaModel {
             private String message; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Conditions model) {
+                this.code = model.code;
+                this.message = model.message;
+                this.type = model.type;
+            } 
+
             /**
              * Code.
              */
@@ -418,6 +449,15 @@ public class GetDefaultWorkspaceResponseBody extends TeaModel {
             private String userId; 
             private String userKp; 
             private String userName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Owner model) {
+                this.userId = model.userId;
+                this.userKp = model.userKp;
+                this.userName = model.userName;
+            } 
 
             /**
              * UserId.

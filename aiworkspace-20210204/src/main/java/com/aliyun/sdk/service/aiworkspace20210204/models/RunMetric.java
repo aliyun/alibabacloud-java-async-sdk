@@ -46,6 +46,10 @@ public class RunMetric extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return key
      */
@@ -79,6 +83,16 @@ public class RunMetric extends TeaModel {
         private Long step; 
         private Long timestamp; 
         private Float value; 
+
+        private Builder() {
+        } 
+
+        private Builder(RunMetric model) {
+            this.key = model.key;
+            this.step = model.step;
+            this.timestamp = model.timestamp;
+            this.value = model.value;
+        } 
 
         /**
          * <p>This parameter is required.</p>

@@ -40,6 +40,10 @@ public class ListModelsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return models
      */
@@ -65,6 +69,15 @@ public class ListModelsResponseBody extends TeaModel {
         private java.util.List<Model> models; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListModelsResponseBody model) {
+            this.models = model.models;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Models.

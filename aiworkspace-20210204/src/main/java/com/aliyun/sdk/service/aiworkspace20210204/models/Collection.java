@@ -48,6 +48,10 @@ public class Collection extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return collectionName
      */
@@ -89,6 +93,17 @@ public class Collection extends TeaModel {
         private String gmtModifiedTime; 
         private String ownerId; 
         private String userId; 
+
+        private Builder() {
+        } 
+
+        private Builder(Collection model) {
+            this.collectionName = model.collectionName;
+            this.gmtCreateTime = model.gmtCreateTime;
+            this.gmtModifiedTime = model.gmtModifiedTime;
+            this.ownerId = model.ownerId;
+            this.userId = model.userId;
+        } 
 
         /**
          * CollectionName.

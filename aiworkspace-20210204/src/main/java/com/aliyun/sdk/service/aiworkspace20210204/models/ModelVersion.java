@@ -108,6 +108,10 @@ public class ModelVersion extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return approvalStatus
      */
@@ -269,6 +273,32 @@ public class ModelVersion extends TeaModel {
         private String userId; 
         private String versionDescription; 
         private String versionName; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModelVersion model) {
+            this.approvalStatus = model.approvalStatus;
+            this.compressionSpec = model.compressionSpec;
+            this.evaluationSpec = model.evaluationSpec;
+            this.extraInfo = model.extraInfo;
+            this.formatType = model.formatType;
+            this.frameworkType = model.frameworkType;
+            this.gmtCreateTime = model.gmtCreateTime;
+            this.gmtModifiedTime = model.gmtModifiedTime;
+            this.inferenceSpec = model.inferenceSpec;
+            this.labels = model.labels;
+            this.metrics = model.metrics;
+            this.options = model.options;
+            this.ownerId = model.ownerId;
+            this.sourceId = model.sourceId;
+            this.sourceType = model.sourceType;
+            this.trainingSpec = model.trainingSpec;
+            this.uri = model.uri;
+            this.userId = model.userId;
+            this.versionDescription = model.versionDescription;
+            this.versionName = model.versionName;
+        } 
 
         /**
          * ApprovalStatus.

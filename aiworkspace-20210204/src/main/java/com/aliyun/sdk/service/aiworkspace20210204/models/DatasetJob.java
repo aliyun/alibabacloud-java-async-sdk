@@ -84,6 +84,10 @@ public class DatasetJob extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return completedFileCount
      */
@@ -197,6 +201,26 @@ public class DatasetJob extends TeaModel {
         private String status; 
         private Long totalFileCount; 
         private String workspaceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DatasetJob model) {
+            this.completedFileCount = model.completedFileCount;
+            this.createTime = model.createTime;
+            this.datasetJobId = model.datasetJobId;
+            this.datasetVersion = model.datasetVersion;
+            this.description = model.description;
+            this.failedFileCount = model.failedFileCount;
+            this.finishTime = model.finishTime;
+            this.jobAction = model.jobAction;
+            this.jobMode = model.jobMode;
+            this.jobSpec = model.jobSpec;
+            this.logs = model.logs;
+            this.status = model.status;
+            this.totalFileCount = model.totalFileCount;
+            this.workspaceId = model.workspaceId;
+        } 
 
         /**
          * CompletedFileCount.

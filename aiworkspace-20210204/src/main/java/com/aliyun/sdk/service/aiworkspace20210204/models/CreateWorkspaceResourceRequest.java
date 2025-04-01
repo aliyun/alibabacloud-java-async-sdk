@@ -46,7 +46,7 @@ public class CreateWorkspaceResourceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -169,6 +169,14 @@ public class CreateWorkspaceResourceRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Labels model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * Key.
              */
@@ -224,6 +232,13 @@ public class CreateWorkspaceResourceRequest extends Request {
 
         public static final class Builder {
             private String id; 
+
+            private Builder() {
+            } 
+
+            private Builder(Quotas model) {
+                this.id = model.id;
+            } 
 
             /**
              * <p>This parameter is required.</p>
@@ -385,6 +400,22 @@ public class CreateWorkspaceResourceRequest extends Request {
             private String resourceType; 
             private java.util.Map<String, ?> spec; 
             private String workspaceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Resources model) {
+                this.envType = model.envType;
+                this.groupName = model.groupName;
+                this.isDefault = model.isDefault;
+                this.labels = model.labels;
+                this.name = model.name;
+                this.productType = model.productType;
+                this.quotas = model.quotas;
+                this.resourceType = model.resourceType;
+                this.spec = model.spec;
+                this.workspaceId = model.workspaceId;
+            } 
 
             /**
              * <p>This parameter is required.</p>

@@ -44,6 +44,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -77,6 +81,16 @@ public class ListWorkspacesResponseBody extends TeaModel {
         private java.util.Map<String, ?> resourceLimits; 
         private Long totalCount; 
         private java.util.List<Workspaces> workspaces; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListWorkspacesResponseBody model) {
+            this.requestId = model.requestId;
+            this.resourceLimits = model.resourceLimits;
+            this.totalCount = model.totalCount;
+            this.workspaces = model.workspaces;
+        } 
 
         /**
          * RequestId.
@@ -279,6 +293,24 @@ public class ListWorkspacesResponseBody extends TeaModel {
             private String workspaceId; 
             private String workspaceName; 
             private String resourceGroupId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Workspaces model) {
+                this.adminNames = model.adminNames;
+                this.creator = model.creator;
+                this.description = model.description;
+                this.envTypes = model.envTypes;
+                this.extraInfos = model.extraInfos;
+                this.gmtCreateTime = model.gmtCreateTime;
+                this.gmtModifiedTime = model.gmtModifiedTime;
+                this.isDefault = model.isDefault;
+                this.status = model.status;
+                this.workspaceId = model.workspaceId;
+                this.workspaceName = model.workspaceName;
+                this.resourceGroupId = model.resourceGroupId;
+            } 
 
             /**
              * AdminNames.

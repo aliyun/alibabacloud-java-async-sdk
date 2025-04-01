@@ -56,6 +56,10 @@ public class ListDatasetFileMetasResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return datasetFileMetas
      */
@@ -113,6 +117,19 @@ public class ListDatasetFileMetasResponseBody extends TeaModel {
         private Integer pageSize; 
         private Integer totalCount; 
         private String workspaceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDatasetFileMetasResponseBody model) {
+            this.datasetFileMetas = model.datasetFileMetas;
+            this.datasetId = model.datasetId;
+            this.datasetVersion = model.datasetVersion;
+            this.nextToken = model.nextToken;
+            this.pageSize = model.pageSize;
+            this.totalCount = model.totalCount;
+            this.workspaceId = model.workspaceId;
+        } 
 
         /**
          * DatasetFileMetas.

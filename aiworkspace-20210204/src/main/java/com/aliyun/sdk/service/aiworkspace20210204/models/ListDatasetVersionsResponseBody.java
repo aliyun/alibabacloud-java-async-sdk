@@ -48,6 +48,10 @@ public class ListDatasetVersionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return datasetVersions
      */
@@ -89,6 +93,17 @@ public class ListDatasetVersionsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDatasetVersionsResponseBody model) {
+            this.datasetVersions = model.datasetVersions;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * DatasetVersions.

@@ -36,6 +36,10 @@ public class CreateDatasetJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return datasetJobId
      */
@@ -53,6 +57,14 @@ public class CreateDatasetJobResponseBody extends TeaModel {
     public static final class Builder {
         private String datasetJobId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateDatasetJobResponseBody model) {
+            this.datasetJobId = model.datasetJobId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * DatasetJobId.

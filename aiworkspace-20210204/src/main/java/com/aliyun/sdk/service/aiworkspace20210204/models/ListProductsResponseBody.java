@@ -40,6 +40,10 @@ public class ListProductsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return products
      */
@@ -65,6 +69,15 @@ public class ListProductsResponseBody extends TeaModel {
         private java.util.List<Products> products; 
         private String requestId; 
         private java.util.List<Services> services; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListProductsResponseBody model) {
+            this.products = model.products;
+            this.requestId = model.requestId;
+            this.services = model.services;
+        } 
 
         /**
          * Products.
@@ -176,6 +189,17 @@ public class ListProductsResponseBody extends TeaModel {
             private String productInstanceId; 
             private String purchaseUrl; 
 
+            private Builder() {
+            } 
+
+            private Builder(Products model) {
+                this.hasPermissionToPurchase = model.hasPermissionToPurchase;
+                this.isPurchased = model.isPurchased;
+                this.productCode = model.productCode;
+                this.productInstanceId = model.productInstanceId;
+                this.purchaseUrl = model.purchaseUrl;
+            } 
+
             /**
              * HasPermissionToPurchase.
              */
@@ -278,6 +302,15 @@ public class ListProductsResponseBody extends TeaModel {
             private Boolean isOpen; 
             private String openUrl; 
             private String serviceCode; 
+
+            private Builder() {
+            } 
+
+            private Builder(Services model) {
+                this.isOpen = model.isOpen;
+                this.openUrl = model.openUrl;
+                this.serviceCode = model.serviceCode;
+            } 
 
             /**
              * IsOpen.

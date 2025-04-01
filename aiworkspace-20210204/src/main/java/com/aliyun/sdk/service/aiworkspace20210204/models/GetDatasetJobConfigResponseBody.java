@@ -56,6 +56,10 @@ public class GetDatasetJobConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return config
      */
@@ -113,6 +117,19 @@ public class GetDatasetJobConfigResponseBody extends TeaModel {
         private String modifyTime; 
         private String requestId; 
         private String workspaceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDatasetJobConfigResponseBody model) {
+            this.config = model.config;
+            this.configType = model.configType;
+            this.createTime = model.createTime;
+            this.datasetId = model.datasetId;
+            this.modifyTime = model.modifyTime;
+            this.requestId = model.requestId;
+            this.workspaceId = model.workspaceId;
+        } 
 
         /**
          * Config.

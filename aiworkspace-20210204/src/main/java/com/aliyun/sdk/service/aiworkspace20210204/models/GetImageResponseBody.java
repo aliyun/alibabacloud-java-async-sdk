@@ -47,6 +47,12 @@ public class GetImageResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Size")
     private Integer size;
 
+    @com.aliyun.core.annotation.NameInMap("SourceId")
+    private String sourceId;
+
+    @com.aliyun.core.annotation.NameInMap("SourceType")
+    private String sourceType;
+
     @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
@@ -64,6 +70,8 @@ public class GetImageResponseBody extends TeaModel {
         this.parentUserId = builder.parentUserId;
         this.requestId = builder.requestId;
         this.size = builder.size;
+        this.sourceId = builder.sourceId;
+        this.sourceType = builder.sourceType;
         this.userId = builder.userId;
         this.workspaceId = builder.workspaceId;
     }
@@ -74,6 +82,10 @@ public class GetImageResponseBody extends TeaModel {
 
     public static GetImageResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -147,6 +159,20 @@ public class GetImageResponseBody extends TeaModel {
     }
 
     /**
+     * @return sourceId
+     */
+    public String getSourceId() {
+        return this.sourceId;
+    }
+
+    /**
+     * @return sourceType
+     */
+    public String getSourceType() {
+        return this.sourceType;
+    }
+
+    /**
      * @return userId
      */
     public String getUserId() {
@@ -171,8 +197,30 @@ public class GetImageResponseBody extends TeaModel {
         private String parentUserId; 
         private String requestId; 
         private Integer size; 
+        private String sourceId; 
+        private String sourceType; 
         private String userId; 
         private String workspaceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetImageResponseBody model) {
+            this.accessibility = model.accessibility;
+            this.description = model.description;
+            this.gmtCreateTime = model.gmtCreateTime;
+            this.gmtModifiedTime = model.gmtModifiedTime;
+            this.imageUri = model.imageUri;
+            this.labels = model.labels;
+            this.name = model.name;
+            this.parentUserId = model.parentUserId;
+            this.requestId = model.requestId;
+            this.size = model.size;
+            this.sourceId = model.sourceId;
+            this.sourceType = model.sourceType;
+            this.userId = model.userId;
+            this.workspaceId = model.workspaceId;
+        } 
 
         /**
          * Accessibility.
@@ -255,6 +303,22 @@ public class GetImageResponseBody extends TeaModel {
         }
 
         /**
+         * SourceId.
+         */
+        public Builder sourceId(String sourceId) {
+            this.sourceId = sourceId;
+            return this;
+        }
+
+        /**
+         * SourceType.
+         */
+        public Builder sourceType(String sourceType) {
+            this.sourceType = sourceType;
+            return this;
+        }
+
+        /**
          * UserId.
          */
         public Builder userId(String userId) {
@@ -319,6 +383,14 @@ public class GetImageResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Labels model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * Key.

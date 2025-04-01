@@ -44,6 +44,10 @@ public class ListExperimentResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return experiments
      */
@@ -77,6 +81,16 @@ public class ListExperimentResponseBody extends TeaModel {
         private Long nextPageToken; 
         private Long totalCount; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListExperimentResponseBody model) {
+            this.experiments = model.experiments;
+            this.nextPageToken = model.nextPageToken;
+            this.totalCount = model.totalCount;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Experiments.

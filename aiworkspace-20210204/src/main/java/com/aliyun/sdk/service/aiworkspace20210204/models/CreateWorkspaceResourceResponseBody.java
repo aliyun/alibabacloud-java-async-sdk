@@ -40,6 +40,10 @@ public class CreateWorkspaceResourceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class CreateWorkspaceResourceResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Resources> resources; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateWorkspaceResourceResponseBody model) {
+            this.requestId = model.requestId;
+            this.resources = model.resources;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * RequestId.
@@ -127,6 +140,13 @@ public class CreateWorkspaceResourceResponseBody extends TeaModel {
 
         public static final class Builder {
             private String id; 
+
+            private Builder() {
+            } 
+
+            private Builder(Resources model) {
+                this.id = model.id;
+            } 
 
             /**
              * Id.

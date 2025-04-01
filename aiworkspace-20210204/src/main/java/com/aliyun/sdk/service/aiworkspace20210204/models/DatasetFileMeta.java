@@ -64,6 +64,10 @@ public class DatasetFileMeta extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataSize
      */
@@ -137,6 +141,21 @@ public class DatasetFileMeta extends TeaModel {
         private Float score; 
         private String tags; 
         private String uri; 
+
+        private Builder() {
+        } 
+
+        private Builder(DatasetFileMeta model) {
+            this.dataSize = model.dataSize;
+            this.datasetFileMetaId = model.datasetFileMetaId;
+            this.downloadUrl = model.downloadUrl;
+            this.fileFingerPrint = model.fileFingerPrint;
+            this.fileName = model.fileName;
+            this.fileUpdateTime = model.fileUpdateTime;
+            this.score = model.score;
+            this.tags = model.tags;
+            this.uri = model.uri;
+        } 
 
         /**
          * DataSize.

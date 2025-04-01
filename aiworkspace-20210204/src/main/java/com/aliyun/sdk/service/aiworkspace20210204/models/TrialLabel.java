@@ -48,6 +48,10 @@ public class TrialLabel extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return gmtCreateTime
      */
@@ -89,6 +93,17 @@ public class TrialLabel extends TeaModel {
         private String key; 
         private String trialId; 
         private String value; 
+
+        private Builder() {
+        } 
+
+        private Builder(TrialLabel model) {
+            this.gmtCreateTime = model.gmtCreateTime;
+            this.gmtModifiedTime = model.gmtModifiedTime;
+            this.key = model.key;
+            this.trialId = model.trialId;
+            this.value = model.value;
+        } 
 
         /**
          * GmtCreateTime.

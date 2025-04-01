@@ -76,6 +76,10 @@ public class Trial extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessibility
      */
@@ -173,6 +177,24 @@ public class Trial extends TeaModel {
         private String trialId; 
         private String userId; 
         private String workspaceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(Trial model) {
+            this.accessibility = model.accessibility;
+            this.experimentId = model.experimentId;
+            this.gmtCreateTime = model.gmtCreateTime;
+            this.gmtModifiedTime = model.gmtModifiedTime;
+            this.labels = model.labels;
+            this.name = model.name;
+            this.ownerId = model.ownerId;
+            this.sourceId = model.sourceId;
+            this.sourceType = model.sourceType;
+            this.trialId = model.trialId;
+            this.userId = model.userId;
+            this.workspaceId = model.workspaceId;
+        } 
 
         /**
          * Accessibility.

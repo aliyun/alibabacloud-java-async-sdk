@@ -50,6 +50,10 @@ public class RunLabel extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return gmtCreateTime
      */
@@ -91,6 +95,17 @@ public class RunLabel extends TeaModel {
         private String key; 
         private String runId; 
         private String value; 
+
+        private Builder() {
+        } 
+
+        private Builder(RunLabel model) {
+            this.gmtCreateTime = model.gmtCreateTime;
+            this.gmtModifiedTime = model.gmtModifiedTime;
+            this.key = model.key;
+            this.runId = model.runId;
+            this.value = model.value;
+        } 
 
         /**
          * GmtCreateTime.

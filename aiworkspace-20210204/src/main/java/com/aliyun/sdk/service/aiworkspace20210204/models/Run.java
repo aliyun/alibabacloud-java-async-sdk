@@ -88,6 +88,10 @@ public class Run extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessibility
      */
@@ -209,6 +213,27 @@ public class Run extends TeaModel {
         private String sourceType; 
         private String userId; 
         private String workspaceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(Run model) {
+            this.accessibility = model.accessibility;
+            this.experimentId = model.experimentId;
+            this.gmtCreateTime = model.gmtCreateTime;
+            this.gmtModifiedTime = model.gmtModifiedTime;
+            this.labels = model.labels;
+            this.metrics = model.metrics;
+            this.name = model.name;
+            this.ownerId = model.ownerId;
+            this.params = model.params;
+            this.requestId = model.requestId;
+            this.runId = model.runId;
+            this.sourceId = model.sourceId;
+            this.sourceType = model.sourceType;
+            this.userId = model.userId;
+            this.workspaceId = model.workspaceId;
+        } 
 
         /**
          * Accessibility.

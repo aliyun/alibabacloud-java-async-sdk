@@ -69,6 +69,10 @@ public class DatasetFileMetaConentUpdate extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return comment
      */
@@ -150,6 +154,22 @@ public class DatasetFileMetaConentUpdate extends TeaModel {
         private String fileUpdateTime; 
         private String metaAttributes; 
         private String tags; 
+
+        private Builder() {
+        } 
+
+        private Builder(DatasetFileMetaConentUpdate model) {
+            this.comment = model.comment;
+            this.contentType = model.contentType;
+            this.dataSize = model.dataSize;
+            this.datasetFileMetaId = model.datasetFileMetaId;
+            this.fileCreateTime = model.fileCreateTime;
+            this.fileName = model.fileName;
+            this.fileType = model.fileType;
+            this.fileUpdateTime = model.fileUpdateTime;
+            this.metaAttributes = model.metaAttributes;
+            this.tags = model.tags;
+        } 
 
         /**
          * Comment.

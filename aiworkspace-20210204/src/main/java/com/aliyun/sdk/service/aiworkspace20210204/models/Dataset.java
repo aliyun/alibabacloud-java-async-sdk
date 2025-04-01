@@ -128,6 +128,10 @@ public class Dataset extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessibility
      */
@@ -329,6 +333,37 @@ public class Dataset extends TeaModel {
         private String uri; 
         private String userId; 
         private String workspaceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(Dataset model) {
+            this.accessibility = model.accessibility;
+            this.dataSourceType = model.dataSourceType;
+            this.dataType = model.dataType;
+            this.datasetId = model.datasetId;
+            this.description = model.description;
+            this.gmtCreateTime = model.gmtCreateTime;
+            this.gmtModifiedTime = model.gmtModifiedTime;
+            this.importInfo = model.importInfo;
+            this.labels = model.labels;
+            this.latestVersion = model.latestVersion;
+            this.mountAccess = model.mountAccess;
+            this.mountAccessReadWriteRoleIdList = model.mountAccessReadWriteRoleIdList;
+            this.name = model.name;
+            this.options = model.options;
+            this.ownerId = model.ownerId;
+            this.property = model.property;
+            this.providerType = model.providerType;
+            this.sourceDatasetId = model.sourceDatasetId;
+            this.sourceDatasetVersion = model.sourceDatasetVersion;
+            this.sourceId = model.sourceId;
+            this.sourceType = model.sourceType;
+            this.tagTemplateType = model.tagTemplateType;
+            this.uri = model.uri;
+            this.userId = model.userId;
+            this.workspaceId = model.workspaceId;
+        } 
 
         /**
          * Accessibility.

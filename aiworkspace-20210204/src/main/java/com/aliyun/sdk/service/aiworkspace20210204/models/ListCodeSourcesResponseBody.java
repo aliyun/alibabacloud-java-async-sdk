@@ -40,6 +40,10 @@ public class ListCodeSourcesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return codeSources
      */
@@ -65,6 +69,15 @@ public class ListCodeSourcesResponseBody extends TeaModel {
         private java.util.List<CodeSourceItem> codeSources; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListCodeSourcesResponseBody model) {
+            this.codeSources = model.codeSources;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * CodeSources.

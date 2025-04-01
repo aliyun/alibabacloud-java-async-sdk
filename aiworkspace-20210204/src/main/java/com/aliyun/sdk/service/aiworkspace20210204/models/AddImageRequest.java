@@ -48,6 +48,14 @@ public class AddImageRequest extends Request {
     private Integer size;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceId")
+    private String sourceId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceType")
+    private String sourceType;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     private String workspaceId;
 
@@ -60,6 +68,8 @@ public class AddImageRequest extends Request {
         this.labels = builder.labels;
         this.name = builder.name;
         this.size = builder.size;
+        this.sourceId = builder.sourceId;
+        this.sourceType = builder.sourceType;
         this.workspaceId = builder.workspaceId;
     }
 
@@ -71,7 +81,7 @@ public class AddImageRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -126,6 +136,20 @@ public class AddImageRequest extends Request {
     }
 
     /**
+     * @return sourceId
+     */
+    public String getSourceId() {
+        return this.sourceId;
+    }
+
+    /**
+     * @return sourceType
+     */
+    public String getSourceType() {
+        return this.sourceType;
+    }
+
+    /**
      * @return workspaceId
      */
     public String getWorkspaceId() {
@@ -140,6 +164,8 @@ public class AddImageRequest extends Request {
         private java.util.List<Labels> labels; 
         private String name; 
         private Integer size; 
+        private String sourceId; 
+        private String sourceType; 
         private String workspaceId; 
 
         private Builder() {
@@ -155,6 +181,8 @@ public class AddImageRequest extends Request {
             this.labels = request.labels;
             this.name = request.name;
             this.size = request.size;
+            this.sourceId = request.sourceId;
+            this.sourceType = request.sourceType;
             this.workspaceId = request.workspaceId;
         } 
 
@@ -228,6 +256,24 @@ public class AddImageRequest extends Request {
         }
 
         /**
+         * SourceId.
+         */
+        public Builder sourceId(String sourceId) {
+            this.putBodyParameter("SourceId", sourceId);
+            this.sourceId = sourceId;
+            return this;
+        }
+
+        /**
+         * SourceType.
+         */
+        public Builder sourceType(String sourceType) {
+            this.putBodyParameter("SourceType", sourceType);
+            this.sourceType = sourceType;
+            return this;
+        }
+
+        /**
          * WorkspaceId.
          */
         public Builder workspaceId(String workspaceId) {
@@ -286,6 +332,14 @@ public class AddImageRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Labels model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * Key.

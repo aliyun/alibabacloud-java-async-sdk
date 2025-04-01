@@ -36,6 +36,10 @@ public class DeleteWorkspaceResourceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DeleteWorkspaceResourceResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<String> resourceIds; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteWorkspaceResourceResponseBody model) {
+            this.requestId = model.requestId;
+            this.resourceIds = model.resourceIds;
+        } 
 
         /**
          * RequestId.

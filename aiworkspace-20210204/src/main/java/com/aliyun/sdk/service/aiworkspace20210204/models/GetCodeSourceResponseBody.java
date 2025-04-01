@@ -88,6 +88,10 @@ public class GetCodeSourceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessibility
      */
@@ -209,6 +213,27 @@ public class GetCodeSourceResponseBody extends TeaModel {
         private String requestId; 
         private String userId; 
         private String workspaceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetCodeSourceResponseBody model) {
+            this.accessibility = model.accessibility;
+            this.codeBranch = model.codeBranch;
+            this.codeCommit = model.codeCommit;
+            this.codeRepo = model.codeRepo;
+            this.codeRepoAccessToken = model.codeRepoAccessToken;
+            this.codeRepoUserName = model.codeRepoUserName;
+            this.codeSourceId = model.codeSourceId;
+            this.description = model.description;
+            this.displayName = model.displayName;
+            this.gmtCreateTime = model.gmtCreateTime;
+            this.gmtModifyTime = model.gmtModifyTime;
+            this.mountPath = model.mountPath;
+            this.requestId = model.requestId;
+            this.userId = model.userId;
+            this.workspaceId = model.workspaceId;
+        } 
 
         /**
          * Accessibility.

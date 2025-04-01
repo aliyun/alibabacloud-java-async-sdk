@@ -36,6 +36,10 @@ public class CreateMemberResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return members
      */
@@ -53,6 +57,14 @@ public class CreateMemberResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Members> members; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateMemberResponseBody model) {
+            this.members = model.members;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Members.
@@ -143,6 +155,16 @@ public class CreateMemberResponseBody extends TeaModel {
             private String memberId; 
             private java.util.List<String> roles; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Members model) {
+                this.displayName = model.displayName;
+                this.memberId = model.memberId;
+                this.roles = model.roles;
+                this.userId = model.userId;
+            } 
 
             /**
              * DisplayName.

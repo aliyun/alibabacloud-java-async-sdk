@@ -40,6 +40,10 @@ public class ListImageLabelsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return labels
      */
@@ -65,6 +69,15 @@ public class ListImageLabelsResponseBody extends TeaModel {
         private java.util.List<Labels> labels; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListImageLabelsResponseBody model) {
+            this.labels = model.labels;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Labels.
@@ -139,6 +152,14 @@ public class ListImageLabelsResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Labels model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * Key.

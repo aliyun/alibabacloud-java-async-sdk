@@ -108,6 +108,10 @@ public class GetModelResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessibility
      */
@@ -269,6 +273,32 @@ public class GetModelResponseBody extends TeaModel {
         private String task; 
         private String userId; 
         private String workspaceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetModelResponseBody model) {
+            this.accessibility = model.accessibility;
+            this.domain = model.domain;
+            this.extraInfo = model.extraInfo;
+            this.gmtCreateTime = model.gmtCreateTime;
+            this.gmtModifiedTime = model.gmtModifiedTime;
+            this.labels = model.labels;
+            this.latestVersion = model.latestVersion;
+            this.modelDescription = model.modelDescription;
+            this.modelDoc = model.modelDoc;
+            this.modelId = model.modelId;
+            this.modelName = model.modelName;
+            this.modelType = model.modelType;
+            this.orderNumber = model.orderNumber;
+            this.origin = model.origin;
+            this.ownerId = model.ownerId;
+            this.provider = model.provider;
+            this.requestId = model.requestId;
+            this.task = model.task;
+            this.userId = model.userId;
+            this.workspaceId = model.workspaceId;
+        } 
 
         /**
          * Accessibility.

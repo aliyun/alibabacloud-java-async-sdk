@@ -44,6 +44,10 @@ public class Relationship extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return attributes
      */
@@ -77,6 +81,16 @@ public class Relationship extends TeaModel {
         private String dataChannel; 
         private String relationshipGuid; 
         private String relationshipType; 
+
+        private Builder() {
+        } 
+
+        private Builder(Relationship model) {
+            this.attributes = model.attributes;
+            this.dataChannel = model.dataChannel;
+            this.relationshipGuid = model.relationshipGuid;
+            this.relationshipType = model.relationshipType;
+        } 
 
         /**
          * Attributes.

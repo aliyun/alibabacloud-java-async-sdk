@@ -40,6 +40,10 @@ public class Relation extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errMsg
      */
@@ -65,6 +69,15 @@ public class Relation extends TeaModel {
         private String errMsg; 
         private LineageRelation lineageRelation; 
         private Boolean result; 
+
+        private Builder() {
+        } 
+
+        private Builder(Relation model) {
+            this.errMsg = model.errMsg;
+            this.lineageRelation = model.lineageRelation;
+            this.result = model.result;
+        } 
 
         /**
          * ErrMsg.

@@ -39,7 +39,7 @@ public class CreateProductOrdersRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -152,6 +152,15 @@ public class CreateProductOrdersRequest extends Request {
             private String code; 
             private String name; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceProperties model) {
+                this.code = model.code;
+                this.name = model.name;
+                this.value = model.value;
+            } 
 
             /**
              * Code.
@@ -287,6 +296,19 @@ public class CreateProductOrdersRequest extends Request {
             private String orderType; 
             private String pricingCycle; 
             private String productCode; 
+
+            private Builder() {
+            } 
+
+            private Builder(Products model) {
+                this.autoRenew = model.autoRenew;
+                this.chargeType = model.chargeType;
+                this.duration = model.duration;
+                this.instanceProperties = model.instanceProperties;
+                this.orderType = model.orderType;
+                this.pricingCycle = model.pricingCycle;
+                this.productCode = model.productCode;
+            } 
 
             /**
              * AutoRenew.

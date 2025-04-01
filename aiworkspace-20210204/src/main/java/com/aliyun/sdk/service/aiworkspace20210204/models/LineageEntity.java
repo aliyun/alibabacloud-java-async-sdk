@@ -44,6 +44,10 @@ public class LineageEntity extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return attributes
      */
@@ -77,6 +81,16 @@ public class LineageEntity extends TeaModel {
         private String entityType; 
         private String name; 
         private String qualifiedName; 
+
+        private Builder() {
+        } 
+
+        private Builder(LineageEntity model) {
+            this.attributes = model.attributes;
+            this.entityType = model.entityType;
+            this.name = model.name;
+            this.qualifiedName = model.qualifiedName;
+        } 
 
         /**
          * Attributes.

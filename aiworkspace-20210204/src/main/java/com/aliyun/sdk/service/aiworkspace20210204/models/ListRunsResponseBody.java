@@ -44,6 +44,10 @@ public class ListRunsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextPageToken
      */
@@ -77,6 +81,16 @@ public class ListRunsResponseBody extends TeaModel {
         private java.util.List<Run> runs; 
         private Long totalCount; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListRunsResponseBody model) {
+            this.nextPageToken = model.nextPageToken;
+            this.runs = model.runs;
+            this.totalCount = model.totalCount;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * NextPageToken.

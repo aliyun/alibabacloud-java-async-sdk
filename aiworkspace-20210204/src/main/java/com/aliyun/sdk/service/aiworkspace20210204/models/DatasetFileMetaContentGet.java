@@ -76,6 +76,10 @@ public class DatasetFileMetaContentGet extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return comment
      */
@@ -173,6 +177,24 @@ public class DatasetFileMetaContentGet extends TeaModel {
         private String metaAttributes; 
         private String tags; 
         private String uri; 
+
+        private Builder() {
+        } 
+
+        private Builder(DatasetFileMetaContentGet model) {
+            this.comment = model.comment;
+            this.contentType = model.contentType;
+            this.dataSize = model.dataSize;
+            this.datasetFileMetaId = model.datasetFileMetaId;
+            this.fileCreateTime = model.fileCreateTime;
+            this.fileFingerPrint = model.fileFingerPrint;
+            this.fileName = model.fileName;
+            this.fileType = model.fileType;
+            this.fileUpdateTime = model.fileUpdateTime;
+            this.metaAttributes = model.metaAttributes;
+            this.tags = model.tags;
+            this.uri = model.uri;
+        } 
 
         /**
          * Comment.

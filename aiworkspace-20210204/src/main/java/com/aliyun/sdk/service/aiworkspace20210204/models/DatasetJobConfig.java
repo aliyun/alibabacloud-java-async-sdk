@@ -52,6 +52,10 @@ public class DatasetJobConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return config
      */
@@ -101,6 +105,18 @@ public class DatasetJobConfig extends TeaModel {
         private String datasetJobConfigId; 
         private String modifyTime; 
         private String workspaceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DatasetJobConfig model) {
+            this.config = model.config;
+            this.configType = model.configType;
+            this.createTime = model.createTime;
+            this.datasetJobConfigId = model.datasetJobConfigId;
+            this.modifyTime = model.modifyTime;
+            this.workspaceId = model.workspaceId;
+        } 
 
         /**
          * Config.

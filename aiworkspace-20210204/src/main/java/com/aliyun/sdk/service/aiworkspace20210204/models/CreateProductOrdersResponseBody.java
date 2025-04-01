@@ -44,6 +44,10 @@ public class CreateProductOrdersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return buyProductRequestId
      */
@@ -77,6 +81,16 @@ public class CreateProductOrdersResponseBody extends TeaModel {
         private String message; 
         private String orderId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateProductOrdersResponseBody model) {
+            this.buyProductRequestId = model.buyProductRequestId;
+            this.message = model.message;
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * BuyProductRequestId.

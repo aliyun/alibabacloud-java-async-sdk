@@ -40,6 +40,10 @@ public class ListRunMetricsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return metrics
      */
@@ -65,6 +69,15 @@ public class ListRunMetricsResponseBody extends TeaModel {
         private java.util.List<RunMetric> metrics; 
         private Long nextPageToken; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListRunMetricsResponseBody model) {
+            this.metrics = model.metrics;
+            this.nextPageToken = model.nextPageToken;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Metrics.

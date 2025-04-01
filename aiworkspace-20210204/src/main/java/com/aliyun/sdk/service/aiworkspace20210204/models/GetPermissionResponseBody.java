@@ -40,6 +40,10 @@ public class GetPermissionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return permissionCode
      */
@@ -65,6 +69,15 @@ public class GetPermissionResponseBody extends TeaModel {
         private String permissionCode; 
         private java.util.List<PermissionRules> permissionRules; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetPermissionResponseBody model) {
+            this.permissionCode = model.permissionCode;
+            this.permissionRules = model.permissionRules;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * PermissionCode.
@@ -139,6 +152,14 @@ public class GetPermissionResponseBody extends TeaModel {
         public static final class Builder {
             private String accessibility; 
             private String entityAccessType; 
+
+            private Builder() {
+            } 
+
+            private Builder(PermissionRules model) {
+                this.accessibility = model.accessibility;
+                this.entityAccessType = model.entityAccessType;
+            } 
 
             /**
              * Accessibility.

@@ -40,6 +40,10 @@ public class LineageRelation extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return destEntityQualifiedName
      */
@@ -65,6 +69,15 @@ public class LineageRelation extends TeaModel {
         private String destEntityQualifiedName; 
         private String relationshipGuid; 
         private String srcEntityQualifiedName; 
+
+        private Builder() {
+        } 
+
+        private Builder(LineageRelation model) {
+            this.destEntityQualifiedName = model.destEntityQualifiedName;
+            this.relationshipGuid = model.relationshipGuid;
+            this.srcEntityQualifiedName = model.srcEntityQualifiedName;
+        } 
 
         /**
          * DestEntityQualifiedName.

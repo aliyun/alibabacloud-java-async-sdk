@@ -88,6 +88,10 @@ public class GetWorkspaceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return adminNames
      */
@@ -209,6 +213,27 @@ public class GetWorkspaceResponseBody extends TeaModel {
         private String status; 
         private String workspaceId; 
         private String workspaceName; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetWorkspaceResponseBody model) {
+            this.adminNames = model.adminNames;
+            this.creator = model.creator;
+            this.description = model.description;
+            this.displayName = model.displayName;
+            this.envTypes = model.envTypes;
+            this.extraInfos = model.extraInfos;
+            this.gmtCreateTime = model.gmtCreateTime;
+            this.gmtModifiedTime = model.gmtModifiedTime;
+            this.isDefault = model.isDefault;
+            this.owner = model.owner;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+            this.status = model.status;
+            this.workspaceId = model.workspaceId;
+            this.workspaceName = model.workspaceName;
+        } 
 
         /**
          * AdminNames.
@@ -403,6 +428,16 @@ public class GetWorkspaceResponseBody extends TeaModel {
             private String userId; 
             private String userKp; 
             private String userName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Owner model) {
+                this.displayName = model.displayName;
+                this.userId = model.userId;
+                this.userKp = model.userKp;
+                this.userName = model.userName;
+            } 
 
             /**
              * DisplayName.

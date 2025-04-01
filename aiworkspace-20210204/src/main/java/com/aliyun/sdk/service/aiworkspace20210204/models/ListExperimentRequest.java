@@ -89,7 +89,7 @@ public class ListExperimentRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -359,6 +359,13 @@ public class ListExperimentRequest extends Request {
 
         public static final class Builder {
             private String matchNameExactly; 
+
+            private Builder() {
+            } 
+
+            private Builder(Options model) {
+                this.matchNameExactly = model.matchNameExactly;
+            } 
 
             /**
              * match_name_exactly.

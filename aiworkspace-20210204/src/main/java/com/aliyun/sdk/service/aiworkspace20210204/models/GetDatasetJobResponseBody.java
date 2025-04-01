@@ -76,6 +76,10 @@ public class GetDatasetJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return completedFileCount
      */
@@ -173,6 +177,24 @@ public class GetDatasetJobResponseBody extends TeaModel {
         private String requestId; 
         private String status; 
         private Long totalFileCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDatasetJobResponseBody model) {
+            this.completedFileCount = model.completedFileCount;
+            this.createTime = model.createTime;
+            this.description = model.description;
+            this.failedFileCount = model.failedFileCount;
+            this.finishTime = model.finishTime;
+            this.jobAction = model.jobAction;
+            this.jobMode = model.jobMode;
+            this.jobSpec = model.jobSpec;
+            this.logs = model.logs;
+            this.requestId = model.requestId;
+            this.status = model.status;
+            this.totalFileCount = model.totalFileCount;
+        } 
 
         /**
          * CompletedFileCount.

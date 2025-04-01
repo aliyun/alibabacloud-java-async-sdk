@@ -40,6 +40,10 @@ public class ListModelVersionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class ListModelVersionsResponseBody extends TeaModel {
         private String requestId; 
         private Long totalCount; 
         private java.util.List<ModelVersion> versions; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListModelVersionsResponseBody model) {
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.versions = model.versions;
+        } 
 
         /**
          * RequestId.

@@ -40,6 +40,10 @@ public class ListResourcesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class ListResourcesResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Resources> resources; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListResourcesResponseBody model) {
+            this.requestId = model.requestId;
+            this.resources = model.resources;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * RequestId.
@@ -152,6 +165,15 @@ public class ListResourcesResponseBody extends TeaModel {
             private Boolean enabled; 
             private String key; 
 
+            private Builder() {
+            } 
+
+            private Builder(Encryption model) {
+                this.algorithm = model.algorithm;
+                this.enabled = model.enabled;
+                this.key = model.key;
+            } 
+
             /**
              * Algorithm.
              */
@@ -215,6 +237,13 @@ public class ListResourcesResponseBody extends TeaModel {
         public static final class Builder {
             private String ownerId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Executor model) {
+                this.ownerId = model.ownerId;
+            } 
+
             /**
              * OwnerId.
              */
@@ -273,6 +302,14 @@ public class ListResourcesResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Labels model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * Key.
@@ -340,6 +377,14 @@ public class ListResourcesResponseBody extends TeaModel {
         public static final class Builder {
             private String name; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Specs model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
 
             /**
              * Name.
@@ -479,6 +524,20 @@ public class ListResourcesResponseBody extends TeaModel {
             private String productCode; 
             private String quotaType; 
             private java.util.List<Specs> specs; 
+
+            private Builder() {
+            } 
+
+            private Builder(Quotas model) {
+                this.cardType = model.cardType;
+                this.displayName = model.displayName;
+                this.id = model.id;
+                this.mode = model.mode;
+                this.name = model.name;
+                this.productCode = model.productCode;
+                this.quotaType = model.quotaType;
+                this.specs = model.specs;
+            } 
 
             /**
              * CardType.
@@ -738,6 +797,26 @@ public class ListResourcesResponseBody extends TeaModel {
             private String resourceType; 
             private java.util.Map<String, ?> spec; 
             private String workspaceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Resources model) {
+                this.encryption = model.encryption;
+                this.envType = model.envType;
+                this.executor = model.executor;
+                this.gmtCreateTime = model.gmtCreateTime;
+                this.groupName = model.groupName;
+                this.id = model.id;
+                this.isDefault = model.isDefault;
+                this.labels = model.labels;
+                this.name = model.name;
+                this.productType = model.productType;
+                this.quotas = model.quotas;
+                this.resourceType = model.resourceType;
+                this.spec = model.spec;
+                this.workspaceId = model.workspaceId;
+            } 
 
             /**
              * Encryption.

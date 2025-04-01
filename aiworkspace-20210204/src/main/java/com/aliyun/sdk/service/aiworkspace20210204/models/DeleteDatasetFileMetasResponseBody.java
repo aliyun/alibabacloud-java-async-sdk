@@ -40,6 +40,10 @@ public class DeleteDatasetFileMetasResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return failedDetails
      */
@@ -65,6 +69,15 @@ public class DeleteDatasetFileMetasResponseBody extends TeaModel {
         private java.util.List<DatasetFileMetaResponse> failedDetails; 
         private String requestId; 
         private Boolean status; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteDatasetFileMetasResponseBody model) {
+            this.failedDetails = model.failedDetails;
+            this.requestId = model.requestId;
+            this.status = model.status;
+        } 
 
         /**
          * FailedDetails.

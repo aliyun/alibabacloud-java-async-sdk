@@ -40,6 +40,10 @@ public class ListQuotasResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return quotas
      */
@@ -65,6 +69,15 @@ public class ListQuotasResponseBody extends TeaModel {
         private java.util.List<Quotas> quotas; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListQuotasResponseBody model) {
+            this.quotas = model.quotas;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Quotas.
@@ -151,6 +164,15 @@ public class ListQuotasResponseBody extends TeaModel {
             private String name; 
             private String type; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Specs model) {
+                this.name = model.name;
+                this.type = model.type;
+                this.value = model.value;
+            } 
 
             /**
              * Name.
@@ -286,6 +308,19 @@ public class ListQuotasResponseBody extends TeaModel {
             private String productCode; 
             private String quotaType; 
             private java.util.List<Specs> specs; 
+
+            private Builder() {
+            } 
+
+            private Builder(Quotas model) {
+                this.displayName = model.displayName;
+                this.id = model.id;
+                this.mode = model.mode;
+                this.name = model.name;
+                this.productCode = model.productCode;
+                this.quotaType = model.quotaType;
+                this.specs = model.specs;
+            } 
 
             /**
              * DisplayName.

@@ -80,6 +80,10 @@ public class Experiment extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessibility
      */
@@ -185,6 +189,25 @@ public class Experiment extends TeaModel {
         private String tensorboardLogUri; 
         private String userId; 
         private String workspaceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(Experiment model) {
+            this.accessibility = model.accessibility;
+            this.artifactUri = model.artifactUri;
+            this.experimentId = model.experimentId;
+            this.gmtCreateTime = model.gmtCreateTime;
+            this.gmtModifiedTime = model.gmtModifiedTime;
+            this.labels = model.labels;
+            this.latestRun = model.latestRun;
+            this.name = model.name;
+            this.ownerId = model.ownerId;
+            this.requestId = model.requestId;
+            this.tensorboardLogUri = model.tensorboardLogUri;
+            this.userId = model.userId;
+            this.workspaceId = model.workspaceId;
+        } 
 
         /**
          * Accessibility.

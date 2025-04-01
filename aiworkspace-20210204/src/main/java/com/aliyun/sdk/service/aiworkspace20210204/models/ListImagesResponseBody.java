@@ -40,6 +40,10 @@ public class ListImagesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return images
      */
@@ -65,6 +69,15 @@ public class ListImagesResponseBody extends TeaModel {
         private java.util.List<Images> images; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListImagesResponseBody model) {
+            this.images = model.images;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Images.
@@ -140,6 +153,14 @@ public class ListImagesResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Labels model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * Key.
              */
@@ -200,6 +221,12 @@ public class ListImagesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Size")
         private Integer size;
 
+        @com.aliyun.core.annotation.NameInMap("SourceId")
+        private String sourceId;
+
+        @com.aliyun.core.annotation.NameInMap("SourceType")
+        private String sourceType;
+
         @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
@@ -217,6 +244,8 @@ public class ListImagesResponseBody extends TeaModel {
             this.name = builder.name;
             this.parentUserId = builder.parentUserId;
             this.size = builder.size;
+            this.sourceId = builder.sourceId;
+            this.sourceType = builder.sourceType;
             this.userId = builder.userId;
             this.workspaceId = builder.workspaceId;
         }
@@ -300,6 +329,20 @@ public class ListImagesResponseBody extends TeaModel {
         }
 
         /**
+         * @return sourceId
+         */
+        public String getSourceId() {
+            return this.sourceId;
+        }
+
+        /**
+         * @return sourceType
+         */
+        public String getSourceType() {
+            return this.sourceType;
+        }
+
+        /**
          * @return userId
          */
         public String getUserId() {
@@ -324,8 +367,30 @@ public class ListImagesResponseBody extends TeaModel {
             private String name; 
             private String parentUserId; 
             private Integer size; 
+            private String sourceId; 
+            private String sourceType; 
             private String userId; 
             private String workspaceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Images model) {
+                this.accessibility = model.accessibility;
+                this.description = model.description;
+                this.gmtCreateTime = model.gmtCreateTime;
+                this.gmtModifiedTime = model.gmtModifiedTime;
+                this.imageId = model.imageId;
+                this.imageUri = model.imageUri;
+                this.labels = model.labels;
+                this.name = model.name;
+                this.parentUserId = model.parentUserId;
+                this.size = model.size;
+                this.sourceId = model.sourceId;
+                this.sourceType = model.sourceType;
+                this.userId = model.userId;
+                this.workspaceId = model.workspaceId;
+            } 
 
             /**
              * Accessibility.
@@ -404,6 +469,22 @@ public class ListImagesResponseBody extends TeaModel {
              */
             public Builder size(Integer size) {
                 this.size = size;
+                return this;
+            }
+
+            /**
+             * SourceId.
+             */
+            public Builder sourceId(String sourceId) {
+                this.sourceId = sourceId;
+                return this;
+            }
+
+            /**
+             * SourceType.
+             */
+            public Builder sourceType(String sourceType) {
+                this.sourceType = sourceType;
                 return this;
             }
 
