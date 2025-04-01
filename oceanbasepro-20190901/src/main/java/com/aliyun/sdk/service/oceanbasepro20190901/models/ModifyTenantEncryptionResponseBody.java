@@ -36,6 +36,10 @@ public class ModifyTenantEncryptionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class ModifyTenantEncryptionResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private TenantEncryption tenantEncryption; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyTenantEncryptionResponseBody model) {
+            this.requestId = model.requestId;
+            this.tenantEncryption = model.tenantEncryption;
+        } 
 
         /**
          * <p>Id of the request</p>
@@ -134,6 +146,15 @@ public class ModifyTenantEncryptionResponseBody extends TeaModel {
             private String encryptionType; 
             private String instanceId; 
             private String tenantId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TenantEncryption model) {
+                this.encryptionType = model.encryptionType;
+                this.instanceId = model.instanceId;
+                this.tenantId = model.tenantId;
+            } 
 
             /**
              * EncryptionType.

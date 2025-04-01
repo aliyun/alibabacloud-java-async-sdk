@@ -141,7 +141,7 @@ public class CreateProjectRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -607,6 +607,14 @@ public class CreateProjectRequest extends Request {
             private String columnName; 
             private String expression; 
 
+            private Builder() {
+            } 
+
+            private Builder(CustomColumns model) {
+                this.columnName = model.columnName;
+                this.expression = model.expression;
+            } 
+
             /**
              * ColumnName.
              */
@@ -841,6 +849,28 @@ public class CreateProjectRequest extends Request {
             private Boolean syncSchema; 
             private String syncSchemaColumnName; 
             private String tableCategory; 
+
+            private Builder() {
+            } 
+
+            private Builder(CommonTransferConfig model) {
+                this.activeActive = model.activeActive;
+                this.customColumns = model.customColumns;
+                this.dataWorksBusinessName = model.dataWorksBusinessName;
+                this.datahubTopicType = model.datahubTopicType;
+                this.mqPartition = model.mqPartition;
+                this.mqPartitionMode = model.mqPartitionMode;
+                this.mqSerializerType = model.mqSerializerType;
+                this.rocketMqEnableMsgTrace = model.rocketMqEnableMsgTrace;
+                this.rocketMqMsgTags = model.rocketMqMsgTags;
+                this.rocketMqProducerGroup = model.rocketMqProducerGroup;
+                this.rocketMqSendMsgTimeout = model.rocketMqSendMsgTimeout;
+                this.sinkStoreFormat = model.sinkStoreFormat;
+                this.sourceStoreFormat = model.sourceStoreFormat;
+                this.syncSchema = model.syncSchema;
+                this.syncSchemaColumnName = model.syncSchemaColumnName;
+                this.tableCategory = model.tableCategory;
+            } 
 
             /**
              * ActiveActive.
@@ -1141,6 +1171,24 @@ public class CreateProjectRequest extends Request {
             private Integer throttleRps; 
             private Integer writeWorkerNum; 
 
+            private Builder() {
+            } 
+
+            private Builder(FullTransferConfig model) {
+                this.allowDestTableNotEmpty = model.allowDestTableNotEmpty;
+                this.fullTransferSpeedMode = model.fullTransferSpeedMode;
+                this.fullVerifySpeedMode = model.fullVerifySpeedMode;
+                this.hbaseObjCheckMode = model.hbaseObjCheckMode;
+                this.hbaseObjMigMode = model.hbaseObjMigMode;
+                this.indexDDLConcurrencyLimit = model.indexDDLConcurrencyLimit;
+                this.maxConcurrentIndexDDLs = model.maxConcurrentIndexDDLs;
+                this.nonePkUkTruncateDstTable = model.nonePkUkTruncateDstTable;
+                this.readWorkerNum = model.readWorkerNum;
+                this.throttleIOPS = model.throttleIOPS;
+                this.throttleRps = model.throttleRps;
+                this.writeWorkerNum = model.writeWorkerNum;
+            } 
+
             /**
              * AllowDestTableNotEmpty.
              */
@@ -1373,6 +1421,21 @@ public class CreateProjectRequest extends Request {
             private Integer throttleIOPS; 
             private Integer throttleRps; 
 
+            private Builder() {
+            } 
+
+            private Builder(IncrTransferConfig model) {
+                this.enableIncrSyncStatistics = model.enableIncrSyncStatistics;
+                this.enableSequencingWithinTxn = model.enableSequencingWithinTxn;
+                this.incrSyncConcurrency = model.incrSyncConcurrency;
+                this.recordTypeWhiteList = model.recordTypeWhiteList;
+                this.startTimestamp = model.startTimestamp;
+                this.storeLogKeptHour = model.storeLogKeptHour;
+                this.supportDDLTypes = model.supportDDLTypes;
+                this.throttleIOPS = model.throttleIOPS;
+                this.throttleRps = model.throttleRps;
+            } 
+
             /**
              * EnableIncrSyncStatistics.
              */
@@ -1581,6 +1644,21 @@ public class CreateProjectRequest extends Request {
             private Integer throttleIOPS; 
             private Integer throttleRps; 
 
+            private Builder() {
+            } 
+
+            private Builder(ReverseIncrTransferConfig model) {
+                this.enableIncrSyncStatistics = model.enableIncrSyncStatistics;
+                this.enableSequencingWithinTxn = model.enableSequencingWithinTxn;
+                this.incrSyncConcurrency = model.incrSyncConcurrency;
+                this.recordTypeWhiteList = model.recordTypeWhiteList;
+                this.startTimestamp = model.startTimestamp;
+                this.storeLogKeptHour = model.storeLogKeptHour;
+                this.supportDDLTypes = model.supportDDLTypes;
+                this.throttleIOPS = model.throttleIOPS;
+                this.throttleRps = model.throttleRps;
+            } 
+
             /**
              * EnableIncrSyncStatistics.
              */
@@ -1704,6 +1782,14 @@ public class CreateProjectRequest extends Request {
             private String byteCharConvertStrategy; 
             private Boolean deferIndexCreation; 
 
+            private Builder() {
+            } 
+
+            private Builder(StructTransferConfig model) {
+                this.byteCharConvertStrategy = model.byteCharConvertStrategy;
+                this.deferIndexCreation = model.deferIndexCreation;
+            } 
+
             /**
              * ByteCharConvertStrategy.
              */
@@ -1794,6 +1880,16 @@ public class CreateProjectRequest extends Request {
             private String partitionLifeCycle; 
             private String partitionStatement; 
             private java.util.List<String> primaryKeys; 
+
+            private Builder() {
+            } 
+
+            private Builder(AdbTableSchema model) {
+                this.distributedKeys = model.distributedKeys;
+                this.partitionLifeCycle = model.partitionLifeCycle;
+                this.partitionStatement = model.partitionStatement;
+                this.primaryKeys = model.primaryKeys;
+            } 
 
             /**
              * DistributedKeys.
@@ -1938,6 +2034,19 @@ public class CreateProjectRequest extends Request {
             private java.util.List<String> shardColumns; 
             private String whereClause; 
 
+            private Builder() {
+            } 
+
+            private Builder(SpecificTables model) {
+                this.adbTableSchema = model.adbTableSchema;
+                this.filterColumns = model.filterColumns;
+                this.id = model.id;
+                this.mappedName = model.mappedName;
+                this.name = model.name;
+                this.shardColumns = model.shardColumns;
+                this.whereClause = model.whereClause;
+            } 
+
             /**
              * AdbTableSchema.
              */
@@ -2071,6 +2180,16 @@ public class CreateProjectRequest extends Request {
             private String partitionLifeCycle; 
             private String partitionStatement; 
             private java.util.List<String> primaryKeys; 
+
+            private Builder() {
+            } 
+
+            private Builder(SpecificViewsAdbTableSchema model) {
+                this.distributedKeys = model.distributedKeys;
+                this.partitionLifeCycle = model.partitionLifeCycle;
+                this.partitionStatement = model.partitionStatement;
+                this.primaryKeys = model.primaryKeys;
+            } 
 
             /**
              * DistributedKeys.
@@ -2215,6 +2334,19 @@ public class CreateProjectRequest extends Request {
             private java.util.List<String> shardColumns; 
             private String whereClause; 
 
+            private Builder() {
+            } 
+
+            private Builder(SpecificViews model) {
+                this.adbTableSchema = model.adbTableSchema;
+                this.filterColumns = model.filterColumns;
+                this.id = model.id;
+                this.mappedName = model.mappedName;
+                this.name = model.name;
+                this.shardColumns = model.shardColumns;
+                this.whereClause = model.whereClause;
+            } 
+
             /**
              * AdbTableSchema.
              */
@@ -2349,6 +2481,16 @@ public class CreateProjectRequest extends Request {
             private String partitionStatement; 
             private java.util.List<String> primaryKeys; 
 
+            private Builder() {
+            } 
+
+            private Builder(TablesAdbTableSchema model) {
+                this.distributedKeys = model.distributedKeys;
+                this.partitionLifeCycle = model.partitionLifeCycle;
+                this.partitionStatement = model.partitionStatement;
+                this.primaryKeys = model.primaryKeys;
+            } 
+
             /**
              * DistributedKeys.
              */
@@ -2444,6 +2586,15 @@ public class CreateProjectRequest extends Request {
             private Integer partitionSize; 
             private String partitionType; 
             private String virtualColumn; 
+
+            private Builder() {
+            } 
+
+            private Builder(ObkvPartitionConfig model) {
+                this.partitionSize = model.partitionSize;
+                this.partitionType = model.partitionType;
+                this.virtualColumn = model.virtualColumn;
+            } 
 
             /**
              * PartitionSize.
@@ -2592,6 +2743,20 @@ public class CreateProjectRequest extends Request {
             private java.util.List<String> shardColumns; 
             private String whereClause; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tables model) {
+                this.adbTableSchema = model.adbTableSchema;
+                this.filterColumns = model.filterColumns;
+                this.id = model.id;
+                this.mappedName = model.mappedName;
+                this.name = model.name;
+                this.obkvPartitionConfig = model.obkvPartitionConfig;
+                this.shardColumns = model.shardColumns;
+                this.whereClause = model.whereClause;
+            } 
+
             /**
              * AdbTableSchema.
              */
@@ -2733,6 +2898,16 @@ public class CreateProjectRequest extends Request {
             private String partitionLifeCycle; 
             private String partitionStatement; 
             private java.util.List<String> primaryKeys; 
+
+            private Builder() {
+            } 
+
+            private Builder(ViewsAdbTableSchema model) {
+                this.distributedKeys = model.distributedKeys;
+                this.partitionLifeCycle = model.partitionLifeCycle;
+                this.partitionStatement = model.partitionStatement;
+                this.primaryKeys = model.primaryKeys;
+            } 
 
             /**
              * DistributedKeys.
@@ -2876,6 +3051,19 @@ public class CreateProjectRequest extends Request {
             private String name; 
             private java.util.List<String> shardColumns; 
             private String whereClause; 
+
+            private Builder() {
+            } 
+
+            private Builder(Views model) {
+                this.adbTableSchema = model.adbTableSchema;
+                this.filterColumns = model.filterColumns;
+                this.id = model.id;
+                this.mappedName = model.mappedName;
+                this.name = model.name;
+                this.shardColumns = model.shardColumns;
+                this.whereClause = model.whereClause;
+            } 
 
             /**
              * AdbTableSchema.
@@ -3071,6 +3259,21 @@ public class CreateProjectRequest extends Request {
             private String tenantName; 
             private java.util.List<Views> views; 
 
+            private Builder() {
+            } 
+
+            private Builder(Databases model) {
+                this.clusterName = model.clusterName;
+                this.id = model.id;
+                this.mappedName = model.mappedName;
+                this.name = model.name;
+                this.specificTables = model.specificTables;
+                this.specificViews = model.specificViews;
+                this.tables = model.tables;
+                this.tenantName = model.tenantName;
+                this.views = model.views;
+            } 
+
             /**
              * ClusterName.
              */
@@ -3221,6 +3424,16 @@ public class CreateProjectRequest extends Request {
             private String partitionStatement; 
             private java.util.List<String> primaryKeys; 
 
+            private Builder() {
+            } 
+
+            private Builder(SpecificTablesAdbTableSchema model) {
+                this.distributedKeys = model.distributedKeys;
+                this.partitionLifeCycle = model.partitionLifeCycle;
+                this.partitionStatement = model.partitionStatement;
+                this.primaryKeys = model.primaryKeys;
+            } 
+
             /**
              * DistributedKeys.
              */
@@ -3364,6 +3577,19 @@ public class CreateProjectRequest extends Request {
             private java.util.List<String> shardColumns; 
             private String whereClause; 
 
+            private Builder() {
+            } 
+
+            private Builder(DatabasesBlackSpecificTables model) {
+                this.adbTableSchema = model.adbTableSchema;
+                this.filterColumns = model.filterColumns;
+                this.id = model.id;
+                this.mappedName = model.mappedName;
+                this.name = model.name;
+                this.shardColumns = model.shardColumns;
+                this.whereClause = model.whereClause;
+            } 
+
             /**
              * AdbTableSchema.
              */
@@ -3497,6 +3723,16 @@ public class CreateProjectRequest extends Request {
             private String partitionLifeCycle; 
             private String partitionStatement; 
             private java.util.List<String> primaryKeys; 
+
+            private Builder() {
+            } 
+
+            private Builder(DatabasesBlackSpecificViewsAdbTableSchema model) {
+                this.distributedKeys = model.distributedKeys;
+                this.partitionLifeCycle = model.partitionLifeCycle;
+                this.partitionStatement = model.partitionStatement;
+                this.primaryKeys = model.primaryKeys;
+            } 
 
             /**
              * DistributedKeys.
@@ -3641,6 +3877,19 @@ public class CreateProjectRequest extends Request {
             private java.util.List<String> shardColumns; 
             private String whereClause; 
 
+            private Builder() {
+            } 
+
+            private Builder(DatabasesBlackSpecificViews model) {
+                this.adbTableSchema = model.adbTableSchema;
+                this.filterColumns = model.filterColumns;
+                this.id = model.id;
+                this.mappedName = model.mappedName;
+                this.name = model.name;
+                this.shardColumns = model.shardColumns;
+                this.whereClause = model.whereClause;
+            } 
+
             /**
              * AdbTableSchema.
              */
@@ -3774,6 +4023,16 @@ public class CreateProjectRequest extends Request {
             private String partitionLifeCycle; 
             private String partitionStatement; 
             private java.util.List<String> primaryKeys; 
+
+            private Builder() {
+            } 
+
+            private Builder(DatabasesBlackTablesAdbTableSchema model) {
+                this.distributedKeys = model.distributedKeys;
+                this.partitionLifeCycle = model.partitionLifeCycle;
+                this.partitionStatement = model.partitionStatement;
+                this.primaryKeys = model.primaryKeys;
+            } 
 
             /**
              * DistributedKeys.
@@ -3918,6 +4177,19 @@ public class CreateProjectRequest extends Request {
             private java.util.List<String> shardColumns; 
             private String whereClause; 
 
+            private Builder() {
+            } 
+
+            private Builder(DatabasesBlackTables model) {
+                this.adbTableSchema = model.adbTableSchema;
+                this.filterColumns = model.filterColumns;
+                this.id = model.id;
+                this.mappedName = model.mappedName;
+                this.name = model.name;
+                this.shardColumns = model.shardColumns;
+                this.whereClause = model.whereClause;
+            } 
+
             /**
              * AdbTableSchema.
              */
@@ -4051,6 +4323,16 @@ public class CreateProjectRequest extends Request {
             private String partitionLifeCycle; 
             private String partitionStatement; 
             private java.util.List<String> primaryKeys; 
+
+            private Builder() {
+            } 
+
+            private Builder(DatabasesBlackViewsAdbTableSchema model) {
+                this.distributedKeys = model.distributedKeys;
+                this.partitionLifeCycle = model.partitionLifeCycle;
+                this.partitionStatement = model.partitionStatement;
+                this.primaryKeys = model.primaryKeys;
+            } 
 
             /**
              * DistributedKeys.
@@ -4194,6 +4476,19 @@ public class CreateProjectRequest extends Request {
             private String name; 
             private java.util.List<String> shardColumns; 
             private String whereClause; 
+
+            private Builder() {
+            } 
+
+            private Builder(DatabasesBlackViews model) {
+                this.adbTableSchema = model.adbTableSchema;
+                this.filterColumns = model.filterColumns;
+                this.id = model.id;
+                this.mappedName = model.mappedName;
+                this.name = model.name;
+                this.shardColumns = model.shardColumns;
+                this.whereClause = model.whereClause;
+            } 
 
             /**
              * AdbTableSchema.
@@ -4389,6 +4684,21 @@ public class CreateProjectRequest extends Request {
             private String tenantName; 
             private java.util.List<DatabasesBlackViews> views; 
 
+            private Builder() {
+            } 
+
+            private Builder(DatabasesBlack model) {
+                this.clusterName = model.clusterName;
+                this.id = model.id;
+                this.mappedName = model.mappedName;
+                this.name = model.name;
+                this.specificTables = model.specificTables;
+                this.specificViews = model.specificViews;
+                this.tables = model.tables;
+                this.tenantName = model.tenantName;
+                this.views = model.views;
+            } 
+
             /**
              * ClusterName.
              */
@@ -4550,6 +4860,17 @@ public class CreateProjectRequest extends Request {
             private String mode; 
             private java.util.List<String> tableAndViewBlackList; 
             private java.util.List<String> tableAndViewWhiteList; 
+
+            private Builder() {
+            } 
+
+            private Builder(TransferMapping model) {
+                this.databases = model.databases;
+                this.databasesBlack = model.databasesBlack;
+                this.mode = model.mode;
+                this.tableAndViewBlackList = model.tableAndViewBlackList;
+                this.tableAndViewWhiteList = model.tableAndViewWhiteList;
+            } 
 
             /**
              * Databases.

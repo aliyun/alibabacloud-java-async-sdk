@@ -36,6 +36,10 @@ public class DescribeOutlineBindingResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return outlineBinding
      */
@@ -53,6 +57,14 @@ public class DescribeOutlineBindingResponseBody extends TeaModel {
     public static final class Builder {
         private OutlineBinding outlineBinding; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeOutlineBindingResponseBody model) {
+            this.outlineBinding = model.outlineBinding;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The binding information.</p>
@@ -158,6 +170,17 @@ public class DescribeOutlineBindingResponseBody extends TeaModel {
             private Integer maxConcurrent; 
             private Long outlineId; 
             private String tableName; 
+
+            private Builder() {
+            } 
+
+            private Builder(OutlineBinding model) {
+                this.bindIndex = model.bindIndex;
+                this.bindPlan = model.bindPlan;
+                this.maxConcurrent = model.maxConcurrent;
+                this.outlineId = model.outlineId;
+                this.tableName = model.tableName;
+            } 
 
             /**
              * <p>The bound index.</p>

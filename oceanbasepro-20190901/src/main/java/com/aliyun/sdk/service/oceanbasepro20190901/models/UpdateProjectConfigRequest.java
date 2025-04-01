@@ -60,7 +60,7 @@ public class UpdateProjectConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -241,6 +241,14 @@ public class UpdateProjectConfigRequest extends Request {
             private String sinkStoreFormat; 
             private String sourceStoreFormat; 
 
+            private Builder() {
+            } 
+
+            private Builder(CommonTransferConfig model) {
+                this.sinkStoreFormat = model.sinkStoreFormat;
+                this.sourceStoreFormat = model.sourceStoreFormat;
+            } 
+
             /**
              * SinkStoreFormat.
              */
@@ -355,6 +363,18 @@ public class UpdateProjectConfigRequest extends Request {
             private Integer throttleIOPS; 
             private Integer throttleRps; 
             private Integer writeWorkerNum; 
+
+            private Builder() {
+            } 
+
+            private Builder(FullTransferConfig model) {
+                this.indexDDLConcurrencyLimit = model.indexDDLConcurrencyLimit;
+                this.maxConcurrentIndexDDLs = model.maxConcurrentIndexDDLs;
+                this.readWorkerNum = model.readWorkerNum;
+                this.throttleIOPS = model.throttleIOPS;
+                this.throttleRps = model.throttleRps;
+                this.writeWorkerNum = model.writeWorkerNum;
+            } 
 
             /**
              * IndexDDLConcurrencyLimit.
@@ -491,6 +511,17 @@ public class UpdateProjectConfigRequest extends Request {
             private Integer throttleIOPS; 
             private Integer throttleRps; 
 
+            private Builder() {
+            } 
+
+            private Builder(IncrTransferConfig model) {
+                this.incrSyncThreadCount = model.incrSyncThreadCount;
+                this.recordTypeWhiteList = model.recordTypeWhiteList;
+                this.supportDDLTypes = model.supportDDLTypes;
+                this.throttleIOPS = model.throttleIOPS;
+                this.throttleRps = model.throttleRps;
+            } 
+
             /**
              * IncrSyncThreadCount.
              */
@@ -617,6 +648,17 @@ public class UpdateProjectConfigRequest extends Request {
             private java.util.List<String> supportDDLTypes; 
             private Integer throttleIOPS; 
             private Integer throttleRps; 
+
+            private Builder() {
+            } 
+
+            private Builder(ReverseIncrTransferConfig model) {
+                this.incrSyncThreadCount = model.incrSyncThreadCount;
+                this.recordTypeWhiteList = model.recordTypeWhiteList;
+                this.supportDDLTypes = model.supportDDLTypes;
+                this.throttleIOPS = model.throttleIOPS;
+                this.throttleRps = model.throttleRps;
+            } 
 
             /**
              * IncrSyncThreadCount.

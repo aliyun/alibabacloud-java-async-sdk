@@ -36,6 +36,10 @@ public class DescribeParametersHistoryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeParametersHistoryResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Respond respond; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeParametersHistoryResponseBody model) {
+            this.requestId = model.requestId;
+            this.respond = model.respond;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -182,6 +194,19 @@ public class DescribeParametersHistoryResponseBody extends TeaModel {
             private String oldValue; 
             private String status; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Parameters model) {
+                this.createTime = model.createTime;
+                this.dimensionValue = model.dimensionValue;
+                this.name = model.name;
+                this.newValue = model.newValue;
+                this.oldValue = model.oldValue;
+                this.status = model.status;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The time when the parameter modification was initiated.</p>
@@ -326,6 +351,15 @@ public class DescribeParametersHistoryResponseBody extends TeaModel {
             private Integer pageNumber; 
             private java.util.List<Parameters> parameters; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Respond model) {
+                this.pageNumber = model.pageNumber;
+                this.parameters = model.parameters;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The number of the page to return.    </p>

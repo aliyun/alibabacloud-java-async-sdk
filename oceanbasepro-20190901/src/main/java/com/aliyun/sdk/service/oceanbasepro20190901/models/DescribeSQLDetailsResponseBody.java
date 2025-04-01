@@ -36,6 +36,10 @@ public class DescribeSQLDetailsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeSQLDetailsResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<SQLDetails> SQLDetails; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSQLDetailsResponseBody model) {
+            this.requestId = model.requestId;
+            this.SQLDetails = model.SQLDetails;
+        } 
 
         /**
          * <p>The operation that you want to perform.<br>Set the value to <strong>DescribeSQLDetails</strong>.</p>
@@ -138,6 +150,15 @@ public class DescribeSQLDetailsResponseBody extends TeaModel {
             private String dbName; 
             private String SQLText; 
             private String userName; 
+
+            private Builder() {
+            } 
+
+            private Builder(SQLDetails model) {
+                this.dbName = model.dbName;
+                this.SQLText = model.SQLText;
+                this.userName = model.userName;
+            } 
 
             /**
              * DbName.

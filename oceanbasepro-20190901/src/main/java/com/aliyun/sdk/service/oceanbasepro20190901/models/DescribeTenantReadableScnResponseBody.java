@@ -36,6 +36,10 @@ public class DescribeTenantReadableScnResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DescribeTenantReadableScnResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTenantReadableScnResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The data in the return result of the request.</p>
@@ -110,6 +122,13 @@ public class DescribeTenantReadableScnResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long readableScn; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.readableScn = model.readableScn;
+            } 
 
             /**
              * <p>The maximum readable timestamp.</p>

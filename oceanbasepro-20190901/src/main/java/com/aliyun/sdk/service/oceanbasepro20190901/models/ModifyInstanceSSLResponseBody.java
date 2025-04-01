@@ -36,6 +36,10 @@ public class ModifyInstanceSSLResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceSSL
      */
@@ -53,6 +57,14 @@ public class ModifyInstanceSSLResponseBody extends TeaModel {
     public static final class Builder {
         private InstanceSSL instanceSSL; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyInstanceSSLResponseBody model) {
+            this.instanceSSL = model.instanceSSL;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The SSL setting of the OceanBase cluster instance.</p>
@@ -134,6 +146,15 @@ public class ModifyInstanceSSLResponseBody extends TeaModel {
             private String enableSSL; 
             private String instanceId; 
             private String tenantId; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceSSL model) {
+                this.enableSSL = model.enableSSL;
+                this.instanceId = model.instanceId;
+                this.tenantId = model.tenantId;
+            } 
 
             /**
              * <p>The operation to modify the SSL status. Valid values:</p>

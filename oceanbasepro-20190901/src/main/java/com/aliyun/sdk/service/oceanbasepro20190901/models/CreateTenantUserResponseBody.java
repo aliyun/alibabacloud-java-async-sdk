@@ -36,6 +36,10 @@ public class CreateTenantUserResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class CreateTenantUserResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private TenantUser tenantUser; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateTenantUserResponseBody model) {
+            this.requestId = model.requestId;
+            this.tenantUser = model.tenantUser;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -122,6 +134,14 @@ public class CreateTenantUserResponseBody extends TeaModel {
         public static final class Builder {
             private String database; 
             private String role; 
+
+            private Builder() {
+            } 
+
+            private Builder(Roles model) {
+                this.database = model.database;
+                this.role = model.role;
+            } 
 
             /**
              * Database.
@@ -225,6 +245,17 @@ public class CreateTenantUserResponseBody extends TeaModel {
             private String userName; 
             private String userStatus; 
             private String userType; 
+
+            private Builder() {
+            } 
+
+            private Builder(TenantUser model) {
+                this.globalPermissions = model.globalPermissions;
+                this.roles = model.roles;
+                this.userName = model.userName;
+                this.userStatus = model.userStatus;
+                this.userType = model.userType;
+            } 
 
             /**
              * GlobalPermissions.

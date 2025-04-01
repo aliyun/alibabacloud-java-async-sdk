@@ -36,6 +36,10 @@ public class CreateBackupSetDownloadLinkResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return downloadTaskId
      */
@@ -53,6 +57,14 @@ public class CreateBackupSetDownloadLinkResponseBody extends TeaModel {
     public static final class Builder {
         private Long downloadTaskId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateBackupSetDownloadLinkResponseBody model) {
+            this.downloadTaskId = model.downloadTaskId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * DownloadTaskId.

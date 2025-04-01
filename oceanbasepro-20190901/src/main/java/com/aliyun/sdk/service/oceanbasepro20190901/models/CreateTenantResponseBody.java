@@ -36,6 +36,10 @@ public class CreateTenantResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class CreateTenantResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String tenantId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateTenantResponseBody model) {
+            this.requestId = model.requestId;
+            this.tenantId = model.tenantId;
+        } 
 
         /**
          * <p>The request ID.</p>

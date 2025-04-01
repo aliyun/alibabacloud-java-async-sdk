@@ -40,6 +40,10 @@ public class DescribeDataBackupSetResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -65,6 +69,15 @@ public class DescribeDataBackupSetResponseBody extends TeaModel {
         private java.util.List<Data> data; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDataBackupSetResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Data.
@@ -139,6 +152,14 @@ public class DescribeDataBackupSetResponseBody extends TeaModel {
         public static final class Builder {
             private String database; 
             private java.util.List<String> tables; 
+
+            private Builder() {
+            } 
+
+            private Builder(DatabaseTablesList model) {
+                this.database = model.database;
+                this.tables = model.tables;
+            } 
 
             /**
              * Database.
@@ -218,6 +239,15 @@ public class DescribeDataBackupSetResponseBody extends TeaModel {
             private String clusterName; 
             private java.util.List<DatabaseTablesList> databaseTablesList; 
             private String tenantName; 
+
+            private Builder() {
+            } 
+
+            private Builder(BackupObjects model) {
+                this.clusterName = model.clusterName;
+                this.databaseTablesList = model.databaseTablesList;
+                this.tenantName = model.tenantName;
+            } 
 
             /**
              * ClusterName.
@@ -318,6 +348,16 @@ public class DescribeDataBackupSetResponseBody extends TeaModel {
             private String status; 
             private String table; 
 
+            private Builder() {
+            } 
+
+            private Builder(TableBackupResults model) {
+                this.database = model.database;
+                this.message = model.message;
+                this.status = model.status;
+                this.table = model.table;
+            } 
+
             /**
              * Database.
              */
@@ -412,6 +452,15 @@ public class DescribeDataBackupSetResponseBody extends TeaModel {
             private String clusterName; 
             private java.util.List<TableBackupResults> tableBackupResults; 
             private String tenantName; 
+
+            private Builder() {
+            } 
+
+            private Builder(BackupResults model) {
+                this.clusterName = model.clusterName;
+                this.tableBackupResults = model.tableBackupResults;
+                this.tenantName = model.tenantName;
+            } 
 
             /**
              * ClusterName.
@@ -679,6 +728,30 @@ public class DescribeDataBackupSetResponseBody extends TeaModel {
             private String storageClass; 
             private String type; 
             private String validity; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.backupObjectType = model.backupObjectType;
+                this.backupObjects = model.backupObjects;
+                this.backupResults = model.backupResults;
+                this.checkpoint = model.checkpoint;
+                this.dataSize = model.dataSize;
+                this.dataVersion = model.dataVersion;
+                this.downloadTaskId = model.downloadTaskId;
+                this.downloadTaskStatus = model.downloadTaskStatus;
+                this.endTime = model.endTime;
+                this.method = model.method;
+                this.policy = model.policy;
+                this.progress = model.progress;
+                this.setId = model.setId;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.storageClass = model.storageClass;
+                this.type = model.type;
+                this.validity = model.validity;
+            } 
 
             /**
              * BackupObjectType.

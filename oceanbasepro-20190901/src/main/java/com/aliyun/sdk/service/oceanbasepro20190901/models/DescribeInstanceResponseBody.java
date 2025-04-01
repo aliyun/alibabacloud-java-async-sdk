@@ -36,6 +36,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instance
      */
@@ -53,6 +57,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
     public static final class Builder {
         private Instance instance; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceResponseBody model) {
+            this.instance = model.instance;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information of the OceanBase cluster.</p>
@@ -206,6 +218,21 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private String upperScaleStrategy; 
             private Long upperThreshold; 
             private Long upperbound; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataDiskAutoScaleConfig model) {
+                this.autoScale = model.autoScale;
+                this.maxDiskSize = model.maxDiskSize;
+                this.scaleStepInMerge = model.scaleStepInMerge;
+                this.scaleStepInNormal = model.scaleStepInNormal;
+                this.upperMergeThreshold = model.upperMergeThreshold;
+                this.upperScaleStep = model.upperScaleStep;
+                this.upperScaleStrategy = model.upperScaleStrategy;
+                this.upperThreshold = model.upperThreshold;
+                this.upperbound = model.upperbound;
+            } 
 
             /**
              * <p>Specifies whether to enable the automatic scaling of the data disk.</p>
@@ -369,6 +396,15 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private Integer minCapacityUnit; 
             private String usedCapacityUnit; 
 
+            private Builder() {
+            } 
+
+            private Builder(CapacityUnit model) {
+                this.maxCapacityUnit = model.maxCapacityUnit;
+                this.minCapacityUnit = model.minCapacityUnit;
+                this.usedCapacityUnit = model.usedCapacityUnit;
+            } 
+
             /**
              * <p>The maximum number of capacity units.</p>
              * 
@@ -476,6 +512,16 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private Long totalCpu; 
             private Long unitCpu; 
             private Long usedCpu; 
+
+            private Builder() {
+            } 
+
+            private Builder(Cpu model) {
+                this.originalTotalCpu = model.originalTotalCpu;
+                this.totalCpu = model.totalCpu;
+                this.unitCpu = model.unitCpu;
+                this.usedCpu = model.usedCpu;
+            } 
 
             /**
              * <p>The number of original CPU cores in the cluster.</p>
@@ -643,6 +689,20 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private Long totalDiskSize; 
             private Long unitDiskSize; 
             private Long usedDiskSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(DiskSize model) {
+                this.dataUsedSize = model.dataUsedSize;
+                this.maxDiskSize = model.maxDiskSize;
+                this.maxDiskUsedObServer = model.maxDiskUsedObServer;
+                this.maxDiskUsedPercent = model.maxDiskUsedPercent;
+                this.originalTotalDiskSize = model.originalTotalDiskSize;
+                this.totalDiskSize = model.totalDiskSize;
+                this.unitDiskSize = model.unitDiskSize;
+                this.usedDiskSize = model.usedDiskSize;
+            } 
 
             /**
              * <p>The size of the data disk, in GB.</p>
@@ -816,6 +876,17 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private Long totalDiskSize; 
             private Long unitDiskSize; 
 
+            private Builder() {
+            } 
+
+            private Builder(LogDiskSize model) {
+                this.logAssignedSize = model.logAssignedSize;
+                this.maxLogAssignedObServer = model.maxLogAssignedObServer;
+                this.maxLogAssignedPercent = model.maxLogAssignedPercent;
+                this.totalDiskSize = model.totalDiskSize;
+                this.unitDiskSize = model.unitDiskSize;
+            } 
+
             /**
              * <p>The allocated disk space for log storage, in GB.</p>
              * 
@@ -942,6 +1013,16 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private Long totalMemory; 
             private Long unitMemory; 
             private Long usedMemory; 
+
+            private Builder() {
+            } 
+
+            private Builder(Memory model) {
+                this.originalTotalMemory = model.originalTotalMemory;
+                this.totalMemory = model.totalMemory;
+                this.unitMemory = model.unitMemory;
+                this.usedMemory = model.usedMemory;
+            } 
 
             /**
              * <p>The original memory size of the cluster.</p>
@@ -1086,6 +1167,18 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private Memory memory; 
             private Long unitCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(ReadOnlyResource model) {
+                this.capacityUnit = model.capacityUnit;
+                this.cpu = model.cpu;
+                this.diskSize = model.diskSize;
+                this.logDiskSize = model.logDiskSize;
+                this.memory = model.memory;
+                this.unitCount = model.unitCount;
+            } 
+
             /**
              * <p>The information about capacity units.</p>
              */
@@ -1200,6 +1293,15 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private Integer minCapacityUnit; 
             private String usedCapacityUnit; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResourceCapacityUnit model) {
+                this.maxCapacityUnit = model.maxCapacityUnit;
+                this.minCapacityUnit = model.minCapacityUnit;
+                this.usedCapacityUnit = model.usedCapacityUnit;
+            } 
+
             /**
              * <p>The maximum number of capacity units.</p>
              * 
@@ -1307,6 +1409,16 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private Long totalCpu; 
             private Long unitCpu; 
             private Long usedCpu; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceCpu model) {
+                this.originalTotalCpu = model.originalTotalCpu;
+                this.totalCpu = model.totalCpu;
+                this.unitCpu = model.unitCpu;
+                this.usedCpu = model.usedCpu;
+            } 
 
             /**
              * <p>The number of original CPU cores in the cluster.</p>
@@ -1474,6 +1586,20 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private Long totalDiskSize; 
             private Long unitDiskSize; 
             private Long usedDiskSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceDiskSize model) {
+                this.dataUsedSize = model.dataUsedSize;
+                this.maxDiskSize = model.maxDiskSize;
+                this.maxDiskUsedObServer = model.maxDiskUsedObServer;
+                this.maxDiskUsedPercent = model.maxDiskUsedPercent;
+                this.originalTotalDiskSize = model.originalTotalDiskSize;
+                this.totalDiskSize = model.totalDiskSize;
+                this.unitDiskSize = model.unitDiskSize;
+                this.usedDiskSize = model.usedDiskSize;
+            } 
 
             /**
              * <p>The size of the data disk, in GB.</p>
@@ -1659,6 +1785,18 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private Long totalDiskSize; 
             private Long unitDiskSize; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResourceLogDiskSize model) {
+                this.logAssignedSize = model.logAssignedSize;
+                this.maxLogAssignedObServer = model.maxLogAssignedObServer;
+                this.maxLogAssignedPercent = model.maxLogAssignedPercent;
+                this.originalTotalDiskSize = model.originalTotalDiskSize;
+                this.totalDiskSize = model.totalDiskSize;
+                this.unitDiskSize = model.unitDiskSize;
+            } 
+
             /**
              * <p>The allocated disk space for log storage, in GB.</p>
              * 
@@ -1796,6 +1934,16 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private Long totalMemory; 
             private Long unitMemory; 
             private Long usedMemory; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceMemory model) {
+                this.originalTotalMemory = model.originalTotalMemory;
+                this.totalMemory = model.totalMemory;
+                this.unitMemory = model.unitMemory;
+                this.usedMemory = model.usedMemory;
+            } 
 
             /**
              * <p>The original memory size of the cluster, in GB.</p>
@@ -1940,6 +2088,18 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private ResourceMemory memory; 
             private Long unitCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(Resource model) {
+                this.capacityUnit = model.capacityUnit;
+                this.cpu = model.cpu;
+                this.diskSize = model.diskSize;
+                this.logDiskSize = model.logDiskSize;
+                this.memory = model.memory;
+                this.unitCount = model.unitCount;
+            } 
+
             /**
              * <p>The information about capacity units.</p>
              */
@@ -2041,6 +2201,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public static final class Builder {
             private String disableCreateTenantReason; 
             private Boolean enableCreateTenant; 
+
+            private Builder() {
+            } 
+
+            private Builder(TenantCreatable model) {
+                this.disableCreateTenantReason = model.disableCreateTenantReason;
+                this.enableCreateTenant = model.enableCreateTenant;
+            } 
 
             /**
              * <p>The reason why you cannot create a tenant in the cluster.</p>
@@ -2654,6 +2822,59 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private String unitSpec; 
             private String version; 
             private java.util.List<String> zones; 
+
+            private Builder() {
+            } 
+
+            private Builder(Instance model) {
+                this.allowCreateProxySqlFirewallRule = model.allowCreateProxySqlFirewallRule;
+                this.allowModifyInternetAddressConnectionLimit = model.allowModifyInternetAddressConnectionLimit;
+                this.autoRenewal = model.autoRenewal;
+                this.autoUpgradeObVersion = model.autoUpgradeObVersion;
+                this.availableZones = model.availableZones;
+                this.cpuArchitecture = model.cpuArchitecture;
+                this.createTime = model.createTime;
+                this.dataDiskAutoScale = model.dataDiskAutoScale;
+                this.dataDiskAutoScaleConfig = model.dataDiskAutoScaleConfig;
+                this.dataMergeTime = model.dataMergeTime;
+                this.deployMode = model.deployMode;
+                this.deployType = model.deployType;
+                this.diskType = model.diskType;
+                this.enableIsolationOptimization = model.enableIsolationOptimization;
+                this.enableProxyService = model.enableProxyService;
+                this.enableReadOnlyReplica = model.enableReadOnlyReplica;
+                this.enableReadOnlyReplicaManagement = model.enableReadOnlyReplicaManagement;
+                this.enableUpgradeLogDisk = model.enableUpgradeLogDisk;
+                this.exclusiveUnitNumLimit = model.exclusiveUnitNumLimit;
+                this.expireTime = model.expireTime;
+                this.inTempCapacityStatus = model.inTempCapacityStatus;
+                this.instanceClass = model.instanceClass;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.instanceRole = model.instanceRole;
+                this.isLatestObVersion = model.isLatestObVersion;
+                this.isTrustEcs = model.isTrustEcs;
+                this.isolationOptimization = model.isolationOptimization;
+                this.maintainTime = model.maintainTime;
+                this.nodeNum = model.nodeNum;
+                this.obRpmVersion = model.obRpmVersion;
+                this.payType = model.payType;
+                this.primaryInstance = model.primaryInstance;
+                this.primaryRegion = model.primaryRegion;
+                this.proxyClusterId = model.proxyClusterId;
+                this.proxyServiceStatus = model.proxyServiceStatus;
+                this.readOnlyResource = model.readOnlyResource;
+                this.replicaMode = model.replicaMode;
+                this.resource = model.resource;
+                this.series = model.series;
+                this.sharedUnitNumLimit = model.sharedUnitNumLimit;
+                this.specType = model.specType;
+                this.status = model.status;
+                this.tenantCreatable = model.tenantCreatable;
+                this.unitSpec = model.unitSpec;
+                this.version = model.version;
+                this.zones = model.zones;
+            } 
 
             /**
              * <p>Indicates whether the OceanBase Database Proxy (ODP) SQL firewall is supported.</p>

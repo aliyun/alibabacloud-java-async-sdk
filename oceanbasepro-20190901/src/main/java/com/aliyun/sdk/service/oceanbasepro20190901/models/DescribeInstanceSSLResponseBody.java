@@ -36,6 +36,10 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceSSL
      */
@@ -53,6 +57,14 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
     public static final class Builder {
         private InstanceSSL instanceSSL; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceSSLResponseBody model) {
+            this.instanceSSL = model.instanceSSL;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The SSL setting of the OceanBase cluster instance.</p>
@@ -206,6 +218,21 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
             private String status; 
             private String tenantId; 
             private String validPeriod; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceSSL model) {
+                this.autoUpdate = model.autoUpdate;
+                this.caUrl = model.caUrl;
+                this.enableSSL = model.enableSSL;
+                this.forceSSL = model.forceSSL;
+                this.forceSSLSupport = model.forceSSLSupport;
+                this.instanceId = model.instanceId;
+                this.status = model.status;
+                this.tenantId = model.tenantId;
+                this.validPeriod = model.validPeriod;
+            } 
 
             /**
              * <p>The status of automatic update of SSL certificates. Valid values: </p>

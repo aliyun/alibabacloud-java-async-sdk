@@ -32,6 +32,10 @@ public class ModifyInstanceNameResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -41,6 +45,13 @@ public class ModifyInstanceNameResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyInstanceNameResponseBody model) {
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The operation that you want to perform.<br>Set the value to <strong>ModifyInstanceName</strong>.</p>

@@ -36,6 +36,10 @@ public class DescribeRecommendIndexResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return recommendIndex
      */
@@ -53,6 +57,14 @@ public class DescribeRecommendIndexResponseBody extends TeaModel {
     public static final class Builder {
         private RecommendIndex recommendIndex; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRecommendIndexResponseBody model) {
+            this.recommendIndex = model.recommendIndex;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the recommended index.</p>
@@ -134,6 +146,15 @@ public class DescribeRecommendIndexResponseBody extends TeaModel {
             private String suggestIndex; 
             private String tableList; 
             private String tenantMode; 
+
+            private Builder() {
+            } 
+
+            private Builder(RecommendIndex model) {
+                this.suggestIndex = model.suggestIndex;
+                this.tableList = model.tableList;
+                this.tenantMode = model.tenantMode;
+            } 
 
             /**
              * <p>Example 1</p>

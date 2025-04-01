@@ -32,6 +32,10 @@ public class ModifyTenantUserDescriptionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -41,6 +45,13 @@ public class ModifyTenantUserDescriptionResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyTenantUserDescriptionResponseBody model) {
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>You can call this operation to modify the description of a specified account in a tenant.</p>

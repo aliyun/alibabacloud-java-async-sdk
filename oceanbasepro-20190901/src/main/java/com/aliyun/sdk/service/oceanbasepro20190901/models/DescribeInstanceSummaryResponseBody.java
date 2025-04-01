@@ -36,6 +36,10 @@ public class DescribeInstanceSummaryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceSummary
      */
@@ -53,6 +57,14 @@ public class DescribeInstanceSummaryResponseBody extends TeaModel {
     public static final class Builder {
         private InstanceSummary instanceSummary; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceSummaryResponseBody model) {
+            this.instanceSummary = model.instanceSummary;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The overview information about OceanBase instances.</p>
@@ -170,6 +182,18 @@ public class DescribeInstanceSummaryResponseBody extends TeaModel {
             private String region; 
             private Long runningInstancesCount; 
             private Long totalInstancesCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(RegionalInstanceSummaryList model) {
+                this.expiredInstancesCount = model.expiredInstancesCount;
+                this.immediatelyExpiredInstancesCount = model.immediatelyExpiredInstancesCount;
+                this.recentCreatedInstancesCount = model.recentCreatedInstancesCount;
+                this.region = model.region;
+                this.runningInstancesCount = model.runningInstancesCount;
+                this.totalInstancesCount = model.totalInstancesCount;
+            } 
 
             /**
              * <p>The number of expired instances.</p>
@@ -407,6 +431,24 @@ public class DescribeInstanceSummaryResponseBody extends TeaModel {
             private Long tenantInstancesCount; 
             private Long totalInstancesCount; 
             private Long totalOmsInstancesCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceSummary model) {
+                this.alarmSummaryCount = model.alarmSummaryCount;
+                this.anomalySQLCount = model.anomalySQLCount;
+                this.clusterInstancesCount = model.clusterInstancesCount;
+                this.expiredInstancesCount = model.expiredInstancesCount;
+                this.immediatelyExpiredInstancesCount = model.immediatelyExpiredInstancesCount;
+                this.insufficientDiskInstancesCount = model.insufficientDiskInstancesCount;
+                this.overLoadInstancesCount = model.overLoadInstancesCount;
+                this.regionalInstanceSummaryList = model.regionalInstanceSummaryList;
+                this.runningInstancesCount = model.runningInstancesCount;
+                this.tenantInstancesCount = model.tenantInstancesCount;
+                this.totalInstancesCount = model.totalInstancesCount;
+                this.totalOmsInstancesCount = model.totalOmsInstancesCount;
+            } 
 
             /**
              * <p>The total number of alerts during the query period.</p>

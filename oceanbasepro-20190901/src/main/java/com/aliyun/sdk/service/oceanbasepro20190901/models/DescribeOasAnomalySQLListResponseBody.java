@@ -40,6 +40,10 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -65,6 +69,15 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
         private java.util.List<Data> data; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeOasAnomalySQLListResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The information about suspicious SQL statements.</p>
@@ -361,6 +374,32 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
             private String sumElapsedTime; 
             private Float sumRetryCount; 
             private String userName; 
+
+            private Builder() {
+            } 
+
+            private Builder(SqlList model) {
+                this.avgCpuTime = model.avgCpuTime;
+                this.avgDbTime = model.avgDbTime;
+                this.avgElapsedTime = model.avgElapsedTime;
+                this.avgGetPlanTime = model.avgGetPlanTime;
+                this.avgLogicalReads = model.avgLogicalReads;
+                this.avgRetryCount = model.avgRetryCount;
+                this.cpuTime = model.cpuTime;
+                this.dbName = model.dbName;
+                this.diagTypes = model.diagTypes;
+                this.diagnosis = model.diagnosis;
+                this.executions = model.executions;
+                this.lastExecutedTime = model.lastExecutedTime;
+                this.riskLevel = model.riskLevel;
+                this.sqlId = model.sqlId;
+                this.sqlTextShort = model.sqlTextShort;
+                this.suggestion = model.suggestion;
+                this.sumDbTime = model.sumDbTime;
+                this.sumElapsedTime = model.sumElapsedTime;
+                this.sumRetryCount = model.sumRetryCount;
+                this.userName = model.userName;
+            } 
 
             /**
              * <p>The average CPU time.</p>
@@ -874,6 +913,34 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
             private String sumElapsedTime; 
             private Float sumRetryCount; 
             private String userName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.avgCpuTime = model.avgCpuTime;
+                this.avgDbTime = model.avgDbTime;
+                this.avgElapsedTime = model.avgElapsedTime;
+                this.avgGetPlanTime = model.avgGetPlanTime;
+                this.avgLogicalReads = model.avgLogicalReads;
+                this.avgRetryCount = model.avgRetryCount;
+                this.cpuTime = model.cpuTime;
+                this.dbName = model.dbName;
+                this.diagTypes = model.diagTypes;
+                this.diagnosis = model.diagnosis;
+                this.dynamicSql = model.dynamicSql;
+                this.executions = model.executions;
+                this.lastExecutedTime = model.lastExecutedTime;
+                this.riskLevel = model.riskLevel;
+                this.sqlId = model.sqlId;
+                this.sqlList = model.sqlList;
+                this.sqlTextShort = model.sqlTextShort;
+                this.suggestion = model.suggestion;
+                this.sumDbTime = model.sumDbTime;
+                this.sumElapsedTime = model.sumElapsedTime;
+                this.sumRetryCount = model.sumRetryCount;
+                this.userName = model.userName;
+            } 
 
             /**
              * <p>Average CPU time of the suspicious SQL.</p>

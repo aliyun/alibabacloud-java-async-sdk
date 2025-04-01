@@ -36,6 +36,10 @@ public class KillProcessListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class KillProcessListResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Data> data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(KillProcessListResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -230,6 +242,23 @@ public class KillProcessListResponseBody extends TeaModel {
             private String status; 
             private String tenantId; 
             private String user; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.clientIp = model.clientIp;
+                this.command = model.command;
+                this.database = model.database;
+                this.errorMessage = model.errorMessage;
+                this.executeTime = model.executeTime;
+                this.serverIp = model.serverIp;
+                this.sessionId = model.sessionId;
+                this.sqlText = model.sqlText;
+                this.status = model.status;
+                this.tenantId = model.tenantId;
+                this.user = model.user;
+            } 
 
             /**
              * <p>The client IP address.</p>

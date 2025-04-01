@@ -36,6 +36,10 @@ public class CreateTenantSecurityIpGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class CreateTenantSecurityIpGroupResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private SecurityIpGroup securityIpGroup; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateTenantSecurityIpGroupResponseBody model) {
+            this.requestId = model.requestId;
+            this.securityIpGroup = model.securityIpGroup;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -146,6 +158,16 @@ public class CreateTenantSecurityIpGroupResponseBody extends TeaModel {
             private String securityIpGroupName; 
             private String securityIps; 
             private String tenantId; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecurityIpGroup model) {
+                this.instanceId = model.instanceId;
+                this.securityIpGroupName = model.securityIpGroupName;
+                this.securityIps = model.securityIps;
+                this.tenantId = model.tenantId;
+            } 
 
             /**
              * <p>The ID of the OceanBase cluster.</p>

@@ -36,6 +36,10 @@ public class ModifyParametersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class ModifyParametersResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Results results; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyParametersResponseBody model) {
+            this.requestId = model.requestId;
+            this.results = model.results;
+        } 
 
         /**
          * <p>The operation that you want to perform.<br>Set the value to <strong>ModifyParameters</strong>.</p>
@@ -122,6 +134,14 @@ public class ModifyParametersResponseBody extends TeaModel {
         public static final class Builder {
             private String message; 
             private Boolean success; 
+
+            private Builder() {
+            } 
+
+            private Builder(Results model) {
+                this.message = model.message;
+                this.success = model.success;
+            } 
 
             /**
              * Message.

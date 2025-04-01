@@ -36,6 +36,10 @@ public class ModifyTenantUserRolesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class ModifyTenantUserRolesResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private TenantUser tenantUser; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyTenantUserRolesResponseBody model) {
+            this.requestId = model.requestId;
+            this.tenantUser = model.tenantUser;
+        } 
 
         /**
          * RequestId.
@@ -143,6 +155,16 @@ public class ModifyTenantUserRolesResponseBody extends TeaModel {
             private Boolean isSuccess; 
             private String role; 
             private String table; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserRole model) {
+                this.database = model.database;
+                this.isSuccess = model.isSuccess;
+                this.role = model.role;
+                this.table = model.table;
+            } 
 
             /**
              * <pre><code>http(s)://[Endpoint]/?Action=ModifyTenantUserRoles
@@ -251,6 +273,15 @@ public class ModifyTenantUserRolesResponseBody extends TeaModel {
             private String tenantId; 
             private String userName; 
             private java.util.List<UserRole> userRole; 
+
+            private Builder() {
+            } 
+
+            private Builder(TenantUser model) {
+                this.tenantId = model.tenantId;
+                this.userName = model.userName;
+                this.userRole = model.userRole;
+            } 
 
             /**
              * TenantId.

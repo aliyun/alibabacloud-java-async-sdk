@@ -40,6 +40,10 @@ public class DescribeTenantEncryptionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class DescribeTenantEncryptionResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<TenantEncryptions> tenantEncryptions; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTenantEncryptionResponseBody model) {
+            this.requestId = model.requestId;
+            this.tenantEncryptions = model.tenantEncryptions;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * RequestId.
@@ -211,6 +224,20 @@ public class DescribeTenantEncryptionResponseBody extends TeaModel {
             private String tenantMode; 
             private String tenantName; 
             private String tenantStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(TenantEncryptions model) {
+                this.enableEncryption = model.enableEncryption;
+                this.encryptionKeyId = model.encryptionKeyId;
+                this.encryptionType = model.encryptionType;
+                this.status = model.status;
+                this.tenantId = model.tenantId;
+                this.tenantMode = model.tenantMode;
+                this.tenantName = model.tenantName;
+                this.tenantStatus = model.tenantStatus;
+            } 
 
             /**
              * EnableEncryption.

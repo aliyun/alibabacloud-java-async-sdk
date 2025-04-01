@@ -36,6 +36,10 @@ public class DescribeAvailableCpuResourceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DescribeAvailableCpuResourceResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Data> data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAvailableCpuResourceResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Data.
@@ -155,6 +167,17 @@ public class DescribeAvailableCpuResourceResponseBody extends TeaModel {
             private Long minCpu; 
             private String reviewCode; 
             private Long unitNum; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.comment = model.comment;
+                this.maxCpu = model.maxCpu;
+                this.minCpu = model.minCpu;
+                this.reviewCode = model.reviewCode;
+                this.unitNum = model.unitNum;
+            } 
 
             /**
              * Comment.

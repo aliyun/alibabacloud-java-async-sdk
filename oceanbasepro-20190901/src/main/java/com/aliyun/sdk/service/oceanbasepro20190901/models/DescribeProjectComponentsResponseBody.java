@@ -72,6 +72,10 @@ public class DescribeProjectComponentsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return advice
      */
@@ -161,6 +165,23 @@ public class DescribeProjectComponentsResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeProjectComponentsResponseBody model) {
+            this.advice = model.advice;
+            this.code = model.code;
+            this.cost = model.cost;
+            this.data = model.data;
+            this.errorDetail = model.errorDetail;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Advice.
@@ -432,6 +453,25 @@ public class DescribeProjectComponentsResponseBody extends TeaModel {
             private String reasonMcmsKey; 
             private Object upstreamErrorDetail; 
 
+            private Builder() {
+            } 
+
+            private Builder(ErrorDetails model) {
+                this.code = model.code;
+                this.extraContext = model.extraContext;
+                this.level = model.level;
+                this.message = model.message;
+                this.messageMcmsContext = model.messageMcmsContext;
+                this.messageMcmsKey = model.messageMcmsKey;
+                this.proposal = model.proposal;
+                this.proposalMcmsContext = model.proposalMcmsContext;
+                this.proposalMcmsKey = model.proposalMcmsKey;
+                this.reason = model.reason;
+                this.reasonMcmsContext = model.reasonMcmsContext;
+                this.reasonMcmsKey = model.reasonMcmsKey;
+                this.upstreamErrorDetail = model.upstreamErrorDetail;
+            } 
+
             /**
              * Code.
              */
@@ -670,6 +710,21 @@ public class DescribeProjectComponentsResponseBody extends TeaModel {
             private Integer progress; 
             private String region; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(FullImportComponents model) {
+                this.errorDetails = model.errorDetails;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModify = model.gmtModify;
+                this.identity = model.identity;
+                this.ip = model.ip;
+                this.name = model.name;
+                this.progress = model.progress;
+                this.region = model.region;
+                this.status = model.status;
+            } 
 
             /**
              * ErrorDetails.
@@ -926,6 +981,25 @@ public class DescribeProjectComponentsResponseBody extends TeaModel {
             private String reasonMcmsKey; 
             private Object upstreamErrorDetail; 
 
+            private Builder() {
+            } 
+
+            private Builder(FullVerifyComponentsErrorDetails model) {
+                this.code = model.code;
+                this.extraContext = model.extraContext;
+                this.level = model.level;
+                this.message = model.message;
+                this.messageMcmsContext = model.messageMcmsContext;
+                this.messageMcmsKey = model.messageMcmsKey;
+                this.proposal = model.proposal;
+                this.proposalMcmsContext = model.proposalMcmsContext;
+                this.proposalMcmsKey = model.proposalMcmsKey;
+                this.reason = model.reason;
+                this.reasonMcmsContext = model.reasonMcmsContext;
+                this.reasonMcmsKey = model.reasonMcmsKey;
+                this.upstreamErrorDetail = model.upstreamErrorDetail;
+            } 
+
             /**
              * Code.
              */
@@ -1176,6 +1250,22 @@ public class DescribeProjectComponentsResponseBody extends TeaModel {
             private String region; 
             private String status; 
             private Long taskId; 
+
+            private Builder() {
+            } 
+
+            private Builder(FullVerifyComponents model) {
+                this.consistentQuantity = model.consistentQuantity;
+                this.errorDetails = model.errorDetails;
+                this.inconsistentQuantity = model.inconsistentQuantity;
+                this.ip = model.ip;
+                this.name = model.name;
+                this.progress = model.progress;
+                this.recordProgress = model.recordProgress;
+                this.region = model.region;
+                this.status = model.status;
+                this.taskId = model.taskId;
+            } 
 
             /**
              * ConsistentQuantity.
@@ -1439,6 +1529,25 @@ public class DescribeProjectComponentsResponseBody extends TeaModel {
             private java.util.Map<String, String> reasonMcmsContext; 
             private String reasonMcmsKey; 
             private Object upstreamErrorDetail; 
+
+            private Builder() {
+            } 
+
+            private Builder(IncrSyncComponentsErrorDetails model) {
+                this.code = model.code;
+                this.extraContext = model.extraContext;
+                this.level = model.level;
+                this.message = model.message;
+                this.messageMcmsContext = model.messageMcmsContext;
+                this.messageMcmsKey = model.messageMcmsKey;
+                this.proposal = model.proposal;
+                this.proposalMcmsContext = model.proposalMcmsContext;
+                this.proposalMcmsKey = model.proposalMcmsKey;
+                this.reason = model.reason;
+                this.reasonMcmsContext = model.reasonMcmsContext;
+                this.reasonMcmsKey = model.reasonMcmsKey;
+                this.upstreamErrorDetail = model.upstreamErrorDetail;
+            } 
 
             /**
              * Code.
@@ -1727,6 +1836,25 @@ public class DescribeProjectComponentsResponseBody extends TeaModel {
             private java.util.List<String> subtopics; 
             private Long tps; 
 
+            private Builder() {
+            } 
+
+            private Builder(IncrSyncComponents model) {
+                this.checkpoint = model.checkpoint;
+                this.checkpointSampleTimestamp = model.checkpointSampleTimestamp;
+                this.delay = model.delay;
+                this.errorDetails = model.errorDetails;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModify = model.gmtModify;
+                this.identity = model.identity;
+                this.ip = model.ip;
+                this.name = model.name;
+                this.region = model.region;
+                this.status = model.status;
+                this.subtopics = model.subtopics;
+                this.tps = model.tps;
+            } 
+
             /**
              * Checkpoint.
              */
@@ -2013,6 +2141,25 @@ public class DescribeProjectComponentsResponseBody extends TeaModel {
             private java.util.Map<String, String> reasonMcmsContext; 
             private String reasonMcmsKey; 
             private Object upstreamErrorDetail; 
+
+            private Builder() {
+            } 
+
+            private Builder(ReverseIncrSyncComponentsErrorDetails model) {
+                this.code = model.code;
+                this.extraContext = model.extraContext;
+                this.level = model.level;
+                this.message = model.message;
+                this.messageMcmsContext = model.messageMcmsContext;
+                this.messageMcmsKey = model.messageMcmsKey;
+                this.proposal = model.proposal;
+                this.proposalMcmsContext = model.proposalMcmsContext;
+                this.proposalMcmsKey = model.proposalMcmsKey;
+                this.reason = model.reason;
+                this.reasonMcmsContext = model.reasonMcmsContext;
+                this.reasonMcmsKey = model.reasonMcmsKey;
+                this.upstreamErrorDetail = model.upstreamErrorDetail;
+            } 
 
             /**
              * Code.
@@ -2301,6 +2448,25 @@ public class DescribeProjectComponentsResponseBody extends TeaModel {
             private java.util.List<String> subtopics; 
             private Long tps; 
 
+            private Builder() {
+            } 
+
+            private Builder(ReverseIncrSyncComponents model) {
+                this.checkpoint = model.checkpoint;
+                this.checkpointSampleTimestamp = model.checkpointSampleTimestamp;
+                this.delay = model.delay;
+                this.errorDetails = model.errorDetails;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModify = model.gmtModify;
+                this.identity = model.identity;
+                this.ip = model.ip;
+                this.name = model.name;
+                this.region = model.region;
+                this.status = model.status;
+                this.subtopics = model.subtopics;
+                this.tps = model.tps;
+            } 
+
             /**
              * Checkpoint.
              */
@@ -2587,6 +2753,25 @@ public class DescribeProjectComponentsResponseBody extends TeaModel {
             private java.util.Map<String, String> reasonMcmsContext; 
             private String reasonMcmsKey; 
             private Object upstreamErrorDetail; 
+
+            private Builder() {
+            } 
+
+            private Builder(ReverseStoreListErrorDetails model) {
+                this.code = model.code;
+                this.extraContext = model.extraContext;
+                this.level = model.level;
+                this.message = model.message;
+                this.messageMcmsContext = model.messageMcmsContext;
+                this.messageMcmsKey = model.messageMcmsKey;
+                this.proposal = model.proposal;
+                this.proposalMcmsContext = model.proposalMcmsContext;
+                this.proposalMcmsKey = model.proposalMcmsKey;
+                this.reason = model.reason;
+                this.reasonMcmsContext = model.reasonMcmsContext;
+                this.reasonMcmsKey = model.reasonMcmsKey;
+                this.upstreamErrorDetail = model.upstreamErrorDetail;
+            } 
 
             /**
              * Code.
@@ -2959,6 +3144,32 @@ public class DescribeProjectComponentsResponseBody extends TeaModel {
             private String topic; 
             private Long tps; 
 
+            private Builder() {
+            } 
+
+            private Builder(ReverseStoreList model) {
+                this.beginCheckpoint = model.beginCheckpoint;
+                this.conn = model.conn;
+                this.delay = model.delay;
+                this.endCheckpoint = model.endCheckpoint;
+                this.errMsg = model.errMsg;
+                this.errorDetails = model.errorDetails;
+                this.gmt = model.gmt;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.ip = model.ip;
+                this.latelyHeartbeatTimeSec = model.latelyHeartbeatTimeSec;
+                this.name = model.name;
+                this.port = model.port;
+                this.region = model.region;
+                this.status = model.status;
+                this.storePort = model.storePort;
+                this.subtopic = model.subtopic;
+                this.toSwitch = model.toSwitch;
+                this.topic = model.topic;
+                this.tps = model.tps;
+            } 
+
             /**
              * BeginCheckpoint.
              */
@@ -3307,6 +3518,25 @@ public class DescribeProjectComponentsResponseBody extends TeaModel {
             private java.util.Map<String, String> reasonMcmsContext; 
             private String reasonMcmsKey; 
             private Object upstreamErrorDetail; 
+
+            private Builder() {
+            } 
+
+            private Builder(StoreListErrorDetails model) {
+                this.code = model.code;
+                this.extraContext = model.extraContext;
+                this.level = model.level;
+                this.message = model.message;
+                this.messageMcmsContext = model.messageMcmsContext;
+                this.messageMcmsKey = model.messageMcmsKey;
+                this.proposal = model.proposal;
+                this.proposalMcmsContext = model.proposalMcmsContext;
+                this.proposalMcmsKey = model.proposalMcmsKey;
+                this.reason = model.reason;
+                this.reasonMcmsContext = model.reasonMcmsContext;
+                this.reasonMcmsKey = model.reasonMcmsKey;
+                this.upstreamErrorDetail = model.upstreamErrorDetail;
+            } 
 
             /**
              * Code.
@@ -3679,6 +3909,32 @@ public class DescribeProjectComponentsResponseBody extends TeaModel {
             private String topic; 
             private Long tps; 
 
+            private Builder() {
+            } 
+
+            private Builder(StoreList model) {
+                this.beginCheckpoint = model.beginCheckpoint;
+                this.conn = model.conn;
+                this.delay = model.delay;
+                this.endCheckpoint = model.endCheckpoint;
+                this.errMsg = model.errMsg;
+                this.errorDetails = model.errorDetails;
+                this.gmt = model.gmt;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.ip = model.ip;
+                this.latelyHeartbeatTimeSec = model.latelyHeartbeatTimeSec;
+                this.name = model.name;
+                this.port = model.port;
+                this.region = model.region;
+                this.status = model.status;
+                this.storePort = model.storePort;
+                this.subtopic = model.subtopic;
+                this.toSwitch = model.toSwitch;
+                this.topic = model.topic;
+                this.tps = model.tps;
+            } 
+
             /**
              * BeginCheckpoint.
              */
@@ -3944,6 +4200,18 @@ public class DescribeProjectComponentsResponseBody extends TeaModel {
             private java.util.List<ReverseStoreList> reverseStoreList; 
             private java.util.List<StoreList> storeList; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.fullImportComponents = model.fullImportComponents;
+                this.fullVerifyComponents = model.fullVerifyComponents;
+                this.incrSyncComponents = model.incrSyncComponents;
+                this.reverseIncrSyncComponents = model.reverseIncrSyncComponents;
+                this.reverseStoreList = model.reverseStoreList;
+                this.storeList = model.storeList;
+            } 
+
             /**
              * FullImportComponents.
              */
@@ -4174,6 +4442,25 @@ public class DescribeProjectComponentsResponseBody extends TeaModel {
             private java.util.Map<String, String> reasonMcmsContext; 
             private String reasonMcmsKey; 
             private Object upstreamErrorDetail; 
+
+            private Builder() {
+            } 
+
+            private Builder(ErrorDetail model) {
+                this.code = model.code;
+                this.extraContext = model.extraContext;
+                this.level = model.level;
+                this.message = model.message;
+                this.messageMcmsContext = model.messageMcmsContext;
+                this.messageMcmsKey = model.messageMcmsKey;
+                this.proposal = model.proposal;
+                this.proposalMcmsContext = model.proposalMcmsContext;
+                this.proposalMcmsKey = model.proposalMcmsKey;
+                this.reason = model.reason;
+                this.reasonMcmsContext = model.reasonMcmsContext;
+                this.reasonMcmsKey = model.reasonMcmsKey;
+                this.upstreamErrorDetail = model.upstreamErrorDetail;
+            } 
 
             /**
              * Code.

@@ -36,6 +36,10 @@ public class DescribeInstanceCreatableZoneResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeInstanceCreatableZoneResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<ZoneList> zoneList; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceCreatableZoneResponseBody model) {
+            this.requestId = model.requestId;
+            this.zoneList = model.zoneList;
+        } 
 
         /**
          * <p>Indicates whether the cluster is deployed in the zone.</p>
@@ -158,6 +170,17 @@ public class DescribeInstanceCreatableZoneResponseBody extends TeaModel {
             private String logicalZoneName; 
             private Long replicateZoneIndex; 
             private String zone; 
+
+            private Builder() {
+            } 
+
+            private Builder(ZoneList model) {
+                this.fullCopyId = model.fullCopyId;
+                this.isInCluster = model.isInCluster;
+                this.logicalZoneName = model.logicalZoneName;
+                this.replicateZoneIndex = model.replicateZoneIndex;
+                this.zone = model.zone;
+            } 
 
             /**
              * FullCopyId.

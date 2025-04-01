@@ -36,6 +36,10 @@ public class SwitchoverInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class SwitchoverInstanceResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(SwitchoverInstanceResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The list of data for the switchover.</p>
@@ -122,6 +134,14 @@ public class SwitchoverInstanceResponseBody extends TeaModel {
         public static final class Builder {
             private String message; 
             private Boolean success; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.message = model.message;
+                this.success = model.success;
+            } 
 
             /**
              * <p>The message of the switchover.</p>

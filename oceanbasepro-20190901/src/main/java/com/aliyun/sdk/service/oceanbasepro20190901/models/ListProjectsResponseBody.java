@@ -72,6 +72,10 @@ public class ListProjectsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return advice
      */
@@ -161,6 +165,23 @@ public class ListProjectsResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListProjectsResponseBody model) {
+            this.advice = model.advice;
+            this.code = model.code;
+            this.cost = model.cost;
+            this.data = model.data;
+            this.errorDetail = model.errorDetail;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Advice.
@@ -347,6 +368,18 @@ public class ListProjectsResponseBody extends TeaModel {
             private Integer recentlyTriggerCount; 
             private java.util.Map<String, Integer> ruleToRecentlyTriggerCount; 
             private String target; 
+
+            private Builder() {
+            } 
+
+            private Builder(AlarmStats model) {
+                this.alarmContent = model.alarmContent;
+                this.alarming = model.alarming;
+                this.openMonitor = model.openMonitor;
+                this.recentlyTriggerCount = model.recentlyTriggerCount;
+                this.ruleToRecentlyTriggerCount = model.ruleToRecentlyTriggerCount;
+                this.target = model.target;
+            } 
 
             /**
              * AlarmContent.
@@ -554,6 +587,23 @@ public class ListProjectsResponseBody extends TeaModel {
             private String rocketMqProducerGroup; 
             private Long rocketMqSendMsgTimeout; 
             private String tableCategory; 
+
+            private Builder() {
+            } 
+
+            private Builder(CommonTransferConfig model) {
+                this.activeActive = model.activeActive;
+                this.dataWorksBusinessName = model.dataWorksBusinessName;
+                this.datahubTopicType = model.datahubTopicType;
+                this.mqPartition = model.mqPartition;
+                this.mqPartitionMode = model.mqPartitionMode;
+                this.mqSerializerType = model.mqSerializerType;
+                this.rocketMqEnableMsgTrace = model.rocketMqEnableMsgTrace;
+                this.rocketMqMsgTags = model.rocketMqMsgTags;
+                this.rocketMqProducerGroup = model.rocketMqProducerGroup;
+                this.rocketMqSendMsgTimeout = model.rocketMqSendMsgTimeout;
+                this.tableCategory = model.tableCategory;
+            } 
 
             /**
              * ActiveActive.
@@ -886,6 +936,30 @@ public class ListProjectsResponseBody extends TeaModel {
             private Long syncDelay; 
             private Long syncDelaySampleTimestamp; 
 
+            private Builder() {
+            } 
+
+            private Builder(ExtraInfo model) {
+                this.accessObSource = model.accessObSource;
+                this.ignoreUnsupportDdl = model.ignoreUnsupportDdl;
+                this.incrSyncTimestamp = model.incrSyncTimestamp;
+                this.logServiceStartCheckpoint = model.logServiceStartCheckpoint;
+                this.maxConnectorCount = model.maxConnectorCount;
+                this.monitoringIncr = model.monitoringIncr;
+                this.overwriteConfig = model.overwriteConfig;
+                this.reverseSubtopics = model.reverseSubtopics;
+                this.runningProgress = model.runningProgress;
+                this.runningStep = model.runningStep;
+                this.sourceStoreKeptHour = model.sourceStoreKeptHour;
+                this.storeIncr = model.storeIncr;
+                this.subConds = model.subConds;
+                this.subDbs = model.subDbs;
+                this.subIds = model.subIds;
+                this.subtopics = model.subtopics;
+                this.syncDelay = model.syncDelay;
+                this.syncDelaySampleTimestamp = model.syncDelaySampleTimestamp;
+            } 
+
             /**
              * AccessObSource.
              */
@@ -1105,6 +1179,16 @@ public class ListProjectsResponseBody extends TeaModel {
             private String fullVerifySpeedMode; 
             private Boolean nonePkUkTruncateDstTable; 
 
+            private Builder() {
+            } 
+
+            private Builder(FullTransferConfig model) {
+                this.allowDestTableNotEmpty = model.allowDestTableNotEmpty;
+                this.fullTransferSpeedMode = model.fullTransferSpeedMode;
+                this.fullVerifySpeedMode = model.fullVerifySpeedMode;
+                this.nonePkUkTruncateDstTable = model.nonePkUkTruncateDstTable;
+            } 
+
             /**
              * AllowDestTableNotEmpty.
              */
@@ -1235,6 +1319,18 @@ public class ListProjectsResponseBody extends TeaModel {
             private java.util.List<String> recordTypeWhiteList; 
             private Long startTimestamp; 
             private Integer storeLogKeptHour; 
+
+            private Builder() {
+            } 
+
+            private Builder(IncrTransferConfig model) {
+                this.enableIncrSyncStatistics = model.enableIncrSyncStatistics;
+                this.enableSequencingWithinTxn = model.enableSequencingWithinTxn;
+                this.incrSyncConcurrency = model.incrSyncConcurrency;
+                this.recordTypeWhiteList = model.recordTypeWhiteList;
+                this.startTimestamp = model.startTimestamp;
+                this.storeLogKeptHour = model.storeLogKeptHour;
+            } 
 
             /**
              * EnableIncrSyncStatistics.
@@ -1370,6 +1466,17 @@ public class ListProjectsResponseBody extends TeaModel {
             private String id; 
             private String name; 
             private Integer type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Labels model) {
+                this.count = model.count;
+                this.creator = model.creator;
+                this.id = model.id;
+                this.name = model.name;
+                this.type = model.type;
+            } 
 
             /**
              * Count.
@@ -1665,6 +1772,31 @@ public class ListProjectsResponseBody extends TeaModel {
             private String timezone; 
             private String username; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(SinkConnectInfo model) {
+                this.charset = model.charset;
+                this.connExtraAttributes = model.connExtraAttributes;
+                this.connectionInfo = model.connectionInfo;
+                this.dbEngine = model.dbEngine;
+                this.endpointId = model.endpointId;
+                this.endpointName = model.endpointName;
+                this.endpointSide = model.endpointSide;
+                this.host = model.host;
+                this.id = model.id;
+                this.nlsLengthSemantics = model.nlsLengthSemantics;
+                this.ocpName = model.ocpName;
+                this.operatingSystem = model.operatingSystem;
+                this.owner = model.owner;
+                this.port = model.port;
+                this.region = model.region;
+                this.resourceOwner = model.resourceOwner;
+                this.timezone = model.timezone;
+                this.username = model.username;
+                this.version = model.version;
+            } 
 
             /**
              * Charset.
@@ -2076,6 +2208,31 @@ public class ListProjectsResponseBody extends TeaModel {
             private String username; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(SourceConnectInfo model) {
+                this.charset = model.charset;
+                this.connExtraAttributes = model.connExtraAttributes;
+                this.connectionInfo = model.connectionInfo;
+                this.dbEngine = model.dbEngine;
+                this.endpointId = model.endpointId;
+                this.endpointName = model.endpointName;
+                this.endpointSide = model.endpointSide;
+                this.host = model.host;
+                this.id = model.id;
+                this.nlsLengthSemantics = model.nlsLengthSemantics;
+                this.ocpName = model.ocpName;
+                this.operatingSystem = model.operatingSystem;
+                this.owner = model.owner;
+                this.port = model.port;
+                this.region = model.region;
+                this.resourceOwner = model.resourceOwner;
+                this.timezone = model.timezone;
+                this.username = model.username;
+                this.version = model.version;
+            } 
+
             /**
              * Charset.
              */
@@ -2414,6 +2571,25 @@ public class ListProjectsResponseBody extends TeaModel {
             private String reasonMcmsKey; 
             private Object upstreamErrorDetail; 
 
+            private Builder() {
+            } 
+
+            private Builder(ErrorDetails model) {
+                this.code = model.code;
+                this.extraContext = model.extraContext;
+                this.level = model.level;
+                this.message = model.message;
+                this.messageMcmsContext = model.messageMcmsContext;
+                this.messageMcmsKey = model.messageMcmsKey;
+                this.proposal = model.proposal;
+                this.proposalMcmsContext = model.proposalMcmsContext;
+                this.proposalMcmsKey = model.proposalMcmsKey;
+                this.reason = model.reason;
+                this.reasonMcmsContext = model.reasonMcmsContext;
+                this.reasonMcmsKey = model.reasonMcmsKey;
+                this.upstreamErrorDetail = model.upstreamErrorDetail;
+            } 
+
             /**
              * Code.
              */
@@ -2605,6 +2781,17 @@ public class ListProjectsResponseBody extends TeaModel {
             private java.util.Map<String, String> errorParam; 
             private String failedTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(StepsExtraInfo model) {
+                this.errorCode = model.errorCode;
+                this.errorDetails = model.errorDetails;
+                this.errorMsg = model.errorMsg;
+                this.errorParam = model.errorParam;
+                this.failedTime = model.failedTime;
+            } 
+
             /**
              * ErrorCode.
              */
@@ -2780,6 +2967,21 @@ public class ListProjectsResponseBody extends TeaModel {
             private String status; 
             private java.util.Map<String, ?> stepInfo; 
 
+            private Builder() {
+            } 
+
+            private Builder(Steps model) {
+                this.description = model.description;
+                this.extraInfo = model.extraInfo;
+                this.finishTime = model.finishTime;
+                this.name = model.name;
+                this.order = model.order;
+                this.progress = model.progress;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.stepInfo = model.stepInfo;
+            } 
+
             /**
              * Description.
              */
@@ -2903,6 +3105,14 @@ public class ListProjectsResponseBody extends TeaModel {
             private String byteCharConvertStrategy; 
             private Boolean deferIndexCreation; 
 
+            private Builder() {
+            } 
+
+            private Builder(StructTransferConfig model) {
+                this.byteCharConvertStrategy = model.byteCharConvertStrategy;
+                this.deferIndexCreation = model.deferIndexCreation;
+            } 
+
             /**
              * ByteCharConvertStrategy.
              */
@@ -2957,6 +3167,13 @@ public class ListProjectsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String mode; 
+
+            private Builder() {
+            } 
+
+            private Builder(TransferMapping model) {
+                this.mode = model.mode;
+            } 
 
             /**
              * Mode.
@@ -3160,6 +3377,26 @@ public class ListProjectsResponseBody extends TeaModel {
             private String sourceType; 
             private String spec; 
             private String specName; 
+
+            private Builder() {
+            } 
+
+            private Builder(WorkerGradeInfo model) {
+                this.autoRenewal = model.autoRenewal;
+                this.chargeType = model.chargeType;
+                this.destRegion = model.destRegion;
+                this.destType = model.destType;
+                this.endTime = model.endTime;
+                this.expired = model.expired;
+                this.gmtCreate = model.gmtCreate;
+                this.grade = model.grade;
+                this.id = model.id;
+                this.name = model.name;
+                this.sourceRegion = model.sourceRegion;
+                this.sourceType = model.sourceType;
+                this.spec = model.spec;
+                this.specName = model.specName;
+            } 
 
             /**
              * AutoRenewal.
@@ -3720,6 +3957,47 @@ public class ListProjectsResponseBody extends TeaModel {
             private String workerGradeId; 
             private WorkerGradeInfo workerGradeInfo; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.alarmStats = model.alarmStats;
+                this.commonTransferConfig = model.commonTransferConfig;
+                this.destConnId = model.destConnId;
+                this.enableFullTransfer = model.enableFullTransfer;
+                this.enableFullVerify = model.enableFullVerify;
+                this.enableIncrTransfer = model.enableIncrTransfer;
+                this.enableIncrVerify = model.enableIncrVerify;
+                this.enableReverseIncrTransfer = model.enableReverseIncrTransfer;
+                this.enableStructTransfer = model.enableStructTransfer;
+                this.extraInfo = model.extraInfo;
+                this.fullTransferConfig = model.fullTransferConfig;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtFinish = model.gmtFinish;
+                this.gmtModified = model.gmtModified;
+                this.gmtStart = model.gmtStart;
+                this.id = model.id;
+                this.importance = model.importance;
+                this.incrTransferConfig = model.incrTransferConfig;
+                this.isMerging = model.isMerging;
+                this.isModifying = model.isModifying;
+                this.isSubProject = model.isSubProject;
+                this.labels = model.labels;
+                this.name = model.name;
+                this.owner = model.owner;
+                this.sinkConnectInfo = model.sinkConnectInfo;
+                this.sinkEndpointType = model.sinkEndpointType;
+                this.sourceConnectInfo = model.sourceConnectInfo;
+                this.sourceEndpointType = model.sourceEndpointType;
+                this.status = model.status;
+                this.steps = model.steps;
+                this.structTransferConfig = model.structTransferConfig;
+                this.transferMapping = model.transferMapping;
+                this.type = model.type;
+                this.workerGradeId = model.workerGradeId;
+                this.workerGradeInfo = model.workerGradeInfo;
+            } 
+
             /**
              * AlarmStats.
              */
@@ -4185,6 +4463,25 @@ public class ListProjectsResponseBody extends TeaModel {
             private java.util.Map<String, String> reasonMcmsContext; 
             private String reasonMcmsKey; 
             private Object upstreamErrorDetail; 
+
+            private Builder() {
+            } 
+
+            private Builder(ErrorDetail model) {
+                this.code = model.code;
+                this.extraContext = model.extraContext;
+                this.level = model.level;
+                this.message = model.message;
+                this.messageMcmsContext = model.messageMcmsContext;
+                this.messageMcmsKey = model.messageMcmsKey;
+                this.proposal = model.proposal;
+                this.proposalMcmsContext = model.proposalMcmsContext;
+                this.proposalMcmsKey = model.proposalMcmsKey;
+                this.reason = model.reason;
+                this.reasonMcmsContext = model.reasonMcmsContext;
+                this.reasonMcmsKey = model.reasonMcmsKey;
+                this.upstreamErrorDetail = model.upstreamErrorDetail;
+            } 
 
             /**
              * Code.

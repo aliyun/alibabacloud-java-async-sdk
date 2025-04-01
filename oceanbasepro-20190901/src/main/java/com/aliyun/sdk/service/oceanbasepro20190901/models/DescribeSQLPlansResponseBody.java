@@ -36,6 +36,10 @@ public class DescribeSQLPlansResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeSQLPlansResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<SQLPlans> SQLPlans; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSQLPlansResponseBody model) {
+            this.requestId = model.requestId;
+            this.SQLPlans = model.SQLPlans;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -290,6 +302,28 @@ public class DescribeSQLPlansResponseBody extends TeaModel {
             private String planInfo; 
             private String planUnionHash; 
             private String querySQL; 
+
+            private Builder() {
+            } 
+
+            private Builder(SQLPlans model) {
+                this.avgExecutionMS = model.avgExecutionMS;
+                this.avgExecutionTimeMS = model.avgExecutionTimeMS;
+                this.firstLoadTime = model.firstLoadTime;
+                this.firstLoadTimeUTCString = model.firstLoadTimeUTCString;
+                this.hitCount = model.hitCount;
+                this.mergedVersion = model.mergedVersion;
+                this.nodeIp = model.nodeIp;
+                this.outlineData = model.outlineData;
+                this.outlineId = model.outlineId;
+                this.outlineTime = model.outlineTime;
+                this.outlineTimeUTCString = model.outlineTimeUTCString;
+                this.planFull = model.planFull;
+                this.planId = model.planId;
+                this.planInfo = model.planInfo;
+                this.planUnionHash = model.planUnionHash;
+                this.querySQL = model.querySQL;
+            } 
 
             /**
              * <p>The average execution duration, in ms.</p>

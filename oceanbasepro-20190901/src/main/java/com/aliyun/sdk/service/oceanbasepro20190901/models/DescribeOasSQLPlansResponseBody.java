@@ -36,6 +36,10 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Data> data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeOasSQLPlansResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The list of SQL execution plan.</p>
@@ -110,6 +122,13 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
 
         public static final class Builder {
             private String planJsonString; 
+
+            private Builder() {
+            } 
+
+            private Builder(PlanExplain model) {
+                this.planJsonString = model.planJsonString;
+            } 
 
             /**
              * <p>JSON string of the SQL execution plan.</p>
@@ -568,6 +587,47 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
             private Boolean tableScan; 
             private Double timeoutPercentage; 
             private String uid; 
+
+            private Builder() {
+            } 
+
+            private Builder(Plans model) {
+                this.avgApplicationWaitTime = model.avgApplicationWaitTime;
+                this.avgBufferGets = model.avgBufferGets;
+                this.avgConcurrencyWaitTime = model.avgConcurrencyWaitTime;
+                this.avgCpuTime = model.avgCpuTime;
+                this.avgDiskReads = model.avgDiskReads;
+                this.avgDiskWrites = model.avgDiskWrites;
+                this.avgElapsedTime = model.avgElapsedTime;
+                this.avgRowProcessed = model.avgRowProcessed;
+                this.avgUserIoWaitTime = model.avgUserIoWaitTime;
+                this.collectTimeUs = model.collectTimeUs;
+                this.delayedLargeQueryPercentage = model.delayedLargeQueryPercentage;
+                this.execPs = model.execPs;
+                this.executions = model.executions;
+                this.firstLoadTime = model.firstLoadTime;
+                this.firstLoadTimeUs = model.firstLoadTimeUs;
+                this.hitDiagnosis = model.hitDiagnosis;
+                this.hitPercentage = model.hitPercentage;
+                this.largeQueryPercentage = model.largeQueryPercentage;
+                this.mergedVersion = model.mergedVersion;
+                this.obDbId = model.obDbId;
+                this.obServerId = model.obServerId;
+                this.outlineData = model.outlineData;
+                this.outlineId = model.outlineId;
+                this.planHash = model.planHash;
+                this.planId = model.planId;
+                this.planSize = model.planSize;
+                this.planType = model.planType;
+                this.planUnionHash = model.planUnionHash;
+                this.schemaVersion = model.schemaVersion;
+                this.server = model.server;
+                this.serverId = model.serverId;
+                this.sqlId = model.sqlId;
+                this.tableScan = model.tableScan;
+                this.timeoutPercentage = model.timeoutPercentage;
+                this.uid = model.uid;
+            } 
 
             /**
              * <p>Average Application event waiting time (in milliseconds) during the execution period.</p>
@@ -1172,6 +1232,28 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
             private java.util.List<Plans> plans; 
             private String querySql; 
             private Boolean tableScan; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.avgCpuTime = model.avgCpuTime;
+                this.bounded = model.bounded;
+                this.executions = model.executions;
+                this.firstLoadTime = model.firstLoadTime;
+                this.hitDiagnosis = model.hitDiagnosis;
+                this.hitPercentage = model.hitPercentage;
+                this.mergedVersion = model.mergedVersion;
+                this.outlineId = model.outlineId;
+                this.outlineStatus = model.outlineStatus;
+                this.planExplain = model.planExplain;
+                this.planHash = model.planHash;
+                this.planType = model.planType;
+                this.planUnionHash = model.planUnionHash;
+                this.plans = model.plans;
+                this.querySql = model.querySql;
+                this.tableScan = model.tableScan;
+            } 
 
             /**
              * <p>Average CPU time (in milliseconds) during the execution period.</p>

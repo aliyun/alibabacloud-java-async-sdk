@@ -36,6 +36,10 @@ public class BatchKillProcessListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class BatchKillProcessListResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Data> data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(BatchKillProcessListResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The array of the return result.</p>
@@ -110,6 +122,13 @@ public class BatchKillProcessListResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean success; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.success = model.success;
+            } 
 
             /**
              * <p>Indicates whether the calling is successful.</p>

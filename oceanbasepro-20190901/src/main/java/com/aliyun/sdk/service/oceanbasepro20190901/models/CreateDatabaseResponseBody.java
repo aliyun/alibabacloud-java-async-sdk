@@ -36,6 +36,10 @@ public class CreateDatabaseResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return databaseName
      */
@@ -53,6 +57,14 @@ public class CreateDatabaseResponseBody extends TeaModel {
     public static final class Builder {
         private String databaseName; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateDatabaseResponseBody model) {
+            this.databaseName = model.databaseName;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>CreateDatabase</p>

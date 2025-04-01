@@ -56,6 +56,10 @@ public class DataExtraInfoSubDbsValue extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clusterName
      */
@@ -113,6 +117,19 @@ public class DataExtraInfoSubDbsValue extends TeaModel {
         private String mappingDatabaseName; 
         private String sourceClientId; 
         private java.util.List<Tables> tables; 
+
+        private Builder() {
+        } 
+
+        private Builder(DataExtraInfoSubDbsValue model) {
+            this.clusterName = model.clusterName;
+            this.tenantName = model.tenantName;
+            this.databaseId = model.databaseId;
+            this.databaseName = model.databaseName;
+            this.mappingDatabaseName = model.mappingDatabaseName;
+            this.sourceClientId = model.sourceClientId;
+            this.tables = model.tables;
+        } 
 
         /**
          * ClusterName.
@@ -364,6 +381,26 @@ public class DataExtraInfoSubDbsValue extends TeaModel {
             private String columnComment; 
             private Boolean isGenerateField; 
 
+            private Builder() {
+            } 
+
+            private Builder(Columns model) {
+                this.columnName = model.columnName;
+                this.position = model.position;
+                this.columnType = model.columnType;
+                this.recordFieldType = model.recordFieldType;
+                this.rawColumnType = model.rawColumnType;
+                this.columnKey = model.columnKey;
+                this.nullable = model.nullable;
+                this.defaultValue = model.defaultValue;
+                this.dataLength = model.dataLength;
+                this.dataPrecision = model.dataPrecision;
+                this.dataScale = model.dataScale;
+                this.encoding = model.encoding;
+                this.columnComment = model.columnComment;
+                this.isGenerateField = model.isGenerateField;
+            } 
+
             /**
              * ColumnName.
              */
@@ -574,6 +611,18 @@ public class DataExtraInfoSubDbsValue extends TeaModel {
             private String mappingTableName; 
             private String instance; 
             private java.util.List<Columns> columns; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tables model) {
+                this.tableId = model.tableId;
+                this.database = model.database;
+                this.tableName = model.tableName;
+                this.mappingTableName = model.mappingTableName;
+                this.instance = model.instance;
+                this.columns = model.columns;
+            } 
 
             /**
              * TableId.

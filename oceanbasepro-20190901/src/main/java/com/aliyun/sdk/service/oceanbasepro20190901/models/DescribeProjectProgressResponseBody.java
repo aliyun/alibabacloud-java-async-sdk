@@ -72,6 +72,10 @@ public class DescribeProjectProgressResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return advice
      */
@@ -161,6 +165,23 @@ public class DescribeProjectProgressResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeProjectProgressResponseBody model) {
+            this.advice = model.advice;
+            this.code = model.code;
+            this.cost = model.cost;
+            this.data = model.data;
+            this.errorDetail = model.errorDetail;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Advice.
@@ -419,6 +440,24 @@ public class DescribeProjectProgressResponseBody extends TeaModel {
             private Long reverseIncrTransferCheckpoint; 
             private String status; 
             private Integer structTransferProgress; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.alarmLevel = model.alarmLevel;
+                this.currentStep = model.currentStep;
+                this.enableFullTransfer = model.enableFullTransfer;
+                this.enableIncrSync = model.enableIncrSync;
+                this.enableReverseIncrTransfer = model.enableReverseIncrTransfer;
+                this.enableStructTransfer = model.enableStructTransfer;
+                this.fullTransferProgress = model.fullTransferProgress;
+                this.incrSyncCheckpoint = model.incrSyncCheckpoint;
+                this.projectId = model.projectId;
+                this.reverseIncrTransferCheckpoint = model.reverseIncrTransferCheckpoint;
+                this.status = model.status;
+                this.structTransferProgress = model.structTransferProgress;
+            } 
 
             /**
              * AlarmLevel.
@@ -698,6 +737,25 @@ public class DescribeProjectProgressResponseBody extends TeaModel {
             private java.util.Map<String, String> reasonMcmsContext; 
             private String reasonMcmsKey; 
             private Object upstreamErrorDetail; 
+
+            private Builder() {
+            } 
+
+            private Builder(ErrorDetail model) {
+                this.code = model.code;
+                this.extraContext = model.extraContext;
+                this.level = model.level;
+                this.message = model.message;
+                this.messageMcmsContext = model.messageMcmsContext;
+                this.messageMcmsKey = model.messageMcmsKey;
+                this.proposal = model.proposal;
+                this.proposalMcmsContext = model.proposalMcmsContext;
+                this.proposalMcmsKey = model.proposalMcmsKey;
+                this.reason = model.reason;
+                this.reasonMcmsContext = model.reasonMcmsContext;
+                this.reasonMcmsKey = model.reasonMcmsKey;
+                this.upstreamErrorDetail = model.upstreamErrorDetail;
+            } 
 
             /**
              * Code.

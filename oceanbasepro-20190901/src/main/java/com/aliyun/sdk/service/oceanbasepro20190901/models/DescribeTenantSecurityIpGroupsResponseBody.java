@@ -40,6 +40,10 @@ public class DescribeTenantSecurityIpGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class DescribeTenantSecurityIpGroupsResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<SecurityIpGroups> securityIpGroups; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTenantSecurityIpGroupsResponseBody model) {
+            this.requestId = model.requestId;
+            this.securityIpGroups = model.securityIpGroups;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -169,6 +182,16 @@ public class DescribeTenantSecurityIpGroupsResponseBody extends TeaModel {
             private String securityIpGroupType; 
             private String securityIps; 
             private String tenantId; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecurityIpGroups model) {
+                this.securityIpGroupName = model.securityIpGroupName;
+                this.securityIpGroupType = model.securityIpGroupType;
+                this.securityIps = model.securityIps;
+                this.tenantId = model.tenantId;
+            } 
 
             /**
              * <p>The group name.</p>

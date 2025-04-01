@@ -36,6 +36,10 @@ public class DescribeTimeZonesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeTimeZonesResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private TimeZones timeZones; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTimeZonesResponseBody model) {
+            this.requestId = model.requestId;
+            this.timeZones = model.timeZones;
+        } 
 
         /**
          * <p>DescribeTimeZones</p>
@@ -122,6 +134,14 @@ public class DescribeTimeZonesResponseBody extends TeaModel {
         public static final class Builder {
             private String description; 
             private String timeZone; 
+
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.description = model.description;
+                this.timeZone = model.timeZone;
+            } 
 
             /**
              * <p>Example 1</p>
@@ -195,6 +215,14 @@ public class DescribeTimeZonesResponseBody extends TeaModel {
         public static final class Builder {
             private String _default; 
             private java.util.List<List> list; 
+
+            private Builder() {
+            } 
+
+            private Builder(TimeZones model) {
+                this._default = model._default;
+                this.list = model.list;
+            } 
 
             /**
              * Default.

@@ -36,6 +36,10 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceTopology
      */
@@ -53,6 +57,14 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
     public static final class Builder {
         private InstanceTopology instanceTopology; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceTopologyResponseBody model) {
+            this.instanceTopology = model.instanceTopology;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The topology of the cluster.</p>
@@ -122,6 +134,14 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         public static final class Builder {
             private Integer totalCpu; 
             private Integer usedCpu; 
+
+            private Builder() {
+            } 
+
+            private Builder(Cpu model) {
+                this.totalCpu = model.totalCpu;
+                this.usedCpu = model.usedCpu;
+            } 
 
             /**
              * <p>The total number of CPU cores of the replica.</p>
@@ -196,6 +216,14 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             private Long totalDiskSize; 
             private Float usedDiskSize; 
 
+            private Builder() {
+            } 
+
+            private Builder(DiskSize model) {
+                this.totalDiskSize = model.totalDiskSize;
+                this.usedDiskSize = model.usedDiskSize;
+            } 
+
             /**
              * <p>The total disk space of the replica, in GB.</p>
              * 
@@ -268,6 +296,14 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         public static final class Builder {
             private Long totalMemory; 
             private Long usedMemory; 
+
+            private Builder() {
+            } 
+
+            private Builder(Memory model) {
+                this.totalMemory = model.totalMemory;
+                this.usedMemory = model.usedMemory;
+            } 
 
             /**
              * <p>The total memory size of the replica, in GB.</p>
@@ -353,6 +389,15 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             private Cpu cpu; 
             private DiskSize diskSize; 
             private Memory memory; 
+
+            private Builder() {
+            } 
+
+            private Builder(ReplicaResource model) {
+                this.cpu = model.cpu;
+                this.diskSize = model.diskSize;
+                this.memory = model.memory;
+            } 
 
             /**
              * <p>The information about the CPU resources of the replica.</p>
@@ -512,6 +557,21 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             private Integer zoneLogicalId; 
             private String zoneLogicalName; 
             private String zoneRegionName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Replicas model) {
+                this.logicalZone = model.logicalZone;
+                this.nodeNum = model.nodeNum;
+                this.readOnlyReplicaType = model.readOnlyReplicaType;
+                this.replicaResource = model.replicaResource;
+                this.replicaType = model.replicaType;
+                this.status = model.status;
+                this.zoneLogicalId = model.zoneLogicalId;
+                this.zoneLogicalName = model.zoneLogicalName;
+                this.zoneRegionName = model.zoneRegionName;
+            } 
 
             /**
              * <p>The ID of the replica.</p>
@@ -756,6 +816,22 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             private Float unitMemory; 
             private String unitStatus; 
 
+            private Builder() {
+            } 
+
+            private Builder(Units model) {
+                this.enableCancelMigrateUnit = model.enableCancelMigrateUnit;
+                this.enableMigrateUnit = model.enableMigrateUnit;
+                this.manualMigrate = model.manualMigrate;
+                this.nodeId = model.nodeId;
+                this.replicaType = model.replicaType;
+                this.unitCpu = model.unitCpu;
+                this.unitDataSize = model.unitDataSize;
+                this.unitId = model.unitId;
+                this.unitMemory = model.unitMemory;
+                this.unitStatus = model.unitStatus;
+            } 
+
             /**
              * <p>Indicates whether the migration can be canceled. This parameter is valid only for resource units that are being manually immigrated or emigrated.</p>
              * 
@@ -989,6 +1065,19 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             private String tenantZoneId; 
             private String tenantZoneRole; 
             private java.util.List<Units> units; 
+
+            private Builder() {
+            } 
+
+            private Builder(TenantZones model) {
+                this.isPrimaryTenantZone = model.isPrimaryTenantZone;
+                this.logicalZone = model.logicalZone;
+                this.readOnlyReplicaType = model.readOnlyReplicaType;
+                this.replicaType = model.replicaType;
+                this.tenantZoneId = model.tenantZoneId;
+                this.tenantZoneRole = model.tenantZoneRole;
+                this.units = model.units;
+            } 
 
             /**
              * <p>Indicates whether the zone is the primary zone.</p>
@@ -1251,6 +1340,25 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             private Integer tenantUnitNum; 
             private java.util.List<TenantZones> tenantZones; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tenants model) {
+                this.primaryZoneDeployType = model.primaryZoneDeployType;
+                this.tenantCpu = model.tenantCpu;
+                this.tenantDeployType = model.tenantDeployType;
+                this.tenantDiskSize = model.tenantDiskSize;
+                this.tenantId = model.tenantId;
+                this.tenantMemory = model.tenantMemory;
+                this.tenantMode = model.tenantMode;
+                this.tenantName = model.tenantName;
+                this.tenantStatus = model.tenantStatus;
+                this.tenantUnitCpu = model.tenantUnitCpu;
+                this.tenantUnitMemory = model.tenantUnitMemory;
+                this.tenantUnitNum = model.tenantUnitNum;
+                this.tenantZones = model.tenantZones;
+            } 
+
             /**
              * <p>The deployment mode of the primary zone. Valid values: </p>
              * <ul>
@@ -1466,6 +1574,14 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             private Integer totalCpu; 
             private Float usedCpu; 
 
+            private Builder() {
+            } 
+
+            private Builder(NodeResourceCpu model) {
+                this.totalCpu = model.totalCpu;
+                this.usedCpu = model.usedCpu;
+            } 
+
             /**
              * <p>The total number of CPU cores of the node.</p>
              * 
@@ -1539,6 +1655,14 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             private Double totalDiskSize; 
             private Double usedDiskSize; 
 
+            private Builder() {
+            } 
+
+            private Builder(NodeResourceDiskSize model) {
+                this.totalDiskSize = model.totalDiskSize;
+                this.usedDiskSize = model.usedDiskSize;
+            } 
+
             /**
              * <p>The total storage space of the node, in GB.</p>
              * 
@@ -1611,6 +1735,14 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         public static final class Builder {
             private Long totalMemory; 
             private Float usedMemory; 
+
+            private Builder() {
+            } 
+
+            private Builder(NodeResourceMemory model) {
+                this.totalMemory = model.totalMemory;
+                this.usedMemory = model.usedMemory;
+            } 
 
             /**
              * <p>The total memory size of the node, in GB.</p>
@@ -1696,6 +1828,15 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             private NodeResourceCpu cpu; 
             private NodeResourceDiskSize diskSize; 
             private NodeResourceMemory memory; 
+
+            private Builder() {
+            } 
+
+            private Builder(NodeResource model) {
+                this.cpu = model.cpu;
+                this.diskSize = model.diskSize;
+                this.memory = model.memory;
+            } 
 
             /**
              * <p>The information about the CPU resources of the node.</p>
@@ -1856,6 +1997,21 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             private String readOnlyReplicaType; 
             private String replicaType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Nodes model) {
+                this.fullCopyId = model.fullCopyId;
+                this.logicalZone = model.logicalZone;
+                this.nodeCopyId = model.nodeCopyId;
+                this.nodeId = model.nodeId;
+                this.nodeResource = model.nodeResource;
+                this.nodeStatus = model.nodeStatus;
+                this.readOnlyCopyId = model.readOnlyCopyId;
+                this.readOnlyReplicaType = model.readOnlyReplicaType;
+                this.replicaType = model.replicaType;
+            } 
+
             /**
              * <p>The ID of the full-featured replica.</p>
              * 
@@ -2007,6 +2163,14 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             private java.util.List<String> maxDiskUsedObServer; 
             private Double maxDiskUsedPercent; 
 
+            private Builder() {
+            } 
+
+            private Builder(ZoneResourceDiskSize model) {
+                this.maxDiskUsedObServer = model.maxDiskUsedObServer;
+                this.maxDiskUsedPercent = model.maxDiskUsedPercent;
+            } 
+
             /**
              * <p>The IDs of OBServer nodes that use the maximum disk space.</p>
              */
@@ -2064,6 +2228,13 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
 
         public static final class Builder {
             private ZoneResourceDiskSize diskSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(ZoneResource model) {
+                this.diskSize = model.diskSize;
+            } 
 
             /**
              * <p>The information about the storage resources of the node.</p>
@@ -2159,6 +2330,17 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             private String zoneDisk; 
             private String zoneId; 
             private ZoneResource zoneResource; 
+
+            private Builder() {
+            } 
+
+            private Builder(Zones model) {
+                this.nodes = model.nodes;
+                this.region = model.region;
+                this.zoneDisk = model.zoneDisk;
+                this.zoneId = model.zoneId;
+                this.zoneResource = model.zoneResource;
+            } 
 
             /**
              * <p>The information about the nodes.</p>
@@ -2271,6 +2453,15 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             private java.util.List<Replicas> replicas; 
             private java.util.List<Tenants> tenants; 
             private java.util.List<Zones> zones; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceTopology model) {
+                this.replicas = model.replicas;
+                this.tenants = model.tenants;
+                this.zones = model.zones;
+            } 
 
             /**
              * <p>The information about replicas.</p>

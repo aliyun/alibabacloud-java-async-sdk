@@ -36,6 +36,10 @@ public class DescribeTenantUserRolesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeTenantUserRolesResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<String> role; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTenantUserRolesResponseBody model) {
+            this.requestId = model.requestId;
+            this.role = model.role;
+        } 
 
         /**
          * <p>The request ID.</p>

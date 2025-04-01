@@ -36,6 +36,10 @@ public class DescribeSQLTuningAdvicesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DescribeSQLTuningAdvicesResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Data> data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSQLTuningAdvicesResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Data.
@@ -143,6 +155,16 @@ public class DescribeSQLTuningAdvicesResponseBody extends TeaModel {
             private String maxValue; 
             private String minValue; 
             private Float ndv; 
+
+            private Builder() {
+            } 
+
+            private Builder(Columns model) {
+                this.columnName = model.columnName;
+                this.maxValue = model.maxValue;
+                this.minValue = model.minValue;
+                this.ndv = model.ndv;
+            } 
 
             /**
              * ColumnName.
@@ -590,6 +612,44 @@ public class DescribeSQLTuningAdvicesResponseBody extends TeaModel {
             private Float timeoutPercentage; 
             private String uid; 
 
+            private Builder() {
+            } 
+
+            private Builder(Plan model) {
+                this.avgApplicationWaitTime = model.avgApplicationWaitTime;
+                this.avgBufferGets = model.avgBufferGets;
+                this.avgConcurrencyWaitTime = model.avgConcurrencyWaitTime;
+                this.avgCpuTime = model.avgCpuTime;
+                this.avgDiskReads = model.avgDiskReads;
+                this.avgDiskWrites = model.avgDiskWrites;
+                this.avgElapsedTime = model.avgElapsedTime;
+                this.avgRowProcessed = model.avgRowProcessed;
+                this.avgUserIoWaitTime = model.avgUserIoWaitTime;
+                this.collectTimeUs = model.collectTimeUs;
+                this.delayedLargeQueryPercentage = model.delayedLargeQueryPercentage;
+                this.execPs = model.execPs;
+                this.executions = model.executions;
+                this.firstLoadTime = model.firstLoadTime;
+                this.firstLoadTimeUs = model.firstLoadTimeUs;
+                this.hitDiagnosis = model.hitDiagnosis;
+                this.hitPercentage = model.hitPercentage;
+                this.largeQueryPercentage = model.largeQueryPercentage;
+                this.mergedVersion = model.mergedVersion;
+                this.obDbId = model.obDbId;
+                this.obServerId = model.obServerId;
+                this.outlineData = model.outlineData;
+                this.outlineId = model.outlineId;
+                this.planHash = model.planHash;
+                this.planId = model.planId;
+                this.planSize = model.planSize;
+                this.planType = model.planType;
+                this.schemaVersion = model.schemaVersion;
+                this.serverSn = model.serverSn;
+                this.tableScan = model.tableScan;
+                this.timeoutPercentage = model.timeoutPercentage;
+                this.uid = model.uid;
+            } 
+
             /**
              * AvgApplicationWaitTime.
              */
@@ -962,6 +1022,19 @@ public class DescribeSQLTuningAdvicesResponseBody extends TeaModel {
             private Plan plan; 
             private String table; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.columnNames = model.columnNames;
+                this.columns = model.columns;
+                this.dbName = model.dbName;
+                this.localityType = model.localityType;
+                this.plan = model.plan;
+                this.table = model.table;
+                this.type = model.type;
+            } 
 
             /**
              * ColumnNames.

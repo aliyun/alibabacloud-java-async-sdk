@@ -36,6 +36,10 @@ public class DescribeBackupSetDownloadLinkResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DescribeBackupSetDownloadLinkResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeBackupSetDownloadLinkResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned data.</p>
@@ -194,6 +206,20 @@ public class DescribeBackupSetDownloadLinkResponseBody extends TeaModel {
             private String internalUrl; 
             private Long urlAliveTime; 
             private String urlExpiredTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.backupRestorableTime = model.backupRestorableTime;
+                this.backupSetId = model.backupSetId;
+                this.downloadTaskCreateTime = model.downloadTaskCreateTime;
+                this.downloadTaskId = model.downloadTaskId;
+                this.downloadTaskStatus = model.downloadTaskStatus;
+                this.internalUrl = model.internalUrl;
+                this.urlAliveTime = model.urlAliveTime;
+                this.urlExpiredTime = model.urlExpiredTime;
+            } 
 
             /**
              * <p>The restorable time of the backup set.</p>

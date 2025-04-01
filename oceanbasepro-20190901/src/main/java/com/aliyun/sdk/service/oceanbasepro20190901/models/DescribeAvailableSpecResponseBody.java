@@ -36,6 +36,10 @@ public class DescribeAvailableSpecResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DescribeAvailableSpecResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAvailableSpecResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Data.
@@ -131,6 +143,15 @@ public class DescribeAvailableSpecResponseBody extends TeaModel {
             private Long max; 
             private Long min; 
             private Long step; 
+
+            private Builder() {
+            } 
+
+            private Builder(DiskSizeRange model) {
+                this.max = model.max;
+                this.min = model.min;
+                this.step = model.step;
+            } 
 
             /**
              * Max.
@@ -218,6 +239,15 @@ public class DescribeAvailableSpecResponseBody extends TeaModel {
             private Long max; 
             private Long min; 
             private Long step; 
+
+            private Builder() {
+            } 
+
+            private Builder(LogDiskSizeRange model) {
+                this.max = model.max;
+                this.min = model.min;
+                this.step = model.step;
+            } 
 
             /**
              * Max.
@@ -342,6 +372,18 @@ public class DescribeAvailableSpecResponseBody extends TeaModel {
             private java.util.List<Integer> nodeNum; 
             private String spec; 
 
+            private Builder() {
+            } 
+
+            private Builder(AvailableSpecifications model) {
+                this.diskSizeRange = model.diskSizeRange;
+                this.diskTypes = model.diskTypes;
+                this.instanceClass = model.instanceClass;
+                this.logDiskSizeRange = model.logDiskSizeRange;
+                this.nodeNum = model.nodeNum;
+                this.spec = model.spec;
+            } 
+
             /**
              * DiskSizeRange.
              */
@@ -428,6 +470,13 @@ public class DescribeAvailableSpecResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<AvailableSpecifications> availableSpecifications; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.availableSpecifications = model.availableSpecifications;
+            } 
 
             /**
              * AvailableSpecifications.

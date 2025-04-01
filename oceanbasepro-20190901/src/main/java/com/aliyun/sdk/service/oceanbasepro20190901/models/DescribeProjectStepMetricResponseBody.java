@@ -72,6 +72,10 @@ public class DescribeProjectStepMetricResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return advice
      */
@@ -161,6 +165,23 @@ public class DescribeProjectStepMetricResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeProjectStepMetricResponseBody model) {
+            this.advice = model.advice;
+            this.code = model.code;
+            this.cost = model.cost;
+            this.data = model.data;
+            this.errorDetail = model.errorDetail;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Advice.
@@ -300,6 +321,14 @@ public class DescribeProjectStepMetricResponseBody extends TeaModel {
             private Long timestamp; 
             private Double value; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataPoints model) {
+                this.timestamp = model.timestamp;
+                this.value = model.value;
+            } 
+
             /**
              * Timestamp.
              */
@@ -378,6 +407,15 @@ public class DescribeProjectStepMetricResponseBody extends TeaModel {
             private java.util.List<DataPoints> dataPoints; 
             private String name; 
             private java.util.Map<String, String> tags; 
+
+            private Builder() {
+            } 
+
+            private Builder(Metrics model) {
+                this.dataPoints = model.dataPoints;
+                this.name = model.name;
+                this.tags = model.tags;
+            } 
 
             /**
              * DataPoints.
@@ -465,6 +503,15 @@ public class DescribeProjectStepMetricResponseBody extends TeaModel {
             private String aggregator; 
             private java.util.List<Metrics> metrics; 
             private Long referenceValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.aggregator = model.aggregator;
+                this.metrics = model.metrics;
+                this.referenceValue = model.referenceValue;
+            } 
 
             /**
              * Aggregator.
@@ -672,6 +719,25 @@ public class DescribeProjectStepMetricResponseBody extends TeaModel {
             private java.util.Map<String, String> reasonMcmsContext; 
             private String reasonMcmsKey; 
             private Object upstreamErrorDetail; 
+
+            private Builder() {
+            } 
+
+            private Builder(ErrorDetail model) {
+                this.code = model.code;
+                this.extraContext = model.extraContext;
+                this.level = model.level;
+                this.message = model.message;
+                this.messageMcmsContext = model.messageMcmsContext;
+                this.messageMcmsKey = model.messageMcmsKey;
+                this.proposal = model.proposal;
+                this.proposalMcmsContext = model.proposalMcmsContext;
+                this.proposalMcmsKey = model.proposalMcmsKey;
+                this.reason = model.reason;
+                this.reasonMcmsContext = model.reasonMcmsContext;
+                this.reasonMcmsKey = model.reasonMcmsKey;
+                this.upstreamErrorDetail = model.upstreamErrorDetail;
+            } 
 
             /**
              * Code.

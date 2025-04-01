@@ -36,6 +36,10 @@ public class DescribeAvailableZoneResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DescribeAvailableZoneResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAvailableZoneResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Data.
@@ -131,6 +143,15 @@ public class DescribeAvailableZoneResponseBody extends TeaModel {
             private Long max; 
             private Long min; 
             private Long step; 
+
+            private Builder() {
+            } 
+
+            private Builder(DiskSizeRange model) {
+                this.max = model.max;
+                this.min = model.min;
+                this.step = model.step;
+            } 
 
             /**
              * Max.
@@ -218,6 +239,15 @@ public class DescribeAvailableZoneResponseBody extends TeaModel {
             private String obVersion; 
             private Boolean supportIsolationOptimization; 
             private java.util.List<String> supportReplicaModes; 
+
+            private Builder() {
+            } 
+
+            private Builder(SupportEngineVersions model) {
+                this.obVersion = model.obVersion;
+                this.supportIsolationOptimization = model.supportIsolationOptimization;
+                this.supportReplicaModes = model.supportReplicaModes;
+            } 
 
             /**
              * ObVersion.
@@ -329,6 +359,17 @@ public class DescribeAvailableZoneResponseBody extends TeaModel {
             private String instanceClass; 
             private String spec; 
             private java.util.List<SupportEngineVersions> supportEngineVersions; 
+
+            private Builder() {
+            } 
+
+            private Builder(SupportSpecifications model) {
+                this.diskSizeRange = model.diskSizeRange;
+                this.diskTypes = model.diskTypes;
+                this.instanceClass = model.instanceClass;
+                this.spec = model.spec;
+                this.supportEngineVersions = model.supportEngineVersions;
+            } 
 
             /**
              * DiskSizeRange.
@@ -493,6 +534,20 @@ public class DescribeAvailableZoneResponseBody extends TeaModel {
             private java.util.List<SupportSpecifications> supportSpecifications; 
             private String zones; 
 
+            private Builder() {
+            } 
+
+            private Builder(AvailableZones model) {
+                this.channel = model.channel;
+                this.cpuArch = model.cpuArch;
+                this.deployType = model.deployType;
+                this.instanceType = model.instanceType;
+                this.region = model.region;
+                this.series = model.series;
+                this.supportSpecifications = model.supportSpecifications;
+                this.zones = model.zones;
+            } 
+
             /**
              * Channel.
              */
@@ -595,6 +650,13 @@ public class DescribeAvailableZoneResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<AvailableZones> availableZones; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.availableZones = model.availableZones;
+            } 
 
             /**
              * AvailableZones.

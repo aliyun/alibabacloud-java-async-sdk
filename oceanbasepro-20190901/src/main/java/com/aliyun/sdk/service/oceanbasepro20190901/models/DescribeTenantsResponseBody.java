@@ -40,6 +40,10 @@ public class DescribeTenantsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class DescribeTenantsResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Tenants> tenants; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTenantsResponseBody model) {
+            this.requestId = model.requestId;
+            this.tenants = model.tenants;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -361,6 +374,32 @@ public class DescribeTenantsResponseBody extends TeaModel {
             private Integer unitNum; 
             private Double usedDiskSize; 
             private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tenants model) {
+                this.charset = model.charset;
+                this.collation = model.collation;
+                this.cpu = model.cpu;
+                this.createTime = model.createTime;
+                this.deployMode = model.deployMode;
+                this.deployType = model.deployType;
+                this.description = model.description;
+                this.enableReadOnlyReplica = model.enableReadOnlyReplica;
+                this.mem = model.mem;
+                this.parameterTemplate = model.parameterTemplate;
+                this.primaryZone = model.primaryZone;
+                this.status = model.status;
+                this.tenantId = model.tenantId;
+                this.tenantMode = model.tenantMode;
+                this.tenantName = model.tenantName;
+                this.unitCpu = model.unitCpu;
+                this.unitMem = model.unitMem;
+                this.unitNum = model.unitNum;
+                this.usedDiskSize = model.usedDiskSize;
+                this.vpcId = model.vpcId;
+            } 
 
             /**
              * <p>The character set.</p>

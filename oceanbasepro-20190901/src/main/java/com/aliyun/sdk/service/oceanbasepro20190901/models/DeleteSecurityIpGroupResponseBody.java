@@ -36,6 +36,10 @@ public class DeleteSecurityIpGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DeleteSecurityIpGroupResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private SecurityIpGroup securityIpGroup; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteSecurityIpGroupResponseBody model) {
+            this.requestId = model.requestId;
+            this.securityIpGroup = model.securityIpGroup;
+        } 
 
         /**
          * <p>Example 1</p>
@@ -122,6 +134,14 @@ public class DeleteSecurityIpGroupResponseBody extends TeaModel {
         public static final class Builder {
             private String instanceId; 
             private String securityIpGroupName; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecurityIpGroup model) {
+                this.instanceId = model.instanceId;
+                this.securityIpGroupName = model.securityIpGroupName;
+            } 
 
             /**
              * InstanceId.

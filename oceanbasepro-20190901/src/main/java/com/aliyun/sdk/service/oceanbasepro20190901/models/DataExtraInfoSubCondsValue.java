@@ -72,6 +72,10 @@ public class DataExtraInfoSubCondsValue extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return tenantName
      */
@@ -161,6 +165,23 @@ public class DataExtraInfoSubCondsValue extends TeaModel {
         private String logicTableId; 
         private String sourceEndpointId; 
         private String sourceClientId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DataExtraInfoSubCondsValue model) {
+            this.tenantName = model.tenantName;
+            this.database = model.database;
+            this.destDatabase = model.destDatabase;
+            this.tableName = model.tableName;
+            this.destName = model.destName;
+            this.whereClause = model.whereClause;
+            this.filterColumns = model.filterColumns;
+            this.shardColumns = model.shardColumns;
+            this.logicTableId = model.logicTableId;
+            this.sourceEndpointId = model.sourceEndpointId;
+            this.sourceClientId = model.sourceClientId;
+        } 
 
         /**
          * TenantName.

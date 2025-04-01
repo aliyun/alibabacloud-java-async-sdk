@@ -36,6 +36,10 @@ public class DescribeInstanceTenantModesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceModes
      */
@@ -53,6 +57,14 @@ public class DescribeInstanceTenantModesResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<String> instanceModes; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceTenantModesResponseBody model) {
+            this.instanceModes = model.instanceModes;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * InstanceModes.

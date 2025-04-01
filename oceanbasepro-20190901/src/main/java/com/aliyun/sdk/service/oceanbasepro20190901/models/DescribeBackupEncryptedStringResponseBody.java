@@ -36,6 +36,10 @@ public class DescribeBackupEncryptedStringResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DescribeBackupEncryptedStringResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeBackupEncryptedStringResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Data.
@@ -107,6 +119,13 @@ public class DescribeBackupEncryptedStringResponseBody extends TeaModel {
 
         public static final class Builder {
             private String backupInfoJson; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.backupInfoJson = model.backupInfoJson;
+            } 
 
             /**
              * BackupInfoJson.

@@ -72,6 +72,10 @@ public class StartProjectsByLabelResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return advice
      */
@@ -161,6 +165,23 @@ public class StartProjectsByLabelResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(StartProjectsByLabelResponseBody model) {
+            this.advice = model.advice;
+            this.code = model.code;
+            this.cost = model.cost;
+            this.data = model.data;
+            this.errorDetail = model.errorDetail;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Advice.
@@ -311,6 +332,15 @@ public class StartProjectsByLabelResponseBody extends TeaModel {
             private java.util.List<String> failedProjectIds; 
             private java.util.List<String> succeedProjectIds; 
             private Integer total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.failedProjectIds = model.failedProjectIds;
+                this.succeedProjectIds = model.succeedProjectIds;
+                this.total = model.total;
+            } 
 
             /**
              * FailedProjectIds.
@@ -518,6 +548,25 @@ public class StartProjectsByLabelResponseBody extends TeaModel {
             private java.util.Map<String, String> reasonMcmsContext; 
             private String reasonMcmsKey; 
             private Object upstreamErrorDetail; 
+
+            private Builder() {
+            } 
+
+            private Builder(ErrorDetail model) {
+                this.code = model.code;
+                this.extraContext = model.extraContext;
+                this.level = model.level;
+                this.message = model.message;
+                this.messageMcmsContext = model.messageMcmsContext;
+                this.messageMcmsKey = model.messageMcmsKey;
+                this.proposal = model.proposal;
+                this.proposalMcmsContext = model.proposalMcmsContext;
+                this.proposalMcmsKey = model.proposalMcmsKey;
+                this.reason = model.reason;
+                this.reasonMcmsContext = model.reasonMcmsContext;
+                this.reasonMcmsKey = model.reasonMcmsKey;
+                this.upstreamErrorDetail = model.upstreamErrorDetail;
+            } 
 
             /**
              * Code.

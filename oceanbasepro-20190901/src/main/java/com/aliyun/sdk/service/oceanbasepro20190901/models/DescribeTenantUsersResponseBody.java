@@ -40,6 +40,10 @@ public class DescribeTenantUsersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class DescribeTenantUsersResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<TenantUsers> tenantUsers; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTenantUsersResponseBody model) {
+            this.requestId = model.requestId;
+            this.tenantUsers = model.tenantUsers;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The name of the database account.</p>
@@ -185,6 +198,16 @@ public class DescribeTenantUsersResponseBody extends TeaModel {
             private String privileges; 
             private String role; 
             private String table; 
+
+            private Builder() {
+            } 
+
+            private Builder(Databases model) {
+                this.database = model.database;
+                this.privileges = model.privileges;
+                this.role = model.role;
+                this.table = model.table;
+            } 
 
             /**
              * Database.
@@ -340,6 +363,20 @@ public class DescribeTenantUsersResponseBody extends TeaModel {
             private String userName; 
             private String userStatus; 
             private String userType; 
+
+            private Builder() {
+            } 
+
+            private Builder(TenantUsers model) {
+                this.databases = model.databases;
+                this.description = model.description;
+                this.globalPermissions = model.globalPermissions;
+                this.instanceId = model.instanceId;
+                this.tenantId = model.tenantId;
+                this.userName = model.userName;
+                this.userStatus = model.userStatus;
+                this.userType = model.userType;
+            } 
 
             /**
              * Databases.

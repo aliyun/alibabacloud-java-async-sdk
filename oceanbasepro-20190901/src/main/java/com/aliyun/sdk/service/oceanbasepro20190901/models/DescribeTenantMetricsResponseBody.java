@@ -40,6 +40,10 @@ public class DescribeTenantMetricsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class DescribeTenantMetricsResponseBody extends TeaModel {
         private String requestId; 
         private String tenantMetrics; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTenantMetricsResponseBody model) {
+            this.requestId = model.requestId;
+            this.tenantMetrics = model.tenantMetrics;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * RequestId.

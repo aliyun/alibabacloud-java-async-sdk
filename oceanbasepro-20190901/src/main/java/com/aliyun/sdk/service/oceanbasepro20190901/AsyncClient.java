@@ -504,6 +504,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeSlowSQLListResponse> describeSlowSQLList(DescribeSlowSQLListRequest request);
 
     /**
+     * @param request the request parameters of DescribeSqlAuditStat  DescribeSqlAuditStatRequest
+     * @return DescribeSqlAuditStatResponse
+     */
+    CompletableFuture<DescribeSqlAuditStatResponse> describeSqlAuditStat(DescribeSqlAuditStatRequest request);
+
+    /**
      * @param request the request parameters of DescribeStandbyCreateMode  DescribeStandbyCreateModeRequest
      * @return DescribeStandbyCreateModeResponse
      */

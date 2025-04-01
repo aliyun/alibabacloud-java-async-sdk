@@ -40,6 +40,10 @@ public class DescribeSlowSQLListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class DescribeSlowSQLListResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<SlowSQLList> slowSQLList; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSlowSQLListResponseBody model) {
+            this.requestId = model.requestId;
+            this.slowSQLList = model.slowSQLList;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -601,6 +614,52 @@ public class DescribeSlowSQLListResponseBody extends TeaModel {
             private Long ssstoreReadRowCount; 
             private Float totalWaitTime; 
             private String userName; 
+
+            private Builder() {
+            } 
+
+            private Builder(SlowSQLList model) {
+                this.affectedRows = model.affectedRows;
+                this.appWaitTime = model.appWaitTime;
+                this.blockCacheHit = model.blockCacheHit;
+                this.blockIndexCacheHit = model.blockIndexCacheHit;
+                this.bloomFilterCacheHit = model.bloomFilterCacheHit;
+                this.clientIp = model.clientIp;
+                this.concurrencyWaitTime = model.concurrencyWaitTime;
+                this.cpuTime = model.cpuTime;
+                this.dbName = model.dbName;
+                this.decodeTime = model.decodeTime;
+                this.diskRead = model.diskRead;
+                this.elapsedTime = model.elapsedTime;
+                this.event = model.event;
+                this.execPerSecond = model.execPerSecond;
+                this.executeTime = model.executeTime;
+                this.executions = model.executions;
+                this.failTimes = model.failTimes;
+                this.getPlanTime = model.getPlanTime;
+                this.IOWaitTime = model.IOWaitTime;
+                this.key = model.key;
+                this.logicalRead = model.logicalRead;
+                this.maxCpuTime = model.maxCpuTime;
+                this.maxElapsedTime = model.maxElapsedTime;
+                this.memstoreReadRowCount = model.memstoreReadRowCount;
+                this.missPlans = model.missPlans;
+                this.netWaitTime = model.netWaitTime;
+                this.nodeIp = model.nodeIp;
+                this.queueTime = model.queueTime;
+                this.RPCCount = model.RPCCount;
+                this.remotePlans = model.remotePlans;
+                this.retryCount = model.retryCount;
+                this.returnRows = model.returnRows;
+                this.rowCacheHit = model.rowCacheHit;
+                this.SQLId = model.SQLId;
+                this.SQLText = model.SQLText;
+                this.SQLType = model.SQLType;
+                this.scheduleTime = model.scheduleTime;
+                this.ssstoreReadRowCount = model.ssstoreReadRowCount;
+                this.totalWaitTime = model.totalWaitTime;
+                this.userName = model.userName;
+            } 
 
             /**
              * <p>The number of rows affected.</p>

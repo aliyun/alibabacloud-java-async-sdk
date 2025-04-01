@@ -72,6 +72,10 @@ public class ListDataSourceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return advice
      */
@@ -161,6 +165,23 @@ public class ListDataSourceResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDataSourceResponseBody model) {
+            this.advice = model.advice;
+            this.code = model.code;
+            this.cost = model.cost;
+            this.data = model.data;
+            this.errorDetail = model.errorDetail;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Advice.
@@ -576,6 +597,37 @@ public class ListDataSourceResponseBody extends TeaModel {
             private String version; 
             private String vpcId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.charset = model.charset;
+                this.cluster = model.cluster;
+                this.connExtraAttributes = model.connExtraAttributes;
+                this.description = model.description;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.ip = model.ip;
+                this.name = model.name;
+                this.operatingSystem = model.operatingSystem;
+                this.oracleNlsLengthSemantics = model.oracleNlsLengthSemantics;
+                this.oracleSid = model.oracleSid;
+                this.owner = model.owner;
+                this.partnerId = model.partnerId;
+                this.port = model.port;
+                this.region = model.region;
+                this.resourceOwner = model.resourceOwner;
+                this.role = model.role;
+                this.schema = model.schema;
+                this.tenant = model.tenant;
+                this.timezone = model.timezone;
+                this.type = model.type;
+                this.userName = model.userName;
+                this.version = model.version;
+                this.vpcId = model.vpcId;
+            } 
+
             /**
              * Charset.
              */
@@ -958,6 +1010,25 @@ public class ListDataSourceResponseBody extends TeaModel {
             private java.util.Map<String, String> reasonMcmsContext; 
             private String reasonMcmsKey; 
             private Object upstreamErrorDetail; 
+
+            private Builder() {
+            } 
+
+            private Builder(ErrorDetail model) {
+                this.code = model.code;
+                this.extraContext = model.extraContext;
+                this.level = model.level;
+                this.message = model.message;
+                this.messageMcmsContext = model.messageMcmsContext;
+                this.messageMcmsKey = model.messageMcmsKey;
+                this.proposal = model.proposal;
+                this.proposalMcmsContext = model.proposalMcmsContext;
+                this.proposalMcmsKey = model.proposalMcmsKey;
+                this.reason = model.reason;
+                this.reasonMcmsContext = model.reasonMcmsContext;
+                this.reasonMcmsKey = model.reasonMcmsKey;
+                this.upstreamErrorDetail = model.upstreamErrorDetail;
+            } 
 
             /**
              * Code.

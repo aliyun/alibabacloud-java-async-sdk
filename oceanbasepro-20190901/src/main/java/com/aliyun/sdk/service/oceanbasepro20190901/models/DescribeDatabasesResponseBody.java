@@ -40,6 +40,10 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return databases
      */
@@ -65,6 +69,15 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         private java.util.List<Databases> databases; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDatabasesResponseBody model) {
+            this.databases = model.databases;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The list of databases in the tenant.</p>
@@ -133,6 +146,13 @@ public class DescribeDatabasesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String tableName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tables model) {
+                this.tableName = model.tableName;
+            } 
 
             /**
              * <p>The name of the database table.</p>
@@ -219,6 +239,16 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             private String role; 
             private String userName; 
             private String userType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Users model) {
+                this.privileges = model.privileges;
+                this.role = model.role;
+                this.userName = model.userName;
+                this.userType = model.userType;
+            } 
 
             /**
              * <p>If you have granted custom privileges on the database, this parameter indicates the custom privileges, separated by commas (,). Otherwise, no data is returned for this parameter.</p>
@@ -468,6 +498,26 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             private String tenantId; 
             private String tenantName; 
             private java.util.List<Users> users; 
+
+            private Builder() {
+            } 
+
+            private Builder(Databases model) {
+                this.collation = model.collation;
+                this.createTime = model.createTime;
+                this.dataSize = model.dataSize;
+                this.databaseName = model.databaseName;
+                this.dbType = model.dbType;
+                this.description = model.description;
+                this.encoding = model.encoding;
+                this.instanceId = model.instanceId;
+                this.requiredSize = model.requiredSize;
+                this.status = model.status;
+                this.tables = model.tables;
+                this.tenantId = model.tenantId;
+                this.tenantName = model.tenantName;
+                this.users = model.users;
+            } 
 
             /**
              * <p>The collation.</p>

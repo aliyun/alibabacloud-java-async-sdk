@@ -36,6 +36,10 @@ public class DeleteTenantsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DeleteTenantsResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<String> tenantIds; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteTenantsResponseBody model) {
+            this.requestId = model.requestId;
+            this.tenantIds = model.tenantIds;
+        } 
 
         /**
          * RequestId.

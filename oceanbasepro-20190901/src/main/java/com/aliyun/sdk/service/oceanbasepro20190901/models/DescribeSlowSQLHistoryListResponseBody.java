@@ -36,6 +36,10 @@ public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private SlowSQLHistoryList slowSQLHistoryList; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSlowSQLHistoryListResponseBody model) {
+            this.requestId = model.requestId;
+            this.slowSQLHistoryList = model.slowSQLHistoryList;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -579,6 +591,52 @@ public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
             private Double totalWaitTime; 
             private String userName; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.affectedRows = model.affectedRows;
+                this.appWaitTime = model.appWaitTime;
+                this.blockCacheHit = model.blockCacheHit;
+                this.blockIndexCacheHit = model.blockIndexCacheHit;
+                this.bloomFilterCacheHit = model.bloomFilterCacheHit;
+                this.clientIp = model.clientIp;
+                this.concurrencyWaitTime = model.concurrencyWaitTime;
+                this.cpuTime = model.cpuTime;
+                this.dbName = model.dbName;
+                this.decodeTime = model.decodeTime;
+                this.diskRead = model.diskRead;
+                this.elapsedTime = model.elapsedTime;
+                this.endTimeUTCString = model.endTimeUTCString;
+                this.event = model.event;
+                this.execPerSecond = model.execPerSecond;
+                this.executeTime = model.executeTime;
+                this.executions = model.executions;
+                this.failTimes = model.failTimes;
+                this.getPlanTime = model.getPlanTime;
+                this.IOWaitTime = model.IOWaitTime;
+                this.logicalRead = model.logicalRead;
+                this.maxCpuTime = model.maxCpuTime;
+                this.maxElapsedTime = model.maxElapsedTime;
+                this.memstoreReadRowCount = model.memstoreReadRowCount;
+                this.missPlans = model.missPlans;
+                this.netWaitTime = model.netWaitTime;
+                this.nodeIp = model.nodeIp;
+                this.queueTime = model.queueTime;
+                this.RPCCount = model.RPCCount;
+                this.remotePlans = model.remotePlans;
+                this.retryCount = model.retryCount;
+                this.returnRows = model.returnRows;
+                this.rowCacheHit = model.rowCacheHit;
+                this.scheduleTime = model.scheduleTime;
+                this.sqlId = model.sqlId;
+                this.sqlType = model.sqlType;
+                this.ssstoreReadRowCount = model.ssstoreReadRowCount;
+                this.tenantName = model.tenantName;
+                this.totalWaitTime = model.totalWaitTime;
+                this.userName = model.userName;
+            } 
+
             /**
              * <p>The number of rows affected.</p>
              * 
@@ -1069,6 +1127,14 @@ public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
         public static final class Builder {
             private Long count; 
             private java.util.List<List> list; 
+
+            private Builder() {
+            } 
+
+            private Builder(SlowSQLHistoryList model) {
+                this.count = model.count;
+                this.list = model.list;
+            } 
 
             /**
              * <p>The quantity.</p>

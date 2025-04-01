@@ -36,6 +36,10 @@ public class ModifyInstanceNodeNumResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class ModifyInstanceNodeNumResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyInstanceNodeNumResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The return result of the request.</p>
@@ -122,6 +134,14 @@ public class ModifyInstanceNodeNumResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean dryRunResult; 
             private String orderId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.dryRunResult = model.dryRunResult;
+                this.orderId = model.orderId;
+            } 
 
             /**
              * <p>The result of the dry-run request.</p>

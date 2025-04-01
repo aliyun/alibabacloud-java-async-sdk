@@ -36,6 +36,10 @@ public class DescribeSessionListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DescribeSessionListResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Data> data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSessionListResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The object information.</p>
@@ -122,6 +134,14 @@ public class DescribeSessionListResponseBody extends TeaModel {
         public static final class Builder {
             private String host; 
             private String sessionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.host = model.host;
+                this.sessionId = model.sessionId;
+            } 
 
             /**
              * <p>The address of the client, with the format ip:port.</p>

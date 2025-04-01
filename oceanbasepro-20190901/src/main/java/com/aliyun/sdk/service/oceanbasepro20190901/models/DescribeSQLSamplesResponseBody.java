@@ -36,6 +36,10 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Data> data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSQLSamplesResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The list of sample data of slow query execution details.</p>
@@ -746,6 +758,66 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             private Double waitCount; 
             private String waitEvent; 
             private Double waitTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.affectedRows = model.affectedRows;
+                this.applicationWaitTime = model.applicationWaitTime;
+                this.blockCacheHit = model.blockCacheHit;
+                this.blockIndexCacheHit = model.blockIndexCacheHit;
+                this.bloomFilterCacheHit = model.bloomFilterCacheHit;
+                this.clientIp = model.clientIp;
+                this.clientPort = model.clientPort;
+                this.concurrencyWaitTime = model.concurrencyWaitTime;
+                this.consistencyLevel = model.consistencyLevel;
+                this.cpuTime = model.cpuTime;
+                this.dbName = model.dbName;
+                this.decodeTime = model.decodeTime;
+                this.diskReads = model.diskReads;
+                this.elapsedTime = model.elapsedTime;
+                this.executeTime = model.executeTime;
+                this.executorRpc = model.executorRpc;
+                this.expectedWorkerCount = model.expectedWorkerCount;
+                this.fullSqlText = model.fullSqlText;
+                this.getPlanTime = model.getPlanTime;
+                this.hitPlan = model.hitPlan;
+                this.inner = model.inner;
+                this.memstoreReadRows = model.memstoreReadRows;
+                this.netTime = model.netTime;
+                this.netWaitTime = model.netWaitTime;
+                this.obDbId = model.obDbId;
+                this.obServerId = model.obServerId;
+                this.obUserId = model.obUserId;
+                this.paramsValue = model.paramsValue;
+                this.partitionCount = model.partitionCount;
+                this.planId = model.planId;
+                this.planType = model.planType;
+                this.queueTime = model.queueTime;
+                this.requestId = model.requestId;
+                this.requestTime = model.requestTime;
+                this.retCode = model.retCode;
+                this.retryCount = model.retryCount;
+                this.returnRows = model.returnRows;
+                this.rowCacheHit = model.rowCacheHit;
+                this.rpcCount = model.rpcCount;
+                this.scheduleTime = model.scheduleTime;
+                this.server = model.server;
+                this.sqlText = model.sqlText;
+                this.sqlType = model.sqlType;
+                this.ssstoreReadRows = model.ssstoreReadRows;
+                this.statement = model.statement;
+                this.tableScan = model.tableScan;
+                this.traceId = model.traceId;
+                this.transHash = model.transHash;
+                this.usedWorkerCount = model.usedWorkerCount;
+                this.userIoWaitTime = model.userIoWaitTime;
+                this.userName = model.userName;
+                this.waitCount = model.waitCount;
+                this.waitEvent = model.waitEvent;
+                this.waitTime = model.waitTime;
+            } 
 
             /**
              * <p>Average updated rows during the execution period.</p>

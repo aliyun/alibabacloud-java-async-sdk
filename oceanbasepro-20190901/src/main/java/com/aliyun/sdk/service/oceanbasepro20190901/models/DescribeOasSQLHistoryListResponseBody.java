@@ -36,6 +36,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Data> data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeOasSQLHistoryListResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The list of SQL execution history.</p>
@@ -938,6 +950,82 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             private String userName; 
             private String waitEvent; 
             private Double weakConsistencyPercentage; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.avgAffectedRows = model.avgAffectedRows;
+                this.avgApplicationWaitTime = model.avgApplicationWaitTime;
+                this.avgBlockCacheHit = model.avgBlockCacheHit;
+                this.avgBlockIndexCacheHit = model.avgBlockIndexCacheHit;
+                this.avgBloomFilterCacheHit = model.avgBloomFilterCacheHit;
+                this.avgConcurrencyWaitTime = model.avgConcurrencyWaitTime;
+                this.avgCpuTime = model.avgCpuTime;
+                this.avgDbTime = model.avgDbTime;
+                this.avgDecodeTime = model.avgDecodeTime;
+                this.avgDiskReads = model.avgDiskReads;
+                this.avgElapsedTime = model.avgElapsedTime;
+                this.avgExecuteTime = model.avgExecuteTime;
+                this.avgExecutorRpcCount = model.avgExecutorRpcCount;
+                this.avgExpectedWorkerCount = model.avgExpectedWorkerCount;
+                this.avgGetPlanTime = model.avgGetPlanTime;
+                this.avgLogicalReads = model.avgLogicalReads;
+                this.avgMemstoreReadRows = model.avgMemstoreReadRows;
+                this.avgNetTime = model.avgNetTime;
+                this.avgNetWaitTime = model.avgNetWaitTime;
+                this.avgPartitionCount = model.avgPartitionCount;
+                this.avgQueueTime = model.avgQueueTime;
+                this.avgReturnRows = model.avgReturnRows;
+                this.avgRowCacheHit = model.avgRowCacheHit;
+                this.avgRpcCount = model.avgRpcCount;
+                this.avgScheduleTime = model.avgScheduleTime;
+                this.avgSsstoreReadRows = model.avgSsstoreReadRows;
+                this.avgUsedWorkerCount = model.avgUsedWorkerCount;
+                this.avgUserIoWaitTime = model.avgUserIoWaitTime;
+                this.avgWaitCount = model.avgWaitCount;
+                this.avgWaitTime = model.avgWaitTime;
+                this.dbName = model.dbName;
+                this.distPlanPercentage = model.distPlanPercentage;
+                this.execPs = model.execPs;
+                this.executions = model.executions;
+                this.failCount = model.failCount;
+                this.failPercentage = model.failPercentage;
+                this.localPlanPercentage = model.localPlanPercentage;
+                this.maxAffectedRows = model.maxAffectedRows;
+                this.maxApplicationWaitTime = model.maxApplicationWaitTime;
+                this.maxConcurrencyWaitTime = model.maxConcurrencyWaitTime;
+                this.maxCpuTime = model.maxCpuTime;
+                this.maxDiskReads = model.maxDiskReads;
+                this.maxElapsedTime = model.maxElapsedTime;
+                this.maxReturnRows = model.maxReturnRows;
+                this.maxUserIoWaitTime = model.maxUserIoWaitTime;
+                this.maxWaitTime = model.maxWaitTime;
+                this.missPlanPercentage = model.missPlanPercentage;
+                this.missPlans = model.missPlans;
+                this.remotePlanPercentage = model.remotePlanPercentage;
+                this.remotePlans = model.remotePlans;
+                this.retCode4012Count = model.retCode4012Count;
+                this.retCode4013Count = model.retCode4013Count;
+                this.retCode5001Count = model.retCode5001Count;
+                this.retCode5024Count = model.retCode5024Count;
+                this.retCode5167Count = model.retCode5167Count;
+                this.retCode5217Count = model.retCode5217Count;
+                this.retCode6002Count = model.retCode6002Count;
+                this.retryCount = model.retryCount;
+                this.SQLId = model.SQLId;
+                this.server = model.server;
+                this.strongConsistencyPercentage = model.strongConsistencyPercentage;
+                this.sumDbTime = model.sumDbTime;
+                this.sumElapsedTime = model.sumElapsedTime;
+                this.sumLogicalReads = model.sumLogicalReads;
+                this.sumWaitTime = model.sumWaitTime;
+                this.tableScanPercentage = model.tableScanPercentage;
+                this.timestamp = model.timestamp;
+                this.userName = model.userName;
+                this.waitEvent = model.waitEvent;
+                this.weakConsistencyPercentage = model.weakConsistencyPercentage;
+            } 
 
             /**
              * <p>Average updated rows during the execution period.</p>

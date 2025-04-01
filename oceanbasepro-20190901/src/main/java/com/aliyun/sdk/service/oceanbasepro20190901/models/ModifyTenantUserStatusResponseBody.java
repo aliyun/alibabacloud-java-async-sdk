@@ -36,6 +36,10 @@ public class ModifyTenantUserStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class ModifyTenantUserStatusResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<TenantUser> tenantUser; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyTenantUserStatusResponseBody model) {
+            this.requestId = model.requestId;
+            this.tenantUser = model.tenantUser;
+        } 
 
         /**
          * <p>Example 1</p>
@@ -134,6 +146,15 @@ public class ModifyTenantUserStatusResponseBody extends TeaModel {
             private String tenantId; 
             private String userName; 
             private String userStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(TenantUser model) {
+                this.tenantId = model.tenantId;
+                this.userName = model.userName;
+                this.userStatus = model.userStatus;
+            } 
 
             /**
              * TenantId.

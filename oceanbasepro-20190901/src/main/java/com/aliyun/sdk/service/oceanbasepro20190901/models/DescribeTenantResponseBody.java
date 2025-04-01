@@ -36,6 +36,10 @@ public class DescribeTenantResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeTenantResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Tenant tenant; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTenantResponseBody model) {
+            this.requestId = model.requestId;
+            this.tenant = model.tenant;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -134,6 +146,15 @@ public class DescribeTenantResponseBody extends TeaModel {
             private Integer maxCapacityUnit; 
             private Integer minCapacityUnit; 
             private Integer usedCapacit; 
+
+            private Builder() {
+            } 
+
+            private Builder(CapacityUnit model) {
+                this.maxCapacityUnit = model.maxCapacityUnit;
+                this.minCapacityUnit = model.minCapacityUnit;
+                this.usedCapacit = model.usedCapacit;
+            } 
 
             /**
              * <p>The maximum number of capacity units.</p>
@@ -231,6 +252,15 @@ public class DescribeTenantResponseBody extends TeaModel {
             private Float unitCpu; 
             private Float usedCpu; 
 
+            private Builder() {
+            } 
+
+            private Builder(Cpu model) {
+                this.totalCpu = model.totalCpu;
+                this.unitCpu = model.unitCpu;
+                this.usedCpu = model.usedCpu;
+            } 
+
             /**
              * <p>The total number of CPU cores of the tenant.</p>
              * 
@@ -303,6 +333,13 @@ public class DescribeTenantResponseBody extends TeaModel {
         public static final class Builder {
             private Float usedDiskSize; 
 
+            private Builder() {
+            } 
+
+            private Builder(DiskSize model) {
+                this.usedDiskSize = model.usedDiskSize;
+            } 
+
             /**
              * <p>The size of disk space used by the tenant, in GB.</p>
              * 
@@ -364,6 +401,14 @@ public class DescribeTenantResponseBody extends TeaModel {
         public static final class Builder {
             private Integer totalLogDisk; 
             private Integer unitLogDisk; 
+
+            private Builder() {
+            } 
+
+            private Builder(LogDiskSize model) {
+                this.totalLogDisk = model.totalLogDisk;
+                this.unitLogDisk = model.unitLogDisk;
+            } 
 
             /**
              * <p>The total log disk size of the tenant, in GB.</p>
@@ -449,6 +494,15 @@ public class DescribeTenantResponseBody extends TeaModel {
             private Float totalMemory; 
             private Float unitMemory; 
             private Float usedMemory; 
+
+            private Builder() {
+            } 
+
+            private Builder(Memory model) {
+                this.totalMemory = model.totalMemory;
+                this.unitMemory = model.unitMemory;
+                this.usedMemory = model.usedMemory;
+            } 
 
             /**
              * <p>The total memory size of the tenant, in GB.</p>
@@ -581,6 +635,18 @@ public class DescribeTenantResponseBody extends TeaModel {
             private LogDiskSize logDiskSize; 
             private Memory memory; 
             private Integer unitNum; 
+
+            private Builder() {
+            } 
+
+            private Builder(ReadOnlyResource model) {
+                this.capacityUnit = model.capacityUnit;
+                this.cpu = model.cpu;
+                this.diskSize = model.diskSize;
+                this.logDiskSize = model.logDiskSize;
+                this.memory = model.memory;
+                this.unitNum = model.unitNum;
+            } 
 
             /**
              * <p>The information about capacity units.</p>
@@ -984,6 +1050,39 @@ public class DescribeTenantResponseBody extends TeaModel {
             private String vSwitchId; 
             private String vpcId; 
 
+            private Builder() {
+            } 
+
+            private Builder(TenantConnections model) {
+                this.addressType = model.addressType;
+                this.connectionLogicalZones = model.connectionLogicalZones;
+                this.connectionReplicaType = model.connectionReplicaType;
+                this.connectionZones = model.connectionZones;
+                this.enableTransactionSplit = model.enableTransactionSplit;
+                this.internetAddress = model.internetAddress;
+                this.internetAddressStatus = model.internetAddressStatus;
+                this.internetMaxConnectionLimit = model.internetMaxConnectionLimit;
+                this.internetMaxConnectionNum = model.internetMaxConnectionNum;
+                this.internetPort = model.internetPort;
+                this.internetRpcPort = model.internetRpcPort;
+                this.intranetAddress = model.intranetAddress;
+                this.intranetAddressMasterZoneId = model.intranetAddressMasterZoneId;
+                this.intranetAddressSlaveZoneId = model.intranetAddressSlaveZoneId;
+                this.intranetAddressStatus = model.intranetAddressStatus;
+                this.intranetPort = model.intranetPort;
+                this.intranetRpcPort = model.intranetRpcPort;
+                this.intranetSqlPort = model.intranetSqlPort;
+                this.maxConnectionLimit = model.maxConnectionLimit;
+                this.maxConnectionNum = model.maxConnectionNum;
+                this.odpVersion = model.odpVersion;
+                this.parallelQueryDegree = model.parallelQueryDegree;
+                this.proxyClusterId = model.proxyClusterId;
+                this.tenantEndpointId = model.tenantEndpointId;
+                this.transactionSplit = model.transactionSplit;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+            } 
+
             /**
              * <p>The type of the address.</p>
              * <ul>
@@ -1353,6 +1452,15 @@ public class DescribeTenantResponseBody extends TeaModel {
             private Integer minCapacityUnit; 
             private Integer usedCapacit; 
 
+            private Builder() {
+            } 
+
+            private Builder(TenantResourceCapacityUnit model) {
+                this.maxCapacityUnit = model.maxCapacityUnit;
+                this.minCapacityUnit = model.minCapacityUnit;
+                this.usedCapacit = model.usedCapacit;
+            } 
+
             /**
              * <p>The maximum number of capacity units.</p>
              * 
@@ -1449,6 +1557,15 @@ public class DescribeTenantResponseBody extends TeaModel {
             private Float unitCpu; 
             private Float usedCpu; 
 
+            private Builder() {
+            } 
+
+            private Builder(TenantResourceCpu model) {
+                this.totalCpu = model.totalCpu;
+                this.unitCpu = model.unitCpu;
+                this.usedCpu = model.usedCpu;
+            } 
+
             /**
              * <p>The total number of CPU cores of the tenant.</p>
              * 
@@ -1521,6 +1638,13 @@ public class DescribeTenantResponseBody extends TeaModel {
         public static final class Builder {
             private Float usedDiskSize; 
 
+            private Builder() {
+            } 
+
+            private Builder(TenantResourceDiskSize model) {
+                this.usedDiskSize = model.usedDiskSize;
+            } 
+
             /**
              * <p>The size of used disk space of the tenant, in GB.</p>
              * 
@@ -1582,6 +1706,14 @@ public class DescribeTenantResponseBody extends TeaModel {
         public static final class Builder {
             private Integer totalLogDisk; 
             private Integer unitLogDisk; 
+
+            private Builder() {
+            } 
+
+            private Builder(TenantResourceLogDiskSize model) {
+                this.totalLogDisk = model.totalLogDisk;
+                this.unitLogDisk = model.unitLogDisk;
+            } 
 
             /**
              * <p>The total size of log disk of the tenant, in GB.</p>
@@ -1667,6 +1799,15 @@ public class DescribeTenantResponseBody extends TeaModel {
             private Float totalMemory; 
             private Float unitMemory; 
             private Float usedMemory; 
+
+            private Builder() {
+            } 
+
+            private Builder(TenantResourceMemory model) {
+                this.totalMemory = model.totalMemory;
+                this.unitMemory = model.unitMemory;
+                this.usedMemory = model.usedMemory;
+            } 
 
             /**
              * <p>The total memory size of the tenant, in GB.</p>
@@ -1799,6 +1940,18 @@ public class DescribeTenantResponseBody extends TeaModel {
             private TenantResourceLogDiskSize logDiskSize; 
             private TenantResourceMemory memory; 
             private Integer unitNum; 
+
+            private Builder() {
+            } 
+
+            private Builder(TenantResource model) {
+                this.capacityUnit = model.capacityUnit;
+                this.cpu = model.cpu;
+                this.diskSize = model.diskSize;
+                this.logDiskSize = model.logDiskSize;
+                this.memory = model.memory;
+                this.unitNum = model.unitNum;
+            } 
 
             /**
              * <p>The information about capacity units.</p>
@@ -1962,6 +2115,19 @@ public class DescribeTenantResponseBody extends TeaModel {
             private Long zoneNodes; 
             private String zoneReplicaType; 
 
+            private Builder() {
+            } 
+
+            private Builder(TenantZoneReplicas model) {
+                this.fullCopyId = model.fullCopyId;
+                this.logicZoneName = model.logicZoneName;
+                this.readOnlyCopyId = model.readOnlyCopyId;
+                this.readOnlyReplicaType = model.readOnlyReplicaType;
+                this.zoneCopyId = model.zoneCopyId;
+                this.zoneNodes = model.zoneNodes;
+                this.zoneReplicaType = model.zoneReplicaType;
+            } 
+
             /**
              * <p>The ID of the full-featured replica.</p>
              * 
@@ -2113,6 +2279,16 @@ public class DescribeTenantResponseBody extends TeaModel {
             private String tenantZoneId; 
             private java.util.List<TenantZoneReplicas> tenantZoneReplicas; 
             private String tenantZoneRole; 
+
+            private Builder() {
+            } 
+
+            private Builder(TenantZones model) {
+                this.region = model.region;
+                this.tenantZoneId = model.tenantZoneId;
+                this.tenantZoneReplicas = model.tenantZoneReplicas;
+                this.tenantZoneRole = model.tenantZoneRole;
+            } 
 
             /**
              * <p>The region where the zone of the tenant resides.</p>
@@ -2649,6 +2825,51 @@ public class DescribeTenantResponseBody extends TeaModel {
             private String timeZone; 
             private String version; 
             private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tenant model) {
+                this.availableZones = model.availableZones;
+                this.charset = model.charset;
+                this.clogServiceStatus = model.clogServiceStatus;
+                this.collation = model.collation;
+                this.createTime = model.createTime;
+                this.dataMergeTime = model.dataMergeTime;
+                this.deployMode = model.deployMode;
+                this.deployType = model.deployType;
+                this.description = model.description;
+                this.diskType = model.diskType;
+                this.enableBinlogService = model.enableBinlogService;
+                this.enableClogService = model.enableClogService;
+                this.enableInternetAddressService = model.enableInternetAddressService;
+                this.enableParallelQuery = model.enableParallelQuery;
+                this.enableReadOnlyReplica = model.enableReadOnlyReplica;
+                this.enableReadWriteSplit = model.enableReadWriteSplit;
+                this.instanceType = model.instanceType;
+                this.lowerCaseTableNames = model.lowerCaseTableNames;
+                this.masterIntranetAddressZone = model.masterIntranetAddressZone;
+                this.maxParallelQueryDegree = model.maxParallelQueryDegree;
+                this.odpVersion = model.odpVersion;
+                this.parameterTemplate = model.parameterTemplate;
+                this.payType = model.payType;
+                this.primaryZone = model.primaryZone;
+                this.primaryZoneDeployType = model.primaryZoneDeployType;
+                this.readOnlyResource = model.readOnlyResource;
+                this.recycleBinStatus = model.recycleBinStatus;
+                this.series = model.series;
+                this.status = model.status;
+                this.tenantConnections = model.tenantConnections;
+                this.tenantId = model.tenantId;
+                this.tenantMaxConnections = model.tenantMaxConnections;
+                this.tenantMode = model.tenantMode;
+                this.tenantName = model.tenantName;
+                this.tenantResource = model.tenantResource;
+                this.tenantZones = model.tenantZones;
+                this.timeZone = model.timeZone;
+                this.version = model.version;
+                this.vpcId = model.vpcId;
+            } 
 
             /**
              * <p>The list of zones.</p>

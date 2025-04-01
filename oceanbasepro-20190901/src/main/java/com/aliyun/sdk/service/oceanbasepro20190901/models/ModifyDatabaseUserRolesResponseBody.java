@@ -36,6 +36,10 @@ public class ModifyDatabaseUserRolesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class ModifyDatabaseUserRolesResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private TenantUser tenantUser; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyDatabaseUserRolesResponseBody model) {
+            this.requestId = model.requestId;
+            this.tenantUser = model.tenantUser;
+        } 
 
         /**
          * RequestId.
@@ -119,6 +131,14 @@ public class ModifyDatabaseUserRolesResponseBody extends TeaModel {
         public static final class Builder {
             private String role; 
             private String userName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Users model) {
+                this.role = model.role;
+                this.userName = model.userName;
+            } 
 
             /**
              * Role.
@@ -198,6 +218,15 @@ public class ModifyDatabaseUserRolesResponseBody extends TeaModel {
             private String databaseName; 
             private String tenantId; 
             private java.util.List<Users> users; 
+
+            private Builder() {
+            } 
+
+            private Builder(TenantUser model) {
+                this.databaseName = model.databaseName;
+                this.tenantId = model.tenantId;
+                this.users = model.users;
+            } 
 
             /**
              * <p>Example 1</p>

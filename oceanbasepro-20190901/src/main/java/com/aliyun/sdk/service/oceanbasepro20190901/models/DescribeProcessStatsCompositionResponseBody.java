@@ -36,6 +36,10 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeProcessStatsCompositionResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The return result.</p>
@@ -278,6 +290,27 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
             private String tenantId; 
             private String traceId; 
             private String user; 
+
+            private Builder() {
+            } 
+
+            private Builder(AllProcessList model) {
+                this.clientIp = model.clientIp;
+                this.command = model.command;
+                this.cpuTime = model.cpuTime;
+                this.database = model.database;
+                this.executeTime = model.executeTime;
+                this.planId = model.planId;
+                this.proxySessId = model.proxySessId;
+                this.serverIp = model.serverIp;
+                this.sessionId = model.sessionId;
+                this.sqlId = model.sqlId;
+                this.sqlText = model.sqlText;
+                this.status = model.status;
+                this.tenantId = model.tenantId;
+                this.traceId = model.traceId;
+                this.user = model.user;
+            } 
 
             /**
              * <p>The IP address of the client.</p>
@@ -526,6 +559,16 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
             private Long totalCount; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataBaseStatistics model) {
+                this.activeCount = model.activeCount;
+                this.metricValue = model.metricValue;
+                this.totalCount = model.totalCount;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The number of active sessions.</p>
              * 
@@ -644,6 +687,16 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
             private String metricValue; 
             private Long totalCount; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(SourceStatistics model) {
+                this.activeCount = model.activeCount;
+                this.metricValue = model.metricValue;
+                this.totalCount = model.totalCount;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The number of active sessions.</p>
@@ -764,6 +817,16 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
             private Long totalCount; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserStatistics model) {
+                this.activeCount = model.activeCount;
+                this.metricValue = model.metricValue;
+                this.totalCount = model.totalCount;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The number of active sessions.</p>
              * 
@@ -870,6 +933,15 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
             private java.util.List<DataBaseStatistics> dataBaseStatistics; 
             private java.util.List<SourceStatistics> sourceStatistics; 
             private java.util.List<UserStatistics> userStatistics; 
+
+            private Builder() {
+            } 
+
+            private Builder(SessionStatistics model) {
+                this.dataBaseStatistics = model.dataBaseStatistics;
+                this.sourceStatistics = model.sourceStatistics;
+                this.userStatistics = model.userStatistics;
+            } 
 
             /**
              * <p>The session data in the database dimension.</p>
@@ -993,6 +1065,18 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
             private String obVersion; 
             private SessionStatistics sessionStatistics; 
             private Integer totalSessionCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.activeSessionCount = model.activeSessionCount;
+                this.allProcessList = model.allProcessList;
+                this.idleSessionCount = model.idleSessionCount;
+                this.obVersion = model.obVersion;
+                this.sessionStatistics = model.sessionStatistics;
+                this.totalSessionCount = model.totalSessionCount;
+            } 
 
             /**
              * <p>The number of active sessions.</p>

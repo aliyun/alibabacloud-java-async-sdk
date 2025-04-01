@@ -36,6 +36,10 @@ public class DescribeTenantZonesReadResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeTenantZonesReadResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<TenantZones> tenantZones; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTenantZonesReadResponseBody model) {
+            this.requestId = model.requestId;
+            this.tenantZones = model.tenantZones;
+        } 
 
         /**
          * <p>Indicates whether a read-only connection needs to be created for the zone.</p>
@@ -146,6 +158,16 @@ public class DescribeTenantZonesReadResponseBody extends TeaModel {
             private Boolean isPrimary; 
             private String isReadable; 
             private String zone; 
+
+            private Builder() {
+            } 
+
+            private Builder(TenantZones model) {
+                this.isElectable = model.isElectable;
+                this.isPrimary = model.isPrimary;
+                this.isReadable = model.isReadable;
+                this.zone = model.zone;
+            } 
 
             /**
              * <p>Example 1</p>

@@ -36,6 +36,10 @@ public class DescribeProxyServiceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DescribeProxyServiceResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeProxyServiceResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Data.
@@ -251,6 +263,25 @@ public class DescribeProxyServiceResponseBody extends TeaModel {
             private Long unitNumLimit; 
             private String unitSpec; 
             private String zone; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.createTime = model.createTime;
+                this.currentEndpointNum = model.currentEndpointNum;
+                this.endpointNumQuota = model.endpointNumQuota;
+                this.expireTime = model.expireTime;
+                this.proxyClusterId = model.proxyClusterId;
+                this.proxyMode = model.proxyMode;
+                this.proxyServiceVersion = model.proxyServiceVersion;
+                this.proxyVersion = model.proxyVersion;
+                this.status = model.status;
+                this.unitNum = model.unitNum;
+                this.unitNumLimit = model.unitNumLimit;
+                this.unitSpec = model.unitSpec;
+                this.zone = model.zone;
+            } 
 
             /**
              * CreateTime.

@@ -36,6 +36,10 @@ public class DescribeOasSQLDetailsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DescribeOasSQLDetailsResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeOasSQLDetailsResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The list of the SQL execution plan.</p>
@@ -158,6 +170,17 @@ public class DescribeOasSQLDetailsResponseBody extends TeaModel {
             private String statement; 
             private java.util.List<String> tables; 
             private String userName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.dbName = model.dbName;
+                this.fulltext = model.fulltext;
+                this.statement = model.statement;
+                this.tables = model.tables;
+                this.userName = model.userName;
+            } 
 
             /**
              * <p>The name of the database.</p>

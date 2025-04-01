@@ -36,6 +36,10 @@ public class DescribeParametersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return parameters
      */
@@ -53,6 +57,14 @@ public class DescribeParametersResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Parameters> parameters; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeParametersResponseBody model) {
+            this.parameters = model.parameters;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Indicates whether a restart is required for changes to the parameter to take effect. Valid values:   </p>
@@ -222,6 +234,22 @@ public class DescribeParametersResponseBody extends TeaModel {
             private java.util.List<String> rejectedValue; 
             private String unit; 
             private String valueType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Parameters model) {
+                this.acceptableValue = model.acceptableValue;
+                this.currentValue = model.currentValue;
+                this.defaultValue = model.defaultValue;
+                this.description = model.description;
+                this.name = model.name;
+                this.needReboot = model.needReboot;
+                this.readonly = model.readonly;
+                this.rejectedValue = model.rejectedValue;
+                this.unit = model.unit;
+                this.valueType = model.valueType;
+            } 
 
             /**
              * <p>DescribeParameters</p>

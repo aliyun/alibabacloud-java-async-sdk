@@ -36,6 +36,10 @@ public class CreateOmsMysqlDataSourceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class CreateOmsMysqlDataSourceResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateOmsMysqlDataSourceResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The return result of the request.</p>
@@ -110,6 +122,13 @@ public class CreateOmsMysqlDataSourceResponseBody extends TeaModel {
 
         public static final class Builder {
             private String endpointId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.endpointId = model.endpointId;
+            } 
 
             /**
              * <p>The ID of the data source record.</p>

@@ -40,6 +40,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instances
      */
@@ -65,6 +69,15 @@ public class DescribeInstancesResponseBody extends TeaModel {
         private java.util.List<Instances> instances; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstancesResponseBody model) {
+            this.instances = model.instances;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The information of the OceanBase cluster.</p>
@@ -218,6 +231,20 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private Double upperThreshold; 
             private Double upperbound; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataDiskAutoScaleConfig model) {
+                this.autoScale = model.autoScale;
+                this.maxDiskSize = model.maxDiskSize;
+                this.scaleStepInMerge = model.scaleStepInMerge;
+                this.scaleStepInNormal = model.scaleStepInNormal;
+                this.upperMergeThreshold = model.upperMergeThreshold;
+                this.upperScaleStrategy = model.upperScaleStrategy;
+                this.upperThreshold = model.upperThreshold;
+                this.upperbound = model.upperbound;
+            } 
+
             /**
              * <p>Specifies whether to enable the automatic scaling of the data disk.</p>
              * 
@@ -369,6 +396,15 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private Integer minCapacityUnit; 
             private Integer usedCapacityUnit; 
 
+            private Builder() {
+            } 
+
+            private Builder(CapacityUnit model) {
+                this.maxCapacityUnit = model.maxCapacityUnit;
+                this.minCapacityUnit = model.minCapacityUnit;
+                this.usedCapacityUnit = model.usedCapacityUnit;
+            } 
+
             /**
              * <p>The maximum number of capacity units.</p>
              * 
@@ -476,6 +512,16 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private Double totalCpu; 
             private Double unitCpu; 
             private Double usedCpu; 
+
+            private Builder() {
+            } 
+
+            private Builder(Cpu model) {
+                this.originalTotalCpu = model.originalTotalCpu;
+                this.totalCpu = model.totalCpu;
+                this.unitCpu = model.unitCpu;
+                this.usedCpu = model.usedCpu;
+            } 
 
             /**
              * <p>The number of original CPU cores in the cluster.</p>
@@ -596,6 +642,16 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private Double unitDiskSize; 
             private Long usedDiskSize; 
 
+            private Builder() {
+            } 
+
+            private Builder(DiskSize model) {
+                this.originalTotalDiskSize = model.originalTotalDiskSize;
+                this.totalDiskSize = model.totalDiskSize;
+                this.unitDiskSize = model.unitDiskSize;
+                this.usedDiskSize = model.usedDiskSize;
+            } 
+
             /**
              * <p>The original size of the disk.</p>
              * 
@@ -714,6 +770,16 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private Double totalMemory; 
             private Long unitMemory; 
             private Long usedMemory; 
+
+            private Builder() {
+            } 
+
+            private Builder(Memory model) {
+                this.originalTotalMemory = model.originalTotalMemory;
+                this.totalMemory = model.totalMemory;
+                this.unitMemory = model.unitMemory;
+                this.usedMemory = model.usedMemory;
+            } 
 
             /**
              * <p>The original memory size of the cluster, in GB.</p>
@@ -845,6 +911,17 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private DiskSize diskSize; 
             private Memory memory; 
             private Long unitCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Resource model) {
+                this.capacityUnit = model.capacityUnit;
+                this.cpu = model.cpu;
+                this.diskSize = model.diskSize;
+                this.memory = model.memory;
+                this.unitCount = model.unitCount;
+            } 
 
             /**
              * <p>The information about capacity units.</p>
@@ -1311,6 +1388,45 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private Long usedDiskSize; 
             private String version; 
             private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Instances model) {
+                this.availableZones = model.availableZones;
+                this.commodityCode = model.commodityCode;
+                this.cpu = model.cpu;
+                this.cpuArchitecture = model.cpuArchitecture;
+                this.createTime = model.createTime;
+                this.dataDiskAutoScaleConfig = model.dataDiskAutoScaleConfig;
+                this.deployMode = model.deployMode;
+                this.deployType = model.deployType;
+                this.diskSize = model.diskSize;
+                this.diskType = model.diskType;
+                this.enableReadOnlyReplicaManagement = model.enableReadOnlyReplicaManagement;
+                this.enableUpgradeNodes = model.enableUpgradeNodes;
+                this.expireSeconds = model.expireSeconds;
+                this.expireTime = model.expireTime;
+                this.inTempCapacityStatus = model.inTempCapacityStatus;
+                this.instanceClass = model.instanceClass;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.instanceRole = model.instanceRole;
+                this.instanceType = model.instanceType;
+                this.maintainTime = model.maintainTime;
+                this.mem = model.mem;
+                this.obRpmVersion = model.obRpmVersion;
+                this.payType = model.payType;
+                this.replicaMode = model.replicaMode;
+                this.resource = model.resource;
+                this.resourceGroupId = model.resourceGroupId;
+                this.series = model.series;
+                this.specType = model.specType;
+                this.state = model.state;
+                this.usedDiskSize = model.usedDiskSize;
+                this.version = model.version;
+                this.vpcId = model.vpcId;
+            } 
 
             /**
              * <p>The information about the zone in which the cluster is deployed.</p>

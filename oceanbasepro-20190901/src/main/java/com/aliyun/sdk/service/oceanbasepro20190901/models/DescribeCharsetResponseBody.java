@@ -36,6 +36,10 @@ public class DescribeCharsetResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return charset
      */
@@ -53,6 +57,14 @@ public class DescribeCharsetResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Charset> charset; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCharsetResponseBody model) {
+            this.charset = model.charset;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <pre><code>http(s)://[Endpoint]/?Action=DescribeCharset
@@ -125,6 +137,14 @@ public class DescribeCharsetResponseBody extends TeaModel {
         public static final class Builder {
             private String charset; 
             private java.util.List<String> collations; 
+
+            private Builder() {
+            } 
+
+            private Builder(Charset model) {
+                this.charset = model.charset;
+                this.collations = model.collations;
+            } 
 
             /**
              * <p>DescribeCharset</p>

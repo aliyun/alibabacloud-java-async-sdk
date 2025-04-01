@@ -36,6 +36,10 @@ public class DescribeAvailableMemResourceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DescribeAvailableMemResourceResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAvailableMemResourceResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The available memory size.</p>
@@ -146,6 +158,16 @@ public class DescribeAvailableMemResourceResponseBody extends TeaModel {
             private Long minMem; 
             private String safeMem; 
             private Long usedMem; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.maxMem = model.maxMem;
+                this.minMem = model.minMem;
+                this.safeMem = model.safeMem;
+                this.usedMem = model.usedMem;
+            } 
 
             /**
              * <p>The maximum memory size for each resource unit, in GB.</p>

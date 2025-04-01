@@ -72,6 +72,10 @@ public class DescribeProjectResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return advice
      */
@@ -161,6 +165,23 @@ public class DescribeProjectResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeProjectResponseBody model) {
+            this.advice = model.advice;
+            this.code = model.code;
+            this.cost = model.cost;
+            this.data = model.data;
+            this.errorDetail = model.errorDetail;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Advice.
@@ -347,6 +368,18 @@ public class DescribeProjectResponseBody extends TeaModel {
             private Integer recentlyTriggerCount; 
             private java.util.Map<String, Integer> ruleToRecentlyTriggerCount; 
             private String target; 
+
+            private Builder() {
+            } 
+
+            private Builder(AlarmStats model) {
+                this.alarmContent = model.alarmContent;
+                this.alarming = model.alarming;
+                this.openMonitor = model.openMonitor;
+                this.recentlyTriggerCount = model.recentlyTriggerCount;
+                this.ruleToRecentlyTriggerCount = model.ruleToRecentlyTriggerCount;
+                this.target = model.target;
+            } 
 
             /**
              * AlarmContent.
@@ -578,6 +611,25 @@ public class DescribeProjectResponseBody extends TeaModel {
             private String sinkStoreFormat; 
             private String sourceStoreFormat; 
             private String tableCategory; 
+
+            private Builder() {
+            } 
+
+            private Builder(CommonTransferConfig model) {
+                this.activeActive = model.activeActive;
+                this.dataWorksBusinessName = model.dataWorksBusinessName;
+                this.datahubTopicType = model.datahubTopicType;
+                this.mqPartition = model.mqPartition;
+                this.mqPartitionMode = model.mqPartitionMode;
+                this.mqSerializerType = model.mqSerializerType;
+                this.rocketMqEnableMsgTrace = model.rocketMqEnableMsgTrace;
+                this.rocketMqMsgTags = model.rocketMqMsgTags;
+                this.rocketMqProducerGroup = model.rocketMqProducerGroup;
+                this.rocketMqSendMsgTimeout = model.rocketMqSendMsgTimeout;
+                this.sinkStoreFormat = model.sinkStoreFormat;
+                this.sourceStoreFormat = model.sourceStoreFormat;
+                this.tableCategory = model.tableCategory;
+            } 
 
             /**
              * ActiveActive.
@@ -926,6 +978,30 @@ public class DescribeProjectResponseBody extends TeaModel {
             private Long syncDelay; 
             private Long syncDelaySampleTimestamp; 
 
+            private Builder() {
+            } 
+
+            private Builder(ExtraInfo model) {
+                this.accessObSource = model.accessObSource;
+                this.ignoreUnsupportDdl = model.ignoreUnsupportDdl;
+                this.incrSyncTimestamp = model.incrSyncTimestamp;
+                this.logServiceStartCheckpoint = model.logServiceStartCheckpoint;
+                this.maxConnectorCount = model.maxConnectorCount;
+                this.monitoringIncr = model.monitoringIncr;
+                this.overwriteConfig = model.overwriteConfig;
+                this.reverseSubtopics = model.reverseSubtopics;
+                this.runningProgress = model.runningProgress;
+                this.runningStep = model.runningStep;
+                this.sourceStoreKeptHour = model.sourceStoreKeptHour;
+                this.storeIncr = model.storeIncr;
+                this.subConds = model.subConds;
+                this.subDbs = model.subDbs;
+                this.subIds = model.subIds;
+                this.subtopics = model.subtopics;
+                this.syncDelay = model.syncDelay;
+                this.syncDelaySampleTimestamp = model.syncDelaySampleTimestamp;
+            } 
+
             /**
              * AccessObSource.
              */
@@ -1193,6 +1269,20 @@ public class DescribeProjectResponseBody extends TeaModel {
             private Integer throttleRps; 
             private Integer writeWorkerNum; 
 
+            private Builder() {
+            } 
+
+            private Builder(FullTransferConfig model) {
+                this.allowDestTableNotEmpty = model.allowDestTableNotEmpty;
+                this.fullTransferSpeedMode = model.fullTransferSpeedMode;
+                this.fullVerifySpeedMode = model.fullVerifySpeedMode;
+                this.nonePkUkTruncateDstTable = model.nonePkUkTruncateDstTable;
+                this.readWorkerNum = model.readWorkerNum;
+                this.throttleIOPS = model.throttleIOPS;
+                this.throttleRps = model.throttleRps;
+                this.writeWorkerNum = model.writeWorkerNum;
+            } 
+
             /**
              * AllowDestTableNotEmpty.
              */
@@ -1392,6 +1482,21 @@ public class DescribeProjectResponseBody extends TeaModel {
             private Integer throttleIOPS; 
             private Integer throttleRps; 
 
+            private Builder() {
+            } 
+
+            private Builder(IncrTransferConfig model) {
+                this.enableIncrSyncStatistics = model.enableIncrSyncStatistics;
+                this.enableSequencingWithinTxn = model.enableSequencingWithinTxn;
+                this.incrSyncConcurrency = model.incrSyncConcurrency;
+                this.recordTypeWhiteList = model.recordTypeWhiteList;
+                this.startTimestamp = model.startTimestamp;
+                this.storeLogKeptHour = model.storeLogKeptHour;
+                this.supportDDLTypes = model.supportDDLTypes;
+                this.throttleIOPS = model.throttleIOPS;
+                this.throttleRps = model.throttleRps;
+            } 
+
             /**
              * EnableIncrSyncStatistics.
              */
@@ -1514,6 +1619,14 @@ public class DescribeProjectResponseBody extends TeaModel {
         public static final class Builder {
             private String id; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(Labels model) {
+                this.id = model.id;
+                this.name = model.name;
+            } 
 
             /**
              * Id.
@@ -1665,6 +1778,21 @@ public class DescribeProjectResponseBody extends TeaModel {
             private java.util.List<String> supportDDLTypes; 
             private Integer throttleIOPS; 
             private Integer throttleRps; 
+
+            private Builder() {
+            } 
+
+            private Builder(ReverseIncrTransferConfig model) {
+                this.enableIncrSyncStatistics = model.enableIncrSyncStatistics;
+                this.enableSequencingWithinTxn = model.enableSequencingWithinTxn;
+                this.incrSyncConcurrency = model.incrSyncConcurrency;
+                this.recordTypeWhiteList = model.recordTypeWhiteList;
+                this.startTimestamp = model.startTimestamp;
+                this.storeLogKeptHour = model.storeLogKeptHour;
+                this.supportDDLTypes = model.supportDDLTypes;
+                this.throttleIOPS = model.throttleIOPS;
+                this.throttleRps = model.throttleRps;
+            } 
 
             /**
              * EnableIncrSyncStatistics.
@@ -1992,6 +2120,31 @@ public class DescribeProjectResponseBody extends TeaModel {
             private String timezone; 
             private String username; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(SinkConnectInfo model) {
+                this.charset = model.charset;
+                this.connExtraAttributes = model.connExtraAttributes;
+                this.connectionInfo = model.connectionInfo;
+                this.dbEngine = model.dbEngine;
+                this.endpointId = model.endpointId;
+                this.endpointName = model.endpointName;
+                this.endpointSide = model.endpointSide;
+                this.host = model.host;
+                this.id = model.id;
+                this.nlsLengthSemantics = model.nlsLengthSemantics;
+                this.ocpName = model.ocpName;
+                this.operatingSystem = model.operatingSystem;
+                this.owner = model.owner;
+                this.port = model.port;
+                this.region = model.region;
+                this.resourceOwner = model.resourceOwner;
+                this.timezone = model.timezone;
+                this.username = model.username;
+                this.version = model.version;
+            } 
 
             /**
              * Charset.
@@ -2403,6 +2556,31 @@ public class DescribeProjectResponseBody extends TeaModel {
             private String username; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(SourceConnectInfo model) {
+                this.charset = model.charset;
+                this.connExtraAttributes = model.connExtraAttributes;
+                this.connectionInfo = model.connectionInfo;
+                this.dbEngine = model.dbEngine;
+                this.endpointId = model.endpointId;
+                this.endpointName = model.endpointName;
+                this.endpointSide = model.endpointSide;
+                this.host = model.host;
+                this.id = model.id;
+                this.nlsLengthSemantics = model.nlsLengthSemantics;
+                this.ocpName = model.ocpName;
+                this.operatingSystem = model.operatingSystem;
+                this.owner = model.owner;
+                this.port = model.port;
+                this.region = model.region;
+                this.resourceOwner = model.resourceOwner;
+                this.timezone = model.timezone;
+                this.username = model.username;
+                this.version = model.version;
+            } 
+
             /**
              * Charset.
              */
@@ -2741,6 +2919,25 @@ public class DescribeProjectResponseBody extends TeaModel {
             private String reasonMcmsKey; 
             private Object upstreamErrorDetail; 
 
+            private Builder() {
+            } 
+
+            private Builder(ErrorDetails model) {
+                this.code = model.code;
+                this.extraContext = model.extraContext;
+                this.level = model.level;
+                this.message = model.message;
+                this.messageMcmsContext = model.messageMcmsContext;
+                this.messageMcmsKey = model.messageMcmsKey;
+                this.proposal = model.proposal;
+                this.proposalMcmsContext = model.proposalMcmsContext;
+                this.proposalMcmsKey = model.proposalMcmsKey;
+                this.reason = model.reason;
+                this.reasonMcmsContext = model.reasonMcmsContext;
+                this.reasonMcmsKey = model.reasonMcmsKey;
+                this.upstreamErrorDetail = model.upstreamErrorDetail;
+            } 
+
             /**
              * Code.
              */
@@ -2935,6 +3132,17 @@ public class DescribeProjectResponseBody extends TeaModel {
             private java.util.Map<String, String> errorParam; 
             private String failedTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(StepsExtraInfo model) {
+                this.errorCode = model.errorCode;
+                this.errorDetails = model.errorDetails;
+                this.errorMsg = model.errorMsg;
+                this.errorParam = model.errorParam;
+                this.failedTime = model.failedTime;
+            } 
+
             /**
              * ErrorCode.
              */
@@ -3110,6 +3318,21 @@ public class DescribeProjectResponseBody extends TeaModel {
             private String status; 
             private java.util.Map<String, ?> stepInfo; 
 
+            private Builder() {
+            } 
+
+            private Builder(Steps model) {
+                this.description = model.description;
+                this.extraInfo = model.extraInfo;
+                this.finishTime = model.finishTime;
+                this.name = model.name;
+                this.order = model.order;
+                this.progress = model.progress;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.stepInfo = model.stepInfo;
+            } 
+
             /**
              * Description.
              */
@@ -3233,6 +3456,14 @@ public class DescribeProjectResponseBody extends TeaModel {
             private String byteCharConvertStrategy; 
             private Boolean deferIndexCreation; 
 
+            private Builder() {
+            } 
+
+            private Builder(StructTransferConfig model) {
+                this.byteCharConvertStrategy = model.byteCharConvertStrategy;
+                this.deferIndexCreation = model.deferIndexCreation;
+            } 
+
             /**
              * ByteCharConvertStrategy.
              */
@@ -3323,6 +3554,16 @@ public class DescribeProjectResponseBody extends TeaModel {
             private String partitionLifeCycle; 
             private String partitionStatement; 
             private java.util.List<String> primaryKeys; 
+
+            private Builder() {
+            } 
+
+            private Builder(AdbTableSchema model) {
+                this.distributedKeys = model.distributedKeys;
+                this.partitionLifeCycle = model.partitionLifeCycle;
+                this.partitionStatement = model.partitionStatement;
+                this.primaryKeys = model.primaryKeys;
+            } 
 
             /**
              * DistributedKeys.
@@ -3467,6 +3708,19 @@ public class DescribeProjectResponseBody extends TeaModel {
             private java.util.List<String> shardColumns; 
             private String whereClause; 
 
+            private Builder() {
+            } 
+
+            private Builder(SpecificTables model) {
+                this.adbTableSchema = model.adbTableSchema;
+                this.filterColumns = model.filterColumns;
+                this.id = model.id;
+                this.mappedName = model.mappedName;
+                this.name = model.name;
+                this.shardColumns = model.shardColumns;
+                this.whereClause = model.whereClause;
+            } 
+
             /**
              * AdbTableSchema.
              */
@@ -3597,6 +3851,16 @@ public class DescribeProjectResponseBody extends TeaModel {
             private String partitionLifeCycle; 
             private String partitionStatement; 
             private java.util.List<String> primaryKeys; 
+
+            private Builder() {
+            } 
+
+            private Builder(SpecificViewsAdbTableSchema model) {
+                this.distributedKeys = model.distributedKeys;
+                this.partitionLifeCycle = model.partitionLifeCycle;
+                this.partitionStatement = model.partitionStatement;
+                this.primaryKeys = model.primaryKeys;
+            } 
 
             /**
              * DistributedKeys.
@@ -3741,6 +4005,19 @@ public class DescribeProjectResponseBody extends TeaModel {
             private java.util.List<String> shardColumns; 
             private String whereClause; 
 
+            private Builder() {
+            } 
+
+            private Builder(SpecificViews model) {
+                this.adbTableSchema = model.adbTableSchema;
+                this.filterColumns = model.filterColumns;
+                this.id = model.id;
+                this.mappedName = model.mappedName;
+                this.name = model.name;
+                this.shardColumns = model.shardColumns;
+                this.whereClause = model.whereClause;
+            } 
+
             /**
              * AdbTableSchema.
              */
@@ -3871,6 +4148,16 @@ public class DescribeProjectResponseBody extends TeaModel {
             private String partitionLifeCycle; 
             private String partitionStatement; 
             private java.util.List<String> primaryKeys; 
+
+            private Builder() {
+            } 
+
+            private Builder(TablesAdbTableSchema model) {
+                this.distributedKeys = model.distributedKeys;
+                this.partitionLifeCycle = model.partitionLifeCycle;
+                this.partitionStatement = model.partitionStatement;
+                this.primaryKeys = model.primaryKeys;
+            } 
 
             /**
              * DistributedKeys.
@@ -4015,6 +4302,19 @@ public class DescribeProjectResponseBody extends TeaModel {
             private java.util.List<String> shardColumns; 
             private String whereClause; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tables model) {
+                this.adbTableSchema = model.adbTableSchema;
+                this.filterColumns = model.filterColumns;
+                this.id = model.id;
+                this.mappedName = model.mappedName;
+                this.name = model.name;
+                this.shardColumns = model.shardColumns;
+                this.whereClause = model.whereClause;
+            } 
+
             /**
              * AdbTableSchema.
              */
@@ -4145,6 +4445,16 @@ public class DescribeProjectResponseBody extends TeaModel {
             private String partitionLifeCycle; 
             private String partitionStatement; 
             private java.util.List<String> primaryKeys; 
+
+            private Builder() {
+            } 
+
+            private Builder(ViewsAdbTableSchema model) {
+                this.distributedKeys = model.distributedKeys;
+                this.partitionLifeCycle = model.partitionLifeCycle;
+                this.partitionStatement = model.partitionStatement;
+                this.primaryKeys = model.primaryKeys;
+            } 
 
             /**
              * DistributedKeys.
@@ -4288,6 +4598,19 @@ public class DescribeProjectResponseBody extends TeaModel {
             private String name; 
             private java.util.List<String> shardColumns; 
             private String whereClause; 
+
+            private Builder() {
+            } 
+
+            private Builder(Views model) {
+                this.adbTableSchema = model.adbTableSchema;
+                this.filterColumns = model.filterColumns;
+                this.id = model.id;
+                this.mappedName = model.mappedName;
+                this.name = model.name;
+                this.shardColumns = model.shardColumns;
+                this.whereClause = model.whereClause;
+            } 
 
             /**
              * AdbTableSchema.
@@ -4480,6 +4803,21 @@ public class DescribeProjectResponseBody extends TeaModel {
             private String type; 
             private java.util.List<Views> views; 
 
+            private Builder() {
+            } 
+
+            private Builder(Databases model) {
+                this.id = model.id;
+                this.mappedName = model.mappedName;
+                this.name = model.name;
+                this.specificTables = model.specificTables;
+                this.specificViews = model.specificViews;
+                this.tables = model.tables;
+                this.tenantName = model.tenantName;
+                this.type = model.type;
+                this.views = model.views;
+            } 
+
             /**
              * Id.
              */
@@ -4627,6 +4965,16 @@ public class DescribeProjectResponseBody extends TeaModel {
             private String partitionStatement; 
             private java.util.List<String> primaryKeys; 
 
+            private Builder() {
+            } 
+
+            private Builder(SpecificTablesAdbTableSchema model) {
+                this.distributedKeys = model.distributedKeys;
+                this.partitionLifeCycle = model.partitionLifeCycle;
+                this.partitionStatement = model.partitionStatement;
+                this.primaryKeys = model.primaryKeys;
+            } 
+
             /**
              * DistributedKeys.
              */
@@ -4770,6 +5118,19 @@ public class DescribeProjectResponseBody extends TeaModel {
             private java.util.List<String> shardColumns; 
             private String whereClause; 
 
+            private Builder() {
+            } 
+
+            private Builder(DatabasesBlackSpecificTables model) {
+                this.adbTableSchema = model.adbTableSchema;
+                this.filterColumns = model.filterColumns;
+                this.id = model.id;
+                this.mappedName = model.mappedName;
+                this.name = model.name;
+                this.shardColumns = model.shardColumns;
+                this.whereClause = model.whereClause;
+            } 
+
             /**
              * AdbTableSchema.
              */
@@ -4900,6 +5261,16 @@ public class DescribeProjectResponseBody extends TeaModel {
             private String partitionLifeCycle; 
             private String partitionStatement; 
             private java.util.List<String> primaryKeys; 
+
+            private Builder() {
+            } 
+
+            private Builder(DatabasesBlackSpecificViewsAdbTableSchema model) {
+                this.distributedKeys = model.distributedKeys;
+                this.partitionLifeCycle = model.partitionLifeCycle;
+                this.partitionStatement = model.partitionStatement;
+                this.primaryKeys = model.primaryKeys;
+            } 
 
             /**
              * DistributedKeys.
@@ -5044,6 +5415,19 @@ public class DescribeProjectResponseBody extends TeaModel {
             private java.util.List<String> shardColumns; 
             private String whereClause; 
 
+            private Builder() {
+            } 
+
+            private Builder(DatabasesBlackSpecificViews model) {
+                this.adbTableSchema = model.adbTableSchema;
+                this.filterColumns = model.filterColumns;
+                this.id = model.id;
+                this.mappedName = model.mappedName;
+                this.name = model.name;
+                this.shardColumns = model.shardColumns;
+                this.whereClause = model.whereClause;
+            } 
+
             /**
              * AdbTableSchema.
              */
@@ -5174,6 +5558,16 @@ public class DescribeProjectResponseBody extends TeaModel {
             private String partitionLifeCycle; 
             private String partitionStatement; 
             private java.util.List<String> primaryKeys; 
+
+            private Builder() {
+            } 
+
+            private Builder(DatabasesBlackTablesAdbTableSchema model) {
+                this.distributedKeys = model.distributedKeys;
+                this.partitionLifeCycle = model.partitionLifeCycle;
+                this.partitionStatement = model.partitionStatement;
+                this.primaryKeys = model.primaryKeys;
+            } 
 
             /**
              * DistributedKeys.
@@ -5318,6 +5712,19 @@ public class DescribeProjectResponseBody extends TeaModel {
             private java.util.List<String> shardColumns; 
             private String whereClause; 
 
+            private Builder() {
+            } 
+
+            private Builder(DatabasesBlackTables model) {
+                this.adbTableSchema = model.adbTableSchema;
+                this.filterColumns = model.filterColumns;
+                this.id = model.id;
+                this.mappedName = model.mappedName;
+                this.name = model.name;
+                this.shardColumns = model.shardColumns;
+                this.whereClause = model.whereClause;
+            } 
+
             /**
              * AdbTableSchema.
              */
@@ -5448,6 +5855,16 @@ public class DescribeProjectResponseBody extends TeaModel {
             private String partitionLifeCycle; 
             private String partitionStatement; 
             private java.util.List<String> primaryKeys; 
+
+            private Builder() {
+            } 
+
+            private Builder(DatabasesBlackViewsAdbTableSchema model) {
+                this.distributedKeys = model.distributedKeys;
+                this.partitionLifeCycle = model.partitionLifeCycle;
+                this.partitionStatement = model.partitionStatement;
+                this.primaryKeys = model.primaryKeys;
+            } 
 
             /**
              * DistributedKeys.
@@ -5591,6 +6008,19 @@ public class DescribeProjectResponseBody extends TeaModel {
             private String name; 
             private java.util.List<String> shardColumns; 
             private String whereClause; 
+
+            private Builder() {
+            } 
+
+            private Builder(DatabasesBlackViews model) {
+                this.adbTableSchema = model.adbTableSchema;
+                this.filterColumns = model.filterColumns;
+                this.id = model.id;
+                this.mappedName = model.mappedName;
+                this.name = model.name;
+                this.shardColumns = model.shardColumns;
+                this.whereClause = model.whereClause;
+            } 
 
             /**
              * AdbTableSchema.
@@ -5783,6 +6213,21 @@ public class DescribeProjectResponseBody extends TeaModel {
             private String type; 
             private java.util.List<DatabasesBlackViews> views; 
 
+            private Builder() {
+            } 
+
+            private Builder(DatabasesBlack model) {
+                this.id = model.id;
+                this.mappedName = model.mappedName;
+                this.name = model.name;
+                this.specificTables = model.specificTables;
+                this.specificViews = model.specificViews;
+                this.tables = model.tables;
+                this.tenantName = model.tenantName;
+                this.type = model.type;
+                this.views = model.views;
+            } 
+
             /**
              * Id.
              */
@@ -5941,6 +6386,17 @@ public class DescribeProjectResponseBody extends TeaModel {
             private String mode; 
             private java.util.List<String> tableAndViewBlackList; 
             private java.util.List<String> tableAndViewWhiteList; 
+
+            private Builder() {
+            } 
+
+            private Builder(TransferMapping model) {
+                this.databases = model.databases;
+                this.databasesBlack = model.databasesBlack;
+                this.mode = model.mode;
+                this.tableAndViewBlackList = model.tableAndViewBlackList;
+                this.tableAndViewWhiteList = model.tableAndViewWhiteList;
+            } 
 
             /**
              * Databases.
@@ -6176,6 +6632,26 @@ public class DescribeProjectResponseBody extends TeaModel {
             private String sourceType; 
             private String spec; 
             private String specName; 
+
+            private Builder() {
+            } 
+
+            private Builder(WorkerGradeInfo model) {
+                this.autoRenewal = model.autoRenewal;
+                this.chargeType = model.chargeType;
+                this.destRegion = model.destRegion;
+                this.destType = model.destType;
+                this.endTime = model.endTime;
+                this.expired = model.expired;
+                this.gmtCreate = model.gmtCreate;
+                this.grade = model.grade;
+                this.id = model.id;
+                this.name = model.name;
+                this.sourceRegion = model.sourceRegion;
+                this.sourceType = model.sourceType;
+                this.spec = model.spec;
+                this.specName = model.specName;
+            } 
 
             /**
              * AutoRenewal.
@@ -6748,6 +7224,48 @@ public class DescribeProjectResponseBody extends TeaModel {
             private String workerGradeId; 
             private WorkerGradeInfo workerGradeInfo; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.alarmStats = model.alarmStats;
+                this.commonTransferConfig = model.commonTransferConfig;
+                this.destConnId = model.destConnId;
+                this.enableFullTransfer = model.enableFullTransfer;
+                this.enableFullVerify = model.enableFullVerify;
+                this.enableIncrTransfer = model.enableIncrTransfer;
+                this.enableIncrVerify = model.enableIncrVerify;
+                this.enableReverseIncrTransfer = model.enableReverseIncrTransfer;
+                this.enableStructTransfer = model.enableStructTransfer;
+                this.extraInfo = model.extraInfo;
+                this.fullTransferConfig = model.fullTransferConfig;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtFinish = model.gmtFinish;
+                this.gmtModified = model.gmtModified;
+                this.gmtStart = model.gmtStart;
+                this.id = model.id;
+                this.importance = model.importance;
+                this.incrTransferConfig = model.incrTransferConfig;
+                this.isMerging = model.isMerging;
+                this.isModifying = model.isModifying;
+                this.isSubProject = model.isSubProject;
+                this.labels = model.labels;
+                this.name = model.name;
+                this.owner = model.owner;
+                this.reverseIncrTransferConfig = model.reverseIncrTransferConfig;
+                this.sinkConnectInfo = model.sinkConnectInfo;
+                this.sinkEndpointType = model.sinkEndpointType;
+                this.sourceConnectInfo = model.sourceConnectInfo;
+                this.sourceEndpointType = model.sourceEndpointType;
+                this.status = model.status;
+                this.steps = model.steps;
+                this.structTransferConfig = model.structTransferConfig;
+                this.transferMapping = model.transferMapping;
+                this.type = model.type;
+                this.workerGradeId = model.workerGradeId;
+                this.workerGradeInfo = model.workerGradeInfo;
+            } 
+
             /**
              * AlarmStats.
              */
@@ -7221,6 +7739,25 @@ public class DescribeProjectResponseBody extends TeaModel {
             private java.util.Map<String, String> reasonMcmsContext; 
             private String reasonMcmsKey; 
             private Object upstreamErrorDetail; 
+
+            private Builder() {
+            } 
+
+            private Builder(ErrorDetail model) {
+                this.code = model.code;
+                this.extraContext = model.extraContext;
+                this.level = model.level;
+                this.message = model.message;
+                this.messageMcmsContext = model.messageMcmsContext;
+                this.messageMcmsKey = model.messageMcmsKey;
+                this.proposal = model.proposal;
+                this.proposalMcmsContext = model.proposalMcmsContext;
+                this.proposalMcmsKey = model.proposalMcmsKey;
+                this.reason = model.reason;
+                this.reasonMcmsContext = model.reasonMcmsContext;
+                this.reasonMcmsKey = model.reasonMcmsKey;
+                this.upstreamErrorDetail = model.upstreamErrorDetail;
+            } 
 
             /**
              * Code.

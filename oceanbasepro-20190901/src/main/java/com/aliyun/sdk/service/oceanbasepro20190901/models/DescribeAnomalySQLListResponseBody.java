@@ -40,6 +40,10 @@ public class DescribeAnomalySQLListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return anomalySQLList
      */
@@ -65,6 +69,15 @@ public class DescribeAnomalySQLListResponseBody extends TeaModel {
         private java.util.List<AnomalySQLList> anomalySQLList; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAnomalySQLListResponseBody model) {
+            this.anomalySQLList = model.anomalySQLList;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The list of suspicious SQL statements.</p>
@@ -265,6 +278,24 @@ public class DescribeAnomalySQLListResponseBody extends TeaModel {
             private String SQLText; 
             private String suggestion; 
             private String userName; 
+
+            private Builder() {
+            } 
+
+            private Builder(AnomalySQLList model) {
+                this.cpuTime = model.cpuTime;
+                this.dbName = model.dbName;
+                this.diagnosis = model.diagnosis;
+                this.diagnosisRule = model.diagnosisRule;
+                this.executions = model.executions;
+                this.key = model.key;
+                this.requestTime = model.requestTime;
+                this.requestTimeUTCString = model.requestTimeUTCString;
+                this.SQLId = model.SQLId;
+                this.SQLText = model.SQLText;
+                this.suggestion = model.suggestion;
+                this.userName = model.userName;
+            } 
 
             /**
              * <p>The average CPU time, in ms.</p>

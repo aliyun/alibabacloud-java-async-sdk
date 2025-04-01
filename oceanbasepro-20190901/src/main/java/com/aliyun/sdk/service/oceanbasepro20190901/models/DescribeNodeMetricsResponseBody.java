@@ -40,6 +40,10 @@ public class DescribeNodeMetricsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nodeMetrics
      */
@@ -65,6 +69,15 @@ public class DescribeNodeMetricsResponseBody extends TeaModel {
         private String nodeMetrics; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeNodeMetricsResponseBody model) {
+            this.nodeMetrics = model.nodeMetrics;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * NodeMetrics.

@@ -40,6 +40,10 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Tenants> tenants; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRestorableTenantsResponseBody model) {
+            this.requestId = model.requestId;
+            this.tenants = model.tenants;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -169,6 +182,16 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
             private String checkpoint; 
             private String setId; 
             private String tenantId; 
+
+            private Builder() {
+            } 
+
+            private Builder(BackupSets model) {
+                this.backupSetId = model.backupSetId;
+                this.checkpoint = model.checkpoint;
+                this.setId = model.setId;
+                this.tenantId = model.tenantId;
+            } 
 
             /**
              * <p>The ID of the full backup set used for restore.</p>
@@ -288,6 +311,16 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
             private Boolean fromArchive; 
             private String startTime; 
             private String storageType; 
+
+            private Builder() {
+            } 
+
+            private Builder(TimeIntervalList model) {
+                this.endTime = model.endTime;
+                this.fromArchive = model.fromArchive;
+                this.startTime = model.startTime;
+                this.storageType = model.storageType;
+            } 
 
             /**
              * <p>The end time of the restorable period.</p>
@@ -587,6 +620,31 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
             private java.util.List<TimeIntervalList> timeIntervalList; 
             private Long unitNum; 
             private Long usedDisk; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tenants model) {
+                this.backupBucketName = model.backupBucketName;
+                this.backupSets = model.backupSets;
+                this.clusterId = model.clusterId;
+                this.clusterName = model.clusterName;
+                this.cpuNum = model.cpuNum;
+                this.memoryNum = model.memoryNum;
+                this.method = model.method;
+                this.obRpmVersion = model.obRpmVersion;
+                this.obTenantId = model.obTenantId;
+                this.obVersion = model.obVersion;
+                this.sourceRegion = model.sourceRegion;
+                this.tenantAlias = model.tenantAlias;
+                this.tenantDataBackupRemainDays = model.tenantDataBackupRemainDays;
+                this.tenantId = model.tenantId;
+                this.tenantMode = model.tenantMode;
+                this.tenantName = model.tenantName;
+                this.timeIntervalList = model.timeIntervalList;
+                this.unitNum = model.unitNum;
+                this.usedDisk = model.usedDisk;
+            } 
 
             /**
              * <p>The name of the backup directory.</p>

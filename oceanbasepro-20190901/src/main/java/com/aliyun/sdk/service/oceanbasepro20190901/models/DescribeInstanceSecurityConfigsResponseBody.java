@@ -36,6 +36,10 @@ public class DescribeInstanceSecurityConfigsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceSecurityConfigs
      */
@@ -53,6 +57,14 @@ public class DescribeInstanceSecurityConfigsResponseBody extends TeaModel {
     public static final class Builder {
         private InstanceSecurityConfigs instanceSecurityConfigs; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceSecurityConfigsResponseBody model) {
+            this.instanceSecurityConfigs = model.instanceSecurityConfigs;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The return result of the request.</p>
@@ -158,6 +170,17 @@ public class DescribeInstanceSecurityConfigsResponseBody extends TeaModel {
             private String configName; 
             private Boolean risk; 
             private String riskDescription; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecurityConfigs model) {
+                this.configDescription = model.configDescription;
+                this.configGroup = model.configGroup;
+                this.configName = model.configName;
+                this.risk = model.risk;
+                this.riskDescription = model.riskDescription;
+            } 
 
             /**
              * <p>The name of the check item.</p>
@@ -312,6 +335,18 @@ public class DescribeInstanceSecurityConfigsResponseBody extends TeaModel {
             private java.util.List<SecurityConfigs> securityConfigs; 
             private Integer totalCheckCount; 
             private Integer totalRiskCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceSecurityConfigs model) {
+                this.checkId = model.checkId;
+                this.checkTime = model.checkTime;
+                this.instanceId = model.instanceId;
+                this.securityConfigs = model.securityConfigs;
+                this.totalCheckCount = model.totalCheckCount;
+                this.totalRiskCount = model.totalRiskCount;
+            } 
 
             /**
              * <p>The unique identifier of the check.</p>

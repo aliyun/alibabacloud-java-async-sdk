@@ -72,6 +72,10 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return advice
      */
@@ -161,6 +165,23 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListProjectModifyRecordsResponseBody model) {
+            this.advice = model.advice;
+            this.code = model.code;
+            this.cost = model.cost;
+            this.data = model.data;
+            this.errorDetail = model.errorDetail;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Advice.
@@ -323,6 +344,16 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
             private Integer partitionLifeCycle; 
             private String partitionStatement; 
             private java.util.List<String> primaryKeys; 
+
+            private Builder() {
+            } 
+
+            private Builder(AdbTableSchema model) {
+                this.distributedKeys = model.distributedKeys;
+                this.partitionLifeCycle = model.partitionLifeCycle;
+                this.partitionStatement = model.partitionStatement;
+                this.primaryKeys = model.primaryKeys;
+            } 
 
             /**
              * DistributedKeys.
@@ -575,6 +606,28 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
             private String recordFieldType; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Columns model) {
+                this.columnComment = model.columnComment;
+                this.columnKey = model.columnKey;
+                this.columnName = model.columnName;
+                this.columnType = model.columnType;
+                this.dataLength = model.dataLength;
+                this.dataPrecision = model.dataPrecision;
+                this.dataScale = model.dataScale;
+                this.defaultValue = model.defaultValue;
+                this.encoding = model.encoding;
+                this.isGenerateField = model.isGenerateField;
+                this.mappedName = model.mappedName;
+                this.nullable = model.nullable;
+                this.position = model.position;
+                this.rawColumnType = model.rawColumnType;
+                this.recordFieldType = model.recordFieldType;
+                this.type = model.type;
+            } 
+
             /**
              * ColumnComment.
              */
@@ -826,6 +879,20 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
             private java.util.List<String> shardColumns; 
             private String whereClause; 
 
+            private Builder() {
+            } 
+
+            private Builder(SpecificTables model) {
+                this.adbTableSchema = model.adbTableSchema;
+                this.columns = model.columns;
+                this.filterColumns = model.filterColumns;
+                this.id = model.id;
+                this.mappedName = model.mappedName;
+                this.name = model.name;
+                this.shardColumns = model.shardColumns;
+                this.whereClause = model.whereClause;
+            } 
+
             /**
              * AdbTableSchema.
              */
@@ -964,6 +1031,16 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
             private Integer partitionLifeCycle; 
             private String partitionStatement; 
             private java.util.List<String> primaryKeys; 
+
+            private Builder() {
+            } 
+
+            private Builder(SpecificViewsAdbTableSchema model) {
+                this.distributedKeys = model.distributedKeys;
+                this.partitionLifeCycle = model.partitionLifeCycle;
+                this.partitionStatement = model.partitionStatement;
+                this.primaryKeys = model.primaryKeys;
+            } 
 
             /**
              * DistributedKeys.
@@ -1216,6 +1293,28 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
             private String recordFieldType; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(SpecificViewsColumns model) {
+                this.columnComment = model.columnComment;
+                this.columnKey = model.columnKey;
+                this.columnName = model.columnName;
+                this.columnType = model.columnType;
+                this.dataLength = model.dataLength;
+                this.dataPrecision = model.dataPrecision;
+                this.dataScale = model.dataScale;
+                this.defaultValue = model.defaultValue;
+                this.encoding = model.encoding;
+                this.isGenerateField = model.isGenerateField;
+                this.mappedName = model.mappedName;
+                this.nullable = model.nullable;
+                this.position = model.position;
+                this.rawColumnType = model.rawColumnType;
+                this.recordFieldType = model.recordFieldType;
+                this.type = model.type;
+            } 
+
             /**
              * ColumnComment.
              */
@@ -1467,6 +1566,20 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
             private java.util.List<String> shardColumns; 
             private String whereClause; 
 
+            private Builder() {
+            } 
+
+            private Builder(SpecificViews model) {
+                this.adbTableSchema = model.adbTableSchema;
+                this.columns = model.columns;
+                this.filterColumns = model.filterColumns;
+                this.id = model.id;
+                this.mappedName = model.mappedName;
+                this.name = model.name;
+                this.shardColumns = model.shardColumns;
+                this.whereClause = model.whereClause;
+            } 
+
             /**
              * AdbTableSchema.
              */
@@ -1605,6 +1718,16 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
             private Integer partitionLifeCycle; 
             private String partitionStatement; 
             private java.util.List<String> primaryKeys; 
+
+            private Builder() {
+            } 
+
+            private Builder(TablesAdbTableSchema model) {
+                this.distributedKeys = model.distributedKeys;
+                this.partitionLifeCycle = model.partitionLifeCycle;
+                this.partitionStatement = model.partitionStatement;
+                this.primaryKeys = model.primaryKeys;
+            } 
 
             /**
              * DistributedKeys.
@@ -1857,6 +1980,28 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
             private String recordFieldType; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(TablesColumns model) {
+                this.columnComment = model.columnComment;
+                this.columnKey = model.columnKey;
+                this.columnName = model.columnName;
+                this.columnType = model.columnType;
+                this.dataLength = model.dataLength;
+                this.dataPrecision = model.dataPrecision;
+                this.dataScale = model.dataScale;
+                this.defaultValue = model.defaultValue;
+                this.encoding = model.encoding;
+                this.isGenerateField = model.isGenerateField;
+                this.mappedName = model.mappedName;
+                this.nullable = model.nullable;
+                this.position = model.position;
+                this.rawColumnType = model.rawColumnType;
+                this.recordFieldType = model.recordFieldType;
+                this.type = model.type;
+            } 
+
             /**
              * ColumnComment.
              */
@@ -2108,6 +2253,20 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
             private java.util.List<String> shardColumns; 
             private String whereClause; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tables model) {
+                this.adbTableSchema = model.adbTableSchema;
+                this.columns = model.columns;
+                this.filterColumns = model.filterColumns;
+                this.id = model.id;
+                this.mappedName = model.mappedName;
+                this.name = model.name;
+                this.shardColumns = model.shardColumns;
+                this.whereClause = model.whereClause;
+            } 
+
             /**
              * AdbTableSchema.
              */
@@ -2246,6 +2405,16 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
             private Integer partitionLifeCycle; 
             private String partitionStatement; 
             private java.util.List<String> primaryKeys; 
+
+            private Builder() {
+            } 
+
+            private Builder(ViewsAdbTableSchema model) {
+                this.distributedKeys = model.distributedKeys;
+                this.partitionLifeCycle = model.partitionLifeCycle;
+                this.partitionStatement = model.partitionStatement;
+                this.primaryKeys = model.primaryKeys;
+            } 
 
             /**
              * DistributedKeys.
@@ -2498,6 +2667,28 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
             private String recordFieldType; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(ViewsColumns model) {
+                this.columnComment = model.columnComment;
+                this.columnKey = model.columnKey;
+                this.columnName = model.columnName;
+                this.columnType = model.columnType;
+                this.dataLength = model.dataLength;
+                this.dataPrecision = model.dataPrecision;
+                this.dataScale = model.dataScale;
+                this.defaultValue = model.defaultValue;
+                this.encoding = model.encoding;
+                this.isGenerateField = model.isGenerateField;
+                this.mappedName = model.mappedName;
+                this.nullable = model.nullable;
+                this.position = model.position;
+                this.rawColumnType = model.rawColumnType;
+                this.recordFieldType = model.recordFieldType;
+                this.type = model.type;
+            } 
+
             /**
              * ColumnComment.
              */
@@ -2749,6 +2940,20 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
             private java.util.List<String> shardColumns; 
             private String whereClause; 
 
+            private Builder() {
+            } 
+
+            private Builder(Views model) {
+                this.adbTableSchema = model.adbTableSchema;
+                this.columns = model.columns;
+                this.filterColumns = model.filterColumns;
+                this.id = model.id;
+                this.mappedName = model.mappedName;
+                this.name = model.name;
+                this.shardColumns = model.shardColumns;
+                this.whereClause = model.whereClause;
+            } 
+
             /**
              * AdbTableSchema.
              */
@@ -2923,6 +3128,19 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
             private java.util.List<SpecificViews> specificViews; 
             private java.util.List<Tables> tables; 
             private java.util.List<Views> views; 
+
+            private Builder() {
+            } 
+
+            private Builder(Databases model) {
+                this.id = model.id;
+                this.mappedName = model.mappedName;
+                this.name = model.name;
+                this.specificTables = model.specificTables;
+                this.specificViews = model.specificViews;
+                this.tables = model.tables;
+                this.views = model.views;
+            } 
 
             /**
              * Id.
@@ -3163,6 +3381,25 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
             private String reasonMcmsKey; 
             private Object upstreamErrorDetail; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataErrorDetail model) {
+                this.code = model.code;
+                this.extraContext = model.extraContext;
+                this.level = model.level;
+                this.message = model.message;
+                this.messageMcmsContext = model.messageMcmsContext;
+                this.messageMcmsKey = model.messageMcmsKey;
+                this.proposal = model.proposal;
+                this.proposalMcmsContext = model.proposalMcmsContext;
+                this.proposalMcmsKey = model.proposalMcmsKey;
+                this.reason = model.reason;
+                this.reasonMcmsContext = model.reasonMcmsContext;
+                this.reasonMcmsKey = model.reasonMcmsKey;
+                this.upstreamErrorDetail = model.upstreamErrorDetail;
+            } 
+
             /**
              * Code.
              */
@@ -3318,6 +3555,14 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
             private String name; 
             private String schema; 
 
+            private Builder() {
+            } 
+
+            private Builder(MigrationObjectsInfoTables model) {
+                this.name = model.name;
+                this.schema = model.schema;
+            } 
+
             /**
              * Name.
              */
@@ -3384,6 +3629,14 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         public static final class Builder {
             private String name; 
             private String schema; 
+
+            private Builder() {
+            } 
+
+            private Builder(TablesBlack model) {
+                this.name = model.name;
+                this.schema = model.schema;
+            } 
 
             /**
              * Name.
@@ -3452,6 +3705,14 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
             private String name; 
             private String schema; 
 
+            private Builder() {
+            } 
+
+            private Builder(MigrationObjectsInfoViews model) {
+                this.name = model.name;
+                this.schema = model.schema;
+            } 
+
             /**
              * Name.
              */
@@ -3518,6 +3779,14 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         public static final class Builder {
             private String name; 
             private String schema; 
+
+            private Builder() {
+            } 
+
+            private Builder(ViewsBlack model) {
+                this.name = model.name;
+                this.schema = model.schema;
+            } 
 
             /**
              * Name.
@@ -3621,6 +3890,17 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
             private java.util.List<MigrationObjectsInfoViews> views; 
             private java.util.List<ViewsBlack> viewsBlack; 
             private Boolean wildcardMode; 
+
+            private Builder() {
+            } 
+
+            private Builder(MigrationObjectsInfo model) {
+                this.tables = model.tables;
+                this.tablesBlack = model.tablesBlack;
+                this.views = model.views;
+                this.viewsBlack = model.viewsBlack;
+                this.wildcardMode = model.wildcardMode;
+            } 
 
             /**
              * Tables.
@@ -3737,6 +4017,16 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
             private String sourceSchema; 
             private String sourceTable; 
 
+            private Builder() {
+            } 
+
+            private Builder(ColumnMappings model) {
+                this.destName = model.destName;
+                this.sourceName = model.sourceName;
+                this.sourceSchema = model.sourceSchema;
+                this.sourceTable = model.sourceTable;
+            } 
+
             /**
              * DestName.
              */
@@ -3820,6 +4110,14 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
             private String destName; 
             private String sourceName; 
 
+            private Builder() {
+            } 
+
+            private Builder(SchemaMappings model) {
+                this.destName = model.destName;
+                this.sourceName = model.sourceName;
+            } 
+
             /**
              * DestName.
              */
@@ -3898,6 +4196,15 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
             private String destName; 
             private String sourceName; 
             private String sourceSchema; 
+
+            private Builder() {
+            } 
+
+            private Builder(TableMappings model) {
+                this.destName = model.destName;
+                this.sourceName = model.sourceName;
+                this.sourceSchema = model.sourceSchema;
+            } 
 
             /**
              * DestName.
@@ -3985,6 +4292,15 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
             private String destName; 
             private String sourceName; 
             private String sourceSchema; 
+
+            private Builder() {
+            } 
+
+            private Builder(ViewMappings model) {
+                this.destName = model.destName;
+                this.sourceName = model.sourceName;
+                this.sourceSchema = model.sourceSchema;
+            } 
 
             /**
              * DestName.
@@ -4084,6 +4400,16 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
             private java.util.List<SchemaMappings> schemaMappings; 
             private java.util.List<TableMappings> tableMappings; 
             private java.util.List<ViewMappings> viewMappings; 
+
+            private Builder() {
+            } 
+
+            private Builder(OmsProjectMappingInfo model) {
+                this.columnMappings = model.columnMappings;
+                this.schemaMappings = model.schemaMappings;
+                this.tableMappings = model.tableMappings;
+                this.viewMappings = model.viewMappings;
+            } 
 
             /**
              * ColumnMappings.
@@ -4263,6 +4589,22 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
             private String tableName; 
             private String tenantName; 
             private String whereClause; 
+
+            private Builder() {
+            } 
+
+            private Builder(TableEtlList model) {
+                this.database = model.database;
+                this.destDatabase = model.destDatabase;
+                this.destName = model.destName;
+                this.filterColumns = model.filterColumns;
+                this.logicTableId = model.logicTableId;
+                this.shardColumns = model.shardColumns;
+                this.sourceEndpointId = model.sourceEndpointId;
+                this.tableName = model.tableName;
+                this.tenantName = model.tenantName;
+                this.whereClause = model.whereClause;
+            } 
 
             /**
              * Database.
@@ -4514,6 +4856,24 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
             private java.util.List<TableEtlList> tableEtlList; 
             private String type; 
             private Long updateRequestId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.databases = model.databases;
+                this.errorDetail = model.errorDetail;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.mergeRequestId = model.mergeRequestId;
+                this.migrationObjectsInfo = model.migrationObjectsInfo;
+                this.omsProjectMappingInfo = model.omsProjectMappingInfo;
+                this.status = model.status;
+                this.subProjectId = model.subProjectId;
+                this.tableEtlList = model.tableEtlList;
+                this.type = model.type;
+                this.updateRequestId = model.updateRequestId;
+            } 
 
             /**
              * Databases.
@@ -4793,6 +5153,25 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
             private java.util.Map<String, String> reasonMcmsContext; 
             private String reasonMcmsKey; 
             private Object upstreamErrorDetail; 
+
+            private Builder() {
+            } 
+
+            private Builder(ErrorDetail model) {
+                this.code = model.code;
+                this.extraContext = model.extraContext;
+                this.level = model.level;
+                this.message = model.message;
+                this.messageMcmsContext = model.messageMcmsContext;
+                this.messageMcmsKey = model.messageMcmsKey;
+                this.proposal = model.proposal;
+                this.proposalMcmsContext = model.proposalMcmsContext;
+                this.proposalMcmsKey = model.proposalMcmsKey;
+                this.reason = model.reason;
+                this.reasonMcmsContext = model.reasonMcmsContext;
+                this.reasonMcmsKey = model.reasonMcmsKey;
+                this.upstreamErrorDetail = model.upstreamErrorDetail;
+            } 
 
             /**
              * Code.

@@ -36,6 +36,10 @@ public class CreateInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class CreateInstanceResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateInstanceResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned data.</p>
@@ -146,6 +158,16 @@ public class CreateInstanceResponseBody extends TeaModel {
             private String instanceId; 
             private String orderId; 
             private String resourceGroupId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.dryRunResult = model.dryRunResult;
+                this.instanceId = model.instanceId;
+                this.orderId = model.orderId;
+                this.resourceGroupId = model.resourceGroupId;
+            } 
 
             /**
              * <p>The result of the dry-run request.</p>

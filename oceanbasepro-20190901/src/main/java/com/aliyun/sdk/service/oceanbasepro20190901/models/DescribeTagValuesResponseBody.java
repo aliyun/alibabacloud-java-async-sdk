@@ -36,6 +36,10 @@ public class DescribeTagValuesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return map
      */
@@ -53,6 +57,14 @@ public class DescribeTagValuesResponseBody extends TeaModel {
     public static final class Builder {
         private String map; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTagValuesResponseBody model) {
+            this.map = model.map;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The mappings between tag groups and tags.</p>
