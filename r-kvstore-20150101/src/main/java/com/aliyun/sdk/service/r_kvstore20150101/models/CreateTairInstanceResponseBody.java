@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -81,6 +86,10 @@ public class CreateTairInstanceResponseBody extends TeaModel {
 
     public static CreateTairInstanceResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -205,8 +214,29 @@ public class CreateTairInstanceResponseBody extends TeaModel {
         private String taskId; 
         private String zoneId; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateTairInstanceResponseBody model) {
+            this.bandwidth = model.bandwidth;
+            this.chargeType = model.chargeType;
+            this.config = model.config;
+            this.connectionDomain = model.connectionDomain;
+            this.connections = model.connections;
+            this.instanceId = model.instanceId;
+            this.instanceName = model.instanceName;
+            this.instanceStatus = model.instanceStatus;
+            this.orderId = model.orderId;
+            this.port = model.port;
+            this.QPS = model.QPS;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+            this.taskId = model.taskId;
+            this.zoneId = model.zoneId;
+        } 
+
         /**
-         * <p>The maximum bandwidth of the instance. Unit: MB/s.</p>
+         * <p>The maximum bandwidth of the instance. Unit: Mbit/s.</p>
          * 
          * <strong>example:</strong>
          * <p>96</p>
@@ -232,7 +262,7 @@ public class CreateTairInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The detailed configurations of the instance. The value is a JSON string. For more information about the parameter description, see <a href="https://help.aliyun.com/document_detail/43885.html">Modify the parameters of an ApsaraDB for Redis instance</a>.</p>
+         * <p>The detailed configurations of the instance. The value is a JSON string. For more information about the parameters, see <a href="https://help.aliyun.com/document_detail/43885.html">Configure parameters</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;EvictionPolicy&quot;:&quot;volatile-lru&quot;,&quot;hash-max-ziplist-entries&quot;:512,&quot;zset-max-ziplist-entries&quot;:128,&quot;list-max-ziplist-entries&quot;:512,&quot;list-max-ziplist-value&quot;:64,&quot;zset-max-ziplist-value&quot;:64,&quot;set-max-intset-entries&quot;:512,&quot;hash-max-ziplist-value&quot;:64}</p>
@@ -254,7 +284,7 @@ public class CreateTairInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of connections supported by the instance.</p>
+         * <p>The maximum number of connections to the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -276,9 +306,10 @@ public class CreateTairInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the instance.</p>
-         * <p>**</p>
-         * <p>This parameter is returned only if the <strong>InstanceName</strong> parameter is specified in the request.</p>
+         * <p>The instance name.</p>
+         * <blockquote>
+         * <p> This parameter is returned only if the <strong>InstanceName</strong> parameter is specified in the request.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>redistest</p>
@@ -289,7 +320,7 @@ public class CreateTairInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The state of the instance. The return value is <strong>Creating</strong>.</p>
+         * <p>The current status of the instance. The value is <strong>Creating</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>Creating</p>
@@ -311,7 +342,7 @@ public class CreateTairInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The port number that is used to connect to the instance.</p>
+         * <p>The service port number of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>6379</p>
@@ -333,7 +364,7 @@ public class CreateTairInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The region ID of the instance.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -344,7 +375,7 @@ public class CreateTairInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>12123216-4B00-4378-BE4B-08005BFC****</p>
@@ -355,7 +386,7 @@ public class CreateTairInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the task.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>10****</p>
@@ -366,7 +397,7 @@ public class CreateTairInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The zone ID of the instance.</p>
+         * <p>The zone ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-h</p>

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -107,7 +112,7 @@ public class DescribeAuditRecordsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -276,7 +281,7 @@ public class DescribeAuditRecordsRequest extends Request {
         }
 
         /**
-         * <p>The username of the account. If you do not specify this parameter, this call applies to all accounts of the instance.</p>
+         * <p>The username of the account. If you do not specify this parameter, all accounts of the instance are queried.</p>
          * 
          * <strong>example:</strong>
          * <p>demo</p>
@@ -288,7 +293,7 @@ public class DescribeAuditRecordsRequest extends Request {
         }
 
         /**
-         * <p>The name of the database in the instance. If you do not specify this parameter, all databases are queried. Valid values: 0 to 255. 0 specifies the database 0.</p>
+         * <p>The name of the database in the instance. If you do not specify this parameter, all databases are queried. Valid values: 0 to 255. 0 specifies database 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -341,13 +346,13 @@ public class DescribeAuditRecordsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the node in the instance. You can set this parameter to query the data of a specified node.</p>
+         * <p>The ID of the node in the instance. You can set this parameter to query the monitoring data of a specified node.</p>
          * <blockquote>
          * </blockquote>
          * <ul>
-         * <li><p>This parameter is available only for read/write splitting or cluster instances of ApsaraDB for Redis.</p>
+         * <li><p>This parameter is available only for read/write splitting and cluster instances.</p>
          * </li>
-         * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/94665.html">DescribeLogicInstanceTopology</a> operation to query node IDs.</p>
+         * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/473786.html">DescribeLogicInstanceTopology</a> operation to query node IDs.</p>
          * </li>
          * </ul>
          * 

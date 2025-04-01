@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -83,7 +88,7 @@ public class ModifyParameterGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -200,8 +205,8 @@ public class ModifyParameterGroupRequest extends Request {
         /**
          * <p>The service category. Valid values:</p>
          * <ul>
-         * <li><strong>standard</strong>: Community Edition</li>
-         * <li><strong>enterprise</strong>: Enhanced Edition (Tair)</li>
+         * <li><strong>standard</strong>: Redis Open-Source Edition</li>
+         * <li><strong>enterprise</strong>: Tair (Enterprise Edition)</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -291,7 +296,10 @@ public class ModifyParameterGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-zhangjiakou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

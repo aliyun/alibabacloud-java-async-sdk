@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class DescribeEncryptionKeyListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return keyIds
      */
@@ -48,6 +57,14 @@ public class DescribeEncryptionKeyListResponseBody extends TeaModel {
     public static final class Builder {
         private KeyIds keyIds; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeEncryptionKeyListResponseBody model) {
+            this.keyIds = model.keyIds;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The custom keys that are available in the region.</p>
@@ -82,7 +99,7 @@ public class DescribeEncryptionKeyListResponseBody extends TeaModel {
      */
     public static class KeyIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("KeyId")
-        private java.util.List < String > keyId;
+        private java.util.List<String> keyId;
 
         private KeyIds(Builder builder) {
             this.keyId = builder.keyId;
@@ -99,17 +116,24 @@ public class DescribeEncryptionKeyListResponseBody extends TeaModel {
         /**
          * @return keyId
          */
-        public java.util.List < String > getKeyId() {
+        public java.util.List<String> getKeyId() {
             return this.keyId;
         }
 
         public static final class Builder {
-            private java.util.List < String > keyId; 
+            private java.util.List<String> keyId; 
+
+            private Builder() {
+            } 
+
+            private Builder(KeyIds model) {
+                this.keyId = model.keyId;
+            } 
 
             /**
              * KeyId.
              */
-            public Builder keyId(java.util.List < String > keyId) {
+            public Builder keyId(java.util.List<String> keyId) {
                 this.keyId = keyId;
                 return this;
             }

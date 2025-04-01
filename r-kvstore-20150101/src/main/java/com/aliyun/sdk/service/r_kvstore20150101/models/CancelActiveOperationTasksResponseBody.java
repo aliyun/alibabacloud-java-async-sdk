@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class CancelActiveOperationTasksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ids
      */
@@ -48,6 +57,14 @@ public class CancelActiveOperationTasksResponseBody extends TeaModel {
     public static final class Builder {
         private String ids; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CancelActiveOperationTasksResponseBody model) {
+            this.ids = model.ids;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The IDs of O&amp;M events that are canceled at a time. Separate multiple IDs with commas (,).</p>

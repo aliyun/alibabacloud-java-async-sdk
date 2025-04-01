@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -39,6 +44,10 @@ public class ModifyTaskInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -73,8 +82,21 @@ public class ModifyTaskInfoResponseBody extends TeaModel {
         private String requestId; 
         private String successCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ModifyTaskInfoResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorTaskId = model.errorTaskId;
+            this.requestId = model.requestId;
+            this.successCount = model.successCount;
+        } 
+
         /**
-         * ErrorCode.
+         * <p>The error code returned if a task fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mst.errorcode.success.errormessage</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -82,7 +104,10 @@ public class ModifyTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorTaskId.
+         * <p>The ID of the failed task. This parameter is returned if a task fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-0mqaj5hnyofczv****</p>
          */
         public Builder errorTaskId(String errorTaskId) {
             this.errorTaskId = errorTaskId;
@@ -90,7 +115,10 @@ public class ModifyTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2B98499B-E62B-56D4-8D7F-3D6D4DB260F2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +126,10 @@ public class ModifyTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * SuccessCount.
+         * <p>The number of completed tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder successCount(String successCount) {
             this.successCount = successCount;

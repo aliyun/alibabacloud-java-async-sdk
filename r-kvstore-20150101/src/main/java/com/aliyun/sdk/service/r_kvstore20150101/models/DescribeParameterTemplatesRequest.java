@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -82,7 +87,7 @@ public class DescribeParameterTemplatesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -236,7 +241,7 @@ public class DescribeParameterTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The major version that is run on the instance. Valid values: <strong>2.8</strong>, <strong>4.0</strong>, and <strong>5.0</strong>.</p>
+         * <p>The major version of the instance. Valid values: <strong>4.0</strong>, <strong>5.0</strong>, <strong>6.0</strong>, and <strong>7.0</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -249,7 +254,7 @@ public class DescribeParameterTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance. You can call the <a href="~~DescribeInstances~~">DescribeInstances</a> operation to query the IDs of instances.</p>
+         * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to query the IDs of instances.</p>
          * 
          * <strong>example:</strong>
          * <p>r-bp1zxszhcgatnx****</p>

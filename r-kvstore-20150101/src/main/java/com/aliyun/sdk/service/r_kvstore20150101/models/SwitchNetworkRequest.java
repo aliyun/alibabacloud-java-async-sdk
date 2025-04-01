@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -85,7 +90,7 @@ public class SwitchNetworkRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -224,7 +229,7 @@ public class SwitchNetworkRequest extends Request {
          * <ul>
          * <li><p>This parameter is available and required only when the <strong>RetainClassic</strong> parameter is set to <strong>True</strong>.</p>
          * </li>
-         * <li><p>After you complete the switchover operation, you can also call the <a href="https://help.aliyun.com/document_detail/61010.html">ModifyInstanceNetExpireTime</a> operation to modify the retention period of the classic network endpoint.</p>
+         * <li><p>After you complete the switchover operation, you can also call the <a href="https://help.aliyun.com/document_detail/473793.html">ModifyInstanceNetExpireTime</a> operation to modify the retention period of the classic network endpoint.</p>
          * </li>
          * </ul>
          * 
@@ -238,7 +243,7 @@ public class SwitchNetworkRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/60933.html">DescribeInstances</a> operation to query the ID of the instance.</p>
+         * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to query the ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -327,9 +332,9 @@ public class SwitchNetworkRequest extends Request {
         }
 
         /**
-         * <p>The ID of the vSwitch that belongs to the VPC to which you want to switch. You can call the <a href="https://help.aliyun.com/document_detail/35739.html">DescribeVpcs</a> operation to query the VPC ID.</p>
+         * <p>The ID of the vSwitch that belongs to the VPC to which you want to switch. You can call the <a href="https://help.aliyun.com/document_detail/35739.html">DescribeVpcs</a> operation to query the vSwitch ID.</p>
          * <blockquote>
-         * <p>The vSwitch and the ApsaraDB for Redis instance must be deployed in the same zone.</p>
+         * <p> The vSwitch and the instance must be deployed in the same zone.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -346,7 +351,7 @@ public class SwitchNetworkRequest extends Request {
          * <blockquote>
          * </blockquote>
          * <ul>
-         * <li><p>The VPC and the ApsaraDB for Redis instance must be deployed in the same region.</p>
+         * <li><p>The VPC and the instance must be deployed in the same region.</p>
          * </li>
          * <li><p>After you set this parameter, you must also set the <strong>VSwitchId</strong> parameter.</p>
          * </li>

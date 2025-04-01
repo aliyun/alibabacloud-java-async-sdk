@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -70,7 +75,7 @@ public class ModifyIntranetAttributeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -208,9 +213,9 @@ public class ModifyIntranetAttributeRequest extends Request {
         }
 
         /**
-         * <p>The ID of the data node. You can call the <a href="https://help.aliyun.com/document_detail/193462.html">DescribeClusterMemberInfo</a> operation to query the node ID. Separate multiple IDs with commas (,).</p>
+         * <p>The ID of the data node. You can call the <a href="https://help.aliyun.com/document_detail/473783.html">DescribeClusterMemberInfo</a> operation to query the node ID. Separate multiple IDs with commas (,).</p>
          * <blockquote>
-         * <p>This parameter is available and required only when the instance uses the <a href="https://help.aliyun.com/document_detail/52228.html">cluster architecture</a>.</p>
+         * <p> This parameter is required if the instance is a <a href="https://help.aliyun.com/document_detail/52228.html">cluster</a> instance.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

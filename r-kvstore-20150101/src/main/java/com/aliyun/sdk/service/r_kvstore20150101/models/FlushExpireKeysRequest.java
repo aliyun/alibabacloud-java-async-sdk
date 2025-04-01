@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -65,7 +70,7 @@ public class FlushExpireKeysRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -162,13 +167,13 @@ public class FlushExpireKeysRequest extends Request {
         }
 
         /**
-         * <p>The time when the minor version is upgraded. Valid values:</p>
+         * <p>The time when you want to delete the expired keys. Default value: Immediately. Valid values:</p>
          * <ul>
-         * <li><strong>Immediately</strong>: immediately deletes expired keys.</li>
-         * <li><strong>MaintainTime</strong>:deletes expired key in the maintenance window.</li>
+         * <li><strong>Immediately</strong>: deletes the keys immediately.</li>
+         * <li><strong>MaintainTime</strong>: deletes the keys during the maintenance window.</li>
          * </ul>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/61000.html">ModifyInstanceMaintainTime</a> operation to modify the maintenance window of an ApsaraDB for Redis instance.</p>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/473775.html">ModifyInstanceMaintainTime</a> operation to modify the maintenance window of an instance.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

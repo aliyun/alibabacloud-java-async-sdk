@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -75,7 +80,7 @@ public class SwitchInstanceHARequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -190,7 +195,7 @@ public class SwitchInstanceHARequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/60933.html">DescribeInstances</a> operation to query the ID of the instance.</p>
+         * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to query the ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -203,7 +208,7 @@ public class SwitchInstanceHARequest extends Request {
         }
 
         /**
-         * <p>The ID of the data shard. You can call the <a href="https://help.aliyun.com/document_detail/190794.html">DescribeRoleZoneInfo</a> operation to obtain the value of the CustinsId parameter. Separate multiple data shard IDs with commas (,). <code>all</code> indicates that all data shards are specified.</p>
+         * <p>The ID of the data shard. You can call the <a href="https://help.aliyun.com/document_detail/473782.html">DescribeRoleZoneInfo</a> operation to obtain the value of the CustinsId parameter. Separate multiple data shard IDs with commas (,). <code>all</code> indicates that all data shards are specified.</p>
          * <blockquote>
          * <p>This parameter is available and required only for read/write splitting and cluster instances.</p>
          * </blockquote>
@@ -269,7 +274,7 @@ public class SwitchInstanceHARequest extends Request {
          * <li><strong>1</strong>: performs the switchover during the maintenance window.</li>
          * </ul>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/61000.html">ModifyInstanceMaintainTime</a> operation to modify the maintenance window of an ApsaraDB for Redis instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/473775.html">ModifyInstanceMaintainTime</a> operation to modify the maintenance window of a Tair (Redis OSS-compatible) instance.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -284,11 +289,11 @@ public class SwitchInstanceHARequest extends Request {
         /**
          * <p>The switching mode. Valid values:</p>
          * <ul>
-         * <li><strong>AvailablePriority</strong>: prioritizes the availability and performs a switchover immediately without considering the latency of data synchronization between the master and replica nodes. This may cause data loss.</li>
-         * <li><strong>ReliabilityPriority</strong>: prioritizes the reliability and performs a switchover after no latency of data synchronization between the master and replica nodes exists. This ensures data integrity. This mode may cause a switchover failure in scenarios that involve a large volume of data writes and persistent latency of data synchronization.</li>
+         * <li><strong>AvailablePriority</strong>: immediately performs a switchover by prioritizing availability. No latency of data synchronization between the master and replica nodes is considered. This may cause data loss.</li>
+         * <li><strong>ReliabilityPriority</strong>: performs a switchover by prioritizing reliability. Make sure that no latency of data synchronization between the master and replica nodes exists. This ensures data integrity. This mode may cause switchover failures in scenarios where a large volume of data is written and data synchronization latency consistently exists.</li>
          * </ul>
          * <blockquote>
-         * <p>You must evaluate the requirements for data and services based on your business scenarios and then select a switching mode.</p>
+         * <p> You must evaluate the requirements for data and services based on your business scenarios and then select a switching mode.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

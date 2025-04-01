@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return parameterGroup
      */
@@ -48,6 +57,14 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
     public static final class Builder {
         private ParameterGroup parameterGroup; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeParameterGroupResponseBody model) {
+            this.parameterGroup = model.parameterGroup;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the parameter template.</p>
@@ -118,6 +135,14 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             private String paramName; 
             private String paramValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(ParamGroupsDetails model) {
+                this.paramName = model.paramName;
+                this.paramValue = model.paramValue;
+            } 
+
             /**
              * <p>The name of the parameter.</p>
              * 
@@ -173,7 +198,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
         private String paramGroupId;
 
         @com.aliyun.core.annotation.NameInMap("ParamGroupsDetails")
-        private java.util.List < ParamGroupsDetails> paramGroupsDetails;
+        private java.util.List<ParamGroupsDetails> paramGroupsDetails;
 
         @com.aliyun.core.annotation.NameInMap("ParameterGroupDesc")
         private String parameterGroupDesc;
@@ -246,7 +271,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
         /**
          * @return paramGroupsDetails
          */
-        public java.util.List < ParamGroupsDetails> getParamGroupsDetails() {
+        public java.util.List<ParamGroupsDetails> getParamGroupsDetails() {
             return this.paramGroupsDetails;
         }
 
@@ -271,15 +296,30 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             private String engineVersion; 
             private String modified; 
             private String paramGroupId; 
-            private java.util.List < ParamGroupsDetails> paramGroupsDetails; 
+            private java.util.List<ParamGroupsDetails> paramGroupsDetails; 
             private String parameterGroupDesc; 
             private String parameterGroupName; 
+
+            private Builder() {
+            } 
+
+            private Builder(ParameterGroup model) {
+                this.category = model.category;
+                this.created = model.created;
+                this.engine = model.engine;
+                this.engineVersion = model.engineVersion;
+                this.modified = model.modified;
+                this.paramGroupId = model.paramGroupId;
+                this.paramGroupsDetails = model.paramGroupsDetails;
+                this.parameterGroupDesc = model.parameterGroupDesc;
+                this.parameterGroupName = model.parameterGroupName;
+            } 
 
             /**
              * <p>The service category. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: Community Edition</li>
-             * <li><strong>1</strong>: Enhanced Edition (Tair)</li>
+             * <li><strong>0</strong>: Redis Open-Source Edition</li>
+             * <li><strong>1</strong>: Tair (Enterprise Edition)</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -302,7 +342,15 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Engine.
+             * <p>The engine type. Valid values:</p>
+             * <ul>
+             * <li><em>redis</em>: Redis or Tair DRAM-based instance</li>
+             * <li><em>tair_pena</em>: Tair persistent memory-optimized instance</li>
+             * <li><em>tair_pdb</em>: Tair ESSD-based instance</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>redis</p>
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -345,7 +393,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             /**
              * <p>The parameter details of the parameter template.</p>
              */
-            public Builder paramGroupsDetails(java.util.List < ParamGroupsDetails> paramGroupsDetails) {
+            public Builder paramGroupsDetails(java.util.List<ParamGroupsDetails> paramGroupsDetails) {
                 this.paramGroupsDetails = paramGroupsDetails;
                 return this;
             }

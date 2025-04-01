@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -60,7 +65,7 @@ public class DescribeParameterGroupsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -139,7 +144,12 @@ public class DescribeParameterGroupsRequest extends Request {
         } 
 
         /**
-         * <p>The database type. Valid values: <strong>redis</strong> (default) and <strong>tair</strong>.</p>
+         * <p>The engine type. Valid values:</p>
+         * <ul>
+         * <li><strong>redis</strong>: Redis Open-Source Edition or Tair (In-Memory)</li>
+         * <li><strong>tair_pena</strong>: Tair (On NVM)</li>
+         * <li><strong>tair_pdb</strong>: Tair (On Disk)</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>redis</p>
@@ -169,7 +179,11 @@ public class DescribeParameterGroupsRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the instance.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

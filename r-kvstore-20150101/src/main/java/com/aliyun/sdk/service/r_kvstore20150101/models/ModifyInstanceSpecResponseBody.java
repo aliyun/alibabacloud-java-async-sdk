@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class ModifyInstanceSpecResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return orderId
      */
@@ -49,8 +58,16 @@ public class ModifyInstanceSpecResponseBody extends TeaModel {
         private String orderId; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ModifyInstanceSpecResponseBody model) {
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>The ID of the order.</p>
+         * <p>The order ID.</p>
          * 
          * <strong>example:</strong>
          * <p>20722623431****</p>
@@ -61,7 +78,7 @@ public class ModifyInstanceSpecResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0DA1D7EF-C80D-432C-8758-7D225182626B</p>

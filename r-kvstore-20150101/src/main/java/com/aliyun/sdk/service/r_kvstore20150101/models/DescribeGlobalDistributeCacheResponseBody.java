@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeGlobalDistributeCacheResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("GlobalDistributeCaches")
-    private java.util.List < GlobalDistributeCaches> globalDistributeCaches;
+    private java.util.List<GlobalDistributeCaches> globalDistributeCaches;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -43,10 +48,14 @@ public class DescribeGlobalDistributeCacheResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return globalDistributeCaches
      */
-    public java.util.List < GlobalDistributeCaches> getGlobalDistributeCaches() {
+    public java.util.List<GlobalDistributeCaches> getGlobalDistributeCaches() {
         return this.globalDistributeCaches;
     }
 
@@ -79,16 +88,27 @@ public class DescribeGlobalDistributeCacheResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < GlobalDistributeCaches> globalDistributeCaches; 
+        private java.util.List<GlobalDistributeCaches> globalDistributeCaches; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalRecordCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeGlobalDistributeCacheResponseBody model) {
+            this.globalDistributeCaches = model.globalDistributeCaches;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
+
         /**
          * <p>Details of the distributed instance.</p>
          */
-        public Builder globalDistributeCaches(java.util.List < GlobalDistributeCaches> globalDistributeCaches) {
+        public Builder globalDistributeCaches(java.util.List<GlobalDistributeCaches> globalDistributeCaches) {
             this.globalDistributeCaches = globalDistributeCaches;
             return this;
         }
@@ -223,6 +243,17 @@ public class DescribeGlobalDistributeCacheResponseBody extends TeaModel {
             private String instanceStatus; 
             private String regionId; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubInstances model) {
+                this.globalInstanceId = model.globalInstanceId;
+                this.instanceClass = model.instanceClass;
+                this.instanceID = model.instanceID;
+                this.instanceStatus = model.instanceStatus;
+                this.regionId = model.regionId;
+            } 
+
             /**
              * <p>The ID of the distributed instance.</p>
              * 
@@ -324,7 +355,7 @@ public class DescribeGlobalDistributeCacheResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("SubInstances")
-        private java.util.List < SubInstances> subInstances;
+        private java.util.List<SubInstances> subInstances;
 
         private GlobalDistributeCaches(Builder builder) {
             this.globalInstanceId = builder.globalInstanceId;
@@ -357,14 +388,23 @@ public class DescribeGlobalDistributeCacheResponseBody extends TeaModel {
         /**
          * @return subInstances
          */
-        public java.util.List < SubInstances> getSubInstances() {
+        public java.util.List<SubInstances> getSubInstances() {
             return this.subInstances;
         }
 
         public static final class Builder {
             private String globalInstanceId; 
             private String status; 
-            private java.util.List < SubInstances> subInstances; 
+            private java.util.List<SubInstances> subInstances; 
+
+            private Builder() {
+            } 
+
+            private Builder(GlobalDistributeCaches model) {
+                this.globalInstanceId = model.globalInstanceId;
+                this.status = model.status;
+                this.subInstances = model.subInstances;
+            } 
 
             /**
              * <p>The ID of the distributed instance.</p>
@@ -396,7 +436,7 @@ public class DescribeGlobalDistributeCacheResponseBody extends TeaModel {
             /**
              * <p>Details of the child instances.</p>
              */
-            public Builder subInstances(java.util.List < SubInstances> subInstances) {
+            public Builder subInstances(java.util.List<SubInstances> subInstances) {
                 this.subInstances = subInstances;
                 return this;
             }

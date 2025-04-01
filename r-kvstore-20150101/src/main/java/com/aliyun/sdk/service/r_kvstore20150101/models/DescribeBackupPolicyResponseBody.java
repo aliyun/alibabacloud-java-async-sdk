@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -53,6 +58,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
 
     public static DescribeBackupPolicyResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -120,6 +129,20 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         private String preferredBackupTime; 
         private String preferredNextBackupTime; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeBackupPolicyResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.backupRetentionPeriod = model.backupRetentionPeriod;
+            this.dbsInstance = model.dbsInstance;
+            this.enableBackupLog = model.enableBackupLog;
+            this.preferredBackupPeriod = model.preferredBackupPeriod;
+            this.preferredBackupTime = model.preferredBackupTime;
+            this.preferredNextBackupTime = model.preferredNextBackupTime;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The following parameters are no longer used. Ignore the parameters.</p>
@@ -332,6 +355,19 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             private String encodedDiagnosticMessage; 
             private String noPermissionType; 
             private String policyType; 
+
+            private Builder() {
+            } 
+
+            private Builder(AccessDeniedDetail model) {
+                this.authAction = model.authAction;
+                this.authPrincipalDisplayName = model.authPrincipalDisplayName;
+                this.authPrincipalOwnerId = model.authPrincipalOwnerId;
+                this.authPrincipalType = model.authPrincipalType;
+                this.encodedDiagnosticMessage = model.encodedDiagnosticMessage;
+                this.noPermissionType = model.noPermissionType;
+                this.policyType = model.policyType;
+            } 
 
             /**
              * <p>This parameter is no longer used. Ignore this parameter.</p>

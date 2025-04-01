@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -75,7 +80,7 @@ public class DescribeRoleZoneInfoRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -190,7 +195,7 @@ public class DescribeRoleZoneInfoRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/60933.html">DescribeInstances</a> operation to query instance IDs.</p>
+         * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to query instance IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -221,7 +226,7 @@ public class DescribeRoleZoneInfoRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. The value must be an integer that is greater than <strong>0</strong> and less than or equal to the maximum value supported by the integer data type. Default value: <strong>1</strong>.</p>
+         * <p>The page number. The value must be an integer that is greater than <strong>0</strong> and less than or equal to the maximum value supported by the integer data type. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -233,7 +238,7 @@ public class DescribeRoleZoneInfoRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Valid values: <strong>10</strong>, <strong>20</strong>, and <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * <p>The number of entries per page. Valid values: <strong>10</strong>, <strong>20</strong>, and <strong>50</strong>. Default value: <strong>10</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -245,15 +250,14 @@ public class DescribeRoleZoneInfoRequest extends Request {
         }
 
         /**
-         * <p>The type of node to query. Default value: 1. Valid values:</p>
+         * <p>The type of the node to query. Default value: 1. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: proxy node</li>
-         * </ul>
-         * <blockquote>
-         * <p>This parameter is supported only for cluster and read/write splitting instances.</p>
-         * </blockquote>
-         * <ul>
-         * <li><strong>1</strong>: data node</li>
+         * <li><p><strong>0</strong>: proxy node</p>
+         * <p>**</p>
+         * <p><strong>Note</strong> This parameter is supported only for cluster instances and read/write splitting instances.</p>
+         * </li>
+         * <li><p><strong>1</strong>: data node</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

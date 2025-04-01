@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,6 +20,10 @@ public class DeleteShardingNodeRequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EffectiveTime")
+    private String effectiveTime;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ForceTrans")
@@ -58,6 +67,7 @@ public class DeleteShardingNodeRequest extends Request {
     private DeleteShardingNodeRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.effectiveTime = builder.effectiveTime;
         this.forceTrans = builder.forceTrans;
         this.instanceId = builder.instanceId;
         this.nodeId = builder.nodeId;
@@ -77,7 +87,7 @@ public class DeleteShardingNodeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -87,6 +97,13 @@ public class DeleteShardingNodeRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return effectiveTime
+     */
+    public String getEffectiveTime() {
+        return this.effectiveTime;
     }
 
     /**
@@ -154,6 +171,7 @@ public class DeleteShardingNodeRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeleteShardingNodeRequest, Builder> {
         private String regionId; 
+        private String effectiveTime; 
         private Boolean forceTrans; 
         private String instanceId; 
         private String nodeId; 
@@ -171,6 +189,7 @@ public class DeleteShardingNodeRequest extends Request {
         private Builder(DeleteShardingNodeRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.effectiveTime = request.effectiveTime;
             this.forceTrans = request.forceTrans;
             this.instanceId = request.instanceId;
             this.nodeId = request.nodeId;
@@ -188,6 +207,25 @@ public class DeleteShardingNodeRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>The time when you want to delete the proxy nodes for instance in the proxy mode. Valid values:</p>
+         * <ul>
+         * <li><strong>0 or Immediately</strong> (default): immediately delete the proxy nodes.</li>
+         * <li><strong>1 or MaintainTime</strong>: delete the proxy nodes during the maintenance window.</li>
+         * </ul>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/473775.html">ModifyInstanceMaintainTime</a> operation to modify the maintenance window of an instance.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Immediately</p>
+         */
+        public Builder effectiveTime(String effectiveTime) {
+            this.putQueryParameter("EffectiveTime", effectiveTime);
+            this.effectiveTime = effectiveTime;
             return this;
         }
 

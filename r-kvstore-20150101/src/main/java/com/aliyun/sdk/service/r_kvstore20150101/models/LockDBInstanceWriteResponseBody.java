@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -39,6 +44,10 @@ public class LockDBInstanceWriteResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBInstanceName
      */
@@ -72,6 +81,16 @@ public class LockDBInstanceWriteResponseBody extends TeaModel {
         private String lockReason; 
         private String requestId; 
         private Long taskId; 
+
+        private Builder() {
+        } 
+
+        private Builder(LockDBInstanceWriteResponseBody model) {
+            this.DBInstanceName = model.DBInstanceName;
+            this.lockReason = model.lockReason;
+            this.requestId = model.requestId;
+            this.taskId = model.taskId;
+        } 
 
         /**
          * <p>The instance ID.</p>

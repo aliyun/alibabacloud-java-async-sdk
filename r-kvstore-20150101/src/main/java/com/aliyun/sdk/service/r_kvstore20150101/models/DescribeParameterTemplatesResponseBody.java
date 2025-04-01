@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,6 +46,10 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
 
     public static DescribeParameterTemplatesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,6 +94,17 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         private Parameters parameters; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeParameterTemplatesResponseBody model) {
+            this.engine = model.engine;
+            this.engineVersion = model.engineVersion;
+            this.parameterCount = model.parameterCount;
+            this.parameters = model.parameters;
+            this.requestId = model.requestId;
+        } 
+
         /**
          * <p>The database engine that is run on the instance. The value <strong>Redis</strong> is returned for this parameter.</p>
          * 
@@ -97,7 +117,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The major version that is run on the instance.</p>
+         * <p>The major version of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>5.0</p>
@@ -235,6 +255,18 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             private String parameterName; 
             private String parameterValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(TemplateRecord model) {
+                this.checkingCode = model.checkingCode;
+                this.forceModify = model.forceModify;
+                this.forceRestart = model.forceRestart;
+                this.parameterDescription = model.parameterDescription;
+                this.parameterName = model.parameterName;
+                this.parameterValue = model.parameterValue;
+            } 
+
             /**
              * <p>The valid values of the parameter.</p>
              * 
@@ -324,7 +356,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
      */
     public static class Parameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TemplateRecord")
-        private java.util.List < TemplateRecord> templateRecord;
+        private java.util.List<TemplateRecord> templateRecord;
 
         private Parameters(Builder builder) {
             this.templateRecord = builder.templateRecord;
@@ -341,17 +373,24 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         /**
          * @return templateRecord
          */
-        public java.util.List < TemplateRecord> getTemplateRecord() {
+        public java.util.List<TemplateRecord> getTemplateRecord() {
             return this.templateRecord;
         }
 
         public static final class Builder {
-            private java.util.List < TemplateRecord> templateRecord; 
+            private java.util.List<TemplateRecord> templateRecord; 
+
+            private Builder() {
+            } 
+
+            private Builder(Parameters model) {
+                this.templateRecord = model.templateRecord;
+            } 
 
             /**
              * TemplateRecord.
              */
-            public Builder templateRecord(java.util.List < TemplateRecord> templateRecord) {
+            public Builder templateRecord(java.util.List<TemplateRecord> templateRecord) {
                 this.templateRecord = templateRecord;
                 return this;
             }

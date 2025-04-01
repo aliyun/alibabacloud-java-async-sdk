@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -77,7 +82,7 @@ public class DescribeParameterGroupTemplateListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -193,7 +198,10 @@ public class DescribeParameterGroupTemplateListRequest extends Request {
 
         /**
          * <p>The service category. Valid values:</p>
-         * <p>standard: Community Edition enterprise: Enhanced Edition (Tair)</p>
+         * <ul>
+         * <li><strong>standard</strong>: Redis Open-Source Edition</li>
+         * <li><strong>enterprise</strong>: Tair (Enterprise Edition)</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -219,7 +227,11 @@ public class DescribeParameterGroupTemplateListRequest extends Request {
 
         /**
          * <p>The engine type. Valid values:</p>
-         * <p>redis: Redis or Tair DRAM-based instance tair_pena: Tair persistent memory-optimized instance tair_pdb: Tair ESSD-based instance</p>
+         * <ul>
+         * <li><strong>redis</strong>: Redis Open-Source Edition or Tair (In-Memory)</li>
+         * <li><strong>tair_pena</strong>: Tair (On NVM)</li>
+         * <li><strong>tair_pdb</strong>: Tair (On Disk)</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -233,7 +245,12 @@ public class DescribeParameterGroupTemplateListRequest extends Request {
 
         /**
          * <p>The compatible engine version. Valid values:</p>
-         * <p>ApsaraDB for Redis Community Edition: 5.0, 6.0, and 7.0. Tair DRAM-based instances: 5.0 and 6.0. Tair persistent memory-optimized instances: 6.0. Tair ESSD-based instances: 4.0.</p>
+         * <ul>
+         * <li>For Redis Open-Source Edition instances, set the parameter to <strong>5.0</strong>, <strong>6.0</strong>, or <strong>7.0</strong>.</li>
+         * <li>For Tair DRAM-based instances that are compatible with Redis 5.0, 6.0, or 7.0, set the parameter to <strong>5.0</strong>, <strong>6.0</strong>, or <strong>7.0</strong>.</li>
+         * <li>For Tair persistent memory-optimized instances that are compatible with Redis 6.0, set the parameter to <strong>1.0</strong>.</li>
+         * <li>For Tair ESSD-based instances that are compatible with Redis 6.0, set the parameter to <strong>1.0</strong>. For Tair SSD-based instances that are compatible with Redis 6.0, set the parameter to <strong>2.0</strong>.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

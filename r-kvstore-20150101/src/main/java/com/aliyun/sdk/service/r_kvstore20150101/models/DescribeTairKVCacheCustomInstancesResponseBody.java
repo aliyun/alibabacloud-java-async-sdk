@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,6 +46,10 @@ public class DescribeTairKVCacheCustomInstancesResponseBody extends TeaModel {
 
     public static DescribeTairKVCacheCustomInstancesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class DescribeTairKVCacheCustomInstancesResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTairKVCacheCustomInstancesResponseBody model) {
+            this.instances = model.instances;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Instances.
@@ -175,6 +195,14 @@ public class DescribeTairKVCacheCustomInstancesResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * Key.
              */
@@ -206,7 +234,7 @@ public class DescribeTairKVCacheCustomInstancesResponseBody extends TeaModel {
      */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -223,17 +251,24 @@ public class DescribeTairKVCacheCustomInstancesResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -282,6 +317,9 @@ public class DescribeTairKVCacheCustomInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NetworkType")
         private String networkType;
 
+        @com.aliyun.core.annotation.NameInMap("PrivateIp")
+        private String privateIp;
+
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
@@ -296,6 +334,9 @@ public class DescribeTairKVCacheCustomInstancesResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
+
+        @com.aliyun.core.annotation.NameInMap("UseEni")
+        private Boolean useEni;
 
         @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
@@ -317,11 +358,13 @@ public class DescribeTairKVCacheCustomInstancesResponseBody extends TeaModel {
             this.instanceStatus = builder.instanceStatus;
             this.instanceType = builder.instanceType;
             this.networkType = builder.networkType;
+            this.privateIp = builder.privateIp;
             this.regionId = builder.regionId;
             this.resourceGroupId = builder.resourceGroupId;
             this.storage = builder.storage;
             this.storageType = builder.storageType;
             this.tags = builder.tags;
+            this.useEni = builder.useEni;
             this.vSwitchId = builder.vSwitchId;
             this.vpcId = builder.vpcId;
             this.zoneId = builder.zoneId;
@@ -406,6 +449,13 @@ public class DescribeTairKVCacheCustomInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return privateIp
+         */
+        public String getPrivateIp() {
+            return this.privateIp;
+        }
+
+        /**
          * @return regionId
          */
         public String getRegionId() {
@@ -441,6 +491,13 @@ public class DescribeTairKVCacheCustomInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return useEni
+         */
+        public Boolean getUseEni() {
+            return this.useEni;
+        }
+
+        /**
          * @return vSwitchId
          */
         public String getVSwitchId() {
@@ -472,14 +529,42 @@ public class DescribeTairKVCacheCustomInstancesResponseBody extends TeaModel {
             private String instanceStatus; 
             private String instanceType; 
             private String networkType; 
+            private String privateIp; 
             private String regionId; 
             private String resourceGroupId; 
             private Long storage; 
             private String storageType; 
             private Tags tags; 
+            private Boolean useEni; 
             private String vSwitchId; 
             private String vpcId; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(KVStoreInstance model) {
+                this.chargeType = model.chargeType;
+                this.createTime = model.createTime;
+                this.destroyTime = model.destroyTime;
+                this.endTime = model.endTime;
+                this.instanceClass = model.instanceClass;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.instanceStatus = model.instanceStatus;
+                this.instanceType = model.instanceType;
+                this.networkType = model.networkType;
+                this.privateIp = model.privateIp;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.storage = model.storage;
+                this.storageType = model.storageType;
+                this.tags = model.tags;
+                this.useEni = model.useEni;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * ChargeType.
@@ -562,6 +647,14 @@ public class DescribeTairKVCacheCustomInstancesResponseBody extends TeaModel {
             }
 
             /**
+             * PrivateIp.
+             */
+            public Builder privateIp(String privateIp) {
+                this.privateIp = privateIp;
+                return this;
+            }
+
+            /**
              * RegionId.
              */
             public Builder regionId(String regionId) {
@@ -598,6 +691,14 @@ public class DescribeTairKVCacheCustomInstancesResponseBody extends TeaModel {
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
+                return this;
+            }
+
+            /**
+             * UseEni.
+             */
+            public Builder useEni(Boolean useEni) {
+                this.useEni = useEni;
                 return this;
             }
 
@@ -640,7 +741,7 @@ public class DescribeTairKVCacheCustomInstancesResponseBody extends TeaModel {
      */
     public static class Instances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("KVStoreInstance")
-        private java.util.List < KVStoreInstance> KVStoreInstance;
+        private java.util.List<KVStoreInstance> KVStoreInstance;
 
         private Instances(Builder builder) {
             this.KVStoreInstance = builder.KVStoreInstance;
@@ -657,17 +758,24 @@ public class DescribeTairKVCacheCustomInstancesResponseBody extends TeaModel {
         /**
          * @return KVStoreInstance
          */
-        public java.util.List < KVStoreInstance> getKVStoreInstance() {
+        public java.util.List<KVStoreInstance> getKVStoreInstance() {
             return this.KVStoreInstance;
         }
 
         public static final class Builder {
-            private java.util.List < KVStoreInstance> KVStoreInstance; 
+            private java.util.List<KVStoreInstance> KVStoreInstance; 
+
+            private Builder() {
+            } 
+
+            private Builder(Instances model) {
+                this.KVStoreInstance = model.KVStoreInstance;
+            } 
 
             /**
              * KVStoreInstance.
              */
-            public Builder KVStoreInstance(java.util.List < KVStoreInstance> KVStoreInstance) {
+            public Builder KVStoreInstance(java.util.List<KVStoreInstance> KVStoreInstance) {
                 this.KVStoreInstance = KVStoreInstance;
                 return this;
             }

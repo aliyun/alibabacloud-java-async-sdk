@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -66,7 +71,7 @@ public class ModifyTaskInfoRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -154,7 +159,21 @@ public class ModifyTaskInfoRequest extends Request {
         } 
 
         /**
-         * ActionParams.
+         * <p>The JSON-formatted parameters related to the action. Set this parameter to <code>{&quot;recoverMode&quot;: &quot;xxx&quot;, &quot;recoverTime&quot;: &quot;xxx&quot;}</code> if the <strong>TaskAction</strong> parameter is set to <strong>modifySwitchTime</strong>.</p>
+         * <ul>
+         * <li><p><strong>recoverMode</strong>: specifies the restoration mode for the task. Valid values:</p>
+         * <ul>
+         * <li><strong>timePoint</strong>: performs the task at the specified point in time.</li>
+         * <li><strong>immediate</strong>: performs the task immediately.</li>
+         * <li><strong>maintainTime</strong>: performs the task within the maintenance window.</li>
+         * </ul>
+         * </li>
+         * <li><p><strong>recoverTime</strong>: specifies the point in time for restoration. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. This parameter is required if the <strong>recoverMode</strong> parameter is set to <strong>timePoint</strong>.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;recoverMode&quot;:&quot;immediate&quot;}</p>
          */
         public Builder actionParams(String actionParams) {
             this.putQueryParameter("ActionParams", actionParams);
@@ -163,6 +182,7 @@ public class ModifyTaskInfoRequest extends Request {
         }
 
         /**
+         * <p>The ID of the region where the instance is deployed.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -202,7 +222,10 @@ public class ModifyTaskInfoRequest extends Request {
         }
 
         /**
-         * StepName.
+         * <p>The name of the current step.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exec_task</p>
          */
         public Builder stepName(String stepName) {
             this.putQueryParameter("StepName", stepName);
@@ -211,7 +234,10 @@ public class ModifyTaskInfoRequest extends Request {
         }
 
         /**
-         * TaskAction.
+         * <p>The action name. Set the value to <strong>modifySwitchTime</strong>. The value specifies that you want to change the switching time or restoration time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>modifySwitchTime</p>
          */
         public Builder taskAction(String taskAction) {
             this.putQueryParameter("TaskAction", taskAction);
@@ -220,6 +246,7 @@ public class ModifyTaskInfoRequest extends Request {
         }
 
         /**
+         * <p>The task ID. Separate multiple task IDs with commas (,). You can specify up to 30 task IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

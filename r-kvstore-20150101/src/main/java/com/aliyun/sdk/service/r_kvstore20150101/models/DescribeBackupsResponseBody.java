@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -57,6 +62,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
 
     public static DescribeBackupsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -132,6 +141,21 @@ public class DescribeBackupsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeBackupsResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.backups = model.backups;
+            this.freeSize = model.freeSize;
+            this.fullStorageSize = model.fullStorageSize;
+            this.logStorageSize = model.logStorageSize;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The following parameters are no longer used. Ignore the parameters.</p>
@@ -341,6 +365,19 @@ public class DescribeBackupsResponseBody extends TeaModel {
             private String encodedDiagnosticMessage; 
             private String noPermissionType; 
             private String policyType; 
+
+            private Builder() {
+            } 
+
+            private Builder(AccessDeniedDetail model) {
+                this.authAction = model.authAction;
+                this.authPrincipalDisplayName = model.authPrincipalDisplayName;
+                this.authPrincipalOwnerId = model.authPrincipalOwnerId;
+                this.authPrincipalType = model.authPrincipalType;
+                this.encodedDiagnosticMessage = model.encodedDiagnosticMessage;
+                this.noPermissionType = model.noPermissionType;
+                this.policyType = model.policyType;
+            } 
 
             /**
              * <p>This parameter is no longer used. Ignore this parameter.</p>
@@ -626,6 +663,27 @@ public class DescribeBackupsResponseBody extends TeaModel {
             private String nodeInstanceId; 
             private String recoverConfigMode; 
 
+            private Builder() {
+            } 
+
+            private Builder(Backup model) {
+                this.backupDBNames = model.backupDBNames;
+                this.backupDownloadURL = model.backupDownloadURL;
+                this.backupEndTime = model.backupEndTime;
+                this.backupId = model.backupId;
+                this.backupIntranetDownloadURL = model.backupIntranetDownloadURL;
+                this.backupJobID = model.backupJobID;
+                this.backupMethod = model.backupMethod;
+                this.backupMode = model.backupMode;
+                this.backupSize = model.backupSize;
+                this.backupStartTime = model.backupStartTime;
+                this.backupStatus = model.backupStatus;
+                this.backupType = model.backupType;
+                this.engineVersion = model.engineVersion;
+                this.nodeInstanceId = model.nodeInstanceId;
+                this.recoverConfigMode = model.recoverConfigMode;
+            } 
+
             /**
              * <p>The names of the databases that are backed up. The default value is <strong>all</strong>, which indicates that all databases are backed up.</p>
              * 
@@ -828,7 +886,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
      */
     public static class Backups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Backup")
-        private java.util.List < Backup> backup;
+        private java.util.List<Backup> backup;
 
         private Backups(Builder builder) {
             this.backup = builder.backup;
@@ -845,17 +903,24 @@ public class DescribeBackupsResponseBody extends TeaModel {
         /**
          * @return backup
          */
-        public java.util.List < Backup> getBackup() {
+        public java.util.List<Backup> getBackup() {
             return this.backup;
         }
 
         public static final class Builder {
-            private java.util.List < Backup> backup; 
+            private java.util.List<Backup> backup; 
+
+            private Builder() {
+            } 
+
+            private Builder(Backups model) {
+                this.backup = model.backup;
+            } 
 
             /**
              * Backup.
              */
-            public Builder backup(java.util.List < Backup> backup) {
+            public Builder backup(java.util.List<Backup> backup) {
                 this.backup = backup;
                 return this;
             }

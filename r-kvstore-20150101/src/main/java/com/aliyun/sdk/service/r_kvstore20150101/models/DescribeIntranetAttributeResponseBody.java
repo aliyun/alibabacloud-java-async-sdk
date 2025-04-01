@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -49,6 +54,10 @@ public class DescribeIntranetAttributeResponseBody extends TeaModel {
 
     public static DescribeIntranetAttributeResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -109,6 +118,19 @@ public class DescribeIntranetAttributeResponseBody extends TeaModel {
         private Integer intranetBandwidth; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeIntranetAttributeResponseBody model) {
+            this.autoRenewal = model.autoRenewal;
+            this.bandwidthExpireTime = model.bandwidthExpireTime;
+            this.bandwidthPrePaid = model.bandwidthPrePaid;
+            this.expireTime = model.expireTime;
+            this.hasPrePaidBandWidthOrderRunning = model.hasPrePaidBandWidthOrderRunning;
+            this.intranetBandwidth = model.intranetBandwidth;
+            this.requestId = model.requestId;
+        } 
+
         /**
          * <p>Indicates whether auto-renewal is enabled for the extra internal bandwidth that you purchased. Valid values:</p>
          * <ul>
@@ -142,10 +164,10 @@ public class DescribeIntranetAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The billing methods of unexpired bandwith plans. Valid values:</p>
+         * <p>The billing method of the bandwidth plan. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: Pay-as-you-go</li>
-         * <li><strong>1</strong>: Subscription</li>
+         * <li><strong>0</strong>: pay-as-you-go</li>
+         * <li><strong>1</strong>: subscription</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -189,7 +211,7 @@ public class DescribeIntranetAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The current internal bandwidth of the instance. Unit: Mbit/s.</p>
+         * <p>The internal bandwidth of the instance. This parameter indicates the combined bandwidth of all shards in the instance. Unit: Mbit/s.</p>
          * 
          * <strong>example:</strong>
          * <p>102</p>

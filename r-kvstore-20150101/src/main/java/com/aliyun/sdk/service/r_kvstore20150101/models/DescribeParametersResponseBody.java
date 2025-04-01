@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,6 +46,10 @@ public class DescribeParametersResponseBody extends TeaModel {
 
     public static DescribeParametersResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,19 @@ public class DescribeParametersResponseBody extends TeaModel {
         private String requestId; 
         private RunningParameters runningParameters; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeParametersResponseBody model) {
+            this.configParameters = model.configParameters;
+            this.engine = model.engine;
+            this.engineVersion = model.engineVersion;
+            this.requestId = model.requestId;
+            this.runningParameters = model.runningParameters;
+        } 
+
         /**
-         * <p>The configuration parameters.</p>
+         * <p>The configuration parameters that have not taken effect.</p>
          */
         public Builder configParameters(ConfigParameters configParameters) {
             this.configParameters = configParameters;
@@ -232,6 +252,18 @@ public class DescribeParametersResponseBody extends TeaModel {
             private String parameterName; 
             private String parameterValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Parameter model) {
+                this.checkingCode = model.checkingCode;
+                this.forceRestart = model.forceRestart;
+                this.modifiableStatus = model.modifiableStatus;
+                this.parameterDescription = model.parameterDescription;
+                this.parameterName = model.parameterName;
+                this.parameterValue = model.parameterValue;
+            } 
+
             /**
              * <p>The check code that indicates the valid values of the parameter.</p>
              * 
@@ -321,7 +353,7 @@ public class DescribeParametersResponseBody extends TeaModel {
      */
     public static class ConfigParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Parameter")
-        private java.util.List < Parameter> parameter;
+        private java.util.List<Parameter> parameter;
 
         private ConfigParameters(Builder builder) {
             this.parameter = builder.parameter;
@@ -338,17 +370,24 @@ public class DescribeParametersResponseBody extends TeaModel {
         /**
          * @return parameter
          */
-        public java.util.List < Parameter> getParameter() {
+        public java.util.List<Parameter> getParameter() {
             return this.parameter;
         }
 
         public static final class Builder {
-            private java.util.List < Parameter> parameter; 
+            private java.util.List<Parameter> parameter; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConfigParameters model) {
+                this.parameter = model.parameter;
+            } 
 
             /**
              * Parameter.
              */
-            public Builder parameter(java.util.List < Parameter> parameter) {
+            public Builder parameter(java.util.List<Parameter> parameter) {
                 this.parameter = parameter;
                 return this;
             }
@@ -452,6 +491,18 @@ public class DescribeParametersResponseBody extends TeaModel {
             private String parameterName; 
             private String parameterValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(RunningParametersParameter model) {
+                this.checkingCode = model.checkingCode;
+                this.forceRestart = model.forceRestart;
+                this.modifiableStatus = model.modifiableStatus;
+                this.parameterDescription = model.parameterDescription;
+                this.parameterName = model.parameterName;
+                this.parameterValue = model.parameterValue;
+            } 
+
             /**
              * <p>The check code that indicates the valid values of the parameter.</p>
              * 
@@ -541,7 +592,7 @@ public class DescribeParametersResponseBody extends TeaModel {
      */
     public static class RunningParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Parameter")
-        private java.util.List < RunningParametersParameter> parameter;
+        private java.util.List<RunningParametersParameter> parameter;
 
         private RunningParameters(Builder builder) {
             this.parameter = builder.parameter;
@@ -558,17 +609,24 @@ public class DescribeParametersResponseBody extends TeaModel {
         /**
          * @return parameter
          */
-        public java.util.List < RunningParametersParameter> getParameter() {
+        public java.util.List<RunningParametersParameter> getParameter() {
             return this.parameter;
         }
 
         public static final class Builder {
-            private java.util.List < RunningParametersParameter> parameter; 
+            private java.util.List<RunningParametersParameter> parameter; 
+
+            private Builder() {
+            } 
+
+            private Builder(RunningParameters model) {
+                this.parameter = model.parameter;
+            } 
 
             /**
              * Parameter.
              */
-            public Builder parameter(java.util.List < RunningParametersParameter> parameter) {
+            public Builder parameter(java.util.List<RunningParametersParameter> parameter) {
                 this.parameter = parameter;
                 return this;
             }

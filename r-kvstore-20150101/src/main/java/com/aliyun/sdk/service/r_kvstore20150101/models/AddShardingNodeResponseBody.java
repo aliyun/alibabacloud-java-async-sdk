@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class AddShardingNodeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("NodeIds")
-    private java.util.List < String > nodeIds;
+    private java.util.List<String> nodeIds;
 
     @com.aliyun.core.annotation.NameInMap("OrderId")
     private Long orderId;
@@ -35,10 +40,14 @@ public class AddShardingNodeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nodeIds
      */
-    public java.util.List < String > getNodeIds() {
+    public java.util.List<String> getNodeIds() {
         return this.nodeIds;
     }
 
@@ -57,14 +66,23 @@ public class AddShardingNodeResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > nodeIds; 
+        private java.util.List<String> nodeIds; 
         private Long orderId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AddShardingNodeResponseBody model) {
+            this.nodeIds = model.nodeIds;
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The IDs of the data shards.</p>
          */
-        public Builder nodeIds(java.util.List < String > nodeIds) {
+        public Builder nodeIds(java.util.List<String> nodeIds) {
             this.nodeIds = nodeIds;
             return this;
         }

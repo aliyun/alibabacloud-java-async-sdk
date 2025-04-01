@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeTasksResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Items")
-    private java.util.List < Items> items;
+    private java.util.List<Items> items;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -43,10 +48,14 @@ public class DescribeTasksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
-    public java.util.List < Items> getItems() {
+    public java.util.List<Items> getItems() {
         return this.items;
     }
 
@@ -79,16 +88,27 @@ public class DescribeTasksResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Items> items; 
+        private java.util.List<Items> items; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalRecordCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeTasksResponseBody model) {
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
+
         /**
          * <p>The details of the task.</p>
          */
-        public Builder items(java.util.List < Items> items) {
+        public Builder items(java.util.List<Items> items) {
             this.items = items;
             return this;
         }
@@ -282,6 +302,22 @@ public class DescribeTasksResponseBody extends TeaModel {
             private String stepsInfo; 
             private String taskAction; 
             private String taskId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.beginTime = model.beginTime;
+                this.currentStepName = model.currentStepName;
+                this.finishTime = model.finishTime;
+                this.progress = model.progress;
+                this.remain = model.remain;
+                this.status = model.status;
+                this.stepProgressInfo = model.stepProgressInfo;
+                this.stepsInfo = model.stepsInfo;
+                this.taskAction = model.taskAction;
+                this.taskId = model.taskId;
+            } 
 
             /**
              * <p>The beginning time of the task. The time follows the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>

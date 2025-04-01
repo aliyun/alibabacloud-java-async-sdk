@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -39,7 +44,7 @@ public class CreateTCInstanceRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DataDisk")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < DataDisk> dataDisk;
+    private java.util.List<DataDisk> dataDisk;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DryRun")
@@ -109,7 +114,7 @@ public class CreateTCInstanceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VSwitchId")
@@ -162,7 +167,7 @@ public class CreateTCInstanceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -212,7 +217,7 @@ public class CreateTCInstanceRequest extends Request {
     /**
      * @return dataDisk
      */
-    public java.util.List < DataDisk> getDataDisk() {
+    public java.util.List<DataDisk> getDataDisk() {
         return this.dataDisk;
     }
 
@@ -331,7 +336,7 @@ public class CreateTCInstanceRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -363,7 +368,7 @@ public class CreateTCInstanceRequest extends Request {
         private String businessInfo; 
         private String clientToken; 
         private String couponNo; 
-        private java.util.List < DataDisk> dataDisk; 
+        private java.util.List<DataDisk> dataDisk; 
         private Boolean dryRun; 
         private String imageId; 
         private String instanceChargeType; 
@@ -380,7 +385,7 @@ public class CreateTCInstanceRequest extends Request {
         private Long resourceOwnerId; 
         private String securityGroupId; 
         private String securityToken; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String vSwitchId; 
         private String vpcId; 
         private String zoneId; 
@@ -477,7 +482,7 @@ public class CreateTCInstanceRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder dataDisk(java.util.List < DataDisk> dataDisk) {
+        public Builder dataDisk(java.util.List<DataDisk> dataDisk) {
             this.putQueryParameter("DataDisk", dataDisk);
             this.dataDisk = dataDisk;
             return this;
@@ -636,7 +641,7 @@ public class CreateTCInstanceRequest extends Request {
         /**
          * Tag.
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -735,6 +740,15 @@ public class CreateTCInstanceRequest extends Request {
             private String performanceLevel; 
             private Integer size; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataDisk model) {
+                this.category = model.category;
+                this.performanceLevel = model.performanceLevel;
+                this.size = model.size;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              * 
@@ -818,6 +832,14 @@ public class CreateTCInstanceRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * Key.

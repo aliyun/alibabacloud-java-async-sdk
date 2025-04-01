@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateGlobalSecurityIPGroupResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("GlobalSecurityIPGroup")
-    private java.util.List < GlobalSecurityIPGroup> globalSecurityIPGroup;
+    private java.util.List<GlobalSecurityIPGroup> globalSecurityIPGroup;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -31,10 +36,14 @@ public class CreateGlobalSecurityIPGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return globalSecurityIPGroup
      */
-    public java.util.List < GlobalSecurityIPGroup> getGlobalSecurityIPGroup() {
+    public java.util.List<GlobalSecurityIPGroup> getGlobalSecurityIPGroup() {
         return this.globalSecurityIPGroup;
     }
 
@@ -46,13 +55,21 @@ public class CreateGlobalSecurityIPGroupResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < GlobalSecurityIPGroup> globalSecurityIPGroup; 
+        private java.util.List<GlobalSecurityIPGroup> globalSecurityIPGroup; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateGlobalSecurityIPGroupResponseBody model) {
+            this.globalSecurityIPGroup = model.globalSecurityIPGroup;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the global IP whitelist template.</p>
          */
-        public Builder globalSecurityIPGroup(java.util.List < GlobalSecurityIPGroup> globalSecurityIPGroup) {
+        public Builder globalSecurityIPGroup(java.util.List<GlobalSecurityIPGroup> globalSecurityIPGroup) {
             this.globalSecurityIPGroup = globalSecurityIPGroup;
             return this;
         }
@@ -141,6 +158,16 @@ public class CreateGlobalSecurityIPGroupResponseBody extends TeaModel {
             private String globalIgName; 
             private String globalSecurityGroupId; 
             private String regionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(GlobalSecurityIPGroup model) {
+                this.gIpList = model.gIpList;
+                this.globalIgName = model.globalIgName;
+                this.globalSecurityGroupId = model.globalSecurityGroupId;
+                this.regionId = model.regionId;
+            } 
 
             /**
              * <p>The IP addresses in the IP whitelist template.</p>

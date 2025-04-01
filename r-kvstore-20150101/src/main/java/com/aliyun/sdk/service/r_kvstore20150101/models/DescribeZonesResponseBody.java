@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class DescribeZonesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,6 +57,14 @@ public class DescribeZonesResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Zones zones; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeZonesResponseBody model) {
+            this.requestId = model.requestId;
+            this.zones = model.zones;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -166,11 +183,23 @@ public class DescribeZonesResponseBody extends TeaModel {
             private String zoneId; 
             private String zoneName; 
 
+            private Builder() {
+            } 
+
+            private Builder(KVStoreZone model) {
+                this.disabled = model.disabled;
+                this.isRds = model.isRds;
+                this.regionId = model.regionId;
+                this.switchNetwork = model.switchNetwork;
+                this.zoneId = model.zoneId;
+                this.zoneName = model.zoneName;
+            } 
+
             /**
-             * <p>Indicates whether ApsaraDB for Redis instances can be created in the current zone. Valid values:</p>
+             * <p>Indicates whether Tair (Redis OSS-compatible) instances can be created in the current zone. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: ApsaraDB for Redis instances cannot be created in the current zone.</li>
-             * <li><strong>false</strong>: ApsaraDB for Redis instances can be created in the current zone.</li>
+             * <li><strong>true</strong>: Tair (Redis OSS-compatible) instances cannot be created in the current zone.</li>
+             * <li><strong>false</strong>: Tair (Redis OSS-compatible) instances can be created in the current zone.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -182,7 +211,7 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the zone is managed by ApsaraDB RDS. The return value of this parameter is <strong>true</strong> in ApsaraDB for Redis.</p>
+             * <p>Indicates whether the zone is managed by ApsaraDB RDS. The return value of this parameter is <strong>true</strong> in Tair (Redis OSS-compatible).</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -255,7 +284,7 @@ public class DescribeZonesResponseBody extends TeaModel {
      */
     public static class Zones extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("KVStoreZone")
-        private java.util.List < KVStoreZone> KVStoreZone;
+        private java.util.List<KVStoreZone> KVStoreZone;
 
         private Zones(Builder builder) {
             this.KVStoreZone = builder.KVStoreZone;
@@ -272,17 +301,24 @@ public class DescribeZonesResponseBody extends TeaModel {
         /**
          * @return KVStoreZone
          */
-        public java.util.List < KVStoreZone> getKVStoreZone() {
+        public java.util.List<KVStoreZone> getKVStoreZone() {
             return this.KVStoreZone;
         }
 
         public static final class Builder {
-            private java.util.List < KVStoreZone> KVStoreZone; 
+            private java.util.List<KVStoreZone> KVStoreZone; 
+
+            private Builder() {
+            } 
+
+            private Builder(Zones model) {
+                this.KVStoreZone = model.KVStoreZone;
+            } 
 
             /**
              * KVStoreZone.
              */
-            public Builder KVStoreZone(java.util.List < KVStoreZone> KVStoreZone) {
+            public Builder KVStoreZone(java.util.List<KVStoreZone> KVStoreZone) {
                 this.KVStoreZone = KVStoreZone;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -103,7 +108,7 @@ public class DescribeInstancesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VSwitchId")
@@ -155,7 +160,7 @@ public class DescribeInstancesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -317,7 +322,7 @@ public class DescribeInstancesRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -365,7 +370,7 @@ public class DescribeInstancesRequest extends Request {
         private Long resourceOwnerId; 
         private String searchKey; 
         private String securityToken; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String vSwitchId; 
         private String vpcId; 
         private String zoneId; 
@@ -422,7 +427,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * <p>The billing method. Valid values:</p>
+         * <p>The billing method of the instance. Valid values:</p>
          * <ul>
          * <li><strong>PrePaid</strong>: subscription</li>
          * <li><strong>PostPaid</strong>: pay-as-you-go</li>
@@ -440,8 +445,8 @@ public class DescribeInstancesRequest extends Request {
         /**
          * <p>The edition of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>Community</strong>: ApsaraDB for Redis Community Edition</li>
-         * <li><strong>Enterprise</strong>: ApsaraDB for Redis Enhanced Edition (Tair)</li>
+         * <li><strong>Community</strong>: Redis Open-Source Edition</li>
+         * <li><strong>Enterprise</strong>: Tair (Enterprise Edition)</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -454,8 +459,8 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * <p>The engine version of the instance. Valid values: <strong>2.8</strong>, <strong>4.0</strong>, and <strong>5.0</strong>.</p>
-         * <p>Valid values:</p>
+         * <p>The database engine version of the instance. Valid values: <strong>2.8</strong>, <strong>4.0</strong>, <strong>5.0</strong>, <strong>6.0</strong>, and <strong>7.0</strong>.</p>
+         * <p>Enumerated values:</p>
          * <ul>
          * <li>1.0</li>
          * <li>2.8</li>
@@ -566,10 +571,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * <p>The database engine of the instance. Valid values:</p>
+         * <p>The database engine. Valid values:</p>
          * <ul>
-         * <li><strong>Tair</strong></li>
-         * <li><strong>Redis</strong></li>
+         * <li><strong>Tair</strong>: Tair (Enterprise Edition)</li>
+         * <li><strong>Redis</strong>: Redis Open-Source Edition</li>
          * <li><strong>Memcache</strong></li>
          * </ul>
          * 
@@ -670,7 +675,7 @@ public class DescribeInstancesRequest extends Request {
         /**
          * <p>The ID of the resource group to which the instance belongs.</p>
          * <blockquote>
-         * <p>You can query resource group IDs by using the ApsaraDB for Redis console or by calling the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</p>
+         * <p>You can query resource group IDs by using the Tair (Redis OSS-compatible) console or by calling the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -724,7 +729,7 @@ public class DescribeInstancesRequest extends Request {
         /**
          * <p>The tags of the instance.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -816,6 +821,14 @@ public class DescribeInstancesRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key. A tag is a key-value pair.</p>

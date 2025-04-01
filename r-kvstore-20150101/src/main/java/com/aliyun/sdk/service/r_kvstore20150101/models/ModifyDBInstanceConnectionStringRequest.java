@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -82,7 +87,7 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -281,9 +286,9 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * <p>The port number that is used to connect to the instance. Valid values: <strong>1024</strong> to <strong>65535</strong>.</p>
+         * <p>The port number of the instance. Valid values: <strong>1024</strong> to <strong>65535</strong>.</p>
          * <blockquote>
-         * <p>You must specify one of the <strong>NewConnectionString</strong> and <strong>Port</strong> parameters.</p>
+         * <p> You must specify one of the <strong>NewConnectionString</strong> and <strong>Port</strong> parameters.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

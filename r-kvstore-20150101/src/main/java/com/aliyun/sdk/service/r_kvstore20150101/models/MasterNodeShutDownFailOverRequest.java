@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -60,7 +65,7 @@ public class MasterNodeShutDownFailOverRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -179,8 +184,15 @@ public class MasterNodeShutDownFailOverRequest extends Request {
 
         /**
          * <ul>
-         * <li>Safe: safe shutdown. This mode involves using redis_safe to shut down the Redis process.</li>
-         * <li>UnSafe: non-secure shutdown. This mode involves using the shutdown command to shut down the Redis process.</li>
+         * <li><strong>Hard</strong>: stimulates a hardware failure that cannot be recovered. In this case, a high-availability switchover is triggered.</li>
+         * <li><strong>Soft</strong> (default): stimulates a hardware failure that can be recovered. In this case, the system first attempts to recover the faulty node. If the attempt fails, a high-availability switchover is triggered.</li>
+         * </ul>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Safe</li>
+         * <li>UnSafe</li>
+         * <li>Hard</li>
+         * <li>Soft</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -193,7 +205,7 @@ public class MasterNodeShutDownFailOverRequest extends Request {
         }
 
         /**
-         * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/60933.html">DescribeInstances</a> operation to query the instance ID.</p>
+         * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to query the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

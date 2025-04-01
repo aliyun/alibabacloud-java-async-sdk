@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeHistoryTasksResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Items")
-    private java.util.List < Items> items;
+    private java.util.List<Items> items;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -43,10 +48,14 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
-    public java.util.List < Items> getItems() {
+    public java.util.List<Items> getItems() {
         return this.items;
     }
 
@@ -79,16 +88,27 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Items> items; 
+        private java.util.List<Items> items; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeHistoryTasksResponseBody model) {
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
          * <p>The queried task objects.</p>
          */
-        public Builder items(java.util.List < Items> items) {
+        public Builder items(java.util.List<Items> items) {
             this.items = items;
             return this;
         }
@@ -196,7 +216,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         private String startTime;
 
         @com.aliyun.core.annotation.NameInMap("Status")
-        private Integer status;
+        private String status;
 
         @com.aliyun.core.annotation.NameInMap("TaskDetail")
         private String taskDetail;
@@ -349,7 +369,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         /**
          * @return status
          */
-        public Integer getStatus() {
+        public String getStatus() {
             return this.status;
         }
 
@@ -397,11 +417,37 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             private String regionId; 
             private Integer remainTime; 
             private String startTime; 
-            private Integer status; 
+            private String status; 
             private String taskDetail; 
             private String taskId; 
             private String taskType; 
             private String uid; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.actionInfo = model.actionInfo;
+                this.callerSource = model.callerSource;
+                this.callerUid = model.callerUid;
+                this.currentStepName = model.currentStepName;
+                this.dbType = model.dbType;
+                this.endTime = model.endTime;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.instanceType = model.instanceType;
+                this.product = model.product;
+                this.progress = model.progress;
+                this.reasonCode = model.reasonCode;
+                this.regionId = model.regionId;
+                this.remainTime = model.remainTime;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.taskDetail = model.taskDetail;
+                this.taskId = model.taskId;
+                this.taskType = model.taskType;
+                this.uid = model.uid;
+            } 
 
             /**
              * <p>A set of allowed actions that can be taken on the task. The system matches the current step name and status of the task to the available actions specified by ActionInfo. If no matching action is found, the current status of the task does not support any action. Example:</p>
@@ -557,6 +603,9 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
 
             /**
              * <p>The reason why the current task was initiated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UpgradeMinorVersion</p>
              */
             public Builder reasonCode(String reasonCode) {
                 this.reasonCode = reasonCode;
@@ -611,7 +660,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>Running</p>
              */
-            public Builder status(Integer status) {
+            public Builder status(String status) {
                 this.status = status;
                 return this;
             }

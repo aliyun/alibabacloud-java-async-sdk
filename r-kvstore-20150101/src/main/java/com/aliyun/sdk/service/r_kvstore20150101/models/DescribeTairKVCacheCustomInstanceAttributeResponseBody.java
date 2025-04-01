@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -81,6 +86,9 @@ public class DescribeTairKVCacheCustomInstanceAttributeResponseBody extends TeaM
     @com.aliyun.core.annotation.NameInMap("Tags")
     private Tags tags;
 
+    @com.aliyun.core.annotation.NameInMap("UseEni")
+    private Boolean useEni;
+
     @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private String vSwitchId;
 
@@ -117,6 +125,7 @@ public class DescribeTairKVCacheCustomInstanceAttributeResponseBody extends TeaM
         this.storage = builder.storage;
         this.storageType = builder.storageType;
         this.tags = builder.tags;
+        this.useEni = builder.useEni;
         this.vSwitchId = builder.vSwitchId;
         this.vpcId = builder.vpcId;
         this.zoneId = builder.zoneId;
@@ -129,6 +138,10 @@ public class DescribeTairKVCacheCustomInstanceAttributeResponseBody extends TeaM
 
     public static DescribeTairKVCacheCustomInstanceAttributeResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -293,6 +306,13 @@ public class DescribeTairKVCacheCustomInstanceAttributeResponseBody extends TeaM
     }
 
     /**
+     * @return useEni
+     */
+    public Boolean getUseEni() {
+        return this.useEni;
+    }
+
+    /**
      * @return vSwitchId
      */
     public String getVSwitchId() {
@@ -344,10 +364,45 @@ public class DescribeTairKVCacheCustomInstanceAttributeResponseBody extends TeaM
         private Long storage; 
         private String storageType; 
         private Tags tags; 
+        private Boolean useEni; 
         private String vSwitchId; 
         private String vpcId; 
         private String zoneId; 
         private String zoneType; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTairKVCacheCustomInstanceAttributeResponseBody model) {
+            this.architectureType = model.architectureType;
+            this.chargeType = model.chargeType;
+            this.cpu = model.cpu;
+            this.createTime = model.createTime;
+            this.disks = model.disks;
+            this.endTime = model.endTime;
+            this.imageId = model.imageId;
+            this.instanceClass = model.instanceClass;
+            this.instanceId = model.instanceId;
+            this.instanceName = model.instanceName;
+            this.instanceStatus = model.instanceStatus;
+            this.instanceType = model.instanceType;
+            this.isOrderCompleted = model.isOrderCompleted;
+            this.memory = model.memory;
+            this.networkType = model.networkType;
+            this.privateIp = model.privateIp;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+            this.securityGroupId = model.securityGroupId;
+            this.storage = model.storage;
+            this.storageType = model.storageType;
+            this.tags = model.tags;
+            this.useEni = model.useEni;
+            this.vSwitchId = model.vSwitchId;
+            this.vpcId = model.vpcId;
+            this.zoneId = model.zoneId;
+            this.zoneType = model.zoneType;
+        } 
 
         /**
          * ArchitectureType.
@@ -534,6 +589,14 @@ public class DescribeTairKVCacheCustomInstanceAttributeResponseBody extends TeaM
         }
 
         /**
+         * UseEni.
+         */
+        public Builder useEni(Boolean useEni) {
+            this.useEni = useEni;
+            return this;
+        }
+
+        /**
          * VSwitchId.
          */
         public Builder vSwitchId(String vSwitchId) {
@@ -627,6 +690,15 @@ public class DescribeTairKVCacheCustomInstanceAttributeResponseBody extends TeaM
             private String size; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Disk model) {
+                this.diskId = model.diskId;
+                this.size = model.size;
+                this.type = model.type;
+            } 
+
             /**
              * DiskId.
              */
@@ -666,7 +738,7 @@ public class DescribeTairKVCacheCustomInstanceAttributeResponseBody extends TeaM
      */
     public static class Disks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Disk")
-        private java.util.List < Disk> disk;
+        private java.util.List<Disk> disk;
 
         private Disks(Builder builder) {
             this.disk = builder.disk;
@@ -683,17 +755,24 @@ public class DescribeTairKVCacheCustomInstanceAttributeResponseBody extends TeaM
         /**
          * @return disk
          */
-        public java.util.List < Disk> getDisk() {
+        public java.util.List<Disk> getDisk() {
             return this.disk;
         }
 
         public static final class Builder {
-            private java.util.List < Disk> disk; 
+            private java.util.List<Disk> disk; 
+
+            private Builder() {
+            } 
+
+            private Builder(Disks model) {
+                this.disk = model.disk;
+            } 
 
             /**
              * Disk.
              */
-            public Builder disk(java.util.List < Disk> disk) {
+            public Builder disk(java.util.List<Disk> disk) {
                 this.disk = disk;
                 return this;
             }
@@ -749,6 +828,14 @@ public class DescribeTairKVCacheCustomInstanceAttributeResponseBody extends TeaM
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * Key.
              */
@@ -780,7 +867,7 @@ public class DescribeTairKVCacheCustomInstanceAttributeResponseBody extends TeaM
      */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -797,17 +884,24 @@ public class DescribeTairKVCacheCustomInstanceAttributeResponseBody extends TeaM
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }

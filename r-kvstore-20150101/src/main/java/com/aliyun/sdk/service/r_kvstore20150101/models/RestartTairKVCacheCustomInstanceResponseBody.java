@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,6 +40,10 @@ public class RestartTairKVCacheCustomInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceId
      */
@@ -60,6 +69,15 @@ public class RestartTairKVCacheCustomInstanceResponseBody extends TeaModel {
         private String instanceId; 
         private String requestId; 
         private String taskId; 
+
+        private Builder() {
+        } 
+
+        private Builder(RestartTairKVCacheCustomInstanceResponseBody model) {
+            this.instanceId = model.instanceId;
+            this.requestId = model.requestId;
+            this.taskId = model.taskId;
+        } 
 
         /**
          * InstanceId.

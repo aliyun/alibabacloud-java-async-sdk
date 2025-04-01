@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -75,7 +80,7 @@ public class ModifyInstanceAttributeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -215,13 +220,13 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * <p><a href="https://help.aliyun.com/document_detail/165005.html">The release protection state of the instance.</a> Valid values:</p>
+         * <p><a href="https://help.aliyun.com/document_detail/165005.html">Specifies whether to enable release protection for the instance.</a> Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: enabled</li>
-         * <li><strong>false</strong>: disabled</li>
+         * <li><strong>true</strong>: enables release protection.</li>
+         * <li><strong>false</strong>: disables release protection.</li>
          * </ul>
          * <blockquote>
-         * <p>This parameter is available only for pay-as-you-go instances.</p>
+         * <p> This parameter is available only for pay-as-you-go instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

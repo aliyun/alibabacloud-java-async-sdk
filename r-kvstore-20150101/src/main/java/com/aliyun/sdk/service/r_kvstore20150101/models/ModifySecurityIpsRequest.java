@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -76,7 +81,7 @@ public class ModifySecurityIpsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -197,7 +202,7 @@ public class ModifySecurityIpsRequest extends Request {
         /**
          * <p>The method that is used to modify the whitelist. Valid values:</p>
          * <ul>
-         * <li><strong>Cover</strong>: overwrites the original whitelist.</li>
+         * <li><strong>Cover</strong> (default): overwrites the original whitelist.</li>
          * <li><strong>Append</strong>: appends data to the whitelist.</li>
          * <li><strong>Delete</strong>: deletes the whitelist.</li>
          * </ul>

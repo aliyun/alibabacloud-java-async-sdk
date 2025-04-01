@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,10 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeCacheAnalysisReportResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("BigKeys")
-    private java.util.List < java.util.Map<String, ?>> bigKeys;
+    private java.util.List<java.util.Map<String, ?>> bigKeys;
 
     @com.aliyun.core.annotation.NameInMap("HotKeys")
-    private java.util.List < java.util.Map<String, ?>> hotKeys;
+    private java.util.List<java.util.Map<String, ?>> hotKeys;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -51,17 +56,21 @@ public class DescribeCacheAnalysisReportResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bigKeys
      */
-    public java.util.List < java.util.Map<String, ?>> getBigKeys() {
+    public java.util.List<java.util.Map<String, ?>> getBigKeys() {
         return this.bigKeys;
     }
 
     /**
      * @return hotKeys
      */
-    public java.util.List < java.util.Map<String, ?>> getHotKeys() {
+    public java.util.List<java.util.Map<String, ?>> getHotKeys() {
         return this.hotKeys;
     }
 
@@ -101,18 +110,31 @@ public class DescribeCacheAnalysisReportResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < java.util.Map<String, ?>> bigKeys; 
-        private java.util.List < java.util.Map<String, ?>> hotKeys; 
+        private java.util.List<java.util.Map<String, ?>> bigKeys; 
+        private java.util.List<java.util.Map<String, ?>> hotKeys; 
         private Integer pageNumber; 
         private Integer pageRecordCount; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalRecordCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeCacheAnalysisReportResponseBody model) {
+            this.bigKeys = model.bigKeys;
+            this.hotKeys = model.hotKeys;
+            this.pageNumber = model.pageNumber;
+            this.pageRecordCount = model.pageRecordCount;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
+
         /**
          * <p>Details of the large keys.</p>
          */
-        public Builder bigKeys(java.util.List < java.util.Map<String, ?>> bigKeys) {
+        public Builder bigKeys(java.util.List<java.util.Map<String, ?>> bigKeys) {
             this.bigKeys = bigKeys;
             return this;
         }
@@ -120,10 +142,10 @@ public class DescribeCacheAnalysisReportResponseBody extends TeaModel {
         /**
          * <p>Details of the hotkeys.</p>
          * <blockquote>
-         * <p>This parameter is not returned because ApsaraDB for Redis does not support hotkey analytics.</p>
+         * <p>This parameter is not returned because Tair (Redis OSS-compatible) does not support hotkey analytics.</p>
          * </blockquote>
          */
-        public Builder hotKeys(java.util.List < java.util.Map<String, ?>> hotKeys) {
+        public Builder hotKeys(java.util.List<java.util.Map<String, ?>> hotKeys) {
             this.hotKeys = hotKeys;
             return this;
         }

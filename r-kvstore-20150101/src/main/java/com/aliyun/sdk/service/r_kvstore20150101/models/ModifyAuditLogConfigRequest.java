@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -71,7 +76,7 @@ public class ModifyAuditLogConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -196,7 +201,7 @@ public class ModifyAuditLogConfigRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/60933.html">DescribeInstances</a> operation to query the ID of the instance.</p>
+         * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to query the ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -247,11 +252,13 @@ public class ModifyAuditLogConfigRequest extends Request {
         /**
          * <p>The retention period of audit logs. Valid values: <strong>1</strong> to <strong>365</strong>. Unit: days.</p>
          * <blockquote>
-         * <ul>
-         * <li>This parameter is required only if the <strong>DbAudit</strong> parameter is set to <strong>true</strong>.</li>
-         * <li>The value of this parameter takes effect for all ApsaraDB for Redis instances in the current region.</li>
-         * </ul>
          * </blockquote>
+         * <ul>
+         * <li><p>This parameter is required only when the <strong>DbAudit</strong> parameter is set to <strong>true</strong>.</p>
+         * </li>
+         * <li><p>The value of this parameter takes effect for all instances in the current region.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>10</p>

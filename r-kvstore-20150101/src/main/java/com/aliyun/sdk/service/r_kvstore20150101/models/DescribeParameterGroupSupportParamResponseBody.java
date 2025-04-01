@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeParameterGroupSupportParamResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("ResourceList")
-    private java.util.List < ResourceList> resourceList;
+    private java.util.List<ResourceList> resourceList;
 
     private DescribeParameterGroupSupportParamResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -31,6 +36,10 @@ public class DescribeParameterGroupSupportParamResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -41,13 +50,21 @@ public class DescribeParameterGroupSupportParamResponseBody extends TeaModel {
     /**
      * @return resourceList
      */
-    public java.util.List < ResourceList> getResourceList() {
+    public java.util.List<ResourceList> getResourceList() {
         return this.resourceList;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < ResourceList> resourceList; 
+        private java.util.List<ResourceList> resourceList; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeParameterGroupSupportParamResponseBody model) {
+            this.requestId = model.requestId;
+            this.resourceList = model.resourceList;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -63,7 +80,7 @@ public class DescribeParameterGroupSupportParamResponseBody extends TeaModel {
         /**
          * <p>The parameters.</p>
          */
-        public Builder resourceList(java.util.List < ResourceList> resourceList) {
+        public Builder resourceList(java.util.List<ResourceList> resourceList) {
             this.resourceList = resourceList;
             return this;
         }
@@ -141,6 +158,16 @@ public class DescribeParameterGroupSupportParamResponseBody extends TeaModel {
             private String dbType; 
             private String dbVersion; 
             private String paramName; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceList model) {
+                this.category = model.category;
+                this.dbType = model.dbType;
+                this.dbVersion = model.dbVersion;
+                this.paramName = model.paramName;
+            } 
 
             /**
              * <p>The service category.</p>

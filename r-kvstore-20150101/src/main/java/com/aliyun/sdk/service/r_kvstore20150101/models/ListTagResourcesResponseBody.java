@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,6 +40,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextToken
      */
@@ -61,6 +70,15 @@ public class ListTagResourcesResponseBody extends TeaModel {
         private String requestId; 
         private TagResources tagResources; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListTagResourcesResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.tagResources = model.tagResources;
+        } 
+
         /**
          * <p>The token required to obtain more results. If a query does not return all results, in the next query, you can provide the token returned by the previous query to obtain more results.</p>
          * 
@@ -84,7 +102,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Details of the instances and tags.</p>
+         * <p>Details about the instances and tags.</p>
          */
         public Builder tagResources(TagResources tagResources) {
             this.tagResources = tagResources;
@@ -165,6 +183,16 @@ public class ListTagResourcesResponseBody extends TeaModel {
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(TagResource model) {
+                this.resourceId = model.resourceId;
+                this.resourceType = model.resourceType;
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
              * <p>The resource ID, which is also the ID of the instance.</p>
              * 
@@ -177,7 +205,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource type. The return value is <strong>ALIYUN::KVSTORE::INSTANCE</strong>. This value indicates an ApsaraDB for Redis instance.</p>
+             * <p>The resource type. The return value is <strong>ALIYUN::KVSTORE::INSTANCE</strong>. This value indicates a Tair (Redis OSS-compatible) instance.</p>
              * 
              * <strong>example:</strong>
              * <p>ALIYUN::KVSTORE::INSTANCE</p>
@@ -224,7 +252,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
      */
     public static class TagResources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagResource")
-        private java.util.List < TagResource> tagResource;
+        private java.util.List<TagResource> tagResource;
 
         private TagResources(Builder builder) {
             this.tagResource = builder.tagResource;
@@ -241,17 +269,24 @@ public class ListTagResourcesResponseBody extends TeaModel {
         /**
          * @return tagResource
          */
-        public java.util.List < TagResource> getTagResource() {
+        public java.util.List<TagResource> getTagResource() {
             return this.tagResource;
         }
 
         public static final class Builder {
-            private java.util.List < TagResource> tagResource; 
+            private java.util.List<TagResource> tagResource; 
+
+            private Builder() {
+            } 
+
+            private Builder(TagResources model) {
+                this.tagResource = model.tagResource;
+            } 
 
             /**
              * TagResource.
              */
-            public Builder tagResource(java.util.List < TagResource> tagResource) {
+            public Builder tagResource(java.util.List<TagResource> tagResource) {
                 this.tagResource = tagResource;
                 return this;
             }

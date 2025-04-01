@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeClusterMemberInfoResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ClusterChildren")
-    private java.util.List < ClusterChildren> clusterChildren;
+    private java.util.List<ClusterChildren> clusterChildren;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -31,10 +36,14 @@ public class DescribeClusterMemberInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clusterChildren
      */
-    public java.util.List < ClusterChildren> getClusterChildren() {
+    public java.util.List<ClusterChildren> getClusterChildren() {
         return this.clusterChildren;
     }
 
@@ -46,13 +55,21 @@ public class DescribeClusterMemberInfoResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ClusterChildren> clusterChildren; 
+        private java.util.List<ClusterChildren> clusterChildren; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeClusterMemberInfoResponseBody model) {
+            this.clusterChildren = model.clusterChildren;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>Details of nodes in the cluster instance.</p>
+         * <p>Details about data nodes in the cluster instance.</p>
          */
-        public Builder clusterChildren(java.util.List < ClusterChildren> clusterChildren) {
+        public Builder clusterChildren(java.util.List<ClusterChildren> clusterChildren) {
             this.clusterChildren = clusterChildren;
             return this;
         }
@@ -274,6 +291,27 @@ public class DescribeClusterMemberInfoResponseBody extends TeaModel {
             private String serviceVersion; 
             private String userId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ClusterChildren model) {
+                this.bandWidth = model.bandWidth;
+                this.binlogRetentionDays = model.binlogRetentionDays;
+                this.bizType = model.bizType;
+                this.capacity = model.capacity;
+                this.classCode = model.classCode;
+                this.connections = model.connections;
+                this.currentBandWidth = model.currentBandWidth;
+                this.diskSizeMB = model.diskSizeMB;
+                this.id = model.id;
+                this.name = model.name;
+                this.replicaSize = model.replicaSize;
+                this.resourceGroupName = model.resourceGroupName;
+                this.service = model.service;
+                this.serviceVersion = model.serviceVersion;
+                this.userId = model.userId;
+            } 
+
             /**
              * <p>The maximum bandwidth of the node. Unit: MB/s.</p>
              * <blockquote>
@@ -347,10 +385,7 @@ public class DescribeClusterMemberInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The current bandwidth of the node, which consists of the default bandwidth and the increased bandwidth. Unit: MB/s.</p>
-             * <blockquote>
-             * <p>This parameter is returned only if the instance is created in a dedicated cluster.</p>
-             * </blockquote>
+             * <p>The current bandwidth of the data node, which is the sum of the default bandwidth and any extra bandwidth that is purchased. Unit: Mbit/s.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>

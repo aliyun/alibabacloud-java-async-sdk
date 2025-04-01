@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -83,7 +88,7 @@ public class ModifyAccountPasswordRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -207,7 +212,7 @@ public class ModifyAccountPasswordRequest extends Request {
         }
 
         /**
-         * <p>The username of the account for which you want to change the password. You can call the <a href="https://help.aliyun.com/document_detail/95802.html">DescribeAccounts</a> operation to query the username of the account.</p>
+         * <p>The username of the account for which you want to change the password. You can call the <a href="https://help.aliyun.com/document_detail/473816.html">DescribeAccounts</a> operation to query the username of the account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -248,7 +253,7 @@ public class ModifyAccountPasswordRequest extends Request {
         /**
          * <p>The current password of the account.</p>
          * <blockquote>
-         * <p>If you forget your password, you can call the <a href="https://help.aliyun.com/document_detail/95941.html">ResetAccountPassword</a> operation to reset your password.</p>
+         * <p>If you forget your password, you can call the <a href="https://help.aliyun.com/document_detail/473815.html">ResetAccountPassword</a> operation to reset your password.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -307,7 +312,10 @@ public class ModifyAccountPasswordRequest extends Request {
         }
 
         /**
-         * SourceBiz.
+         * <p>This parameter is used only for internal maintenance. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SDK</p>
          */
         public Builder sourceBiz(String sourceBiz) {
             this.putQueryParameter("SourceBiz", sourceBiz);

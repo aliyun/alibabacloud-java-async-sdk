@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -65,6 +70,10 @@ public class DescribeEncryptionKeyResponseBody extends TeaModel {
 
     public static DescribeEncryptionKeyResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -156,6 +165,23 @@ public class DescribeEncryptionKeyResponseBody extends TeaModel {
         private String origin; 
         private String requestId; 
         private String roleArn; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeEncryptionKeyResponseBody model) {
+            this.creator = model.creator;
+            this.deleteDate = model.deleteDate;
+            this.description = model.description;
+            this.encryptionKey = model.encryptionKey;
+            this.encryptionKeyStatus = model.encryptionKeyStatus;
+            this.encryptionName = model.encryptionName;
+            this.keyUsage = model.keyUsage;
+            this.materialExpireTime = model.materialExpireTime;
+            this.origin = model.origin;
+            this.requestId = model.requestId;
+            this.roleArn = model.roleArn;
+        } 
 
         /**
          * <p>The ID of the Alibaba Cloud account that is used to create the custom key.</p>

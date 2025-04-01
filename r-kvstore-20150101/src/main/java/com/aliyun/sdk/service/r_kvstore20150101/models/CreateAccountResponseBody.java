@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,6 +40,10 @@ public class CreateAccountResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return acountName
      */
@@ -60,6 +69,15 @@ public class CreateAccountResponseBody extends TeaModel {
         private String acountName; 
         private String instanceId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateAccountResponseBody model) {
+            this.acountName = model.acountName;
+            this.instanceId = model.instanceId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The name of the account.</p>

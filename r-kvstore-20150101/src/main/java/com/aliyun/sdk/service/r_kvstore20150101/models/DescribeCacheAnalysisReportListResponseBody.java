@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,6 +40,10 @@ public class DescribeCacheAnalysisReportListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dailyTasks
      */
@@ -61,8 +70,17 @@ public class DescribeCacheAnalysisReportListResponseBody extends TeaModel {
         private String instanceId; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeCacheAnalysisReportListResponseBody model) {
+            this.dailyTasks = model.dailyTasks;
+            this.instanceId = model.instanceId;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>Details of the offline key analytics tasks.</p>
+         * <p>The list of the offline key analysis reports.</p>
          */
         public Builder dailyTasks(DailyTasks dailyTasks) {
             this.dailyTasks = dailyTasks;
@@ -165,6 +183,16 @@ public class DescribeCacheAnalysisReportListResponseBody extends TeaModel {
             private String status; 
             private String taskId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Task model) {
+                this.nodeId = model.nodeId;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.taskId = model.taskId;
+            } 
+
             /**
              * <p>The ID of the child node in the cluster instance.</p>
              * 
@@ -228,7 +256,7 @@ public class DescribeCacheAnalysisReportListResponseBody extends TeaModel {
      */
     public static class Tasks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Task")
-        private java.util.List < Task> task;
+        private java.util.List<Task> task;
 
         private Tasks(Builder builder) {
             this.task = builder.task;
@@ -245,17 +273,24 @@ public class DescribeCacheAnalysisReportListResponseBody extends TeaModel {
         /**
          * @return task
          */
-        public java.util.List < Task> getTask() {
+        public java.util.List<Task> getTask() {
             return this.task;
         }
 
         public static final class Builder {
-            private java.util.List < Task> task; 
+            private java.util.List<Task> task; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tasks model) {
+                this.task = model.task;
+            } 
 
             /**
              * Task.
              */
-            public Builder task(java.util.List < Task> task) {
+            public Builder task(java.util.List<Task> task) {
                 this.task = task;
                 return this;
             }
@@ -311,6 +346,14 @@ public class DescribeCacheAnalysisReportListResponseBody extends TeaModel {
             private String date; 
             private Tasks tasks; 
 
+            private Builder() {
+            } 
+
+            private Builder(DailyTask model) {
+                this.date = model.date;
+                this.tasks = model.tasks;
+            } 
+
             /**
              * <p>The date when the offline key analytics task was performed.</p>
              * 
@@ -323,7 +366,7 @@ public class DescribeCacheAnalysisReportListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Details of the offline key analytics tasks.</p>
+             * <p>Details about the offline key analysis reports.</p>
              */
             public Builder tasks(Tasks tasks) {
                 this.tasks = tasks;
@@ -345,7 +388,7 @@ public class DescribeCacheAnalysisReportListResponseBody extends TeaModel {
      */
     public static class DailyTasks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DailyTask")
-        private java.util.List < DailyTask> dailyTask;
+        private java.util.List<DailyTask> dailyTask;
 
         private DailyTasks(Builder builder) {
             this.dailyTask = builder.dailyTask;
@@ -362,17 +405,24 @@ public class DescribeCacheAnalysisReportListResponseBody extends TeaModel {
         /**
          * @return dailyTask
          */
-        public java.util.List < DailyTask> getDailyTask() {
+        public java.util.List<DailyTask> getDailyTask() {
             return this.dailyTask;
         }
 
         public static final class Builder {
-            private java.util.List < DailyTask> dailyTask; 
+            private java.util.List<DailyTask> dailyTask; 
+
+            private Builder() {
+            } 
+
+            private Builder(DailyTasks model) {
+                this.dailyTask = model.dailyTask;
+            } 
 
             /**
              * DailyTask.
              */
-            public Builder dailyTask(java.util.List < DailyTask> dailyTask) {
+            public Builder dailyTask(java.util.List<DailyTask> dailyTask) {
                 this.dailyTask = dailyTask;
                 return this;
             }

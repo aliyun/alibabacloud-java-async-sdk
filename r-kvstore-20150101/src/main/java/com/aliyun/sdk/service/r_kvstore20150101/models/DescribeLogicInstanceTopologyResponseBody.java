@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -39,6 +44,10 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceId
      */
@@ -73,6 +82,16 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
         private RedisShardList redisShardList; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeLogicInstanceTopologyResponseBody model) {
+            this.instanceId = model.instanceId;
+            this.redisProxyList = model.redisProxyList;
+            this.redisShardList = model.redisShardList;
+            this.requestId = model.requestId;
+        } 
+
         /**
          * <p>The ID of the instance.</p>
          * 
@@ -85,7 +104,7 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about proxy nodes.</p>
+         * <p>The detailed proxy information, including information about proxy nodes.</p>
          */
         public Builder redisProxyList(RedisProxyList redisProxyList) {
             this.redisProxyList = redisProxyList;
@@ -93,7 +112,7 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Details of data shards, including node information such as NodeInfo.</p>
+         * <p>Details of data shards, which includes node information such as NodeInfo.</p>
          */
         public Builder redisShardList(RedisShardList redisShardList) {
             this.redisShardList = redisShardList;
@@ -197,8 +216,19 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
             private String nodeId; 
             private String nodeType; 
 
+            private Builder() {
+            } 
+
+            private Builder(NodeInfo model) {
+                this.bandwidth = model.bandwidth;
+                this.capacity = model.capacity;
+                this.connection = model.connection;
+                this.nodeId = model.nodeId;
+                this.nodeType = model.nodeType;
+            } 
+
             /**
-             * <p>The maximum bandwidth of the node. Unit: Mbit/s.</p>
+             * <p>The bandwidth throttling of the node. Unit: MB/s.</p>
              * 
              * <strong>example:</strong>
              * <p>96</p>
@@ -244,8 +274,8 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
             /**
              * <p>The node type. Valid values:</p>
              * <ul>
-             * <li><strong>db</strong>: a data node.</li>
-             * <li><strong>normal</strong>: a management node, which can be a proxy node or a Configserver node. For specific instances, the return value of this parameter is proxy or cs, instead of normal.</li>
+             * <li><strong>proxy</strong>: proxy node</li>
+             * <li><strong>db</strong>: data node</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -271,7 +301,7 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
      */
     public static class RedisProxyList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NodeInfo")
-        private java.util.List < NodeInfo> nodeInfo;
+        private java.util.List<NodeInfo> nodeInfo;
 
         private RedisProxyList(Builder builder) {
             this.nodeInfo = builder.nodeInfo;
@@ -288,17 +318,24 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
         /**
          * @return nodeInfo
          */
-        public java.util.List < NodeInfo> getNodeInfo() {
+        public java.util.List<NodeInfo> getNodeInfo() {
             return this.nodeInfo;
         }
 
         public static final class Builder {
-            private java.util.List < NodeInfo> nodeInfo; 
+            private java.util.List<NodeInfo> nodeInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(RedisProxyList model) {
+                this.nodeInfo = model.nodeInfo;
+            } 
 
             /**
              * NodeInfo.
              */
-            public Builder nodeInfo(java.util.List < NodeInfo> nodeInfo) {
+            public Builder nodeInfo(java.util.List<NodeInfo> nodeInfo) {
                 this.nodeInfo = nodeInfo;
                 return this;
             }
@@ -402,8 +439,20 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
             private String nodeType; 
             private String subInstanceType; 
 
+            private Builder() {
+            } 
+
+            private Builder(RedisShardListNodeInfo model) {
+                this.bandwidth = model.bandwidth;
+                this.capacity = model.capacity;
+                this.connection = model.connection;
+                this.nodeId = model.nodeId;
+                this.nodeType = model.nodeType;
+                this.subInstanceType = model.subInstanceType;
+            } 
+
             /**
-             * <p>The maximum bandwidth of the node. Unit: Mbit/s.</p>
+             * <p>The bandwidth throttling of the node. Unit: MB/s.</p>
              * 
              * <strong>example:</strong>
              * <p>96</p>
@@ -462,10 +511,10 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the child instance. Valid values:</p>
+             * <p>子实例类型，返回值：</p>
              * <ul>
-             * <li><strong>master</strong>: master node</li>
-             * <li><strong>readonly</strong>: read-only instance</li>
+             * <li><strong>master</strong>：主节点类型。</li>
+             * <li><strong>readonly</strong>：只读实例类型。</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -491,7 +540,7 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
      */
     public static class RedisShardList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NodeInfo")
-        private java.util.List < RedisShardListNodeInfo> nodeInfo;
+        private java.util.List<RedisShardListNodeInfo> nodeInfo;
 
         private RedisShardList(Builder builder) {
             this.nodeInfo = builder.nodeInfo;
@@ -508,17 +557,24 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
         /**
          * @return nodeInfo
          */
-        public java.util.List < RedisShardListNodeInfo> getNodeInfo() {
+        public java.util.List<RedisShardListNodeInfo> getNodeInfo() {
             return this.nodeInfo;
         }
 
         public static final class Builder {
-            private java.util.List < RedisShardListNodeInfo> nodeInfo; 
+            private java.util.List<RedisShardListNodeInfo> nodeInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(RedisShardList model) {
+                this.nodeInfo = model.nodeInfo;
+            } 
 
             /**
              * NodeInfo.
              */
-            public Builder nodeInfo(java.util.List < RedisShardListNodeInfo> nodeInfo) {
+            public Builder nodeInfo(java.util.List<RedisShardListNodeInfo> nodeInfo) {
                 this.nodeInfo = nodeInfo;
                 return this;
             }

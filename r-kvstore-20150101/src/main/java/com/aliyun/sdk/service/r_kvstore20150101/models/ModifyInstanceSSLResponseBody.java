@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,6 +40,10 @@ public class ModifyInstanceSSLResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceId
      */
@@ -61,8 +70,17 @@ public class ModifyInstanceSSLResponseBody extends TeaModel {
         private String requestId; 
         private String taskId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ModifyInstanceSSLResponseBody model) {
+            this.instanceId = model.instanceId;
+            this.requestId = model.requestId;
+            this.taskId = model.taskId;
+        } 
+
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>r-bp1zxszhcgatnx****</p>
@@ -73,7 +91,7 @@ public class ModifyInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>AD7E16AA-6B23-43BF-979C-07D957FB****</p>

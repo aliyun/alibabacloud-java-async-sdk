@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instances
      */
@@ -48,6 +57,14 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     public static final class Builder {
         private Instances instances; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceAttributeResponseBody model) {
+            this.instances = model.instances;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Details about the instances.</p>
@@ -118,6 +135,14 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The tag key.</p>
              * 
@@ -155,7 +180,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
      */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -172,17 +197,24 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -206,6 +238,9 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("AuditLogRetention")
         private String auditLogRetention;
+
+        @com.aliyun.core.annotation.NameInMap("AutoSecondaryZone")
+        private Boolean autoSecondaryZone;
 
         @com.aliyun.core.annotation.NameInMap("AvailabilityValue")
         private String availabilityValue;
@@ -369,6 +404,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         private DBInstanceAttribute(Builder builder) {
             this.architectureType = builder.architectureType;
             this.auditLogRetention = builder.auditLogRetention;
+            this.autoSecondaryZone = builder.autoSecondaryZone;
             this.availabilityValue = builder.availabilityValue;
             this.backupLogStartTime = builder.backupLogStartTime;
             this.bandwidth = builder.bandwidth;
@@ -444,6 +480,13 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
          */
         public String getAuditLogRetention() {
             return this.auditLogRetention;
+        }
+
+        /**
+         * @return autoSecondaryZone
+         */
+        public Boolean getAutoSecondaryZone() {
+            return this.autoSecondaryZone;
         }
 
         /**
@@ -820,6 +863,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public static final class Builder {
             private String architectureType; 
             private String auditLogRetention; 
+            private Boolean autoSecondaryZone; 
             private String availabilityValue; 
             private String backupLogStartTime; 
             private Long bandwidth; 
@@ -874,6 +918,68 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             private String zoneId; 
             private String zoneType; 
 
+            private Builder() {
+            } 
+
+            private Builder(DBInstanceAttribute model) {
+                this.architectureType = model.architectureType;
+                this.auditLogRetention = model.auditLogRetention;
+                this.autoSecondaryZone = model.autoSecondaryZone;
+                this.availabilityValue = model.availabilityValue;
+                this.backupLogStartTime = model.backupLogStartTime;
+                this.bandwidth = model.bandwidth;
+                this.capacity = model.capacity;
+                this.chargeType = model.chargeType;
+                this.cloudType = model.cloudType;
+                this.config = model.config;
+                this.connectionDomain = model.connectionDomain;
+                this.connections = model.connections;
+                this.createTime = model.createTime;
+                this.endTime = model.endTime;
+                this.engine = model.engine;
+                this.engineVersion = model.engineVersion;
+                this.globalInstanceId = model.globalInstanceId;
+                this.hasRenewChangeOrder = model.hasRenewChangeOrder;
+                this.instanceClass = model.instanceClass;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.instanceReleaseProtection = model.instanceReleaseProtection;
+                this.instanceStatus = model.instanceStatus;
+                this.instanceType = model.instanceType;
+                this.isOrderCompleted = model.isOrderCompleted;
+                this.isRds = model.isRds;
+                this.isSupportTDE = model.isSupportTDE;
+                this.maintainEndTime = model.maintainEndTime;
+                this.maintainStartTime = model.maintainStartTime;
+                this.networkType = model.networkType;
+                this.nodeType = model.nodeType;
+                this.packageType = model.packageType;
+                this.port = model.port;
+                this.privateIp = model.privateIp;
+                this.QPS = model.QPS;
+                this.readOnlyCount = model.readOnlyCount;
+                this.realInstanceClass = model.realInstanceClass;
+                this.regionId = model.regionId;
+                this.replicaCount = model.replicaCount;
+                this.replicaId = model.replicaId;
+                this.replicationMode = model.replicationMode;
+                this.resourceGroupId = model.resourceGroupId;
+                this.secondaryZoneId = model.secondaryZoneId;
+                this.securityIPList = model.securityIPList;
+                this.shardCount = model.shardCount;
+                this.slaveReadOnlyCount = model.slaveReadOnlyCount;
+                this.slaveReplicaCount = model.slaveReplicaCount;
+                this.storage = model.storage;
+                this.storageType = model.storageType;
+                this.tags = model.tags;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcAuthMode = model.vpcAuthMode;
+                this.vpcCloudInstanceId = model.vpcCloudInstanceId;
+                this.vpcId = model.vpcId;
+                this.zoneId = model.zoneId;
+                this.zoneType = model.zoneType;
+            } 
+
             /**
              * <p>The architecture of the instance. Valid values:</p>
              * <ul>
@@ -902,6 +1008,21 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
+             * <p>Indicates whether a secondary zone is automatically allocated.</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder autoSecondaryZone(Boolean autoSecondaryZone) {
+                this.autoSecondaryZone = autoSecondaryZone;
+                return this;
+            }
+
+            /**
              * <p>The availability metric of the current month.</p>
              * 
              * <strong>example:</strong>
@@ -919,7 +1040,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
              * <ul>
              * <li><p>This parameter is returned only when the data flashback feature is enabled for the instance. For more information, see <a href="https://help.aliyun.com/document_detail/148479.html">Restore data to a point in time by using the data flashback feature</a>.</p>
              * </li>
-             * <li><p>When you call the <a href="https://help.aliyun.com/document_detail/61083.html">RestoreInstance</a> operation to implement data flashback, you can obtain the earliest point in time for data flashback from the return value of this parameter and set the <strong>RestoreTime</strong> parameter to this point in time.</p>
+             * <li><p>When you call the <a href="https://help.aliyun.com/document_detail/473824.html">RestoreInstance</a> operation to implement data flashback, you can obtain the earliest point in time for data flashback from the return value of this parameter and set the <strong>RestoreTime</strong> parameter to this point in time.</p>
              * </li>
              * </ul>
              * 
@@ -1046,7 +1167,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The database engine version of the instance. Valid values: <strong>2.8</strong>, <strong>4.0</strong>, and <strong>5.0</strong>.</p>
+             * <p>The database engine version of the instance. Valid values: <strong>2.8</strong>, <strong>4.0</strong>, <strong>5.0</strong>, <strong>6.0</strong>, and <strong>7.0</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>4.0</p>
@@ -1059,7 +1180,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             /**
              * <p>The ID of the distributed instance to which the instance belongs.</p>
              * <blockquote>
-             * <p> This parameter is returned only when the ApsaraDB for Redis instance is a child instance of a distributed instance.</p>
+             * <p> This parameter is returned only when the Tair (Redis OSS-compatible) instance is a child instance of a distributed instance.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1213,7 +1334,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             /**
              * <p>Indicates whether the transparent data encryption (TDE) feature is supported for the instance. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: This feature is supported. This feature is available only for <a href="https://help.aliyun.com/document_detail/443827.html">DRAM-based</a> instances that use local disks.</li>
+             * <li><strong>true</strong>: This feature is supported only for DRAM-based classic instances.</li>
              * <li><strong>false</strong>: This feature is not supported.</li>
              * </ul>
              * 
@@ -1342,7 +1463,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             /**
              * <p>If the instance is a cluster instance that uses cloud disks, this parameter indicates the actual instance type of individual shards in the instance. The InstanceClass parameter indicates the virtual instance type.</p>
              * <blockquote>
-             * <p> To query fees for instances of the instance type, you can specify the instance type that is returned by this parameter in the <a href="https://help.aliyun.com/document_detail/95612.html">DescribePrice</a> operation.</p>
+             * <p> To query fees for instances of the instance type, you can specify the instance type that is returned by this parameter in the <a href="https://help.aliyun.com/document_detail/473807.html">DescribePrice</a> operation.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1365,7 +1486,13 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ReplicaCount.
+             * <p>The number of replica nodes in the primary zone.</p>
+             * <blockquote>
+             * <p> The <strong>ReplicaCount</strong> and <strong>SlaveReplicaCount</strong> parameters are applicable only to cloud-native instances. If the instance is a cluster instance, the preceding parameters indicate the number of replica nodes <strong>per node</strong> in the primary and secondary zones of the instance.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder replicaCount(Integer replicaCount) {
                 this.replicaCount = replicaCount;
@@ -1435,7 +1562,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of shards. This parameter is available only for ApsaraDB for Redis instances that are purchased on the China site (aliyun.com).</p>
+             * <p>The number of shards. This parameter is available only for instances that are purchased on the China site (aliyun.com).</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -1457,7 +1584,10 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * SlaveReplicaCount.
+             * <p>The number of replica nodes in the secondary zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder slaveReplicaCount(Integer slaveReplicaCount) {
                 this.slaveReplicaCount = slaveReplicaCount;
@@ -1583,7 +1713,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
      */
     public static class Instances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBInstanceAttribute")
-        private java.util.List < DBInstanceAttribute> DBInstanceAttribute;
+        private java.util.List<DBInstanceAttribute> DBInstanceAttribute;
 
         private Instances(Builder builder) {
             this.DBInstanceAttribute = builder.DBInstanceAttribute;
@@ -1600,17 +1730,24 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         /**
          * @return DBInstanceAttribute
          */
-        public java.util.List < DBInstanceAttribute> getDBInstanceAttribute() {
+        public java.util.List<DBInstanceAttribute> getDBInstanceAttribute() {
             return this.DBInstanceAttribute;
         }
 
         public static final class Builder {
-            private java.util.List < DBInstanceAttribute> DBInstanceAttribute; 
+            private java.util.List<DBInstanceAttribute> DBInstanceAttribute; 
+
+            private Builder() {
+            } 
+
+            private Builder(Instances model) {
+                this.DBInstanceAttribute = model.DBInstanceAttribute;
+            } 
 
             /**
              * DBInstanceAttribute.
              */
-            public Builder DBInstanceAttribute(java.util.List < DBInstanceAttribute> DBInstanceAttribute) {
+            public Builder DBInstanceAttribute(java.util.List<DBInstanceAttribute> DBInstanceAttribute) {
                 this.DBInstanceAttribute = DBInstanceAttribute;
                 return this;
             }

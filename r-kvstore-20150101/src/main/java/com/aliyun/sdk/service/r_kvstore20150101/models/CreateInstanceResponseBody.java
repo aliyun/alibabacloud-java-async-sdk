@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -110,6 +115,10 @@ public class CreateInstanceResponseBody extends TeaModel {
 
     public static CreateInstanceResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -289,6 +298,34 @@ public class CreateInstanceResponseBody extends TeaModel {
         private String vSwitchId; 
         private String vpcId; 
         private String zoneId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateInstanceResponseBody model) {
+            this.bandwidth = model.bandwidth;
+            this.capacity = model.capacity;
+            this.chargeType = model.chargeType;
+            this.config = model.config;
+            this.connectionDomain = model.connectionDomain;
+            this.connections = model.connections;
+            this.endTime = model.endTime;
+            this.instanceId = model.instanceId;
+            this.instanceName = model.instanceName;
+            this.instanceStatus = model.instanceStatus;
+            this.networkType = model.networkType;
+            this.nodeType = model.nodeType;
+            this.orderId = model.orderId;
+            this.port = model.port;
+            this.privateIpAddr = model.privateIpAddr;
+            this.QPS = model.QPS;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+            this.userName = model.userName;
+            this.vSwitchId = model.vSwitchId;
+            this.vpcId = model.vpcId;
+            this.zoneId = model.zoneId;
+        } 
 
         /**
          * <p>The maximum bandwidth of the instance. Unit: MB/s.</p>
@@ -502,7 +539,7 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The username that is used to connect to the instance. By default, ApsaraDB for Redis provides a username that is named after the instance ID.</p>
+         * <p>The username that is used to connect to the instance. By default, Tair (Redis OSS-compatible) provides a username that is named after the instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>r-bp1zxszhcgatnx****</p>

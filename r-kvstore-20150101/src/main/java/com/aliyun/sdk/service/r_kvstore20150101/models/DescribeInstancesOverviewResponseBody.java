@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeInstancesOverviewResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Instances")
-    private java.util.List < Instances> instances;
+    private java.util.List<Instances> instances;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -35,10 +40,14 @@ public class DescribeInstancesOverviewResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instances
      */
-    public java.util.List < Instances> getInstances() {
+    public java.util.List<Instances> getInstances() {
         return this.instances;
     }
 
@@ -57,14 +66,23 @@ public class DescribeInstancesOverviewResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Instances> instances; 
+        private java.util.List<Instances> instances; 
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstancesOverviewResponseBody model) {
+            this.instances = model.instances;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * <p>An array of instances.</p>
+         * <p>The queried instances.</p>
          */
-        public Builder instances(java.util.List < Instances> instances) {
+        public Builder instances(java.util.List<Instances> instances) {
             this.instances = instances;
             return this;
         }
@@ -369,6 +387,33 @@ public class DescribeInstancesOverviewResponseBody extends TeaModel {
             private String vpcId; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Instances model) {
+                this.architectureType = model.architectureType;
+                this.capacity = model.capacity;
+                this.chargeType = model.chargeType;
+                this.connectionDomain = model.connectionDomain;
+                this.createTime = model.createTime;
+                this.endTime = model.endTime;
+                this.engineVersion = model.engineVersion;
+                this.globalInstanceId = model.globalInstanceId;
+                this.instanceClass = model.instanceClass;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.instanceStatus = model.instanceStatus;
+                this.instanceType = model.instanceType;
+                this.networkType = model.networkType;
+                this.privateIp = model.privateIp;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.secondaryZoneId = model.secondaryZoneId;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
              * <p>The architecture of the instance. Valid values:</p>
              * <ul>
@@ -445,7 +490,7 @@ public class DescribeInstancesOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The database engine version of the instance. Valid values: <strong>2.8</strong>, <strong>4.0</strong>, and <strong>5.0</strong>.</p>
+             * <p>The engine version of the instance. Valid values: <strong>2.8</strong>, <strong>4.0</strong>, <strong>5.0</strong>, <strong>6.0</strong>, and <strong>7.0</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>4.0</p>
@@ -531,10 +576,10 @@ public class DescribeInstancesOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The category of the instance. Valid values:</p>
+             * <p>The edition of the instance. Valid values:</p>
              * <ul>
-             * <li><strong>Tair</strong></li>
-             * <li><strong>Redis</strong></li>
+             * <li><strong>Tair</strong>: Tair (Enterprise Edition)</li>
+             * <li><strong>Redis</strong>: Redis Open-Source Edition</li>
              * <li><strong>Memcache</strong></li>
              * </ul>
              * 

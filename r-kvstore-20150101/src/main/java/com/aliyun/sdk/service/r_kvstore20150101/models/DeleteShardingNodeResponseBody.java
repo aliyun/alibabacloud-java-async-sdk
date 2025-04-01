@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class DeleteShardingNodeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return orderId
      */
@@ -48,6 +57,14 @@ public class DeleteShardingNodeResponseBody extends TeaModel {
     public static final class Builder {
         private String orderId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteShardingNodeResponseBody model) {
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the order. On the Orders page in the Billing Management console, you can obtain the details of the order based on the order ID.</p>

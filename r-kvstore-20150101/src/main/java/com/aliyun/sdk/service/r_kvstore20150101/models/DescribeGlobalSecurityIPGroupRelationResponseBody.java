@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeGlobalSecurityIPGroupRelationResponseBody extends TeaModel 
     private String DBClusterId;
 
     @com.aliyun.core.annotation.NameInMap("GlobalSecurityIPGroupRel")
-    private java.util.List < GlobalSecurityIPGroupRel> globalSecurityIPGroupRel;
+    private java.util.List<GlobalSecurityIPGroupRel> globalSecurityIPGroupRel;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -35,6 +40,10 @@ public class DescribeGlobalSecurityIPGroupRelationResponseBody extends TeaModel 
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBClusterId
      */
@@ -45,7 +54,7 @@ public class DescribeGlobalSecurityIPGroupRelationResponseBody extends TeaModel 
     /**
      * @return globalSecurityIPGroupRel
      */
-    public java.util.List < GlobalSecurityIPGroupRel> getGlobalSecurityIPGroupRel() {
+    public java.util.List<GlobalSecurityIPGroupRel> getGlobalSecurityIPGroupRel() {
         return this.globalSecurityIPGroupRel;
     }
 
@@ -58,8 +67,17 @@ public class DescribeGlobalSecurityIPGroupRelationResponseBody extends TeaModel 
 
     public static final class Builder {
         private String DBClusterId; 
-        private java.util.List < GlobalSecurityIPGroupRel> globalSecurityIPGroupRel; 
+        private java.util.List<GlobalSecurityIPGroupRel> globalSecurityIPGroupRel; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeGlobalSecurityIPGroupRelationResponseBody model) {
+            this.DBClusterId = model.DBClusterId;
+            this.globalSecurityIPGroupRel = model.globalSecurityIPGroupRel;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The instance ID.</p>
@@ -75,7 +93,7 @@ public class DescribeGlobalSecurityIPGroupRelationResponseBody extends TeaModel 
         /**
          * <p>The information about the associated global IP whitelist template.</p>
          */
-        public Builder globalSecurityIPGroupRel(java.util.List < GlobalSecurityIPGroupRel> globalSecurityIPGroupRel) {
+        public Builder globalSecurityIPGroupRel(java.util.List<GlobalSecurityIPGroupRel> globalSecurityIPGroupRel) {
             this.globalSecurityIPGroupRel = globalSecurityIPGroupRel;
             return this;
         }
@@ -164,6 +182,16 @@ public class DescribeGlobalSecurityIPGroupRelationResponseBody extends TeaModel 
             private String globalIgName; 
             private String globalSecurityGroupId; 
             private String regionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(GlobalSecurityIPGroupRel model) {
+                this.gIpList = model.gIpList;
+                this.globalIgName = model.globalIgName;
+                this.globalSecurityGroupId = model.globalSecurityGroupId;
+                this.regionId = model.regionId;
+            } 
 
             /**
              * <p>The IP address in the IP whitelist template.</p>

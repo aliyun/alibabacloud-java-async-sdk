@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return availableZones
      */
@@ -49,8 +58,16 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         private AvailableZones availableZones; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeAvailableResourceResponseBody model) {
+            this.availableZones = model.availableZones;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>Details of the zones.</p>
+         * <p>Details about the zones.</p>
          */
         public Builder availableZones(AvailableZones availableZones) {
             this.availableZones = availableZones;
@@ -130,6 +147,15 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             private String instanceClass; 
             private String instanceClassRemark; 
 
+            private Builder() {
+            } 
+
+            private Builder(AvailableResource model) {
+                this.capacity = model.capacity;
+                this.instanceClass = model.instanceClass;
+                this.instanceClassRemark = model.instanceClassRemark;
+            } 
+
             /**
              * <p>The memory size of the instance. Unit: MB.</p>
              * 
@@ -178,7 +204,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
      */
     public static class AvailableResources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvailableResource")
-        private java.util.List < AvailableResource> availableResource;
+        private java.util.List<AvailableResource> availableResource;
 
         private AvailableResources(Builder builder) {
             this.availableResource = builder.availableResource;
@@ -195,17 +221,24 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         /**
          * @return availableResource
          */
-        public java.util.List < AvailableResource> getAvailableResource() {
+        public java.util.List<AvailableResource> getAvailableResource() {
             return this.availableResource;
         }
 
         public static final class Builder {
-            private java.util.List < AvailableResource> availableResource; 
+            private java.util.List<AvailableResource> availableResource; 
+
+            private Builder() {
+            } 
+
+            private Builder(AvailableResources model) {
+                this.availableResource = model.availableResource;
+            } 
 
             /**
              * AvailableResource.
              */
-            public Builder availableResource(java.util.List < AvailableResource> availableResource) {
+            public Builder availableResource(java.util.List<AvailableResource> availableResource) {
                 this.availableResource = availableResource;
                 return this;
             }
@@ -261,6 +294,14 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             private AvailableResources availableResources; 
             private String supportedNodeType; 
 
+            private Builder() {
+            } 
+
+            private Builder(SupportedNodeType model) {
+                this.availableResources = model.availableResources;
+                this.supportedNodeType = model.supportedNodeType;
+            } 
+
             /**
              * <p>The available instance types.</p>
              */
@@ -299,7 +340,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
      */
     public static class SupportedNodeTypes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SupportedNodeType")
-        private java.util.List < SupportedNodeType> supportedNodeType;
+        private java.util.List<SupportedNodeType> supportedNodeType;
 
         private SupportedNodeTypes(Builder builder) {
             this.supportedNodeType = builder.supportedNodeType;
@@ -316,12 +357,19 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         /**
          * @return supportedNodeType
          */
-        public java.util.List < SupportedNodeType> getSupportedNodeType() {
+        public java.util.List<SupportedNodeType> getSupportedNodeType() {
             return this.supportedNodeType;
         }
 
         public static final class Builder {
-            private java.util.List < SupportedNodeType> supportedNodeType; 
+            private java.util.List<SupportedNodeType> supportedNodeType; 
+
+            private Builder() {
+            } 
+
+            private Builder(SupportedNodeTypes model) {
+                this.supportedNodeType = model.supportedNodeType;
+            } 
 
             /**
              * <p>The node type of the instance. Valid values:</p>
@@ -333,7 +381,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>double</p>
              */
-            public Builder supportedNodeType(java.util.List < SupportedNodeType> supportedNodeType) {
+            public Builder supportedNodeType(java.util.List<SupportedNodeType> supportedNodeType) {
                 this.supportedNodeType = supportedNodeType;
                 return this;
             }
@@ -389,6 +437,14 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             private String shardNumber; 
             private SupportedNodeTypes supportedNodeTypes; 
 
+            private Builder() {
+            } 
+
+            private Builder(SupportedShardNumber model) {
+                this.shardNumber = model.shardNumber;
+                this.supportedNodeTypes = model.supportedNodeTypes;
+            } 
+
             /**
              * <p>The number of shards.</p>
              * 
@@ -401,7 +457,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The available node types.</p>
+             * <p>The supported node types.</p>
              */
             public Builder supportedNodeTypes(SupportedNodeTypes supportedNodeTypes) {
                 this.supportedNodeTypes = supportedNodeTypes;
@@ -423,7 +479,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
      */
     public static class SupportedShardNumbers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SupportedShardNumber")
-        private java.util.List < SupportedShardNumber> supportedShardNumber;
+        private java.util.List<SupportedShardNumber> supportedShardNumber;
 
         private SupportedShardNumbers(Builder builder) {
             this.supportedShardNumber = builder.supportedShardNumber;
@@ -440,17 +496,24 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         /**
          * @return supportedShardNumber
          */
-        public java.util.List < SupportedShardNumber> getSupportedShardNumber() {
+        public java.util.List<SupportedShardNumber> getSupportedShardNumber() {
             return this.supportedShardNumber;
         }
 
         public static final class Builder {
-            private java.util.List < SupportedShardNumber> supportedShardNumber; 
+            private java.util.List<SupportedShardNumber> supportedShardNumber; 
+
+            private Builder() {
+            } 
+
+            private Builder(SupportedShardNumbers model) {
+                this.supportedShardNumber = model.supportedShardNumber;
+            } 
 
             /**
              * SupportedShardNumber.
              */
-            public Builder supportedShardNumber(java.util.List < SupportedShardNumber> supportedShardNumber) {
+            public Builder supportedShardNumber(java.util.List<SupportedShardNumber> supportedShardNumber) {
                 this.supportedShardNumber = supportedShardNumber;
                 return this;
             }
@@ -506,6 +569,14 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             private String architecture; 
             private SupportedShardNumbers supportedShardNumbers; 
 
+            private Builder() {
+            } 
+
+            private Builder(SupportedArchitectureType model) {
+                this.architecture = model.architecture;
+                this.supportedShardNumbers = model.supportedShardNumbers;
+            } 
+
             /**
              * <p>The architecture of the instance. Valid values:</p>
              * <ul>
@@ -523,7 +594,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The numbers of shards that are allowed.</p>
+             * <p>The numbers of available shards.</p>
              */
             public Builder supportedShardNumbers(SupportedShardNumbers supportedShardNumbers) {
                 this.supportedShardNumbers = supportedShardNumbers;
@@ -545,7 +616,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
      */
     public static class SupportedArchitectureTypes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SupportedArchitectureType")
-        private java.util.List < SupportedArchitectureType> supportedArchitectureType;
+        private java.util.List<SupportedArchitectureType> supportedArchitectureType;
 
         private SupportedArchitectureTypes(Builder builder) {
             this.supportedArchitectureType = builder.supportedArchitectureType;
@@ -562,17 +633,24 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         /**
          * @return supportedArchitectureType
          */
-        public java.util.List < SupportedArchitectureType> getSupportedArchitectureType() {
+        public java.util.List<SupportedArchitectureType> getSupportedArchitectureType() {
             return this.supportedArchitectureType;
         }
 
         public static final class Builder {
-            private java.util.List < SupportedArchitectureType> supportedArchitectureType; 
+            private java.util.List<SupportedArchitectureType> supportedArchitectureType; 
+
+            private Builder() {
+            } 
+
+            private Builder(SupportedArchitectureTypes model) {
+                this.supportedArchitectureType = model.supportedArchitectureType;
+            } 
 
             /**
              * SupportedArchitectureType.
              */
-            public Builder supportedArchitectureType(java.util.List < SupportedArchitectureType> supportedArchitectureType) {
+            public Builder supportedArchitectureType(java.util.List<SupportedArchitectureType> supportedArchitectureType) {
                 this.supportedArchitectureType = supportedArchitectureType;
                 return this;
             }
@@ -628,8 +706,16 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             private SupportedArchitectureTypes supportedArchitectureTypes; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(SupportedEngineVersion model) {
+                this.supportedArchitectureTypes = model.supportedArchitectureTypes;
+                this.version = model.version;
+            } 
+
             /**
-             * <p>The available instance architectures.</p>
+             * <p>The available architectures.</p>
              */
             public Builder supportedArchitectureTypes(SupportedArchitectureTypes supportedArchitectureTypes) {
                 this.supportedArchitectureTypes = supportedArchitectureTypes;
@@ -662,7 +748,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
      */
     public static class SupportedEngineVersions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SupportedEngineVersion")
-        private java.util.List < SupportedEngineVersion> supportedEngineVersion;
+        private java.util.List<SupportedEngineVersion> supportedEngineVersion;
 
         private SupportedEngineVersions(Builder builder) {
             this.supportedEngineVersion = builder.supportedEngineVersion;
@@ -679,17 +765,24 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         /**
          * @return supportedEngineVersion
          */
-        public java.util.List < SupportedEngineVersion> getSupportedEngineVersion() {
+        public java.util.List<SupportedEngineVersion> getSupportedEngineVersion() {
             return this.supportedEngineVersion;
         }
 
         public static final class Builder {
-            private java.util.List < SupportedEngineVersion> supportedEngineVersion; 
+            private java.util.List<SupportedEngineVersion> supportedEngineVersion; 
+
+            private Builder() {
+            } 
+
+            private Builder(SupportedEngineVersions model) {
+                this.supportedEngineVersion = model.supportedEngineVersion;
+            } 
 
             /**
              * SupportedEngineVersion.
              */
-            public Builder supportedEngineVersion(java.util.List < SupportedEngineVersion> supportedEngineVersion) {
+            public Builder supportedEngineVersion(java.util.List<SupportedEngineVersion> supportedEngineVersion) {
                 this.supportedEngineVersion = supportedEngineVersion;
                 return this;
             }
@@ -745,11 +838,19 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             private String seriesType; 
             private SupportedEngineVersions supportedEngineVersions; 
 
+            private Builder() {
+            } 
+
+            private Builder(SupportedSeriesType model) {
+                this.seriesType = model.seriesType;
+                this.supportedEngineVersions = model.supportedEngineVersions;
+            } 
+
             /**
              * <p>The instance series. Valid values:</p>
              * <ul>
-             * <li><strong>enhanced_performance_type</strong>: ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instance</li>
-             * <li><strong>hybrid_storage</strong>: ApsaraDB for Redis Community Edition hybrid-storage instance</li>
+             * <li><strong>enhanced_performance_type</strong>: Tair (Enterprise Edition) DRAM-based instance</li>
+             * <li><strong>hybrid_storage</strong>: Redis Open-Source Edition hybrid-storage instance</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -783,7 +884,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
      */
     public static class SupportedSeriesTypes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SupportedSeriesType")
-        private java.util.List < SupportedSeriesType> supportedSeriesType;
+        private java.util.List<SupportedSeriesType> supportedSeriesType;
 
         private SupportedSeriesTypes(Builder builder) {
             this.supportedSeriesType = builder.supportedSeriesType;
@@ -800,17 +901,24 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         /**
          * @return supportedSeriesType
          */
-        public java.util.List < SupportedSeriesType> getSupportedSeriesType() {
+        public java.util.List<SupportedSeriesType> getSupportedSeriesType() {
             return this.supportedSeriesType;
         }
 
         public static final class Builder {
-            private java.util.List < SupportedSeriesType> supportedSeriesType; 
+            private java.util.List<SupportedSeriesType> supportedSeriesType; 
+
+            private Builder() {
+            } 
+
+            private Builder(SupportedSeriesTypes model) {
+                this.supportedSeriesType = model.supportedSeriesType;
+            } 
 
             /**
              * SupportedSeriesType.
              */
-            public Builder supportedSeriesType(java.util.List < SupportedSeriesType> supportedSeriesType) {
+            public Builder supportedSeriesType(java.util.List<SupportedSeriesType> supportedSeriesType) {
                 this.supportedSeriesType = supportedSeriesType;
                 return this;
             }
@@ -866,6 +974,14 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             private String editionType; 
             private SupportedSeriesTypes supportedSeriesTypes; 
 
+            private Builder() {
+            } 
+
+            private Builder(SupportedEditionType model) {
+                this.editionType = model.editionType;
+                this.supportedSeriesTypes = model.supportedSeriesTypes;
+            } 
+
             /**
              * <p>The edition of the instance. Valid values:</p>
              * <ul>
@@ -882,7 +998,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The available instance series.</p>
+             * <p>The instance series types.</p>
              */
             public Builder supportedSeriesTypes(SupportedSeriesTypes supportedSeriesTypes) {
                 this.supportedSeriesTypes = supportedSeriesTypes;
@@ -904,7 +1020,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
      */
     public static class SupportedEditionTypes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SupportedEditionType")
-        private java.util.List < SupportedEditionType> supportedEditionType;
+        private java.util.List<SupportedEditionType> supportedEditionType;
 
         private SupportedEditionTypes(Builder builder) {
             this.supportedEditionType = builder.supportedEditionType;
@@ -921,17 +1037,24 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         /**
          * @return supportedEditionType
          */
-        public java.util.List < SupportedEditionType> getSupportedEditionType() {
+        public java.util.List<SupportedEditionType> getSupportedEditionType() {
             return this.supportedEditionType;
         }
 
         public static final class Builder {
-            private java.util.List < SupportedEditionType> supportedEditionType; 
+            private java.util.List<SupportedEditionType> supportedEditionType; 
+
+            private Builder() {
+            } 
+
+            private Builder(SupportedEditionTypes model) {
+                this.supportedEditionType = model.supportedEditionType;
+            } 
 
             /**
              * SupportedEditionType.
              */
-            public Builder supportedEditionType(java.util.List < SupportedEditionType> supportedEditionType) {
+            public Builder supportedEditionType(java.util.List<SupportedEditionType> supportedEditionType) {
                 this.supportedEditionType = supportedEditionType;
                 return this;
             }
@@ -987,6 +1110,14 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             private String engine; 
             private SupportedEditionTypes supportedEditionTypes; 
 
+            private Builder() {
+            } 
+
+            private Builder(SupportedEngine model) {
+                this.engine = model.engine;
+                this.supportedEditionTypes = model.supportedEditionTypes;
+            } 
+
             /**
              * <p>The database engine of the instance.</p>
              * 
@@ -999,7 +1130,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The available instance editions.</p>
+             * <p>The instance edition types.</p>
              */
             public Builder supportedEditionTypes(SupportedEditionTypes supportedEditionTypes) {
                 this.supportedEditionTypes = supportedEditionTypes;
@@ -1021,7 +1152,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
      */
     public static class SupportedEngines extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SupportedEngine")
-        private java.util.List < SupportedEngine> supportedEngine;
+        private java.util.List<SupportedEngine> supportedEngine;
 
         private SupportedEngines(Builder builder) {
             this.supportedEngine = builder.supportedEngine;
@@ -1038,17 +1169,24 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         /**
          * @return supportedEngine
          */
-        public java.util.List < SupportedEngine> getSupportedEngine() {
+        public java.util.List<SupportedEngine> getSupportedEngine() {
             return this.supportedEngine;
         }
 
         public static final class Builder {
-            private java.util.List < SupportedEngine> supportedEngine; 
+            private java.util.List<SupportedEngine> supportedEngine; 
+
+            private Builder() {
+            } 
+
+            private Builder(SupportedEngines model) {
+                this.supportedEngine = model.supportedEngine;
+            } 
 
             /**
              * SupportedEngine.
              */
-            public Builder supportedEngine(java.util.List < SupportedEngine> supportedEngine) {
+            public Builder supportedEngine(java.util.List<SupportedEngine> supportedEngine) {
                 this.supportedEngine = supportedEngine;
                 return this;
             }
@@ -1067,6 +1205,9 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
      * <p>DescribeAvailableResourceResponseBody</p>
      */
     public static class AvailableZone extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("IsMainSale")
+        private Boolean isMainSale;
+
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
@@ -1080,6 +1221,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         private String zoneName;
 
         private AvailableZone(Builder builder) {
+            this.isMainSale = builder.isMainSale;
             this.regionId = builder.regionId;
             this.supportedEngines = builder.supportedEngines;
             this.zoneId = builder.zoneId;
@@ -1092,6 +1234,13 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
         public static AvailableZone create() {
             return builder().build();
+        }
+
+        /**
+         * @return isMainSale
+         */
+        public Boolean getIsMainSale() {
+            return this.isMainSale;
         }
 
         /**
@@ -1123,10 +1272,33 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean isMainSale; 
             private String regionId; 
             private SupportedEngines supportedEngines; 
             private String zoneId; 
             private String zoneName; 
+
+            private Builder() {
+            } 
+
+            private Builder(AvailableZone model) {
+                this.isMainSale = model.isMainSale;
+                this.regionId = model.regionId;
+                this.supportedEngines = model.supportedEngines;
+                this.zoneId = model.zoneId;
+                this.zoneName = model.zoneName;
+            } 
+
+            /**
+             * <p>An internal parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder isMainSale(Boolean isMainSale) {
+                this.isMainSale = isMainSale;
+                return this;
+            }
 
             /**
              * <p>The ID of the region.</p>
@@ -1140,7 +1312,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The available database engines.</p>
+             * <p>The supported engines.</p>
              */
             public Builder supportedEngines(SupportedEngines supportedEngines) {
                 this.supportedEngines = supportedEngines;
@@ -1184,7 +1356,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
      */
     public static class AvailableZones extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvailableZone")
-        private java.util.List < AvailableZone> availableZone;
+        private java.util.List<AvailableZone> availableZone;
 
         private AvailableZones(Builder builder) {
             this.availableZone = builder.availableZone;
@@ -1201,17 +1373,24 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         /**
          * @return availableZone
          */
-        public java.util.List < AvailableZone> getAvailableZone() {
+        public java.util.List<AvailableZone> getAvailableZone() {
             return this.availableZone;
         }
 
         public static final class Builder {
-            private java.util.List < AvailableZone> availableZone; 
+            private java.util.List<AvailableZone> availableZone; 
+
+            private Builder() {
+            } 
+
+            private Builder(AvailableZones model) {
+                this.availableZone = model.availableZone;
+            } 
 
             /**
              * AvailableZone.
              */
-            public Builder availableZone(java.util.List < AvailableZone> availableZone) {
+            public Builder availableZone(java.util.List<AvailableZone> availableZone) {
                 this.availableZone = availableZone;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeParameterGroupsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ParameterGroups")
-    private java.util.List < ParameterGroups> parameterGroups;
+    private java.util.List<ParameterGroups> parameterGroups;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -31,10 +36,14 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return parameterGroups
      */
-    public java.util.List < ParameterGroups> getParameterGroups() {
+    public java.util.List<ParameterGroups> getParameterGroups() {
         return this.parameterGroups;
     }
 
@@ -46,13 +55,21 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ParameterGroups> parameterGroups; 
+        private java.util.List<ParameterGroups> parameterGroups; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeParameterGroupsResponseBody model) {
+            this.parameterGroups = model.parameterGroups;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The list of parameter templates.</p>
          */
-        public Builder parameterGroups(java.util.List < ParameterGroups> parameterGroups) {
+        public Builder parameterGroups(java.util.List<ParameterGroups> parameterGroups) {
             this.parameterGroups = parameterGroups;
             return this;
         }
@@ -190,11 +207,25 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
             private String parameterGroupDesc; 
             private String parameterGroupName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ParameterGroups model) {
+                this.category = model.category;
+                this.created = model.created;
+                this.engine = model.engine;
+                this.engineVersion = model.engineVersion;
+                this.modified = model.modified;
+                this.paramGroupId = model.paramGroupId;
+                this.parameterGroupDesc = model.parameterGroupDesc;
+                this.parameterGroupName = model.parameterGroupName;
+            } 
+
             /**
              * <p>The service category. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: Community Edition</li>
-             * <li><strong>1</strong>: Enhanced Edition (Tair)</li>
+             * <li><strong>0</strong>: Redis Open-Source Edition</li>
+             * <li><strong>1</strong>: Tair (Enterprise Edition)</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -219,9 +250,9 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
             /**
              * <p>The engine type. Valid values:</p>
              * <ul>
-             * <li><strong>redis</strong>: Redis or Tair DRAM-based instance</li>
-             * <li><strong>tair_pena</strong>: Tair persistent memory-optimized instance</li>
-             * <li><strong>tair_pdb</strong>: Tair ESSD-based instance</li>
+             * <li><strong>redis</strong>: Redis Open-Source Edition or Tair (In-Memory)</li>
+             * <li><strong>tair_pena</strong>: Tair (On NVM)</li>
+             * <li><strong>tair_pdb</strong>: Tair (On Disk)</li>
              * </ul>
              * 
              * <strong>example:</strong>

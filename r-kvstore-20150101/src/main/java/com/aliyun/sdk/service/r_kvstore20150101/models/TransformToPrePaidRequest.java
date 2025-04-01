@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -81,7 +86,7 @@ public class TransformToPrePaidRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -207,8 +212,8 @@ public class TransformToPrePaidRequest extends Request {
         /**
          * <p>Specifies whether to enable auto-renewal. Default value: false. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: yes</li>
-         * <li><strong>false</strong>: no. In this case, you can renew your instance in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/26352.html">Manually renew an instance</a>.</li>
+         * <li><strong>true</strong>: enables auto-renewal.</li>
+         * <li><strong>false</strong>: disables auto-renewal. In this case, you can renew your instance in the console. For more information, see <a href="https://help.aliyun.com/document_detail/26352.html">Manually renew an instance</a>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -221,7 +226,14 @@ public class TransformToPrePaidRequest extends Request {
         }
 
         /**
-         * AutoRenew.
+         * <p>Specifies whether to enable auto-renewal for the instance. Valid values:</p>
+         * <ul>
+         * <li><em>true</em>: enables auto-renewal.</li>
+         * <li><em>false</em> (default): disables auto-renewal.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoRenew(String autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -230,7 +242,13 @@ public class TransformToPrePaidRequest extends Request {
         }
 
         /**
-         * AutoRenewPeriod.
+         * <p>The subscription duration that is supported by auto-renewal. Unit: month. Valid values: <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>6</strong>, and <strong>12</strong>.</p>
+         * <blockquote>
+         * <p> This parameter is required if the <strong>AutoRenew</strong> parameter is set to <strong>true</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder autoRenewPeriod(Long autoRenewPeriod) {
             this.putQueryParameter("AutoRenewPeriod", autoRenewPeriod);

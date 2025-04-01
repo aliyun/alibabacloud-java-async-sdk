@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,6 +40,10 @@ public class DescribeDBNodeDirectVipInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return directVipInfo
      */
@@ -61,8 +70,17 @@ public class DescribeDBNodeDirectVipInfoResponseBody extends TeaModel {
         private String instanceId; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBNodeDirectVipInfoResponseBody model) {
+            this.directVipInfo = model.directVipInfo;
+            this.instanceId = model.instanceId;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>The virtual IP addresses (VIPs) of shards in an ApsaraDB for Redis cluster instance.</p>
+         * <p>The VIP information of shards in the cluster instance.</p>
          */
         public Builder directVipInfo(DirectVipInfo directVipInfo) {
             this.directVipInfo = directVipInfo;
@@ -165,6 +183,16 @@ public class DescribeDBNodeDirectVipInfoResponseBody extends TeaModel {
             private String port; 
             private String vip; 
 
+            private Builder() {
+            } 
+
+            private Builder(VipInfo model) {
+                this.netType = model.netType;
+                this.nodeId = model.nodeId;
+                this.port = model.port;
+                this.vip = model.vip;
+            } 
+
             /**
              * <p>The network type of the security group. Valid values:</p>
              * <ul>
@@ -227,7 +255,7 @@ public class DescribeDBNodeDirectVipInfoResponseBody extends TeaModel {
      */
     public static class DirectVipInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VipInfo")
-        private java.util.List < VipInfo> vipInfo;
+        private java.util.List<VipInfo> vipInfo;
 
         private DirectVipInfo(Builder builder) {
             this.vipInfo = builder.vipInfo;
@@ -244,17 +272,24 @@ public class DescribeDBNodeDirectVipInfoResponseBody extends TeaModel {
         /**
          * @return vipInfo
          */
-        public java.util.List < VipInfo> getVipInfo() {
+        public java.util.List<VipInfo> getVipInfo() {
             return this.vipInfo;
         }
 
         public static final class Builder {
-            private java.util.List < VipInfo> vipInfo; 
+            private java.util.List<VipInfo> vipInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(DirectVipInfo model) {
+                this.vipInfo = model.vipInfo;
+            } 
 
             /**
              * VipInfo.
              */
-            public Builder vipInfo(java.util.List < VipInfo> vipInfo) {
+            public Builder vipInfo(java.util.List<VipInfo> vipInfo) {
                 this.vipInfo = vipInfo;
                 return this;
             }

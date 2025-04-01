@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,6 +40,10 @@ public class MasterNodeShutDownFailOverResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBInstanceId
      */
@@ -61,6 +70,15 @@ public class MasterNodeShutDownFailOverResponseBody extends TeaModel {
         private String requestId; 
         private String taskID; 
 
+        private Builder() {
+        } 
+
+        private Builder(MasterNodeShutDownFailOverResponseBody model) {
+            this.DBInstanceId = model.DBInstanceId;
+            this.requestId = model.requestId;
+            this.taskID = model.taskID;
+        } 
+
         /**
          * <p>The instance ID.</p>
          * 
@@ -84,7 +102,7 @@ public class MasterNodeShutDownFailOverResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The task ID. For information about how to obtain the ID of a task, see <a href="https://help.aliyun.com/document_detail/454662.html">ListTasks</a>.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>17566</p>

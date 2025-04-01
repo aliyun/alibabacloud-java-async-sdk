@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -57,6 +62,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
 
     public static DescribeSlowLogRecordsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -132,6 +141,21 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         private String requestId; 
         private String startTime; 
         private Integer totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSlowLogRecordsResponseBody model) {
+            this.engine = model.engine;
+            this.instanceId = model.instanceId;
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageRecordCount = model.pageRecordCount;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * <p>The database engine that the instance runs.</p>
@@ -363,6 +387,21 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             private String IPAddress; 
             private String nodeId; 
 
+            private Builder() {
+            } 
+
+            private Builder(LogRecords model) {
+                this.account = model.account;
+                this.accountName = model.accountName;
+                this.command = model.command;
+                this.DBName = model.DBName;
+                this.dataBaseName = model.dataBaseName;
+                this.elapsedTime = model.elapsedTime;
+                this.executeTime = model.executeTime;
+                this.IPAddress = model.IPAddress;
+                this.nodeId = model.nodeId;
+            } 
+
             /**
              * <p>The ID of the account.</p>
              * 
@@ -477,7 +516,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
      */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LogRecords")
-        private java.util.List < LogRecords> logRecords;
+        private java.util.List<LogRecords> logRecords;
 
         private Items(Builder builder) {
             this.logRecords = builder.logRecords;
@@ -494,17 +533,24 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         /**
          * @return logRecords
          */
-        public java.util.List < LogRecords> getLogRecords() {
+        public java.util.List<LogRecords> getLogRecords() {
             return this.logRecords;
         }
 
         public static final class Builder {
-            private java.util.List < LogRecords> logRecords; 
+            private java.util.List<LogRecords> logRecords; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.logRecords = model.logRecords;
+            } 
 
             /**
              * LogRecords.
              */
-            public Builder logRecords(java.util.List < LogRecords> logRecords) {
+            public Builder logRecords(java.util.List<LogRecords> logRecords) {
                 this.logRecords = logRecords;
                 return this;
             }

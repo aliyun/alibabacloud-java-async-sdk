@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -95,7 +100,7 @@ public class ModifyInstanceConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -291,7 +296,10 @@ public class ModifyInstanceConfigRequest extends Request {
         }
 
         /**
-         * ParamNoLooseSentinelEnabled.
+         * <p>The Sentinel-compatible mode, which is applicable to non-cluster instances. For more information about the parameter, see the relevant documentation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yes</p>
          */
         public Builder paramNoLooseSentinelEnabled(String paramNoLooseSentinelEnabled) {
             this.putQueryParameter("ParamNoLooseSentinelEnabled", paramNoLooseSentinelEnabled);
@@ -300,7 +308,10 @@ public class ModifyInstanceConfigRequest extends Request {
         }
 
         /**
-         * ParamNoLooseSentinelPasswordFreeAccess.
+         * <p>Specifies whether to allow Sentinel commands to be run without requiring a password when the Sentinel mode is enabled. Valid values: Valid values: yes and no. Default value: no. After you set this parameter to yes, you can run Sentinel commands in a virtual private cloud (VPC) without the need to enable the password-free access feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder paramNoLooseSentinelPasswordFreeAccess(String paramNoLooseSentinelPasswordFreeAccess) {
             this.putQueryParameter("ParamNoLooseSentinelPasswordFreeAccess", paramNoLooseSentinelPasswordFreeAccess);
@@ -309,7 +320,10 @@ public class ModifyInstanceConfigRequest extends Request {
         }
 
         /**
-         * ParamNoLooseSentinelPasswordFreeCommands.
+         * <p>After you enable the Sentinel mode and set the ParamNoLooseSentinelPasswordFreeAccess parameter to yes, you can use this parameter to specify an additional list of commands that can be run without requiring a password. By default, this parameter is empty. After you configure this parameter, you can run the specified commands without a password on any connection. Proceed with caution. The commands must be written in lowercase letters. Separate multiple commands with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder paramNoLooseSentinelPasswordFreeCommands(String paramNoLooseSentinelPasswordFreeCommands) {
             this.putQueryParameter("ParamNoLooseSentinelPasswordFreeCommands", paramNoLooseSentinelPasswordFreeCommands);
@@ -318,7 +332,14 @@ public class ModifyInstanceConfigRequest extends Request {
         }
 
         /**
-         * ParamReplMode.
+         * <p>The synchronization mode.</p>
+         * <ul>
+         * <li><strong>semisync</strong></li>
+         * <li><strong>async</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>async</p>
          */
         public Builder paramReplMode(String paramReplMode) {
             this.putQueryParameter("ParamReplMode", paramReplMode);
@@ -327,7 +348,10 @@ public class ModifyInstanceConfigRequest extends Request {
         }
 
         /**
-         * ParamSemisyncReplTimeout.
+         * <p>The degradation threshold time of the semi-synchronous replication mode. This parameter is required only when semi-synchronous replication is enabled. Unit: milliseconds. Valid values: 10 to 60000.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder paramSemisyncReplTimeout(String paramSemisyncReplTimeout) {
             this.putQueryParameter("ParamSemisyncReplTimeout", paramSemisyncReplTimeout);
@@ -336,7 +360,10 @@ public class ModifyInstanceConfigRequest extends Request {
         }
 
         /**
-         * ParamSentinelCompatEnable.
+         * <p>The Sentinel-compatible mode, which is applicable to cluster instances in proxy mode or read/write splitting instances. For more information about the parameter, see the relevant documentation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder paramSentinelCompatEnable(String paramSentinelCompatEnable) {
             this.putQueryParameter("ParamSentinelCompatEnable", paramSentinelCompatEnable);

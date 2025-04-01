@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Instances")
-    private java.util.List < Instances> instances;
+    private java.util.List<Instances> instances;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -43,10 +48,14 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instances
      */
-    public java.util.List < Instances> getInstances() {
+    public java.util.List<Instances> getInstances() {
         return this.instances;
     }
 
@@ -79,16 +88,27 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Instances> instances; 
+        private java.util.List<Instances> instances; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeDedicatedClusterInstanceListResponseBody model) {
+            this.instances = model.instances;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * <p>Details of the instances.</p>
+         * <p>Details about the instances.</p>
          */
-        public Builder instances(java.util.List < Instances> instances) {
+        public Builder instances(java.util.List<Instances> instances) {
             this.instances = instances;
             return this;
         }
@@ -259,6 +279,20 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             private String role; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceNodeList model) {
+                this.dedicatedHostName = model.dedicatedHostName;
+                this.instanceId = model.instanceId;
+                this.nodeId = model.nodeId;
+                this.nodeIp = model.nodeIp;
+                this.nodeType = model.nodeType;
+                this.port = model.port;
+                this.role = model.role;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
              * <p>The ID of the host in the dedicated cluster.</p>
              * 
@@ -410,7 +444,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
         private String instanceName;
 
         @com.aliyun.core.annotation.NameInMap("InstanceNodeList")
-        private java.util.List < InstanceNodeList> instanceNodeList;
+        private java.util.List<InstanceNodeList> instanceNodeList;
 
         @com.aliyun.core.annotation.NameInMap("InstanceStatus")
         private String instanceStatus;
@@ -571,7 +605,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
         /**
          * @return instanceNodeList
          */
-        public java.util.List < InstanceNodeList> getInstanceNodeList() {
+        public java.util.List<InstanceNodeList> getInstanceNodeList() {
             return this.instanceNodeList;
         }
 
@@ -659,7 +693,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             private String instanceClass; 
             private String instanceId; 
             private String instanceName; 
-            private java.util.List < InstanceNodeList> instanceNodeList; 
+            private java.util.List<InstanceNodeList> instanceNodeList; 
             private String instanceStatus; 
             private String maintainEndTime; 
             private String maintainStartTime; 
@@ -670,6 +704,36 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             private String vpcId; 
             private String vswitchId; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Instances model) {
+                this.bandWidth = model.bandWidth;
+                this.characterType = model.characterType;
+                this.clusterId = model.clusterId;
+                this.clusterName = model.clusterName;
+                this.connectionDomain = model.connectionDomain;
+                this.createTime = model.createTime;
+                this.currentBandWidth = model.currentBandWidth;
+                this.customId = model.customId;
+                this.engine = model.engine;
+                this.engineVersion = model.engineVersion;
+                this.instanceClass = model.instanceClass;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.instanceNodeList = model.instanceNodeList;
+                this.instanceStatus = model.instanceStatus;
+                this.maintainEndTime = model.maintainEndTime;
+                this.maintainStartTime = model.maintainStartTime;
+                this.proxyCount = model.proxyCount;
+                this.regionId = model.regionId;
+                this.shardCount = model.shardCount;
+                this.storageType = model.storageType;
+                this.vpcId = model.vpcId;
+                this.vswitchId = model.vswitchId;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>The default bandwidth of the instance. Unit: Mbit/s.</p>
@@ -819,9 +883,9 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The nodes.</p>
+             * <p>Details about the nodes.</p>
              */
-            public Builder instanceNodeList(java.util.List < InstanceNodeList> instanceNodeList) {
+            public Builder instanceNodeList(java.util.List<InstanceNodeList> instanceNodeList) {
                 this.instanceNodeList = instanceNodeList;
                 return this;
             }
@@ -883,7 +947,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
              * <ul>
              * <li><p>If the return value is <strong>0</strong>, the proxy mode is disabled for the instance. If the return value is an integer greater than <strong>0</strong>, such as <strong>1</strong>, the proxy mode is enabled for the instance.</p>
              * </li>
-             * <li><p>This parameter is returned only when the instance is a cluster instance. For more information about cluster instances, see <a href="https://help.aliyun.com/document_detail/52228.html">Cluster master-replica instances</a>.</p>
+             * <li><p>This parameter is returned only when the instance is a <a href="https://help.aliyun.com/document_detail/52228.html">cluster</a> instance.</p>
              * </li>
              * </ul>
              * 
@@ -909,7 +973,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             /**
              * <p>The number of shards.</p>
              * <blockquote>
-             * <p> This parameter is returned only when the instance is a cluster instance. For more information about cluster instances, see <a href="https://help.aliyun.com/document_detail/52228.html">Cluster master-replica instances</a>.</p>
+             * <p> This parameter is returned only when the instance is a <a href="https://help.aliyun.com/document_detail/52228.html">cluster</a> instance.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

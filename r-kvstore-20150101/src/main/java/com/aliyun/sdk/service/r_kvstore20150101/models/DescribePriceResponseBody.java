@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,6 +46,10 @@ public class DescribePriceResponseBody extends TeaModel {
 
     public static DescribePriceResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,6 +94,17 @@ public class DescribePriceResponseBody extends TeaModel {
         private Rules rules; 
         private SubOrders subOrders; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribePriceResponseBody model) {
+            this.order = model.order;
+            this.orderParams = model.orderParams;
+            this.requestId = model.requestId;
+            this.rules = model.rules;
+            this.subOrders = model.subOrders;
+        } 
+
         /**
          * <p>The information about the order.</p>
          */
@@ -124,7 +144,7 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Details about rules that match the coupon.</p>
+         * <p>The rules that match the coupon.</p>
          */
         public Builder subOrders(SubOrders subOrders) {
             this.subOrders = subOrders;
@@ -205,6 +225,16 @@ public class DescribePriceResponseBody extends TeaModel {
             private String isSelected; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(Coupon model) {
+                this.couponNo = model.couponNo;
+                this.description = model.description;
+                this.isSelected = model.isSelected;
+                this.name = model.name;
+            } 
+
             /**
              * <p>The coupon ID.</p>
              * 
@@ -264,7 +294,7 @@ public class DescribePriceResponseBody extends TeaModel {
      */
     public static class Coupons extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Coupon")
-        private java.util.List < Coupon> coupon;
+        private java.util.List<Coupon> coupon;
 
         private Coupons(Builder builder) {
             this.coupon = builder.coupon;
@@ -281,17 +311,24 @@ public class DescribePriceResponseBody extends TeaModel {
         /**
          * @return coupon
          */
-        public java.util.List < Coupon> getCoupon() {
+        public java.util.List<Coupon> getCoupon() {
             return this.coupon;
         }
 
         public static final class Builder {
-            private java.util.List < Coupon> coupon; 
+            private java.util.List<Coupon> coupon; 
+
+            private Builder() {
+            } 
+
+            private Builder(Coupons model) {
+                this.coupon = model.coupon;
+            } 
 
             /**
              * Coupon.
              */
-            public Builder coupon(java.util.List < Coupon> coupon) {
+            public Builder coupon(java.util.List<Coupon> coupon) {
                 this.coupon = coupon;
                 return this;
             }
@@ -311,7 +348,7 @@ public class DescribePriceResponseBody extends TeaModel {
      */
     public static class OptionIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OptionId")
-        private java.util.List < Long > optionId;
+        private java.util.List<Long> optionId;
 
         private OptionIds(Builder builder) {
             this.optionId = builder.optionId;
@@ -328,17 +365,24 @@ public class DescribePriceResponseBody extends TeaModel {
         /**
          * @return optionId
          */
-        public java.util.List < Long > getOptionId() {
+        public java.util.List<Long> getOptionId() {
             return this.optionId;
         }
 
         public static final class Builder {
-            private java.util.List < Long > optionId; 
+            private java.util.List<Long> optionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(OptionIds model) {
+                this.optionId = model.optionId;
+            } 
 
             /**
              * OptionId.
              */
-            public Builder optionId(java.util.List < Long > optionId) {
+            public Builder optionId(java.util.List<Long> optionId) {
                 this.optionId = optionId;
                 return this;
             }
@@ -454,8 +498,24 @@ public class DescribePriceResponseBody extends TeaModel {
             private OptionIds optionIds; 
             private Double prodFee; 
 
+            private Builder() {
+            } 
+
+            private Builder(ContractActivity model) {
+                this.activityId = model.activityId;
+                this.activityName = model.activityName;
+                this.finalFee = model.finalFee;
+                this.finalPromFee = model.finalPromFee;
+                this.optionCode = model.optionCode;
+                this.optionIds = model.optionIds;
+                this.prodFee = model.prodFee;
+            } 
+
             /**
-             * ActivityId.
+             * <p>The activity ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder activityId(Long activityId) {
                 this.activityId = activityId;
@@ -463,7 +523,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * ActivityName.
+             * <p>The activity name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>合同优惠_整单_xxx折</p>
              */
             public Builder activityName(String activityName) {
                 this.activityName = activityName;
@@ -471,7 +534,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * FinalFee.
+             * <p>The price after the promotion.</p>
              */
             public Builder finalFee(Double finalFee) {
                 this.finalFee = finalFee;
@@ -479,7 +542,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * FinalPromFee.
+             * <p>The total discount amount.</p>
              */
             public Builder finalPromFee(Double finalPromFee) {
                 this.finalPromFee = finalPromFee;
@@ -487,7 +550,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * OptionCode.
+             * <p>The promotion ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder optionCode(String optionCode) {
                 this.optionCode = optionCode;
@@ -495,7 +561,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * OptionIds.
+             * <p>The promotion IDs.</p>
              */
             public Builder optionIds(OptionIds optionIds) {
                 this.optionIds = optionIds;
@@ -503,7 +569,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * ProdFee.
+             * <p>The original price.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder prodFee(Double prodFee) {
                 this.prodFee = prodFee;
@@ -657,8 +726,27 @@ public class DescribePriceResponseBody extends TeaModel {
             private Long monthPrice; 
             private Long originalStandAmount; 
 
+            private Builder() {
+            } 
+
+            private Builder(DepreciateInfo model) {
+                this.cheapRate = model.cheapRate;
+                this.cheapStandAmount = model.cheapStandAmount;
+                this.contractActivity = model.contractActivity;
+                this.differential = model.differential;
+                this.differentialName = model.differentialName;
+                this.isContractActivity = model.isContractActivity;
+                this.isShow = model.isShow;
+                this.listPrice = model.listPrice;
+                this.monthPrice = model.monthPrice;
+                this.originalStandAmount = model.originalStandAmount;
+            } 
+
             /**
-             * CheapRate.
+             * <p>The price reduction rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30%</p>
              */
             public Builder cheapRate(Long cheapRate) {
                 this.cheapRate = cheapRate;
@@ -666,7 +754,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * CheapStandAmount.
+             * <p>The new total price displayed on the official website.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9*</p>
              */
             public Builder cheapStandAmount(Long cheapStandAmount) {
                 this.cheapStandAmount = cheapStandAmount;
@@ -674,7 +765,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * ContractActivity.
+             * <p>The activity information.</p>
              */
             public Builder contractActivity(ContractActivity contractActivity) {
                 this.contractActivity = contractActivity;
@@ -682,7 +773,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * Differential.
+             * <p>The price difference displayed in the total order amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>**</p>
              */
             public Builder differential(Long differential) {
                 this.differential = differential;
@@ -690,7 +784,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * DifferentialName.
+             * <p>The name of the price difference.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>XXXXX</p>
              */
             public Builder differentialName(String differentialName) {
                 this.differentialName = differentialName;
@@ -698,7 +795,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * IsContractActivity.
+             * <p>Indicates whether the contract promotion is hit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isContractActivity(Boolean isContractActivity) {
                 this.isContractActivity = isContractActivity;
@@ -706,7 +806,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * IsShow.
+             * <p>Indicates whether the price reduction rate is displayed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isShow(Boolean isShow) {
                 this.isShow = isShow;
@@ -714,7 +817,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * ListPrice.
+             * <p>The list price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1*</p>
              */
             public Builder listPrice(Long listPrice) {
                 this.listPrice = listPrice;
@@ -722,7 +828,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * MonthPrice.
+             * <p>The monthly price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>**</p>
              */
             public Builder monthPrice(Long monthPrice) {
                 this.monthPrice = monthPrice;
@@ -730,7 +839,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalStandAmount.
+             * <p>The original total price displayed on the official website.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12*</p>
              */
             public Builder originalStandAmount(Long originalStandAmount) {
                 this.originalStandAmount = originalStandAmount;
@@ -752,7 +864,7 @@ public class DescribePriceResponseBody extends TeaModel {
      */
     public static class RuleIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RuleId")
-        private java.util.List < String > ruleId;
+        private java.util.List<String> ruleId;
 
         private RuleIds(Builder builder) {
             this.ruleId = builder.ruleId;
@@ -769,17 +881,24 @@ public class DescribePriceResponseBody extends TeaModel {
         /**
          * @return ruleId
          */
-        public java.util.List < String > getRuleId() {
+        public java.util.List<String> getRuleId() {
             return this.ruleId;
         }
 
         public static final class Builder {
-            private java.util.List < String > ruleId; 
+            private java.util.List<String> ruleId; 
+
+            private Builder() {
+            } 
+
+            private Builder(RuleIds model) {
+                this.ruleId = model.ruleId;
+            } 
 
             /**
              * RuleId.
              */
-            public Builder ruleId(java.util.List < String > ruleId) {
+            public Builder ruleId(java.util.List<String> ruleId) {
                 this.ruleId = ruleId;
                 return this;
             }
@@ -979,8 +1098,31 @@ public class DescribePriceResponseBody extends TeaModel {
             private Long standPrice; 
             private String tradeAmount; 
 
+            private Builder() {
+            } 
+
+            private Builder(Order model) {
+                this.code = model.code;
+                this.coupons = model.coupons;
+                this.currency = model.currency;
+                this.depreciateInfo = model.depreciateInfo;
+                this.discountAmount = model.discountAmount;
+                this.handlingFeeAmount = model.handlingFeeAmount;
+                this.isContractActivity = model.isContractActivity;
+                this.message = model.message;
+                this.originalAmount = model.originalAmount;
+                this.ruleIds = model.ruleIds;
+                this.showDiscountInfo = model.showDiscountInfo;
+                this.standDiscountPrice = model.standDiscountPrice;
+                this.standPrice = model.standPrice;
+                this.tradeAmount = model.tradeAmount;
+            } 
+
             /**
-             * Code.
+             * <p>The order code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -1007,7 +1149,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * DepreciateInfo.
+             * <p>The activity information.</p>
              */
             public Builder depreciateInfo(DepreciateInfo depreciateInfo) {
                 this.depreciateInfo = depreciateInfo;
@@ -1037,7 +1179,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * IsContractActivity.
+             * <p>Indicates whether the contract promotion is hit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isContractActivity(Boolean isContractActivity) {
                 this.isContractActivity = isContractActivity;
@@ -1045,7 +1190,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The order information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -1064,7 +1212,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Details about promotion rule IDs.</p>
+             * <p>The rule IDs.</p>
              */
             public Builder ruleIds(RuleIds ruleIds) {
                 this.ruleIds = ruleIds;
@@ -1080,7 +1228,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * StandDiscountPrice.
+             * <p>The discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder standDiscountPrice(Long standDiscountPrice) {
                 this.standDiscountPrice = standDiscountPrice;
@@ -1088,7 +1239,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * StandPrice.
+             * <p>The discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder standPrice(Long standPrice) {
                 this.standPrice = standPrice;
@@ -1169,6 +1323,15 @@ public class DescribePriceResponseBody extends TeaModel {
             private Long ruleDescId; 
             private String title; 
 
+            private Builder() {
+            } 
+
+            private Builder(Rule model) {
+                this.name = model.name;
+                this.ruleDescId = model.ruleDescId;
+                this.title = model.title;
+            } 
+
             /**
              * <p>The name of the promotion rule.</p>
              * 
@@ -1217,7 +1380,7 @@ public class DescribePriceResponseBody extends TeaModel {
      */
     public static class Rules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Rule")
-        private java.util.List < Rule> rule;
+        private java.util.List<Rule> rule;
 
         private Rules(Builder builder) {
             this.rule = builder.rule;
@@ -1234,17 +1397,24 @@ public class DescribePriceResponseBody extends TeaModel {
         /**
          * @return rule
          */
-        public java.util.List < Rule> getRule() {
+        public java.util.List<Rule> getRule() {
             return this.rule;
         }
 
         public static final class Builder {
-            private java.util.List < Rule> rule; 
+            private java.util.List<Rule> rule; 
+
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.rule = model.rule;
+            } 
 
             /**
              * Rule.
              */
-            public Builder rule(java.util.List < Rule> rule) {
+            public Builder rule(java.util.List<Rule> rule) {
                 this.rule = rule;
                 return this;
             }
@@ -1264,7 +1434,7 @@ public class DescribePriceResponseBody extends TeaModel {
      */
     public static class ContractActivityOptionIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OptionId")
-        private java.util.List < Long > optionId;
+        private java.util.List<Long> optionId;
 
         private ContractActivityOptionIds(Builder builder) {
             this.optionId = builder.optionId;
@@ -1281,17 +1451,24 @@ public class DescribePriceResponseBody extends TeaModel {
         /**
          * @return optionId
          */
-        public java.util.List < Long > getOptionId() {
+        public java.util.List<Long> getOptionId() {
             return this.optionId;
         }
 
         public static final class Builder {
-            private java.util.List < Long > optionId; 
+            private java.util.List<Long> optionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ContractActivityOptionIds model) {
+                this.optionId = model.optionId;
+            } 
 
             /**
              * OptionId.
              */
-            public Builder optionId(java.util.List < Long > optionId) {
+            public Builder optionId(java.util.List<Long> optionId) {
                 this.optionId = optionId;
                 return this;
             }
@@ -1407,8 +1584,24 @@ public class DescribePriceResponseBody extends TeaModel {
             private ContractActivityOptionIds optionIds; 
             private Double prodFee; 
 
+            private Builder() {
+            } 
+
+            private Builder(DepreciateInfoContractActivity model) {
+                this.activityId = model.activityId;
+                this.activityName = model.activityName;
+                this.finalFee = model.finalFee;
+                this.finalPromFee = model.finalPromFee;
+                this.optionCode = model.optionCode;
+                this.optionIds = model.optionIds;
+                this.prodFee = model.prodFee;
+            } 
+
             /**
-             * ActivityId.
+             * <p>The activity ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1412025702634847</p>
              */
             public Builder activityId(Long activityId) {
                 this.activityId = activityId;
@@ -1416,7 +1609,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * ActivityName.
+             * <p>The activity name.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder activityName(String activityName) {
                 this.activityName = activityName;
@@ -1424,7 +1620,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * FinalFee.
+             * <p>The discounted price.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder finalFee(Double finalFee) {
                 this.finalFee = finalFee;
@@ -1432,7 +1631,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * FinalPromFee.
+             * <p>The transaction price.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder finalPromFee(Double finalPromFee) {
                 this.finalPromFee = finalPromFee;
@@ -1440,7 +1642,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * OptionCode.
+             * <p>The promotion ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder optionCode(String optionCode) {
                 this.optionCode = optionCode;
@@ -1448,7 +1653,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * OptionIds.
+             * <p>The promotion ID.</p>
              */
             public Builder optionIds(ContractActivityOptionIds optionIds) {
                 this.optionIds = optionIds;
@@ -1456,7 +1661,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * ProdFee.
+             * <p>The original price.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder prodFee(Double prodFee) {
                 this.prodFee = prodFee;
@@ -1610,8 +1818,27 @@ public class DescribePriceResponseBody extends TeaModel {
             private Long originalStandAmount; 
             private String startTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubOrderDepreciateInfo model) {
+                this.cheapRate = model.cheapRate;
+                this.cheapStandAmount = model.cheapStandAmount;
+                this.contractActivity = model.contractActivity;
+                this.differential = model.differential;
+                this.differentialName = model.differentialName;
+                this.isContractActivity = model.isContractActivity;
+                this.listPrice = model.listPrice;
+                this.monthPrice = model.monthPrice;
+                this.originalStandAmount = model.originalStandAmount;
+                this.startTime = model.startTime;
+            } 
+
             /**
-             * CheapRate.
+             * <p>The price reduction rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder cheapRate(Long cheapRate) {
                 this.cheapRate = cheapRate;
@@ -1619,7 +1846,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * CheapStandAmount.
+             * <p>The new total price displayed on the official website.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder cheapStandAmount(Long cheapStandAmount) {
                 this.cheapStandAmount = cheapStandAmount;
@@ -1627,7 +1857,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * ContractActivity.
+             * <p>The contract promotion.</p>
              */
             public Builder contractActivity(DepreciateInfoContractActivity contractActivity) {
                 this.contractActivity = contractActivity;
@@ -1635,7 +1865,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * Differential.
+             * <p>The promotional offer (displayed in the total order amount).</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder differential(Long differential) {
                 this.differential = differential;
@@ -1643,7 +1876,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * DifferentialName.
+             * <p>The name of the promotional offer.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder differentialName(String differentialName) {
                 this.differentialName = differentialName;
@@ -1651,7 +1887,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * IsContractActivity.
+             * <p>Indicates whether eligibility for the contracted discount is met.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isContractActivity(Boolean isContractActivity) {
                 this.isContractActivity = isContractActivity;
@@ -1659,7 +1898,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * ListPrice.
+             * <p>The list price.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder listPrice(Long listPrice) {
                 this.listPrice = listPrice;
@@ -1667,7 +1909,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * MonthPrice.
+             * <p>The monthly price.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder monthPrice(Long monthPrice) {
                 this.monthPrice = monthPrice;
@@ -1675,7 +1920,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalStandAmount.
+             * <p>The original total price displayed on the official website.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder originalStandAmount(Long originalStandAmount) {
                 this.originalStandAmount = originalStandAmount;
@@ -1683,7 +1931,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the activity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-11-18T00:00:00Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -1837,8 +2088,27 @@ public class DescribePriceResponseBody extends TeaModel {
             private Double originalStandAmount; 
             private String startTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(ModuleInstanceDepreciateInfo model) {
+                this.cheapRate = model.cheapRate;
+                this.cheapStandAmount = model.cheapStandAmount;
+                this.differential = model.differential;
+                this.differentialName = model.differentialName;
+                this.isContractActivity = model.isContractActivity;
+                this.isShow = model.isShow;
+                this.listPrice = model.listPrice;
+                this.monthPrice = model.monthPrice;
+                this.originalStandAmount = model.originalStandAmount;
+                this.startTime = model.startTime;
+            } 
+
             /**
-             * CheapRate.
+             * <p>The price reduction rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder cheapRate(Double cheapRate) {
                 this.cheapRate = cheapRate;
@@ -1846,7 +2116,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * CheapStandAmount.
+             * <p>The new total price displayed on the official website.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder cheapStandAmount(Double cheapStandAmount) {
                 this.cheapStandAmount = cheapStandAmount;
@@ -1854,7 +2127,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * Differential.
+             * <p>The promotional offer (displayed in the total order amount).</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder differential(Double differential) {
                 this.differential = differential;
@@ -1862,7 +2138,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * DifferentialName.
+             * <p>The name of the promotional offer.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder differentialName(String differentialName) {
                 this.differentialName = differentialName;
@@ -1870,7 +2149,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * IsContractActivity.
+             * <p>Indicates whether eligibility for the contracted discount is met.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder isContractActivity(Boolean isContractActivity) {
                 this.isContractActivity = isContractActivity;
@@ -1878,7 +2160,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * IsShow.
+             * <p>Indicates whether the price reduction rate is displayed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isShow(Boolean isShow) {
                 this.isShow = isShow;
@@ -1886,7 +2171,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * ListPrice.
+             * <p>The list price.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder listPrice(Double listPrice) {
                 this.listPrice = listPrice;
@@ -1894,7 +2182,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * MonthPrice.
+             * <p>The monthly price.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder monthPrice(Double monthPrice) {
                 this.monthPrice = monthPrice;
@@ -1902,7 +2193,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalStandAmount.
+             * <p>The original total price displayed on the official website.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder originalStandAmount(Double originalStandAmount) {
                 this.originalStandAmount = originalStandAmount;
@@ -1910,7 +2204,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the activity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-09-23T14:00:01Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -1992,8 +2289,21 @@ public class DescribePriceResponseBody extends TeaModel {
             private Long type; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(ModuleAttr model) {
+                this.code = model.code;
+                this.name = model.name;
+                this.type = model.type;
+                this.value = model.value;
+            } 
+
             /**
-             * Code.
+             * <p>The attribute code.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -2001,10 +2311,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the promotion rule.</p>
+             * <p>The attribute name.</p>
              * 
              * <strong>example:</strong>
-             * <p>test</p>
+             * <hr>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2012,7 +2322,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The attribute type.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder type(Long type) {
                 this.type = type;
@@ -2020,7 +2333,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The attribute value.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -2042,7 +2358,7 @@ public class DescribePriceResponseBody extends TeaModel {
      */
     public static class ModuleAttrs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("moduleAttr")
-        private java.util.List < ModuleAttr> moduleAttr;
+        private java.util.List<ModuleAttr> moduleAttr;
 
         private ModuleAttrs(Builder builder) {
             this.moduleAttr = builder.moduleAttr;
@@ -2059,17 +2375,24 @@ public class DescribePriceResponseBody extends TeaModel {
         /**
          * @return moduleAttr
          */
-        public java.util.List < ModuleAttr> getModuleAttr() {
+        public java.util.List<ModuleAttr> getModuleAttr() {
             return this.moduleAttr;
         }
 
         public static final class Builder {
-            private java.util.List < ModuleAttr> moduleAttr; 
+            private java.util.List<ModuleAttr> moduleAttr; 
+
+            private Builder() {
+            } 
+
+            private Builder(ModuleAttrs model) {
+                this.moduleAttr = model.moduleAttr;
+            } 
 
             /**
              * moduleAttr.
              */
-            public Builder moduleAttr(java.util.List < ModuleAttr> moduleAttr) {
+            public Builder moduleAttr(java.util.List<ModuleAttr> moduleAttr) {
                 this.moduleAttr = moduleAttr;
                 return this;
             }
@@ -2245,8 +2568,29 @@ public class DescribePriceResponseBody extends TeaModel {
             private Double standPrice; 
             private Double totalProductFee; 
 
+            private Builder() {
+            } 
+
+            private Builder(ModuleInstance model) {
+                this.contractActivity = model.contractActivity;
+                this.depreciateInfo = model.depreciateInfo;
+                this.discountFee = model.discountFee;
+                this.moduleAttrs = model.moduleAttrs;
+                this.moduleCode = model.moduleCode;
+                this.moduleId = model.moduleId;
+                this.moduleName = model.moduleName;
+                this.needOrderPay = model.needOrderPay;
+                this.payFee = model.payFee;
+                this.pricingModule = model.pricingModule;
+                this.standPrice = model.standPrice;
+                this.totalProductFee = model.totalProductFee;
+            } 
+
             /**
-             * ContractActivity.
+             * <p>Indicates whether eligibility for the contracted discount is met.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder contractActivity(Boolean contractActivity) {
                 this.contractActivity = contractActivity;
@@ -2254,7 +2598,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * DepreciateInfo.
+             * <p>The price reduction information.</p>
              */
             public Builder depreciateInfo(ModuleInstanceDepreciateInfo depreciateInfo) {
                 this.depreciateInfo = depreciateInfo;
@@ -2262,7 +2606,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * DiscountFee.
+             * <p>The discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder discountFee(Double discountFee) {
                 this.discountFee = discountFee;
@@ -2270,7 +2617,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * ModuleAttrs.
+             * <p>The module attributes.</p>
              */
             public Builder moduleAttrs(ModuleAttrs moduleAttrs) {
                 this.moduleAttrs = moduleAttrs;
@@ -2278,7 +2625,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * ModuleCode.
+             * <p>The module code.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder moduleCode(String moduleCode) {
                 this.moduleCode = moduleCode;
@@ -2286,7 +2636,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * ModuleId.
+             * <p>The module ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder moduleId(String moduleId) {
                 this.moduleId = moduleId;
@@ -2294,7 +2647,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * ModuleName.
+             * <p>The module name.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder moduleName(String moduleName) {
                 this.moduleName = moduleName;
@@ -2302,7 +2658,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * NeedOrderPay.
+             * <p>Indicates whether the order is paid.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder needOrderPay(Boolean needOrderPay) {
                 this.needOrderPay = needOrderPay;
@@ -2310,7 +2669,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * PayFee.
+             * <p>The actual amount paid.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
              */
             public Builder payFee(Double payFee) {
                 this.payFee = payFee;
@@ -2318,7 +2680,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * PricingModule.
+             * <p>Indicates whether the item is billed.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder pricingModule(Boolean pricingModule) {
                 this.pricingModule = pricingModule;
@@ -2326,7 +2691,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * StandPrice.
+             * <p>The discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder standPrice(Double standPrice) {
                 this.standPrice = standPrice;
@@ -2334,7 +2702,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * TotalProductFee.
+             * <p>The original price of the product.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
              */
             public Builder totalProductFee(Double totalProductFee) {
                 this.totalProductFee = totalProductFee;
@@ -2356,7 +2727,7 @@ public class DescribePriceResponseBody extends TeaModel {
      */
     public static class SubOrderModuleInstance extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ModuleInstance")
-        private java.util.List < ModuleInstance> moduleInstance;
+        private java.util.List<ModuleInstance> moduleInstance;
 
         private SubOrderModuleInstance(Builder builder) {
             this.moduleInstance = builder.moduleInstance;
@@ -2373,17 +2744,24 @@ public class DescribePriceResponseBody extends TeaModel {
         /**
          * @return moduleInstance
          */
-        public java.util.List < ModuleInstance> getModuleInstance() {
+        public java.util.List<ModuleInstance> getModuleInstance() {
             return this.moduleInstance;
         }
 
         public static final class Builder {
-            private java.util.List < ModuleInstance> moduleInstance; 
+            private java.util.List<ModuleInstance> moduleInstance; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubOrderModuleInstance model) {
+                this.moduleInstance = model.moduleInstance;
+            } 
 
             /**
              * ModuleInstance.
              */
-            public Builder moduleInstance(java.util.List < ModuleInstance> moduleInstance) {
+            public Builder moduleInstance(java.util.List<ModuleInstance> moduleInstance) {
                 this.moduleInstance = moduleInstance;
                 return this;
             }
@@ -2403,7 +2781,7 @@ public class DescribePriceResponseBody extends TeaModel {
      */
     public static class OptionalPromotion extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActivityExtInfo")
-        private java.util.Map < String, ? > activityExtInfo;
+        private java.util.Map<String, ?> activityExtInfo;
 
         @com.aliyun.core.annotation.NameInMap("CanPromFee")
         private String canPromFee;
@@ -2456,7 +2834,7 @@ public class DescribePriceResponseBody extends TeaModel {
         /**
          * @return activityExtInfo
          */
-        public java.util.Map < String, ? > getActivityExtInfo() {
+        public java.util.Map<String, ?> getActivityExtInfo() {
             return this.activityExtInfo;
         }
 
@@ -2524,7 +2902,7 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.Map < String, ? > activityExtInfo; 
+            private java.util.Map<String, ?> activityExtInfo; 
             private String canPromFee; 
             private String couponNo; 
             private String description; 
@@ -2535,16 +2913,38 @@ public class DescribePriceResponseBody extends TeaModel {
             private Boolean selected; 
             private Boolean show; 
 
+            private Builder() {
+            } 
+
+            private Builder(OptionalPromotion model) {
+                this.activityExtInfo = model.activityExtInfo;
+                this.canPromFee = model.canPromFee;
+                this.couponNo = model.couponNo;
+                this.description = model.description;
+                this.name = model.name;
+                this.optionCode = model.optionCode;
+                this.promotionName = model.promotionName;
+                this.promotionOptionNo = model.promotionOptionNo;
+                this.selected = model.selected;
+                this.show = model.show;
+            } 
+
             /**
-             * ActivityExtInfo.
+             * <p>The additional activity information.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
-            public Builder activityExtInfo(java.util.Map < String, ? > activityExtInfo) {
+            public Builder activityExtInfo(java.util.Map<String, ?> activityExtInfo) {
                 this.activityExtInfo = activityExtInfo;
                 return this;
             }
 
             /**
-             * CanPromFee.
+             * <p>The amount that can be deducted by using the coupon.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder canPromFee(String canPromFee) {
                 this.canPromFee = canPromFee;
@@ -2552,10 +2952,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The coupon ID.</p>
+             * <p>The coupon code. Default value: <code>youhuiquan_promotion_option_id_for_blank</code>.</p>
              * 
              * <strong>example:</strong>
-             * <p>youhuiquan_promotion_option_id_for_blank</p>
+             * <p>default</p>
              */
             public Builder couponNo(String couponNo) {
                 this.couponNo = couponNo;
@@ -2566,7 +2966,7 @@ public class DescribePriceResponseBody extends TeaModel {
              * <p>The description of the coupon.</p>
              * 
              * <strong>example:</strong>
-             * <p>coupondemo</p>
+             * <hr>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2574,10 +2974,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the promotion rule.</p>
+             * <p>The coupon name.</p>
              * 
              * <strong>example:</strong>
-             * <p>test</p>
+             * <hr>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2585,7 +2985,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * OptionCode.
+             * <p>The promotion code.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder optionCode(String optionCode) {
                 this.optionCode = optionCode;
@@ -2593,7 +2996,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * PromotionName.
+             * <p>The promotion name.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder promotionName(String promotionName) {
                 this.promotionName = promotionName;
@@ -2601,7 +3007,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * PromotionOptionNo.
+             * <p>The promotion ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>youhuiquan_promotion_option_id_for_blank</p>
              */
             public Builder promotionOptionNo(String promotionOptionNo) {
                 this.promotionOptionNo = promotionOptionNo;
@@ -2609,7 +3018,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * Selected.
+             * <p>Indicates whether</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder selected(Boolean selected) {
                 this.selected = selected;
@@ -2617,7 +3029,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * Show.
+             * <p>Indicates whether the discount is displayed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>False</p>
              */
             public Builder show(Boolean show) {
                 this.show = show;
@@ -2639,7 +3054,7 @@ public class DescribePriceResponseBody extends TeaModel {
      */
     public static class OptionalPromotions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OptionalPromotion")
-        private java.util.List < OptionalPromotion> optionalPromotion;
+        private java.util.List<OptionalPromotion> optionalPromotion;
 
         private OptionalPromotions(Builder builder) {
             this.optionalPromotion = builder.optionalPromotion;
@@ -2656,17 +3071,24 @@ public class DescribePriceResponseBody extends TeaModel {
         /**
          * @return optionalPromotion
          */
-        public java.util.List < OptionalPromotion> getOptionalPromotion() {
+        public java.util.List<OptionalPromotion> getOptionalPromotion() {
             return this.optionalPromotion;
         }
 
         public static final class Builder {
-            private java.util.List < OptionalPromotion> optionalPromotion; 
+            private java.util.List<OptionalPromotion> optionalPromotion; 
+
+            private Builder() {
+            } 
+
+            private Builder(OptionalPromotions model) {
+                this.optionalPromotion = model.optionalPromotion;
+            } 
 
             /**
              * OptionalPromotion.
              */
-            public Builder optionalPromotion(java.util.List < OptionalPromotion> optionalPromotion) {
+            public Builder optionalPromotion(java.util.List<OptionalPromotion> optionalPromotion) {
                 this.optionalPromotion = optionalPromotion;
                 return this;
             }
@@ -2686,7 +3108,7 @@ public class DescribePriceResponseBody extends TeaModel {
      */
     public static class PromDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActivityExtInfo")
-        private java.util.Map < String, ? > activityExtInfo;
+        private java.util.Map<String, ?> activityExtInfo;
 
         @com.aliyun.core.annotation.NameInMap("DerivedPromType")
         private String derivedPromType;
@@ -2731,7 +3153,7 @@ public class DescribePriceResponseBody extends TeaModel {
         /**
          * @return activityExtInfo
          */
-        public java.util.Map < String, ? > getActivityExtInfo() {
+        public java.util.Map<String, ?> getActivityExtInfo() {
             return this.activityExtInfo;
         }
 
@@ -2785,7 +3207,7 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.Map < String, ? > activityExtInfo; 
+            private java.util.Map<String, ?> activityExtInfo; 
             private String derivedPromType; 
             private Double finalPromFee; 
             private String optionCode; 
@@ -2794,16 +3216,36 @@ public class DescribePriceResponseBody extends TeaModel {
             private Long promotionId; 
             private String promotionName; 
 
+            private Builder() {
+            } 
+
+            private Builder(PromDetail model) {
+                this.activityExtInfo = model.activityExtInfo;
+                this.derivedPromType = model.derivedPromType;
+                this.finalPromFee = model.finalPromFee;
+                this.optionCode = model.optionCode;
+                this.promType = model.promType;
+                this.promotionCode = model.promotionCode;
+                this.promotionId = model.promotionId;
+                this.promotionName = model.promotionName;
+            } 
+
             /**
-             * ActivityExtInfo.
+             * <p>The additional activity information.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
-            public Builder activityExtInfo(java.util.Map < String, ? > activityExtInfo) {
+            public Builder activityExtInfo(java.util.Map<String, ?> activityExtInfo) {
                 this.activityExtInfo = activityExtInfo;
                 return this;
             }
 
             /**
-             * DerivedPromType.
+             * <p>The derived promotion type.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder derivedPromType(String derivedPromType) {
                 this.derivedPromType = derivedPromType;
@@ -2811,7 +3253,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * FinalPromFee.
+             * <p>The transaction price.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder finalPromFee(Double finalPromFee) {
                 this.finalPromFee = finalPromFee;
@@ -2819,7 +3264,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * OptionCode.
+             * <p>The code of the coupon.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder optionCode(String optionCode) {
                 this.optionCode = optionCode;
@@ -2827,7 +3275,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * PromType.
+             * <p>The promotion type.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder promType(String promType) {
                 this.promType = promType;
@@ -2835,7 +3286,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * PromotionCode.
+             * <p>The coupon code.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder promotionCode(String promotionCode) {
                 this.promotionCode = promotionCode;
@@ -2843,7 +3297,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * PromotionId.
+             * <p>The promotion ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder promotionId(Long promotionId) {
                 this.promotionId = promotionId;
@@ -2851,7 +3308,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * PromotionName.
+             * <p>The name of the promotional activity.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder promotionName(String promotionName) {
                 this.promotionName = promotionName;
@@ -2873,7 +3333,7 @@ public class DescribePriceResponseBody extends TeaModel {
      */
     public static class PromDetailList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PromDetail")
-        private java.util.List < PromDetail> promDetail;
+        private java.util.List<PromDetail> promDetail;
 
         private PromDetailList(Builder builder) {
             this.promDetail = builder.promDetail;
@@ -2890,17 +3350,24 @@ public class DescribePriceResponseBody extends TeaModel {
         /**
          * @return promDetail
          */
-        public java.util.List < PromDetail> getPromDetail() {
+        public java.util.List<PromDetail> getPromDetail() {
             return this.promDetail;
         }
 
         public static final class Builder {
-            private java.util.List < PromDetail> promDetail; 
+            private java.util.List<PromDetail> promDetail; 
+
+            private Builder() {
+            } 
+
+            private Builder(PromDetailList model) {
+                this.promDetail = model.promDetail;
+            } 
 
             /**
              * PromDetail.
              */
-            public Builder promDetail(java.util.List < PromDetail> promDetail) {
+            public Builder promDetail(java.util.List<PromDetail> promDetail) {
                 this.promDetail = promDetail;
                 return this;
             }
@@ -2920,7 +3387,7 @@ public class DescribePriceResponseBody extends TeaModel {
      */
     public static class SubOrderRuleIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RuleId")
-        private java.util.List < String > ruleId;
+        private java.util.List<String> ruleId;
 
         private SubOrderRuleIds(Builder builder) {
             this.ruleId = builder.ruleId;
@@ -2937,17 +3404,24 @@ public class DescribePriceResponseBody extends TeaModel {
         /**
          * @return ruleId
          */
-        public java.util.List < String > getRuleId() {
+        public java.util.List<String> getRuleId() {
             return this.ruleId;
         }
 
         public static final class Builder {
-            private java.util.List < String > ruleId; 
+            private java.util.List<String> ruleId; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubOrderRuleIds model) {
+                this.ruleId = model.ruleId;
+            } 
 
             /**
              * RuleId.
              */
-            public Builder ruleId(java.util.List < String > ruleId) {
+            public Builder ruleId(java.util.List<String> ruleId) {
                 this.ruleId = ruleId;
                 return this;
             }
@@ -3135,8 +3609,30 @@ public class DescribePriceResponseBody extends TeaModel {
             private Long standPrice; 
             private String tradeAmount; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubOrder model) {
+                this.contractActivity = model.contractActivity;
+                this.depreciateInfo = model.depreciateInfo;
+                this.discountAmount = model.discountAmount;
+                this.instanceId = model.instanceId;
+                this.isContractActivity = model.isContractActivity;
+                this.moduleInstance = model.moduleInstance;
+                this.optionalPromotions = model.optionalPromotions;
+                this.originalAmount = model.originalAmount;
+                this.promDetailList = model.promDetailList;
+                this.ruleIds = model.ruleIds;
+                this.standDiscountPrice = model.standDiscountPrice;
+                this.standPrice = model.standPrice;
+                this.tradeAmount = model.tradeAmount;
+            } 
+
             /**
-             * ContractActivity.
+             * <p>Indicates whether eligibility for the contracted discount is met.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder contractActivity(Boolean contractActivity) {
                 this.contractActivity = contractActivity;
@@ -3144,7 +3640,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * DepreciateInfo.
+             * <p>The price reduction information.</p>
              */
             public Builder depreciateInfo(SubOrderDepreciateInfo depreciateInfo) {
                 this.depreciateInfo = depreciateInfo;
@@ -3174,7 +3670,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * IsContractActivity.
+             * <p>Indicates whether eligibility for the contracted discount is met.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder isContractActivity(Boolean isContractActivity) {
                 this.isContractActivity = isContractActivity;
@@ -3182,7 +3681,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * ModuleInstance.
+             * <p>The configuration details for each instance of an order line item.</p>
              */
             public Builder moduleInstance(SubOrderModuleInstance moduleInstance) {
                 this.moduleInstance = moduleInstance;
@@ -3190,7 +3689,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * OptionalPromotions.
+             * <p>The optional promotions.</p>
              */
             public Builder optionalPromotions(OptionalPromotions optionalPromotions) {
                 this.optionalPromotions = optionalPromotions;
@@ -3209,7 +3708,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * PromDetailList.
+             * <p>The promotion details.</p>
              */
             public Builder promDetailList(PromDetailList promDetailList) {
                 this.promDetailList = promDetailList;
@@ -3225,7 +3724,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * StandDiscountPrice.
+             * <p>The discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder standDiscountPrice(Long standDiscountPrice) {
                 this.standDiscountPrice = standDiscountPrice;
@@ -3233,7 +3735,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * StandPrice.
+             * <p>The discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder standPrice(Long standPrice) {
                 this.standPrice = standPrice;
@@ -3266,7 +3771,7 @@ public class DescribePriceResponseBody extends TeaModel {
      */
     public static class SubOrders extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SubOrder")
-        private java.util.List < SubOrder> subOrder;
+        private java.util.List<SubOrder> subOrder;
 
         private SubOrders(Builder builder) {
             this.subOrder = builder.subOrder;
@@ -3283,17 +3788,24 @@ public class DescribePriceResponseBody extends TeaModel {
         /**
          * @return subOrder
          */
-        public java.util.List < SubOrder> getSubOrder() {
+        public java.util.List<SubOrder> getSubOrder() {
             return this.subOrder;
         }
 
         public static final class Builder {
-            private java.util.List < SubOrder> subOrder; 
+            private java.util.List<SubOrder> subOrder; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubOrders model) {
+                this.subOrder = model.subOrder;
+            } 
 
             /**
              * SubOrder.
              */
-            public Builder subOrder(java.util.List < SubOrder> subOrder) {
+            public Builder subOrder(java.util.List<SubOrder> subOrder) {
                 this.subOrder = subOrder;
                 return this;
             }

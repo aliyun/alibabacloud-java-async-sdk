@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeParameterGroupTemplateListResponseBody extends TeaModel {
     private String engineVersion;
 
     @com.aliyun.core.annotation.NameInMap("Parameters")
-    private java.util.List < Parameters> parameters;
+    private java.util.List<Parameters> parameters;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -35,6 +40,10 @@ public class DescribeParameterGroupTemplateListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return engineVersion
      */
@@ -45,7 +54,7 @@ public class DescribeParameterGroupTemplateListResponseBody extends TeaModel {
     /**
      * @return parameters
      */
-    public java.util.List < Parameters> getParameters() {
+    public java.util.List<Parameters> getParameters() {
         return this.parameters;
     }
 
@@ -58,12 +67,21 @@ public class DescribeParameterGroupTemplateListResponseBody extends TeaModel {
 
     public static final class Builder {
         private String engineVersion; 
-        private java.util.List < Parameters> parameters; 
+        private java.util.List<Parameters> parameters; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeParameterGroupTemplateListResponseBody model) {
+            this.engineVersion = model.engineVersion;
+            this.parameters = model.parameters;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The compatible engine version. Valid values:</p>
-         * <p>ApsaraDB for Redis Community Edition: 5.0, 6.0, and 7.0. Tair DRAM-based instances: 5.0 and 6.0. Tair persistent memory-optimized instances: 6.0. Tair ESSD-based instances: 4.0.</p>
+         * <p>Redis Open Source Edition: 5.0, 6.0, and 7.0. Tair DRAM-based instances: 5.0 and 6.0. Tair persistent memory-optimized instances: 6.0. Tair ESSD-based instances: 4.0.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -76,7 +94,7 @@ public class DescribeParameterGroupTemplateListResponseBody extends TeaModel {
         /**
          * <p>The information about parameters.</p>
          */
-        public Builder parameters(java.util.List < Parameters> parameters) {
+        public Builder parameters(java.util.List<Parameters> parameters) {
             this.parameters = parameters;
             return this;
         }
@@ -226,6 +244,21 @@ public class DescribeParameterGroupTemplateListResponseBody extends TeaModel {
             private Boolean supportModifyForMinorVersion; 
             private String unit; 
 
+            private Builder() {
+            } 
+
+            private Builder(Parameters model) {
+                this.checkingCode = model.checkingCode;
+                this.effective = model.effective;
+                this.factor = model.factor;
+                this.parameterDescription = model.parameterDescription;
+                this.parameterName = model.parameterName;
+                this.parameterValue = model.parameterValue;
+                this.revisable = model.revisable;
+                this.supportModifyForMinorVersion = model.supportModifyForMinorVersion;
+                this.unit = model.unit;
+            } 
+
             /**
              * <p>The regular expression used to validate input.</p>
              * 
@@ -261,6 +294,9 @@ public class DescribeParameterGroupTemplateListResponseBody extends TeaModel {
 
             /**
              * <p>The description of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Open AOF persistence mode</p>
              */
             public Builder parameterDescription(String parameterDescription) {
                 this.parameterDescription = parameterDescription;

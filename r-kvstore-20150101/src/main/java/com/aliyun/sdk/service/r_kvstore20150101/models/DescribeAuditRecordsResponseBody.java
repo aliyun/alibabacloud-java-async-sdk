@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -53,6 +58,10 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
 
     public static DescribeAuditRecordsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -120,6 +129,20 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
         private String requestId; 
         private String startTime; 
         private Integer totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAuditRecordsResponseBody model) {
+            this.endTime = model.endTime;
+            this.instanceName = model.instanceName;
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * <p>The end time of the query.</p>
@@ -340,6 +363,21 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
             private String SQLType; 
             private String totalExecutionTimes; 
 
+            private Builder() {
+            } 
+
+            private Builder(SQL model) {
+                this.accountName = model.accountName;
+                this.databaseName = model.databaseName;
+                this.executeTime = model.executeTime;
+                this.hostAddress = model.hostAddress;
+                this.IPAddress = model.IPAddress;
+                this.nodeId = model.nodeId;
+                this.SQLText = model.SQLText;
+                this.SQLType = model.SQLType;
+                this.totalExecutionTimes = model.totalExecutionTimes;
+            } 
+
             /**
              * <p>The username of the account.</p>
              * 
@@ -457,7 +495,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
      */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SQL")
-        private java.util.List < SQL> SQL;
+        private java.util.List<SQL> SQL;
 
         private Items(Builder builder) {
             this.SQL = builder.SQL;
@@ -474,17 +512,24 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
         /**
          * @return SQL
          */
-        public java.util.List < SQL> getSQL() {
+        public java.util.List<SQL> getSQL() {
             return this.SQL;
         }
 
         public static final class Builder {
-            private java.util.List < SQL> SQL; 
+            private java.util.List<SQL> SQL; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.SQL = model.SQL;
+            } 
 
             /**
              * SQL.
              */
-            public Builder SQL(java.util.List < SQL> SQL) {
+            public Builder SQL(java.util.List<SQL> SQL) {
                 this.SQL = SQL;
                 return this;
             }

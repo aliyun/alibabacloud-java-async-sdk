@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -113,7 +118,7 @@ public class DescribeSlowLogRecordsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -329,9 +334,9 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the node in the instance. You can specify this parameter to query the slow logs of a specified node.</p>
+         * <p>The ID of the node in the instance. You can set this parameter to query the slow query logs of a specified node.</p>
          * <blockquote>
-         * <p>This parameter is available only if the instance uses the read/write splitting or cluster architecture.</p>
+         * <p> This parameter is available only for read/write splitting and cluster instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

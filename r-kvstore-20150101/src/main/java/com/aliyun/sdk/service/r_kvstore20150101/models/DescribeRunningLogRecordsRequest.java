@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -118,7 +123,7 @@ public class DescribeRunningLogRecordsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -365,11 +370,13 @@ public class DescribeRunningLogRecordsRequest extends Request {
         /**
          * <p>The ID of the node in the instance. You can set this parameter to query the operational logs of a specified node.</p>
          * <blockquote>
-         * <ul>
-         * <li>This parameter is available only for read/write splitting and cluster instances of ApsaraDB for Redis.</li>
-         * <li>If you set this parameter, you must also set the <strong>CharacterType</strong> parameter.</li>
-         * </ul>
          * </blockquote>
+         * <ul>
+         * <li><p>This parameter is available only for read/write splitting and cluster instances.</p>
+         * </li>
+         * <li><p>If you set this parameter, you must also set the <strong>CharacterType</strong> parameter.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>r-bp1zxszhcgatnx****-db-0</p>

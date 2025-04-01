@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -81,7 +86,7 @@ public class DescribeCacheAnalysisReportListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -235,7 +240,7 @@ public class DescribeCacheAnalysisReportListRequest extends Request {
         /**
          * <p>The ID of the child node in the cluster instance.</p>
          * <blockquote>
-         * <p>If this parameter is not specified, the analysis results of all child nodes in the instance are returned.</p>
+         * <p> If you do not specify this parameter, the analysis results of all child nodes in the instance are returned.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

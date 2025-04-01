@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,6 +46,10 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
 
     public static DescribeInstanceAutoRenewalAttributeResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
         private Integer pageRecordCount; 
         private String requestId; 
         private Integer totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceAutoRenewalAttributeResponseBody model) {
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageRecordCount = model.pageRecordCount;
+            this.requestId = model.requestId;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * <p>Details of the auto-renewal information for the instance.</p>
@@ -211,6 +231,16 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
             private Integer duration; 
             private String regionId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Item model) {
+                this.autoRenew = model.autoRenew;
+                this.DBInstanceId = model.DBInstanceId;
+                this.duration = model.duration;
+                this.regionId = model.regionId;
+            } 
+
             /**
              * <p>Indicates whether auto-renewal is enabled. Valid values:</p>
              * <ul>
@@ -274,7 +304,7 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
      */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Item")
-        private java.util.List < Item> item;
+        private java.util.List<Item> item;
 
         private Items(Builder builder) {
             this.item = builder.item;
@@ -291,17 +321,24 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
         /**
          * @return item
          */
-        public java.util.List < Item> getItem() {
+        public java.util.List<Item> getItem() {
             return this.item;
         }
 
         public static final class Builder {
-            private java.util.List < Item> item; 
+            private java.util.List<Item> item; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.item = model.item;
+            } 
 
             /**
              * Item.
              */
-            public Builder item(java.util.List < Item> item) {
+            public Builder item(java.util.List<Item> item) {
                 this.item = item;
                 return this;
             }

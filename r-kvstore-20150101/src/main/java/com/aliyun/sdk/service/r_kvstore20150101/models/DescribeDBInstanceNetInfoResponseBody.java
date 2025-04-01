@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,6 +40,10 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceNetworkType
      */
@@ -60,6 +69,15 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         private String instanceNetworkType; 
         private NetInfoItems netInfoItems; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBInstanceNetInfoResponseBody model) {
+            this.instanceNetworkType = model.instanceNetworkType;
+            this.netInfoItems = model.netInfoItems;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The network type. Valid values:</p>
@@ -265,6 +283,24 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             private String VPCInstanceId; 
             private String vSwitchId; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceNetInfo model) {
+                this.connectionString = model.connectionString;
+                this.DBInstanceNetType = model.DBInstanceNetType;
+                this.directConnection = model.directConnection;
+                this.expiredTime = model.expiredTime;
+                this.IPAddress = model.IPAddress;
+                this.IPType = model.IPType;
+                this.isSlaveProxy = model.isSlaveProxy;
+                this.port = model.port;
+                this.upgradeable = model.upgradeable;
+                this.VPCId = model.VPCId;
+                this.VPCInstanceId = model.VPCInstanceId;
+                this.vSwitchId = model.vSwitchId;
+            } 
+
             /**
              * <p>The endpoint of the instance.</p>
              * 
@@ -432,7 +468,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
      */
     public static class NetInfoItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceNetInfo")
-        private java.util.List < InstanceNetInfo> instanceNetInfo;
+        private java.util.List<InstanceNetInfo> instanceNetInfo;
 
         private NetInfoItems(Builder builder) {
             this.instanceNetInfo = builder.instanceNetInfo;
@@ -449,17 +485,24 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         /**
          * @return instanceNetInfo
          */
-        public java.util.List < InstanceNetInfo> getInstanceNetInfo() {
+        public java.util.List<InstanceNetInfo> getInstanceNetInfo() {
             return this.instanceNetInfo;
         }
 
         public static final class Builder {
-            private java.util.List < InstanceNetInfo> instanceNetInfo; 
+            private java.util.List<InstanceNetInfo> instanceNetInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetInfoItems model) {
+                this.instanceNetInfo = model.instanceNetInfo;
+            } 
 
             /**
              * InstanceNetInfo.
              */
-            public Builder instanceNetInfo(java.util.List < InstanceNetInfo> instanceNetInfo) {
+            public Builder instanceNetInfo(java.util.List<InstanceNetInfo> instanceNetInfo) {
                 this.instanceNetInfo = instanceNetInfo;
                 return this;
             }

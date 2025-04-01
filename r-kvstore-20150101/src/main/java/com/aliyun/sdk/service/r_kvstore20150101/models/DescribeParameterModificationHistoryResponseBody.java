@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class DescribeParameterModificationHistoryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return historicalParameters
      */
@@ -49,8 +58,16 @@ public class DescribeParameterModificationHistoryResponseBody extends TeaModel {
         private HistoricalParameters historicalParameters; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeParameterModificationHistoryResponseBody model) {
+            this.historicalParameters = model.historicalParameters;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>Details of the parameter modification records.</p>
+         * <p>The modification records of the parameters.</p>
          */
         public Builder historicalParameters(HistoricalParameters historicalParameters) {
             this.historicalParameters = historicalParameters;
@@ -142,6 +159,16 @@ public class DescribeParameterModificationHistoryResponseBody extends TeaModel {
             private String oldParameterValue; 
             private String parameterName; 
 
+            private Builder() {
+            } 
+
+            private Builder(HistoricalParameter model) {
+                this.modifyTime = model.modifyTime;
+                this.newParameterValue = model.newParameterValue;
+                this.oldParameterValue = model.oldParameterValue;
+                this.parameterName = model.parameterName;
+            } 
+
             /**
              * <p>The time when the parameter was modified. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
              * 
@@ -201,7 +228,7 @@ public class DescribeParameterModificationHistoryResponseBody extends TeaModel {
      */
     public static class HistoricalParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HistoricalParameter")
-        private java.util.List < HistoricalParameter> historicalParameter;
+        private java.util.List<HistoricalParameter> historicalParameter;
 
         private HistoricalParameters(Builder builder) {
             this.historicalParameter = builder.historicalParameter;
@@ -218,17 +245,24 @@ public class DescribeParameterModificationHistoryResponseBody extends TeaModel {
         /**
          * @return historicalParameter
          */
-        public java.util.List < HistoricalParameter> getHistoricalParameter() {
+        public java.util.List<HistoricalParameter> getHistoricalParameter() {
             return this.historicalParameter;
         }
 
         public static final class Builder {
-            private java.util.List < HistoricalParameter> historicalParameter; 
+            private java.util.List<HistoricalParameter> historicalParameter; 
+
+            private Builder() {
+            } 
+
+            private Builder(HistoricalParameters model) {
+                this.historicalParameter = model.historicalParameter;
+            } 
 
             /**
              * HistoricalParameter.
              */
-            public Builder historicalParameter(java.util.List < HistoricalParameter> historicalParameter) {
+            public Builder historicalParameter(java.util.List<HistoricalParameter> historicalParameter) {
                 this.historicalParameter = historicalParameter;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class DescribeAccountsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accounts
      */
@@ -48,6 +57,14 @@ public class DescribeAccountsResponseBody extends TeaModel {
     public static final class Builder {
         private Accounts accounts; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAccountsResponseBody model) {
+            this.accounts = model.accounts;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Details about returned accounts of the instance.</p>
@@ -106,6 +123,13 @@ public class DescribeAccountsResponseBody extends TeaModel {
         public static final class Builder {
             private String accountPrivilege; 
 
+            private Builder() {
+            } 
+
+            private Builder(DatabasePrivilege model) {
+                this.accountPrivilege = model.accountPrivilege;
+            } 
+
             /**
              * <p>The permission of the account. Default value: RoleReadWrite. Valid values:</p>
              * <ul>
@@ -136,7 +160,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
      */
     public static class DatabasePrivileges extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DatabasePrivilege")
-        private java.util.List < DatabasePrivilege> databasePrivilege;
+        private java.util.List<DatabasePrivilege> databasePrivilege;
 
         private DatabasePrivileges(Builder builder) {
             this.databasePrivilege = builder.databasePrivilege;
@@ -153,17 +177,24 @@ public class DescribeAccountsResponseBody extends TeaModel {
         /**
          * @return databasePrivilege
          */
-        public java.util.List < DatabasePrivilege> getDatabasePrivilege() {
+        public java.util.List<DatabasePrivilege> getDatabasePrivilege() {
             return this.databasePrivilege;
         }
 
         public static final class Builder {
-            private java.util.List < DatabasePrivilege> databasePrivilege; 
+            private java.util.List<DatabasePrivilege> databasePrivilege; 
+
+            private Builder() {
+            } 
+
+            private Builder(DatabasePrivileges model) {
+                this.databasePrivilege = model.databasePrivilege;
+            } 
 
             /**
              * DatabasePrivilege.
              */
-            public Builder databasePrivilege(java.util.List < DatabasePrivilege> databasePrivilege) {
+            public Builder databasePrivilege(java.util.List<DatabasePrivilege> databasePrivilege) {
                 this.databasePrivilege = databasePrivilege;
                 return this;
             }
@@ -267,6 +298,18 @@ public class DescribeAccountsResponseBody extends TeaModel {
             private DatabasePrivileges databasePrivileges; 
             private String instanceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Account model) {
+                this.accountDescription = model.accountDescription;
+                this.accountName = model.accountName;
+                this.accountStatus = model.accountStatus;
+                this.accountType = model.accountType;
+                this.databasePrivileges = model.databasePrivileges;
+                this.instanceId = model.instanceId;
+            } 
+
             /**
              * <p>The description of the account.</p>
              * 
@@ -353,7 +396,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
      */
     public static class Accounts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Account")
-        private java.util.List < Account> account;
+        private java.util.List<Account> account;
 
         private Accounts(Builder builder) {
             this.account = builder.account;
@@ -370,17 +413,24 @@ public class DescribeAccountsResponseBody extends TeaModel {
         /**
          * @return account
          */
-        public java.util.List < Account> getAccount() {
+        public java.util.List<Account> getAccount() {
             return this.account;
         }
 
         public static final class Builder {
-            private java.util.List < Account> account; 
+            private java.util.List<Account> account; 
+
+            private Builder() {
+            } 
+
+            private Builder(Accounts model) {
+                this.account = model.account;
+            } 
 
             /**
              * Account.
              */
-            public Builder account(java.util.List < Account> account) {
+            public Builder account(java.util.List<Account> account) {
                 this.account = account;
                 return this;
             }

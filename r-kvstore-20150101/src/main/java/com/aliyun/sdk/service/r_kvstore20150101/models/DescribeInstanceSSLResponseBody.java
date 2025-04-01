@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -45,6 +50,10 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
 
     public static DescribeInstanceSSLResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
         private String requestId; 
         private String SSLEnabled; 
         private String SSLExpiredTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceSSLResponseBody model) {
+            this.certCommonName = model.certCommonName;
+            this.certDownloadURL = model.certDownloadURL;
+            this.instanceId = model.instanceId;
+            this.requestId = model.requestId;
+            this.SSLEnabled = model.SSLEnabled;
+            this.SSLExpiredTime = model.SSLExpiredTime;
+        } 
 
         /**
          * <p>The common name of the CA certificate. The default value is the internal endpoint of the instance.</p>

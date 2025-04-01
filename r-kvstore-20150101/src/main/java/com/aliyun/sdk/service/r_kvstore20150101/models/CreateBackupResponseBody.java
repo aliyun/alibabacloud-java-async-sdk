@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class CreateBackupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return backupJobID
      */
@@ -49,8 +58,16 @@ public class CreateBackupResponseBody extends TeaModel {
         private String backupJobID; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateBackupResponseBody model) {
+            this.backupJobID = model.backupJobID;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>The ID of the backup task.<br>For cluster instances created before December 5, 2023, the return value is a comma-separated list composed of the job ID of each node within an instance. For example, if you have a cluster instance with two shards, the return value of BackupJobID is &quot;10000,10001&quot;.<br>For cluster instance created after December 5, 2023, all jobs for nodes in an instance are represented by a single job ID.</p>
+         * <p>The ID of the backup task.</p>
          * 
          * <strong>example:</strong>
          * <p>1162****</p>

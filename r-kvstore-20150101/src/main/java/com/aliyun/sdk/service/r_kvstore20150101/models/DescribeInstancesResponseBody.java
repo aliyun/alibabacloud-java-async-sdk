@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,6 +46,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     public static DescribeInstancesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class DescribeInstancesResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstancesResponseBody model) {
+            this.instances = model.instances;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>Details about the instances.</p>
@@ -187,6 +207,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The key of the tag.</p>
              * 
@@ -224,7 +252,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
      */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -241,17 +269,24 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -811,6 +846,56 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String vpcId; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(KVStoreInstance model) {
+                this.architectureType = model.architectureType;
+                this.bandwidth = model.bandwidth;
+                this.capacity = model.capacity;
+                this.chargeType = model.chargeType;
+                this.cloudType = model.cloudType;
+                this.computingType = model.computingType;
+                this.config = model.config;
+                this.connectionDomain = model.connectionDomain;
+                this.connectionMode = model.connectionMode;
+                this.connections = model.connections;
+                this.createTime = model.createTime;
+                this.destroyTime = model.destroyTime;
+                this.editionType = model.editionType;
+                this.endTime = model.endTime;
+                this.engineVersion = model.engineVersion;
+                this.globalInstanceId = model.globalInstanceId;
+                this.hasRenewChangeOrder = model.hasRenewChangeOrder;
+                this.instanceClass = model.instanceClass;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.instanceStatus = model.instanceStatus;
+                this.instanceType = model.instanceType;
+                this.isRds = model.isRds;
+                this.networkType = model.networkType;
+                this.nodeType = model.nodeType;
+                this.packageType = model.packageType;
+                this.port = model.port;
+                this.privateIp = model.privateIp;
+                this.QPS = model.QPS;
+                this.readOnlyCount = model.readOnlyCount;
+                this.regionId = model.regionId;
+                this.replacateId = model.replacateId;
+                this.replicaCount = model.replicaCount;
+                this.resourceGroupId = model.resourceGroupId;
+                this.secondaryZoneId = model.secondaryZoneId;
+                this.shardClass = model.shardClass;
+                this.shardCount = model.shardCount;
+                this.slaveReadOnlyCount = model.slaveReadOnlyCount;
+                this.slaveReplicaCount = model.slaveReplicaCount;
+                this.tags = model.tags;
+                this.userName = model.userName;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
              * <p>The architecture of the instance. Default value: NULL. Valid values:</p>
              * <ul>
@@ -877,7 +962,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ComputingType.
+             * <p>The type of the computing resource. Valid values:</p>
+             * <ul>
+             * <li><strong>Ecs</strong>: cloud-native computing service</li>
+             * <li><strong>Machine</strong>: physical machine</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Ecs</p>
              */
             public Builder computingType(String computingType) {
                 this.computingType = computingType;
@@ -957,8 +1049,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
             /**
              * <p>The edition of the instance. Valid values:</p>
              * <ul>
-             * <li><strong>Community</strong>: ApsaraDB for Redis Community Edition</li>
-             * <li><strong>Enterprise</strong>: ApsaraDB for Redis Enhanced Edition (Tair)</li>
+             * <li><strong>Community</strong>: Redis Open-Source Edition</li>
+             * <li><strong>Enterprise</strong>: Tair (Enterprise Edition)</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -981,7 +1073,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The engine version of the instance. Valid values: <strong>2.8</strong>, <strong>4.0</strong>, and <strong>5.0</strong>.</p>
+             * <p>The database engine version of the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>4.0</p>
@@ -1194,7 +1286,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ReadOnlyCount.
+             * <p>The number of read replicas in the primary zone.</p>
+             * <blockquote>
+             * <p> The <strong>ReadOnlyCount</strong> and <strong>SlaveReadOnlyCount</strong> parameters are applicable only to cloud-native instances for which read/write splitting is enabled. If the instance is a cluster instance, the preceding parameters indicate the number of read replicas <strong>per node</strong> in the primary and secondary zones of the instance.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder readOnlyCount(String readOnlyCount) {
                 this.readOnlyCount = readOnlyCount;
@@ -1224,7 +1322,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ReplicaCount.
+             * <p>The number of replica nodes in the primary zone.</p>
+             * <blockquote>
+             * <p> The <strong>ReplicaCount</strong> and <strong>SlaveReplicaCount</strong> parameters are applicable only to cloud-native instances. If the instance is a cluster instance, the preceding parameters indicate the number of replica nodes <strong>per node</strong> in the primary and secondary zones of the instance.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder replicaCount(Integer replicaCount) {
                 this.replicaCount = replicaCount;
@@ -1285,7 +1389,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SlaveReadOnlyCount.
+             * <p>The number of read replicas in the secondary zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder slaveReadOnlyCount(Integer slaveReadOnlyCount) {
                 this.slaveReadOnlyCount = slaveReadOnlyCount;
@@ -1293,7 +1400,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SlaveReplicaCount.
+             * <p>The number of replica nodes in the secondary zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder slaveReplicaCount(Integer slaveReplicaCount) {
                 this.slaveReplicaCount = slaveReplicaCount;
@@ -1367,7 +1477,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
      */
     public static class Instances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("KVStoreInstance")
-        private java.util.List < KVStoreInstance> KVStoreInstance;
+        private java.util.List<KVStoreInstance> KVStoreInstance;
 
         private Instances(Builder builder) {
             this.KVStoreInstance = builder.KVStoreInstance;
@@ -1384,17 +1494,24 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * @return KVStoreInstance
          */
-        public java.util.List < KVStoreInstance> getKVStoreInstance() {
+        public java.util.List<KVStoreInstance> getKVStoreInstance() {
             return this.KVStoreInstance;
         }
 
         public static final class Builder {
-            private java.util.List < KVStoreInstance> KVStoreInstance; 
+            private java.util.List<KVStoreInstance> KVStoreInstance; 
+
+            private Builder() {
+            } 
+
+            private Builder(Instances model) {
+                this.KVStoreInstance = model.KVStoreInstance;
+            } 
 
             /**
              * KVStoreInstance.
              */
-            public Builder KVStoreInstance(java.util.List < KVStoreInstance> KVStoreInstance) {
+            public Builder KVStoreInstance(java.util.List<KVStoreInstance> KVStoreInstance) {
                 this.KVStoreInstance = KVStoreInstance;
                 return this;
             }

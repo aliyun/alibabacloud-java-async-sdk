@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeGlobalSecurityIPGroupResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("GlobalSecurityIPGroup")
-    private java.util.List < GlobalSecurityIPGroup> globalSecurityIPGroup;
+    private java.util.List<GlobalSecurityIPGroup> globalSecurityIPGroup;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -31,10 +36,14 @@ public class DescribeGlobalSecurityIPGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return globalSecurityIPGroup
      */
-    public java.util.List < GlobalSecurityIPGroup> getGlobalSecurityIPGroup() {
+    public java.util.List<GlobalSecurityIPGroup> getGlobalSecurityIPGroup() {
         return this.globalSecurityIPGroup;
     }
 
@@ -46,13 +55,21 @@ public class DescribeGlobalSecurityIPGroupResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < GlobalSecurityIPGroup> globalSecurityIPGroup; 
+        private java.util.List<GlobalSecurityIPGroup> globalSecurityIPGroup; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeGlobalSecurityIPGroupResponseBody model) {
+            this.globalSecurityIPGroup = model.globalSecurityIPGroup;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the IP whitelist template.</p>
          */
-        public Builder globalSecurityIPGroup(java.util.List < GlobalSecurityIPGroup> globalSecurityIPGroup) {
+        public Builder globalSecurityIPGroup(java.util.List<GlobalSecurityIPGroup> globalSecurityIPGroup) {
             this.globalSecurityIPGroup = globalSecurityIPGroup;
             return this;
         }
@@ -82,7 +99,7 @@ public class DescribeGlobalSecurityIPGroupResponseBody extends TeaModel {
      */
     public static class GlobalSecurityIPGroup extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBInstances")
-        private java.util.List < String > DBInstances;
+        private java.util.List<String> DBInstances;
 
         @com.aliyun.core.annotation.NameInMap("GIpList")
         private String gIpList;
@@ -115,7 +132,7 @@ public class DescribeGlobalSecurityIPGroupResponseBody extends TeaModel {
         /**
          * @return DBInstances
          */
-        public java.util.List < String > getDBInstances() {
+        public java.util.List<String> getDBInstances() {
             return this.DBInstances;
         }
 
@@ -148,16 +165,27 @@ public class DescribeGlobalSecurityIPGroupResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > DBInstances; 
+            private java.util.List<String> DBInstances; 
             private String gIpList; 
             private String globalIgName; 
             private String globalSecurityGroupId; 
             private String regionId; 
 
+            private Builder() {
+            } 
+
+            private Builder(GlobalSecurityIPGroup model) {
+                this.DBInstances = model.DBInstances;
+                this.gIpList = model.gIpList;
+                this.globalIgName = model.globalIgName;
+                this.globalSecurityGroupId = model.globalSecurityGroupId;
+                this.regionId = model.regionId;
+            } 
+
             /**
              * <p>The IDs of the instances that are associated with the IP whitelist template.</p>
              */
-            public Builder DBInstances(java.util.List < String > DBInstances) {
+            public Builder DBInstances(java.util.List<String> DBInstances) {
                 this.DBInstances = DBInstances;
                 return this;
             }

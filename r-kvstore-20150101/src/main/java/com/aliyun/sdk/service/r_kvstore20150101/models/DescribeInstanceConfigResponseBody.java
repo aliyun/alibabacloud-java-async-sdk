@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -53,6 +58,10 @@ public class DescribeInstanceConfigResponseBody extends TeaModel {
 
     public static DescribeInstanceConfigResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -121,6 +130,20 @@ public class DescribeInstanceConfigResponseBody extends TeaModel {
         private String paramSentinelCompatEnable; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceConfigResponseBody model) {
+            this.config = model.config;
+            this.paramNoLooseSentinelEnabled = model.paramNoLooseSentinelEnabled;
+            this.paramNoLooseSentinelPasswordFreeAccess = model.paramNoLooseSentinelPasswordFreeAccess;
+            this.paramNoLooseSentinelPasswordFreeCommands = model.paramNoLooseSentinelPasswordFreeCommands;
+            this.paramReplMode = model.paramReplMode;
+            this.paramReplTimeout = model.paramReplTimeout;
+            this.paramSentinelCompatEnable = model.paramSentinelCompatEnable;
+            this.requestId = model.requestId;
+        } 
+
         /**
          * <p>The parameter settings of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/43885.html">Parameter overview and configuration guide</a>.</p>
          * 
@@ -133,7 +156,10 @@ public class DescribeInstanceConfigResponseBody extends TeaModel {
         }
 
         /**
-         * ParamNoLooseSentinelEnabled.
+         * <p>The Sentinel-compatible mode, which is applicable to non-cluster instances. For more information about the parameter, see the relevant documentation.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder paramNoLooseSentinelEnabled(String paramNoLooseSentinelEnabled) {
             this.paramNoLooseSentinelEnabled = paramNoLooseSentinelEnabled;
@@ -141,7 +167,10 @@ public class DescribeInstanceConfigResponseBody extends TeaModel {
         }
 
         /**
-         * ParamNoLooseSentinelPasswordFreeAccess.
+         * <p>Indicates whether Sentinel commands can be run without requiring a password when the Sentinel mode is enabled. Valid values: Valid values: yes and no. Default value: no. After you set this parameter to yes, you can run Sentinel commands in a virtual private cloud (VPC) without the need to enable the password-free access feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>no</p>
          */
         public Builder paramNoLooseSentinelPasswordFreeAccess(String paramNoLooseSentinelPasswordFreeAccess) {
             this.paramNoLooseSentinelPasswordFreeAccess = paramNoLooseSentinelPasswordFreeAccess;
@@ -149,7 +178,10 @@ public class DescribeInstanceConfigResponseBody extends TeaModel {
         }
 
         /**
-         * ParamNoLooseSentinelPasswordFreeCommands.
+         * <p>After you enable the Sentinel mode and set the ParamNoLooseSentinelPasswordFreeAccess parameter to yes, you can use this parameter to specify an additional list of commands that can be run without requiring a password. By default, this parameter is empty. After you configure this parameter, you can run the specified commands without a password on any connection. Proceed with caution. The commands must be written in lowercase letters. Multiple commands are separated by commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder paramNoLooseSentinelPasswordFreeCommands(String paramNoLooseSentinelPasswordFreeCommands) {
             this.paramNoLooseSentinelPasswordFreeCommands = paramNoLooseSentinelPasswordFreeCommands;
@@ -157,7 +189,14 @@ public class DescribeInstanceConfigResponseBody extends TeaModel {
         }
 
         /**
-         * ParamReplMode.
+         * <p>The synchronization mode.</p>
+         * <ul>
+         * <li><strong>semisync</strong></li>
+         * <li><strong>async</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>async</p>
          */
         public Builder paramReplMode(String paramReplMode) {
             this.paramReplMode = paramReplMode;
@@ -165,7 +204,10 @@ public class DescribeInstanceConfigResponseBody extends TeaModel {
         }
 
         /**
-         * ParamReplTimeout.
+         * <p>The degradation threshold time of the semi-synchronous replication mode. This parameter is required only when semi-synchronous replication is enabled. Unit: milliseconds. Valid values: 10 to 60000.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder paramReplTimeout(String paramReplTimeout) {
             this.paramReplTimeout = paramReplTimeout;
@@ -173,7 +215,10 @@ public class DescribeInstanceConfigResponseBody extends TeaModel {
         }
 
         /**
-         * ParamSentinelCompatEnable.
+         * <p>The Sentinel-compatible mode, which is applicable to cluster instances in proxy mode or read/write splitting instances. For more information about the parameter, see the relevant documentation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder paramSentinelCompatEnable(String paramSentinelCompatEnable) {
             this.paramSentinelCompatEnable = paramSentinelCompatEnable;

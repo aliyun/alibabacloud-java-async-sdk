@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,6 +40,10 @@ public class CreateInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceIds
      */
@@ -60,6 +69,15 @@ public class CreateInstancesResponseBody extends TeaModel {
         private InstanceIds instanceIds; 
         private String orderId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateInstancesResponseBody model) {
+            this.instanceIds = model.instanceIds;
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The IDs of instances that were created.</p>
@@ -105,7 +123,7 @@ public class CreateInstancesResponseBody extends TeaModel {
      */
     public static class InstanceIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
-        private java.util.List < String > instanceId;
+        private java.util.List<String> instanceId;
 
         private InstanceIds(Builder builder) {
             this.instanceId = builder.instanceId;
@@ -122,17 +140,24 @@ public class CreateInstancesResponseBody extends TeaModel {
         /**
          * @return instanceId
          */
-        public java.util.List < String > getInstanceId() {
+        public java.util.List<String> getInstanceId() {
             return this.instanceId;
         }
 
         public static final class Builder {
-            private java.util.List < String > instanceId; 
+            private java.util.List<String> instanceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceIds model) {
+                this.instanceId = model.instanceId;
+            } 
 
             /**
              * InstanceId.
              */
-            public Builder instanceId(java.util.List < String > instanceId) {
+            public Builder instanceId(java.util.List<String> instanceId) {
                 this.instanceId = instanceId;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return regionIds
      */
@@ -48,6 +57,14 @@ public class DescribeRegionsResponseBody extends TeaModel {
     public static final class Builder {
         private RegionIds regionIds; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRegionsResponseBody model) {
+            this.regionIds = model.regionIds;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The <strong>region IDs</strong>.</p>
@@ -82,7 +99,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
      */
     public static class ZoneIdList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ZoneId")
-        private java.util.List < String > zoneId;
+        private java.util.List<String> zoneId;
 
         private ZoneIdList(Builder builder) {
             this.zoneId = builder.zoneId;
@@ -99,17 +116,24 @@ public class DescribeRegionsResponseBody extends TeaModel {
         /**
          * @return zoneId
          */
-        public java.util.List < String > getZoneId() {
+        public java.util.List<String> getZoneId() {
             return this.zoneId;
         }
 
         public static final class Builder {
-            private java.util.List < String > zoneId; 
+            private java.util.List<String> zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ZoneIdList model) {
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * ZoneId.
              */
-            public Builder zoneId(java.util.List < String > zoneId) {
+            public Builder zoneId(java.util.List<String> zoneId) {
                 this.zoneId = zoneId;
                 return this;
             }
@@ -201,6 +225,17 @@ public class DescribeRegionsResponseBody extends TeaModel {
             private ZoneIdList zoneIdList; 
             private String zoneIds; 
 
+            private Builder() {
+            } 
+
+            private Builder(KVStoreRegion model) {
+                this.localName = model.localName;
+                this.regionEndpoint = model.regionEndpoint;
+                this.regionId = model.regionId;
+                this.zoneIdList = model.zoneIdList;
+                this.zoneIds = model.zoneIds;
+            } 
+
             /**
              * <p>The name of the region.</p>
              * 
@@ -268,7 +303,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
      */
     public static class RegionIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("KVStoreRegion")
-        private java.util.List < KVStoreRegion> KVStoreRegion;
+        private java.util.List<KVStoreRegion> KVStoreRegion;
 
         private RegionIds(Builder builder) {
             this.KVStoreRegion = builder.KVStoreRegion;
@@ -285,17 +320,24 @@ public class DescribeRegionsResponseBody extends TeaModel {
         /**
          * @return KVStoreRegion
          */
-        public java.util.List < KVStoreRegion> getKVStoreRegion() {
+        public java.util.List<KVStoreRegion> getKVStoreRegion() {
             return this.KVStoreRegion;
         }
 
         public static final class Builder {
-            private java.util.List < KVStoreRegion> KVStoreRegion; 
+            private java.util.List<KVStoreRegion> KVStoreRegion; 
+
+            private Builder() {
+            } 
+
+            private Builder(RegionIds model) {
+                this.KVStoreRegion = model.KVStoreRegion;
+            } 
 
             /**
              * KVStoreRegion.
              */
-            public Builder KVStoreRegion(java.util.List < KVStoreRegion> KVStoreRegion) {
+            public Builder KVStoreRegion(java.util.List<KVStoreRegion> KVStoreRegion) {
                 this.KVStoreRegion = KVStoreRegion;
                 return this;
             }

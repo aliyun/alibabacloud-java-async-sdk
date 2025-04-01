@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -58,6 +63,10 @@ public class DescribeTairKVCacheCustomInstancesRequest extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrivateIp")
+    private String privateIp;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
@@ -83,7 +92,7 @@ public class DescribeTairKVCacheCustomInstancesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VSwitchId")
@@ -110,6 +119,7 @@ public class DescribeTairKVCacheCustomInstancesRequest extends Request {
         this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.privateIp = builder.privateIp;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -130,7 +140,7 @@ public class DescribeTairKVCacheCustomInstancesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -213,6 +223,13 @@ public class DescribeTairKVCacheCustomInstancesRequest extends Request {
     }
 
     /**
+     * @return privateIp
+     */
+    public String getPrivateIp() {
+        return this.privateIp;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -257,7 +274,7 @@ public class DescribeTairKVCacheCustomInstancesRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -294,13 +311,14 @@ public class DescribeTairKVCacheCustomInstancesRequest extends Request {
         private Long ownerId; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String privateIp; 
         private String regionId; 
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String searchKey; 
         private String securityToken; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String vSwitchId; 
         private String vpcId; 
         private String zoneId; 
@@ -322,6 +340,7 @@ public class DescribeTairKVCacheCustomInstancesRequest extends Request {
             this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.privateIp = request.privateIp;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
@@ -434,6 +453,15 @@ public class DescribeTairKVCacheCustomInstancesRequest extends Request {
         }
 
         /**
+         * PrivateIp.
+         */
+        public Builder privateIp(String privateIp) {
+            this.putQueryParameter("PrivateIp", privateIp);
+            this.privateIp = privateIp;
+            return this;
+        }
+
+        /**
          * RegionId.
          */
         public Builder regionId(String regionId) {
@@ -490,7 +518,7 @@ public class DescribeTairKVCacheCustomInstancesRequest extends Request {
         /**
          * Tag.
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -573,6 +601,14 @@ public class DescribeTairKVCacheCustomInstancesRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * Key.

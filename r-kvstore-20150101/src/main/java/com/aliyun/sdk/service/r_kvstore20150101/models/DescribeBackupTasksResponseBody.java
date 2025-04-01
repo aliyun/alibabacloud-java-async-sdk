@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
     private AccessDeniedDetail accessDeniedDetail;
 
     @com.aliyun.core.annotation.NameInMap("BackupJobs")
-    private java.util.List < BackupJobs> backupJobs;
+    private java.util.List<BackupJobs> backupJobs;
 
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
@@ -39,6 +44,10 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -49,7 +58,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
     /**
      * @return backupJobs
      */
-    public java.util.List < BackupJobs> getBackupJobs() {
+    public java.util.List<BackupJobs> getBackupJobs() {
         return this.backupJobs;
     }
 
@@ -69,9 +78,19 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
 
     public static final class Builder {
         private AccessDeniedDetail accessDeniedDetail; 
-        private java.util.List < BackupJobs> backupJobs; 
+        private java.util.List<BackupJobs> backupJobs; 
         private String instanceId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeBackupTasksResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.backupJobs = model.backupJobs;
+            this.instanceId = model.instanceId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The following parameters are no longer used. Ignore the parameters.</p>
@@ -84,13 +103,13 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
         /**
          * <p>The details of the backup tasks.</p>
          */
-        public Builder backupJobs(java.util.List < BackupJobs> backupJobs) {
+        public Builder backupJobs(java.util.List<BackupJobs> backupJobs) {
             this.backupJobs = backupJobs;
             return this;
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>r-bp1zxszhcgatnx****</p>
@@ -101,15 +120,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the backup task. Valid values:</p>
-         * <ul>
-         * <li><strong>NoStart</strong>: The backup task is not started.</li>
-         * <li><strong>Preparing</strong>: The backup task is being prepared.</li>
-         * <li><strong>Waiting</strong>: The backup task is pending.</li>
-         * <li><strong>Uploading:</strong> The system is uploading the backup file.</li>
-         * <li><strong>Checking:</strong> The system is checking the uploaded backup file.</li>
-         * <li><strong>Finished</strong>: The backup task is complete.</li>
-         * </ul>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>BB73740C-23E2-4392-9DA4-2660C74C****</p>
@@ -229,6 +240,19 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
             private String noPermissionType; 
             private String policyType; 
 
+            private Builder() {
+            } 
+
+            private Builder(AccessDeniedDetail model) {
+                this.authAction = model.authAction;
+                this.authPrincipalDisplayName = model.authPrincipalDisplayName;
+                this.authPrincipalOwnerId = model.authPrincipalOwnerId;
+                this.authPrincipalType = model.authPrincipalType;
+                this.encodedDiagnosticMessage = model.encodedDiagnosticMessage;
+                this.noPermissionType = model.noPermissionType;
+                this.policyType = model.policyType;
+            } 
+
             /**
              * <p>This parameter is no longer used. Ignore this parameter.</p>
              * 
@@ -335,6 +359,9 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Process")
         private String process;
 
+        @com.aliyun.core.annotation.NameInMap("Progress")
+        private String progress;
+
         @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
@@ -347,6 +374,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
             this.jobMode = builder.jobMode;
             this.nodeId = builder.nodeId;
             this.process = builder.process;
+            this.progress = builder.progress;
             this.startTime = builder.startTime;
             this.taskAction = builder.taskAction;
         }
@@ -395,6 +423,13 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
         }
 
         /**
+         * @return progress
+         */
+        public String getProgress() {
+            return this.progress;
+        }
+
+        /**
          * @return startTime
          */
         public String getStartTime() {
@@ -414,8 +449,23 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
             private String jobMode; 
             private String nodeId; 
             private String process; 
+            private String progress; 
             private String startTime; 
             private String taskAction; 
+
+            private Builder() {
+            } 
+
+            private Builder(BackupJobs model) {
+                this.backupJobID = model.backupJobID;
+                this.backupProgressStatus = model.backupProgressStatus;
+                this.jobMode = model.jobMode;
+                this.nodeId = model.nodeId;
+                this.process = model.process;
+                this.progress = model.progress;
+                this.startTime = model.startTime;
+                this.taskAction = model.taskAction;
+            } 
 
             /**
              * <p>The ID of the backup task.</p>
@@ -481,6 +531,17 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
              */
             public Builder process(String process) {
                 this.process = process;
+                return this;
+            }
+
+            /**
+             * <p>The backup progress.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>27</p>
+             */
+            public Builder progress(String progress) {
+                this.progress = progress;
                 return this;
             }
 

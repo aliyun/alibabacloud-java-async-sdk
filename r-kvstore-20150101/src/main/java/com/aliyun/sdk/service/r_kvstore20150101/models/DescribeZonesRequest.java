@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -59,7 +64,7 @@ public class DescribeZonesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -138,9 +143,9 @@ public class DescribeZonesRequest extends Request {
         } 
 
         /**
-         * <p>The display language of the response. Default value: zh-CN. Valid values:</p>
+         * <p>The display language of the zone names to return. Valid values:</p>
          * <ul>
-         * <li><strong>zh-C</strong>N: Chinese</li>
+         * <li><strong>zh-CN</strong> (default): Chinese</li>
          * <li><strong>en-US</strong>: English</li>
          * </ul>
          * 

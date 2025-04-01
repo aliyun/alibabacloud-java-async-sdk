@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -27,6 +32,10 @@ public class DescribePriceRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CouponNo")
     private String couponNo;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EngineVersion")
+    private String engineVersion;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ForceUpgrade")
@@ -103,6 +112,7 @@ public class DescribePriceRequest extends Request {
         this.capacity = builder.capacity;
         this.chargeType = builder.chargeType;
         this.couponNo = builder.couponNo;
+        this.engineVersion = builder.engineVersion;
         this.forceUpgrade = builder.forceUpgrade;
         this.instanceClass = builder.instanceClass;
         this.instanceId = builder.instanceId;
@@ -130,7 +140,7 @@ public class DescribePriceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -161,6 +171,13 @@ public class DescribePriceRequest extends Request {
      */
     public String getCouponNo() {
         return this.couponNo;
+    }
+
+    /**
+     * @return engineVersion
+     */
+    public String getEngineVersion() {
+        return this.engineVersion;
     }
 
     /**
@@ -287,6 +304,7 @@ public class DescribePriceRequest extends Request {
         private Long capacity; 
         private String chargeType; 
         private String couponNo; 
+        private String engineVersion; 
         private Boolean forceUpgrade; 
         private String instanceClass; 
         private String instanceId; 
@@ -315,6 +333,7 @@ public class DescribePriceRequest extends Request {
             this.capacity = request.capacity;
             this.chargeType = request.chargeType;
             this.couponNo = request.couponNo;
+            this.engineVersion = request.engineVersion;
             this.forceUpgrade = request.forceUpgrade;
             this.instanceClass = request.instanceClass;
             this.instanceId = request.instanceId;
@@ -347,7 +366,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * <p>The storage capacity of the instance. Unit: MB. This parameter is used only to query ApsaraDB for Redis Community Edition instances that are deployed in classic mode. We recommend that you use the <strong>InstanceClass</strong> parameter to specify an exact instance type.</p>
+         * <p>The storage capacity of the instance. Unit: MB. This parameter is used only to query Redis Open-Source Edition instances that are deployed in classic mode. We recommend that you use the <strong>InstanceClass</strong> parameter to specify an exact instance type.</p>
          * <blockquote>
          * <p> If you specify the <strong>InstanceClass</strong> parameter, you do not need to specify the Capacity parameter.</p>
          * </blockquote>
@@ -362,7 +381,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * <p>The billing method of the instance. Valid values:</p>
+         * <p>The billing method. Valid values:</p>
          * <ul>
          * <li><strong>PostPaid</strong> (default): pay-as-you-go</li>
          * <li><strong>PrePaid</strong>: subscription</li>
@@ -386,6 +405,18 @@ public class DescribePriceRequest extends Request {
         public Builder couponNo(String couponNo) {
             this.putQueryParameter("CouponNo", couponNo);
             this.couponNo = couponNo;
+            return this;
+        }
+
+        /**
+         * <p>The engine version of the instance. Valid values: <strong>2.8</strong>, <strong>4.0</strong>, and <strong>5.0</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5.0</p>
+         */
+        public Builder engineVersion(String engineVersion) {
+            this.putQueryParameter("EngineVersion", engineVersion);
+            this.engineVersion = engineVersion;
             return this;
         }
 
@@ -490,10 +521,10 @@ public class DescribePriceRequest extends Request {
         /**
          * <p>The order type. Valid values:</p>
          * <ul>
-         * <li><strong>BUY</strong>: The order is used to purchase instances.</li>
-         * <li><strong>UPGRADE</strong>: The order is used to change the configurations of instances.</li>
-         * <li><strong>RENEW</strong>: The order is used to renew instances.</li>
-         * <li><strong>CONVERT</strong>: The order is used to change the billing methods of instances.</li>
+         * <li><strong>BUY</strong>: specifies the orders that are used to purchase instances.</li>
+         * <li><strong>UPGRADE</strong>: specifies the orders that are used to change the configurations of instances.</li>
+         * <li><strong>RENEW</strong>: specifies the orders that are used to renew instances.</li>
+         * <li><strong>CONVERT</strong>: specifies the orders that are used to change the billing methods of instances.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -549,7 +580,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61012.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -588,7 +619,10 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * ShardCount.
+         * <p>The number of shards. This parameter is applicable only to cloud-native cluster instances. You can use this parameter to customize the number of shards.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder shardCount(Integer shardCount) {
             this.putQueryParameter("ShardCount", shardCount);
@@ -597,7 +631,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * <p>The zone ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/94527.html">DescribeZones</a> operation to query the most recent zone list.</p>
+         * <p>The zone ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473764.html">DescribeZones</a> operation to query the most recent zone list.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-e</p>

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class DescribeMonitorItemsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return monitorItems
      */
@@ -48,6 +57,14 @@ public class DescribeMonitorItemsResponseBody extends TeaModel {
     public static final class Builder {
         private MonitorItems monitorItems; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeMonitorItemsResponseBody model) {
+            this.monitorItems = model.monitorItems;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned metrics.</p>
@@ -124,6 +141,14 @@ public class DescribeMonitorItemsResponseBody extends TeaModel {
             private String monitorKey; 
             private String unit; 
 
+            private Builder() {
+            } 
+
+            private Builder(KVStoreMonitorItem model) {
+                this.monitorKey = model.monitorKey;
+                this.unit = model.unit;
+            } 
+
             /**
              * <p>The metric.</p>
              * 
@@ -161,7 +186,7 @@ public class DescribeMonitorItemsResponseBody extends TeaModel {
      */
     public static class MonitorItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("KVStoreMonitorItem")
-        private java.util.List < KVStoreMonitorItem> KVStoreMonitorItem;
+        private java.util.List<KVStoreMonitorItem> KVStoreMonitorItem;
 
         private MonitorItems(Builder builder) {
             this.KVStoreMonitorItem = builder.KVStoreMonitorItem;
@@ -178,17 +203,24 @@ public class DescribeMonitorItemsResponseBody extends TeaModel {
         /**
          * @return KVStoreMonitorItem
          */
-        public java.util.List < KVStoreMonitorItem> getKVStoreMonitorItem() {
+        public java.util.List<KVStoreMonitorItem> getKVStoreMonitorItem() {
             return this.KVStoreMonitorItem;
         }
 
         public static final class Builder {
-            private java.util.List < KVStoreMonitorItem> KVStoreMonitorItem; 
+            private java.util.List<KVStoreMonitorItem> KVStoreMonitorItem; 
+
+            private Builder() {
+            } 
+
+            private Builder(MonitorItems model) {
+                this.KVStoreMonitorItem = model.KVStoreMonitorItem;
+            } 
 
             /**
              * KVStoreMonitorItem.
              */
-            public Builder KVStoreMonitorItem(java.util.List < KVStoreMonitorItem> KVStoreMonitorItem) {
+            public Builder KVStoreMonitorItem(java.util.List<KVStoreMonitorItem> KVStoreMonitorItem) {
                 this.KVStoreMonitorItem = KVStoreMonitorItem;
                 return this;
             }

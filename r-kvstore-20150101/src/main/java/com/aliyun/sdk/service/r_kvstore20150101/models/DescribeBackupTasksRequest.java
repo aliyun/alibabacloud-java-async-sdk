@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -70,7 +75,7 @@ public class DescribeBackupTasksRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -176,7 +181,10 @@ public class DescribeBackupTasksRequest extends Request {
         }
 
         /**
-         * <p>The progress of the backup task in percentage.</p>
+         * <p>The ID of the backup task.</p>
+         * <blockquote>
+         * <p> If you call the <a href="https://help.aliyun.com/document_detail/473819.html">CreateBackup</a> operation to perform a manual backup task, you can set this parameter to the returned backup ID to query the backup progress of the task.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>1162****</p>
@@ -188,7 +196,7 @@ public class DescribeBackupTasksRequest extends Request {
         }
 
         /**
-         * <p>The details of the backup tasks.</p>
+         * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to query instance IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -203,11 +211,11 @@ public class DescribeBackupTasksRequest extends Request {
         /**
          * <p>The backup mode. Valid values:</p>
          * <ul>
-         * <li><strong>Automated</strong>: automatic backup. You can call the <a href="https://help.aliyun.com/document_detail/61078.html">DescribeBackupPolicy</a> operation to query the automatic backup policy.</li>
+         * <li><strong>Automated</strong>: automatic backup. You can call the <a href="https://help.aliyun.com/document_detail/473822.html">DescribeBackupPolicy</a> operation to query the automatic backup policy.</li>
          * <li><strong>Manual</strong>: manual backup.</li>
          * </ul>
          * <blockquote>
-         * <p>By default, the information about backup tasks in both modes is returned.</p>
+         * <p> By default, the information about backup tasks in both modes is returned.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -38,6 +43,10 @@ public class ModifyInstanceAutoRenewalAttributeRequest extends Request {
     private Long ownerId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Product")
+    private String product;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -57,6 +66,7 @@ public class ModifyInstanceAutoRenewalAttributeRequest extends Request {
         this.duration = builder.duration;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.product = builder.product;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityToken = builder.securityToken;
@@ -70,7 +80,7 @@ public class ModifyInstanceAutoRenewalAttributeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -118,6 +128,13 @@ public class ModifyInstanceAutoRenewalAttributeRequest extends Request {
     }
 
     /**
+     * @return product
+     */
+    public String getProduct() {
+        return this.product;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -145,6 +162,7 @@ public class ModifyInstanceAutoRenewalAttributeRequest extends Request {
         private String duration; 
         private String ownerAccount; 
         private Long ownerId; 
+        private String product; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String securityToken; 
@@ -161,6 +179,7 @@ public class ModifyInstanceAutoRenewalAttributeRequest extends Request {
             this.duration = request.duration;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.product = request.product;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.securityToken = request.securityToken;
@@ -178,11 +197,11 @@ public class ModifyInstanceAutoRenewalAttributeRequest extends Request {
         /**
          * <p>Specifies whether to enable auto-renewal. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: enables auto-renewal.</li>
-         * <li><strong>false</strong>: disables auto-renewal.</li>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
          * </ul>
          * <blockquote>
-         * <p>The default value is <strong>false</strong>.</p>
+         * <p> The default value is <strong>false</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -240,6 +259,18 @@ public class ModifyInstanceAutoRenewalAttributeRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * <p>The service. Set the value to kvstore.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kvstore</p>
+         */
+        public Builder product(String product) {
+            this.putQueryParameter("Product", product);
+            this.product = product;
             return this;
         }
 
