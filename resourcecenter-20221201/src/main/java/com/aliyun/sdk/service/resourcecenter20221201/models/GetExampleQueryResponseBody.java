@@ -36,6 +36,10 @@ public class GetExampleQueryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return exampleQuery
      */
@@ -53,6 +57,14 @@ public class GetExampleQueryResponseBody extends TeaModel {
     public static final class Builder {
         private ExampleQuery exampleQuery; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetExampleQueryResponseBody model) {
+            this.exampleQuery = model.exampleQuery;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the sample query template.</p>
@@ -146,6 +158,16 @@ public class GetExampleQueryResponseBody extends TeaModel {
             private String expression; 
             private String name; 
             private String queryId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ExampleQuery model) {
+                this.description = model.description;
+                this.expression = model.expression;
+                this.name = model.name;
+                this.queryId = model.queryId;
+            } 
 
             /**
              * <p>The description of the template.</p>

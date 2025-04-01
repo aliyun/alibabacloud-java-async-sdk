@@ -44,6 +44,10 @@ public class ListSavedQueriesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -77,6 +81,16 @@ public class ListSavedQueriesResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private java.util.List<SavedQueries> savedQueries; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSavedQueriesResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.savedQueries = model.savedQueries;
+        } 
 
         /**
          * <p>The maximum number of entries per page.</p>
@@ -204,6 +218,17 @@ public class ListSavedQueriesResponseBody extends TeaModel {
             private String name; 
             private String queryId; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(SavedQueries model) {
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.name = model.name;
+                this.queryId = model.queryId;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The time when the template was created. The time is displayed in UTC.</p>

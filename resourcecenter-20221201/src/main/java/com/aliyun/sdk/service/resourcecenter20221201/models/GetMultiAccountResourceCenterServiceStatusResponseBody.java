@@ -40,6 +40,10 @@ public class GetMultiAccountResourceCenterServiceStatusResponseBody extends TeaM
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return initialStatus
      */
@@ -65,6 +69,15 @@ public class GetMultiAccountResourceCenterServiceStatusResponseBody extends TeaM
         private String initialStatus; 
         private String requestId; 
         private String serviceStatus; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMultiAccountResourceCenterServiceStatusResponseBody model) {
+            this.initialStatus = model.initialStatus;
+            this.requestId = model.requestId;
+            this.serviceStatus = model.serviceStatus;
+        } 
 
         /**
          * <p>The initialization status of the feature. Valid values:</p>

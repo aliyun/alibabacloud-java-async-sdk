@@ -36,6 +36,10 @@ public class GetSavedQueryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetSavedQueryResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private SavedQuery savedQuery; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSavedQueryResponseBody model) {
+            this.requestId = model.requestId;
+            this.savedQuery = model.savedQuery;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -170,6 +182,18 @@ public class GetSavedQueryResponseBody extends TeaModel {
             private String name; 
             private String queryId; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(SavedQuery model) {
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.expression = model.expression;
+                this.name = model.name;
+                this.queryId = model.queryId;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The time when the template was created. The time is displayed in UTC.</p>

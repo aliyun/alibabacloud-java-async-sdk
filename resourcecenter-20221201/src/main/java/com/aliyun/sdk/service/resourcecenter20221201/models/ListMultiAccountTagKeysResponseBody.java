@@ -40,6 +40,10 @@ public class ListMultiAccountTagKeysResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextToken
      */
@@ -65,6 +69,15 @@ public class ListMultiAccountTagKeysResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private java.util.List<String> tagKeys; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListMultiAccountTagKeysResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.tagKeys = model.tagKeys;
+        } 
 
         /**
          * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>

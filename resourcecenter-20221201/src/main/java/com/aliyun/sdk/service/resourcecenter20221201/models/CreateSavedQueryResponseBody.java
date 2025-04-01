@@ -36,6 +36,10 @@ public class CreateSavedQueryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return queryId
      */
@@ -53,6 +57,14 @@ public class CreateSavedQueryResponseBody extends TeaModel {
     public static final class Builder {
         private String queryId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateSavedQueryResponseBody model) {
+            this.queryId = model.queryId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The template ID.</p>

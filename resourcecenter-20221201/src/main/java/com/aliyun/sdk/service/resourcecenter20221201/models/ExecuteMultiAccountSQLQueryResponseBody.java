@@ -48,6 +48,10 @@ public class ExecuteMultiAccountSQLQueryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return columns
      */
@@ -90,6 +94,17 @@ public class ExecuteMultiAccountSQLQueryResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<?> rows; 
 
+        private Builder() {
+        } 
+
+        private Builder(ExecuteMultiAccountSQLQueryResponseBody model) {
+            this.columns = model.columns;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.rows = model.rows;
+        } 
+
         /**
          * <p>The columns.</p>
          */
@@ -99,7 +114,10 @@ public class ExecuteMultiAccountSQLQueryResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -107,7 +125,10 @@ public class ExecuteMultiAccountSQLQueryResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJzZWFyY2hBZnRlcnMiOlsiMTAwMTU2Nzk4MTU1OSJd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -182,6 +203,14 @@ public class ExecuteMultiAccountSQLQueryResponseBody extends TeaModel {
         public static final class Builder {
             private String name; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Columns model) {
+                this.name = model.name;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The name of the column.</p>

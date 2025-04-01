@@ -56,7 +56,7 @@ public class SearchMultiAccountResourcesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -243,6 +243,15 @@ public class SearchMultiAccountResourcesRequest extends Request {
             private String matchType; 
             private java.util.List<String> value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Filter model) {
+                this.key = model.key;
+                this.matchType = model.matchType;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The key of the filter condition. For more information, see <code>Supported filter parameters</code>.</p>
              * 
@@ -324,6 +333,14 @@ public class SearchMultiAccountResourcesRequest extends Request {
         public static final class Builder {
             private String key; 
             private String order; 
+
+            private Builder() {
+            } 
+
+            private Builder(SortCriterion model) {
+                this.key = model.key;
+                this.order = model.order;
+            } 
 
             /**
              * <p>The attribute based on which the entries are sorted.</p>

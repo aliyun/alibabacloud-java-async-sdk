@@ -40,6 +40,10 @@ public class ListTagValuesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextToken
      */
@@ -65,6 +69,15 @@ public class ListTagValuesResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private java.util.List<String> tagValues; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTagValuesResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.tagValues = model.tagValues;
+        } 
 
         /**
          * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>

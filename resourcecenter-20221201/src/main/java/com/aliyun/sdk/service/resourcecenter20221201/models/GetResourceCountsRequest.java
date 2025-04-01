@@ -39,7 +39,7 @@ public class GetResourceCountsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -162,6 +162,15 @@ public class GetResourceCountsRequest extends Request {
             private String key; 
             private String matchType; 
             private java.util.List<String> value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Filter model) {
+                this.key = model.key;
+                this.matchType = model.matchType;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of the filter condition. For more information, see <code>Supported filter parameters</code>.</p>

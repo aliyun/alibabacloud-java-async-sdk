@@ -36,6 +36,10 @@ public class ListResourceTypesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -54,6 +58,14 @@ public class ListResourceTypesResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<ResourceTypes> resourceTypes; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListResourceTypesResponseBody model) {
+            this.requestId = model.requestId;
+            this.resourceTypes = model.resourceTypes;
+        } 
+
         /**
          * <p>The ID of the request.</p>
          * 
@@ -66,7 +78,7 @@ public class ListResourceTypesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the resource types.</p>
+         * <p>The resource types.</p>
          */
         public Builder resourceTypes(java.util.List<ResourceTypes> resourceTypes) {
             this.resourceTypes = resourceTypes;
@@ -123,8 +135,19 @@ public class ListResourceTypesResponseBody extends TeaModel {
             private String resourceGroup; 
             private String tag; 
 
+            private Builder() {
+            } 
+
+            private Builder(CodeMapping model) {
+                this.resourceGroup = model.resourceGroup;
+                this.tag = model.tag;
+            } 
+
             /**
-             * ResourceGroup.
+             * <p>The resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cs.cluster</p>
              */
             public Builder resourceGroup(String resourceGroup) {
                 this.resourceGroup = resourceGroup;
@@ -132,7 +155,10 @@ public class ListResourceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * Tag.
+             * <p>The tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cs.cluster</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -238,8 +264,20 @@ public class ListResourceTypesResponseBody extends TeaModel {
             private String resourceType; 
             private String resourceTypeName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResourceTypes model) {
+                this.codeMapping = model.codeMapping;
+                this.filterKeys = model.filterKeys;
+                this.productName = model.productName;
+                this.relatedResourceTypes = model.relatedResourceTypes;
+                this.resourceType = model.resourceType;
+                this.resourceTypeName = model.resourceTypeName;
+            } 
+
             /**
-             * CodeMapping.
+             * <p>The code mapping of the resource type.</p>
              */
             public Builder codeMapping(CodeMapping codeMapping) {
                 this.codeMapping = codeMapping;

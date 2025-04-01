@@ -44,6 +44,10 @@ public class GetResourceCountsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return filters
      */
@@ -77,6 +81,16 @@ public class GetResourceCountsResponseBody extends TeaModel {
         private String groupByKey; 
         private String requestId; 
         private java.util.List<ResourceCounts> resourceCounts; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetResourceCountsResponseBody model) {
+            this.filters = model.filters;
+            this.groupByKey = model.groupByKey;
+            this.requestId = model.requestId;
+            this.resourceCounts = model.resourceCounts;
+        } 
 
         /**
          * <p>The filter conditions.</p>
@@ -166,6 +180,14 @@ public class GetResourceCountsResponseBody extends TeaModel {
             private String key; 
             private java.util.List<String> values; 
 
+            private Builder() {
+            } 
+
+            private Builder(Filters model) {
+                this.key = model.key;
+                this.values = model.values;
+            } 
+
             /**
              * <p>The key of the filter condition.</p>
              * 
@@ -235,6 +257,14 @@ public class GetResourceCountsResponseBody extends TeaModel {
         public static final class Builder {
             private Long count; 
             private String groupName; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceCounts model) {
+                this.count = model.count;
+                this.groupName = model.groupName;
+            } 
 
             /**
              * <p>The number of resources.</p>

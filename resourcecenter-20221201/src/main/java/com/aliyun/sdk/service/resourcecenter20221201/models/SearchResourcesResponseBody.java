@@ -48,6 +48,10 @@ public class SearchResourcesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return filters
      */
@@ -89,6 +93,17 @@ public class SearchResourcesResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private java.util.List<Resources> resources; 
+
+        private Builder() {
+        } 
+
+        private Builder(SearchResourcesResponseBody model) {
+            this.filters = model.filters;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.resources = model.resources;
+        } 
 
         /**
          * <p>The filter conditions.</p>
@@ -201,6 +216,15 @@ public class SearchResourcesResponseBody extends TeaModel {
             private String matchType; 
             private java.util.List<String> values; 
 
+            private Builder() {
+            } 
+
+            private Builder(Filters model) {
+                this.key = model.key;
+                this.matchType = model.matchType;
+                this.values = model.values;
+            } 
+
             /**
              * <p>The key of the filter condition.</p>
              * 
@@ -294,6 +318,15 @@ public class SearchResourcesResponseBody extends TeaModel {
             private String networkType; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(IpAddressAttributes model) {
+                this.ipAddress = model.ipAddress;
+                this.networkType = model.networkType;
+                this.version = model.version;
+            } 
+
             /**
              * <p>The IP address.</p>
              */
@@ -378,6 +411,14 @@ public class SearchResourcesResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of tag N.</p>
@@ -571,6 +612,24 @@ public class SearchResourcesResponseBody extends TeaModel {
             private String resourceType; 
             private java.util.List<Tags> tags; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Resources model) {
+                this.accountId = model.accountId;
+                this.createTime = model.createTime;
+                this.expireTime = model.expireTime;
+                this.ipAddressAttributes = model.ipAddressAttributes;
+                this.ipAddresses = model.ipAddresses;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.resourceId = model.resourceId;
+                this.resourceName = model.resourceName;
+                this.resourceType = model.resourceType;
+                this.tags = model.tags;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>The ID of the Alibaba Cloud account.</p>

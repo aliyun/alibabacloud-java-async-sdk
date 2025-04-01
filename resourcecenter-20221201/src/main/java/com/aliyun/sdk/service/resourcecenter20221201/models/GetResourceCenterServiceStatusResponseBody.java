@@ -40,6 +40,10 @@ public class GetResourceCenterServiceStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return initialStatus
      */
@@ -65,6 +69,15 @@ public class GetResourceCenterServiceStatusResponseBody extends TeaModel {
         private String initialStatus; 
         private String requestId; 
         private String serviceStatus; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetResourceCenterServiceStatusResponseBody model) {
+            this.initialStatus = model.initialStatus;
+            this.requestId = model.requestId;
+            this.serviceStatus = model.serviceStatus;
+        } 
 
         /**
          * <p>The initialization status of the service. Valid values:</p>

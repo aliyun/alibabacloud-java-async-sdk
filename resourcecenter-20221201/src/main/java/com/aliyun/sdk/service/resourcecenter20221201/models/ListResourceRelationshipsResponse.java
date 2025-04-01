@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ListMultiAccountTagKeysResponse} extends {@link TeaModel}
+ * {@link ListResourceRelationshipsResponse} extends {@link TeaModel}
  *
- * <p>ListMultiAccountTagKeysResponse</p>
+ * <p>ListResourceRelationshipsResponse</p>
  */
-public class ListMultiAccountTagKeysResponse extends Response {
+public class ListResourceRelationshipsResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class ListMultiAccountTagKeysResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private ListMultiAccountTagKeysResponseBody body;
+    private ListResourceRelationshipsResponseBody body;
 
-    private ListMultiAccountTagKeysResponse(BuilderImpl builder) {
+    private ListResourceRelationshipsResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static ListMultiAccountTagKeysResponse create() {
+    public static ListResourceRelationshipsResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class ListMultiAccountTagKeysResponse extends Response {
     /**
      * @return body
      */
-    public ListMultiAccountTagKeysResponseBody getBody() {
+    public ListResourceRelationshipsResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<ListMultiAccountTagKeysResponse, Builder> {
+    public interface Builder extends Response.Builder<ListResourceRelationshipsResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(ListMultiAccountTagKeysResponseBody body);
+        Builder body(ListResourceRelationshipsResponseBody body);
 
         @Override
-        ListMultiAccountTagKeysResponse build();
+        ListResourceRelationshipsResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<ListMultiAccountTagKeysResponse, Builder>
+            extends Response.BuilderImpl<ListResourceRelationshipsResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private ListMultiAccountTagKeysResponseBody body; 
+        private ListResourceRelationshipsResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(ListMultiAccountTagKeysResponse response) {
+        private BuilderImpl(ListResourceRelationshipsResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class ListMultiAccountTagKeysResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(ListMultiAccountTagKeysResponseBody body) {
+        public Builder body(ListResourceRelationshipsResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public ListMultiAccountTagKeysResponse build() {
-            return new ListMultiAccountTagKeysResponse(this);
+        public ListResourceRelationshipsResponse build() {
+            return new ListResourceRelationshipsResponse(this);
         } 
 
     } 

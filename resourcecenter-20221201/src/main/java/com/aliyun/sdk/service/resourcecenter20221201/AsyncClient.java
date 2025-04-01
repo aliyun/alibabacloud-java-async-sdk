@@ -155,6 +155,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListMultiAccountResourceGroupsResponse> listMultiAccountResourceGroups(ListMultiAccountResourceGroupsRequest request);
 
     /**
+     * @param request the request parameters of ListMultiAccountResourceRelationships  ListMultiAccountResourceRelationshipsRequest
+     * @return ListMultiAccountResourceRelationshipsResponse
+     */
+    CompletableFuture<ListMultiAccountResourceRelationshipsResponse> listMultiAccountResourceRelationships(ListMultiAccountResourceRelationshipsRequest request);
+
+    /**
      * @param request the request parameters of ListMultiAccountTagKeys  ListMultiAccountTagKeysRequest
      * @return ListMultiAccountTagKeysResponse
      */
@@ -165,6 +171,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListMultiAccountTagValuesResponse
      */
     CompletableFuture<ListMultiAccountTagValuesResponse> listMultiAccountTagValues(ListMultiAccountTagValuesRequest request);
+
+    /**
+     * @param request the request parameters of ListResourceRelationships  ListResourceRelationshipsRequest
+     * @return ListResourceRelationshipsResponse
+     */
+    CompletableFuture<ListResourceRelationshipsResponse> listResourceRelationships(ListResourceRelationshipsRequest request);
 
     /**
      * @param request the request parameters of ListResourceTypes  ListResourceTypesRequest

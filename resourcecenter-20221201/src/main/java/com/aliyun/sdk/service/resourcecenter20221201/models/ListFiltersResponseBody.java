@@ -40,6 +40,10 @@ public class ListFiltersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return defaultFilterName
      */
@@ -65,6 +69,15 @@ public class ListFiltersResponseBody extends TeaModel {
         private String defaultFilterName; 
         private java.util.List<Filters> filters; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListFiltersResponseBody model) {
+            this.defaultFilterName = model.defaultFilterName;
+            this.filters = model.filters;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The name of the default filter.</p>
@@ -146,6 +159,14 @@ public class ListFiltersResponseBody extends TeaModel {
         public static final class Builder {
             private String filterConfiguration; 
             private String filterName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Filters model) {
+                this.filterConfiguration = model.filterConfiguration;
+                this.filterName = model.filterName;
+            } 
 
             /**
              * <p>The configurations of the filter.</p>

@@ -44,6 +44,10 @@ public class ListExampleQueriesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return exampleQueries
      */
@@ -77,6 +81,16 @@ public class ListExampleQueriesResponseBody extends TeaModel {
         private String maxResults; 
         private String nextToken; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListExampleQueriesResponseBody model) {
+            this.exampleQueries = model.exampleQueries;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the sample query templates.</p>
@@ -180,6 +194,15 @@ public class ListExampleQueriesResponseBody extends TeaModel {
             private String description; 
             private String name; 
             private String queryId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ExampleQueries model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.queryId = model.queryId;
+            } 
 
             /**
              * <p>The description of the template.</p>
