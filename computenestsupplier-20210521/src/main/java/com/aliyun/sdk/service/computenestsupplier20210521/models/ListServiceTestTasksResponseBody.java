@@ -48,6 +48,10 @@ public class ListServiceTestTasksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return count
      */
@@ -89,6 +93,17 @@ public class ListServiceTestTasksResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private java.util.List<ServiceTestTasks> serviceTestTasks; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListServiceTestTasksResponseBody model) {
+            this.count = model.count;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.serviceTestTasks = model.serviceTestTasks;
+        } 
 
         /**
          * <p>The total number of entries returned.</p>
@@ -227,6 +242,17 @@ public class ListServiceTestTasksResponseBody extends TeaModel {
             private String taskId; 
             private String taskName; 
             private String taskRegionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ServiceTestTasks model) {
+                this.createTime = model.createTime;
+                this.status = model.status;
+                this.taskId = model.taskId;
+                this.taskName = model.taskName;
+                this.taskRegionId = model.taskRegionId;
+            } 
 
             /**
              * <p>The time when the task was created.</p>

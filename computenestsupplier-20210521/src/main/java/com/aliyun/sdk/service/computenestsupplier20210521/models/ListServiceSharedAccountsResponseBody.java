@@ -48,6 +48,10 @@ public class ListServiceSharedAccountsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -89,6 +93,17 @@ public class ListServiceSharedAccountsResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<ShareAccount> shareAccount; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListServiceSharedAccountsResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.shareAccount = model.shareAccount;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
@@ -251,6 +266,19 @@ public class ListServiceSharedAccountsResponseBody extends TeaModel {
             private String serviceId; 
             private String updateTime; 
             private String userAliUid; 
+
+            private Builder() {
+            } 
+
+            private Builder(ShareAccount model) {
+                this.createTime = model.createTime;
+                this.logo = model.logo;
+                this.name = model.name;
+                this.permission = model.permission;
+                this.serviceId = model.serviceId;
+                this.updateTime = model.updateTime;
+                this.userAliUid = model.userAliUid;
+            } 
 
             /**
              * <p>The time when the service was created.</p>

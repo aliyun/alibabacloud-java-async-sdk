@@ -68,6 +68,10 @@ public class GetServiceRegistrationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return comment
      */
@@ -149,6 +153,22 @@ public class GetServiceRegistrationResponseBody extends TeaModel {
         private String serviceVersion; 
         private String status; 
         private String submitTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetServiceRegistrationResponseBody model) {
+            this.comment = model.comment;
+            this.detail = model.detail;
+            this.finishTime = model.finishTime;
+            this.registrationId = model.registrationId;
+            this.requestId = model.requestId;
+            this.serviceId = model.serviceId;
+            this.serviceInfo = model.serviceInfo;
+            this.serviceVersion = model.serviceVersion;
+            this.status = model.status;
+            this.submitTime = model.submitTime;
+        } 
 
         /**
          * <p>Comment from reviewer.</p>
@@ -335,6 +355,16 @@ public class GetServiceRegistrationResponseBody extends TeaModel {
             private String reports; 
             private String templateDiffUrl; 
 
+            private Builder() {
+            } 
+
+            private Builder(Detail model) {
+                this.atRisk = model.atRisk;
+                this.hasRelatedArtifact = model.hasRelatedArtifact;
+                this.reports = model.reports;
+                this.templateDiffUrl = model.templateDiffUrl;
+            } 
+
             /**
              * <p>Whether risk exists.</p>
              * 
@@ -441,6 +471,15 @@ public class GetServiceRegistrationResponseBody extends TeaModel {
             private String serviceType; 
             private String trialType; 
             private String versionName; 
+
+            private Builder() {
+            } 
+
+            private Builder(ServiceInfo model) {
+                this.serviceType = model.serviceType;
+                this.trialType = model.trialType;
+                this.versionName = model.versionName;
+            } 
 
             /**
              * <p>The type of the service. Valid values:</p>

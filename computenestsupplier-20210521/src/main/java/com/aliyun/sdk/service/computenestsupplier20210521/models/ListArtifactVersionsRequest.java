@@ -50,7 +50,7 @@ public class ListArtifactVersionsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -198,6 +198,14 @@ public class ListArtifactVersionsRequest extends Request {
         public static final class Builder {
             private String name; 
             private java.util.List<String> values; 
+
+            private Builder() {
+            } 
+
+            private Builder(Filters model) {
+                this.name = model.name;
+                this.values = model.values;
+            } 
 
             /**
              * <p>The parameter name of the filter. You can specify one or more filters. Valid values:</p>

@@ -36,6 +36,10 @@ public class RegisterServiceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return registrationId
      */
@@ -53,6 +57,14 @@ public class RegisterServiceResponseBody extends TeaModel {
     public static final class Builder {
         private String registrationId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(RegisterServiceResponseBody model) {
+            this.registrationId = model.registrationId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The registration ID.</p>

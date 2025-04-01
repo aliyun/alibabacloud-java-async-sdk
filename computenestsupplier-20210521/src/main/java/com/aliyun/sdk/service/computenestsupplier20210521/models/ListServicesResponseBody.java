@@ -48,6 +48,10 @@ public class ListServicesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -89,6 +93,17 @@ public class ListServicesResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Services> services; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListServicesResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.services = model.services;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
@@ -204,6 +219,15 @@ public class ListServicesResponseBody extends TeaModel {
             private String saasBoostMetadata; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Commodity model) {
+                this.commodityCode = model.commodityCode;
+                this.saasBoostMetadata = model.saasBoostMetadata;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The commodity code.</p>
              * 
@@ -317,6 +341,16 @@ public class ListServicesResponseBody extends TeaModel {
             private String name; 
             private String shortDescription; 
 
+            private Builder() {
+            } 
+
+            private Builder(ServiceInfos model) {
+                this.image = model.image;
+                this.locale = model.locale;
+                this.name = model.name;
+                this.shortDescription = model.shortDescription;
+            } 
+
             /**
              * <p>The URL of the service icon.</p>
              * 
@@ -415,6 +449,14 @@ public class ListServicesResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -908,6 +950,49 @@ public class ListServicesResponseBody extends TeaModel {
             private String version; 
             private String versionName; 
             private String virtualInternetService; 
+
+            private Builder() {
+            } 
+
+            private Builder(Services model) {
+                this.approvalType = model.approvalType;
+                this.artifactId = model.artifactId;
+                this.artifactVersion = model.artifactVersion;
+                this.buildInfo = model.buildInfo;
+                this.categories = model.categories;
+                this.commodity = model.commodity;
+                this.commodityCode = model.commodityCode;
+                this.createTime = model.createTime;
+                this.defaultVersion = model.defaultVersion;
+                this.deployType = model.deployType;
+                this.hasBeta = model.hasBeta;
+                this.hasDraft = model.hasDraft;
+                this.latestResellSourceServiceVersion = model.latestResellSourceServiceVersion;
+                this.publishTime = model.publishTime;
+                this.relationType = model.relationType;
+                this.resellApplyStatus = model.resellApplyStatus;
+                this.resellServiceId = model.resellServiceId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.serviceDiscoverable = model.serviceDiscoverable;
+                this.serviceId = model.serviceId;
+                this.serviceInfos = model.serviceInfos;
+                this.serviceType = model.serviceType;
+                this.shareType = model.shareType;
+                this.sourceImage = model.sourceImage;
+                this.sourceServiceId = model.sourceServiceId;
+                this.sourceServiceVersion = model.sourceServiceVersion;
+                this.sourceSupplierName = model.sourceSupplierName;
+                this.status = model.status;
+                this.supplierName = model.supplierName;
+                this.supplierUrl = model.supplierUrl;
+                this.tags = model.tags;
+                this.tenantType = model.tenantType;
+                this.trialType = model.trialType;
+                this.updateTime = model.updateTime;
+                this.version = model.version;
+                this.versionName = model.versionName;
+                this.virtualInternetService = model.virtualInternetService;
+            } 
 
             /**
              * <p>The approval type for applications for using the service. Valid values:</p>

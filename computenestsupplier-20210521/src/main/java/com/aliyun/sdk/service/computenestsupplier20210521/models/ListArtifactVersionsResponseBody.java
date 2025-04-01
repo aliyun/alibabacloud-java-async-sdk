@@ -48,6 +48,10 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return artifacts
      */
@@ -89,6 +93,17 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListArtifactVersionsResponseBody model) {
+            this.artifacts = model.artifacts;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The version information about the deployment package.</p>
@@ -359,6 +374,28 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
             private String statusDetail; 
             private String supportRegionIds; 
             private String versionName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Artifacts model) {
+                this.artifactBuildProperty = model.artifactBuildProperty;
+                this.artifactBuildType = model.artifactBuildType;
+                this.artifactId = model.artifactId;
+                this.artifactProperty = model.artifactProperty;
+                this.artifactType = model.artifactType;
+                this.artifactVersion = model.artifactVersion;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.imageDelivery = model.imageDelivery;
+                this.progress = model.progress;
+                this.resultFile = model.resultFile;
+                this.securityAuditResult = model.securityAuditResult;
+                this.status = model.status;
+                this.statusDetail = model.statusDetail;
+                this.supportRegionIds = model.supportRegionIds;
+                this.versionName = model.versionName;
+            } 
 
             /**
              * <p>The build properties of the artifact, utilized for hosting and building the deployment package.</p>

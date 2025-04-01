@@ -48,6 +48,10 @@ public class ListSupplierRegistrationsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -89,6 +93,17 @@ public class ListSupplierRegistrationsResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<SupplierRegistrations> supplierRegistrations; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSupplierRegistrationsResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.supplierRegistrations = model.supplierRegistrations;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
@@ -419,6 +434,33 @@ public class ListSupplierRegistrationsResponseBody extends TeaModel {
             private String supplierNameEn; 
             private String supplierUid; 
             private String supplierUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(SupplierRegistrations model) {
+                this.comment = model.comment;
+                this.contactEmail = model.contactEmail;
+                this.contactNumber = model.contactNumber;
+                this.contactPerson = model.contactPerson;
+                this.contactPersonTitle = model.contactPersonTitle;
+                this.enableResellerMode = model.enableResellerMode;
+                this.productAnnualRevenue = model.productAnnualRevenue;
+                this.productBusiness = model.productBusiness;
+                this.productDeliveryTypes = model.productDeliveryTypes;
+                this.productPublishTime = model.productPublishTime;
+                this.productSellTypes = model.productSellTypes;
+                this.registrationId = model.registrationId;
+                this.resellBusinessDesc = model.resellBusinessDesc;
+                this.status = model.status;
+                this.submitTime = model.submitTime;
+                this.supplierDesc = model.supplierDesc;
+                this.supplierLogo = model.supplierLogo;
+                this.supplierName = model.supplierName;
+                this.supplierNameEn = model.supplierNameEn;
+                this.supplierUid = model.supplierUid;
+                this.supplierUrl = model.supplierUrl;
+            } 
 
             /**
              * <p>The comment of this registration.</p>

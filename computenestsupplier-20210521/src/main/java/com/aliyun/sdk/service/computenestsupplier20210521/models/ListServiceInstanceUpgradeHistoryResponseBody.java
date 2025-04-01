@@ -48,6 +48,10 @@ public class ListServiceInstanceUpgradeHistoryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -89,6 +93,17 @@ public class ListServiceInstanceUpgradeHistoryResponseBody extends TeaModel {
         private String requestId; 
         private Long totalCount; 
         private java.util.List<UpgradeHistory> upgradeHistory; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListServiceInstanceUpgradeHistoryResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.upgradeHistory = model.upgradeHistory;
+        } 
 
         /**
          * <p>The number of items to return per page when paginating results. The maximum is 100, and the default is 20.</p>
@@ -263,6 +278,20 @@ public class ListServiceInstanceUpgradeHistoryResponseBody extends TeaModel {
             private String toVersion; 
             private String type; 
             private String upgradeHistoryId; 
+
+            private Builder() {
+            } 
+
+            private Builder(UpgradeHistory model) {
+                this.endTime = model.endTime;
+                this.fromVersion = model.fromVersion;
+                this.results = model.results;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.toVersion = model.toVersion;
+                this.type = model.type;
+                this.upgradeHistoryId = model.upgradeHistoryId;
+            } 
 
             /**
              * <p>End time of the upgrade.</p>

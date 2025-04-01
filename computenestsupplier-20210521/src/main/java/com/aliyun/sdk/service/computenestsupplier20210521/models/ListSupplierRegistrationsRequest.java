@@ -50,7 +50,7 @@ public class ListSupplierRegistrationsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -197,6 +197,14 @@ public class ListSupplierRegistrationsRequest extends Request {
         public static final class Builder {
             private String name; 
             private java.util.List<String> value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Filter model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
 
             /**
              * <p>Name of the filter field. Allowed values:</p>

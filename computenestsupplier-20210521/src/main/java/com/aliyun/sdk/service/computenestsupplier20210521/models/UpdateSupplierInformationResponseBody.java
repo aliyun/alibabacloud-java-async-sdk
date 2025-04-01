@@ -44,6 +44,10 @@ public class UpdateSupplierInformationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -77,6 +81,16 @@ public class UpdateSupplierInformationResponseBody extends TeaModel {
         private String supplierDesc; 
         private String supplierName; 
         private String supplierUrl; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateSupplierInformationResponseBody model) {
+            this.requestId = model.requestId;
+            this.supplierDesc = model.supplierDesc;
+            this.supplierName = model.supplierName;
+            this.supplierUrl = model.supplierUrl;
+        } 
 
         /**
          * <p>The request ID.</p>

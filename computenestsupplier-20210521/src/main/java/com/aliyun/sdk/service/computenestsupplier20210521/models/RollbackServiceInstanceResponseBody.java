@@ -40,6 +40,10 @@ public class RollbackServiceInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class RollbackServiceInstanceResponseBody extends TeaModel {
         private String requestId; 
         private String serviceInstanceId; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(RollbackServiceInstanceResponseBody model) {
+            this.requestId = model.requestId;
+            this.serviceInstanceId = model.serviceInstanceId;
+            this.status = model.status;
+        } 
 
         /**
          * <p>Request ID.</p>

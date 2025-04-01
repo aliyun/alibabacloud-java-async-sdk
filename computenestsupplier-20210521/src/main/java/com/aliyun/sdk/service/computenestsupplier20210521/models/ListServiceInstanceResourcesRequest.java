@@ -65,7 +65,7 @@ public class ListServiceInstanceResourcesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -275,6 +275,14 @@ public class ListServiceInstanceResourcesRequest extends Request {
             private String name; 
             private java.util.List<String> values; 
 
+            private Builder() {
+            } 
+
+            private Builder(Filters model) {
+                this.name = model.name;
+                this.values = model.values;
+            } 
+
             /**
              * <p>Vaild values:</p>
              * <ul>
@@ -350,6 +358,14 @@ public class ListServiceInstanceResourcesRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>

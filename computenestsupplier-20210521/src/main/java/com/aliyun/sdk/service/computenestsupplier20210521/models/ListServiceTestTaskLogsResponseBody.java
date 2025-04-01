@@ -44,6 +44,10 @@ public class ListServiceTestTaskLogsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -77,6 +81,16 @@ public class ListServiceTestTaskLogsResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private java.util.List<TaskLogs> taskLogs; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListServiceTestTaskLogsResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.taskLogs = model.taskLogs;
+        } 
 
         /**
          * <p>The number of items to return per page when paginating results. The maximum is 100, and the default is 20.</p>
@@ -168,6 +182,14 @@ public class ListServiceTestTaskLogsResponseBody extends TeaModel {
         public static final class Builder {
             private String content; 
             private String timestamp; 
+
+            private Builder() {
+            } 
+
+            private Builder(TaskLogs model) {
+                this.content = model.content;
+                this.timestamp = model.timestamp;
+            } 
 
             /**
              * <p>The log content.</p>

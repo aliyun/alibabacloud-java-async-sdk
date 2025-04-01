@@ -40,6 +40,10 @@ public class GetServiceEstimateCostResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return commodity
      */
@@ -65,6 +69,15 @@ public class GetServiceEstimateCostResponseBody extends TeaModel {
         private java.util.Map<String, ?> commodity; 
         private String requestId; 
         private java.util.Map<String, ?> resources; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetServiceEstimateCostResponseBody model) {
+            this.commodity = model.commodity;
+            this.requestId = model.requestId;
+            this.resources = model.resources;
+        } 
 
         /**
          * <p>The subscription duration information about the purchase order of Alibaba Cloud Marketplace.</p>

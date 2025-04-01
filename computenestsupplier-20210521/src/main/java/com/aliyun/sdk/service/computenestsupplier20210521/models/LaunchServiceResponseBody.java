@@ -40,6 +40,10 @@ public class LaunchServiceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class LaunchServiceResponseBody extends TeaModel {
         private String requestId; 
         private String serviceLaunchResultType; 
         private String version; 
+
+        private Builder() {
+        } 
+
+        private Builder(LaunchServiceResponseBody model) {
+            this.requestId = model.requestId;
+            this.serviceLaunchResultType = model.serviceLaunchResultType;
+            this.version = model.version;
+        } 
 
         /**
          * <p>The request ID.</p>

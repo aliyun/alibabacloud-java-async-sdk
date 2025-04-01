@@ -48,6 +48,10 @@ public class ListServiceTestCasesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -89,6 +93,17 @@ public class ListServiceTestCasesResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListServiceTestCasesResponseBody model) {
+            this.data = model.data;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -215,6 +230,16 @@ public class ListServiceTestCasesResponseBody extends TeaModel {
             private String testCaseId; 
             private String testCaseName; 
             private String testConfig; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.templateName = model.templateName;
+                this.testCaseId = model.testCaseId;
+                this.testCaseName = model.testCaseName;
+                this.testConfig = model.testConfig;
+            } 
 
             /**
              * <p>The template name.</p>

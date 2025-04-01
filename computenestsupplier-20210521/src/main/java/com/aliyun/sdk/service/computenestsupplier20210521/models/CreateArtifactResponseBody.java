@@ -88,6 +88,10 @@ public class CreateArtifactResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return artifactBuildProperty
      */
@@ -209,6 +213,27 @@ public class CreateArtifactResponseBody extends TeaModel {
         private String statusDetail; 
         private String supportRegionIds; 
         private String versionName; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateArtifactResponseBody model) {
+            this.artifactBuildProperty = model.artifactBuildProperty;
+            this.artifactBuildType = model.artifactBuildType;
+            this.artifactId = model.artifactId;
+            this.artifactProperty = model.artifactProperty;
+            this.artifactType = model.artifactType;
+            this.artifactVersion = model.artifactVersion;
+            this.description = model.description;
+            this.gmtModified = model.gmtModified;
+            this.maxVersion = model.maxVersion;
+            this.name = model.name;
+            this.requestId = model.requestId;
+            this.status = model.status;
+            this.statusDetail = model.statusDetail;
+            this.supportRegionIds = model.supportRegionIds;
+            this.versionName = model.versionName;
+        } 
 
         /**
          * <p>The build properties of the artifact, utilized for hosting and building the deployment package.</p>

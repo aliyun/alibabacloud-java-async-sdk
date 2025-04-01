@@ -40,6 +40,10 @@ public class ContinueDeployServiceInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dryRunResult
      */
@@ -65,6 +69,15 @@ public class ContinueDeployServiceInstanceResponseBody extends TeaModel {
         private DryRunResult dryRunResult; 
         private String requestId; 
         private String serviceInstanceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ContinueDeployServiceInstanceResponseBody model) {
+            this.dryRunResult = model.dryRunResult;
+            this.requestId = model.requestId;
+            this.serviceInstanceId = model.serviceInstanceId;
+        } 
 
         /**
          * <p>The dry run result.</p>
@@ -157,6 +170,15 @@ public class ContinueDeployServiceInstanceResponseBody extends TeaModel {
             private java.util.List<String> parametersAllowedToBeModified; 
             private java.util.List<String> parametersConditionallyAllowedToBeModified; 
             private java.util.List<String> parametersNotAllowedToBeModified; 
+
+            private Builder() {
+            } 
+
+            private Builder(DryRunResult model) {
+                this.parametersAllowedToBeModified = model.parametersAllowedToBeModified;
+                this.parametersConditionallyAllowedToBeModified = model.parametersConditionallyAllowedToBeModified;
+                this.parametersNotAllowedToBeModified = model.parametersNotAllowedToBeModified;
+            } 
 
             /**
              * <p>The parameters that can be modified. The operation that is performed to modify the parameters does not cause a validation error.</p>

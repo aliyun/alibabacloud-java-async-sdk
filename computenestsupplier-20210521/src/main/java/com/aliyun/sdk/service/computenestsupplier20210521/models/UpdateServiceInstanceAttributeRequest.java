@@ -56,7 +56,7 @@ public class UpdateServiceInstanceAttributeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -215,6 +215,13 @@ public class UpdateServiceInstanceAttributeRequest extends Request {
 
         public static final class Builder {
             private String customData; 
+
+            private Builder() {
+            } 
+
+            private Builder(LicenseData model) {
+                this.customData = model.customData;
+            } 
 
             /**
              * <p>The Custom Data</p>

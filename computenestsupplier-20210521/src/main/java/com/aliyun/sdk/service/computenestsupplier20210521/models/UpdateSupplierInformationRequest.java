@@ -65,7 +65,7 @@ public class UpdateSupplierInformationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -299,6 +299,16 @@ public class UpdateSupplierInformationRequest extends Request {
             private Boolean ossEnabled; 
             private Long ossExpirationDays; 
             private String ossPath; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeliverySettings model) {
+                this.ossBucketName = model.ossBucketName;
+                this.ossEnabled = model.ossEnabled;
+                this.ossExpirationDays = model.ossExpirationDays;
+                this.ossPath = model.ossPath;
+            } 
 
             /**
              * <p>The name of the OSS bucket.</p>

@@ -48,6 +48,10 @@ public class ListAcrImageRepositoriesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -89,6 +93,17 @@ public class ListAcrImageRepositoriesResponseBody extends TeaModel {
         private java.util.List<Repositories> repositories; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAcrImageRepositoriesResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.repositories = model.repositories;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
@@ -161,6 +176,9 @@ public class ListAcrImageRepositoriesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
+        @com.aliyun.core.annotation.NameInMap("Namespace")
+        private String namespace;
+
         @com.aliyun.core.annotation.NameInMap("RepoId")
         private String repoId;
 
@@ -173,6 +191,7 @@ public class ListAcrImageRepositoriesResponseBody extends TeaModel {
         private Repositories(Builder builder) {
             this.createTime = builder.createTime;
             this.modifiedTime = builder.modifiedTime;
+            this.namespace = builder.namespace;
             this.repoId = builder.repoId;
             this.repoName = builder.repoName;
             this.repoType = builder.repoType;
@@ -201,6 +220,13 @@ public class ListAcrImageRepositoriesResponseBody extends TeaModel {
         }
 
         /**
+         * @return namespace
+         */
+        public String getNamespace() {
+            return this.namespace;
+        }
+
+        /**
          * @return repoId
          */
         public String getRepoId() {
@@ -224,9 +250,22 @@ public class ListAcrImageRepositoriesResponseBody extends TeaModel {
         public static final class Builder {
             private String createTime; 
             private String modifiedTime; 
+            private String namespace; 
             private String repoId; 
             private String repoName; 
             private String repoType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Repositories model) {
+                this.createTime = model.createTime;
+                this.modifiedTime = model.modifiedTime;
+                this.namespace = model.namespace;
+                this.repoId = model.repoId;
+                this.repoName = model.repoName;
+                this.repoType = model.repoType;
+            } 
 
             /**
              * <p>The time when the image was created.</p>
@@ -247,6 +286,17 @@ public class ListAcrImageRepositoriesResponseBody extends TeaModel {
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
+                return this;
+            }
+
+            /**
+             * <p>The namespace of the repository</p>
+             * 
+             * <strong>example:</strong>
+             * <p>computenest</p>
+             */
+            public Builder namespace(String namespace) {
+                this.namespace = namespace;
                 return this;
             }
 

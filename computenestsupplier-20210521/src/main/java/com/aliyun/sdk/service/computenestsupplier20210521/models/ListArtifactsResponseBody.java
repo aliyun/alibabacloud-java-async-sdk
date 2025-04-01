@@ -48,6 +48,10 @@ public class ListArtifactsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return artifacts
      */
@@ -89,6 +93,17 @@ public class ListArtifactsResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListArtifactsResponseBody model) {
+            this.artifacts = model.artifacts;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The information about deployment packages.</p>
@@ -191,6 +206,14 @@ public class ListArtifactsResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -360,6 +383,22 @@ public class ListArtifactsResponseBody extends TeaModel {
             private String resourceGroupId; 
             private String status; 
             private java.util.List<Tags> tags; 
+
+            private Builder() {
+            } 
+
+            private Builder(Artifacts model) {
+                this.artifactBuildProperty = model.artifactBuildProperty;
+                this.artifactId = model.artifactId;
+                this.artifactType = model.artifactType;
+                this.description = model.description;
+                this.gmtModified = model.gmtModified;
+                this.maxVersion = model.maxVersion;
+                this.name = model.name;
+                this.resourceGroupId = model.resourceGroupId;
+                this.status = model.status;
+                this.tags = model.tags;
+            } 
 
             /**
              * <p>The build properties of the artifact, utilized for hosting and building the deployment package.</p>

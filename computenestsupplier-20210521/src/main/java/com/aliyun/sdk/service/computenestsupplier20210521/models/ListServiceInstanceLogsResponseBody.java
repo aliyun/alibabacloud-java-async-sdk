@@ -44,6 +44,10 @@ public class ListServiceInstanceLogsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -77,6 +81,16 @@ public class ListServiceInstanceLogsResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private java.util.List<ServiceInstancesLogs> serviceInstancesLogs; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListServiceInstanceLogsResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.serviceInstancesLogs = model.serviceInstancesLogs;
+        } 
 
         /**
          * <p>The number of items to return per page when paginating results. The maximum is 100, and the default is 20.</p>
@@ -252,6 +266,21 @@ public class ListServiceInstanceLogsResponseBody extends TeaModel {
             private String source; 
             private String status; 
             private String timestamp; 
+
+            private Builder() {
+            } 
+
+            private Builder(ServiceInstancesLogs model) {
+                this.compliancePackType = model.compliancePackType;
+                this.complianceRuleName = model.complianceRuleName;
+                this.content = model.content;
+                this.logType = model.logType;
+                this.resourceId = model.resourceId;
+                this.resourceType = model.resourceType;
+                this.source = model.source;
+                this.status = model.status;
+                this.timestamp = model.timestamp;
+            } 
 
             /**
              * <p>Compliance package risk types. This only applies when the source is CompliancePack. . For example, data security checks within a VPC, such as VpcDataRisk</p>

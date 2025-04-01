@@ -48,6 +48,10 @@ public class ListServiceRegistrationsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -89,6 +93,17 @@ public class ListServiceRegistrationsResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<ServiceRegistrations> serviceRegistrations; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListServiceRegistrationsResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.serviceRegistrations = model.serviceRegistrations;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>Number of items per page in a paginated query. The maximum is 100, and the default is 20.</p>
@@ -239,6 +254,18 @@ public class ListServiceRegistrationsResponseBody extends TeaModel {
             private String serviceId; 
             private String status; 
             private String submitTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(ServiceRegistrations model) {
+                this.comment = model.comment;
+                this.finishTime = model.finishTime;
+                this.registrationId = model.registrationId;
+                this.serviceId = model.serviceId;
+                this.status = model.status;
+                this.submitTime = model.submitTime;
+            } 
 
             /**
              * <p>Comment.</p>

@@ -48,6 +48,10 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -89,6 +93,17 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<ServiceInstances> serviceInstances; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListServiceInstancesResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.serviceInstances = model.serviceInstances;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
@@ -215,6 +230,16 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             private String locale; 
             private String name; 
             private String shortDescription; 
+
+            private Builder() {
+            } 
+
+            private Builder(ServiceInfos model) {
+                this.image = model.image;
+                this.locale = model.locale;
+                this.name = model.name;
+                this.shortDescription = model.shortDescription;
+            } 
 
             /**
              * <p>The URL of the service icon.</p>
@@ -443,6 +468,25 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             private String version; 
             private String versionName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Service model) {
+                this.deployMetadata = model.deployMetadata;
+                this.deployType = model.deployType;
+                this.enablePrivateVpcConnection = model.enablePrivateVpcConnection;
+                this.publishTime = model.publishTime;
+                this.serviceId = model.serviceId;
+                this.serviceInfos = model.serviceInfos;
+                this.serviceType = model.serviceType;
+                this.sourceSupplierName = model.sourceSupplierName;
+                this.status = model.status;
+                this.supplierName = model.supplierName;
+                this.supplierUrl = model.supplierUrl;
+                this.version = model.version;
+                this.versionName = model.versionName;
+            } 
+
             /**
              * <p>The storage configurations of the service. The format in which the deployment information of a service is stored varies based on the deployment type of the service. In this case, the deployment information is stored in the JSON string format.</p>
              */
@@ -647,6 +691,14 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -972,6 +1024,35 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             private String templateName; 
             private String updateTime; 
             private Long userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ServiceInstances model) {
+                this.bizStatus = model.bizStatus;
+                this.createTime = model.createTime;
+                this.enableInstanceOps = model.enableInstanceOps;
+                this.endTime = model.endTime;
+                this.isOperated = model.isOperated;
+                this.name = model.name;
+                this.operatedServiceInstanceId = model.operatedServiceInstanceId;
+                this.operationEndTime = model.operationEndTime;
+                this.operationStartTime = model.operationStartTime;
+                this.parameters = model.parameters;
+                this.payType = model.payType;
+                this.progress = model.progress;
+                this.resourceGroupId = model.resourceGroupId;
+                this.service = model.service;
+                this.serviceInstanceId = model.serviceInstanceId;
+                this.serviceType = model.serviceType;
+                this.source = model.source;
+                this.status = model.status;
+                this.statusDetail = model.statusDetail;
+                this.tags = model.tags;
+                this.templateName = model.templateName;
+                this.updateTime = model.updateTime;
+                this.userId = model.userId;
+            } 
 
             /**
              * <p>The business status of the service instance. Valid values:</p>

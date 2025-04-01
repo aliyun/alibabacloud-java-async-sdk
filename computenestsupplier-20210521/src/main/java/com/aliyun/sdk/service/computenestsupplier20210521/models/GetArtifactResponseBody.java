@@ -104,6 +104,10 @@ public class GetArtifactResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return artifactBuildProperty
      */
@@ -257,6 +261,31 @@ public class GetArtifactResponseBody extends TeaModel {
         private String supportRegionIds; 
         private java.util.List<Tags> tags; 
         private String versionName; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetArtifactResponseBody model) {
+            this.artifactBuildProperty = model.artifactBuildProperty;
+            this.artifactBuildType = model.artifactBuildType;
+            this.artifactId = model.artifactId;
+            this.artifactProperty = model.artifactProperty;
+            this.artifactType = model.artifactType;
+            this.artifactVersion = model.artifactVersion;
+            this.description = model.description;
+            this.gmtModified = model.gmtModified;
+            this.maxVersion = model.maxVersion;
+            this.name = model.name;
+            this.permissionType = model.permissionType;
+            this.progress = model.progress;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+            this.status = model.status;
+            this.statusDetail = model.statusDetail;
+            this.supportRegionIds = model.supportRegionIds;
+            this.tags = model.tags;
+            this.versionName = model.versionName;
+        } 
 
         /**
          * <p>The build properties of the artifact, utilized for hosting and building the deployment package.</p>
@@ -517,6 +546,14 @@ public class GetArtifactResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key of the deployment package.</p>

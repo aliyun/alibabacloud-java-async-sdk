@@ -44,6 +44,10 @@ public class GetArtifactRepositoryCredentialsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return availableResources
      */
@@ -77,6 +81,16 @@ public class GetArtifactRepositoryCredentialsResponseBody extends TeaModel {
         private Credentials credentials; 
         private String expireDate; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetArtifactRepositoryCredentialsResponseBody model) {
+            this.availableResources = model.availableResources;
+            this.credentials = model.credentials;
+            this.expireDate = model.expireDate;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the resources that can be uploaded.</p>
@@ -177,6 +191,15 @@ public class GetArtifactRepositoryCredentialsResponseBody extends TeaModel {
             private String path; 
             private String regionId; 
             private String repositoryName; 
+
+            private Builder() {
+            } 
+
+            private Builder(AvailableResources model) {
+                this.path = model.path;
+                this.regionId = model.regionId;
+                this.repositoryName = model.repositoryName;
+            } 
 
             /**
              * <p>The path.</p>
@@ -297,6 +320,17 @@ public class GetArtifactRepositoryCredentialsResponseBody extends TeaModel {
             private String password; 
             private String securityToken; 
             private String username; 
+
+            private Builder() {
+            } 
+
+            private Builder(Credentials model) {
+                this.accessKeyId = model.accessKeyId;
+                this.accessKeySecret = model.accessKeySecret;
+                this.password = model.password;
+                this.securityToken = model.securityToken;
+                this.username = model.username;
+            } 
 
             /**
              * <p>The AccessKey ID.</p>

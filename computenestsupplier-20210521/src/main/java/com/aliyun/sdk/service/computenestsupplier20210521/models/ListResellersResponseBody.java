@@ -48,6 +48,10 @@ public class ListResellersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -89,6 +93,17 @@ public class ListResellersResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<SupplierInformation> supplierInformation; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListResellersResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.supplierInformation = model.supplierInformation;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
@@ -227,6 +242,17 @@ public class ListResellersResponseBody extends TeaModel {
             private String supplierName; 
             private Long supplierUid; 
             private String supplierUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(SupplierInformation model) {
+                this.supplierDesc = model.supplierDesc;
+                this.supplierLogo = model.supplierLogo;
+                this.supplierName = model.supplierName;
+                this.supplierUid = model.supplierUid;
+                this.supplierUrl = model.supplierUrl;
+            } 
 
             /**
              * <p>The description of distributor.</p>

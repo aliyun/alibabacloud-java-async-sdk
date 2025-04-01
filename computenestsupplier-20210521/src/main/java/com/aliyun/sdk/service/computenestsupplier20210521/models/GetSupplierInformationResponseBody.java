@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetSupplierInformationResponseBody</p>
  */
 public class GetSupplierInformationResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AcrNamespace")
+    private String acrNamespace;
+
     @com.aliyun.core.annotation.NameInMap("DeliverySettings")
     private DeliverySettings deliverySettings;
 
@@ -45,6 +48,7 @@ public class GetSupplierInformationResponseBody extends TeaModel {
     private String supplierUrl;
 
     private GetSupplierInformationResponseBody(Builder builder) {
+        this.acrNamespace = builder.acrNamespace;
         this.deliverySettings = builder.deliverySettings;
         this.enableReseller = builder.enableReseller;
         this.operationIp = builder.operationIp;
@@ -62,6 +66,17 @@ public class GetSupplierInformationResponseBody extends TeaModel {
 
     public static GetSupplierInformationResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return acrNamespace
+     */
+    public String getAcrNamespace() {
+        return this.acrNamespace;
     }
 
     /**
@@ -128,6 +143,7 @@ public class GetSupplierInformationResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String acrNamespace; 
         private DeliverySettings deliverySettings; 
         private Boolean enableReseller; 
         private String operationIp; 
@@ -137,6 +153,33 @@ public class GetSupplierInformationResponseBody extends TeaModel {
         private String supplierLogo; 
         private String supplierName; 
         private String supplierUrl; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSupplierInformationResponseBody model) {
+            this.acrNamespace = model.acrNamespace;
+            this.deliverySettings = model.deliverySettings;
+            this.enableReseller = model.enableReseller;
+            this.operationIp = model.operationIp;
+            this.operationMfaPresent = model.operationMfaPresent;
+            this.requestId = model.requestId;
+            this.supplierDesc = model.supplierDesc;
+            this.supplierLogo = model.supplierLogo;
+            this.supplierName = model.supplierName;
+            this.supplierUrl = model.supplierUrl;
+        } 
+
+        /**
+         * <p>Acr container namespace</p>
+         * 
+         * <strong>example:</strong>
+         * <p>computenest</p>
+         */
+        public Builder acrNamespace(String acrNamespace) {
+            this.acrNamespace = acrNamespace;
+            return this;
+        }
 
         /**
          * <p>The delivery settings.</p>
@@ -307,6 +350,16 @@ public class GetSupplierInformationResponseBody extends TeaModel {
             private Boolean ossEnabled; 
             private Long ossExpirationDays; 
             private String ossPath; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeliverySettings model) {
+                this.ossBucketName = model.ossBucketName;
+                this.ossEnabled = model.ossEnabled;
+                this.ossExpirationDays = model.ossExpirationDays;
+                this.ossPath = model.ossPath;
+            } 
 
             /**
              * <p>The name of the OSS bucket.</p>

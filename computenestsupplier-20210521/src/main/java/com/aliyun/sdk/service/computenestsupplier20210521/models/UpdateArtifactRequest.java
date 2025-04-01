@@ -70,7 +70,7 @@ public class UpdateArtifactRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -300,6 +300,14 @@ public class UpdateArtifactRequest extends Request {
             private String argumentName; 
             private String argumentValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(BuildArgs model) {
+                this.argumentName = model.argumentName;
+                this.argumentValue = model.argumentValue;
+            } 
+
             /**
              * <p>The name of a specific build argument.</p>
              * 
@@ -433,6 +441,19 @@ public class UpdateArtifactRequest extends Request {
             private Long repoId; 
             private String repoName; 
 
+            private Builder() {
+            } 
+
+            private Builder(CodeRepo model) {
+                this.branch = model.branch;
+                this.endpoint = model.endpoint;
+                this.orgId = model.orgId;
+                this.owner = model.owner;
+                this.platform = model.platform;
+                this.repoId = model.repoId;
+                this.repoName = model.repoName;
+            } 
+
             /**
              * <p>The name of the branch in the code repository.</p>
              * 
@@ -445,7 +466,11 @@ public class UpdateArtifactRequest extends Request {
             }
 
             /**
-             * Endpoint.
+             * <p>The endpoint. 
+             * The URL address used to access the privately deployed GitLab instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://121.40.25.0">http://121.40.25.0</a></p>
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -453,7 +478,10 @@ public class UpdateArtifactRequest extends Request {
             }
 
             /**
-             * OrgId.
+             * <p>The organization ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>455231</p>
              */
             public Builder orgId(String orgId) {
                 this.orgId = orgId;
@@ -475,7 +503,17 @@ public class UpdateArtifactRequest extends Request {
             }
 
             /**
-             * <p>The platform where the code repository is hosted.</p>
+             * <p>The platform type. Valid values:</p>
+             * <ul>
+             * <li><p>github</p>
+             * </li>
+             * <li><p>gitee</p>
+             * </li>
+             * <li><p>gitlab</p>
+             * </li>
+             * <li><p>codeup</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>github</p>
@@ -486,7 +524,10 @@ public class UpdateArtifactRequest extends Request {
             }
 
             /**
-             * RepoId.
+             * <p>The repository ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>103</p>
              */
             public Builder repoId(Long repoId) {
                 this.repoId = repoId;
@@ -626,6 +667,20 @@ public class UpdateArtifactRequest extends Request {
             private String regionId; 
             private String sourceContainerImage; 
             private String sourceImageId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ArtifactBuildProperty model) {
+                this.buildArgs = model.buildArgs;
+                this.codeRepo = model.codeRepo;
+                this.commandContent = model.commandContent;
+                this.commandType = model.commandType;
+                this.dockerfilePath = model.dockerfilePath;
+                this.regionId = model.regionId;
+                this.sourceContainerImage = model.sourceContainerImage;
+                this.sourceImageId = model.sourceImageId;
+            } 
 
             /**
              * <p>The build arguments used during the image build process.</p>
@@ -880,6 +935,21 @@ public class UpdateArtifactRequest extends Request {
             private String repoType; 
             private String tag; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(ArtifactProperty model) {
+                this.commodityCode = model.commodityCode;
+                this.commodityVersion = model.commodityVersion;
+                this.imageId = model.imageId;
+                this.regionId = model.regionId;
+                this.repoId = model.repoId;
+                this.repoName = model.repoName;
+                this.repoType = model.repoType;
+                this.tag = model.tag;
+                this.url = model.url;
+            } 
 
             /**
              * <p>The commodity code of the service in Alibaba Cloud Marketplace.</p>

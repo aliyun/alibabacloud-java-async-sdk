@@ -64,6 +64,10 @@ public class ReleaseArtifactResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return artifactId
      */
@@ -137,6 +141,21 @@ public class ReleaseArtifactResponseBody extends TeaModel {
         private String requestId; 
         private String status; 
         private String versionName; 
+
+        private Builder() {
+        } 
+
+        private Builder(ReleaseArtifactResponseBody model) {
+            this.artifactId = model.artifactId;
+            this.artifactProperty = model.artifactProperty;
+            this.artifactType = model.artifactType;
+            this.artifactVersion = model.artifactVersion;
+            this.description = model.description;
+            this.gmtModified = model.gmtModified;
+            this.requestId = model.requestId;
+            this.status = model.status;
+            this.versionName = model.versionName;
+        } 
 
         /**
          * <p>The ID of the artifact.</p>

@@ -161,7 +161,7 @@ public class UpdateServiceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -809,6 +809,14 @@ public class UpdateServiceRequest extends Request {
             private java.util.Map<String, String> mappings; 
             private String templateName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ComponentsMappings model) {
+                this.mappings = model.mappings;
+                this.templateName = model.templateName;
+            } 
+
             /**
              * <p>This parameter is not available to the public.</p>
              */
@@ -902,6 +910,16 @@ public class UpdateServiceRequest extends Request {
             private String metricName; 
             private String promql; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(MeteringEntityExtraInfos model) {
+                this.entityId = model.entityId;
+                this.metricName = model.metricName;
+                this.promql = model.promql;
+                this.type = model.type;
+            } 
 
             /**
              * <p>Metering entity ID.</p>
@@ -1016,6 +1034,15 @@ public class UpdateServiceRequest extends Request {
             private String specificationName; 
             private String templateName; 
 
+            private Builder() {
+            } 
+
+            private Builder(MeteringEntityMappings model) {
+                this.entityIds = model.entityIds;
+                this.specificationName = model.specificationName;
+                this.templateName = model.templateName;
+            } 
+
             /**
              * <p>Metering entity IDs.</p>
              */
@@ -1108,6 +1135,15 @@ public class UpdateServiceRequest extends Request {
             private String specificationCode; 
             private String specificationName; 
             private String templateName; 
+
+            private Builder() {
+            } 
+
+            private Builder(SpecificationMappings model) {
+                this.specificationCode = model.specificationCode;
+                this.specificationName = model.specificationName;
+                this.templateName = model.templateName;
+            } 
 
             /**
              * <p>Specification code.</p>
@@ -1235,6 +1271,17 @@ public class UpdateServiceRequest extends Request {
             private String saasBoostConfig; 
             private java.util.List<SpecificationMappings> specificationMappings; 
 
+            private Builder() {
+            } 
+
+            private Builder(Commodity model) {
+                this.componentsMappings = model.componentsMappings;
+                this.meteringEntityExtraInfos = model.meteringEntityExtraInfos;
+                this.meteringEntityMappings = model.meteringEntityMappings;
+                this.saasBoostConfig = model.saasBoostConfig;
+                this.specificationMappings = model.specificationMappings;
+            } 
+
             /**
              * <p>This parameter is not available to the public.</p>
              */
@@ -1317,6 +1364,13 @@ public class UpdateServiceRequest extends Request {
         public static final class Builder {
             private java.util.List<String> compliancePacks; 
 
+            private Builder() {
+            } 
+
+            private Builder(ComplianceMetadata model) {
+                this.compliancePacks = model.compliancePacks;
+            } 
+
             /**
              * <p>The compliance pack.</p>
              */
@@ -1375,6 +1429,14 @@ public class UpdateServiceRequest extends Request {
         public static final class Builder {
             private String name; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(Agreements model) {
+                this.name = model.name;
+                this.url = model.url;
+            } 
 
             /**
              * <p>Protocol name.</p>
@@ -1448,6 +1510,14 @@ public class UpdateServiceRequest extends Request {
         public static final class Builder {
             private String name; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(Softwares model) {
+                this.name = model.name;
+                this.version = model.version;
+            } 
 
             /**
              * <p>The name of the software.</p>
@@ -1582,6 +1652,19 @@ public class UpdateServiceRequest extends Request {
             private String shortDescription; 
             private java.util.List<Softwares> softwares; 
 
+            private Builder() {
+            } 
+
+            private Builder(ServiceInfo model) {
+                this.agreements = model.agreements;
+                this.image = model.image;
+                this.locale = model.locale;
+                this.longDescriptionUrl = model.longDescriptionUrl;
+                this.name = model.name;
+                this.shortDescription = model.shortDescription;
+                this.softwares = model.softwares;
+            } 
+
             /**
              * <p>Protocol document information about the service.</p>
              */
@@ -1707,6 +1790,14 @@ public class UpdateServiceRequest extends Request {
         public static final class Builder {
             private Boolean updateArtifact; 
             private String updateFrom; 
+
+            private Builder() {
+            } 
+
+            private Builder(UpdateOption model) {
+                this.updateArtifact = model.updateArtifact;
+                this.updateFrom = model.updateFrom;
+            } 
 
             /**
              * <p>Whether to update artifact.</p>

@@ -40,6 +40,10 @@ public class CreateServiceInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class CreateServiceInstanceResponseBody extends TeaModel {
         private String requestId; 
         private String serviceInstanceId; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateServiceInstanceResponseBody model) {
+            this.requestId = model.requestId;
+            this.serviceInstanceId = model.serviceInstanceId;
+            this.status = model.status;
+        } 
 
         /**
          * <p>The request ID.</p>

@@ -36,6 +36,10 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<ServiceProvisions> serviceProvisions; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetServiceProvisionsResponseBody model) {
+            this.requestId = model.requestId;
+            this.serviceProvisions = model.serviceProvisions;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -146,6 +158,16 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
             private String apiProductId; 
             private String apiType; 
             private java.util.Map<String, ?> parameters; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApiForCreation model) {
+                this.apiName = model.apiName;
+                this.apiProductId = model.apiProductId;
+                this.apiType = model.apiType;
+                this.parameters = model.parameters;
+            } 
 
             /**
              * <p>The name of the API operation.</p>
@@ -270,6 +292,16 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
             private String function; 
             private String roleName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Roles model) {
+                this.apiForCreation = model.apiForCreation;
+                this.created = model.created;
+                this.function = model.function;
+                this.roleName = model.roleName;
+            } 
+
             /**
              * <p>The information about the API operation that is used to create the RAM role.</p>
              */
@@ -365,6 +397,14 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
         public static final class Builder {
             private String authorizationURL; 
             private java.util.List<Roles> roles; 
+
+            private Builder() {
+            } 
+
+            private Builder(RoleProvision model) {
+                this.authorizationURL = model.authorizationURL;
+                this.roles = model.roles;
+            } 
 
             /**
              * <p>The authorization URL of the RAM role.</p>
@@ -486,6 +526,18 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
             private String serviceName; 
             private String status; 
             private String statusReason; 
+
+            private Builder() {
+            } 
+
+            private Builder(ServiceProvisions model) {
+                this.autoEnableService = model.autoEnableService;
+                this.enableURL = model.enableURL;
+                this.roleProvision = model.roleProvision;
+                this.serviceName = model.serviceName;
+                this.status = model.status;
+                this.statusReason = model.statusReason;
+            } 
 
             /**
              * <p>Indicates whether automatic activation for the service is defined in the template. Valid values:</p>

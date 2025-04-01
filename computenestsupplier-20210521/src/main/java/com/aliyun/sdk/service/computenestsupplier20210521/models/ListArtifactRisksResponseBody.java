@@ -36,6 +36,10 @@ public class ListArtifactRisksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return artifactRiskList
      */
@@ -53,6 +57,14 @@ public class ListArtifactRisksResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<ArtifactRiskList> artifactRiskList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListArtifactRisksResponseBody model) {
+            this.artifactRiskList = model.artifactRiskList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>List of artifact risks</p>
@@ -182,6 +194,19 @@ public class ListArtifactRisksResponseBody extends TeaModel {
             private String riskType; 
             private String riskTypeName; 
             private String solution; 
+
+            private Builder() {
+            } 
+
+            private Builder(ArtifactRiskList model) {
+                this.cveNos = model.cveNos;
+                this.extendInfo = model.extendInfo;
+                this.level = model.level;
+                this.riskName = model.riskName;
+                this.riskType = model.riskType;
+                this.riskTypeName = model.riskTypeName;
+                this.solution = model.solution;
+            } 
 
             /**
              * <p>CVE numbers</p>

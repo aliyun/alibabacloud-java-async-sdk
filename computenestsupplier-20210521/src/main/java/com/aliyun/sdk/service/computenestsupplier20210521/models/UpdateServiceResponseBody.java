@@ -36,6 +36,10 @@ public class UpdateServiceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dryRunResult
      */
@@ -53,6 +57,14 @@ public class UpdateServiceResponseBody extends TeaModel {
     public static final class Builder {
         private DryRunResult dryRunResult; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateServiceResponseBody model) {
+            this.dryRunResult = model.dryRunResult;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The dry run result.</p>
@@ -134,6 +146,15 @@ public class UpdateServiceResponseBody extends TeaModel {
             private java.util.List<String> action; 
             private String resource; 
             private String serviceName; 
+
+            private Builder() {
+            } 
+
+            private Builder(MissingPolicy model) {
+                this.action = model.action;
+                this.resource = model.resource;
+                this.serviceName = model.serviceName;
+            } 
 
             /**
              * <p>The Actions.</p>
@@ -218,6 +239,14 @@ public class UpdateServiceResponseBody extends TeaModel {
             private java.util.List<MissingPolicy> missingPolicy; 
             private String policy; 
 
+            private Builder() {
+            } 
+
+            private Builder(RolePolicy model) {
+                this.missingPolicy = model.missingPolicy;
+                this.policy = model.policy;
+            } 
+
             /**
              * <p>The missing  ram policy for deploying role.</p>
              */
@@ -290,6 +319,13 @@ public class UpdateServiceResponseBody extends TeaModel {
 
         public static final class Builder {
             private RolePolicy rolePolicy; 
+
+            private Builder() {
+            } 
+
+            private Builder(DryRunResult model) {
+                this.rolePolicy = model.rolePolicy;
+            } 
 
             /**
              * <p>The required ram policy for deploying role.</p>

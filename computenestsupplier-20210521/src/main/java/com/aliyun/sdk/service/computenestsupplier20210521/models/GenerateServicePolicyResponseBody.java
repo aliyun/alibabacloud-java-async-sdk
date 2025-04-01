@@ -40,6 +40,10 @@ public class GenerateServicePolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return missingPolicy
      */
@@ -65,6 +69,15 @@ public class GenerateServicePolicyResponseBody extends TeaModel {
         private java.util.List<MissingPolicy> missingPolicy; 
         private String policy; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GenerateServicePolicyResponseBody model) {
+            this.missingPolicy = model.missingPolicy;
+            this.policy = model.policy;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The policies that are missing.</p>
@@ -157,6 +170,15 @@ public class GenerateServicePolicyResponseBody extends TeaModel {
             private java.util.List<String> action; 
             private String resource; 
             private String serviceName; 
+
+            private Builder() {
+            } 
+
+            private Builder(MissingPolicy model) {
+                this.action = model.action;
+                this.resource = model.resource;
+                this.serviceName = model.serviceName;
+            } 
 
             /**
              * <p>Operations on specific resources.</p>

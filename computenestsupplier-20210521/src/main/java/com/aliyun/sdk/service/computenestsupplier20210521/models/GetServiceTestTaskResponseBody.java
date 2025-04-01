@@ -48,6 +48,10 @@ public class GetServiceTestTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return executionDetails
      */
@@ -89,6 +93,17 @@ public class GetServiceTestTaskResponseBody extends TeaModel {
         private String status; 
         private String taskName; 
         private String taskRegionId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetServiceTestTaskResponseBody model) {
+            this.executionDetails = model.executionDetails;
+            this.requestId = model.requestId;
+            this.status = model.status;
+            this.taskName = model.taskName;
+            this.taskRegionId = model.taskRegionId;
+        } 
 
         /**
          * <p>The execution details.</p>
@@ -220,6 +235,16 @@ public class GetServiceTestTaskResponseBody extends TeaModel {
             private String executionReport; 
             private String status; 
             private String subTaskId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ExecutionDetails model) {
+                this.caseName = model.caseName;
+                this.executionReport = model.executionReport;
+                this.status = model.status;
+                this.subTaskId = model.subTaskId;
+            } 
 
             /**
              * <p>The service test case name.</p>

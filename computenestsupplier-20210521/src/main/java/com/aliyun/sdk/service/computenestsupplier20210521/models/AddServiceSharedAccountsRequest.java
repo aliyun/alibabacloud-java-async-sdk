@@ -57,7 +57,7 @@ public class AddServiceSharedAccountsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -233,6 +233,14 @@ public class AddServiceSharedAccountsRequest extends Request {
         public static final class Builder {
             private String permission; 
             private String userAliUid; 
+
+            private Builder() {
+            } 
+
+            private Builder(SharedAccounts model) {
+                this.permission = model.permission;
+                this.userAliUid = model.userAliUid;
+            } 
 
             /**
              * <p>The permissions on the service. Valid values:</p>

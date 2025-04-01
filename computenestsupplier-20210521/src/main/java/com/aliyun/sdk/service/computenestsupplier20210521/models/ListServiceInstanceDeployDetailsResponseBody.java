@@ -48,6 +48,10 @@ public class ListServiceInstanceDeployDetailsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return deployDetails
      */
@@ -89,6 +93,17 @@ public class ListServiceInstanceDeployDetailsResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListServiceInstanceDeployDetailsResponseBody model) {
+            this.deployDetails = model.deployDetails;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The details of the service instance deployment.</p>
@@ -347,6 +362,27 @@ public class ListServiceInstanceDeployDetailsResponseBody extends TeaModel {
             private String serviceVersion; 
             private String timestamp; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeployDetails model) {
+                this.count = model.count;
+                this.createTime = model.createTime;
+                this.cycle = model.cycle;
+                this.deploySucceeded = model.deploySucceeded;
+                this.errorCode = model.errorCode;
+                this.errorDetail = model.errorDetail;
+                this.errorType = model.errorType;
+                this.serviceId = model.serviceId;
+                this.serviceInstanceId = model.serviceInstanceId;
+                this.serviceNameChn = model.serviceNameChn;
+                this.serviceNameEng = model.serviceNameEng;
+                this.serviceType = model.serviceType;
+                this.serviceVersion = model.serviceVersion;
+                this.timestamp = model.timestamp;
+                this.userId = model.userId;
+            } 
 
             /**
              * <p>The total number of entries that meet the specified conditions.</p>

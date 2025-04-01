@@ -52,6 +52,10 @@ public class GetUploadCredentialsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetUploadCredentialsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetUploadCredentialsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The response code.</p>
@@ -274,6 +290,19 @@ public class GetUploadCredentialsResponseBody extends TeaModel {
             private String key; 
             private String regionId; 
             private String securityToken; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.accessKeyId = model.accessKeyId;
+                this.accessKeySecret = model.accessKeySecret;
+                this.bucketName = model.bucketName;
+                this.expireDate = model.expireDate;
+                this.key = model.key;
+                this.regionId = model.regionId;
+                this.securityToken = model.securityToken;
+            } 
 
             /**
              * <p>The AccessKey ID.</p>
