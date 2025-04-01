@@ -18,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class SourceConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("oss")
-    private OpenStructOssSourceConfig oss;
+    private OssSourceConfig oss;
 
     @com.aliyun.core.annotation.NameInMap("repository")
     private RepositorySourceConfig repository;
@@ -47,7 +47,7 @@ public class SourceConfig extends TeaModel {
     /**
      * @return oss
      */
-    public OpenStructOssSourceConfig getOss() {
+    public OssSourceConfig getOss() {
         return this.oss;
     }
 
@@ -66,7 +66,7 @@ public class SourceConfig extends TeaModel {
     }
 
     public static final class Builder {
-        private OpenStructOssSourceConfig oss; 
+        private OssSourceConfig oss; 
         private RepositorySourceConfig repository; 
         private TemplateSourceConfig template; 
 
@@ -82,7 +82,7 @@ public class SourceConfig extends TeaModel {
         /**
          * oss.
          */
-        public Builder oss(OpenStructOssSourceConfig oss) {
+        public Builder oss(OssSourceConfig oss) {
             this.oss = oss;
             return this;
         }
