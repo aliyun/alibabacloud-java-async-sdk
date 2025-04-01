@@ -56,6 +56,10 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -113,6 +117,19 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeApplicationInstancesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * <p>The HTTP status code. Valid values:</p>
@@ -260,6 +277,15 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
             private String containerId; 
             private String containerStatus; 
             private String imageUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(SidecarContainersStatus model) {
+                this.containerId = model.containerId;
+                this.containerStatus = model.containerStatus;
+                this.imageUrl = model.imageUrl;
+            } 
 
             /**
              * ContainerId.
@@ -503,6 +529,28 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
             private java.util.List<SidecarContainersStatus> sidecarContainersStatus; 
             private String unhealthyMessage; 
             private String vSwitchId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Instances model) {
+                this.createTimeStamp = model.createTimeStamp;
+                this.debugStatus = model.debugStatus;
+                this.eip = model.eip;
+                this.finishTimeStamp = model.finishTimeStamp;
+                this.groupId = model.groupId;
+                this.imageUrl = model.imageUrl;
+                this.instanceContainerIp = model.instanceContainerIp;
+                this.instanceContainerRestarts = model.instanceContainerRestarts;
+                this.instanceContainerStatus = model.instanceContainerStatus;
+                this.instanceHealthStatus = model.instanceHealthStatus;
+                this.instanceId = model.instanceId;
+                this.mainContainerStatus = model.mainContainerStatus;
+                this.packageVersion = model.packageVersion;
+                this.sidecarContainersStatus = model.sidecarContainersStatus;
+                this.unhealthyMessage = model.unhealthyMessage;
+                this.vSwitchId = model.vSwitchId;
+            } 
 
             /**
              * <p>The start time of the instance creation process. Unit: milliseconds.</p>
@@ -768,6 +816,16 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
             private java.util.List<Instances> instances; 
             private Integer pageSize; 
             private Integer totalSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.currentPage = model.currentPage;
+                this.instances = model.instances;
+                this.pageSize = model.pageSize;
+                this.totalSize = model.totalSize;
+            } 
 
             /**
              * <p>The number of the returned page.</p>

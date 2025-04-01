@@ -36,6 +36,10 @@ public class ProbeHandler extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return httpGet
      */
@@ -53,6 +57,14 @@ public class ProbeHandler extends TeaModel {
     public static final class Builder {
         private HTTPGetAction httpGet; 
         private TCPSocketAction tcpSocket; 
+
+        private Builder() {
+        } 
+
+        private Builder(ProbeHandler model) {
+            this.httpGet = model.httpGet;
+            this.tcpSocket = model.tcpSocket;
+        } 
 
         /**
          * HttpGet.

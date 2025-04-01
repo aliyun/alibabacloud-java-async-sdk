@@ -56,6 +56,10 @@ public class DescribeApplicationGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -113,6 +117,19 @@ public class DescribeApplicationGroupsResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeApplicationGroupsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * <p>The HTTP status code. Valid values:</p>
@@ -368,6 +385,24 @@ public class DescribeApplicationGroupsResponseBody extends TeaModel {
             private Integer replicas; 
             private Integer runningInstances; 
             private String webContainer; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.edasContainerVersion = model.edasContainerVersion;
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+                this.groupType = model.groupType;
+                this.imageUrl = model.imageUrl;
+                this.jdk = model.jdk;
+                this.packageType = model.packageType;
+                this.packageUrl = model.packageUrl;
+                this.packageVersion = model.packageVersion;
+                this.replicas = model.replicas;
+                this.runningInstances = model.runningInstances;
+                this.webContainer = model.webContainer;
+            } 
 
             /**
              * <p>The version of the container, such as Ali-Tomcat, in which a High-speed Service Framework (HSF) application runs.</p>

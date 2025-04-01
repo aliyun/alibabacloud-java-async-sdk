@@ -46,6 +46,10 @@ public class PublishWebApplicationRevisionInput extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return containers
      */
@@ -79,6 +83,16 @@ public class PublishWebApplicationRevisionInput extends TeaModel {
         private String description; 
         private Boolean enableArmsMetrics; 
         private Boolean takeEffect; 
+
+        private Builder() {
+        } 
+
+        private Builder(PublishWebApplicationRevisionInput model) {
+            this.containers = model.containers;
+            this.description = model.description;
+            this.enableArmsMetrics = model.enableArmsMetrics;
+            this.takeEffect = model.takeEffect;
+        } 
 
         /**
          * <p>This parameter is required.</p>

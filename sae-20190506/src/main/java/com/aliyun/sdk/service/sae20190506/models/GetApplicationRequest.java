@@ -44,7 +44,7 @@ public class GetApplicationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -87,7 +87,10 @@ public class GetApplicationRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>017f39b8-dfa4-4e16-a84b-1dcee4b1****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -96,7 +99,10 @@ public class GetApplicationRequest extends Request {
         }
 
         /**
-         * AppName.
+         * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -105,7 +111,10 @@ public class GetApplicationRequest extends Request {
         }
 
         /**
-         * NamespaceId.
+         * <p>The ID of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shenzhen</p>
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);

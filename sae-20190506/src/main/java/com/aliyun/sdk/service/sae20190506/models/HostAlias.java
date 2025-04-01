@@ -36,6 +36,10 @@ public class HostAlias extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return hostnames
      */
@@ -53,6 +57,14 @@ public class HostAlias extends TeaModel {
     public static final class Builder {
         private java.util.List<String> hostnames; 
         private String ip; 
+
+        private Builder() {
+        } 
+
+        private Builder(HostAlias model) {
+            this.hostnames = model.hostnames;
+            this.ip = model.ip;
+        } 
 
         /**
          * hostnames.

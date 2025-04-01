@@ -35,7 +35,7 @@ public class DescribeIngressRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -60,7 +60,7 @@ public class DescribeIngressRequest extends Request {
         } 
 
         /**
-         * <p>The returned data.</p>
+         * <p>The ID of the routing rule to be queried.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

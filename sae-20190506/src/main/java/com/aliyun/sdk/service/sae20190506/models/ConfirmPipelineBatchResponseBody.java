@@ -56,6 +56,10 @@ public class ConfirmPipelineBatchResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -113,6 +117,19 @@ public class ConfirmPipelineBatchResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ConfirmPipelineBatchResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * <p>The HTTP status code. Valid values:</p>
@@ -236,6 +253,13 @@ public class ConfirmPipelineBatchResponseBody extends TeaModel {
 
         public static final class Builder {
             private String pipelineId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.pipelineId = model.pipelineId;
+            } 
 
             /**
              * <p>The ID of the batch.</p>

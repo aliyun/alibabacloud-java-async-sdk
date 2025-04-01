@@ -56,6 +56,10 @@ public class ListChangeOrdersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -114,6 +118,19 @@ public class ListChangeOrdersResponseBody extends TeaModel {
         private Boolean success; 
         private String traceId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListChangeOrdersResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
+
         /**
          * <p>Indicates whether the list of change orders was obtained. Valid values:</p>
          * <ul>
@@ -130,7 +147,7 @@ public class ListChangeOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of the returned page.</p>
+         * <p>The information about change orders.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -386,6 +403,26 @@ public class ListChangeOrdersResponseBody extends TeaModel {
             private Integer status; 
             private String userId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ChangeOrderList model) {
+                this.appId = model.appId;
+                this.batchCount = model.batchCount;
+                this.batchType = model.batchType;
+                this.changeOrderId = model.changeOrderId;
+                this.coType = model.coType;
+                this.coTypeCode = model.coTypeCode;
+                this.createTime = model.createTime;
+                this.createUserId = model.createUserId;
+                this.description = model.description;
+                this.finishTime = model.finishTime;
+                this.groupId = model.groupId;
+                this.source = model.source;
+                this.status = model.status;
+                this.userId = model.userId;
+            } 
+
             /**
              * <p>The number of entries returned on each page.</p>
              * 
@@ -443,7 +480,29 @@ public class ListChangeOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the change order.</p>
+             * <p>The code of the change order. Valid values:</p>
+             * <ul>
+             * <li><strong>CoBindSlb</strong>: associates the Server Load Balancer (SLB) instance with the application.</li>
+             * <li><strong>CoUnbindSlb</strong>: disassociates an SLB instance from the application.</li>
+             * <li><strong>CoCreateApp</strong>: creates the application.</li>
+             * <li><strong>CoDeleteApp</strong>: deletes the application.</li>
+             * <li><strong>CoDeploy</strong>: deploys the application.</li>
+             * <li><strong>CoRestartApplication</strong>: restarts the application.</li>
+             * <li><strong>CoRollback</strong>: rolls back the application.</li>
+             * <li><strong>CoScaleIn</strong>: scales in the application.</li>
+             * <li><strong>CoScaleOut</strong>: scales out the application.</li>
+             * <li><strong>CoStartApplication</strong>: starts the application.</li>
+             * <li><strong>CoStopApplication</strong>: stops the application.</li>
+             * <li><strong>CoRescaleApplicationVertically</strong>: modifies the instance type.</li>
+             * <li><strong>CoDeployHistroy</strong>: rolls back the application to an earlier version.</li>
+             * <li><strong>CoBindNas</strong>: associates a network-attached storage (NAS) file system with the application.</li>
+             * <li><strong>CoUnbindNas</strong>: disassociates a NAS file system from the application.</li>
+             * <li><strong>CoBatchStartApplication</strong>: starts multiple applications concurrently.</li>
+             * <li><strong>CoBatchStopApplication</strong>: stops multiple applications concurrently.</li>
+             * <li><strong>CoRestartInstances</strong>: restarts the instance.</li>
+             * <li><strong>CoDeleteInstances</strong>: deletes the instance.</li>
+             * <li><strong>CoScaleInAppWithInstances</strong>: reduces the specified number of application instances.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>CoCreateApp</p>
@@ -635,20 +694,18 @@ public class ListChangeOrdersResponseBody extends TeaModel {
             private Integer pageSize; 
             private Integer totalSize; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.changeOrderList = model.changeOrderList;
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalSize = model.totalSize;
+            } 
+
             /**
-             * <p>The status of the change order. Valid values:</p>
-             * <ul>
-             * <li><strong>0</strong>: The change order is being prepared.</li>
-             * <li><strong>1</strong>: The change order is being executed.</li>
-             * <li><strong>2</strong>: The change order was executed.</li>
-             * <li><strong>3</strong>: The change order could not be executed.</li>
-             * <li><strong>6</strong>: The change order was terminated.</li>
-             * <li><strong>8</strong>: The execution process is pending. You must manually determine the release batch.</li>
-             * <li><strong>9</strong>: The execution process is pending. SAE will automatically determine the release batch.</li>
-             * <li><strong>10</strong>: The change order could not be executed due to a system exception.</li>
-             * <li><strong>11</strong>: The change order is pending approval.</li>
-             * <li><strong>12</strong>: The change order is approved and is pending execution.</li>
-             * </ul>
+             * <p>The change orders.</p>
              */
             public Builder changeOrderList(java.util.List<ChangeOrderList> changeOrderList) {
                 this.changeOrderList = changeOrderList;

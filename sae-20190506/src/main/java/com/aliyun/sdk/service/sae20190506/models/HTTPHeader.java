@@ -36,6 +36,10 @@ public class HTTPHeader extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return name
      */
@@ -53,6 +57,14 @@ public class HTTPHeader extends TeaModel {
     public static final class Builder {
         private String name; 
         private String value; 
+
+        private Builder() {
+        } 
+
+        private Builder(HTTPHeader model) {
+            this.name = model.name;
+            this.value = model.value;
+        } 
 
         /**
          * name.

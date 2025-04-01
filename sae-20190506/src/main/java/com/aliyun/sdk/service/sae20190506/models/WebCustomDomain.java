@@ -72,6 +72,10 @@ public class WebCustomDomain extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createdTime
      */
@@ -161,6 +165,23 @@ public class WebCustomDomain extends TeaModel {
         private WebTLSConfig webTLSConfig; 
         private WebWAFConfig webWAFConfig; 
         private String accountId; 
+
+        private Builder() {
+        } 
+
+        private Builder(WebCustomDomain model) {
+            this.createdTime = model.createdTime;
+            this.defaultForwardingAppName = model.defaultForwardingAppName;
+            this.domainName = model.domainName;
+            this.lastModifiedTime = model.lastModifiedTime;
+            this.namespaceId = model.namespaceId;
+            this.protocol = model.protocol;
+            this.routeConfig = model.routeConfig;
+            this.webCertConfig = model.webCertConfig;
+            this.webTLSConfig = model.webTLSConfig;
+            this.webWAFConfig = model.webWAFConfig;
+            this.accountId = model.accountId;
+        } 
 
         /**
          * CreatedTime.

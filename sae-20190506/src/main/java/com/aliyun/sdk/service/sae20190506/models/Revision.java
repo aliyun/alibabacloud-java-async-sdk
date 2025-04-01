@@ -48,6 +48,10 @@ public class Revision extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createdTime
      */
@@ -89,6 +93,17 @@ public class Revision extends TeaModel {
         private RevisionConfig revisionConfig; 
         private String revisionId; 
         private Float weight; 
+
+        private Builder() {
+        } 
+
+        private Builder(Revision model) {
+            this.createdTime = model.createdTime;
+            this.description = model.description;
+            this.revisionConfig = model.revisionConfig;
+            this.revisionId = model.revisionId;
+            this.weight = model.weight;
+        } 
 
         /**
          * CreatedTime.

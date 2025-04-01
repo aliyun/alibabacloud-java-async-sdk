@@ -84,6 +84,10 @@ public class CustomDomain extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accountId
      */
@@ -197,6 +201,26 @@ public class CustomDomain extends TeaModel {
         private String subdomainCount; 
         private TLSConfig tlsConfig; 
         private WAFConfig wafConfig; 
+
+        private Builder() {
+        } 
+
+        private Builder(CustomDomain model) {
+            this.accountId = model.accountId;
+            this.apiVersion = model.apiVersion;
+            this.certConfig = model.certConfig;
+            this.createdTime = model.createdTime;
+            this.domainName = model.domainName;
+            this.keepFullPath = model.keepFullPath;
+            this.lastModifiedTime = model.lastModifiedTime;
+            this.namespaceID = model.namespaceID;
+            this.protocol = model.protocol;
+            this.requestId = model.requestId;
+            this.routeConfig = model.routeConfig;
+            this.subdomainCount = model.subdomainCount;
+            this.tlsConfig = model.tlsConfig;
+            this.wafConfig = model.wafConfig;
+        } 
 
         /**
          * accountId.

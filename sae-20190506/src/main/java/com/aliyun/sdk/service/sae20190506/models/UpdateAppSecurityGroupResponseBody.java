@@ -52,6 +52,10 @@ public class UpdateAppSecurityGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -102,11 +106,25 @@ public class UpdateAppSecurityGroupResponseBody extends TeaModel {
         private Boolean success; 
         private String traceId; 
 
+        private Builder() {
+        } 
+
+        private Builder(UpdateAppSecurityGroupResponseBody model) {
+            this.code = model.code;
+            this.errorCode = model.errorCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
+
         /**
-         * <p>Indicates whether the security group of the application is successfully updated. Valid values:</p>
+         * <p>The HTTP status code. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>2xx</strong>: The call was successful.</li>
+         * <li><strong>3xx</strong>: The call was redirected.</li>
+         * <li><strong>4xx</strong>: The call failed.</li>
+         * <li><strong>5xx</strong>: A server error occurred.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -118,12 +136,10 @@ public class UpdateAppSecurityGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code. Valid values:</p>
+         * <p>The error code. Valid values:</p>
          * <ul>
-         * <li><strong>2xx</strong>: indicates that the request was successful.</li>
-         * <li><strong>3xx</strong>: indicates that the request was redirected.</li>
-         * <li><strong>4xx</strong>: indicates that the request was invalid.</li>
-         * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+         * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+         * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
          * </ul>
          */
         public Builder errorCode(String errorCode) {
@@ -132,7 +148,11 @@ public class UpdateAppSecurityGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the trace. It can be used to query details of a request.</p>
+         * <p>The returned message. Valid values:</p>
+         * <ul>
+         * <li>success: If the call is successful, <strong>success</strong> is returned.</li>
+         * <li>An error code: If the call fails, an error code is returned.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -143,11 +163,7 @@ public class UpdateAppSecurityGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
-         * <ul>
-         * <li>If the request is successful, <strong>success</strong> is returned.</li>
-         * <li>An error code is returned when the request fails.</li>
-         * </ul>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
@@ -158,7 +174,14 @@ public class UpdateAppSecurityGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the security group of the application was updated. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The security group was updated.</li>
+         * <li><strong>false</strong>: The security group failed to be updated.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -166,11 +189,7 @@ public class UpdateAppSecurityGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code.</p>
-         * <ul>
-         * <li>If the request is successful, this parameter is not returned.****</li>
-         * <li>This parameter is returned only if the request failed.**** For more information, see the &quot;<strong>Error codes</strong>&quot; section in this topic.</li>
-         * </ul>
+         * <p>The trace ID that is used to query the details of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>0a98a02315955564772843261e****</p>

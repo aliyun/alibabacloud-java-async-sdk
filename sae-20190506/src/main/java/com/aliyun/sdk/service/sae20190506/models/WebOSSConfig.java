@@ -32,6 +32,10 @@ public class WebOSSConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return mountPoints
      */
@@ -41,6 +45,13 @@ public class WebOSSConfig extends TeaModel {
 
     public static final class Builder {
         private java.util.List<WebOSSMountPoint> mountPoints; 
+
+        private Builder() {
+        } 
+
+        private Builder(WebOSSConfig model) {
+            this.mountPoints = model.mountPoints;
+        } 
 
         /**
          * MountPoints.

@@ -48,6 +48,10 @@ public class PriceEstimateOutput extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return apps
      */
@@ -89,6 +93,17 @@ public class PriceEstimateOutput extends TeaModel {
         private java.util.List<PostPayItems> postPayItems; 
         private Float postPayTotalPrice; 
         private Float totalPrice; 
+
+        private Builder() {
+        } 
+
+        private Builder(PriceEstimateOutput model) {
+            this.apps = model.apps;
+            this.items = model.items;
+            this.postPayItems = model.postPayItems;
+            this.postPayTotalPrice = model.postPayTotalPrice;
+            this.totalPrice = model.totalPrice;
+        } 
 
         /**
          * Apps.
@@ -192,6 +207,15 @@ public class PriceEstimateOutput extends TeaModel {
             private String id; 
             private String unit; 
 
+            private Builder() {
+            } 
+
+            private Builder(Usages model) {
+                this.amount = model.amount;
+                this.id = model.id;
+                this.unit = model.unit;
+            } 
+
             /**
              * Amount.
              */
@@ -278,6 +302,15 @@ public class PriceEstimateOutput extends TeaModel {
             private PriceEstimateFeature feature; 
             private Long id; 
             private java.util.List<Usages> usages; 
+
+            private Builder() {
+            } 
+
+            private Builder(Apps model) {
+                this.feature = model.feature;
+                this.id = model.id;
+                this.usages = model.usages;
+            } 
 
             /**
              * Feature.
@@ -389,6 +422,17 @@ public class PriceEstimateOutput extends TeaModel {
             private Float price; 
             private java.util.List<String> regionIds; 
             private String unit; 
+
+            private Builder() {
+            } 
+
+            private Builder(Steps model) {
+                this.begin = model.begin;
+                this.end = model.end;
+                this.price = model.price;
+                this.regionIds = model.regionIds;
+                this.unit = model.unit;
+            } 
 
             /**
              * Begin.
@@ -541,6 +585,19 @@ public class PriceEstimateOutput extends TeaModel {
             private String type; 
             private String unit; 
 
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.amount = model.amount;
+                this.count = model.count;
+                this.id = model.id;
+                this.price = model.price;
+                this.steps = model.steps;
+                this.type = model.type;
+                this.unit = model.unit;
+            } 
+
             /**
              * Amount.
              */
@@ -683,6 +740,17 @@ public class PriceEstimateOutput extends TeaModel {
             private Float price; 
             private java.util.List<String> regionIds; 
             private String unit; 
+
+            private Builder() {
+            } 
+
+            private Builder(PostPayItemsSteps model) {
+                this.begin = model.begin;
+                this.end = model.end;
+                this.price = model.price;
+                this.regionIds = model.regionIds;
+                this.unit = model.unit;
+            } 
 
             /**
              * Begin.
@@ -834,6 +902,19 @@ public class PriceEstimateOutput extends TeaModel {
             private java.util.List<PostPayItemsSteps> steps; 
             private String type; 
             private String unit; 
+
+            private Builder() {
+            } 
+
+            private Builder(PostPayItems model) {
+                this.amount = model.amount;
+                this.count = model.count;
+                this.id = model.id;
+                this.price = model.price;
+                this.steps = model.steps;
+                this.type = model.type;
+                this.unit = model.unit;
+            } 
 
             /**
              * Amount.

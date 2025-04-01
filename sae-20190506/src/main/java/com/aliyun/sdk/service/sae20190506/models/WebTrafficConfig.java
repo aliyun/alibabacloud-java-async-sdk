@@ -44,6 +44,10 @@ public class WebTrafficConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return authType
      */
@@ -77,6 +81,16 @@ public class WebTrafficConfig extends TeaModel {
         private Boolean disableInternetURL; 
         private java.util.Map<String, Float> revisionsTrafficWeight; 
         private WebAclConfig webAclConfig; 
+
+        private Builder() {
+        } 
+
+        private Builder(WebTrafficConfig model) {
+            this.authType = model.authType;
+            this.disableInternetURL = model.disableInternetURL;
+            this.revisionsTrafficWeight = model.revisionsTrafficWeight;
+            this.webAclConfig = model.webAclConfig;
+        } 
 
         /**
          * AuthType.

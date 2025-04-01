@@ -68,6 +68,10 @@ public class SidecarContainerConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return acrInstanceId
      */
@@ -149,6 +153,22 @@ public class SidecarContainerConfig extends TeaModel {
         private String imageUrl; 
         private Integer memory; 
         private String name; 
+
+        private Builder() {
+        } 
+
+        private Builder(SidecarContainerConfig model) {
+            this.acrInstanceId = model.acrInstanceId;
+            this.command = model.command;
+            this.commandArgs = model.commandArgs;
+            this.configMapMountDesc = model.configMapMountDesc;
+            this.cpu = model.cpu;
+            this.emptyDirDesc = model.emptyDirDesc;
+            this.envs = model.envs;
+            this.imageUrl = model.imageUrl;
+            this.memory = model.memory;
+            this.name = model.name;
+        } 
 
         /**
          * AcrInstanceId.

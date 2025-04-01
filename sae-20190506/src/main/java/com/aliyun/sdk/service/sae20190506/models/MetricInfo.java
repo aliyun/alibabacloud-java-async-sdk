@@ -56,6 +56,10 @@ public class MetricInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return average
      */
@@ -113,6 +117,19 @@ public class MetricInfo extends TeaModel {
         private Float sum; 
         private Long timestamp; 
         private Float value; 
+
+        private Builder() {
+        } 
+
+        private Builder(MetricInfo model) {
+            this.average = model.average;
+            this.count = model.count;
+            this.maximum = model.maximum;
+            this.minimum = model.minimum;
+            this.sum = model.sum;
+            this.timestamp = model.timestamp;
+            this.value = model.value;
+        } 
 
         /**
          * Average.

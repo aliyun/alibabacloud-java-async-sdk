@@ -44,6 +44,10 @@ public class WebStaticsInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cpuUsage
      */
@@ -77,6 +81,16 @@ public class WebStaticsInfo extends TeaModel {
         private Long internetTrafficOut; 
         private Long invocations; 
         private Long memoryUsage; 
+
+        private Builder() {
+        } 
+
+        private Builder(WebStaticsInfo model) {
+            this.cpuUsage = model.cpuUsage;
+            this.internetTrafficOut = model.internetTrafficOut;
+            this.invocations = model.invocations;
+            this.memoryUsage = model.memoryUsage;
+        } 
 
         /**
          * CpuUsage.

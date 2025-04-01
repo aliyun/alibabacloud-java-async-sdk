@@ -44,6 +44,10 @@ public class SourceCodeAccount extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return avatarUrl
      */
@@ -77,6 +81,16 @@ public class SourceCodeAccount extends TeaModel {
         private String id; 
         private String name; 
         private java.util.List<Organizations> organizations; 
+
+        private Builder() {
+        } 
+
+        private Builder(SourceCodeAccount model) {
+            this.avatarUrl = model.avatarUrl;
+            this.id = model.id;
+            this.name = model.name;
+            this.organizations = model.organizations;
+        } 
 
         /**
          * AvatarUrl.
@@ -171,6 +185,15 @@ public class SourceCodeAccount extends TeaModel {
             private String avatarUrl; 
             private String id; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(Organizations model) {
+                this.avatarUrl = model.avatarUrl;
+                this.id = model.id;
+                this.name = model.name;
+            } 
 
             /**
              * AvatarUrl.

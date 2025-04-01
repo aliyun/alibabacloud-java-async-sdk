@@ -194,6 +194,10 @@ public class UpdateApplicationInput extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return args
      */
@@ -515,6 +519,52 @@ public class UpdateApplicationInput extends TeaModel {
         private Integer timeout; 
         private TracingConfig tracingConfig; 
         private VPCConfig vpcConfig; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateApplicationInput model) {
+            this.args = model.args;
+            this.caPort = model.caPort;
+            this.code = model.code;
+            this.command = model.command;
+            this.cpu = model.cpu;
+            this.customDNS = model.customDNS;
+            this.customHealthCheckConfig = model.customHealthCheckConfig;
+            this.customHostAlias = model.customHostAlias;
+            this.customRuntimeConfig = model.customRuntimeConfig;
+            this.description = model.description;
+            this.diskSize = model.diskSize;
+            this.effectiveImmediately = model.effectiveImmediately;
+            this.enableAppMetric = model.enableAppMetric;
+            this.environmentVariables = model.environmentVariables;
+            this.gpuMemorySize = model.gpuMemorySize;
+            this.handler = model.handler;
+            this.httpTriggerConfig = model.httpTriggerConfig;
+            this.imageConfig = model.imageConfig;
+            this.initializationTimeout = model.initializationTimeout;
+            this.initializer = model.initializer;
+            this.instanceConcurrency = model.instanceConcurrency;
+            this.instanceLifecycleConfig = model.instanceLifecycleConfig;
+            this.instanceSoftConcurrency = model.instanceSoftConcurrency;
+            this.instanceType = model.instanceType;
+            this.internetAccess = model.internetAccess;
+            this.layers = model.layers;
+            this.livenessProbe = model.livenessProbe;
+            this.logConfig = model.logConfig;
+            this.memorySize = model.memorySize;
+            this.namespaceID = model.namespaceID;
+            this.nasConfig = model.nasConfig;
+            this.ossMountConfig = model.ossMountConfig;
+            this.programmingLanguage = model.programmingLanguage;
+            this.runtime = model.runtime;
+            this.scaleConfig = model.scaleConfig;
+            this.slsConfig = model.slsConfig;
+            this.startupProbe = model.startupProbe;
+            this.timeout = model.timeout;
+            this.tracingConfig = model.tracingConfig;
+            this.vpcConfig = model.vpcConfig;
+        } 
 
         /**
          * args.

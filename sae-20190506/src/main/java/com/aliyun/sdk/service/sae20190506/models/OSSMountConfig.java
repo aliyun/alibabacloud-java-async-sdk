@@ -32,6 +32,10 @@ public class OSSMountConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return mountPoints
      */
@@ -41,6 +45,13 @@ public class OSSMountConfig extends TeaModel {
 
     public static final class Builder {
         private java.util.List<OSSMountPoint> mountPoints; 
+
+        private Builder() {
+        } 
+
+        private Builder(OSSMountConfig model) {
+            this.mountPoints = model.mountPoints;
+        } 
 
         /**
          * mountPoints.

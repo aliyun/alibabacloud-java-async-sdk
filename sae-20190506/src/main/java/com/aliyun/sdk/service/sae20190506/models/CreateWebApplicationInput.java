@@ -55,6 +55,10 @@ public class CreateWebApplicationInput extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return applicationName
      */
@@ -104,6 +108,18 @@ public class CreateWebApplicationInput extends TeaModel {
         private WebNetworkConfig webNetworkConfig; 
         private WebScalingConfig webScalingConfig; 
         private WebTrafficConfig webTrafficConfig; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateWebApplicationInput model) {
+            this.applicationName = model.applicationName;
+            this.description = model.description;
+            this.revisionConfig = model.revisionConfig;
+            this.webNetworkConfig = model.webNetworkConfig;
+            this.webScalingConfig = model.webScalingConfig;
+            this.webTrafficConfig = model.webTrafficConfig;
+        } 
 
         /**
          * <p>This parameter is required.</p>

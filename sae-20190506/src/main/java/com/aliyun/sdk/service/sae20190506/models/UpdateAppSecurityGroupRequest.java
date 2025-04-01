@@ -41,7 +41,7 @@ public class UpdateAppSecurityGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -75,7 +75,7 @@ public class UpdateAppSecurityGroupRequest extends Request {
         } 
 
         /**
-         * <p>sg-wz969ngg2e49q5i4****</p>
+         * <p>The ID of the application.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class UpdateAppSecurityGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The ID of the security group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

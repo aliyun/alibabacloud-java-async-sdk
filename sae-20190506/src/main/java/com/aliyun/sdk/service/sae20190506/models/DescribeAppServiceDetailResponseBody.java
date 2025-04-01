@@ -56,6 +56,10 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -114,6 +118,19 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
         private Boolean success; 
         private String traceId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeAppServiceDetailResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
+
         /**
          * <p>The HTTP status code. Valid values:</p>
          * <ul>
@@ -132,7 +149,7 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>The data that is returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -260,6 +277,15 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
             private String description; 
             private String name; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(ParameterDefinitions model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The description of the parameter.</p>
@@ -440,6 +466,22 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
             private java.util.List<String> requestMethods; 
             private String returnDetails; 
             private String returnType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Methods model) {
+                this.methodController = model.methodController;
+                this.name = model.name;
+                this.nameDetail = model.nameDetail;
+                this.parameterDefinitions = model.parameterDefinitions;
+                this.parameterDetails = model.parameterDetails;
+                this.parameterTypes = model.parameterTypes;
+                this.paths = model.paths;
+                this.requestMethods = model.requestMethods;
+                this.returnDetails = model.returnDetails;
+                this.returnType = model.returnType;
+            } 
 
             /**
              * <p>The class to which the method belongs.</p>
@@ -712,6 +754,24 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
             private String springApplicationName; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.dubboApplicationName = model.dubboApplicationName;
+                this.edasAppName = model.edasAppName;
+                this.group = model.group;
+                this.metadata = model.metadata;
+                this.methods = model.methods;
+                this.serviceName = model.serviceName;
+                this.servicePorts = model.servicePorts;
+                this.serviceProtocol = model.serviceProtocol;
+                this.serviceTags = model.serviceTags;
+                this.serviceType = model.serviceType;
+                this.springApplicationName = model.springApplicationName;
+                this.version = model.version;
+            } 
+
             /**
              * <p>The name of the Dubbo application.</p>
              * 
@@ -776,7 +836,7 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ServicePorts.
+             * <p>The port used by the service.</p>
              */
             public Builder servicePorts(java.util.List<Long> servicePorts) {
                 this.servicePorts = servicePorts;
@@ -784,7 +844,10 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceProtocol.
+             * <p>The protocol used by the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTP</p>
              */
             public Builder serviceProtocol(String serviceProtocol) {
                 this.serviceProtocol = serviceProtocol;
@@ -792,7 +855,7 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceTags.
+             * <p>The tag of the service.</p>
              */
             public Builder serviceTags(java.util.List<String> serviceTags) {
                 this.serviceTags = serviceTags;

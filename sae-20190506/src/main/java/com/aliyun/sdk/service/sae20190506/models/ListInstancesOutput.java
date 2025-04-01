@@ -44,6 +44,10 @@ public class ListInstancesOutput extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return currentError
      */
@@ -77,6 +81,16 @@ public class ListInstancesOutput extends TeaModel {
         private java.util.List<InstanceInfo> instances; 
         private String requestId; 
         private java.util.Map<String, VersionStatus> versionStatus; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListInstancesOutput model) {
+            this.currentError = model.currentError;
+            this.instances = model.instances;
+            this.requestId = model.requestId;
+            this.versionStatus = model.versionStatus;
+        } 
 
         /**
          * currentError.

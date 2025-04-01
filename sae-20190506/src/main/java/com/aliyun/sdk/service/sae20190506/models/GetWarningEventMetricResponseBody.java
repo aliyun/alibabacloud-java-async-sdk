@@ -48,6 +48,10 @@ public class GetWarningEventMetricResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -90,14 +94,19 @@ public class GetWarningEventMetricResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetWarningEventMetricResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * <p>The HTTP status code. The following limits are imposed on the ID:</p>
-         * <ul>
-         * <li><strong>2xx</strong>: The call was successful.</li>
-         * <li><strong>3xx</strong>: The call was redirected.</li>
-         * <li><strong>4xx</strong>: The call failed.</li>
-         * <li><strong>5xx</strong>: A server error occurred.</li>
-         * </ul>
+         * <p>The number of Warning events.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -108,7 +117,7 @@ public class GetWarningEventMetricResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of applications.</p>
+         * <p>3B763F98-0BA2-5C23-B6B8-558568D2C1C2</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -134,7 +143,7 @@ public class GetWarningEventMetricResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>3B763F98-0BA2-5C23-B6B8-558568D2C1C2</p>
+         * <p>3B763F98-0BA2-5C23-B6B8-558568D2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -142,10 +151,12 @@ public class GetWarningEventMetricResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the list of applications was obtained. The following limits are imposed on the ID:</p>
+         * <p>The HTTP status code. The following limits are imposed on the ID:</p>
          * <ul>
-         * <li><strong>true</strong>: The namespaces were obtained.</li>
-         * <li><strong>false</strong>: no</li>
+         * <li><strong>2xx</strong>: The call was successful.</li>
+         * <li><strong>3xx</strong>: The call was redirected.</li>
+         * <li><strong>4xx</strong>: The call failed.</li>
+         * <li><strong>5xx</strong>: A server error occurred.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -230,8 +241,18 @@ public class GetWarningEventMetricResponseBody extends TeaModel {
             private String regionId; 
             private Long warningCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.appId = model.appId;
+                this.name = model.name;
+                this.regionId = model.regionId;
+                this.warningCount = model.warningCount;
+            } 
+
             /**
-             * <p>The application ID.</p>
+             * <p>The details of the application.</p>
              * 
              * <strong>example:</strong>
              * <p>7171a6ca-d1cd-4928-8642-7d5cfe69****</p>
@@ -242,7 +263,7 @@ public class GetWarningEventMetricResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The application name.</p>
+             * <p>The application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -253,7 +274,7 @@ public class GetWarningEventMetricResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The namespace ID.</p>
+             * <p>The application name.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -264,7 +285,7 @@ public class GetWarningEventMetricResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of Warning events.</p>
+             * <p>The namespace ID.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>

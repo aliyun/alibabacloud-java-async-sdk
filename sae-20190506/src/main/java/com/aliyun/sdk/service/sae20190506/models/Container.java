@@ -86,6 +86,10 @@ public class Container extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return args
      */
@@ -199,6 +203,26 @@ public class Container extends TeaModel {
         private StartupProbe startupProbe; 
         private WebNASConfig webNASConfig; 
         private WebOSSConfig webOSSConfig; 
+
+        private Builder() {
+        } 
+
+        private Builder(Container model) {
+            this.args = model.args;
+            this.command = model.command;
+            this.environmentVariables = model.environmentVariables;
+            this.image = model.image;
+            this.imageRegistryConfig = model.imageRegistryConfig;
+            this.metricsCollectConfig = model.metricsCollectConfig;
+            this.port = model.port;
+            this.requestConcurrency = model.requestConcurrency;
+            this.requestTimeout = model.requestTimeout;
+            this.resources = model.resources;
+            this.SLSCollectConfigs = model.SLSCollectConfigs;
+            this.startupProbe = model.startupProbe;
+            this.webNASConfig = model.webNASConfig;
+            this.webOSSConfig = model.webOSSConfig;
+        } 
 
         /**
          * Args.

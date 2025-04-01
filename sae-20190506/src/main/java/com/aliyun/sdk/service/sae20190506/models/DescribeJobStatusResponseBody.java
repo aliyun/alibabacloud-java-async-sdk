@@ -56,6 +56,10 @@ public class DescribeJobStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -113,6 +117,19 @@ public class DescribeJobStatusResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeJobStatusResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * <p>The HTTP status code. Valid values:</p>
@@ -327,6 +344,20 @@ public class DescribeJobStatusResponseBody extends TeaModel {
             private Long startTime; 
             private String state; 
             private Long succeeded; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.active = model.active;
+                this.completionTime = model.completionTime;
+                this.failed = model.failed;
+                this.jobId = model.jobId;
+                this.message = model.message;
+                this.startTime = model.startTime;
+                this.state = model.state;
+                this.succeeded = model.succeeded;
+            } 
 
             /**
              * <p>The number of running instances.</p>

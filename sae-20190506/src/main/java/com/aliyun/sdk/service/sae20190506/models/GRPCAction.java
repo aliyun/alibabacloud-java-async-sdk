@@ -36,6 +36,10 @@ public class GRPCAction extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return port
      */
@@ -53,6 +57,14 @@ public class GRPCAction extends TeaModel {
     public static final class Builder {
         private Integer port; 
         private String service; 
+
+        private Builder() {
+        } 
+
+        private Builder(GRPCAction model) {
+            this.port = model.port;
+            this.service = model.service;
+        } 
 
         /**
          * port.

@@ -47,7 +47,7 @@ public class PublishWebApplicationRevisionRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -90,6 +90,7 @@ public class PublishWebApplicationRevisionRequest extends Request {
         } 
 
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class PublishWebApplicationRevisionRequest extends Request {
         }
 
         /**
+         * <p>The namespace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,7 @@ public class PublishWebApplicationRevisionRequest extends Request {
         }
 
         /**
+         * <p>The configurations of the version.</p>
          * <p>This parameter is required.</p>
          */
         public Builder body(PublishWebApplicationRevisionInput body) {

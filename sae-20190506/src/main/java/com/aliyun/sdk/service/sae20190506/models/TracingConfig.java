@@ -40,6 +40,10 @@ public class TracingConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return jaegerConfig
      */
@@ -65,6 +69,15 @@ public class TracingConfig extends TeaModel {
         private JaegerConfig jaegerConfig; 
         private Object params; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(TracingConfig model) {
+            this.jaegerConfig = model.jaegerConfig;
+            this.params = model.params;
+            this.type = model.type;
+        } 
 
         /**
          * jaegerConfig.

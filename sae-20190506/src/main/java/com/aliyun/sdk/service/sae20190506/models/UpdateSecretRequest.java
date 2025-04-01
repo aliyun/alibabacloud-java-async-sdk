@@ -47,7 +47,7 @@ public class UpdateSecretRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -90,6 +90,7 @@ public class UpdateSecretRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the namespace where the Secret resides. If the namespace is the default namespace, you need to only enter the region ID, such as <code>cn-beijing</code>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class UpdateSecretRequest extends Request {
         }
 
         /**
+         * <p>The Secret data.</p>
          * <p>This parameter is required.</p>
          */
         public Builder secretData(SecretData secretData) {
@@ -163,8 +165,21 @@ public class UpdateSecretRequest extends Request {
         public static final class Builder {
             private String secretData; 
 
+            private Builder() {
+            } 
+
+            private Builder(SecretData model) {
+                this.secretData = model.secretData;
+            } 
+
             /**
+             * <p>The information about the key-value pairs of the Secret. This parameter is required. The following formats are supported:</p>
+             * <p>{&quot;Data&quot;:&quot;{&quot;k1&quot;:&quot;v1&quot;, &quot;k2&quot;:&quot;v2&quot;}&quot;}</p>
+             * <p>k specifies a key and v specifies a value. For more information, see <a href="https://help.aliyun.com/document_detail/463383.html">Manage a Kubernetes Secret</a>.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;.dockerconfigjson&quot;:&quot;eyJhdXRocyI6eyJyZWdpc3RyeS12cGMuY24tYmVpamluZy5hbGl5dW5jcy5jb20iOnsidXNlcm5hbWUiOiJ1c2VybmFtZSIsInBhc3N3b3JkIjoicGFzc3dvcmQiLCJhdXRoIjoiZFhObGNtNWhiV1U2Y0dGemMzZHZjbVE9In0sInJlZ2lzdHJ5LmNuLWJlaWppbmcuYWxpeXVuY3MuY29tIjp7InVzZXJuYW1lIjoidXNlcm5hbWUiLCJwYXNzd29yZCI6InBhc3N3b3JkIiwiYXV0aCI6ImRYTmxjbTVoYldVNmNHRnpjM2R2Y21RPSJ9fX0=&quot;}</p>
              */
             public Builder secretData(String secretData) {
                 this.secretData = secretData;

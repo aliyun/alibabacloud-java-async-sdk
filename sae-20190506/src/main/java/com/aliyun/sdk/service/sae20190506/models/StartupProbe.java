@@ -48,6 +48,10 @@ public class StartupProbe extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return failureThreshold
      */
@@ -89,6 +93,17 @@ public class StartupProbe extends TeaModel {
         private Integer periodSeconds; 
         private ProbeHandler probeHandler; 
         private Integer timeoutSeconds; 
+
+        private Builder() {
+        } 
+
+        private Builder(StartupProbe model) {
+            this.failureThreshold = model.failureThreshold;
+            this.initialDelaySeconds = model.initialDelaySeconds;
+            this.periodSeconds = model.periodSeconds;
+            this.probeHandler = model.probeHandler;
+            this.timeoutSeconds = model.timeoutSeconds;
+        } 
 
         /**
          * FailureThreshold.

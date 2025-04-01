@@ -52,6 +52,10 @@ public class InstanceExecAuthorizationOutput extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessKeyId
      */
@@ -101,6 +105,18 @@ public class InstanceExecAuthorizationOutput extends TeaModel {
         private String date; 
         private String endpoint; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(InstanceExecAuthorizationOutput model) {
+            this.accessKeyId = model.accessKeyId;
+            this.accountId = model.accountId;
+            this.authorization = model.authorization;
+            this.date = model.date;
+            this.endpoint = model.endpoint;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * accessKeyId.

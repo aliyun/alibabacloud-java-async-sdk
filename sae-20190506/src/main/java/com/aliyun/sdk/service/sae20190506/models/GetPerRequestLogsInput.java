@@ -63,6 +63,10 @@ public class GetPerRequestLogsInput extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return endTime
      */
@@ -128,6 +132,20 @@ public class GetPerRequestLogsInput extends TeaModel {
         private String requestID; 
         private Long startTime; 
         private String timestamp; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetPerRequestLogsInput model) {
+            this.endTime = model.endTime;
+            this.errorType = model.errorType;
+            this.forwardLine = model.forwardLine;
+            this.instanceID = model.instanceID;
+            this.isColdStart = model.isColdStart;
+            this.requestID = model.requestID;
+            this.startTime = model.startTime;
+            this.timestamp = model.timestamp;
+        } 
 
         /**
          * <p>This parameter is required.</p>

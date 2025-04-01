@@ -56,6 +56,10 @@ public class Version extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createdTime
      */
@@ -113,6 +117,19 @@ public class Version extends TeaModel {
         private String requestId; 
         private String versionId; 
         private Double weight; 
+
+        private Builder() {
+        } 
+
+        private Builder(Version model) {
+            this.createdTime = model.createdTime;
+            this.description = model.description;
+            this.image = model.image;
+            this.lastModifiedTime = model.lastModifiedTime;
+            this.requestId = model.requestId;
+            this.versionId = model.versionId;
+            this.weight = model.weight;
+        } 
 
         /**
          * createdTime.

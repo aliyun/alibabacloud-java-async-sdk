@@ -32,6 +32,10 @@ public class SLSCollectConfigs extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return collectConfigs
      */
@@ -41,6 +45,13 @@ public class SLSCollectConfigs extends TeaModel {
 
     public static final class Builder {
         private java.util.List<SLSCollectConfig> collectConfigs; 
+
+        private Builder() {
+        } 
+
+        private Builder(SLSCollectConfigs model) {
+            this.collectConfigs = model.collectConfigs;
+        } 
 
         /**
          * CollectConfigs.

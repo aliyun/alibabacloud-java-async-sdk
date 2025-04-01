@@ -36,6 +36,10 @@ public class RegistryAuthenticationConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return password
      */
@@ -53,6 +57,14 @@ public class RegistryAuthenticationConfig extends TeaModel {
     public static final class Builder {
         private String password; 
         private String userName; 
+
+        private Builder() {
+        } 
+
+        private Builder(RegistryAuthenticationConfig model) {
+            this.password = model.password;
+            this.userName = model.userName;
+        } 
 
         /**
          * Password.

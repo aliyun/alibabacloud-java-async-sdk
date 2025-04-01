@@ -60,6 +60,10 @@ public class AppStackTask extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createTime
      */
@@ -125,6 +129,20 @@ public class AppStackTask extends TeaModel {
         private String status; 
         private java.util.List<Steps> steps; 
         private String taskId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AppStackTask model) {
+            this.createTime = model.createTime;
+            this.endTime = model.endTime;
+            this.instanceId = model.instanceId;
+            this.stackId = model.stackId;
+            this.startTime = model.startTime;
+            this.status = model.status;
+            this.steps = model.steps;
+            this.taskId = model.taskId;
+        } 
 
         /**
          * CreateTime.
@@ -311,6 +329,20 @@ public class AppStackTask extends TeaModel {
             private String name; 
             private Long startTime; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Steps model) {
+                this.code = model.code;
+                this.duration = model.duration;
+                this.endTime = model.endTime;
+                this.id = model.id;
+                this.message = model.message;
+                this.name = model.name;
+                this.startTime = model.startTime;
+                this.status = model.status;
+            } 
 
             /**
              * Code.

@@ -56,6 +56,10 @@ public class DescribeInstanceSpecificationsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -114,13 +118,26 @@ public class DescribeInstanceSpecificationsResponseBody extends TeaModel {
         private Boolean success; 
         private String traceId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceSpecificationsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
+
         /**
          * <p>The HTTP status code. Valid values:</p>
          * <ul>
-         * <li><strong>2xx</strong>: indicates that the request was successful.</li>
-         * <li><strong>3xx</strong>: indicates that the request was redirected.</li>
-         * <li><strong>4xx</strong>: indicates that the request was invalid.</li>
-         * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+         * <li><strong>2xx</strong>: The call was successful.</li>
+         * <li><strong>3xx</strong>: The call was redirected.</li>
+         * <li><strong>4xx</strong>: The call failed.</li>
+         * <li><strong>5xx</strong>: A server error occurred.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -132,7 +149,7 @@ public class DescribeInstanceSpecificationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Information of instance types.</p>
+         * <p>The information about the instance types.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -140,10 +157,10 @@ public class DescribeInstanceSpecificationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code.</p>
+         * <p>The error code. Valid values:</p>
          * <ul>
-         * <li>If the request is successful, this parameter is not returned.****</li>
-         * <li>This parameter is returned only if the request failed.**** For more information, see <strong>Error codes</strong> in this topic.</li>
+         * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+         * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
          * </ul>
          */
         public Builder errorCode(String errorCode) {
@@ -154,8 +171,8 @@ public class DescribeInstanceSpecificationsResponseBody extends TeaModel {
         /**
          * <p>The returned message. Valid values:</p>
          * <ul>
-         * <li><strong>success</strong> is returned when the request succeeds.</li>
-         * <li>An error code is returned when the request fails.</li>
+         * <li>success: If the call is successful, <strong>success</strong> is returned.</li>
+         * <li>If the request failed, an error code is returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -167,7 +184,7 @@ public class DescribeInstanceSpecificationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
@@ -178,10 +195,10 @@ public class DescribeInstanceSpecificationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether information of the instance types is successfully obtained. Valid values:</p>
+         * <p>Indicates whether the instance types were queried. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: The instance types were queried.</li>
+         * <li><strong>false</strong>: The instance types failed to be queried.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -193,7 +210,7 @@ public class DescribeInstanceSpecificationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the trace. It is used to query the details of a request.</p>
+         * <p>The trace ID that is used to query the details of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>0a98a02315955564772843261e****</p>
@@ -300,6 +317,18 @@ public class DescribeInstanceSpecificationsResponseBody extends TeaModel {
             private Integer memory; 
             private String specInfo; 
             private Integer version; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.cpu = model.cpu;
+                this.enable = model.enable;
+                this.id = model.id;
+                this.memory = model.memory;
+                this.specInfo = model.specInfo;
+                this.version = model.version;
+            } 
 
             /**
              * <p>The CPU specification of the instance type. Unit: millicore.</p>

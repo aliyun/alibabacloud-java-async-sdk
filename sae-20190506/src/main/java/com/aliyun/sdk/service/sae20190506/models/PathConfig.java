@@ -36,6 +36,10 @@ public class PathConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return applicationName
      */
@@ -53,6 +57,14 @@ public class PathConfig extends TeaModel {
     public static final class Builder {
         private String applicationName; 
         private String path; 
+
+        private Builder() {
+        } 
+
+        private Builder(PathConfig model) {
+            this.applicationName = model.applicationName;
+            this.path = model.path;
+        } 
 
         /**
          * applicationName.

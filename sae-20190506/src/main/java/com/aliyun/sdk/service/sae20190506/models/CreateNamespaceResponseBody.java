@@ -56,6 +56,10 @@ public class CreateNamespaceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -114,6 +118,19 @@ public class CreateNamespaceResponseBody extends TeaModel {
         private Boolean success; 
         private String traceId; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateNamespaceResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
+
         /**
          * <p>bucketPath</p>
          * 
@@ -126,7 +143,7 @@ public class CreateNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The region where the namespace resides.</p>
+         * <p>The information about a namespace.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -286,8 +303,27 @@ public class CreateNamespaceResponseBody extends TeaModel {
             private String namespaceName; 
             private String regionId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.enableMicroRegistration = model.enableMicroRegistration;
+                this.nameSpaceShortId = model.nameSpaceShortId;
+                this.namespaceDescription = model.namespaceDescription;
+                this.namespaceId = model.namespaceId;
+                this.namespaceName = model.namespaceName;
+                this.regionId = model.regionId;
+            } 
+
             /**
-             * EnableMicroRegistration.
+             * <p>Indicates whether the SAE built-in registry is enabled:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableMicroRegistration(Boolean enableMicroRegistration) {
                 this.enableMicroRegistration = enableMicroRegistration;

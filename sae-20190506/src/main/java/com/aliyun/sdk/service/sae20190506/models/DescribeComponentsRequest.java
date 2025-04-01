@@ -40,7 +40,7 @@ public class DescribeComponentsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -74,7 +74,7 @@ public class DescribeComponentsRequest extends Request {
         } 
 
         /**
-         * <p>TOMCAT</p>
+         * <p>The application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>d700e680-aa4d-4ec1-afc2-6566b5ff****</p>
@@ -86,7 +86,11 @@ public class DescribeComponentsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The type of the supported components. Valid values:</p>
+         * <ul>
+         * <li><strong>TOMCAT</strong></li>
+         * <li><strong>JDK</strong></li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -37,6 +37,10 @@ public class UpdateWebApplicationInput extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return description
      */
@@ -54,6 +58,14 @@ public class UpdateWebApplicationInput extends TeaModel {
     public static final class Builder {
         private String description; 
         private WebNetworkConfig webNetworkConfig; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateWebApplicationInput model) {
+            this.description = model.description;
+            this.webNetworkConfig = model.webNetworkConfig;
+        } 
 
         /**
          * Description.

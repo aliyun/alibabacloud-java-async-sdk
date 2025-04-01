@@ -48,6 +48,10 @@ public class GetChangeOrderMetricResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetChangeOrderMetricResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetChangeOrderMetricResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code. The following limits are imposed on the ID:</p>
@@ -253,6 +268,18 @@ public class GetChangeOrderMetricResponseBody extends TeaModel {
             private String name; 
             private String regionId; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.appId = model.appId;
+                this.error = model.error;
+                this.errorPercent = model.errorPercent;
+                this.name = model.name;
+                this.regionId = model.regionId;
+                this.total = model.total;
+            } 
 
             /**
              * <p>The application ID.</p>

@@ -56,6 +56,10 @@ public class UpdateGreyTagRouteResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -114,6 +118,19 @@ public class UpdateGreyTagRouteResponseBody extends TeaModel {
         private Boolean success; 
         private String traceId; 
 
+        private Builder() {
+        } 
+
+        private Builder(UpdateGreyTagRouteResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
+
         /**
          * <p>The HTTP status code. Valid values:</p>
          * <ul>
@@ -140,10 +157,10 @@ public class UpdateGreyTagRouteResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned error code. Valid values:</p>
+         * <p>The error code. Valid values:</p>
          * <ul>
          * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
-         * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the &quot;<strong>Error codes</strong>&quot; section of this topic.</li>
+         * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
          * </ul>
          */
         public Builder errorCode(String errorCode) {
@@ -152,7 +169,7 @@ public class UpdateGreyTagRouteResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned information.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -163,7 +180,7 @@ public class UpdateGreyTagRouteResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>9D29CBD0-45D3-410B-9826-52F86F90****</p>
@@ -236,6 +253,13 @@ public class UpdateGreyTagRouteResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long greyTagRouteId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.greyTagRouteId = model.greyTagRouteId;
+            } 
 
             /**
              * <p>The ID of the canary release rule. The ID is globally unique.</p>

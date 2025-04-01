@@ -60,6 +60,10 @@ public class AppStackResource extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createTime
      */
@@ -125,6 +129,20 @@ public class AppStackResource extends TeaModel {
         private String resourceType; 
         private String stackId; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(AppStackResource model) {
+            this.createTime = model.createTime;
+            this.instanceId = model.instanceId;
+            this.productCode = model.productCode;
+            this.resourceId = model.resourceId;
+            this.resourceName = model.resourceName;
+            this.resourceType = model.resourceType;
+            this.stackId = model.stackId;
+            this.status = model.status;
+        } 
 
         /**
          * CreateTime.

@@ -57,6 +57,10 @@ public class CreateWebCustomDomainInput extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return defaultForwardingAppName
      */
@@ -114,6 +118,19 @@ public class CreateWebCustomDomainInput extends TeaModel {
         private WebCertConfig webCertConfig; 
         private WebTLSConfig webTLSConfig; 
         private WebWAFConfig webWAFConfig; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateWebCustomDomainInput model) {
+            this.defaultForwardingAppName = model.defaultForwardingAppName;
+            this.domainName = model.domainName;
+            this.protocol = model.protocol;
+            this.routeConfig = model.routeConfig;
+            this.webCertConfig = model.webCertConfig;
+            this.webTLSConfig = model.webTLSConfig;
+            this.webWAFConfig = model.webWAFConfig;
+        } 
 
         /**
          * DefaultForwardingAppName.

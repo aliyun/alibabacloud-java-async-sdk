@@ -51,7 +51,7 @@ public class ListWebApplicationRevisionsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -103,6 +103,7 @@ public class ListWebApplicationRevisionsRequest extends Request {
         } 
 
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +116,10 @@ public class ListWebApplicationRevisionsRequest extends Request {
         }
 
         /**
-         * Limit.
+         * <p>The number of applications returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("Limit", limit);
@@ -124,6 +128,7 @@ public class ListWebApplicationRevisionsRequest extends Request {
         }
 
         /**
+         * <p>The namespace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -136,7 +141,10 @@ public class ListWebApplicationRevisionsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A2RN</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);

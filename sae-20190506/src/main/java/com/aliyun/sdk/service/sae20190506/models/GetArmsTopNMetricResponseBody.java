@@ -48,6 +48,10 @@ public class GetArmsTopNMetricResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -90,6 +94,17 @@ public class GetArmsTopNMetricResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetArmsTopNMetricResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
          * <p>The HTTP status code. The following limits are imposed on the ID:</p>
          * <ul>
@@ -116,11 +131,7 @@ public class GetArmsTopNMetricResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The additional information that is returned. The following limits are imposed on the ID:</p>
-         * <ul>
-         * <li>success: If the call is successful, <strong>success</strong> is returned.</li>
-         * <li>An error code: If the call fails, an error code is returned.</li>
-         * </ul>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -131,10 +142,10 @@ public class GetArmsTopNMetricResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>3B763F98-0BA2-5C23-B6B8-558568D2C1C2</p>
          * 
          * <strong>example:</strong>
-         * <p>3B763F98-0BA2-5C23-B6B8-558568D2C1C2</p>
+         * <p>3B763F98-0BA2-5C23-B6B8-558568D2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -253,6 +264,18 @@ public class GetArmsTopNMetricResponseBody extends TeaModel {
             private String name; 
             private String regionId; 
             private Long rt; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.appId = model.appId;
+                this.count = model.count;
+                this.error = model.error;
+                this.name = model.name;
+                this.regionId = model.regionId;
+                this.rt = model.rt;
+            } 
 
             /**
              * <p>The application ID.</p>

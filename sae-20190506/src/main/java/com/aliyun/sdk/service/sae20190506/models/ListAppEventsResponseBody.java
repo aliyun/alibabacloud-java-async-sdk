@@ -52,6 +52,10 @@ public class ListAppEventsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListAppEventsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAppEventsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code. Valid values:</p>
@@ -286,6 +302,19 @@ public class ListAppEventsResponseBody extends TeaModel {
             private String objectName; 
             private String reason; 
 
+            private Builder() {
+            } 
+
+            private Builder(AppEventEntity model) {
+                this.eventType = model.eventType;
+                this.firstTimestamp = model.firstTimestamp;
+                this.lastTimestamp = model.lastTimestamp;
+                this.message = model.message;
+                this.objectKind = model.objectKind;
+                this.objectName = model.objectName;
+                this.reason = model.reason;
+            } 
+
             /**
              * <p>The type of the event. Valid values:</p>
              * 
@@ -437,6 +466,16 @@ public class ListAppEventsResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.appEventEntity = model.appEventEntity;
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalSize = model.totalSize;
+            } 
 
             /**
              * <p>The events.</p>

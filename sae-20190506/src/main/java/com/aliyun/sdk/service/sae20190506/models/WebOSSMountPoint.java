@@ -47,6 +47,10 @@ public class WebOSSMountPoint extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bucketName
      */
@@ -80,6 +84,16 @@ public class WebOSSMountPoint extends TeaModel {
         private String bucketPath; 
         private String mountDir; 
         private Boolean readOnly; 
+
+        private Builder() {
+        } 
+
+        private Builder(WebOSSMountPoint model) {
+            this.bucketName = model.bucketName;
+            this.bucketPath = model.bucketPath;
+            this.mountDir = model.mountDir;
+            this.readOnly = model.readOnly;
+        } 
 
         /**
          * BucketName.

@@ -80,7 +80,7 @@ public class ExecJobRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -234,7 +234,10 @@ public class ExecJobRequest extends Request {
         }
 
         /**
-         * JarStartArgs.
+         * <p>The arguments in the JAR package. The arguments are used to start the job. The default startup command is <code>$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS &quot;$package_path&quot; $JarStartArgs</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>custom-args</p>
          */
         public Builder jarStartArgs(String jarStartArgs) {
             this.putQueryParameter("JarStartArgs", jarStartArgs);
@@ -243,7 +246,10 @@ public class ExecJobRequest extends Request {
         }
 
         /**
-         * JarStartOptions.
+         * <p>The option settings in the JAR package. The settings are used to start the job. The default startup command is <code>$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS &quot;$package_path&quot; $JarStartArg</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-Xms4G -Xmx4G</p>
          */
         public Builder jarStartOptions(String jarStartOptions) {
             this.putQueryParameter("JarStartOptions", jarStartOptions);
@@ -252,7 +258,10 @@ public class ExecJobRequest extends Request {
         }
 
         /**
-         * Replicas.
+         * <p>The number of concurrent instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder replicas(String replicas) {
             this.putQueryParameter("Replicas", replicas);
@@ -261,7 +270,10 @@ public class ExecJobRequest extends Request {
         }
 
         /**
-         * Time.
+         * <p>The time at which the job is triggered. Format: <code>yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot;</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-09-14T14:25:02Z</p>
          */
         public Builder time(String time) {
             this.putQueryParameter("Time", time);
@@ -270,7 +282,10 @@ public class ExecJobRequest extends Request {
         }
 
         /**
-         * WarStartOptions.
+         * <p>The startup command of the WAR package. For information about how to configure the startup command, see <a href="https://help.aliyun.com/document_detail/96677.html">Configure a startup command</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CATALINA_OPTS=&quot;$CATALINA_OPTS $Options&quot; catalina.sh run</p>
          */
         public Builder warStartOptions(String warStartOptions) {
             this.putQueryParameter("WarStartOptions", warStartOptions);

@@ -40,6 +40,10 @@ public class ListWebInstancesOutput extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return currentError
      */
@@ -65,6 +69,15 @@ public class ListWebInstancesOutput extends TeaModel {
         private String currentError; 
         private java.util.List<WebInstanceInfo> webInstances; 
         private java.util.Map<String, WebVersionStatus> webVersionStatus; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListWebInstancesOutput model) {
+            this.currentError = model.currentError;
+            this.webInstances = model.webInstances;
+            this.webVersionStatus = model.webVersionStatus;
+        } 
 
         /**
          * CurrentError.

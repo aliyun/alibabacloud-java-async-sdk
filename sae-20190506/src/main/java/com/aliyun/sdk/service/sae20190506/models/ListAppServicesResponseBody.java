@@ -56,6 +56,10 @@ public class ListAppServicesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -114,8 +118,30 @@ public class ListAppServicesResponseBody extends TeaModel {
         private Boolean success; 
         private String traceId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListAppServicesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
+
         /**
-         * Code.
+         * <p>The HTTP status code that is returned. Valid values:</p>
+         * <ul>
+         * <li><strong>2xx</strong>: The request was successful.</li>
+         * <li><strong>3xx</strong>: The request was redirected.</li>
+         * <li><strong>4xx</strong>: The request failed.</li>
+         * <li><strong>5xx</strong>: A server error occurred.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -123,7 +149,7 @@ public class ListAppServicesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The details of the microservice.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -131,7 +157,11 @@ public class ListAppServicesResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The status code. Valid values:</p>
+         * <ul>
+         * <li>If the request was successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+         * <li>If the request failed, <strong>ErrorCode</strong> is returned. For more information, see <strong>Error codes</strong> in this topic.</li>
+         * </ul>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -139,7 +169,14 @@ public class ListAppServicesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message returned. Valid values:</p>
+         * <ul>
+         * <li>If the request was successful, <strong>success</strong> is returned.</li>
+         * <li>If the request failed, an error message is returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -147,7 +184,10 @@ public class ListAppServicesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -155,7 +195,14 @@ public class ListAppServicesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -163,7 +210,10 @@ public class ListAppServicesResponseBody extends TeaModel {
         }
 
         /**
-         * TraceId.
+         * <p>The ID of the trace. The ID is used to query the details of a request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0a98a02315955564772843261e****</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -364,8 +414,31 @@ public class ListAppServicesResponseBody extends TeaModel {
             private String serviceType; 
             private String serviceVersion; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.appId = model.appId;
+                this.appName = model.appName;
+                this.instanceCount = model.instanceCount;
+                this.namespaceId = model.namespaceId;
+                this.namespaceName = model.namespaceName;
+                this.registryType = model.registryType;
+                this.securityGroupId = model.securityGroupId;
+                this.serviceGroup = model.serviceGroup;
+                this.serviceName = model.serviceName;
+                this.servicePortAndProtocol = model.servicePortAndProtocol;
+                this.servicePorts = model.servicePorts;
+                this.serviceProtocol = model.serviceProtocol;
+                this.serviceType = model.serviceType;
+                this.serviceVersion = model.serviceVersion;
+            } 
+
             /**
-             * AppId.
+             * <p>The application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0099b7be-5f5b-4512-a7fc-56049ef1****</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -373,7 +446,10 @@ public class ListAppServicesResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo-app</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -381,7 +457,10 @@ public class ListAppServicesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceCount.
+             * <p>The number of instances of the microservice.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder instanceCount(String instanceCount) {
                 this.instanceCount = instanceCount;
@@ -389,7 +468,10 @@ public class ListAppServicesResponseBody extends TeaModel {
             }
 
             /**
-             * NamespaceId.
+             * <p>The ID of the namespace to which the application belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing:test</p>
              */
             public Builder namespaceId(String namespaceId) {
                 this.namespaceId = namespaceId;
@@ -397,7 +479,7 @@ public class ListAppServicesResponseBody extends TeaModel {
             }
 
             /**
-             * NamespaceName.
+             * <p>The name of the namespace.</p>
              */
             public Builder namespaceName(String namespaceName) {
                 this.namespaceName = namespaceName;
@@ -405,7 +487,16 @@ public class ListAppServicesResponseBody extends TeaModel {
             }
 
             /**
-             * RegistryType.
+             * <p>The registry type. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>：SAE Nacos</li>
+             * <li><strong>1</strong>: SAE built-in Nacos</li>
+             * <li><strong>2</strong>: MSE Nacos</li>
+             * <li><strong>9</strong>: SAE Kubernets service</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder registryType(String registryType) {
                 this.registryType = registryType;
@@ -413,7 +504,10 @@ public class ListAppServicesResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupId.
+             * <p>The IDs of the security groups.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-wz969ngg2e49q5i4****</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -421,7 +515,10 @@ public class ListAppServicesResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceGroup.
+             * <p>The group to which the microservice belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEFAULT_GROUP</p>
              */
             public Builder serviceGroup(String serviceGroup) {
                 this.serviceGroup = serviceGroup;
@@ -429,7 +526,10 @@ public class ListAppServicesResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceName.
+             * <p>The name of the microservice.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>frontend</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -437,7 +537,7 @@ public class ListAppServicesResponseBody extends TeaModel {
             }
 
             /**
-             * ServicePortAndProtocol.
+             * <p>The ports and protocols.</p>
              */
             public Builder servicePortAndProtocol(java.util.Map<String, String> servicePortAndProtocol) {
                 this.servicePortAndProtocol = servicePortAndProtocol;
@@ -445,7 +545,7 @@ public class ListAppServicesResponseBody extends TeaModel {
             }
 
             /**
-             * ServicePorts.
+             * <p>The list of ports.</p>
              */
             public Builder servicePorts(java.util.List<Integer> servicePorts) {
                 this.servicePorts = servicePorts;
@@ -453,7 +553,10 @@ public class ListAppServicesResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceProtocol.
+             * <p>The protocol used by the microservice.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTP</p>
              */
             public Builder serviceProtocol(String serviceProtocol) {
                 this.serviceProtocol = serviceProtocol;
@@ -461,7 +564,16 @@ public class ListAppServicesResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceType.
+             * <p>The type of the microservice. Valid values:</p>
+             * <ul>
+             * <li><strong>dubbo</strong></li>
+             * <li><strong>springCloud</strong></li>
+             * <li><strong>hsf</strong></li>
+             * <li><strong>k8sService</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>springCloud</p>
              */
             public Builder serviceType(String serviceType) {
                 this.serviceType = serviceType;
@@ -469,7 +581,10 @@ public class ListAppServicesResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceVersion.
+             * <p>The version of the microservice.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder serviceVersion(String serviceVersion) {
                 this.serviceVersion = serviceVersion;

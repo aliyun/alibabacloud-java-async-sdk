@@ -32,6 +32,10 @@ public class JaegerConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return endpoint
      */
@@ -41,6 +45,13 @@ public class JaegerConfig extends TeaModel {
 
     public static final class Builder {
         private String endpoint; 
+
+        private Builder() {
+        } 
+
+        private Builder(JaegerConfig model) {
+            this.endpoint = model.endpoint;
+        } 
 
         /**
          * endpoint.

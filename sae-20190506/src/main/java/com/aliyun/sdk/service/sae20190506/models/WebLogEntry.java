@@ -32,6 +32,10 @@ public class WebLogEntry extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return message
      */
@@ -41,6 +45,13 @@ public class WebLogEntry extends TeaModel {
 
     public static final class Builder {
         private String message; 
+
+        private Builder() {
+        } 
+
+        private Builder(WebLogEntry model) {
+            this.message = model.message;
+        } 
 
         /**
          * Message.

@@ -35,7 +35,7 @@ public class AbortAndRollbackChangeOrderRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -60,7 +60,7 @@ public class AbortAndRollbackChangeOrderRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The ID of the change order.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

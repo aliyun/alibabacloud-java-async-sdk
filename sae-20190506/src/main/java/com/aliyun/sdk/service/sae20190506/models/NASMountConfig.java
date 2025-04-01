@@ -42,6 +42,10 @@ public class NASMountConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return enableTLS
      */
@@ -67,6 +71,15 @@ public class NASMountConfig extends TeaModel {
         private Boolean enableTLS; 
         private String mountDir; 
         private String serverAddr; 
+
+        private Builder() {
+        } 
+
+        private Builder(NASMountConfig model) {
+            this.enableTLS = model.enableTLS;
+            this.mountDir = model.mountDir;
+            this.serverAddr = model.serverAddr;
+        } 
 
         /**
          * enableTLS.

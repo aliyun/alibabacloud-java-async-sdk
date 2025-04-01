@@ -40,6 +40,10 @@ public class SourceCodeRepo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return fullName
      */
@@ -65,6 +69,15 @@ public class SourceCodeRepo extends TeaModel {
         private String fullName; 
         private String id; 
         private String name; 
+
+        private Builder() {
+        } 
+
+        private Builder(SourceCodeRepo model) {
+            this.fullName = model.fullName;
+            this.id = model.id;
+            this.name = model.name;
+        } 
 
         /**
          * FullName.

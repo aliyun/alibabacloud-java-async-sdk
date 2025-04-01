@@ -78,6 +78,10 @@ public class GetInstanceLogsInput extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return backwardLine
      */
@@ -175,6 +179,24 @@ public class GetInstanceLogsInput extends TeaModel {
         private Long startTime; 
         private String timestamp; 
         private String versionID; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetInstanceLogsInput model) {
+            this.backwardLine = model.backwardLine;
+            this.endTime = model.endTime;
+            this.forwardLine = model.forwardLine;
+            this.isTail = model.isTail;
+            this.match = model.match;
+            this.message = model.message;
+            this.offset = model.offset;
+            this.packID = model.packID;
+            this.packMeta = model.packMeta;
+            this.startTime = model.startTime;
+            this.timestamp = model.timestamp;
+            this.versionID = model.versionID;
+        } 
 
         /**
          * backwardLine.

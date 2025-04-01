@@ -36,6 +36,10 @@ public class TCPSocketAction extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return host
      */
@@ -53,6 +57,14 @@ public class TCPSocketAction extends TeaModel {
     public static final class Builder {
         private String host; 
         private Integer port; 
+
+        private Builder() {
+        } 
+
+        private Builder(TCPSocketAction model) {
+            this.host = model.host;
+            this.port = model.port;
+        } 
 
         /**
          * Host.

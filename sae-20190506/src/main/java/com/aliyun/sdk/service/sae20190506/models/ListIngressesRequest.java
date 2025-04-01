@@ -40,7 +40,7 @@ public class ListIngressesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -74,7 +74,7 @@ public class ListIngressesRequest extends Request {
         } 
 
         /**
-         * <p>The list of routing rules.</p>
+         * <p>The ID of an application.</p>
          * 
          * <strong>example:</strong>
          * <p>bbf3a590-6d13-46fe-8ca9-c947a20b****</p>
@@ -86,7 +86,7 @@ public class ListIngressesRequest extends Request {
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>The ID of a namespace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

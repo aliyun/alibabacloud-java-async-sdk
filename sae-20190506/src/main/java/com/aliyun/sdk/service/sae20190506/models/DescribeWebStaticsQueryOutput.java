@@ -36,6 +36,10 @@ public class DescribeWebStaticsQueryOutput extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return length
      */
@@ -53,6 +57,14 @@ public class DescribeWebStaticsQueryOutput extends TeaModel {
     public static final class Builder {
         private Integer length; 
         private java.util.List<WebStaticsInfo> webStatics; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeWebStaticsQueryOutput model) {
+            this.length = model.length;
+            this.webStatics = model.webStatics;
+        } 
 
         /**
          * Length.

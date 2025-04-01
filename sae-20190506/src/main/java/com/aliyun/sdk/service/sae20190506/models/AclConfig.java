@@ -33,6 +33,10 @@ public class AclConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return aclEntries
      */
@@ -42,6 +46,13 @@ public class AclConfig extends TeaModel {
 
     public static final class Builder {
         private java.util.List<AclEntryConfig> aclEntries; 
+
+        private Builder() {
+        } 
+
+        private Builder(AclConfig model) {
+            this.aclEntries = model.aclEntries;
+        } 
 
         /**
          * <p>This parameter is required.</p>

@@ -48,6 +48,10 @@ public class PermissionAssistantApi extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createTime
      */
@@ -89,6 +93,17 @@ public class PermissionAssistantApi extends TeaModel {
         private String name; 
         private String resourceType; 
         private String updateTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(PermissionAssistantApi model) {
+            this.createTime = model.createTime;
+            this.id = model.id;
+            this.name = model.name;
+            this.resourceType = model.resourceType;
+            this.updateTime = model.updateTime;
+        } 
 
         /**
          * createTime.

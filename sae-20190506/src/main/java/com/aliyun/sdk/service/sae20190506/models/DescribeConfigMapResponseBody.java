@@ -56,6 +56,10 @@ public class DescribeConfigMapResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -114,11 +118,26 @@ public class DescribeConfigMapResponseBody extends TeaModel {
         private Boolean success; 
         private String traceId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeConfigMapResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
+
         /**
-         * <p>Indicates whether the details of the ConfigMap instance were obtained. Valid values:</p>
+         * <p>The HTTP status code. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The details were obtained.</li>
-         * <li><strong>false</strong>: The details failed to be obtained.</li>
+         * <li><strong>2xx</strong>: The call was successful.</li>
+         * <li><strong>3xx</strong>: The call was redirected.</li>
+         * <li><strong>4xx</strong>: The call failed.</li>
+         * <li><strong>5xx</strong>: A server error occurred.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -130,7 +149,7 @@ public class DescribeConfigMapResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the instance was last modified.</p>
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -138,12 +157,10 @@ public class DescribeConfigMapResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code. Valid values:</p>
+         * <p>The error code. Valid values:</p>
          * <ul>
-         * <li><strong>2xx</strong>: indicates that the call was successful.</li>
-         * <li><strong>3xx</strong>: indicates that the call was redirected.</li>
-         * <li><strong>4xx</strong>: indicates that the call failed.</li>
-         * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+         * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+         * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
          * </ul>
          */
         public Builder errorCode(String errorCode) {
@@ -152,7 +169,11 @@ public class DescribeConfigMapResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the trace. The ID is used to query the details of a request.</p>
+         * <p>The returned message. Valid values:</p>
+         * <ul>
+         * <li>success: If the call is successful, <strong>success</strong> is returned.</li>
+         * <li>An error code: If the call fails, an error code is returned.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -163,11 +184,7 @@ public class DescribeConfigMapResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned information. Valid values:</p>
-         * <ul>
-         * <li>If the call is successful, <strong>success</strong> is returned.</li>
-         * <li>If the call fails, an error code is returned.</li>
-         * </ul>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
@@ -178,7 +195,14 @@ public class DescribeConfigMapResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the details of the ConfigMap were queried. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The details were queried.</li>
+         * <li><strong>false</strong>: The details failed to be queried.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -186,7 +210,7 @@ public class DescribeConfigMapResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned result.</p>
+         * <p>The trace ID that is used to query the details of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>0a98a02315955564772843261e****</p>
@@ -246,8 +270,16 @@ public class DescribeConfigMapResponseBody extends TeaModel {
             private String appId; 
             private String appName; 
 
+            private Builder() {
+            } 
+
+            private Builder(RelateApps model) {
+                this.appId = model.appId;
+                this.appName = model.appName;
+            } 
+
             /**
-             * <p>The ID of the ConfigMap instance.</p>
+             * <p>The ID of the application.</p>
              * 
              * <strong>example:</strong>
              * <p>f16b4000-9058-4c22-a49d-49a28f0b****</p>
@@ -258,7 +290,7 @@ public class DescribeConfigMapResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the application.</p>
+             * <p>The name of the application.</p>
              * 
              * <strong>example:</strong>
              * <p>test-app</p>
@@ -391,8 +423,22 @@ public class DescribeConfigMapResponseBody extends TeaModel {
             private java.util.List<RelateApps> relateApps; 
             private Long updateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.configMapId = model.configMapId;
+                this.createTime = model.createTime;
+                this.data = model.data;
+                this.description = model.description;
+                this.name = model.name;
+                this.namespaceId = model.namespaceId;
+                this.relateApps = model.relateApps;
+                this.updateTime = model.updateTime;
+            } 
+
             /**
-             * <p>The name of the ConfigMap instance.</p>
+             * <p>The ID of the ConfigMap.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -403,7 +449,7 @@ public class DescribeConfigMapResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The application that is associated with the instance.</p>
+             * <p>The time when the ConfigMap was created.</p>
              * 
              * <strong>example:</strong>
              * <p>1593746835111</p>
@@ -414,7 +460,9 @@ public class DescribeConfigMapResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the namespace to which the instance belongs.</p>
+             * <p>The key-value pairs of the ConfigMap. Format:</p>
+             * <p>{&quot;k1&quot;:&quot;v1&quot;, &quot;k2&quot;:&quot;v2&quot;}</p>
+             * <p>k specifies a key and v specifies a value. For more information, see <a href="https://help.aliyun.com/document_detail/171326.html">Manage a Kubernetes ConfigMap</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;k1&quot;:&quot;v1&quot;,&quot;k2&quot;:&quot;v2&quot;}</p>
@@ -425,7 +473,7 @@ public class DescribeConfigMapResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the instance was created.</p>
+             * <p>The description of the ConfigMap.</p>
              * 
              * <strong>example:</strong>
              * <p>test-desc</p>
@@ -436,11 +484,7 @@ public class DescribeConfigMapResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The returned error code. Valid values:</p>
-             * <ul>
-             * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
-             * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the &quot;<strong>Error codes</strong>&quot; section of this topic.</li>
-             * </ul>
+             * <p>The name of the ConfigMap.</p>
              * 
              * <strong>example:</strong>
              * <p>test-configmap</p>
@@ -451,7 +495,7 @@ public class DescribeConfigMapResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the instance.</p>
+             * <p>The ID of the namespace.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -462,7 +506,7 @@ public class DescribeConfigMapResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the application.</p>
+             * <p>The application that is associated with the ConfigMap.</p>
              */
             public Builder relateApps(java.util.List<RelateApps> relateApps) {
                 this.relateApps = relateApps;
@@ -470,9 +514,7 @@ public class DescribeConfigMapResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data of ConfigMap key-value pairs. Format:</p>
-             * <p>{&quot;k1&quot;:&quot;v1&quot;, &quot;k2&quot;:&quot;v2&quot;}</p>
-             * <p>k specifies a key and v specifies a value. For more information, see <a href="https://help.aliyun.com/document_detail/171326.html">Manage and use configurations</a>.</p>
+             * <p>The time when the ConfigMap was updated.</p>
              * 
              * <strong>example:</strong>
              * <p>1593747274195</p>

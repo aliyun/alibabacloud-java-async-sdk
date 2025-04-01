@@ -38,6 +38,10 @@ public class UpdateWebApplicationScalingConfigInput extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maximumInstanceCount
      */
@@ -55,6 +59,14 @@ public class UpdateWebApplicationScalingConfigInput extends TeaModel {
     public static final class Builder {
         private Long maximumInstanceCount; 
         private Long minimumInstanceCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateWebApplicationScalingConfigInput model) {
+            this.maximumInstanceCount = model.maximumInstanceCount;
+            this.minimumInstanceCount = model.minimumInstanceCount;
+        } 
 
         /**
          * <p>This parameter is required.</p>

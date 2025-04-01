@@ -36,6 +36,10 @@ public class ListWebApplicationRevisionsOutput extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextToken
      */
@@ -53,6 +57,14 @@ public class ListWebApplicationRevisionsOutput extends TeaModel {
     public static final class Builder {
         private String nextToken; 
         private java.util.List<Revision> revisions; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListWebApplicationRevisionsOutput model) {
+            this.nextToken = model.nextToken;
+            this.revisions = model.revisions;
+        } 
 
         /**
          * NextToken.

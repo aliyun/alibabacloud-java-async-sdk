@@ -80,6 +80,10 @@ public class StaticsInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return activeCPUUsage
      */
@@ -185,6 +189,25 @@ public class StaticsInfo extends TeaModel {
         private Long memoryUsage; 
         private String region; 
         private String serviceName; 
+
+        private Builder() {
+        } 
+
+        private Builder(StaticsInfo model) {
+            this.activeCPUUsage = model.activeCPUUsage;
+            this.cost = model.cost;
+            this.diskUsage = model.diskUsage;
+            this.functionName = model.functionName;
+            this.gpuUsage = model.gpuUsage;
+            this.idleCPUUsage = model.idleCPUUsage;
+            this.instanceTrafficOut = model.instanceTrafficOut;
+            this.invocations = model.invocations;
+            this.invokeCDNOut = model.invokeCDNOut;
+            this.invokeInternetOut = model.invokeInternetOut;
+            this.memoryUsage = model.memoryUsage;
+            this.region = model.region;
+            this.serviceName = model.serviceName;
+        } 
 
         /**
          * activeCPUUsage.

@@ -52,6 +52,10 @@ public class TomcatConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return contextPath
      */
@@ -101,6 +105,18 @@ public class TomcatConfig extends TeaModel {
         private String uriEncoding; 
         private Boolean useBodyEncodingForUri; 
         private String version; 
+
+        private Builder() {
+        } 
+
+        private Builder(TomcatConfig model) {
+            this.contextPath = model.contextPath;
+            this.maxThreads = model.maxThreads;
+            this.port = model.port;
+            this.uriEncoding = model.uriEncoding;
+            this.useBodyEncodingForUri = model.useBodyEncodingForUri;
+            this.version = model.version;
+        } 
 
         /**
          * ContextPath.

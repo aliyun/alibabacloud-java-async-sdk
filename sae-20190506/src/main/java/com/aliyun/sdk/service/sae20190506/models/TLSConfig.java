@@ -40,6 +40,10 @@ public class TLSConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cipherSuites
      */
@@ -65,6 +69,15 @@ public class TLSConfig extends TeaModel {
         private java.util.List<String> cipherSuites; 
         private String maxVersion; 
         private String minVersion; 
+
+        private Builder() {
+        } 
+
+        private Builder(TLSConfig model) {
+            this.cipherSuites = model.cipherSuites;
+            this.maxVersion = model.maxVersion;
+            this.minVersion = model.minVersion;
+        } 
 
         /**
          * cipherSuites.

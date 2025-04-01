@@ -36,6 +36,10 @@ public class ApplicationStatus extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceCount
      */
@@ -53,6 +57,14 @@ public class ApplicationStatus extends TeaModel {
     public static final class Builder {
         private Long instanceCount; 
         private ScaleConfig scaleConfig; 
+
+        private Builder() {
+        } 
+
+        private Builder(ApplicationStatus model) {
+            this.instanceCount = model.instanceCount;
+            this.scaleConfig = model.scaleConfig;
+        } 
 
         /**
          * instanceCount.

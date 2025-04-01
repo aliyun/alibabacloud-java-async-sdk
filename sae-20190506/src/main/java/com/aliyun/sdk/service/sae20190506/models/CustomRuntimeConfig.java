@@ -36,6 +36,10 @@ public class CustomRuntimeConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return args
      */
@@ -53,6 +57,14 @@ public class CustomRuntimeConfig extends TeaModel {
     public static final class Builder {
         private java.util.List<String> args; 
         private java.util.List<String> command; 
+
+        private Builder() {
+        } 
+
+        private Builder(CustomRuntimeConfig model) {
+            this.args = model.args;
+            this.command = model.command;
+        } 
 
         /**
          * args.

@@ -36,6 +36,10 @@ public class RoutePolicy extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return condition
      */
@@ -53,6 +57,14 @@ public class RoutePolicy extends TeaModel {
     public static final class Builder {
         private String condition; 
         private java.util.List<PolicyItem> policyItems; 
+
+        private Builder() {
+        } 
+
+        private Builder(RoutePolicy model) {
+            this.condition = model.condition;
+            this.policyItems = model.policyItems;
+        } 
 
         /**
          * condition.

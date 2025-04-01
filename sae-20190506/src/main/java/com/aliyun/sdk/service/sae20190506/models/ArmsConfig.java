@@ -40,6 +40,10 @@ public class ArmsConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return agentVersion
      */
@@ -65,6 +69,15 @@ public class ArmsConfig extends TeaModel {
         private String agentVersion; 
         private String appId; 
         private String licenseKey; 
+
+        private Builder() {
+        } 
+
+        private Builder(ArmsConfig model) {
+            this.agentVersion = model.agentVersion;
+            this.appId = model.appId;
+            this.licenseKey = model.licenseKey;
+        } 
 
         /**
          * agentVersion.

@@ -45,6 +45,10 @@ public class UpdateApplicationTrafficConfigInput extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return additionalVersionWeight
      */
@@ -78,6 +82,16 @@ public class UpdateApplicationTrafficConfigInput extends TeaModel {
         private String resolvePolicy; 
         private RoutePolicy routePolicy; 
         private String versionId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateApplicationTrafficConfigInput model) {
+            this.additionalVersionWeight = model.additionalVersionWeight;
+            this.resolvePolicy = model.resolvePolicy;
+            this.routePolicy = model.routePolicy;
+            this.versionId = model.versionId;
+        } 
 
         /**
          * additionalVersionWeight.

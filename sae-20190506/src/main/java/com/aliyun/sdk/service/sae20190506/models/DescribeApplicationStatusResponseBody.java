@@ -56,6 +56,10 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -114,13 +118,26 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
         private Boolean success; 
         private String traceId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeApplicationStatusResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
+
         /**
          * <p>The HTTP status code. Valid values:</p>
          * <ul>
-         * <li><strong>2xx</strong>: indicates that the request was successful.</li>
-         * <li><strong>3xx</strong>: indicates that the request was redirected.</li>
-         * <li><strong>4xx</strong>: indicates that the request was invalid.</li>
-         * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+         * <li><strong>2xx</strong>: The call was successful.</li>
+         * <li><strong>3xx</strong>: The call was redirected.</li>
+         * <li><strong>4xx</strong>: The call failed.</li>
+         * <li><strong>5xx</strong>: A server error occurred.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -132,7 +149,7 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -140,10 +157,10 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code.</p>
+         * <p>The error code. Valid values:</p>
          * <ul>
-         * <li>If the request is successful, this parameter is not returned.****</li>
-         * <li>This parameter is returned only if the request failed.**** For more information, see <strong>Error codes</strong> in this topic.</li>
+         * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+         * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
          * </ul>
          */
         public Builder errorCode(String errorCode) {
@@ -154,8 +171,8 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
         /**
          * <p>The returned message. Valid values:</p>
          * <ul>
-         * <li><strong>success</strong> is returned when the request succeeds.</li>
-         * <li>An error code is returned when the request fails.</li>
+         * <li>success: If the call is successful, <strong>success</strong> is returned.</li>
+         * <li>An error code: If the call fails, an error code is returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -167,7 +184,7 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
@@ -178,10 +195,10 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether information of the application is successfully obtained. Valid values:</p>
+         * <p>Indicates whether the status of the application was queried. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: The status was queried.</li>
+         * <li><strong>false</strong>: The status failed to be queried.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -193,7 +210,7 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the trace. It is used to query the details of a request.</p>
+         * <p>The trace ID that is used to query the details of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>0a98a02315955564772843261e****</p>
@@ -373,6 +390,24 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
             private Integer runningInstances; 
             private String subStatus; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.appId = model.appId;
+                this.armsAdvancedEnabled = model.armsAdvancedEnabled;
+                this.armsApmInfo = model.armsApmInfo;
+                this.createTime = model.createTime;
+                this.currentStatus = model.currentStatus;
+                this.enableAgent = model.enableAgent;
+                this.fileSizeLimit = model.fileSizeLimit;
+                this.lastChangeOrderId = model.lastChangeOrderId;
+                this.lastChangeOrderRunning = model.lastChangeOrderRunning;
+                this.lastChangeOrderStatus = model.lastChangeOrderStatus;
+                this.runningInstances = model.runningInstances;
+                this.subStatus = model.subStatus;
+            } 
+
             /**
              * <p>The ID of the application.</p>
              * 
@@ -422,7 +457,7 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The current state of the application. Valid values:</p>
+             * <p>The current status of the application. Valid values:</p>
              * <ul>
              * <li><strong>RUNNING</strong></li>
              * <li><strong>STOPPED</strong></li>
@@ -464,7 +499,7 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the latest change order that is executed. If no change orders have been executed or if change orders have expired, an empty parameter is returned.</p>
+             * <p>The ID of the latest change order that is executed. If no change orders are executed or if change orders expire, this parameter is left empty.</p>
              * 
              * <strong>example:</strong>
              * <p>1ccc2339-fc19-49aa-bda0-1e7b8497****</p>
@@ -490,11 +525,11 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the latest change order. Valid values:</p>
+             * <p>The status of the latest change order. Valid values:</p>
              * <ul>
              * <li><strong>READY</strong>: The change order is ready.</li>
              * <li><strong>RUNNING</strong>: The change order is being executed.</li>
-             * <li><strong>SUCCESS</strong>: The change order was executed successfully.</li>
+             * <li><strong>SUCCESS</strong>: The change order was executed.</li>
              * <li><strong>FAIL</strong>: The change order failed to be executed.</li>
              * <li><strong>ABORT</strong>: The change order is stopped.</li>
              * <li><strong>WAIT_BATCH_CONFIRM</strong>: The change order is pending execution. You must manually confirm the release batch.</li>
@@ -524,10 +559,10 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether an error occurred while the change order was being executed. Valid values:</p>
+             * <p>The substatus of the change order. This parameter indicates whether an exception occurred while the change order was being executed. Valid values:</p>
              * <ul>
              * <li><strong>NORMAL</strong></li>
-             * <li><strong>RUNNING_BUT_HAS_ERROR</strong> If an error occurs during a batch release, you must manually perform a rollback. In this case, the change order is still running because the task is not completed, but the state of the change order is RUNNING_BUT_HAS_ERROR.</li>
+             * <li><strong>RUNNING_BUT_HAS_ERROR</strong>: For example, if an error occurs during a phased release, you must manually roll back the application. In this case, the change order cannot be completed because the change order is still being executed.</li>
              * </ul>
              * 
              * <strong>example:</strong>

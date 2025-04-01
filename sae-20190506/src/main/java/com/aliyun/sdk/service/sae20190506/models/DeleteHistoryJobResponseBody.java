@@ -56,6 +56,10 @@ public class DeleteHistoryJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -114,6 +118,19 @@ public class DeleteHistoryJobResponseBody extends TeaModel {
         private Boolean success; 
         private String traceId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DeleteHistoryJobResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
+
         /**
          * <p>The HTTP status code. Valid values:</p>
          * <ul>
@@ -132,7 +149,7 @@ public class DeleteHistoryJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned result.</p>
+         * <p>The result returned.</p>
          * 
          * <strong>example:</strong>
          * <p>{msg: &quot;&quot;, code: 200, success: true}</p>

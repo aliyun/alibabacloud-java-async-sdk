@@ -56,6 +56,10 @@ public class ListLogConfigsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -114,6 +118,19 @@ public class ListLogConfigsResponseBody extends TeaModel {
         private Boolean success; 
         private String traceId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListLogConfigsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
+
         /**
          * <p>Indicates whether the logging configurations of an application were obtained. Valid values:</p>
          * <ul>
@@ -130,7 +147,7 @@ public class ListLogConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of logging configurations.</p>
+         * <p>The logging configurations.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -318,6 +335,20 @@ public class ListLogConfigsResponseBody extends TeaModel {
             private String slsProject; 
             private String storeType; 
 
+            private Builder() {
+            } 
+
+            private Builder(LogConfigs model) {
+                this.configName = model.configName;
+                this.createTime = model.createTime;
+                this.logDir = model.logDir;
+                this.logType = model.logType;
+                this.regionId = model.regionId;
+                this.slsLogStore = model.slsLogStore;
+                this.slsProject = model.slsProject;
+                this.storeType = model.storeType;
+            } 
+
             /**
              * <p>The path of logs.</p>
              * 
@@ -341,7 +372,7 @@ public class ListLogConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the Logstore in Log Service.</p>
+             * <p>The path of the log file (log source).</p>
              * 
              * <strong>example:</strong>
              * <p>/root/logs/hsf/hsf.log</p>
@@ -481,6 +512,16 @@ public class ListLogConfigsResponseBody extends TeaModel {
             private Integer pageSize; 
             private Integer totalSize; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.currentPage = model.currentPage;
+                this.logConfigs = model.logConfigs;
+                this.pageSize = model.pageSize;
+                this.totalSize = model.totalSize;
+            } 
+
             /**
              * <p>The total number of returned entries.</p>
              * 
@@ -493,7 +534,7 @@ public class ListLogConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the Log Service configuration.</p>
+             * <p>The details of the logging configuration.</p>
              */
             public Builder logConfigs(java.util.List<LogConfigs> logConfigs) {
                 this.logConfigs = logConfigs;

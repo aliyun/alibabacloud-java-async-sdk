@@ -44,6 +44,10 @@ public class ImageConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accelerationType
      */
@@ -77,6 +81,16 @@ public class ImageConfig extends TeaModel {
         private String image; 
         private String instanceID; 
         private RegistryConfig registryConfig; 
+
+        private Builder() {
+        } 
+
+        private Builder(ImageConfig model) {
+            this.accelerationType = model.accelerationType;
+            this.image = model.image;
+            this.instanceID = model.instanceID;
+            this.registryConfig = model.registryConfig;
+        } 
 
         /**
          * accelerationType.

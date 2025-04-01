@@ -32,6 +32,10 @@ public class RouteConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return routes
      */
@@ -41,6 +45,13 @@ public class RouteConfig extends TeaModel {
 
     public static final class Builder {
         private java.util.List<PathConfig> routes; 
+
+        private Builder() {
+        } 
+
+        private Builder(RouteConfig model) {
+            this.routes = model.routes;
+        } 
 
         /**
          * routes.

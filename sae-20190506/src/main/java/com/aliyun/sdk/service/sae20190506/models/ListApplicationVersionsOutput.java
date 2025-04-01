@@ -44,6 +44,10 @@ public class ListApplicationVersionsOutput extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return direction
      */
@@ -77,6 +81,16 @@ public class ListApplicationVersionsOutput extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private java.util.List<Version> versions; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListApplicationVersionsOutput model) {
+            this.direction = model.direction;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.versions = model.versions;
+        } 
 
         /**
          * direction.

@@ -40,7 +40,7 @@ public class DescribeJobRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -74,7 +74,7 @@ public class DescribeJobRequest extends Request {
         } 
 
         /**
-         * <p>The application ID.</p>
+         * <p>The ID of the job template.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -56,6 +56,10 @@ public class InstanceMetricInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return applicationID
      */
@@ -113,6 +117,19 @@ public class InstanceMetricInfo extends TeaModel {
         private Float memoryLimitMB; 
         private Float memoryUsageMB; 
         private Long timestamp; 
+
+        private Builder() {
+        } 
+
+        private Builder(InstanceMetricInfo model) {
+            this.applicationID = model.applicationID;
+            this.cpuPercent = model.cpuPercent;
+            this.cpuQuotaPercent = model.cpuQuotaPercent;
+            this.instanceID = model.instanceID;
+            this.memoryLimitMB = model.memoryLimitMB;
+            this.memoryUsageMB = model.memoryUsageMB;
+            this.timestamp = model.timestamp;
+        } 
 
         /**
          * applicationID.

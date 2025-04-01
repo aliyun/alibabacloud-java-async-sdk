@@ -56,6 +56,10 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -113,6 +117,19 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListNamespaceChangeOrdersResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * <p>The HTTP status code. Valid values:</p>
@@ -405,6 +422,27 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
             private Integer status; 
             private String userId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ChangeOrderList model) {
+                this.batchCount = model.batchCount;
+                this.batchType = model.batchType;
+                this.changeOrderId = model.changeOrderId;
+                this.coType = model.coType;
+                this.coTypeCode = model.coTypeCode;
+                this.createTime = model.createTime;
+                this.createUserId = model.createUserId;
+                this.description = model.description;
+                this.finishTime = model.finishTime;
+                this.groupId = model.groupId;
+                this.namespaceId = model.namespaceId;
+                this.pipelines = model.pipelines;
+                this.source = model.source;
+                this.status = model.status;
+                this.userId = model.userId;
+            } 
+
             /**
              * <p>The number of release batches.</p>
              * 
@@ -654,6 +692,16 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.changeOrderList = model.changeOrderList;
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalSize = model.totalSize;
+            } 
 
             /**
              * <p>The list of change orders.</p>

@@ -74,7 +74,7 @@ public class ListAppServicesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -171,7 +171,10 @@ public class ListAppServicesRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>The ID of the application. You must specify only one of the following parameters: vpcId, namespace ID, and application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>017f39b8-dfa4-4e16-a84b-1dcee4b1****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -180,7 +183,10 @@ public class ListAppServicesRequest extends Request {
         }
 
         /**
-         * NacosInstanceId.
+         * <p>The ID of the MSE Nacos instance. This parameter is required when the registry type is set to MSE Nacos.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-cn-sco3r0u****</p>
          */
         public Builder nacosInstanceId(String nacosInstanceId) {
             this.putQueryParameter("NacosInstanceId", nacosInstanceId);
@@ -189,7 +195,10 @@ public class ListAppServicesRequest extends Request {
         }
 
         /**
-         * NacosNamespaceId.
+         * <p>The ID of the MSE Nacos namespace. This parameter is required when the registry type is set to MSE Nacos.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-test</p>
          */
         public Builder nacosNamespaceId(String nacosNamespaceId) {
             this.putQueryParameter("NacosNamespaceId", nacosNamespaceId);
@@ -198,7 +207,10 @@ public class ListAppServicesRequest extends Request {
         }
 
         /**
-         * NamespaceId.
+         * <p>The ID of the namespace. You must specify only one of the following parameters: VPC ID, namespace ID, and application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing:test</p>
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -207,7 +219,10 @@ public class ListAppServicesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -216,7 +231,10 @@ public class ListAppServicesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -225,7 +243,16 @@ public class ListAppServicesRequest extends Request {
         }
 
         /**
-         * RegistryType.
+         * <p>The registry type. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: SAE Nacos</li>
+         * <li><strong>1</strong>: SAE built-in Nacos</li>
+         * <li><strong>2</strong> :MSE Nacos</li>
+         * <li><strong>9</strong>: SAE Kubernetes service</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder registryType(String registryType) {
             this.putQueryParameter("RegistryType", registryType);
@@ -234,7 +261,16 @@ public class ListAppServicesRequest extends Request {
         }
 
         /**
-         * ServiceType.
+         * <p>The service type. Valid values:</p>
+         * <ul>
+         * <li><strong>dubbo</strong></li>
+         * <li><strong>springCloud</strong></li>
+         * <li><strong>hsf</strong></li>
+         * <li><strong>k8sService</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>springCloud</p>
          */
         public Builder serviceType(String serviceType) {
             this.putQueryParameter("ServiceType", serviceType);
@@ -243,7 +279,10 @@ public class ListAppServicesRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * <p>The unique identifier of the VPC. You must specify only one of the following parameters: VPC ID, namespace ID, and application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-2ze0i263cnn311nvj****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

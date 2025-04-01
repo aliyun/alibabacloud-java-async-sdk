@@ -41,6 +41,10 @@ public class WebNetworkConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return internetAccess
      */
@@ -66,6 +70,15 @@ public class WebNetworkConfig extends TeaModel {
         private Boolean internetAccess; 
         private String securityGroupId; 
         private java.util.List<String> vSwitchIds; 
+
+        private Builder() {
+        } 
+
+        private Builder(WebNetworkConfig model) {
+            this.internetAccess = model.internetAccess;
+            this.securityGroupId = model.securityGroupId;
+            this.vSwitchIds = model.vSwitchIds;
+        } 
 
         /**
          * InternetAccess.

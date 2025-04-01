@@ -32,6 +32,10 @@ public class InstanceExecAuthorizationInput extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return options
      */
@@ -41,6 +45,13 @@ public class InstanceExecAuthorizationInput extends TeaModel {
 
     public static final class Builder {
         private InstanceExecAuthorizationInputOptions options; 
+
+        private Builder() {
+        } 
+
+        private Builder(InstanceExecAuthorizationInput model) {
+            this.options = model.options;
+        } 
 
         /**
          * options.

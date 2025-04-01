@@ -56,6 +56,10 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -113,6 +117,19 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListNamespacedConfigMapsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * <p>The HTTP status code. Valid values:</p>
@@ -252,6 +269,14 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
         public static final class Builder {
             private String appId; 
             private String appName; 
+
+            private Builder() {
+            } 
+
+            private Builder(RelateApps model) {
+                this.appId = model.appId;
+                this.appName = model.appName;
+            } 
 
             /**
              * <p>The ID of the application.</p>
@@ -398,6 +423,20 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
             private java.util.List<RelateApps> relateApps; 
             private Long updateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConfigMaps model) {
+                this.configMapId = model.configMapId;
+                this.createTime = model.createTime;
+                this.data = model.data;
+                this.description = model.description;
+                this.name = model.name;
+                this.namespaceId = model.namespaceId;
+                this.relateApps = model.relateApps;
+                this.updateTime = model.updateTime;
+            } 
+
             /**
              * <p>The ID of the ConfigMap instance.</p>
              * 
@@ -523,6 +562,13 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ConfigMaps> configMaps; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.configMaps = model.configMaps;
+            } 
 
             /**
              * <p>The ConfigMap instances.</p>

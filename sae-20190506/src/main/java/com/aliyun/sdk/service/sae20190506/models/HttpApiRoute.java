@@ -104,6 +104,10 @@ public class HttpApiRoute extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return addressType
      */
@@ -257,6 +261,31 @@ public class HttpApiRoute extends TeaModel {
         private String routeId; 
         private java.util.List<Services> services; 
         private String sourceType; 
+
+        private Builder() {
+        } 
+
+        private Builder(HttpApiRoute model) {
+            this.addressType = model.addressType;
+            this.deployStatus = model.deployStatus;
+            this.destinationType = model.destinationType;
+            this.domains = model.domains;
+            this.environmentId = model.environmentId;
+            this.gatewayId = model.gatewayId;
+            this.httpApiId = model.httpApiId;
+            this.httpApiName = model.httpApiName;
+            this.httpApiType = model.httpApiType;
+            this.ingressId = model.ingressId;
+            this.nacosInstanceId = model.nacosInstanceId;
+            this.nacosNamespaceId = model.nacosNamespaceId;
+            this.name = model.name;
+            this.namespaceId = model.namespaceId;
+            this.policies = model.policies;
+            this.predicates = model.predicates;
+            this.routeId = model.routeId;
+            this.services = model.services;
+            this.sourceType = model.sourceType;
+        } 
 
         /**
          * AddressType.
@@ -460,6 +489,14 @@ public class HttpApiRoute extends TeaModel {
             private String domainId; 
             private String domainName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Domains model) {
+                this.domainId = model.domainId;
+                this.domainName = model.domainName;
+            } 
+
             /**
              * DomainId.
              */
@@ -575,6 +612,18 @@ public class HttpApiRoute extends TeaModel {
             private Long servicePort; 
             private String serviceProtocol; 
 
+            private Builder() {
+            } 
+
+            private Builder(Destinations model) {
+                this.appId = model.appId;
+                this.appName = model.appName;
+                this.serviceId = model.serviceId;
+                this.serviceName = model.serviceName;
+                this.servicePort = model.servicePort;
+                this.serviceProtocol = model.serviceProtocol;
+            } 
+
             /**
              * AppId.
              */
@@ -674,6 +723,14 @@ public class HttpApiRoute extends TeaModel {
             private java.util.List<Destinations> destinations; 
             private Boolean enable; 
 
+            private Builder() {
+            } 
+
+            private Builder(Fallback model) {
+                this.destinations = model.destinations;
+                this.enable = model.enable;
+            } 
+
             /**
              * Destinations.
              */
@@ -764,6 +821,16 @@ public class HttpApiRoute extends TeaModel {
             private Boolean enable; 
             private java.util.List<String> httpCodes; 
             private java.util.List<String> retryOn; 
+
+            private Builder() {
+            } 
+
+            private Builder(Retry model) {
+                this.attempts = model.attempts;
+                this.enable = model.enable;
+                this.httpCodes = model.httpCodes;
+                this.retryOn = model.retryOn;
+            } 
 
             /**
              * Attempts.
@@ -860,6 +927,15 @@ public class HttpApiRoute extends TeaModel {
             private String timeUnit; 
             private Long unitNum; 
 
+            private Builder() {
+            } 
+
+            private Builder(Timeout model) {
+                this.enable = model.enable;
+                this.timeUnit = model.timeUnit;
+                this.unitNum = model.unitNum;
+            } 
+
             /**
              * Enable.
              */
@@ -946,6 +1022,15 @@ public class HttpApiRoute extends TeaModel {
             private Fallback fallback; 
             private Retry retry; 
             private Timeout timeout; 
+
+            private Builder() {
+            } 
+
+            private Builder(Policies model) {
+                this.fallback = model.fallback;
+                this.retry = model.retry;
+                this.timeout = model.timeout;
+            } 
 
             /**
              * Fallback.
@@ -1034,6 +1119,15 @@ public class HttpApiRoute extends TeaModel {
             private String type; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(HeaderPredicates model) {
+                this.name = model.name;
+                this.type = model.type;
+                this.value = model.value;
+            } 
+
             /**
              * Name.
              */
@@ -1121,6 +1215,15 @@ public class HttpApiRoute extends TeaModel {
             private String path; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(PathPredicates model) {
+                this.ignoreCase = model.ignoreCase;
+                this.path = model.path;
+                this.type = model.type;
+            } 
+
             /**
              * IgnoreCase.
              */
@@ -1207,6 +1310,15 @@ public class HttpApiRoute extends TeaModel {
             private String name; 
             private String type; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(QueryPredicates model) {
+                this.name = model.name;
+                this.type = model.type;
+                this.value = model.value;
+            } 
 
             /**
              * Name.
@@ -1306,6 +1418,16 @@ public class HttpApiRoute extends TeaModel {
             private java.util.List<String> methodPredicates; 
             private PathPredicates pathPredicates; 
             private java.util.List<QueryPredicates> queryPredicates; 
+
+            private Builder() {
+            } 
+
+            private Builder(Predicates model) {
+                this.headerPredicates = model.headerPredicates;
+                this.methodPredicates = model.methodPredicates;
+                this.pathPredicates = model.pathPredicates;
+                this.queryPredicates = model.queryPredicates;
+            } 
 
             /**
              * HeaderPredicates.
@@ -1449,6 +1571,19 @@ public class HttpApiRoute extends TeaModel {
             private Long servicePort; 
             private String serviceProtocol; 
             private Long serviceWeight; 
+
+            private Builder() {
+            } 
+
+            private Builder(Services model) {
+                this.appId = model.appId;
+                this.appName = model.appName;
+                this.serviceId = model.serviceId;
+                this.serviceName = model.serviceName;
+                this.servicePort = model.servicePort;
+                this.serviceProtocol = model.serviceProtocol;
+                this.serviceWeight = model.serviceWeight;
+            } 
 
             /**
              * AppId.

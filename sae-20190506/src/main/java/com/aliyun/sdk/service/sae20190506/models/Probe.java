@@ -48,6 +48,10 @@ public class Probe extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return failureThreshold
      */
@@ -89,6 +93,17 @@ public class Probe extends TeaModel {
         private Integer periodSeconds; 
         private ProbeHandler probeHandler; 
         private Integer timeoutSeconds; 
+
+        private Builder() {
+        } 
+
+        private Builder(Probe model) {
+            this.failureThreshold = model.failureThreshold;
+            this.initialDelaySeconds = model.initialDelaySeconds;
+            this.periodSeconds = model.periodSeconds;
+            this.probeHandler = model.probeHandler;
+            this.timeoutSeconds = model.timeoutSeconds;
+        } 
 
         /**
          * failureThreshold.
@@ -180,6 +195,14 @@ public class Probe extends TeaModel {
             private String name; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(HttpHeaders model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
+
             /**
              * name.
              */
@@ -259,6 +282,15 @@ public class Probe extends TeaModel {
             private String path; 
             private Integer port; 
 
+            private Builder() {
+            } 
+
+            private Builder(HttpGet model) {
+                this.httpHeaders = model.httpHeaders;
+                this.path = model.path;
+                this.port = model.port;
+            } 
+
             /**
              * httpHeaders.
              */
@@ -322,6 +354,13 @@ public class Probe extends TeaModel {
         public static final class Builder {
             private Integer port; 
 
+            private Builder() {
+            } 
+
+            private Builder(TcpSocket model) {
+                this.port = model.port;
+            } 
+
             /**
              * port.
              */
@@ -380,6 +419,14 @@ public class Probe extends TeaModel {
         public static final class Builder {
             private HttpGet httpGet; 
             private TcpSocket tcpSocket; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProbeHandler model) {
+                this.httpGet = model.httpGet;
+                this.tcpSocket = model.tcpSocket;
+            } 
 
             /**
              * httpGet.

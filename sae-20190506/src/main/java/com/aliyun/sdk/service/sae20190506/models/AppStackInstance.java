@@ -60,6 +60,10 @@ public class AppStackInstance extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createTime
      */
@@ -125,6 +129,20 @@ public class AppStackInstance extends TeaModel {
         private String stackId; 
         private String status; 
         private Long updateTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(AppStackInstance model) {
+            this.createTime = model.createTime;
+            this.endpoints = model.endpoints;
+            this.instanceId = model.instanceId;
+            this.instanceName = model.instanceName;
+            this.parameters = model.parameters;
+            this.stackId = model.stackId;
+            this.status = model.status;
+            this.updateTime = model.updateTime;
+        } 
 
         /**
          * CreateTime.
@@ -252,6 +270,15 @@ public class AppStackInstance extends TeaModel {
             private String name; 
             private String protocol; 
 
+            private Builder() {
+            } 
+
+            private Builder(Endpoints model) {
+                this.address = model.address;
+                this.name = model.name;
+                this.protocol = model.protocol;
+            } 
+
             /**
              * Address.
              */
@@ -326,6 +353,14 @@ public class AppStackInstance extends TeaModel {
         public static final class Builder {
             private String name; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Parameters model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
 
             /**
              * Name.

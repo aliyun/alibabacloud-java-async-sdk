@@ -48,6 +48,10 @@ public class GetScaleAppMetricResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetScaleAppMetricResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetScaleAppMetricResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code. The following limits are imposed on the ID:</p>
@@ -241,6 +256,17 @@ public class GetScaleAppMetricResponseBody extends TeaModel {
             private String name; 
             private String regionId; 
             private Long runnings; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.appId = model.appId;
+                this.maxReplicas = model.maxReplicas;
+                this.name = model.name;
+                this.regionId = model.regionId;
+                this.runnings = model.runnings;
+            } 
 
             /**
              * <p>The application ID.</p>

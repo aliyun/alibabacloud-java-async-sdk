@@ -42,6 +42,10 @@ public class WebNASMountPoint extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return mountDir
      */
@@ -67,6 +71,15 @@ public class WebNASMountPoint extends TeaModel {
         private String mountDir; 
         private String nasAddr; 
         private String nasPath; 
+
+        private Builder() {
+        } 
+
+        private Builder(WebNASMountPoint model) {
+            this.mountDir = model.mountDir;
+            this.nasAddr = model.nasAddr;
+            this.nasPath = model.nasPath;
+        } 
 
         /**
          * MountDir.

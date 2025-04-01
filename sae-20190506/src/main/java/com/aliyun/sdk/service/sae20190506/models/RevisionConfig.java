@@ -41,6 +41,10 @@ public class RevisionConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return containers
      */
@@ -66,6 +70,15 @@ public class RevisionConfig extends TeaModel {
         private java.util.List<Container> containers; 
         private Boolean enableArmsMetrics; 
         private WebNetworkConfig webNetworkConfig; 
+
+        private Builder() {
+        } 
+
+        private Builder(RevisionConfig model) {
+            this.containers = model.containers;
+            this.enableArmsMetrics = model.enableArmsMetrics;
+            this.webNetworkConfig = model.webNetworkConfig;
+        } 
 
         /**
          * <p>This parameter is required.</p>

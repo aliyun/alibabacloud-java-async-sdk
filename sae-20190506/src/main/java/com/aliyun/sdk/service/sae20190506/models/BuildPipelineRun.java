@@ -96,6 +96,10 @@ public class BuildPipelineRun extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return buildConfig
      */
@@ -233,6 +237,29 @@ public class BuildPipelineRun extends TeaModel {
         private TriggerConfig triggerConfig; 
         private String versionId; 
         private Long waitDuration; 
+
+        private Builder() {
+        } 
+
+        private Builder(BuildPipelineRun model) {
+            this.buildConfig = model.buildConfig;
+            this.buildDuration = model.buildDuration;
+            this.codeConfig = model.codeConfig;
+            this.createTime = model.createTime;
+            this.deployConfig = model.deployConfig;
+            this.deployDuration = model.deployDuration;
+            this.endTime = model.endTime;
+            this.imageConfig = model.imageConfig;
+            this.packageConfig = model.packageConfig;
+            this.pipelineId = model.pipelineId;
+            this.pipelineRunId = model.pipelineRunId;
+            this.startTime = model.startTime;
+            this.status = model.status;
+            this.steps = model.steps;
+            this.triggerConfig = model.triggerConfig;
+            this.versionId = model.versionId;
+            this.waitDuration = model.waitDuration;
+        } 
 
         /**
          * BuildConfig.
@@ -433,6 +460,15 @@ public class BuildPipelineRun extends TeaModel {
             private String tagName; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Trigger model) {
+                this.branchName = model.branchName;
+                this.tagName = model.tagName;
+                this.type = model.type;
+            } 
+
             /**
              * BranchName.
              */
@@ -596,6 +632,21 @@ public class BuildPipelineRun extends TeaModel {
             private TomcatConfig tomcatConfig; 
             private Trigger trigger; 
             private String workingDir; 
+
+            private Builder() {
+            } 
+
+            private Builder(BuildConfig model) {
+                this.beforeBuildCommand = model.beforeBuildCommand;
+                this.buildType = model.buildType;
+                this.dockerfilePath = model.dockerfilePath;
+                this.runCommand = model.runCommand;
+                this.runtimeType = model.runtimeType;
+                this.runtimeVersion = model.runtimeVersion;
+                this.tomcatConfig = model.tomcatConfig;
+                this.trigger = model.trigger;
+                this.workingDir = model.workingDir;
+            } 
 
             /**
              * BeforeBuildCommand.
@@ -800,6 +851,20 @@ public class BuildPipelineRun extends TeaModel {
             private String repoFullName; 
             private String repoId; 
 
+            private Builder() {
+            } 
+
+            private Builder(CodeConfig model) {
+                this.accountId = model.accountId;
+                this.branchName = model.branchName;
+                this.commitId = model.commitId;
+                this.commitUrl = model.commitUrl;
+                this.organizationId = model.organizationId;
+                this.provider = model.provider;
+                this.repoFullName = model.repoFullName;
+                this.repoId = model.repoId;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              * 
@@ -966,6 +1031,17 @@ public class BuildPipelineRun extends TeaModel {
             private String updateApplicationInput; 
             private Boolean updateTraffic; 
 
+            private Builder() {
+            } 
+
+            private Builder(DeployConfig model) {
+                this.alwaysAllocateCPU = model.alwaysAllocateCPU;
+                this.maximumInstanceCount = model.maximumInstanceCount;
+                this.minimumInstanceCount = model.minimumInstanceCount;
+                this.updateApplicationInput = model.updateApplicationInput;
+                this.updateTraffic = model.updateTraffic;
+            } 
+
             /**
              * AlwaysAllocateCPU.
              */
@@ -1069,6 +1145,15 @@ public class BuildPipelineRun extends TeaModel {
             private String namespace; 
             private String repository; 
 
+            private Builder() {
+            } 
+
+            private Builder(ImageConfig model) {
+                this.instanceType = model.instanceType;
+                this.namespace = model.namespace;
+                this.repository = model.repository;
+            } 
+
             /**
              * InstanceType.
              */
@@ -1167,6 +1252,16 @@ public class BuildPipelineRun extends TeaModel {
             private String packageType; 
             private String packageUrl; 
             private String packageVersion; 
+
+            private Builder() {
+            } 
+
+            private Builder(PackageConfig model) {
+                this.packageName = model.packageName;
+                this.packageType = model.packageType;
+                this.packageUrl = model.packageUrl;
+                this.packageVersion = model.packageVersion;
+            } 
 
             /**
              * PackageName.
@@ -1323,6 +1418,20 @@ public class BuildPipelineRun extends TeaModel {
             private Long startTime; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(Steps model) {
+                this.description = model.description;
+                this.duration = model.duration;
+                this.endTime = model.endTime;
+                this.id = model.id;
+                this.name = model.name;
+                this.result = model.result;
+                this.startTime = model.startTime;
+                this.status = model.status;
+            } 
+
             /**
              * Description.
              */
@@ -1449,6 +1558,15 @@ public class BuildPipelineRun extends TeaModel {
             private String branchName; 
             private String tagName; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(TriggerConfig model) {
+                this.branchName = model.branchName;
+                this.tagName = model.tagName;
+                this.type = model.type;
+            } 
 
             /**
              * <p>This parameter is required.</p>

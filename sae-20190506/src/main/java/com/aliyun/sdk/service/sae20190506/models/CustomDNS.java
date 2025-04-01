@@ -40,6 +40,10 @@ public class CustomDNS extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dnsOptions
      */
@@ -65,6 +69,15 @@ public class CustomDNS extends TeaModel {
         private java.util.List<DNSOption> dnsOptions; 
         private java.util.List<String> nameServers; 
         private java.util.List<String> searches; 
+
+        private Builder() {
+        } 
+
+        private Builder(CustomDNS model) {
+            this.dnsOptions = model.dnsOptions;
+            this.nameServers = model.nameServers;
+            this.searches = model.searches;
+        } 
 
         /**
          * dnsOptions.

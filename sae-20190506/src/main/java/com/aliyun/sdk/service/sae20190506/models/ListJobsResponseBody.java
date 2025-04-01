@@ -64,6 +64,10 @@ public class ListJobsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -137,6 +141,21 @@ public class ListJobsResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Integer totalSize; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListJobsResponseBody model) {
+            this.code = model.code;
+            this.currentPage = model.currentPage;
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.message = model.message;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalSize = model.totalSize;
+        } 
 
         /**
          * <p>The HTTP status code. Valid values:</p>
@@ -298,8 +317,16 @@ public class ListJobsResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * <p>The tag key.</p>
+             * <p>The key of the tag.</p>
              * 
              * <strong>example:</strong>
              * <p>key</p>
@@ -310,7 +337,7 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value.</p>
+             * <p>The value of the tag.</p>
              * 
              * <strong>example:</strong>
              * <p>value</p>
@@ -563,6 +590,30 @@ public class ListJobsResponseBody extends TeaModel {
             private java.util.List<Tags> tags; 
             private String triggerConfig; 
 
+            private Builder() {
+            } 
+
+            private Builder(Applications model) {
+                this.active = model.active;
+                this.appDescription = model.appDescription;
+                this.appId = model.appId;
+                this.appName = model.appName;
+                this.completionTime = model.completionTime;
+                this.cpu = model.cpu;
+                this.failed = model.failed;
+                this.lastChangeorderState = model.lastChangeorderState;
+                this.lastJobState = model.lastJobState;
+                this.lastStartTime = model.lastStartTime;
+                this.mem = model.mem;
+                this.message = model.message;
+                this.namespaceId = model.namespaceId;
+                this.regionId = model.regionId;
+                this.succeeded = model.succeeded;
+                this.suspend = model.suspend;
+                this.tags = model.tags;
+                this.triggerConfig = model.triggerConfig;
+            } 
+
             /**
              * <p>The number of running instances.</p>
              * 
@@ -619,7 +670,19 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Cpu.
+             * <p>The CPU specifications that are required for each instance. Unit: millicores. This parameter cannot be set to 0. Valid values:</p>
+             * <ul>
+             * <li><strong>500</strong></li>
+             * <li><strong>1000</strong></li>
+             * <li><strong>2000</strong></li>
+             * <li><strong>4000</strong></li>
+             * <li><strong>8000</strong></li>
+             * <li><strong>16000</strong></li>
+             * <li><strong>32000</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -653,7 +716,7 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The running status of the latest job. Valid values:</p>
+             * <p>The status of the latest job. Valid values:</p>
              * <ul>
              * <li><strong>0</strong>: The job is not executed.</li>
              * <li><strong>1</strong>: The job was executed.</li>
@@ -681,7 +744,22 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Mem.
+             * <p>The size of memory that is required by each instance. Unit: MB. This parameter cannot be set to 0. The values of this parameter correspond to the values of the Cpu parameter:</p>
+             * <ul>
+             * <li>This parameter is set to <strong>1024</strong> if the Cpu parameter is set to 500 or 1000.</li>
+             * <li>This parameter is set to <strong>2048</strong> if the Cpu parameter is set to 500, 1000, or 2000.</li>
+             * <li>This parameter is set to <strong>4096</strong> if the Cpu parameter is set to 1000, 2000, or 4000.</li>
+             * <li>This parameter is set to <strong>8192</strong> if the Cpu parameter is set to 2000, 4000, or 8000.</li>
+             * <li>This parameter is set to <strong>12288</strong> if the Cpu parameter is set to 12000.</li>
+             * <li>This parameter is set to <strong>16384</strong> if the Cpu parameter is set to 4000, 8000, or 16000.</li>
+             * <li>This parameter is set to <strong>24576</strong> if the Cpu parameter is set to 12000.</li>
+             * <li>This parameter is set to <strong>32768</strong> if the Cpu parameter is set to 16000.</li>
+             * <li>This parameter is set to <strong>65536</strong> if the Cpu parameter is set to 8000, 16000, or 32000.</li>
+             * <li>This parameter is set to <strong>131072</strong> if the Cpu parameter is set to 32000.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder mem(Integer mem) {
                 this.mem = mem;
@@ -700,7 +778,7 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The namespace ID.</p>
+             * <p>The ID of the namespace.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-beijing:demo</p>
@@ -744,7 +822,7 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag of the job template.</p>
+             * <p>The tags of the job template.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -833,6 +911,16 @@ public class ListJobsResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.applications = model.applications;
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalSize = model.totalSize;
+            } 
 
             /**
              * <p>The job templates.</p>

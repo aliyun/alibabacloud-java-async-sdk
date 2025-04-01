@@ -71,7 +71,7 @@ public class ListWebApplicationInstancesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -159,6 +159,7 @@ public class ListWebApplicationInstancesRequest extends Request {
         } 
 
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -171,7 +172,10 @@ public class ListWebApplicationInstancesRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The time when the operation ended.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1715567192</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -180,7 +184,10 @@ public class ListWebApplicationInstancesRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-667d143a-17b4e0fa-46d3a2******</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             String instanceIdsShrink = shrink(instanceIds, "InstanceIds", "json");
@@ -190,7 +197,10 @@ public class ListWebApplicationInstancesRequest extends Request {
         }
 
         /**
-         * Limit.
+         * <p>The number of application instances returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder limit(String limit) {
             this.putQueryParameter("Limit", limit);
@@ -199,6 +209,7 @@ public class ListWebApplicationInstancesRequest extends Request {
         }
 
         /**
+         * <p>The namespace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -211,7 +222,10 @@ public class ListWebApplicationInstancesRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The time when the task was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1562831689704</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -220,7 +234,7 @@ public class ListWebApplicationInstancesRequest extends Request {
         }
 
         /**
-         * Statuses.
+         * <p>The status of the application instance.</p>
          */
         public Builder statuses(java.util.List<String> statuses) {
             String statusesShrink = shrink(statuses, "Statuses", "json");
@@ -230,7 +244,10 @@ public class ListWebApplicationInstancesRequest extends Request {
         }
 
         /**
-         * VersionIds.
+         * <p>The ID of the application version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>001</p>
          */
         public Builder versionIds(java.util.List<String> versionIds) {
             String versionIdsShrink = shrink(versionIds, "VersionIds", "json");

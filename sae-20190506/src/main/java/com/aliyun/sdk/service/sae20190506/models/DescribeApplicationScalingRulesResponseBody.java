@@ -56,6 +56,10 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -114,6 +118,19 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
         private Boolean success; 
         private String traceId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeApplicationScalingRulesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
+
         /**
          * Code.
          */
@@ -123,7 +140,7 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -274,6 +291,18 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             private String slbProject; 
             private String vport; 
 
+            private Builder() {
+            } 
+
+            private Builder(Metrics model) {
+                this.metricTargetAverageUtilization = model.metricTargetAverageUtilization;
+                this.metricType = model.metricType;
+                this.slbId = model.slbId;
+                this.slbLogstore = model.slbLogstore;
+                this.slbProject = model.slbProject;
+                this.vport = model.vport;
+            } 
+
             /**
              * <p>The limit on the metric.</p>
              * <ul>
@@ -405,6 +434,15 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             private String name; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(CurrentMetrics model) {
+                this.currentValue = model.currentValue;
+                this.name = model.name;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The current value of the metric.</p>
              * 
@@ -512,6 +550,15 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             private String name; 
             private Integer nextScaleInAverageUtilization; 
             private Integer nextScaleOutAverageUtilization; 
+
+            private Builder() {
+            } 
+
+            private Builder(NextScaleMetrics model) {
+                this.name = model.name;
+                this.nextScaleInAverageUtilization = model.nextScaleInAverageUtilization;
+                this.nextScaleOutAverageUtilization = model.nextScaleOutAverageUtilization;
+            } 
 
             /**
              * <p>The name of the metric.</p>
@@ -676,6 +723,20 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             private java.util.List<NextScaleMetrics> nextScaleMetrics; 
             private Integer nextScaleTimePeriod; 
 
+            private Builder() {
+            } 
+
+            private Builder(MetricsStatus model) {
+                this.currentMetrics = model.currentMetrics;
+                this.currentReplicas = model.currentReplicas;
+                this.desiredReplicas = model.desiredReplicas;
+                this.lastScaleTime = model.lastScaleTime;
+                this.maxReplicas = model.maxReplicas;
+                this.minReplicas = model.minReplicas;
+                this.nextScaleMetrics = model.nextScaleMetrics;
+                this.nextScaleTimePeriod = model.nextScaleTimePeriod;
+            } 
+
             /**
              * <p>The metrics that are used to trigger the auto scaling policy this time.</p>
              */
@@ -821,6 +882,15 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             private Long stabilizationWindowSeconds; 
             private Long step; 
 
+            private Builder() {
+            } 
+
+            private Builder(ScaleDownRules model) {
+                this.disabled = model.disabled;
+                this.stabilizationWindowSeconds = model.stabilizationWindowSeconds;
+                this.step = model.step;
+            } 
+
             /**
              * <p>Indicates whether the application scale-in was disabled. Valid values:</p>
              * <ul>
@@ -923,6 +993,15 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             private Boolean disabled; 
             private Long stabilizationWindowSeconds; 
             private Long step; 
+
+            private Builder() {
+            } 
+
+            private Builder(ScaleUpRules model) {
+                this.disabled = model.disabled;
+                this.stabilizationWindowSeconds = model.stabilizationWindowSeconds;
+                this.step = model.step;
+            } 
 
             /**
              * <p>Indicates whether the application scale-in was disabled. Valid values:</p>
@@ -1063,6 +1142,18 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             private ScaleDownRules scaleDownRules; 
             private ScaleUpRules scaleUpRules; 
 
+            private Builder() {
+            } 
+
+            private Builder(Metric model) {
+                this.maxReplicas = model.maxReplicas;
+                this.metrics = model.metrics;
+                this.metricsStatus = model.metricsStatus;
+                this.minReplicas = model.minReplicas;
+                this.scaleDownRules = model.scaleDownRules;
+                this.scaleUpRules = model.scaleUpRules;
+            } 
+
             /**
              * <p>The maximum number of instances.</p>
              * 
@@ -1192,6 +1283,16 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             private Long minReplicas; 
             private Integer targetReplicas; 
 
+            private Builder() {
+            } 
+
+            private Builder(Schedules model) {
+                this.atTime = model.atTime;
+                this.maxReplicas = model.maxReplicas;
+                this.minReplicas = model.minReplicas;
+                this.targetReplicas = model.targetReplicas;
+            } 
+
             /**
              * <p>The point in time. Format: <strong>Hour:Minute</strong>.</p>
              * 
@@ -1311,6 +1412,16 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             private String period; 
             private java.util.List<Schedules> schedules; 
 
+            private Builder() {
+            } 
+
+            private Builder(Timer model) {
+                this.beginDate = model.beginDate;
+                this.endDate = model.endDate;
+                this.period = model.period;
+                this.schedules = model.schedules;
+            } 
+
             /**
              * <p>The start date of the validity period of the scheduled auto scaling policy. Valid values:</p>
              * <ul>
@@ -1397,9 +1508,6 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @com.aliyun.core.annotation.NameInMap("EnableIdle")
-        private Boolean enableIdle;
-
         @com.aliyun.core.annotation.NameInMap("LastDisableTime")
         private Long lastDisableTime;
 
@@ -1430,7 +1538,6 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
         private ApplicationScalingRules(Builder builder) {
             this.appId = builder.appId;
             this.createTime = builder.createTime;
-            this.enableIdle = builder.enableIdle;
             this.lastDisableTime = builder.lastDisableTime;
             this.metric = builder.metric;
             this.minReadyInstanceRatio = builder.minReadyInstanceRatio;
@@ -1462,13 +1569,6 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
          */
         public Long getCreateTime() {
             return this.createTime;
-        }
-
-        /**
-         * @return enableIdle
-         */
-        public Boolean getEnableIdle() {
-            return this.enableIdle;
         }
 
         /**
@@ -1537,7 +1637,6 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
         public static final class Builder {
             private String appId; 
             private Long createTime; 
-            private Boolean enableIdle; 
             private Long lastDisableTime; 
             private Metric metric; 
             private Integer minReadyInstanceRatio; 
@@ -1547,6 +1646,23 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             private String scaleRuleType; 
             private Timer timer; 
             private Long updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApplicationScalingRules model) {
+                this.appId = model.appId;
+                this.createTime = model.createTime;
+                this.lastDisableTime = model.lastDisableTime;
+                this.metric = model.metric;
+                this.minReadyInstanceRatio = model.minReadyInstanceRatio;
+                this.minReadyInstances = model.minReadyInstances;
+                this.scaleRuleEnabled = model.scaleRuleEnabled;
+                this.scaleRuleName = model.scaleRuleName;
+                this.scaleRuleType = model.scaleRuleType;
+                this.timer = model.timer;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The ID of the application.</p>
@@ -1567,14 +1683,6 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
-                return this;
-            }
-
-            /**
-             * EnableIdle.
-             */
-            public Builder enableIdle(Boolean enableIdle) {
-                this.enableIdle = enableIdle;
                 return this;
             }
 
@@ -1748,6 +1856,16 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.applicationScalingRules = model.applicationScalingRules;
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalSize = model.totalSize;
+            } 
 
             /**
              * <p>The auto scaling policies of the application.</p>

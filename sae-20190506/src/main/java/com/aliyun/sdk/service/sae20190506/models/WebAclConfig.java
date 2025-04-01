@@ -33,6 +33,10 @@ public class WebAclConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return webAclEntries
      */
@@ -42,6 +46,13 @@ public class WebAclConfig extends TeaModel {
 
     public static final class Builder {
         private java.util.List<WebAclEntryConfig> webAclEntries; 
+
+        private Builder() {
+        } 
+
+        private Builder(WebAclConfig model) {
+            this.webAclEntries = model.webAclEntries;
+        } 
 
         /**
          * <p>This parameter is required.</p>

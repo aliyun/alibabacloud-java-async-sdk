@@ -47,7 +47,7 @@ public class UpdateWebCustomDomainRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -90,6 +90,7 @@ public class UpdateWebCustomDomainRequest extends Request {
         } 
 
         /**
+         * <p>The name of the custom domain name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class UpdateWebCustomDomainRequest extends Request {
         }
 
         /**
+         * <p>The namespace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,7 @@ public class UpdateWebCustomDomainRequest extends Request {
         }
 
         /**
+         * <p>The information about the custom domain name.</p>
          * <p>This parameter is required.</p>
          */
         public Builder body(UpdateWebCustomDomainInput body) {

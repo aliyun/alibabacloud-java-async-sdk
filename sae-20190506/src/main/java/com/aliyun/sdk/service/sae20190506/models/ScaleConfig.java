@@ -44,6 +44,10 @@ public class ScaleConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return alwaysAllocateCPU
      */
@@ -77,6 +81,16 @@ public class ScaleConfig extends TeaModel {
         private Long maximumInstanceCount; 
         private Long minimumInstanceCount; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ScaleConfig model) {
+            this.alwaysAllocateCPU = model.alwaysAllocateCPU;
+            this.maximumInstanceCount = model.maximumInstanceCount;
+            this.minimumInstanceCount = model.minimumInstanceCount;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * alwaysAllocateCPU.

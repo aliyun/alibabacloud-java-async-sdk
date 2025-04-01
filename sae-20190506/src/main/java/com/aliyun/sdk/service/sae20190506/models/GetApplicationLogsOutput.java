@@ -40,6 +40,10 @@ public class GetApplicationLogsOutput extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return logEntrys
      */
@@ -65,6 +69,15 @@ public class GetApplicationLogsOutput extends TeaModel {
         private java.util.List<LogEntry> logEntrys; 
         private Long nextOffset; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetApplicationLogsOutput model) {
+            this.logEntrys = model.logEntrys;
+            this.nextOffset = model.nextOffset;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * logEntrys.

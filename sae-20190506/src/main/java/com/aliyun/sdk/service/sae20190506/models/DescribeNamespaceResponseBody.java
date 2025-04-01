@@ -56,6 +56,10 @@ public class DescribeNamespaceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -113,6 +117,19 @@ public class DescribeNamespaceResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeNamespaceResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * <p>The HTTP status code. Valid values:</p>
@@ -303,6 +320,18 @@ public class DescribeNamespaceResponseBody extends TeaModel {
             private String namespaceId; 
             private String namespaceName; 
             private String regionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.enableMicroRegistration = model.enableMicroRegistration;
+                this.nameSpaceShortId = model.nameSpaceShortId;
+                this.namespaceDescription = model.namespaceDescription;
+                this.namespaceId = model.namespaceId;
+                this.namespaceName = model.namespaceName;
+                this.regionId = model.regionId;
+            } 
 
             /**
              * <p>Indicates whether the SAE built-in registry is enabled. Valid values:</p>

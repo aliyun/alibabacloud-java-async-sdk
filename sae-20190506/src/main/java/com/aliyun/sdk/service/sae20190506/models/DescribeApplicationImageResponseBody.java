@@ -56,6 +56,10 @@ public class DescribeApplicationImageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -113,6 +117,19 @@ public class DescribeApplicationImageResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeApplicationImageResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * <p>The HTTP status code. Valid values:</p>
@@ -324,6 +341,20 @@ public class DescribeApplicationImageResponseBody extends TeaModel {
             private String repoOriginType; 
             private String repoTag; 
             private String repoType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.crUrl = model.crUrl;
+                this.logo = model.logo;
+                this.regionId = model.regionId;
+                this.repoName = model.repoName;
+                this.repoNamespace = model.repoNamespace;
+                this.repoOriginType = model.repoOriginType;
+                this.repoTag = model.repoTag;
+                this.repoType = model.repoType;
+            } 
 
             /**
              * <p>This parameter is reserved.</p>

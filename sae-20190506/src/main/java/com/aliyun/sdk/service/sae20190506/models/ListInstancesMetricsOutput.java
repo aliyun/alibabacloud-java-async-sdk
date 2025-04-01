@@ -48,6 +48,10 @@ public class ListInstancesMetricsOutput extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -89,6 +93,17 @@ public class ListInstancesMetricsOutput extends TeaModel {
         private Integer pageNumber; 
         private Integer pageSize; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListInstancesMetricsOutput model) {
+            this.requestId = model.requestId;
+            this.metricsList = model.metricsList;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * RequestId.

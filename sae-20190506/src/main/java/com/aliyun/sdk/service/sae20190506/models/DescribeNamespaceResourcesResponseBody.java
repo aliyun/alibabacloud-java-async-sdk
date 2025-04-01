@@ -56,6 +56,10 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -113,6 +117,19 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeNamespaceResourcesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * <p>The HTTP status code. Valid values:</p>
@@ -456,6 +473,31 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
             private String vSwitchName; 
             private String vpcId; 
             private String vpcName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.appCount = model.appCount;
+                this.belongRegion = model.belongRegion;
+                this.description = model.description;
+                this.jumpServerAppId = model.jumpServerAppId;
+                this.jumpServerIp = model.jumpServerIp;
+                this.lastChangeOrderId = model.lastChangeOrderId;
+                this.lastChangeOrderRunning = model.lastChangeOrderRunning;
+                this.lastChangeOrderStatus = model.lastChangeOrderStatus;
+                this.nameSpaceShortId = model.nameSpaceShortId;
+                this.namespaceId = model.namespaceId;
+                this.namespaceName = model.namespaceName;
+                this.notificationExpired = model.notificationExpired;
+                this.securityGroupId = model.securityGroupId;
+                this.tenantId = model.tenantId;
+                this.userId = model.userId;
+                this.vSwitchId = model.vSwitchId;
+                this.vSwitchName = model.vSwitchName;
+                this.vpcId = model.vpcId;
+                this.vpcName = model.vpcName;
+            } 
 
             /**
              * <p>The number of applications.</p>

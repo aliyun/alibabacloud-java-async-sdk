@@ -26,6 +26,10 @@ public class UpdateIngressRequest extends Request {
     private String certIds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CorsConfig")
+    private String corsConfig;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DefaultRule")
     private String defaultRule;
 
@@ -90,6 +94,7 @@ public class UpdateIngressRequest extends Request {
         super(builder);
         this.certId = builder.certId;
         this.certIds = builder.certIds;
+        this.corsConfig = builder.corsConfig;
         this.defaultRule = builder.defaultRule;
         this.description = builder.description;
         this.enableXForwardedFor = builder.enableXForwardedFor;
@@ -115,7 +120,7 @@ public class UpdateIngressRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -132,6 +137,13 @@ public class UpdateIngressRequest extends Request {
      */
     public String getCertIds() {
         return this.certIds;
+    }
+
+    /**
+     * @return corsConfig
+     */
+    public String getCorsConfig() {
+        return this.corsConfig;
     }
 
     /**
@@ -242,6 +254,7 @@ public class UpdateIngressRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateIngressRequest, Builder> {
         private String certId; 
         private String certIds; 
+        private String corsConfig; 
         private String defaultRule; 
         private String description; 
         private Boolean enableXForwardedFor; 
@@ -266,6 +279,7 @@ public class UpdateIngressRequest extends Request {
             super(request);
             this.certId = request.certId;
             this.certIds = request.certIds;
+            this.corsConfig = request.corsConfig;
             this.defaultRule = request.defaultRule;
             this.description = request.description;
             this.enableXForwardedFor = request.enableXForwardedFor;
@@ -312,6 +326,15 @@ public class UpdateIngressRequest extends Request {
         public Builder certIds(String certIds) {
             this.putQueryParameter("CertIds", certIds);
             this.certIds = certIds;
+            return this;
+        }
+
+        /**
+         * CorsConfig.
+         */
+        public Builder corsConfig(String corsConfig) {
+            this.putQueryParameter("CorsConfig", corsConfig);
+            this.corsConfig = corsConfig;
             return this;
         }
 
@@ -392,7 +415,13 @@ public class UpdateIngressRequest extends Request {
         }
 
         /**
-         * IdleTimeout.
+         * <p>The timeout period of idle connections. Unit: seconds.</p>
+         * <blockquote>
+         * <p> A value of 0 indicates that the default value is used.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder idleTimeout(Integer idleTimeout) {
             this.putQueryParameter("IdleTimeout", idleTimeout);
@@ -454,7 +483,10 @@ public class UpdateIngressRequest extends Request {
         }
 
         /**
-         * RequestTimeout.
+         * <p>The request timed out. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder requestTimeout(Integer requestTimeout) {
             this.putQueryParameter("RequestTimeout", requestTimeout);
@@ -481,7 +513,10 @@ public class UpdateIngressRequest extends Request {
         }
 
         /**
-         * SecurityPolicyId.
+         * <p>The ID of a security policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tls_cipher_policy_1_2_strict_with_1_3</p>
          */
         public Builder securityPolicyId(String securityPolicyId) {
             this.putQueryParameter("SecurityPolicyId", securityPolicyId);

@@ -60,6 +60,10 @@ public class LogEntry extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceID
      */
@@ -125,6 +129,20 @@ public class LogEntry extends TeaModel {
         private String qualifier; 
         private Integer timestamp; 
         private String versionID; 
+
+        private Builder() {
+        } 
+
+        private Builder(LogEntry model) {
+            this.instanceID = model.instanceID;
+            this.message = model.message;
+            this.offset = model.offset;
+            this.packID = model.packID;
+            this.packMeta = model.packMeta;
+            this.qualifier = model.qualifier;
+            this.timestamp = model.timestamp;
+            this.versionID = model.versionID;
+        } 
 
         /**
          * instanceID.

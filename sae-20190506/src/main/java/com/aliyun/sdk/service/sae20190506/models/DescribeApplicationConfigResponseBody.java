@@ -56,6 +56,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -113,6 +117,19 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeApplicationConfigResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * <p>The HTTP status code. Valid values:</p>
@@ -273,6 +290,16 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             private String key; 
             private String mountPath; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConfigMapMountDesc model) {
+                this.configMapId = model.configMapId;
+                this.configMapName = model.configMapName;
+                this.key = model.key;
+                this.mountPath = model.mountPath;
+            } 
+
             /**
              * <p>The ID of the ConfigMap.</p>
              * 
@@ -367,6 +394,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         public static final class Builder {
             private String mountPath; 
             private String nasPath; 
+
+            private Builder() {
+            } 
+
+            private Builder(MountDesc model) {
+                this.mountPath = model.mountPath;
+                this.nasPath = model.nasPath;
+            } 
 
             /**
              * <p>The path on which the NAS file system is mounted.</p>
@@ -464,6 +499,16 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             private String bucketPath; 
             private String mountPath; 
             private Boolean readOnly; 
+
+            private Builder() {
+            } 
+
+            private Builder(OssMountDescs model) {
+                this.bucketName = model.bucketName;
+                this.bucketPath = model.bucketPath;
+                this.mountPath = model.mountPath;
+                this.readOnly = model.readOnly;
+            } 
 
             /**
              * <p>The name of the OSS bucket.</p>
@@ -588,6 +633,16 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             private Long secretId; 
             private String secretName; 
 
+            private Builder() {
+            } 
+
+            private Builder(SecretMountDesc model) {
+                this.key = model.key;
+                this.mountPath = model.mountPath;
+                this.secretId = model.secretId;
+                this.secretName = model.secretName;
+            } 
+
             /**
              * <p>The key-value pair that is stored in the ConfigMap.</p>
              * 
@@ -701,6 +756,16 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             private String key; 
             private String mountPath; 
 
+            private Builder() {
+            } 
+
+            private Builder(SidecarContainersConfigConfigMapMountDesc model) {
+                this.configMapId = model.configMapId;
+                this.configMapName = model.configMapName;
+                this.key = model.key;
+                this.mountPath = model.mountPath;
+            } 
+
             /**
              * <p>The ID of the ConfigMap.</p>
              * 
@@ -795,6 +860,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         public static final class Builder {
             private String mountPath; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(EmptyDirDesc model) {
+                this.mountPath = model.mountPath;
+                this.name = model.name;
+            } 
 
             /**
              * <p>The path on which the NAS file system is mounted.</p>
@@ -962,6 +1035,22 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             private Integer memory; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(SidecarContainersConfig model) {
+                this.acrInstanceId = model.acrInstanceId;
+                this.command = model.command;
+                this.commandArgs = model.commandArgs;
+                this.configMapMountDesc = model.configMapMountDesc;
+                this.cpu = model.cpu;
+                this.emptyDirDesc = model.emptyDirDesc;
+                this.envs = model.envs;
+                this.imageUrl = model.imageUrl;
+                this.memory = model.memory;
+                this.name = model.name;
+            } 
+
             /**
              * AcrInstanceId.
              */
@@ -1092,6 +1181,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of the tag.</p>
@@ -2114,6 +2211,93 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             private String warStartOptions; 
             private String webContainer; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.acrAssumeRoleArn = model.acrAssumeRoleArn;
+                this.acrInstanceId = model.acrInstanceId;
+                this.appDescription = model.appDescription;
+                this.appId = model.appId;
+                this.appName = model.appName;
+                this.appSource = model.appSource;
+                this.associateEip = model.associateEip;
+                this.baseAppId = model.baseAppId;
+                this.batchWaitTime = model.batchWaitTime;
+                this.clusterId = model.clusterId;
+                this.command = model.command;
+                this.commandArgs = model.commandArgs;
+                this.configMapMountDesc = model.configMapMountDesc;
+                this.cpu = model.cpu;
+                this.customHostAlias = model.customHostAlias;
+                this.customImageNetworkType = model.customImageNetworkType;
+                this.dotnet = model.dotnet;
+                this.edasContainerVersion = model.edasContainerVersion;
+                this.enableAhas = model.enableAhas;
+                this.enableCpuBurst = model.enableCpuBurst;
+                this.enableGreyTagRoute = model.enableGreyTagRoute;
+                this.enableIdle = model.enableIdle;
+                this.enableNewArms = model.enableNewArms;
+                this.envs = model.envs;
+                this.imagePullSecrets = model.imagePullSecrets;
+                this.imageUrl = model.imageUrl;
+                this.jarStartArgs = model.jarStartArgs;
+                this.jarStartOptions = model.jarStartOptions;
+                this.jdk = model.jdk;
+                this.kafkaConfigs = model.kafkaConfigs;
+                this.liveness = model.liveness;
+                this.memory = model.memory;
+                this.microRegistration = model.microRegistration;
+                this.microRegistrationConfig = model.microRegistrationConfig;
+                this.microserviceEngineConfig = model.microserviceEngineConfig;
+                this.minReadyInstanceRatio = model.minReadyInstanceRatio;
+                this.minReadyInstances = model.minReadyInstances;
+                this.mountDesc = model.mountDesc;
+                this.mountHost = model.mountHost;
+                this.mseApplicationId = model.mseApplicationId;
+                this.mseApplicationName = model.mseApplicationName;
+                this.namespaceId = model.namespaceId;
+                this.nasConfigs = model.nasConfigs;
+                this.nasId = model.nasId;
+                this.newSaeVersion = model.newSaeVersion;
+                this.oidcRoleName = model.oidcRoleName;
+                this.ossAkId = model.ossAkId;
+                this.ossAkSecret = model.ossAkSecret;
+                this.ossMountDescs = model.ossMountDescs;
+                this.packageType = model.packageType;
+                this.packageUrl = model.packageUrl;
+                this.packageVersion = model.packageVersion;
+                this.php = model.php;
+                this.phpArmsConfigLocation = model.phpArmsConfigLocation;
+                this.phpConfig = model.phpConfig;
+                this.phpConfigLocation = model.phpConfigLocation;
+                this.postStart = model.postStart;
+                this.preStop = model.preStop;
+                this.programmingLanguage = model.programmingLanguage;
+                this.pvtzDiscovery = model.pvtzDiscovery;
+                this.python = model.python;
+                this.pythonModules = model.pythonModules;
+                this.readiness = model.readiness;
+                this.regionId = model.regionId;
+                this.replicas = model.replicas;
+                this.resourceType = model.resourceType;
+                this.secretMountDesc = model.secretMountDesc;
+                this.securityGroupId = model.securityGroupId;
+                this.serviceTags = model.serviceTags;
+                this.sidecarContainersConfig = model.sidecarContainersConfig;
+                this.slsConfigs = model.slsConfigs;
+                this.swimlanePvtzDiscovery = model.swimlanePvtzDiscovery;
+                this.tags = model.tags;
+                this.terminationGracePeriodSeconds = model.terminationGracePeriodSeconds;
+                this.timezone = model.timezone;
+                this.tomcatConfig = model.tomcatConfig;
+                this.updateStrategy = model.updateStrategy;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+                this.warStartOptions = model.warStartOptions;
+                this.webContainer = model.webContainer;
+            } 
+
             /**
              * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role that is used to pull images across accounts. For more information, see <a href="https://help.aliyun.com/document_detail/190675.html">Pull images across Alibaba Cloud accounts</a> and <a href="https://help.aliyun.com/document_detail/223585.html">Grant permissions across Alibaba Cloud accounts by using a RAM role</a>.</p>
              * 
@@ -2168,6 +2352,11 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
 
             /**
              * <p>The SAE application type.</p>
+             * <ul>
+             * <li>micro_service</li>
+             * <li>web</li>
+             * <li>job</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>micro_service</p>
@@ -2930,7 +3119,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceTags.
+             * <p>The canary tag configured for the application.</p>
              */
             public Builder serviceTags(java.util.Map<String, String> serviceTags) {
                 this.serviceTags = serviceTags;

@@ -54,7 +54,7 @@ public class ListWebCustomDomainsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -115,7 +115,10 @@ public class ListWebCustomDomainsRequest extends Request {
         } 
 
         /**
-         * ApplicationId.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7e41aff0-9eca-45c9-ac48-675e09******</p>
          */
         public Builder applicationId(String applicationId) {
             this.putQueryParameter("ApplicationId", applicationId);
@@ -124,7 +127,10 @@ public class ListWebCustomDomainsRequest extends Request {
         }
 
         /**
-         * Limit.
+         * <p>The number of custom domain names returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("Limit", limit);
@@ -133,7 +139,10 @@ public class ListWebCustomDomainsRequest extends Request {
         }
 
         /**
-         * NamespaceId.
+         * <p>The namespace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -142,7 +151,10 @@ public class ListWebCustomDomainsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A2RN</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -151,7 +163,10 @@ public class ListWebCustomDomainsRequest extends Request {
         }
 
         /**
-         * Prefix.
+         * <p>The prefix of the custom domain name that you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>remoteresult</p>
          */
         public Builder prefix(String prefix) {
             this.putQueryParameter("Prefix", prefix);

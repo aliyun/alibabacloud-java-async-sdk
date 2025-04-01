@@ -32,6 +32,10 @@ public class ExecAction extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return command
      */
@@ -41,6 +45,13 @@ public class ExecAction extends TeaModel {
 
     public static final class Builder {
         private java.util.List<String> command; 
+
+        private Builder() {
+        } 
+
+        private Builder(ExecAction model) {
+            this.command = model.command;
+        } 
 
         /**
          * command.

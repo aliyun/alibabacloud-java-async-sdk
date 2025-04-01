@@ -36,6 +36,10 @@ public class WebScalingConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maximumInstanceCount
      */
@@ -53,6 +57,14 @@ public class WebScalingConfig extends TeaModel {
     public static final class Builder {
         private Long maximumInstanceCount; 
         private Long minimumInstanceCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(WebScalingConfig model) {
+            this.maximumInstanceCount = model.maximumInstanceCount;
+            this.minimumInstanceCount = model.minimumInstanceCount;
+        } 
 
         /**
          * MaximumInstanceCount.

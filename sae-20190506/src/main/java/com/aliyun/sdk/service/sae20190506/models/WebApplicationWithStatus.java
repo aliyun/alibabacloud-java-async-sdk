@@ -36,6 +36,10 @@ public class WebApplicationWithStatus extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return status
      */
@@ -53,6 +57,14 @@ public class WebApplicationWithStatus extends TeaModel {
     public static final class Builder {
         private WebApplicationStatus status; 
         private WebApplication webApplication; 
+
+        private Builder() {
+        } 
+
+        private Builder(WebApplicationWithStatus model) {
+            this.status = model.status;
+            this.webApplication = model.webApplication;
+        } 
 
         /**
          * Status.

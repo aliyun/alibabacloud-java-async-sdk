@@ -43,6 +43,10 @@ public class WebCertConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return certName
      */
@@ -68,6 +72,15 @@ public class WebCertConfig extends TeaModel {
         private String certName; 
         private String certificate; 
         private String privateKey; 
+
+        private Builder() {
+        } 
+
+        private Builder(WebCertConfig model) {
+            this.certName = model.certName;
+            this.certificate = model.certificate;
+            this.privateKey = model.privateKey;
+        } 
 
         /**
          * CertName.

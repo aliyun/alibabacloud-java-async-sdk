@@ -79,6 +79,10 @@ public class WebApplication extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return applicationId
      */
@@ -176,6 +180,24 @@ public class WebApplication extends TeaModel {
         private String vpcId; 
         private WebScalingConfig webScalingConfig; 
         private WebTrafficConfig webTrafficConfig; 
+
+        private Builder() {
+        } 
+
+        private Builder(WebApplication model) {
+            this.applicationId = model.applicationId;
+            this.applicationName = model.applicationName;
+            this.createdTime = model.createdTime;
+            this.description = model.description;
+            this.internetURL = model.internetURL;
+            this.intranetURL = model.intranetURL;
+            this.lastModifiedTime = model.lastModifiedTime;
+            this.namespaceId = model.namespaceId;
+            this.revisionConfig = model.revisionConfig;
+            this.vpcId = model.vpcId;
+            this.webScalingConfig = model.webScalingConfig;
+            this.webTrafficConfig = model.webTrafficConfig;
+        } 
 
         /**
          * <p>This parameter is required.</p>

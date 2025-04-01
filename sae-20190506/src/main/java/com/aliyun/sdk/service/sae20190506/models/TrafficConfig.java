@@ -56,6 +56,10 @@ public class TrafficConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return additionalVersionWeight
      */
@@ -113,6 +117,19 @@ public class TrafficConfig extends TeaModel {
         private String resolvePolicy; 
         private RoutePolicy routePolicy; 
         private String versionId; 
+
+        private Builder() {
+        } 
+
+        private Builder(TrafficConfig model) {
+            this.additionalVersionWeight = model.additionalVersionWeight;
+            this.createdTime = model.createdTime;
+            this.lastModifiedTime = model.lastModifiedTime;
+            this.requestId = model.requestId;
+            this.resolvePolicy = model.resolvePolicy;
+            this.routePolicy = model.routePolicy;
+            this.versionId = model.versionId;
+        } 
 
         /**
          * additionalVersionWeight.

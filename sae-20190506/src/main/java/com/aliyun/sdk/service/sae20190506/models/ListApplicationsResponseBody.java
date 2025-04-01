@@ -64,6 +64,10 @@ public class ListApplicationsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -137,6 +141,21 @@ public class ListApplicationsResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Integer totalSize; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListApplicationsResponseBody model) {
+            this.code = model.code;
+            this.currentPage = model.currentPage;
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.message = model.message;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalSize = model.totalSize;
+        } 
 
         /**
          * <p>Queries applications.</p>
@@ -283,6 +302,14 @@ public class ListApplicationsResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * Key.
@@ -555,6 +582,31 @@ public class ListApplicationsResponseBody extends TeaModel {
             private String scaleRuleType; 
             private java.util.List<Tags> tags; 
 
+            private Builder() {
+            } 
+
+            private Builder(Children model) {
+                this.appDeletingStatus = model.appDeletingStatus;
+                this.appDescription = model.appDescription;
+                this.appId = model.appId;
+                this.appName = model.appName;
+                this.appType = model.appType;
+                this.baseAppId = model.baseAppId;
+                this.cpu = model.cpu;
+                this.instances = model.instances;
+                this.mem = model.mem;
+                this.mseEnabled = model.mseEnabled;
+                this.namespaceId = model.namespaceId;
+                this.namespaceName = model.namespaceName;
+                this.newSaeVersion = model.newSaeVersion;
+                this.programmingLanguage = model.programmingLanguage;
+                this.regionId = model.regionId;
+                this.runningInstances = model.runningInstances;
+                this.scaleRuleEnabled = model.scaleRuleEnabled;
+                this.scaleRuleType = model.scaleRuleType;
+                this.tags = model.tags;
+            } 
+
             /**
              * AppDeletingStatus.
              */
@@ -758,6 +810,14 @@ public class ListApplicationsResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(ApplicationsTags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The key of the tag.</p>
              * 
@@ -818,6 +878,9 @@ public class ListApplicationsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cpu")
         private Integer cpu;
 
+        @com.aliyun.core.annotation.NameInMap("EnableIdle")
+        private String enableIdle;
+
         @com.aliyun.core.annotation.NameInMap("ImageUrl")
         private String imageUrl;
 
@@ -866,6 +929,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             this.baseAppId = builder.baseAppId;
             this.children = builder.children;
             this.cpu = builder.cpu;
+            this.enableIdle = builder.enableIdle;
             this.imageUrl = builder.imageUrl;
             this.instances = builder.instances;
             this.mem = builder.mem;
@@ -943,6 +1007,13 @@ public class ListApplicationsResponseBody extends TeaModel {
          */
         public Integer getCpu() {
             return this.cpu;
+        }
+
+        /**
+         * @return enableIdle
+         */
+        public String getEnableIdle() {
+            return this.enableIdle;
         }
 
         /**
@@ -1045,6 +1116,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             private String baseAppId; 
             private java.util.List<Children> children; 
             private Integer cpu; 
+            private String enableIdle; 
             private String imageUrl; 
             private Integer instances; 
             private Integer mem; 
@@ -1058,6 +1130,34 @@ public class ListApplicationsResponseBody extends TeaModel {
             private String regionId; 
             private Integer runningInstances; 
             private java.util.List<ApplicationsTags> tags; 
+
+            private Builder() {
+            } 
+
+            private Builder(Applications model) {
+                this.appDeletingStatus = model.appDeletingStatus;
+                this.appDescription = model.appDescription;
+                this.appId = model.appId;
+                this.appName = model.appName;
+                this.appType = model.appType;
+                this.baseAppId = model.baseAppId;
+                this.children = model.children;
+                this.cpu = model.cpu;
+                this.enableIdle = model.enableIdle;
+                this.imageUrl = model.imageUrl;
+                this.instances = model.instances;
+                this.mem = model.mem;
+                this.mseEnabled = model.mseEnabled;
+                this.mseNamespaceId = model.mseNamespaceId;
+                this.namespaceId = model.namespaceId;
+                this.namespaceName = model.namespaceName;
+                this.newSaeVersion = model.newSaeVersion;
+                this.packageUrl = model.packageUrl;
+                this.programmingLanguage = model.programmingLanguage;
+                this.regionId = model.regionId;
+                this.runningInstances = model.runningInstances;
+                this.tags = model.tags;
+            } 
 
             /**
              * <p>Indicates whether the application is being deleted. Valid values:</p>
@@ -1148,6 +1248,14 @@ public class ListApplicationsResponseBody extends TeaModel {
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
+                return this;
+            }
+
+            /**
+             * EnableIdle.
+             */
+            public Builder enableIdle(String enableIdle) {
+                this.enableIdle = enableIdle;
                 return this;
             }
 
@@ -1356,6 +1464,16 @@ public class ListApplicationsResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.applications = model.applications;
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalSize = model.totalSize;
+            } 
 
             /**
              * <p>The applications.</p>

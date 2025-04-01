@@ -56,6 +56,10 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -113,6 +117,19 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeGreyTagRouteResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * <p>The HTTP status code. Valid values:</p>
@@ -309,6 +326,19 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
             private String type; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.cond = model.cond;
+                this.expr = model.expr;
+                this.index = model.index;
+                this.name = model.name;
+                this.operator = model.operator;
+                this.type = model.type;
+                this.value = model.value;
+            } 
+
             /**
              * <p>Valid value: ==.</p>
              * 
@@ -466,6 +496,16 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
             private java.util.List<Items> items; 
             private String serviceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(AlbRules model) {
+                this.condition = model.condition;
+                this.ingressId = model.ingressId;
+                this.items = model.items;
+                this.serviceId = model.serviceId;
+            } 
+
             /**
              * <p>The condition mode of the canary release rule. Valid value: AND. This value indicates that that all conditions must be met.</p>
              * 
@@ -617,6 +657,19 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
             private String operator; 
             private String type; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(DubboRulesItems model) {
+                this.cond = model.cond;
+                this.expr = model.expr;
+                this.index = model.index;
+                this.name = model.name;
+                this.operator = model.operator;
+                this.type = model.type;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The comparison operator. Valid values: <strong>&gt;</strong>, <strong>&lt;**, **&gt;=</strong>, <strong>&lt;=</strong>, <strong>==</strong>, and <strong>! =</strong>.</p>
@@ -808,6 +861,18 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
             private String serviceName; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(DubboRules model) {
+                this.condition = model.condition;
+                this.group = model.group;
+                this.items = model.items;
+                this.methodName = model.methodName;
+                this.serviceName = model.serviceName;
+                this.version = model.version;
+            } 
+
             /**
              * <p>The relationship between the conditions in the canary release rule. Valid values:</p>
              * <ul>
@@ -986,6 +1051,19 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
             private String type; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(ScRulesItems model) {
+                this.cond = model.cond;
+                this.expr = model.expr;
+                this.index = model.index;
+                this.name = model.name;
+                this.operator = model.operator;
+                this.type = model.type;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The comparison operator. Valid values: <strong>&gt;</strong>, <strong>&lt;**, **&gt;=</strong>, <strong>&lt;=</strong>, <strong>==</strong>, and <strong>! =</strong>.</p>
              * 
@@ -1136,6 +1214,15 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
             private String condition; 
             private java.util.List<ScRulesItems> items; 
             private String path; 
+
+            private Builder() {
+            } 
+
+            private Builder(ScRules model) {
+                this.condition = model.condition;
+                this.items = model.items;
+                this.path = model.path;
+            } 
 
             /**
              * <p>The relationship between the conditions in the canary release rule. Valid values:</p>
@@ -1305,6 +1392,21 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
             private String name; 
             private java.util.List<ScRules> scRules; 
             private Long updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.albRules = model.albRules;
+                this.appId = model.appId;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.dubboRules = model.dubboRules;
+                this.greyTagRouteId = model.greyTagRouteId;
+                this.name = model.name;
+                this.scRules = model.scRules;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * AlbRules.

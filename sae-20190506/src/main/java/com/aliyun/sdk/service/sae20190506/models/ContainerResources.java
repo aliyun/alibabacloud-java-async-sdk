@@ -38,6 +38,10 @@ public class ContainerResources extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cpu
      */
@@ -55,6 +59,14 @@ public class ContainerResources extends TeaModel {
     public static final class Builder {
         private Integer cpu; 
         private Integer memory; 
+
+        private Builder() {
+        } 
+
+        private Builder(ContainerResources model) {
+            this.cpu = model.cpu;
+            this.memory = model.memory;
+        } 
 
         /**
          * <p>This parameter is required.</p>

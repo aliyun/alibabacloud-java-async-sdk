@@ -48,6 +48,10 @@ public class HTTPGetAction extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return host
      */
@@ -89,6 +93,17 @@ public class HTTPGetAction extends TeaModel {
         private String path; 
         private Integer port; 
         private String scheme; 
+
+        private Builder() {
+        } 
+
+        private Builder(HTTPGetAction model) {
+            this.host = model.host;
+            this.httpHeaders = model.httpHeaders;
+            this.path = model.path;
+            this.port = model.port;
+            this.scheme = model.scheme;
+        } 
 
         /**
          * Host.

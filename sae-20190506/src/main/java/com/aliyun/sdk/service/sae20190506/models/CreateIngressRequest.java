@@ -30,6 +30,10 @@ public class CreateIngressRequest extends Request {
     private String certIds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CorsConfig")
+    private String corsConfig;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DefaultRule")
     @com.aliyun.core.annotation.Validation(required = true)
     private String defaultRule;
@@ -110,6 +114,7 @@ public class CreateIngressRequest extends Request {
         this.addressType = builder.addressType;
         this.certId = builder.certId;
         this.certIds = builder.certIds;
+        this.corsConfig = builder.corsConfig;
         this.defaultRule = builder.defaultRule;
         this.description = builder.description;
         this.enableXForwardedFor = builder.enableXForwardedFor;
@@ -138,7 +143,7 @@ public class CreateIngressRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -162,6 +167,13 @@ public class CreateIngressRequest extends Request {
      */
     public String getCertIds() {
         return this.certIds;
+    }
+
+    /**
+     * @return corsConfig
+     */
+    public String getCorsConfig() {
+        return this.corsConfig;
     }
 
     /**
@@ -294,6 +306,7 @@ public class CreateIngressRequest extends Request {
         private String addressType; 
         private String certId; 
         private String certIds; 
+        private String corsConfig; 
         private String defaultRule; 
         private String description; 
         private Boolean enableXForwardedFor; 
@@ -322,6 +335,7 @@ public class CreateIngressRequest extends Request {
             this.addressType = request.addressType;
             this.certId = request.certId;
             this.certIds = request.certIds;
+            this.corsConfig = request.corsConfig;
             this.defaultRule = request.defaultRule;
             this.description = request.description;
             this.enableXForwardedFor = request.enableXForwardedFor;
@@ -380,6 +394,15 @@ public class CreateIngressRequest extends Request {
         public Builder certIds(String certIds) {
             this.putQueryParameter("CertIds", certIds);
             this.certIds = certIds;
+            return this;
+        }
+
+        /**
+         * CorsConfig.
+         */
+        public Builder corsConfig(String corsConfig) {
+            this.putQueryParameter("CorsConfig", corsConfig);
+            this.corsConfig = corsConfig;
             return this;
         }
 
@@ -460,8 +483,7 @@ public class CreateIngressRequest extends Request {
         }
 
         /**
-         * <p>The timeout period of an idle connection. Unit: seconds. Valid values: 1 to 60.</p>
-         * <p>If no request is received within the specified timeout period, ALB closes the current connection. When another request is received, ALB establishes a new connection.</p>
+         * <p>The timeout period of an idle connection. Unit: seconds Valid values: 1 to 60. If no requests are received within the specified timeout period, ALB closes the current connection. When a new request is received, ALB establishes a new connection.</p>
          * 
          * <strong>example:</strong>
          * <p>15</p>
@@ -540,8 +562,7 @@ public class CreateIngressRequest extends Request {
         }
 
         /**
-         * <p>The timeout period of a request. Unit: seconds. Valid values: 1 to 180.
-         * If no response is received from the backend server within the specified timeout period, ALB returns an HTTP 504 error code to the client.</p>
+         * <p>The timeout period of a request. Unit: seconds. Valid values: 1 to 180. If no response is received from the backend server within the specified timeout period, ALB stops waiting for the response and returns an HTTP 504 error code to the client.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -577,7 +598,7 @@ public class CreateIngressRequest extends Request {
         }
 
         /**
-         * <p>The security policy ID.</p>
+         * <p>The ID of a security policy.</p>
          * 
          * <strong>example:</strong>
          * <p>sp-bp1bpn0kn9****</p>

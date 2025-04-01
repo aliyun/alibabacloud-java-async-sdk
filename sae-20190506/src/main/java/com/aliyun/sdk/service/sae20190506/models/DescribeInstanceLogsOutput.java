@@ -32,6 +32,10 @@ public class DescribeInstanceLogsOutput extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return webLogEntrys
      */
@@ -41,6 +45,13 @@ public class DescribeInstanceLogsOutput extends TeaModel {
 
     public static final class Builder {
         private java.util.List<WebLogEntry> webLogEntrys; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceLogsOutput model) {
+            this.webLogEntrys = model.webLogEntrys;
+        } 
 
         /**
          * WebLogEntrys.

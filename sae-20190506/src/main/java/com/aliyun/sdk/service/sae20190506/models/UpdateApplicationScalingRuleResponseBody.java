@@ -56,6 +56,10 @@ public class UpdateApplicationScalingRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -113,6 +117,19 @@ public class UpdateApplicationScalingRuleResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateApplicationScalingRuleResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * <p>The HTTP status code. Valid values:</p>
@@ -304,6 +321,18 @@ public class UpdateApplicationScalingRuleResponseBody extends TeaModel {
             private String slbProject; 
             private String vport; 
 
+            private Builder() {
+            } 
+
+            private Builder(Metrics model) {
+                this.metricTargetAverageUtilization = model.metricTargetAverageUtilization;
+                this.metricType = model.metricType;
+                this.slbId = model.slbId;
+                this.slbLogstore = model.slbLogstore;
+                this.slbProject = model.slbProject;
+                this.vport = model.vport;
+            } 
+
             /**
              * <p>The limit on the metric.</p>
              * <ul>
@@ -435,6 +464,15 @@ public class UpdateApplicationScalingRuleResponseBody extends TeaModel {
             private java.util.List<Metrics> metrics; 
             private Integer minReplicas; 
 
+            private Builder() {
+            } 
+
+            private Builder(Metric model) {
+                this.maxReplicas = model.maxReplicas;
+                this.metrics = model.metrics;
+                this.minReplicas = model.minReplicas;
+            } 
+
             /**
              * <p>The maximum number of instances.</p>
              * 
@@ -539,6 +577,16 @@ public class UpdateApplicationScalingRuleResponseBody extends TeaModel {
             private Integer maxReplicas; 
             private Integer minReplicas; 
             private Integer targetReplicas; 
+
+            private Builder() {
+            } 
+
+            private Builder(Schedules model) {
+                this.atTime = model.atTime;
+                this.maxReplicas = model.maxReplicas;
+                this.minReplicas = model.minReplicas;
+                this.targetReplicas = model.targetReplicas;
+            } 
 
             /**
              * <p>The point in time. Format: <strong>Hour:Minute</strong>.</p>
@@ -658,6 +706,16 @@ public class UpdateApplicationScalingRuleResponseBody extends TeaModel {
             private String endDate; 
             private String period; 
             private java.util.List<Schedules> schedules; 
+
+            private Builder() {
+            } 
+
+            private Builder(Timer model) {
+                this.beginDate = model.beginDate;
+                this.endDate = model.endDate;
+                this.period = model.period;
+                this.schedules = model.schedules;
+            } 
 
             /**
              * <p>The start date of the validity period of the scheduled auto scaling policy. Parameter description:</p>
@@ -871,6 +929,22 @@ public class UpdateApplicationScalingRuleResponseBody extends TeaModel {
             private String scaleRuleType; 
             private Timer timer; 
             private Long updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.appId = model.appId;
+                this.createTime = model.createTime;
+                this.enableIdle = model.enableIdle;
+                this.lastDisableTime = model.lastDisableTime;
+                this.metric = model.metric;
+                this.scaleRuleEnabled = model.scaleRuleEnabled;
+                this.scaleRuleName = model.scaleRuleName;
+                this.scaleRuleType = model.scaleRuleType;
+                this.timer = model.timer;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The application ID.</p>

@@ -36,6 +36,10 @@ public class SourceCodeRepoBranch extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return commitId
      */
@@ -53,6 +57,14 @@ public class SourceCodeRepoBranch extends TeaModel {
     public static final class Builder {
         private String commitId; 
         private String name; 
+
+        private Builder() {
+        } 
+
+        private Builder(SourceCodeRepoBranch model) {
+            this.commitId = model.commitId;
+            this.name = model.name;
+        } 
 
         /**
          * CommitId.

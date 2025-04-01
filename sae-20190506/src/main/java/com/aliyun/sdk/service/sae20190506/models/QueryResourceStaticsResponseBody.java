@@ -56,6 +56,10 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -113,6 +117,19 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryResourceStaticsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * <p>The HTTP status code. Valid values:</p>
@@ -253,6 +270,14 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
             private Float cpu; 
             private Float memory; 
 
+            private Builder() {
+            } 
+
+            private Builder(RealTimeRes model) {
+                this.cpu = model.cpu;
+                this.memory = model.memory;
+            } 
+
             /**
              * <p>The CPU usage. Unit: core per minute.</p>
              * 
@@ -350,6 +375,16 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
             private Float idleCpu; 
             private Float memory; 
 
+            private Builder() {
+            } 
+
+            private Builder(Summary model) {
+                this.activeCpu = model.activeCpu;
+                this.cpu = model.cpu;
+                this.idleCpu = model.idleCpu;
+                this.memory = model.memory;
+            } 
+
             /**
              * ActiveCpu.
              */
@@ -438,6 +473,14 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
         public static final class Builder {
             private RealTimeRes realTimeRes; 
             private Summary summary; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.realTimeRes = model.realTimeRes;
+                this.summary = model.summary;
+            } 
 
             /**
              * <p>The real-time resource usage.</p>

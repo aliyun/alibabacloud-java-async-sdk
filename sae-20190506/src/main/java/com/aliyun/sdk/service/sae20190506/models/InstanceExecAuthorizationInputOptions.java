@@ -48,6 +48,10 @@ public class InstanceExecAuthorizationInputOptions extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return command
      */
@@ -89,6 +93,17 @@ public class InstanceExecAuthorizationInputOptions extends TeaModel {
         private Boolean stdin; 
         private Boolean stdout; 
         private Boolean tty; 
+
+        private Builder() {
+        } 
+
+        private Builder(InstanceExecAuthorizationInputOptions model) {
+            this.command = model.command;
+            this.stderr = model.stderr;
+            this.stdin = model.stdin;
+            this.stdout = model.stdout;
+            this.tty = model.tty;
+        } 
 
         /**
          * command.

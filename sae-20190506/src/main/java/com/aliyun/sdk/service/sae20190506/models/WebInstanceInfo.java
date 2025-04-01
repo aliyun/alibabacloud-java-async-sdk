@@ -44,6 +44,10 @@ public class WebInstanceInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return imageUrl
      */
@@ -77,6 +81,16 @@ public class WebInstanceInfo extends TeaModel {
         private String instanceId; 
         private String status; 
         private String versionId; 
+
+        private Builder() {
+        } 
+
+        private Builder(WebInstanceInfo model) {
+            this.imageUrl = model.imageUrl;
+            this.instanceId = model.instanceId;
+            this.status = model.status;
+            this.versionId = model.versionId;
+        } 
 
         /**
          * ImageUrl.

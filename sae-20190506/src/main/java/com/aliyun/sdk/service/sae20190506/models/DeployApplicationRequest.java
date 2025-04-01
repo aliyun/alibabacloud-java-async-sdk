@@ -147,6 +147,10 @@ public class DeployApplicationRequest extends Request {
     private String microRegistrationConfig;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MicroserviceEngineConfig")
+    private String microserviceEngineConfig;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MinReadyInstanceRatio")
     private Integer minReadyInstanceRatio;
 
@@ -329,6 +333,7 @@ public class DeployApplicationRequest extends Request {
         this.memory = builder.memory;
         this.microRegistration = builder.microRegistration;
         this.microRegistrationConfig = builder.microRegistrationConfig;
+        this.microserviceEngineConfig = builder.microserviceEngineConfig;
         this.minReadyInstanceRatio = builder.minReadyInstanceRatio;
         this.minReadyInstances = builder.minReadyInstances;
         this.mountDesc = builder.mountDesc;
@@ -376,7 +381,7 @@ public class DeployApplicationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -603,6 +608,13 @@ public class DeployApplicationRequest extends Request {
      */
     public String getMicroRegistrationConfig() {
         return this.microRegistrationConfig;
+    }
+
+    /**
+     * @return microserviceEngineConfig
+     */
+    public String getMicroserviceEngineConfig() {
+        return this.microserviceEngineConfig;
     }
 
     /**
@@ -897,6 +909,7 @@ public class DeployApplicationRequest extends Request {
         private Integer memory; 
         private String microRegistration; 
         private String microRegistrationConfig; 
+        private String microserviceEngineConfig; 
         private Integer minReadyInstanceRatio; 
         private Integer minReadyInstances; 
         private String mountDesc; 
@@ -973,6 +986,7 @@ public class DeployApplicationRequest extends Request {
             this.memory = request.memory;
             this.microRegistration = request.microRegistration;
             this.microRegistrationConfig = request.microRegistrationConfig;
+            this.microserviceEngineConfig = request.microserviceEngineConfig;
             this.minReadyInstanceRatio = request.minReadyInstanceRatio;
             this.minReadyInstances = request.minReadyInstances;
             this.mountDesc = request.mountDesc;
@@ -1472,6 +1486,15 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
+         * MicroserviceEngineConfig.
+         */
+        public Builder microserviceEngineConfig(String microserviceEngineConfig) {
+            this.putQueryParameter("MicroserviceEngineConfig", microserviceEngineConfig);
+            this.microserviceEngineConfig = microserviceEngineConfig;
+            return this;
+        }
+
+        /**
          * <p>The percentage of the minimum number of available instances. Take note of the following rules:</p>
          * <ul>
          * <li>If you set the value to <strong>-1</strong>, the minimum number of available instances is not determined based on this parameter. Default value: -1.</li>
@@ -1565,7 +1588,13 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * OidcRoleName.
+         * <p>The name of the RAM role used to authenticate the user identity.</p>
+         * <blockquote>
+         * <p> You need to create an OpenID Connect (OIDC) identity provider (IdP) and an identity provider (IdP) for role-based single sign-on (SSO) in advance. For more information, see <a href="https://help.aliyun.com/document_detail/2331022.html">Creates an OpenID Connect (OIDC) identity provider (IdP)</a> and <a href="https://help.aliyun.com/document_detail/2331016.html">Creates an identity provider (IdP) for role-based single sign-on (SSO)</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>sae-test</p>
          */
         public Builder oidcRoleName(String oidcRoleName) {
             this.putQueryParameter("OidcRoleName", oidcRoleName);
@@ -1819,7 +1848,7 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * SidecarContainersConfig.
+         * <p>The configuration of the container.</p>
          */
         public Builder sidecarContainersConfig(java.util.List<SidecarContainerConfig> sidecarContainersConfig) {
             String sidecarContainersConfigShrink = shrink(sidecarContainersConfig, "SidecarContainersConfig", "json");

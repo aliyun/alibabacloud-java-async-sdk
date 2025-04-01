@@ -69,6 +69,10 @@ public class BuildPipeline extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return applicationId
      */
@@ -142,6 +146,21 @@ public class BuildPipeline extends TeaModel {
         private ImageConfig imageConfig; 
         private PackageConfig packageConfig; 
         private TriggerConfig triggerConfig; 
+
+        private Builder() {
+        } 
+
+        private Builder(BuildPipeline model) {
+            this.applicationId = model.applicationId;
+            this.applicationName = model.applicationName;
+            this.buildConfig = model.buildConfig;
+            this.codeConfig = model.codeConfig;
+            this.deployConfig = model.deployConfig;
+            this.enabled = model.enabled;
+            this.imageConfig = model.imageConfig;
+            this.packageConfig = model.packageConfig;
+            this.triggerConfig = model.triggerConfig;
+        } 
 
         /**
          * <p>This parameter is required.</p>
@@ -338,6 +357,20 @@ public class BuildPipeline extends TeaModel {
             private TomcatConfig tomcatConfig; 
             private String workingDir; 
 
+            private Builder() {
+            } 
+
+            private Builder(BuildConfig model) {
+                this.beforeBuildCommand = model.beforeBuildCommand;
+                this.buildType = model.buildType;
+                this.dockerfilePath = model.dockerfilePath;
+                this.runCommand = model.runCommand;
+                this.runtimeType = model.runtimeType;
+                this.runtimeVersion = model.runtimeVersion;
+                this.tomcatConfig = model.tomcatConfig;
+                this.workingDir = model.workingDir;
+            } 
+
             /**
              * BeforeBuildCommand.
              */
@@ -533,6 +566,20 @@ public class BuildPipeline extends TeaModel {
             private String repoFullName; 
             private String repoId; 
 
+            private Builder() {
+            } 
+
+            private Builder(CodeConfig model) {
+                this.accountId = model.accountId;
+                this.branchName = model.branchName;
+                this.commitId = model.commitId;
+                this.commitUrl = model.commitUrl;
+                this.organizationId = model.organizationId;
+                this.provider = model.provider;
+                this.repoFullName = model.repoFullName;
+                this.repoId = model.repoId;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              * 
@@ -699,6 +746,17 @@ public class BuildPipeline extends TeaModel {
             private String updateApplicationInput; 
             private Boolean updateTraffic; 
 
+            private Builder() {
+            } 
+
+            private Builder(DeployConfig model) {
+                this.alwaysAllocateCPU = model.alwaysAllocateCPU;
+                this.maximumInstanceCount = model.maximumInstanceCount;
+                this.minimumInstanceCount = model.minimumInstanceCount;
+                this.updateApplicationInput = model.updateApplicationInput;
+                this.updateTraffic = model.updateTraffic;
+            } 
+
             /**
              * AlwaysAllocateCPU.
              */
@@ -802,6 +860,15 @@ public class BuildPipeline extends TeaModel {
             private String namespace; 
             private String repository; 
 
+            private Builder() {
+            } 
+
+            private Builder(ImageConfig model) {
+                this.instanceType = model.instanceType;
+                this.namespace = model.namespace;
+                this.repository = model.repository;
+            } 
+
             /**
              * InstanceType.
              */
@@ -901,6 +968,16 @@ public class BuildPipeline extends TeaModel {
             private String packageUrl; 
             private String packageVersion; 
 
+            private Builder() {
+            } 
+
+            private Builder(PackageConfig model) {
+                this.packageName = model.packageName;
+                this.packageType = model.packageType;
+                this.packageUrl = model.packageUrl;
+                this.packageVersion = model.packageVersion;
+            } 
+
             /**
              * PackageName.
              */
@@ -996,6 +1073,15 @@ public class BuildPipeline extends TeaModel {
             private String branchName; 
             private String tagName; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(TriggerConfig model) {
+                this.branchName = model.branchName;
+                this.tagName = model.tagName;
+                this.type = model.type;
+            } 
 
             /**
              * <p>This parameter is required.</p>

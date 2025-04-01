@@ -106,6 +106,10 @@ public class PriceEstimateFeature extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return appType
      */
@@ -251,6 +255,30 @@ public class PriceEstimateFeature extends TeaModel {
         private Long noneLoadInstanceCount; 
         private Long noneLoadSeconds; 
         private String regionId; 
+
+        private Builder() {
+        } 
+
+        private Builder(PriceEstimateFeature model) {
+            this.appType = model.appType;
+            this.cpuCore = model.cpuCore;
+            this.cpuStrategy = model.cpuStrategy;
+            this.envType = model.envType;
+            this.highLoadInstanceCount = model.highLoadInstanceCount;
+            this.highLoadQps = model.highLoadQps;
+            this.highLoadSeconds = model.highLoadSeconds;
+            this.instanceQps = model.instanceQps;
+            this.internetOutboundGiB = model.internetOutboundGiB;
+            this.lowLoadInstanceCount = model.lowLoadInstanceCount;
+            this.lowLoadQps = model.lowLoadQps;
+            this.lowLoadSeconds = model.lowLoadSeconds;
+            this.maxInstanceCount = model.maxInstanceCount;
+            this.memoryGiB = model.memoryGiB;
+            this.minInstanceCount = model.minInstanceCount;
+            this.noneLoadInstanceCount = model.noneLoadInstanceCount;
+            this.noneLoadSeconds = model.noneLoadSeconds;
+            this.regionId = model.regionId;
+        } 
 
         /**
          * <p>This parameter is required.</p>

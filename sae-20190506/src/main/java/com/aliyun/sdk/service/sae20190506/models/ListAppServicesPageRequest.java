@@ -51,7 +51,7 @@ public class ListAppServicesPageRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -103,7 +103,7 @@ public class ListAppServicesPageRequest extends Request {
         } 
 
         /**
-         * <p>1</p>
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,7 +116,7 @@ public class ListAppServicesPageRequest extends Request {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The page number of the returned page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -128,7 +128,7 @@ public class ListAppServicesPageRequest extends Request {
         }
 
         /**
-         * <p>The returned information.</p>
+         * <p>The number of entries returned on each page. Valid values: 0 to 9999.</p>
          * 
          * <strong>example:</strong>
          * <p>9999</p>
@@ -140,7 +140,11 @@ public class ListAppServicesPageRequest extends Request {
         }
 
         /**
-         * <p>9999</p>
+         * <p>The service type. Valid values:</p>
+         * <ul>
+         * <li><strong>dubbo</strong></li>
+         * <li><strong>springCloud</strong></li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

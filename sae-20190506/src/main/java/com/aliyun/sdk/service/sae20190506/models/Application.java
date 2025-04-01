@@ -240,6 +240,10 @@ public class Application extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -665,6 +669,65 @@ public class Application extends TeaModel {
         private String urlIntranet; 
         private Version version; 
         private VPCConfig vpcConfig; 
+
+        private Builder() {
+        } 
+
+        private Builder(Application model) {
+            this.requestId = model.requestId;
+            this.applicationId = model.applicationId;
+            this.applicationName = model.applicationName;
+            this.args = model.args;
+            this.caPort = model.caPort;
+            this.codeChecksum = model.codeChecksum;
+            this.codeSize = model.codeSize;
+            this.command = model.command;
+            this.cpu = model.cpu;
+            this.createdTime = model.createdTime;
+            this.customDNS = model.customDNS;
+            this.customDomainName = model.customDomainName;
+            this.customHealthCheckConfig = model.customHealthCheckConfig;
+            this.customHostAlias = model.customHostAlias;
+            this.customRuntimeConfig = model.customRuntimeConfig;
+            this.description = model.description;
+            this.diskSize = model.diskSize;
+            this.enableAppMetric = model.enableAppMetric;
+            this.enableArmsAdvanced = model.enableArmsAdvanced;
+            this.environmentVariables = model.environmentVariables;
+            this.gpuMemorySize = model.gpuMemorySize;
+            this.handler = model.handler;
+            this.httpTriggerConfig = model.httpTriggerConfig;
+            this.imageConfig = model.imageConfig;
+            this.initializationTimeout = model.initializationTimeout;
+            this.initializer = model.initializer;
+            this.instanceConcurrency = model.instanceConcurrency;
+            this.instanceLifecycleConfig = model.instanceLifecycleConfig;
+            this.instanceSoftConcurrency = model.instanceSoftConcurrency;
+            this.instanceType = model.instanceType;
+            this.internetAccess = model.internetAccess;
+            this.lastModifiedTime = model.lastModifiedTime;
+            this.layers = model.layers;
+            this.layersArnV2 = model.layersArnV2;
+            this.livenessProbe = model.livenessProbe;
+            this.logConfig = model.logConfig;
+            this.memorySize = model.memorySize;
+            this.namespace = model.namespace;
+            this.namespaceID = model.namespaceID;
+            this.namespaceName = model.namespaceName;
+            this.nasConfig = model.nasConfig;
+            this.ossMountConfig = model.ossMountConfig;
+            this.programmingLanguage = model.programmingLanguage;
+            this.runtime = model.runtime;
+            this.scaleConfig = model.scaleConfig;
+            this.slsConfig = model.slsConfig;
+            this.startupProbe = model.startupProbe;
+            this.timeout = model.timeout;
+            this.tracingConfig = model.tracingConfig;
+            this.urlInternet = model.urlInternet;
+            this.urlIntranet = model.urlIntranet;
+            this.version = model.version;
+            this.vpcConfig = model.vpcConfig;
+        } 
 
         /**
          * RequestId.

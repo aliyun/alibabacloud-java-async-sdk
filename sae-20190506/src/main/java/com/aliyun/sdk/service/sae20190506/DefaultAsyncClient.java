@@ -306,6 +306,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Call the CreateWebApplication operation to create a web application.</p>
+     * 
      * @param request the request parameters of CreateWebApplication  CreateWebApplicationRequest
      * @return CreateWebApplicationResponse
      */
@@ -324,6 +327,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Create a custom domain name for the web application.</p>
+     * 
      * @param request the request parameters of CreateWebCustomDomain  CreateWebCustomDomainRequest
      * @return CreateWebCustomDomainResponse
      */
@@ -504,6 +510,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Call the DeleteWebApplication operation to delete a web application.</p>
+     * 
      * @param request the request parameters of DeleteWebApplication  DeleteWebApplicationRequest
      * @return DeleteWebApplicationResponse
      */
@@ -522,6 +531,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Delete a web application version.</p>
+     * 
      * @param request the request parameters of DeleteWebApplicationRevision  DeleteWebApplicationRevisionRequest
      * @return DeleteWebApplicationRevisionResponse
      */
@@ -540,6 +552,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Delete a custom domain name.</p>
+     * 
      * @param request the request parameters of DeleteWebCustomDomain  DeleteWebCustomDomainRequest
      * @return DeleteWebCustomDomainResponse
      */
@@ -1080,6 +1095,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Call the DescribeWebApplication operation to query web applications.</p>
+     * 
      * @param request the request parameters of DescribeWebApplication  DescribeWebApplicationRequest
      * @return DescribeWebApplicationResponse
      */
@@ -1098,6 +1116,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query the resource usage of a web application.</p>
+     * 
      * @param request the request parameters of DescribeWebApplicationResourceStatics  DescribeWebApplicationResourceStaticsRequest
      * @return DescribeWebApplicationResourceStaticsResponse
      */
@@ -1116,6 +1137,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Describe a web application version.</p>
+     * 
      * @param request the request parameters of DescribeWebApplicationRevision  DescribeWebApplicationRevisionRequest
      * @return DescribeWebApplicationRevisionResponse
      */
@@ -1134,6 +1158,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Call the DescribeWebApplicationScalingConfig operation to obtain the scaling configuration of a web application.</p>
+     * 
      * @param request the request parameters of DescribeWebApplicationScalingConfig  DescribeWebApplicationScalingConfigRequest
      * @return DescribeWebApplicationScalingConfigResponse
      */
@@ -1152,6 +1179,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Call the DescribeWebApplicationTrafficConfig operation to query the traffic configurations of a web application.</p>
+     * 
      * @param request the request parameters of DescribeWebApplicationTrafficConfig  DescribeWebApplicationTrafficConfigRequest
      * @return DescribeWebApplicationTrafficConfigResponse
      */
@@ -1170,6 +1200,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query the details of a custom domain name for a web application.</p>
+     * 
      * @param request the request parameters of DescribeWebCustomDomain  DescribeWebCustomDomainRequest
      * @return DescribeWebCustomDomainResponse
      */
@@ -1188,6 +1221,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Obtain the logs of web application instances.</p>
+     * 
      * @param request the request parameters of DescribeWebInstanceLogs  DescribeWebInstanceLogsRequest
      * @return DescribeWebInstanceLogsResponse
      */
@@ -1697,6 +1733,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query the list of web application instances.</p>
+     * 
      * @param request the request parameters of ListWebApplicationInstances  ListWebApplicationInstancesRequest
      * @return ListWebApplicationInstancesResponse
      */
@@ -1715,6 +1754,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query the list of web application versions.</p>
+     * 
      * @param request the request parameters of ListWebApplicationRevisions  ListWebApplicationRevisionsRequest
      * @return ListWebApplicationRevisionsResponse
      */
@@ -1733,6 +1775,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Call the ListWebApplications operation to query the list of web applications.</p>
+     * 
      * @param request the request parameters of ListWebApplications  ListWebApplicationsRequest
      * @return ListWebApplicationsResponse
      */
@@ -1751,6 +1796,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query available custom domain names.</p>
+     * 
      * @param request the request parameters of ListWebCustomDomains  ListWebCustomDomainsRequest
      * @return ListWebCustomDomainsResponse
      */
@@ -1792,6 +1840,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Publish a web application version. You can change the configurations of the version and create a new version.</p>
+     * 
      * @param request the request parameters of PublishWebApplicationRevision  PublishWebApplicationRevisionRequest
      * @return PublishWebApplicationRevisionResponse
      */
@@ -1954,6 +2005,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Call the StartWebApplication operation to start a web application.</p>
+     * 
      * @param request the request parameters of StartWebApplication  StartWebApplicationRequest
      * @return StartWebApplicationResponse
      */
@@ -1990,6 +2044,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Call the StopWebApplication operation to stop a web application.</p>
+     * 
      * @param request the request parameters of StopWebApplication  StopWebApplicationRequest
      * @return StopWebApplicationResponse
      */
@@ -2038,6 +2095,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<TagResourcesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UnbindNlb  UnbindNlbRequest
+     * @return UnbindNlbResponse
+     */
+    @Override
+    public CompletableFuture<UnbindNlbResponse> unbindNlb(UnbindNlbRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UnbindNlb").setMethod(HttpMethod.DELETE).setPathRegex("/pop/v1/sam/app/nlb").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UnbindNlbResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UnbindNlbResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2282,6 +2357,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call the UpdateWebApplication operation to update the configuration at the web application level.</p>
+     * 
      * @param request the request parameters of UpdateWebApplication  UpdateWebApplicationRequest
      * @return UpdateWebApplicationResponse
      */
@@ -2300,6 +2378,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call the UpdateWebApplicationScalingConfig operation to update the scaling configurations of a web application.</p>
+     * 
      * @param request the request parameters of UpdateWebApplicationScalingConfig  UpdateWebApplicationScalingConfigRequest
      * @return UpdateWebApplicationScalingConfigResponse
      */
@@ -2318,6 +2399,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Call the UpdateWebApplicationTrafficConfig operation to update the traffic configurations of a web application.</p>
+     * 
      * @param request the request parameters of UpdateWebApplicationTrafficConfig  UpdateWebApplicationTrafficConfigRequest
      * @return UpdateWebApplicationTrafficConfigResponse
      */
@@ -2336,6 +2420,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Update a custom domain name.</p>
+     * 
      * @param request the request parameters of UpdateWebCustomDomain  UpdateWebCustomDomainRequest
      * @return UpdateWebCustomDomainResponse
      */
@@ -2354,6 +2441,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You are charged when you use the ARMS advanced monitoring feature. Enable this feature based on your business requirements. For more information, see <a href="https://icms.alibaba-inc.com/content/arms/arms?l=1%5C&m=16992%5C&n=3183148">Billing overview</a>.</p>
+     * 
      * @param request the request parameters of UpgradeApplicationApmService  UpgradeApplicationApmServiceRequest
      * @return UpgradeApplicationApmServiceResponse
      */

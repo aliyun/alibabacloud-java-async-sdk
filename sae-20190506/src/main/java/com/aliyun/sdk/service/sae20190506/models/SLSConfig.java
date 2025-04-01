@@ -32,6 +32,10 @@ public class SLSConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return collectConfigs
      */
@@ -41,6 +45,13 @@ public class SLSConfig extends TeaModel {
 
     public static final class Builder {
         private java.util.List<CollectConfigs> collectConfigs; 
+
+        private Builder() {
+        } 
+
+        private Builder(SLSConfig model) {
+            this.collectConfigs = model.collectConfigs;
+        } 
 
         /**
          * collectConfigs.
@@ -135,6 +146,17 @@ public class SLSConfig extends TeaModel {
             private String logstoreName; 
             private String logtailName; 
             private String projectName; 
+
+            private Builder() {
+            } 
+
+            private Builder(CollectConfigs model) {
+                this.logPath = model.logPath;
+                this.logType = model.logType;
+                this.logstoreName = model.logstoreName;
+                this.logtailName = model.logtailName;
+                this.projectName = model.projectName;
+            } 
 
             /**
              * logPath.

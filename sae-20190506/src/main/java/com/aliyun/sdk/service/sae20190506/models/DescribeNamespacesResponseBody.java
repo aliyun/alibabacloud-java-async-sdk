@@ -56,6 +56,10 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -114,13 +118,26 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         private Boolean success; 
         private String traceId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeNamespacesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
+
         /**
          * <p>The HTTP status code. Valid values:</p>
          * <ul>
-         * <li><strong>2xx</strong>: indicates that the request was successful.</li>
-         * <li><strong>3xx</strong>: indicates that the request was redirected.</li>
-         * <li><strong>4xx</strong>: indicates that the request failed.</li>
-         * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+         * <li><strong>2xx</strong>: The call was successful.</li>
+         * <li><strong>3xx</strong>: The call was redirected.</li>
+         * <li><strong>4xx</strong>: The call failed.</li>
+         * <li><strong>5xx</strong>: A server error occurred.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -140,10 +157,10 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code. </p>
+         * <p>The error code. Valid values:</p>
          * <ul>
-         * <li>The <strong>ErrorCode</strong> parameter is not returned when the request succeeds.</li>
-         * <li>The <strong>ErrorCode</strong> parameter is returned when the request fails. For more information, see <strong>Error codes</strong> in this topic.</li>
+         * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+         * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
          * </ul>
          */
         public Builder errorCode(String errorCode) {
@@ -152,10 +169,10 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The returned message. Valid values:</p>
          * <ul>
-         * <li><strong>success</strong> is returned when the request succeeds.</li>
-         * <li>An error message is returned when the request fails.</li>
+         * <li>success: If the call is successful, <strong>success</strong> is returned.</li>
+         * <li>An error code: If the call fails, an error code is returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -167,7 +184,7 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
@@ -178,10 +195,10 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the details of namespaces were queried successfully. Valid values:</p>
+         * <p>Indicates whether the list of namespaces was queried. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: indicates that the query was successful.</li>
-         * <li><strong>false</strong>: indicates that the query failed.</li>
+         * <li><strong>true</strong>: The list was queried.</li>
+         * <li><strong>false</strong>: The list failed to be queried.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -193,7 +210,7 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the trace. It can be used to query the details of a request.</p>
+         * <p>The trace ID that is used to query the details of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>0a981dd515966966104121683d****</p>
@@ -337,8 +354,23 @@ public class DescribeNamespacesResponseBody extends TeaModel {
             private String secretKey; 
             private String tenantId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Namespaces model) {
+                this.accessKey = model.accessKey;
+                this.addressServerHost = model.addressServerHost;
+                this.nameSpaceShortId = model.nameSpaceShortId;
+                this.namespaceDescription = model.namespaceDescription;
+                this.namespaceId = model.namespaceId;
+                this.namespaceName = model.namespaceName;
+                this.regionId = model.regionId;
+                this.secretKey = model.secretKey;
+                this.tenantId = model.tenantId;
+            } 
+
             /**
-             * <p>The ACM-specific AccessKey ID. It can be used to manage data in an Application Configuration Management (ACM) namespace. For more information, see <a href="~~~~">Differences between Alibaba Cloud AccessKey and ACM-specific AccessKey</a>.</p>
+             * <p>The ACM-specific AccessKey ID. It can be used to manage data in an Application Configuration Management (ACM) namespace. For more information, see <a href="https://help.aliyun.com/document_detail/68941.html">Differences between Alibaba Cloud AccessKey and ACM-specific AccessKey</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>b34dbe3315c64f9f99b58ea447ec****</p>
@@ -349,7 +381,10 @@ public class DescribeNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * AddressServerHost.
+             * <p>The endpoint of the host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>addr-bj-internal.edas.aliyun.com</p>
              */
             public Builder addressServerHost(String addressServerHost) {
                 this.addressServerHost = addressServerHost;
@@ -357,7 +392,10 @@ public class DescribeNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * NameSpaceShortId.
+             * <p>The short ID of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder nameSpaceShortId(String nameSpaceShortId) {
                 this.nameSpaceShortId = nameSpaceShortId;
@@ -376,7 +414,7 @@ public class DescribeNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the namespace. The information of the default namespace cannot be queried or modified. The default namespace cannot be deleted.</p>
+             * <p>The ID of the namespace. You cannot query, modify, or delete the default namespace.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-beijing:test</p>
@@ -398,7 +436,7 @@ public class DescribeNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region.</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-beijing</p>
@@ -409,7 +447,7 @@ public class DescribeNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ACM-specific AccessKey secret. It can be used to manage data in an ACM namespace. For more information, see <a href="~~~~">Differences between Alibaba Cloud AccessKey and ACM-specific AccessKey</a>.</p>
+             * <p>The ACM-specific AccessKey secret. It can be used to manage data in an ACM namespace. For more information, see <a href="https://help.aliyun.com/document_detail/68941.html">Differences between Alibaba Cloud AccessKey and ACM-specific AccessKey</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>G/w6sseK7+nb3S6HBmANDBMD****</p>
@@ -420,7 +458,7 @@ public class DescribeNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the tenant.</p>
+             * <p>The tenant ID.</p>
              * 
              * <strong>example:</strong>
              * <p>838cad95-973f-48fe-830b-2a8546d7****</p>
@@ -505,8 +543,18 @@ public class DescribeNamespacesResponseBody extends TeaModel {
             private Integer pageSize; 
             private Integer totalSize; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.currentPage = model.currentPage;
+                this.namespaces = model.namespaces;
+                this.pageSize = model.pageSize;
+                this.totalSize = model.totalSize;
+            } 
+
             /**
-             * <p>The page number of the returned page.</p>
+             * <p>The page number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -517,7 +565,7 @@ public class DescribeNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of namespaces.</p>
+             * <p>The namespaces.</p>
              */
             public Builder namespaces(java.util.List<Namespaces> namespaces) {
                 this.namespaces = namespaces;
@@ -525,7 +573,7 @@ public class DescribeNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries returned on each page.</p>
+             * <p>The number of entries per page.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>

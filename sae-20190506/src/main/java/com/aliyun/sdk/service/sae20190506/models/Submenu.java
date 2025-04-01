@@ -44,6 +44,10 @@ public class Submenu extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -77,6 +81,16 @@ public class Submenu extends TeaModel {
         private String submenuDesc; 
         private String submenuType; 
         private java.util.List<Submenu> submenus; 
+
+        private Builder() {
+        } 
+
+        private Builder(Submenu model) {
+            this.items = model.items;
+            this.submenuDesc = model.submenuDesc;
+            this.submenuType = model.submenuType;
+            this.submenus = model.submenus;
+        } 
 
         /**
          * Items.
@@ -183,6 +197,16 @@ public class Submenu extends TeaModel {
             private String itemDesc; 
             private String itemType; 
             private java.util.List<String> relatingItems; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.defaultSelected = model.defaultSelected;
+                this.itemDesc = model.itemDesc;
+                this.itemType = model.itemType;
+                this.relatingItems = model.relatingItems;
+            } 
 
             /**
              * DefaultSelected.

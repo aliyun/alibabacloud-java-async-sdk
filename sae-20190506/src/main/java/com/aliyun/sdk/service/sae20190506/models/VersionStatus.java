@@ -36,6 +36,10 @@ public class VersionStatus extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorMessage
      */
@@ -53,6 +57,14 @@ public class VersionStatus extends TeaModel {
     public static final class Builder {
         private String errorMessage; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(VersionStatus model) {
+            this.errorMessage = model.errorMessage;
+            this.status = model.status;
+        } 
 
         /**
          * errorMessage.

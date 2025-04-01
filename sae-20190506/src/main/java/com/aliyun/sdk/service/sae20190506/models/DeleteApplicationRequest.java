@@ -35,7 +35,7 @@ public class DeleteApplicationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -60,7 +60,7 @@ public class DeleteApplicationRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The ID of the application.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

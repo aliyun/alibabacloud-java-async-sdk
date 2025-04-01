@@ -52,6 +52,10 @@ public class ListAppVersionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -102,6 +106,18 @@ public class ListAppVersionsResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListAppVersionsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
          * <p>Indicates whether the historical versions of the application were obtained. Valid values:</p>
          * <ul>
@@ -118,12 +134,7 @@ public class ListAppVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The deployment method of the application. Valid values:</p>
-         * <ul>
-         * <li><strong>image</strong>: indicates that the application was deployed by using an image.</li>
-         * <li><strong>upload</strong>: indicates that the application was deployed by uploading a WAR or JAR package.</li>
-         * <li><strong>url</strong>: indicates that the application was deployed by specifying the URL of a WAR or JAR package.</li>
-         * </ul>
+         * <p>The information about the versions.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -260,10 +271,22 @@ public class ListAppVersionsResponseBody extends TeaModel {
             private String type; 
             private String warUrl; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.buildPackageUrl = model.buildPackageUrl;
+                this.createTime = model.createTime;
+                this.id = model.id;
+                this.type = model.type;
+                this.warUrl = model.warUrl;
+            } 
+
             /**
+             * <p>The URL of the code package. If you use the SAE console to upload the code package, take note of the following items:</p>
              * <ul>
-             * <li>The address of the image. This parameter is returned when the <strong>Type</strong> parameter is set to <strong>image</strong>.</li>
-             * <li>The download link of the WAR or JAR package. This parameter is returned when the <strong>Type</strong> parameter is set to <strong>upload</strong>.</li>
+             * <li>You cannot download the URL. You must call the GetPackageVersionAccessableUrl operation to obtain the URL. The obtained URL is valid for 10 minutes.</li>
+             * <li>SAE can retain the package up to 90 days. After 90 days, the URL cannot be returned or downloaded.</li>
              * </ul>
              */
             public Builder buildPackageUrl(String buildPackageUrl) {
@@ -298,7 +321,11 @@ public class ListAppVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the application was created.</p>
+             * <p>The deployment method of the application. Valid values:</p>
+             * <ul>
+             * <li><strong>image</strong>: indicates that the application is deployed by using an image.</li>
+             * <li><strong>url</strong>: indicates that the application is deployed by using a code package.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>image</p>
@@ -309,7 +336,7 @@ public class ListAppVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the version.</p>
+             * <p>The URL of the image.</p>
              */
             public Builder warUrl(String warUrl) {
                 this.warUrl = warUrl;

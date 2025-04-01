@@ -40,6 +40,10 @@ public class UpdateAttributesInput extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return description
      */
@@ -65,6 +69,15 @@ public class UpdateAttributesInput extends TeaModel {
         private String description; 
         private HTTPTriggerConfig httpTriggerConfig; 
         private String versionID; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateAttributesInput model) {
+            this.description = model.description;
+            this.httpTriggerConfig = model.httpTriggerConfig;
+            this.versionID = model.versionID;
+        } 
 
         /**
          * description.

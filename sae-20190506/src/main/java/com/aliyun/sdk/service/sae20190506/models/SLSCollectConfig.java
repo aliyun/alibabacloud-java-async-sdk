@@ -52,6 +52,10 @@ public class SLSCollectConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return logPath
      */
@@ -101,6 +105,18 @@ public class SLSCollectConfig extends TeaModel {
         private String logtailName; 
         private String machineGroup; 
         private String projectName; 
+
+        private Builder() {
+        } 
+
+        private Builder(SLSCollectConfig model) {
+            this.logPath = model.logPath;
+            this.logType = model.logType;
+            this.logstoreName = model.logstoreName;
+            this.logtailName = model.logtailName;
+            this.machineGroup = model.machineGroup;
+            this.projectName = model.projectName;
+        } 
 
         /**
          * LogPath.

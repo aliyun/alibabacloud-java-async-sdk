@@ -56,6 +56,10 @@ public class ListSecretsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -113,6 +117,19 @@ public class ListSecretsResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSecretsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * <p>The HTTP status code. Valid values:</p>
@@ -256,6 +273,14 @@ public class ListSecretsResponseBody extends TeaModel {
             private String appId; 
             private String appName; 
 
+            private Builder() {
+            } 
+
+            private Builder(RelateApps model) {
+                this.appId = model.appId;
+                this.appName = model.appName;
+            } 
+
             /**
              * <p>The application ID.</p>
              * 
@@ -389,6 +414,19 @@ public class ListSecretsResponseBody extends TeaModel {
             private String secretType; 
             private Long updateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(Secrets model) {
+                this.createTime = model.createTime;
+                this.namespaceId = model.namespaceId;
+                this.relateApps = model.relateApps;
+                this.secretId = model.secretId;
+                this.secretName = model.secretName;
+                this.secretType = model.secretType;
+                this.updateTime = model.updateTime;
+            } 
+
             /**
              * <p>The time when the Secret was created.</p>
              * 
@@ -502,6 +540,13 @@ public class ListSecretsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Secrets> secrets; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.secrets = model.secrets;
+            } 
 
             /**
              * <p>The Secrets.</p>

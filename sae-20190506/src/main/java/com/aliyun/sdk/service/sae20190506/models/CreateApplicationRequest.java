@@ -147,6 +147,10 @@ public class CreateApplicationRequest extends Request {
     private String microRegistrationConfig;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MicroserviceEngineConfig")
+    private String microserviceEngineConfig;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MountDesc")
     private String mountDesc;
 
@@ -165,6 +169,10 @@ public class CreateApplicationRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NasId")
     private String nasId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewSaeVersion")
+    private String newSaeVersion;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OidcRoleName")
@@ -335,11 +343,13 @@ public class CreateApplicationRequest extends Request {
         this.memory = builder.memory;
         this.microRegistration = builder.microRegistration;
         this.microRegistrationConfig = builder.microRegistrationConfig;
+        this.microserviceEngineConfig = builder.microserviceEngineConfig;
         this.mountDesc = builder.mountDesc;
         this.mountHost = builder.mountHost;
         this.namespaceId = builder.namespaceId;
         this.nasConfigs = builder.nasConfigs;
         this.nasId = builder.nasId;
+        this.newSaeVersion = builder.newSaeVersion;
         this.oidcRoleName = builder.oidcRoleName;
         this.ossAkId = builder.ossAkId;
         this.ossAkSecret = builder.ossAkSecret;
@@ -383,7 +393,7 @@ public class CreateApplicationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -613,6 +623,13 @@ public class CreateApplicationRequest extends Request {
     }
 
     /**
+     * @return microserviceEngineConfig
+     */
+    public String getMicroserviceEngineConfig() {
+        return this.microserviceEngineConfig;
+    }
+
+    /**
      * @return mountDesc
      */
     public String getMountDesc() {
@@ -645,6 +662,13 @@ public class CreateApplicationRequest extends Request {
      */
     public String getNasId() {
         return this.nasId;
+    }
+
+    /**
+     * @return newSaeVersion
+     */
+    public String getNewSaeVersion() {
+        return this.newSaeVersion;
     }
 
     /**
@@ -911,11 +935,13 @@ public class CreateApplicationRequest extends Request {
         private Integer memory; 
         private String microRegistration; 
         private String microRegistrationConfig; 
+        private String microserviceEngineConfig; 
         private String mountDesc; 
         private String mountHost; 
         private String namespaceId; 
         private String nasConfigs; 
         private String nasId; 
+        private String newSaeVersion; 
         private String oidcRoleName; 
         private String ossAkId; 
         private String ossAkSecret; 
@@ -988,11 +1014,13 @@ public class CreateApplicationRequest extends Request {
             this.memory = request.memory;
             this.microRegistration = request.microRegistration;
             this.microRegistrationConfig = request.microRegistrationConfig;
+            this.microserviceEngineConfig = request.microserviceEngineConfig;
             this.mountDesc = request.mountDesc;
             this.mountHost = request.mountHost;
             this.namespaceId = request.namespaceId;
             this.nasConfigs = request.nasConfigs;
             this.nasId = request.nasId;
+            this.newSaeVersion = request.newSaeVersion;
             this.oidcRoleName = request.oidcRoleName;
             this.ossAkId = request.ossAkId;
             this.ossAkSecret = request.ossAkSecret;
@@ -1378,6 +1406,15 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
+         * MicroserviceEngineConfig.
+         */
+        public Builder microserviceEngineConfig(String microserviceEngineConfig) {
+            this.putQueryParameter("MicroserviceEngineConfig", microserviceEngineConfig);
+            this.microserviceEngineConfig = microserviceEngineConfig;
+            return this;
+        }
+
+        /**
          * <p>[{mountPath: &quot;/tmp&quot;, nasPath: &quot;/&quot;}]</p>
          * 
          * <strong>example:</strong>
@@ -1431,6 +1468,15 @@ public class CreateApplicationRequest extends Request {
         public Builder nasId(String nasId) {
             this.putQueryParameter("NasId", nasId);
             this.nasId = nasId;
+            return this;
+        }
+
+        /**
+         * NewSaeVersion.
+         */
+        public Builder newSaeVersion(String newSaeVersion) {
+            this.putQueryParameter("NewSaeVersion", newSaeVersion);
+            this.newSaeVersion = newSaeVersion;
             return this;
         }
 

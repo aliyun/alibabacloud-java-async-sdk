@@ -56,6 +56,10 @@ public class DescribeJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -114,6 +118,19 @@ public class DescribeJobResponseBody extends TeaModel {
         private Boolean success; 
         private String traceId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeJobResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
+
         /**
          * <p>The HTTP status code. Valid values:</p>
          * <ul>
@@ -132,7 +149,7 @@ public class DescribeJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the application.</p>
+         * <p>The information of the job template.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -177,10 +194,10 @@ public class DescribeJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the configurations of an application were obtained. Valid values:</p>
+         * <p>Indicates whether the configurations of the job template were obtained. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: The configurations were obtained.</li>
+         * <li><strong>false</strong>: The configurations failed to be obtained.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -276,6 +293,16 @@ public class DescribeJobResponseBody extends TeaModel {
             private String key; 
             private String mountPath; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConfigMapMountDesc model) {
+                this.configMapId = model.configMapId;
+                this.configMapName = model.configMapName;
+                this.key = model.key;
+                this.mountPath = model.mountPath;
+            } 
+
             /**
              * <p>The ConfigMap ID.</p>
              * 
@@ -310,7 +337,7 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The path on which the NAS file system is mounted.</p>
+             * <p>The path on which the ConfigMap is mounted.</p>
              * 
              * <strong>example:</strong>
              * <p>/tmp</p>
@@ -370,6 +397,14 @@ public class DescribeJobResponseBody extends TeaModel {
         public static final class Builder {
             private String mountPath; 
             private String nasPath; 
+
+            private Builder() {
+            } 
+
+            private Builder(MountDesc model) {
+                this.mountPath = model.mountPath;
+                this.nasPath = model.nasPath;
+            } 
 
             /**
              * <p>The path on which the NAS file system is mounted.</p>
@@ -468,8 +503,18 @@ public class DescribeJobResponseBody extends TeaModel {
             private String mountPath; 
             private Boolean readOnly; 
 
+            private Builder() {
+            } 
+
+            private Builder(OssMountDescs model) {
+                this.bucketName = model.bucketName;
+                this.bucketPath = model.bucketPath;
+                this.mountPath = model.mountPath;
+                this.readOnly = model.readOnly;
+            } 
+
             /**
-             * <p>The bucket name.</p>
+             * <p>The name of the bucket.</p>
              * 
              * <strong>example:</strong>
              * <p>oss-bucket</p>
@@ -502,10 +547,10 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the application can use the container path to read data from or write data to resources in the directory of the OSS bucket. Valid values:</p>
+             * <p>Indicates whether the job template can use the container directory to read data from or write data to resources in the directory of the OSS bucket. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: The application has the read-only permission.</li>
-             * <li><strong>false</strong>: The application has read and write permissions.</li>
+             * <li><strong>true</strong>: The job template has the read-only permissions.</li>
+             * <li><strong>false</strong>: The job template has the read and write permissions.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -566,6 +611,14 @@ public class DescribeJobResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -1324,6 +1377,71 @@ public class DescribeJobResponseBody extends TeaModel {
             private String warStartOptions; 
             private String webContainer; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.acrAssumeRoleArn = model.acrAssumeRoleArn;
+                this.acrInstanceId = model.acrInstanceId;
+                this.appDescription = model.appDescription;
+                this.appId = model.appId;
+                this.appName = model.appName;
+                this.backoffLimit = model.backoffLimit;
+                this.command = model.command;
+                this.commandArgs = model.commandArgs;
+                this.concurrencyPolicy = model.concurrencyPolicy;
+                this.configMapMountDesc = model.configMapMountDesc;
+                this.cpu = model.cpu;
+                this.customHostAlias = model.customHostAlias;
+                this.edasContainerVersion = model.edasContainerVersion;
+                this.envs = model.envs;
+                this.imagePullSecrets = model.imagePullSecrets;
+                this.imageUrl = model.imageUrl;
+                this.jarStartArgs = model.jarStartArgs;
+                this.jarStartOptions = model.jarStartOptions;
+                this.jdk = model.jdk;
+                this.memory = model.memory;
+                this.mountDesc = model.mountDesc;
+                this.mountHost = model.mountHost;
+                this.namespaceId = model.namespaceId;
+                this.nasConfigs = model.nasConfigs;
+                this.nasId = model.nasId;
+                this.ossAkId = model.ossAkId;
+                this.ossAkSecret = model.ossAkSecret;
+                this.ossMountDescs = model.ossMountDescs;
+                this.packageType = model.packageType;
+                this.packageUrl = model.packageUrl;
+                this.packageVersion = model.packageVersion;
+                this.phpConfig = model.phpConfig;
+                this.phpConfigLocation = model.phpConfigLocation;
+                this.postStart = model.postStart;
+                this.preStop = model.preStop;
+                this.programmingLanguage = model.programmingLanguage;
+                this.publicWebHookUrls = model.publicWebHookUrls;
+                this.python = model.python;
+                this.pythonModules = model.pythonModules;
+                this.refAppId = model.refAppId;
+                this.refedAppIds = model.refedAppIds;
+                this.regionId = model.regionId;
+                this.replicas = model.replicas;
+                this.securityGroupId = model.securityGroupId;
+                this.slice = model.slice;
+                this.sliceEnvs = model.sliceEnvs;
+                this.slsConfigs = model.slsConfigs;
+                this.suspend = model.suspend;
+                this.tags = model.tags;
+                this.terminationGracePeriodSeconds = model.terminationGracePeriodSeconds;
+                this.timeout = model.timeout;
+                this.timezone = model.timezone;
+                this.tomcatConfig = model.tomcatConfig;
+                this.triggerConfig = model.triggerConfig;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+                this.vpcWebHookUrls = model.vpcWebHookUrls;
+                this.warStartOptions = model.warStartOptions;
+                this.webContainer = model.webContainer;
+            } 
+
             /**
              * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role that is used to pull images across accounts. For more information, see <a href="https://help.aliyun.com/document_detail/190675.html">Pull images across Alibaba Cloud accounts</a> and <a href="https://help.aliyun.com/document_detail/223585.html">Grant permissions across Alibaba Cloud accounts by using a RAM role</a>.</p>
              * 
@@ -1347,7 +1465,7 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the application.</p>
+             * <p>The description of the job template.</p>
              * 
              * <strong>example:</strong>
              * <p>Sample application</p>
@@ -1358,7 +1476,7 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The application ID.</p>
+             * <p>The ID of the job template.</p>
              * 
              * <strong>example:</strong>
              * <p>7171a6ca-d1cd-4928-8642-7d5cfe69****</p>
@@ -1369,7 +1487,7 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The application name.</p>
+             * <p>The name of the job template.</p>
              * 
              * <strong>example:</strong>
              * <p>demo-app</p>
@@ -1481,7 +1599,7 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the container, such as Ali-Tomcat, in which an application developed based on High-speed Service Framework (HSF) is deployed.</p>
+             * <p>The version of the container, such as Ali-Tomcat, in which a job that is developed based on High-speed Service Framework (HSF) is deployed.</p>
              * 
              * <strong>example:</strong>
              * <p>3.5.3</p>
@@ -1541,7 +1659,7 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The arguments in the JAR package. The arguments are used to start the application container. The default startup command is <code>$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS &quot;$package_path&quot; $JarStartArgs</code>.</p>
+             * <p>The arguments in the JAR package. The arguments are used to start the job. The default startup command is <code>$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS &quot;$package_path&quot; $JarStartArgs</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>start</p>
@@ -1552,7 +1670,7 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The option settings in the JAR package. The settings are used to start the application container. The default startup command is <code>$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS &quot;$package_path&quot; $JarStartArgs</code>.</p>
+             * <p>The option settings in the JAR package. The settings are used to start the job. The default startup command is <code>$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS &quot;$package_path&quot; $JarStartArgs</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>-Dtest=true</p>
@@ -1614,7 +1732,7 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The mount target of the NAS file system in the VPC in which the application is deployed. If you do not need to modify this configuration during the deployment, configure <strong>MountHost</strong> only in the first request. If you need to remove this configuration, leave <strong>MountHost</strong> empty in the request.</p>
+             * <p>The mount target of the Apsara File Storage NAS (NAS) file system in the virtual private cloud (VPC) where the job template is deployed. If you do not need to modify the NAS configurations when you deploy the job template, configure the <strong>MountHost</strong> parameter only in the first request. You do not need to include this parameter in subsequent requests. If you no longer need to use NAS, leave the <strong>MountHost</strong> parameter empty in the request.</p>
              * 
              * <strong>example:</strong>
              * <p>example.com</p>
@@ -1690,9 +1808,9 @@ public class DescribeJobResponseBody extends TeaModel {
             /**
              * <p>The type of the deployment package. Valid values:</p>
              * <ul>
-             * <li><p>If you deploy the application by using a Java Archive (JAR) package, this parameter is set to <strong>FatJar</strong>, <strong>War</strong>, or <strong>Image</strong>.</p>
+             * <li><p>If you deploy a Java job template, you can set this parameter to <strong>FatJar</strong>, <strong>War</strong>, or <strong>Image</strong>.</p>
              * </li>
-             * <li><p>If you deploy the application by using a PHP package, this parameter is set to one of the following values:</p>
+             * <li><p>If you deploy a PHP job template, the following types are available:</p>
              * <ul>
              * <li><strong>PhpZip</strong></li>
              * <li><strong>IMAGE_PHP_5_4</strong></li>
@@ -1711,7 +1829,7 @@ public class DescribeJobResponseBody extends TeaModel {
              * <li><strong>IMAGE_PHP_7_3_ALPINE</strong></li>
              * </ul>
              * </li>
-             * <li><p>If you deploy the application by using a Pythhon package, this parameter is set to <strong>PythonZip</strong> or <strong>Image</strong>.</p>
+             * <li><p>If you deploy a Python job template, you can set this parameter to <strong>PythonZip</strong> or <strong>Image</strong>.</p>
              * </li>
              * </ul>
              * 
@@ -1754,7 +1872,7 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The path on which the PHP configuration file for application startup is mounted. Make sure that the PHP server uses this configuration file during the startup.</p>
+             * <p>The path on which the PHP configuration file for job startup is mounted. Make sure that the PHP server uses this configuration file during the startup.</p>
              * 
              * <strong>example:</strong>
              * <p>/usr/local/etc/php/php.ini</p>
@@ -1787,12 +1905,12 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The programming language that is used to create the application. Valid values:</p>
+             * <p>The programming language in which the job template is created. Valid values:</p>
              * <ul>
              * <li><strong>java</strong>: Java</li>
              * <li><strong>php</strong>: PHP</li>
              * <li><strong>python</strong>: Python</li>
-             * <li><strong>other</strong>: other programming languages, such as C++, Go, .NET, and Node.js.</li>
+             * <li><strong>other</strong>: other programming languages, such as C++, Go, .NET, and Node.js</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1864,7 +1982,7 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of application instances.</p>
+             * <p>The number of job instances.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -1962,7 +2080,7 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timeout period for the job. Unit: seconds.</p>
+             * <p>The timeout period of the job. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>3600</p>
@@ -2040,7 +2158,7 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The option settings in the WAR package. The settings are used to start the application container. The default startup command is <code>java $JAVA_OPTS $CATALINA_OPTS -Options org.apache.catalina.startup.Bootstrap &quot;$@&quot; start</code>.</p>
+             * <p>The option settings in the WAR package. The settings are used to start the job. The default startup command is <code>java $JAVA_OPTS $CATALINA_OPTS -Options org.apache.catalina.startup.Bootstrap &quot;$@&quot; start</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>custom-option</p>

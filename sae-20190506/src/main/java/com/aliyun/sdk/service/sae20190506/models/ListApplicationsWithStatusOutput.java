@@ -40,6 +40,10 @@ public class ListApplicationsWithStatusOutput extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return applications
      */
@@ -65,6 +69,15 @@ public class ListApplicationsWithStatusOutput extends TeaModel {
         private java.util.List<ApplicationWithStatus> applications; 
         private String nextToken; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListApplicationsWithStatusOutput model) {
+            this.applications = model.applications;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * applications.

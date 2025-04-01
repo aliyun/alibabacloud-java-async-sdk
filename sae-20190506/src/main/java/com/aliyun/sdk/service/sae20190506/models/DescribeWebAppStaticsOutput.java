@@ -36,6 +36,10 @@ public class DescribeWebAppStaticsOutput extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return length
      */
@@ -53,6 +57,14 @@ public class DescribeWebAppStaticsOutput extends TeaModel {
     public static final class Builder {
         private Integer length; 
         private java.util.List<WebStaticsInfo> webAppStatics; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeWebAppStaticsOutput model) {
+            this.length = model.length;
+            this.webAppStatics = model.webAppStatics;
+        } 
 
         /**
          * Length.

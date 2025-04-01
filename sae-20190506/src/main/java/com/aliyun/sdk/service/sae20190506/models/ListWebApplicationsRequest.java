@@ -49,7 +49,7 @@ public class ListWebApplicationsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -101,7 +101,10 @@ public class ListWebApplicationsRequest extends Request {
         } 
 
         /**
-         * Limit.
+         * <p>The number of applications returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("Limit", limit);
@@ -110,7 +113,10 @@ public class ListWebApplicationsRequest extends Request {
         }
 
         /**
-         * NamespaceId.
+         * <p>The namespace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing:test</p>
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -119,7 +125,10 @@ public class ListWebApplicationsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MTIzNCNhYmM</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -128,7 +137,10 @@ public class ListWebApplicationsRequest extends Request {
         }
 
         /**
-         * Prefix.
+         * <p>The prefix of the application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-application</p>
          */
         public Builder prefix(String prefix) {
             this.putQueryParameter("Prefix", prefix);

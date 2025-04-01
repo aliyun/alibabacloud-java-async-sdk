@@ -35,7 +35,7 @@ public class DescribeChangeOrderRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -60,7 +60,7 @@ public class DescribeChangeOrderRequest extends Request {
         } 
 
         /**
-         * <p>76fa5c0-9ebb-4bb4-b383-1f885447****</p>
+         * <p>The ID of the change order. You can call the <a href="https://help.aliyun.com/document_detail/126615.html">ListChangeOrders</a> operation to obtain the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

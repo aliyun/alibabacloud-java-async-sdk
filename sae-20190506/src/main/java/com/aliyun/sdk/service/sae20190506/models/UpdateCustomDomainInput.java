@@ -60,6 +60,10 @@ public class UpdateCustomDomainInput extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return applicationID
      */
@@ -125,6 +129,20 @@ public class UpdateCustomDomainInput extends TeaModel {
         private String protocol; 
         private TLSConfig tlsConfig; 
         private WAFConfig wafConfig; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateCustomDomainInput model) {
+            this.applicationID = model.applicationID;
+            this.applicationName = model.applicationName;
+            this.certConfig = model.certConfig;
+            this.keepFullPath = model.keepFullPath;
+            this.namespaceID = model.namespaceID;
+            this.protocol = model.protocol;
+            this.tlsConfig = model.tlsConfig;
+            this.wafConfig = model.wafConfig;
+        } 
 
         /**
          * applicationID.

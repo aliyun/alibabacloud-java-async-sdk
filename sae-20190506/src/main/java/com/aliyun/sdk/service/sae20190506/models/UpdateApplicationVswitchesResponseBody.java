@@ -52,6 +52,10 @@ public class UpdateApplicationVswitchesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -102,8 +106,29 @@ public class UpdateApplicationVswitchesResponseBody extends TeaModel {
         private Boolean success; 
         private String traceId; 
 
+        private Builder() {
+        } 
+
+        private Builder(UpdateApplicationVswitchesResponseBody model) {
+            this.code = model.code;
+            this.errorCode = model.errorCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
+
         /**
-         * Code.
+         * <p>The HTTP status code. Valid values:</p>
+         * <ul>
+         * <li><strong>2xx</strong>: The request was successful.</li>
+         * <li><strong>3xx</strong>: The request was redirected.</li>
+         * <li><strong>4xx</strong>: The request failed.</li>
+         * <li><strong>5xx</strong>: A server error occurred.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -111,7 +136,11 @@ public class UpdateApplicationVswitchesResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code. Valid values:</p>
+         * <ul>
+         * <li>If the request was successful, this parameter is not returned.****</li>
+         * <li>If the request failed, <strong>ErrorCode</strong> is returned. For more information, see <strong>Error code</strong> section of this topic.</li>
+         * </ul>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -119,7 +148,14 @@ public class UpdateApplicationVswitchesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message returned. Valid values:</p>
+         * <ul>
+         * <li>If the request was successful, <strong>success</strong> is returned.</li>
+         * <li>If the request failed, an error code is returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -127,7 +163,10 @@ public class UpdateApplicationVswitchesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -135,7 +174,14 @@ public class UpdateApplicationVswitchesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the list of applications was obtained. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The applications were obtained.</li>
+         * <li><strong>false</strong>: The applications failed to be queried.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -143,7 +189,10 @@ public class UpdateApplicationVswitchesResponseBody extends TeaModel {
         }
 
         /**
-         * TraceId.
+         * <p>The ID of the trace. The ID is used to query the details of a request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0a98a02315955564772843261e****</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;

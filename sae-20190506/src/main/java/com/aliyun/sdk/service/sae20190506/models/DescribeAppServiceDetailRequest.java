@@ -65,7 +65,7 @@ public class DescribeAppServiceDetailRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -157,7 +157,10 @@ public class DescribeAppServiceDetailRequest extends Request {
         }
 
         /**
-         * NacosInstanceId.
+         * <p>The ID of the MSE Nacos instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-cn-sco3r0u****</p>
          */
         public Builder nacosInstanceId(String nacosInstanceId) {
             this.putQueryParameter("NacosInstanceId", nacosInstanceId);
@@ -166,7 +169,10 @@ public class DescribeAppServiceDetailRequest extends Request {
         }
 
         /**
-         * NacosNamespaceId.
+         * <p>The ID of the namespace for the MSE Nacos instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>public</p>
          */
         public Builder nacosNamespaceId(String nacosNamespaceId) {
             this.putQueryParameter("NacosNamespaceId", nacosNamespaceId);

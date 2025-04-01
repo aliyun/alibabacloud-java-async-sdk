@@ -42,6 +42,10 @@ public class UpdateApplicationScaleConfigInput extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return alwaysAllocateCPU
      */
@@ -67,6 +71,15 @@ public class UpdateApplicationScaleConfigInput extends TeaModel {
         private Boolean alwaysAllocateCPU; 
         private Long maximumInstanceCount; 
         private Long minimumInstanceCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateApplicationScaleConfigInput model) {
+            this.alwaysAllocateCPU = model.alwaysAllocateCPU;
+            this.maximumInstanceCount = model.maximumInstanceCount;
+            this.minimumInstanceCount = model.minimumInstanceCount;
+        } 
 
         /**
          * alwaysAllocateCPU.

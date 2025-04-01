@@ -48,6 +48,10 @@ public class HTTPTriggerConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return aclConfig
      */
@@ -89,6 +93,17 @@ public class HTTPTriggerConfig extends TeaModel {
         private String authType; 
         private Boolean disableURLInternet; 
         private Boolean safeMode; 
+
+        private Builder() {
+        } 
+
+        private Builder(HTTPTriggerConfig model) {
+            this.aclConfig = model.aclConfig;
+            this.authConfig = model.authConfig;
+            this.authType = model.authType;
+            this.disableURLInternet = model.disableURLInternet;
+            this.safeMode = model.safeMode;
+        } 
 
         /**
          * aclConfig.

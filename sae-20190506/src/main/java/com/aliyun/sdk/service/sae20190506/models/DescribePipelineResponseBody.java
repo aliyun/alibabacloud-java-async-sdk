@@ -56,6 +56,10 @@ public class DescribePipelineResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -113,6 +117,19 @@ public class DescribePipelineResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePipelineResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * <p>The HTTP status code. Valid values:</p>
@@ -336,6 +353,21 @@ public class DescribePipelineResponseBody extends TeaModel {
             private String taskId; 
             private String taskName; 
 
+            private Builder() {
+            } 
+
+            private Builder(TaskList model) {
+                this.errorCode = model.errorCode;
+                this.errorIgnore = model.errorIgnore;
+                this.errorMessage = model.errorMessage;
+                this.message = model.message;
+                this.showManualIgnore = model.showManualIgnore;
+                this.stageId = model.stageId;
+                this.status = model.status;
+                this.taskId = model.taskId;
+                this.taskName = model.taskName;
+            } 
+
             /**
              * <p>The error code returned when the task could not be executed. If the task is successfully executed, this parameter is not returned.</p>
              * 
@@ -538,6 +570,17 @@ public class DescribePipelineResponseBody extends TeaModel {
             private Integer status; 
             private java.util.List<TaskList> taskList; 
 
+            private Builder() {
+            } 
+
+            private Builder(StageList model) {
+                this.executorType = model.executorType;
+                this.stageId = model.stageId;
+                this.stageName = model.stageName;
+                this.status = model.status;
+                this.taskList = model.taskList;
+            } 
+
             /**
              * <p>The execution type of the stage. Valid values:</p>
              * <ul>
@@ -723,6 +766,20 @@ public class DescribePipelineResponseBody extends TeaModel {
             private Integer pipelineStatus; 
             private Boolean showBatch; 
             private java.util.List<StageList> stageList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.coStatus = model.coStatus;
+                this.currentStageId = model.currentStageId;
+                this.nextPipelineId = model.nextPipelineId;
+                this.pipelineId = model.pipelineId;
+                this.pipelineName = model.pipelineName;
+                this.pipelineStatus = model.pipelineStatus;
+                this.showBatch = model.showBatch;
+                this.stageList = model.stageList;
+            } 
 
             /**
              * <p>The status of the change order for the batch.</p>

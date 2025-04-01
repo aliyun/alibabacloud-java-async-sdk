@@ -56,6 +56,10 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -114,6 +118,19 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         private Boolean success; 
         private String traceId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeApplicationSlbsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
+
         /**
          * <p>Indicates whether the information about the SLB instances that are associated with an application was obtained successfully. Valid values:</p>
          * <ul>
@@ -130,7 +147,7 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Configurations of internal-facing SLB instances.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -342,6 +359,22 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             private String stickySessionType; 
             private Integer targetPort; 
 
+            private Builder() {
+            } 
+
+            private Builder(Internet model) {
+                this.cookie = model.cookie;
+                this.cookieTimeout = model.cookieTimeout;
+                this.createTime = model.createTime;
+                this.httpsCaCertId = model.httpsCaCertId;
+                this.httpsCertId = model.httpsCertId;
+                this.port = model.port;
+                this.protocol = model.protocol;
+                this.stickySession = model.stickySession;
+                this.stickySessionType = model.stickySessionType;
+                this.targetPort = model.targetPort;
+            } 
+
             /**
              * Cookie.
              */
@@ -359,7 +392,10 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The timestamp when the canary release rule was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1741247308294</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -581,6 +617,22 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             private String stickySessionType; 
             private Integer targetPort; 
 
+            private Builder() {
+            } 
+
+            private Builder(Intranet model) {
+                this.cookie = model.cookie;
+                this.cookieTimeout = model.cookieTimeout;
+                this.createTime = model.createTime;
+                this.httpsCaCertId = model.httpsCaCertId;
+                this.httpsCertId = model.httpsCertId;
+                this.port = model.port;
+                this.protocol = model.protocol;
+                this.stickySession = model.stickySession;
+                this.stickySessionType = model.stickySessionType;
+                this.targetPort = model.targetPort;
+            } 
+
             /**
              * Cookie.
              */
@@ -598,7 +650,10 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The timestamp when the canary release rule was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1741247308294</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -820,8 +875,24 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             private Boolean intranetSlbExpired; 
             private String intranetSlbId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.internet = model.internet;
+                this.internetIp = model.internetIp;
+                this.internetSlbChargeType = model.internetSlbChargeType;
+                this.internetSlbExpired = model.internetSlbExpired;
+                this.internetSlbId = model.internetSlbId;
+                this.intranet = model.intranet;
+                this.intranetIp = model.intranetIp;
+                this.intranetSlbChargeType = model.intranetSlbChargeType;
+                this.intranetSlbExpired = model.intranetSlbExpired;
+                this.intranetSlbId = model.intranetSlbId;
+            } 
+
             /**
-             * <p>The ID of the SSL certificate issued by Alibaba Cloud.</p>
+             * <p>The configurations of the Internet-facing SLB instance.</p>
              */
             public Builder internet(java.util.List<Internet> internet) {
                 this.internet = internet;
@@ -867,7 +938,7 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the SSL certificate issued by Alibaba Cloud.</p>
+             * <p>The configurations of the internal-facing SLB instance.</p>
              */
             public Builder intranet(java.util.List<Intranet> intranet) {
                 this.intranet = intranet;

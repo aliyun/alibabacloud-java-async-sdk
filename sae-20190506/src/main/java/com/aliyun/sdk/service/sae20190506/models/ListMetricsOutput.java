@@ -36,6 +36,10 @@ public class ListMetricsOutput extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class ListMetricsOutput extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.Map<String, java.util.List<MetricInfo>> metrics; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListMetricsOutput model) {
+            this.requestId = model.requestId;
+            this.metrics = model.metrics;
+        } 
 
         /**
          * RequestId.

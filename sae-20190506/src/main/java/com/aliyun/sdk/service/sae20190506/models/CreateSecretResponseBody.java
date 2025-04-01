@@ -56,6 +56,10 @@ public class CreateSecretResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -113,6 +117,19 @@ public class CreateSecretResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateSecretResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * Code.
@@ -207,6 +224,13 @@ public class CreateSecretResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long secretId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.secretId = model.secretId;
+            } 
 
             /**
              * SecretId.

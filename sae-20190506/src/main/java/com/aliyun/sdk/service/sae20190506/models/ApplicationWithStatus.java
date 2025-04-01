@@ -36,6 +36,10 @@ public class ApplicationWithStatus extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return application
      */
@@ -53,6 +57,14 @@ public class ApplicationWithStatus extends TeaModel {
     public static final class Builder {
         private Application application; 
         private ApplicationStatus status; 
+
+        private Builder() {
+        } 
+
+        private Builder(ApplicationWithStatus model) {
+            this.application = model.application;
+            this.status = model.status;
+        } 
 
         /**
          * application.

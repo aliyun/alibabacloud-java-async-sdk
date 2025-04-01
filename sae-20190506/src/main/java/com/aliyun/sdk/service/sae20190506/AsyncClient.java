@@ -118,12 +118,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateSecretResponse> createSecret(CreateSecretRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Call the CreateWebApplication operation to create a web application.</p>
+     * 
      * @param request the request parameters of CreateWebApplication  CreateWebApplicationRequest
      * @return CreateWebApplicationResponse
      */
     CompletableFuture<CreateWebApplicationResponse> createWebApplication(CreateWebApplicationRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Create a custom domain name for the web application.</p>
+     * 
      * @param request the request parameters of CreateWebCustomDomain  CreateWebCustomDomainRequest
      * @return CreateWebCustomDomainResponse
      */
@@ -184,18 +190,27 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteSecretResponse> deleteSecret(DeleteSecretRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Call the DeleteWebApplication operation to delete a web application.</p>
+     * 
      * @param request the request parameters of DeleteWebApplication  DeleteWebApplicationRequest
      * @return DeleteWebApplicationResponse
      */
     CompletableFuture<DeleteWebApplicationResponse> deleteWebApplication(DeleteWebApplicationRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Delete a web application version.</p>
+     * 
      * @param request the request parameters of DeleteWebApplicationRevision  DeleteWebApplicationRevisionRequest
      * @return DeleteWebApplicationRevisionResponse
      */
     CompletableFuture<DeleteWebApplicationRevisionResponse> deleteWebApplicationRevision(DeleteWebApplicationRevisionRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Delete a custom domain name.</p>
+     * 
      * @param request the request parameters of DeleteWebCustomDomain  DeleteWebCustomDomainRequest
      * @return DeleteWebCustomDomainResponse
      */
@@ -376,42 +391,63 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeSecretResponse> describeSecret(DescribeSecretRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Call the DescribeWebApplication operation to query web applications.</p>
+     * 
      * @param request the request parameters of DescribeWebApplication  DescribeWebApplicationRequest
      * @return DescribeWebApplicationResponse
      */
     CompletableFuture<DescribeWebApplicationResponse> describeWebApplication(DescribeWebApplicationRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Query the resource usage of a web application.</p>
+     * 
      * @param request the request parameters of DescribeWebApplicationResourceStatics  DescribeWebApplicationResourceStaticsRequest
      * @return DescribeWebApplicationResourceStaticsResponse
      */
     CompletableFuture<DescribeWebApplicationResourceStaticsResponse> describeWebApplicationResourceStatics(DescribeWebApplicationResourceStaticsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Describe a web application version.</p>
+     * 
      * @param request the request parameters of DescribeWebApplicationRevision  DescribeWebApplicationRevisionRequest
      * @return DescribeWebApplicationRevisionResponse
      */
     CompletableFuture<DescribeWebApplicationRevisionResponse> describeWebApplicationRevision(DescribeWebApplicationRevisionRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Call the DescribeWebApplicationScalingConfig operation to obtain the scaling configuration of a web application.</p>
+     * 
      * @param request the request parameters of DescribeWebApplicationScalingConfig  DescribeWebApplicationScalingConfigRequest
      * @return DescribeWebApplicationScalingConfigResponse
      */
     CompletableFuture<DescribeWebApplicationScalingConfigResponse> describeWebApplicationScalingConfig(DescribeWebApplicationScalingConfigRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Call the DescribeWebApplicationTrafficConfig operation to query the traffic configurations of a web application.</p>
+     * 
      * @param request the request parameters of DescribeWebApplicationTrafficConfig  DescribeWebApplicationTrafficConfigRequest
      * @return DescribeWebApplicationTrafficConfigResponse
      */
     CompletableFuture<DescribeWebApplicationTrafficConfigResponse> describeWebApplicationTrafficConfig(DescribeWebApplicationTrafficConfigRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Query the details of a custom domain name for a web application.</p>
+     * 
      * @param request the request parameters of DescribeWebCustomDomain  DescribeWebCustomDomainRequest
      * @return DescribeWebCustomDomainResponse
      */
     CompletableFuture<DescribeWebCustomDomainResponse> describeWebCustomDomain(DescribeWebCustomDomainRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Obtain the logs of web application instances.</p>
+     * 
      * @param request the request parameters of DescribeWebInstanceLogs  DescribeWebInstanceLogsRequest
      * @return DescribeWebInstanceLogsResponse
      */
@@ -585,24 +621,36 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Query the list of web application instances.</p>
+     * 
      * @param request the request parameters of ListWebApplicationInstances  ListWebApplicationInstancesRequest
      * @return ListWebApplicationInstancesResponse
      */
     CompletableFuture<ListWebApplicationInstancesResponse> listWebApplicationInstances(ListWebApplicationInstancesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Query the list of web application versions.</p>
+     * 
      * @param request the request parameters of ListWebApplicationRevisions  ListWebApplicationRevisionsRequest
      * @return ListWebApplicationRevisionsResponse
      */
     CompletableFuture<ListWebApplicationRevisionsResponse> listWebApplicationRevisions(ListWebApplicationRevisionsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Call the ListWebApplications operation to query the list of web applications.</p>
+     * 
      * @param request the request parameters of ListWebApplications  ListWebApplicationsRequest
      * @return ListWebApplicationsResponse
      */
     CompletableFuture<ListWebApplicationsResponse> listWebApplications(ListWebApplicationsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Query available custom domain names.</p>
+     * 
      * @param request the request parameters of ListWebCustomDomains  ListWebCustomDomainsRequest
      * @return ListWebCustomDomainsResponse
      */
@@ -620,6 +668,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<OpenSaeServiceResponse> openSaeService(OpenSaeServiceRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Publish a web application version. You can change the configurations of the version and create a new version.</p>
+     * 
      * @param request the request parameters of PublishWebApplicationRevision  PublishWebApplicationRevisionRequest
      * @return PublishWebApplicationRevisionResponse
      */
@@ -674,6 +725,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StartApplicationResponse> startApplication(StartApplicationRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Call the StartWebApplication operation to start a web application.</p>
+     * 
      * @param request the request parameters of StartWebApplication  StartWebApplicationRequest
      * @return StartWebApplicationResponse
      */
@@ -686,6 +740,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StopApplicationResponse> stopApplication(StopApplicationRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Call the StopWebApplication operation to stop a web application.</p>
+     * 
      * @param request the request parameters of StopWebApplication  StopWebApplicationRequest
      * @return StopWebApplicationResponse
      */
@@ -702,6 +759,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return TagResourcesResponse
      */
     CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
+
+    /**
+     * @param request the request parameters of UnbindNlb  UnbindNlbRequest
+     * @return UnbindNlbResponse
+     */
+    CompletableFuture<UnbindNlbResponse> unbindNlb(UnbindNlbRequest request);
 
     /**
      * @param request the request parameters of UnbindSlb  UnbindSlbRequest
@@ -786,30 +849,45 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateSecretResponse> updateSecret(UpdateSecretRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>You can call the UpdateWebApplication operation to update the configuration at the web application level.</p>
+     * 
      * @param request the request parameters of UpdateWebApplication  UpdateWebApplicationRequest
      * @return UpdateWebApplicationResponse
      */
     CompletableFuture<UpdateWebApplicationResponse> updateWebApplication(UpdateWebApplicationRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>You can call the UpdateWebApplicationScalingConfig operation to update the scaling configurations of a web application.</p>
+     * 
      * @param request the request parameters of UpdateWebApplicationScalingConfig  UpdateWebApplicationScalingConfigRequest
      * @return UpdateWebApplicationScalingConfigResponse
      */
     CompletableFuture<UpdateWebApplicationScalingConfigResponse> updateWebApplicationScalingConfig(UpdateWebApplicationScalingConfigRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Call the UpdateWebApplicationTrafficConfig operation to update the traffic configurations of a web application.</p>
+     * 
      * @param request the request parameters of UpdateWebApplicationTrafficConfig  UpdateWebApplicationTrafficConfigRequest
      * @return UpdateWebApplicationTrafficConfigResponse
      */
     CompletableFuture<UpdateWebApplicationTrafficConfigResponse> updateWebApplicationTrafficConfig(UpdateWebApplicationTrafficConfigRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Update a custom domain name.</p>
+     * 
      * @param request the request parameters of UpdateWebCustomDomain  UpdateWebCustomDomainRequest
      * @return UpdateWebCustomDomainResponse
      */
     CompletableFuture<UpdateWebCustomDomainResponse> updateWebCustomDomain(UpdateWebCustomDomainRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>You are charged when you use the ARMS advanced monitoring feature. Enable this feature based on your business requirements. For more information, see <a href="https://icms.alibaba-inc.com/content/arms/arms?l=1%5C&m=16992%5C&n=3183148">Billing overview</a>.</p>
+     * 
      * @param request the request parameters of UpgradeApplicationApmService  UpgradeApplicationApmServiceRequest
      * @return UpgradeApplicationApmServiceResponse
      */

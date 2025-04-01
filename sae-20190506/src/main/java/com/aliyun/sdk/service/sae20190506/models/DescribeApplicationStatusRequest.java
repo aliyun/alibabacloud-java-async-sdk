@@ -35,7 +35,7 @@ public class DescribeApplicationStatusRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -60,7 +60,7 @@ public class DescribeApplicationStatusRequest extends Request {
         } 
 
         /**
-         * <p>0099b7be-5f5b-4512-a7fc-56049ef1****</p>
+         * <p>The ID of the application.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

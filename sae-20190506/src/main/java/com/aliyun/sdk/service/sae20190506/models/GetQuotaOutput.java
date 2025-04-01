@@ -40,6 +40,10 @@ public class GetQuotaOutput extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class GetQuotaOutput extends TeaModel {
         private String requestId; 
         private Long instanceLimit; 
         private Long instanceUsed; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetQuotaOutput model) {
+            this.requestId = model.requestId;
+            this.instanceLimit = model.instanceLimit;
+            this.instanceUsed = model.instanceUsed;
+        } 
 
         /**
          * RequestId.

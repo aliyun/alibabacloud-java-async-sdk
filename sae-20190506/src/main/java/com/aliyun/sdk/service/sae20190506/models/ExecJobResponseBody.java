@@ -56,6 +56,10 @@ public class ExecJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -113,6 +117,19 @@ public class ExecJobResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ExecJobResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * Code.
@@ -243,6 +260,16 @@ public class ExecJobResponseBody extends TeaModel {
             private String data; 
             private String msg; 
             private String success; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.code = model.code;
+                this.data = model.data;
+                this.msg = model.msg;
+                this.success = model.success;
+            } 
 
             /**
              * Code.

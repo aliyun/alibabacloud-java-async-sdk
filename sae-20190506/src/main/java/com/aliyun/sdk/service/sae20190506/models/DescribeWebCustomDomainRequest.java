@@ -41,7 +41,7 @@ public class DescribeWebCustomDomainRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -75,7 +75,11 @@ public class DescribeWebCustomDomainRequest extends Request {
         } 
 
         /**
+         * <p>The custom domain name.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putPathParameter("DomainName", domainName);
@@ -84,6 +88,7 @@ public class DescribeWebCustomDomainRequest extends Request {
         }
 
         /**
+         * <p>The namespace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

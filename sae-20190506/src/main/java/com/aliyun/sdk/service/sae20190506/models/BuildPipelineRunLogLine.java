@@ -36,6 +36,10 @@ public class BuildPipelineRunLogLine extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return content
      */
@@ -53,6 +57,14 @@ public class BuildPipelineRunLogLine extends TeaModel {
     public static final class Builder {
         private String content; 
         private Long offset; 
+
+        private Builder() {
+        } 
+
+        private Builder(BuildPipelineRunLogLine model) {
+            this.content = model.content;
+            this.offset = model.offset;
+        } 
 
         /**
          * Content.

@@ -32,6 +32,10 @@ public class WebWAFConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return enableWAF
      */
@@ -41,6 +45,13 @@ public class WebWAFConfig extends TeaModel {
 
     public static final class Builder {
         private Boolean enableWAF; 
+
+        private Builder() {
+        } 
+
+        private Builder(WebWAFConfig model) {
+            this.enableWAF = model.enableWAF;
+        } 
 
         /**
          * EnableWAF.

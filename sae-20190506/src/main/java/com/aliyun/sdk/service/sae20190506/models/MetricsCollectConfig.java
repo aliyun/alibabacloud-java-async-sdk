@@ -42,6 +42,10 @@ public class MetricsCollectConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return enablePushToUserSLS
      */
@@ -67,6 +71,15 @@ public class MetricsCollectConfig extends TeaModel {
         private Boolean enablePushToUserSLS; 
         private String logstoreName; 
         private String projectName; 
+
+        private Builder() {
+        } 
+
+        private Builder(MetricsCollectConfig model) {
+            this.enablePushToUserSLS = model.enablePushToUserSLS;
+            this.logstoreName = model.logstoreName;
+            this.projectName = model.projectName;
+        } 
 
         /**
          * EnablePushToUserSLS.

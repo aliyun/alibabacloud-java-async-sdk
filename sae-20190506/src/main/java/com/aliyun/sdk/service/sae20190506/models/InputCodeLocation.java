@@ -41,6 +41,10 @@ public class InputCodeLocation extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ossBucketName
      */
@@ -66,6 +70,15 @@ public class InputCodeLocation extends TeaModel {
         private String ossBucketName; 
         private String ossObjectName; 
         private String zipFile; 
+
+        private Builder() {
+        } 
+
+        private Builder(InputCodeLocation model) {
+            this.ossBucketName = model.ossBucketName;
+            this.ossObjectName = model.ossObjectName;
+            this.zipFile = model.zipFile;
+        } 
 
         /**
          * ossBucketName.
