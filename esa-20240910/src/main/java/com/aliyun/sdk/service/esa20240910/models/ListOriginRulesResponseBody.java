@@ -215,6 +215,9 @@ public class ListOriginRulesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OriginMtls")
         private String originMtls;
 
+        @com.aliyun.core.annotation.NameInMap("OriginReadTimeout")
+        private String originReadTimeout;
+
         @com.aliyun.core.annotation.NameInMap("OriginScheme")
         private String originScheme;
 
@@ -253,6 +256,7 @@ public class ListOriginRulesResponseBody extends TeaModel {
             this.originHttpPort = builder.originHttpPort;
             this.originHttpsPort = builder.originHttpsPort;
             this.originMtls = builder.originMtls;
+            this.originReadTimeout = builder.originReadTimeout;
             this.originScheme = builder.originScheme;
             this.originSni = builder.originSni;
             this.originVerify = builder.originVerify;
@@ -320,6 +324,13 @@ public class ListOriginRulesResponseBody extends TeaModel {
          */
         public String getOriginMtls() {
             return this.originMtls;
+        }
+
+        /**
+         * @return originReadTimeout
+         */
+        public String getOriginReadTimeout() {
+            return this.originReadTimeout;
         }
 
         /**
@@ -400,6 +411,7 @@ public class ListOriginRulesResponseBody extends TeaModel {
             private String originHttpPort; 
             private String originHttpsPort; 
             private String originMtls; 
+            private String originReadTimeout; 
             private String originScheme; 
             private String originSni; 
             private String originVerify; 
@@ -422,6 +434,7 @@ public class ListOriginRulesResponseBody extends TeaModel {
                 this.originHttpPort = model.originHttpPort;
                 this.originHttpsPort = model.originHttpsPort;
                 this.originMtls = model.originMtls;
+                this.originReadTimeout = model.originReadTimeout;
                 this.originScheme = model.originScheme;
                 this.originSni = model.originSni;
                 this.originVerify = model.originVerify;
@@ -516,6 +529,14 @@ public class ListOriginRulesResponseBody extends TeaModel {
              */
             public Builder originMtls(String originMtls) {
                 this.originMtls = originMtls;
+                return this;
+            }
+
+            /**
+             * OriginReadTimeout.
+             */
+            public Builder originReadTimeout(String originReadTimeout) {
+                this.originReadTimeout = originReadTimeout;
                 return this;
             }
 

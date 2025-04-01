@@ -2381,6 +2381,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetEdgeContainerAppResourceStatus  GetEdgeContainerAppResourceStatusRequest
+     * @return GetEdgeContainerAppResourceStatusResponse
+     */
+    @Override
+    public CompletableFuture<GetEdgeContainerAppResourceStatusResponse> getEdgeContainerAppResourceStatus(GetEdgeContainerAppResourceStatusRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetEdgeContainerAppResourceStatus").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetEdgeContainerAppResourceStatusResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetEdgeContainerAppResourceStatusResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetEdgeContainerAppStatus  GetEdgeContainerAppStatusRequest
      * @return GetEdgeContainerAppStatusResponse
      */

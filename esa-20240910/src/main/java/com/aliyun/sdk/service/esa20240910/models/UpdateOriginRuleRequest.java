@@ -43,6 +43,10 @@ public class UpdateOriginRuleRequest extends Request {
     private String originMtls;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OriginReadTimeout")
+    private String originReadTimeout;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OriginScheme")
     private String originScheme;
 
@@ -91,6 +95,7 @@ public class UpdateOriginRuleRequest extends Request {
         this.originHttpPort = builder.originHttpPort;
         this.originHttpsPort = builder.originHttpsPort;
         this.originMtls = builder.originMtls;
+        this.originReadTimeout = builder.originReadTimeout;
         this.originScheme = builder.originScheme;
         this.originSni = builder.originSni;
         this.originVerify = builder.originVerify;
@@ -156,6 +161,13 @@ public class UpdateOriginRuleRequest extends Request {
      */
     public String getOriginMtls() {
         return this.originMtls;
+    }
+
+    /**
+     * @return originReadTimeout
+     */
+    public String getOriginReadTimeout() {
+        return this.originReadTimeout;
     }
 
     /**
@@ -235,6 +247,7 @@ public class UpdateOriginRuleRequest extends Request {
         private String originHttpPort; 
         private String originHttpsPort; 
         private String originMtls; 
+        private String originReadTimeout; 
         private String originScheme; 
         private String originSni; 
         private String originVerify; 
@@ -258,6 +271,7 @@ public class UpdateOriginRuleRequest extends Request {
             this.originHttpPort = request.originHttpPort;
             this.originHttpsPort = request.originHttpsPort;
             this.originMtls = request.originMtls;
+            this.originReadTimeout = request.originReadTimeout;
             this.originScheme = request.originScheme;
             this.originSni = request.originSni;
             this.originVerify = request.originVerify;
@@ -344,6 +358,15 @@ public class UpdateOriginRuleRequest extends Request {
         public Builder originMtls(String originMtls) {
             this.putQueryParameter("OriginMtls", originMtls);
             this.originMtls = originMtls;
+            return this;
+        }
+
+        /**
+         * OriginReadTimeout.
+         */
+        public Builder originReadTimeout(String originReadTimeout) {
+            this.putQueryParameter("OriginReadTimeout", originReadTimeout);
+            this.originReadTimeout = originReadTimeout;
             return this;
         }
 

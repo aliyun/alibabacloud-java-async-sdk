@@ -837,6 +837,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetEdgeContainerAppResourceReserveResponse> getEdgeContainerAppResourceReserve(GetEdgeContainerAppResourceReserveRequest request);
 
     /**
+     * @param request the request parameters of GetEdgeContainerAppResourceStatus  GetEdgeContainerAppResourceStatusRequest
+     * @return GetEdgeContainerAppResourceStatusResponse
+     */
+    CompletableFuture<GetEdgeContainerAppResourceStatusResponse> getEdgeContainerAppResourceStatus(GetEdgeContainerAppResourceStatusRequest request);
+
+    /**
      * @param request the request parameters of GetEdgeContainerAppStatus  GetEdgeContainerAppStatusRequest
      * @return GetEdgeContainerAppStatusResponse
      */
