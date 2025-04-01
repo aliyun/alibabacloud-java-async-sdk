@@ -30,6 +30,10 @@ public class CreateTaskRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("categoryTags")
+    private java.util.List<CategoryTags> categoryTags;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("customPrompt")
     private String customPrompt;
 
@@ -71,11 +75,16 @@ public class CreateTaskRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("transcription")
     private Transcription transcription;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("variables")
+    private java.util.List<Variables> variables;
+
     private CreateTaskRequest(Builder builder) {
         super(builder);
         this.workspaceId = builder.workspaceId;
         this.appId = builder.appId;
         this.regionId = builder.regionId;
+        this.categoryTags = builder.categoryTags;
         this.customPrompt = builder.customPrompt;
         this.dialogue = builder.dialogue;
         this.examples = builder.examples;
@@ -86,6 +95,7 @@ public class CreateTaskRequest extends Request {
         this.taskType = builder.taskType;
         this.templateIds = builder.templateIds;
         this.transcription = builder.transcription;
+        this.variables = builder.variables;
     }
 
     public static Builder builder() {
@@ -120,6 +130,13 @@ public class CreateTaskRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return categoryTags
+     */
+    public java.util.List<CategoryTags> getCategoryTags() {
+        return this.categoryTags;
     }
 
     /**
@@ -192,10 +209,18 @@ public class CreateTaskRequest extends Request {
         return this.transcription;
     }
 
+    /**
+     * @return variables
+     */
+    public java.util.List<Variables> getVariables() {
+        return this.variables;
+    }
+
     public static final class Builder extends Request.Builder<CreateTaskRequest, Builder> {
         private String workspaceId; 
         private String appId; 
         private String regionId; 
+        private java.util.List<CategoryTags> categoryTags; 
         private String customPrompt; 
         private Dialogue dialogue; 
         private Examples examples; 
@@ -206,6 +231,7 @@ public class CreateTaskRequest extends Request {
         private String taskType; 
         private java.util.List<String> templateIds; 
         private Transcription transcription; 
+        private java.util.List<Variables> variables; 
 
         private Builder() {
             super();
@@ -216,6 +242,7 @@ public class CreateTaskRequest extends Request {
             this.workspaceId = request.workspaceId;
             this.appId = request.appId;
             this.regionId = request.regionId;
+            this.categoryTags = request.categoryTags;
             this.customPrompt = request.customPrompt;
             this.dialogue = request.dialogue;
             this.examples = request.examples;
@@ -226,6 +253,7 @@ public class CreateTaskRequest extends Request {
             this.taskType = request.taskType;
             this.templateIds = request.templateIds;
             this.transcription = request.transcription;
+            this.variables = request.variables;
         } 
 
         /**
@@ -252,6 +280,15 @@ public class CreateTaskRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("regionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * categoryTags.
+         */
+        public Builder categoryTags(java.util.List<CategoryTags> categoryTags) {
+            this.putBodyParameter("categoryTags", categoryTags);
+            this.categoryTags = categoryTags;
             return this;
         }
 
@@ -351,6 +388,15 @@ public class CreateTaskRequest extends Request {
             return this;
         }
 
+        /**
+         * variables.
+         */
+        public Builder variables(java.util.List<Variables> variables) {
+            this.putBodyParameter("variables", variables);
+            this.variables = variables;
+            return this;
+        }
+
         @Override
         public CreateTaskRequest build() {
             return new CreateTaskRequest(this);
@@ -358,6 +404,81 @@ public class CreateTaskRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateTaskRequest</p>
+     */
+    public static class CategoryTags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("tagDesc")
+        private String tagDesc;
+
+        @com.aliyun.core.annotation.NameInMap("tagName")
+        private String tagName;
+
+        private CategoryTags(Builder builder) {
+            this.tagDesc = builder.tagDesc;
+            this.tagName = builder.tagName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CategoryTags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagDesc
+         */
+        public String getTagDesc() {
+            return this.tagDesc;
+        }
+
+        /**
+         * @return tagName
+         */
+        public String getTagName() {
+            return this.tagName;
+        }
+
+        public static final class Builder {
+            private String tagDesc; 
+            private String tagName; 
+
+            private Builder() {
+            } 
+
+            private Builder(CategoryTags model) {
+                this.tagDesc = model.tagDesc;
+                this.tagName = model.tagName;
+            } 
+
+            /**
+             * tagDesc.
+             */
+            public Builder tagDesc(String tagDesc) {
+                this.tagDesc = tagDesc;
+                return this;
+            }
+
+            /**
+             * tagName.
+             */
+            public Builder tagName(String tagName) {
+                this.tagName = tagName;
+                return this;
+            }
+
+            public CategoryTags build() {
+                return new CategoryTags(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link CreateTaskRequest} extends {@link TeaModel}
@@ -1267,6 +1388,81 @@ public class CreateTaskRequest extends Request {
 
             public Transcription build() {
                 return new Transcription(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateTaskRequest</p>
+     */
+    public static class Variables extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("variableCode")
+        private String variableCode;
+
+        @com.aliyun.core.annotation.NameInMap("variableValue")
+        private String variableValue;
+
+        private Variables(Builder builder) {
+            this.variableCode = builder.variableCode;
+            this.variableValue = builder.variableValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Variables create() {
+            return builder().build();
+        }
+
+        /**
+         * @return variableCode
+         */
+        public String getVariableCode() {
+            return this.variableCode;
+        }
+
+        /**
+         * @return variableValue
+         */
+        public String getVariableValue() {
+            return this.variableValue;
+        }
+
+        public static final class Builder {
+            private String variableCode; 
+            private String variableValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Variables model) {
+                this.variableCode = model.variableCode;
+                this.variableValue = model.variableValue;
+            } 
+
+            /**
+             * variableCode.
+             */
+            public Builder variableCode(String variableCode) {
+                this.variableCode = variableCode;
+                return this;
+            }
+
+            /**
+             * variableValue.
+             */
+            public Builder variableValue(String variableValue) {
+                this.variableValue = variableValue;
+                return this;
+            }
+
+            public Variables build() {
+                return new Variables(this);
             } 
 
         } 

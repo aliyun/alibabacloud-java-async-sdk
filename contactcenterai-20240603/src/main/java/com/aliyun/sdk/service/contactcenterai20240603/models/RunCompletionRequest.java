@@ -57,6 +57,10 @@ public class RunCompletionRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<Long> templateIds;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("variables")
+    private java.util.List<Variables> variables;
+
     private RunCompletionRequest(Builder builder) {
         super(builder);
         this.workspaceId = builder.workspaceId;
@@ -68,6 +72,7 @@ public class RunCompletionRequest extends Request {
         this.serviceInspection = builder.serviceInspection;
         this.stream = builder.stream;
         this.templateIds = builder.templateIds;
+        this.variables = builder.variables;
     }
 
     public static Builder builder() {
@@ -146,6 +151,13 @@ public class RunCompletionRequest extends Request {
         return this.templateIds;
     }
 
+    /**
+     * @return variables
+     */
+    public java.util.List<Variables> getVariables() {
+        return this.variables;
+    }
+
     public static final class Builder extends Request.Builder<RunCompletionRequest, Builder> {
         private String workspaceId; 
         private String appId; 
@@ -156,6 +168,7 @@ public class RunCompletionRequest extends Request {
         private ServiceInspection serviceInspection; 
         private Boolean stream; 
         private java.util.List<Long> templateIds; 
+        private java.util.List<Variables> variables; 
 
         private Builder() {
             super();
@@ -172,6 +185,7 @@ public class RunCompletionRequest extends Request {
             this.serviceInspection = request.serviceInspection;
             this.stream = request.stream;
             this.templateIds = request.templateIds;
+            this.variables = request.variables;
         } 
 
         /**
@@ -258,6 +272,15 @@ public class RunCompletionRequest extends Request {
         public Builder templateIds(java.util.List<Long> templateIds) {
             this.putBodyParameter("TemplateIds", templateIds);
             this.templateIds = templateIds;
+            return this;
+        }
+
+        /**
+         * variables.
+         */
+        public Builder variables(java.util.List<Variables> variables) {
+            this.putBodyParameter("variables", variables);
+            this.variables = variables;
             return this;
         }
 
@@ -805,6 +828,81 @@ public class RunCompletionRequest extends Request {
 
             public ServiceInspection build() {
                 return new ServiceInspection(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link RunCompletionRequest} extends {@link TeaModel}
+     *
+     * <p>RunCompletionRequest</p>
+     */
+    public static class Variables extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("variableCode")
+        private String variableCode;
+
+        @com.aliyun.core.annotation.NameInMap("variableValue")
+        private String variableValue;
+
+        private Variables(Builder builder) {
+            this.variableCode = builder.variableCode;
+            this.variableValue = builder.variableValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Variables create() {
+            return builder().build();
+        }
+
+        /**
+         * @return variableCode
+         */
+        public String getVariableCode() {
+            return this.variableCode;
+        }
+
+        /**
+         * @return variableValue
+         */
+        public String getVariableValue() {
+            return this.variableValue;
+        }
+
+        public static final class Builder {
+            private String variableCode; 
+            private String variableValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Variables model) {
+                this.variableCode = model.variableCode;
+                this.variableValue = model.variableValue;
+            } 
+
+            /**
+             * variableCode.
+             */
+            public Builder variableCode(String variableCode) {
+                this.variableCode = variableCode;
+                return this;
+            }
+
+            /**
+             * variableValue.
+             */
+            public Builder variableValue(String variableValue) {
+                this.variableValue = variableValue;
+                return this;
+            }
+
+            public Variables build() {
+                return new Variables(this);
             } 
 
         } 
