@@ -185,6 +185,9 @@ public class DescribeAdvisorChecksFoPagesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Product")
         private String product;
 
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
+        private Long riskLevel;
+
         @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
@@ -209,6 +212,7 @@ public class DescribeAdvisorChecksFoPagesResponseBody extends TeaModel {
             this.name = builder.name;
             this.operateColumn = builder.operateColumn;
             this.product = builder.product;
+            this.riskLevel = builder.riskLevel;
             this.source = builder.source;
             this.status = builder.status;
             this.subCategory = builder.subCategory;
@@ -281,6 +285,13 @@ public class DescribeAdvisorChecksFoPagesResponseBody extends TeaModel {
         }
 
         /**
+         * @return riskLevel
+         */
+        public Long getRiskLevel() {
+            return this.riskLevel;
+        }
+
+        /**
          * @return source
          */
         public String getSource() {
@@ -324,6 +335,7 @@ public class DescribeAdvisorChecksFoPagesResponseBody extends TeaModel {
             private String name; 
             private String operateColumn; 
             private String product; 
+            private Long riskLevel; 
             private String source; 
             private String status; 
             private java.util.List<Long> subCategory; 
@@ -342,6 +354,7 @@ public class DescribeAdvisorChecksFoPagesResponseBody extends TeaModel {
                 this.name = model.name;
                 this.operateColumn = model.operateColumn;
                 this.product = model.product;
+                this.riskLevel = model.riskLevel;
                 this.source = model.source;
                 this.status = model.status;
                 this.subCategory = model.subCategory;
@@ -410,6 +423,14 @@ public class DescribeAdvisorChecksFoPagesResponseBody extends TeaModel {
              */
             public Builder product(String product) {
                 this.product = product;
+                return this;
+            }
+
+            /**
+             * RiskLevel.
+             */
+            public Builder riskLevel(Long riskLevel) {
+                this.riskLevel = riskLevel;
                 return this;
             }
 
