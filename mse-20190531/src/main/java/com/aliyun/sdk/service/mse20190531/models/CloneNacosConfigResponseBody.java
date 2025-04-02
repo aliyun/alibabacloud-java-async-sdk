@@ -60,6 +60,10 @@ public class CloneNacosConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -125,6 +129,20 @@ public class CloneNacosConfigResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CloneNacosConfigResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.dynamicMessage = model.dynamicMessage;
+            this.errorCode = model.errorCode;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>Response code.</p>
@@ -280,6 +298,15 @@ public class CloneNacosConfigResponseBody extends TeaModel {
             private String group; 
             private String reason; 
 
+            private Builder() {
+            } 
+
+            private Builder(FailData model) {
+                this.dataId = model.dataId;
+                this.group = model.group;
+                this.reason = model.reason;
+            } 
+
             /**
              * <p>Data ID.</p>
              * 
@@ -363,6 +390,14 @@ public class CloneNacosConfigResponseBody extends TeaModel {
         public static final class Builder {
             private String dataId; 
             private String group; 
+
+            private Builder() {
+            } 
+
+            private Builder(SkipData model) {
+                this.dataId = model.dataId;
+                this.group = model.group;
+            } 
 
             /**
              * <p>Data ID.</p>
@@ -460,6 +495,16 @@ public class CloneNacosConfigResponseBody extends TeaModel {
             private Integer skipCount; 
             private java.util.List<SkipData> skipData; 
             private Integer succCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.failData = model.failData;
+                this.skipCount = model.skipCount;
+                this.skipData = model.skipData;
+                this.succCount = model.succCount;
+            } 
 
             /**
              * <p>Failed configuration information.</p>

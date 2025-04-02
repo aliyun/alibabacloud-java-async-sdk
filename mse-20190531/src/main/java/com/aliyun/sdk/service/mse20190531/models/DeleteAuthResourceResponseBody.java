@@ -52,6 +52,10 @@ public class DeleteAuthResourceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class DeleteAuthResourceResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteAuthResourceResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code returned.</p>
@@ -314,6 +330,22 @@ public class DeleteAuthResourceResponseBody extends TeaModel {
             private Long id; 
             private Boolean isWhite; 
             private String path; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.authId = model.authId;
+                this.domainId = model.domainId;
+                this.domainName = model.domainName;
+                this.gatewayId = model.gatewayId;
+                this.gatewayUniqueId = model.gatewayUniqueId;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.isWhite = model.isWhite;
+                this.path = model.path;
+            } 
 
             /**
              * <p>The authentication ID.</p>

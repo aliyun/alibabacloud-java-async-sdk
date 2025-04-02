@@ -48,6 +48,10 @@ public class QueryBusinessLocationsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -89,6 +93,17 @@ public class QueryBusinessLocationsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryBusinessLocationsResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The details of the data.</p>
@@ -323,6 +338,25 @@ public class QueryBusinessLocationsResponseBody extends TeaModel {
             private Integer ordering; 
             private String showName; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.cnName = model.cnName;
+                this.description = model.description;
+                this.districtCnName = model.districtCnName;
+                this.districtEnName = model.districtEnName;
+                this.districtId = model.districtId;
+                this.districtOrdering = model.districtOrdering;
+                this.districtShowName = model.districtShowName;
+                this.enDescription = model.enDescription;
+                this.enName = model.enName;
+                this.name = model.name;
+                this.ordering = model.ordering;
+                this.showName = model.showName;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The Chinese name of the region.</p>

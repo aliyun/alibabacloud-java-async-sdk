@@ -52,6 +52,10 @@ public class ListSSLCertResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListSSLCertResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSSLCertResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code returned. A value of 200 indicates that the request is successful.</p>
@@ -314,6 +330,22 @@ public class ListSSLCertResponseBody extends TeaModel {
             private String gmtBefore; 
             private String issuer; 
             private String sans; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.afterDate = model.afterDate;
+                this.algorithm = model.algorithm;
+                this.beforeDate = model.beforeDate;
+                this.certIdentifier = model.certIdentifier;
+                this.certName = model.certName;
+                this.commonName = model.commonName;
+                this.gmtAfter = model.gmtAfter;
+                this.gmtBefore = model.gmtBefore;
+                this.issuer = model.issuer;
+                this.sans = model.sans;
+            } 
 
             /**
              * <p>The time when the certificate expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>

@@ -52,6 +52,10 @@ public class GetServiceListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetServiceListResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetServiceListResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code returned.</p>
@@ -262,6 +278,18 @@ public class GetServiceListResponseBody extends TeaModel {
             private java.util.List<String> paths; 
             private java.util.List<String> requestMethods; 
             private String returnType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Methods model) {
+                this.methodController = model.methodController;
+                this.name = model.name;
+                this.parameterTypes = model.parameterTypes;
+                this.paths = model.paths;
+                this.requestMethods = model.requestMethods;
+                this.returnType = model.returnType;
+            } 
 
             /**
              * <p>The controller of the method.</p>
@@ -466,6 +494,22 @@ public class GetServiceListResponseBody extends TeaModel {
             private String serviceType; 
             private String springApplicationName; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.dubboApplicationName = model.dubboApplicationName;
+                this.edasAppName = model.edasAppName;
+                this.group = model.group;
+                this.metadata = model.metadata;
+                this.methods = model.methods;
+                this.registryType = model.registryType;
+                this.serviceName = model.serviceName;
+                this.serviceType = model.serviceType;
+                this.springApplicationName = model.springApplicationName;
+                this.version = model.version;
+            } 
 
             /**
              * <p>The name of the Dubbo application.</p>

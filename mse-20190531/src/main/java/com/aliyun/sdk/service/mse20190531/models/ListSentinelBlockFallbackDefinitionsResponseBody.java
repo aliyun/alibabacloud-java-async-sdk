@@ -48,6 +48,10 @@ public class ListSentinelBlockFallbackDefinitionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -89,6 +93,17 @@ public class ListSentinelBlockFallbackDefinitionsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSentinelBlockFallbackDefinitionsResponseBody model) {
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The details of the data.</p>
@@ -255,6 +270,19 @@ public class ListSentinelBlockFallbackDefinitionsResponseBody extends TeaModel {
             private String namespace; 
             private String resourceClassification; 
             private java.util.Map<String, ?> targetMap; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.appName = model.appName;
+                this.fallbackBehavior = model.fallbackBehavior;
+                this.id = model.id;
+                this.name = model.name;
+                this.namespace = model.namespace;
+                this.resourceClassification = model.resourceClassification;
+                this.targetMap = model.targetMap;
+            } 
 
             /**
              * <p>The name of the application.</p>

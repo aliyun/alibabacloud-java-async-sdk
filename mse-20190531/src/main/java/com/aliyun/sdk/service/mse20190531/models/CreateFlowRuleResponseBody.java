@@ -48,6 +48,10 @@ public class CreateFlowRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class CreateFlowRuleResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateFlowRuleResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The response code.</p>
@@ -312,6 +327,23 @@ public class CreateFlowRuleResponseBody extends TeaModel {
             private String regionId; 
             private String resource; 
             private Float threshold; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.appId = model.appId;
+                this.appName = model.appName;
+                this.controlBehavior = model.controlBehavior;
+                this.enable = model.enable;
+                this.id = model.id;
+                this.limitApp = model.limitApp;
+                this.maxQueueingTimeMs = model.maxQueueingTimeMs;
+                this.namespace = model.namespace;
+                this.regionId = model.regionId;
+                this.resource = model.resource;
+                this.threshold = model.threshold;
+            } 
 
             /**
              * <p>The application ID.</p>

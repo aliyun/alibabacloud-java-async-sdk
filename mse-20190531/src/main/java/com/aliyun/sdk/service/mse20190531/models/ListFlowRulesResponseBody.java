@@ -52,6 +52,10 @@ public class ListFlowRulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListFlowRulesResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListFlowRulesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code.</p>
@@ -391,6 +407,27 @@ public class ListFlowRulesResponseBody extends TeaModel {
             private Float threshold; 
             private java.util.Map<String, ?> trafficTags; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.appId = model.appId;
+                this.appName = model.appName;
+                this.controlBehavior = model.controlBehavior;
+                this.enable = model.enable;
+                this.fallbackObject = model.fallbackObject;
+                this.limitApp = model.limitApp;
+                this.maxQueueingTimeMs = model.maxQueueingTimeMs;
+                this.metricType = model.metricType;
+                this.namespace = model.namespace;
+                this.regionId = model.regionId;
+                this.resource = model.resource;
+                this.resourceType = model.resourceType;
+                this.ruleId = model.ruleId;
+                this.threshold = model.threshold;
+                this.trafficTags = model.trafficTags;
+            } 
+
             /**
              * <p>The ID of the application.</p>
              * 
@@ -666,6 +703,16 @@ public class ListFlowRulesResponseBody extends TeaModel {
             private Integer pageSize; 
             private java.util.List<Result> result; 
             private Integer totalSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.result = model.result;
+                this.totalSize = model.totalSize;
+            } 
 
             /**
              * <p>The page number.</p>

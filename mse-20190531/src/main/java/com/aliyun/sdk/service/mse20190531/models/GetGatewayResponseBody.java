@@ -52,6 +52,10 @@ public class GetGatewayResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetGatewayResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetGatewayResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code returned. A value of 200 indicates that the request is successful.</p>
@@ -231,6 +247,15 @@ public class GetGatewayResponseBody extends TeaModel {
             private String endTime; 
             private String startTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(TimePolicyList model) {
+                this.desiredReplica = model.desiredReplica;
+                this.endTime = model.endTime;
+                this.startTime = model.startTime;
+            } 
+
             /**
              * <p>The number of expected replicas.</p>
              * 
@@ -326,6 +351,15 @@ public class GetGatewayResponseBody extends TeaModel {
             private String elasticType; 
             private Integer maxReplica; 
             private java.util.List<TimePolicyList> timePolicyList; 
+
+            private Builder() {
+            } 
+
+            private Builder(ElasticPolicy model) {
+                this.elasticType = model.elasticType;
+                this.maxReplica = model.maxReplica;
+                this.timePolicyList = model.timePolicyList;
+            } 
 
             /**
              * <p>The type of auto scale-out. Valid value:</p>
@@ -423,6 +457,15 @@ public class GetGatewayResponseBody extends TeaModel {
             private String logStoreName; 
             private String projectName; 
 
+            private Builder() {
+            } 
+
+            private Builder(LogConfigDetails model) {
+                this.logEnabled = model.logEnabled;
+                this.logStoreName = model.logStoreName;
+                this.projectName = model.projectName;
+            } 
+
             /**
              * <p>Indicates whether Log Service is activated.</p>
              * 
@@ -506,6 +549,14 @@ public class GetGatewayResponseBody extends TeaModel {
         public static final class Builder {
             private Integer sample; 
             private Boolean traceOn; 
+
+            private Builder() {
+            } 
+
+            private Builder(XtraceDetails model) {
+                this.sample = model.sample;
+                this.traceOn = model.traceOn;
+            } 
 
             /**
              * <p>The sampling rate of Tracing Analysis.</p>
@@ -879,6 +930,39 @@ public class GetGatewayResponseBody extends TeaModel {
             private String vswitch; 
             private String vswitch2; 
             private XtraceDetails xtraceDetails; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.chargeType = model.chargeType;
+                this.elastic = model.elastic;
+                this.elasticPolicy = model.elasticPolicy;
+                this.elasticReplica = model.elasticReplica;
+                this.elasticType = model.elasticType;
+                this.endDate = model.endDate;
+                this.gatewayUniqueId = model.gatewayUniqueId;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.instanceId = model.instanceId;
+                this.logConfigDetails = model.logConfigDetails;
+                this.mseTag = model.mseTag;
+                this.name = model.name;
+                this.primaryUser = model.primaryUser;
+                this.region = model.region;
+                this.replica = model.replica;
+                this.resourceGroupId = model.resourceGroupId;
+                this.securityGroup = model.securityGroup;
+                this.spec = model.spec;
+                this.status = model.status;
+                this.statusDesc = model.statusDesc;
+                this.totalReplica = model.totalReplica;
+                this.vpc = model.vpc;
+                this.vswitch = model.vswitch;
+                this.vswitch2 = model.vswitch2;
+                this.xtraceDetails = model.xtraceDetails;
+            } 
 
             /**
              * <p>The billing method, such as subscription or pay-as-you-go.</p>

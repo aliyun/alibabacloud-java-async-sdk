@@ -64,6 +64,10 @@ public class ListEngineNamespacesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -137,6 +141,21 @@ public class ListEngineNamespacesResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListEngineNamespacesResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.httpCode = model.httpCode;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The details of the data.</p>
@@ -359,6 +378,20 @@ public class ListEngineNamespacesResponseBody extends TeaModel {
             private String serviceCount; 
             private String sourceType; 
             private Integer type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.configCount = model.configCount;
+                this.namespace = model.namespace;
+                this.namespaceDesc = model.namespaceDesc;
+                this.namespaceShowName = model.namespaceShowName;
+                this.quota = model.quota;
+                this.serviceCount = model.serviceCount;
+                this.sourceType = model.sourceType;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The quota value.</p>

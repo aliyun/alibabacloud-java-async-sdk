@@ -54,7 +54,7 @@ public class UpdateGatewayRouteTimeoutRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -238,6 +238,15 @@ public class UpdateGatewayRouteTimeoutRequest extends Request {
             private String status; 
             private String timeUnit; 
             private Integer unitNum; 
+
+            private Builder() {
+            } 
+
+            private Builder(TimeoutJSON model) {
+                this.status = model.status;
+                this.timeUnit = model.timeUnit;
+                this.unitNum = model.unitNum;
+            } 
 
             /**
              * <p>The status of the policy.</p>

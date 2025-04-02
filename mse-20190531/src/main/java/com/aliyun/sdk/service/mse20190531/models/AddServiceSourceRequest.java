@@ -79,7 +79,7 @@ public class AddServiceSourceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -384,6 +384,16 @@ public class AddServiceSourceRequest extends Request {
             private String ingressClass; 
             private String watchNamespace; 
 
+            private Builder() {
+            } 
+
+            private Builder(IngressOptionsRequest model) {
+                this.enableIngress = model.enableIngress;
+                this.enableStatus = model.enableStatus;
+                this.ingressClass = model.ingressClass;
+                this.watchNamespace = model.watchNamespace;
+            } 
+
             /**
              * <p>The group to which the service belongs.</p>
              * 
@@ -495,6 +505,15 @@ public class AddServiceSourceRequest extends Request {
             private String description; 
             private String portRange; 
             private String securityGroupId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ToAuthorizeSecurityGroups model) {
+                this.description = model.description;
+                this.portRange = model.portRange;
+                this.securityGroupId = model.securityGroupId;
+            } 
 
             /**
              * <p>The description of the authorization record.</p>

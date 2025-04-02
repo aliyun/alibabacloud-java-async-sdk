@@ -60,6 +60,10 @@ public class QueryClusterDiskSpecificationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -125,6 +129,20 @@ public class QueryClusterDiskSpecificationResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryClusterDiskSpecificationResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.dynamicMessage = model.dynamicMessage;
+            this.errorCode = model.errorCode;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code returned.</p>
@@ -279,6 +297,15 @@ public class QueryClusterDiskSpecificationResponseBody extends TeaModel {
             private Integer max; 
             private Integer min; 
             private Integer step; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.max = model.max;
+                this.min = model.min;
+                this.step = model.step;
+            } 
 
             /**
              * <p>The maximum disk capacity. Unit: GB.</p>

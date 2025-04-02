@@ -52,6 +52,10 @@ public class GetImageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class GetImageResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetImageResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.httpCode = model.httpCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The details of the data.</p>
@@ -242,6 +258,16 @@ public class GetImageResponseBody extends TeaModel {
             private String maxVersionChangelogUrl; 
             private String maxVersionCode; 
             private String maxVersionFullShowName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.currentVersionFullShowName = model.currentVersionFullShowName;
+                this.maxVersionChangelogUrl = model.maxVersionChangelogUrl;
+                this.maxVersionCode = model.maxVersionCode;
+                this.maxVersionFullShowName = model.maxVersionFullShowName;
+            } 
 
             /**
              * <p>The full version number of the current instance image. The parameter is in the X.X.X.X format.</p>

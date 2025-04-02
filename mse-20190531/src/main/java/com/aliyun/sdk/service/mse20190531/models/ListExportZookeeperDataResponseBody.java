@@ -56,6 +56,10 @@ public class ListExportZookeeperDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -113,6 +117,19 @@ public class ListExportZookeeperDataResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListExportZookeeperDataResponseBody model) {
+            this.data = model.data;
+            this.dynamicMessage = model.dynamicMessage;
+            this.errorCode = model.errorCode;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The details of the data.</p>
@@ -328,6 +345,21 @@ public class ListExportZookeeperDataResponseBody extends TeaModel {
             private String kubeoneTaskIds; 
             private String status; 
             private Long updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.contentMap = model.contentMap;
+                this.createTime = model.createTime;
+                this.exportType = model.exportType;
+                this.extend = model.extend;
+                this.id = model.id;
+                this.instanceId = model.instanceId;
+                this.kubeoneTaskIds = model.kubeoneTaskIds;
+                this.status = model.status;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The details of the task.</p>

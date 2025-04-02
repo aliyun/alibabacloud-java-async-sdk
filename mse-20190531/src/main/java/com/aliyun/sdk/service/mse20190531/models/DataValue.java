@@ -48,6 +48,10 @@ public class DataValue extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return userId
      */
@@ -89,6 +93,17 @@ public class DataValue extends TeaModel {
         private String namespace; 
         private String appName; 
         private String appId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DataValue model) {
+            this.userId = model.userId;
+            this.regionId = model.regionId;
+            this.namespace = model.namespace;
+            this.appName = model.appName;
+            this.appId = model.appId;
+        } 
 
         /**
          * <p>The ID of the user to which the application belongs.</p>

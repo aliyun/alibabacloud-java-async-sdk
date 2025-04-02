@@ -64,6 +64,10 @@ public class ListGatewayZoneResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -137,6 +141,21 @@ public class ListGatewayZoneResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListGatewayZoneResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.dynamicCode = model.dynamicCode;
+            this.dynamicMessage = model.dynamicMessage;
+            this.errorCode = model.errorCode;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The response code. The status code 200 indicates that the request was successful.</p>
@@ -287,6 +306,14 @@ public class ListGatewayZoneResponseBody extends TeaModel {
         public static final class Builder {
             private String localName; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.localName = model.localName;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>The local name of the zone.</p>

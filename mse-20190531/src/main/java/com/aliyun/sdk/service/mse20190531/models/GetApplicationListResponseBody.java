@@ -44,6 +44,10 @@ public class GetApplicationListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -77,6 +81,16 @@ public class GetApplicationListResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetApplicationListResponseBody model) {
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The details of the data.</p>
@@ -281,6 +295,23 @@ public class GetApplicationListResponseBody extends TeaModel {
             private java.util.Map<String, ?> tags; 
             private String userId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.appId = model.appId;
+                this.appName = model.appName;
+                this.extraInfo = model.extraInfo;
+                this.instancesNumber = model.instancesNumber;
+                this.language = model.language;
+                this.namespace = model.namespace;
+                this.regionId = model.regionId;
+                this.source = model.source;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.userId = model.userId;
+            } 
+
             /**
              * <p>The ID of the application.</p>
              * 
@@ -473,6 +504,16 @@ public class GetApplicationListResponseBody extends TeaModel {
             private Integer pageSize; 
             private java.util.List<Result> result; 
             private Integer totalSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.result = model.result;
+                this.totalSize = model.totalSize;
+            } 
 
             /**
              * <p>The page number of the returned page.</p>

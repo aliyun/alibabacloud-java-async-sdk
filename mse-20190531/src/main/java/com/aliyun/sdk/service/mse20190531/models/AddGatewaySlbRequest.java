@@ -81,7 +81,7 @@ public class AddGatewaySlbRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -388,6 +388,16 @@ public class AddGatewaySlbRequest extends Request {
             private String protocol; 
             private String vServerGroupId; 
             private String vServerGroupName; 
+
+            private Builder() {
+            } 
+
+            private Builder(VServiceList model) {
+                this.port = model.port;
+                this.protocol = model.protocol;
+                this.vServerGroupId = model.vServerGroupId;
+                this.vServerGroupName = model.vServerGroupName;
+            } 
 
             /**
              * <p>The port number.</p>

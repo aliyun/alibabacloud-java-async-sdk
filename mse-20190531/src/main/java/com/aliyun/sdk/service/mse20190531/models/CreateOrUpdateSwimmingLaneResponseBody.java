@@ -56,6 +56,10 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -113,6 +117,19 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateOrUpdateSwimmingLaneResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code. The value 200 is returned if the request is successful.</p>
@@ -341,6 +358,22 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
             private String type; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(RestItems model) {
+                this.cond = model.cond;
+                this.datum = model.datum;
+                this.divisor = model.divisor;
+                this.name = model.name;
+                this.nameList = model.nameList;
+                this.operator = model.operator;
+                this.rate = model.rate;
+                this.remainder = model.remainder;
+                this.type = model.type;
+                this.value = model.value;
+            } 
+
             /**
              * cond.
              */
@@ -495,6 +528,16 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
             private String path; 
             private java.util.List<String> paths; 
             private java.util.List<RestItems> restItems; 
+
+            private Builder() {
+            } 
+
+            private Builder(EntryRules model) {
+                this.condition = model.condition;
+                this.path = model.path;
+                this.paths = model.paths;
+                this.restItems = model.restItems;
+            } 
 
             /**
              * condition.
@@ -722,6 +765,26 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
             private String regionId; 
             private Integer status; 
             private String tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.enable = model.enable;
+                this.enableRules = model.enableRules;
+                this.entryRule = model.entryRule;
+                this.entryRules = model.entryRules;
+                this.gatewaySwimmingLaneRouteJson = model.gatewaySwimmingLaneRouteJson;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.groupId = model.groupId;
+                this.id = model.id;
+                this.name = model.name;
+                this.pathIndependentPercentageEnable = model.pathIndependentPercentageEnable;
+                this.regionId = model.regionId;
+                this.status = model.status;
+                this.tag = model.tag;
+            } 
 
             /**
              * enable.

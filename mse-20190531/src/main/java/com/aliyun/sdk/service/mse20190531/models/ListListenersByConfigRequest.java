@@ -67,7 +67,7 @@ public class ListListenersByConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -308,6 +308,16 @@ public class ListListenersByConfigRequest extends Request {
             private String grayRuleName; 
             private Integer grayRulePriority; 
             private String grayRuleType; 
+
+            private Builder() {
+            } 
+
+            private Builder(ExtGrayRules model) {
+                this.grayRule = model.grayRule;
+                this.grayRuleName = model.grayRuleName;
+                this.grayRulePriority = model.grayRulePriority;
+                this.grayRuleType = model.grayRuleType;
+            } 
 
             /**
              * GrayRule.

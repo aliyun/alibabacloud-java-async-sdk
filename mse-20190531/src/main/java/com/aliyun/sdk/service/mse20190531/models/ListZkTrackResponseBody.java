@@ -64,6 +64,10 @@ public class ListZkTrackResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -137,6 +141,21 @@ public class ListZkTrackResponseBody extends TeaModel {
         private Boolean success; 
         private Long totalCount; 
         private java.util.List<Traces> traces; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListZkTrackResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.httpCode = model.httpCode;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+            this.traces = model.traces;
+        } 
 
         /**
          * <p>The error code returned if the request failed.</p>
@@ -431,6 +450,26 @@ public class ListZkTrackResponseBody extends TeaModel {
             private String traceType; 
             private Long ttl; 
             private Boolean watch; 
+
+            private Builder() {
+            } 
+
+            private Builder(Traces model) {
+                this.acl = model.acl;
+                this.dataType = model.dataType;
+                this.eventType = model.eventType;
+                this.finished = model.finished;
+                this.logDate = model.logDate;
+                this.multiSize = model.multiSize;
+                this.opType = model.opType;
+                this.path = model.path;
+                this.result = model.result;
+                this.sessionId = model.sessionId;
+                this.timestamp = model.timestamp;
+                this.traceType = model.traceType;
+                this.ttl = model.ttl;
+                this.watch = model.watch;
+            } 
 
             /**
              * <p>The access control list (ACL).</p>

@@ -48,6 +48,10 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -89,6 +93,17 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryAllSwimmingLaneResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The details of the data.</p>
@@ -295,6 +310,22 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
             private String type; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(RestItems model) {
+                this.cond = model.cond;
+                this.datum = model.datum;
+                this.divisor = model.divisor;
+                this.name = model.name;
+                this.nameList = model.nameList;
+                this.operator = model.operator;
+                this.rate = model.rate;
+                this.remainder = model.remainder;
+                this.type = model.type;
+                this.value = model.value;
+            } 
+
             /**
              * cond.
              */
@@ -450,6 +481,16 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
             private java.util.List<String> paths; 
             private java.util.List<RestItems> restItems; 
 
+            private Builder() {
+            } 
+
+            private Builder(EntryRules model) {
+                this.condition = model.condition;
+                this.path = model.path;
+                this.paths = model.paths;
+                this.restItems = model.restItems;
+            } 
+
             /**
              * condition.
              */
@@ -569,6 +610,17 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
             private String type; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Conditions model) {
+                this.cond = model.cond;
+                this.name = model.name;
+                this.nameList = model.nameList;
+                this.type = model.type;
+                this.value = model.value;
+            } 
+
             /**
              * Cond.
              */
@@ -659,6 +711,14 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
         public static final class Builder {
             private String percentage; 
             private String routeId; 
+
+            private Builder() {
+            } 
+
+            private Builder(RouteIndependentPercentageList model) {
+                this.percentage = model.percentage;
+                this.routeId = model.routeId;
+            } 
 
             /**
              * Percentage.
@@ -810,6 +870,21 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
             private java.util.List<Long> routeIdList; 
             private String routeIndependentPercentageEnable; 
             private java.util.List<RouteIndependentPercentageList> routeIndependentPercentageList; 
+
+            private Builder() {
+            } 
+
+            private Builder(GatewaySwimmingLaneRoute model) {
+                this.canaryModel = model.canaryModel;
+                this.condition = model.condition;
+                this.conditions = model.conditions;
+                this.gatewayId = model.gatewayId;
+                this.gatewayUniqueId = model.gatewayUniqueId;
+                this.percentage = model.percentage;
+                this.routeIdList = model.routeIdList;
+                this.routeIndependentPercentageEnable = model.routeIndependentPercentageEnable;
+                this.routeIndependentPercentageList = model.routeIndependentPercentageList;
+            } 
 
             /**
              * CanaryModel.
@@ -1125,6 +1200,30 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
             private Boolean enableRules; 
             private String gmtCreate; 
             private String gmtModified; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.enable = model.enable;
+                this.entryRules = model.entryRules;
+                this.gatewaySwimmingLaneRoute = model.gatewaySwimmingLaneRoute;
+                this.gatewaySwimmingLaneRouteJson = model.gatewaySwimmingLaneRouteJson;
+                this.groupId = model.groupId;
+                this.id = model.id;
+                this.messageQueueFilterSide = model.messageQueueFilterSide;
+                this.messageQueueGrayEnable = model.messageQueueGrayEnable;
+                this.name = model.name;
+                this.namespace = model.namespace;
+                this.pathIndependentPercentageEnable = model.pathIndependentPercentageEnable;
+                this.recordCanaryDetail = model.recordCanaryDetail;
+                this.regionId = model.regionId;
+                this.tag = model.tag;
+                this.userId = model.userId;
+                this.enableRules = model.enableRules;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+            } 
 
             /**
              * Enable.

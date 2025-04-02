@@ -52,6 +52,10 @@ public class ListGatewayResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListGatewayResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListGatewayResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The return value.</p>
@@ -219,6 +235,14 @@ public class ListGatewayResponseBody extends TeaModel {
             private String endTime; 
             private String startTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(EnableScaleTimePolicyList model) {
+                this.endTime = model.endTime;
+                this.startTime = model.startTime;
+            } 
+
             /**
              * EndTime.
              */
@@ -297,6 +321,15 @@ public class ListGatewayResponseBody extends TeaModel {
             private Integer desiredReplica; 
             private String endTime; 
             private String startTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(TimePolicyList model) {
+                this.desiredReplica = model.desiredReplica;
+                this.endTime = model.endTime;
+                this.startTime = model.startTime;
+            } 
 
             /**
              * <p>The expected number of replicas for auto scale-out.</p>
@@ -430,6 +463,18 @@ public class ListGatewayResponseBody extends TeaModel {
             private Integer maxReplica; 
             private java.util.List<TimePolicyList> timePolicyList; 
 
+            private Builder() {
+            } 
+
+            private Builder(ElasticPolicy model) {
+                this.elastic = model.elastic;
+                this.elasticType = model.elasticType;
+                this.enableScaleTimePolicyList = model.enableScaleTimePolicyList;
+                this.loadWarningThreshold = model.loadWarningThreshold;
+                this.maxReplica = model.maxReplica;
+                this.timePolicyList = model.timePolicyList;
+            } 
+
             /**
              * <p>Indicates whether auto scale-out is enabled.</p>
              * 
@@ -503,6 +548,144 @@ public class ListGatewayResponseBody extends TeaModel {
      *
      * <p>ListGatewayResponseBody</p>
      */
+    public static class GatewayEntry extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EntryDomain")
+        private String entryDomain;
+
+        @com.aliyun.core.annotation.NameInMap("HttpPorts")
+        private java.util.List<Integer> httpPorts;
+
+        @com.aliyun.core.annotation.NameInMap("HttpsPorts")
+        private java.util.List<Integer> httpsPorts;
+
+        @com.aliyun.core.annotation.NameInMap("IpList")
+        private java.util.List<String> ipList;
+
+        @com.aliyun.core.annotation.NameInMap("NetType")
+        private String netType;
+
+        private GatewayEntry(Builder builder) {
+            this.entryDomain = builder.entryDomain;
+            this.httpPorts = builder.httpPorts;
+            this.httpsPorts = builder.httpsPorts;
+            this.ipList = builder.ipList;
+            this.netType = builder.netType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static GatewayEntry create() {
+            return builder().build();
+        }
+
+        /**
+         * @return entryDomain
+         */
+        public String getEntryDomain() {
+            return this.entryDomain;
+        }
+
+        /**
+         * @return httpPorts
+         */
+        public java.util.List<Integer> getHttpPorts() {
+            return this.httpPorts;
+        }
+
+        /**
+         * @return httpsPorts
+         */
+        public java.util.List<Integer> getHttpsPorts() {
+            return this.httpsPorts;
+        }
+
+        /**
+         * @return ipList
+         */
+        public java.util.List<String> getIpList() {
+            return this.ipList;
+        }
+
+        /**
+         * @return netType
+         */
+        public String getNetType() {
+            return this.netType;
+        }
+
+        public static final class Builder {
+            private String entryDomain; 
+            private java.util.List<Integer> httpPorts; 
+            private java.util.List<Integer> httpsPorts; 
+            private java.util.List<String> ipList; 
+            private String netType; 
+
+            private Builder() {
+            } 
+
+            private Builder(GatewayEntry model) {
+                this.entryDomain = model.entryDomain;
+                this.httpPorts = model.httpPorts;
+                this.httpsPorts = model.httpsPorts;
+                this.ipList = model.ipList;
+                this.netType = model.netType;
+            } 
+
+            /**
+             * EntryDomain.
+             */
+            public Builder entryDomain(String entryDomain) {
+                this.entryDomain = entryDomain;
+                return this;
+            }
+
+            /**
+             * HttpPorts.
+             */
+            public Builder httpPorts(java.util.List<Integer> httpPorts) {
+                this.httpPorts = httpPorts;
+                return this;
+            }
+
+            /**
+             * HttpsPorts.
+             */
+            public Builder httpsPorts(java.util.List<Integer> httpsPorts) {
+                this.httpsPorts = httpsPorts;
+                return this;
+            }
+
+            /**
+             * IpList.
+             */
+            public Builder ipList(java.util.List<String> ipList) {
+                this.ipList = ipList;
+                return this;
+            }
+
+            /**
+             * NetType.
+             */
+            public Builder netType(String netType) {
+                this.netType = netType;
+                return this;
+            }
+
+            public GatewayEntry build() {
+                return new GatewayEntry(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListGatewayResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGatewayResponseBody</p>
+     */
     public static class InitConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnableWaf")
         private Boolean enableWaf;
@@ -540,6 +723,14 @@ public class ListGatewayResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean enableWaf; 
             private Boolean supportWaf; 
+
+            private Builder() {
+            } 
+
+            private Builder(InitConfig model) {
+                this.enableWaf = model.enableWaf;
+                this.supportWaf = model.supportWaf;
+            } 
 
             /**
              * <p>Indicates whether Web Application Firewall (WAF) is enabled.</p>
@@ -697,6 +888,21 @@ public class ListGatewayResponseBody extends TeaModel {
             private String slbSpec; 
             private String statusDesc; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(InternetSlb model) {
+                this.gatewaySlbMode = model.gatewaySlbMode;
+                this.gatewaySlbStatus = model.gatewaySlbStatus;
+                this.internetNetworkFlow = model.internetNetworkFlow;
+                this.slbId = model.slbId;
+                this.slbIp = model.slbIp;
+                this.slbPort = model.slbPort;
+                this.slbSpec = model.slbSpec;
+                this.statusDesc = model.statusDesc;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The mode of the SLB instance.</p>
@@ -860,6 +1066,15 @@ public class ListGatewayResponseBody extends TeaModel {
             private String startTime; 
             private String timeZone; 
 
+            private Builder() {
+            } 
+
+            private Builder(MaintenancePeriod model) {
+                this.endTime = model.endTime;
+                this.startTime = model.startTime;
+                this.timeZone = model.timeZone;
+            } 
+
             /**
              * <p>The end time of auto scale-out.</p>
              * 
@@ -1013,6 +1228,20 @@ public class ListGatewayResponseBody extends TeaModel {
             private String statusDesc; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Slb model) {
+                this.gatewaySlbMode = model.gatewaySlbMode;
+                this.gatewaySlbStatus = model.gatewaySlbStatus;
+                this.slbId = model.slbId;
+                this.slbIp = model.slbIp;
+                this.slbPort = model.slbPort;
+                this.slbSpec = model.slbSpec;
+                this.statusDesc = model.statusDesc;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The mode of the SLB instance.</p>
              * 
@@ -1152,6 +1381,9 @@ public class ListGatewayResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndDate")
         private String endDate;
 
+        @com.aliyun.core.annotation.NameInMap("GatewayEntry")
+        private java.util.List<GatewayEntry> gatewayEntry;
+
         @com.aliyun.core.annotation.NameInMap("GatewayType")
         private String gatewayType;
 
@@ -1236,6 +1468,9 @@ public class ListGatewayResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Upgrade")
         private Boolean upgrade;
 
+        @com.aliyun.core.annotation.NameInMap("VersionLifecycle")
+        private String versionLifecycle;
+
         @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
@@ -1254,6 +1489,7 @@ public class ListGatewayResponseBody extends TeaModel {
             this.elasticReplica = builder.elasticReplica;
             this.elasticType = builder.elasticType;
             this.endDate = builder.endDate;
+            this.gatewayEntry = builder.gatewayEntry;
             this.gatewayType = builder.gatewayType;
             this.gatewayUniqueId = builder.gatewayUniqueId;
             this.gatewayVersion = builder.gatewayVersion;
@@ -1282,6 +1518,7 @@ public class ListGatewayResponseBody extends TeaModel {
             this.tag = builder.tag;
             this.totalReplica = builder.totalReplica;
             this.upgrade = builder.upgrade;
+            this.versionLifecycle = builder.versionLifecycle;
             this.vpcId = builder.vpcId;
             this.vswitch2 = builder.vswitch2;
         }
@@ -1369,6 +1606,13 @@ public class ListGatewayResponseBody extends TeaModel {
          */
         public String getEndDate() {
             return this.endDate;
+        }
+
+        /**
+         * @return gatewayEntry
+         */
+        public java.util.List<GatewayEntry> getGatewayEntry() {
+            return this.gatewayEntry;
         }
 
         /**
@@ -1568,6 +1812,13 @@ public class ListGatewayResponseBody extends TeaModel {
         }
 
         /**
+         * @return versionLifecycle
+         */
+        public String getVersionLifecycle() {
+            return this.versionLifecycle;
+        }
+
+        /**
          * @return vpcId
          */
         public String getVpcId() {
@@ -1593,6 +1844,7 @@ public class ListGatewayResponseBody extends TeaModel {
             private Integer elasticReplica; 
             private String elasticType; 
             private String endDate; 
+            private java.util.List<GatewayEntry> gatewayEntry; 
             private String gatewayType; 
             private String gatewayUniqueId; 
             private String gatewayVersion; 
@@ -1621,8 +1873,58 @@ public class ListGatewayResponseBody extends TeaModel {
             private String tag; 
             private Integer totalReplica; 
             private Boolean upgrade; 
+            private String versionLifecycle; 
             private String vpcId; 
             private String vswitch2; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.ahasOn = model.ahasOn;
+                this.appVersion = model.appVersion;
+                this.armsOn = model.armsOn;
+                this.chargeType = model.chargeType;
+                this.currentVersion = model.currentVersion;
+                this.elastic = model.elastic;
+                this.elasticInstanceId = model.elasticInstanceId;
+                this.elasticPolicy = model.elasticPolicy;
+                this.elasticReplica = model.elasticReplica;
+                this.elasticType = model.elasticType;
+                this.endDate = model.endDate;
+                this.gatewayEntry = model.gatewayEntry;
+                this.gatewayType = model.gatewayType;
+                this.gatewayUniqueId = model.gatewayUniqueId;
+                this.gatewayVersion = model.gatewayVersion;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.initConfig = model.initConfig;
+                this.instanceId = model.instanceId;
+                this.internetSlb = model.internetSlb;
+                this.latestVersion = model.latestVersion;
+                this.maintenancePeriod = model.maintenancePeriod;
+                this.mseTag = model.mseTag;
+                this.mseVersion = model.mseVersion;
+                this.mustUpgrade = model.mustUpgrade;
+                this.name = model.name;
+                this.primaryUser = model.primaryUser;
+                this.region = model.region;
+                this.replica = model.replica;
+                this.resourceGroupId = model.resourceGroupId;
+                this.rollBack = model.rollBack;
+                this.slb = model.slb;
+                this.spec = model.spec;
+                this.status = model.status;
+                this.statusDesc = model.statusDesc;
+                this.supportWasm = model.supportWasm;
+                this.tag = model.tag;
+                this.totalReplica = model.totalReplica;
+                this.upgrade = model.upgrade;
+                this.versionLifecycle = model.versionLifecycle;
+                this.vpcId = model.vpcId;
+                this.vswitch2 = model.vswitch2;
+            } 
 
             /**
              * <p>Indicates whether Application High Availability Service (AHAS) is activated.</p>
@@ -1742,6 +2044,14 @@ public class ListGatewayResponseBody extends TeaModel {
              */
             public Builder endDate(String endDate) {
                 this.endDate = endDate;
+                return this;
+            }
+
+            /**
+             * GatewayEntry.
+             */
+            public Builder gatewayEntry(java.util.List<GatewayEntry> gatewayEntry) {
+                this.gatewayEntry = gatewayEntry;
                 return this;
             }
 
@@ -2053,6 +2363,14 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
+             * VersionLifecycle.
+             */
+            public Builder versionLifecycle(String versionLifecycle) {
+                this.versionLifecycle = versionLifecycle;
+                return this;
+            }
+
+            /**
              * <p>The ID of the virtual private cloud (VPC) to which the gateway belongs.</p>
              * 
              * <strong>example:</strong>
@@ -2148,6 +2466,16 @@ public class ListGatewayResponseBody extends TeaModel {
             private Integer pageSize; 
             private java.util.List<Result> result; 
             private Long totalSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.result = model.result;
+                this.totalSize = model.totalSize;
+            } 
 
             /**
              * <p>The page number of the returned page.</p>

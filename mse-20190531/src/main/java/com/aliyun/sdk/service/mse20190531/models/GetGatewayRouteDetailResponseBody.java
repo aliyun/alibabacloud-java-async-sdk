@@ -52,6 +52,10 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetGatewayRouteDetailResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code returned. A value of 200 indicates that the request is successful.</p>
@@ -291,6 +307,20 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             private String timeUnit; 
             private Long unitNum; 
 
+            private Builder() {
+            } 
+
+            private Builder(Cors model) {
+                this.allowCredentials = model.allowCredentials;
+                this.allowHeaders = model.allowHeaders;
+                this.allowMethods = model.allowMethods;
+                this.allowOrigins = model.allowOrigins;
+                this.exposeHeaders = model.exposeHeaders;
+                this.status = model.status;
+                this.timeUnit = model.timeUnit;
+                this.unitNum = model.unitNum;
+            } 
+
             /**
              * <p>The credentials allowed.</p>
              * 
@@ -435,6 +465,14 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         public static final class Builder {
             private String body; 
             private Integer code; 
+
+            private Builder() {
+            } 
+
+            private Builder(DirectResponse model) {
+                this.body = model.body;
+                this.code = model.code;
+            } 
 
             /**
              * <p>The mock return value.</p>
@@ -604,6 +642,22 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             private Integer servicePort; 
             private String sourceType; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(FallbackServices model) {
+                this.agreementType = model.agreementType;
+                this.groupName = model.groupName;
+                this.name = model.name;
+                this.namespace = model.namespace;
+                this.percent = model.percent;
+                this.serviceId = model.serviceId;
+                this.serviceName = model.serviceName;
+                this.servicePort = model.servicePort;
+                this.sourceType = model.sourceType;
+                this.version = model.version;
+            } 
 
             /**
              * <p>The protocol type.</p>
@@ -802,6 +856,17 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             private Long targetServiceId; 
             private String targetServiceName; 
 
+            private Builder() {
+            } 
+
+            private Builder(FlowMirror model) {
+                this.percentage = model.percentage;
+                this.port = model.port;
+                this.status = model.status;
+                this.targetServiceId = model.targetServiceId;
+                this.targetServiceName = model.targetServiceName;
+            } 
+
             /**
              * <p>流量复制比例（%），取值0-100。</p>
              * 
@@ -960,6 +1025,18 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             private String status; 
             private String substitution; 
 
+            private Builder() {
+            } 
+
+            private Builder(HTTPRewrite model) {
+                this.host = model.host;
+                this.path = model.path;
+                this.pathType = model.pathType;
+                this.pattern = model.pattern;
+                this.status = model.status;
+                this.substitution = model.substitution;
+            } 
+
             /**
              * <p>The hostname of the gateway.</p>
              * 
@@ -1101,6 +1178,16 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             private String opType; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(HeaderOpItems model) {
+                this.directionType = model.directionType;
+                this.key = model.key;
+                this.opType = model.opType;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The request or response.</p>
              * 
@@ -1196,6 +1283,14 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             private java.util.List<HeaderOpItems> headerOpItems; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(HeaderOp model) {
+                this.headerOpItems = model.headerOpItems;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The information about headers.</p>
              */
@@ -1277,6 +1372,15 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             private Integer code; 
             private String host; 
             private String path; 
+
+            private Builder() {
+            } 
+
+            private Builder(Redirect model) {
+                this.code = model.code;
+                this.host = model.host;
+                this.path = model.path;
+            } 
 
             /**
              * <p>The response code returned.</p>
@@ -1386,6 +1490,16 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             private java.util.List<String> retryOn; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(Retry model) {
+                this.attempts = model.attempts;
+                this.httpCodes = model.httpCodes;
+                this.retryOn = model.retryOn;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The number of retries allowed.</p>
              * 
@@ -1487,6 +1601,15 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             private String type; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(HeaderPredicates model) {
+                this.key = model.key;
+                this.type = model.type;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The key of the request header.</p>
              * 
@@ -1583,6 +1706,15 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             private String path; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(PathPredicates model) {
+                this.ignoreCase = model.ignoreCase;
+                this.path = model.path;
+                this.type = model.type;
+            } 
+
             /**
              * <p>Indicates whether case sensitivity is ignored.</p>
              * 
@@ -1678,6 +1810,15 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             private String key; 
             private String type; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(QueryPredicates model) {
+                this.key = model.key;
+                this.type = model.type;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The parameter name.</p>
@@ -1787,6 +1928,16 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             private PathPredicates pathPredicates; 
             private java.util.List<QueryPredicates> queryPredicates; 
 
+            private Builder() {
+            } 
+
+            private Builder(RoutePredicates model) {
+                this.headerPredicates = model.headerPredicates;
+                this.methodPredicates = model.methodPredicates;
+                this.pathPredicates = model.pathPredicates;
+                this.queryPredicates = model.queryPredicates;
+            } 
+
             /**
              * <p>The information about header matching.</p>
              */
@@ -1881,6 +2032,15 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             private String extractKey; 
             private String extractKeySpec; 
             private String mappingType; 
+
+            private Builder() {
+            } 
+
+            private Builder(ParamMapsList model) {
+                this.extractKey = model.extractKey;
+                this.extractKeySpec = model.extractKeySpec;
+                this.mappingType = model.mappingType;
+            } 
 
             /**
              * ExtractKey.
@@ -2005,6 +2165,18 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             private String passThroughAllHeaders; 
             private java.util.List<String> passThroughList; 
 
+            private Builder() {
+            } 
+
+            private Builder(MothedMapList model) {
+                this.dubboMothedName = model.dubboMothedName;
+                this.httpMothed = model.httpMothed;
+                this.mothedpath = model.mothedpath;
+                this.paramMapsList = model.paramMapsList;
+                this.passThroughAllHeaders = model.passThroughAllHeaders;
+                this.passThroughList = model.passThroughList;
+            } 
+
             /**
              * DubboMothedName.
              */
@@ -2127,6 +2299,16 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             private String dubboServiceName; 
             private String dubboServiceVersion; 
             private java.util.List<MothedMapList> mothedMapList; 
+
+            private Builder() {
+            } 
+
+            private Builder(HttpDubboTranscoder model) {
+                this.dubboServiceGroup = model.dubboServiceGroup;
+                this.dubboServiceName = model.dubboServiceName;
+                this.dubboServiceVersion = model.dubboServiceVersion;
+                this.mothedMapList = model.mothedMapList;
+            } 
 
             /**
              * DubboServiceGroup.
@@ -2343,6 +2525,25 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             private java.util.List<String> unhealthyEndpoints; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(RouteServices model) {
+                this.agreementType = model.agreementType;
+                this.groupName = model.groupName;
+                this.healthStatus = model.healthStatus;
+                this.httpDubboTranscoder = model.httpDubboTranscoder;
+                this.name = model.name;
+                this.namespace = model.namespace;
+                this.percent = model.percent;
+                this.serviceId = model.serviceId;
+                this.serviceName = model.serviceName;
+                this.servicePort = model.servicePort;
+                this.sourceType = model.sourceType;
+                this.unhealthyEndpoints = model.unhealthyEndpoints;
+                this.version = model.version;
+            } 
+
             /**
              * <p>The protocol type.</p>
              * 
@@ -2539,6 +2740,15 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             private String status; 
             private String timeUnit; 
             private Integer unitNum; 
+
+            private Builder() {
+            } 
+
+            private Builder(Timeout model) {
+                this.status = model.status;
+                this.timeUnit = model.timeUnit;
+                this.unitNum = model.unitNum;
+            } 
 
             /**
              * <p>The status.</p>
@@ -2995,6 +3205,45 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             private String services; 
             private Integer status; 
             private Timeout timeout; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.ahasStatus = model.ahasStatus;
+                this.cors = model.cors;
+                this.defaultServiceId = model.defaultServiceId;
+                this.defaultServiceName = model.defaultServiceName;
+                this.description = model.description;
+                this.destinationType = model.destinationType;
+                this.directResponse = model.directResponse;
+                this.domainId = model.domainId;
+                this.domainIdList = model.domainIdList;
+                this.domainName = model.domainName;
+                this.domainNameList = model.domainNameList;
+                this.enableWaf = model.enableWaf;
+                this.fallback = model.fallback;
+                this.fallbackServices = model.fallbackServices;
+                this.flowMirror = model.flowMirror;
+                this.gatewayId = model.gatewayId;
+                this.gatewayUniqueId = model.gatewayUniqueId;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.HTTPRewrite = model.HTTPRewrite;
+                this.headerOp = model.headerOp;
+                this.id = model.id;
+                this.name = model.name;
+                this.policies = model.policies;
+                this.predicates = model.predicates;
+                this.redirect = model.redirect;
+                this.retry = model.retry;
+                this.routeOrder = model.routeOrder;
+                this.routePredicates = model.routePredicates;
+                this.routeServices = model.routeServices;
+                this.services = model.services;
+                this.status = model.status;
+                this.timeout = model.timeout;
+            } 
 
             /**
              * <p>The status of Application High Availability Service (AHAS).</p>

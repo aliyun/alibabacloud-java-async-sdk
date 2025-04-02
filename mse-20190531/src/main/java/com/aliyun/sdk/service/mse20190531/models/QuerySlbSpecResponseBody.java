@@ -52,6 +52,10 @@ public class QuerySlbSpecResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class QuerySlbSpecResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QuerySlbSpecResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The return value.</p>
@@ -266,6 +282,18 @@ public class QuerySlbSpecResponseBody extends TeaModel {
             private String newConnectionPerSecond; 
             private String qps; 
             private String spec; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.id = model.id;
+                this.maxConnection = model.maxConnection;
+                this.name = model.name;
+                this.newConnectionPerSecond = model.newConnectionPerSecond;
+                this.qps = model.qps;
+                this.spec = model.spec;
+            } 
 
             /**
              * <p>The ID of the returned data.</p>

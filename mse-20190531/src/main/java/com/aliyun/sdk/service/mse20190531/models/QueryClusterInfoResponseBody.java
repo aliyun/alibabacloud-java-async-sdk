@@ -48,6 +48,10 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -89,6 +93,17 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryClusterInfoResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The details of the data.</p>
@@ -272,6 +287,20 @@ public class QueryClusterInfoResponseBody extends TeaModel {
             private String singleTunnelVip; 
             private String zone; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceModels model) {
+                this.creationTimestamp = model.creationTimestamp;
+                this.healthStatus = model.healthStatus;
+                this.internetIp = model.internetIp;
+                this.ip = model.ip;
+                this.podName = model.podName;
+                this.role = model.role;
+                this.singleTunnelVip = model.singleTunnelVip;
+                this.zone = model.zone;
+            } 
+
             /**
              * <p>A reserved parameter.</p>
              * 
@@ -410,6 +439,14 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         public static final class Builder {
             private String endTime; 
             private String startTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(MaintenancePeriod model) {
+                this.endTime = model.endTime;
+                this.startTime = model.startTime;
+            } 
 
             /**
              * <p>The start time of the O&amp;M time window.</p>
@@ -573,6 +610,9 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VersionCode")
         private String versionCode;
 
+        @com.aliyun.core.annotation.NameInMap("VersionLifecycle")
+        private String versionLifecycle;
+
         @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
@@ -619,6 +659,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
             this.tags = builder.tags;
             this.vSwitchId = builder.vSwitchId;
             this.versionCode = builder.versionCode;
+            this.versionLifecycle = builder.versionLifecycle;
             this.vpcId = builder.vpcId;
         }
 
@@ -925,6 +966,13 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return versionLifecycle
+         */
+        public String getVersionLifecycle() {
+            return this.versionLifecycle;
+        }
+
+        /**
          * @return vpcId
          */
         public String getVpcId() {
@@ -974,7 +1022,58 @@ public class QueryClusterInfoResponseBody extends TeaModel {
             private java.util.Map<String, ?> tags; 
             private String vSwitchId; 
             private String versionCode; 
+            private String versionLifecycle; 
             private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.aclEntryList = model.aclEntryList;
+                this.aclId = model.aclId;
+                this.appVersion = model.appVersion;
+                this.canUpdate = model.canUpdate;
+                this.chargeType = model.chargeType;
+                this.clusterAliasName = model.clusterAliasName;
+                this.clusterName = model.clusterName;
+                this.clusterSpecification = model.clusterSpecification;
+                this.clusterType = model.clusterType;
+                this.clusterVersion = model.clusterVersion;
+                this.connectionType = model.connectionType;
+                this.cpu = model.cpu;
+                this.createTime = model.createTime;
+                this.diskCapacity = model.diskCapacity;
+                this.diskType = model.diskType;
+                this.eipInstanceId = model.eipInstanceId;
+                this.endDate = model.endDate;
+                this.expectZones = model.expectZones;
+                this.healthStatus = model.healthStatus;
+                this.initCostTime = model.initCostTime;
+                this.initStatus = model.initStatus;
+                this.instanceCount = model.instanceCount;
+                this.instanceId = model.instanceId;
+                this.instanceModels = model.instanceModels;
+                this.internetAddress = model.internetAddress;
+                this.internetDomain = model.internetDomain;
+                this.internetPort = model.internetPort;
+                this.intranetAddress = model.intranetAddress;
+                this.intranetDomain = model.intranetDomain;
+                this.intranetPort = model.intranetPort;
+                this.maintenancePeriod = model.maintenancePeriod;
+                this.memoryCapacity = model.memoryCapacity;
+                this.mseVersion = model.mseVersion;
+                this.netType = model.netType;
+                this.payInfo = model.payInfo;
+                this.pubNetworkFlow = model.pubNetworkFlow;
+                this.regionId = model.regionId;
+                this.securityGroupId = model.securityGroupId;
+                this.securityGroupType = model.securityGroupType;
+                this.tags = model.tags;
+                this.vSwitchId = model.vSwitchId;
+                this.versionCode = model.versionCode;
+                this.versionLifecycle = model.versionLifecycle;
+                this.vpcId = model.vpcId;
+            } 
 
             /**
              * <p>The public IP address whitelist.</p>
@@ -1417,6 +1516,14 @@ public class QueryClusterInfoResponseBody extends TeaModel {
              */
             public Builder versionCode(String versionCode) {
                 this.versionCode = versionCode;
+                return this;
+            }
+
+            /**
+             * VersionLifecycle.
+             */
+            public Builder versionLifecycle(String versionLifecycle) {
+                this.versionLifecycle = versionLifecycle;
                 return this;
             }
 

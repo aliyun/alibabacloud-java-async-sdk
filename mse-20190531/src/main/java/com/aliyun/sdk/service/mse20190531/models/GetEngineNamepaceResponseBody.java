@@ -72,6 +72,10 @@ public class GetEngineNamepaceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return configCount
      */
@@ -161,6 +165,23 @@ public class GetEngineNamepaceResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetEngineNamepaceResponseBody model) {
+            this.configCount = model.configCount;
+            this.errorCode = model.errorCode;
+            this.httpCode = model.httpCode;
+            this.message = model.message;
+            this.namespace = model.namespace;
+            this.namespaceDesc = model.namespaceDesc;
+            this.namespaceShowName = model.namespaceShowName;
+            this.quota = model.quota;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.type = model.type;
+        } 
 
         /**
          * <p>The number of configurations.</p>

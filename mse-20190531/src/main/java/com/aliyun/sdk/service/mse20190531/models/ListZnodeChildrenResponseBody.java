@@ -48,6 +48,10 @@ public class ListZnodeChildrenResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -89,6 +93,17 @@ public class ListZnodeChildrenResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListZnodeChildrenResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The details of the data.</p>
@@ -219,6 +234,16 @@ public class ListZnodeChildrenResponseBody extends TeaModel {
             private Boolean dir; 
             private String name; 
             private String path; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.data = model.data;
+                this.dir = model.dir;
+                this.name = model.name;
+                this.path = model.path;
+            } 
 
             /**
              * <p>The data of the node.</p>

@@ -44,6 +44,10 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -77,6 +81,16 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ApplyTagPoliciesResponseBody model) {
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The details of the data.</p>
@@ -264,6 +278,22 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
             private String rules; 
             private Integer status; 
             private String tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.carryData = model.carryData;
+                this.enable = model.enable;
+                this.id = model.id;
+                this.instanceNum = model.instanceNum;
+                this.name = model.name;
+                this.rate = model.rate;
+                this.remove = model.remove;
+                this.rules = model.rules;
+                this.status = model.status;
+                this.tag = model.tag;
+            } 
 
             /**
              * <p>Indicates whether the field is the primary key.</p>

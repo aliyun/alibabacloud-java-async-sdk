@@ -54,7 +54,7 @@ public class UpdateGatewayRouteCORSRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -299,6 +299,20 @@ public class UpdateGatewayRouteCORSRequest extends Request {
             private String status; 
             private String timeUnit; 
             private Long unitNum; 
+
+            private Builder() {
+            } 
+
+            private Builder(CorsJSON model) {
+                this.allowCredentials = model.allowCredentials;
+                this.allowHeaders = model.allowHeaders;
+                this.allowMethods = model.allowMethods;
+                this.allowOrigins = model.allowOrigins;
+                this.exposeHeaders = model.exposeHeaders;
+                this.status = model.status;
+                this.timeUnit = model.timeUnit;
+                this.unitNum = model.unitNum;
+            } 
 
             /**
              * <p>The credentials allowed.</p>

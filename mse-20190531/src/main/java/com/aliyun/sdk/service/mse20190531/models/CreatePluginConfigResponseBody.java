@@ -36,6 +36,10 @@ public class CreatePluginConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pluginConfigID
      */
@@ -53,6 +57,14 @@ public class CreatePluginConfigResponseBody extends TeaModel {
     public static final class Builder {
         private Long pluginConfigID; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreatePluginConfigResponseBody model) {
+            this.pluginConfigID = model.pluginConfigID;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The plug-in configuration ID.</p>

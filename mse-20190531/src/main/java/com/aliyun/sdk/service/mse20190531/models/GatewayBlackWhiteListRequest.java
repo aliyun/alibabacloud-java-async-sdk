@@ -59,7 +59,7 @@ public class GatewayBlackWhiteListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -308,6 +308,19 @@ public class GatewayBlackWhiteListRequest extends Request {
             private String searchContent; 
             private String searchType; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(FilterParams model) {
+                this.gatewayId = model.gatewayId;
+                this.gatewayUniqueId = model.gatewayUniqueId;
+                this.isWhite = model.isWhite;
+                this.resourceType = model.resourceType;
+                this.searchContent = model.searchContent;
+                this.searchType = model.searchType;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The gateway ID.</p>
