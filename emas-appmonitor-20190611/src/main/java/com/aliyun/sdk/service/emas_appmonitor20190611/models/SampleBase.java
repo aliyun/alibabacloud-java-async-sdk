@@ -44,6 +44,10 @@ public class SampleBase extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return fullSampleDeviceIds
      */
@@ -77,6 +81,16 @@ public class SampleBase extends TeaModel {
         private java.util.List<FullSampleItem> fullSampleUsers; 
         private String sampleMethod; 
         private Float sampleRate; 
+
+        private Builder() {
+        } 
+
+        private Builder(SampleBase model) {
+            this.fullSampleDeviceIds = model.fullSampleDeviceIds;
+            this.fullSampleUsers = model.fullSampleUsers;
+            this.sampleMethod = model.sampleMethod;
+            this.sampleRate = model.sampleRate;
+        } 
 
         /**
          * FullSampleDeviceIds.

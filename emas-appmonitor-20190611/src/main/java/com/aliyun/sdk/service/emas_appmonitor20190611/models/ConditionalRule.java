@@ -48,6 +48,10 @@ public class ConditionalRule extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return filter
      */
@@ -89,6 +93,17 @@ public class ConditionalRule extends TeaModel {
         private String name; 
         private String operator; 
         private Float sampleRate; 
+
+        private Builder() {
+        } 
+
+        private Builder(ConditionalRule model) {
+            this.filter = model.filter;
+            this.modifyTime = model.modifyTime;
+            this.name = model.name;
+            this.operator = model.operator;
+            this.sampleRate = model.sampleRate;
+        } 
 
         /**
          * Filter.

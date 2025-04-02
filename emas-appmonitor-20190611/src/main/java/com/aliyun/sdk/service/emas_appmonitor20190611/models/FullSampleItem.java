@@ -40,6 +40,10 @@ public class FullSampleItem extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return id
      */
@@ -65,6 +69,15 @@ public class FullSampleItem extends TeaModel {
         private String id; 
         private String modifyTime; 
         private String operator; 
+
+        private Builder() {
+        } 
+
+        private Builder(FullSampleItem model) {
+            this.id = model.id;
+            this.modifyTime = model.modifyTime;
+            this.operator = model.operator;
+        } 
 
         /**
          * Id.

@@ -63,7 +63,7 @@ public class GetIssueRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -272,6 +272,16 @@ public class GetIssueRequest extends Request {
             private java.util.List<String> subFilters; 
             private java.util.List<?> values; 
 
+            private Builder() {
+            } 
+
+            private Builder(Filter model) {
+                this.key = model.key;
+                this.operator = model.operator;
+                this.subFilters = model.subFilters;
+                this.values = model.values;
+            } 
+
             /**
              * Key.
              */
@@ -378,6 +388,16 @@ public class GetIssueRequest extends Request {
             private Integer granularity; 
             private String granularityUnit; 
             private Long startTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(TimeRange model) {
+                this.endTime = model.endTime;
+                this.granularity = model.granularity;
+                this.granularityUnit = model.granularityUnit;
+                this.startTime = model.startTime;
+            } 
 
             /**
              * EndTime.

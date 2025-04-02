@@ -43,4 +43,22 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<GetIssuesResponse> getIssues(GetIssuesRequest request);
 
+    /**
+     * @param request the request parameters of GetSymbolicFiles  GetSymbolicFilesRequest
+     * @return GetSymbolicFilesResponse
+     */
+    CompletableFuture<GetSymbolicFilesResponse> getSymbolicFiles(GetSymbolicFilesRequest request);
+
+    /**
+     * @param request the request parameters of RequestUploadToken  RequestUploadTokenRequest
+     * @return RequestUploadTokenResponse
+     */
+    CompletableFuture<RequestUploadTokenResponse> requestUploadToken(RequestUploadTokenRequest request);
+
+    /**
+     * @param request the request parameters of SubmitSymbolic  SubmitSymbolicRequest
+     * @return SubmitSymbolicResponse
+     */
+    CompletableFuture<SubmitSymbolicResponse> submitSymbolic(SubmitSymbolicRequest request);
+
 }

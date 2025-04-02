@@ -52,6 +52,10 @@ public class EventRule extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return conditional
      */
@@ -101,6 +105,18 @@ public class EventRule extends TeaModel {
         private String modifyTime; 
         private String operator; 
         private Float sampleRate; 
+
+        private Builder() {
+        } 
+
+        private Builder(EventRule model) {
+            this.conditional = model.conditional;
+            this.enable = model.enable;
+            this.eventId = model.eventId;
+            this.modifyTime = model.modifyTime;
+            this.operator = model.operator;
+            this.sampleRate = model.sampleRate;
+        } 
 
         /**
          * Conditional.

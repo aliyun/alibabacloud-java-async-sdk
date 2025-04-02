@@ -52,6 +52,10 @@ public class GetIssueResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return args
      */
@@ -101,6 +105,18 @@ public class GetIssueResponseBody extends TeaModel {
         private Model model; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetIssueResponseBody model) {
+            this.args = model.args;
+            this.errorCode = model.errorCode;
+            this.message = model.message;
+            this.model = model.model;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>Args</p>
@@ -487,6 +503,38 @@ public class GetIssueResponseBody extends TeaModel {
             private String summary; 
             private Boolean symbolicStatus; 
             private java.util.List<String> tags; 
+
+            private Builder() {
+            } 
+
+            private Builder(Model model) {
+                this.affectedVersions = model.affectedVersions;
+                this.cruxStack = model.cruxStack;
+                this.digestHash = model.digestHash;
+                this.errorColumn = model.errorColumn;
+                this.errorCount = model.errorCount;
+                this.errorCountGrowthRate = model.errorCountGrowthRate;
+                this.errorDeviceCount = model.errorDeviceCount;
+                this.errorDeviceCountGrowthRate = model.errorDeviceCountGrowthRate;
+                this.errorDeviceRate = model.errorDeviceRate;
+                this.errorDeviceRateGrowthRate = model.errorDeviceRateGrowthRate;
+                this.errorFileName = model.errorFileName;
+                this.errorLine = model.errorLine;
+                this.errorName = model.errorName;
+                this.errorRate = model.errorRate;
+                this.errorRateGrowthRate = model.errorRateGrowthRate;
+                this.errorType = model.errorType;
+                this.firstVersion = model.firstVersion;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtLatest = model.gmtLatest;
+                this.keyLine = model.keyLine;
+                this.name = model.name;
+                this.stack = model.stack;
+                this.status = model.status;
+                this.summary = model.summary;
+                this.symbolicStatus = model.symbolicStatus;
+                this.tags = model.tags;
+            } 
 
             /**
              * AffectedVersions.

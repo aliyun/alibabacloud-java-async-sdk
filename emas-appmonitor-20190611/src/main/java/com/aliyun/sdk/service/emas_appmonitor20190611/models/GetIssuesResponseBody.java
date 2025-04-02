@@ -52,6 +52,10 @@ public class GetIssuesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return args
      */
@@ -101,6 +105,18 @@ public class GetIssuesResponseBody extends TeaModel {
         private Model model; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetIssuesResponseBody model) {
+            this.args = model.args;
+            this.errorCode = model.errorCode;
+            this.message = model.message;
+            this.model = model.model;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>Args</p>
@@ -380,6 +396,29 @@ public class GetIssuesResponseBody extends TeaModel {
             private String stack; 
             private Integer status; 
 
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.affectedUserCount = model.affectedUserCount;
+                this.digestHash = model.digestHash;
+                this.domScore = model.domScore;
+                this.errorColumn = model.errorColumn;
+                this.errorCount = model.errorCount;
+                this.errorDeviceCount = model.errorDeviceCount;
+                this.errorDeviceRate = model.errorDeviceRate;
+                this.errorFileName = model.errorFileName;
+                this.errorLine = model.errorLine;
+                this.errorName = model.errorName;
+                this.errorRate = model.errorRate;
+                this.errorType = model.errorType;
+                this.eventTime = model.eventTime;
+                this.firstVersion = model.firstVersion;
+                this.name = model.name;
+                this.stack = model.stack;
+                this.status = model.status;
+            } 
+
             /**
              * AffectedUserCount.
              */
@@ -602,6 +641,17 @@ public class GetIssuesResponseBody extends TeaModel {
             private Integer pageSize; 
             private Integer pages; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Model model) {
+                this.items = model.items;
+                this.pageNum = model.pageNum;
+                this.pageSize = model.pageSize;
+                this.pages = model.pages;
+                this.total = model.total;
+            } 
 
             /**
              * Items.

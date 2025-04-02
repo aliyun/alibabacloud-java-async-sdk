@@ -79,7 +79,7 @@ public class GetErrorsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -348,6 +348,16 @@ public class GetErrorsRequest extends Request {
             private java.util.List<String> subFilters; 
             private java.util.List<?> values; 
 
+            private Builder() {
+            } 
+
+            private Builder(Filter model) {
+                this.key = model.key;
+                this.operator = model.operator;
+                this.subFilters = model.subFilters;
+                this.values = model.values;
+            } 
+
             /**
              * Key.
              */
@@ -432,6 +442,14 @@ public class GetErrorsRequest extends Request {
         public static final class Builder {
             private Long endTime; 
             private Long startTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(TimeRange model) {
+                this.endTime = model.endTime;
+                this.startTime = model.startTime;
+            } 
 
             /**
              * <p>This parameter is required.</p>

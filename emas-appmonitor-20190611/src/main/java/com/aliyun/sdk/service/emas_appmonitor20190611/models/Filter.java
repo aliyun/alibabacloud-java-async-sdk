@@ -44,6 +44,10 @@ public class Filter extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return key
      */
@@ -77,6 +81,16 @@ public class Filter extends TeaModel {
         private String operator; 
         private java.util.List<Filter> subFilters; 
         private Object values; 
+
+        private Builder() {
+        } 
+
+        private Builder(Filter model) {
+            this.key = model.key;
+            this.operator = model.operator;
+            this.subFilters = model.subFilters;
+            this.values = model.values;
+        } 
 
         /**
          * Key.

@@ -52,6 +52,10 @@ public class GetErrorResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return args
      */
@@ -101,6 +105,18 @@ public class GetErrorResponseBody extends TeaModel {
         private Model model; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetErrorResponseBody model) {
+            this.args = model.args;
+            this.errorCode = model.errorCode;
+            this.message = model.message;
+            this.model = model.model;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Args.
@@ -1867,6 +1883,153 @@ public class GetErrorResponseBody extends TeaModel {
             private String weexFullUrl; 
             private String weexShortUrl; 
             private Integer writeLimit; 
+
+            private Builder() {
+            } 
+
+            private Builder(Model model) {
+                this.access = model.access;
+                this.accessSubType = model.accessSubType;
+                this.additionalCallbackInfo = model.additionalCallbackInfo;
+                this.additionalCrossPlatformCrashInfo = model.additionalCrossPlatformCrashInfo;
+                this.additionalCustomInfo = model.additionalCustomInfo;
+                this.androidVm = model.androidVm;
+                this.appId = model.appId;
+                this.appKey = model.appKey;
+                this.appVersion = model.appVersion;
+                this.argHash = model.argHash;
+                this.args = model.args;
+                this.backtrace = model.backtrace;
+                this.banner = model.banner;
+                this.binaryUuids = model.binaryUuids;
+                this.brand = model.brand;
+                this.browserName = model.browserName;
+                this.browserVersion = model.browserVersion;
+                this.build = model.build;
+                this.businessCountry = model.businessCountry;
+                this.businessErrorExtData = model.businessErrorExtData;
+                this.businessLogType = model.businessLogType;
+                this.carrier = model.carrier;
+                this.channel = model.channel;
+                this.city = model.city;
+                this.clientIp = model.clientIp;
+                this.clientTime = model.clientTime;
+                this.colNo = model.colNo;
+                this.country = model.country;
+                this.cpuModel = model.cpuModel;
+                this.cruxModule = model.cruxModule;
+                this.cruxStack = model.cruxStack;
+                this.cruxStackHash = model.cruxStackHash;
+                this.cruxStackTrace = model.cruxStackTrace;
+                this.cruxStackTraceHash = model.cruxStackTraceHash;
+                this.customExceptionType = model.customExceptionType;
+                this.customInfo = model.customInfo;
+                this.dataDirectory = model.dataDirectory;
+                this.deviceId = model.deviceId;
+                this.deviceModel = model.deviceModel;
+                this.did = model.did;
+                this.digest = model.digest;
+                this.digestHash = model.digestHash;
+                this.domScore = model.domScore;
+                this.downloadCacheDirectory = model.downloadCacheDirectory;
+                this.errorName = model.errorName;
+                this.errorType = model.errorType;
+                this.eventId = model.eventId;
+                this.eventLog = model.eventLog;
+                this.exceptionArg1 = model.exceptionArg1;
+                this.exceptionArg2 = model.exceptionArg2;
+                this.exceptionArg3 = model.exceptionArg3;
+                this.exceptionCode = model.exceptionCode;
+                this.exceptionCodes = model.exceptionCodes;
+                this.exceptionDetail = model.exceptionDetail;
+                this.exceptionId = model.exceptionId;
+                this.exceptionMsg = model.exceptionMsg;
+                this.exceptionSubtype = model.exceptionSubtype;
+                this.exceptionType = model.exceptionType;
+                this.exceptionVersion = model.exceptionVersion;
+                this.exportStatus = model.exportStatus;
+                this.externalStorageDirectory = model.externalStorageDirectory;
+                this.featureScene = model.featureScene;
+                this.fileName = model.fileName;
+                this.filePath = model.filePath;
+                this.filename = model.filename;
+                this.flutterRoute = model.flutterRoute;
+                this.forceGround = model.forceGround;
+                this.foreGround = model.foreGround;
+                this.h5FullUrl = model.h5FullUrl;
+                this.h5ShortUrl = model.h5ShortUrl;
+                this.hasOpenMultiProcessMode = model.hasOpenMultiProcessMode;
+                this.hasSdCard = model.hasSdCard;
+                this.hasSgSecurityConfigKey = model.hasSgSecurityConfigKey;
+                this.imei = model.imei;
+                this.imsi = model.imsi;
+                this.inMainProcess = model.inMainProcess;
+                this.installSdCard = model.installSdCard;
+                this.isBackTrace = model.isBackTrace;
+                this.isSpeedVersion = model.isSpeedVersion;
+                this.isp = model.isp;
+                this.jsBacktrace = model.jsBacktrace;
+                this.language = model.language;
+                this.launchedTime = model.launchedTime;
+                this.lineNo = model.lineNo;
+                this.logHash = model.logHash;
+                this.mainLog = model.mainLog;
+                this.memoryMap = model.memoryMap;
+                this.moreInfo1 = model.moreInfo1;
+                this.moreInfo2 = model.moreInfo2;
+                this.moreInfo3 = model.moreInfo3;
+                this.nativeAllThreadDump = model.nativeAllThreadDump;
+                this.nativeMaps = model.nativeMaps;
+                this.needReCluster = model.needReCluster;
+                this.openedFileCount = model.openedFileCount;
+                this.operations = model.operations;
+                this.originData = model.originData;
+                this.originUri = model.originUri;
+                this.os = model.os;
+                this.osVersion = model.osVersion;
+                this.page = model.page;
+                this.parentProcessName = model.parentProcessName;
+                this.pid = model.pid;
+                this.platform = model.platform;
+                this.processName = model.processName;
+                this.province = model.province;
+                this.reason = model.reason;
+                this.reportContent = model.reportContent;
+                this.reportType = model.reportType;
+                this.resolution = model.resolution;
+                this.rootDirectory = model.rootDirectory;
+                this.runtimeExtData = model.runtimeExtData;
+                this.sceneValue = model.sceneValue;
+                this.sdkType = model.sdkType;
+                this.sdkVersion = model.sdkVersion;
+                this.seq = model.seq;
+                this.serverTime = model.serverTime;
+                this.sessionId = model.sessionId;
+                this.simpleReportContent = model.simpleReportContent;
+                this.soLibBuild = model.soLibBuild;
+                this.speedFlags = model.speedFlags;
+                this.stack = model.stack;
+                this.status = model.status;
+                this.summary = model.summary;
+                this.symbolicFileType = model.symbolicFileType;
+                this.sysLog = model.sysLog;
+                this.threadName = model.threadName;
+                this.threads = model.threads;
+                this.tid = model.tid;
+                this.track = model.track;
+                this.triggeredTime = model.triggeredTime;
+                this.uploadTime = model.uploadTime;
+                this.uri = model.uri;
+                this.user = model.user;
+                this.userId = model.userId;
+                this.userNick = model.userNick;
+                this.utdid = model.utdid;
+                this.uuid = model.uuid;
+                this.view = model.view;
+                this.weexFullUrl = model.weexFullUrl;
+                this.weexShortUrl = model.weexShortUrl;
+                this.writeLimit = model.writeLimit;
+            } 
 
             /**
              * Access.

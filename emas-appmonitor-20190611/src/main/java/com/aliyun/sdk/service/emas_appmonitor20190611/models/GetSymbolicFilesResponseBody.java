@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetErrorsResponseBody} extends {@link TeaModel}
+ * {@link GetSymbolicFilesResponseBody} extends {@link TeaModel}
  *
- * <p>GetErrorsResponseBody</p>
+ * <p>GetSymbolicFilesResponseBody</p>
  */
-public class GetErrorsResponseBody extends TeaModel {
+public class GetSymbolicFilesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Args")
     private java.util.Map<String, ?> args;
 
@@ -35,7 +35,7 @@ public class GetErrorsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private GetErrorsResponseBody(Builder builder) {
+    private GetSymbolicFilesResponseBody(Builder builder) {
         this.args = builder.args;
         this.errorCode = builder.errorCode;
         this.message = builder.message;
@@ -48,7 +48,7 @@ public class GetErrorsResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static GetErrorsResponseBody create() {
+    public static GetSymbolicFilesResponseBody create() {
         return builder().build();
     }
 
@@ -109,7 +109,7 @@ public class GetErrorsResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(GetErrorsResponseBody model) {
+        private Builder(GetSymbolicFilesResponseBody model) {
             this.args = model.args;
             this.errorCode = model.errorCode;
             this.message = model.message;
@@ -151,7 +151,7 @@ public class GetErrorsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>RequestId</p>
+         * <p>requestId</p>
          * 
          * <strong>example:</strong>
          * <p>B3AD0FE4-36EF-1641-90B1-77618166F2ff</p>
@@ -169,35 +169,59 @@ public class GetErrorsResponseBody extends TeaModel {
             return this;
         }
 
-        public GetErrorsResponseBody build() {
-            return new GetErrorsResponseBody(this);
+        public GetSymbolicFilesResponseBody build() {
+            return new GetSymbolicFilesResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link GetErrorsResponseBody} extends {@link TeaModel}
+     * {@link GetSymbolicFilesResponseBody} extends {@link TeaModel}
      *
-     * <p>GetErrorsResponseBody</p>
+     * <p>GetSymbolicFilesResponseBody</p>
      */
     public static class Items extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("ClientTime")
-        private Long clientTime;
+        @com.aliyun.core.annotation.NameInMap("AppVersion")
+        private String appVersion;
 
-        @com.aliyun.core.annotation.NameInMap("Did")
-        private String did;
+        @com.aliyun.core.annotation.NameInMap("BuildId")
+        private String buildId;
 
-        @com.aliyun.core.annotation.NameInMap("Utdid")
-        private String utdid;
+        @com.aliyun.core.annotation.NameInMap("ExportStatus")
+        private String exportStatus;
+
+        @com.aliyun.core.annotation.NameInMap("FileName")
+        private String fileName;
+
+        @com.aliyun.core.annotation.NameInMap("FilePath")
+        private String filePath;
+
+        @com.aliyun.core.annotation.NameInMap("FileType")
+        private String fileType;
+
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
+        private Long gmtCreate;
+
+        @com.aliyun.core.annotation.NameInMap("Id")
+        private Long id;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
 
         @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
         private Items(Builder builder) {
-            this.clientTime = builder.clientTime;
-            this.did = builder.did;
-            this.utdid = builder.utdid;
+            this.appVersion = builder.appVersion;
+            this.buildId = builder.buildId;
+            this.exportStatus = builder.exportStatus;
+            this.fileName = builder.fileName;
+            this.filePath = builder.filePath;
+            this.fileType = builder.fileType;
+            this.gmtCreate = builder.gmtCreate;
+            this.id = builder.id;
+            this.status = builder.status;
             this.uuid = builder.uuid;
         }
 
@@ -210,24 +234,66 @@ public class GetErrorsResponseBody extends TeaModel {
         }
 
         /**
-         * @return clientTime
+         * @return appVersion
          */
-        public Long getClientTime() {
-            return this.clientTime;
+        public String getAppVersion() {
+            return this.appVersion;
         }
 
         /**
-         * @return did
+         * @return buildId
          */
-        public String getDid() {
-            return this.did;
+        public String getBuildId() {
+            return this.buildId;
         }
 
         /**
-         * @return utdid
+         * @return exportStatus
          */
-        public String getUtdid() {
-            return this.utdid;
+        public String getExportStatus() {
+            return this.exportStatus;
+        }
+
+        /**
+         * @return fileName
+         */
+        public String getFileName() {
+            return this.fileName;
+        }
+
+        /**
+         * @return filePath
+         */
+        public String getFilePath() {
+            return this.filePath;
+        }
+
+        /**
+         * @return fileType
+         */
+        public String getFileType() {
+            return this.fileType;
+        }
+
+        /**
+         * @return gmtCreate
+         */
+        public Long getGmtCreate() {
+            return this.gmtCreate;
+        }
+
+        /**
+         * @return id
+         */
+        public Long getId() {
+            return this.id;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
         }
 
         /**
@@ -238,50 +304,110 @@ public class GetErrorsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private Long clientTime; 
-            private String did; 
-            private String utdid; 
+            private String appVersion; 
+            private String buildId; 
+            private String exportStatus; 
+            private String fileName; 
+            private String filePath; 
+            private String fileType; 
+            private Long gmtCreate; 
+            private Long id; 
+            private String status; 
             private String uuid; 
 
             private Builder() {
             } 
 
             private Builder(Items model) {
-                this.clientTime = model.clientTime;
-                this.did = model.did;
-                this.utdid = model.utdid;
+                this.appVersion = model.appVersion;
+                this.buildId = model.buildId;
+                this.exportStatus = model.exportStatus;
+                this.fileName = model.fileName;
+                this.filePath = model.filePath;
+                this.fileType = model.fileType;
+                this.gmtCreate = model.gmtCreate;
+                this.id = model.id;
+                this.status = model.status;
                 this.uuid = model.uuid;
             } 
 
             /**
-             * ClientTime.
+             * AppVersion.
              */
-            public Builder clientTime(Long clientTime) {
-                this.clientTime = clientTime;
+            public Builder appVersion(String appVersion) {
+                this.appVersion = appVersion;
                 return this;
             }
 
             /**
-             * Did.
+             * BuildId.
              */
-            public Builder did(String did) {
-                this.did = did;
+            public Builder buildId(String buildId) {
+                this.buildId = buildId;
                 return this;
             }
 
             /**
-             * <p>Utdid</p>
+             * ExportStatus.
+             */
+            public Builder exportStatus(String exportStatus) {
+                this.exportStatus = exportStatus;
+                return this;
+            }
+
+            /**
+             * FileName.
+             */
+            public Builder fileName(String fileName) {
+                this.fileName = fileName;
+                return this;
+            }
+
+            /**
+             * FilePath.
+             */
+            public Builder filePath(String filePath) {
+                this.filePath = filePath;
+                return this;
+            }
+
+            /**
+             * FileType.
+             */
+            public Builder fileType(String fileType) {
+                this.fileType = fileType;
+                return this;
+            }
+
+            /**
+             * GmtCreate.
+             */
+            public Builder gmtCreate(Long gmtCreate) {
+                this.gmtCreate = gmtCreate;
+                return this;
+            }
+
+            /**
+             * Id.
+             */
+            public Builder id(Long id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * <p>uuid</p>
              * 
              * <strong>example:</strong>
-             * <p>RANDOM-1729634758587856312DEVICE</p>
-             */
-            public Builder utdid(String utdid) {
-                this.utdid = utdid;
-                return this;
-            }
-
-            /**
-             * Uuid.
+             * <p>9634758587856312DEV</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -297,9 +423,9 @@ public class GetErrorsResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link GetErrorsResponseBody} extends {@link TeaModel}
+     * {@link GetSymbolicFilesResponseBody} extends {@link TeaModel}
      *
-     * <p>GetErrorsResponseBody</p>
+     * <p>GetSymbolicFilesResponseBody</p>
      */
     public static class Model extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Items")

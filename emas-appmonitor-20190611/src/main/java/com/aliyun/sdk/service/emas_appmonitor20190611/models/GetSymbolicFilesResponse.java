@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetIssueResponse} extends {@link TeaModel}
+ * {@link GetSymbolicFilesResponse} extends {@link TeaModel}
  *
- * <p>GetIssueResponse</p>
+ * <p>GetSymbolicFilesResponse</p>
  */
-public class GetIssueResponse extends Response {
+public class GetSymbolicFilesResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class GetIssueResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private GetIssueResponseBody body;
+    private GetSymbolicFilesResponseBody body;
 
-    private GetIssueResponse(BuilderImpl builder) {
+    private GetSymbolicFilesResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static GetIssueResponse create() {
+    public static GetSymbolicFilesResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class GetIssueResponse extends Response {
     /**
      * @return body
      */
-    public GetIssueResponseBody getBody() {
+    public GetSymbolicFilesResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<GetIssueResponse, Builder> {
+    public interface Builder extends Response.Builder<GetSymbolicFilesResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(GetIssueResponseBody body);
+        Builder body(GetSymbolicFilesResponseBody body);
 
         @Override
-        GetIssueResponse build();
+        GetSymbolicFilesResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<GetIssueResponse, Builder>
+            extends Response.BuilderImpl<GetSymbolicFilesResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private GetIssueResponseBody body; 
+        private GetSymbolicFilesResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(GetIssueResponse response) {
+        private BuilderImpl(GetSymbolicFilesResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class GetIssueResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(GetIssueResponseBody body) {
+        public Builder body(GetSymbolicFilesResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public GetIssueResponse build() {
-            return new GetIssueResponse(this);
+        public GetSymbolicFilesResponse build() {
+            return new GetSymbolicFilesResponse(this);
         } 
 
     } 

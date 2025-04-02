@@ -45,6 +45,10 @@ public class EventFilter extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return key
      */
@@ -78,6 +82,16 @@ public class EventFilter extends TeaModel {
         private String op; 
         private java.util.List<EventFilter> subFilters; 
         private java.util.List<String> values; 
+
+        private Builder() {
+        } 
+
+        private Builder(EventFilter model) {
+            this.key = model.key;
+            this.op = model.op;
+            this.subFilters = model.subFilters;
+            this.values = model.values;
+        } 
 
         /**
          * Key.
