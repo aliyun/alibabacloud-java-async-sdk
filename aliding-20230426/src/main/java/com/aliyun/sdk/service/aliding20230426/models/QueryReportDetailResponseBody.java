@@ -76,6 +76,10 @@ public class QueryReportDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return content
      */
@@ -173,6 +177,24 @@ public class QueryReportDetailResponseBody extends TeaModel {
         private String templateName; 
         private String vendorRequestId; 
         private String vendorType; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryReportDetailResponseBody model) {
+            this.content = model.content;
+            this.createTime = model.createTime;
+            this.creatorId = model.creatorId;
+            this.creatorName = model.creatorName;
+            this.deptName = model.deptName;
+            this.modifiedTime = model.modifiedTime;
+            this.remark = model.remark;
+            this.reportId = model.reportId;
+            this.requestId = model.requestId;
+            this.templateName = model.templateName;
+            this.vendorRequestId = model.vendorRequestId;
+            this.vendorType = model.vendorType;
+        } 
 
         /**
          * content.
@@ -355,6 +377,17 @@ public class QueryReportDetailResponseBody extends TeaModel {
             private String sort; 
             private String type; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.images = model.images;
+                this.key = model.key;
+                this.sort = model.sort;
+                this.type = model.type;
+                this.value = model.value;
+            } 
 
             /**
              * Images.

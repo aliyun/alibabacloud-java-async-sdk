@@ -36,6 +36,10 @@ public class CreateLiveResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return liveId
      */
@@ -53,6 +57,14 @@ public class CreateLiveResponseBody extends TeaModel {
     public static final class Builder {
         private String liveId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateLiveResponseBody model) {
+            this.liveId = model.liveId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * liveId.

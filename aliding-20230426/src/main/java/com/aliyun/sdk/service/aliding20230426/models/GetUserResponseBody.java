@@ -164,6 +164,10 @@ public class GetUserResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return active
      */
@@ -437,6 +441,46 @@ public class GetUserResponseBody extends TeaModel {
         private String unionid; 
         private String userid; 
         private String workPlace; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetUserResponseBody model) {
+            this.active = model.active;
+            this.admin = model.admin;
+            this.avatar = model.avatar;
+            this.boss = model.boss;
+            this.deptIdList = model.deptIdList;
+            this.deptOrderList = model.deptOrderList;
+            this.email = model.email;
+            this.exclusiveAccount = model.exclusiveAccount;
+            this.exclusiveAccountCorpId = model.exclusiveAccountCorpId;
+            this.exclusiveAccountCorpName = model.exclusiveAccountCorpName;
+            this.exclusiveAccountType = model.exclusiveAccountType;
+            this.extension = model.extension;
+            this.hideMobile = model.hideMobile;
+            this.hiredDate = model.hiredDate;
+            this.jobNumber = model.jobNumber;
+            this.leaderInDept = model.leaderInDept;
+            this.loginId = model.loginId;
+            this.managerUserid = model.managerUserid;
+            this.mobile = model.mobile;
+            this.name = model.name;
+            this.nickname = model.nickname;
+            this.orgEmail = model.orgEmail;
+            this.realAuthed = model.realAuthed;
+            this.remark = model.remark;
+            this.requestId = model.requestId;
+            this.roleList = model.roleList;
+            this.senior = model.senior;
+            this.stateCode = model.stateCode;
+            this.telephone = model.telephone;
+            this.title = model.title;
+            this.unionEmpExt = model.unionEmpExt;
+            this.unionid = model.unionid;
+            this.userid = model.userid;
+            this.workPlace = model.workPlace;
+        } 
 
         /**
          * active.
@@ -760,6 +804,14 @@ public class GetUserResponseBody extends TeaModel {
             private Long deptId; 
             private Long order; 
 
+            private Builder() {
+            } 
+
+            private Builder(DeptOrderList model) {
+                this.deptId = model.deptId;
+                this.order = model.order;
+            } 
+
             /**
              * deptId.
              */
@@ -826,6 +878,14 @@ public class GetUserResponseBody extends TeaModel {
         public static final class Builder {
             private Long deptId; 
             private Boolean leader; 
+
+            private Builder() {
+            } 
+
+            private Builder(LeaderInDept model) {
+                this.deptId = model.deptId;
+                this.leader = model.leader;
+            } 
 
             /**
              * deptId.
@@ -906,6 +966,15 @@ public class GetUserResponseBody extends TeaModel {
             private Long id; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(RoleList model) {
+                this.groupName = model.groupName;
+                this.id = model.id;
+                this.name = model.name;
+            } 
+
             /**
              * groupName.
              */
@@ -980,6 +1049,14 @@ public class GetUserResponseBody extends TeaModel {
         public static final class Builder {
             private String cropId; 
             private String userid; 
+
+            private Builder() {
+            } 
+
+            private Builder(UnionEmpMapList model) {
+                this.cropId = model.cropId;
+                this.userid = model.userid;
+            } 
 
             /**
              * cropId.
@@ -1059,6 +1136,15 @@ public class GetUserResponseBody extends TeaModel {
             private String corpId; 
             private java.util.List<UnionEmpMapList> unionEmpMapList; 
             private String userid; 
+
+            private Builder() {
+            } 
+
+            private Builder(UnionEmpExt model) {
+                this.corpId = model.corpId;
+                this.unionEmpMapList = model.unionEmpMapList;
+                this.userid = model.userid;
+            } 
 
             /**
              * corpId.

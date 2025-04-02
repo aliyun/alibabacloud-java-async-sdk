@@ -44,6 +44,10 @@ public class GetOperationRecordsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -77,6 +81,16 @@ public class GetOperationRecordsResponseBody extends TeaModel {
         private java.util.List<Result> result; 
         private String vendorRequestId; 
         private String vendorType; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetOperationRecordsResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.vendorRequestId = model.vendorRequestId;
+            this.vendorType = model.vendorType;
+        } 
 
         /**
          * requestId.
@@ -423,6 +437,36 @@ public class GetOperationRecordsResponseBody extends TeaModel {
             private String taskId; 
             private String taskType; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.action = model.action;
+                this.actionExit = model.actionExit;
+                this.activeTimeGMT = model.activeTimeGMT;
+                this.activityId = model.activityId;
+                this.dataId = model.dataId;
+                this.digitalSign = model.digitalSign;
+                this.files = model.files;
+                this.operateTimeGMT = model.operateTimeGMT;
+                this.operateType = model.operateType;
+                this.operatorDisplayName = model.operatorDisplayName;
+                this.operatorName = model.operatorName;
+                this.operatorNickName = model.operatorNickName;
+                this.operatorPhotoUrl = model.operatorPhotoUrl;
+                this.operatorStatus = model.operatorStatus;
+                this.operatorUserId = model.operatorUserId;
+                this.processInstanceId = model.processInstanceId;
+                this.remark = model.remark;
+                this.showName = model.showName;
+                this.size = model.size;
+                this.taskExecuteType = model.taskExecuteType;
+                this.taskHoldTimeGMT = model.taskHoldTimeGMT;
+                this.taskId = model.taskId;
+                this.taskType = model.taskType;
+                this.type = model.type;
+            } 
 
             /**
              * Action.

@@ -44,6 +44,10 @@ public class CreateTicketResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return openTicketId
      */
@@ -77,6 +81,16 @@ public class CreateTicketResponseBody extends TeaModel {
         private String requestId; 
         private String vendorRequestId; 
         private String vendorType; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateTicketResponseBody model) {
+            this.openTicketId = model.openTicketId;
+            this.requestId = model.requestId;
+            this.vendorRequestId = model.vendorRequestId;
+            this.vendorType = model.vendorType;
+        } 
 
         /**
          * openTicketId.

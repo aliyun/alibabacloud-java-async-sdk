@@ -52,6 +52,10 @@ public class GetCorpTasksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class GetCorpTasksResponseBody extends TeaModel {
         private Long totalCount; 
         private String vendorRequestId; 
         private String vendorType; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetCorpTasksResponseBody model) {
+            this.data = model.data;
+            this.pageNumber = model.pageNumber;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.vendorRequestId = model.vendorRequestId;
+            this.vendorType = model.vendorType;
+        } 
 
         /**
          * data.
@@ -427,6 +443,33 @@ public class GetCorpTasksResponseBody extends TeaModel {
             private String taskType; 
             private String title; 
             private String titleInEnglish; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.activeTimeGMT = model.activeTimeGMT;
+                this.actualActionerId = model.actualActionerId;
+                this.appType = model.appType;
+                this.createTimeGMT = model.createTimeGMT;
+                this.finishTimeGMT = model.finishTimeGMT;
+                this.originatorEmail = model.originatorEmail;
+                this.originatorId = model.originatorId;
+                this.originatorName = model.originatorName;
+                this.originatorNameInEnglish = model.originatorNameInEnglish;
+                this.originatorNickName = model.originatorNickName;
+                this.originatorNickNameEn = model.originatorNickNameEn;
+                this.originatorNickNameInEnglish = model.originatorNickNameInEnglish;
+                this.originatorPhoto = model.originatorPhoto;
+                this.outResult = model.outResult;
+                this.outResultName = model.outResultName;
+                this.processInstanceId = model.processInstanceId;
+                this.status = model.status;
+                this.taskId = model.taskId;
+                this.taskType = model.taskType;
+                this.title = model.title;
+                this.titleInEnglish = model.titleInEnglish;
+            } 
 
             /**
              * ActiveTimeGMT.

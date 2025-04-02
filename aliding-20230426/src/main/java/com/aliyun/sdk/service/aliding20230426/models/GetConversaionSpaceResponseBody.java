@@ -44,6 +44,10 @@ public class GetConversaionSpaceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -77,6 +81,16 @@ public class GetConversaionSpaceResponseBody extends TeaModel {
         private Space space; 
         private String vendorRequestId; 
         private String vendorType; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetConversaionSpaceResponseBody model) {
+            this.requestId = model.requestId;
+            this.space = model.space;
+            this.vendorRequestId = model.vendorRequestId;
+            this.vendorType = model.vendorType;
+        } 
 
         /**
          * requestId.
@@ -183,6 +197,16 @@ public class GetConversaionSpaceResponseBody extends TeaModel {
             private String createTime; 
             private String modifiedTime; 
             private String spaceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Space model) {
+                this.corpId = model.corpId;
+                this.createTime = model.createTime;
+                this.modifiedTime = model.modifiedTime;
+                this.spaceId = model.spaceId;
+            } 
 
             /**
              * CorpId.

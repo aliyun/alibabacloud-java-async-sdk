@@ -48,6 +48,10 @@ public class UpdateUserAvatarResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errcode
      */
@@ -89,6 +93,17 @@ public class UpdateUserAvatarResponseBody extends TeaModel {
         private String requestId; 
         private String vendorRequestId; 
         private String vendorType; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateUserAvatarResponseBody model) {
+            this.errcode = model.errcode;
+            this.errmsg = model.errmsg;
+            this.requestId = model.requestId;
+            this.vendorRequestId = model.vendorRequestId;
+            this.vendorType = model.vendorType;
+        } 
 
         /**
          * errcode.

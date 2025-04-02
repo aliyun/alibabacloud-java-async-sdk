@@ -36,6 +36,10 @@ public class CreateSubscribedCalendarResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return calendarId
      */
@@ -53,6 +57,14 @@ public class CreateSubscribedCalendarResponseBody extends TeaModel {
     public static final class Builder {
         private String calendarId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateSubscribedCalendarResponseBody model) {
+            this.calendarId = model.calendarId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * calendarId.

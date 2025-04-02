@@ -48,6 +48,10 @@ public class CreateScheduleConferenceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return phones
      */
@@ -89,6 +93,17 @@ public class CreateScheduleConferenceResponseBody extends TeaModel {
         private String roomCode; 
         private String scheduleConferenceId; 
         private String url; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateScheduleConferenceResponseBody model) {
+            this.phones = model.phones;
+            this.requestId = model.requestId;
+            this.roomCode = model.roomCode;
+            this.scheduleConferenceId = model.scheduleConferenceId;
+            this.url = model.url;
+        } 
 
         /**
          * phones.

@@ -61,7 +61,7 @@ public class InvokeAssistantRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -258,6 +258,15 @@ public class InvokeAssistantRequest extends Request {
             private String templateId; 
             private String userId; 
 
+            private Builder() {
+            } 
+
+            private Builder(CardCallback model) {
+                this.content = model.content;
+                this.templateId = model.templateId;
+                this.userId = model.userId;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              * 
@@ -378,6 +387,17 @@ public class InvokeAssistantRequest extends Request {
             private Boolean finished; 
             private String templateId; 
 
+            private Builder() {
+            } 
+
+            private Builder(DingCard model) {
+                this.cardDesc = model.cardDesc;
+                this.content = model.content;
+                this.contentType = model.contentType;
+                this.finished = model.finished;
+                this.templateId = model.templateId;
+            } 
+
             /**
              * cardDesc.
              */
@@ -492,6 +512,15 @@ public class InvokeAssistantRequest extends Request {
             private String imageDesc; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(ImageUrl model) {
+                this.detail = model.detail;
+                this.imageDesc = model.imageDesc;
+                this.url = model.url;
+            } 
+
             /**
              * detail.
              */
@@ -555,6 +584,13 @@ public class InvokeAssistantRequest extends Request {
         public static final class Builder {
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Markdown model) {
+                this.value = model.value;
+            } 
+
             /**
              * value.
              */
@@ -601,6 +637,13 @@ public class InvokeAssistantRequest extends Request {
 
         public static final class Builder {
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Text model) {
+                this.value = model.value;
+            } 
 
             /**
              * value.
@@ -709,6 +752,18 @@ public class InvokeAssistantRequest extends Request {
             private Markdown markdown; 
             private Text text; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.cardCallback = model.cardCallback;
+                this.dingCard = model.dingCard;
+                this.imageUrl = model.imageUrl;
+                this.markdown = model.markdown;
+                this.text = model.text;
+                this.type = model.type;
+            } 
 
             /**
              * cardCallback.
@@ -823,6 +878,15 @@ public class InvokeAssistantRequest extends Request {
             private String content; 
             private String templateId; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ContentCardCallback model) {
+                this.content = model.content;
+                this.templateId = model.templateId;
+                this.userId = model.userId;
+            } 
 
             /**
              * <p>This parameter is required.</p>
@@ -944,6 +1008,17 @@ public class InvokeAssistantRequest extends Request {
             private Boolean finished; 
             private String templateId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ContentDingCard model) {
+                this.cardDesc = model.cardDesc;
+                this.content = model.content;
+                this.contentType = model.contentType;
+                this.finished = model.finished;
+                this.templateId = model.templateId;
+            } 
+
             /**
              * cardDesc.
              */
@@ -1058,6 +1133,15 @@ public class InvokeAssistantRequest extends Request {
             private String imageDesc; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(ContentImageUrl model) {
+                this.detail = model.detail;
+                this.imageDesc = model.imageDesc;
+                this.url = model.url;
+            } 
+
             /**
              * detail.
              */
@@ -1121,6 +1205,13 @@ public class InvokeAssistantRequest extends Request {
         public static final class Builder {
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(ContentMarkdown model) {
+                this.value = model.value;
+            } 
+
             /**
              * value.
              */
@@ -1167,6 +1258,13 @@ public class InvokeAssistantRequest extends Request {
 
         public static final class Builder {
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(ContentText model) {
+                this.value = model.value;
+            } 
 
             /**
              * value.
@@ -1276,6 +1374,18 @@ public class InvokeAssistantRequest extends Request {
             private ContentText text; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(HistoryContent model) {
+                this.cardCallback = model.cardCallback;
+                this.dingCard = model.dingCard;
+                this.imageUrl = model.imageUrl;
+                this.markdown = model.markdown;
+                this.text = model.text;
+                this.type = model.type;
+            } 
+
             /**
              * cardCallback.
              */
@@ -1377,6 +1487,14 @@ public class InvokeAssistantRequest extends Request {
         public static final class Builder {
             private java.util.List<HistoryContent> content; 
             private String role; 
+
+            private Builder() {
+            } 
+
+            private Builder(History model) {
+                this.content = model.content;
+                this.role = model.role;
+            } 
 
             /**
              * <p>This parameter is required.</p>

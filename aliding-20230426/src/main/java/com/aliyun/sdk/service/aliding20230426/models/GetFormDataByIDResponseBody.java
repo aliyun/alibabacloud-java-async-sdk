@@ -56,6 +56,10 @@ public class GetFormDataByIDResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return formData
      */
@@ -113,6 +117,19 @@ public class GetFormDataByIDResponseBody extends TeaModel {
         private String requestId; 
         private String vendorRequestId; 
         private String vendorType; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetFormDataByIDResponseBody model) {
+            this.formData = model.formData;
+            this.formInstId = model.formInstId;
+            this.modifiedTimeGMT = model.modifiedTimeGMT;
+            this.originator = model.originator;
+            this.requestId = model.requestId;
+            this.vendorRequestId = model.vendorRequestId;
+            this.vendorType = model.vendorType;
+        } 
 
         /**
          * formData.
@@ -232,6 +249,15 @@ public class GetFormDataByIDResponseBody extends TeaModel {
             private String nameInEnglish; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Name model) {
+                this.nameInChinese = model.nameInChinese;
+                this.nameInEnglish = model.nameInEnglish;
+                this.type = model.type;
+            } 
+
             /**
              * NameInChinese.
              */
@@ -330,6 +356,16 @@ public class GetFormDataByIDResponseBody extends TeaModel {
             private String email; 
             private Name name; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Originator model) {
+                this.departmentName = model.departmentName;
+                this.email = model.email;
+                this.name = model.name;
+                this.userId = model.userId;
+            } 
 
             /**
              * DepartmentName.

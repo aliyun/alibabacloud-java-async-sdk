@@ -44,6 +44,10 @@ public class QueryMeetingRoomGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return groupId
      */
@@ -77,6 +81,16 @@ public class QueryMeetingRoomGroupResponseBody extends TeaModel {
         private String groupName; 
         private Long parentId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryMeetingRoomGroupResponseBody model) {
+            this.groupId = model.groupId;
+            this.groupName = model.groupName;
+            this.parentId = model.parentId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * groupId.

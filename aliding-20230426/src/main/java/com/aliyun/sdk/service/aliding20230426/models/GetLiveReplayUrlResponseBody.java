@@ -44,6 +44,10 @@ public class GetLiveReplayUrlResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return replayUrl
      */
@@ -77,6 +81,16 @@ public class GetLiveReplayUrlResponseBody extends TeaModel {
         private String requestId; 
         private String vendorRequestId; 
         private String vendorType; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetLiveReplayUrlResponseBody model) {
+            this.replayUrl = model.replayUrl;
+            this.requestId = model.requestId;
+            this.vendorRequestId = model.vendorRequestId;
+            this.vendorType = model.vendorType;
+        } 
 
         /**
          * replayUrl.

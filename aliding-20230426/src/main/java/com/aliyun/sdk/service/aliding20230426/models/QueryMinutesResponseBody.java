@@ -44,6 +44,10 @@ public class QueryMinutesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return audioList
      */
@@ -77,6 +81,16 @@ public class QueryMinutesResponseBody extends TeaModel {
         private String requestId; 
         private String vendorRequestId; 
         private String vendorType; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryMinutesResponseBody model) {
+            this.audioList = model.audioList;
+            this.requestId = model.requestId;
+            this.vendorRequestId = model.vendorRequestId;
+            this.vendorType = model.vendorType;
+        } 
 
         /**
          * audioList.
@@ -219,6 +233,19 @@ public class QueryMinutesResponseBody extends TeaModel {
             private String recordId; 
             private Long startTime; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(AudioList model) {
+                this.duration = model.duration;
+                this.endTime = model.endTime;
+                this.fileSize = model.fileSize;
+                this.playUrl = model.playUrl;
+                this.recordId = model.recordId;
+                this.startTime = model.startTime;
+                this.userId = model.userId;
+            } 
 
             /**
              * Duration.

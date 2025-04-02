@@ -56,6 +56,10 @@ public class CreateVideoConferenceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return conferenceId
      */
@@ -113,6 +117,19 @@ public class CreateVideoConferenceResponseBody extends TeaModel {
         private java.util.List<String> phoneNumbers; 
         private String requestId; 
         private String roomCode; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateVideoConferenceResponseBody model) {
+            this.conferenceId = model.conferenceId;
+            this.conferencePassword = model.conferencePassword;
+            this.externalLinkUrl = model.externalLinkUrl;
+            this.hostPassword = model.hostPassword;
+            this.phoneNumbers = model.phoneNumbers;
+            this.requestId = model.requestId;
+            this.roomCode = model.roomCode;
+        } 
 
         /**
          * conferenceId.

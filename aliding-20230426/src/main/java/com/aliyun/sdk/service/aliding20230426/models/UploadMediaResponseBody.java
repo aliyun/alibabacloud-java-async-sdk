@@ -36,6 +36,10 @@ public class UploadMediaResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return mediaId
      */
@@ -53,6 +57,14 @@ public class UploadMediaResponseBody extends TeaModel {
     public static final class Builder {
         private String mediaId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UploadMediaResponseBody model) {
+            this.mediaId = model.mediaId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * mediaId.

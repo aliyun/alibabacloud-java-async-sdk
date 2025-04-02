@@ -56,7 +56,7 @@ public class CreateSubscribedCalendarRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -204,6 +204,13 @@ public class CreateSubscribedCalendarRequest extends Request {
         public static final class Builder {
             private String accountId; 
 
+            private Builder() {
+            } 
+
+            private Builder(AccountContext model) {
+                this.accountId = model.accountId;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              * 
@@ -277,6 +284,15 @@ public class CreateSubscribedCalendarRequest extends Request {
             private java.util.List<String> corpIds; 
             private java.util.List<String> openConversationIds; 
             private java.util.List<String> userIds; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubscribeScope model) {
+                this.corpIds = model.corpIds;
+                this.openConversationIds = model.openConversationIds;
+                this.userIds = model.userIds;
+            } 
 
             /**
              * CorpIds.

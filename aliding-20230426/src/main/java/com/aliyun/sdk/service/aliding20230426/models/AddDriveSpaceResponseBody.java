@@ -72,6 +72,10 @@ public class AddDriveSpaceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createTime
      */
@@ -161,6 +165,23 @@ public class AddDriveSpaceResponseBody extends TeaModel {
         private Long usedQuota; 
         private String vendorRequestId; 
         private String vendorType; 
+
+        private Builder() {
+        } 
+
+        private Builder(AddDriveSpaceResponseBody model) {
+            this.createTime = model.createTime;
+            this.modifyTime = model.modifyTime;
+            this.permissionMode = model.permissionMode;
+            this.quota = model.quota;
+            this.requestId = model.requestId;
+            this.spaceId = model.spaceId;
+            this.spaceName = model.spaceName;
+            this.spaceType = model.spaceType;
+            this.usedQuota = model.usedQuota;
+            this.vendorRequestId = model.vendorRequestId;
+            this.vendorType = model.vendorType;
+        } 
 
         /**
          * createTime.

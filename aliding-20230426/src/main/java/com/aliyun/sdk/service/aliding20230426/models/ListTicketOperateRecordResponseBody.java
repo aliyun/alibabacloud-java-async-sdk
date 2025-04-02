@@ -44,6 +44,10 @@ public class ListTicketOperateRecordResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return records
      */
@@ -77,6 +81,16 @@ public class ListTicketOperateRecordResponseBody extends TeaModel {
         private String requestId; 
         private String vendorRequestId; 
         private String vendorType; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTicketOperateRecordResponseBody model) {
+            this.records = model.records;
+            this.requestId = model.requestId;
+            this.vendorRequestId = model.vendorRequestId;
+            this.vendorType = model.vendorType;
+        } 
 
         /**
          * records.
@@ -160,6 +174,14 @@ public class ListTicketOperateRecordResponseBody extends TeaModel {
             private String nickName; 
             private String unionId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Operator model) {
+                this.nickName = model.nickName;
+                this.unionId = model.unionId;
+            } 
+
             /**
              * NickName.
              */
@@ -227,6 +249,14 @@ public class ListTicketOperateRecordResponseBody extends TeaModel {
             private String fileName; 
             private String key; 
 
+            private Builder() {
+            } 
+
+            private Builder(Attachments model) {
+                this.fileName = model.fileName;
+                this.key = model.key;
+            } 
+
             /**
              * FileName.
              */
@@ -293,6 +323,14 @@ public class ListTicketOperateRecordResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Attachments> attachments; 
             private String memo; 
+
+            private Builder() {
+            } 
+
+            private Builder(TicketMemo model) {
+                this.attachments = model.attachments;
+                this.memo = model.memo;
+            } 
 
             /**
              * Attachments.
@@ -420,6 +458,19 @@ public class ListTicketOperateRecordResponseBody extends TeaModel {
             private String operationDisplayName; 
             private Operator operator; 
             private TicketMemo ticketMemo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Records model) {
+                this.openTicketId = model.openTicketId;
+                this.operateData = model.operateData;
+                this.operateTime = model.operateTime;
+                this.operation = model.operation;
+                this.operationDisplayName = model.operationDisplayName;
+                this.operator = model.operator;
+                this.ticketMemo = model.ticketMemo;
+            } 
 
             /**
              * OpenTicketId.

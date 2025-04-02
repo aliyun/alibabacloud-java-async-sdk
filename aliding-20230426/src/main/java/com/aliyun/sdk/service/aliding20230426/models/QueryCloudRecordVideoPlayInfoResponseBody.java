@@ -52,6 +52,10 @@ public class QueryCloudRecordVideoPlayInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return duration
      */
@@ -101,6 +105,18 @@ public class QueryCloudRecordVideoPlayInfoResponseBody extends TeaModel {
         private String playUrl; 
         private String requestId; 
         private Long status; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryCloudRecordVideoPlayInfoResponseBody model) {
+            this.duration = model.duration;
+            this.fileSize = model.fileSize;
+            this.mp4FileUrl = model.mp4FileUrl;
+            this.playUrl = model.playUrl;
+            this.requestId = model.requestId;
+            this.status = model.status;
+        } 
 
         /**
          * duration.

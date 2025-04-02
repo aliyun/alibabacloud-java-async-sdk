@@ -48,6 +48,10 @@ public class SendBannerResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return arguments
      */
@@ -89,6 +93,17 @@ public class SendBannerResponseBody extends TeaModel {
         private Boolean success; 
         private String vendorRequestId; 
         private String vendorType; 
+
+        private Builder() {
+        } 
+
+        private Builder(SendBannerResponseBody model) {
+            this.arguments = model.arguments;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.vendorRequestId = model.vendorRequestId;
+            this.vendorType = model.vendorType;
+        } 
 
         /**
          * arguments.

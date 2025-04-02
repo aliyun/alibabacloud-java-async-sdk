@@ -59,7 +59,7 @@ public class CommitFileRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -225,6 +225,13 @@ public class CommitFileRequest extends Request {
         public static final class Builder {
             private String accountId; 
 
+            private Builder() {
+            } 
+
+            private Builder(AccountContext model) {
+                this.accountId = model.accountId;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              * 
@@ -298,6 +305,15 @@ public class CommitFileRequest extends Request {
             private String name; 
             private String value; 
             private String visibility; 
+
+            private Builder() {
+            } 
+
+            private Builder(AppProperties model) {
+                this.name = model.name;
+                this.value = model.value;
+                this.visibility = model.visibility;
+            } 
 
             /**
              * Name.
@@ -410,6 +426,17 @@ public class CommitFileRequest extends Request {
             private String convertToOnlineDocTargetDocumentType; 
             private Long size; 
 
+            private Builder() {
+            } 
+
+            private Builder(Option model) {
+                this.appProperties = model.appProperties;
+                this.conflictStrategy = model.conflictStrategy;
+                this.convertToOnlineDoc = model.convertToOnlineDoc;
+                this.convertToOnlineDocTargetDocumentType = model.convertToOnlineDocTargetDocumentType;
+                this.size = model.size;
+            } 
+
             /**
              * AppProperties.
              */
@@ -488,6 +515,13 @@ public class CommitFileRequest extends Request {
 
         public static final class Builder {
             private String tenantId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TenantContext model) {
+                this.tenantId = model.tenantId;
+            } 
 
             /**
              * tenantId.

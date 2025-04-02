@@ -52,6 +52,10 @@ public class SearchFormDatasResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return currentPage
      */
@@ -101,6 +105,18 @@ public class SearchFormDatasResponseBody extends TeaModel {
         private Integer totalCount; 
         private String vendorRequestId; 
         private String vendorType; 
+
+        private Builder() {
+        } 
+
+        private Builder(SearchFormDatasResponseBody model) {
+            this.currentPage = model.currentPage;
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.vendorRequestId = model.vendorRequestId;
+            this.vendorType = model.vendorType;
+        } 
 
         /**
          * currentPage.
@@ -212,6 +228,15 @@ public class SearchFormDatasResponseBody extends TeaModel {
             private String nameInEnglish; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserName model) {
+                this.nameInChinese = model.nameInChinese;
+                this.nameInEnglish = model.nameInEnglish;
+                this.type = model.type;
+            } 
+
             /**
              * NameInChinese.
              */
@@ -286,6 +311,14 @@ public class SearchFormDatasResponseBody extends TeaModel {
         public static final class Builder {
             private String userId; 
             private UserName userName; 
+
+            private Builder() {
+            } 
+
+            private Builder(ModifyUser model) {
+                this.userId = model.userId;
+                this.userName = model.userName;
+            } 
 
             /**
              * UserId.
@@ -366,6 +399,15 @@ public class SearchFormDatasResponseBody extends TeaModel {
             private String nameInEnglish; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(OriginatorUserName model) {
+                this.nameInChinese = model.nameInChinese;
+                this.nameInEnglish = model.nameInEnglish;
+                this.type = model.type;
+            } 
+
             /**
              * NameInChinese.
              */
@@ -440,6 +482,14 @@ public class SearchFormDatasResponseBody extends TeaModel {
         public static final class Builder {
             private String userId; 
             private OriginatorUserName userName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Originator model) {
+                this.userId = model.userId;
+                this.userName = model.userName;
+            } 
 
             /**
              * UserId.
@@ -675,6 +725,28 @@ public class SearchFormDatasResponseBody extends TeaModel {
             private String serialNo; 
             private String title; 
             private Long version; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.createdTimeGMT = model.createdTimeGMT;
+                this.creatorUserId = model.creatorUserId;
+                this.dataId = model.dataId;
+                this.formData = model.formData;
+                this.formInstanceId = model.formInstanceId;
+                this.formUuid = model.formUuid;
+                this.instanceValue = model.instanceValue;
+                this.modelUuid = model.modelUuid;
+                this.modifiedTimeGMT = model.modifiedTimeGMT;
+                this.modifierUserId = model.modifierUserId;
+                this.modifyUser = model.modifyUser;
+                this.originator = model.originator;
+                this.sequence = model.sequence;
+                this.serialNo = model.serialNo;
+                this.title = model.title;
+                this.version = model.version;
+            } 
 
             /**
              * CreatedTimeGMT.

@@ -52,6 +52,10 @@ public class GetCorpAccomplishmentTasksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class GetCorpAccomplishmentTasksResponseBody extends TeaModel {
         private Long totalCount; 
         private String vendorRequestId; 
         private String vendorType; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetCorpAccomplishmentTasksResponseBody model) {
+            this.data = model.data;
+            this.pageNumber = model.pageNumber;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.vendorRequestId = model.vendorRequestId;
+            this.vendorType = model.vendorType;
+        } 
 
         /**
          * data.
@@ -367,6 +383,28 @@ public class GetCorpAccomplishmentTasksResponseBody extends TeaModel {
             private String outResultName; 
             private String processInstanceId; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.activeTimeGMT = model.activeTimeGMT;
+                this.actualActionerId = model.actualActionerId;
+                this.appType = model.appType;
+                this.createTimeGMT = model.createTimeGMT;
+                this.finishTimeGMT = model.finishTimeGMT;
+                this.originatorEmail = model.originatorEmail;
+                this.originatorId = model.originatorId;
+                this.originatorName = model.originatorName;
+                this.originatorNameInEnglish = model.originatorNameInEnglish;
+                this.originatorNickName = model.originatorNickName;
+                this.originatorNickNameInEnglish = model.originatorNickNameInEnglish;
+                this.originatorPhoto = model.originatorPhoto;
+                this.outResult = model.outResult;
+                this.outResultName = model.outResultName;
+                this.processInstanceId = model.processInstanceId;
+                this.title = model.title;
+            } 
 
             /**
              * ActiveTimeGMT.

@@ -44,6 +44,10 @@ public class QueryMeetingRoomResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -77,6 +81,16 @@ public class QueryMeetingRoomResponseBody extends TeaModel {
         private Result result; 
         private String vendorRequestId; 
         private String vendorType; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryMeetingRoomResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.vendorRequestId = model.vendorRequestId;
+            this.vendorType = model.vendorType;
+        } 
 
         /**
          * <p>requestId</p>
@@ -175,6 +189,15 @@ public class QueryMeetingRoomResponseBody extends TeaModel {
             private String memberName; 
             private String memberType; 
 
+            private Builder() {
+            } 
+
+            private Builder(AuthorizedMembers model) {
+                this.memberId = model.memberId;
+                this.memberName = model.memberName;
+                this.memberType = model.memberType;
+            } 
+
             /**
              * MemberId.
              */
@@ -237,6 +260,13 @@ public class QueryMeetingRoomResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<AuthorizedMembers> authorizedMembers; 
+
+            private Builder() {
+            } 
+
+            private Builder(ReservationAuthority model) {
+                this.authorizedMembers = model.authorizedMembers;
+            } 
 
             /**
              * AuthorizedMembers.
@@ -308,6 +338,15 @@ public class QueryMeetingRoomResponseBody extends TeaModel {
             private Long groupId; 
             private String groupName; 
             private Long parentId; 
+
+            private Builder() {
+            } 
+
+            private Builder(RoomGroup model) {
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+                this.parentId = model.parentId;
+            } 
 
             /**
              * GroupId.
@@ -384,6 +423,14 @@ public class QueryMeetingRoomResponseBody extends TeaModel {
             private Long labelId; 
             private String labelName; 
 
+            private Builder() {
+            } 
+
+            private Builder(RoomLabels model) {
+                this.labelId = model.labelId;
+                this.labelName = model.labelName;
+            } 
+
             /**
              * LabelId.
              */
@@ -450,6 +497,14 @@ public class QueryMeetingRoomResponseBody extends TeaModel {
         public static final class Builder {
             private String desc; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(RoomLocation model) {
+                this.desc = model.desc;
+                this.title = model.title;
+            } 
 
             /**
              * Desc.
@@ -673,6 +728,27 @@ public class QueryMeetingRoomResponseBody extends TeaModel {
             private String roomStaffId; 
             private Integer roomStatus; 
             private String roomUnionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.corpId = model.corpId;
+                this.deviceUnionIds = model.deviceUnionIds;
+                this.enableCycleReservation = model.enableCycleReservation;
+                this.isvRoomId = model.isvRoomId;
+                this.reservationAuthority = model.reservationAuthority;
+                this.roomCapacity = model.roomCapacity;
+                this.roomGroup = model.roomGroup;
+                this.roomId = model.roomId;
+                this.roomLabels = model.roomLabels;
+                this.roomLocation = model.roomLocation;
+                this.roomName = model.roomName;
+                this.roomPicture = model.roomPicture;
+                this.roomStaffId = model.roomStaffId;
+                this.roomStatus = model.roomStatus;
+                this.roomUnionId = model.roomUnionId;
+            } 
 
             /**
              * CorpId.

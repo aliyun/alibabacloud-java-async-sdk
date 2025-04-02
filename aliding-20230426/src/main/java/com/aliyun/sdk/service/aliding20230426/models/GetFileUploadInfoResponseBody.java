@@ -56,6 +56,10 @@ public class GetFileUploadInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return headerSignatureInfo
      */
@@ -113,6 +117,19 @@ public class GetFileUploadInfoResponseBody extends TeaModel {
         private String uploadKey; 
         private String vendorRequestId; 
         private String vendorType; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetFileUploadInfoResponseBody model) {
+            this.headerSignatureInfo = model.headerSignatureInfo;
+            this.protocol = model.protocol;
+            this.requestId = model.requestId;
+            this.storageDriver = model.storageDriver;
+            this.uploadKey = model.uploadKey;
+            this.vendorRequestId = model.vendorRequestId;
+            this.vendorType = model.vendorType;
+        } 
 
         /**
          * headerSignatureInfo.
@@ -255,6 +272,17 @@ public class GetFileUploadInfoResponseBody extends TeaModel {
             private java.util.List<String> internalResourceUrls; 
             private String region; 
             private java.util.List<String> resourceUrls; 
+
+            private Builder() {
+            } 
+
+            private Builder(HeaderSignatureInfo model) {
+                this.expirationSeconds = model.expirationSeconds;
+                this.headers = model.headers;
+                this.internalResourceUrls = model.internalResourceUrls;
+                this.region = model.region;
+                this.resourceUrls = model.resourceUrls;
+            } 
 
             /**
              * ExpirationSeconds.

@@ -44,6 +44,10 @@ public class ListNavigationByFormTypeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -77,6 +81,16 @@ public class ListNavigationByFormTypeResponseBody extends TeaModel {
         private java.util.List<Result> result; 
         private String vendorRequestId; 
         private String vendorType; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListNavigationByFormTypeResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.vendorRequestId = model.vendorRequestId;
+            this.vendorType = model.vendorType;
+        } 
 
         /**
          * requestId.
@@ -172,6 +186,15 @@ public class ListNavigationByFormTypeResponseBody extends TeaModel {
             private String nameInEnglish; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Title model) {
+                this.nameInChinese = model.nameInChinese;
+                this.nameInEnglish = model.nameInEnglish;
+                this.type = model.type;
+            } 
+
             /**
              * NameInChinese.
              */
@@ -258,6 +281,15 @@ public class ListNavigationByFormTypeResponseBody extends TeaModel {
             private String formUuid; 
             private String processCode; 
             private Title title; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.formUuid = model.formUuid;
+                this.processCode = model.processCode;
+                this.title = model.title;
+            } 
 
             /**
              * FormUuid.

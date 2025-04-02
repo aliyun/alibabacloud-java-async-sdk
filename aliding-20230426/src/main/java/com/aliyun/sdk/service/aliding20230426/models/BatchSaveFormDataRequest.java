@@ -69,7 +69,7 @@ public class BatchSaveFormDataRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -269,6 +269,13 @@ public class BatchSaveFormDataRequest extends Request {
 
         public static final class Builder {
             private String accountId; 
+
+            private Builder() {
+            } 
+
+            private Builder(AccountContext model) {
+                this.accountId = model.accountId;
+            } 
 
             /**
              * <p>This parameter is required.</p>

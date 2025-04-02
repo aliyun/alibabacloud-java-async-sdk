@@ -48,6 +48,10 @@ public class GetRangeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return backgroundColors
      */
@@ -89,6 +93,17 @@ public class GetRangeResponseBody extends TeaModel {
         private java.util.List<java.util.List<String>> formulas; 
         private String requestId; 
         private java.util.List<java.util.List<?>> values; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetRangeResponseBody model) {
+            this.backgroundColors = model.backgroundColors;
+            this.displayValues = model.displayValues;
+            this.formulas = model.formulas;
+            this.requestId = model.requestId;
+            this.values = model.values;
+        } 
 
         /**
          * backgroundColors.
@@ -206,6 +221,16 @@ public class GetRangeResponseBody extends TeaModel {
             private Integer green; 
             private Integer blue; 
             private String hexString; 
+
+            private Builder() {
+            } 
+
+            private Builder(BackgroundColors model) {
+                this.red = model.red;
+                this.green = model.green;
+                this.blue = model.blue;
+                this.hexString = model.hexString;
+            } 
 
             /**
              * <p>red</p>

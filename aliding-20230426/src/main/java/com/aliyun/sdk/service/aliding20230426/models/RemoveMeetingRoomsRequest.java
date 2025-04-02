@@ -51,7 +51,7 @@ public class RemoveMeetingRoomsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -186,6 +186,13 @@ public class RemoveMeetingRoomsRequest extends Request {
         public static final class Builder {
             private String accountId; 
 
+            private Builder() {
+            } 
+
+            private Builder(AccountContext model) {
+                this.accountId = model.accountId;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              * 
@@ -236,6 +243,13 @@ public class RemoveMeetingRoomsRequest extends Request {
 
         public static final class Builder {
             private String roomId; 
+
+            private Builder() {
+            } 
+
+            private Builder(MeetingRoomsToRemove model) {
+                this.roomId = model.roomId;
+            } 
 
             /**
              * <p>This parameter is required.</p>

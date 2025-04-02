@@ -48,6 +48,10 @@ public class StatisticsReportResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return commentNum
      */
@@ -89,6 +93,17 @@ public class StatisticsReportResponseBody extends TeaModel {
         private Long likeNum; 
         private Long readNum; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(StatisticsReportResponseBody model) {
+            this.commentNum = model.commentNum;
+            this.commentUserNum = model.commentUserNum;
+            this.likeNum = model.likeNum;
+            this.readNum = model.readNum;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * commentNum.

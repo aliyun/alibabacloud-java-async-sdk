@@ -36,6 +36,10 @@ public class GetAllSheetsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetAllSheetsResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<Value> value; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAllSheetsResponseBody model) {
+            this.requestId = model.requestId;
+            this.value = model.value;
+        } 
 
         /**
          * <p>requestId</p>
@@ -122,6 +134,14 @@ public class GetAllSheetsResponseBody extends TeaModel {
         public static final class Builder {
             private String id; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(Value model) {
+                this.id = model.id;
+                this.name = model.name;
+            } 
 
             /**
              * Id.

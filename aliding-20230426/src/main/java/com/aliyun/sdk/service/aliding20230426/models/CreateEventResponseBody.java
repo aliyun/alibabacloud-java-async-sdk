@@ -96,6 +96,10 @@ public class CreateEventResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return attendees
      */
@@ -233,6 +237,29 @@ public class CreateEventResponseBody extends TeaModel {
         private String summary; 
         private java.util.List<UiConfigs> uiConfigs; 
         private String updateTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateEventResponseBody model) {
+            this.attendees = model.attendees;
+            this.createTime = model.createTime;
+            this.description = model.description;
+            this.end = model.end;
+            this.id = model.id;
+            this.isAllDay = model.isAllDay;
+            this.location = model.location;
+            this.onlineMeetingInfo = model.onlineMeetingInfo;
+            this.organizer = model.organizer;
+            this.recurrence = model.recurrence;
+            this.reminders = model.reminders;
+            this.requestId = model.requestId;
+            this.richTextDescription = model.richTextDescription;
+            this.start = model.start;
+            this.summary = model.summary;
+            this.uiConfigs = model.uiConfigs;
+            this.updateTime = model.updateTime;
+        } 
 
         /**
          * attendees.
@@ -447,6 +474,16 @@ public class CreateEventResponseBody extends TeaModel {
             private String responseStatus; 
             private Boolean self; 
 
+            private Builder() {
+            } 
+
+            private Builder(Attendees model) {
+                this.displayName = model.displayName;
+                this.isOptional = model.isOptional;
+                this.responseStatus = model.responseStatus;
+                this.self = model.self;
+            } 
+
             /**
              * DisplayName.
              */
@@ -542,6 +579,15 @@ public class CreateEventResponseBody extends TeaModel {
             private String dateTime; 
             private String timeZone; 
 
+            private Builder() {
+            } 
+
+            private Builder(End model) {
+                this.date = model.date;
+                this.dateTime = model.dateTime;
+                this.timeZone = model.timeZone;
+            } 
+
             /**
              * Date.
              */
@@ -604,6 +650,13 @@ public class CreateEventResponseBody extends TeaModel {
 
         public static final class Builder {
             private String displayName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Location model) {
+                this.displayName = model.displayName;
+            } 
 
             /**
              * DisplayName.
@@ -687,6 +740,16 @@ public class CreateEventResponseBody extends TeaModel {
             private java.util.Map<String, ?> extraInfo; 
             private String type; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(OnlineMeetingInfo model) {
+                this.conferenceId = model.conferenceId;
+                this.extraInfo = model.extraInfo;
+                this.type = model.type;
+                this.url = model.url;
+            } 
 
             /**
              * ConferenceId.
@@ -794,6 +857,16 @@ public class CreateEventResponseBody extends TeaModel {
             private String id; 
             private String responseStatus; 
             private Boolean self; 
+
+            private Builder() {
+            } 
+
+            private Builder(Organizer model) {
+                this.displayName = model.displayName;
+                this.id = model.id;
+                this.responseStatus = model.responseStatus;
+                this.self = model.self;
+            } 
 
             /**
              * DisplayName.
@@ -914,6 +987,17 @@ public class CreateEventResponseBody extends TeaModel {
             private Integer interval; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Pattern model) {
+                this.dayOfMonth = model.dayOfMonth;
+                this.daysOfWeek = model.daysOfWeek;
+                this.index = model.index;
+                this.interval = model.interval;
+                this.type = model.type;
+            } 
+
             /**
              * DayOfMonth.
              */
@@ -1017,6 +1101,15 @@ public class CreateEventResponseBody extends TeaModel {
             private Integer numberOfOccurrences; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Range model) {
+                this.endDate = model.endDate;
+                this.numberOfOccurrences = model.numberOfOccurrences;
+                this.type = model.type;
+            } 
+
             /**
              * EndDate.
              */
@@ -1092,6 +1185,14 @@ public class CreateEventResponseBody extends TeaModel {
             private Pattern pattern; 
             private Range range; 
 
+            private Builder() {
+            } 
+
+            private Builder(Recurrence model) {
+                this.pattern = model.pattern;
+                this.range = model.range;
+            } 
+
             /**
              * Pattern.
              */
@@ -1159,6 +1260,14 @@ public class CreateEventResponseBody extends TeaModel {
             private String method; 
             private String minutes; 
 
+            private Builder() {
+            } 
+
+            private Builder(Reminders model) {
+                this.method = model.method;
+                this.minutes = model.minutes;
+            } 
+
             /**
              * Method.
              */
@@ -1213,6 +1322,13 @@ public class CreateEventResponseBody extends TeaModel {
 
         public static final class Builder {
             private String text; 
+
+            private Builder() {
+            } 
+
+            private Builder(RichTextDescription model) {
+                this.text = model.text;
+            } 
 
             /**
              * text.
@@ -1284,6 +1400,15 @@ public class CreateEventResponseBody extends TeaModel {
             private String date; 
             private String dateTime; 
             private String timeZone; 
+
+            private Builder() {
+            } 
+
+            private Builder(Start model) {
+                this.date = model.date;
+                this.dateTime = model.dateTime;
+                this.timeZone = model.timeZone;
+            } 
 
             /**
              * Date.
@@ -1359,6 +1484,14 @@ public class CreateEventResponseBody extends TeaModel {
         public static final class Builder {
             private String uiName; 
             private String uiStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(UiConfigs model) {
+                this.uiName = model.uiName;
+                this.uiStatus = model.uiStatus;
+            } 
 
             /**
              * UiName.

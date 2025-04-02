@@ -44,6 +44,10 @@ public class CheckAlibabaStaffResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return isAlibabaStaff
      */
@@ -77,6 +81,16 @@ public class CheckAlibabaStaffResponseBody extends TeaModel {
         private String requestId; 
         private String vendorRequestId; 
         private String vendorType; 
+
+        private Builder() {
+        } 
+
+        private Builder(CheckAlibabaStaffResponseBody model) {
+            this.isAlibabaStaff = model.isAlibabaStaff;
+            this.requestId = model.requestId;
+            this.vendorRequestId = model.vendorRequestId;
+            this.vendorType = model.vendorType;
+        } 
 
         /**
          * isAlibabaStaff.

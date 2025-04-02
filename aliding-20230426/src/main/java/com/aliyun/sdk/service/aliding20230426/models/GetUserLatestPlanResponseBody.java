@@ -88,6 +88,10 @@ public class GetUserLatestPlanResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accountHandleStatus
      */
@@ -209,6 +213,27 @@ public class GetUserLatestPlanResponseBody extends TeaModel {
         private Integer status; 
         private String vendorRequestId; 
         private String vendorType; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetUserLatestPlanResponseBody model) {
+            this.accountHandleStatus = model.accountHandleStatus;
+            this.accountHandleTime = model.accountHandleTime;
+            this.accountType = model.accountType;
+            this.agreementFirstSignTime = model.agreementFirstSignTime;
+            this.agreementLastSignTime = model.agreementLastSignTime;
+            this.agreementStatus = model.agreementStatus;
+            this.dataHandleEndTime = model.dataHandleEndTime;
+            this.dataHandleStartTime = model.dataHandleStartTime;
+            this.dataHandleStatus = model.dataHandleStatus;
+            this.exclusivePlan = model.exclusivePlan;
+            this.newAccountUid = model.newAccountUid;
+            this.requestId = model.requestId;
+            this.status = model.status;
+            this.vendorRequestId = model.vendorRequestId;
+            this.vendorType = model.vendorType;
+        } 
 
         /**
          * accountHandleStatus.

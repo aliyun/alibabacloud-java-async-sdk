@@ -44,6 +44,10 @@ public class SaveFormRemarkResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -77,6 +81,16 @@ public class SaveFormRemarkResponseBody extends TeaModel {
         private Long result; 
         private String vendorRequestId; 
         private String vendorType; 
+
+        private Builder() {
+        } 
+
+        private Builder(SaveFormRemarkResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.vendorRequestId = model.vendorRequestId;
+            this.vendorType = model.vendorType;
+        } 
 
         /**
          * requestId.

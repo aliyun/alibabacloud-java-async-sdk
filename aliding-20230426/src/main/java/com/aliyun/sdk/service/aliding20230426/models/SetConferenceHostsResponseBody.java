@@ -44,6 +44,10 @@ public class SetConferenceHostsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -77,6 +81,16 @@ public class SetConferenceHostsResponseBody extends TeaModel {
         private Boolean success; 
         private String vendorRequestId; 
         private String vendorType; 
+
+        private Builder() {
+        } 
+
+        private Builder(SetConferenceHostsResponseBody model) {
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.vendorRequestId = model.vendorRequestId;
+            this.vendorType = model.vendorType;
+        } 
 
         /**
          * requestId.

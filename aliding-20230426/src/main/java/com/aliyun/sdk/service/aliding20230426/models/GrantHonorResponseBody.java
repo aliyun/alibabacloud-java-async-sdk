@@ -40,6 +40,10 @@ public class GrantHonorResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return failedUserIds
      */
@@ -65,6 +69,15 @@ public class GrantHonorResponseBody extends TeaModel {
         private java.util.List<String> failedUserIds; 
         private String requestId; 
         private java.util.List<String> successUserIds; 
+
+        private Builder() {
+        } 
+
+        private Builder(GrantHonorResponseBody model) {
+            this.failedUserIds = model.failedUserIds;
+            this.requestId = model.requestId;
+            this.successUserIds = model.successUserIds;
+        } 
 
         /**
          * failedUserIds.

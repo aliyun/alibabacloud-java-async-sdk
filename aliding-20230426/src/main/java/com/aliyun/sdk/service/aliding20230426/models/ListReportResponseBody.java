@@ -48,6 +48,10 @@ public class ListReportResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataList
      */
@@ -89,6 +93,17 @@ public class ListReportResponseBody extends TeaModel {
         private Long nextCursor; 
         private String requestId; 
         private Long size; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListReportResponseBody model) {
+            this.dataList = model.dataList;
+            this.hasMore = model.hasMore;
+            this.nextCursor = model.nextCursor;
+            this.requestId = model.requestId;
+            this.size = model.size;
+        } 
 
         /**
          * dataList.
@@ -206,6 +221,16 @@ public class ListReportResponseBody extends TeaModel {
             private String sort; 
             private String type; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Contents model) {
+                this.key = model.key;
+                this.sort = model.sort;
+                this.type = model.type;
+                this.value = model.value;
+            } 
 
             /**
              * Key.
@@ -409,6 +434,24 @@ public class ListReportResponseBody extends TeaModel {
             private String remark; 
             private String reportId; 
             private String templateName; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataList model) {
+                this.contents = model.contents;
+                this.createTime = model.createTime;
+                this.creatorId = model.creatorId;
+                this.creatorName = model.creatorName;
+                this.deptName = model.deptName;
+                this.images = model.images;
+                this.latitude = model.latitude;
+                this.longitude = model.longitude;
+                this.modifiedTime = model.modifiedTime;
+                this.remark = model.remark;
+                this.reportId = model.reportId;
+                this.templateName = model.templateName;
+            } 
 
             /**
              * Contents.

@@ -44,6 +44,10 @@ public class GetGroupLiveListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -77,6 +81,16 @@ public class GetGroupLiveListResponseBody extends TeaModel {
         private Result result; 
         private String vendorRequestId; 
         private String vendorType; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetGroupLiveListResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.vendorRequestId = model.vendorRequestId;
+            this.vendorType = model.vendorType;
+        } 
 
         /**
          * requestId.
@@ -208,6 +222,18 @@ public class GetGroupLiveListResponseBody extends TeaModel {
             private String liveUuid; 
             private String title; 
 
+            private Builder() {
+            } 
+
+            private Builder(GroupLiveList model) {
+                this.anchorNickname = model.anchorNickname;
+                this.anchorUnionId = model.anchorUnionId;
+                this.liveEndTime = model.liveEndTime;
+                this.liveStartTime = model.liveStartTime;
+                this.liveUuid = model.liveUuid;
+                this.title = model.title;
+            } 
+
             /**
              * AnchorNickname.
              */
@@ -294,6 +320,13 @@ public class GetGroupLiveListResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<GroupLiveList> groupLiveList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.groupLiveList = model.groupLiveList;
+            } 
 
             /**
              * GroupLiveList.

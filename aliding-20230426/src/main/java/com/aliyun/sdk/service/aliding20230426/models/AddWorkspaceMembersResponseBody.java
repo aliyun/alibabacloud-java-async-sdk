@@ -36,6 +36,10 @@ public class AddWorkspaceMembersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return notInOrgList
      */
@@ -53,6 +57,14 @@ public class AddWorkspaceMembersResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<String> notInOrgList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AddWorkspaceMembersResponseBody model) {
+            this.notInOrgList = model.notInOrgList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * NotInOrgList.

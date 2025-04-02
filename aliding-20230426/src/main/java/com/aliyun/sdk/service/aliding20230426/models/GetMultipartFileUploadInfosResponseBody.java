@@ -44,6 +44,10 @@ public class GetMultipartFileUploadInfosResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return multipartHeaderSignatureInfos
      */
@@ -77,6 +81,16 @@ public class GetMultipartFileUploadInfosResponseBody extends TeaModel {
         private String requestId; 
         private String vendorRequestId; 
         private String vendorType; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMultipartFileUploadInfosResponseBody model) {
+            this.multipartHeaderSignatureInfos = model.multipartHeaderSignatureInfos;
+            this.requestId = model.requestId;
+            this.vendorRequestId = model.vendorRequestId;
+            this.vendorType = model.vendorType;
+        } 
 
         /**
          * multipartHeaderSignatureInfos.
@@ -196,6 +210,17 @@ public class GetMultipartFileUploadInfosResponseBody extends TeaModel {
             private String region; 
             private java.util.List<String> resourceUrls; 
 
+            private Builder() {
+            } 
+
+            private Builder(HeaderSignatureInfo model) {
+                this.expirationSeconds = model.expirationSeconds;
+                this.headers = model.headers;
+                this.internalResourceUrls = model.internalResourceUrls;
+                this.region = model.region;
+                this.resourceUrls = model.resourceUrls;
+            } 
+
             /**
              * ExpirationSeconds.
              */
@@ -286,6 +311,14 @@ public class GetMultipartFileUploadInfosResponseBody extends TeaModel {
         public static final class Builder {
             private HeaderSignatureInfo headerSignatureInfo; 
             private Integer partNumber; 
+
+            private Builder() {
+            } 
+
+            private Builder(MultipartHeaderSignatureInfos model) {
+                this.headerSignatureInfo = model.headerSignatureInfo;
+                this.partNumber = model.partNumber;
+            } 
 
             /**
              * HeaderSignatureInfo.

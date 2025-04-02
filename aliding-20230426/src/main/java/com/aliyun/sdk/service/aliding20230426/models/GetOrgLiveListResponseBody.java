@@ -44,6 +44,10 @@ public class GetOrgLiveListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -77,6 +81,16 @@ public class GetOrgLiveListResponseBody extends TeaModel {
         private Result result; 
         private String vendorRequestId; 
         private String vendorType; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetOrgLiveListResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.vendorRequestId = model.vendorRequestId;
+            this.vendorType = model.vendorType;
+        } 
 
         /**
          * requestId.
@@ -232,6 +246,20 @@ public class GetOrgLiveListResponseBody extends TeaModel {
             private java.util.List<String> shareOpenConversationIds; 
             private String title; 
 
+            private Builder() {
+            } 
+
+            private Builder(LiveList model) {
+                this.anchorNickname = model.anchorNickname;
+                this.anchorUnionId = model.anchorUnionId;
+                this.anchorUserId = model.anchorUserId;
+                this.liveEndTime = model.liveEndTime;
+                this.liveStartTime = model.liveStartTime;
+                this.liveUuid = model.liveUuid;
+                this.shareOpenConversationIds = model.shareOpenConversationIds;
+                this.title = model.title;
+            } 
+
             /**
              * AnchorNickname.
              */
@@ -382,6 +410,17 @@ public class GetOrgLiveListResponseBody extends TeaModel {
             private Long pageNumber; 
             private Long pageSize; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(NewLive model) {
+                this.hasMore = model.hasMore;
+                this.liveList = model.liveList;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * HasMore.
@@ -534,6 +573,19 @@ public class GetOrgLiveListResponseBody extends TeaModel {
             private String liveUuid; 
             private String title; 
 
+            private Builder() {
+            } 
+
+            private Builder(UpdateLiveLiveList model) {
+                this.anchorNickname = model.anchorNickname;
+                this.anchorUnionId = model.anchorUnionId;
+                this.anchorUserId = model.anchorUserId;
+                this.liveEndTime = model.liveEndTime;
+                this.liveStartTime = model.liveStartTime;
+                this.liveUuid = model.liveUuid;
+                this.title = model.title;
+            } 
+
             /**
              * AnchorNickname.
              */
@@ -677,6 +729,17 @@ public class GetOrgLiveListResponseBody extends TeaModel {
             private Long pageSize; 
             private Long totalCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(UpdateLive model) {
+                this.hasMore = model.hasMore;
+                this.liveList = model.liveList;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
+
             /**
              * HasMore.
              */
@@ -767,6 +830,14 @@ public class GetOrgLiveListResponseBody extends TeaModel {
         public static final class Builder {
             private NewLive newLive; 
             private UpdateLive updateLive; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.newLive = model.newLive;
+                this.updateLive = model.updateLive;
+            } 
 
             /**
              * NewLive.

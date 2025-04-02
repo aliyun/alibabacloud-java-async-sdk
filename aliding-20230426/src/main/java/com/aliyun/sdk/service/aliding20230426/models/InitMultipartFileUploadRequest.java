@@ -49,7 +49,7 @@ public class InitMultipartFileUploadRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -179,6 +179,13 @@ public class InitMultipartFileUploadRequest extends Request {
         public static final class Builder {
             private String accountId; 
 
+            private Builder() {
+            } 
+
+            private Builder(AccountContext model) {
+                this.accountId = model.accountId;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              * 
@@ -264,6 +271,16 @@ public class InitMultipartFileUploadRequest extends Request {
             private String name; 
             private String parentId; 
             private Long size; 
+
+            private Builder() {
+            } 
+
+            private Builder(PreCheckParam model) {
+                this.md5 = model.md5;
+                this.name = model.name;
+                this.parentId = model.parentId;
+                this.size = model.size;
+            } 
 
             /**
              * Md5.
@@ -360,6 +377,15 @@ public class InitMultipartFileUploadRequest extends Request {
             private String preferRegion; 
             private String storageDriver; 
 
+            private Builder() {
+            } 
+
+            private Builder(Option model) {
+                this.preCheckParam = model.preCheckParam;
+                this.preferRegion = model.preferRegion;
+                this.storageDriver = model.storageDriver;
+            } 
+
             /**
              * PreCheckParam.
              */
@@ -422,6 +448,13 @@ public class InitMultipartFileUploadRequest extends Request {
 
         public static final class Builder {
             private String tenantId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TenantContext model) {
+                this.tenantId = model.tenantId;
+            } 
 
             /**
              * tenantId.

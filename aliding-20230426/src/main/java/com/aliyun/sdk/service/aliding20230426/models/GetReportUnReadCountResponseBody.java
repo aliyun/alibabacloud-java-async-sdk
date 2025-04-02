@@ -36,6 +36,10 @@ public class GetReportUnReadCountResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return count
      */
@@ -53,6 +57,14 @@ public class GetReportUnReadCountResponseBody extends TeaModel {
     public static final class Builder {
         private Long count; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetReportUnReadCountResponseBody model) {
+            this.count = model.count;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * count.

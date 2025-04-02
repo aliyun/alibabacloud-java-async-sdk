@@ -36,6 +36,10 @@ public class ClearDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return a1Notation
      */
@@ -53,6 +57,14 @@ public class ClearDataResponseBody extends TeaModel {
     public static final class Builder {
         private String a1Notation; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ClearDataResponseBody model) {
+            this.a1Notation = model.a1Notation;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * a1Notation.

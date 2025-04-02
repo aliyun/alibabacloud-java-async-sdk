@@ -44,6 +44,10 @@ public class InvokeAssistantResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return content
      */
@@ -77,6 +81,16 @@ public class InvokeAssistantResponseBody extends TeaModel {
         private String requestId; 
         private String sessionId; 
         private Boolean streamEnd; 
+
+        private Builder() {
+        } 
+
+        private Builder(InvokeAssistantResponseBody model) {
+            this.content = model.content;
+            this.requestId = model.requestId;
+            this.sessionId = model.sessionId;
+            this.streamEnd = model.streamEnd;
+        } 
 
         /**
          * content.
@@ -171,6 +185,15 @@ public class InvokeAssistantResponseBody extends TeaModel {
             private String content; 
             private String templateId; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(CardCallback model) {
+                this.content = model.content;
+                this.templateId = model.templateId;
+                this.userId = model.userId;
+            } 
 
             /**
              * content.
@@ -283,6 +306,17 @@ public class InvokeAssistantResponseBody extends TeaModel {
             private Boolean finished; 
             private String templateId; 
 
+            private Builder() {
+            } 
+
+            private Builder(DingCard model) {
+                this.cardDesc = model.cardDesc;
+                this.content = model.content;
+                this.contentType = model.contentType;
+                this.finished = model.finished;
+                this.templateId = model.templateId;
+            } 
+
             /**
              * cardDesc.
              */
@@ -386,6 +420,15 @@ public class InvokeAssistantResponseBody extends TeaModel {
             private String imageDesc; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(ImageUrl model) {
+                this.detail = model.detail;
+                this.imageDesc = model.imageDesc;
+                this.url = model.url;
+            } 
+
             /**
              * detail.
              */
@@ -449,6 +492,13 @@ public class InvokeAssistantResponseBody extends TeaModel {
         public static final class Builder {
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Markdown model) {
+                this.value = model.value;
+            } 
+
             /**
              * value.
              */
@@ -495,6 +545,13 @@ public class InvokeAssistantResponseBody extends TeaModel {
 
         public static final class Builder {
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Text model) {
+                this.value = model.value;
+            } 
 
             /**
              * value.
@@ -602,6 +659,18 @@ public class InvokeAssistantResponseBody extends TeaModel {
             private Markdown markdown; 
             private Text text; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.cardCallback = model.cardCallback;
+                this.dingCard = model.dingCard;
+                this.imageUrl = model.imageUrl;
+                this.markdown = model.markdown;
+                this.text = model.text;
+                this.type = model.type;
+            } 
 
             /**
              * cardCallback.

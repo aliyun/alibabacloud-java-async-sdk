@@ -56,6 +56,10 @@ public class GetSubscribedCalendarResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return author
      */
@@ -113,6 +117,19 @@ public class GetSubscribedCalendarResponseBody extends TeaModel {
         private String name; 
         private String requestId; 
         private SubscribeScope subscribeScope; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSubscribedCalendarResponseBody model) {
+            this.author = model.author;
+            this.calendarId = model.calendarId;
+            this.description = model.description;
+            this.managers = model.managers;
+            this.name = model.name;
+            this.requestId = model.requestId;
+            this.subscribeScope = model.subscribeScope;
+        } 
 
         /**
          * author.
@@ -234,6 +251,15 @@ public class GetSubscribedCalendarResponseBody extends TeaModel {
             private java.util.List<String> corpIds; 
             private java.util.List<String> openConversationIds; 
             private java.util.List<String> userIds; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubscribeScope model) {
+                this.corpIds = model.corpIds;
+                this.openConversationIds = model.openConversationIds;
+                this.userIds = model.userIds;
+            } 
 
             /**
              * CorpIds.

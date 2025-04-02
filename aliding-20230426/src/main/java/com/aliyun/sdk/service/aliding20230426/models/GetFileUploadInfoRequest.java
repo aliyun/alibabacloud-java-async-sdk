@@ -54,7 +54,7 @@ public class GetFileUploadInfoRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -202,6 +202,13 @@ public class GetFileUploadInfoRequest extends Request {
         public static final class Builder {
             private String accountId; 
 
+            private Builder() {
+            } 
+
+            private Builder(AccountContext model) {
+                this.accountId = model.accountId;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              * 
@@ -263,6 +270,14 @@ public class GetFileUploadInfoRequest extends Request {
         public static final class Builder {
             private String name; 
             private Long size; 
+
+            private Builder() {
+            } 
+
+            private Builder(PreCheckParam model) {
+                this.name = model.name;
+                this.size = model.size;
+            } 
 
             /**
              * Name.
@@ -355,6 +370,16 @@ public class GetFileUploadInfoRequest extends Request {
             private String preferRegion; 
             private String storageDriver; 
 
+            private Builder() {
+            } 
+
+            private Builder(Option model) {
+                this.preCheckParam = model.preCheckParam;
+                this.preferIntranet = model.preferIntranet;
+                this.preferRegion = model.preferRegion;
+                this.storageDriver = model.storageDriver;
+            } 
+
             /**
              * PreCheckParam.
              */
@@ -425,6 +450,13 @@ public class GetFileUploadInfoRequest extends Request {
 
         public static final class Builder {
             private String tenantId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TenantContext model) {
+                this.tenantId = model.tenantId;
+            } 
 
             /**
              * tenantId.

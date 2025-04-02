@@ -50,7 +50,7 @@ public class AddWorkspaceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -180,6 +180,13 @@ public class AddWorkspaceRequest extends Request {
         public static final class Builder {
             private String accountId; 
 
+            private Builder() {
+            } 
+
+            private Builder(AccountContext model) {
+                this.accountId = model.accountId;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              * 
@@ -242,6 +249,14 @@ public class AddWorkspaceRequest extends Request {
             private String description; 
             private String teamId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Option model) {
+                this.description = model.description;
+                this.teamId = model.teamId;
+            } 
+
             /**
              * Description.
              */
@@ -296,6 +311,13 @@ public class AddWorkspaceRequest extends Request {
 
         public static final class Builder {
             private String tenantId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TenantContext model) {
+                this.tenantId = model.tenantId;
+            } 
 
             /**
              * tenantId.

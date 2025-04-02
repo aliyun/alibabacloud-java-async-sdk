@@ -76,7 +76,7 @@ public class CreatePersonalTodoTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -304,6 +304,13 @@ public class CreatePersonalTodoTaskRequest extends Request {
         public static final class Builder {
             private String accountId; 
 
+            private Builder() {
+            } 
+
+            private Builder(AccountContext model) {
+                this.accountId = model.accountId;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              * 
@@ -354,6 +361,13 @@ public class CreatePersonalTodoTaskRequest extends Request {
         public static final class Builder {
             private String dingNotify; 
 
+            private Builder() {
+            } 
+
+            private Builder(NotifyConfigs model) {
+                this.dingNotify = model.dingNotify;
+            } 
+
             /**
              * DingNotify.
              */
@@ -400,6 +414,13 @@ public class CreatePersonalTodoTaskRequest extends Request {
 
         public static final class Builder {
             private String tenantId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TenantContext model) {
+                this.tenantId = model.tenantId;
+            } 
 
             /**
              * tenantId.

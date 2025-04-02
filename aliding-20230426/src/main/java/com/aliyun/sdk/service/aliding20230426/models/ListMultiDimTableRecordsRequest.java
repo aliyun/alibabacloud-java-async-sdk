@@ -66,7 +66,7 @@ public class ListMultiDimTableRecordsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -256,6 +256,13 @@ public class ListMultiDimTableRecordsRequest extends Request {
         public static final class Builder {
             private String accountId; 
 
+            private Builder() {
+            } 
+
+            private Builder(AccountContext model) {
+                this.accountId = model.accountId;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              * 
@@ -329,6 +336,15 @@ public class ListMultiDimTableRecordsRequest extends Request {
             private String field; 
             private String operator; 
             private java.util.List<?> value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Conditions model) {
+                this.field = model.field;
+                this.operator = model.operator;
+                this.value = model.value;
+            } 
 
             /**
              * Field.
@@ -405,6 +421,14 @@ public class ListMultiDimTableRecordsRequest extends Request {
             private String combination; 
             private java.util.List<Conditions> conditions; 
 
+            private Builder() {
+            } 
+
+            private Builder(Filter model) {
+                this.combination = model.combination;
+                this.conditions = model.conditions;
+            } 
+
             /**
              * Combination.
              */
@@ -459,6 +483,13 @@ public class ListMultiDimTableRecordsRequest extends Request {
 
         public static final class Builder {
             private String tenantId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TenantContext model) {
+                this.tenantId = model.tenantId;
+            } 
 
             /**
              * tenantId.

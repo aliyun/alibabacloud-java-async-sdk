@@ -80,6 +80,10 @@ public class QueryLiveInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return coverUrl
      */
@@ -185,6 +189,25 @@ public class QueryLiveInfoResponseBody extends TeaModel {
         private Integer subscribeCount; 
         private String title; 
         private Integer uv; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryLiveInfoResponseBody model) {
+            this.coverUrl = model.coverUrl;
+            this.duration = model.duration;
+            this.endTime = model.endTime;
+            this.introduction = model.introduction;
+            this.liveId = model.liveId;
+            this.livePlayUrl = model.livePlayUrl;
+            this.liveStatus = model.liveStatus;
+            this.playbackDuration = model.playbackDuration;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+            this.subscribeCount = model.subscribeCount;
+            this.title = model.title;
+            this.uv = model.uv;
+        } 
 
         /**
          * coverUrl.

@@ -61,7 +61,7 @@ public class FinishTicketRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -234,6 +234,13 @@ public class FinishTicketRequest extends Request {
         public static final class Builder {
             private String accountId; 
 
+            private Builder() {
+            } 
+
+            private Builder(AccountContext model) {
+                this.accountId = model.accountId;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              * 
@@ -308,6 +315,15 @@ public class FinishTicketRequest extends Request {
             private Boolean noticeAllGroupMember; 
             private java.util.List<String> workNoticeReceiverUserIds; 
 
+            private Builder() {
+            } 
+
+            private Builder(Notify model) {
+                this.groupNoticeReceiverUserIds = model.groupNoticeReceiverUserIds;
+                this.noticeAllGroupMember = model.noticeAllGroupMember;
+                this.workNoticeReceiverUserIds = model.workNoticeReceiverUserIds;
+            } 
+
             /**
              * GroupNoticeReceiverUserIds.
              */
@@ -371,6 +387,13 @@ public class FinishTicketRequest extends Request {
         public static final class Builder {
             private String tenantId; 
 
+            private Builder() {
+            } 
+
+            private Builder(TenantContext model) {
+                this.tenantId = model.tenantId;
+            } 
+
             /**
              * tenantId.
              */
@@ -429,6 +452,14 @@ public class FinishTicketRequest extends Request {
         public static final class Builder {
             private String fileName; 
             private String key; 
+
+            private Builder() {
+            } 
+
+            private Builder(Attachments model) {
+                this.fileName = model.fileName;
+                this.key = model.key;
+            } 
 
             /**
              * FileName.
@@ -496,6 +527,14 @@ public class FinishTicketRequest extends Request {
         public static final class Builder {
             private java.util.List<Attachments> attachments; 
             private String memo; 
+
+            private Builder() {
+            } 
+
+            private Builder(TicketMemo model) {
+                this.attachments = model.attachments;
+                this.memo = model.memo;
+            } 
 
             /**
              * Attachments.

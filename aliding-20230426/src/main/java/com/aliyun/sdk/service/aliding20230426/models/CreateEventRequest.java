@@ -112,7 +112,7 @@ public class CreateEventRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -470,6 +470,13 @@ public class CreateEventRequest extends Request {
         public static final class Builder {
             private String accountId; 
 
+            private Builder() {
+            } 
+
+            private Builder(AccountContext model) {
+                this.accountId = model.accountId;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              * 
@@ -531,6 +538,14 @@ public class CreateEventRequest extends Request {
         public static final class Builder {
             private String id; 
             private Boolean isOptional; 
+
+            private Builder() {
+            } 
+
+            private Builder(Attendees model) {
+                this.id = model.id;
+                this.isOptional = model.isOptional;
+            } 
 
             /**
              * id.
@@ -598,6 +613,14 @@ public class CreateEventRequest extends Request {
         public static final class Builder {
             private String outTrackId; 
             private String scenario; 
+
+            private Builder() {
+            } 
+
+            private Builder(CardInstances model) {
+                this.outTrackId = model.outTrackId;
+                this.scenario = model.scenario;
+            } 
 
             /**
              * OutTrackId.
@@ -678,6 +701,15 @@ public class CreateEventRequest extends Request {
             private String dateTime; 
             private String timeZone; 
 
+            private Builder() {
+            } 
+
+            private Builder(End model) {
+                this.date = model.date;
+                this.dateTime = model.dateTime;
+                this.timeZone = model.timeZone;
+            } 
+
             /**
              * date.
              */
@@ -741,6 +773,13 @@ public class CreateEventRequest extends Request {
         public static final class Builder {
             private String displayName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Location model) {
+                this.displayName = model.displayName;
+            } 
+
             /**
              * displayName.
              */
@@ -787,6 +826,13 @@ public class CreateEventRequest extends Request {
 
         public static final class Builder {
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(OnlineMeetingInfo model) {
+                this.type = model.type;
+            } 
 
             /**
              * type.
@@ -882,6 +928,17 @@ public class CreateEventRequest extends Request {
             private String index; 
             private Integer interval; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Pattern model) {
+                this.dayOfMonth = model.dayOfMonth;
+                this.daysOfWeek = model.daysOfWeek;
+                this.index = model.index;
+                this.interval = model.interval;
+                this.type = model.type;
+            } 
 
             /**
              * dayOfMonth.
@@ -986,6 +1043,15 @@ public class CreateEventRequest extends Request {
             private Integer numberOfOccurrences; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Range model) {
+                this.endDate = model.endDate;
+                this.numberOfOccurrences = model.numberOfOccurrences;
+                this.type = model.type;
+            } 
+
             /**
              * endDate.
              */
@@ -1061,6 +1127,14 @@ public class CreateEventRequest extends Request {
             private Pattern pattern; 
             private Range range; 
 
+            private Builder() {
+            } 
+
+            private Builder(Recurrence model) {
+                this.pattern = model.pattern;
+                this.range = model.range;
+            } 
+
             /**
              * pattern.
              */
@@ -1128,6 +1202,14 @@ public class CreateEventRequest extends Request {
             private String method; 
             private Integer minutes; 
 
+            private Builder() {
+            } 
+
+            private Builder(Reminders model) {
+                this.method = model.method;
+                this.minutes = model.minutes;
+            } 
+
             /**
              * method.
              */
@@ -1182,6 +1264,13 @@ public class CreateEventRequest extends Request {
 
         public static final class Builder {
             private String text; 
+
+            private Builder() {
+            } 
+
+            private Builder(RichTextDescription model) {
+                this.text = model.text;
+            } 
 
             /**
              * text.
@@ -1241,6 +1330,14 @@ public class CreateEventRequest extends Request {
         public static final class Builder {
             private String uiName; 
             private String uiStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(UiConfigs model) {
+                this.uiName = model.uiName;
+                this.uiStatus = model.uiStatus;
+            } 
 
             /**
              * uiName.
@@ -1320,6 +1417,15 @@ public class CreateEventRequest extends Request {
             private String date; 
             private String dateTime; 
             private String timeZone; 
+
+            private Builder() {
+            } 
+
+            private Builder(Start model) {
+                this.date = model.date;
+                this.dateTime = model.dateTime;
+                this.timeZone = model.timeZone;
+            } 
 
             /**
              * date.

@@ -84,7 +84,7 @@ public class CreateTicketRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -336,6 +336,13 @@ public class CreateTicketRequest extends Request {
         public static final class Builder {
             private String accountId; 
 
+            private Builder() {
+            } 
+
+            private Builder(AccountContext model) {
+                this.accountId = model.accountId;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              * 
@@ -409,6 +416,15 @@ public class CreateTicketRequest extends Request {
             private java.util.List<String> groupNoticeReceiverUserIds; 
             private Boolean noticeAllGroupMember; 
             private java.util.List<String> workNoticeReceiverUserIds; 
+
+            private Builder() {
+            } 
+
+            private Builder(Notify model) {
+                this.groupNoticeReceiverUserIds = model.groupNoticeReceiverUserIds;
+                this.noticeAllGroupMember = model.noticeAllGroupMember;
+                this.workNoticeReceiverUserIds = model.workNoticeReceiverUserIds;
+            } 
 
             /**
              * GroupNoticeReceiverUserIds.
@@ -484,6 +500,14 @@ public class CreateTicketRequest extends Request {
         public static final class Builder {
             private Boolean anchor; 
             private String openMsgId; 
+
+            private Builder() {
+            } 
+
+            private Builder(GroupMsgs model) {
+                this.anchor = model.anchor;
+                this.openMsgId = model.openMsgId;
+            } 
 
             /**
              * Anchor.
@@ -576,6 +600,16 @@ public class CreateTicketRequest extends Request {
             private java.util.List<String> relevantorUserIds; 
             private String topicId; 
 
+            private Builder() {
+            } 
+
+            private Builder(SceneContext model) {
+                this.groupMsgs = model.groupMsgs;
+                this.openConversationId = model.openConversationId;
+                this.relevantorUserIds = model.relevantorUserIds;
+                this.topicId = model.topicId;
+            } 
+
             /**
              * GroupMsgs.
              */
@@ -646,6 +680,13 @@ public class CreateTicketRequest extends Request {
 
         public static final class Builder {
             private String tenantId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TenantContext model) {
+                this.tenantId = model.tenantId;
+            } 
 
             /**
              * tenantId.

@@ -44,6 +44,10 @@ public class GetRelatedWorkspacesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -77,6 +81,16 @@ public class GetRelatedWorkspacesResponseBody extends TeaModel {
         private String vendorRequestId; 
         private String vendorType; 
         private java.util.List<Workspaces> workspaces; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetRelatedWorkspacesResponseBody model) {
+            this.requestId = model.requestId;
+            this.vendorRequestId = model.vendorRequestId;
+            this.vendorType = model.vendorType;
+            this.workspaces = model.workspaces;
+        } 
 
         /**
          * requestId.
@@ -183,6 +197,16 @@ public class GetRelatedWorkspacesResponseBody extends TeaModel {
             private String name; 
             private String nodeId; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(RecentList model) {
+                this.lastEditTime = model.lastEditTime;
+                this.name = model.name;
+                this.nodeId = model.nodeId;
+                this.url = model.url;
+            } 
 
             /**
              * LastEditTime.
@@ -338,6 +362,20 @@ public class GetRelatedWorkspacesResponseBody extends TeaModel {
             private String role; 
             private String url; 
             private String workspaceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Workspaces model) {
+                this.createTime = model.createTime;
+                this.deleted = model.deleted;
+                this.name = model.name;
+                this.owner = model.owner;
+                this.recentList = model.recentList;
+                this.role = model.role;
+                this.url = model.url;
+                this.workspaceId = model.workspaceId;
+            } 
 
             /**
              * CreateTime.

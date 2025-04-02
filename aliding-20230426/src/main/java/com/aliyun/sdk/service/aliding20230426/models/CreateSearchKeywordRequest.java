@@ -64,7 +64,7 @@ public class CreateSearchKeywordRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -247,6 +247,13 @@ public class CreateSearchKeywordRequest extends Request {
         public static final class Builder {
             private String userToken; 
 
+            private Builder() {
+            } 
+
+            private Builder(AccountContext model) {
+                this.userToken = model.userToken;
+            } 
+
             /**
              * userToken.
              */
@@ -293,6 +300,13 @@ public class CreateSearchKeywordRequest extends Request {
 
         public static final class Builder {
             private String tenantId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TenantContext model) {
+                this.tenantId = model.tenantId;
+            } 
 
             /**
              * tenantId.

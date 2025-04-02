@@ -44,6 +44,10 @@ public class QueryMinutesSummaryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -77,6 +81,16 @@ public class QueryMinutesSummaryResponseBody extends TeaModel {
         private Summary summary; 
         private String vendorRequestId; 
         private String vendorType; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryMinutesSummaryResponseBody model) {
+            this.requestId = model.requestId;
+            this.summary = model.summary;
+            this.vendorRequestId = model.vendorRequestId;
+            this.vendorType = model.vendorType;
+        } 
 
         /**
          * requestId.
@@ -195,6 +209,17 @@ public class QueryMinutesSummaryResponseBody extends TeaModel {
             private Long sentenceId; 
             private Long start; 
             private String text; 
+
+            private Builder() {
+            } 
+
+            private Builder(Actions model) {
+                this.end = model.end;
+                this.id = model.id;
+                this.sentenceId = model.sentenceId;
+                this.start = model.start;
+                this.text = model.text;
+            } 
 
             /**
              * End.
@@ -323,6 +348,17 @@ public class QueryMinutesSummaryResponseBody extends TeaModel {
             private Long start; 
             private String summary; 
 
+            private Builder() {
+            } 
+
+            private Builder(AutoChapters model) {
+                this.end = model.end;
+                this.headline = model.headline;
+                this.id = model.id;
+                this.start = model.start;
+                this.summary = model.summary;
+            } 
+
             /**
              * End.
              */
@@ -425,6 +461,15 @@ public class QueryMinutesSummaryResponseBody extends TeaModel {
             private String speakerId; 
             private String speakerName; 
             private String summary; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConversationalSummary model) {
+                this.speakerId = model.speakerId;
+                this.speakerName = model.speakerName;
+                this.summary = model.summary;
+            } 
 
             /**
              * SpeakerId.
@@ -536,6 +581,17 @@ public class QueryMinutesSummaryResponseBody extends TeaModel {
             private Long sentenceId; 
             private Long start; 
             private String text; 
+
+            private Builder() {
+            } 
+
+            private Builder(KeySentences model) {
+                this.end = model.end;
+                this.id = model.id;
+                this.sentenceId = model.sentenceId;
+                this.start = model.start;
+                this.text = model.text;
+            } 
 
             /**
              * End.
@@ -651,6 +707,16 @@ public class QueryMinutesSummaryResponseBody extends TeaModel {
             private String question; 
             private java.util.List<Long> sentenceIdsOfAnswer; 
             private java.util.List<Long> sentenceIdsOfQuestion; 
+
+            private Builder() {
+            } 
+
+            private Builder(QuestionsAnsweringSummary model) {
+                this.answer = model.answer;
+                this.question = model.question;
+                this.sentenceIdsOfAnswer = model.sentenceIdsOfAnswer;
+                this.sentenceIdsOfQuestion = model.sentenceIdsOfQuestion;
+            } 
 
             /**
              * Answer.
@@ -794,6 +860,19 @@ public class QueryMinutesSummaryResponseBody extends TeaModel {
             private java.util.List<String> keywords; 
             private String paragraphSummary; 
             private java.util.List<QuestionsAnsweringSummary> questionsAnsweringSummary; 
+
+            private Builder() {
+            } 
+
+            private Builder(Summary model) {
+                this.actions = model.actions;
+                this.autoChapters = model.autoChapters;
+                this.conversationalSummary = model.conversationalSummary;
+                this.keySentences = model.keySentences;
+                this.keywords = model.keywords;
+                this.paragraphSummary = model.paragraphSummary;
+                this.questionsAnsweringSummary = model.questionsAnsweringSummary;
+            } 
 
             /**
              * Actions.

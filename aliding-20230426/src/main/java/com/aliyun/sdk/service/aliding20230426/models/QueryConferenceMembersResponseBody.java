@@ -44,6 +44,10 @@ public class QueryConferenceMembersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return memberModels
      */
@@ -77,6 +81,16 @@ public class QueryConferenceMembersResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryConferenceMembersResponseBody model) {
+            this.memberModels = model.memberModels;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * memberModels.
@@ -270,6 +284,23 @@ public class QueryConferenceMembersResponseBody extends TeaModel {
             private Boolean pstnJoin; 
             private String userId; 
             private String userNick; 
+
+            private Builder() {
+            } 
+
+            private Builder(MemberModels model) {
+                this.attendStatus = model.attendStatus;
+                this.coHost = model.coHost;
+                this.conferenceId = model.conferenceId;
+                this.duration = model.duration;
+                this.host = model.host;
+                this.joinTime = model.joinTime;
+                this.leaveTime = model.leaveTime;
+                this.outerOrgMember = model.outerOrgMember;
+                this.pstnJoin = model.pstnJoin;
+                this.userId = model.userId;
+                this.userNick = model.userNick;
+            } 
 
             /**
              * AttendStatus.

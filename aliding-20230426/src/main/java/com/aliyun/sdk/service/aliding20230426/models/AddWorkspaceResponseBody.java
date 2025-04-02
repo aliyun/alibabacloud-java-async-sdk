@@ -36,6 +36,10 @@ public class AddWorkspaceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class AddWorkspaceResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Workspace workspace; 
+
+        private Builder() {
+        } 
+
+        private Builder(AddWorkspaceResponseBody model) {
+            this.requestId = model.requestId;
+            this.workspace = model.workspace;
+        } 
 
         /**
          * <p>requestId</p>
@@ -122,6 +134,14 @@ public class AddWorkspaceResponseBody extends TeaModel {
         public static final class Builder {
             private String type; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Icon model) {
+                this.type = model.type;
+                this.value = model.value;
+            } 
 
             /**
              * Type.
@@ -345,6 +365,27 @@ public class AddWorkspaceResponseBody extends TeaModel {
             private String type; 
             private String url; 
             private String workspaceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Workspace model) {
+                this.corpId = model.corpId;
+                this.cover = model.cover;
+                this.createTime = model.createTime;
+                this.creatorId = model.creatorId;
+                this.description = model.description;
+                this.icon = model.icon;
+                this.modifiedTime = model.modifiedTime;
+                this.modifierId = model.modifierId;
+                this.name = model.name;
+                this.permissionRole = model.permissionRole;
+                this.rootNodeId = model.rootNodeId;
+                this.teamId = model.teamId;
+                this.type = model.type;
+                this.url = model.url;
+                this.workspaceId = model.workspaceId;
+            } 
 
             /**
              * CorpId.

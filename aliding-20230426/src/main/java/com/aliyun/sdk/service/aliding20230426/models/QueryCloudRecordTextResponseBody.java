@@ -40,6 +40,10 @@ public class QueryCloudRecordTextResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return hasMore
      */
@@ -65,6 +69,15 @@ public class QueryCloudRecordTextResponseBody extends TeaModel {
         private Boolean hasMore; 
         private java.util.List<ParagraphList> paragraphList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryCloudRecordTextResponseBody model) {
+            this.hasMore = model.hasMore;
+            this.paragraphList = model.paragraphList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * hasMore.
@@ -166,6 +179,16 @@ public class QueryCloudRecordTextResponseBody extends TeaModel {
             private Long startTime; 
             private String word; 
             private String wordId; 
+
+            private Builder() {
+            } 
+
+            private Builder(WordList model) {
+                this.endTime = model.endTime;
+                this.startTime = model.startTime;
+                this.word = model.word;
+                this.wordId = model.wordId;
+            } 
 
             /**
              * EndTime.
@@ -285,6 +308,17 @@ public class QueryCloudRecordTextResponseBody extends TeaModel {
             private Long startTime; 
             private String userId; 
             private java.util.List<WordList> wordList; 
+
+            private Builder() {
+            } 
+
+            private Builder(SentenceList model) {
+                this.endTime = model.endTime;
+                this.sentence = model.sentence;
+                this.startTime = model.startTime;
+                this.userId = model.userId;
+                this.wordList = model.wordList;
+            } 
 
             /**
              * EndTime.
@@ -460,6 +494,21 @@ public class QueryCloudRecordTextResponseBody extends TeaModel {
             private Long startTime; 
             private Long status; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ParagraphList model) {
+                this.endTime = model.endTime;
+                this.nextTtoken = model.nextTtoken;
+                this.nickName = model.nickName;
+                this.paragraph = model.paragraph;
+                this.recordId = model.recordId;
+                this.sentenceList = model.sentenceList;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.userId = model.userId;
+            } 
 
             /**
              * EndTime.

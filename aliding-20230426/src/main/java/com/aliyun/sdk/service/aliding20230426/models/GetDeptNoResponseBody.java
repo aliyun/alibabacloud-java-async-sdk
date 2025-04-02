@@ -44,6 +44,10 @@ public class GetDeptNoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return deptNo
      */
@@ -77,6 +81,16 @@ public class GetDeptNoResponseBody extends TeaModel {
         private String requestId; 
         private String vendorRequestId; 
         private String vendorType; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDeptNoResponseBody model) {
+            this.deptNo = model.deptNo;
+            this.requestId = model.requestId;
+            this.vendorRequestId = model.vendorRequestId;
+            this.vendorType = model.vendorType;
+        } 
 
         /**
          * deptNo.

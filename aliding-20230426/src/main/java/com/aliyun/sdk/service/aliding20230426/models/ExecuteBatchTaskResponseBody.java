@@ -52,6 +52,10 @@ public class ExecuteBatchTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return failNumber
      */
@@ -101,6 +105,18 @@ public class ExecuteBatchTaskResponseBody extends TeaModel {
         private Integer total; 
         private String vendorRequestId; 
         private String vendorType; 
+
+        private Builder() {
+        } 
+
+        private Builder(ExecuteBatchTaskResponseBody model) {
+            this.failNumber = model.failNumber;
+            this.requestId = model.requestId;
+            this.successNumber = model.successNumber;
+            this.total = model.total;
+            this.vendorRequestId = model.vendorRequestId;
+            this.vendorType = model.vendorType;
+        } 
 
         /**
          * failNumber.

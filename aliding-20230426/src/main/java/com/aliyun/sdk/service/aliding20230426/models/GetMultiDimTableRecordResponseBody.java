@@ -64,6 +64,10 @@ public class GetMultiDimTableRecordResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createdBy
      */
@@ -137,6 +141,21 @@ public class GetMultiDimTableRecordResponseBody extends TeaModel {
         private String requestId; 
         private String vendorRequestId; 
         private String vendorType; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMultiDimTableRecordResponseBody model) {
+            this.createdBy = model.createdBy;
+            this.createdTime = model.createdTime;
+            this.fields = model.fields;
+            this.id = model.id;
+            this.lastModifiedBy = model.lastModifiedBy;
+            this.lastModifiedTime = model.lastModifiedTime;
+            this.requestId = model.requestId;
+            this.vendorRequestId = model.vendorRequestId;
+            this.vendorType = model.vendorType;
+        } 
 
         /**
          * CreatedBy.
@@ -248,6 +267,13 @@ public class GetMultiDimTableRecordResponseBody extends TeaModel {
         public static final class Builder {
             private String userId; 
 
+            private Builder() {
+            } 
+
+            private Builder(CreatedBy model) {
+                this.userId = model.userId;
+            } 
+
             /**
              * UserId.
              */
@@ -294,6 +320,13 @@ public class GetMultiDimTableRecordResponseBody extends TeaModel {
 
         public static final class Builder {
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(LastModifiedBy model) {
+                this.userId = model.userId;
+            } 
 
             /**
              * UserId.

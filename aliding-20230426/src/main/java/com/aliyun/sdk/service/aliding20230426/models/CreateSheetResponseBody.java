@@ -44,6 +44,10 @@ public class CreateSheetResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return id
      */
@@ -77,6 +81,16 @@ public class CreateSheetResponseBody extends TeaModel {
         private String name; 
         private String requestId; 
         private String visibility; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateSheetResponseBody model) {
+            this.id = model.id;
+            this.name = model.name;
+            this.requestId = model.requestId;
+            this.visibility = model.visibility;
+        } 
 
         /**
          * id.

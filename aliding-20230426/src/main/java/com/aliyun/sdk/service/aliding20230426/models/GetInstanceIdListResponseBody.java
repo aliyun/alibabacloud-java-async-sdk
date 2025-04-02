@@ -52,6 +52,10 @@ public class GetInstanceIdListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class GetInstanceIdListResponseBody extends TeaModel {
         private Long totalCount; 
         private String vendorRequestId; 
         private String vendorType; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetInstanceIdListResponseBody model) {
+            this.data = model.data;
+            this.pageNumber = model.pageNumber;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.vendorRequestId = model.vendorRequestId;
+            this.vendorType = model.vendorType;
+        } 
 
         /**
          * data.

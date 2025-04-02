@@ -36,6 +36,10 @@ public class QueryConferenceInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return confInfo
      */
@@ -53,6 +57,14 @@ public class QueryConferenceInfoResponseBody extends TeaModel {
     public static final class Builder {
         private ConfInfo confInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryConferenceInfoResponseBody model) {
+            this.confInfo = model.confInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * confInfo.
@@ -254,6 +266,25 @@ public class QueryConferenceInfoResponseBody extends TeaModel {
             private Long startTime; 
             private Integer status; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConfInfo model) {
+                this.activeNum = model.activeNum;
+                this.attendNum = model.attendNum;
+                this.confDuration = model.confDuration;
+                this.conferenceId = model.conferenceId;
+                this.creatorId = model.creatorId;
+                this.creatorNick = model.creatorNick;
+                this.endTime = model.endTime;
+                this.externalLinkUrl = model.externalLinkUrl;
+                this.invitedNum = model.invitedNum;
+                this.roomCode = model.roomCode;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.title = model.title;
+            } 
 
             /**
              * ActiveNum.

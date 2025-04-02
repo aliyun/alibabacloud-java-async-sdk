@@ -80,6 +80,10 @@ public class GetProcessDefinitionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return formUuid
      */
@@ -185,6 +189,25 @@ public class GetProcessDefinitionResponseBody extends TeaModel {
         private java.util.Map<String, ?> variables; 
         private String vendorRequestId; 
         private String vendorType; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetProcessDefinitionResponseBody model) {
+            this.formUuid = model.formUuid;
+            this.originator = model.originator;
+            this.outResult = model.outResult;
+            this.owners = model.owners;
+            this.processId = model.processId;
+            this.processInstanceId = model.processInstanceId;
+            this.requestId = model.requestId;
+            this.status = model.status;
+            this.tasks = model.tasks;
+            this.title = model.title;
+            this.variables = model.variables;
+            this.vendorRequestId = model.vendorRequestId;
+            this.vendorType = model.vendorType;
+        } 
 
         /**
          * formUuid.
@@ -412,6 +435,20 @@ public class GetProcessDefinitionResponseBody extends TeaModel {
             private Long id; 
             private String masterWorkNo; 
 
+            private Builder() {
+            } 
+
+            private Builder(MasterDataDepartments model) {
+                this.deptName = model.deptName;
+                this.deptNameInEnglish = model.deptNameInEnglish;
+                this.deptNo = model.deptNo;
+                this.deptPath = model.deptPath;
+                this.humanSourceGroupOrderNumber = model.humanSourceGroupOrderNumber;
+                this.humanSourceGroupWorkNo = model.humanSourceGroupWorkNo;
+                this.id = model.id;
+                this.masterWorkNo = model.masterWorkNo;
+            } 
+
             /**
              * DeptName.
              */
@@ -623,6 +660,22 @@ public class GetProcessDefinitionResponseBody extends TeaModel {
             private String userId; 
             private String userInfo; 
 
+            private Builder() {
+            } 
+
+            private Builder(Originator model) {
+                this.departmentDescription = model.departmentDescription;
+                this.displayEnName = model.displayEnName;
+                this.displayName = model.displayName;
+                this.masterDataDepartments = model.masterDataDepartments;
+                this.orderNumber = model.orderNumber;
+                this.personalPhoto = model.personalPhoto;
+                this.status = model.status;
+                this.tbWang = model.tbWang;
+                this.userId = model.userId;
+                this.userInfo = model.userInfo;
+            } 
+
             /**
              * DepartmentDescription.
              */
@@ -825,6 +878,20 @@ public class GetProcessDefinitionResponseBody extends TeaModel {
             private String humanSourceGroupWorkNo; 
             private Long id; 
             private String masterWorkNo; 
+
+            private Builder() {
+            } 
+
+            private Builder(OwnersMasterDataDepartments model) {
+                this.deptName = model.deptName;
+                this.deptNameInEnglish = model.deptNameInEnglish;
+                this.deptNo = model.deptNo;
+                this.deptPath = model.deptPath;
+                this.humanSourceGroupOrderNumber = model.humanSourceGroupOrderNumber;
+                this.humanSourceGroupWorkNo = model.humanSourceGroupWorkNo;
+                this.id = model.id;
+                this.masterWorkNo = model.masterWorkNo;
+            } 
 
             /**
              * DeptName.
@@ -1037,6 +1104,22 @@ public class GetProcessDefinitionResponseBody extends TeaModel {
             private String userId; 
             private String userInfo; 
 
+            private Builder() {
+            } 
+
+            private Builder(Owners model) {
+                this.departmentDescription = model.departmentDescription;
+                this.displayEnName = model.displayEnName;
+                this.displayName = model.displayName;
+                this.masterDataDepartments = model.masterDataDepartments;
+                this.orderNumber = model.orderNumber;
+                this.personalPhoto = model.personalPhoto;
+                this.status = model.status;
+                this.tbWang = model.tbWang;
+                this.userId = model.userId;
+                this.userInfo = model.userInfo;
+            } 
+
             /**
              * DepartmentDescription.
              */
@@ -1204,6 +1287,17 @@ public class GetProcessDefinitionResponseBody extends TeaModel {
             private String activityNameInEnglish; 
             private Long id; 
 
+            private Builder() {
+            } 
+
+            private Builder(Activity model) {
+                this.activityId = model.activityId;
+                this.activityInstanceStatus = model.activityInstanceStatus;
+                this.activityName = model.activityName;
+                this.activityNameInEnglish = model.activityNameInEnglish;
+                this.id = model.id;
+            } 
+
             /**
              * ActivityId.
              */
@@ -1318,6 +1412,16 @@ public class GetProcessDefinitionResponseBody extends TeaModel {
             private Activity activity; 
             private String status; 
             private Long taskId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tasks model) {
+                this.actionerId = model.actionerId;
+                this.activity = model.activity;
+                this.status = model.status;
+                this.taskId = model.taskId;
+            } 
 
             /**
              * ActionerId.

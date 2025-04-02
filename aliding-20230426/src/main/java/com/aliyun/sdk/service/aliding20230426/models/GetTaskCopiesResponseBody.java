@@ -52,6 +52,10 @@ public class GetTaskCopiesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class GetTaskCopiesResponseBody extends TeaModel {
         private Long totalCount; 
         private String vendorRequestId; 
         private String vendorType; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTaskCopiesResponseBody model) {
+            this.data = model.data;
+            this.pageNumber = model.pageNumber;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.vendorRequestId = model.vendorRequestId;
+            this.vendorType = model.vendorType;
+        } 
 
         /**
          * data.
@@ -235,6 +251,17 @@ public class GetTaskCopiesResponseBody extends TeaModel {
             private String activityName; 
             private String activityNameInEnglish; 
             private Long id; 
+
+            private Builder() {
+            } 
+
+            private Builder(CurrentActivityInstances model) {
+                this.activityId = model.activityId;
+                this.activityInstanceStatus = model.activityInstanceStatus;
+                this.activityName = model.activityName;
+                this.activityNameInEnglish = model.activityNameInEnglish;
+                this.id = model.id;
+            } 
 
             /**
              * ActivityId.
@@ -626,6 +653,39 @@ public class GetTaskCopiesResponseBody extends TeaModel {
             private String serialNumber; 
             private String title; 
             private Long version; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.actionExecutorId = model.actionExecutorId;
+                this.actionExecutorName = model.actionExecutorName;
+                this.appType = model.appType;
+                this.carbonActivityId = model.carbonActivityId;
+                this.createTimeGMT = model.createTimeGMT;
+                this.currentActivityInstances = model.currentActivityInstances;
+                this.dataMap = model.dataMap;
+                this.dataType = model.dataType;
+                this.finishTimeGMT = model.finishTimeGMT;
+                this.formInstanceId = model.formInstanceId;
+                this.formUuid = model.formUuid;
+                this.instanceValue = model.instanceValue;
+                this.modifiedTimeGMT = model.modifiedTimeGMT;
+                this.originatorAvatar = model.originatorAvatar;
+                this.originatorDisplayName = model.originatorDisplayName;
+                this.originatorId = model.originatorId;
+                this.processApprovedResult = model.processApprovedResult;
+                this.processApprovedResultText = model.processApprovedResultText;
+                this.processCode = model.processCode;
+                this.processId = model.processId;
+                this.processInstanceId = model.processInstanceId;
+                this.processInstanceStatus = model.processInstanceStatus;
+                this.processInstanceStatusText = model.processInstanceStatusText;
+                this.processName = model.processName;
+                this.serialNumber = model.serialNumber;
+                this.title = model.title;
+                this.version = model.version;
+            } 
 
             /**
              * ActionExecutorId.

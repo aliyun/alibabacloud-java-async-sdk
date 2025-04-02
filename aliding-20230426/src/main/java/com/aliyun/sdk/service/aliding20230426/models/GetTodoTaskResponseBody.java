@@ -128,6 +128,10 @@ public class GetTodoTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bizTag
      */
@@ -329,6 +333,37 @@ public class GetTodoTaskResponseBody extends TeaModel {
         private String tenantType; 
         private String vendorRequestId; 
         private String vendorType; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTodoTaskResponseBody model) {
+            this.bizTag = model.bizTag;
+            this.cardTypeId = model.cardTypeId;
+            this.createdTime = model.createdTime;
+            this.creatorId = model.creatorId;
+            this.description = model.description;
+            this.detailUrl = model.detailUrl;
+            this.done = model.done;
+            this.dueTime = model.dueTime;
+            this.executorIds = model.executorIds;
+            this.finishTime = model.finishTime;
+            this.id = model.id;
+            this.isOnlyShowExecutor = model.isOnlyShowExecutor;
+            this.modifiedTime = model.modifiedTime;
+            this.modifierId = model.modifierId;
+            this.participantIds = model.participantIds;
+            this.priority = model.priority;
+            this.requestId = model.requestId;
+            this.source = model.source;
+            this.sourceId = model.sourceId;
+            this.startTime = model.startTime;
+            this.subject = model.subject;
+            this.tenantId = model.tenantId;
+            this.tenantType = model.tenantType;
+            this.vendorRequestId = model.vendorRequestId;
+            this.vendorType = model.vendorType;
+        } 
 
         /**
          * bizTag.
@@ -579,6 +614,14 @@ public class GetTodoTaskResponseBody extends TeaModel {
         public static final class Builder {
             private String appUrl; 
             private String pcUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(DetailUrl model) {
+                this.appUrl = model.appUrl;
+                this.pcUrl = model.pcUrl;
+            } 
 
             /**
              * AppUrl.

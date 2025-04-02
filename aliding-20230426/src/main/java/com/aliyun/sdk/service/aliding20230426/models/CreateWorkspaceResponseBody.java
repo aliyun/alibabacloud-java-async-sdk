@@ -48,6 +48,10 @@ public class CreateWorkspaceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return description
      */
@@ -89,6 +93,17 @@ public class CreateWorkspaceResponseBody extends TeaModel {
         private String requestId; 
         private String url; 
         private String workspaceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateWorkspaceResponseBody model) {
+            this.description = model.description;
+            this.name = model.name;
+            this.requestId = model.requestId;
+            this.url = model.url;
+            this.workspaceId = model.workspaceId;
+        } 
 
         /**
          * description.

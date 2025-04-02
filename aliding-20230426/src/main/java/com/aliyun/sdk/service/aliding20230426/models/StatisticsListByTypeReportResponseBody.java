@@ -44,6 +44,10 @@ public class StatisticsListByTypeReportResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return hasMore
      */
@@ -77,6 +81,16 @@ public class StatisticsListByTypeReportResponseBody extends TeaModel {
         private Long nextCursor; 
         private String requestId; 
         private java.util.List<String> useridList; 
+
+        private Builder() {
+        } 
+
+        private Builder(StatisticsListByTypeReportResponseBody model) {
+            this.hasMore = model.hasMore;
+            this.nextCursor = model.nextCursor;
+            this.requestId = model.requestId;
+            this.useridList = model.useridList;
+        } 
 
         /**
          * hasMore.

@@ -60,6 +60,10 @@ public class GetReportTemplateByNameResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return defaultReceivedConvs
      */
@@ -125,6 +129,20 @@ public class GetReportTemplateByNameResponseBody extends TeaModel {
         private String requestId; 
         private String userName; 
         private String userid; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetReportTemplateByNameResponseBody model) {
+            this.defaultReceivedConvs = model.defaultReceivedConvs;
+            this.defaultReceivers = model.defaultReceivers;
+            this.fields = model.fields;
+            this.id = model.id;
+            this.name = model.name;
+            this.requestId = model.requestId;
+            this.userName = model.userName;
+            this.userid = model.userid;
+        } 
 
         /**
          * defaultReceivedConvs.
@@ -243,6 +261,14 @@ public class GetReportTemplateByNameResponseBody extends TeaModel {
             private String conversationId; 
             private String title; 
 
+            private Builder() {
+            } 
+
+            private Builder(DefaultReceivedConvs model) {
+                this.conversationId = model.conversationId;
+                this.title = model.title;
+            } 
+
             /**
              * ConversationId.
              */
@@ -309,6 +335,14 @@ public class GetReportTemplateByNameResponseBody extends TeaModel {
         public static final class Builder {
             private String userName; 
             private String userid; 
+
+            private Builder() {
+            } 
+
+            private Builder(DefaultReceivers model) {
+                this.userName = model.userName;
+                this.userid = model.userid;
+            } 
 
             /**
              * UserName.
@@ -388,6 +422,15 @@ public class GetReportTemplateByNameResponseBody extends TeaModel {
             private String fieldName; 
             private Long sort; 
             private Long type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Fields model) {
+                this.fieldName = model.fieldName;
+                this.sort = model.sort;
+                this.type = model.type;
+            } 
 
             /**
              * FieldName.

@@ -52,6 +52,10 @@ public class GetNotifyMeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class GetNotifyMeResponseBody extends TeaModel {
         private Long totalCount; 
         private String vendorRequestId; 
         private String vendorType; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetNotifyMeResponseBody model) {
+            this.data = model.data;
+            this.pageNumber = model.pageNumber;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.vendorRequestId = model.vendorRequestId;
+            this.vendorType = model.vendorType;
+        } 
 
         /**
          * data.
@@ -283,6 +299,21 @@ public class GetNotifyMeResponseBody extends TeaModel {
             private String instStatus; 
             private String mobileUrl; 
             private String modifiedTimeGMT; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.activityId = model.activityId;
+                this.appType = model.appType;
+                this.corpId = model.corpId;
+                this.createTimeGMT = model.createTimeGMT;
+                this.creatorUserId = model.creatorUserId;
+                this.formInstanceId = model.formInstanceId;
+                this.instStatus = model.instStatus;
+                this.mobileUrl = model.mobileUrl;
+                this.modifiedTimeGMT = model.modifiedTimeGMT;
+            } 
 
             /**
              * ActivityId.

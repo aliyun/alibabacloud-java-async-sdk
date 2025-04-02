@@ -48,6 +48,10 @@ public class CreateThreadResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createAt
      */
@@ -89,6 +93,17 @@ public class CreateThreadResponseBody extends TeaModel {
         private java.util.Map<String, ?> metadata; 
         private String object; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateThreadResponseBody model) {
+            this.createAt = model.createAt;
+            this.id = model.id;
+            this.metadata = model.metadata;
+            this.object = model.object;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * createAt.

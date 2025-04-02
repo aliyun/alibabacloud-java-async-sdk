@@ -104,6 +104,10 @@ public class QueryDentryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return contentType
      */
@@ -257,6 +261,31 @@ public class QueryDentryResponseBody extends TeaModel {
         private Updater updater; 
         private String url; 
         private VisitorInfo visitorInfo; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryDentryResponseBody model) {
+            this.contentType = model.contentType;
+            this.createdTime = model.createdTime;
+            this.creator = model.creator;
+            this.dentryId = model.dentryId;
+            this.dentryType = model.dentryType;
+            this.dentryUuid = model.dentryUuid;
+            this.docKey = model.docKey;
+            this.extension = model.extension;
+            this.hasChildren = model.hasChildren;
+            this.linkSourceInfo = model.linkSourceInfo;
+            this.name = model.name;
+            this.path = model.path;
+            this.requestId = model.requestId;
+            this.space = model.space;
+            this.spaceId = model.spaceId;
+            this.updatedTime = model.updatedTime;
+            this.updater = model.updater;
+            this.url = model.url;
+            this.visitorInfo = model.visitorInfo;
+        } 
 
         /**
          * contentType.
@@ -463,6 +492,14 @@ public class QueryDentryResponseBody extends TeaModel {
             private String name; 
             private String userId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Creator model) {
+                this.name = model.name;
+                this.userId = model.userId;
+            } 
+
             /**
              * Name.
              */
@@ -529,6 +566,14 @@ public class QueryDentryResponseBody extends TeaModel {
         public static final class Builder {
             private String line; 
             private String small; 
+
+            private Builder() {
+            } 
+
+            private Builder(IconUrl model) {
+                this.line = model.line;
+                this.small = model.small;
+            } 
 
             /**
              * Line.
@@ -633,6 +678,17 @@ public class QueryDentryResponseBody extends TeaModel {
             private Long linkType; 
             private String spaceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(LinkSourceInfo model) {
+                this.extension = model.extension;
+                this.iconUrl = model.iconUrl;
+                this.id = model.id;
+                this.linkType = model.linkType;
+                this.spaceId = model.spaceId;
+            } 
+
             /**
              * Extension.
              */
@@ -724,6 +780,14 @@ public class QueryDentryResponseBody extends TeaModel {
             private String icon; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(HdIconVO model) {
+                this.icon = model.icon;
+                this.type = model.type;
+            } 
+
             /**
              * Icon.
              */
@@ -790,6 +854,14 @@ public class QueryDentryResponseBody extends TeaModel {
         public static final class Builder {
             private String icon; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(IconVO model) {
+                this.icon = model.icon;
+                this.type = model.type;
+            } 
 
             /**
              * Icon.
@@ -858,6 +930,14 @@ public class QueryDentryResponseBody extends TeaModel {
             private String name; 
             private String userId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Owner model) {
+                this.name = model.name;
+                this.userId = model.userId;
+            } 
+
             /**
              * Name.
              */
@@ -925,6 +1005,14 @@ public class QueryDentryResponseBody extends TeaModel {
             private String name; 
             private String userId; 
 
+            private Builder() {
+            } 
+
+            private Builder(RecentListCreator model) {
+                this.name = model.name;
+                this.userId = model.userId;
+            } 
+
             /**
              * Name.
              */
@@ -991,6 +1079,14 @@ public class QueryDentryResponseBody extends TeaModel {
         public static final class Builder {
             private String line; 
             private String small; 
+
+            private Builder() {
+            } 
+
+            private Builder(LinkSourceInfoIconUrl model) {
+                this.line = model.line;
+                this.small = model.small;
+            } 
 
             /**
              * Line.
@@ -1095,6 +1191,17 @@ public class QueryDentryResponseBody extends TeaModel {
             private Long linkType; 
             private String spaceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(RecentListLinkSourceInfo model) {
+                this.extension = model.extension;
+                this.iconUrl = model.iconUrl;
+                this.id = model.id;
+                this.linkType = model.linkType;
+                this.spaceId = model.spaceId;
+            } 
+
             /**
              * Extension.
              */
@@ -1174,6 +1281,13 @@ public class QueryDentryResponseBody extends TeaModel {
         public static final class Builder {
             private Long wordCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(StatisticalInfo model) {
+                this.wordCount = model.wordCount;
+            } 
+
             /**
              * WordCount.
              */
@@ -1232,6 +1346,14 @@ public class QueryDentryResponseBody extends TeaModel {
         public static final class Builder {
             private String name; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(RecentListUpdater model) {
+                this.name = model.name;
+                this.userId = model.userId;
+            } 
 
             /**
              * Name.
@@ -1311,6 +1433,15 @@ public class QueryDentryResponseBody extends TeaModel {
             private java.util.List<String> dentryActions; 
             private String roleCode; 
             private java.util.List<String> spaceActions; 
+
+            private Builder() {
+            } 
+
+            private Builder(RecentListVisitorInfo model) {
+                this.dentryActions = model.dentryActions;
+                this.roleCode = model.roleCode;
+                this.spaceActions = model.spaceActions;
+            } 
 
             /**
              * DentryActions.
@@ -1591,6 +1722,31 @@ public class QueryDentryResponseBody extends TeaModel {
             private String url; 
             private RecentListVisitorInfo visitorInfo; 
 
+            private Builder() {
+            } 
+
+            private Builder(RecentList model) {
+                this.contentType = model.contentType;
+                this.createdTime = model.createdTime;
+                this.creator = model.creator;
+                this.dentryId = model.dentryId;
+                this.dentryType = model.dentryType;
+                this.dentryUuid = model.dentryUuid;
+                this.docKey = model.docKey;
+                this.extension = model.extension;
+                this.hasChildren = model.hasChildren;
+                this.linkSourceInfo = model.linkSourceInfo;
+                this.name = model.name;
+                this.path = model.path;
+                this.space = model.space;
+                this.spaceId = model.spaceId;
+                this.statisticalInfo = model.statisticalInfo;
+                this.updatedTime = model.updatedTime;
+                this.updater = model.updater;
+                this.url = model.url;
+                this.visitorInfo = model.visitorInfo;
+            } 
+
             /**
              * ContentType.
              */
@@ -1806,6 +1962,15 @@ public class QueryDentryResponseBody extends TeaModel {
             private String roleCode; 
             private java.util.List<String> spaceActions; 
 
+            private Builder() {
+            } 
+
+            private Builder(SpaceVisitorInfo model) {
+                this.dentryActions = model.dentryActions;
+                this.roleCode = model.roleCode;
+                this.spaceActions = model.spaceActions;
+            } 
+
             /**
              * DentryActions.
              */
@@ -1989,6 +2154,23 @@ public class QueryDentryResponseBody extends TeaModel {
             private String url; 
             private SpaceVisitorInfo visitorInfo; 
 
+            private Builder() {
+            } 
+
+            private Builder(Space model) {
+                this.cover = model.cover;
+                this.description = model.description;
+                this.hdIconVO = model.hdIconVO;
+                this.iconVO = model.iconVO;
+                this.id = model.id;
+                this.name = model.name;
+                this.owner = model.owner;
+                this.recentList = model.recentList;
+                this.type = model.type;
+                this.url = model.url;
+                this.visitorInfo = model.visitorInfo;
+            } 
+
             /**
              * Cover.
              */
@@ -2128,6 +2310,14 @@ public class QueryDentryResponseBody extends TeaModel {
             private String name; 
             private String userId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Updater model) {
+                this.name = model.name;
+                this.userId = model.userId;
+            } 
+
             /**
              * Name.
              */
@@ -2206,6 +2396,15 @@ public class QueryDentryResponseBody extends TeaModel {
             private java.util.List<String> dentryActions; 
             private String roleCode; 
             private java.util.List<String> spaceActions; 
+
+            private Builder() {
+            } 
+
+            private Builder(VisitorInfo model) {
+                this.dentryActions = model.dentryActions;
+                this.roleCode = model.roleCode;
+                this.spaceActions = model.spaceActions;
+            } 
 
             /**
              * DentryActions.

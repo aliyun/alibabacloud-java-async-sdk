@@ -40,6 +40,10 @@ public class GetTemplateListByUserIdResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextCursor
      */
@@ -65,6 +69,15 @@ public class GetTemplateListByUserIdResponseBody extends TeaModel {
         private Long nextCursor; 
         private String requestId; 
         private java.util.List<TemplateList> templateList; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTemplateListByUserIdResponseBody model) {
+            this.nextCursor = model.nextCursor;
+            this.requestId = model.requestId;
+            this.templateList = model.templateList;
+        } 
 
         /**
          * nextCursor.
@@ -166,6 +179,16 @@ public class GetTemplateListByUserIdResponseBody extends TeaModel {
             private String name; 
             private String reportCode; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(TemplateList model) {
+                this.iconUrl = model.iconUrl;
+                this.name = model.name;
+                this.reportCode = model.reportCode;
+                this.url = model.url;
+            } 
 
             /**
              * IconUrl.

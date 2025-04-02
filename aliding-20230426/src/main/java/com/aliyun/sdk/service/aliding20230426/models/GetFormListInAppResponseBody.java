@@ -56,6 +56,10 @@ public class GetFormListInAppResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return currentPage
      */
@@ -113,6 +117,19 @@ public class GetFormListInAppResponseBody extends TeaModel {
         private Integer totalCount; 
         private String vendorRequestId; 
         private String vendorType; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetFormListInAppResponseBody model) {
+            this.currentPage = model.currentPage;
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+            this.vendorRequestId = model.vendorRequestId;
+            this.vendorType = model.vendorType;
+        } 
 
         /**
          * currentPage.
@@ -220,6 +237,14 @@ public class GetFormListInAppResponseBody extends TeaModel {
             private String enUS; 
             private String zhCN; 
 
+            private Builder() {
+            } 
+
+            private Builder(Title model) {
+                this.enUS = model.enUS;
+                this.zhCN = model.zhCN;
+            } 
+
             /**
              * EnUS.
              */
@@ -322,6 +347,17 @@ public class GetFormListInAppResponseBody extends TeaModel {
             private String formUuid; 
             private String gmtCreate; 
             private Title title; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.creator = model.creator;
+                this.formType = model.formType;
+                this.formUuid = model.formUuid;
+                this.gmtCreate = model.gmtCreate;
+                this.title = model.title;
+            } 
 
             /**
              * Creator.

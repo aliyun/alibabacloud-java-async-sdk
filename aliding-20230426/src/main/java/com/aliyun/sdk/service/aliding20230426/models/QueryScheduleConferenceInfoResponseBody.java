@@ -52,6 +52,10 @@ public class QueryScheduleConferenceInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return conferenceList
      */
@@ -101,6 +105,18 @@ public class QueryScheduleConferenceInfoResponseBody extends TeaModel {
         private Integer totalCount; 
         private String vendorRequestId; 
         private String vendorType; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryScheduleConferenceInfoResponseBody model) {
+            this.conferenceList = model.conferenceList;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.vendorRequestId = model.vendorRequestId;
+            this.vendorType = model.vendorType;
+        } 
 
         /**
          * conferenceList.
@@ -247,6 +263,18 @@ public class QueryScheduleConferenceInfoResponseBody extends TeaModel {
             private Long startTime; 
             private Integer status; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConferenceList model) {
+                this.conferenceId = model.conferenceId;
+                this.endTime = model.endTime;
+                this.roomCode = model.roomCode;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.title = model.title;
+            } 
 
             /**
              * ConferenceId.

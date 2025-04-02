@@ -36,6 +36,10 @@ public class CreateMeetingRoomGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class CreateMeetingRoomGroupResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Long result; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateMeetingRoomGroupResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * <p>requestId</p>

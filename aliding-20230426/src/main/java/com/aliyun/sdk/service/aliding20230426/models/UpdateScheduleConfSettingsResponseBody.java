@@ -44,6 +44,10 @@ public class UpdateScheduleConfSettingsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -77,6 +81,16 @@ public class UpdateScheduleConfSettingsResponseBody extends TeaModel {
         private Boolean success; 
         private String vendorRequestId; 
         private String vendorType; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateScheduleConfSettingsResponseBody model) {
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.vendorRequestId = model.vendorRequestId;
+            this.vendorType = model.vendorType;
+        } 
 
         /**
          * requestId.

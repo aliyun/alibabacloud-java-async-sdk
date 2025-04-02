@@ -48,6 +48,10 @@ public class ListTeamsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextToken
      */
@@ -89,6 +93,17 @@ public class ListTeamsResponseBody extends TeaModel {
         private java.util.List<Teams> teams; 
         private String vendorRequestId; 
         private String vendorType; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTeamsResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.teams = model.teams;
+            this.vendorRequestId = model.vendorRequestId;
+            this.vendorType = model.vendorType;
+        } 
 
         /**
          * nextToken.
@@ -179,6 +194,14 @@ public class ListTeamsResponseBody extends TeaModel {
         public static final class Builder {
             private String type; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Icon model) {
+                this.type = model.type;
+                this.value = model.value;
+            } 
 
             /**
              * Type.
@@ -342,6 +365,22 @@ public class ListTeamsResponseBody extends TeaModel {
             private String modifierId; 
             private String name; 
             private String teamId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Teams model) {
+                this.corpId = model.corpId;
+                this.cover = model.cover;
+                this.createTime = model.createTime;
+                this.creatorId = model.creatorId;
+                this.description = model.description;
+                this.icon = model.icon;
+                this.modifiedTime = model.modifiedTime;
+                this.modifierId = model.modifierId;
+                this.name = model.name;
+                this.teamId = model.teamId;
+            } 
 
             /**
              * CorpId.

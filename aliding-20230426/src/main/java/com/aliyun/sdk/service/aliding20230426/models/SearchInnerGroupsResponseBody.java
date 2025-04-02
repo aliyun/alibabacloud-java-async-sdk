@@ -44,6 +44,10 @@ public class SearchInnerGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return groupInfos
      */
@@ -77,6 +81,16 @@ public class SearchInnerGroupsResponseBody extends TeaModel {
         private String requestId; 
         private String vendorRequestId; 
         private String vendorType; 
+
+        private Builder() {
+        } 
+
+        private Builder(SearchInnerGroupsResponseBody model) {
+            this.groupInfos = model.groupInfos;
+            this.requestId = model.requestId;
+            this.vendorRequestId = model.vendorRequestId;
+            this.vendorType = model.vendorType;
+        } 
 
         /**
          * groupInfos.
@@ -183,6 +197,16 @@ public class SearchInnerGroupsResponseBody extends TeaModel {
             private String memberAmount; 
             private String openConversationId; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(GroupInfos model) {
+                this.icon = model.icon;
+                this.memberAmount = model.memberAmount;
+                this.openConversationId = model.openConversationId;
+                this.title = model.title;
+            } 
 
             /**
              * Icon.

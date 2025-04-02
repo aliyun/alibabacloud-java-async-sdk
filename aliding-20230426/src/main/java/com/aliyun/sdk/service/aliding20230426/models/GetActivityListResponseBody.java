@@ -44,6 +44,10 @@ public class GetActivityListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -77,6 +81,16 @@ public class GetActivityListResponseBody extends TeaModel {
         private java.util.List<Result> result; 
         private String vendorRequestId; 
         private String vendorType; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetActivityListResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.vendorRequestId = model.vendorRequestId;
+            this.vendorType = model.vendorType;
+        } 
 
         /**
          * requestId.
@@ -171,6 +185,15 @@ public class GetActivityListResponseBody extends TeaModel {
             private String activityId; 
             private String activityName; 
             private String activityNameInEnglish; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.activityId = model.activityId;
+                this.activityName = model.activityName;
+                this.activityNameInEnglish = model.activityNameInEnglish;
+            } 
 
             /**
              * ActivityId.

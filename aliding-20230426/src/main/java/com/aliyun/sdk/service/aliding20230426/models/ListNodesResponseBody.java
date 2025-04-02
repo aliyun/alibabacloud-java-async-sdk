@@ -40,6 +40,10 @@ public class ListNodesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextToken
      */
@@ -65,6 +69,15 @@ public class ListNodesResponseBody extends TeaModel {
         private String nextToken; 
         private java.util.List<Nodes> nodes; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListNodesResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.nodes = model.nodes;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * nextToken.
@@ -130,6 +143,13 @@ public class ListNodesResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long wordCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(StatisticalInfo model) {
+                this.wordCount = model.wordCount;
+            } 
 
             /**
              * WordCount.
@@ -345,6 +365,27 @@ public class ListNodesResponseBody extends TeaModel {
             private String type; 
             private String url; 
             private String workspaceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Nodes model) {
+                this.category = model.category;
+                this.createTime = model.createTime;
+                this.creatorId = model.creatorId;
+                this.extension = model.extension;
+                this.hasChildren = model.hasChildren;
+                this.modifiedTime = model.modifiedTime;
+                this.modifierId = model.modifierId;
+                this.name = model.name;
+                this.nodeId = model.nodeId;
+                this.permissionRole = model.permissionRole;
+                this.size = model.size;
+                this.statisticalInfo = model.statisticalInfo;
+                this.type = model.type;
+                this.url = model.url;
+                this.workspaceId = model.workspaceId;
+            } 
 
             /**
              * Category.

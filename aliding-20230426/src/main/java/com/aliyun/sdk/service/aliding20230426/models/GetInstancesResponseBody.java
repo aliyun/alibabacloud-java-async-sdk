@@ -52,6 +52,10 @@ public class GetInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class GetInstancesResponseBody extends TeaModel {
         private Long totalCount; 
         private String vendorRequestId; 
         private String vendorType; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetInstancesResponseBody model) {
+            this.data = model.data;
+            this.pageNumber = model.pageNumber;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.vendorRequestId = model.vendorRequestId;
+            this.vendorType = model.vendorType;
+        } 
 
         /**
          * data.
@@ -212,6 +228,15 @@ public class GetInstancesResponseBody extends TeaModel {
             private String nameInEnglish; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Name model) {
+                this.nameInChinese = model.nameInChinese;
+                this.nameInEnglish = model.nameInEnglish;
+                this.type = model.type;
+            } 
+
             /**
              * NameInChinese.
              */
@@ -311,6 +336,16 @@ public class GetInstancesResponseBody extends TeaModel {
             private Name name; 
             private String userId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ActionExecutor model) {
+                this.deptName = model.deptName;
+                this.email = model.email;
+                this.name = model.name;
+                this.userId = model.userId;
+            } 
+
             /**
              * DeptName.
              */
@@ -405,6 +440,15 @@ public class GetInstancesResponseBody extends TeaModel {
             private String nameInChinese; 
             private String nameInEnglish; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(OriginatorName model) {
+                this.nameInChinese = model.nameInChinese;
+                this.nameInEnglish = model.nameInEnglish;
+                this.type = model.type;
+            } 
 
             /**
              * NameInChinese.
@@ -504,6 +548,16 @@ public class GetInstancesResponseBody extends TeaModel {
             private String email; 
             private OriginatorName name; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Originator model) {
+                this.deptName = model.deptName;
+                this.email = model.email;
+                this.name = model.name;
+                this.userId = model.userId;
+            } 
 
             /**
              * DeptName.
@@ -707,6 +761,24 @@ public class GetInstancesResponseBody extends TeaModel {
             private String processInstanceId; 
             private String title; 
             private Long version; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.actionExecutor = model.actionExecutor;
+                this.approvedResult = model.approvedResult;
+                this.createTimeGMT = model.createTimeGMT;
+                this.data = model.data;
+                this.formUuid = model.formUuid;
+                this.instanceStatus = model.instanceStatus;
+                this.modifiedTimeGMT = model.modifiedTimeGMT;
+                this.originator = model.originator;
+                this.processCode = model.processCode;
+                this.processInstanceId = model.processInstanceId;
+                this.title = model.title;
+                this.version = model.version;
+            } 
 
             /**
              * ActionExecutor.

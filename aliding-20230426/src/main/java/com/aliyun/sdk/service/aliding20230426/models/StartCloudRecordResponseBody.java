@@ -36,6 +36,10 @@ public class StartCloudRecordResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -53,6 +57,14 @@ public class StartCloudRecordResponseBody extends TeaModel {
     public static final class Builder {
         private String code; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(StartCloudRecordResponseBody model) {
+            this.code = model.code;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * code.

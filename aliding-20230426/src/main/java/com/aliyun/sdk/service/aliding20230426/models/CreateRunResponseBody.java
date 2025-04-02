@@ -88,6 +88,10 @@ public class CreateRunResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cancelledAt
      */
@@ -209,6 +213,27 @@ public class CreateRunResponseBody extends TeaModel {
         private Long startedAt; 
         private String status; 
         private String threadId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateRunResponseBody model) {
+            this.cancelledAt = model.cancelledAt;
+            this.completedAt = model.completedAt;
+            this.content = model.content;
+            this.createAt = model.createAt;
+            this.delta = model.delta;
+            this.expiresAt = model.expiresAt;
+            this.failedAt = model.failedAt;
+            this.id = model.id;
+            this.lastErrorMsg = model.lastErrorMsg;
+            this.metadata = model.metadata;
+            this.object = model.object;
+            this.requestId = model.requestId;
+            this.startedAt = model.startedAt;
+            this.status = model.status;
+            this.threadId = model.threadId;
+        } 
 
         /**
          * cancelledAt.
@@ -392,6 +417,15 @@ public class CreateRunResponseBody extends TeaModel {
             private String templateId; 
             private String userId; 
 
+            private Builder() {
+            } 
+
+            private Builder(CardCallback model) {
+                this.content = model.content;
+                this.templateId = model.templateId;
+                this.userId = model.userId;
+            } 
+
             /**
              * content.
              */
@@ -503,6 +537,17 @@ public class CreateRunResponseBody extends TeaModel {
             private Boolean finished; 
             private String templateId; 
 
+            private Builder() {
+            } 
+
+            private Builder(DingCard model) {
+                this.cardDesc = model.cardDesc;
+                this.content = model.content;
+                this.contentType = model.contentType;
+                this.finished = model.finished;
+                this.templateId = model.templateId;
+            } 
+
             /**
              * cardDesc.
              */
@@ -606,6 +651,15 @@ public class CreateRunResponseBody extends TeaModel {
             private String imageDesc; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(ImageUrl model) {
+                this.detail = model.detail;
+                this.imageDesc = model.imageDesc;
+                this.url = model.url;
+            } 
+
             /**
              * detail.
              */
@@ -669,6 +723,13 @@ public class CreateRunResponseBody extends TeaModel {
         public static final class Builder {
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Markdown model) {
+                this.value = model.value;
+            } 
+
             /**
              * value.
              */
@@ -715,6 +776,13 @@ public class CreateRunResponseBody extends TeaModel {
 
         public static final class Builder {
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Text model) {
+                this.value = model.value;
+            } 
 
             /**
              * value.
@@ -822,6 +890,18 @@ public class CreateRunResponseBody extends TeaModel {
             private Markdown markdown; 
             private Text text; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.cardCallback = model.cardCallback;
+                this.dingCard = model.dingCard;
+                this.imageUrl = model.imageUrl;
+                this.markdown = model.markdown;
+                this.text = model.text;
+                this.type = model.type;
+            } 
 
             /**
              * cardCallback.
@@ -934,6 +1014,15 @@ public class CreateRunResponseBody extends TeaModel {
             private String templateId; 
             private String userId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ContentCardCallback model) {
+                this.content = model.content;
+                this.templateId = model.templateId;
+                this.userId = model.userId;
+            } 
+
             /**
              * content.
              */
@@ -1045,6 +1134,17 @@ public class CreateRunResponseBody extends TeaModel {
             private Boolean finished; 
             private String templateId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ContentDingCard model) {
+                this.cardDesc = model.cardDesc;
+                this.content = model.content;
+                this.contentType = model.contentType;
+                this.finished = model.finished;
+                this.templateId = model.templateId;
+            } 
+
             /**
              * cardDesc.
              */
@@ -1148,6 +1248,15 @@ public class CreateRunResponseBody extends TeaModel {
             private String imageDesc; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(ContentImageUrl model) {
+                this.detail = model.detail;
+                this.imageDesc = model.imageDesc;
+                this.url = model.url;
+            } 
+
             /**
              * detail.
              */
@@ -1211,6 +1320,13 @@ public class CreateRunResponseBody extends TeaModel {
         public static final class Builder {
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(ContentMarkdown model) {
+                this.value = model.value;
+            } 
+
             /**
              * value.
              */
@@ -1257,6 +1373,13 @@ public class CreateRunResponseBody extends TeaModel {
 
         public static final class Builder {
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(ContentText model) {
+                this.value = model.value;
+            } 
 
             /**
              * value.
@@ -1365,6 +1488,18 @@ public class CreateRunResponseBody extends TeaModel {
             private ContentText text; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(DeltaContent model) {
+                this.cardCallback = model.cardCallback;
+                this.dingCard = model.dingCard;
+                this.imageUrl = model.imageUrl;
+                this.markdown = model.markdown;
+                this.text = model.text;
+                this.type = model.type;
+            } 
+
             /**
              * cardCallback.
              */
@@ -1451,6 +1586,13 @@ public class CreateRunResponseBody extends TeaModel {
 
         public static final class Builder {
             private DeltaContent content; 
+
+            private Builder() {
+            } 
+
+            private Builder(Delta model) {
+                this.content = model.content;
+            } 
 
             /**
              * content.

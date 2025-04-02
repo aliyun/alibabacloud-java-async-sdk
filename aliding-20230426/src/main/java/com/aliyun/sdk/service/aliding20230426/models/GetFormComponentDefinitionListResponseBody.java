@@ -44,6 +44,10 @@ public class GetFormComponentDefinitionListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return result
      */
@@ -77,6 +81,16 @@ public class GetFormComponentDefinitionListResponseBody extends TeaModel {
         private String requestId; 
         private String vendorRequestId; 
         private String vendorType; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetFormComponentDefinitionListResponseBody model) {
+            this.result = model.result;
+            this.requestId = model.requestId;
+            this.vendorRequestId = model.vendorRequestId;
+            this.vendorType = model.vendorType;
+        } 
 
         /**
          * Result.
@@ -183,6 +197,16 @@ public class GetFormComponentDefinitionListResponseBody extends TeaModel {
             private String fieldId; 
             private String label; 
             private String parentId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.componentName = model.componentName;
+                this.fieldId = model.fieldId;
+                this.label = model.label;
+                this.parentId = model.parentId;
+            } 
 
             /**
              * ComponentName.

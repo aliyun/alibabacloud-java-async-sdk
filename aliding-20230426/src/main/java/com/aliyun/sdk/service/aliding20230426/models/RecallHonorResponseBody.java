@@ -56,6 +56,10 @@ public class RecallHonorResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return content
      */
@@ -113,6 +117,19 @@ public class RecallHonorResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(RecallHonorResponseBody model) {
+            this.content = model.content;
+            this.errorCode = model.errorCode;
+            this.errorCtx = model.errorCtx;
+            this.errorMsg = model.errorMsg;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * content.
@@ -210,6 +227,13 @@ public class RecallHonorResponseBody extends TeaModel {
 
         public static final class Builder {
             private Object data; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.data = model.data;
+            } 
 
             /**
              * data.

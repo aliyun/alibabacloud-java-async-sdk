@@ -48,6 +48,10 @@ public class UpdateVideoConferenceSettingResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return caseResult
      */
@@ -89,6 +93,17 @@ public class UpdateVideoConferenceSettingResponseBody extends TeaModel {
         private String requestId; 
         private String vendorRequestId; 
         private String vendorType; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateVideoConferenceSettingResponseBody model) {
+            this.caseResult = model.caseResult;
+            this.code = model.code;
+            this.requestId = model.requestId;
+            this.vendorRequestId = model.vendorRequestId;
+            this.vendorType = model.vendorType;
+        } 
 
         /**
          * caseResult.

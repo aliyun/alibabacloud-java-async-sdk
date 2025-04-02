@@ -36,6 +36,10 @@ public class GetMeetingRoomsScheduleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetMeetingRoomsScheduleResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<ScheduleInformation> scheduleInformation; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMeetingRoomsScheduleResponseBody model) {
+            this.requestId = model.requestId;
+            this.scheduleInformation = model.scheduleInformation;
+        } 
 
         /**
          * <p>requestId</p>
@@ -123,6 +135,14 @@ public class GetMeetingRoomsScheduleResponseBody extends TeaModel {
             private String dateTime; 
             private String timeZone; 
 
+            private Builder() {
+            } 
+
+            private Builder(End model) {
+                this.dateTime = model.dateTime;
+                this.timeZone = model.timeZone;
+            } 
+
             /**
              * DateTime.
              */
@@ -177,6 +197,13 @@ public class GetMeetingRoomsScheduleResponseBody extends TeaModel {
 
         public static final class Builder {
             private String id; 
+
+            private Builder() {
+            } 
+
+            private Builder(Organizer model) {
+                this.id = model.id;
+            } 
 
             /**
              * Id.
@@ -236,6 +263,14 @@ public class GetMeetingRoomsScheduleResponseBody extends TeaModel {
         public static final class Builder {
             private String dateTime; 
             private String timeZone; 
+
+            private Builder() {
+            } 
+
+            private Builder(Start model) {
+                this.dateTime = model.dateTime;
+                this.timeZone = model.timeZone;
+            } 
 
             /**
              * DateTime.
@@ -340,6 +375,17 @@ public class GetMeetingRoomsScheduleResponseBody extends TeaModel {
             private Start start; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(ScheduleItems model) {
+                this.end = model.end;
+                this.eventId = model.eventId;
+                this.organizer = model.organizer;
+                this.start = model.start;
+                this.status = model.status;
+            } 
+
             /**
              * End.
              */
@@ -442,6 +488,15 @@ public class GetMeetingRoomsScheduleResponseBody extends TeaModel {
             private String error; 
             private String roomId; 
             private java.util.List<ScheduleItems> scheduleItems; 
+
+            private Builder() {
+            } 
+
+            private Builder(ScheduleInformation model) {
+                this.error = model.error;
+                this.roomId = model.roomId;
+                this.scheduleItems = model.scheduleItems;
+            } 
 
             /**
              * Error.

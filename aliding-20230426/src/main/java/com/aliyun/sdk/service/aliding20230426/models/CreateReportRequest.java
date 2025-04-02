@@ -73,7 +73,7 @@ public class CreateReportRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -289,6 +289,13 @@ public class CreateReportRequest extends Request {
         public static final class Builder {
             private String accountId; 
 
+            private Builder() {
+            } 
+
+            private Builder(AccountContext model) {
+                this.accountId = model.accountId;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              * 
@@ -392,6 +399,17 @@ public class CreateReportRequest extends Request {
             private Long sort; 
             private Long type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Contents model) {
+                this.content = model.content;
+                this.contentType = model.contentType;
+                this.key = model.key;
+                this.sort = model.sort;
+                this.type = model.type;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              * 
@@ -485,6 +503,13 @@ public class CreateReportRequest extends Request {
 
         public static final class Builder {
             private String tenantId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TenantContext model) {
+                this.tenantId = model.tenantId;
+            } 
 
             /**
              * tenantId.

@@ -64,6 +64,10 @@ public class QueryLiveWatchDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return avgWatchTime
      */
@@ -137,6 +141,21 @@ public class QueryLiveWatchDetailResponseBody extends TeaModel {
         private String requestId; 
         private Long totalWatchTime; 
         private Integer uv; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryLiveWatchDetailResponseBody model) {
+            this.avgWatchTime = model.avgWatchTime;
+            this.liveUv = model.liveUv;
+            this.msgCount = model.msgCount;
+            this.playbackUv = model.playbackUv;
+            this.praiseCount = model.praiseCount;
+            this.pv = model.pv;
+            this.requestId = model.requestId;
+            this.totalWatchTime = model.totalWatchTime;
+            this.uv = model.uv;
+        } 
 
         /**
          * avgWatchTime.

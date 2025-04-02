@@ -68,7 +68,7 @@ public class CreateMessageRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -284,6 +284,15 @@ public class CreateMessageRequest extends Request {
             private String templateId; 
             private String userId; 
 
+            private Builder() {
+            } 
+
+            private Builder(CardCallback model) {
+                this.content = model.content;
+                this.templateId = model.templateId;
+                this.userId = model.userId;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              * 
@@ -399,6 +408,17 @@ public class CreateMessageRequest extends Request {
             private Boolean finished; 
             private String templateId; 
 
+            private Builder() {
+            } 
+
+            private Builder(DingCard model) {
+                this.cardDesc = model.cardDesc;
+                this.content = model.content;
+                this.contentType = model.contentType;
+                this.finished = model.finished;
+                this.templateId = model.templateId;
+            } 
+
             /**
              * cardDesc.
              */
@@ -508,6 +528,15 @@ public class CreateMessageRequest extends Request {
             private String imageDesc; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(ImageUrl model) {
+                this.detail = model.detail;
+                this.imageDesc = model.imageDesc;
+                this.url = model.url;
+            } 
+
             /**
              * detail.
              */
@@ -571,6 +600,13 @@ public class CreateMessageRequest extends Request {
         public static final class Builder {
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Markdown model) {
+                this.value = model.value;
+            } 
+
             /**
              * value.
              */
@@ -617,6 +653,13 @@ public class CreateMessageRequest extends Request {
 
         public static final class Builder {
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Text model) {
+                this.value = model.value;
+            } 
 
             /**
              * value.
@@ -725,6 +768,18 @@ public class CreateMessageRequest extends Request {
             private Markdown markdown; 
             private Text text; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.cardCallback = model.cardCallback;
+                this.dingCard = model.dingCard;
+                this.imageUrl = model.imageUrl;
+                this.markdown = model.markdown;
+                this.text = model.text;
+                this.type = model.type;
+            } 
 
             /**
              * cardCallback.

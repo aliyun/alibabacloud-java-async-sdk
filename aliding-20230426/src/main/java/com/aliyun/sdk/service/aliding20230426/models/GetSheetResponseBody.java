@@ -60,6 +60,10 @@ public class GetSheetResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return columnCount
      */
@@ -125,6 +129,20 @@ public class GetSheetResponseBody extends TeaModel {
         private String requestId; 
         private Long rowCount; 
         private String visibility; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSheetResponseBody model) {
+            this.columnCount = model.columnCount;
+            this.id = model.id;
+            this.lastNonEmptyColumn = model.lastNonEmptyColumn;
+            this.lastNonEmptyRow = model.lastNonEmptyRow;
+            this.name = model.name;
+            this.requestId = model.requestId;
+            this.rowCount = model.rowCount;
+            this.visibility = model.visibility;
+        } 
 
         /**
          * columnCount.

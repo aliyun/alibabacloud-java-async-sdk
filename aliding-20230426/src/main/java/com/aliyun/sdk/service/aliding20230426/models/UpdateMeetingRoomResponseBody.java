@@ -44,6 +44,10 @@ public class UpdateMeetingRoomResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return result
      */
@@ -77,6 +81,16 @@ public class UpdateMeetingRoomResponseBody extends TeaModel {
         private String requestId; 
         private String vendorRequestId; 
         private String vendorType; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateMeetingRoomResponseBody model) {
+            this.result = model.result;
+            this.requestId = model.requestId;
+            this.vendorRequestId = model.vendorRequestId;
+            this.vendorType = model.vendorType;
+        } 
 
         /**
          * Result.

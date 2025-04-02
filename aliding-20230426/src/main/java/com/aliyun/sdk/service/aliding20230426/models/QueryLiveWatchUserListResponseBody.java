@@ -40,6 +40,10 @@ public class QueryLiveWatchUserListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return orgUsesList
      */
@@ -65,6 +69,15 @@ public class QueryLiveWatchUserListResponseBody extends TeaModel {
         private java.util.List<OrgUsesList> orgUsesList; 
         private java.util.List<OutOrgUserList> outOrgUserList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryLiveWatchUserListResponseBody model) {
+            this.orgUsesList = model.orgUsesList;
+            this.outOrgUserList = model.outOrgUserList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * orgUsesList.
@@ -191,6 +204,18 @@ public class QueryLiveWatchUserListResponseBody extends TeaModel {
             private Long watchPlaybackTime; 
             private Long watchProgressMs; 
 
+            private Builder() {
+            } 
+
+            private Builder(OrgUsesList model) {
+                this.deptName = model.deptName;
+                this.name = model.name;
+                this.userId = model.userId;
+                this.watchLiveTime = model.watchLiveTime;
+                this.watchPlaybackTime = model.watchPlaybackTime;
+                this.watchProgressMs = model.watchProgressMs;
+            } 
+
             /**
              * DeptName.
              */
@@ -313,6 +338,16 @@ public class QueryLiveWatchUserListResponseBody extends TeaModel {
             private Long watchLiveTime; 
             private Long watchPlaybackTime; 
             private Long watchProgressMs; 
+
+            private Builder() {
+            } 
+
+            private Builder(OutOrgUserList model) {
+                this.name = model.name;
+                this.watchLiveTime = model.watchLiveTime;
+                this.watchPlaybackTime = model.watchPlaybackTime;
+                this.watchProgressMs = model.watchProgressMs;
+            } 
 
             /**
              * Name.

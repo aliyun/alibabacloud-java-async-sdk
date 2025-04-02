@@ -48,6 +48,10 @@ public class CreateDingtalkPersonalTodoTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createdTime
      */
@@ -89,6 +93,17 @@ public class CreateDingtalkPersonalTodoTaskResponseBody extends TeaModel {
         private String taskId; 
         private String vendorRequestId; 
         private String vendorType; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateDingtalkPersonalTodoTaskResponseBody model) {
+            this.createdTime = model.createdTime;
+            this.requestId = model.requestId;
+            this.taskId = model.taskId;
+            this.vendorRequestId = model.vendorRequestId;
+            this.vendorType = model.vendorType;
+        } 
 
         /**
          * createdTime.

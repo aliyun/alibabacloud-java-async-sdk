@@ -44,6 +44,10 @@ public class GetOrgOrWebOpenDocContentTaskIdResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -77,6 +81,16 @@ public class GetOrgOrWebOpenDocContentTaskIdResponseBody extends TeaModel {
         private Long taskId; 
         private String vendorRequestId; 
         private String vendorType; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetOrgOrWebOpenDocContentTaskIdResponseBody model) {
+            this.requestId = model.requestId;
+            this.taskId = model.taskId;
+            this.vendorRequestId = model.vendorRequestId;
+            this.vendorType = model.vendorType;
+        } 
 
         /**
          * requestId.

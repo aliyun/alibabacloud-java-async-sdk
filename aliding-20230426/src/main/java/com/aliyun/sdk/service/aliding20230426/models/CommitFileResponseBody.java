@@ -44,6 +44,10 @@ public class CommitFileResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dentry
      */
@@ -77,6 +81,16 @@ public class CommitFileResponseBody extends TeaModel {
         private String requestId; 
         private String vendorRequestId; 
         private String vendorType; 
+
+        private Builder() {
+        } 
+
+        private Builder(CommitFileResponseBody model) {
+            this.dentry = model.dentry;
+            this.requestId = model.requestId;
+            this.vendorRequestId = model.vendorRequestId;
+            this.vendorType = model.vendorType;
+        } 
 
         /**
          * dentry.
@@ -148,6 +162,13 @@ public class CommitFileResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean readOnly; 
 
+            private Builder() {
+            } 
+
+            private Builder(Properties model) {
+                this.readOnly = model.readOnly;
+            } 
+
             /**
              * ReadOnly.
              */
@@ -218,6 +239,15 @@ public class CommitFileResponseBody extends TeaModel {
             private Integer height; 
             private String url; 
             private Integer width; 
+
+            private Builder() {
+            } 
+
+            private Builder(Thumbnail model) {
+                this.height = model.height;
+                this.url = model.url;
+                this.width = model.width;
+            } 
 
             /**
              * Height.
@@ -521,6 +551,33 @@ public class CommitFileResponseBody extends TeaModel {
             private String type; 
             private String uuid; 
             private Long version; 
+
+            private Builder() {
+            } 
+
+            private Builder(Dentry model) {
+                this.appProperties = model.appProperties;
+                this.category = model.category;
+                this.createTime = model.createTime;
+                this.creatorId = model.creatorId;
+                this.extension = model.extension;
+                this.id = model.id;
+                this.modifiedTime = model.modifiedTime;
+                this.modifierId = model.modifierId;
+                this.name = model.name;
+                this.parentId = model.parentId;
+                this.partitionType = model.partitionType;
+                this.path = model.path;
+                this.properties = model.properties;
+                this.size = model.size;
+                this.spaceId = model.spaceId;
+                this.status = model.status;
+                this.storageDriver = model.storageDriver;
+                this.thumbnail = model.thumbnail;
+                this.type = model.type;
+                this.uuid = model.uuid;
+                this.version = model.version;
+            } 
 
             /**
              * AppProperties.

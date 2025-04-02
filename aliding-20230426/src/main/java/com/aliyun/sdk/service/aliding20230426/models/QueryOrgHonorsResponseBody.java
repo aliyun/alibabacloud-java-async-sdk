@@ -40,6 +40,10 @@ public class QueryOrgHonorsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextToken
      */
@@ -65,6 +69,15 @@ public class QueryOrgHonorsResponseBody extends TeaModel {
         private String nextToken; 
         private java.util.List<OpenHonors> openHonors; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryOrgHonorsResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.openHonors = model.openHonors;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * nextToken.
@@ -178,6 +191,17 @@ public class QueryOrgHonorsResponseBody extends TeaModel {
             private String honorImgUrl; 
             private String honorName; 
             private String honorPendantImgUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(OpenHonors model) {
+                this.honorDesc = model.honorDesc;
+                this.honorId = model.honorId;
+                this.honorImgUrl = model.honorImgUrl;
+                this.honorName = model.honorName;
+                this.honorPendantImgUrl = model.honorPendantImgUrl;
+            } 
 
             /**
              * honorDesc.

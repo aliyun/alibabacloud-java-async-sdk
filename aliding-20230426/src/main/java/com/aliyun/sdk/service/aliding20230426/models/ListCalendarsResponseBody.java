@@ -36,6 +36,10 @@ public class ListCalendarsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class ListCalendarsResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Response response; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListCalendarsResponseBody model) {
+            this.requestId = model.requestId;
+            this.response = model.response;
+        } 
 
         /**
          * <p>requestId</p>
@@ -183,6 +195,19 @@ public class ListCalendarsResponseBody extends TeaModel {
             private String timeZone; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Calendars model) {
+                this.description = model.description;
+                this.eTag = model.eTag;
+                this.id = model.id;
+                this.privilege = model.privilege;
+                this.summary = model.summary;
+                this.timeZone = model.timeZone;
+                this.type = model.type;
+            } 
+
             /**
              * Description.
              */
@@ -277,6 +302,13 @@ public class ListCalendarsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Calendars> calendars; 
+
+            private Builder() {
+            } 
+
+            private Builder(Response model) {
+                this.calendars = model.calendars;
+            } 
 
             /**
              * Calendars.

@@ -52,6 +52,10 @@ public class GetInnerGroupMembersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return hasMore
      */
@@ -101,6 +105,18 @@ public class GetInnerGroupMembersResponseBody extends TeaModel {
         private java.util.List<String> userIds; 
         private String vendorRequestId; 
         private String vendorType; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetInnerGroupMembersResponseBody model) {
+            this.hasMore = model.hasMore;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.userIds = model.userIds;
+            this.vendorRequestId = model.vendorRequestId;
+            this.vendorType = model.vendorType;
+        } 
 
         /**
          * hasMore.

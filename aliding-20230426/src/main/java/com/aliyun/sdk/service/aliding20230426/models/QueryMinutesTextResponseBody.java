@@ -52,6 +52,10 @@ public class QueryMinutesTextResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return hasMore
      */
@@ -101,6 +105,18 @@ public class QueryMinutesTextResponseBody extends TeaModel {
         private String requestId; 
         private String vendorRequestId; 
         private String vendorType; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryMinutesTextResponseBody model) {
+            this.hasMore = model.hasMore;
+            this.nextToken = model.nextToken;
+            this.paragraphList = model.paragraphList;
+            this.requestId = model.requestId;
+            this.vendorRequestId = model.vendorRequestId;
+            this.vendorType = model.vendorType;
+        } 
 
         /**
          * hasMore.
@@ -224,6 +240,16 @@ public class QueryMinutesTextResponseBody extends TeaModel {
             private String word; 
             private String wordId; 
 
+            private Builder() {
+            } 
+
+            private Builder(WordList model) {
+                this.endTime = model.endTime;
+                this.startTime = model.startTime;
+                this.word = model.word;
+                this.wordId = model.wordId;
+            } 
+
             /**
              * EndTime.
              */
@@ -342,6 +368,17 @@ public class QueryMinutesTextResponseBody extends TeaModel {
             private Long startTime; 
             private String userId; 
             private java.util.List<WordList> wordList; 
+
+            private Builder() {
+            } 
+
+            private Builder(SentenceList model) {
+                this.endTime = model.endTime;
+                this.sentence = model.sentence;
+                this.startTime = model.startTime;
+                this.userId = model.userId;
+                this.wordList = model.wordList;
+            } 
 
             /**
              * EndTime.
@@ -505,6 +542,20 @@ public class QueryMinutesTextResponseBody extends TeaModel {
             private java.util.List<SentenceList> sentenceList; 
             private Long startTime; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ParagraphList model) {
+                this.endTime = model.endTime;
+                this.nickName = model.nickName;
+                this.paragraph = model.paragraph;
+                this.paragraphId = model.paragraphId;
+                this.recordId = model.recordId;
+                this.sentenceList = model.sentenceList;
+                this.startTime = model.startTime;
+                this.userId = model.userId;
+            } 
 
             /**
              * EndTime.

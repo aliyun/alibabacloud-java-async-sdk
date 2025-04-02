@@ -44,6 +44,10 @@ public class QueryRecordMinutesUrlResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return recordMinutesUrls
      */
@@ -77,6 +81,16 @@ public class QueryRecordMinutesUrlResponseBody extends TeaModel {
         private String requestId; 
         private String vendorRequestId; 
         private String vendorType; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryRecordMinutesUrlResponseBody model) {
+            this.recordMinutesUrls = model.recordMinutesUrls;
+            this.requestId = model.requestId;
+            this.vendorRequestId = model.vendorRequestId;
+            this.vendorType = model.vendorType;
+        } 
 
         /**
          * recordMinutesUrls.
@@ -147,6 +161,13 @@ public class QueryRecordMinutesUrlResponseBody extends TeaModel {
 
         public static final class Builder {
             private String recordMinutesUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(RecordMinutesUrls model) {
+                this.recordMinutesUrl = model.recordMinutesUrl;
+            } 
 
             /**
              * RecordMinutesUrl.

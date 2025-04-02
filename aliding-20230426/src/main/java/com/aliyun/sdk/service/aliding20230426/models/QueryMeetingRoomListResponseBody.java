@@ -44,6 +44,10 @@ public class QueryMeetingRoomListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return hasMore
      */
@@ -77,6 +81,16 @@ public class QueryMeetingRoomListResponseBody extends TeaModel {
         private Long nextToken; 
         private String requestId; 
         private java.util.List<Result> result; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryMeetingRoomListResponseBody model) {
+            this.hasMore = model.hasMore;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * hasMore.
@@ -175,6 +189,15 @@ public class QueryMeetingRoomListResponseBody extends TeaModel {
             private String groupName; 
             private Long parentId; 
 
+            private Builder() {
+            } 
+
+            private Builder(RoomGroup model) {
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+                this.parentId = model.parentId;
+            } 
+
             /**
              * GroupId.
              */
@@ -250,6 +273,14 @@ public class QueryMeetingRoomListResponseBody extends TeaModel {
             private Long labelId; 
             private String labelName; 
 
+            private Builder() {
+            } 
+
+            private Builder(RoomLabels model) {
+                this.labelId = model.labelId;
+                this.labelName = model.labelName;
+            } 
+
             /**
              * LabelId.
              */
@@ -316,6 +347,14 @@ public class QueryMeetingRoomListResponseBody extends TeaModel {
         public static final class Builder {
             private String desc; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(RoomLocation model) {
+                this.desc = model.desc;
+                this.title = model.title;
+            } 
 
             /**
              * Desc.
@@ -491,6 +530,23 @@ public class QueryMeetingRoomListResponseBody extends TeaModel {
             private String roomPicture; 
             private String roomStaffId; 
             private Integer roomStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.corpId = model.corpId;
+                this.isvRoomId = model.isvRoomId;
+                this.roomCapacity = model.roomCapacity;
+                this.roomGroup = model.roomGroup;
+                this.roomId = model.roomId;
+                this.roomLabels = model.roomLabels;
+                this.roomLocation = model.roomLocation;
+                this.roomName = model.roomName;
+                this.roomPicture = model.roomPicture;
+                this.roomStaffId = model.roomStaffId;
+                this.roomStatus = model.roomStatus;
+            } 
 
             /**
              * CorpId.

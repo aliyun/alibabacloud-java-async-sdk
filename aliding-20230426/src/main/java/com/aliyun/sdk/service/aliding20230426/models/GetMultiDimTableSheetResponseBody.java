@@ -48,6 +48,10 @@ public class GetMultiDimTableSheetResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return id
      */
@@ -89,6 +93,17 @@ public class GetMultiDimTableSheetResponseBody extends TeaModel {
         private String requestId; 
         private String vendorRequestId; 
         private String vendorType; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMultiDimTableSheetResponseBody model) {
+            this.id = model.id;
+            this.name = model.name;
+            this.requestId = model.requestId;
+            this.vendorRequestId = model.vendorRequestId;
+            this.vendorType = model.vendorType;
+        } 
 
         /**
          * id.

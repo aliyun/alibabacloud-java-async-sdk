@@ -110,7 +110,7 @@ public class CreateTodoTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -463,6 +463,13 @@ public class CreateTodoTaskRequest extends Request {
         public static final class Builder {
             private String accountId; 
 
+            private Builder() {
+            } 
+
+            private Builder(AccountContext model) {
+                this.accountId = model.accountId;
+            } 
+
             /**
              * accountId.
              */
@@ -509,6 +516,13 @@ public class CreateTodoTaskRequest extends Request {
 
         public static final class Builder {
             private String tenantId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TenantContext model) {
+                this.tenantId = model.tenantId;
+            } 
 
             /**
              * tenantId.
@@ -568,6 +582,14 @@ public class CreateTodoTaskRequest extends Request {
         public static final class Builder {
             private String body; 
             private java.util.Map<String, String> header; 
+
+            private Builder() {
+            } 
+
+            private Builder(Param model) {
+                this.body = model.body;
+                this.header = model.header;
+            } 
 
             /**
              * body.
@@ -696,6 +718,19 @@ public class CreateTodoTaskRequest extends Request {
             private String title; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(ActionList model) {
+                this.actionKey = model.actionKey;
+                this.actionType = model.actionType;
+                this.buttonStyleType = model.buttonStyleType;
+                this.param = model.param;
+                this.pcUrl = model.pcUrl;
+                this.title = model.title;
+                this.url = model.url;
+            } 
+
             /**
              * actionKey.
              */
@@ -803,6 +838,14 @@ public class CreateTodoTaskRequest extends Request {
             private String fieldKey; 
             private String fieldValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(ContentFieldList model) {
+                this.fieldKey = model.fieldKey;
+                this.fieldValue = model.fieldValue;
+            } 
+
             /**
              * <p>fieldKey</p>
              * 
@@ -876,6 +919,14 @@ public class CreateTodoTaskRequest extends Request {
             private String appUrl; 
             private String pcUrl; 
 
+            private Builder() {
+            } 
+
+            private Builder(DetailUrl model) {
+                this.appUrl = model.appUrl;
+                this.pcUrl = model.pcUrl;
+            } 
+
             /**
              * appUrl.
              */
@@ -930,6 +981,13 @@ public class CreateTodoTaskRequest extends Request {
 
         public static final class Builder {
             private String dingNotify; 
+
+            private Builder() {
+            } 
+
+            private Builder(NotifyConfigs model) {
+                this.dingNotify = model.dingNotify;
+            } 
 
             /**
              * dingNotify.

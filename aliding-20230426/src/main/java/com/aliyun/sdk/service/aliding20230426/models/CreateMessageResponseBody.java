@@ -60,6 +60,10 @@ public class CreateMessageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return content
      */
@@ -125,6 +129,20 @@ public class CreateMessageResponseBody extends TeaModel {
         private String requestId; 
         private String role; 
         private String threadId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateMessageResponseBody model) {
+            this.content = model.content;
+            this.createAt = model.createAt;
+            this.id = model.id;
+            this.metadata = model.metadata;
+            this.object = model.object;
+            this.requestId = model.requestId;
+            this.role = model.role;
+            this.threadId = model.threadId;
+        } 
 
         /**
          * content.
@@ -252,6 +270,15 @@ public class CreateMessageResponseBody extends TeaModel {
             private String templateId; 
             private String userId; 
 
+            private Builder() {
+            } 
+
+            private Builder(CardCallback model) {
+                this.content = model.content;
+                this.templateId = model.templateId;
+                this.userId = model.userId;
+            } 
+
             /**
              * content.
              */
@@ -363,6 +390,17 @@ public class CreateMessageResponseBody extends TeaModel {
             private Boolean finished; 
             private String templateId; 
 
+            private Builder() {
+            } 
+
+            private Builder(DingCard model) {
+                this.cardDesc = model.cardDesc;
+                this.content = model.content;
+                this.contentType = model.contentType;
+                this.finished = model.finished;
+                this.templateId = model.templateId;
+            } 
+
             /**
              * cardDesc.
              */
@@ -466,6 +504,15 @@ public class CreateMessageResponseBody extends TeaModel {
             private String imageDesc; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(ImageUrl model) {
+                this.detail = model.detail;
+                this.imageDesc = model.imageDesc;
+                this.url = model.url;
+            } 
+
             /**
              * detail.
              */
@@ -529,6 +576,13 @@ public class CreateMessageResponseBody extends TeaModel {
         public static final class Builder {
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Markdown model) {
+                this.value = model.value;
+            } 
+
             /**
              * value.
              */
@@ -575,6 +629,13 @@ public class CreateMessageResponseBody extends TeaModel {
 
         public static final class Builder {
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Text model) {
+                this.value = model.value;
+            } 
 
             /**
              * value.
@@ -682,6 +743,18 @@ public class CreateMessageResponseBody extends TeaModel {
             private Markdown markdown; 
             private Text text; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.cardCallback = model.cardCallback;
+                this.dingCard = model.dingCard;
+                this.imageUrl = model.imageUrl;
+                this.markdown = model.markdown;
+                this.text = model.text;
+                this.type = model.type;
+            } 
 
             /**
              * cardCallback.

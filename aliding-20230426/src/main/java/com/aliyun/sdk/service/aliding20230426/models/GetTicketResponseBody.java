@@ -92,6 +92,10 @@ public class GetTicketResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createTime
      */
@@ -221,6 +225,28 @@ public class GetTicketResponseBody extends TeaModel {
         private String updateTime; 
         private String vendorRequestId; 
         private String vendorType; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTicketResponseBody model) {
+            this.createTime = model.createTime;
+            this.creator = model.creator;
+            this.customFields = model.customFields;
+            this.openConversationId = model.openConversationId;
+            this.openTicketId = model.openTicketId;
+            this.processor = model.processor;
+            this.requestId = model.requestId;
+            this.scene = model.scene;
+            this.sceneContext = model.sceneContext;
+            this.stage = model.stage;
+            this.takers = model.takers;
+            this.template = model.template;
+            this.title = model.title;
+            this.updateTime = model.updateTime;
+            this.vendorRequestId = model.vendorRequestId;
+            this.vendorType = model.vendorType;
+        } 
 
         /**
          * createTime.
@@ -400,6 +426,14 @@ public class GetTicketResponseBody extends TeaModel {
             private String nickName; 
             private String unionId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Creator model) {
+                this.nickName = model.nickName;
+                this.unionId = model.unionId;
+            } 
+
             /**
              * NickName.
              */
@@ -467,6 +501,14 @@ public class GetTicketResponseBody extends TeaModel {
             private String nickName; 
             private String unionId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Processor model) {
+                this.nickName = model.nickName;
+                this.unionId = model.unionId;
+            } 
+
             /**
              * NickName.
              */
@@ -533,6 +575,14 @@ public class GetTicketResponseBody extends TeaModel {
         public static final class Builder {
             private String nickName; 
             private String unionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Takers model) {
+                this.nickName = model.nickName;
+                this.unionId = model.unionId;
+            } 
 
             /**
              * NickName.
@@ -612,6 +662,15 @@ public class GetTicketResponseBody extends TeaModel {
             private String openTemplateBizId; 
             private String openTemplateId; 
             private String templateName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Template model) {
+                this.openTemplateBizId = model.openTemplateBizId;
+                this.openTemplateId = model.openTemplateId;
+                this.templateName = model.templateName;
+            } 
 
             /**
              * <p>OpenTemplateBizId</p>

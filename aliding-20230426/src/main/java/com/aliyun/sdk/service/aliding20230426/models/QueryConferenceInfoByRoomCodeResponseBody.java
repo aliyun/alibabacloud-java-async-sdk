@@ -60,6 +60,10 @@ public class QueryConferenceInfoByRoomCodeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return conferenceList
      */
@@ -125,6 +129,20 @@ public class QueryConferenceInfoByRoomCodeResponseBody extends TeaModel {
         private Integer totalCount; 
         private String vendorRequestId; 
         private String vendorType; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryConferenceInfoByRoomCodeResponseBody model) {
+            this.conferenceList = model.conferenceList;
+            this.dingtalkRequestId = model.dingtalkRequestId;
+            this.hasMore = model.hasMore;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.vendorRequestId = model.vendorRequestId;
+            this.vendorType = model.vendorType;
+        } 
 
         /**
          * conferenceList.
@@ -359,6 +377,24 @@ public class QueryConferenceInfoByRoomCodeResponseBody extends TeaModel {
             private Long startTime; 
             private Integer status; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConferenceList model) {
+                this.bizType = model.bizType;
+                this.confDuration = model.confDuration;
+                this.conferenceId = model.conferenceId;
+                this.creatorId = model.creatorId;
+                this.creatorNick = model.creatorNick;
+                this.endTime = model.endTime;
+                this.externalLinkUrl = model.externalLinkUrl;
+                this.roomCode = model.roomCode;
+                this.scheduleConferenceId = model.scheduleConferenceId;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.title = model.title;
+            } 
 
             /**
              * BizType.

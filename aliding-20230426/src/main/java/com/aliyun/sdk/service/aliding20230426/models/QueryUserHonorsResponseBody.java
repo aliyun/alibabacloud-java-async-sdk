@@ -40,6 +40,10 @@ public class QueryUserHonorsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return honors
      */
@@ -65,6 +69,15 @@ public class QueryUserHonorsResponseBody extends TeaModel {
         private java.util.List<Honors> honors; 
         private String nextToken; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryUserHonorsResponseBody model) {
+            this.honors = model.honors;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * honors.
@@ -142,6 +155,14 @@ public class QueryUserHonorsResponseBody extends TeaModel {
         public static final class Builder {
             private Long grantTime; 
             private String senderUserid; 
+
+            private Builder() {
+            } 
+
+            private Builder(GrantHistory model) {
+                this.grantTime = model.grantTime;
+                this.senderUserid = model.senderUserid;
+            } 
 
             /**
              * grantTime.
@@ -245,6 +266,17 @@ public class QueryUserHonorsResponseBody extends TeaModel {
             private String honorDesc; 
             private String honorId; 
             private String honorName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Honors model) {
+                this.expirationTime = model.expirationTime;
+                this.grantHistory = model.grantHistory;
+                this.honorDesc = model.honorDesc;
+                this.honorId = model.honorId;
+                this.honorName = model.honorName;
+            } 
 
             /**
              * expirationTime.

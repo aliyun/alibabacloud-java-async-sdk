@@ -44,6 +44,10 @@ public class BatchGetFormDataByIdListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -77,6 +81,16 @@ public class BatchGetFormDataByIdListResponseBody extends TeaModel {
         private java.util.List<Result> result; 
         private String vendorRequestId; 
         private String vendorType; 
+
+        private Builder() {
+        } 
+
+        private Builder(BatchGetFormDataByIdListResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.vendorRequestId = model.vendorRequestId;
+            this.vendorType = model.vendorType;
+        } 
 
         /**
          * requestId.
@@ -160,6 +174,14 @@ public class BatchGetFormDataByIdListResponseBody extends TeaModel {
             private String nameInChinese; 
             private String nameInEnglish; 
 
+            private Builder() {
+            } 
+
+            private Builder(Name model) {
+                this.nameInChinese = model.nameInChinese;
+                this.nameInEnglish = model.nameInEnglish;
+            } 
+
             /**
              * NameInChinese.
              */
@@ -226,6 +248,14 @@ public class BatchGetFormDataByIdListResponseBody extends TeaModel {
         public static final class Builder {
             private Name name; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ModifyUser model) {
+                this.name = model.name;
+                this.userId = model.userId;
+            } 
 
             /**
              * Name.
@@ -294,6 +324,14 @@ public class BatchGetFormDataByIdListResponseBody extends TeaModel {
             private String nameInChinese; 
             private String nameInEnglish; 
 
+            private Builder() {
+            } 
+
+            private Builder(OriginatorName model) {
+                this.nameInChinese = model.nameInChinese;
+                this.nameInEnglish = model.nameInEnglish;
+            } 
+
             /**
              * NameInChinese.
              */
@@ -360,6 +398,14 @@ public class BatchGetFormDataByIdListResponseBody extends TeaModel {
         public static final class Builder {
             private OriginatorName name; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Originator model) {
+                this.name = model.name;
+                this.userId = model.userId;
+            } 
 
             /**
              * Name.
@@ -583,6 +629,27 @@ public class BatchGetFormDataByIdListResponseBody extends TeaModel {
             private String serialNumber; 
             private String title; 
             private Long version; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.createTimeGMT = model.createTimeGMT;
+                this.creatorUserId = model.creatorUserId;
+                this.formData = model.formData;
+                this.formInstanceId = model.formInstanceId;
+                this.formUuid = model.formUuid;
+                this.id = model.id;
+                this.instanceValue = model.instanceValue;
+                this.modifiedTimeGMT = model.modifiedTimeGMT;
+                this.modifier = model.modifier;
+                this.modifyUser = model.modifyUser;
+                this.originator = model.originator;
+                this.sequence = model.sequence;
+                this.serialNumber = model.serialNumber;
+                this.title = model.title;
+                this.version = model.version;
+            } 
 
             /**
              * CreateTimeGMT.

@@ -44,6 +44,10 @@ public class GetScheduleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -77,6 +81,16 @@ public class GetScheduleResponseBody extends TeaModel {
         private java.util.List<ScheduleInformation> scheduleInformation; 
         private String vendorRequestId; 
         private String vendorType; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetScheduleResponseBody model) {
+            this.requestId = model.requestId;
+            this.scheduleInformation = model.scheduleInformation;
+            this.vendorRequestId = model.vendorRequestId;
+            this.vendorType = model.vendorType;
+        } 
 
         /**
          * requestId.
@@ -172,6 +186,15 @@ public class GetScheduleResponseBody extends TeaModel {
             private String dateTime; 
             private String timeZone; 
 
+            private Builder() {
+            } 
+
+            private Builder(End model) {
+                this.date = model.date;
+                this.dateTime = model.dateTime;
+                this.timeZone = model.timeZone;
+            } 
+
             /**
              * Date.
              */
@@ -258,6 +281,15 @@ public class GetScheduleResponseBody extends TeaModel {
             private String date; 
             private String dateTime; 
             private String timeZone; 
+
+            private Builder() {
+            } 
+
+            private Builder(Start model) {
+                this.date = model.date;
+                this.dateTime = model.dateTime;
+                this.timeZone = model.timeZone;
+            } 
 
             /**
              * Date.
@@ -346,6 +378,15 @@ public class GetScheduleResponseBody extends TeaModel {
             private Start start; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(ScheduleItems model) {
+                this.end = model.end;
+                this.start = model.start;
+                this.status = model.status;
+            } 
+
             /**
              * End.
              */
@@ -432,6 +473,15 @@ public class GetScheduleResponseBody extends TeaModel {
             private String error; 
             private java.util.List<ScheduleItems> scheduleItems; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ScheduleInformation model) {
+                this.error = model.error;
+                this.scheduleItems = model.scheduleItems;
+                this.userId = model.userId;
+            } 
 
             /**
              * Error.

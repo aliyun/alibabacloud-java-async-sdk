@@ -44,6 +44,10 @@ public class GetInstancesByIdListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -77,6 +81,16 @@ public class GetInstancesByIdListResponseBody extends TeaModel {
         private java.util.List<Result> result; 
         private String vendorRequestId; 
         private String vendorType; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetInstancesByIdListResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.vendorRequestId = model.vendorRequestId;
+            this.vendorType = model.vendorType;
+        } 
 
         /**
          * requestId.
@@ -171,6 +185,15 @@ public class GetInstancesByIdListResponseBody extends TeaModel {
             private String nameInChinese; 
             private String nameInEnglish; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Name model) {
+                this.nameInChinese = model.nameInChinese;
+                this.nameInEnglish = model.nameInEnglish;
+                this.type = model.type;
+            } 
 
             /**
              * NameInChinese.
@@ -271,6 +294,16 @@ public class GetInstancesByIdListResponseBody extends TeaModel {
             private Name name; 
             private String userId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ActionExecutor model) {
+                this.departmentName = model.departmentName;
+                this.email = model.email;
+                this.name = model.name;
+                this.userId = model.userId;
+            } 
+
             /**
              * DepartmentName.
              */
@@ -365,6 +398,15 @@ public class GetInstancesByIdListResponseBody extends TeaModel {
             private String nameInChinese; 
             private String nameInEnglish; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(OriginatorName model) {
+                this.nameInChinese = model.nameInChinese;
+                this.nameInEnglish = model.nameInEnglish;
+                this.type = model.type;
+            } 
 
             /**
              * NameInChinese.
@@ -464,6 +506,16 @@ public class GetInstancesByIdListResponseBody extends TeaModel {
             private String email; 
             private OriginatorName name; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Originator model) {
+                this.departmentName = model.departmentName;
+                this.email = model.email;
+                this.name = model.name;
+                this.userId = model.userId;
+            } 
 
             /**
              * DepartmentName.
@@ -631,6 +683,21 @@ public class GetInstancesByIdListResponseBody extends TeaModel {
             private String processCode; 
             private String processInstanceId; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.actionExecutor = model.actionExecutor;
+                this.approvedResult = model.approvedResult;
+                this.data = model.data;
+                this.formUuid = model.formUuid;
+                this.instanceStatus = model.instanceStatus;
+                this.originator = model.originator;
+                this.processCode = model.processCode;
+                this.processInstanceId = model.processInstanceId;
+                this.title = model.title;
+            } 
 
             /**
              * ActionExecutor.

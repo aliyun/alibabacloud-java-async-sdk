@@ -60,6 +60,10 @@ public class QueryScheduleConferenceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return endTime
      */
@@ -125,6 +129,20 @@ public class QueryScheduleConferenceResponseBody extends TeaModel {
         private Long startTime; 
         private String title; 
         private String url; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryScheduleConferenceResponseBody model) {
+            this.endTime = model.endTime;
+            this.phones = model.phones;
+            this.requestId = model.requestId;
+            this.roomCode = model.roomCode;
+            this.scheduleConferenceId = model.scheduleConferenceId;
+            this.startTime = model.startTime;
+            this.title = model.title;
+            this.url = model.url;
+        } 
 
         /**
          * endTime.

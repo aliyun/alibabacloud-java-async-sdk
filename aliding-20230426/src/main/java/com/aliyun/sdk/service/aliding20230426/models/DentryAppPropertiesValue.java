@@ -40,6 +40,10 @@ public class DentryAppPropertiesValue extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return name
      */
@@ -65,6 +69,15 @@ public class DentryAppPropertiesValue extends TeaModel {
         private String name; 
         private String value; 
         private String visibility; 
+
+        private Builder() {
+        } 
+
+        private Builder(DentryAppPropertiesValue model) {
+            this.name = model.name;
+            this.value = model.value;
+            this.visibility = model.visibility;
+        } 
 
         /**
          * Name.

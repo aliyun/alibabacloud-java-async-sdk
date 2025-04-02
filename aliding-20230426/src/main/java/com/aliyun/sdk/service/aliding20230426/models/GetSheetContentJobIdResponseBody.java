@@ -48,6 +48,10 @@ public class GetSheetContentJobIdResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return jobId
      */
@@ -89,6 +93,17 @@ public class GetSheetContentJobIdResponseBody extends TeaModel {
         private String status; 
         private String vendorRequestId; 
         private String vendorType; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSheetContentJobIdResponseBody model) {
+            this.jobId = model.jobId;
+            this.requestId = model.requestId;
+            this.status = model.status;
+            this.vendorRequestId = model.vendorRequestId;
+            this.vendorType = model.vendorType;
+        } 
 
         /**
          * jobId.

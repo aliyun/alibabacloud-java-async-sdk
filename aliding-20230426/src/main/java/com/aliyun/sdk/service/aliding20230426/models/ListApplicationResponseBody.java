@@ -52,6 +52,10 @@ public class ListApplicationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class ListApplicationResponseBody extends TeaModel {
         private Long totalCount; 
         private String vendorRequestId; 
         private String vendorType; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListApplicationResponseBody model) {
+            this.data = model.data;
+            this.pageNumber = model.pageNumber;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.vendorRequestId = model.vendorRequestId;
+            this.vendorType = model.vendorType;
+        } 
 
         /**
          * data.
@@ -295,6 +311,22 @@ public class ListApplicationResponseBody extends TeaModel {
             private String inexistence; 
             private String name; 
             private String subCorpId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.appConfig = model.appConfig;
+                this.appType = model.appType;
+                this.applicationStatus = model.applicationStatus;
+                this.corpId = model.corpId;
+                this.creatorUserId = model.creatorUserId;
+                this.description = model.description;
+                this.icon = model.icon;
+                this.inexistence = model.inexistence;
+                this.name = model.name;
+                this.subCorpId = model.subCorpId;
+            } 
 
             /**
              * AppConfig.

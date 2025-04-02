@@ -52,7 +52,7 @@ public class AddMeetingRoomsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -187,6 +187,13 @@ public class AddMeetingRoomsRequest extends Request {
         public static final class Builder {
             private String accountId; 
 
+            private Builder() {
+            } 
+
+            private Builder(AccountContext model) {
+                this.accountId = model.accountId;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              * 
@@ -236,6 +243,13 @@ public class AddMeetingRoomsRequest extends Request {
 
         public static final class Builder {
             private String roomId; 
+
+            private Builder() {
+            } 
+
+            private Builder(MeetingRoomsToAdd model) {
+                this.roomId = model.roomId;
+            } 
 
             /**
              * RoomId.

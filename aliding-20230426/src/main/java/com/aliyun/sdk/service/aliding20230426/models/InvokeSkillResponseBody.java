@@ -36,6 +36,10 @@ public class InvokeSkillResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class InvokeSkillResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.Map<String, ?> data; 
+
+        private Builder() {
+        } 
+
+        private Builder(InvokeSkillResponseBody model) {
+            this.requestId = model.requestId;
+            this.data = model.data;
+        } 
 
         /**
          * <p>RequestId</p>

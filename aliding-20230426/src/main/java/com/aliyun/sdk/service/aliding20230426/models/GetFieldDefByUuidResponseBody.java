@@ -48,6 +48,10 @@ public class GetFieldDefByUuidResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -89,6 +93,17 @@ public class GetFieldDefByUuidResponseBody extends TeaModel {
         private Boolean success; 
         private String vendorRequestId; 
         private String vendorType; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetFieldDefByUuidResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+            this.vendorRequestId = model.vendorRequestId;
+            this.vendorType = model.vendorType;
+        } 
 
         /**
          * requestId.
@@ -239,6 +254,19 @@ public class GetFieldDefByUuidResponseBody extends TeaModel {
             private Object label; 
             private Object props; 
             private Boolean success; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.behavior = model.behavior;
+                this.children = model.children;
+                this.componentName = model.componentName;
+                this.fieldId = model.fieldId;
+                this.label = model.label;
+                this.props = model.props;
+                this.success = model.success;
+            } 
 
             /**
              * Behavior.

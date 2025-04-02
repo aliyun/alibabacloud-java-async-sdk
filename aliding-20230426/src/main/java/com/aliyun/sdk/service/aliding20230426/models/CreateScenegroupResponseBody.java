@@ -36,6 +36,10 @@ public class CreateScenegroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return openConversationId
      */
@@ -53,6 +57,14 @@ public class CreateScenegroupResponseBody extends TeaModel {
     public static final class Builder {
         private String openConversationId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateScenegroupResponseBody model) {
+            this.openConversationId = model.openConversationId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * openConversationId.

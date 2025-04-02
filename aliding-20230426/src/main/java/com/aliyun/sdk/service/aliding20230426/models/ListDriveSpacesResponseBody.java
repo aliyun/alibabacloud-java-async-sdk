@@ -48,6 +48,10 @@ public class ListDriveSpacesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextToken
      */
@@ -89,6 +93,17 @@ public class ListDriveSpacesResponseBody extends TeaModel {
         private java.util.List<Spaces> spaces; 
         private String vendorRequestId; 
         private String vendorType; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDriveSpacesResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.spaces = model.spaces;
+            this.vendorRequestId = model.vendorRequestId;
+            this.vendorType = model.vendorType;
+        } 
 
         /**
          * nextToken.
@@ -251,6 +266,20 @@ public class ListDriveSpacesResponseBody extends TeaModel {
             private String spaceName; 
             private String spaceType; 
             private Long usedQuota; 
+
+            private Builder() {
+            } 
+
+            private Builder(Spaces model) {
+                this.createTime = model.createTime;
+                this.modifyTime = model.modifyTime;
+                this.permissionMode = model.permissionMode;
+                this.quota = model.quota;
+                this.spaceId = model.spaceId;
+                this.spaceName = model.spaceName;
+                this.spaceType = model.spaceType;
+                this.usedQuota = model.usedQuota;
+            } 
 
             /**
              * CreateTime.

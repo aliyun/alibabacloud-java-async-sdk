@@ -44,6 +44,10 @@ public class ListFormRemarksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return formRemarkVoMap
      */
@@ -77,6 +81,16 @@ public class ListFormRemarksResponseBody extends TeaModel {
         private String requestId; 
         private String vendorRequestId; 
         private String vendorType; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListFormRemarksResponseBody model) {
+            this.formRemarkVoMap = model.formRemarkVoMap;
+            this.requestId = model.requestId;
+            this.vendorRequestId = model.vendorRequestId;
+            this.vendorType = model.vendorType;
+        } 
 
         /**
          * formRemarkVoMap.

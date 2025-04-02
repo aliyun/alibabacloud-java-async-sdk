@@ -48,6 +48,10 @@ public class InitMultipartFileUploadResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -89,6 +93,17 @@ public class InitMultipartFileUploadResponseBody extends TeaModel {
         private String uploadKey; 
         private String vendorRequestId; 
         private String vendorType; 
+
+        private Builder() {
+        } 
+
+        private Builder(InitMultipartFileUploadResponseBody model) {
+            this.requestId = model.requestId;
+            this.storageDriver = model.storageDriver;
+            this.uploadKey = model.uploadKey;
+            this.vendorRequestId = model.vendorRequestId;
+            this.vendorType = model.vendorType;
+        } 
 
         /**
          * requestId.

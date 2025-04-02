@@ -52,6 +52,10 @@ public class ListTemplateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return hasMore
      */
@@ -101,6 +105,18 @@ public class ListTemplateResponseBody extends TeaModel {
         private java.util.List<TemplateList> templateList; 
         private String vendorRequestId; 
         private String vendorType; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTemplateResponseBody model) {
+            this.hasMore = model.hasMore;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.templateList = model.templateList;
+            this.vendorRequestId = model.vendorRequestId;
+            this.vendorType = model.vendorType;
+        } 
 
         /**
          * hasMore.
@@ -271,6 +287,20 @@ public class ListTemplateResponseBody extends TeaModel {
             private String title; 
             private Long updateTime; 
             private String workspaceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TemplateList model) {
+                this.coverUrl = model.coverUrl;
+                this.createTime = model.createTime;
+                this.docType = model.docType;
+                this.id = model.id;
+                this.templateType = model.templateType;
+                this.title = model.title;
+                this.updateTime = model.updateTime;
+                this.workspaceId = model.workspaceId;
+            } 
 
             /**
              * CoverUrl.

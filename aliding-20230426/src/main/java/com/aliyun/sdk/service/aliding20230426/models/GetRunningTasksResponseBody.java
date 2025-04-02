@@ -44,6 +44,10 @@ public class GetRunningTasksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -77,6 +81,16 @@ public class GetRunningTasksResponseBody extends TeaModel {
         private java.util.List<Result> result; 
         private String vendorRequestId; 
         private String vendorType; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetRunningTasksResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.vendorRequestId = model.vendorRequestId;
+            this.vendorType = model.vendorType;
+        } 
 
         /**
          * requestId.
@@ -279,6 +293,24 @@ public class GetRunningTasksResponseBody extends TeaModel {
             private String taskType; 
             private String title; 
             private String titleInEnglish; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.activeTimeGMT = model.activeTimeGMT;
+                this.activityId = model.activityId;
+                this.actualActionerId = model.actualActionerId;
+                this.createTimeGMT = model.createTimeGMT;
+                this.finishTimeGMT = model.finishTimeGMT;
+                this.originatorId = model.originatorId;
+                this.processInstanceId = model.processInstanceId;
+                this.status = model.status;
+                this.taskId = model.taskId;
+                this.taskType = model.taskType;
+                this.title = model.title;
+                this.titleInEnglish = model.titleInEnglish;
+            } 
 
             /**
              * ActiveTimeGMT.

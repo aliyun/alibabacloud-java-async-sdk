@@ -44,6 +44,10 @@ public class GetMultiDimTableAllFieldsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -77,6 +81,16 @@ public class GetMultiDimTableAllFieldsResponseBody extends TeaModel {
         private java.util.List<Value> value; 
         private String vendorRequestId; 
         private String vendorType; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMultiDimTableAllFieldsResponseBody model) {
+            this.requestId = model.requestId;
+            this.value = model.value;
+            this.vendorRequestId = model.vendorRequestId;
+            this.vendorType = model.vendorType;
+        } 
 
         /**
          * requestId.
@@ -183,6 +197,16 @@ public class GetMultiDimTableAllFieldsResponseBody extends TeaModel {
             private String name; 
             private java.util.Map<String, ?> property; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Value model) {
+                this.id = model.id;
+                this.name = model.name;
+                this.property = model.property;
+                this.type = model.type;
+            } 
 
             /**
              * Id.

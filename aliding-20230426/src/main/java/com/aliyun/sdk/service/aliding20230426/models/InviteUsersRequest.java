@@ -55,7 +55,7 @@ public class InviteUsersRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -207,6 +207,13 @@ public class InviteUsersRequest extends Request {
         public static final class Builder {
             private String accountId; 
 
+            private Builder() {
+            } 
+
+            private Builder(AccountContext model) {
+                this.accountId = model.accountId;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              * 
@@ -270,6 +277,14 @@ public class InviteUsersRequest extends Request {
             private String nick; 
             private String userId; 
 
+            private Builder() {
+            } 
+
+            private Builder(InviteeList model) {
+                this.nick = model.nick;
+                this.userId = model.userId;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              * 
@@ -327,6 +342,13 @@ public class InviteUsersRequest extends Request {
 
         public static final class Builder {
             private String tenantId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TenantContext model) {
+                this.tenantId = model.tenantId;
+            } 
 
             /**
              * tenantId.
@@ -410,6 +432,16 @@ public class InviteUsersRequest extends Request {
             private String nick; 
             private String phoneNumber; 
             private String statusCode; 
+
+            private Builder() {
+            } 
+
+            private Builder(PhoneInviteeList model) {
+                this.inviteClient = model.inviteClient;
+                this.nick = model.nick;
+                this.phoneNumber = model.phoneNumber;
+                this.statusCode = model.statusCode;
+            } 
 
             /**
              * InviteClient.

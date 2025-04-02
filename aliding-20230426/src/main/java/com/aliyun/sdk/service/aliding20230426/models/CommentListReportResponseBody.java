@@ -44,6 +44,10 @@ public class CommentListReportResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return comments
      */
@@ -77,6 +81,16 @@ public class CommentListReportResponseBody extends TeaModel {
         private Boolean hasMore; 
         private Long nextCursor; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CommentListReportResponseBody model) {
+            this.comments = model.comments;
+            this.hasMore = model.hasMore;
+            this.nextCursor = model.nextCursor;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * comments.
@@ -174,6 +188,15 @@ public class CommentListReportResponseBody extends TeaModel {
             private String content; 
             private String createTime; 
             private String userid; 
+
+            private Builder() {
+            } 
+
+            private Builder(Comments model) {
+                this.content = model.content;
+                this.createTime = model.createTime;
+                this.userid = model.userid;
+            } 
 
             /**
              * Content.

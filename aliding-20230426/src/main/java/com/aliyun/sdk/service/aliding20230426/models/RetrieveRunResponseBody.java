@@ -80,6 +80,10 @@ public class RetrieveRunResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cancelledAt
      */
@@ -185,6 +189,25 @@ public class RetrieveRunResponseBody extends TeaModel {
         private Long startedAt; 
         private String status; 
         private String threadId; 
+
+        private Builder() {
+        } 
+
+        private Builder(RetrieveRunResponseBody model) {
+            this.cancelledAt = model.cancelledAt;
+            this.completedAt = model.completedAt;
+            this.createAt = model.createAt;
+            this.expiresAt = model.expiresAt;
+            this.failedAt = model.failedAt;
+            this.id = model.id;
+            this.lastErrorMsg = model.lastErrorMsg;
+            this.metadata = model.metadata;
+            this.object = model.object;
+            this.requestId = model.requestId;
+            this.startedAt = model.startedAt;
+            this.status = model.status;
+            this.threadId = model.threadId;
+        } 
 
         /**
          * cancelledAt.

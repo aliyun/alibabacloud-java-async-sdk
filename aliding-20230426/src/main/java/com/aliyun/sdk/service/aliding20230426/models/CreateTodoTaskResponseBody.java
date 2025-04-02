@@ -116,6 +116,10 @@ public class CreateTodoTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bizTag
      */
@@ -293,6 +297,34 @@ public class CreateTodoTaskResponseBody extends TeaModel {
         private String sourceId; 
         private Long startTime; 
         private String subject; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateTodoTaskResponseBody model) {
+            this.bizTag = model.bizTag;
+            this.contentFieldList = model.contentFieldList;
+            this.createdTime = model.createdTime;
+            this.creatorId = model.creatorId;
+            this.description = model.description;
+            this.detailUrl = model.detailUrl;
+            this.done = model.done;
+            this.dueTime = model.dueTime;
+            this.executorIds = model.executorIds;
+            this.finishTime = model.finishTime;
+            this.id = model.id;
+            this.isOnlyShowExecutor = model.isOnlyShowExecutor;
+            this.modifiedTime = model.modifiedTime;
+            this.modifierId = model.modifierId;
+            this.notifyConfigs = model.notifyConfigs;
+            this.participantIds = model.participantIds;
+            this.priority = model.priority;
+            this.requestId = model.requestId;
+            this.source = model.source;
+            this.sourceId = model.sourceId;
+            this.startTime = model.startTime;
+            this.subject = model.subject;
+        } 
 
         /**
          * bizTag.
@@ -523,6 +555,14 @@ public class CreateTodoTaskResponseBody extends TeaModel {
             private String fieldKey; 
             private String fieldValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(ContentFieldList model) {
+                this.fieldKey = model.fieldKey;
+                this.fieldValue = model.fieldValue;
+            } 
+
             /**
              * <p>fieldKey</p>
              * 
@@ -596,6 +636,14 @@ public class CreateTodoTaskResponseBody extends TeaModel {
             private String appUrl; 
             private String pcUrl; 
 
+            private Builder() {
+            } 
+
+            private Builder(DetailUrl model) {
+                this.appUrl = model.appUrl;
+                this.pcUrl = model.pcUrl;
+            } 
+
             /**
              * appUrl.
              */
@@ -650,6 +698,13 @@ public class CreateTodoTaskResponseBody extends TeaModel {
 
         public static final class Builder {
             private String dingNotify; 
+
+            private Builder() {
+            } 
+
+            private Builder(NotifyConfigs model) {
+                this.dingNotify = model.dingNotify;
+            } 
 
             /**
              * dingNotify.

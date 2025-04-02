@@ -52,6 +52,10 @@ public class GetMeCorpSubmissionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class GetMeCorpSubmissionResponseBody extends TeaModel {
         private Long totalCount; 
         private String vendorRequestId; 
         private String vendorType; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMeCorpSubmissionResponseBody model) {
+            this.data = model.data;
+            this.pageNumber = model.pageNumber;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.vendorRequestId = model.vendorRequestId;
+            this.vendorType = model.vendorType;
+        } 
 
         /**
          * data.
@@ -392,6 +408,30 @@ public class GetMeCorpSubmissionResponseBody extends TeaModel {
             private String tbWang; 
             private String userId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Actioner model) {
+                this.buName = model.buName;
+                this.email = model.email;
+                this.employeeType = model.employeeType;
+                this.employeeTypeInformation = model.employeeTypeInformation;
+                this.humanResourceGroupWorkNumber = model.humanResourceGroupWorkNumber;
+                this.isSystemAdmin = model.isSystemAdmin;
+                this.level = model.level;
+                this.name = model.name;
+                this.nickName = model.nickName;
+                this.orderNumber = model.orderNumber;
+                this.personalPhoto = model.personalPhoto;
+                this.personalPhotoUrl = model.personalPhotoUrl;
+                this.pinyinNameAll = model.pinyinNameAll;
+                this.pinyinNickName = model.pinyinNickName;
+                this.state = model.state;
+                this.superUserId = model.superUserId;
+                this.tbWang = model.tbWang;
+                this.userId = model.userId;
+            } 
+
             /**
              * BuName.
              */
@@ -622,6 +662,17 @@ public class GetMeCorpSubmissionResponseBody extends TeaModel {
             private String activityName; 
             private String activityNameEn; 
             private Long id; 
+
+            private Builder() {
+            } 
+
+            private Builder(CurrentActivityInstances model) {
+                this.activityId = model.activityId;
+                this.activityInstanceStatus = model.activityInstanceStatus;
+                this.activityName = model.activityName;
+                this.activityNameEn = model.activityNameEn;
+                this.id = model.id;
+            } 
 
             /**
              * ActivityId.
@@ -1001,6 +1052,38 @@ public class GetMeCorpSubmissionResponseBody extends TeaModel {
             private String processName; 
             private String title; 
             private Long version; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.actioner = model.actioner;
+                this.actionerId = model.actionerId;
+                this.actionerName = model.actionerName;
+                this.appType = model.appType;
+                this.createTimeGMT = model.createTimeGMT;
+                this.currentActivityInstances = model.currentActivityInstances;
+                this.dataMap = model.dataMap;
+                this.dataType = model.dataType;
+                this.finishTimeGMT = model.finishTimeGMT;
+                this.formInstanceId = model.formInstanceId;
+                this.formUuid = model.formUuid;
+                this.instanceValue = model.instanceValue;
+                this.modifiedTimeGMT = model.modifiedTimeGMT;
+                this.originatorAvatar = model.originatorAvatar;
+                this.originatorDisplayName = model.originatorDisplayName;
+                this.originatorId = model.originatorId;
+                this.processApprovedResult = model.processApprovedResult;
+                this.processApprovedResultText = model.processApprovedResultText;
+                this.processCode = model.processCode;
+                this.processId = model.processId;
+                this.processInstanceId = model.processInstanceId;
+                this.processInstanceStatus = model.processInstanceStatus;
+                this.processInstanceStatusText = model.processInstanceStatusText;
+                this.processName = model.processName;
+                this.title = model.title;
+                this.version = model.version;
+            } 
 
             /**
              * Actioner.

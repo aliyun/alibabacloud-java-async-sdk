@@ -52,6 +52,10 @@ public class ListMultiDimTableRecordsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return hasMore
      */
@@ -101,6 +105,18 @@ public class ListMultiDimTableRecordsResponseBody extends TeaModel {
         private String requestId; 
         private String vendorRequestId; 
         private String vendorType; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListMultiDimTableRecordsResponseBody model) {
+            this.hasMore = model.hasMore;
+            this.nextToken = model.nextToken;
+            this.records = model.records;
+            this.requestId = model.requestId;
+            this.vendorRequestId = model.vendorRequestId;
+            this.vendorType = model.vendorType;
+        } 
 
         /**
          * hasMore.
@@ -188,6 +204,13 @@ public class ListMultiDimTableRecordsResponseBody extends TeaModel {
         public static final class Builder {
             private String userId; 
 
+            private Builder() {
+            } 
+
+            private Builder(CreatedBy model) {
+                this.userId = model.userId;
+            } 
+
             /**
              * UserId.
              */
@@ -234,6 +257,13 @@ public class ListMultiDimTableRecordsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(LastModifiedBy model) {
+                this.userId = model.userId;
+            } 
 
             /**
              * UserId.
@@ -341,6 +371,18 @@ public class ListMultiDimTableRecordsResponseBody extends TeaModel {
             private String id; 
             private LastModifiedBy lastModifiedBy; 
             private Long lastModifiedTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Records model) {
+                this.createdBy = model.createdBy;
+                this.createdTime = model.createdTime;
+                this.fields = model.fields;
+                this.id = model.id;
+                this.lastModifiedBy = model.lastModifiedBy;
+                this.lastModifiedTime = model.lastModifiedTime;
+            } 
 
             /**
              * CreatedBy.

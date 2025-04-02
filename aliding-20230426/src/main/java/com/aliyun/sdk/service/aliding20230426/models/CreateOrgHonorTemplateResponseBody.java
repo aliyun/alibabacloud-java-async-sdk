@@ -36,6 +36,10 @@ public class CreateOrgHonorTemplateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return honorId
      */
@@ -53,6 +57,14 @@ public class CreateOrgHonorTemplateResponseBody extends TeaModel {
     public static final class Builder {
         private String honorId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateOrgHonorTemplateResponseBody model) {
+            this.honorId = model.honorId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * honorId.

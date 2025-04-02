@@ -36,6 +36,10 @@ public class DeleteSubscribedCalendarResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return result
      */
@@ -53,6 +57,14 @@ public class DeleteSubscribedCalendarResponseBody extends TeaModel {
     public static final class Builder {
         private Boolean result; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteSubscribedCalendarResponseBody model) {
+            this.result = model.result;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Result.

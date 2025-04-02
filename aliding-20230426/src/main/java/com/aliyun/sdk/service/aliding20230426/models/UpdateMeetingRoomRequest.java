@@ -94,7 +94,7 @@ public class UpdateMeetingRoomRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -388,6 +388,13 @@ public class UpdateMeetingRoomRequest extends Request {
         public static final class Builder {
             private String accountId; 
 
+            private Builder() {
+            } 
+
+            private Builder(AccountContext model) {
+                this.accountId = model.accountId;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              * 
@@ -462,6 +469,15 @@ public class UpdateMeetingRoomRequest extends Request {
             private String memberName; 
             private String memberType; 
 
+            private Builder() {
+            } 
+
+            private Builder(AuthorizedMembers model) {
+                this.memberId = model.memberId;
+                this.memberName = model.memberName;
+                this.memberType = model.memberType;
+            } 
+
             /**
              * MemberId.
              */
@@ -525,6 +541,13 @@ public class UpdateMeetingRoomRequest extends Request {
         public static final class Builder {
             private java.util.List<AuthorizedMembers> authorizedMembers; 
 
+            private Builder() {
+            } 
+
+            private Builder(ReservationAuthority model) {
+                this.authorizedMembers = model.authorizedMembers;
+            } 
+
             /**
              * AuthorizedMembers.
              */
@@ -584,6 +607,14 @@ public class UpdateMeetingRoomRequest extends Request {
             private String desc; 
             private String title; 
 
+            private Builder() {
+            } 
+
+            private Builder(RoomLocation model) {
+                this.desc = model.desc;
+                this.title = model.title;
+            } 
+
             /**
              * Desc.
              */
@@ -638,6 +669,13 @@ public class UpdateMeetingRoomRequest extends Request {
 
         public static final class Builder {
             private String tenantId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TenantContext model) {
+                this.tenantId = model.tenantId;
+            } 
 
             /**
              * tenantId.

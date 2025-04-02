@@ -40,6 +40,10 @@ public class QueryOrgTodoTasksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextToken
      */
@@ -65,6 +69,15 @@ public class QueryOrgTodoTasksResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private java.util.List<TodoCards> todoCards; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryOrgTodoTasksResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.todoCards = model.todoCards;
+        } 
 
         /**
          * nextToken.
@@ -142,6 +155,14 @@ public class QueryOrgTodoTasksResponseBody extends TeaModel {
         public static final class Builder {
             private String appUrl; 
             private String pcUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(DetailUrl model) {
+                this.appUrl = model.appUrl;
+                this.pcUrl = model.pcUrl;
+            } 
 
             /**
              * appUrl.
@@ -317,6 +338,23 @@ public class QueryOrgTodoTasksResponseBody extends TeaModel {
             private String sourceId; 
             private String subject; 
             private String taskId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TodoCards model) {
+                this.bizTag = model.bizTag;
+                this.createdTime = model.createdTime;
+                this.creatorId = model.creatorId;
+                this.detailUrl = model.detailUrl;
+                this.dueTime = model.dueTime;
+                this.isDone = model.isDone;
+                this.modifiedTime = model.modifiedTime;
+                this.priority = model.priority;
+                this.sourceId = model.sourceId;
+                this.subject = model.subject;
+                this.taskId = model.taskId;
+            } 
 
             /**
              * bizTag.

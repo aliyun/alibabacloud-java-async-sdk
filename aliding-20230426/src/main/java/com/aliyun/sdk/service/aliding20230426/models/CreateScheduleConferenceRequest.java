@@ -62,7 +62,7 @@ public class CreateScheduleConferenceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -237,6 +237,13 @@ public class CreateScheduleConferenceRequest extends Request {
         public static final class Builder {
             private String accountId; 
 
+            private Builder() {
+            } 
+
+            private Builder(AccountContext model) {
+                this.accountId = model.accountId;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              * 
@@ -322,6 +329,16 @@ public class CreateScheduleConferenceRequest extends Request {
             private String mode; 
             private Integer recordAutoStart; 
             private Integer recordAutoStartType; 
+
+            private Builder() {
+            } 
+
+            private Builder(MoziConfOpenRecordSetting model) {
+                this.isFollowHost = model.isFollowHost;
+                this.mode = model.mode;
+                this.recordAutoStart = model.recordAutoStart;
+                this.recordAutoStartType = model.recordAutoStartType;
+            } 
 
             /**
              * IsFollowHost.
@@ -417,6 +434,15 @@ public class CreateScheduleConferenceRequest extends Request {
             private Integer autoOpenMode; 
             private String coolAppCode; 
             private String extensionAppBizData; 
+
+            private Builder() {
+            } 
+
+            private Builder(MoziConfExtensionAppSettings model) {
+                this.autoOpenMode = model.autoOpenMode;
+                this.coolAppCode = model.coolAppCode;
+                this.extensionAppBizData = model.extensionAppBizData;
+            } 
 
             /**
              * AutoOpenMode.
@@ -612,6 +638,24 @@ public class CreateScheduleConferenceRequest extends Request {
             private Boolean pushCloudRecordCard; 
             private Boolean pushMinutesCard; 
             private Integer waitingRoom; 
+
+            private Builder() {
+            } 
+
+            private Builder(MoziConfVirtualExtraSetting model) {
+                this.cloudRecordOwnerUserId = model.cloudRecordOwnerUserId;
+                this.enableChat = model.enableChat;
+                this.enableWebAnonymousJoin = model.enableWebAnonymousJoin;
+                this.joinBeforeHost = model.joinBeforeHost;
+                this.lockMediaStatusMicMute = model.lockMediaStatusMicMute;
+                this.lockNick = model.lockNick;
+                this.minutesOwnerUserId = model.minutesOwnerUserId;
+                this.moziConfExtensionAppSettings = model.moziConfExtensionAppSettings;
+                this.pushAllMeetingRecords = model.pushAllMeetingRecords;
+                this.pushCloudRecordCard = model.pushCloudRecordCard;
+                this.pushMinutesCard = model.pushMinutesCard;
+                this.waitingRoom = model.waitingRoom;
+            } 
 
             /**
              * CloudRecordOwnerUserId.
@@ -832,6 +876,20 @@ public class CreateScheduleConferenceRequest extends Request {
             private Integer muteOnJoin; 
             private Integer screenShareForbidden; 
 
+            private Builder() {
+            } 
+
+            private Builder(ScheduleConfSettingModel model) {
+                this.cohostUserIds = model.cohostUserIds;
+                this.confAllowedCorpId = model.confAllowedCorpId;
+                this.hostUserId = model.hostUserId;
+                this.lockRoom = model.lockRoom;
+                this.moziConfOpenRecordSetting = model.moziConfOpenRecordSetting;
+                this.moziConfVirtualExtraSetting = model.moziConfVirtualExtraSetting;
+                this.muteOnJoin = model.muteOnJoin;
+                this.screenShareForbidden = model.screenShareForbidden;
+            } 
+
             /**
              * CohostUserIds.
              */
@@ -934,6 +992,13 @@ public class CreateScheduleConferenceRequest extends Request {
 
         public static final class Builder {
             private String tenantId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TenantContext model) {
+                this.tenantId = model.tenantId;
+            } 
 
             /**
              * tenantId.

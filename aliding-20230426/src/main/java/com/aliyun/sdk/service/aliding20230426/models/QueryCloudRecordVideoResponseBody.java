@@ -36,6 +36,10 @@ public class QueryCloudRecordVideoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class QueryCloudRecordVideoResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<VideoList> videoList; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryCloudRecordVideoResponseBody model) {
+            this.requestId = model.requestId;
+            this.videoList = model.videoList;
+        } 
 
         /**
          * <p>requestId</p>
@@ -206,6 +218,21 @@ public class QueryCloudRecordVideoResponseBody extends TeaModel {
             private String regionId; 
             private Long startTime; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(VideoList model) {
+                this.duration = model.duration;
+                this.endTime = model.endTime;
+                this.fileSize = model.fileSize;
+                this.mediaId = model.mediaId;
+                this.recordId = model.recordId;
+                this.recordType = model.recordType;
+                this.regionId = model.regionId;
+                this.startTime = model.startTime;
+                this.userId = model.userId;
+            } 
 
             /**
              * Duration.

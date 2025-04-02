@@ -84,6 +84,10 @@ public class PatchEventResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return attendees
      */
@@ -197,6 +201,26 @@ public class PatchEventResponseBody extends TeaModel {
         private Start start; 
         private String summary; 
         private String updateTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(PatchEventResponseBody model) {
+            this.attendees = model.attendees;
+            this.createTime = model.createTime;
+            this.description = model.description;
+            this.end = model.end;
+            this.id = model.id;
+            this.isAllDay = model.isAllDay;
+            this.location = model.location;
+            this.organizer = model.organizer;
+            this.recurrence = model.recurrence;
+            this.reminders = model.reminders;
+            this.requestId = model.requestId;
+            this.start = model.start;
+            this.summary = model.summary;
+            this.updateTime = model.updateTime;
+        } 
 
         /**
          * attendees.
@@ -399,6 +423,17 @@ public class PatchEventResponseBody extends TeaModel {
             private String responseStatus; 
             private Boolean self; 
 
+            private Builder() {
+            } 
+
+            private Builder(Attendees model) {
+                this.displayName = model.displayName;
+                this.id = model.id;
+                this.isOptional = model.isOptional;
+                this.responseStatus = model.responseStatus;
+                this.self = model.self;
+            } 
+
             /**
              * DisplayName.
              */
@@ -502,6 +537,15 @@ public class PatchEventResponseBody extends TeaModel {
             private String dateTime; 
             private String timeZone; 
 
+            private Builder() {
+            } 
+
+            private Builder(End model) {
+                this.date = model.date;
+                this.dateTime = model.dateTime;
+                this.timeZone = model.timeZone;
+            } 
+
             /**
              * Date.
              */
@@ -576,6 +620,14 @@ public class PatchEventResponseBody extends TeaModel {
         public static final class Builder {
             private String displayName; 
             private java.util.List<String> meetingRooms; 
+
+            private Builder() {
+            } 
+
+            private Builder(Location model) {
+                this.displayName = model.displayName;
+                this.meetingRooms = model.meetingRooms;
+            } 
 
             /**
              * DisplayName.
@@ -667,6 +719,16 @@ public class PatchEventResponseBody extends TeaModel {
             private String id; 
             private String responseStatus; 
             private Boolean self; 
+
+            private Builder() {
+            } 
+
+            private Builder(Organizer model) {
+                this.displayName = model.displayName;
+                this.id = model.id;
+                this.responseStatus = model.responseStatus;
+                this.self = model.self;
+            } 
 
             /**
              * DisplayName.
@@ -787,6 +849,17 @@ public class PatchEventResponseBody extends TeaModel {
             private Integer interval; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Pattern model) {
+                this.dayOfMonth = model.dayOfMonth;
+                this.daysOfWeek = model.daysOfWeek;
+                this.index = model.index;
+                this.interval = model.interval;
+                this.type = model.type;
+            } 
+
             /**
              * DayOfMonth.
              */
@@ -890,6 +963,15 @@ public class PatchEventResponseBody extends TeaModel {
             private Integer numberOfOccurrences; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Range model) {
+                this.endDate = model.endDate;
+                this.numberOfOccurrences = model.numberOfOccurrences;
+                this.type = model.type;
+            } 
+
             /**
              * EndDate.
              */
@@ -965,6 +1047,14 @@ public class PatchEventResponseBody extends TeaModel {
             private Pattern pattern; 
             private Range range; 
 
+            private Builder() {
+            } 
+
+            private Builder(Recurrence model) {
+                this.pattern = model.pattern;
+                this.range = model.range;
+            } 
+
             /**
              * Pattern.
              */
@@ -1031,6 +1121,14 @@ public class PatchEventResponseBody extends TeaModel {
         public static final class Builder {
             private String method; 
             private String minutes; 
+
+            private Builder() {
+            } 
+
+            private Builder(Reminders model) {
+                this.method = model.method;
+                this.minutes = model.minutes;
+            } 
 
             /**
              * Method.
@@ -1110,6 +1208,15 @@ public class PatchEventResponseBody extends TeaModel {
             private String date; 
             private String dateTime; 
             private String timeZone; 
+
+            private Builder() {
+            } 
+
+            private Builder(Start model) {
+                this.date = model.date;
+                this.dateTime = model.dateTime;
+                this.timeZone = model.timeZone;
+            } 
 
             /**
              * Date.
