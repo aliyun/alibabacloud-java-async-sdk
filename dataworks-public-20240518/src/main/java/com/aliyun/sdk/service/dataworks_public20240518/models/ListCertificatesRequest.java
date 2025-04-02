@@ -195,7 +195,10 @@ public class ListCertificatesRequest extends Request {
         }
 
         /**
-         * CreateUser.
+         * <p>The ID of the user who created the certificate files.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1107550004253538</p>
          */
         public Builder createUser(String createUser) {
             this.putQueryParameter("CreateUser", createUser);
@@ -204,7 +207,10 @@ public class ListCertificatesRequest extends Request {
         }
 
         /**
-         * EndCreateTime.
+         * <p>The time when the certificate file was created. You can call this operation to query the files that are created before the time. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1593877765000</p>
          */
         public Builder endCreateTime(Long endCreateTime) {
             this.putQueryParameter("EndCreateTime", endCreateTime);
@@ -213,7 +219,10 @@ public class ListCertificatesRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the certificate file. Fuzzy match by file name is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xm_create_test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -222,7 +231,10 @@ public class ListCertificatesRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The order in which you want to sort the certificate files. Valid values: Desc: descending order ASC: ascending order Default value: Asc</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Asc</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -231,7 +243,10 @@ public class ListCertificatesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -240,7 +255,10 @@ public class ListCertificatesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -249,6 +267,7 @@ public class ListCertificatesRequest extends Request {
         }
 
         /**
+         * <p>The ID of the workspace to which the certificate file belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -261,7 +280,10 @@ public class ListCertificatesRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The field used to sort the certificate files. Valid values: CreateTime Id Name Default value: Id</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Id</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -270,7 +292,10 @@ public class ListCertificatesRequest extends Request {
         }
 
         /**
-         * StartCreateTime.
+         * <p>The time when the certificate file was created. You can call this operation to query the files that are created after the time. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1730217600000</p>
          */
         public Builder startCreateTime(Long startCreateTime) {
             this.putQueryParameter("StartCreateTime", startCreateTime);

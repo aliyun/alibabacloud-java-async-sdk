@@ -1135,10 +1135,14 @@ public class ListNodesResponseBody extends TeaModel {
      * <p>ListNodesResponseBody</p>
      */
     public static class RuntimeResource extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ResourceGroup")
+        private String resourceGroup;
+
         @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
         private RuntimeResource(Builder builder) {
+            this.resourceGroup = builder.resourceGroup;
             this.resourceGroupId = builder.resourceGroupId;
         }
 
@@ -1151,6 +1155,13 @@ public class ListNodesResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroup
+         */
+        public String getResourceGroup() {
+            return this.resourceGroup;
+        }
+
+        /**
          * @return resourceGroupId
          */
         public String getResourceGroupId() {
@@ -1158,14 +1169,24 @@ public class ListNodesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String resourceGroup; 
             private String resourceGroupId; 
 
             private Builder() {
             } 
 
             private Builder(RuntimeResource model) {
+                this.resourceGroup = model.resourceGroup;
                 this.resourceGroupId = model.resourceGroupId;
             } 
+
+            /**
+             * ResourceGroup.
+             */
+            public Builder resourceGroup(String resourceGroup) {
+                this.resourceGroup = resourceGroup;
+                return this;
+            }
 
             /**
              * <p>The resource group ID.</p>

@@ -2007,7 +2007,12 @@ public class GetDIJobResponseBody extends TeaModel {
             }
 
             /**
-             * JobType.
+             * <p>DatabaseRealtimeMigration (Full Database Real-Time): Perform stream synchronization of multiple tables from multiple source databases. Supports full data only, incremental only, or full + incremental.</p>
+             * <p>DatabaseOfflineMigration (Full Database Offline): Perform batch synchronization of multiple tables from multiple source databases. Supports full data only, incremental only, or full + incremental.</p>
+             * <p>SingleTableRealtimeMigration (Single Table Real-Time): Perform stream synchronization of a single table from the source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DatabaseRealtimeMigration</p>
              */
             public Builder jobType(String jobType) {
                 this.jobType = jobType;

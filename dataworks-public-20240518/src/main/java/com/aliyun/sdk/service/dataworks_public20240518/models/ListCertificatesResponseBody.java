@@ -67,7 +67,7 @@ public class ListCertificatesResponseBody extends TeaModel {
         } 
 
         /**
-         * PagingInfo.
+         * <p>The pagination information.</p>
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;
@@ -75,7 +75,10 @@ public class ListCertificatesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecb967ec-c137-48****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +196,10 @@ public class ListCertificatesResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The time when the certificate file was created. This value is a UNIX timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1730217600000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -201,7 +207,10 @@ public class ListCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateUser.
+             * <p>The ID of the user who created the certificate file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1107550004253538</p>
              */
             public Builder createUser(String createUser) {
                 this.createUser = createUser;
@@ -209,7 +218,10 @@ public class ListCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is a file</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -217,7 +229,10 @@ public class ListCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * FileSizeInBytes.
+             * <p>The size of the certificate file, in bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder fileSizeInBytes(Long fileSizeInBytes) {
                 this.fileSizeInBytes = fileSizeInBytes;
@@ -225,7 +240,10 @@ public class ListCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the certificate file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>676303114031776</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -233,7 +251,10 @@ public class ListCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the certificate file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ca1.crt</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -326,7 +347,7 @@ public class ListCertificatesResponseBody extends TeaModel {
             } 
 
             /**
-             * Certificates.
+             * <p>The certificate files.</p>
              */
             public Builder certificates(java.util.List<Certificates> certificates) {
                 this.certificates = certificates;
@@ -334,7 +355,10 @@ public class ListCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -342,7 +366,10 @@ public class ListCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -350,7 +377,10 @@ public class ListCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

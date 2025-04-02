@@ -126,8 +126,7 @@ public class ListDataAssetTagsRequest extends Request {
         }
 
         /**
-         * <p>The type of the tag.</p>
-         * <p>Valid values:</p>
+         * <p>The type of the tag. Valid values:</p>
          * <ul>
          * <li>Normal</li>
          * <li>System</li>

@@ -210,7 +210,6 @@ public class ListWorkflowInstancesRequest extends Request {
         }
 
         /**
-         * <p>业务日期。</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -314,13 +313,13 @@ public class ListWorkflowInstancesRequest extends Request {
         }
 
         /**
-         * <p>工作流实例的类型。</p>
+         * <p>The type of the workflow instance. Valid values:</p>
          * <ul>
-         * <li>Normal：周期调度</li>
-         * <li>Manual：手动任务</li>
-         * <li>SmokeTest：测试</li>
-         * <li>SupplementData：补数据</li>
-         * <li>ManualWorkflow：手动工作流</li>
+         * <li>Normal</li>
+         * <li>Manual</li>
+         * <li>SmokeTest</li>
+         * <li>SupplementData</li>
+         * <li>ManualWorkflow</li>
          * </ul>
          * 
          * <strong>example:</strong>

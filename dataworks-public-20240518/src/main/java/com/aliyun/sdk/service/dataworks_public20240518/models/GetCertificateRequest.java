@@ -97,6 +97,7 @@ public class GetCertificateRequest extends Request {
         }
 
         /**
+         * <p>The ID of the certificate file.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -109,7 +110,10 @@ public class GetCertificateRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The ID of the workspace to which the certificate file belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1065601</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);

@@ -67,7 +67,7 @@ public class GetCertificateResponseBody extends TeaModel {
         } 
 
         /**
-         * Certificate.
+         * <p>The details of the certificate file.</p>
          */
         public Builder certificate(Certificate certificate) {
             this.certificate = certificate;
@@ -75,7 +75,10 @@ public class GetCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-EFG****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -206,7 +209,10 @@ public class GetCertificateResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The time when the certificate file was created. The value is a UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1730217600000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -214,7 +220,10 @@ public class GetCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * CreateUser.
+             * <p>The ID of the user who created the certificate file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1107550004253538</p>
              */
             public Builder createUser(String createUser) {
                 this.createUser = createUser;
@@ -222,7 +231,10 @@ public class GetCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is a file</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -230,7 +242,10 @@ public class GetCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * FileSizeInBytes.
+             * <p>The size of the certificate file, in bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>77549</p>
              */
             public Builder fileSizeInBytes(Long fileSizeInBytes) {
                 this.fileSizeInBytes = fileSizeInBytes;
@@ -238,7 +253,10 @@ public class GetCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the certificate file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>676303114031776</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -246,7 +264,10 @@ public class GetCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the certificate file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ca1.crt</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -254,7 +275,10 @@ public class GetCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The ID of the workspace to which the certificate file belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>177161</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
