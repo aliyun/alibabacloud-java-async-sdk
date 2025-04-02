@@ -56,6 +56,10 @@ public class ContainerSpec extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return args
      */
@@ -113,6 +117,19 @@ public class ContainerSpec extends TeaModel {
         private String name; 
         private ResourceRequirements resources; 
         private String workingDir; 
+
+        private Builder() {
+        } 
+
+        private Builder(ContainerSpec model) {
+            this.args = model.args;
+            this.command = model.command;
+            this.env = model.env;
+            this.image = model.image;
+            this.name = model.name;
+            this.resources = model.resources;
+            this.workingDir = model.workingDir;
+        } 
 
         /**
          * Args.

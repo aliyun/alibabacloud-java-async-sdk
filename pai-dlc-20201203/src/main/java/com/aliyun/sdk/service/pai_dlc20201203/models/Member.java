@@ -36,6 +36,10 @@ public class Member extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return memberId
      */
@@ -53,6 +57,14 @@ public class Member extends TeaModel {
     public static final class Builder {
         private String memberId; 
         private String memberType; 
+
+        private Builder() {
+        } 
+
+        private Builder(Member model) {
+            this.memberId = model.memberId;
+            this.memberType = model.memberType;
+        } 
 
         /**
          * MemberId.

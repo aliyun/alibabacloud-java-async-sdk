@@ -60,6 +60,10 @@ public class TensorboardDataSourceSpec extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataSourceType
      */
@@ -125,6 +129,20 @@ public class TensorboardDataSourceSpec extends TeaModel {
         private String sourceType; 
         private String summaryPath; 
         private String uri; 
+
+        private Builder() {
+        } 
+
+        private Builder(TensorboardDataSourceSpec model) {
+            this.dataSourceType = model.dataSourceType;
+            this.directoryName = model.directoryName;
+            this.fullSummaryPath = model.fullSummaryPath;
+            this.id = model.id;
+            this.name = model.name;
+            this.sourceType = model.sourceType;
+            this.summaryPath = model.summaryPath;
+            this.uri = model.uri;
+        } 
 
         /**
          * DataSourceType.

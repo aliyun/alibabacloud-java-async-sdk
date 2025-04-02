@@ -192,6 +192,10 @@ public class GetJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessibility
      */
@@ -522,8 +526,62 @@ public class GetJobResponseBody extends TeaModel {
         private String workspaceId; 
         private String workspaceName; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetJobResponseBody model) {
+            this.accessibility = model.accessibility;
+            this.clusterId = model.clusterId;
+            this.codeSource = model.codeSource;
+            this.credentialConfig = model.credentialConfig;
+            this.dataSources = model.dataSources;
+            this.displayName = model.displayName;
+            this.duration = model.duration;
+            this.elasticSpec = model.elasticSpec;
+            this.enabledDebugger = model.enabledDebugger;
+            this.envs = model.envs;
+            this.gmtCreateTime = model.gmtCreateTime;
+            this.gmtFailedTime = model.gmtFailedTime;
+            this.gmtFinishTime = model.gmtFinishTime;
+            this.gmtRunningTime = model.gmtRunningTime;
+            this.gmtStoppedTime = model.gmtStoppedTime;
+            this.gmtSubmittedTime = model.gmtSubmittedTime;
+            this.gmtSuccessedTime = model.gmtSuccessedTime;
+            this.jobId = model.jobId;
+            this.jobSpecs = model.jobSpecs;
+            this.jobType = model.jobType;
+            this.pods = model.pods;
+            this.priority = model.priority;
+            this.reasonCode = model.reasonCode;
+            this.reasonMessage = model.reasonMessage;
+            this.requestId = model.requestId;
+            this.resourceId = model.resourceId;
+            this.resourceLevel = model.resourceLevel;
+            this.resourceType = model.resourceType;
+            this.restartTimes = model.restartTimes;
+            this.settings = model.settings;
+            this.status = model.status;
+            this.statusHistory = model.statusHistory;
+            this.subStatus = model.subStatus;
+            this.tenantId = model.tenantId;
+            this.thirdpartyLibDir = model.thirdpartyLibDir;
+            this.thirdpartyLibs = model.thirdpartyLibs;
+            this.userCommand = model.userCommand;
+            this.userId = model.userId;
+            this.userVpc = model.userVpc;
+            this.workspaceId = model.workspaceId;
+            this.workspaceName = model.workspaceName;
+        } 
+
         /**
-         * Accessibility.
+         * <p>The visibility of the job. Valid values:</p>
+         * <ul>
+         * <li>PUBLIC: The code is public in the workspace.</li>
+         * <li>PRIVATE: The workspace is visible only to you and the administrator of the workspace. This is the default value.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PRIVATE</p>
          */
         public Builder accessibility(String accessibility) {
             this.accessibility = accessibility;
@@ -531,7 +589,10 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * ClusterId.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a*****</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -539,7 +600,7 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * CodeSource.
+         * <p>The code source.</p>
          */
         public Builder codeSource(CodeSource codeSource) {
             this.codeSource = codeSource;
@@ -547,7 +608,7 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * CredentialConfig.
+         * <p>The access credential configurations.</p>
          */
         public Builder credentialConfig(CredentialConfig credentialConfig) {
             this.credentialConfig = credentialConfig;
@@ -555,7 +616,7 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * DataSources.
+         * <p>The data sources.</p>
          */
         public Builder dataSources(java.util.List<DataSources> dataSources) {
             this.dataSources = dataSources;
@@ -563,7 +624,10 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * DisplayName.
+         * <p>The job name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tf-mnist-test</p>
          */
         public Builder displayName(String displayName) {
             this.displayName = displayName;
@@ -571,7 +635,10 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * Duration.
+         * <p>The duration of the job (seconds).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3602</p>
          */
         public Builder duration(Long duration) {
             this.duration = duration;
@@ -579,7 +646,7 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * ElasticSpec.
+         * <p>The elastic job parameters.</p>
          */
         public Builder elasticSpec(JobElasticSpec elasticSpec) {
             this.elasticSpec = elasticSpec;
@@ -587,7 +654,10 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * EnabledDebugger.
+         * <p>Specifies whether to enable the debugger job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enabledDebugger(Boolean enabledDebugger) {
             this.enabledDebugger = enabledDebugger;
@@ -595,7 +665,7 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * Envs.
+         * <p>The configurations of environment variables.</p>
          */
         public Builder envs(java.util.Map<String, String> envs) {
             this.envs = envs;
@@ -603,7 +673,10 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * GmtCreateTime.
+         * <p>The time when the job was created (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-12T14:35:01Z</p>
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -611,7 +684,10 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * GmtFailedTime.
+         * <p>The time of the job failed (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-12T15:36:08Z</p>
          */
         public Builder gmtFailedTime(String gmtFailedTime) {
             this.gmtFailedTime = gmtFailedTime;
@@ -619,7 +695,10 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * GmtFinishTime.
+         * <p>The time when the job ended (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-12T15:36:08Z</p>
          */
         public Builder gmtFinishTime(String gmtFinishTime) {
             this.gmtFinishTime = gmtFinishTime;
@@ -627,7 +706,10 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * GmtRunningTime.
+         * <p>The start time of the job (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-12T14:36:21Z</p>
          */
         public Builder gmtRunningTime(String gmtRunningTime) {
             this.gmtRunningTime = gmtRunningTime;
@@ -635,7 +717,10 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * GmtStoppedTime.
+         * <p>The time when the job stopped (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-12T15:36:08Z</p>
          */
         public Builder gmtStoppedTime(String gmtStoppedTime) {
             this.gmtStoppedTime = gmtStoppedTime;
@@ -643,7 +728,10 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * GmtSubmittedTime.
+         * <p>The time when the job was submitted to the cluster (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-12T14:36:01Z</p>
          */
         public Builder gmtSubmittedTime(String gmtSubmittedTime) {
             this.gmtSubmittedTime = gmtSubmittedTime;
@@ -651,7 +739,10 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * GmtSuccessedTime.
+         * <p>The time when the job succeeded (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-12T15:36:08Z</p>
          */
         public Builder gmtSuccessedTime(String gmtSuccessedTime) {
             this.gmtSuccessedTime = gmtSuccessedTime;
@@ -659,7 +750,10 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * JobId.
+         * <p>The job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dlc*******</p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -667,7 +761,7 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * JobSpecs.
+         * <p>The node configurations of the job, which is <strong>JobSpecs</strong> in the CreateJob operation.</p>
          */
         public Builder jobSpecs(java.util.List<JobSpec> jobSpecs) {
             this.jobSpecs = jobSpecs;
@@ -675,7 +769,10 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * JobType.
+         * <p>The job type. Specified by the JobType parameter of the <a href="https://help.aliyun.com/document_detail/459672.html">CreateJob</a> operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TFJob</p>
          */
         public Builder jobType(String jobType) {
             this.jobType = jobType;
@@ -683,7 +780,7 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * Pods.
+         * <p>All running nodes of the job.</p>
          */
         public Builder pods(java.util.List<Pods> pods) {
             this.pods = pods;
@@ -691,7 +788,10 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * Priority.
+         * <p>The priority of the job. Valid values: 1 to 9.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder priority(Integer priority) {
             this.priority = priority;
@@ -699,7 +799,10 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * ReasonCode.
+         * <p>The status detail code, which is a sub-status under the current status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>JobStoppedByUser</p>
          */
         public Builder reasonCode(String reasonCode) {
             this.reasonCode = reasonCode;
@@ -707,7 +810,10 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * ReasonMessage.
+         * <p>The description of the status detail code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Job is stopped by user.</p>
          */
         public Builder reasonMessage(String reasonMessage) {
             this.reasonMessage = reasonMessage;
@@ -715,7 +821,10 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID, which can be used for troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-xxxxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -723,7 +832,10 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceId.
+         * <p>The ID of the resource group to which the job belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r******</p>
          */
         public Builder resourceId(String resourceId) {
             this.resourceId = resourceId;
@@ -731,7 +843,10 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceLevel.
+         * <p>The resource level that the job uses.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>L0</p>
          */
         public Builder resourceLevel(String resourceLevel) {
             this.resourceLevel = resourceLevel;
@@ -739,7 +854,10 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceType.
+         * <p>The resource type. Valid values: ECS, Lingjun, and ACS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS</p>
          */
         public Builder resourceType(String resourceType) {
             this.resourceType = resourceType;
@@ -747,7 +865,10 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * RestartTimes.
+         * <p>The number of retries and the maximum number of retries used by the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0/10</p>
          */
         public Builder restartTimes(String restartTimes) {
             this.restartTimes = restartTimes;
@@ -755,7 +876,7 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * Settings.
+         * <p>The settings of the additional parameters of the job.</p>
          */
         public Builder settings(JobSettings settings) {
             this.settings = settings;
@@ -763,7 +884,25 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the job. Valid values:</p>
+         * <ul>
+         * <li>Creating</li>
+         * <li>Queuing</li>
+         * <li>Bidding (Only for Lingjun preemptible jobs)</li>
+         * <li>EnvPreparing</li>
+         * <li>SanityChecking</li>
+         * <li>Running</li>
+         * <li>Restarting</li>
+         * <li>Stopping</li>
+         * <li>SucceededReserving</li>
+         * <li>FailedReserving</li>
+         * <li>Succeeded</li>
+         * <li>Failed</li>
+         * <li>Stopped</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Stopped</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -771,7 +910,7 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * StatusHistory.
+         * <p>The status history.</p>
          */
         public Builder statusHistory(java.util.List<StatusTransitionItem> statusHistory) {
             this.statusHistory = statusHistory;
@@ -779,7 +918,10 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * SubStatus.
+         * <p>The sub-status of the job, such as its preemption status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Restarting</p>
          */
         public Builder subStatus(String subStatus) {
             this.subStatus = subStatus;
@@ -787,7 +929,10 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * TenantId.
+         * <p>The tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GAR***W134</p>
          */
         public Builder tenantId(String tenantId) {
             this.tenantId = tenantId;
@@ -795,7 +940,10 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * ThirdpartyLibDir.
+         * <p>The directory that contains requirements.txt.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/root/code/</p>
          */
         public Builder thirdpartyLibDir(String thirdpartyLibDir) {
             this.thirdpartyLibDir = thirdpartyLibDir;
@@ -803,7 +951,7 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * ThirdpartyLibs.
+         * <p>The third-party Python libraries to be installed.</p>
          */
         public Builder thirdpartyLibs(java.util.List<String> thirdpartyLibs) {
             this.thirdpartyLibs = thirdpartyLibs;
@@ -811,7 +959,10 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * UserCommand.
+         * <p>The command that is run to start each node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>python /root/code/mnist.py</p>
          */
         public Builder userCommand(String userCommand) {
             this.userCommand = userCommand;
@@ -819,7 +970,10 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * UserId.
+         * <p>The UID of the Alibaba Cloud account who submitted the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12*********</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;
@@ -827,7 +981,7 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * UserVpc.
+         * <p>The VPC of the user.</p>
          */
         public Builder userVpc(UserVpc userVpc) {
             this.userVpc = userVpc;
@@ -835,7 +989,10 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The ID of the workspace to which the job belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>268</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = workspaceId;
@@ -843,7 +1000,10 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * WorkspaceName.
+         * <p>The name of the workspace to which the job belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dlc-workspace</p>
          */
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = workspaceName;
@@ -924,8 +1084,21 @@ public class GetJobResponseBody extends TeaModel {
             private String commit; 
             private String mountPath; 
 
+            private Builder() {
+            } 
+
+            private Builder(CodeSource model) {
+                this.branch = model.branch;
+                this.codeSourceId = model.codeSourceId;
+                this.commit = model.commit;
+                this.mountPath = model.mountPath;
+            } 
+
             /**
-             * Branch.
+             * <p>The code branch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>master</p>
              */
             public Builder branch(String branch) {
                 this.branch = branch;
@@ -933,7 +1106,10 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * CodeSourceId.
+             * <p>The code source ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>code******</p>
              */
             public Builder codeSourceId(String codeSourceId) {
                 this.codeSourceId = codeSourceId;
@@ -941,7 +1117,10 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * Commit.
+             * <p>The code commit ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>44da109b59f8596152987eaa8f3b2487xxxxxx</p>
              */
             public Builder commit(String commit) {
                 this.commit = commit;
@@ -949,7 +1128,10 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * MountPath.
+             * <p>The local mount path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/mnt/data</p>
              */
             public Builder mountPath(String mountPath) {
                 this.mountPath = mountPath;
@@ -1019,8 +1201,20 @@ public class GetJobResponseBody extends TeaModel {
             private String mountPath; 
             private String uri; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataSources model) {
+                this.dataSourceId = model.dataSourceId;
+                this.mountPath = model.mountPath;
+                this.uri = model.uri;
+            } 
+
             /**
-             * DataSourceId.
+             * <p>The data source ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d*******</p>
              */
             public Builder dataSourceId(String dataSourceId) {
                 this.dataSourceId = dataSourceId;
@@ -1028,7 +1222,10 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * MountPath.
+             * <p>The local mount path. This parameter is optional. The default value is empty, which specifies that the mount path in the data source is used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/mnt/data/</p>
              */
             public Builder mountPath(String mountPath) {
                 this.mountPath = mountPath;
@@ -1036,7 +1233,10 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * Uri.
+             * <p>The data source URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://bucket.oss-cn-hangzhou-internal.aliyuncs.com/path/</p>
              */
             public Builder uri(String uri) {
                 this.uri = uri;
@@ -1190,8 +1390,27 @@ public class GetJobResponseBody extends TeaModel {
             private String subStatus; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(HistoryPods model) {
+                this.gmtCreateTime = model.gmtCreateTime;
+                this.gmtFinishTime = model.gmtFinishTime;
+                this.gmtStartTime = model.gmtStartTime;
+                this.ip = model.ip;
+                this.podId = model.podId;
+                this.podUid = model.podUid;
+                this.resourceType = model.resourceType;
+                this.status = model.status;
+                this.subStatus = model.subStatus;
+                this.type = model.type;
+            } 
+
             /**
-             * GmtCreateTime.
+             * <p>The time when the node was created (UTC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-12T14:36:01Z</p>
              */
             public Builder gmtCreateTime(String gmtCreateTime) {
                 this.gmtCreateTime = gmtCreateTime;
@@ -1199,7 +1418,10 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * GmtFinishTime.
+             * <p>The end time of the node (UTC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-12T14:36:01Z</p>
              */
             public Builder gmtFinishTime(String gmtFinishTime) {
                 this.gmtFinishTime = gmtFinishTime;
@@ -1207,7 +1429,10 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * GmtStartTime.
+             * <p>The start time of the node (UTC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-12T14:36:01Z</p>
              */
             public Builder gmtStartTime(String gmtStartTime) {
                 this.gmtStartTime = gmtStartTime;
@@ -1215,7 +1440,10 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * Ip.
+             * <p>The IP address of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0.1.3</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -1223,7 +1451,10 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * PodId.
+             * <p>The ID of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Worker</p>
              */
             public Builder podId(String podId) {
                 this.podId = podId;
@@ -1231,7 +1462,10 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * PodUid.
+             * <p>The UID of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fe846462-af2c-4521-bd6f-96787a57591d</p>
              */
             public Builder podUid(String podUid) {
                 this.podUid = podUid;
@@ -1239,7 +1473,10 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * <p>The resource type of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -1247,7 +1484,10 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Failed</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1255,7 +1495,14 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * SubStatus.
+             * <p>The sub-status of the node, such as its preemption status. Valid values:</p>
+             * <ul>
+             * <li>Normal</li>
+             * <li>Evicted</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder subStatus(String subStatus) {
                 this.subStatus = subStatus;
@@ -1263,7 +1510,10 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Worker</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1429,8 +1679,28 @@ public class GetJobResponseBody extends TeaModel {
             private String subStatus; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Pods model) {
+                this.gmtCreateTime = model.gmtCreateTime;
+                this.gmtFinishTime = model.gmtFinishTime;
+                this.gmtStartTime = model.gmtStartTime;
+                this.historyPods = model.historyPods;
+                this.ip = model.ip;
+                this.podId = model.podId;
+                this.podUid = model.podUid;
+                this.resourceType = model.resourceType;
+                this.status = model.status;
+                this.subStatus = model.subStatus;
+                this.type = model.type;
+            } 
+
             /**
-             * GmtCreateTime.
+             * <p>The time when the node was created (UTC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-12T14:36:01Z</p>
              */
             public Builder gmtCreateTime(String gmtCreateTime) {
                 this.gmtCreateTime = gmtCreateTime;
@@ -1438,7 +1708,10 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * GmtFinishTime.
+             * <p>The end time of the node (UTC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-12T15:36:05Z</p>
              */
             public Builder gmtFinishTime(String gmtFinishTime) {
                 this.gmtFinishTime = gmtFinishTime;
@@ -1446,7 +1719,10 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * GmtStartTime.
+             * <p>The start time of the node (UTC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-12T14:36:01Z</p>
              */
             public Builder gmtStartTime(String gmtStartTime) {
                 this.gmtStartTime = gmtStartTime;
@@ -1454,7 +1730,7 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * HistoryPods.
+             * <p>The historical nodes.</p>
              */
             public Builder historyPods(java.util.List<HistoryPods> historyPods) {
                 this.historyPods = historyPods;
@@ -1462,7 +1738,10 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * Ip.
+             * <p>The IP address of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0.1.2</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -1470,7 +1749,10 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * PodId.
+             * <p>The node ID. It can be used in the GetPodLogs and GetPodEvents operations to obtain the detailed logs and events of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Worker</p>
              */
             public Builder podId(String podId) {
                 this.podId = podId;
@@ -1478,7 +1760,10 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * PodUid.
+             * <p>The UID of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fe846462-af2c-4521-bd6f-96787a57591d</p>
              */
             public Builder podUid(String podUid) {
                 this.podUid = podUid;
@@ -1486,7 +1771,10 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * <p>The resource type of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -1494,7 +1782,17 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the node. Valid values:</p>
+             * <ul>
+             * <li>Pending</li>
+             * <li>Running</li>
+             * <li>Succeeded</li>
+             * <li>Failed</li>
+             * <li>Unknown</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1502,7 +1800,14 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * SubStatus.
+             * <p>The sub-status of the node, such as its preemption status. Valid values:</p>
+             * <ul>
+             * <li>Normal</li>
+             * <li>Evicted</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder subStatus(String subStatus) {
                 this.subStatus = subStatus;
@@ -1510,7 +1815,10 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The node type, which corresponds to a specific JobSpec in JobSpecs of the CreateJob operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Worker</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1604,8 +1912,20 @@ public class GetJobResponseBody extends TeaModel {
             private String switchId; 
             private String vpcId; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserVpc model) {
+                this.defaultRoute = model.defaultRoute;
+                this.extendedCidrs = model.extendedCidrs;
+                this.securityGroupId = model.securityGroupId;
+                this.switchId = model.switchId;
+                this.vpcId = model.vpcId;
+            } 
+
             /**
-             * DefaultRoute.
+             * <p>The default router. This parameter is valid only for general-purpose computing resources. Valid values:</p>
+             * <p>eth0: The default network interface is used to access the Internet through the public gateway. eth1: The user&quot;s Elastic Network Interface is used to access the Internet through the private gateway.</p>
              */
             public Builder defaultRoute(String defaultRoute) {
                 this.defaultRoute = defaultRoute;
@@ -1613,7 +1933,7 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * ExtendedCidrs.
+             * <p>The extended CIDR block. Example: 192.168.0.1/24.</p>
              */
             public Builder extendedCidrs(java.util.List<String> extendedCidrs) {
                 this.extendedCidrs = extendedCidrs;
@@ -1621,7 +1941,10 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupId.
+             * <p>The security group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-abcdef****</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -1629,7 +1952,10 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * SwitchId.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vs-abcdef****</p>
              */
             public Builder switchId(String switchId) {
                 this.switchId = switchId;
@@ -1637,7 +1963,10 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * <p>The VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-abcdef****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

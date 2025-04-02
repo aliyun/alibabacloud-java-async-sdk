@@ -40,7 +40,7 @@ public class StartTensorboardRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -74,6 +74,7 @@ public class StartTensorboardRequest extends Request {
         } 
 
         /**
+         * <p>The TensorBoard instance ID. For more information about how to obtain the TensorBoard instance ID, see <a href="https://help.aliyun.com/document_detail/459689.html">ListTensorboards</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,11 @@ public class StartTensorboardRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID. 
+         * &lt;props=&quot;china&quot;&gt;For more information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>380</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

@@ -52,6 +52,10 @@ public class AIMasterMessage extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return extended
      */
@@ -101,6 +105,18 @@ public class AIMasterMessage extends TeaModel {
         private String messageEvent; 
         private Integer messageVersion; 
         private String restartType; 
+
+        private Builder() {
+        } 
+
+        private Builder(AIMasterMessage model) {
+            this.extended = model.extended;
+            this.jobRestartCount = model.jobRestartCount;
+            this.messageContent = model.messageContent;
+            this.messageEvent = model.messageEvent;
+            this.messageVersion = model.messageVersion;
+            this.restartType = model.restartType;
+        } 
 
         /**
          * Extended.

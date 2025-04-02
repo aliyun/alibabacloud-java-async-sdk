@@ -40,6 +40,10 @@ public class ListTensorboardsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -66,8 +70,20 @@ public class ListTensorboardsResponseBody extends TeaModel {
         private java.util.List<Tensorboard> tensorboards; 
         private Long totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListTensorboardsResponseBody model) {
+            this.requestId = model.requestId;
+            this.tensorboards = model.tensorboards;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +91,7 @@ public class ListTensorboardsResponseBody extends TeaModel {
         }
 
         /**
-         * Tensorboards.
+         * <p>The TensorBoard instances.</p>
          */
         public Builder tensorboards(java.util.List<Tensorboard> tensorboards) {
             this.tensorboards = tensorboards;
@@ -83,7 +99,10 @@ public class ListTensorboardsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of data sources that meet the conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;

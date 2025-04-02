@@ -84,6 +84,10 @@ public class DebuggerJob extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return debuggerJobId
      */
@@ -197,6 +201,26 @@ public class DebuggerJob extends TeaModel {
         private String userId; 
         private String workspaceId; 
         private String workspaceName; 
+
+        private Builder() {
+        } 
+
+        private Builder(DebuggerJob model) {
+            this.debuggerJobId = model.debuggerJobId;
+            this.displayName = model.displayName;
+            this.duration = model.duration;
+            this.gmtCreateTime = model.gmtCreateTime;
+            this.gmtFailedTime = model.gmtFailedTime;
+            this.gmtFinishTime = model.gmtFinishTime;
+            this.gmtRunningTime = model.gmtRunningTime;
+            this.gmtStoppedTime = model.gmtStoppedTime;
+            this.gmtSubmittedTime = model.gmtSubmittedTime;
+            this.gmtSucceedTime = model.gmtSucceedTime;
+            this.status = model.status;
+            this.userId = model.userId;
+            this.workspaceId = model.workspaceId;
+            this.workspaceName = model.workspaceName;
+        } 
 
         /**
          * DebuggerJobId.

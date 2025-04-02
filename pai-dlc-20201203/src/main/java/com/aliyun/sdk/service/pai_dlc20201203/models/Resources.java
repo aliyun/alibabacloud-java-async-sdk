@@ -40,6 +40,10 @@ public class Resources extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return CPU
      */
@@ -65,6 +69,15 @@ public class Resources extends TeaModel {
         private String CPU; 
         private String GPU; 
         private String memory; 
+
+        private Builder() {
+        } 
+
+        private Builder(Resources model) {
+            this.CPU = model.CPU;
+            this.GPU = model.GPU;
+            this.memory = model.memory;
+        } 
 
         /**
          * CPU.

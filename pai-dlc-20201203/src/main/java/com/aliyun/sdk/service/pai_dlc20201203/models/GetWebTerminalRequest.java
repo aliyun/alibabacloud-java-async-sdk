@@ -49,7 +49,7 @@ public class GetWebTerminalRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -101,7 +101,10 @@ public class GetWebTerminalRequest extends Request {
         } 
 
         /**
-         * JobId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dlc-20210126170216-******</p>
          */
         public Builder jobId(String jobId) {
             this.putPathParameter("JobId", jobId);
@@ -110,7 +113,10 @@ public class GetWebTerminalRequest extends Request {
         }
 
         /**
-         * PodId.
+         * <p>The ID of the pod in the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dlc-20210126170216-****-chief-0</p>
          */
         public Builder podId(String podId) {
             this.putPathParameter("PodId", podId);
@@ -119,7 +125,14 @@ public class GetWebTerminalRequest extends Request {
         }
 
         /**
-         * IsShared.
+         * <p>Specifies whether to create a shareable link to access the container. Valid values:</p>
+         * <ul>
+         * <li>true: returns a shareable link to access the container. The link will expire after 30 seconds and can only be used once. After you access the container by using the link, other requests that use this link to access the container become invalid.</li>
+         * <li>false: returns a common shareable link to access the container. If you use a common shareable link to access a container, Alibaba Cloud identity authentication is required. The link will expire after 30 seconds.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isShared(Boolean isShared) {
             this.putQueryParameter("IsShared", isShared);
@@ -128,7 +141,7 @@ public class GetWebTerminalRequest extends Request {
         }
 
         /**
-         * <p>Pod UID。</p>
+         * <p>The pod UID.</p>
          * 
          * <strong>example:</strong>
          * <p>94a7cc7c-0033-48b5-85bd-71c63592c268</p>

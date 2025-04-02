@@ -44,6 +44,10 @@ public class TensorboardSpec extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ecsType
      */
@@ -77,6 +81,16 @@ public class TensorboardSpec extends TeaModel {
         private String securityGroupId; 
         private String switchId; 
         private String vpcId; 
+
+        private Builder() {
+        } 
+
+        private Builder(TensorboardSpec model) {
+            this.ecsType = model.ecsType;
+            this.securityGroupId = model.securityGroupId;
+            this.switchId = model.switchId;
+            this.vpcId = model.vpcId;
+        } 
 
         /**
          * EcsType.

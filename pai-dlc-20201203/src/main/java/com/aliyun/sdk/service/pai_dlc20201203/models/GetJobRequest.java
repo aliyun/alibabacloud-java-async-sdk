@@ -40,7 +40,7 @@ public class GetJobRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -74,6 +74,7 @@ public class GetJobRequest extends Request {
         } 
 
         /**
+         * <p>The job ID. Call <a href="https://help.aliyun.com/document_detail/459676.html">ListJobs</a> to get the job ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,10 @@ public class GetJobRequest extends Request {
         }
 
         /**
-         * NeedDetail.
+         * <p>Specifies whether to return the job details. Default value: true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder needDetail(Boolean needDetail) {
             this.putQueryParameter("NeedDetail", needDetail);

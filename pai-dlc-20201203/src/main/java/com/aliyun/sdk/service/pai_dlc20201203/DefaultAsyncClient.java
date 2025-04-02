@@ -31,12 +31,9 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.version = "2020-12-03";
         this.endpointRule = "regional";
         this.endpointMap = CommonUtil.buildMap(
-            new TeaPair("ap-northeast-1", "pai-dlc.aliyuncs.com"),
             new TeaPair("ap-northeast-2-pop", "pai-dlc.aliyuncs.com"),
             new TeaPair("ap-south-1", "pai-dlc.aliyuncs.com"),
             new TeaPair("ap-southeast-2", "pai-dlc.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "pai-dlc.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "pai-dlc.aliyuncs.com"),
             new TeaPair("cn-beijing-finance-1", "pai-dlc.aliyuncs.com"),
             new TeaPair("cn-beijing-finance-pop", "pai-dlc.aliyuncs.com"),
             new TeaPair("cn-beijing-gov-1", "pai-dlc.aliyuncs.com"),
@@ -67,7 +64,6 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("cn-shenzhen-st4-d01", "pai-dlc.aliyuncs.com"),
             new TeaPair("cn-shenzhen-su18-b01", "pai-dlc.aliyuncs.com"),
             new TeaPair("cn-wuhan", "pai-dlc.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu", "pai-dlc.aliyuncs.com"),
             new TeaPair("cn-yushanfang", "pai-dlc.aliyuncs.com"),
             new TeaPair("cn-zhangbei", "pai-dlc.aliyuncs.com"),
             new TeaPair("cn-zhangbei-na61-b01", "pai-dlc.aliyuncs.com"),
@@ -77,9 +73,7 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("eu-west-1", "pai-dlc.aliyuncs.com"),
             new TeaPair("eu-west-1-oxs", "pai-dlc.aliyuncs.com"),
             new TeaPair("me-east-1", "pai-dlc.aliyuncs.com"),
-            new TeaPair("rus-west-1-pop", "pai-dlc.aliyuncs.com"),
-            new TeaPair("us-east-1", "pai-dlc.aliyuncs.com"),
-            new TeaPair("us-west-1", "pai-dlc.aliyuncs.com")
+            new TeaPair("rus-west-1-pop", "pai-dlc.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
@@ -90,6 +84,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of Deep Learning Containers (DLC) of Platform for AI (PAI).</p>
+     * 
      * @param request the request parameters of CreateJob  CreateJobRequest
      * @return CreateJobResponse
      */

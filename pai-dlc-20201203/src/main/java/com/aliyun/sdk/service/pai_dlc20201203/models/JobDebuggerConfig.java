@@ -44,6 +44,10 @@ public class JobDebuggerConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return debuggerConfigContent
      */
@@ -77,6 +81,16 @@ public class JobDebuggerConfig extends TeaModel {
         private String debuggerConfigId; 
         private String gmtCreateTime; 
         private String jobId; 
+
+        private Builder() {
+        } 
+
+        private Builder(JobDebuggerConfig model) {
+            this.debuggerConfigContent = model.debuggerConfigContent;
+            this.debuggerConfigId = model.debuggerConfigId;
+            this.gmtCreateTime = model.gmtCreateTime;
+            this.jobId = model.jobId;
+        } 
 
         /**
          * DebuggerConfigContent.

@@ -52,6 +52,10 @@ public class QuotaDetail extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return CPU
      */
@@ -101,6 +105,18 @@ public class QuotaDetail extends TeaModel {
         private String GPUType; 
         private String GPUTypeFullName; 
         private String memory; 
+
+        private Builder() {
+        } 
+
+        private Builder(QuotaDetail model) {
+            this.CPU = model.CPU;
+            this.GPU = model.GPU;
+            this.GPUDetails = model.GPUDetails;
+            this.GPUType = model.GPUType;
+            this.GPUTypeFullName = model.GPUTypeFullName;
+            this.memory = model.memory;
+        } 
 
         /**
          * CPU.

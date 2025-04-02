@@ -36,6 +36,10 @@ public class Metric extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return time
      */
@@ -53,6 +57,14 @@ public class Metric extends TeaModel {
     public static final class Builder {
         private Long time; 
         private Float value; 
+
+        private Builder() {
+        } 
+
+        private Builder(Metric model) {
+            this.time = model.time;
+            this.value = model.value;
+        } 
 
         /**
          * Time.

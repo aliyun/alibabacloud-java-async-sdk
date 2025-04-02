@@ -32,6 +32,9 @@ public class PodItem extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Ip")
     private String ip;
 
+    @com.aliyun.core.annotation.NameInMap("NodeName")
+    private String nodeName;
+
     @com.aliyun.core.annotation.NameInMap("PodId")
     private String podId;
 
@@ -40,6 +43,9 @@ public class PodItem extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
+
+    @com.aliyun.core.annotation.NameInMap("SubStatus")
+    private String subStatus;
 
     @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
@@ -50,9 +56,11 @@ public class PodItem extends TeaModel {
         this.gmtStartTime = builder.gmtStartTime;
         this.historyPods = builder.historyPods;
         this.ip = builder.ip;
+        this.nodeName = builder.nodeName;
         this.podId = builder.podId;
         this.podUid = builder.podUid;
         this.status = builder.status;
+        this.subStatus = builder.subStatus;
         this.type = builder.type;
     }
 
@@ -62,6 +70,10 @@ public class PodItem extends TeaModel {
 
     public static PodItem create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -100,6 +112,13 @@ public class PodItem extends TeaModel {
     }
 
     /**
+     * @return nodeName
+     */
+    public String getNodeName() {
+        return this.nodeName;
+    }
+
+    /**
      * @return podId
      */
     public String getPodId() {
@@ -121,6 +140,13 @@ public class PodItem extends TeaModel {
     }
 
     /**
+     * @return subStatus
+     */
+    public String getSubStatus() {
+        return this.subStatus;
+    }
+
+    /**
      * @return type
      */
     public String getType() {
@@ -133,10 +159,29 @@ public class PodItem extends TeaModel {
         private String gmtStartTime; 
         private java.util.List<PodItem> historyPods; 
         private String ip; 
+        private String nodeName; 
         private String podId; 
         private String podUid; 
         private String status; 
+        private String subStatus; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(PodItem model) {
+            this.gmtCreateTime = model.gmtCreateTime;
+            this.gmtFinishTime = model.gmtFinishTime;
+            this.gmtStartTime = model.gmtStartTime;
+            this.historyPods = model.historyPods;
+            this.ip = model.ip;
+            this.nodeName = model.nodeName;
+            this.podId = model.podId;
+            this.podUid = model.podUid;
+            this.status = model.status;
+            this.subStatus = model.subStatus;
+            this.type = model.type;
+        } 
 
         /**
          * GmtCreateTime.
@@ -179,6 +224,14 @@ public class PodItem extends TeaModel {
         }
 
         /**
+         * NodeName.
+         */
+        public Builder nodeName(String nodeName) {
+            this.nodeName = nodeName;
+            return this;
+        }
+
+        /**
          * PodId.
          */
         public Builder podId(String podId) {
@@ -199,6 +252,14 @@ public class PodItem extends TeaModel {
          */
         public Builder status(String status) {
             this.status = status;
+            return this;
+        }
+
+        /**
+         * SubStatus.
+         */
+        public Builder subStatus(String subStatus) {
+            this.subStatus = subStatus;
             return this;
         }
 

@@ -40,6 +40,10 @@ public class ListJobSanityCheckResultsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestID
      */
@@ -66,8 +70,20 @@ public class ListJobSanityCheckResultsResponseBody extends TeaModel {
         private java.util.List<java.util.List<SanityCheckResultItem>> sanityCheckResults; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListJobSanityCheckResultsResponseBody model) {
+            this.requestID = model.requestID;
+            this.sanityCheckResults = model.sanityCheckResults;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * RequestID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AC9xxx-3xxx-5xxx2-xxxx-FA5</p>
          */
         public Builder requestID(String requestID) {
             this.requestID = requestID;
@@ -75,7 +91,7 @@ public class ListJobSanityCheckResultsResponseBody extends TeaModel {
         }
 
         /**
-         * SanityCheckResults.
+         * <p>The sanity check results.</p>
          */
         public Builder sanityCheckResults(java.util.List<java.util.List<SanityCheckResultItem>> sanityCheckResults) {
             this.sanityCheckResults = sanityCheckResults;
@@ -83,7 +99,10 @@ public class ListJobSanityCheckResultsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of results that meet the filter conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

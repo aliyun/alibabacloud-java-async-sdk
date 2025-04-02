@@ -61,7 +61,7 @@ public class GetPodEventsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -131,6 +131,7 @@ public class GetPodEventsRequest extends Request {
         } 
 
         /**
+         * <p>The job ID. Call <a href="https://help.aliyun.com/document_detail/459676.html">ListJobs</a> to get the job ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,6 +144,7 @@ public class GetPodEventsRequest extends Request {
         }
 
         /**
+         * <p>The node ID. Call <a href="https://help.aliyun.com/document_detail/459677.html">GetJob</a> to get the node ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,7 +157,10 @@ public class GetPodEventsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-09T16:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -164,7 +169,10 @@ public class GetPodEventsRequest extends Request {
         }
 
         /**
-         * MaxEventsNum.
+         * <p>The maximum number of events that can be returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxEventsNum(Integer maxEventsNum) {
             this.putQueryParameter("MaxEventsNum", maxEventsNum);
@@ -173,7 +181,10 @@ public class GetPodEventsRequest extends Request {
         }
 
         /**
-         * PodUid.
+         * <p>The node UID. Call <a href="https://help.aliyun.com/document_detail/459677.html">GetJob</a> to get the node UID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dlc-20210126170216-*****-chief-0</p>
          */
         public Builder podUid(String podUid) {
             this.putQueryParameter("PodUid", podUid);
@@ -182,7 +193,10 @@ public class GetPodEventsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-08T16:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

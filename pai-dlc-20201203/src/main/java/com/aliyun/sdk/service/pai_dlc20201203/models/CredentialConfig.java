@@ -40,6 +40,10 @@ public class CredentialConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return aliyunEnvRoleKey
      */
@@ -65,6 +69,15 @@ public class CredentialConfig extends TeaModel {
         private String aliyunEnvRoleKey; 
         private java.util.List<CredentialConfigItem> credentialConfigItems; 
         private Boolean enableCredentialInject; 
+
+        private Builder() {
+        } 
+
+        private Builder(CredentialConfig model) {
+            this.aliyunEnvRoleKey = model.aliyunEnvRoleKey;
+            this.credentialConfigItems = model.credentialConfigItems;
+            this.enableCredentialInject = model.enableCredentialInject;
+        } 
 
         /**
          * AliyunEnvRoleKey.

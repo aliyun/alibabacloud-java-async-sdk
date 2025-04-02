@@ -40,6 +40,10 @@ public class SpotSpec extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return spotDiscountLimit
      */
@@ -65,6 +69,15 @@ public class SpotSpec extends TeaModel {
         private Float spotDiscountLimit; 
         private Float spotPriceLimit; 
         private String spotStrategy; 
+
+        private Builder() {
+        } 
+
+        private Builder(SpotSpec model) {
+            this.spotDiscountLimit = model.spotDiscountLimit;
+            this.spotPriceLimit = model.spotPriceLimit;
+            this.spotStrategy = model.spotStrategy;
+        } 
 
         /**
          * SpotDiscountLimit.

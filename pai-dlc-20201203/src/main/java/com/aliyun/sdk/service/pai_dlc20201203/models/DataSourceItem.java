@@ -76,6 +76,10 @@ public class DataSourceItem extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataSourceId
      */
@@ -173,6 +177,24 @@ public class DataSourceItem extends TeaModel {
         private String options; 
         private String path; 
         private String userId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DataSourceItem model) {
+            this.dataSourceId = model.dataSourceId;
+            this.dataSourceType = model.dataSourceType;
+            this.description = model.description;
+            this.displayName = model.displayName;
+            this.endpoint = model.endpoint;
+            this.fileSystemId = model.fileSystemId;
+            this.gmtCreateTime = model.gmtCreateTime;
+            this.gmtModifyTime = model.gmtModifyTime;
+            this.mountPath = model.mountPath;
+            this.options = model.options;
+            this.path = model.path;
+            this.userId = model.userId;
+        } 
 
         /**
          * DataSourceId.

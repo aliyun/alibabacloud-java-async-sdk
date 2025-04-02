@@ -36,6 +36,10 @@ public class NodeMetric extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return metrics
      */
@@ -53,6 +57,14 @@ public class NodeMetric extends TeaModel {
     public static final class Builder {
         private java.util.List<Metric> metrics; 
         private String nodeName; 
+
+        private Builder() {
+        } 
+
+        private Builder(NodeMetric model) {
+            this.metrics = model.metrics;
+            this.nodeName = model.nodeName;
+        } 
 
         /**
          * Metrics.

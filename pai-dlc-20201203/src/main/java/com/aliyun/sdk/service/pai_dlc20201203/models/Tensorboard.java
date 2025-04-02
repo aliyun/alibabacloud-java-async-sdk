@@ -148,6 +148,10 @@ public class Tensorboard extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessibility
      */
@@ -389,6 +393,42 @@ public class Tensorboard extends TeaModel {
         private String userId; 
         private String username; 
         private String workspaceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(Tensorboard model) {
+            this.accessibility = model.accessibility;
+            this.cpu = model.cpu;
+            this.dataSourceId = model.dataSourceId;
+            this.dataSourceType = model.dataSourceType;
+            this.displayName = model.displayName;
+            this.duration = model.duration;
+            this.gmtCreateTime = model.gmtCreateTime;
+            this.gmtFinishTime = model.gmtFinishTime;
+            this.gmtModifyTime = model.gmtModifyTime;
+            this.jobId = model.jobId;
+            this.maxRunningTimeMinutes = model.maxRunningTimeMinutes;
+            this.memory = model.memory;
+            this.options = model.options;
+            this.priority = model.priority;
+            this.quotaId = model.quotaId;
+            this.quotaName = model.quotaName;
+            this.reasonCode = model.reasonCode;
+            this.reasonMessage = model.reasonMessage;
+            this.requestId = model.requestId;
+            this.status = model.status;
+            this.summaryPath = model.summaryPath;
+            this.summaryRelativePath = model.summaryRelativePath;
+            this.tensorboardDataSources = model.tensorboardDataSources;
+            this.tensorboardId = model.tensorboardId;
+            this.tensorboardSpec = model.tensorboardSpec;
+            this.tensorboardUrl = model.tensorboardUrl;
+            this.token = model.token;
+            this.userId = model.userId;
+            this.username = model.username;
+            this.workspaceId = model.workspaceId;
+        } 
 
         /**
          * Accessibility.

@@ -64,7 +64,7 @@ public class ListEcsSpecsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -143,7 +143,14 @@ public class ListEcsSpecsRequest extends Request {
         } 
 
         /**
-         * AcceleratorType.
+         * <p>Filter by accelerator type. Valid values:</p>
+         * <ul>
+         * <li>CPU</li>
+         * <li>GPU</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>GPU</p>
          */
         public Builder acceleratorType(String acceleratorType) {
             this.putQueryParameter("AcceleratorType", acceleratorType);
@@ -152,7 +159,10 @@ public class ListEcsSpecsRequest extends Request {
         }
 
         /**
-         * InstanceTypes.
+         * <p>The instance types to query. Separate the types with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.g6.large,ecs.g6.xlarge</p>
          */
         public Builder instanceTypes(String instanceTypes) {
             this.putQueryParameter("InstanceTypes", instanceTypes);
@@ -161,7 +171,14 @@ public class ListEcsSpecsRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sorting order. Valid values:</p>
+         * <ul>
+         * <li>desc: descending order.</li>
+         * <li>asc: ascending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -170,7 +187,10 @@ public class ListEcsSpecsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The number of the page to query. The start value is 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -179,7 +199,10 @@ public class ListEcsSpecsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -188,7 +211,14 @@ public class ListEcsSpecsRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>The type of the resource. Valid values:</p>
+         * <ul>
+         * <li>ECS</li>
+         * <li>Lingjun</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -197,7 +227,16 @@ public class ListEcsSpecsRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The field based on which the results are sorted. Valid values:</p>
+         * <ul>
+         * <li>CPU</li>
+         * <li>GPU</li>
+         * <li>Memory</li>
+         * <li>GmtCreateTime</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Gpu</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);

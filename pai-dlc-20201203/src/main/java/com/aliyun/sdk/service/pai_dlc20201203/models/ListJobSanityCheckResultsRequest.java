@@ -40,7 +40,7 @@ public class ListJobSanityCheckResultsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -74,6 +74,7 @@ public class ListJobSanityCheckResultsRequest extends Request {
         } 
 
         /**
+         * <p>The job ID. Call <a href="https://help.aliyun.com/document_detail/459676.html">ListJobs</a> to get the job ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,14 @@ public class ListJobSanityCheckResultsRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sorting order:</p>
+         * <ul>
+         * <li>desc: descending order</li>
+         * <li>asc: ascending order</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);

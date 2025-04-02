@@ -56,6 +56,10 @@ public class ImageItem extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return acceleratorType
      */
@@ -113,6 +117,19 @@ public class ImageItem extends TeaModel {
         private String imageTag; 
         private String imageUrl; 
         private String imageUrlVpc; 
+
+        private Builder() {
+        } 
+
+        private Builder(ImageItem model) {
+            this.acceleratorType = model.acceleratorType;
+            this.authorId = model.authorId;
+            this.framework = model.framework;
+            this.imageProviderType = model.imageProviderType;
+            this.imageTag = model.imageTag;
+            this.imageUrl = model.imageUrl;
+            this.imageUrlVpc = model.imageUrlVpc;
+        } 
 
         /**
          * AcceleratorType.

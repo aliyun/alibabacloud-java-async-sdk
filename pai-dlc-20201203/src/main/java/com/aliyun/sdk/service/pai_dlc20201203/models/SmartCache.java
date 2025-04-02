@@ -92,6 +92,10 @@ public class SmartCache extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cacheWorkerNum
      */
@@ -221,6 +225,28 @@ public class SmartCache extends TeaModel {
         private String status; 
         private String type; 
         private String userId; 
+
+        private Builder() {
+        } 
+
+        private Builder(SmartCache model) {
+            this.cacheWorkerNum = model.cacheWorkerNum;
+            this.cacheWorkerSize = model.cacheWorkerSize;
+            this.description = model.description;
+            this.displayName = model.displayName;
+            this.duration = model.duration;
+            this.endpoint = model.endpoint;
+            this.fileSystemId = model.fileSystemId;
+            this.gmtCreateTime = model.gmtCreateTime;
+            this.gmtModifyTime = model.gmtModifyTime;
+            this.mountPath = model.mountPath;
+            this.options = model.options;
+            this.path = model.path;
+            this.smartCacheId = model.smartCacheId;
+            this.status = model.status;
+            this.type = model.type;
+            this.userId = model.userId;
+        } 
 
         /**
          * CacheWorkerNum.

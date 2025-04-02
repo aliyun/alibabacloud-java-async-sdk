@@ -44,6 +44,10 @@ public class ImageConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return auth
      */
@@ -77,6 +81,16 @@ public class ImageConfig extends TeaModel {
         private String dockerRegistry; 
         private String password; 
         private String username; 
+
+        private Builder() {
+        } 
+
+        private Builder(ImageConfig model) {
+            this.auth = model.auth;
+            this.dockerRegistry = model.dockerRegistry;
+            this.password = model.password;
+            this.username = model.username;
+        } 
 
         /**
          * Auth.

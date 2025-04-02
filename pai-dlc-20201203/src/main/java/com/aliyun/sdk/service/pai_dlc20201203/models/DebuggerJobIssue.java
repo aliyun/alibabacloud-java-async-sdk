@@ -56,6 +56,10 @@ public class DebuggerJobIssue extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return debuggerJobIssue
      */
@@ -113,6 +117,19 @@ public class DebuggerJobIssue extends TeaModel {
         private String reasonCode; 
         private String reasonMessage; 
         private String ruleName; 
+
+        private Builder() {
+        } 
+
+        private Builder(DebuggerJobIssue model) {
+            this.debuggerJobIssue = model.debuggerJobIssue;
+            this.gmtCreateTime = model.gmtCreateTime;
+            this.jobDebuggerIssueId = model.jobDebuggerIssueId;
+            this.jobId = model.jobId;
+            this.reasonCode = model.reasonCode;
+            this.reasonMessage = model.reasonMessage;
+            this.ruleName = model.ruleName;
+        } 
 
         /**
          * DebuggerJobIssue.

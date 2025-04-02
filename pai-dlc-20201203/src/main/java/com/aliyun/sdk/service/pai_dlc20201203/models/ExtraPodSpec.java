@@ -24,9 +24,11 @@ public class ExtraPodSpec extends TeaModel {
     private Lifecycle lifecycle;
 
     @com.aliyun.core.annotation.NameInMap("PodAnnotations")
+    @Deprecated
     private java.util.Map<String, String> podAnnotations;
 
     @com.aliyun.core.annotation.NameInMap("PodLabels")
+    @Deprecated
     private java.util.Map<String, String> podLabels;
 
     @com.aliyun.core.annotation.NameInMap("SharedVolumeMountPaths")
@@ -50,6 +52,10 @@ public class ExtraPodSpec extends TeaModel {
 
     public static ExtraPodSpec create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -101,6 +107,18 @@ public class ExtraPodSpec extends TeaModel {
         private java.util.Map<String, String> podLabels; 
         private java.util.List<String> sharedVolumeMountPaths; 
         private java.util.List<ContainerSpec> sideCarContainers; 
+
+        private Builder() {
+        } 
+
+        private Builder(ExtraPodSpec model) {
+            this.initContainers = model.initContainers;
+            this.lifecycle = model.lifecycle;
+            this.podAnnotations = model.podAnnotations;
+            this.podLabels = model.podLabels;
+            this.sharedVolumeMountPaths = model.sharedVolumeMountPaths;
+            this.sideCarContainers = model.sideCarContainers;
+        } 
 
         /**
          * InitContainers.

@@ -60,6 +60,10 @@ public class FreeResourceItem extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return availableNumber
      */
@@ -125,6 +129,20 @@ public class FreeResourceItem extends TeaModel {
         private String gmtModifyTime; 
         private String regionID; 
         private String resourceType; 
+
+        private Builder() {
+        } 
+
+        private Builder(FreeResourceItem model) {
+            this.availableNumber = model.availableNumber;
+            this.clusterID = model.clusterID;
+            this.clusterName = model.clusterName;
+            this.freeResourceId = model.freeResourceId;
+            this.gmtCreateTime = model.gmtCreateTime;
+            this.gmtModifyTime = model.gmtModifyTime;
+            this.regionID = model.regionID;
+            this.resourceType = model.resourceType;
+        } 
 
         /**
          * AvailableNumber.

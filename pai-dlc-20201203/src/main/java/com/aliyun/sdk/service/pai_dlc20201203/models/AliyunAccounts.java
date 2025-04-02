@@ -44,6 +44,10 @@ public class AliyunAccounts extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return aliyunUid
      */
@@ -77,6 +81,16 @@ public class AliyunAccounts extends TeaModel {
         private String employeeId; 
         private String gmtCreateTime; 
         private String gmtModifyTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(AliyunAccounts model) {
+            this.aliyunUid = model.aliyunUid;
+            this.employeeId = model.employeeId;
+            this.gmtCreateTime = model.gmtCreateTime;
+            this.gmtModifyTime = model.gmtModifyTime;
+        } 
 
         /**
          * AliyunUid.

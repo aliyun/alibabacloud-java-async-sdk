@@ -44,7 +44,7 @@ public class UpdateJobRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -87,7 +87,10 @@ public class UpdateJobRequest extends Request {
         } 
 
         /**
-         * JobId.
+         * <p>The job ID. For more information about how to obtain the ID of a job, see <a href="https://help.aliyun.com/document_detail/459676.html">ListJobs</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dlc*************</p>
          */
         public Builder jobId(String jobId) {
             this.putPathParameter("JobId", jobId);
@@ -96,7 +99,14 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * Accessibility.
+         * <p>The job visibility. Valid values:</p>
+         * <ul>
+         * <li>PUBLIC: The job is visible to all members in the workspace.</li>
+         * <li>PRIVATE: The job is visible only to you and the administrator of the workspace.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PRIVATE</p>
          */
         public Builder accessibility(String accessibility) {
             this.putBodyParameter("Accessibility", accessibility);
@@ -105,7 +115,14 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * Priority.
+         * <p>The job priority. Valid values: 1 to 9.</p>
+         * <ul>
+         * <li>1: the lowest priority.</li>
+         * <li>9: the highest priority.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder priority(Integer priority) {
             this.putBodyParameter("Priority", priority);

@@ -51,7 +51,7 @@ public class GetJobSanityCheckResultRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -103,6 +103,7 @@ public class GetJobSanityCheckResultRequest extends Request {
         } 
 
         /**
+         * <p>The job ID. For more information about how to obtain a job ID, see <a href="https://help.aliyun.com/document_detail/459676.html">ListJobs</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,6 +116,7 @@ public class GetJobSanityCheckResultRequest extends Request {
         }
 
         /**
+         * <p>The nth time for which the job sanity check is performed.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -127,7 +129,17 @@ public class GetJobSanityCheckResultRequest extends Request {
         }
 
         /**
-         * SanityCheckPhase.
+         * <p>The phase in which the job sanity check is performed.</p>
+         * <ul>
+         * <li>CheckInit</li>
+         * <li>DeviceCheck</li>
+         * <li>SingleNodeCommCheck</li>
+         * <li>TwoNodeCommCheck</li>
+         * <li>AllNodeCommCheck</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DeviceCheck</p>
          */
         public Builder sanityCheckPhase(String sanityCheckPhase) {
             this.putQueryParameter("SanityCheckPhase", sanityCheckPhase);
@@ -136,7 +148,10 @@ public class GetJobSanityCheckResultRequest extends Request {
         }
 
         /**
-         * Token.
+         * <p>The token information for job sharing. For more information about how to obtain the token information, see <a href="https://help.aliyun.com/document_detail/2557812.html">GetToken</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJhbG<strong><strong><strong>zI1NiIsInR5cCI6IkpXVCJ9.eyJle</strong></strong>jE3MDk1Mzk0NDIsImlhdCI6MTcwODkzNDY0MiwidXNlcl9pZCI6IjE3NTgwNTQxNjI0Mzg2NTUiLCJ0YXJnZXRfaWQiOiJkbGM1OGh1a2xyYzZwdGMyIiwidGFyZ2V0X3R5cGUiOiJqb2IifQ.GNL7jo6</strong><strong>mgKKv0QeGIYgvBufSU-PH_EQttX</strong>**</p>
          */
         public Builder token(String token) {
             this.putQueryParameter("Token", token);

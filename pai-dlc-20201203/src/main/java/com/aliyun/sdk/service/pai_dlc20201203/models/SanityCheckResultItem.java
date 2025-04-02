@@ -52,6 +52,10 @@ public class SanityCheckResultItem extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return checkNumber
      */
@@ -101,6 +105,18 @@ public class SanityCheckResultItem extends TeaModel {
         private String phase; 
         private String startedAt; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(SanityCheckResultItem model) {
+            this.checkNumber = model.checkNumber;
+            this.finishedAt = model.finishedAt;
+            this.message = model.message;
+            this.phase = model.phase;
+            this.startedAt = model.startedAt;
+            this.status = model.status;
+        } 
 
         /**
          * CheckNumber.

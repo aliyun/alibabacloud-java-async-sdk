@@ -48,6 +48,10 @@ public class EventInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return content
      */
@@ -89,6 +93,17 @@ public class EventInfo extends TeaModel {
         private String podId; 
         private String podUid; 
         private String time; 
+
+        private Builder() {
+        } 
+
+        private Builder(EventInfo model) {
+            this.content = model.content;
+            this.id = model.id;
+            this.podId = model.podId;
+            this.podUid = model.podUid;
+            this.time = model.time;
+        } 
 
         /**
          * Content.

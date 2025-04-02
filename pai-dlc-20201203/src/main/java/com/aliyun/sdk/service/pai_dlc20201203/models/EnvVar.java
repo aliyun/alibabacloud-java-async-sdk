@@ -36,6 +36,10 @@ public class EnvVar extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return name
      */
@@ -53,6 +57,14 @@ public class EnvVar extends TeaModel {
     public static final class Builder {
         private String name; 
         private String value; 
+
+        private Builder() {
+        } 
+
+        private Builder(EnvVar model) {
+            this.name = model.name;
+            this.value = model.value;
+        } 
 
         /**
          * Name.

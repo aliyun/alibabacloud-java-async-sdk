@@ -36,6 +36,10 @@ public class DeleteTensorboardResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -54,8 +58,19 @@ public class DeleteTensorboardResponseBody extends TeaModel {
         private String requestId; 
         private String tensorboardId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DeleteTensorboardResponseBody model) {
+            this.requestId = model.requestId;
+            this.tensorboardId = model.tensorboardId;
+        } 
+
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -63,7 +78,10 @@ public class DeleteTensorboardResponseBody extends TeaModel {
         }
 
         /**
-         * TensorboardId.
+         * <p>The TensorBoard ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tensorboard-20210114104214-vf9lowjt3pso</p>
          */
         public Builder tensorboardId(String tensorboardId) {
             this.tensorboardId = tensorboardId;

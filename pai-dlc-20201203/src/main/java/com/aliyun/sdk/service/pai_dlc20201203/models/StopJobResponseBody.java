@@ -36,6 +36,10 @@ public class StopJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return jobId
      */
@@ -54,8 +58,19 @@ public class StopJobResponseBody extends TeaModel {
         private String jobId; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(StopJobResponseBody model) {
+            this.jobId = model.jobId;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * JobId.
+         * <p>The job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dlc-20210126170216-xxxxxxx</p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -63,7 +78,10 @@ public class StopJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. You can troubleshoot issues based on the request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-xxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

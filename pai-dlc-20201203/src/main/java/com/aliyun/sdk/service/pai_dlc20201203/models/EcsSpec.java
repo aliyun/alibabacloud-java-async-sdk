@@ -84,6 +84,10 @@ public class EcsSpec extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return acceleratorType
      */
@@ -197,6 +201,26 @@ public class EcsSpec extends TeaModel {
         private String resourceType; 
         private String spotStockStatus; 
         private java.util.List<String> supportedGPUDrivers; 
+
+        private Builder() {
+        } 
+
+        private Builder(EcsSpec model) {
+            this.acceleratorType = model.acceleratorType;
+            this.cpu = model.cpu;
+            this.defaultGPUDriver = model.defaultGPUDriver;
+            this.gpu = model.gpu;
+            this.gpuMemory = model.gpuMemory;
+            this.gpuType = model.gpuType;
+            this.instanceType = model.instanceType;
+            this.isAvailable = model.isAvailable;
+            this.memory = model.memory;
+            this.nonProtectSpotDiscount = model.nonProtectSpotDiscount;
+            this.paymentTypes = model.paymentTypes;
+            this.resourceType = model.resourceType;
+            this.spotStockStatus = model.spotStockStatus;
+            this.supportedGPUDrivers = model.supportedGPUDrivers;
+        } 
 
         /**
          * AcceleratorType.

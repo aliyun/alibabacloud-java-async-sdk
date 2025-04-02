@@ -36,6 +36,10 @@ public class StopTensorboardResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -54,8 +58,19 @@ public class StopTensorboardResponseBody extends TeaModel {
         private String requestId; 
         private String tensorboardId; 
 
+        private Builder() {
+        } 
+
+        private Builder(StopTensorboardResponseBody model) {
+            this.requestId = model.requestId;
+            this.tensorboardId = model.tensorboardId;
+        } 
+
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -63,7 +78,10 @@ public class StopTensorboardResponseBody extends TeaModel {
         }
 
         /**
-         * TensorboardId.
+         * <p>The ID of the TensorBoard instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tensorboard-20210114104214-xxxxxxxx</p>
          */
         public Builder tensorboardId(String tensorboardId) {
             this.tensorboardId = tensorboardId;

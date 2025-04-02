@@ -23,6 +23,9 @@ public class LogInfo extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Id")
     private String id;
 
+    @com.aliyun.core.annotation.NameInMap("IsTruncated")
+    private Boolean isTruncated;
+
     @com.aliyun.core.annotation.NameInMap("PodId")
     private String podId;
 
@@ -38,6 +41,7 @@ public class LogInfo extends TeaModel {
     private LogInfo(Builder builder) {
         this.content = builder.content;
         this.id = builder.id;
+        this.isTruncated = builder.isTruncated;
         this.podId = builder.podId;
         this.podUid = builder.podUid;
         this.source = builder.source;
@@ -52,6 +56,10 @@ public class LogInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return content
      */
@@ -64,6 +72,13 @@ public class LogInfo extends TeaModel {
      */
     public String getId() {
         return this.id;
+    }
+
+    /**
+     * @return isTruncated
+     */
+    public Boolean getIsTruncated() {
+        return this.isTruncated;
     }
 
     /**
@@ -97,10 +112,24 @@ public class LogInfo extends TeaModel {
     public static final class Builder {
         private String content; 
         private String id; 
+        private Boolean isTruncated; 
         private String podId; 
         private String podUid; 
         private String source; 
         private String time; 
+
+        private Builder() {
+        } 
+
+        private Builder(LogInfo model) {
+            this.content = model.content;
+            this.id = model.id;
+            this.isTruncated = model.isTruncated;
+            this.podId = model.podId;
+            this.podUid = model.podUid;
+            this.source = model.source;
+            this.time = model.time;
+        } 
 
         /**
          * Content.
@@ -115,6 +144,14 @@ public class LogInfo extends TeaModel {
          */
         public Builder id(String id) {
             this.id = id;
+            return this;
+        }
+
+        /**
+         * IsTruncated.
+         */
+        public Builder isTruncated(Boolean isTruncated) {
+            this.isTruncated = isTruncated;
             return this;
         }
 

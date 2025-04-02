@@ -40,6 +40,10 @@ public class GetJobSanityCheckResultResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return jobId
      */
@@ -66,8 +70,20 @@ public class GetJobSanityCheckResultResponseBody extends TeaModel {
         private String requestID; 
         private java.util.List<SanityCheckResultItem> sanityCheckResult; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetJobSanityCheckResultResponseBody model) {
+            this.jobId = model.jobId;
+            this.requestID = model.requestID;
+            this.sanityCheckResult = model.sanityCheckResult;
+        } 
+
         /**
-         * JobId.
+         * <p>The job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dlc-20210126170216-xxxxxx</p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -75,7 +91,10 @@ public class GetJobSanityCheckResultResponseBody extends TeaModel {
         }
 
         /**
-         * RequestID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B3789344-F1xxxBE-5xx2-A04D-xxxxx</p>
          */
         public Builder requestID(String requestID) {
             this.requestID = requestID;
@@ -83,7 +102,7 @@ public class GetJobSanityCheckResultResponseBody extends TeaModel {
         }
 
         /**
-         * SanityCheckResult.
+         * <p>The job sanity check result.</p>
          */
         public Builder sanityCheckResult(java.util.List<SanityCheckResultItem> sanityCheckResult) {
             this.sanityCheckResult = sanityCheckResult;

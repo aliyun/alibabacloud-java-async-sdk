@@ -44,6 +44,10 @@ public class AssumeUserInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessKeyId
      */
@@ -77,6 +81,16 @@ public class AssumeUserInfo extends TeaModel {
         private String id; 
         private String securityToken; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(AssumeUserInfo model) {
+            this.accessKeyId = model.accessKeyId;
+            this.id = model.id;
+            this.securityToken = model.securityToken;
+            this.type = model.type;
+        } 
 
         /**
          * AccessKeyId.

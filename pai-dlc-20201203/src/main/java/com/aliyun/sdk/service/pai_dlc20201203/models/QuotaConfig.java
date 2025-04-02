@@ -48,6 +48,10 @@ public class QuotaConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return allowedMaxPriority
      */
@@ -89,6 +93,17 @@ public class QuotaConfig extends TeaModel {
         private Boolean enableDSW; 
         private Boolean enableTideResource; 
         private String resourceLevel; 
+
+        private Builder() {
+        } 
+
+        private Builder(QuotaConfig model) {
+            this.allowedMaxPriority = model.allowedMaxPriority;
+            this.enableDLC = model.enableDLC;
+            this.enableDSW = model.enableDSW;
+            this.enableTideResource = model.enableTideResource;
+            this.resourceLevel = model.resourceLevel;
+        } 
 
         /**
          * AllowedMaxPriority.

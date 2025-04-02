@@ -68,6 +68,10 @@ public class Quota extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clusterId
      */
@@ -149,6 +153,22 @@ public class Quota extends TeaModel {
         private QuotaDetail totalTideQuota; 
         private QuotaDetail usedQuota; 
         private QuotaDetail usedTideQuota; 
+
+        private Builder() {
+        } 
+
+        private Builder(Quota model) {
+            this.clusterId = model.clusterId;
+            this.clusterName = model.clusterName;
+            this.quotaConfig = model.quotaConfig;
+            this.quotaId = model.quotaId;
+            this.quotaName = model.quotaName;
+            this.quotaType = model.quotaType;
+            this.totalQuota = model.totalQuota;
+            this.totalTideQuota = model.totalTideQuota;
+            this.usedQuota = model.usedQuota;
+            this.usedTideQuota = model.usedTideQuota;
+        } 
 
         /**
          * ClusterId.

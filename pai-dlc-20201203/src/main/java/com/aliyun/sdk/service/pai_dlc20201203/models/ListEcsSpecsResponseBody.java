@@ -40,6 +40,10 @@ public class ListEcsSpecsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ecsSpecs
      */
@@ -66,8 +70,17 @@ public class ListEcsSpecsResponseBody extends TeaModel {
         private String requestId; 
         private Long totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListEcsSpecsResponseBody model) {
+            this.ecsSpecs = model.ecsSpecs;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * EcsSpecs.
+         * <p>The list of ECS specifications.</p>
          */
         public Builder ecsSpecs(java.util.List<EcsSpec> ecsSpecs) {
             this.ecsSpecs = ecsSpecs;
@@ -75,7 +88,10 @@ public class ListEcsSpecsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -83,7 +99,10 @@ public class ListEcsSpecsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The number of types that meet the filter conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;

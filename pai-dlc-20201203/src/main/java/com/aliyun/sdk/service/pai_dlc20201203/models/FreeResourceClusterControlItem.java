@@ -60,6 +60,10 @@ public class FreeResourceClusterControlItem extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clusterID
      */
@@ -125,6 +129,20 @@ public class FreeResourceClusterControlItem extends TeaModel {
         private String gmtCreateTime; 
         private String gmtModifyTime; 
         private String regionID; 
+
+        private Builder() {
+        } 
+
+        private Builder(FreeResourceClusterControlItem model) {
+            this.clusterID = model.clusterID;
+            this.clusterName = model.clusterName;
+            this.crossClusters = model.crossClusters;
+            this.enableFreeResource = model.enableFreeResource;
+            this.freeResourceClusterControlId = model.freeResourceClusterControlId;
+            this.gmtCreateTime = model.gmtCreateTime;
+            this.gmtModifyTime = model.gmtModifyTime;
+            this.regionID = model.regionID;
+        } 
 
         /**
          * ClusterID.

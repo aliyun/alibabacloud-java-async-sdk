@@ -40,7 +40,7 @@ public class GetTensorboardSharedUrlRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -74,6 +74,7 @@ public class GetTensorboardSharedUrlRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the TensorBoard task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,10 @@ public class GetTensorboardSharedUrlRequest extends Request {
         }
 
         /**
-         * ExpireTimeSeconds.
+         * <p>The validity period of the shareable link. Unit: seconds. Maximum value: 604800.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86400</p>
          */
         public Builder expireTimeSeconds(String expireTimeSeconds) {
             this.putQueryParameter("ExpireTimeSeconds", expireTimeSeconds);

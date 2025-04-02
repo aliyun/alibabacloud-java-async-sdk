@@ -56,6 +56,10 @@ public class DebuggerResult extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return debuggerConfigContent
      */
@@ -113,6 +117,19 @@ public class DebuggerResult extends TeaModel {
         private String jobDisplayName; 
         private String jobId; 
         private String jobUserId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DebuggerResult model) {
+            this.debuggerConfigContent = model.debuggerConfigContent;
+            this.debuggerJobIssues = model.debuggerJobIssues;
+            this.debuggerJobStatus = model.debuggerJobStatus;
+            this.debuggerReportURL = model.debuggerReportURL;
+            this.jobDisplayName = model.jobDisplayName;
+            this.jobId = model.jobId;
+            this.jobUserId = model.jobUserId;
+        } 
 
         /**
          * DebuggerConfigContent.

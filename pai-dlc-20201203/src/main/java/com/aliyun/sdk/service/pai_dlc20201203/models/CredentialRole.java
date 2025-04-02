@@ -48,6 +48,10 @@ public class CredentialRole extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return assumeRoleFor
      */
@@ -89,6 +93,17 @@ public class CredentialRole extends TeaModel {
         private String policy; 
         private String roleArn; 
         private String roleType; 
+
+        private Builder() {
+        } 
+
+        private Builder(CredentialRole model) {
+            this.assumeRoleFor = model.assumeRoleFor;
+            this.assumeUserInfo = model.assumeUserInfo;
+            this.policy = model.policy;
+            this.roleArn = model.roleArn;
+            this.roleType = model.roleType;
+        } 
 
         /**
          * AssumeRoleFor.

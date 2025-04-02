@@ -72,6 +72,10 @@ public class CodeSourceItem extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return codeBranch
      */
@@ -161,6 +165,23 @@ public class CodeSourceItem extends TeaModel {
         private String gmtCreateTime; 
         private String gmtModifyTime; 
         private String userId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CodeSourceItem model) {
+            this.codeBranch = model.codeBranch;
+            this.codeCommit = model.codeCommit;
+            this.codeRepo = model.codeRepo;
+            this.codeRepoAccessToken = model.codeRepoAccessToken;
+            this.codeRepoUserName = model.codeRepoUserName;
+            this.codeSourceId = model.codeSourceId;
+            this.description = model.description;
+            this.displayName = model.displayName;
+            this.gmtCreateTime = model.gmtCreateTime;
+            this.gmtModifyTime = model.gmtModifyTime;
+            this.userId = model.userId;
+        } 
 
         /**
          * CodeBranch.

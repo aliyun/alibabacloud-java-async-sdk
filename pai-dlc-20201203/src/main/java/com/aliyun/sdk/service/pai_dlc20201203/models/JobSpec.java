@@ -69,6 +69,10 @@ public class JobSpec extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return assignNodeSpec
      */
@@ -150,6 +154,22 @@ public class JobSpec extends TeaModel {
         private SpotSpec spotSpec; 
         private String type; 
         private Boolean useSpotInstance; 
+
+        private Builder() {
+        } 
+
+        private Builder(JobSpec model) {
+            this.assignNodeSpec = model.assignNodeSpec;
+            this.ecsSpec = model.ecsSpec;
+            this.extraPodSpec = model.extraPodSpec;
+            this.image = model.image;
+            this.imageConfig = model.imageConfig;
+            this.podCount = model.podCount;
+            this.resourceConfig = model.resourceConfig;
+            this.spotSpec = model.spotSpec;
+            this.type = model.type;
+            this.useSpotInstance = model.useSpotInstance;
+        } 
 
         /**
          * AssignNodeSpec.

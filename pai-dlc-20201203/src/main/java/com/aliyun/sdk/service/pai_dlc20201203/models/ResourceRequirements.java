@@ -36,6 +36,10 @@ public class ResourceRequirements extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return limits
      */
@@ -53,6 +57,14 @@ public class ResourceRequirements extends TeaModel {
     public static final class Builder {
         private java.util.Map<String, String> limits; 
         private java.util.Map<String, String> requests; 
+
+        private Builder() {
+        } 
+
+        private Builder(ResourceRequirements model) {
+            this.limits = model.limits;
+            this.requests = model.requests;
+        } 
 
         /**
          * Limits.

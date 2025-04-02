@@ -88,6 +88,10 @@ public class JobElasticSpec extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return AIMasterDockerImage
      */
@@ -209,6 +213,27 @@ public class JobElasticSpec extends TeaModel {
         private Integer minParallelism; 
         private Integer PSMaxParallelism; 
         private Integer PSMinParallelism; 
+
+        private Builder() {
+        } 
+
+        private Builder(JobElasticSpec model) {
+            this.AIMasterDockerImage = model.AIMasterDockerImage;
+            this.AIMasterType = model.AIMasterType;
+            this.EDPMaxParallelism = model.EDPMaxParallelism;
+            this.EDPMinParallelism = model.EDPMinParallelism;
+            this.elasticStrategy = model.elasticStrategy;
+            this.enableAIMaster = model.enableAIMaster;
+            this.enableEDP = model.enableEDP;
+            this.enableElasticTraining = model.enableElasticTraining;
+            this.enablePsJobElasticPS = model.enablePsJobElasticPS;
+            this.enablePsJobElasticWorker = model.enablePsJobElasticWorker;
+            this.enablePsResourceEstimate = model.enablePsResourceEstimate;
+            this.maxParallelism = model.maxParallelism;
+            this.minParallelism = model.minParallelism;
+            this.PSMaxParallelism = model.PSMaxParallelism;
+            this.PSMinParallelism = model.PSMinParallelism;
+        } 
 
         /**
          * AIMasterDockerImage.

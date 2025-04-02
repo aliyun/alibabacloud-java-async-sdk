@@ -40,6 +40,10 @@ public class AssignNodeSpec extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return antiAffinityNodeNames
      */
@@ -65,6 +69,15 @@ public class AssignNodeSpec extends TeaModel {
         private String antiAffinityNodeNames; 
         private Boolean enableAssignNode; 
         private String nodeNames; 
+
+        private Builder() {
+        } 
+
+        private Builder(AssignNodeSpec model) {
+            this.antiAffinityNodeNames = model.antiAffinityNodeNames;
+            this.enableAssignNode = model.enableAssignNode;
+            this.nodeNames = model.nodeNames;
+        } 
 
         /**
          * AntiAffinityNodeNames.

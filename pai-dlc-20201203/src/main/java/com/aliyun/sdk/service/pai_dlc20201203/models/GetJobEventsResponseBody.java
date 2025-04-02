@@ -40,6 +40,10 @@ public class GetJobEventsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return events
      */
@@ -66,8 +70,17 @@ public class GetJobEventsResponseBody extends TeaModel {
         private String jobId; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetJobEventsResponseBody model) {
+            this.events = model.events;
+            this.jobId = model.jobId;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * Events.
+         * <p>The events.</p>
          */
         public Builder events(java.util.List<String> events) {
             this.events = events;
@@ -75,7 +88,10 @@ public class GetJobEventsResponseBody extends TeaModel {
         }
 
         /**
-         * JobId.
+         * <p>The job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dlc-20210126170216-******</p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -83,7 +99,10 @@ public class GetJobEventsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID, which can be used for troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>78F6FCE2-278F-4C4A-A6B7-DD8ECEA9C456</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

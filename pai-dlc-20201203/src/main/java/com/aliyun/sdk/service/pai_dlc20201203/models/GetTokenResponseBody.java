@@ -36,6 +36,10 @@ public class GetTokenResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -54,8 +58,19 @@ public class GetTokenResponseBody extends TeaModel {
         private String requestId; 
         private String token; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetTokenResponseBody model) {
+            this.requestId = model.requestId;
+            this.token = model.token;
+        } 
+
         /**
-         * RequestId.
+         * <p>The request ID, which is used to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-xxxxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -63,7 +78,10 @@ public class GetTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Token.
+         * <p>The token of the shared job, which can be used as the value of the Token parameter in the GetJob API operation to view information about the shared job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9*****</p>
          */
         public Builder token(String token) {
             this.token = token;

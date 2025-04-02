@@ -49,6 +49,10 @@ public class GetPodEventsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return events
      */
@@ -91,8 +95,19 @@ public class GetPodEventsResponseBody extends TeaModel {
         private String podUid; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetPodEventsResponseBody model) {
+            this.events = model.events;
+            this.jobId = model.jobId;
+            this.podId = model.podId;
+            this.podUid = model.podUid;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * Events.
+         * <p>The events returned.</p>
          */
         public Builder events(java.util.List<String> events) {
             this.events = events;
@@ -100,7 +115,10 @@ public class GetPodEventsResponseBody extends TeaModel {
         }
 
         /**
-         * JobId.
+         * <p>The job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dlc-20210126170216-*****</p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -108,6 +126,7 @@ public class GetPodEventsResponseBody extends TeaModel {
         }
 
         /**
+         * <p>The node ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -119,7 +138,10 @@ public class GetPodEventsResponseBody extends TeaModel {
         }
 
         /**
-         * PodUid.
+         * <p>The node UID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>94a7cc7c-0033-48b5-85bd-71c63592c268</p>
          */
         public Builder podUid(String podUid) {
             this.podUid = podUid;
@@ -127,7 +149,10 @@ public class GetPodEventsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID, which can be used for troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

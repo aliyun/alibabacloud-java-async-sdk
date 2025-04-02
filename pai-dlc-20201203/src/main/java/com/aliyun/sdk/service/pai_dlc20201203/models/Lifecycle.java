@@ -36,6 +36,10 @@ public class Lifecycle extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return postStart
      */
@@ -53,6 +57,14 @@ public class Lifecycle extends TeaModel {
     public static final class Builder {
         private PostStart postStart; 
         private PreStop preStop; 
+
+        private Builder() {
+        } 
+
+        private Builder(Lifecycle model) {
+            this.postStart = model.postStart;
+            this.preStop = model.preStop;
+        } 
 
         /**
          * PostStart.
@@ -108,6 +120,13 @@ public class Lifecycle extends TeaModel {
         public static final class Builder {
             private java.util.List<String> command; 
 
+            private Builder() {
+            } 
+
+            private Builder(Exec model) {
+                this.command = model.command;
+            } 
+
             /**
              * Command.
              */
@@ -154,6 +173,13 @@ public class Lifecycle extends TeaModel {
 
         public static final class Builder {
             private Exec exec; 
+
+            private Builder() {
+            } 
+
+            private Builder(PostStart model) {
+                this.exec = model.exec;
+            } 
 
             /**
              * Exec.
@@ -202,6 +228,13 @@ public class Lifecycle extends TeaModel {
         public static final class Builder {
             private java.util.List<String> command; 
 
+            private Builder() {
+            } 
+
+            private Builder(PreStopExec model) {
+                this.command = model.command;
+            } 
+
             /**
              * Command.
              */
@@ -248,6 +281,13 @@ public class Lifecycle extends TeaModel {
 
         public static final class Builder {
             private PreStopExec exec; 
+
+            private Builder() {
+            } 
+
+            private Builder(PreStop model) {
+                this.exec = model.exec;
+            } 
 
             /**
              * Exec.

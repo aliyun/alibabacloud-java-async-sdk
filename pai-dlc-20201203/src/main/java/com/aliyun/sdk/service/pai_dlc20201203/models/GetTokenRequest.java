@@ -44,7 +44,7 @@ public class GetTokenRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -87,7 +87,10 @@ public class GetTokenRequest extends Request {
         } 
 
         /**
-         * ExpireTime.
+         * <p>The time when the share link expires. Default value: 604800 seconds. Minimum value: 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder expireTime(Long expireTime) {
             this.putQueryParameter("ExpireTime", expireTime);
@@ -96,7 +99,10 @@ public class GetTokenRequest extends Request {
         }
 
         /**
-         * TargetId.
+         * <p>The ID of the job that is waiting to be shared.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dlc*******</p>
          */
         public Builder targetId(String targetId) {
             this.putQueryParameter("TargetId", targetId);
@@ -105,7 +111,10 @@ public class GetTokenRequest extends Request {
         }
 
         /**
-         * TargetType.
+         * <p>The type of the job that you want to share. Valid values: job and tensorboard.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job</p>
          */
         public Builder targetType(String targetType) {
             this.putQueryParameter("TargetType", targetType);

@@ -64,6 +64,10 @@ public class Workspace extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return creator
      */
@@ -137,6 +141,21 @@ public class Workspace extends TeaModel {
         private java.util.List<Member> workspaceAdmins; 
         private String workspaceId; 
         private String workspaceName; 
+
+        private Builder() {
+        } 
+
+        private Builder(Workspace model) {
+            this.creator = model.creator;
+            this.gmtCreateTime = model.gmtCreateTime;
+            this.gmtModifyTime = model.gmtModifyTime;
+            this.members = model.members;
+            this.quotas = model.quotas;
+            this.totalResources = model.totalResources;
+            this.workspaceAdmins = model.workspaceAdmins;
+            this.workspaceId = model.workspaceId;
+            this.workspaceName = model.workspaceName;
+        } 
 
         /**
          * Creator.

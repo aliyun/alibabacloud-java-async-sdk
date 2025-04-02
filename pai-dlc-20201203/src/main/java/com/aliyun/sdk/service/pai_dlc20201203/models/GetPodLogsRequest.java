@@ -66,7 +66,7 @@ public class GetPodLogsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -145,6 +145,7 @@ public class GetPodLogsRequest extends Request {
         } 
 
         /**
+         * <p>The job ID. For more information about how to obtain a job ID, see <a href="https://help.aliyun.com/document_detail/459676.html">ListJobs</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,6 +158,7 @@ public class GetPodLogsRequest extends Request {
         }
 
         /**
+         * <p>The node ID. For more information about how to obtain a node ID, see <a href="https://help.aliyun.com/document_detail/459677.html">GetJob</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -169,7 +171,14 @@ public class GetPodLogsRequest extends Request {
         }
 
         /**
-         * DownloadToFile.
+         * <p>Specifies whether to download the log file. Default value: false. Valid values:</p>
+         * <ul>
+         * <li>false</li>
+         * <li>true</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder downloadToFile(Boolean downloadToFile) {
             this.putQueryParameter("DownloadToFile", downloadToFile);
@@ -178,7 +187,10 @@ public class GetPodLogsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time of the query. Default value: current time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-08T17:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -187,7 +199,10 @@ public class GetPodLogsRequest extends Request {
         }
 
         /**
-         * MaxLines.
+         * <p>The maximum number of log entries. Default value: 2000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxLines(Integer maxLines) {
             this.putQueryParameter("MaxLines", maxLines);
@@ -196,7 +211,10 @@ public class GetPodLogsRequest extends Request {
         }
 
         /**
-         * PodUid.
+         * <p>The node UID. For more information about how to obtain a node UID, see <a href="https://help.aliyun.com/document_detail/459677.html">GetJob</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fe846462-af2c-4521-bd6f-96787a57****</p>
          */
         public Builder podUid(String podUid) {
             this.putQueryParameter("PodUid", podUid);
@@ -205,7 +223,10 @@ public class GetPodLogsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time of the query. Default value: 7 days ago.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-08T16:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

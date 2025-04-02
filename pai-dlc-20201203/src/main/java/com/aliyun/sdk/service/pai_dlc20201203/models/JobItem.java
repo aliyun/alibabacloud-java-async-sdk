@@ -252,6 +252,10 @@ public class JobItem extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessibility
      */
@@ -701,6 +705,68 @@ public class JobItem extends TeaModel {
         private String workingDir; 
         private String workspaceId; 
         private String workspaceName; 
+
+        private Builder() {
+        } 
+
+        private Builder(JobItem model) {
+            this.accessibility = model.accessibility;
+            this.clusterId = model.clusterId;
+            this.codeSource = model.codeSource;
+            this.credentialConfig = model.credentialConfig;
+            this.dataSources = model.dataSources;
+            this.displayName = model.displayName;
+            this.duration = model.duration;
+            this.elasticSpec = model.elasticSpec;
+            this.enablePreemptibleJob = model.enablePreemptibleJob;
+            this.enabledDebugger = model.enabledDebugger;
+            this.envs = model.envs;
+            this.gmtCreateTime = model.gmtCreateTime;
+            this.gmtFailedTime = model.gmtFailedTime;
+            this.gmtFinishTime = model.gmtFinishTime;
+            this.gmtModifiedTime = model.gmtModifiedTime;
+            this.gmtRunningTime = model.gmtRunningTime;
+            this.gmtStoppedTime = model.gmtStoppedTime;
+            this.gmtSubmittedTime = model.gmtSubmittedTime;
+            this.gmtSuccessedTime = model.gmtSuccessedTime;
+            this.isDeleted = model.isDeleted;
+            this.jobId = model.jobId;
+            this.jobMaxRunningTimeMinutes = model.jobMaxRunningTimeMinutes;
+            this.jobSpecs = model.jobSpecs;
+            this.jobType = model.jobType;
+            this.nodeCount = model.nodeCount;
+            this.nodeNames = model.nodeNames;
+            this.pods = model.pods;
+            this.priority = model.priority;
+            this.reasonCode = model.reasonCode;
+            this.reasonMessage = model.reasonMessage;
+            this.requestCPU = model.requestCPU;
+            this.requestGPU = model.requestGPU;
+            this.requestMemory = model.requestMemory;
+            this.resourceId = model.resourceId;
+            this.resourceLevel = model.resourceLevel;
+            this.resourceName = model.resourceName;
+            this.resourceQuotaName = model.resourceQuotaName;
+            this.resourceType = model.resourceType;
+            this.restartTimes = model.restartTimes;
+            this.settings = model.settings;
+            this.status = model.status;
+            this.statusHistory = model.statusHistory;
+            this.subStatus = model.subStatus;
+            this.systemEnvs = model.systemEnvs;
+            this.tenantId = model.tenantId;
+            this.thirdpartyLibDir = model.thirdpartyLibDir;
+            this.thirdpartyLibs = model.thirdpartyLibs;
+            this.useOversoldResource = model.useOversoldResource;
+            this.userCommand = model.userCommand;
+            this.userId = model.userId;
+            this.userScript = model.userScript;
+            this.userVpc = model.userVpc;
+            this.username = model.username;
+            this.workingDir = model.workingDir;
+            this.workspaceId = model.workspaceId;
+            this.workspaceName = model.workspaceName;
+        } 
 
         /**
          * Accessibility.
@@ -1224,6 +1290,16 @@ public class JobItem extends TeaModel {
             private String commit; 
             private String mountPath; 
 
+            private Builder() {
+            } 
+
+            private Builder(CodeSource model) {
+                this.branch = model.branch;
+                this.codeSourceId = model.codeSourceId;
+                this.commit = model.commit;
+                this.mountPath = model.mountPath;
+            } 
+
             /**
              * Branch.
              */
@@ -1306,6 +1382,14 @@ public class JobItem extends TeaModel {
         public static final class Builder {
             private String dataSourceId; 
             private String mountPath; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataSources model) {
+                this.dataSourceId = model.dataSourceId;
+                this.mountPath = model.mountPath;
+            } 
 
             /**
              * DataSourceId.
@@ -1409,6 +1493,17 @@ public class JobItem extends TeaModel {
             private String securityGroupId; 
             private String switchId; 
             private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserVpc model) {
+                this.defaultRoute = model.defaultRoute;
+                this.extendedCidrs = model.extendedCidrs;
+                this.securityGroupId = model.securityGroupId;
+                this.switchId = model.switchId;
+                this.vpcId = model.vpcId;
+            } 
 
             /**
              * DefaultRoute.

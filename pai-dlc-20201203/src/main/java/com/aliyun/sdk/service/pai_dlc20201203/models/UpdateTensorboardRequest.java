@@ -55,7 +55,7 @@ public class UpdateTensorboardRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -116,6 +116,7 @@ public class UpdateTensorboardRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the TensorBoard instance. For more information about how to query the ID of the TensorBoard instance, see <a href="https://help.aliyun.com/document_detail/459689.html">ListTensorboards</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,7 +129,14 @@ public class UpdateTensorboardRequest extends Request {
         }
 
         /**
-         * Accessibility.
+         * <p>The visibility of the jobs. Valid values:</p>
+         * <ul>
+         * <li>PUBLIC: The jobs are public in the workspace.</li>
+         * <li>PRIVATE: The jobs are visible only to you and the administrator of the workspace.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PRIVATE</p>
          */
         public Builder accessibility(String accessibility) {
             this.putQueryParameter("Accessibility", accessibility);
@@ -137,7 +145,10 @@ public class UpdateTensorboardRequest extends Request {
         }
 
         /**
-         * MaxRunningTimeMinutes.
+         * <p>The maximum running time. Unit: minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder maxRunningTimeMinutes(Long maxRunningTimeMinutes) {
             this.putQueryParameter("MaxRunningTimeMinutes", maxRunningTimeMinutes);
@@ -155,7 +166,11 @@ public class UpdateTensorboardRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID. 
+         * &lt;props=&quot;china&quot;&gt;For more information about how to query the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>380</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

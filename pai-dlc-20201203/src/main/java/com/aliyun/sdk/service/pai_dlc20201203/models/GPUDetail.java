@@ -40,6 +40,10 @@ public class GPUDetail extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return GPU
      */
@@ -65,6 +69,15 @@ public class GPUDetail extends TeaModel {
         private String GPU; 
         private String GPUType; 
         private String GPUTypeFullName; 
+
+        private Builder() {
+        } 
+
+        private Builder(GPUDetail model) {
+            this.GPU = model.GPU;
+            this.GPUType = model.GPUType;
+            this.GPUTypeFullName = model.GPUTypeFullName;
+        } 
 
         /**
          * GPU.

@@ -129,7 +129,7 @@ public class CreateTensorboardRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -325,7 +325,14 @@ public class CreateTensorboardRequest extends Request {
         } 
 
         /**
-         * Accessibility.
+         * <p>The visibility of the job. Valid values:</p>
+         * <ul>
+         * <li>PUBLIC: The configuration is public in the workspace.</li>
+         * <li>PRIVATE: The configuration is visible only to you and the administrator of the workspace.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PRIVATE</p>
          */
         public Builder accessibility(String accessibility) {
             this.putBodyParameter("Accessibility", accessibility);
@@ -334,7 +341,10 @@ public class CreateTensorboardRequest extends Request {
         }
 
         /**
-         * Cpu.
+         * <p>The number of vCPU cores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder cpu(Long cpu) {
             this.putBodyParameter("Cpu", cpu);
@@ -343,7 +353,11 @@ public class CreateTensorboardRequest extends Request {
         }
 
         /**
-         * DataSourceId.
+         * <p>The dataset ID. 
+         * &lt;props=&quot;china&quot;&gt;Call <a href="https://help.aliyun.com/document_detail/457222.html">ListDatasets</a> to get the dataset ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-xxxxxxxx</p>
          */
         public Builder dataSourceId(String dataSourceId) {
             this.putBodyParameter("DataSourceId", dataSourceId);
@@ -352,7 +366,14 @@ public class CreateTensorboardRequest extends Request {
         }
 
         /**
-         * DataSourceType.
+         * <p>The dataset type. Valid values:</p>
+         * <ul>
+         * <li>OSS</li>
+         * <li>NAS</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS</p>
          */
         public Builder dataSourceType(String dataSourceType) {
             this.putBodyParameter("DataSourceType", dataSourceType);
@@ -361,7 +382,7 @@ public class CreateTensorboardRequest extends Request {
         }
 
         /**
-         * DataSources.
+         * <p>The configurations of the data source.</p>
          */
         public Builder dataSources(java.util.List<DataSourceItem> dataSources) {
             this.putBodyParameter("DataSources", dataSources);
@@ -370,7 +391,10 @@ public class CreateTensorboardRequest extends Request {
         }
 
         /**
-         * DisplayName.
+         * <p>The TensorBoard name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tensorboard</p>
          */
         public Builder displayName(String displayName) {
             this.putBodyParameter("DisplayName", displayName);
@@ -379,7 +403,10 @@ public class CreateTensorboardRequest extends Request {
         }
 
         /**
-         * JobId.
+         * <p>The job ID. Call <a href="https://help.aliyun.com/document_detail/459676.html">ListJobs</a> to get the job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dlc-20210126170216-mtl37ge7gkvdz</p>
          */
         public Builder jobId(String jobId) {
             this.putBodyParameter("JobId", jobId);
@@ -388,7 +415,10 @@ public class CreateTensorboardRequest extends Request {
         }
 
         /**
-         * MaxRunningTimeMinutes.
+         * <p>The maximum running duration. Unit: minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>240</p>
          */
         public Builder maxRunningTimeMinutes(Long maxRunningTimeMinutes) {
             this.putBodyParameter("MaxRunningTimeMinutes", maxRunningTimeMinutes);
@@ -397,7 +427,10 @@ public class CreateTensorboardRequest extends Request {
         }
 
         /**
-         * Memory.
+         * <p>The memory size. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder memory(Long memory) {
             this.putBodyParameter("Memory", memory);
@@ -406,7 +439,10 @@ public class CreateTensorboardRequest extends Request {
         }
 
         /**
-         * Options.
+         * <p>The extended fields of the dataset are in the JSON format. MountPath: the path to mount the dataset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;mountpath&quot;:&quot;/root/data/&quot;}</p>
          */
         public Builder options(String options) {
             this.putBodyParameter("Options", options);
@@ -415,7 +451,14 @@ public class CreateTensorboardRequest extends Request {
         }
 
         /**
-         * Priority.
+         * <p>The priority of the job. Default value: 1. Valid values: 1 to 9.</p>
+         * <ul>
+         * <li>1 is the lowest priority.</li>
+         * <li>9 is the highest priority.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder priority(String priority) {
             this.putBodyParameter("Priority", priority);
@@ -424,7 +467,11 @@ public class CreateTensorboardRequest extends Request {
         }
 
         /**
-         * QuotaId.
+         * <p>The resource quota ID. This parameter is required when you create a TensorBoard job by using a resource quota. &lt;props=&quot;china&quot;&gt;Call <a href="https://help.aliyun.com/document_detail/2628071.html">ListQuotas</a> to get the quota ID. 
+         * This feature is currently limited to whitelisted users. If you need to use this feature, contact us.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>quota12345</p>
          */
         public Builder quotaId(String quotaId) {
             this.putBodyParameter("QuotaId", quotaId);
@@ -433,7 +480,10 @@ public class CreateTensorboardRequest extends Request {
         }
 
         /**
-         * SourceId.
+         * <p>The source ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dlc-xxxxxx</p>
          */
         public Builder sourceId(String sourceId) {
             this.putBodyParameter("SourceId", sourceId);
@@ -442,7 +492,10 @@ public class CreateTensorboardRequest extends Request {
         }
 
         /**
-         * SourceType.
+         * <p>The source type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job</p>
          */
         public Builder sourceType(String sourceType) {
             this.putBodyParameter("SourceType", sourceType);
@@ -451,7 +504,10 @@ public class CreateTensorboardRequest extends Request {
         }
 
         /**
-         * SummaryPath.
+         * <p>The directory of summary.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/root/data/</p>
          */
         public Builder summaryPath(String summaryPath) {
             this.putBodyParameter("SummaryPath", summaryPath);
@@ -460,7 +516,10 @@ public class CreateTensorboardRequest extends Request {
         }
 
         /**
-         * SummaryRelativePath.
+         * <p>The relative path of summary.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/summary/</p>
          */
         public Builder summaryRelativePath(String summaryRelativePath) {
             this.putBodyParameter("SummaryRelativePath", summaryRelativePath);
@@ -469,7 +528,7 @@ public class CreateTensorboardRequest extends Request {
         }
 
         /**
-         * TensorboardDataSources.
+         * <p>The configurations of datasets mounted with the TensorBoard job.</p>
          */
         public Builder tensorboardDataSources(java.util.List<TensorboardDataSourceSpec> tensorboardDataSources) {
             this.putBodyParameter("TensorboardDataSources", tensorboardDataSources);
@@ -478,7 +537,7 @@ public class CreateTensorboardRequest extends Request {
         }
 
         /**
-         * TensorboardSpec.
+         * <p>The pay-as-you-go configuration of TensorBoard, which is used to create TensorBoard jobs that use pay-as-you-go resources.</p>
          */
         public Builder tensorboardSpec(TensorboardSpec tensorboardSpec) {
             this.putBodyParameter("TensorboardSpec", tensorboardSpec);
@@ -487,7 +546,14 @@ public class CreateTensorboardRequest extends Request {
         }
 
         /**
-         * Uri.
+         * <p>The dataset URI.</p>
+         * <ul>
+         * <li>Value format when DataSourceType is set to OSS: <code>oss://[oss-bucket].[endpoint]/[path]</code>.</li>
+         * <li>Value format when DataSourceType is set to NAS:<code>nas://[nas-filesystem-id].[region]/[path]</code>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://.oss-cn-shanghai-finance-1.aliyuncs.com/</p>
          */
         public Builder uri(String uri) {
             this.putBodyParameter("Uri", uri);
@@ -496,7 +562,11 @@ public class CreateTensorboardRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID. 
+         * &lt;props=&quot;china&quot;&gt;Call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123***</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);

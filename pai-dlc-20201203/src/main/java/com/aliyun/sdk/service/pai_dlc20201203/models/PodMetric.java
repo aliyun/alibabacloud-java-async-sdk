@@ -36,6 +36,10 @@ public class PodMetric extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return metrics
      */
@@ -53,6 +57,14 @@ public class PodMetric extends TeaModel {
     public static final class Builder {
         private java.util.List<Metric> metrics; 
         private String podId; 
+
+        private Builder() {
+        } 
+
+        private Builder(PodMetric model) {
+            this.metrics = model.metrics;
+            this.podId = model.podId;
+        } 
 
         /**
          * Metrics.

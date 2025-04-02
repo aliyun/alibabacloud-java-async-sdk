@@ -48,6 +48,10 @@ public class ResourceConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return CPU
      */
@@ -89,6 +93,17 @@ public class ResourceConfig extends TeaModel {
         private String GPUType; 
         private String memory; 
         private String sharedMemory; 
+
+        private Builder() {
+        } 
+
+        private Builder(ResourceConfig model) {
+            this.CPU = model.CPU;
+            this.GPU = model.GPU;
+            this.GPUType = model.GPUType;
+            this.memory = model.memory;
+            this.sharedMemory = model.sharedMemory;
+        } 
 
         /**
          * CPU.

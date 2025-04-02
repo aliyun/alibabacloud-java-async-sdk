@@ -36,6 +36,10 @@ public class DeleteJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return jobId
      */
@@ -54,8 +58,19 @@ public class DeleteJobResponseBody extends TeaModel {
         private String jobId; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DeleteJobResponseBody model) {
+            this.jobId = model.jobId;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * JobId.
+         * <p>The job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dlc*************</p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -63,7 +78,10 @@ public class DeleteJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. You can troubleshoot issues based on the request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

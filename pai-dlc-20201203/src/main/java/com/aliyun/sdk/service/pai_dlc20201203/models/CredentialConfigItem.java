@@ -40,6 +40,10 @@ public class CredentialConfigItem extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return key
      */
@@ -65,6 +69,15 @@ public class CredentialConfigItem extends TeaModel {
         private String key; 
         private java.util.List<CredentialRole> roles; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(CredentialConfigItem model) {
+            this.key = model.key;
+            this.roles = model.roles;
+            this.type = model.type;
+        } 
 
         /**
          * Key.

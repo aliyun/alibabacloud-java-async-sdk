@@ -48,6 +48,10 @@ public class StatusTransitionItem extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return endTime
      */
@@ -89,6 +93,17 @@ public class StatusTransitionItem extends TeaModel {
         private String reasonMessage; 
         private String startTime; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(StatusTransitionItem model) {
+            this.endTime = model.endTime;
+            this.reasonCode = model.reasonCode;
+            this.reasonMessage = model.reasonMessage;
+            this.startTime = model.startTime;
+            this.status = model.status;
+        } 
 
         /**
          * EndTime.

@@ -44,6 +44,10 @@ public class CreateTensorboardResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataSourceId
      */
@@ -78,8 +82,21 @@ public class CreateTensorboardResponseBody extends TeaModel {
         private String requestId; 
         private String tensorboardId; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateTensorboardResponseBody model) {
+            this.dataSourceId = model.dataSourceId;
+            this.jobId = model.jobId;
+            this.requestId = model.requestId;
+            this.tensorboardId = model.tensorboardId;
+        } 
+
         /**
-         * DataSourceId.
+         * <p>The dataset ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ds-20210126170216-xxxxxxxx</p>
          */
         public Builder dataSourceId(String dataSourceId) {
             this.dataSourceId = dataSourceId;
@@ -87,7 +104,10 @@ public class CreateTensorboardResponseBody extends TeaModel {
         }
 
         /**
-         * JobId.
+         * <p>The job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dlc-20210126170216-xxxxxxxx</p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -95,7 +115,10 @@ public class CreateTensorboardResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -103,7 +126,10 @@ public class CreateTensorboardResponseBody extends TeaModel {
         }
 
         /**
-         * TensorboardId.
+         * <p>TensorBoard ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tbxxxxxxxx</p>
          */
         public Builder tensorboardId(String tensorboardId) {
             this.tensorboardId = tensorboardId;

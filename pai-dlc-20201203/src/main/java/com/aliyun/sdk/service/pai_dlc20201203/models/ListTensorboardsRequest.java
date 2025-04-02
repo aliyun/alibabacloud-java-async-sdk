@@ -131,7 +131,7 @@ public class ListTensorboardsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -327,7 +327,14 @@ public class ListTensorboardsRequest extends Request {
         } 
 
         /**
-         * Accessibility.
+         * <p>The instance visibility.</p>
+         * <ul>
+         * <li>PUBLIC: TensorBoard instances are visible to all members in the workspace.</li>
+         * <li>PRIVATE: TensorBoard instances are visible only to you and the administrator of the workspace.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PRIVATE</p>
          */
         public Builder accessibility(String accessibility) {
             this.putQueryParameter("Accessibility", accessibility);
@@ -336,7 +343,10 @@ public class ListTensorboardsRequest extends Request {
         }
 
         /**
-         * DisplayName.
+         * <p>The TensorBoard instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestTensorboard</p>
          */
         public Builder displayName(String displayName) {
             this.putQueryParameter("DisplayName", displayName);
@@ -345,7 +355,10 @@ public class ListTensorboardsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time of the query. Use the UTC time when the TensorBoard instance is created to filter data. If you leave this parameter empty, the default value is the current time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-09T14:45:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -354,7 +367,10 @@ public class ListTensorboardsRequest extends Request {
         }
 
         /**
-         * JobId.
+         * <p>The job ID used to filter TensorBoard instances. For more information about how to obtain the ID of a job, see <a href="https://help.aliyun.com/document_detail/459676.html">ListJobs</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dlc-xxx</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -363,7 +379,14 @@ public class ListTensorboardsRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sorting order.</p>
+         * <ul>
+         * <li>desc</li>
+         * <li>asc</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -372,7 +395,10 @@ public class ListTensorboardsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Minimum value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -381,7 +407,10 @@ public class ListTensorboardsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of TensorBoard instances per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -390,7 +419,14 @@ public class ListTensorboardsRequest extends Request {
         }
 
         /**
-         * PaymentType.
+         * <p>The billing method of TensorBoard instances.</p>
+         * <ul>
+         * <li>Free: the TensorBoard instance that uses free resources.</li>
+         * <li>Postpaid: the TensorBoard instance that uses pay-as-you-go resources.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Postpaid</p>
          */
         public Builder paymentType(String paymentType) {
             this.putQueryParameter("PaymentType", paymentType);
@@ -399,7 +435,18 @@ public class ListTensorboardsRequest extends Request {
         }
 
         /**
-         * QuotaId.
+         * <p>The resource quota ID.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>Only whitelisted users can use resource quotas to create TensorBoard instances. If you want to use this feature, contact us.</p>
+         * </li>
+         * <li><p>This parameter takes effect only when TensorBoard instances use resource quotas.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>quota12***</p>
          */
         public Builder quotaId(String quotaId) {
             this.putQueryParameter("QuotaId", quotaId);
@@ -408,7 +455,10 @@ public class ListTensorboardsRequest extends Request {
         }
 
         /**
-         * ShowOwn.
+         * <p>Specifies whether to return only the TensorBoard instances created by the current logon account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder showOwn(Boolean showOwn) {
             this.putQueryParameter("ShowOwn", showOwn);
@@ -417,7 +467,14 @@ public class ListTensorboardsRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The returned field used to sort TensorBoard instances.</p>
+         * <ul>
+         * <li>DisplayName: the name of the TensorBoard instance.</li>
+         * <li>GmtCreateTime: the time when the TensorBoard instance is created.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>GmtCreateTime</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -426,7 +483,10 @@ public class ListTensorboardsRequest extends Request {
         }
 
         /**
-         * SourceId.
+         * <p>The data source ID. For more information about how to obtain the ID of a job, see <a href="https://help.aliyun.com/document_detail/459676.html">ListJobs</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dlc-xxxxxx</p>
          */
         public Builder sourceId(String sourceId) {
             this.putQueryParameter("SourceId", sourceId);
@@ -435,7 +495,10 @@ public class ListTensorboardsRequest extends Request {
         }
 
         /**
-         * SourceType.
+         * <p>The data source associated with the TensorBoard instance. This parameter is no longer used. Only Deep Learning Containers (DLC) training jobs are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job</p>
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);
@@ -444,7 +507,10 @@ public class ListTensorboardsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time of the query. Use the UTC time when the TensorBoard instance is created to filter data. If you leave this parameter empty, the default value is seven days before the current time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-08T16:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -453,7 +519,17 @@ public class ListTensorboardsRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The TensorBoard instance status. Valid values:</p>
+         * <ul>
+         * <li>Creating</li>
+         * <li>Running</li>
+         * <li>Stopped</li>
+         * <li>Succeeded</li>
+         * <li>Failed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -462,7 +538,10 @@ public class ListTensorboardsRequest extends Request {
         }
 
         /**
-         * TensorboardId.
+         * <p>The TensorBoard instance ID used to filter TensorBoard instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tensorboard-xxx</p>
          */
         public Builder tensorboardId(String tensorboardId) {
             this.putQueryParameter("TensorboardId", tensorboardId);
@@ -471,7 +550,10 @@ public class ListTensorboardsRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>161****3000</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);
@@ -480,7 +562,10 @@ public class ListTensorboardsRequest extends Request {
         }
 
         /**
-         * Username.
+         * <p>The username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>she****mo</p>
          */
         public Builder username(String username) {
             this.putQueryParameter("Username", username);
@@ -489,7 +574,14 @@ public class ListTensorboardsRequest extends Request {
         }
 
         /**
-         * Verbose.
+         * <p>Specifies whether to return the information about the TensorBoard instance.</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder verbose(Boolean verbose) {
             this.putQueryParameter("Verbose", verbose);
@@ -498,7 +590,11 @@ public class ListTensorboardsRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID. Obtain a list of TensorBoard instances based on the workspace ID. 
+         * &lt;props=&quot;china&quot;&gt;For more information, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>380</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

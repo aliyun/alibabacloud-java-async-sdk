@@ -48,6 +48,10 @@ public class GetPodLogsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return jobId
      */
@@ -90,8 +94,22 @@ public class GetPodLogsResponseBody extends TeaModel {
         private String podUid; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetPodLogsResponseBody model) {
+            this.jobId = model.jobId;
+            this.logs = model.logs;
+            this.podId = model.podId;
+            this.podUid = model.podUid;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * JobId.
+         * <p>The job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dlc-20210126170216-******</p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -99,7 +117,7 @@ public class GetPodLogsResponseBody extends TeaModel {
         }
 
         /**
-         * Logs.
+         * <p>The logs.</p>
          */
         public Builder logs(java.util.List<String> logs) {
             this.logs = logs;
@@ -107,7 +125,10 @@ public class GetPodLogsResponseBody extends TeaModel {
         }
 
         /**
-         * PodId.
+         * <p>The node ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dlc-20210126170216-****-chief-0</p>
          */
         public Builder podId(String podId) {
             this.podId = podId;
@@ -115,7 +136,10 @@ public class GetPodLogsResponseBody extends TeaModel {
         }
 
         /**
-         * PodUid.
+         * <p>The instance UID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>94a7cc7c-0033-48b5-85bd-71c63592c268</p>
          */
         public Builder podUid(String podUid) {
             this.podUid = podUid;
@@ -123,7 +147,10 @@ public class GetPodLogsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID which is used for diagnostics and Q&amp;A.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

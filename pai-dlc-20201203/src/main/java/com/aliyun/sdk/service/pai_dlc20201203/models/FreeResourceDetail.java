@@ -36,6 +36,10 @@ public class FreeResourceDetail extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return amount
      */
@@ -53,6 +57,14 @@ public class FreeResourceDetail extends TeaModel {
     public static final class Builder {
         private Integer amount; 
         private String resourceType; 
+
+        private Builder() {
+        } 
+
+        private Builder(FreeResourceDetail model) {
+            this.amount = model.amount;
+            this.resourceType = model.resourceType;
+        } 
 
         /**
          * Amount.

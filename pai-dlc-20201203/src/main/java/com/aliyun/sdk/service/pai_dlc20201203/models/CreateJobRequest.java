@@ -138,7 +138,7 @@ public class CreateJobRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -343,7 +343,14 @@ public class CreateJobRequest extends Request {
         } 
 
         /**
-         * Accessibility.
+         * <p>The job visibility. Valid values:</p>
+         * <ul>
+         * <li>PUBLIC: The job is visible to all members in the workspace.</li>
+         * <li>PRIVATE: The job is visible only to you and the administrator of the workspace.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PRIVATE</p>
          */
         public Builder accessibility(String accessibility) {
             this.putBodyParameter("Accessibility", accessibility);
@@ -352,7 +359,7 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * CodeSource.
+         * <p>The code source of the job. Before the node of the job runs, DLC automatically downloads the configured code from the code source and mounts the code to the local path of the container.</p>
          */
         public Builder codeSource(CodeSource codeSource) {
             this.putBodyParameter("CodeSource", codeSource);
@@ -361,7 +368,7 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * CredentialConfig.
+         * <p>The access credential configuration.</p>
          */
         public Builder credentialConfig(CredentialConfig credentialConfig) {
             this.putBodyParameter("CredentialConfig", credentialConfig);
@@ -370,7 +377,7 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * DataSources.
+         * <p>The data sources for job running.</p>
          */
         public Builder dataSources(java.util.List<DataSources> dataSources) {
             this.putBodyParameter("DataSources", dataSources);
@@ -379,7 +386,10 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * DebuggerConfigContent.
+         * <p>This parameter is not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>“”</p>
          */
         public Builder debuggerConfigContent(String debuggerConfigContent) {
             this.putBodyParameter("DebuggerConfigContent", debuggerConfigContent);
@@ -388,6 +398,11 @@ public class CreateJobRequest extends Request {
         }
 
         /**
+         * <p>The job name. The name must be in the following format:</p>
+         * <ul>
+         * <li>The name must be 1 to 256 characters in length.</li>
+         * <li>The name can contain digits, letters, underscores (_), periods (.), and hyphens (-).</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -400,7 +415,7 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * ElasticSpec.
+         * <p>This parameter is not supported.</p>
          */
         public Builder elasticSpec(JobElasticSpec elasticSpec) {
             this.putBodyParameter("ElasticSpec", elasticSpec);
@@ -409,7 +424,7 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * Envs.
+         * <p>The environment variables.</p>
          */
         public Builder envs(java.util.Map<String, String> envs) {
             this.putBodyParameter("Envs", envs);
@@ -418,7 +433,10 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * JobMaxRunningTimeMinutes.
+         * <p>The maximum running duration of the job. Unit: minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
          */
         public Builder jobMaxRunningTimeMinutes(Long jobMaxRunningTimeMinutes) {
             this.putBodyParameter("JobMaxRunningTimeMinutes", jobMaxRunningTimeMinutes);
@@ -427,6 +445,8 @@ public class CreateJobRequest extends Request {
         }
 
         /**
+         * <p>The configurations for job running, such as the image address, startup command, node resource declaration, and number of replicas.****</p>
+         * <p>A DLC job consists of different types of nodes. If nodes of the same type have exactly the same configuration, the configuration is called JobSpec. <strong>JobSpecs</strong> specifies the configurations of all types of nodes. The value is of the array type.</p>
          * <p>This parameter is required.</p>
          */
         public Builder jobSpecs(java.util.List<JobSpec> jobSpecs) {
@@ -436,6 +456,28 @@ public class CreateJobRequest extends Request {
         }
 
         /**
+         * <p>The job type. The value is case-sensitive. Valid values:</p>
+         * <ul>
+         * <li>TFJob</li>
+         * <li>PyTorchJob</li>
+         * <li>MPIJob</li>
+         * <li>XGBoostJob</li>
+         * <li>OneFlowJob</li>
+         * <li>ElasticBatchJob</li>
+         * <li>SlurmJob</li>
+         * <li>RayJob</li>
+         * </ul>
+         * <p>Valid values for each job type:</p>
+         * <ul>
+         * <li>OneFlowJob: OneFlow.</li>
+         * <li>PyTorchJob: PyTorch.</li>
+         * <li>SlurmJob: Slurm.</li>
+         * <li>XGBoostJob: XGBoost.</li>
+         * <li>ElasticBatchJob: ElasticBatch.</li>
+         * <li>MPIJob: MPIJob.</li>
+         * <li>TFJob: Tensorflow.</li>
+         * <li>RayJob: Ray.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -448,7 +490,10 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * Options.
+         * <p>The additional configuration of the job. You can use this parameter to adjust the behavior of the attached data source. For example, if the attached data source of the job is of the OSS type, you can use this parameter to add the following configurations to override the default parameters of JindoFS: <code>fs.oss.download.thread.concurrency=4,fs.oss.download.queue.size=16</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key1=value1,key2=value2</p>
          */
         public Builder options(String options) {
             this.putBodyParameter("Options", options);
@@ -457,7 +502,14 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * Priority.
+         * <p>The priority of the job. Default value: 1. Valid values: 1 to 9.</p>
+         * <ul>
+         * <li>1: the lowest priority.</li>
+         * <li>9: the highest priority.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder priority(Integer priority) {
             this.putBodyParameter("Priority", priority);
@@ -466,7 +518,14 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * <p>The ID of the resource group. This parameter is optional.</p>
+         * <ul>
+         * <li>If you leave this parameter empty, the job is submitted to a public resource group.</li>
+         * <li>If a resource quota is associated with the current workspace, you can specify the resource quota ID. For more information about how to query the resource quota ID, see <a href="https://help.aliyun.com/document_detail/2651299.html">Manage resource quotas</a>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>rs-xxx</p>
          */
         public Builder resourceId(String resourceId) {
             this.putBodyParameter("ResourceId", resourceId);
@@ -475,7 +534,7 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * Settings.
+         * <p>The additional parameter configurations of the job.</p>
          */
         public Builder settings(JobSettings settings) {
             this.putBodyParameter("Settings", settings);
@@ -484,7 +543,14 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * SuccessPolicy.
+         * <p>The policy that is used to check whether a distributed multi-node job is successful. Only TensorFlow distributed multi-node jobs are supported.</p>
+         * <ul>
+         * <li>ChiefWorker: If you use this policy, the job is considered successful when the pod on the chief node completes operations.</li>
+         * <li>AllWorkers (default): If you use this policy, the job is considered successful when all worker nodes complete operations.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AllWorkers</p>
          */
         public Builder successPolicy(String successPolicy) {
             this.putBodyParameter("SuccessPolicy", successPolicy);
@@ -493,7 +559,10 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * ThirdpartyLibDir.
+         * <p>The folder in which the third-party Python library file requirements.txt is stored. Before the startup command specified by the UserCommand parameter is run on each node, DLC fetches the requirements.txt file from the folder and runs <code>pip install -r</code> to install the required package and library.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/root/code/</p>
          */
         public Builder thirdpartyLibDir(String thirdpartyLibDir) {
             this.putBodyParameter("ThirdpartyLibDir", thirdpartyLibDir);
@@ -502,7 +571,7 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * ThirdpartyLibs.
+         * <p>The third-party Python libraries to be installed.</p>
          */
         public Builder thirdpartyLibs(java.util.List<String> thirdpartyLibs) {
             this.putBodyParameter("ThirdpartyLibs", thirdpartyLibs);
@@ -511,6 +580,7 @@ public class CreateJobRequest extends Request {
         }
 
         /**
+         * <p>The startup command for all nodes of the job.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -523,7 +593,7 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * UserVpc.
+         * <p>The VPC settings.</p>
          */
         public Builder userVpc(UserVpc userVpc) {
             this.putBodyParameter("UserVpc", userVpc);
@@ -532,7 +602,10 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ws-20210126170216-xxxxxxx</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);
@@ -615,8 +688,21 @@ public class CreateJobRequest extends Request {
             private String commit; 
             private String mountPath; 
 
+            private Builder() {
+            } 
+
+            private Builder(CodeSource model) {
+                this.branch = model.branch;
+                this.codeSourceId = model.codeSourceId;
+                this.commit = model.commit;
+                this.mountPath = model.mountPath;
+            } 
+
             /**
-             * Branch.
+             * <p>The branch of the referenced code repository. By default, the branch configured in the code source is used. This parameter is optional.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>master</p>
              */
             public Builder branch(String branch) {
                 this.branch = branch;
@@ -624,7 +710,10 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * CodeSourceId.
+             * <p>The ID of the code source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>code-20210111103721-xxxxxxx</p>
              */
             public Builder codeSourceId(String codeSourceId) {
                 this.codeSourceId = codeSourceId;
@@ -632,7 +721,10 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * Commit.
+             * <p>The commit ID of the code to be downloaded. By default, the commit ID configured in the code source is used. This parameter is optional.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>44da109b5******</p>
              */
             public Builder commit(String commit) {
                 this.commit = commit;
@@ -640,7 +732,10 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * MountPath.
+             * <p>The path to which the job is mounted. By default, the mount path configured in the data source is used. This parameter is optional.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/root/data</p>
              */
             public Builder mountPath(String mountPath) {
                 this.mountPath = mountPath;
@@ -667,6 +762,9 @@ public class CreateJobRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("DataSourceVersion")
         private String dataSourceVersion;
 
+        @com.aliyun.core.annotation.NameInMap("MountAccess")
+        private String mountAccess;
+
         @com.aliyun.core.annotation.NameInMap("MountPath")
         private String mountPath;
 
@@ -679,6 +777,7 @@ public class CreateJobRequest extends Request {
         private DataSources(Builder builder) {
             this.dataSourceId = builder.dataSourceId;
             this.dataSourceVersion = builder.dataSourceVersion;
+            this.mountAccess = builder.mountAccess;
             this.mountPath = builder.mountPath;
             this.options = builder.options;
             this.uri = builder.uri;
@@ -707,6 +806,13 @@ public class CreateJobRequest extends Request {
         }
 
         /**
+         * @return mountAccess
+         */
+        public String getMountAccess() {
+            return this.mountAccess;
+        }
+
+        /**
          * @return mountPath
          */
         public String getMountPath() {
@@ -730,12 +836,28 @@ public class CreateJobRequest extends Request {
         public static final class Builder {
             private String dataSourceId; 
             private String dataSourceVersion; 
+            private String mountAccess; 
             private String mountPath; 
             private String options; 
             private String uri; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataSources model) {
+                this.dataSourceId = model.dataSourceId;
+                this.dataSourceVersion = model.dataSourceVersion;
+                this.mountAccess = model.mountAccess;
+                this.mountPath = model.mountPath;
+                this.options = model.options;
+                this.uri = model.uri;
+            } 
+
             /**
-             * DataSourceId.
+             * <p>The data source ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-cn9dl*******</p>
              */
             public Builder dataSourceId(String dataSourceId) {
                 this.dataSourceId = dataSourceId;
@@ -751,7 +873,18 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * MountPath.
+             * MountAccess.
+             */
+            public Builder mountAccess(String mountAccess) {
+                this.mountAccess = mountAccess;
+                return this;
+            }
+
+            /**
+             * <p>The path to which the job is mounted. By default, the mount path in the data source configuration is used. This parameter is optional.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/root/data</p>
              */
             public Builder mountPath(String mountPath) {
                 this.mountPath = mountPath;
@@ -759,7 +892,14 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * Options.
+             * <p>The mount attribute of the custom dataset. Set the value to OSS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *   &quot;fs.oss.download.thread.concurrency&quot;: &quot;10&quot;,
+             *   &quot;fs.oss.upload.thread.concurrency&quot;: &quot;10&quot;,
+             *   &quot;fs.jindo.args&quot;: &quot;-oattr_timeout=3 -oentry_timeout=0 -onegative_timeout=0 -oauto_cache -ono_symlink&quot;
+             * }</p>
              */
             public Builder options(String options) {
                 this.options = options;
@@ -767,7 +907,10 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * Uri.
+             * <p>The data source path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://bucket.oss-cn-hangzhou-internal.aliyuncs.com/path/</p>
              */
             public Builder uri(String uri) {
                 this.uri = uri;
@@ -861,8 +1004,26 @@ public class CreateJobRequest extends Request {
             private String switchId; 
             private String vpcId; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserVpc model) {
+                this.defaultRoute = model.defaultRoute;
+                this.extendedCIDRs = model.extendedCIDRs;
+                this.securityGroupId = model.securityGroupId;
+                this.switchId = model.switchId;
+                this.vpcId = model.vpcId;
+            } 
+
             /**
-             * DefaultRoute.
+             * <p>The default route. Default value: false. Valid values:</p>
+             * <ul>
+             * <li>eth0: The default network interface is used to access the Internet through the public gateway.</li>
+             * <li>eth1: The user&quot;s Elastic Network Interface is used to access the Internet through the private gateway. For more information about the configuration method, see <a href="https://help.aliyun.com/document_detail/2525343.html">Enable Internet access for a DSW instance by using a private Internet NAT gateway</a>.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>eth0</p>
              */
             public Builder defaultRoute(String defaultRoute) {
                 this.defaultRoute = defaultRoute;
@@ -870,7 +1031,11 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * ExtendedCIDRs.
+             * <p>The extended CIDR block.</p>
+             * <ul>
+             * <li>If you leave the SwitchId and ExtendedCIDRs parameters empty, the system automatically obtains all CIDR blocks in a VPC.</li>
+             * <li>If you configure the SwitchId and ExtendedCIDRs parameters, we recommend that you specify all CIDR blocks in a VPC.</li>
+             * </ul>
              */
             public Builder extendedCIDRs(java.util.List<String> extendedCIDRs) {
                 this.extendedCIDRs = extendedCIDRs;
@@ -878,7 +1043,10 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * SecurityGroupId.
+             * <p>The ID of the security group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-abcdef****</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -886,7 +1054,14 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * SwitchId.
+             * <p>The vSwitch ID. This parameter is optional.</p>
+             * <ul>
+             * <li>If you leave this parameter empty, the system automatically selects a vSwitch based on the inventory status.</li>
+             * <li>You can also specify a vSwitch ID.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>vs-abcdef****</p>
              */
             public Builder switchId(String switchId) {
                 this.switchId = switchId;
@@ -894,7 +1069,10 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * VpcId.
+             * <p>The VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-abcdef****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
