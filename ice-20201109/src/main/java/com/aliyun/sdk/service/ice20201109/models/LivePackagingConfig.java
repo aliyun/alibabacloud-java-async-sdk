@@ -143,6 +143,9 @@ public class LivePackagingConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IV")
         private String iv;
 
+        @com.aliyun.core.annotation.NameInMap("RotatePeriod")
+        private Integer rotatePeriod;
+
         @com.aliyun.core.annotation.NameInMap("SystemIds")
         private java.util.List<String> systemIds;
 
@@ -152,6 +155,7 @@ public class LivePackagingConfig extends TeaModel {
         private DrmConfig(Builder builder) {
             this.encryptionMethod = builder.encryptionMethod;
             this.iv = builder.iv;
+            this.rotatePeriod = builder.rotatePeriod;
             this.systemIds = builder.systemIds;
             this.url = builder.url;
         }
@@ -179,6 +183,13 @@ public class LivePackagingConfig extends TeaModel {
         }
 
         /**
+         * @return rotatePeriod
+         */
+        public Integer getRotatePeriod() {
+            return this.rotatePeriod;
+        }
+
+        /**
          * @return systemIds
          */
         public java.util.List<String> getSystemIds() {
@@ -195,6 +206,7 @@ public class LivePackagingConfig extends TeaModel {
         public static final class Builder {
             private String encryptionMethod; 
             private String iv; 
+            private Integer rotatePeriod; 
             private java.util.List<String> systemIds; 
             private String url; 
 
@@ -204,6 +216,7 @@ public class LivePackagingConfig extends TeaModel {
             private Builder(DrmConfig model) {
                 this.encryptionMethod = model.encryptionMethod;
                 this.iv = model.iv;
+                this.rotatePeriod = model.rotatePeriod;
                 this.systemIds = model.systemIds;
                 this.url = model.url;
             } 
@@ -221,6 +234,14 @@ public class LivePackagingConfig extends TeaModel {
              */
             public Builder iv(String iv) {
                 this.iv = iv;
+                return this;
+            }
+
+            /**
+             * RotatePeriod.
+             */
+            public Builder rotatePeriod(Integer rotatePeriod) {
+                this.rotatePeriod = rotatePeriod;
                 return this;
             }
 

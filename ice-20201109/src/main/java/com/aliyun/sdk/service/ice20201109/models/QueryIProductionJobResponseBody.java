@@ -44,6 +44,9 @@ public class QueryIProductionJobResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("OutputFiles")
     private java.util.List<String> outputFiles;
 
+    @com.aliyun.core.annotation.NameInMap("OutputMediaIds")
+    private java.util.List<String> outputMediaIds;
+
     @com.aliyun.core.annotation.NameInMap("OutputUrls")
     private java.util.List<String> outputUrls;
 
@@ -75,6 +78,7 @@ public class QueryIProductionJobResponseBody extends TeaModel {
         this.name = builder.name;
         this.output = builder.output;
         this.outputFiles = builder.outputFiles;
+        this.outputMediaIds = builder.outputMediaIds;
         this.outputUrls = builder.outputUrls;
         this.requestId = builder.requestId;
         this.result = builder.result;
@@ -160,6 +164,13 @@ public class QueryIProductionJobResponseBody extends TeaModel {
     }
 
     /**
+     * @return outputMediaIds
+     */
+    public java.util.List<String> getOutputMediaIds() {
+        return this.outputMediaIds;
+    }
+
+    /**
      * @return outputUrls
      */
     public java.util.List<String> getOutputUrls() {
@@ -218,6 +229,7 @@ public class QueryIProductionJobResponseBody extends TeaModel {
         private String name; 
         private Output output; 
         private java.util.List<String> outputFiles; 
+        private java.util.List<String> outputMediaIds; 
         private java.util.List<String> outputUrls; 
         private String requestId; 
         private String result; 
@@ -239,6 +251,7 @@ public class QueryIProductionJobResponseBody extends TeaModel {
             this.name = model.name;
             this.output = model.output;
             this.outputFiles = model.outputFiles;
+            this.outputMediaIds = model.outputMediaIds;
             this.outputUrls = model.outputUrls;
             this.requestId = model.requestId;
             this.result = model.result;
@@ -338,6 +351,14 @@ public class QueryIProductionJobResponseBody extends TeaModel {
          */
         public Builder outputFiles(java.util.List<String> outputFiles) {
             this.outputFiles = outputFiles;
+            return this;
+        }
+
+        /**
+         * OutputMediaIds.
+         */
+        public Builder outputMediaIds(java.util.List<String> outputMediaIds) {
+            this.outputMediaIds = outputMediaIds;
             return this;
         }
 
@@ -517,14 +538,22 @@ public class QueryIProductionJobResponseBody extends TeaModel {
      * <p>QueryIProductionJobResponseBody</p>
      */
     public static class Output extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Biz")
+        private String biz;
+
         @com.aliyun.core.annotation.NameInMap("Media")
         private String media;
+
+        @com.aliyun.core.annotation.NameInMap("OutputUrl")
+        private String outputUrl;
 
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Output(Builder builder) {
+            this.biz = builder.biz;
             this.media = builder.media;
+            this.outputUrl = builder.outputUrl;
             this.type = builder.type;
         }
 
@@ -537,10 +566,24 @@ public class QueryIProductionJobResponseBody extends TeaModel {
         }
 
         /**
+         * @return biz
+         */
+        public String getBiz() {
+            return this.biz;
+        }
+
+        /**
          * @return media
          */
         public String getMedia() {
             return this.media;
+        }
+
+        /**
+         * @return outputUrl
+         */
+        public String getOutputUrl() {
+            return this.outputUrl;
         }
 
         /**
@@ -551,16 +594,28 @@ public class QueryIProductionJobResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String biz; 
             private String media; 
+            private String outputUrl; 
             private String type; 
 
             private Builder() {
             } 
 
             private Builder(Output model) {
+                this.biz = model.biz;
                 this.media = model.media;
+                this.outputUrl = model.outputUrl;
                 this.type = model.type;
             } 
+
+            /**
+             * Biz.
+             */
+            public Builder biz(String biz) {
+                this.biz = biz;
+                return this;
+            }
 
             /**
              * <p>The output file. If Type is set to OSS, set this parameter to the path of an OSS object. If Type is set to Media, set this parameter to the ID of a media asset. You can specify the path of an OSS object in one of the following formats:</p>
@@ -574,6 +629,14 @@ public class QueryIProductionJobResponseBody extends TeaModel {
              */
             public Builder media(String media) {
                 this.media = media;
+                return this;
+            }
+
+            /**
+             * OutputUrl.
+             */
+            public Builder outputUrl(String outputUrl) {
+                this.outputUrl = outputUrl;
                 return this;
             }
 

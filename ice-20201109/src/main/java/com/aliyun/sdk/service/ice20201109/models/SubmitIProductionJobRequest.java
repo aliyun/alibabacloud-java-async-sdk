@@ -394,16 +394,24 @@ public class SubmitIProductionJobRequest extends Request {
      * <p>SubmitIProductionJobRequest</p>
      */
     public static class Output extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Biz")
+        private String biz;
+
         @com.aliyun.core.annotation.NameInMap("Media")
         @com.aliyun.core.annotation.Validation(required = true)
         private String media;
+
+        @com.aliyun.core.annotation.NameInMap("OutputUrl")
+        private String outputUrl;
 
         @com.aliyun.core.annotation.NameInMap("Type")
         @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
         private Output(Builder builder) {
+            this.biz = builder.biz;
             this.media = builder.media;
+            this.outputUrl = builder.outputUrl;
             this.type = builder.type;
         }
 
@@ -416,10 +424,24 @@ public class SubmitIProductionJobRequest extends Request {
         }
 
         /**
+         * @return biz
+         */
+        public String getBiz() {
+            return this.biz;
+        }
+
+        /**
          * @return media
          */
         public String getMedia() {
             return this.media;
+        }
+
+        /**
+         * @return outputUrl
+         */
+        public String getOutputUrl() {
+            return this.outputUrl;
         }
 
         /**
@@ -430,16 +452,28 @@ public class SubmitIProductionJobRequest extends Request {
         }
 
         public static final class Builder {
+            private String biz; 
             private String media; 
+            private String outputUrl; 
             private String type; 
 
             private Builder() {
             } 
 
             private Builder(Output model) {
+                this.biz = model.biz;
                 this.media = model.media;
+                this.outputUrl = model.outputUrl;
                 this.type = model.type;
             } 
+
+            /**
+             * Biz.
+             */
+            public Builder biz(String biz) {
+                this.biz = biz;
+                return this;
+            }
 
             /**
              * <p>The output file. If Type is set to OSS, set this parameter to the path of an OSS object. If Type is set to Media, set this parameter to the ID of a media asset. You can specify the path of an OSS object in one of the following formats:</p>
@@ -454,6 +488,14 @@ public class SubmitIProductionJobRequest extends Request {
              */
             public Builder media(String media) {
                 this.media = media;
+                return this;
+            }
+
+            /**
+             * OutputUrl.
+             */
+            public Builder outputUrl(String outputUrl) {
+                this.outputUrl = outputUrl;
                 return this;
             }
 

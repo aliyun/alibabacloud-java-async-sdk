@@ -23,41 +23,33 @@ public class LiveManifestConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DateTimeInterval")
     private Integer dateTimeInterval;
 
-    @com.aliyun.core.annotation.NameInMap("ManifestName")
-    private String manifestName;
-
     @com.aliyun.core.annotation.NameInMap("MaxVideoBitrate")
     private Integer maxVideoBitrate;
 
     @com.aliyun.core.annotation.NameInMap("MinBufferTime")
     private Integer minBufferTime;
 
+    @com.aliyun.core.annotation.NameInMap("MinUpdatePeriod")
+    private Integer minUpdatePeriod;
+
     @com.aliyun.core.annotation.NameInMap("MinVideoBitrate")
     private Integer minVideoBitrate;
 
-    @com.aliyun.core.annotation.NameInMap("Protocol")
-    private String protocol;
-
-    @com.aliyun.core.annotation.NameInMap("SegmentNum")
-    private Integer segmentNum;
+    @com.aliyun.core.annotation.NameInMap("SegmentCount")
+    private Integer segmentCount;
 
     @com.aliyun.core.annotation.NameInMap("StreamOrder")
     private String streamOrder;
 
-    @com.aliyun.core.annotation.NameInMap("UseAudioRenditionGroups")
-    private Boolean useAudioRenditionGroups;
-
     private LiveManifestConfig(Builder builder) {
         this.adMarkers = builder.adMarkers;
         this.dateTimeInterval = builder.dateTimeInterval;
-        this.manifestName = builder.manifestName;
         this.maxVideoBitrate = builder.maxVideoBitrate;
         this.minBufferTime = builder.minBufferTime;
+        this.minUpdatePeriod = builder.minUpdatePeriod;
         this.minVideoBitrate = builder.minVideoBitrate;
-        this.protocol = builder.protocol;
-        this.segmentNum = builder.segmentNum;
+        this.segmentCount = builder.segmentCount;
         this.streamOrder = builder.streamOrder;
-        this.useAudioRenditionGroups = builder.useAudioRenditionGroups;
     }
 
     public static Builder builder() {
@@ -87,13 +79,6 @@ public class LiveManifestConfig extends TeaModel {
     }
 
     /**
-     * @return manifestName
-     */
-    public String getManifestName() {
-        return this.manifestName;
-    }
-
-    /**
      * @return maxVideoBitrate
      */
     public Integer getMaxVideoBitrate() {
@@ -108,6 +93,13 @@ public class LiveManifestConfig extends TeaModel {
     }
 
     /**
+     * @return minUpdatePeriod
+     */
+    public Integer getMinUpdatePeriod() {
+        return this.minUpdatePeriod;
+    }
+
+    /**
      * @return minVideoBitrate
      */
     public Integer getMinVideoBitrate() {
@@ -115,17 +107,10 @@ public class LiveManifestConfig extends TeaModel {
     }
 
     /**
-     * @return protocol
+     * @return segmentCount
      */
-    public String getProtocol() {
-        return this.protocol;
-    }
-
-    /**
-     * @return segmentNum
-     */
-    public Integer getSegmentNum() {
-        return this.segmentNum;
+    public Integer getSegmentCount() {
+        return this.segmentCount;
     }
 
     /**
@@ -135,24 +120,15 @@ public class LiveManifestConfig extends TeaModel {
         return this.streamOrder;
     }
 
-    /**
-     * @return useAudioRenditionGroups
-     */
-    public Boolean getUseAudioRenditionGroups() {
-        return this.useAudioRenditionGroups;
-    }
-
     public static final class Builder {
         private String adMarkers; 
         private Integer dateTimeInterval; 
-        private String manifestName; 
         private Integer maxVideoBitrate; 
         private Integer minBufferTime; 
+        private Integer minUpdatePeriod; 
         private Integer minVideoBitrate; 
-        private String protocol; 
-        private Integer segmentNum; 
+        private Integer segmentCount; 
         private String streamOrder; 
-        private Boolean useAudioRenditionGroups; 
 
         private Builder() {
         } 
@@ -160,14 +136,12 @@ public class LiveManifestConfig extends TeaModel {
         private Builder(LiveManifestConfig model) {
             this.adMarkers = model.adMarkers;
             this.dateTimeInterval = model.dateTimeInterval;
-            this.manifestName = model.manifestName;
             this.maxVideoBitrate = model.maxVideoBitrate;
             this.minBufferTime = model.minBufferTime;
+            this.minUpdatePeriod = model.minUpdatePeriod;
             this.minVideoBitrate = model.minVideoBitrate;
-            this.protocol = model.protocol;
-            this.segmentNum = model.segmentNum;
+            this.segmentCount = model.segmentCount;
             this.streamOrder = model.streamOrder;
-            this.useAudioRenditionGroups = model.useAudioRenditionGroups;
         } 
 
         /**
@@ -183,14 +157,6 @@ public class LiveManifestConfig extends TeaModel {
          */
         public Builder dateTimeInterval(Integer dateTimeInterval) {
             this.dateTimeInterval = dateTimeInterval;
-            return this;
-        }
-
-        /**
-         * ManifestName.
-         */
-        public Builder manifestName(String manifestName) {
-            this.manifestName = manifestName;
             return this;
         }
 
@@ -211,6 +177,14 @@ public class LiveManifestConfig extends TeaModel {
         }
 
         /**
+         * MinUpdatePeriod.
+         */
+        public Builder minUpdatePeriod(Integer minUpdatePeriod) {
+            this.minUpdatePeriod = minUpdatePeriod;
+            return this;
+        }
+
+        /**
          * MinVideoBitrate.
          */
         public Builder minVideoBitrate(Integer minVideoBitrate) {
@@ -219,18 +193,10 @@ public class LiveManifestConfig extends TeaModel {
         }
 
         /**
-         * Protocol.
+         * SegmentCount.
          */
-        public Builder protocol(String protocol) {
-            this.protocol = protocol;
-            return this;
-        }
-
-        /**
-         * SegmentNum.
-         */
-        public Builder segmentNum(Integer segmentNum) {
-            this.segmentNum = segmentNum;
+        public Builder segmentCount(Integer segmentCount) {
+            this.segmentCount = segmentCount;
             return this;
         }
 
@@ -239,14 +205,6 @@ public class LiveManifestConfig extends TeaModel {
          */
         public Builder streamOrder(String streamOrder) {
             this.streamOrder = streamOrder;
-            return this;
-        }
-
-        /**
-         * UseAudioRenditionGroups.
-         */
-        public Builder useAudioRenditionGroups(Boolean useAudioRenditionGroups) {
-            this.useAudioRenditionGroups = useAudioRenditionGroups;
             return this;
         }
 
