@@ -302,6 +302,12 @@ public class GetDialogAnalysisResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("dialogLabels")
         private java.util.List<DialogLabels> dialogLabels;
 
+        @com.aliyun.core.annotation.NameInMap("dialogOpenAnalysis")
+        private java.util.Map<String, ?> dialogOpenAnalysis;
+
+        @com.aliyun.core.annotation.NameInMap("dialogProcessAnalysis")
+        private java.util.Map<String, ?> dialogProcessAnalysis;
+
         @com.aliyun.core.annotation.NameInMap("dialogSop")
         private String dialogSop;
 
@@ -311,6 +317,8 @@ public class GetDialogAnalysisResultResponseBody extends TeaModel {
         private AnalysisResp(Builder builder) {
             this.dialogExecPlan = builder.dialogExecPlan;
             this.dialogLabels = builder.dialogLabels;
+            this.dialogOpenAnalysis = builder.dialogOpenAnalysis;
+            this.dialogProcessAnalysis = builder.dialogProcessAnalysis;
             this.dialogSop = builder.dialogSop;
             this.dialogSummary = builder.dialogSummary;
         }
@@ -338,6 +346,20 @@ public class GetDialogAnalysisResultResponseBody extends TeaModel {
         }
 
         /**
+         * @return dialogOpenAnalysis
+         */
+        public java.util.Map<String, ?> getDialogOpenAnalysis() {
+            return this.dialogOpenAnalysis;
+        }
+
+        /**
+         * @return dialogProcessAnalysis
+         */
+        public java.util.Map<String, ?> getDialogProcessAnalysis() {
+            return this.dialogProcessAnalysis;
+        }
+
+        /**
          * @return dialogSop
          */
         public String getDialogSop() {
@@ -354,6 +376,8 @@ public class GetDialogAnalysisResultResponseBody extends TeaModel {
         public static final class Builder {
             private String dialogExecPlan; 
             private java.util.List<DialogLabels> dialogLabels; 
+            private java.util.Map<String, ?> dialogOpenAnalysis; 
+            private java.util.Map<String, ?> dialogProcessAnalysis; 
             private String dialogSop; 
             private String dialogSummary; 
 
@@ -363,6 +387,8 @@ public class GetDialogAnalysisResultResponseBody extends TeaModel {
             private Builder(AnalysisResp model) {
                 this.dialogExecPlan = model.dialogExecPlan;
                 this.dialogLabels = model.dialogLabels;
+                this.dialogOpenAnalysis = model.dialogOpenAnalysis;
+                this.dialogProcessAnalysis = model.dialogProcessAnalysis;
                 this.dialogSop = model.dialogSop;
                 this.dialogSummary = model.dialogSummary;
             } 
@@ -380,6 +406,22 @@ public class GetDialogAnalysisResultResponseBody extends TeaModel {
              */
             public Builder dialogLabels(java.util.List<DialogLabels> dialogLabels) {
                 this.dialogLabels = dialogLabels;
+                return this;
+            }
+
+            /**
+             * dialogOpenAnalysis.
+             */
+            public Builder dialogOpenAnalysis(java.util.Map<String, ?> dialogOpenAnalysis) {
+                this.dialogOpenAnalysis = dialogOpenAnalysis;
+                return this;
+            }
+
+            /**
+             * dialogProcessAnalysis.
+             */
+            public Builder dialogProcessAnalysis(java.util.Map<String, ?> dialogProcessAnalysis) {
+                this.dialogProcessAnalysis = dialogProcessAnalysis;
                 return this;
             }
 
