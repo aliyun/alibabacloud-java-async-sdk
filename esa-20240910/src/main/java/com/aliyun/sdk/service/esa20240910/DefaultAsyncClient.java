@@ -2039,6 +2039,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeSiteTimeSeriesData  DescribeSiteTimeSeriesDataRequest
+     * @return DescribeSiteTimeSeriesDataResponse
+     */
+    @Override
+    public CompletableFuture<DescribeSiteTimeSeriesDataResponse> describeSiteTimeSeriesData(DescribeSiteTimeSeriesDataRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeSiteTimeSeriesData").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeSiteTimeSeriesDataResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeSiteTimeSeriesDataResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeSiteTopData  DescribeSiteTopDataRequest
+     * @return DescribeSiteTopDataResponse
+     */
+    @Override
+    public CompletableFuture<DescribeSiteTopDataResponse> describeSiteTopData(DescribeSiteTopDataRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeSiteTopData").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeSiteTopDataResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeSiteTopDataResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DisableCustomScenePolicy  DisableCustomScenePolicyRequest
      * @return DisableCustomScenePolicyResponse
      */

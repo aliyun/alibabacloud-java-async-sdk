@@ -75,7 +75,7 @@ public class GetWafRuleRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the WAF rule, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850237.html">ListWafRules</a> interface.</p>
+         * <p>The ID of the WAF rule, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2878257.html">ListWafRules</a> interface.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

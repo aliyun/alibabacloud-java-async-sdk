@@ -151,7 +151,7 @@ public class BatchUpdateWafRulesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the WAF ruleset, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850233.html">ListWafRulesets</a> operation.</p>
+         * <p>The ID of the WAF ruleset, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2878359.html">ListWafRulesets</a> operation.</p>
          * 
          * <strong>example:</strong>
          * <p>10000001</p>
@@ -164,6 +164,9 @@ public class BatchUpdateWafRulesRequest extends Request {
 
         /**
          * <p>The configurations shared by multiple rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000001</p>
          */
         public Builder shared(WafBatchRuleShared shared) {
             String sharedShrink = shrink(shared, "Shared", "json");

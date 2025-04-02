@@ -723,6 +723,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeRatePlanInstanceStatusResponse> describeRatePlanInstanceStatus(DescribeRatePlanInstanceStatusRequest request);
 
     /**
+     * @param request the request parameters of DescribeSiteTimeSeriesData  DescribeSiteTimeSeriesDataRequest
+     * @return DescribeSiteTimeSeriesDataResponse
+     */
+    CompletableFuture<DescribeSiteTimeSeriesDataResponse> describeSiteTimeSeriesData(DescribeSiteTimeSeriesDataRequest request);
+
+    /**
+     * @param request the request parameters of DescribeSiteTopData  DescribeSiteTopDataRequest
+     * @return DescribeSiteTopDataResponse
+     */
+    CompletableFuture<DescribeSiteTopDataResponse> describeSiteTopData(DescribeSiteTopDataRequest request);
+
+    /**
      * @param request the request parameters of DisableCustomScenePolicy  DisableCustomScenePolicyRequest
      * @return DisableCustomScenePolicyResponse
      */
