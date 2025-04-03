@@ -633,11 +633,15 @@ public class ExtendClusterRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Bonds")
         private java.util.List<NodePolicyBonds> bonds;
 
+        @com.aliyun.core.annotation.NameInMap("Hostname")
+        private String hostname;
+
         @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
         private NodePolicy(Builder builder) {
             this.bonds = builder.bonds;
+            this.hostname = builder.hostname;
             this.nodeId = builder.nodeId;
         }
 
@@ -657,6 +661,13 @@ public class ExtendClusterRequest extends Request {
         }
 
         /**
+         * @return hostname
+         */
+        public String getHostname() {
+            return this.hostname;
+        }
+
+        /**
          * @return nodeId
          */
         public String getNodeId() {
@@ -665,6 +676,7 @@ public class ExtendClusterRequest extends Request {
 
         public static final class Builder {
             private java.util.List<NodePolicyBonds> bonds; 
+            private String hostname; 
             private String nodeId; 
 
             private Builder() {
@@ -672,6 +684,7 @@ public class ExtendClusterRequest extends Request {
 
             private Builder(NodePolicy model) {
                 this.bonds = model.bonds;
+                this.hostname = model.hostname;
                 this.nodeId = model.nodeId;
             } 
 
@@ -680,6 +693,14 @@ public class ExtendClusterRequest extends Request {
              */
             public Builder bonds(java.util.List<NodePolicyBonds> bonds) {
                 this.bonds = bonds;
+                return this;
+            }
+
+            /**
+             * Hostname.
+             */
+            public Builder hostname(String hostname) {
+                this.hostname = hostname;
                 return this;
             }
 
@@ -792,6 +813,81 @@ public class ExtendClusterRequest extends Request {
 
             public IpAllocationPolicy build() {
                 return new IpAllocationPolicy(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ExtendClusterRequest} extends {@link TeaModel}
+     *
+     * <p>ExtendClusterRequest</p>
+     */
+    public static class NodeTag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private NodeTag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NodeTag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(NodeTag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public NodeTag build() {
+                return new NodeTag(this);
             } 
 
         } 
@@ -957,22 +1053,58 @@ public class ExtendClusterRequest extends Request {
      * <p>ExtendClusterRequest</p>
      */
     public static class NodeGroups extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Amount")
+        private Long amount;
+
+        @com.aliyun.core.annotation.NameInMap("AutoRenew")
+        private Boolean autoRenew;
+
+        @com.aliyun.core.annotation.NameInMap("ChargeType")
+        private String chargeType;
+
+        @com.aliyun.core.annotation.NameInMap("Hostnames")
+        private java.util.List<String> hostnames;
+
+        @com.aliyun.core.annotation.NameInMap("LoginPassword")
+        private String loginPassword;
+
         @com.aliyun.core.annotation.NameInMap("NodeGroupId")
         private String nodeGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("NodeTag")
+        private java.util.List<NodeTag> nodeTag;
 
         @com.aliyun.core.annotation.NameInMap("Nodes")
         private java.util.List<Nodes> nodes;
 
+        @com.aliyun.core.annotation.NameInMap("Period")
+        private Long period;
+
         @com.aliyun.core.annotation.NameInMap("UserData")
         private String userData;
+
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
+        private String vSwitchId;
+
+        @com.aliyun.core.annotation.NameInMap("VpcId")
+        private String vpcId;
 
         @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private NodeGroups(Builder builder) {
+            this.amount = builder.amount;
+            this.autoRenew = builder.autoRenew;
+            this.chargeType = builder.chargeType;
+            this.hostnames = builder.hostnames;
+            this.loginPassword = builder.loginPassword;
             this.nodeGroupId = builder.nodeGroupId;
+            this.nodeTag = builder.nodeTag;
             this.nodes = builder.nodes;
+            this.period = builder.period;
             this.userData = builder.userData;
+            this.vSwitchId = builder.vSwitchId;
+            this.vpcId = builder.vpcId;
             this.zoneId = builder.zoneId;
         }
 
@@ -985,10 +1117,52 @@ public class ExtendClusterRequest extends Request {
         }
 
         /**
+         * @return amount
+         */
+        public Long getAmount() {
+            return this.amount;
+        }
+
+        /**
+         * @return autoRenew
+         */
+        public Boolean getAutoRenew() {
+            return this.autoRenew;
+        }
+
+        /**
+         * @return chargeType
+         */
+        public String getChargeType() {
+            return this.chargeType;
+        }
+
+        /**
+         * @return hostnames
+         */
+        public java.util.List<String> getHostnames() {
+            return this.hostnames;
+        }
+
+        /**
+         * @return loginPassword
+         */
+        public String getLoginPassword() {
+            return this.loginPassword;
+        }
+
+        /**
          * @return nodeGroupId
          */
         public String getNodeGroupId() {
             return this.nodeGroupId;
+        }
+
+        /**
+         * @return nodeTag
+         */
+        public java.util.List<NodeTag> getNodeTag() {
+            return this.nodeTag;
         }
 
         /**
@@ -999,10 +1173,31 @@ public class ExtendClusterRequest extends Request {
         }
 
         /**
+         * @return period
+         */
+        public Long getPeriod() {
+            return this.period;
+        }
+
+        /**
          * @return userData
          */
         public String getUserData() {
             return this.userData;
+        }
+
+        /**
+         * @return vSwitchId
+         */
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        /**
+         * @return vpcId
+         */
+        public String getVpcId() {
+            return this.vpcId;
         }
 
         /**
@@ -1013,20 +1208,81 @@ public class ExtendClusterRequest extends Request {
         }
 
         public static final class Builder {
+            private Long amount; 
+            private Boolean autoRenew; 
+            private String chargeType; 
+            private java.util.List<String> hostnames; 
+            private String loginPassword; 
             private String nodeGroupId; 
+            private java.util.List<NodeTag> nodeTag; 
             private java.util.List<Nodes> nodes; 
+            private Long period; 
             private String userData; 
+            private String vSwitchId; 
+            private String vpcId; 
             private String zoneId; 
 
             private Builder() {
             } 
 
             private Builder(NodeGroups model) {
+                this.amount = model.amount;
+                this.autoRenew = model.autoRenew;
+                this.chargeType = model.chargeType;
+                this.hostnames = model.hostnames;
+                this.loginPassword = model.loginPassword;
                 this.nodeGroupId = model.nodeGroupId;
+                this.nodeTag = model.nodeTag;
                 this.nodes = model.nodes;
+                this.period = model.period;
                 this.userData = model.userData;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
                 this.zoneId = model.zoneId;
             } 
+
+            /**
+             * Amount.
+             */
+            public Builder amount(Long amount) {
+                this.amount = amount;
+                return this;
+            }
+
+            /**
+             * AutoRenew.
+             */
+            public Builder autoRenew(Boolean autoRenew) {
+                this.autoRenew = autoRenew;
+                return this;
+            }
+
+            /**
+             * ChargeType.
+             */
+            public Builder chargeType(String chargeType) {
+                this.chargeType = chargeType;
+                return this;
+            }
+
+            /**
+             * Hostnames.
+             */
+            public Builder hostnames(java.util.List<String> hostnames) {
+                this.hostnames = hostnames;
+                return this;
+            }
+
+            /**
+             * <p>Login Password</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
+             */
+            public Builder loginPassword(String loginPassword) {
+                this.loginPassword = loginPassword;
+                return this;
+            }
 
             /**
              * <p>Node Group ID</p>
@@ -1040,10 +1296,26 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
+             * NodeTag.
+             */
+            public Builder nodeTag(java.util.List<NodeTag> nodeTag) {
+                this.nodeTag = nodeTag;
+                return this;
+            }
+
+            /**
              * <p>List of Nodes</p>
              */
             public Builder nodes(java.util.List<Nodes> nodes) {
                 this.nodes = nodes;
+                return this;
+            }
+
+            /**
+             * Period.
+             */
+            public Builder period(Long period) {
+                this.period = period;
                 return this;
             }
 
@@ -1056,6 +1328,28 @@ public class ExtendClusterRequest extends Request {
              */
             public Builder userData(String userData) {
                 this.userData = userData;
+                return this;
+            }
+
+            /**
+             * <p>VSwitch ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp169pi5fj151rrms4sia</p>
+             */
+            public Builder vSwitchId(String vSwitchId) {
+                this.vSwitchId = vSwitchId;
+                return this;
+            }
+
+            /**
+             * <p>VPC ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-0jlasms92fdxqd3wlf8ny</p>
+             */
+            public Builder vpcId(String vpcId) {
+                this.vpcId = vpcId;
                 return this;
             }
 
