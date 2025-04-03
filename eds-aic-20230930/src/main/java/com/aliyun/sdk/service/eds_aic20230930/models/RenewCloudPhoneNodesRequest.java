@@ -101,7 +101,15 @@ public class RenewCloudPhoneNodesRequest extends Request {
         } 
 
         /**
-         * AutoRenew.
+         * <p>Specifies whether to enable the auto-renewal feature.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true: enables the auto-renewal feature. In this case, the system automatically renews the instance upon expiration.</li>
+         * <li>false (default): disables the auto-renewal feature. In this case, you need to manually renew the instance upon expiration.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putBodyParameter("AutoRenew", autoRenew);
@@ -110,7 +118,7 @@ public class RenewCloudPhoneNodesRequest extends Request {
         }
 
         /**
-         * NodeIds.
+         * <p>The cloud phone matrix IDs.</p>
          */
         public Builder nodeIds(java.util.List<String> nodeIds) {
             this.putBodyParameter("NodeIds", nodeIds);
@@ -119,7 +127,14 @@ public class RenewCloudPhoneNodesRequest extends Request {
         }
 
         /**
-         * Period.
+         * <p>The subscription duration. The unit is specified by <code>PeriodUnit</code>. Valid values:</p>
+         * <ul>
+         * <li>When <code>PeriodUnit</code> is set to <strong>year</strong>: 1.</li>
+         * <li>When <code>PeriodUnit</code> is set to <strong>month</strong>: 1, 2, 3, and 6.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder period(Integer period) {
             this.putBodyParameter("Period", period);
@@ -128,7 +143,15 @@ public class RenewCloudPhoneNodesRequest extends Request {
         }
 
         /**
-         * PeriodUnit.
+         * <p>The unit of the subscription duration.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Month (default)</li>
+         * <li>Year</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder periodUnit(String periodUnit) {
             this.putBodyParameter("PeriodUnit", periodUnit);

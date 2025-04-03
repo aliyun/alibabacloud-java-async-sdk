@@ -73,7 +73,10 @@ public class ModifyCloudPhoneNodeRequest extends Request {
         } 
 
         /**
-         * NewNodeName.
+         * <p>The name that you want to assign to the cloud phone matrix.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>node_name_new</p>
          */
         public Builder newNodeName(String newNodeName) {
             this.putQueryParameter("NewNodeName", newNodeName);
@@ -82,7 +85,10 @@ public class ModifyCloudPhoneNodeRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * <p>The ID of the cloud phone matrix.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cpn-0ugbptfu473fy****</p>
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);

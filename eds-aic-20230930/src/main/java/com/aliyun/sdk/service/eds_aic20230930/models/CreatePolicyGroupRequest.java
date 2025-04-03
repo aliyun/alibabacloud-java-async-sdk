@@ -46,6 +46,10 @@ public class CreatePolicyGroupRequest extends Request {
     private String policyGroupName;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PolicyType")
+    private String policyType;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ResolutionHeight")
     private Integer resolutionHeight;
 
@@ -62,6 +66,7 @@ public class CreatePolicyGroupRequest extends Request {
         this.lockResolution = builder.lockResolution;
         this.netRedirectPolicy = builder.netRedirectPolicy;
         this.policyGroupName = builder.policyGroupName;
+        this.policyType = builder.policyType;
         this.resolutionHeight = builder.resolutionHeight;
         this.resolutionWidth = builder.resolutionWidth;
     }
@@ -129,6 +134,13 @@ public class CreatePolicyGroupRequest extends Request {
     }
 
     /**
+     * @return policyType
+     */
+    public String getPolicyType() {
+        return this.policyType;
+    }
+
+    /**
      * @return resolutionHeight
      */
     public Integer getResolutionHeight() {
@@ -150,6 +162,7 @@ public class CreatePolicyGroupRequest extends Request {
         private String lockResolution; 
         private NetRedirectPolicy netRedirectPolicy; 
         private String policyGroupName; 
+        private String policyType; 
         private Integer resolutionHeight; 
         private Integer resolutionWidth; 
 
@@ -166,6 +179,7 @@ public class CreatePolicyGroupRequest extends Request {
             this.lockResolution = request.lockResolution;
             this.netRedirectPolicy = request.netRedirectPolicy;
             this.policyGroupName = request.policyGroupName;
+            this.policyType = request.policyType;
             this.resolutionHeight = request.resolutionHeight;
             this.resolutionWidth = request.resolutionWidth;
         } 
@@ -278,6 +292,15 @@ public class CreatePolicyGroupRequest extends Request {
         public Builder policyGroupName(String policyGroupName) {
             this.putBodyParameter("PolicyGroupName", policyGroupName);
             this.policyGroupName = policyGroupName;
+            return this;
+        }
+
+        /**
+         * PolicyType.
+         */
+        public Builder policyType(String policyType) {
+            this.putBodyParameter("PolicyType", policyType);
+            this.policyType = policyType;
             return this;
         }
 

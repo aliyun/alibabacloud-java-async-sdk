@@ -73,7 +73,10 @@ public class GenerateCoordinationCodeRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acp-2zecay9ponatdc4m****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -82,7 +85,10 @@ public class GenerateCoordinationCodeRequest extends Request {
         }
 
         /**
-         * OwnerUserId.
+         * <p>The ID of the user to whom the current instance is assigned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xiaoming</p>
          */
         public Builder ownerUserId(String ownerUserId) {
             this.putQueryParameter("OwnerUserId", ownerUserId);

@@ -276,7 +276,7 @@ public class DescribeAndroidInstancesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region. You can call the DescribeRegions operation to query the regions where Cloud Phone is supported.</p>
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/2807298.html">DescribeRegions</a> operation to query the regions where Cloud Phone is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -288,10 +288,11 @@ public class DescribeAndroidInstancesRequest extends Request {
         }
 
         /**
-         * <p>The billing method. Valid values:</p>
+         * <p>The billing method.</p>
+         * <p>Valid values:</p>
          * <ul>
-         * <li>PrePaid: subscription.</li>
          * <li>PostPaid: pay-as-you-go.</li>
+         * <li>PrePaid: subscription.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -93,7 +93,7 @@ public class DescribeImageListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The objects that are returned.</p>
+         * <p>The images.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;

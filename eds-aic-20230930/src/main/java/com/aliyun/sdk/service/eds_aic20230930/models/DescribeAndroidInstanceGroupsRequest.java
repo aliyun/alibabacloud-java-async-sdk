@@ -284,10 +284,11 @@ public class DescribeAndroidInstanceGroupsRequest extends Request {
         }
 
         /**
-         * <p>The sales mode.</p>
+         * <p>The purchase mode of cloud phone instances.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>standard</li>
+         * <li>Instance (default): the instance group mode.</li>
+         * <li>Node: the matrix mode [whitelisted].</li>
          * </ul>
          * 
          * <strong>example:</strong>

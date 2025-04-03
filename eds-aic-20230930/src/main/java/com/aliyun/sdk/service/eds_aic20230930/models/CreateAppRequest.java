@@ -195,7 +195,15 @@ public class CreateAppRequest extends Request {
         }
 
         /**
-         * CustomAppInfo.
+         * <p>The information about the custom app.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>If you want to pass in a custom app, configure the <code>CustomAppInfo</code> parameter. Take note that the six fields within it are mandatory.</p>
+         * </li>
+         * <li><p>A custom app has a higher priority than an app from the Alibaba Cloud Workspace Application Center. If you configure the <code>CustomAppInfo</code> parameter, the <code>FileName</code> and <code>FilePath</code> pair or the <code>OssAppUrl</code> will not take effect.</p>
+         * </li>
+         * </ul>
          */
         public Builder customAppInfo(CustomAppInfo customAppInfo) {
             String customAppInfoShrink = shrink(customAppInfo, "CustomAppInfo", "json");
@@ -217,13 +225,13 @@ public class CreateAppRequest extends Request {
         }
 
         /**
-         * <p>The name used by the application file in OSS. This parameter, combined with <code>FilePath</code>, uniquely identifies the OSS path of the application file.</p>
+         * <p>The name used by the app file in Object Storage Service (OSS). This parameter, combined with <code>FilePath</code>, uniquely identifies the OSS path of the app file.</p>
          * <blockquote>
          * </blockquote>
          * <ul>
-         * <li><p>Log on to the <a href="https://eds.console.aliyun.com/osshelp">Cloud Phone console</a> and follow the on-screen instructions to upload the application file to Application Center to obtain the value of this parameter.</p>
+         * <li><p>If you want to pass in an app from the Alibaba Cloud Workspace Application Center, configure the <code>FileName</code> and <code>FilePath</code> parameters. Alternatively, configure the <code>OssAppUrl</code> parameter. The FileName and FilePath parameters takes precedence over the OssAppUrl parameter.</p>
          * </li>
-         * <li><p>If you do not specify <code>OssAppUrl</code>, you must specify <code>FileName</code> and <code>FilePath</code>.</p>
+         * <li><p>Log on to the <a href="https://eds.console.aliyun.com/osshelp">Elastic Desktop Service (EDS) Enterprise</a> console, upload the app file to the Application Center according to the on-screen instructions, and then retrieve the parameter value.</p>
          * </li>
          * </ul>
          * 
@@ -237,13 +245,13 @@ public class CreateAppRequest extends Request {
         }
 
         /**
-         * <p>The OSS bucket path to the application file. This parameter, combined with <code>FileName</code>, uniquely identifies the OSS path of the application file.</p>
+         * <p>The OSS bucket path to the app file. This parameter, combined with <code>FileName</code>, uniquely identifies the OSS path of the app file.</p>
          * <blockquote>
          * </blockquote>
          * <ul>
-         * <li><p>Log on to the <a href="https://eds.console.aliyun.com/osshelp">Cloud Phone console</a> and follow the on-screen instructions to upload the application file to Application Center to obtain the value of this parameter.</p>
+         * <li><p>If you want to pass in an app from the Alibaba Cloud Workspace Application Center, configure the <code>FileName</code> and <code>FilePath</code> parameters. Alternatively, configure the <code>OssAppUrl</code> parameter. The FileName and FilePath parameters takes precedence over the OssAppUrl parameter.</p>
          * </li>
-         * <li><p>If you do not specify <code>OssAppUrl</code>, you must specify <code>FileName</code> and <code>FilePath</code>.</p>
+         * <li><p>Log on to the <a href="https://eds.console.aliyun.com/osshelp">EDS Enterprise</a> console, upload the app file to the Application Center according to the on-screen instructions, and then retrieve the parameter value.</p>
          * </li>
          * </ul>
          */
@@ -278,13 +286,13 @@ public class CreateAppRequest extends Request {
         }
 
         /**
-         * <p>The endpoint of the OSS bucket to which you want to upload the application file.</p>
+         * <p>The OSS bucket endpoint of the app file.</p>
          * <blockquote>
          * </blockquote>
          * <ul>
-         * <li><p>Log on to the <a href="https://eds.console.aliyun.com/osshelp">Cloud Phone console</a> and follow the on-screen instructions to upload the application file to Application Center to obtain the value of this parameter.</p>
+         * <li><p>If you want to pass in an app from the Alibaba Cloud Workspace Application Center, configure the <code>FileName</code> and <code>FilePath</code> parameters. Alternatively, configure the <code>OssAppUrl</code> parameter. The FileName and FilePath parameters takes precedence over the OssAppUrl parameter.</p>
          * </li>
-         * <li><p>If you do not specify <code>FileName</code> or <code>FilePath</code>, you must specify this parameter.</p>
+         * <li><p>Log on to the <a href="https://eds.console.aliyun.com/osshelp">EDS Enterprise</a> console, upload the app file to the Application Center according to the on-screen instructions, and then retrieve the parameter value.</p>
          * </li>
          * </ul>
          * 
@@ -415,7 +423,10 @@ public class CreateAppRequest extends Request {
             } 
 
             /**
-             * ApkSize.
+             * <p>The size of the .apk file. Unit: MB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder apkSize(String apkSize) {
                 this.apkSize = apkSize;
@@ -423,7 +434,10 @@ public class CreateAppRequest extends Request {
             }
 
             /**
-             * DownloadUrl.
+             * <p>The download URL of the app.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://testApp.apk">http://testApp.apk</a></p>
              */
             public Builder downloadUrl(String downloadUrl) {
                 this.downloadUrl = downloadUrl;
@@ -431,7 +445,10 @@ public class CreateAppRequest extends Request {
             }
 
             /**
-             * Md5.
+             * <p>The MD5 value of the .apk file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>df3f46ce5844ddb278f14c5a9cd2****</p>
              */
             public Builder md5(String md5) {
                 this.md5 = md5;
@@ -439,7 +456,10 @@ public class CreateAppRequest extends Request {
             }
 
             /**
-             * PackageName.
+             * <p>The name of the app package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>com.example.demo</p>
              */
             public Builder packageName(String packageName) {
                 this.packageName = packageName;
@@ -447,7 +467,10 @@ public class CreateAppRequest extends Request {
             }
 
             /**
-             * Version.
+             * <p>The version of the app.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -455,7 +478,10 @@ public class CreateAppRequest extends Request {
             }
 
             /**
-             * VersionCode.
+             * <p>The code of the app version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder versionCode(String versionCode) {
                 this.versionCode = versionCode;

@@ -167,7 +167,14 @@ public class DescribeSpecRequest extends Request {
         }
 
         /**
-         * MatrixSpec.
+         * <p>The matrix specification.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>cpm.gn6.gx1</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cpm.gn6.gx1</p>
          */
         public Builder matrixSpec(String matrixSpec) {
             this.putQueryParameter("MatrixSpec", matrixSpec);
@@ -200,7 +207,15 @@ public class DescribeSpecRequest extends Request {
         }
 
         /**
-         * SaleMode.
+         * <p>The purchase mode of cloud mobile phones.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Instance (default): the instance group mode.</li>
+         * <li>Node: the matrix mode [whitelisted].</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance</p>
          */
         public Builder saleMode(String saleMode) {
             this.putQueryParameter("SaleMode", saleMode);

@@ -77,8 +77,27 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Preparations</h3>
-     * <p>Before you proceed, log on to the <a href="https://eds.console.aliyun.com/osshelp">Elastic Desktop Service (EDS) Enterprise console</a> and follow the on-screen instructions to upload the application file to Application Center to obtain the values of request parameters <code>FileName</code>, <code>FilePath</code>, and <code>OssAppUrl</code>.</p>
+     * <p>When creating an app, you can provide app information to the system in one of the following ways:</p>
+     * <ul>
+     * <li>Way 1: Apps from the Application Center<ul>
+     * <li>You can use one of the following methods:<ul>
+     * <li>Method 1: Pass in the <code>FileName</code> and <code>FilePath</code> parameters at the same time.</li>
+     * <li>Method 2: Pass in the <code>OssAppUrl</code> parameter</li>
+     * </ul>
+     * </li>
+     * <li>Rule: If your app is from the Alibaba Cloud Workspace Application Center, you must use either Method 1 or Method 2. If both are used, Method 1 takes priority.</li>
+     * <li>Condition: Before you proceed, log on to the <a href="https://eds.console.aliyun.com/osshelp">Elastic Desktop Service (EDS) Enterprise console</a> and follow the on-screen instructions to upload the app file to the Application Center to obtain the values of the <code>FileName</code>, <code>FilePath</code>, and <code>OssAppUrl</code> parameters.</li>
+     * </ul>
+     * </li>
+     * <li>Way 2: Custom apps<ul>
+     * <li>Pass in the <code>CustomAppInfo</code> parameter.</li>
+     * <li>Rule: If you pass in the <code>CustomAppInfo</code> parameter, all six fields within it are required.<blockquote>
+     * <p> If Way 1 and Way 2 are adopted simultaneously, the information from Way 2 takes priority.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * </li>
+     * </ul>
      * 
      * @param request the request parameters of CreateApp  CreateAppRequest
      * @return CreateAppResponse
@@ -139,6 +158,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteAppsResponse> deleteApps(DeleteAppsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before you proceed, make sure that the cloud phone matrix that you want to delete expired.</p>
+     * 
      * @param request the request parameters of DeleteCloudPhoneNodes  DeleteCloudPhoneNodesRequest
      * @return DeleteCloudPhoneNodesResponse
      */
@@ -298,6 +320,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<FetchFileResponse> fetchFile(FetchFileRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to generate a collaboration code for a cloud phone accessed by your current account and share this code with other convenience users to allow them to access the same cloud phone over the desktop, mobile, or web client. They can then call the <a href="https://help.aliyun.com/zh/wuying-workspace/developer-reference/api-metaspace-2022-03-07-applycoordinationwithcode?spm=a2c4g.11174283.help-menu-68242.d_5_3_2_1.70e5e380fUFgOH%5C&scm=20140722.H_2863194._.OR_help-T_cn~zh-V_1">ApplyCoordinationWithCode</a> operation to initiate a coordination request, which will provide them with a connection token.</p>
+     * 
      * @param request the request parameters of GenerateCoordinationCode  GenerateCoordinationCodeRequest
      * @return GenerateCoordinationCodeResponse
      */
@@ -314,7 +339,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation runs asynchronously. To check the installation result, you can query the installation history for the app.</p>
+     * <p>This operation runs asynchronously. To check the operation result, visit the Task Center. To retrieve task details, call the <a href="~~DescribeTasks~~">DescribeTasks</a> operation.</p>
      * 
      * @param request the request parameters of InstallApp  InstallAppRequest
      * @return InstallAppResponse
@@ -370,6 +395,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyPolicyGroupResponse> modifyPolicyGroup(ModifyPolicyGroupRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This operation runs asynchronously. To check the operation result, visit the Task Center. To retrieve task details, call the <a href="~~DescribeTasks~~">DescribeTasks</a> operation.</p>
+     * 
      * @param request the request parameters of OperateApp  OperateAppRequest
      * @return OperateAppResponse
      */
@@ -457,6 +485,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StopAndroidInstanceResponse> stopAndroidInstance(StopAndroidInstanceRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This operation runs asynchronously. To check the operation result, you can visit the Task Center. To retrieve task details, call the <a href="~~DescribeTasks~~">DescribeTasks</a> operation.</p>
+     * 
      * @param request the request parameters of UninstallApp  UninstallAppRequest
      * @return UninstallAppResponse
      */

@@ -59,7 +59,7 @@ public class DeleteCloudPhoneNodesRequest extends Request {
         } 
 
         /**
-         * NodeIds.
+         * <p>The cloud phone matrix IDs.</p>
          */
         public Builder nodeIds(java.util.List<String> nodeIds) {
             this.putBodyParameter("NodeIds", nodeIds);

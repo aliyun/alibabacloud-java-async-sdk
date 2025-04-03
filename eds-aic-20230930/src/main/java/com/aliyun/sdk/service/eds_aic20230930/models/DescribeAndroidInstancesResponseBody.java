@@ -93,7 +93,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The instances.</p>
+         * <p>The cloud phone instances.</p>
          */
         public Builder instanceModel(java.util.List<InstanceModel> instanceModel) {
             this.instanceModel = instanceModel;
@@ -192,7 +192,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The size of the disk. Unit: GB.</p>
+             * <p>The disk size. Unit: GB.</p>
              * 
              * <strong>example:</strong>
              * <p>32</p>
@@ -215,6 +215,144 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
 
             public Disks build() {
                 return new Disks(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeAndroidInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAndroidInstancesResponseBody</p>
+     */
+    public static class DisplayConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Dpi")
+        private Integer dpi;
+
+        @com.aliyun.core.annotation.NameInMap("Fps")
+        private Integer fps;
+
+        @com.aliyun.core.annotation.NameInMap("LockResolution")
+        private String lockResolution;
+
+        @com.aliyun.core.annotation.NameInMap("ResolutionHeight")
+        private Integer resolutionHeight;
+
+        @com.aliyun.core.annotation.NameInMap("ResolutionWidth")
+        private Integer resolutionWidth;
+
+        private DisplayConfig(Builder builder) {
+            this.dpi = builder.dpi;
+            this.fps = builder.fps;
+            this.lockResolution = builder.lockResolution;
+            this.resolutionHeight = builder.resolutionHeight;
+            this.resolutionWidth = builder.resolutionWidth;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DisplayConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return dpi
+         */
+        public Integer getDpi() {
+            return this.dpi;
+        }
+
+        /**
+         * @return fps
+         */
+        public Integer getFps() {
+            return this.fps;
+        }
+
+        /**
+         * @return lockResolution
+         */
+        public String getLockResolution() {
+            return this.lockResolution;
+        }
+
+        /**
+         * @return resolutionHeight
+         */
+        public Integer getResolutionHeight() {
+            return this.resolutionHeight;
+        }
+
+        /**
+         * @return resolutionWidth
+         */
+        public Integer getResolutionWidth() {
+            return this.resolutionWidth;
+        }
+
+        public static final class Builder {
+            private Integer dpi; 
+            private Integer fps; 
+            private String lockResolution; 
+            private Integer resolutionHeight; 
+            private Integer resolutionWidth; 
+
+            private Builder() {
+            } 
+
+            private Builder(DisplayConfig model) {
+                this.dpi = model.dpi;
+                this.fps = model.fps;
+                this.lockResolution = model.lockResolution;
+                this.resolutionHeight = model.resolutionHeight;
+                this.resolutionWidth = model.resolutionWidth;
+            } 
+
+            /**
+             * Dpi.
+             */
+            public Builder dpi(Integer dpi) {
+                this.dpi = dpi;
+                return this;
+            }
+
+            /**
+             * Fps.
+             */
+            public Builder fps(Integer fps) {
+                this.fps = fps;
+                return this;
+            }
+
+            /**
+             * LockResolution.
+             */
+            public Builder lockResolution(String lockResolution) {
+                this.lockResolution = lockResolution;
+                return this;
+            }
+
+            /**
+             * ResolutionHeight.
+             */
+            public Builder resolutionHeight(Integer resolutionHeight) {
+                this.resolutionHeight = resolutionHeight;
+                return this;
+            }
+
+            /**
+             * ResolutionWidth.
+             */
+            public Builder resolutionWidth(Integer resolutionWidth) {
+                this.resolutionWidth = resolutionWidth;
+                return this;
+            }
+
+            public DisplayConfig build() {
+                return new DisplayConfig(this);
             } 
 
         } 
@@ -344,6 +482,9 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Disks")
         private java.util.List<Disks> disks;
 
+        @com.aliyun.core.annotation.NameInMap("DisplayConfig")
+        private DisplayConfig displayConfig;
+
         @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
@@ -420,6 +561,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             this.chargeType = builder.chargeType;
             this.cpu = builder.cpu;
             this.disks = builder.disks;
+            this.displayConfig = builder.displayConfig;
             this.errorCode = builder.errorCode;
             this.gmtCreate = builder.gmtCreate;
             this.gmtExpired = builder.gmtExpired;
@@ -533,6 +675,13 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
          */
         public java.util.List<Disks> getDisks() {
             return this.disks;
+        }
+
+        /**
+         * @return displayConfig
+         */
+        public DisplayConfig getDisplayConfig() {
+            return this.displayConfig;
         }
 
         /**
@@ -695,6 +844,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             private String chargeType; 
             private String cpu; 
             private java.util.List<Disks> disks; 
+            private DisplayConfig displayConfig; 
             private String errorCode; 
             private String gmtCreate; 
             private String gmtExpired; 
@@ -733,6 +883,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
                 this.chargeType = model.chargeType;
                 this.cpu = model.cpu;
                 this.disks = model.disks;
+                this.displayConfig = model.displayConfig;
                 this.errorCode = model.errorCode;
                 this.gmtCreate = model.gmtCreate;
                 this.gmtExpired = model.gmtExpired;
@@ -886,6 +1037,14 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
+             * DisplayConfig.
+             */
+            public Builder displayConfig(DisplayConfig displayConfig) {
+                this.displayConfig = displayConfig;
+                return this;
+            }
+
+            /**
              * <p>The cause of the instance data backup failure or restoration failure.</p>
              * 
              * <strong>example:</strong>
@@ -993,7 +1152,12 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkInterfaceIpv6Address.
+             * <blockquote>
+             * <p> This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder networkInterfaceIpv6Address(String networkInterfaceIpv6Address) {
                 this.networkInterfaceIpv6Address = networkInterfaceIpv6Address;
@@ -1001,7 +1165,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the workspace.</p>
+             * <p>The office network ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-shenzhen+dir-211620****</p>
@@ -1045,7 +1209,12 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PublicIpv6Address.
+             * <blockquote>
+             * <p> This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder publicIpv6Address(String publicIpv6Address) {
                 this.publicIpv6Address = publicIpv6Address;
@@ -1086,10 +1255,11 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the session connection.</p>
+             * <p>The session status.</p>
+             * <p>Valid values:</p>
              * <ul>
-             * <li>connect</li>
-             * <li>disConnect</li>
+             * <li>disConnect: The session is disconnected.</li>
+             * <li>connect: The session is connected.</li>
              * </ul>
              * 
              * <strong>example:</strong>

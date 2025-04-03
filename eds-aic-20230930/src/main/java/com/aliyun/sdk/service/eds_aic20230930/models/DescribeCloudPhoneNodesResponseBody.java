@@ -173,6 +173,9 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
+        private String instanceType;
+
         @com.aliyun.core.annotation.NameInMap("Memory")
         private Integer memory;
 
@@ -215,6 +218,7 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
             this.gmtCreate = builder.gmtCreate;
             this.gmtExpired = builder.gmtExpired;
             this.gmtModified = builder.gmtModified;
+            this.instanceType = builder.instanceType;
             this.memory = builder.memory;
             this.networkId = builder.networkId;
             this.nodeId = builder.nodeId;
@@ -270,6 +274,13 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
          */
         public String getGmtModified() {
             return this.gmtModified;
+        }
+
+        /**
+         * @return instanceType
+         */
+        public String getInstanceType() {
+            return this.instanceType;
         }
 
         /**
@@ -362,6 +373,7 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
             private String gmtCreate; 
             private String gmtExpired; 
             private String gmtModified; 
+            private String instanceType; 
             private Integer memory; 
             private String networkId; 
             private String nodeId; 
@@ -384,6 +396,7 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
                 this.gmtCreate = model.gmtCreate;
                 this.gmtExpired = model.gmtExpired;
                 this.gmtModified = model.gmtModified;
+                this.instanceType = model.instanceType;
                 this.memory = model.memory;
                 this.networkId = model.networkId;
                 this.nodeId = model.nodeId;
@@ -435,6 +448,14 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
+                return this;
+            }
+
+            /**
+             * InstanceType.
+             */
+            public Builder instanceType(String instanceType) {
+                this.instanceType = instanceType;
                 return this;
             }
 

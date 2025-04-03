@@ -459,7 +459,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Is all data to be backed up.</p>
+             * <p>Indicates whether the whole instance is backed up.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -580,7 +580,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>List of apps to be backed up.</p>
+             * <p>The names of the application packages that are backed up.</p>
              */
             public Builder sourceAppInfoList(java.util.List<String> sourceAppInfoList) {
                 this.sourceAppInfoList = sourceAppInfoList;

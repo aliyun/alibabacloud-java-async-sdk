@@ -183,7 +183,7 @@ public class BackupFileRequest extends Request {
         }
 
         /**
-         * <p>Whether all data is to be backed up.</p>
+         * <p>Specifies whether to back up the whole instance.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -195,7 +195,7 @@ public class BackupFileRequest extends Request {
         }
 
         /**
-         * <p>Backup file name.</p>
+         * <p>The name of the backup file.</p>
          * 
          * <strong>example:</strong>
          * <p>defaultBackupFile</p>
@@ -232,7 +232,7 @@ public class BackupFileRequest extends Request {
         }
 
         /**
-         * <p>List of apps to be backed up.</p>
+         * <p>The names of the application packages that you want to back up.</p>
          */
         public Builder sourceAppList(java.util.List<String> sourceAppList) {
             this.putQueryParameter("SourceAppList", sourceAppList);

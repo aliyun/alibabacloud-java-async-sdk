@@ -93,7 +93,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the instance group.</p>
+         * <p>The instance group.</p>
          */
         public Builder instanceGroupModel(java.util.List<InstanceGroupModel> instanceGroupModel) {
             this.instanceGroupModel = instanceGroupModel;
@@ -659,7 +659,10 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of instances.</p>
+             * <p>The number of available instances.</p>
+             * <blockquote>
+             * <p> Available instances are those not in the Deleting or Deleted state.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -708,7 +711,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error code.</p>
+             * <p>The cause of the creation failure.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -892,7 +895,13 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The rendering type.</p>
+             * <p>The rendering mode of the instance group.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>GPURemote: GPU remote rendering.</li>
+             * <li>CPU: CPU rendering.</li>
+             * <li>GPUocal: GPU local rendering.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>CPU</p>

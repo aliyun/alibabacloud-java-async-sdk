@@ -34,12 +34,17 @@ public class ListPolicyGroupsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("PolicyGroupName")
     private String policyGroupName;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PolicyType")
+    private String policyType;
+
     private ListPolicyGroupsRequest(Builder builder) {
         super(builder);
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.policyGroupIds = builder.policyGroupIds;
         this.policyGroupName = builder.policyGroupName;
+        this.policyType = builder.policyType;
     }
 
     public static Builder builder() {
@@ -83,11 +88,19 @@ public class ListPolicyGroupsRequest extends Request {
         return this.policyGroupName;
     }
 
+    /**
+     * @return policyType
+     */
+    public String getPolicyType() {
+        return this.policyType;
+    }
+
     public static final class Builder extends Request.Builder<ListPolicyGroupsRequest, Builder> {
         private Integer maxResults; 
         private String nextToken; 
         private java.util.List<String> policyGroupIds; 
         private String policyGroupName; 
+        private String policyType; 
 
         private Builder() {
             super();
@@ -99,6 +112,7 @@ public class ListPolicyGroupsRequest extends Request {
             this.nextToken = request.nextToken;
             this.policyGroupIds = request.policyGroupIds;
             this.policyGroupName = request.policyGroupName;
+            this.policyType = request.policyType;
         } 
 
         /**
@@ -143,6 +157,15 @@ public class ListPolicyGroupsRequest extends Request {
         public Builder policyGroupName(String policyGroupName) {
             this.putBodyParameter("PolicyGroupName", policyGroupName);
             this.policyGroupName = policyGroupName;
+            return this;
+        }
+
+        /**
+         * PolicyType.
+         */
+        public Builder policyType(String policyType) {
+            this.putBodyParameter("PolicyType", policyType);
+            this.policyType = policyType;
             return this;
         }
 

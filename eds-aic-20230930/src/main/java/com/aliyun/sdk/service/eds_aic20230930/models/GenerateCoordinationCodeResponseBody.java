@@ -67,7 +67,10 @@ public class GenerateCoordinationCodeResponseBody extends TeaModel {
         } 
 
         /**
-         * CoordinatorCode.
+         * <p>The collaboration code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CSHGDK</p>
          */
         public Builder coordinatorCode(String coordinatorCode) {
             this.coordinatorCode = coordinatorCode;
@@ -75,7 +78,10 @@ public class GenerateCoordinationCodeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1A923337-44D9-5CAD-9A53-95084BD4****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

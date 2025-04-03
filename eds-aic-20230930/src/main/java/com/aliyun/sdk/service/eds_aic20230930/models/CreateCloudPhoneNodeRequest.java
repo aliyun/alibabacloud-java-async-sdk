@@ -38,6 +38,10 @@ public class CreateCloudPhoneNodeRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Count")
     private String count;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DisplayConfig")
+    private DisplayConfig displayConfig;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ImageId")
     private String imageId;
@@ -99,6 +103,7 @@ public class CreateCloudPhoneNodeRequest extends Request {
         this.bizRegionId = builder.bizRegionId;
         this.chargeType = builder.chargeType;
         this.count = builder.count;
+        this.displayConfig = builder.displayConfig;
         this.imageId = builder.imageId;
         this.instanceType = builder.instanceType;
         this.networkId = builder.networkId;
@@ -160,6 +165,13 @@ public class CreateCloudPhoneNodeRequest extends Request {
      */
     public String getCount() {
         return this.count;
+    }
+
+    /**
+     * @return displayConfig
+     */
+    public DisplayConfig getDisplayConfig() {
+        return this.displayConfig;
     }
 
     /**
@@ -259,6 +271,7 @@ public class CreateCloudPhoneNodeRequest extends Request {
         private String bizRegionId; 
         private String chargeType; 
         private String count; 
+        private DisplayConfig displayConfig; 
         private String imageId; 
         private String instanceType; 
         private String networkId; 
@@ -284,6 +297,7 @@ public class CreateCloudPhoneNodeRequest extends Request {
             this.bizRegionId = request.bizRegionId;
             this.chargeType = request.chargeType;
             this.count = request.count;
+            this.displayConfig = request.displayConfig;
             this.imageId = request.imageId;
             this.instanceType = request.instanceType;
             this.networkId = request.networkId;
@@ -344,6 +358,16 @@ public class CreateCloudPhoneNodeRequest extends Request {
         public Builder count(String count) {
             this.putQueryParameter("Count", count);
             this.count = count;
+            return this;
+        }
+
+        /**
+         * DisplayConfig.
+         */
+        public Builder displayConfig(DisplayConfig displayConfig) {
+            String displayConfigShrink = shrink(displayConfig, "DisplayConfig", "json");
+            this.putBodyParameter("DisplayConfig", displayConfigShrink);
+            this.displayConfig = displayConfig;
             return this;
         }
 
@@ -474,6 +498,102 @@ public class CreateCloudPhoneNodeRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateCloudPhoneNodeRequest} extends {@link TeaModel}
+     *
+     * <p>CreateCloudPhoneNodeRequest</p>
+     */
+    public static class DisplayConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Dpi")
+        private Integer dpi;
+
+        @com.aliyun.core.annotation.NameInMap("Fps")
+        private Integer fps;
+
+        @com.aliyun.core.annotation.NameInMap("LockResolution")
+        private String lockResolution;
+
+        private DisplayConfig(Builder builder) {
+            this.dpi = builder.dpi;
+            this.fps = builder.fps;
+            this.lockResolution = builder.lockResolution;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DisplayConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return dpi
+         */
+        public Integer getDpi() {
+            return this.dpi;
+        }
+
+        /**
+         * @return fps
+         */
+        public Integer getFps() {
+            return this.fps;
+        }
+
+        /**
+         * @return lockResolution
+         */
+        public String getLockResolution() {
+            return this.lockResolution;
+        }
+
+        public static final class Builder {
+            private Integer dpi; 
+            private Integer fps; 
+            private String lockResolution; 
+
+            private Builder() {
+            } 
+
+            private Builder(DisplayConfig model) {
+                this.dpi = model.dpi;
+                this.fps = model.fps;
+                this.lockResolution = model.lockResolution;
+            } 
+
+            /**
+             * Dpi.
+             */
+            public Builder dpi(Integer dpi) {
+                this.dpi = dpi;
+                return this;
+            }
+
+            /**
+             * Fps.
+             */
+            public Builder fps(Integer fps) {
+                this.fps = fps;
+                return this;
+            }
+
+            /**
+             * LockResolution.
+             */
+            public Builder lockResolution(String lockResolution) {
+                this.lockResolution = lockResolution;
+                return this;
+            }
+
+            public DisplayConfig build() {
+                return new DisplayConfig(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link CreateCloudPhoneNodeRequest} extends {@link TeaModel}

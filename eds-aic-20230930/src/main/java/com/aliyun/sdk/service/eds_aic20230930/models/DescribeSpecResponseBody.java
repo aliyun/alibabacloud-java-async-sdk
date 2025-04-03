@@ -115,7 +115,7 @@ public class DescribeSpecResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Specification information.</p>
+         * <p>The specifications.</p>
          */
         public Builder specInfoModel(java.util.List<SpecInfoModel> specInfoModel) {
             this.specInfoModel = specInfoModel;
@@ -307,7 +307,10 @@ public class DescribeSpecResponseBody extends TeaModel {
             }
 
             /**
-             * MaxPhoneCount.
+             * <p>The maximum number of cloud phone instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40</p>
              */
             public Builder maxPhoneCount(String maxPhoneCount) {
                 this.maxPhoneCount = maxPhoneCount;
@@ -326,7 +329,10 @@ public class DescribeSpecResponseBody extends TeaModel {
             }
 
             /**
-             * MinPhoneCount.
+             * <p>The minimum number of cloud phone instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder minPhoneCount(String minPhoneCount) {
                 this.minPhoneCount = minPhoneCount;
