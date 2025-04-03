@@ -36,6 +36,10 @@ public class ListAggregateResourceRelationsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class ListAggregateResourceRelationsResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private ResourceRelations resourceRelations; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAggregateResourceRelationsResponseBody model) {
+            this.requestId = model.requestId;
+            this.resourceRelations = model.resourceRelations;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -182,6 +194,19 @@ public class ListAggregateResourceRelationsResponseBody extends TeaModel {
             private String sourceResourceType; 
             private String targetResourceId; 
             private String targetResourceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceRelationList model) {
+                this.accountId = model.accountId;
+                this.relationType = model.relationType;
+                this.sourceResourceId = model.sourceResourceId;
+                this.sourceResourceRegionId = model.sourceResourceRegionId;
+                this.sourceResourceType = model.sourceResourceType;
+                this.targetResourceId = model.targetResourceId;
+                this.targetResourceType = model.targetResourceType;
+            } 
 
             /**
              * <p>The Alibaba Cloud account ID of the resource owner.</p>
@@ -329,6 +354,15 @@ public class ListAggregateResourceRelationsResponseBody extends TeaModel {
             private Integer maxResults; 
             private String nextToken; 
             private java.util.List<ResourceRelationList> resourceRelationList; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceRelations model) {
+                this.maxResults = model.maxResults;
+                this.nextToken = model.nextToken;
+                this.resourceRelationList = model.resourceRelationList;
+            } 
 
             /**
              * <p>The maximum number of entries returned on each page.</p>

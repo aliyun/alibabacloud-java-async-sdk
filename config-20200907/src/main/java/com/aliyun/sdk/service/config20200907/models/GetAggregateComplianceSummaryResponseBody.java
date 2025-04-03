@@ -36,6 +36,10 @@ public class GetAggregateComplianceSummaryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return complianceSummary
      */
@@ -53,6 +57,14 @@ public class GetAggregateComplianceSummaryResponseBody extends TeaModel {
     public static final class Builder {
         private ComplianceSummary complianceSummary; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAggregateComplianceSummaryResponseBody model) {
+            this.complianceSummary = model.complianceSummary;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The compliance statistics.</p>
@@ -146,6 +158,16 @@ public class GetAggregateComplianceSummaryResponseBody extends TeaModel {
             private Integer compliantCount; 
             private Integer nonCompliantCount; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(ComplianceSummaryByConfigRule model) {
+                this.complianceSummaryTimestamp = model.complianceSummaryTimestamp;
+                this.compliantCount = model.compliantCount;
+                this.nonCompliantCount = model.nonCompliantCount;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The time when the compliance statistics were collected. Unit: milliseconds.</p>
@@ -266,6 +288,16 @@ public class GetAggregateComplianceSummaryResponseBody extends TeaModel {
             private Integer nonCompliantCount; 
             private Long totalCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(ComplianceSummaryByResource model) {
+                this.complianceSummaryTimestamp = model.complianceSummaryTimestamp;
+                this.compliantCount = model.compliantCount;
+                this.nonCompliantCount = model.nonCompliantCount;
+                this.totalCount = model.totalCount;
+            } 
+
             /**
              * <p>The time when the compliance statistics were collected. Unit: milliseconds.</p>
              * 
@@ -360,6 +392,14 @@ public class GetAggregateComplianceSummaryResponseBody extends TeaModel {
         public static final class Builder {
             private ComplianceSummaryByConfigRule complianceSummaryByConfigRule; 
             private ComplianceSummaryByResource complianceSummaryByResource; 
+
+            private Builder() {
+            } 
+
+            private Builder(ComplianceSummary model) {
+                this.complianceSummaryByConfigRule = model.complianceSummaryByConfigRule;
+                this.complianceSummaryByResource = model.complianceSummaryByResource;
+            } 
 
             /**
              * <p>The summary of compliance statistics from the rule dimension.</p>

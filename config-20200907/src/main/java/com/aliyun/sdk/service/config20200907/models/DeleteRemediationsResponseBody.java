@@ -36,6 +36,10 @@ public class DeleteRemediationsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return remediationDeleteResults
      */
@@ -53,6 +57,14 @@ public class DeleteRemediationsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<RemediationDeleteResults> remediationDeleteResults; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteRemediationsResponseBody model) {
+            this.remediationDeleteResults = model.remediationDeleteResults;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned result.</p>
@@ -134,6 +146,15 @@ public class DeleteRemediationsResponseBody extends TeaModel {
             private String errorMessage; 
             private String remediationId; 
             private Boolean success; 
+
+            private Builder() {
+            } 
+
+            private Builder(RemediationDeleteResults model) {
+                this.errorMessage = model.errorMessage;
+                this.remediationId = model.remediationId;
+                this.success = model.success;
+            } 
 
             /**
              * <p>The error code returned.</p>

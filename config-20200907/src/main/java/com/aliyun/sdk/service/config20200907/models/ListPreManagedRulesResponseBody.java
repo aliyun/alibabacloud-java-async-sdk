@@ -44,6 +44,10 @@ public class ListPreManagedRulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return managedRules
      */
@@ -77,6 +81,16 @@ public class ListPreManagedRulesResponseBody extends TeaModel {
         private Long pageNumber; 
         private Long pageSize; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListPreManagedRulesResponseBody model) {
+            this.managedRules = model.managedRules;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The evaluation rules.</p>
@@ -228,6 +242,19 @@ public class ListPreManagedRulesResponseBody extends TeaModel {
             private String identifier; 
             private java.util.Map<String, ?> optionalInputParameterDetails; 
             private String resourceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(ManagedRules model) {
+                this.compulsoryInputParameterDetails = model.compulsoryInputParameterDetails;
+                this.configRuleName = model.configRuleName;
+                this.description = model.description;
+                this.helpUrls = model.helpUrls;
+                this.identifier = model.identifier;
+                this.optionalInputParameterDetails = model.optionalInputParameterDetails;
+                this.resourceType = model.resourceType;
+            } 
 
             /**
              * <p>The details of the required input parameters of the rule.</p>

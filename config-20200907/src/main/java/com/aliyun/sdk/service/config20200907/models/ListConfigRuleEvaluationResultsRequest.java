@@ -70,7 +70,7 @@ public class ListConfigRuleEvaluationResultsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -203,7 +203,7 @@ public class ListConfigRuleEvaluationResultsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return for a single request. Valid values: 1 to 100.</p>
+         * <p>The maximum number of entries to return in a request. Valid values: 1 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

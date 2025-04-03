@@ -36,6 +36,10 @@ public class GetDiscoveredResourceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return discoveredResourceDetail
      */
@@ -53,6 +57,14 @@ public class GetDiscoveredResourceResponseBody extends TeaModel {
     public static final class Builder {
         private DiscoveredResourceDetail discoveredResourceDetail; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDiscoveredResourceResponseBody model) {
+            this.discoveredResourceDetail = model.discoveredResourceDetail;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of the resource.</p>
@@ -242,6 +254,24 @@ public class GetDiscoveredResourceResponseBody extends TeaModel {
             private String resourceStatus; 
             private String resourceType; 
             private String tags; 
+
+            private Builder() {
+            } 
+
+            private Builder(DiscoveredResourceDetail model) {
+                this.accountId = model.accountId;
+                this.availabilityZone = model.availabilityZone;
+                this.complianceType = model.complianceType;
+                this.configuration = model.configuration;
+                this.region = model.region;
+                this.resourceCreationTime = model.resourceCreationTime;
+                this.resourceDeleted = model.resourceDeleted;
+                this.resourceId = model.resourceId;
+                this.resourceName = model.resourceName;
+                this.resourceStatus = model.resourceStatus;
+                this.resourceType = model.resourceType;
+                this.tags = model.tags;
+            } 
 
             /**
              * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>

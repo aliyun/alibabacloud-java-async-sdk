@@ -36,6 +36,10 @@ public class GetConfigRuleComplianceByPackResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return configRuleComplianceResult
      */
@@ -53,6 +57,14 @@ public class GetConfigRuleComplianceByPackResponseBody extends TeaModel {
     public static final class Builder {
         private ConfigRuleComplianceResult configRuleComplianceResult; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetConfigRuleComplianceByPackResponseBody model) {
+            this.configRuleComplianceResult = model.configRuleComplianceResult;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the compliance evaluation results returned.</p>
@@ -134,6 +146,15 @@ public class GetConfigRuleComplianceByPackResponseBody extends TeaModel {
             private String complianceType; 
             private String configRuleId; 
             private String configRuleName; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConfigRuleCompliances model) {
+                this.complianceType = model.complianceType;
+                this.configRuleId = model.configRuleId;
+                this.configRuleName = model.configRuleName;
+            } 
 
             /**
              * <p>The compliance evaluation result. Valid values:</p>
@@ -248,6 +269,16 @@ public class GetConfigRuleComplianceByPackResponseBody extends TeaModel {
             private java.util.List<ConfigRuleCompliances> configRuleCompliances; 
             private Integer nonCompliantCount; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConfigRuleComplianceResult model) {
+                this.compliancePackId = model.compliancePackId;
+                this.configRuleCompliances = model.configRuleCompliances;
+                this.nonCompliantCount = model.nonCompliantCount;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The ID of the compliance package.</p>

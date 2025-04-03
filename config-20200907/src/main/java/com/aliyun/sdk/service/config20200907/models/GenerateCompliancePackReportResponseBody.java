@@ -36,6 +36,10 @@ public class GenerateCompliancePackReportResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return compliancePackId
      */
@@ -53,6 +57,14 @@ public class GenerateCompliancePackReportResponseBody extends TeaModel {
     public static final class Builder {
         private String compliancePackId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GenerateCompliancePackReportResponseBody model) {
+            this.compliancePackId = model.compliancePackId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the compliance package.</p>

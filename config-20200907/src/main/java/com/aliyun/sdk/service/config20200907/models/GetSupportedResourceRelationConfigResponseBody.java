@@ -36,6 +36,10 @@ public class GetSupportedResourceRelationConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetSupportedResourceRelationConfigResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<ResourceRelationConfigList> resourceRelationConfigList; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSupportedResourceRelationConfigResponseBody model) {
+            this.requestId = model.requestId;
+            this.resourceRelationConfigList = model.resourceRelationConfigList;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -122,6 +134,14 @@ public class GetSupportedResourceRelationConfigResponseBody extends TeaModel {
         public static final class Builder {
             private String relationType; 
             private String targetResourceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceRelationConfigList model) {
+                this.relationType = model.relationType;
+                this.targetResourceType = model.targetResourceType;
+            } 
 
             /**
              * <p>The type of the relationship between the resource and the object. Valid values:</p>

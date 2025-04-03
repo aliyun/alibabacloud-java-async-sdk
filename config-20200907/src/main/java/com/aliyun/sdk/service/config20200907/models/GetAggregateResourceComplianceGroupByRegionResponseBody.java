@@ -36,6 +36,10 @@ public class GetAggregateResourceComplianceGroupByRegionResponseBody extends Tea
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return complianceResult
      */
@@ -53,6 +57,14 @@ public class GetAggregateResourceComplianceGroupByRegionResponseBody extends Tea
     public static final class Builder {
         private ComplianceResult complianceResult; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAggregateResourceComplianceGroupByRegionResponseBody model) {
+            this.complianceResult = model.complianceResult;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The queried evaluation results.</p>
@@ -122,6 +134,14 @@ public class GetAggregateResourceComplianceGroupByRegionResponseBody extends Tea
         public static final class Builder {
             private String complianceType; 
             private Long count; 
+
+            private Builder() {
+            } 
+
+            private Builder(Compliances model) {
+                this.complianceType = model.complianceType;
+                this.count = model.count;
+            } 
 
             /**
              * <p>The evaluation result. Valid values:</p>
@@ -202,6 +222,14 @@ public class GetAggregateResourceComplianceGroupByRegionResponseBody extends Tea
             private java.util.List<Compliances> compliances; 
             private String regionId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ComplianceResultList model) {
+                this.compliances = model.compliances;
+                this.regionId = model.regionId;
+            } 
+
             /**
              * <p>The queried evaluation results.</p>
              */
@@ -259,6 +287,13 @@ public class GetAggregateResourceComplianceGroupByRegionResponseBody extends Tea
 
         public static final class Builder {
             private java.util.List<ComplianceResultList> complianceResultList; 
+
+            private Builder() {
+            } 
+
+            private Builder(ComplianceResult model) {
+                this.complianceResultList = model.complianceResultList;
+            } 
 
             /**
              * <p>The evaluation results grouped by region.</p>

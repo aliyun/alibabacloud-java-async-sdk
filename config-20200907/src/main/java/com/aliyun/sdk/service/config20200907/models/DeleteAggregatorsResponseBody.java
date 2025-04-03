@@ -36,6 +36,10 @@ public class DeleteAggregatorsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return operateAggregatorsResult
      */
@@ -53,6 +57,14 @@ public class DeleteAggregatorsResponseBody extends TeaModel {
     public static final class Builder {
         private OperateAggregatorsResult operateAggregatorsResult; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteAggregatorsResponseBody model) {
+            this.operateAggregatorsResult = model.operateAggregatorsResult;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned result.</p>
@@ -135,6 +147,15 @@ public class DeleteAggregatorsResponseBody extends TeaModel {
             private String errorCode; 
             private Boolean success; 
 
+            private Builder() {
+            } 
+
+            private Builder(OperateAggregators model) {
+                this.aggregatorId = model.aggregatorId;
+                this.errorCode = model.errorCode;
+                this.success = model.success;
+            } 
+
             /**
              * <p>The ID of the account group.</p>
              * 
@@ -213,6 +234,13 @@ public class DeleteAggregatorsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<OperateAggregators> operateAggregators; 
+
+            private Builder() {
+            } 
+
+            private Builder(OperateAggregatorsResult model) {
+                this.operateAggregators = model.operateAggregators;
+            } 
 
             /**
              * <p>The details of the account group.</p>

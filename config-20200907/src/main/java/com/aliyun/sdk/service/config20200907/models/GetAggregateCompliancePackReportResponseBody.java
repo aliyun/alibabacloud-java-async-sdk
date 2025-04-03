@@ -36,6 +36,10 @@ public class GetAggregateCompliancePackReportResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return compliancePackReport
      */
@@ -53,6 +57,14 @@ public class GetAggregateCompliancePackReportResponseBody extends TeaModel {
     public static final class Builder {
         private CompliancePackReport compliancePackReport; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAggregateCompliancePackReportResponseBody model) {
+            this.compliancePackReport = model.compliancePackReport;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The compliance evaluation report that is generated based on a compliance package.</p>
@@ -158,6 +170,17 @@ public class GetAggregateCompliancePackReportResponseBody extends TeaModel {
             private Long reportCreateTimestamp; 
             private String reportStatus; 
             private String reportUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(CompliancePackReport model) {
+                this.accountId = model.accountId;
+                this.compliancePackId = model.compliancePackId;
+                this.reportCreateTimestamp = model.reportCreateTimestamp;
+                this.reportStatus = model.reportStatus;
+                this.reportUrl = model.reportUrl;
+            } 
 
             /**
              * <p>The ID of the management account to which the compliance package belongs.</p>

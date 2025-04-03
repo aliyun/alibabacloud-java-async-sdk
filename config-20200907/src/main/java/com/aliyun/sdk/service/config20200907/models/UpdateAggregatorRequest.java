@@ -38,6 +38,14 @@ public class UpdateAggregatorRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FolderId")
+    private String folderId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
+
     private UpdateAggregatorRequest(Builder builder) {
         super(builder);
         this.aggregatorAccounts = builder.aggregatorAccounts;
@@ -45,6 +53,8 @@ public class UpdateAggregatorRequest extends Request {
         this.aggregatorName = builder.aggregatorName;
         this.clientToken = builder.clientToken;
         this.description = builder.description;
+        this.folderId = builder.folderId;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
@@ -55,7 +65,7 @@ public class UpdateAggregatorRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -95,12 +105,28 @@ public class UpdateAggregatorRequest extends Request {
         return this.description;
     }
 
+    /**
+     * @return folderId
+     */
+    public String getFolderId() {
+        return this.folderId;
+    }
+
+    /**
+     * @return tag
+     */
+    public java.util.List<Tag> getTag() {
+        return this.tag;
+    }
+
     public static final class Builder extends Request.Builder<UpdateAggregatorRequest, Builder> {
         private java.util.List<AggregatorAccounts> aggregatorAccounts; 
         private String aggregatorId; 
         private String aggregatorName; 
         private String clientToken; 
         private String description; 
+        private String folderId; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -113,6 +139,8 @@ public class UpdateAggregatorRequest extends Request {
             this.aggregatorName = request.aggregatorName;
             this.clientToken = request.clientToken;
             this.description = request.description;
+            this.folderId = request.folderId;
+            this.tag = request.tag;
         } 
 
         /**
@@ -180,6 +208,26 @@ public class UpdateAggregatorRequest extends Request {
             return this;
         }
 
+        /**
+         * FolderId.
+         */
+        public Builder folderId(String folderId) {
+            this.putBodyParameter("FolderId", folderId);
+            this.folderId = folderId;
+            return this;
+        }
+
+        /**
+         * <p>The tags of the resource.</p>
+         * <p>You can add up to 20 tags to a resource.</p>
+         */
+        public Builder tag(java.util.List<Tag> tag) {
+            String tagShrink = shrink(tag, "Tag", "json");
+            this.putQueryParameter("Tag", tagShrink);
+            this.tag = tag;
+            return this;
+        }
+
         @Override
         public UpdateAggregatorRequest build() {
             return new UpdateAggregatorRequest(this);
@@ -243,6 +291,15 @@ public class UpdateAggregatorRequest extends Request {
             private String accountName; 
             private String accountType; 
 
+            private Builder() {
+            } 
+
+            private Builder(AggregatorAccounts model) {
+                this.accountId = model.accountId;
+                this.accountName = model.accountName;
+                this.accountType = model.accountType;
+            } 
+
             /**
              * <p>The ID of the member.</p>
              * <p>For more information about how to obtain the ID of a member, see <a href="https://help.aliyun.com/document_detail/160016.html">ListAccounts</a>.</p>
@@ -289,6 +346,90 @@ public class UpdateAggregatorRequest extends Request {
 
             public AggregatorAccounts build() {
                 return new AggregatorAccounts(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateAggregatorRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateAggregatorRequest</p>
+     */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The tag key of the resource. You can specify up to 20 tag keys.</p>
+             * <p>The tag key cannot be an empty string. The tag key must be 1 to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs</code>:. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key-1</p>
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * <p>The tag values.</p>
+             * <p>The tag values can be an empty string or up to 128 characters in length. The tag values cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>Each key-value must be unique. You can specify at most 20 tag values in each call.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value-1</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
             } 
 
         } 

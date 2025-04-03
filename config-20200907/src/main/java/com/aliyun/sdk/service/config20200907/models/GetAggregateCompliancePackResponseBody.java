@@ -36,6 +36,10 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return compliancePack
      */
@@ -53,6 +57,14 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
     public static final class Builder {
         private CompliancePack compliancePack; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAggregateCompliancePackResponseBody model) {
+            this.compliancePack = model.compliancePack;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of the compliance package.</p>
@@ -134,6 +146,15 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
             private String parameterName; 
             private String parameterValue; 
             private Boolean required; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConfigRuleParameters model) {
+                this.parameterName = model.parameterName;
+                this.parameterValue = model.parameterValue;
+                this.required = model.required;
+            } 
 
             /**
              * <p>The name of the input parameter.</p>
@@ -283,6 +304,19 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
             private String resourceTypesScope; 
             private Integer riskLevel; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConfigRules model) {
+                this.configRuleId = model.configRuleId;
+                this.configRuleName = model.configRuleName;
+                this.configRuleParameters = model.configRuleParameters;
+                this.description = model.description;
+                this.managedRuleIdentifier = model.managedRuleIdentifier;
+                this.resourceTypesScope = model.resourceTypesScope;
+                this.riskLevel = model.riskLevel;
+            } 
+
             /**
              * <p>The rule ID.</p>
              * 
@@ -413,6 +447,14 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(ExcludeTagsScope model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
              * <p>The key of the tag.</p>
              * 
@@ -485,6 +527,14 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
         public static final class Builder {
             private String tagKey; 
             private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(TagsScope model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
 
             /**
              * <p>The key of the tag.</p>
@@ -655,6 +705,22 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
             private String tagValueScope; 
             private java.util.List<TagsScope> tagsScope; 
 
+            private Builder() {
+            } 
+
+            private Builder(Scope model) {
+                this.excludeRegionIdsScope = model.excludeRegionIdsScope;
+                this.excludeResourceGroupIdsScope = model.excludeResourceGroupIdsScope;
+                this.excludeResourceIdsScope = model.excludeResourceIdsScope;
+                this.excludeTagsScope = model.excludeTagsScope;
+                this.regionIdsScope = model.regionIdsScope;
+                this.resourceGroupIdsScope = model.resourceGroupIdsScope;
+                this.resourceIdsScope = model.resourceIdsScope;
+                this.tagKeyScope = model.tagKeyScope;
+                this.tagValueScope = model.tagValueScope;
+                this.tagsScope = model.tagsScope;
+            } 
+
             /**
              * <p>The IDs of regions that are excluded. Separate multiple region IDs with commas (,).</p>
              * 
@@ -772,6 +838,87 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
      *
      * <p>GetAggregateCompliancePackResponseBody</p>
      */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TagKey")
+        private String tagKey;
+
+        @com.aliyun.core.annotation.NameInMap("TagValue")
+        private String tagValue;
+
+        private Tags(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
+            /**
+             * <p>The tag keys of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key-1</p>
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * <p>The tag values of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value-1</p>
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetAggregateCompliancePackResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAggregateCompliancePackResponseBody</p>
+     */
     public static class CompliancePack extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountId")
         private Long accountId;
@@ -806,6 +953,9 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
+
         @com.aliyun.core.annotation.NameInMap("TemplateContent")
         private String templateContent;
 
@@ -821,6 +971,7 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
             this.riskLevel = builder.riskLevel;
             this.scope = builder.scope;
             this.status = builder.status;
+            this.tags = builder.tags;
             this.templateContent = builder.templateContent;
         }
 
@@ -910,6 +1061,13 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public java.util.List<Tags> getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return templateContent
          */
         public String getTemplateContent() {
@@ -928,7 +1086,27 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
             private Integer riskLevel; 
             private Scope scope; 
             private String status; 
+            private java.util.List<Tags> tags; 
             private String templateContent; 
+
+            private Builder() {
+            } 
+
+            private Builder(CompliancePack model) {
+                this.accountId = model.accountId;
+                this.aggregatorId = model.aggregatorId;
+                this.compliancePackId = model.compliancePackId;
+                this.compliancePackName = model.compliancePackName;
+                this.compliancePackTemplateId = model.compliancePackTemplateId;
+                this.configRules = model.configRules;
+                this.createTimestamp = model.createTimestamp;
+                this.description = model.description;
+                this.riskLevel = model.riskLevel;
+                this.scope = model.scope;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.templateContent = model.templateContent;
+            } 
 
             /**
              * <p>The ID of the management account to which the compliance package belongs.</p>
@@ -1051,6 +1229,14 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * <p>The tags.</p>
+             */
+            public Builder tags(java.util.List<Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 

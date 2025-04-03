@@ -36,6 +36,10 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return compliancePackTemplatesResult
      */
@@ -53,6 +57,14 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
     public static final class Builder {
         private CompliancePackTemplatesResult compliancePackTemplatesResult; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListCompliancePackTemplatesResponseBody model) {
+            this.compliancePackTemplatesResult = model.compliancePackTemplatesResult;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the compliance package templates returned.</p>
@@ -134,6 +146,15 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
             private String parameterName; 
             private String parameterValue; 
             private Boolean required; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConfigRuleParameters model) {
+                this.parameterName = model.parameterName;
+                this.parameterValue = model.parameterValue;
+                this.required = model.required;
+            } 
 
             /**
              * <p>The name of the input parameter of the managed rule.</p>
@@ -306,6 +327,21 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
             private String managedRuleName; 
             private String resourceTypesScope; 
             private Integer riskLevel; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConfigRules model) {
+                this.configRuleParameters = model.configRuleParameters;
+                this.controlDescription = model.controlDescription;
+                this.controlId = model.controlId;
+                this.defaultEnable = model.defaultEnable;
+                this.description = model.description;
+                this.managedRuleIdentifier = model.managedRuleIdentifier;
+                this.managedRuleName = model.managedRuleName;
+                this.resourceTypesScope = model.resourceTypesScope;
+                this.riskLevel = model.riskLevel;
+            } 
 
             /**
              * <p>The input parameter of the managed rule.</p>
@@ -526,6 +562,19 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
             private Integer lastUpdate; 
             private Integer riskLevel; 
 
+            private Builder() {
+            } 
+
+            private Builder(CompliancePackTemplates model) {
+                this.compliancePackTemplateId = model.compliancePackTemplateId;
+                this.compliancePackTemplateName = model.compliancePackTemplateName;
+                this.configRules = model.configRules;
+                this.description = model.description;
+                this.labels = model.labels;
+                this.lastUpdate = model.lastUpdate;
+                this.riskLevel = model.riskLevel;
+            } 
+
             /**
              * <p>The ID of the compliance package template.</p>
              * 
@@ -679,6 +728,16 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(CompliancePackTemplatesResult model) {
+                this.compliancePackTemplates = model.compliancePackTemplates;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The compliance package templates.</p>

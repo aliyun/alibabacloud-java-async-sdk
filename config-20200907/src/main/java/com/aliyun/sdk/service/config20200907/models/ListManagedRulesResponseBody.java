@@ -36,6 +36,10 @@ public class ListManagedRulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return managedRules
      */
@@ -53,6 +57,14 @@ public class ListManagedRulesResponseBody extends TeaModel {
     public static final class Builder {
         private ManagedRules managedRules; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListManagedRulesResponseBody model) {
+            this.managedRules = model.managedRules;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The managed rules.</p>
@@ -110,6 +122,13 @@ public class ListManagedRulesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> complianceResourceTypes; 
+
+            private Builder() {
+            } 
+
+            private Builder(Scope model) {
+                this.complianceResourceTypes = model.complianceResourceTypes;
+            } 
 
             /**
              * <p>The types of resources to which the managed rule applies.</p>
@@ -265,6 +284,22 @@ public class ListManagedRulesResponseBody extends TeaModel {
             private Integer riskLevel; 
             private Scope scope; 
             private Boolean supportPreviewManagedRule; 
+
+            private Builder() {
+            } 
+
+            private Builder(ManagedRuleList model) {
+                this.configRuleName = model.configRuleName;
+                this.description = model.description;
+                this.helpUrls = model.helpUrls;
+                this.identifier = model.identifier;
+                this.labels = model.labels;
+                this.remediationTemplateIdentifier = model.remediationTemplateIdentifier;
+                this.remediationTemplateName = model.remediationTemplateName;
+                this.riskLevel = model.riskLevel;
+                this.scope = model.scope;
+                this.supportPreviewManagedRule = model.supportPreviewManagedRule;
+            } 
 
             /**
              * <p>The name of the managed rule.</p>
@@ -453,6 +488,16 @@ public class ListManagedRulesResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(ManagedRules model) {
+                this.managedRuleList = model.managedRuleList;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The details of the managed rule.</p>

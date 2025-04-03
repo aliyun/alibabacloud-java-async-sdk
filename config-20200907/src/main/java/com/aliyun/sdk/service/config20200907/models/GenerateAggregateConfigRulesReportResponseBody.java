@@ -40,6 +40,10 @@ public class GenerateAggregateConfigRulesReportResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return aggregatorId
      */
@@ -65,6 +69,15 @@ public class GenerateAggregateConfigRulesReportResponseBody extends TeaModel {
         private String aggregatorId; 
         private String reportId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GenerateAggregateConfigRulesReportResponseBody model) {
+            this.aggregatorId = model.aggregatorId;
+            this.reportId = model.reportId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the account group.</p>

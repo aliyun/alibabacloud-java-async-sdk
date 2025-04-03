@@ -57,7 +57,7 @@ public class IgnoreAggregateEvaluationResultsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -261,6 +261,16 @@ public class IgnoreAggregateEvaluationResultsRequest extends Request {
             private Long resourceAccountId; 
             private String resourceId; 
             private String resourceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Resources model) {
+                this.region = model.region;
+                this.resourceAccountId = model.resourceAccountId;
+                this.resourceId = model.resourceId;
+                this.resourceType = model.resourceType;
+            } 
 
             /**
              * <p>The ID of the region in which the resource resides.</p>

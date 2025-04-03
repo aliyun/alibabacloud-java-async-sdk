@@ -36,6 +36,10 @@ public class DescribeRemediationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return remediation
      */
@@ -53,6 +57,14 @@ public class DescribeRemediationResponseBody extends TeaModel {
     public static final class Builder {
         private Remediation remediation; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRemediationResponseBody model) {
+            this.remediation = model.remediation;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of the remediation configuration.</p>
@@ -231,6 +243,23 @@ public class DescribeRemediationResponseBody extends TeaModel {
             private String remediationSourceType; 
             private String remediationTemplateId; 
             private String remediationType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Remediation model) {
+                this.accountId = model.accountId;
+                this.configRuleId = model.configRuleId;
+                this.invokeType = model.invokeType;
+                this.lastSuccessfulInvocationId = model.lastSuccessfulInvocationId;
+                this.lastSuccessfulInvocationTime = model.lastSuccessfulInvocationTime;
+                this.lastSuccessfulInvocationType = model.lastSuccessfulInvocationType;
+                this.remediationId = model.remediationId;
+                this.remediationOriginParams = model.remediationOriginParams;
+                this.remediationSourceType = model.remediationSourceType;
+                this.remediationTemplateId = model.remediationTemplateId;
+                this.remediationType = model.remediationType;
+            } 
 
             /**
              * <p>The ID of the Alibaba Cloud account.</p>

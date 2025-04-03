@@ -36,6 +36,10 @@ public class ListAggregateResourceEvaluationResultsResponseBody extends TeaModel
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return evaluationResults
      */
@@ -53,6 +57,14 @@ public class ListAggregateResourceEvaluationResultsResponseBody extends TeaModel
     public static final class Builder {
         private EvaluationResults evaluationResults; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAggregateResourceEvaluationResultsResponseBody model) {
+            this.evaluationResults = model.evaluationResults;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the compliance evaluation results returned.</p>
@@ -194,6 +206,20 @@ public class ListAggregateResourceEvaluationResultsResponseBody extends TeaModel
             private String resourceId; 
             private String resourceName; 
             private String resourceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(EvaluationResultQualifier model) {
+                this.configRuleArn = model.configRuleArn;
+                this.configRuleId = model.configRuleId;
+                this.configRuleName = model.configRuleName;
+                this.ignoreDate = model.ignoreDate;
+                this.regionId = model.regionId;
+                this.resourceId = model.resourceId;
+                this.resourceName = model.resourceName;
+                this.resourceType = model.resourceType;
+            } 
 
             /**
              * <p>The Alibaba Cloud Resource Name (ARN) of the rule.</p>
@@ -337,6 +363,14 @@ public class ListAggregateResourceEvaluationResultsResponseBody extends TeaModel
             private EvaluationResultQualifier evaluationResultQualifier; 
             private Long orderingTimestamp; 
 
+            private Builder() {
+            } 
+
+            private Builder(EvaluationResultIdentifier model) {
+                this.evaluationResultQualifier = model.evaluationResultQualifier;
+                this.orderingTimestamp = model.orderingTimestamp;
+            } 
+
             /**
              * <p>The information about the evaluated resource in the compliance evaluation result.</p>
              */
@@ -478,6 +512,20 @@ public class ListAggregateResourceEvaluationResultsResponseBody extends TeaModel
             private Boolean remediationEnabled; 
             private Long resultRecordedTimestamp; 
             private Integer riskLevel; 
+
+            private Builder() {
+            } 
+
+            private Builder(EvaluationResultList model) {
+                this.annotation = model.annotation;
+                this.complianceType = model.complianceType;
+                this.configRuleInvokedTimestamp = model.configRuleInvokedTimestamp;
+                this.evaluationResultIdentifier = model.evaluationResultIdentifier;
+                this.invokingEventMessageType = model.invokingEventMessageType;
+                this.remediationEnabled = model.remediationEnabled;
+                this.resultRecordedTimestamp = model.resultRecordedTimestamp;
+                this.riskLevel = model.riskLevel;
+            } 
 
             /**
              * <p>The annotation to the resource that is evaluated as incompliant.</p>
@@ -646,6 +694,15 @@ public class ListAggregateResourceEvaluationResultsResponseBody extends TeaModel
             private java.util.List<EvaluationResultList> evaluationResultList; 
             private Integer maxResults; 
             private String nextToken; 
+
+            private Builder() {
+            } 
+
+            private Builder(EvaluationResults model) {
+                this.evaluationResultList = model.evaluationResultList;
+                this.maxResults = model.maxResults;
+                this.nextToken = model.nextToken;
+            } 
 
             /**
              * <p>The details of the compliance evaluation result.</p>

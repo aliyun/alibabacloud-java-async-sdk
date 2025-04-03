@@ -36,6 +36,10 @@ public class ListConfigDeliveryChannelsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return deliveryChannels
      */
@@ -53,6 +57,14 @@ public class ListConfigDeliveryChannelsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<DeliveryChannels> deliveryChannels; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListConfigDeliveryChannelsResponseBody model) {
+            this.deliveryChannels = model.deliveryChannels;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the delivery channels.</p>
@@ -278,6 +290,27 @@ public class ListConfigDeliveryChannelsResponseBody extends TeaModel {
             private Boolean nonCompliantNotification; 
             private String oversizedDataOSSTargetArn; 
             private Integer status; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeliveryChannels model) {
+                this.accountId = model.accountId;
+                this.compliantSnapshot = model.compliantSnapshot;
+                this.configurationItemChangeNotification = model.configurationItemChangeNotification;
+                this.configurationSnapshot = model.configurationSnapshot;
+                this.deliveryChannelAssumeRoleArn = model.deliveryChannelAssumeRoleArn;
+                this.deliveryChannelCondition = model.deliveryChannelCondition;
+                this.deliveryChannelId = model.deliveryChannelId;
+                this.deliveryChannelName = model.deliveryChannelName;
+                this.deliveryChannelTargetArn = model.deliveryChannelTargetArn;
+                this.deliveryChannelType = model.deliveryChannelType;
+                this.deliverySnapshotTime = model.deliverySnapshotTime;
+                this.description = model.description;
+                this.nonCompliantNotification = model.nonCompliantNotification;
+                this.oversizedDataOSSTargetArn = model.oversizedDataOSSTargetArn;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The ID of your Alibaba Cloud account.</p>

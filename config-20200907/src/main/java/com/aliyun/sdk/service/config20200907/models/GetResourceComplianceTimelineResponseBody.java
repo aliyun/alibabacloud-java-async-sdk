@@ -36,6 +36,10 @@ public class GetResourceComplianceTimelineResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetResourceComplianceTimelineResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private ResourceComplianceTimeline resourceComplianceTimeline; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetResourceComplianceTimelineResponseBody model) {
+            this.requestId = model.requestId;
+            this.resourceComplianceTimeline = model.resourceComplianceTimeline;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -242,6 +254,24 @@ public class GetResourceComplianceTimelineResponseBody extends TeaModel {
             private String resourceStatus; 
             private String resourceType; 
             private String tags; 
+
+            private Builder() {
+            } 
+
+            private Builder(ComplianceList model) {
+                this.accountId = model.accountId;
+                this.availabilityZone = model.availabilityZone;
+                this.captureTime = model.captureTime;
+                this.configuration = model.configuration;
+                this.configurationDiff = model.configurationDiff;
+                this.region = model.region;
+                this.resourceCreateTime = model.resourceCreateTime;
+                this.resourceId = model.resourceId;
+                this.resourceName = model.resourceName;
+                this.resourceStatus = model.resourceStatus;
+                this.resourceType = model.resourceType;
+                this.tags = model.tags;
+            } 
 
             /**
              * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
@@ -441,6 +471,15 @@ public class GetResourceComplianceTimelineResponseBody extends TeaModel {
             private java.util.List<ComplianceList> complianceList; 
             private Integer maxResults; 
             private String nextToken; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceComplianceTimeline model) {
+                this.complianceList = model.complianceList;
+                this.maxResults = model.maxResults;
+                this.nextToken = model.nextToken;
+            } 
 
             /**
              * <p>The compliance evaluation records on the compliance timeline.</p>

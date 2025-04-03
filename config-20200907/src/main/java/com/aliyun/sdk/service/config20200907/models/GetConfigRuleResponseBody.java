@@ -36,6 +36,10 @@ public class GetConfigRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return configRule
      */
@@ -53,6 +57,14 @@ public class GetConfigRuleResponseBody extends TeaModel {
     public static final class Builder {
         private ConfigRule configRule; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetConfigRuleResponseBody model) {
+            this.configRule = model.configRule;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of the rule.</p>
@@ -122,6 +134,14 @@ public class GetConfigRuleResponseBody extends TeaModel {
         public static final class Builder {
             private String complianceType; 
             private Integer count; 
+
+            private Builder() {
+            } 
+
+            private Builder(Compliance model) {
+                this.complianceType = model.complianceType;
+                this.count = model.count;
+            } 
 
             /**
              * <p>The statistics on the compliance evaluation results by compliance type. Valid values:</p>
@@ -273,6 +293,20 @@ public class GetConfigRuleResponseBody extends TeaModel {
             private Long lastFailedInvocationTimestamp; 
             private Long lastSuccessfulEvaluationTimestamp; 
             private Long lastSuccessfulInvocationTimestamp; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConfigRuleEvaluationStatus model) {
+                this.firstActivatedTimestamp = model.firstActivatedTimestamp;
+                this.firstEvaluationStarted = model.firstEvaluationStarted;
+                this.lastErrorCode = model.lastErrorCode;
+                this.lastErrorMessage = model.lastErrorMessage;
+                this.lastFailedEvaluationTimestamp = model.lastFailedEvaluationTimestamp;
+                this.lastFailedInvocationTimestamp = model.lastFailedInvocationTimestamp;
+                this.lastSuccessfulEvaluationTimestamp = model.lastSuccessfulEvaluationTimestamp;
+                this.lastSuccessfulInvocationTimestamp = model.lastSuccessfulInvocationTimestamp;
+            } 
 
             /**
              * <p>The timestamp generated when the rule was first triggered. Unit: millisecond.</p>
@@ -441,6 +475,16 @@ public class GetConfigRuleResponseBody extends TeaModel {
             private String creatorId; 
             private String creatorName; 
 
+            private Builder() {
+            } 
+
+            private Builder(CreateBy model) {
+                this.compliancePackId = model.compliancePackId;
+                this.compliancePackName = model.compliancePackName;
+                this.creatorId = model.creatorId;
+                this.creatorName = model.creatorName;
+            } 
+
             /**
              * <p>The compliance package ID.</p>
              * 
@@ -536,6 +580,14 @@ public class GetConfigRuleResponseBody extends TeaModel {
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(ExcludeTagsScope model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
              * <p>The tag key.</p>
              * 
@@ -620,6 +672,15 @@ public class GetConfigRuleResponseBody extends TeaModel {
             private String eventSource; 
             private String maximumExecutionFrequency; 
             private String messageType; 
+
+            private Builder() {
+            } 
+
+            private Builder(SourceDetails model) {
+                this.eventSource = model.eventSource;
+                this.maximumExecutionFrequency = model.maximumExecutionFrequency;
+                this.messageType = model.messageType;
+            } 
 
             /**
              * <p>The event source.</p>
@@ -782,6 +843,19 @@ public class GetConfigRuleResponseBody extends TeaModel {
             private java.util.Map<String, ?> optionalInputParameterDetails; 
             private java.util.List<SourceDetails> sourceDetails; 
 
+            private Builder() {
+            } 
+
+            private Builder(ManagedRule model) {
+                this.compulsoryInputParameterDetails = model.compulsoryInputParameterDetails;
+                this.description = model.description;
+                this.identifier = model.identifier;
+                this.labels = model.labels;
+                this.managedRuleName = model.managedRuleName;
+                this.optionalInputParameterDetails = model.optionalInputParameterDetails;
+                this.sourceDetails = model.sourceDetails;
+            } 
+
             /**
              * <p>The settings of the required input parameters for the managed rule.</p>
              * 
@@ -892,6 +966,13 @@ public class GetConfigRuleResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> complianceResourceTypes; 
 
+            private Builder() {
+            } 
+
+            private Builder(Scope model) {
+                this.complianceResourceTypes = model.complianceResourceTypes;
+            } 
+
             /**
              * <p>The types of the resources to be evaluated against the rule. You can also view the resource types by using the ResourceTypesScope parameter.</p>
              */
@@ -962,6 +1043,15 @@ public class GetConfigRuleResponseBody extends TeaModel {
             private String eventSource; 
             private String maximumExecutionFrequency; 
             private String messageType; 
+
+            private Builder() {
+            } 
+
+            private Builder(SourceSourceDetails model) {
+                this.eventSource = model.eventSource;
+                this.maximumExecutionFrequency = model.maximumExecutionFrequency;
+                this.messageType = model.messageType;
+            } 
 
             /**
              * <p>The event source.</p>
@@ -1076,6 +1166,15 @@ public class GetConfigRuleResponseBody extends TeaModel {
             private String owner; 
             private java.util.List<SourceSourceDetails> sourceDetails; 
 
+            private Builder() {
+            } 
+
+            private Builder(Source model) {
+                this.identifier = model.identifier;
+                this.owner = model.owner;
+                this.sourceDetails = model.sourceDetails;
+            } 
+
             /**
              * <p>The identifier of the rule.</p>
              * <ul>
@@ -1165,6 +1264,14 @@ public class GetConfigRuleResponseBody extends TeaModel {
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
              * <p>The tag key. The tag key can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
@@ -1237,6 +1344,14 @@ public class GetConfigRuleResponseBody extends TeaModel {
         public static final class Builder {
             private String tagKey; 
             private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(TagsScope model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
 
             /**
              * <p>TagKey</p>
@@ -1343,6 +1458,9 @@ public class GetConfigRuleResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceIdsScope")
         private String resourceIdsScope;
 
+        @com.aliyun.core.annotation.NameInMap("ResourceNameScope")
+        private String resourceNameScope;
+
         @com.aliyun.core.annotation.NameInMap("ResourceTypesScope")
         private String resourceTypesScope;
 
@@ -1356,12 +1474,15 @@ public class GetConfigRuleResponseBody extends TeaModel {
         private Source source;
 
         @com.aliyun.core.annotation.NameInMap("TagKeyLogicScope")
+        @Deprecated
         private String tagKeyLogicScope;
 
         @com.aliyun.core.annotation.NameInMap("TagKeyScope")
+        @Deprecated
         private String tagKeyScope;
 
         @com.aliyun.core.annotation.NameInMap("TagValueScope")
+        @Deprecated
         private String tagValueScope;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
@@ -1394,6 +1515,7 @@ public class GetConfigRuleResponseBody extends TeaModel {
             this.regionIdsScope = builder.regionIdsScope;
             this.resourceGroupIdsScope = builder.resourceGroupIdsScope;
             this.resourceIdsScope = builder.resourceIdsScope;
+            this.resourceNameScope = builder.resourceNameScope;
             this.resourceTypesScope = builder.resourceTypesScope;
             this.riskLevel = builder.riskLevel;
             this.scope = builder.scope;
@@ -1575,6 +1697,13 @@ public class GetConfigRuleResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceNameScope
+         */
+        public String getResourceNameScope() {
+            return this.resourceNameScope;
+        }
+
+        /**
          * @return resourceTypesScope
          */
         public String getResourceTypesScope() {
@@ -1661,6 +1790,7 @@ public class GetConfigRuleResponseBody extends TeaModel {
             private String regionIdsScope; 
             private String resourceGroupIdsScope; 
             private String resourceIdsScope; 
+            private String resourceNameScope; 
             private String resourceTypesScope; 
             private Integer riskLevel; 
             private Scope scope; 
@@ -1670,6 +1800,45 @@ public class GetConfigRuleResponseBody extends TeaModel {
             private String tagValueScope; 
             private java.util.List<Tags> tags; 
             private java.util.List<TagsScope> tagsScope; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConfigRule model) {
+                this.accountId = model.accountId;
+                this.compliance = model.compliance;
+                this.configRuleArn = model.configRuleArn;
+                this.configRuleEvaluationStatus = model.configRuleEvaluationStatus;
+                this.configRuleId = model.configRuleId;
+                this.configRuleName = model.configRuleName;
+                this.configRuleState = model.configRuleState;
+                this.configRuleTriggerTypes = model.configRuleTriggerTypes;
+                this.createBy = model.createBy;
+                this.createTimestamp = model.createTimestamp;
+                this.description = model.description;
+                this.excludeRegionIdsScope = model.excludeRegionIdsScope;
+                this.excludeResourceGroupIdsScope = model.excludeResourceGroupIdsScope;
+                this.excludeResourceIdsScope = model.excludeResourceIdsScope;
+                this.excludeTagsScope = model.excludeTagsScope;
+                this.extendContent = model.extendContent;
+                this.inputParameters = model.inputParameters;
+                this.managedRule = model.managedRule;
+                this.maximumExecutionFrequency = model.maximumExecutionFrequency;
+                this.modifiedTimestamp = model.modifiedTimestamp;
+                this.regionIdsScope = model.regionIdsScope;
+                this.resourceGroupIdsScope = model.resourceGroupIdsScope;
+                this.resourceIdsScope = model.resourceIdsScope;
+                this.resourceNameScope = model.resourceNameScope;
+                this.resourceTypesScope = model.resourceTypesScope;
+                this.riskLevel = model.riskLevel;
+                this.scope = model.scope;
+                this.source = model.source;
+                this.tagKeyLogicScope = model.tagKeyLogicScope;
+                this.tagKeyScope = model.tagKeyScope;
+                this.tagValueScope = model.tagValueScope;
+                this.tags = model.tags;
+                this.tagsScope = model.tagsScope;
+            } 
 
             /**
              * <p>The ID of the Alibaba Cloud account to which the rule belongs.</p>
@@ -1926,6 +2095,14 @@ public class GetConfigRuleResponseBody extends TeaModel {
              */
             public Builder resourceIdsScope(String resourceIdsScope) {
                 this.resourceIdsScope = resourceIdsScope;
+                return this;
+            }
+
+            /**
+             * ResourceNameScope.
+             */
+            public Builder resourceNameScope(String resourceNameScope) {
+                this.resourceNameScope = resourceNameScope;
                 return this;
             }
 

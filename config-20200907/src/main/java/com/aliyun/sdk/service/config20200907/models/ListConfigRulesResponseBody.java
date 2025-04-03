@@ -36,6 +36,10 @@ public class ListConfigRulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return configRules
      */
@@ -53,6 +57,14 @@ public class ListConfigRulesResponseBody extends TeaModel {
     public static final class Builder {
         private ConfigRules configRules; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListConfigRulesResponseBody model) {
+            this.configRules = model.configRules;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the rules.</p>
@@ -122,6 +134,14 @@ public class ListConfigRulesResponseBody extends TeaModel {
         public static final class Builder {
             private String complianceType; 
             private Integer count; 
+
+            private Builder() {
+            } 
+
+            private Builder(Compliance model) {
+                this.complianceType = model.complianceType;
+                this.count = model.count;
+            } 
 
             /**
              * <p>The compliance evaluation result of the rule. Valid values:</p>
@@ -202,6 +222,14 @@ public class ListConfigRulesResponseBody extends TeaModel {
             private String compliancePackId; 
             private String compliancePackName; 
 
+            private Builder() {
+            } 
+
+            private Builder(CreateBy model) {
+                this.compliancePackId = model.compliancePackId;
+                this.compliancePackName = model.compliancePackName;
+            } 
+
             /**
              * <p>The compliance package ID.</p>
              * 
@@ -274,6 +302,14 @@ public class ListConfigRulesResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key of the rule.</p>
@@ -491,6 +527,26 @@ public class ListConfigRulesResponseBody extends TeaModel {
             private String sourceIdentifier; 
             private String sourceOwner; 
             private java.util.List<Tags> tags; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConfigRuleList model) {
+                this.accountId = model.accountId;
+                this.automationType = model.automationType;
+                this.compliance = model.compliance;
+                this.configRuleArn = model.configRuleArn;
+                this.configRuleId = model.configRuleId;
+                this.configRuleName = model.configRuleName;
+                this.configRuleState = model.configRuleState;
+                this.createBy = model.createBy;
+                this.description = model.description;
+                this.resourceTypesScope = model.resourceTypesScope;
+                this.riskLevel = model.riskLevel;
+                this.sourceIdentifier = model.sourceIdentifier;
+                this.sourceOwner = model.sourceOwner;
+                this.tags = model.tags;
+            } 
 
             /**
              * <p>The ID of the account to which the rule belongs.</p>
@@ -730,6 +786,16 @@ public class ListConfigRulesResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConfigRules model) {
+                this.configRuleList = model.configRuleList;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The details of the rule.</p>

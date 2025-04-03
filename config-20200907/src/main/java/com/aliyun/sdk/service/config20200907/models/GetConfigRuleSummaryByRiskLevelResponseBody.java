@@ -36,6 +36,10 @@ public class GetConfigRuleSummaryByRiskLevelResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return configRuleSummaries
      */
@@ -53,6 +57,14 @@ public class GetConfigRuleSummaryByRiskLevelResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<ConfigRuleSummaries> configRuleSummaries; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetConfigRuleSummaryByRiskLevelResponseBody model) {
+            this.configRuleSummaries = model.configRuleSummaries;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The summary of compliance evaluation results by rule risk level.</p>
@@ -134,6 +146,15 @@ public class GetConfigRuleSummaryByRiskLevelResponseBody extends TeaModel {
             private Integer compliantCount; 
             private Integer nonCompliantCount; 
             private Integer riskLevel; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConfigRuleSummaries model) {
+                this.compliantCount = model.compliantCount;
+                this.nonCompliantCount = model.nonCompliantCount;
+                this.riskLevel = model.riskLevel;
+            } 
 
             /**
              * <p>The number of rules against which specific resources are evaluated as compliant.</p>

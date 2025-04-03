@@ -36,6 +36,10 @@ public class ListAggregateRemediationExecutionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return remediationExecutionData
      */
@@ -53,6 +57,14 @@ public class ListAggregateRemediationExecutionsResponseBody extends TeaModel {
     public static final class Builder {
         private RemediationExecutionData remediationExecutionData; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAggregateRemediationExecutionsResponseBody model) {
+            this.remediationExecutionData = model.remediationExecutionData;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The queried remediation records.</p>
@@ -170,6 +182,18 @@ public class ListAggregateRemediationExecutionsResponseBody extends TeaModel {
             private String executionResourceType; 
             private String executionStatus; 
             private String executionStatusMessage; 
+
+            private Builder() {
+            } 
+
+            private Builder(RemediationExecutions model) {
+                this.executionCreateDate = model.executionCreateDate;
+                this.executionInvocationId = model.executionInvocationId;
+                this.executionResourceIds = model.executionResourceIds;
+                this.executionResourceType = model.executionResourceType;
+                this.executionStatus = model.executionStatus;
+                this.executionStatusMessage = model.executionStatusMessage;
+            } 
 
             /**
              * <p>The time when the remediation record was created.</p>
@@ -303,6 +327,15 @@ public class ListAggregateRemediationExecutionsResponseBody extends TeaModel {
             private Long maxResults; 
             private String nextToken; 
             private java.util.List<RemediationExecutions> remediationExecutions; 
+
+            private Builder() {
+            } 
+
+            private Builder(RemediationExecutionData model) {
+                this.maxResults = model.maxResults;
+                this.nextToken = model.nextToken;
+                this.remediationExecutions = model.remediationExecutions;
+            } 
 
             /**
              * <p>The maximum number of entries returned for a single request.</p>

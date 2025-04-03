@@ -36,6 +36,10 @@ public class GetAggregateAccountComplianceByPackResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accountComplianceResult
      */
@@ -53,6 +57,14 @@ public class GetAggregateAccountComplianceByPackResponseBody extends TeaModel {
     public static final class Builder {
         private AccountComplianceResult accountComplianceResult; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAggregateAccountComplianceByPackResponseBody model) {
+            this.accountComplianceResult = model.accountComplianceResult;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The compliance evaluation results of member accounts for which the compliance package takes effect in an account group.</p>
@@ -134,6 +146,15 @@ public class GetAggregateAccountComplianceByPackResponseBody extends TeaModel {
             private Long accountId; 
             private String accountName; 
             private String complianceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(AccountCompliances model) {
+                this.accountId = model.accountId;
+                this.accountName = model.accountName;
+                this.complianceType = model.complianceType;
+            } 
 
             /**
              * <p>The ID of the member account in the account group.</p>
@@ -248,6 +269,16 @@ public class GetAggregateAccountComplianceByPackResponseBody extends TeaModel {
             private String compliancePackId; 
             private Integer nonCompliantCount; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(AccountComplianceResult model) {
+                this.accountCompliances = model.accountCompliances;
+                this.compliancePackId = model.compliancePackId;
+                this.nonCompliantCount = model.nonCompliantCount;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The compliance evaluation result of member accounts.</p>

@@ -36,6 +36,10 @@ public class DeleteAggregateCompliancePacksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return operateCompliancePacksResult
      */
@@ -53,6 +57,14 @@ public class DeleteAggregateCompliancePacksResponseBody extends TeaModel {
     public static final class Builder {
         private OperateCompliancePacksResult operateCompliancePacksResult; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteAggregateCompliancePacksResponseBody model) {
+            this.operateCompliancePacksResult = model.operateCompliancePacksResult;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The results of the delete operations.</p>
@@ -135,6 +147,15 @@ public class DeleteAggregateCompliancePacksResponseBody extends TeaModel {
             private String errorCode; 
             private Boolean success; 
 
+            private Builder() {
+            } 
+
+            private Builder(OperateCompliancePacks model) {
+                this.compliancePackId = model.compliancePackId;
+                this.errorCode = model.errorCode;
+                this.success = model.success;
+            } 
+
             /**
              * <p>The ID of the compliance package.</p>
              * 
@@ -214,6 +235,13 @@ public class DeleteAggregateCompliancePacksResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<OperateCompliancePacks> operateCompliancePacks; 
+
+            private Builder() {
+            } 
+
+            private Builder(OperateCompliancePacksResult model) {
+                this.operateCompliancePacks = model.operateCompliancePacks;
+            } 
 
             /**
              * <p>An array that contains the deleted compliance packages.</p>

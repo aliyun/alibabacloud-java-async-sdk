@@ -34,7 +34,7 @@ public class GetDiscoveredResourceCountsGroupByResourceTypeRequest extends Reque
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }

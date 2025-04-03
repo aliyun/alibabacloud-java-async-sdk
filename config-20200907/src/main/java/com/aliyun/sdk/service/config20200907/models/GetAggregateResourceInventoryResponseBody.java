@@ -36,6 +36,10 @@ public class GetAggregateResourceInventoryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetAggregateResourceInventoryResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private ResourceInventory resourceInventory; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAggregateResourceInventoryResponseBody model) {
+            this.requestId = model.requestId;
+            this.resourceInventory = model.resourceInventory;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -134,6 +146,15 @@ public class GetAggregateResourceInventoryResponseBody extends TeaModel {
             private String downloadUrl; 
             private Long resourceInventoryGenerateTime; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceInventory model) {
+                this.downloadUrl = model.downloadUrl;
+                this.resourceInventoryGenerateTime = model.resourceInventoryGenerateTime;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The download URL of the resource inventory.</p>

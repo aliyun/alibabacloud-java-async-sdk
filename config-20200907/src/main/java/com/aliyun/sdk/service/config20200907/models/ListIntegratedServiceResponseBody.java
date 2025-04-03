@@ -36,6 +36,10 @@ public class ListIntegratedServiceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class ListIntegratedServiceResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Data> data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListIntegratedServiceResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the cloud service that can be integrated.</p>
@@ -158,6 +170,17 @@ public class ListIntegratedServiceResponseBody extends TeaModel {
             private String serviceCode; 
             private String serviceName; 
             private Boolean status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.aggregatorDeliveryDataType = model.aggregatorDeliveryDataType;
+                this.integratedTypes = model.integratedTypes;
+                this.serviceCode = model.serviceCode;
+                this.serviceName = model.serviceName;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The type of the event that is integrated across accounts. Valid values:</p>

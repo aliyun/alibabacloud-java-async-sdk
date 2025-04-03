@@ -36,6 +36,10 @@ public class StopConfigurationRecorderResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class StopConfigurationRecorderResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Boolean stopConfigurationRecorderResult; 
+
+        private Builder() {
+        } 
+
+        private Builder(StopConfigurationRecorderResponseBody model) {
+            this.requestId = model.requestId;
+            this.stopConfigurationRecorderResult = model.stopConfigurationRecorderResult;
+        } 
 
         /**
          * <p>The request ID.</p>

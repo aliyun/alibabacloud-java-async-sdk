@@ -45,7 +45,7 @@ public class EvaluatePreConfigRulesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -118,7 +118,10 @@ public class EvaluatePreConfigRulesRequest extends Request {
         }
 
         /**
-         * ResourceTypeFormat.
+         * <p>下一个查询开始Token</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ros</p>
          */
         public Builder resourceTypeFormat(String resourceTypeFormat) {
             this.putBodyParameter("ResourceTypeFormat", resourceTypeFormat);
@@ -176,6 +179,14 @@ public class EvaluatePreConfigRulesRequest extends Request {
         public static final class Builder {
             private String identifier; 
             private String inputParameters; 
+
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.identifier = model.identifier;
+                this.inputParameters = model.inputParameters;
+            } 
 
             /**
              * <p>The identifier of the evaluation rule.</p>
@@ -274,6 +285,16 @@ public class EvaluatePreConfigRulesRequest extends Request {
             private String resourceProperties; 
             private String resourceType; 
             private java.util.List<Rules> rules; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceEvaluateItems model) {
+                this.resourceLogicalId = model.resourceLogicalId;
+                this.resourceProperties = model.resourceProperties;
+                this.resourceType = model.resourceType;
+                this.rules = model.rules;
+            } 
 
             /**
              * <p>The logical ID of the resource.</p>

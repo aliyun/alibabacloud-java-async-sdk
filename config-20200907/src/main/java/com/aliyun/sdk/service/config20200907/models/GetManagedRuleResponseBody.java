@@ -36,6 +36,10 @@ public class GetManagedRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return managedRule
      */
@@ -53,6 +57,14 @@ public class GetManagedRuleResponseBody extends TeaModel {
     public static final class Builder {
         private ManagedRule managedRule; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetManagedRuleResponseBody model) {
+            this.managedRule = model.managedRule;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of the managed rule.</p>
@@ -110,6 +122,13 @@ public class GetManagedRuleResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> complianceResourceTypes; 
+
+            private Builder() {
+            } 
+
+            private Builder(Scope model) {
+                this.complianceResourceTypes = model.complianceResourceTypes;
+            } 
 
             /**
              * <p>The types of resources to which the managed rule applies.</p>
@@ -169,6 +188,14 @@ public class GetManagedRuleResponseBody extends TeaModel {
         public static final class Builder {
             private String maximumExecutionFrequency; 
             private String messageType; 
+
+            private Builder() {
+            } 
+
+            private Builder(SourceDetails model) {
+                this.maximumExecutionFrequency = model.maximumExecutionFrequency;
+                this.messageType = model.messageType;
+            } 
 
             /**
              * <p>The interval at which the rule is triggered. Valid values: Valid values:</p>
@@ -349,6 +376,22 @@ public class GetManagedRuleResponseBody extends TeaModel {
             private Integer riskLevel; 
             private Scope scope; 
             private java.util.List<SourceDetails> sourceDetails; 
+
+            private Builder() {
+            } 
+
+            private Builder(ManagedRule model) {
+                this.compulsoryInputParameterDetails = model.compulsoryInputParameterDetails;
+                this.configRuleName = model.configRuleName;
+                this.description = model.description;
+                this.helpUrls = model.helpUrls;
+                this.identifier = model.identifier;
+                this.labels = model.labels;
+                this.optionalInputParameterDetails = model.optionalInputParameterDetails;
+                this.riskLevel = model.riskLevel;
+                this.scope = model.scope;
+                this.sourceDetails = model.sourceDetails;
+            } 
 
             /**
              * <p>The details of the required input parameters for the managed rule.</p>

@@ -36,6 +36,10 @@ public class GetConfigRulesReportResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return configRulesReport
      */
@@ -53,6 +57,14 @@ public class GetConfigRulesReportResponseBody extends TeaModel {
     public static final class Builder {
         private ConfigRulesReport configRulesReport; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetConfigRulesReportResponseBody model) {
+            this.configRulesReport = model.configRulesReport;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the compliance evaluation report.</p>
@@ -158,6 +170,17 @@ public class GetConfigRulesReportResponseBody extends TeaModel {
             private String reportId; 
             private String reportStatus; 
             private String reportUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConfigRulesReport model) {
+                this.accountId = model.accountId;
+                this.reportCreateTimestamp = model.reportCreateTimestamp;
+                this.reportId = model.reportId;
+                this.reportStatus = model.reportStatus;
+                this.reportUrl = model.reportUrl;
+            } 
 
             /**
              * <p>The ID of the Alibaba Cloud account to which the rules belong.</p>

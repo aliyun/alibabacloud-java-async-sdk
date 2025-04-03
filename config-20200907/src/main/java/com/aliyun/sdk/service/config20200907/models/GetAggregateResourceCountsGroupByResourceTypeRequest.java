@@ -56,7 +56,7 @@ public class GetAggregateResourceCountsGroupByResourceTypeRequest extends Reques
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }

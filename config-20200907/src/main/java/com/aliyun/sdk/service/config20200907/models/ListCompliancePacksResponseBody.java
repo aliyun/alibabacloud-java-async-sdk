@@ -36,6 +36,10 @@ public class ListCompliancePacksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return compliancePacksResult
      */
@@ -53,6 +57,14 @@ public class ListCompliancePacksResponseBody extends TeaModel {
     public static final class Builder {
         private CompliancePacksResult compliancePacksResult; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListCompliancePacksResponseBody model) {
+            this.compliancePacksResult = model.compliancePacksResult;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The compliance packages returned.</p>
@@ -85,6 +97,87 @@ public class ListCompliancePacksResponseBody extends TeaModel {
      *
      * <p>ListCompliancePacksResponseBody</p>
      */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TagKey")
+        private String tagKey;
+
+        @com.aliyun.core.annotation.NameInMap("TagValue")
+        private String tagValue;
+
+        private Tags(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
+            /**
+             * <p>tag key</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key-1</p>
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * <p>tag value</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value-1</p>
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListCompliancePacksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCompliancePacksResponseBody</p>
+     */
     public static class CompliancePacks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountId")
         private Long accountId;
@@ -110,6 +203,9 @@ public class ListCompliancePacksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
+
         private CompliancePacks(Builder builder) {
             this.accountId = builder.accountId;
             this.compliancePackId = builder.compliancePackId;
@@ -119,6 +215,7 @@ public class ListCompliancePacksResponseBody extends TeaModel {
             this.description = builder.description;
             this.riskLevel = builder.riskLevel;
             this.status = builder.status;
+            this.tags = builder.tags;
         }
 
         public static Builder builder() {
@@ -185,6 +282,13 @@ public class ListCompliancePacksResponseBody extends TeaModel {
             return this.status;
         }
 
+        /**
+         * @return tags
+         */
+        public java.util.List<Tags> getTags() {
+            return this.tags;
+        }
+
         public static final class Builder {
             private Long accountId; 
             private String compliancePackId; 
@@ -194,6 +298,22 @@ public class ListCompliancePacksResponseBody extends TeaModel {
             private String description; 
             private Integer riskLevel; 
             private String status; 
+            private java.util.List<Tags> tags; 
+
+            private Builder() {
+            } 
+
+            private Builder(CompliancePacks model) {
+                this.accountId = model.accountId;
+                this.compliancePackId = model.compliancePackId;
+                this.compliancePackName = model.compliancePackName;
+                this.compliancePackTemplateId = model.compliancePackTemplateId;
+                this.createTimestamp = model.createTimestamp;
+                this.description = model.description;
+                this.riskLevel = model.riskLevel;
+                this.status = model.status;
+                this.tags = model.tags;
+            } 
 
             /**
              * <p>The ID of the Alibaba Cloud account to which the compliance package belongs.</p>
@@ -292,6 +412,14 @@ public class ListCompliancePacksResponseBody extends TeaModel {
                 return this;
             }
 
+            /**
+             * <p>The tags.</p>
+             */
+            public Builder tags(java.util.List<Tags> tags) {
+                this.tags = tags;
+                return this;
+            }
+
             public CompliancePacks build() {
                 return new CompliancePacks(this);
             } 
@@ -366,6 +494,16 @@ public class ListCompliancePacksResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(CompliancePacksResult model) {
+                this.compliancePacks = model.compliancePacks;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The compliance packages.</p>

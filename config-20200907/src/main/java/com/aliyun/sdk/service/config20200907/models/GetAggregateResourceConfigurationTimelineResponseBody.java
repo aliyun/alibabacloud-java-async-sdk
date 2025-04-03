@@ -36,6 +36,10 @@ public class GetAggregateResourceConfigurationTimelineResponseBody extends TeaMo
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetAggregateResourceConfigurationTimelineResponseBody extends TeaMo
     public static final class Builder {
         private String requestId; 
         private ResourceConfigurationTimeline resourceConfigurationTimeline; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAggregateResourceConfigurationTimelineResponseBody model) {
+            this.requestId = model.requestId;
+            this.resourceConfigurationTimeline = model.resourceConfigurationTimeline;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -230,6 +242,23 @@ public class GetAggregateResourceConfigurationTimelineResponseBody extends TeaMo
             private String resourceName; 
             private String resourceType; 
             private String tags; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConfigurationList model) {
+                this.accountId = model.accountId;
+                this.availabilityZone = model.availabilityZone;
+                this.captureTime = model.captureTime;
+                this.configurationDiff = model.configurationDiff;
+                this.region = model.region;
+                this.resourceCreateTime = model.resourceCreateTime;
+                this.resourceEventType = model.resourceEventType;
+                this.resourceId = model.resourceId;
+                this.resourceName = model.resourceName;
+                this.resourceType = model.resourceType;
+                this.tags = model.tags;
+            } 
 
             /**
              * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
@@ -427,6 +456,15 @@ public class GetAggregateResourceConfigurationTimelineResponseBody extends TeaMo
             private java.util.List<ConfigurationList> configurationList; 
             private Integer maxResults; 
             private String nextToken; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceConfigurationTimeline model) {
+                this.configurationList = model.configurationList;
+                this.maxResults = model.maxResults;
+                this.nextToken = model.nextToken;
+            } 
 
             /**
              * <p>The resource name.</p>

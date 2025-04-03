@@ -48,6 +48,10 @@ public class ListRemediationTemplatesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class ListRemediationTemplatesResponseBody extends TeaModel {
         private java.util.List<RemediationTemplates> remediationTemplates; 
         private String requestId; 
         private String totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListRemediationTemplatesResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.remediationTemplates = model.remediationTemplates;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number. Pages start from page 1.</p>
@@ -227,6 +242,17 @@ public class ListRemediationTemplatesResponseBody extends TeaModel {
             private String templateDescription; 
             private String templateIdentifier; 
             private String templateName; 
+
+            private Builder() {
+            } 
+
+            private Builder(RemediationTemplates model) {
+                this.remediationType = model.remediationType;
+                this.templateDefinition = model.templateDefinition;
+                this.templateDescription = model.templateDescription;
+                this.templateIdentifier = model.templateIdentifier;
+                this.templateName = model.templateName;
+            } 
 
             /**
              * <p>The type of the remediation template. Valid value: OOS, which indicates Operation Orchestration Service.</p>

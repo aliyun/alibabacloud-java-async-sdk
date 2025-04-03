@@ -52,6 +52,10 @@ public class ResourceDirectoryFolderNode extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accountId
      */
@@ -101,6 +105,18 @@ public class ResourceDirectoryFolderNode extends TeaModel {
         private String folderId; 
         private String folderName; 
         private String parentFolderId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ResourceDirectoryFolderNode model) {
+            this.accountId = model.accountId;
+            this.children = model.children;
+            this.displayName = model.displayName;
+            this.folderId = model.folderId;
+            this.folderName = model.folderName;
+            this.parentFolderId = model.parentFolderId;
+        } 
 
         /**
          * AccountId.

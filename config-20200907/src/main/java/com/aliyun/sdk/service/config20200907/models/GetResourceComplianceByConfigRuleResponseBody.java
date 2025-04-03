@@ -36,6 +36,10 @@ public class GetResourceComplianceByConfigRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return complianceResult
      */
@@ -53,6 +57,14 @@ public class GetResourceComplianceByConfigRuleResponseBody extends TeaModel {
     public static final class Builder {
         private ComplianceResult complianceResult; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetResourceComplianceByConfigRuleResponseBody model) {
+            this.complianceResult = model.complianceResult;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The compliance result.</p>
@@ -122,6 +134,14 @@ public class GetResourceComplianceByConfigRuleResponseBody extends TeaModel {
         public static final class Builder {
             private String complianceType; 
             private Integer count; 
+
+            private Builder() {
+            } 
+
+            private Builder(Compliances model) {
+                this.complianceType = model.complianceType;
+                this.count = model.count;
+            } 
 
             /**
              * <p>The compliance evaluation results of the resources. Valid values:</p>
@@ -201,6 +221,14 @@ public class GetResourceComplianceByConfigRuleResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Compliances> compliances; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(ComplianceResult model) {
+                this.compliances = model.compliances;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The compliance evaluation results based on compliance types.</p>

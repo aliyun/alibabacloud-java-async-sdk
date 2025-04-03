@@ -36,6 +36,10 @@ public class CopyCompliancePacksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return copyRulesResult
      */
@@ -53,6 +57,14 @@ public class CopyCompliancePacksResponseBody extends TeaModel {
     public static final class Builder {
         private Boolean copyRulesResult; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CopyCompliancePacksResponseBody model) {
+            this.copyRulesResult = model.copyRulesResult;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Indicates whether the compliance packages are replicated. Valid values:</p>

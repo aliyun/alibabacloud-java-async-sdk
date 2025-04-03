@@ -81,6 +81,10 @@ public class CreateAggregateCompliancePackRequest extends Request {
     @com.aliyun.core.annotation.Validation(maximum = 3, minimum = 1)
     private Integer riskLevel;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TagKeyScope")
     private String tagKeyScope;
@@ -115,6 +119,7 @@ public class CreateAggregateCompliancePackRequest extends Request {
         this.resourceGroupIdsScope = builder.resourceGroupIdsScope;
         this.resourceIdsScope = builder.resourceIdsScope;
         this.riskLevel = builder.riskLevel;
+        this.tag = builder.tag;
         this.tagKeyScope = builder.tagKeyScope;
         this.tagValueScope = builder.tagValueScope;
         this.tagsScope = builder.tagsScope;
@@ -129,7 +134,7 @@ public class CreateAggregateCompliancePackRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -240,6 +245,13 @@ public class CreateAggregateCompliancePackRequest extends Request {
     }
 
     /**
+     * @return tag
+     */
+    public java.util.List<Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return tagKeyScope
      */
     public String getTagKeyScope() {
@@ -283,6 +295,7 @@ public class CreateAggregateCompliancePackRequest extends Request {
         private String resourceGroupIdsScope; 
         private String resourceIdsScope; 
         private Integer riskLevel; 
+        private java.util.List<Tag> tag; 
         private String tagKeyScope; 
         private String tagValueScope; 
         private java.util.List<TagsScope> tagsScope; 
@@ -309,6 +322,7 @@ public class CreateAggregateCompliancePackRequest extends Request {
             this.resourceGroupIdsScope = request.resourceGroupIdsScope;
             this.resourceIdsScope = request.resourceIdsScope;
             this.riskLevel = request.riskLevel;
+            this.tag = request.tag;
             this.tagKeyScope = request.tagKeyScope;
             this.tagValueScope = request.tagValueScope;
             this.tagsScope = request.tagsScope;
@@ -507,6 +521,17 @@ public class CreateAggregateCompliancePackRequest extends Request {
         }
 
         /**
+         * <p>The tags of the resource.</p>
+         * <p>You can add up to 20 tags to a resource.</p>
+         */
+        public Builder tag(java.util.List<Tag> tag) {
+            String tagShrink = shrink(tag, "Tag", "json");
+            this.putQueryParameter("Tag", tagShrink);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
          * <p>The tag key of the resource that you want to evaluate by using the compliance package.</p>
          * 
          * <strong>example:</strong>
@@ -607,6 +632,14 @@ public class CreateAggregateCompliancePackRequest extends Request {
         public static final class Builder {
             private String parameterName; 
             private String parameterValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConfigRuleParameters model) {
+                this.parameterName = model.parameterName;
+                this.parameterValue = model.parameterValue;
+            } 
 
             /**
              * <p>The name of the input parameter.</p>
@@ -732,6 +765,18 @@ public class CreateAggregateCompliancePackRequest extends Request {
             private String managedRuleIdentifier; 
             private Integer riskLevel; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConfigRules model) {
+                this.configRuleId = model.configRuleId;
+                this.configRuleName = model.configRuleName;
+                this.configRuleParameters = model.configRuleParameters;
+                this.description = model.description;
+                this.managedRuleIdentifier = model.managedRuleIdentifier;
+                this.riskLevel = model.riskLevel;
+            } 
+
             /**
              * <p>The rule ID. If you configure this parameter, Cloud Config adds the rule that has the specified ID to the compliance package.</p>
              * <p>You need to only configure the <code>ManagedRuleIdentifier</code> or <code>ConfigRuleId</code> parameter. If you configure both parameters, the value of the <code>ConfigRuleId</code> parameter takes precedence. For more information about how to obtain the ID of a rule, see <a href="https://help.aliyun.com/document_detail/264148.html">ListAggregateConfigRules</a>.</p>
@@ -853,6 +898,14 @@ public class CreateAggregateCompliancePackRequest extends Request {
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(ExcludeTagsScope model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
              * <p>The tag key.</p>
              * 
@@ -877,6 +930,89 @@ public class CreateAggregateCompliancePackRequest extends Request {
 
             public ExcludeTagsScope build() {
                 return new ExcludeTagsScope(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateAggregateCompliancePackRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAggregateCompliancePackRequest</p>
+     */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The key of the tag that is added to the resource.</p>
+             * <p>You can add up to 20 tag keys to a resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key-1</p>
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * <p>The value of the tag that is added to the resource.</p>
+             * <p>You can add up to 20 tag values to a resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value-1</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
             } 
 
         } 
@@ -925,6 +1061,14 @@ public class CreateAggregateCompliancePackRequest extends Request {
         public static final class Builder {
             private String tagKey; 
             private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(TagsScope model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
 
             /**
              * <p>The tag key.</p>

@@ -36,6 +36,10 @@ public class EvaluatePreConfigRulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class EvaluatePreConfigRulesResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<ResourceEvaluations> resourceEvaluations; 
+
+        private Builder() {
+        } 
+
+        private Builder(EvaluatePreConfigRulesResponseBody model) {
+            this.requestId = model.requestId;
+            this.resourceEvaluations = model.resourceEvaluations;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -146,6 +158,16 @@ public class EvaluatePreConfigRulesResponseBody extends TeaModel {
             private String complianceType; 
             private String helpUrl; 
             private String identifier; 
+
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.annotation = model.annotation;
+                this.complianceType = model.complianceType;
+                this.helpUrl = model.helpUrl;
+                this.identifier = model.identifier;
+            } 
 
             /**
              * <p>The reason why the resource was evaluated as incompliant.</p>
@@ -258,6 +280,15 @@ public class EvaluatePreConfigRulesResponseBody extends TeaModel {
             private String resourceLogicalId; 
             private String resourceType; 
             private java.util.List<Rules> rules; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceEvaluations model) {
+                this.resourceLogicalId = model.resourceLogicalId;
+                this.resourceType = model.resourceType;
+                this.rules = model.rules;
+            } 
 
             /**
              * <p>The logical ID of the resource.</p>

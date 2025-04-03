@@ -36,6 +36,10 @@ public class ActiveAggregateConfigRulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return operateRuleResult
      */
@@ -53,6 +57,14 @@ public class ActiveAggregateConfigRulesResponseBody extends TeaModel {
     public static final class Builder {
         private OperateRuleResult operateRuleResult; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ActiveAggregateConfigRulesResponseBody model) {
+            this.operateRuleResult = model.operateRuleResult;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The results of the operations.</p>
@@ -135,6 +147,15 @@ public class ActiveAggregateConfigRulesResponseBody extends TeaModel {
             private String errorCode; 
             private Boolean success; 
 
+            private Builder() {
+            } 
+
+            private Builder(OperateRuleItemList model) {
+                this.configRuleId = model.configRuleId;
+                this.errorCode = model.errorCode;
+                this.success = model.success;
+            } 
+
             /**
              * <p>The rule ID.</p>
              * 
@@ -210,6 +231,13 @@ public class ActiveAggregateConfigRulesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<OperateRuleItemList> operateRuleItemList; 
+
+            private Builder() {
+            } 
+
+            private Builder(OperateRuleResult model) {
+                this.operateRuleItemList = model.operateRuleItemList;
+            } 
 
             /**
              * <p>The result information about the operation.</p>

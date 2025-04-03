@@ -51,6 +51,10 @@ public class ListRemediationsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -92,6 +96,17 @@ public class ListRemediationsResponseBody extends TeaModel {
         private java.util.List<Remediations> remediations; 
         private String requestId; 
         private String totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListRemediationsResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.remediations = model.remediations;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number. Pages start from page 1.</p>
@@ -305,6 +320,23 @@ public class ListRemediationsResponseBody extends TeaModel {
             private String remediationSourceType; 
             private String remediationTemplateId; 
             private String remediationType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Remediations model) {
+                this.accountId = model.accountId;
+                this.configRuleId = model.configRuleId;
+                this.invokeType = model.invokeType;
+                this.lastSuccessfulInvocationId = model.lastSuccessfulInvocationId;
+                this.lastSuccessfulInvocationTime = model.lastSuccessfulInvocationTime;
+                this.lastSuccessfulInvocationType = model.lastSuccessfulInvocationType;
+                this.remediationId = model.remediationId;
+                this.remediationOriginParams = model.remediationOriginParams;
+                this.remediationSourceType = model.remediationSourceType;
+                this.remediationTemplateId = model.remediationTemplateId;
+                this.remediationType = model.remediationType;
+            } 
 
             /**
              * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>

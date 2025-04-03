@@ -36,6 +36,10 @@ public class UpdateConfigDeliveryChannelResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return deliveryChannelId
      */
@@ -53,6 +57,14 @@ public class UpdateConfigDeliveryChannelResponseBody extends TeaModel {
     public static final class Builder {
         private String deliveryChannelId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateConfigDeliveryChannelResponseBody model) {
+            this.deliveryChannelId = model.deliveryChannelId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the delivery channel.</p>

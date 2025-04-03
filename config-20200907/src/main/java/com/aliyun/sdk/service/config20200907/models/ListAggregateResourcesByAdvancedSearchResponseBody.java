@@ -36,6 +36,10 @@ public class ListAggregateResourcesByAdvancedSearchResponseBody extends TeaModel
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return queryResults
      */
@@ -53,6 +57,14 @@ public class ListAggregateResourcesByAdvancedSearchResponseBody extends TeaModel
     public static final class Builder {
         private QueryResults queryResults; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAggregateResourcesByAdvancedSearchResponseBody model) {
+            this.queryResults = model.queryResults;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned data.</p>
@@ -123,6 +135,14 @@ public class ListAggregateResourcesByAdvancedSearchResponseBody extends TeaModel
             private java.util.List<String> columns; 
             private java.util.List<?> values; 
 
+            private Builder() {
+            } 
+
+            private Builder(QueryResultList model) {
+                this.columns = model.columns;
+                this.values = model.values;
+            } 
+
             /**
              * <p>The field names.</p>
              */
@@ -177,6 +197,13 @@ public class ListAggregateResourcesByAdvancedSearchResponseBody extends TeaModel
 
         public static final class Builder {
             private QueryResultList queryResultList; 
+
+            private Builder() {
+            } 
+
+            private Builder(QueryResults model) {
+                this.queryResultList = model.queryResultList;
+            } 
 
             /**
              * <p>The queried resources. A maximum of 1,000 data records can be returned. To view more data, use the download URL of the resource file.</p>

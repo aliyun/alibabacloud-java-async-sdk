@@ -44,6 +44,10 @@ public class ListSupportedProductsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -77,6 +81,16 @@ public class ListSupportedProductsResponseBody extends TeaModel {
         private String nextToken; 
         private java.util.List<Products> products; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSupportedProductsResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.products = model.products;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The maximum number of entries to return for a single request. Valid values: 1 to 500.</p>
@@ -193,6 +207,16 @@ public class ListSupportedProductsResponseBody extends TeaModel {
             private String typeNameZh; 
             private String typePageLink; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResourceTypeList model) {
+                this.resourceType = model.resourceType;
+                this.typeNameEn = model.typeNameEn;
+                this.typeNameZh = model.typeNameZh;
+                this.typePageLink = model.typePageLink;
+            } 
+
             /**
              * <p>The identifier of the resource type.</p>
              * 
@@ -299,6 +323,15 @@ public class ListSupportedProductsResponseBody extends TeaModel {
             private String productNameEn; 
             private String productNameZh; 
             private java.util.List<ResourceTypeList> resourceTypeList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Products model) {
+                this.productNameEn = model.productNameEn;
+                this.productNameZh = model.productNameZh;
+                this.resourceTypeList = model.resourceTypeList;
+            } 
 
             /**
              * <p>The English name of the Alibaba Cloud service.</p>

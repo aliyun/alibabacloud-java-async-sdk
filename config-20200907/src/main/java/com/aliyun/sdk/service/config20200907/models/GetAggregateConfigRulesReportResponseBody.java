@@ -36,6 +36,10 @@ public class GetAggregateConfigRulesReportResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return configRulesReport
      */
@@ -54,8 +58,16 @@ public class GetAggregateConfigRulesReportResponseBody extends TeaModel {
         private ConfigRulesReport configRulesReport; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetAggregateConfigRulesReportResponseBody model) {
+            this.configRulesReport = model.configRulesReport;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>The information about the compliance evaluation report.</p>
+         * <p>The compliance evaluation report.</p>
          */
         public Builder configRulesReport(ConfigRulesReport configRulesReport) {
             this.configRulesReport = configRulesReport;
@@ -171,6 +183,18 @@ public class GetAggregateConfigRulesReportResponseBody extends TeaModel {
             private String reportStatus; 
             private String reportUrl; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConfigRulesReport model) {
+                this.accountId = model.accountId;
+                this.aggregatorId = model.aggregatorId;
+                this.reportCreateTimestamp = model.reportCreateTimestamp;
+                this.reportId = model.reportId;
+                this.reportStatus = model.reportStatus;
+                this.reportUrl = model.reportUrl;
+            } 
+
             /**
              * <p>The ID of the management account to which the rules belong.</p>
              * 
@@ -218,8 +242,8 @@ public class GetAggregateConfigRulesReportResponseBody extends TeaModel {
             /**
              * <p>The status of the compliance evaluation report. Valid values:</p>
              * <ul>
-             * <li>NONE: The compliance evaluation report was not generated.</li>
-             * <li>CREATING: The compliance evaluation report was being generated.</li>
+             * <li>NONE: The compliance evaluation report is not generated.</li>
+             * <li>CREATING: The compliance evaluation report is being generated.</li>
              * <li>COMPLETE: The compliance evaluation report was generated.</li>
              * </ul>
              * 
@@ -232,7 +256,7 @@ public class GetAggregateConfigRulesReportResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL that is used to download the compliance evaluation report.</p>
+             * <p>The URL used to download the compliance evaluation report.</p>
              */
             public Builder reportUrl(String reportUrl) {
                 this.reportUrl = reportUrl;

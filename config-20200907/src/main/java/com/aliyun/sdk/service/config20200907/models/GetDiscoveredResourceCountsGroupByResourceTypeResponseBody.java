@@ -36,6 +36,10 @@ public class GetDiscoveredResourceCountsGroupByResourceTypeResponseBody extends 
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return discoveredResourceCountsSummary
      */
@@ -53,6 +57,14 @@ public class GetDiscoveredResourceCountsGroupByResourceTypeResponseBody extends 
     public static final class Builder {
         private java.util.List<DiscoveredResourceCountsSummary> discoveredResourceCountsSummary; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDiscoveredResourceCountsGroupByResourceTypeResponseBody model) {
+            this.discoveredResourceCountsSummary = model.discoveredResourceCountsSummary;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The statistics on the resources.</p>
@@ -134,6 +146,15 @@ public class GetDiscoveredResourceCountsGroupByResourceTypeResponseBody extends 
             private String groupName; 
             private Long resourceCount; 
             private String resourceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(DiscoveredResourceCountsSummary model) {
+                this.groupName = model.groupName;
+                this.resourceCount = model.resourceCount;
+                this.resourceType = model.resourceType;
+            } 
 
             /**
              * <p>The resource type by which the statistics are collected.</p>

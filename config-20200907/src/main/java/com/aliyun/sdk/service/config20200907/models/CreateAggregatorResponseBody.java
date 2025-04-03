@@ -36,6 +36,10 @@ public class CreateAggregatorResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return aggregatorId
      */
@@ -53,6 +57,14 @@ public class CreateAggregatorResponseBody extends TeaModel {
     public static final class Builder {
         private String aggregatorId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateAggregatorResponseBody model) {
+            this.aggregatorId = model.aggregatorId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The account group ID.</p>

@@ -44,6 +44,10 @@ public class GetIntegratedServiceStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return aggregatorDeliveryDataType
      */
@@ -77,6 +81,16 @@ public class GetIntegratedServiceStatusResponseBody extends TeaModel {
         private Boolean data; 
         private String integratedTypes; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetIntegratedServiceStatusResponseBody model) {
+            this.aggregatorDeliveryDataType = model.aggregatorDeliveryDataType;
+            this.data = model.data;
+            this.integratedTypes = model.integratedTypes;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The type of the event that is integrated across accounts. Valid values:</p>

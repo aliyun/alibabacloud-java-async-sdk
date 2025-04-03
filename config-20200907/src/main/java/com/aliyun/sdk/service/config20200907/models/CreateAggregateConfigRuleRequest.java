@@ -96,6 +96,10 @@ public class CreateAggregateConfigRuleRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceIdsScope")
     private String resourceIdsScope;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceNameScope")
+    private String resourceNameScope;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ResourceTypesScope")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -116,16 +120,23 @@ public class CreateAggregateConfigRuleRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String sourceOwner;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TagKeyLogicScope")
+    @Deprecated
     private String tagKeyLogicScope;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TagKeyScope")
+    @Deprecated
     private String tagKeyScope;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TagValueScope")
+    @Deprecated
     private String tagValueScope;
 
     @com.aliyun.core.annotation.Body
@@ -153,10 +164,12 @@ public class CreateAggregateConfigRuleRequest extends Request {
         this.regionIdsScope = builder.regionIdsScope;
         this.resourceGroupIdsScope = builder.resourceGroupIdsScope;
         this.resourceIdsScope = builder.resourceIdsScope;
+        this.resourceNameScope = builder.resourceNameScope;
         this.resourceTypesScope = builder.resourceTypesScope;
         this.riskLevel = builder.riskLevel;
         this.sourceIdentifier = builder.sourceIdentifier;
         this.sourceOwner = builder.sourceOwner;
+        this.tag = builder.tag;
         this.tagKeyLogicScope = builder.tagKeyLogicScope;
         this.tagKeyScope = builder.tagKeyScope;
         this.tagValueScope = builder.tagValueScope;
@@ -171,7 +184,7 @@ public class CreateAggregateConfigRuleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -310,6 +323,13 @@ public class CreateAggregateConfigRuleRequest extends Request {
     }
 
     /**
+     * @return resourceNameScope
+     */
+    public String getResourceNameScope() {
+        return this.resourceNameScope;
+    }
+
+    /**
      * @return resourceTypesScope
      */
     public java.util.List<String> getResourceTypesScope() {
@@ -335,6 +355,13 @@ public class CreateAggregateConfigRuleRequest extends Request {
      */
     public String getSourceOwner() {
         return this.sourceOwner;
+    }
+
+    /**
+     * @return tag
+     */
+    public java.util.List<Tag> getTag() {
+        return this.tag;
     }
 
     /**
@@ -385,10 +412,12 @@ public class CreateAggregateConfigRuleRequest extends Request {
         private String regionIdsScope; 
         private String resourceGroupIdsScope; 
         private String resourceIdsScope; 
+        private String resourceNameScope; 
         private java.util.List<String> resourceTypesScope; 
         private Integer riskLevel; 
         private String sourceIdentifier; 
         private String sourceOwner; 
+        private java.util.List<Tag> tag; 
         private String tagKeyLogicScope; 
         private String tagKeyScope; 
         private String tagValueScope; 
@@ -419,10 +448,12 @@ public class CreateAggregateConfigRuleRequest extends Request {
             this.regionIdsScope = request.regionIdsScope;
             this.resourceGroupIdsScope = request.resourceGroupIdsScope;
             this.resourceIdsScope = request.resourceIdsScope;
+            this.resourceNameScope = request.resourceNameScope;
             this.resourceTypesScope = request.resourceTypesScope;
             this.riskLevel = request.riskLevel;
             this.sourceIdentifier = request.sourceIdentifier;
             this.sourceOwner = request.sourceOwner;
+            this.tag = request.tag;
             this.tagKeyLogicScope = request.tagKeyLogicScope;
             this.tagKeyScope = request.tagKeyScope;
             this.tagValueScope = request.tagValueScope;
@@ -702,6 +733,15 @@ public class CreateAggregateConfigRuleRequest extends Request {
         }
 
         /**
+         * ResourceNameScope.
+         */
+        public Builder resourceNameScope(String resourceNameScope) {
+            this.putQueryParameter("ResourceNameScope", resourceNameScope);
+            this.resourceNameScope = resourceNameScope;
+            return this;
+        }
+
+        /**
          * <p>The type of the resource evaluated by the rule. Separate multiple resource types with commas (,).</p>
          * <p>This parameter is required.</p>
          * 
@@ -769,6 +809,17 @@ public class CreateAggregateConfigRuleRequest extends Request {
         }
 
         /**
+         * <p>The tags.</p>
+         */
+        public Builder tag(java.util.List<Tag> tag) {
+            String tagShrink = shrink(tag, "Tag", "json");
+            this.putQueryParameter("Tag", tagShrink);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is deprecated. We recommend that you use the <code>TagsScope</code> parameter.</p>
          * <p>The logical relationship among the tag keys if you specify multiple tag keys for the <code>TagKeyScope</code> parameter. For example, if you set the <code>TagKeyScope</code> parameter to <code>ECS,OSS</code> and the TagKeyLogicScope parameter to <code>AND</code>, the rule applies to resources with both the <code>ECS</code> and <code>OSS</code> tag keys. Valid values:</p>
          * <ul>
          * <li>AND</li>
@@ -785,9 +836,10 @@ public class CreateAggregateConfigRuleRequest extends Request {
         }
 
         /**
+         * <p>This parameter is deprecated. We recommend that you use the <code>TagsScope</code> parameter.</p>
          * <p>The tag key used to filter resources. The rule applies only to the resources with the specified tag key. Separate multiple parameter values with commas (,).</p>
          * <blockquote>
-         * <p>This parameter applies only to a managed rule. You must configure the <code>TagKeyScope</code> and <code>TagValueScope</code> parameters at the same time.</p>
+         * <p> This parameter applies only to a managed rule. You must configure the <code>TagKeyScope</code> and <code>TagValueScope</code> parameters at the same time.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -800,9 +852,10 @@ public class CreateAggregateConfigRuleRequest extends Request {
         }
 
         /**
-         * <p>The tag value used to filter resources. The rule applies only to the resources with the specified tag value.</p>
+         * <p>This parameter is deprecated. We recommend that you use the <code>TagsScope</code> parameter.</p>
+         * <p>The tag value used to filter resources. The rule applies only to the resources that use the specified tag value.</p>
          * <blockquote>
-         * <p>This parameter applies only to a managed rule. You must configure the <code>TagKeyScope</code> and <code>TagValueScope</code> parameters at the same time.</p>
+         * <p> This parameter applies only to a managed rule. You must configure the <code>TagKeyScope</code> and <code>TagValueScope</code> parameters at the same time.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -874,6 +927,14 @@ public class CreateAggregateConfigRuleRequest extends Request {
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(ExcludeTagsScope model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
              * <p>The tag key of the resource that you want to exclude.</p>
              * 
@@ -898,6 +959,91 @@ public class CreateAggregateConfigRuleRequest extends Request {
 
             public ExcludeTagsScope build() {
                 return new ExcludeTagsScope(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateAggregateConfigRuleRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAggregateConfigRuleRequest</p>
+     */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The tag key.</p>
+             * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>You can specify at most 20 tag keys.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key-1</p>
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * <p>The tag values.</p>
+             * <p>The tag values can be an empty string or up to 128 characters in length. The tag values cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>Each key-value must be unique. You can specify at most 20 tag values in each call.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value-1</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
             } 
 
         } 
@@ -946,6 +1092,14 @@ public class CreateAggregateConfigRuleRequest extends Request {
         public static final class Builder {
             private String tagKey; 
             private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(TagsScope model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
 
             /**
              * <p>The tag key.</p>

@@ -36,6 +36,10 @@ public class ListAggregateRemediationsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return remediations
      */
@@ -53,6 +57,14 @@ public class ListAggregateRemediationsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Remediations> remediations; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAggregateRemediationsResponseBody model) {
+            this.remediations = model.remediations;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>An array that contains remediation templates.</p>
@@ -242,6 +254,24 @@ public class ListAggregateRemediationsResponseBody extends TeaModel {
             private String remediationSourceType; 
             private String remediationTemplateId; 
             private String remediationType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Remediations model) {
+                this.accountId = model.accountId;
+                this.aggregatorId = model.aggregatorId;
+                this.configRuleId = model.configRuleId;
+                this.invokeType = model.invokeType;
+                this.lastSuccessfulInvocationId = model.lastSuccessfulInvocationId;
+                this.lastSuccessfulInvocationTime = model.lastSuccessfulInvocationTime;
+                this.lastSuccessfulInvocationType = model.lastSuccessfulInvocationType;
+                this.remediaitonOriginParams = model.remediaitonOriginParams;
+                this.remediationId = model.remediationId;
+                this.remediationSourceType = model.remediationSourceType;
+                this.remediationTemplateId = model.remediationTemplateId;
+                this.remediationType = model.remediationType;
+            } 
 
             /**
              * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>

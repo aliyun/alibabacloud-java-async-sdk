@@ -36,6 +36,10 @@ public class GetAggregatorResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return aggregator
      */
@@ -53,6 +57,14 @@ public class GetAggregatorResponseBody extends TeaModel {
     public static final class Builder {
         private Aggregator aggregator; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAggregatorResponseBody model) {
+            this.aggregator = model.aggregator;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of the account group.</p>
@@ -147,6 +159,16 @@ public class GetAggregatorResponseBody extends TeaModel {
             private String accountType; 
             private String recorderStatus; 
 
+            private Builder() {
+            } 
+
+            private Builder(AggregatorAccounts model) {
+                this.accountId = model.accountId;
+                this.accountName = model.accountName;
+                this.accountType = model.accountType;
+                this.recorderStatus = model.recorderStatus;
+            } 
+
             /**
              * <p>The ID of the member.</p>
              * 
@@ -210,6 +232,87 @@ public class GetAggregatorResponseBody extends TeaModel {
      *
      * <p>GetAggregatorResponseBody</p>
      */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TagKey")
+        private String tagKey;
+
+        @com.aliyun.core.annotation.NameInMap("TagValue")
+        private String tagValue;
+
+        private Tags(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
+            /**
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key-1</p>
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value-1</p>
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetAggregatorResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAggregatorResponseBody</p>
+     */
     public static class Aggregator extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountId")
         private Long accountId;
@@ -241,6 +344,9 @@ public class GetAggregatorResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FolderId")
         private String folderId;
 
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
+
         private Aggregator(Builder builder) {
             this.accountId = builder.accountId;
             this.aggregatorAccountCount = builder.aggregatorAccountCount;
@@ -252,6 +358,7 @@ public class GetAggregatorResponseBody extends TeaModel {
             this.aggregatorType = builder.aggregatorType;
             this.description = builder.description;
             this.folderId = builder.folderId;
+            this.tags = builder.tags;
         }
 
         public static Builder builder() {
@@ -332,6 +439,13 @@ public class GetAggregatorResponseBody extends TeaModel {
             return this.folderId;
         }
 
+        /**
+         * @return tags
+         */
+        public java.util.List<Tags> getTags() {
+            return this.tags;
+        }
+
         public static final class Builder {
             private Long accountId; 
             private Long aggregatorAccountCount; 
@@ -343,6 +457,24 @@ public class GetAggregatorResponseBody extends TeaModel {
             private String aggregatorType; 
             private String description; 
             private String folderId; 
+            private java.util.List<Tags> tags; 
+
+            private Builder() {
+            } 
+
+            private Builder(Aggregator model) {
+                this.accountId = model.accountId;
+                this.aggregatorAccountCount = model.aggregatorAccountCount;
+                this.aggregatorAccounts = model.aggregatorAccounts;
+                this.aggregatorCreateTimestamp = model.aggregatorCreateTimestamp;
+                this.aggregatorId = model.aggregatorId;
+                this.aggregatorName = model.aggregatorName;
+                this.aggregatorStatus = model.aggregatorStatus;
+                this.aggregatorType = model.aggregatorType;
+                this.description = model.description;
+                this.folderId = model.folderId;
+                this.tags = model.tags;
+            } 
 
             /**
              * <p>The ID of the management account that is used to create the account group.</p>
@@ -458,6 +590,14 @@ public class GetAggregatorResponseBody extends TeaModel {
              */
             public Builder folderId(String folderId) {
                 this.folderId = folderId;
+                return this;
+            }
+
+            /**
+             * <p>tags</p>
+             */
+            public Builder tags(java.util.List<Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 

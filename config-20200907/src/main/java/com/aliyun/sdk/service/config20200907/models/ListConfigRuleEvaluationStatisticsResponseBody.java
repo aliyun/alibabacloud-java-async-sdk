@@ -36,6 +36,10 @@ public class ListConfigRuleEvaluationStatisticsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return evaluationResults
      */
@@ -53,6 +57,14 @@ public class ListConfigRuleEvaluationStatisticsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<EvaluationResults> evaluationResults; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListConfigRuleEvaluationStatisticsResponseBody model) {
+            this.evaluationResults = model.evaluationResults;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The statistics of compliance evaluation results.</p>
@@ -158,6 +170,17 @@ public class ListConfigRuleEvaluationStatisticsResponseBody extends TeaModel {
             private String statisticDate; 
             private Integer totalResourceCnt; 
             private Integer totalRuleCnt; 
+
+            private Builder() {
+            } 
+
+            private Builder(EvaluationResults model) {
+                this.nonCompliantResourceCnt = model.nonCompliantResourceCnt;
+                this.nonCompliantRuleCnt = model.nonCompliantRuleCnt;
+                this.statisticDate = model.statisticDate;
+                this.totalResourceCnt = model.totalResourceCnt;
+                this.totalRuleCnt = model.totalRuleCnt;
+            } 
 
             /**
              * <p>The number of resources that are evaluated as non-compliant.</p>

@@ -36,6 +36,10 @@ public class ListAggregateDiscoveredResourcesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return discoveredResourceProfiles
      */
@@ -53,6 +57,14 @@ public class ListAggregateDiscoveredResourcesResponseBody extends TeaModel {
     public static final class Builder {
         private DiscoveredResourceProfiles discoveredResourceProfiles; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAggregateDiscoveredResourcesResponseBody model) {
+            this.discoveredResourceProfiles = model.discoveredResourceProfiles;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The queried resources.</p>
@@ -254,6 +266,25 @@ public class ListAggregateDiscoveredResourcesResponseBody extends TeaModel {
             private String tags; 
             private Long updateTime; 
             private Long version; 
+
+            private Builder() {
+            } 
+
+            private Builder(DiscoveredResourceProfileList model) {
+                this.accountId = model.accountId;
+                this.availabilityZone = model.availabilityZone;
+                this.region = model.region;
+                this.resourceCreationTime = model.resourceCreationTime;
+                this.resourceDeleted = model.resourceDeleted;
+                this.resourceId = model.resourceId;
+                this.resourceName = model.resourceName;
+                this.resourceOwnerId = model.resourceOwnerId;
+                this.resourceStatus = model.resourceStatus;
+                this.resourceType = model.resourceType;
+                this.tags = model.tags;
+                this.updateTime = model.updateTime;
+                this.version = model.version;
+            } 
 
             /**
              * <p>The ID of the Alibaba Cloud account to which the resource belongs. We recommend that you use the ResourceOwnerId parameter.</p>
@@ -477,6 +508,16 @@ public class ListAggregateDiscoveredResourcesResponseBody extends TeaModel {
             private Integer maxResults; 
             private String nextToken; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(DiscoveredResourceProfiles model) {
+                this.discoveredResourceProfileList = model.discoveredResourceProfileList;
+                this.maxResults = model.maxResults;
+                this.nextToken = model.nextToken;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The queried resource.</p>

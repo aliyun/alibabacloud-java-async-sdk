@@ -36,6 +36,10 @@ public class GetAggregateResourceComplianceByPackResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetAggregateResourceComplianceByPackResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private ResourceComplianceResult resourceComplianceResult; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAggregateResourceComplianceByPackResponseBody model) {
+            this.requestId = model.requestId;
+            this.resourceComplianceResult = model.resourceComplianceResult;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -134,6 +146,15 @@ public class GetAggregateResourceComplianceByPackResponseBody extends TeaModel {
             private String compliancePackId; 
             private Integer nonCompliantCount; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceComplianceResult model) {
+                this.compliancePackId = model.compliancePackId;
+                this.nonCompliantCount = model.nonCompliantCount;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The ID of the compliance package.</p>

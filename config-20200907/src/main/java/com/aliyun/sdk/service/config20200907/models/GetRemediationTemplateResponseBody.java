@@ -36,6 +36,10 @@ public class GetRemediationTemplateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return remediationTemplates
      */
@@ -53,6 +57,14 @@ public class GetRemediationTemplateResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<RemediationTemplates> remediationTemplates; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetRemediationTemplateResponseBody model) {
+            this.remediationTemplates = model.remediationTemplates;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the automatic remediation template.</p>
@@ -172,6 +184,18 @@ public class GetRemediationTemplateResponseBody extends TeaModel {
             private String templateDescription; 
             private String templateIdentifier; 
             private String templateName; 
+
+            private Builder() {
+            } 
+
+            private Builder(RemediationTemplates model) {
+                this.managedRuleIdentifier = model.managedRuleIdentifier;
+                this.remediationType = model.remediationType;
+                this.templateDefinition = model.templateDefinition;
+                this.templateDescription = model.templateDescription;
+                this.templateIdentifier = model.templateIdentifier;
+                this.templateName = model.templateName;
+            } 
 
             /**
              * <p>The ID of the supported rule template.</p>

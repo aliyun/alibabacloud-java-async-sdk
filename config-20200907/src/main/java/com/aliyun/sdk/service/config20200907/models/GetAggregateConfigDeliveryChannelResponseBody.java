@@ -36,6 +36,10 @@ public class GetAggregateConfigDeliveryChannelResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return deliveryChannel
      */
@@ -53,6 +57,14 @@ public class GetAggregateConfigDeliveryChannelResponseBody extends TeaModel {
     public static final class Builder {
         private DeliveryChannel deliveryChannel; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAggregateConfigDeliveryChannelResponseBody model) {
+            this.deliveryChannel = model.deliveryChannel;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about a delivery channel.</p>
@@ -290,6 +302,28 @@ public class GetAggregateConfigDeliveryChannelResponseBody extends TeaModel {
             private Boolean nonCompliantNotification; 
             private String oversizedDataOSSTargetArn; 
             private Integer status; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeliveryChannel model) {
+                this.accountId = model.accountId;
+                this.aggregatorId = model.aggregatorId;
+                this.compliantSnapshot = model.compliantSnapshot;
+                this.configurationItemChangeNotification = model.configurationItemChangeNotification;
+                this.configurationSnapshot = model.configurationSnapshot;
+                this.deliveryChannelAssumeRoleArn = model.deliveryChannelAssumeRoleArn;
+                this.deliveryChannelCondition = model.deliveryChannelCondition;
+                this.deliveryChannelId = model.deliveryChannelId;
+                this.deliveryChannelName = model.deliveryChannelName;
+                this.deliveryChannelTargetArn = model.deliveryChannelTargetArn;
+                this.deliveryChannelType = model.deliveryChannelType;
+                this.deliverySnapshotTime = model.deliverySnapshotTime;
+                this.description = model.description;
+                this.nonCompliantNotification = model.nonCompliantNotification;
+                this.oversizedDataOSSTargetArn = model.oversizedDataOSSTargetArn;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The ID of the member in the account group.</p>

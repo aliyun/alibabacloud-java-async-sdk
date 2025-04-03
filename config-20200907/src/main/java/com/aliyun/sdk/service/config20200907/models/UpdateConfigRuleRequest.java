@@ -79,6 +79,10 @@ public class UpdateConfigRuleRequest extends Request {
     private String resourceIdsScope;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceNameScope")
+    private String resourceNameScope;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ResourceTypesScope")
     private java.util.List<String> resourceTypesScope;
 
@@ -93,14 +97,17 @@ public class UpdateConfigRuleRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TagKeyLogicScope")
+    @Deprecated
     private String tagKeyLogicScope;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TagKeyScope")
+    @Deprecated
     private String tagKeyScope;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TagValueScope")
+    @Deprecated
     private String tagValueScope;
 
     @com.aliyun.core.annotation.Body
@@ -124,6 +131,7 @@ public class UpdateConfigRuleRequest extends Request {
         this.regionIdsScope = builder.regionIdsScope;
         this.resourceGroupIdsScope = builder.resourceGroupIdsScope;
         this.resourceIdsScope = builder.resourceIdsScope;
+        this.resourceNameScope = builder.resourceNameScope;
         this.resourceTypesScope = builder.resourceTypesScope;
         this.riskLevel = builder.riskLevel;
         this.tag = builder.tag;
@@ -141,7 +149,7 @@ public class UpdateConfigRuleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -252,6 +260,13 @@ public class UpdateConfigRuleRequest extends Request {
     }
 
     /**
+     * @return resourceNameScope
+     */
+    public String getResourceNameScope() {
+        return this.resourceNameScope;
+    }
+
+    /**
      * @return resourceTypesScope
      */
     public java.util.List<String> getResourceTypesScope() {
@@ -316,6 +331,7 @@ public class UpdateConfigRuleRequest extends Request {
         private String regionIdsScope; 
         private String resourceGroupIdsScope; 
         private String resourceIdsScope; 
+        private String resourceNameScope; 
         private java.util.List<String> resourceTypesScope; 
         private Integer riskLevel; 
         private java.util.List<Tag> tag; 
@@ -345,6 +361,7 @@ public class UpdateConfigRuleRequest extends Request {
             this.regionIdsScope = request.regionIdsScope;
             this.resourceGroupIdsScope = request.resourceGroupIdsScope;
             this.resourceIdsScope = request.resourceIdsScope;
+            this.resourceNameScope = request.resourceNameScope;
             this.resourceTypesScope = request.resourceTypesScope;
             this.riskLevel = request.riskLevel;
             this.tag = request.tag;
@@ -562,6 +579,15 @@ public class UpdateConfigRuleRequest extends Request {
         }
 
         /**
+         * ResourceNameScope.
+         */
+        public Builder resourceNameScope(String resourceNameScope) {
+            this.putBodyParameter("ResourceNameScope", resourceNameScope);
+            this.resourceNameScope = resourceNameScope;
+            return this;
+        }
+
+        /**
          * <p>The type of the resource to be evaluated by the rule. Separate multiple resource types with commas (,).</p>
          * 
          * <strong>example:</strong>
@@ -708,6 +734,14 @@ public class UpdateConfigRuleRequest extends Request {
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(ExcludeTagsScope model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
              * <p>The key of the tag.</p>
              * 
@@ -781,6 +815,14 @@ public class UpdateConfigRuleRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The key of tag N to add to the key pair. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
              * 
@@ -853,6 +895,14 @@ public class UpdateConfigRuleRequest extends Request {
         public static final class Builder {
             private String tagKey; 
             private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(TagsScope model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
 
             /**
              * <p>The key of the tag.</p>

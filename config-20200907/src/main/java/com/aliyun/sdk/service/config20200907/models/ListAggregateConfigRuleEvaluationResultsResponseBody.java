@@ -36,6 +36,10 @@ public class ListAggregateConfigRuleEvaluationResultsResponseBody extends TeaMod
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return evaluationResults
      */
@@ -53,6 +57,14 @@ public class ListAggregateConfigRuleEvaluationResultsResponseBody extends TeaMod
     public static final class Builder {
         private EvaluationResults evaluationResults; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAggregateConfigRuleEvaluationResultsResponseBody model) {
+            this.evaluationResults = model.evaluationResults;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the compliance evaluation results returned.</p>
@@ -219,6 +231,22 @@ public class ListAggregateConfigRuleEvaluationResultsResponseBody extends TeaMod
             private Long resourceOwnerId; 
             private String resourceType; 
 
+            private Builder() {
+            } 
+
+            private Builder(EvaluationResultQualifier model) {
+                this.compliancePackId = model.compliancePackId;
+                this.configRuleArn = model.configRuleArn;
+                this.configRuleId = model.configRuleId;
+                this.configRuleName = model.configRuleName;
+                this.ignoreDate = model.ignoreDate;
+                this.regionId = model.regionId;
+                this.resourceId = model.resourceId;
+                this.resourceName = model.resourceName;
+                this.resourceOwnerId = model.resourceOwnerId;
+                this.resourceType = model.resourceType;
+            } 
+
             /**
              * <p>The ID of the compliance package to which the rule belongs.</p>
              * 
@@ -383,6 +411,14 @@ public class ListAggregateConfigRuleEvaluationResultsResponseBody extends TeaMod
             private EvaluationResultQualifier evaluationResultQualifier; 
             private Long orderingTimestamp; 
 
+            private Builder() {
+            } 
+
+            private Builder(EvaluationResultIdentifier model) {
+                this.evaluationResultQualifier = model.evaluationResultQualifier;
+                this.orderingTimestamp = model.orderingTimestamp;
+            } 
+
             /**
              * <p>The information about the evaluated resource in the compliance evaluation result.</p>
              */
@@ -527,6 +563,20 @@ public class ListAggregateConfigRuleEvaluationResultsResponseBody extends TeaMod
             private Boolean remediationEnabled; 
             private Long resultRecordedTimestamp; 
             private Integer riskLevel; 
+
+            private Builder() {
+            } 
+
+            private Builder(EvaluationResultList model) {
+                this.annotation = model.annotation;
+                this.complianceType = model.complianceType;
+                this.configRuleInvokedTimestamp = model.configRuleInvokedTimestamp;
+                this.evaluationResultIdentifier = model.evaluationResultIdentifier;
+                this.invokingEventMessageType = model.invokingEventMessageType;
+                this.remediationEnabled = model.remediationEnabled;
+                this.resultRecordedTimestamp = model.resultRecordedTimestamp;
+                this.riskLevel = model.riskLevel;
+            } 
 
             /**
              * <p>The annotation to the resource that is evaluated as non-compliant. The following parameters may be returned:</p>
@@ -702,6 +752,15 @@ public class ListAggregateConfigRuleEvaluationResultsResponseBody extends TeaMod
             private java.util.List<EvaluationResultList> evaluationResultList; 
             private Integer maxResults; 
             private String nextToken; 
+
+            private Builder() {
+            } 
+
+            private Builder(EvaluationResults model) {
+                this.evaluationResultList = model.evaluationResultList;
+                this.maxResults = model.maxResults;
+                this.nextToken = model.nextToken;
+            } 
 
             /**
              * <p>The details of the compliance evaluation result.</p>

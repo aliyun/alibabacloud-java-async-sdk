@@ -36,6 +36,10 @@ public class UpdateRemediationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return remediationId
      */
@@ -53,6 +57,14 @@ public class UpdateRemediationResponseBody extends TeaModel {
     public static final class Builder {
         private String remediationId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateRemediationResponseBody model) {
+            this.remediationId = model.remediationId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the remediation setting.</p>

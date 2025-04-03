@@ -36,6 +36,10 @@ public class UpdateAggregateConfigRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return configRuleId
      */
@@ -53,6 +57,14 @@ public class UpdateAggregateConfigRuleResponseBody extends TeaModel {
     public static final class Builder {
         private String configRuleId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateAggregateConfigRuleResponseBody model) {
+            this.configRuleId = model.configRuleId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the rule.</p>

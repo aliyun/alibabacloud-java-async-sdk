@@ -36,6 +36,10 @@ public class GetAggregateResourceCountsGroupByRegionResponseBody extends TeaMode
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return discoveredResourceCountsSummary
      */
@@ -53,6 +57,14 @@ public class GetAggregateResourceCountsGroupByRegionResponseBody extends TeaMode
     public static final class Builder {
         private java.util.List<DiscoveredResourceCountsSummary> discoveredResourceCountsSummary; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAggregateResourceCountsGroupByRegionResponseBody model) {
+            this.discoveredResourceCountsSummary = model.discoveredResourceCountsSummary;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the region by which statistics are collected.</p>
@@ -134,6 +146,15 @@ public class GetAggregateResourceCountsGroupByRegionResponseBody extends TeaMode
             private String groupName; 
             private String region; 
             private Long resourceCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(DiscoveredResourceCountsSummary model) {
+                this.groupName = model.groupName;
+                this.region = model.region;
+                this.resourceCount = model.resourceCount;
+            } 
 
             /**
              * <p>The dimension by which statistics are collected.</p>

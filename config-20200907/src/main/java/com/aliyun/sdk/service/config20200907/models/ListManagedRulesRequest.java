@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListManagedRulesRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FilterType")
+    private String filterType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Keyword")
     private String keyword;
 
@@ -41,6 +45,7 @@ public class ListManagedRulesRequest extends Request {
 
     private ListManagedRulesRequest(Builder builder) {
         super(builder);
+        this.filterType = builder.filterType;
         this.keyword = builder.keyword;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -56,9 +61,16 @@ public class ListManagedRulesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return filterType
+     */
+    public String getFilterType() {
+        return this.filterType;
     }
 
     /**
@@ -97,6 +109,7 @@ public class ListManagedRulesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListManagedRulesRequest, Builder> {
+        private String filterType; 
         private String keyword; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -109,12 +122,22 @@ public class ListManagedRulesRequest extends Request {
 
         private Builder(ListManagedRulesRequest request) {
             super(request);
+            this.filterType = request.filterType;
             this.keyword = request.keyword;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.resourceTypes = request.resourceTypes;
             this.riskLevel = request.riskLevel;
         } 
+
+        /**
+         * FilterType.
+         */
+        public Builder filterType(String filterType) {
+            this.putQueryParameter("FilterType", filterType);
+            this.filterType = filterType;
+            return this;
+        }
 
         /**
          * <p>The keyword of the managed rule.</p>

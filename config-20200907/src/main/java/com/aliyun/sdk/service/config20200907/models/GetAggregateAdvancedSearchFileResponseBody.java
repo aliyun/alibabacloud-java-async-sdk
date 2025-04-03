@@ -36,6 +36,10 @@ public class GetAggregateAdvancedSearchFileResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetAggregateAdvancedSearchFileResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private ResourceSearch resourceSearch; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAggregateAdvancedSearchFileResponseBody model) {
+            this.requestId = model.requestId;
+            this.resourceSearch = model.resourceSearch;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -134,6 +146,15 @@ public class GetAggregateAdvancedSearchFileResponseBody extends TeaModel {
             private String downloadUrl; 
             private Long resourceInventoryGenerateTime; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceSearch model) {
+                this.downloadUrl = model.downloadUrl;
+                this.resourceInventoryGenerateTime = model.resourceInventoryGenerateTime;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The download URL of the resource file.</p>

@@ -36,6 +36,10 @@ public class DetachConfigRuleToCompliancePackResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return operateRuleResult
      */
@@ -53,6 +57,14 @@ public class DetachConfigRuleToCompliancePackResponseBody extends TeaModel {
     public static final class Builder {
         private OperateRuleResult operateRuleResult; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DetachConfigRuleToCompliancePackResponseBody model) {
+            this.operateRuleResult = model.operateRuleResult;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The results of the operations to remove one or more rules.</p>
@@ -135,6 +147,15 @@ public class DetachConfigRuleToCompliancePackResponseBody extends TeaModel {
             private String errorCode; 
             private Boolean success; 
 
+            private Builder() {
+            } 
+
+            private Builder(OperateRuleItemList model) {
+                this.configRuleId = model.configRuleId;
+                this.errorCode = model.errorCode;
+                this.success = model.success;
+            } 
+
             /**
              * <p>The rule ID.</p>
              * 
@@ -214,6 +235,13 @@ public class DetachConfigRuleToCompliancePackResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<OperateRuleItemList> operateRuleItemList; 
+
+            private Builder() {
+            } 
+
+            private Builder(OperateRuleResult model) {
+                this.operateRuleItemList = model.operateRuleItemList;
+            } 
 
             /**
              * <p>The result of the operation to remove the rule.</p>

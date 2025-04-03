@@ -36,6 +36,10 @@ public class StartConfigurationRecorderResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return configurationRecorder
      */
@@ -53,6 +57,14 @@ public class StartConfigurationRecorderResponseBody extends TeaModel {
     public static final class Builder {
         private ConfigurationRecorder configurationRecorder; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(StartConfigurationRecorderResponseBody model) {
+            this.configurationRecorder = model.configurationRecorder;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of the configuration recorder.</p>
@@ -122,6 +134,14 @@ public class StartConfigurationRecorderResponseBody extends TeaModel {
         public static final class Builder {
             private String configurationRecorderStatus; 
             private java.util.List<String> resourceTypes; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConfigurationRecorder model) {
+                this.configurationRecorderStatus = model.configurationRecorderStatus;
+                this.resourceTypes = model.resourceTypes;
+            } 
 
             /**
              * <p>The status of the configuration recorder. Valid values:</p>
