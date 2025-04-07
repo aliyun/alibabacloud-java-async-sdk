@@ -36,6 +36,10 @@ public class ListRunningAppsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class ListRunningAppsResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<RunningCloudApps> runningCloudApps; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListRunningAppsResponseBody model) {
+            this.requestId = model.requestId;
+            this.runningCloudApps = model.runningCloudApps;
+        } 
 
         /**
          * <p>Id of the request</p>
@@ -230,6 +242,23 @@ public class ListRunningAppsResponseBody extends TeaModel {
             private String osType; 
             private String regionId; 
             private String startTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(RunningCloudApps model) {
+                this.appId = model.appId;
+                this.appInstanceGroupId = model.appInstanceGroupId;
+                this.appInstanceId = model.appInstanceId;
+                this.appName = model.appName;
+                this.appVersion = model.appVersion;
+                this.appVersionName = model.appVersionName;
+                this.duration = model.duration;
+                this.iconUrl = model.iconUrl;
+                this.osType = model.osType;
+                this.regionId = model.regionId;
+                this.startTime = model.startTime;
+            } 
 
             /**
              * AppId.

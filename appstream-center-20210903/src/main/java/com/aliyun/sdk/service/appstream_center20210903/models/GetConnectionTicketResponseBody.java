@@ -92,6 +92,10 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return appInstanceGroupId
      */
@@ -221,6 +225,28 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         private String taskStatus; 
         private Long tenantId; 
         private String ticket; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetConnectionTicketResponseBody model) {
+            this.appInstanceGroupId = model.appInstanceGroupId;
+            this.appInstanceId = model.appInstanceId;
+            this.appInstancePersistentId = model.appInstancePersistentId;
+            this.bindQueueInfo = model.bindQueueInfo;
+            this.code = model.code;
+            this.loginToken = model.loginToken;
+            this.message = model.message;
+            this.osType = model.osType;
+            this.policy = model.policy;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+            this.retryTimes = model.retryTimes;
+            this.taskId = model.taskId;
+            this.taskStatus = model.taskStatus;
+            this.tenantId = model.tenantId;
+            this.ticket = model.ticket;
+        } 
 
         /**
          * AppInstanceGroupId.
@@ -463,6 +489,19 @@ public class GetConnectionTicketResponseBody extends TeaModel {
             private String targetId; 
             private Long waitTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(BindQueueInfo model) {
+                this.queueStatus = model.queueStatus;
+                this.rank = model.rank;
+                this.readyTimeout = model.readyTimeout;
+                this.remainingTime = model.remainingTime;
+                this.requestKey = model.requestKey;
+                this.targetId = model.targetId;
+                this.waitTime = model.waitTime;
+            } 
+
             /**
              * QueueStatus.
              */
@@ -581,6 +620,15 @@ public class GetConnectionTicketResponseBody extends TeaModel {
             private String resolutionAdaptive; 
             private Integer resolutionHeight; 
             private Integer resolutionWidth; 
+
+            private Builder() {
+            } 
+
+            private Builder(Policy model) {
+                this.resolutionAdaptive = model.resolutionAdaptive;
+                this.resolutionHeight = model.resolutionHeight;
+                this.resolutionWidth = model.resolutionWidth;
+            } 
 
             /**
              * ResolutionAdaptive.

@@ -40,6 +40,10 @@ public class ListPublishedAppInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return appModels
      */
@@ -65,6 +69,15 @@ public class ListPublishedAppInfoResponseBody extends TeaModel {
         private java.util.List<AppModels> appModels; 
         private String nextToken; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListPublishedAppInfoResponseBody model) {
+            this.appModels = model.appModels;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>appModels</p>
@@ -262,6 +275,24 @@ public class ListPublishedAppInfoResponseBody extends TeaModel {
             private String iconUrl; 
             private Boolean isAuth; 
             private Boolean usedInSession; 
+
+            private Builder() {
+            } 
+
+            private Builder(AppModels model) {
+                this.appCenterImageId = model.appCenterImageId;
+                this.appId = model.appId;
+                this.appName = model.appName;
+                this.appThemeColor = model.appThemeColor;
+                this.appVersion = model.appVersion;
+                this.appVersionName = model.appVersionName;
+                this.authTime = model.authTime;
+                this.categoryId = model.categoryId;
+                this.categoryType = model.categoryType;
+                this.iconUrl = model.iconUrl;
+                this.isAuth = model.isAuth;
+                this.usedInSession = model.usedInSession;
+            } 
 
             /**
              * AppCenterImageId.

@@ -18,6 +18,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetConnectionTicketRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AccessType")
+    @com.aliyun.core.annotation.Validation(maxLength = 10)
+    private String accessType;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("AppId")
     private String appId;
 
@@ -112,6 +117,7 @@ public class GetConnectionTicketRequest extends Request {
 
     private GetConnectionTicketRequest(Builder builder) {
         super(builder);
+        this.accessType = builder.accessType;
         this.appId = builder.appId;
         this.appInstanceGroupId = builder.appInstanceGroupId;
         this.appInstanceId = builder.appInstanceId;
@@ -145,9 +151,16 @@ public class GetConnectionTicketRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return accessType
+     */
+    public String getAccessType() {
+        return this.accessType;
     }
 
     /**
@@ -312,6 +325,7 @@ public class GetConnectionTicketRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetConnectionTicketRequest, Builder> {
+        private String accessType; 
         private String appId; 
         private String appInstanceGroupId; 
         private String appInstanceId; 
@@ -342,6 +356,7 @@ public class GetConnectionTicketRequest extends Request {
 
         private Builder(GetConnectionTicketRequest request) {
             super(request);
+            this.accessType = request.accessType;
             this.appId = request.appId;
             this.appInstanceGroupId = request.appInstanceGroupId;
             this.appInstanceId = request.appInstanceId;
@@ -366,6 +381,15 @@ public class GetConnectionTicketRequest extends Request {
             this.tenantId = request.tenantId;
             this.uuid = request.uuid;
         } 
+
+        /**
+         * AccessType.
+         */
+        public Builder accessType(String accessType) {
+            this.putBodyParameter("AccessType", accessType);
+            this.accessType = accessType;
+            return this;
+        }
 
         /**
          * AppId.
