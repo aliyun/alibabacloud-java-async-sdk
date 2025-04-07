@@ -23,6 +23,10 @@ public class CreateNatGatewayRequest extends Request {
     private String ensRegionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceBillingCycle")
+    private String instanceBillingCycle;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceType")
     private String instanceType;
 
@@ -42,12 +46,12 @@ public class CreateNatGatewayRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VSwitchId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String vSwitchId;
 
     private CreateNatGatewayRequest(Builder builder) {
         super(builder);
         this.ensRegionId = builder.ensRegionId;
+        this.instanceBillingCycle = builder.instanceBillingCycle;
         this.instanceType = builder.instanceType;
         this.name = builder.name;
         this.networkId = builder.networkId;
@@ -73,6 +77,13 @@ public class CreateNatGatewayRequest extends Request {
      */
     public String getEnsRegionId() {
         return this.ensRegionId;
+    }
+
+    /**
+     * @return instanceBillingCycle
+     */
+    public String getInstanceBillingCycle() {
+        return this.instanceBillingCycle;
     }
 
     /**
@@ -112,6 +123,7 @@ public class CreateNatGatewayRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateNatGatewayRequest, Builder> {
         private String ensRegionId; 
+        private String instanceBillingCycle; 
         private String instanceType; 
         private String name; 
         private String networkId; 
@@ -125,6 +137,7 @@ public class CreateNatGatewayRequest extends Request {
         private Builder(CreateNatGatewayRequest request) {
             super(request);
             this.ensRegionId = request.ensRegionId;
+            this.instanceBillingCycle = request.instanceBillingCycle;
             this.instanceType = request.instanceType;
             this.name = request.name;
             this.networkId = request.networkId;
@@ -142,6 +155,15 @@ public class CreateNatGatewayRequest extends Request {
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
             this.ensRegionId = ensRegionId;
+            return this;
+        }
+
+        /**
+         * InstanceBillingCycle.
+         */
+        public Builder instanceBillingCycle(String instanceBillingCycle) {
+            this.putQueryParameter("InstanceBillingCycle", instanceBillingCycle);
+            this.instanceBillingCycle = instanceBillingCycle;
             return this;
         }
 
@@ -193,7 +215,6 @@ public class CreateNatGatewayRequest extends Request {
 
         /**
          * <p>The ID of the vSwitch.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-5savh5ngxh8sbj14bu7n****</p>
