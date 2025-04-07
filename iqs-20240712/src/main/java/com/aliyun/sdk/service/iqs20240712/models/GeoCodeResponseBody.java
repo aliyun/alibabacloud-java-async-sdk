@@ -36,6 +36,10 @@ public class GeoCodeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GeoCodeResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Data> data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GeoCodeResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * data.
@@ -119,6 +131,14 @@ public class GeoCodeResponseBody extends TeaModel {
         public static final class Builder {
             private String name; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Building model) {
+                this.name = model.name;
+                this.type = model.type;
+            } 
 
             /**
              * name.
@@ -294,6 +314,23 @@ public class GeoCodeResponseBody extends TeaModel {
             private String number; 
             private String province; 
             private String street; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.building = model.building;
+                this.city = model.city;
+                this.cityCode = model.cityCode;
+                this.district = model.district;
+                this.districtCode = model.districtCode;
+                this.latitude = model.latitude;
+                this.level = model.level;
+                this.longitude = model.longitude;
+                this.number = model.number;
+                this.province = model.province;
+                this.street = model.street;
+            } 
 
             /**
              * building.

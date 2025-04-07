@@ -32,6 +32,10 @@ public class AgentBaseQuery extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return query
      */
@@ -41,6 +45,13 @@ public class AgentBaseQuery extends TeaModel {
 
     public static final class Builder {
         private String query; 
+
+        private Builder() {
+        } 
+
+        private Builder(AgentBaseQuery model) {
+            this.query = model.query;
+        } 
 
         /**
          * query.

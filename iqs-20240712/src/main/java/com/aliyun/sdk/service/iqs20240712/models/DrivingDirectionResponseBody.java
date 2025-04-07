@@ -36,6 +36,10 @@ public class DrivingDirectionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DrivingDirectionResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Data> data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DrivingDirectionResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * data.
@@ -182,6 +194,19 @@ public class DrivingDirectionResponseBody extends TeaModel {
             private String tolls; 
             private String trafficLights; 
             private String transitFee; 
+
+            private Builder() {
+            } 
+
+            private Builder(Cost model) {
+                this.durationSecond = model.durationSecond;
+                this.taxiFee = model.taxiFee;
+                this.tollDistanceMeter = model.tollDistanceMeter;
+                this.tollRoads = model.tollRoads;
+                this.tolls = model.tolls;
+                this.trafficLights = model.trafficLights;
+                this.transitFee = model.transitFee;
+            } 
 
             /**
              * durationSecond.
@@ -350,6 +375,19 @@ public class DrivingDirectionResponseBody extends TeaModel {
             private String trafficLights; 
             private String transitFee; 
 
+            private Builder() {
+            } 
+
+            private Builder(StepsCost model) {
+                this.durationSecond = model.durationSecond;
+                this.taxiFee = model.taxiFee;
+                this.tollDistanceMeter = model.tollDistanceMeter;
+                this.tollRoads = model.tollRoads;
+                this.tolls = model.tolls;
+                this.trafficLights = model.trafficLights;
+                this.transitFee = model.transitFee;
+            } 
+
             /**
              * durationSecond.
              */
@@ -493,6 +531,17 @@ public class DrivingDirectionResponseBody extends TeaModel {
             private String roadName; 
             private String stepDistanceMeter; 
 
+            private Builder() {
+            } 
+
+            private Builder(Steps model) {
+                this.cost = model.cost;
+                this.instruction = model.instruction;
+                this.orientation = model.orientation;
+                this.roadName = model.roadName;
+                this.stepDistanceMeter = model.stepDistanceMeter;
+            } 
+
             /**
              * cost.
              */
@@ -607,6 +656,16 @@ public class DrivingDirectionResponseBody extends TeaModel {
             private String distanceMeter; 
             private String restriction; 
             private java.util.List<Steps> steps; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.cost = model.cost;
+                this.distanceMeter = model.distanceMeter;
+                this.restriction = model.restriction;
+                this.steps = model.steps;
+            } 
 
             /**
              * cost.

@@ -36,6 +36,10 @@ public class ElectrobikeDirectionNovaResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class ElectrobikeDirectionNovaResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ElectrobikeDirectionNovaResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * data.
@@ -179,6 +191,19 @@ public class ElectrobikeDirectionNovaResponseBody extends TeaModel {
             private String tolls; 
             private String trafficLights; 
             private String transitFee; 
+
+            private Builder() {
+            } 
+
+            private Builder(Cost model) {
+                this.durationSecond = model.durationSecond;
+                this.taxiFee = model.taxiFee;
+                this.tollDistanceMeter = model.tollDistanceMeter;
+                this.tollRoads = model.tollRoads;
+                this.tolls = model.tolls;
+                this.trafficLights = model.trafficLights;
+                this.transitFee = model.transitFee;
+            } 
 
             /**
              * durationSecond.
@@ -347,6 +372,19 @@ public class ElectrobikeDirectionNovaResponseBody extends TeaModel {
             private String trafficLights; 
             private String transitFee; 
 
+            private Builder() {
+            } 
+
+            private Builder(StepsCost model) {
+                this.durationSecond = model.durationSecond;
+                this.taxiFee = model.taxiFee;
+                this.tollDistanceMeter = model.tollDistanceMeter;
+                this.tollRoads = model.tollRoads;
+                this.tolls = model.tolls;
+                this.trafficLights = model.trafficLights;
+                this.transitFee = model.transitFee;
+            } 
+
             /**
              * durationSecond.
              */
@@ -502,6 +540,18 @@ public class ElectrobikeDirectionNovaResponseBody extends TeaModel {
             private String roadName; 
             private String stepDistanceMeter; 
 
+            private Builder() {
+            } 
+
+            private Builder(Steps model) {
+                this.cost = model.cost;
+                this.instruction = model.instruction;
+                this.orientation = model.orientation;
+                this.polyline = model.polyline;
+                this.roadName = model.roadName;
+                this.stepDistanceMeter = model.stepDistanceMeter;
+            } 
+
             /**
              * cost.
              */
@@ -636,6 +686,17 @@ public class ElectrobikeDirectionNovaResponseBody extends TeaModel {
             private String durationSecond; 
             private String restriction; 
             private java.util.List<Steps> steps; 
+
+            private Builder() {
+            } 
+
+            private Builder(Paths model) {
+                this.cost = model.cost;
+                this.distanceMeter = model.distanceMeter;
+                this.durationSecond = model.durationSecond;
+                this.restriction = model.restriction;
+                this.steps = model.steps;
+            } 
 
             /**
              * cost.
@@ -787,6 +848,19 @@ public class ElectrobikeDirectionNovaResponseBody extends TeaModel {
             private String originLongitude; 
             private java.util.List<Paths> paths; 
             private String taxiCost; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.count = model.count;
+                this.destinationLatitude = model.destinationLatitude;
+                this.destinationLongitude = model.destinationLongitude;
+                this.originLatitude = model.originLatitude;
+                this.originLongitude = model.originLongitude;
+                this.paths = model.paths;
+                this.taxiCost = model.taxiCost;
+            } 
 
             /**
              * count.

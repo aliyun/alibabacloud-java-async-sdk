@@ -36,6 +36,10 @@ public class RgeoCodeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class RgeoCodeResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(RgeoCodeResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * data.
@@ -119,6 +131,14 @@ public class RgeoCodeResponseBody extends TeaModel {
         public static final class Builder {
             private String name; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Building model) {
+                this.name = model.name;
+                this.type = model.type;
+            } 
 
             /**
              * name.
@@ -211,6 +231,16 @@ public class RgeoCodeResponseBody extends TeaModel {
             private String longitude; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(BusinessAreas model) {
+                this.id = model.id;
+                this.latitude = model.latitude;
+                this.longitude = model.longitude;
+                this.name = model.name;
+            } 
+
             /**
              * id.
              */
@@ -293,6 +323,14 @@ public class RgeoCodeResponseBody extends TeaModel {
         public static final class Builder {
             private String name; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Neighborhood model) {
+                this.name = model.name;
+                this.type = model.type;
+            } 
 
             /**
              * name.
@@ -408,6 +446,18 @@ public class RgeoCodeResponseBody extends TeaModel {
             private String longitude; 
             private String number; 
             private String street; 
+
+            private Builder() {
+            } 
+
+            private Builder(StreetNumber model) {
+                this.direction = model.direction;
+                this.distanceMeter = model.distanceMeter;
+                this.latitude = model.latitude;
+                this.longitude = model.longitude;
+                this.number = model.number;
+                this.street = model.street;
+            } 
 
             /**
              * direction.
@@ -639,6 +689,25 @@ public class RgeoCodeResponseBody extends TeaModel {
             private StreetNumber streetNumber; 
             private String townCode; 
             private String townShip; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.building = model.building;
+                this.businessAreas = model.businessAreas;
+                this.city = model.city;
+                this.cityCode = model.cityCode;
+                this.country = model.country;
+                this.district = model.district;
+                this.districtCode = model.districtCode;
+                this.formattedAddress = model.formattedAddress;
+                this.neighborhood = model.neighborhood;
+                this.province = model.province;
+                this.streetNumber = model.streetNumber;
+                this.townCode = model.townCode;
+                this.townShip = model.townShip;
+            } 
 
             /**
              * building.

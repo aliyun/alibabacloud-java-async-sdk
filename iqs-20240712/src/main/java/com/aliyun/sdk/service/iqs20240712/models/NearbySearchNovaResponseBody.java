@@ -36,6 +36,10 @@ public class NearbySearchNovaResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class NearbySearchNovaResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Data> data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(NearbySearchNovaResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * data.
@@ -119,6 +131,14 @@ public class NearbySearchNovaResponseBody extends TeaModel {
         public static final class Builder {
             private String title; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(Images model) {
+                this.title = model.title;
+                this.url = model.url;
+            } 
 
             /**
              * title.
@@ -258,6 +278,20 @@ public class NearbySearchNovaResponseBody extends TeaModel {
             private String score; 
             private String tag; 
             private String weeklyOpeningDays; 
+
+            private Builder() {
+            } 
+
+            private Builder(Metadata model) {
+                this.averageSpend = model.averageSpend;
+                this.businessArea = model.businessArea;
+                this.dailyOpeningHours = model.dailyOpeningHours;
+                this.mainTag = model.mainTag;
+                this.phone = model.phone;
+                this.score = model.score;
+                this.tag = model.tag;
+                this.weeklyOpeningDays = model.weeklyOpeningDays;
+            } 
 
             /**
              * averageSpend.
@@ -541,6 +575,28 @@ public class NearbySearchNovaResponseBody extends TeaModel {
             private String provinceName; 
             private String typeCode; 
             private String types; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.address = model.address;
+                this.cityCode = model.cityCode;
+                this.cityName = model.cityName;
+                this.distanceMeter = model.distanceMeter;
+                this.districtCode = model.districtCode;
+                this.districtName = model.districtName;
+                this.id = model.id;
+                this.images = model.images;
+                this.latitude = model.latitude;
+                this.longitude = model.longitude;
+                this.metadata = model.metadata;
+                this.name = model.name;
+                this.provinceCode = model.provinceCode;
+                this.provinceName = model.provinceName;
+                this.typeCode = model.typeCode;
+                this.types = model.types;
+            } 
 
             /**
              * address.

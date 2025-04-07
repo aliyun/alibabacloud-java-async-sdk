@@ -36,6 +36,10 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(TransitIntegratedDirectionResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * data.
@@ -179,6 +191,19 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
             private String tolls; 
             private String trafficLights; 
             private String transitFee; 
+
+            private Builder() {
+            } 
+
+            private Builder(Cost model) {
+                this.durationSecond = model.durationSecond;
+                this.taxiFee = model.taxiFee;
+                this.tollDistanceMeter = model.tollDistanceMeter;
+                this.tollRoads = model.tollRoads;
+                this.tolls = model.tolls;
+                this.trafficLights = model.trafficLights;
+                this.transitFee = model.transitFee;
+            } 
 
             /**
              * durationSecond.
@@ -347,6 +372,19 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
             private String trafficLights; 
             private String transitFee; 
 
+            private Builder() {
+            } 
+
+            private Builder(PathsCost model) {
+                this.durationSecond = model.durationSecond;
+                this.taxiFee = model.taxiFee;
+                this.tollDistanceMeter = model.tollDistanceMeter;
+                this.tollRoads = model.tollRoads;
+                this.tolls = model.tolls;
+                this.trafficLights = model.trafficLights;
+                this.transitFee = model.transitFee;
+            } 
+
             /**
              * durationSecond.
              */
@@ -466,6 +504,15 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
             private String location; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(Exit model) {
+                this.id = model.id;
+                this.location = model.location;
+                this.name = model.name;
+            } 
+
             /**
              * id.
              */
@@ -564,6 +611,16 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
             private String id; 
             private String location; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(ArrivalStop model) {
+                this.exit = model.exit;
+                this.id = model.id;
+                this.location = model.location;
+                this.name = model.name;
+            } 
 
             /**
              * exit.
@@ -708,6 +765,19 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
             private String trafficLights; 
             private String transitFee; 
 
+            private Builder() {
+            } 
+
+            private Builder(BuslinesCost model) {
+                this.durationSecond = model.durationSecond;
+                this.taxiFee = model.taxiFee;
+                this.tollDistanceMeter = model.tollDistanceMeter;
+                this.tollRoads = model.tollRoads;
+                this.tolls = model.tolls;
+                this.trafficLights = model.trafficLights;
+                this.transitFee = model.transitFee;
+            } 
+
             /**
              * durationSecond.
              */
@@ -827,6 +897,15 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
             private String location; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(Entrance model) {
+                this.id = model.id;
+                this.location = model.location;
+                this.name = model.name;
+            } 
+
             /**
              * id.
              */
@@ -926,6 +1005,16 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
             private String location; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(DepartureStop model) {
+                this.entrance = model.entrance;
+                this.id = model.id;
+                this.location = model.location;
+                this.name = model.name;
+            } 
+
             /**
              * entrance.
              */
@@ -997,6 +1086,13 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
         public static final class Builder {
             private String polyline; 
 
+            private Builder() {
+            } 
+
+            private Builder(Polyline model) {
+                this.polyline = model.polyline;
+            } 
+
             /**
              * polyline.
              */
@@ -1067,6 +1163,15 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
             private String id; 
             private String location; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(ViaStops model) {
+                this.id = model.id;
+                this.location = model.location;
+                this.name = model.name;
+            } 
 
             /**
              * id.
@@ -1287,6 +1392,26 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
             private String viaNum; 
             private java.util.List<ViaStops> viaStops; 
 
+            private Builder() {
+            } 
+
+            private Builder(Buslines model) {
+                this.arrivalStop = model.arrivalStop;
+                this.busTimeTips = model.busTimeTips;
+                this.bustimetag = model.bustimetag;
+                this.cost = model.cost;
+                this.departureStop = model.departureStop;
+                this.distanceMeter = model.distanceMeter;
+                this.endTime = model.endTime;
+                this.id = model.id;
+                this.name = model.name;
+                this.polyline = model.polyline;
+                this.startTime = model.startTime;
+                this.type = model.type;
+                this.viaNum = model.viaNum;
+                this.viaStops = model.viaStops;
+            } 
+
             /**
              * arrivalStop.
              */
@@ -1450,6 +1575,14 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
             private java.util.List<Buslines> buslines; 
             private String index; 
 
+            private Builder() {
+            } 
+
+            private Builder(Bus model) {
+                this.buslines = model.buslines;
+                this.index = model.index;
+            } 
+
             /**
              * buslines.
              */
@@ -1564,6 +1697,18 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
             private String location; 
             private String name; 
             private String time; 
+
+            private Builder() {
+            } 
+
+            private Builder(RailwayArrivalStop model) {
+                this.adcode = model.adcode;
+                this.end = model.end;
+                this.id = model.id;
+                this.location = model.location;
+                this.name = model.name;
+                this.time = model.time;
+            } 
 
             /**
              * adcode.
@@ -1715,6 +1860,18 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
             private String start; 
             private String time; 
 
+            private Builder() {
+            } 
+
+            private Builder(RailwayDepartureStop model) {
+                this.adcode = model.adcode;
+                this.id = model.id;
+                this.location = model.location;
+                this.name = model.name;
+                this.start = model.start;
+                this.time = model.time;
+            } 
+
             /**
              * adcode.
              */
@@ -1813,6 +1970,14 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
         public static final class Builder {
             private String code; 
             private String cost; 
+
+            private Builder() {
+            } 
+
+            private Builder(Spaces model) {
+                this.code = model.code;
+                this.cost = model.cost;
+            } 
 
             /**
              * code.
@@ -1977,6 +2142,22 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
             private String trip; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Railway model) {
+                this.arrivalStop = model.arrivalStop;
+                this.departureStop = model.departureStop;
+                this.distanceMeter = model.distanceMeter;
+                this.id = model.id;
+                this.index = model.index;
+                this.name = model.name;
+                this.spaces = model.spaces;
+                this.time = model.time;
+                this.trip = model.trip;
+                this.type = model.type;
+            } 
+
             /**
              * arrivalStop.
              */
@@ -2095,6 +2276,13 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
 
         public static final class Builder {
             private String polyline; 
+
+            private Builder() {
+            } 
+
+            private Builder(TaxiPolyline model) {
+                this.polyline = model.polyline;
+            } 
 
             /**
              * polyline.
@@ -2238,6 +2426,21 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
             private String originPoint; 
             private TaxiPolyline polyline; 
             private String price; 
+
+            private Builder() {
+            } 
+
+            private Builder(Taxi model) {
+                this.destinationName = model.destinationName;
+                this.destinationPoint = model.destinationPoint;
+                this.distanceMeter = model.distanceMeter;
+                this.driveTimeSecond = model.driveTimeSecond;
+                this.index = model.index;
+                this.originName = model.originName;
+                this.originPoint = model.originPoint;
+                this.polyline = model.polyline;
+                this.price = model.price;
+            } 
 
             /**
              * destinationName.
@@ -2422,6 +2625,19 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
             private String trafficLights; 
             private String transitFee; 
 
+            private Builder() {
+            } 
+
+            private Builder(WalkingCost model) {
+                this.durationSecond = model.durationSecond;
+                this.taxiFee = model.taxiFee;
+                this.tollDistanceMeter = model.tollDistanceMeter;
+                this.tollRoads = model.tollRoads;
+                this.tolls = model.tolls;
+                this.trafficLights = model.trafficLights;
+                this.transitFee = model.transitFee;
+            } 
+
             /**
              * durationSecond.
              */
@@ -2589,6 +2805,19 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
             private String trafficLights; 
             private String transitFee; 
 
+            private Builder() {
+            } 
+
+            private Builder(StepsCost model) {
+                this.durationSecond = model.durationSecond;
+                this.taxiFee = model.taxiFee;
+                this.tollDistanceMeter = model.tollDistanceMeter;
+                this.tollRoads = model.tollRoads;
+                this.tolls = model.tolls;
+                this.trafficLights = model.trafficLights;
+                this.transitFee = model.transitFee;
+            } 
+
             /**
              * durationSecond.
              */
@@ -2683,6 +2912,13 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
 
         public static final class Builder {
             private String polyline; 
+
+            private Builder() {
+            } 
+
+            private Builder(StepsPolyline model) {
+                this.polyline = model.polyline;
+            } 
 
             /**
              * polyline.
@@ -2790,6 +3026,18 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
             private StepsPolyline polyline; 
             private String roadName; 
             private String stepDistanceMeter; 
+
+            private Builder() {
+            } 
+
+            private Builder(Steps model) {
+                this.cost = model.cost;
+                this.instruction = model.instruction;
+                this.orientation = model.orientation;
+                this.polyline = model.polyline;
+                this.roadName = model.roadName;
+                this.stepDistanceMeter = model.stepDistanceMeter;
+            } 
 
             /**
              * cost.
@@ -2938,6 +3186,18 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
             private String origin; 
             private java.util.List<Steps> steps; 
 
+            private Builder() {
+            } 
+
+            private Builder(Walking model) {
+                this.cost = model.cost;
+                this.destination = model.destination;
+                this.distanceMeter = model.distanceMeter;
+                this.index = model.index;
+                this.origin = model.origin;
+                this.steps = model.steps;
+            } 
+
             /**
              * cost.
              */
@@ -3061,6 +3321,16 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
             private Taxi taxi; 
             private Walking walking; 
 
+            private Builder() {
+            } 
+
+            private Builder(Segments model) {
+                this.bus = model.bus;
+                this.railway = model.railway;
+                this.taxi = model.taxi;
+                this.walking = model.walking;
+            } 
+
             /**
              * bus.
              */
@@ -3179,6 +3449,17 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
             private String nightflag; 
             private java.util.List<Segments> segments; 
             private String walkingDistanceMeter; 
+
+            private Builder() {
+            } 
+
+            private Builder(Paths model) {
+                this.cost = model.cost;
+                this.distanceMeter = model.distanceMeter;
+                this.nightflag = model.nightflag;
+                this.segments = model.segments;
+                this.walkingDistanceMeter = model.walkingDistanceMeter;
+            } 
 
             /**
              * cost.
@@ -3342,6 +3623,20 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
             private String originLatitude; 
             private String originLongitude; 
             private java.util.List<Paths> paths; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.cost = model.cost;
+                this.count = model.count;
+                this.destinationLatitude = model.destinationLatitude;
+                this.destinationLongitude = model.destinationLongitude;
+                this.distanceMeter = model.distanceMeter;
+                this.originLatitude = model.originLatitude;
+                this.originLongitude = model.originLongitude;
+                this.paths = model.paths;
+            } 
 
             /**
              * cost.

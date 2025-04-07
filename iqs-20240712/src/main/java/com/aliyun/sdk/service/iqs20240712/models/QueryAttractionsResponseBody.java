@@ -36,6 +36,10 @@ public class QueryAttractionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return queryResult
      */
@@ -53,6 +57,14 @@ public class QueryAttractionsResponseBody extends TeaModel {
     public static final class Builder {
         private QueryResult queryResult; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryAttractionsResponseBody model) {
+            this.queryResult = model.queryResult;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * queryResult.
