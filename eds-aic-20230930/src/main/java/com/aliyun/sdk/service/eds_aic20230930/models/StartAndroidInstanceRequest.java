@@ -21,9 +21,14 @@ public class StartAndroidInstanceRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("AndroidInstanceIds")
     private java.util.List<String> androidInstanceIds;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SaleMode")
+    private String saleMode;
+
     private StartAndroidInstanceRequest(Builder builder) {
         super(builder);
         this.androidInstanceIds = builder.androidInstanceIds;
+        this.saleMode = builder.saleMode;
     }
 
     public static Builder builder() {
@@ -46,8 +51,16 @@ public class StartAndroidInstanceRequest extends Request {
         return this.androidInstanceIds;
     }
 
+    /**
+     * @return saleMode
+     */
+    public String getSaleMode() {
+        return this.saleMode;
+    }
+
     public static final class Builder extends Request.Builder<StartAndroidInstanceRequest, Builder> {
         private java.util.List<String> androidInstanceIds; 
+        private String saleMode; 
 
         private Builder() {
             super();
@@ -56,6 +69,7 @@ public class StartAndroidInstanceRequest extends Request {
         private Builder(StartAndroidInstanceRequest request) {
             super(request);
             this.androidInstanceIds = request.androidInstanceIds;
+            this.saleMode = request.saleMode;
         } 
 
         /**
@@ -64,6 +78,15 @@ public class StartAndroidInstanceRequest extends Request {
         public Builder androidInstanceIds(java.util.List<String> androidInstanceIds) {
             this.putQueryParameter("AndroidInstanceIds", androidInstanceIds);
             this.androidInstanceIds = androidInstanceIds;
+            return this;
+        }
+
+        /**
+         * SaleMode.
+         */
+        public Builder saleMode(String saleMode) {
+            this.putQueryParameter("SaleMode", saleMode);
+            this.saleMode = saleMode;
             return this;
         }
 

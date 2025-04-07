@@ -25,10 +25,15 @@ public class RebootAndroidInstancesInGroupRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ForceStop")
     private Boolean forceStop;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SaleMode")
+    private String saleMode;
+
     private RebootAndroidInstancesInGroupRequest(Builder builder) {
         super(builder);
         this.androidInstanceIds = builder.androidInstanceIds;
         this.forceStop = builder.forceStop;
+        this.saleMode = builder.saleMode;
     }
 
     public static Builder builder() {
@@ -58,9 +63,17 @@ public class RebootAndroidInstancesInGroupRequest extends Request {
         return this.forceStop;
     }
 
+    /**
+     * @return saleMode
+     */
+    public String getSaleMode() {
+        return this.saleMode;
+    }
+
     public static final class Builder extends Request.Builder<RebootAndroidInstancesInGroupRequest, Builder> {
         private java.util.List<String> androidInstanceIds; 
         private Boolean forceStop; 
+        private String saleMode; 
 
         private Builder() {
             super();
@@ -70,6 +83,7 @@ public class RebootAndroidInstancesInGroupRequest extends Request {
             super(request);
             this.androidInstanceIds = request.androidInstanceIds;
             this.forceStop = request.forceStop;
+            this.saleMode = request.saleMode;
         } 
 
         /**
@@ -95,6 +109,15 @@ public class RebootAndroidInstancesInGroupRequest extends Request {
         public Builder forceStop(Boolean forceStop) {
             this.putQueryParameter("ForceStop", forceStop);
             this.forceStop = forceStop;
+            return this;
+        }
+
+        /**
+         * SaleMode.
+         */
+        public Builder saleMode(String saleMode) {
+            this.putQueryParameter("SaleMode", saleMode);
+            this.saleMode = saleMode;
             return this;
         }
 
