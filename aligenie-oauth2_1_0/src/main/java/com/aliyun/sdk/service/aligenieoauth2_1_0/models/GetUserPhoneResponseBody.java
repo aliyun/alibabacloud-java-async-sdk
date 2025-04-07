@@ -36,6 +36,10 @@ public class GetUserPhoneResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return phone
      */
@@ -53,6 +57,14 @@ public class GetUserPhoneResponseBody extends TeaModel {
     public static final class Builder {
         private String phone; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetUserPhoneResponseBody model) {
+            this.phone = model.phone;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Phone.

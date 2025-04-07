@@ -36,6 +36,10 @@ public class GetSceneListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetSceneListResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<SceneList> sceneList; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSceneListResponseBody model) {
+            this.requestId = model.requestId;
+            this.sceneList = model.sceneList;
+        } 
 
         /**
          * RequestId.
@@ -119,6 +131,14 @@ public class GetSceneListResponseBody extends TeaModel {
         public static final class Builder {
             private String sceneId; 
             private String sceneName; 
+
+            private Builder() {
+            } 
+
+            private Builder(SceneList model) {
+                this.sceneId = model.sceneId;
+                this.sceneName = model.sceneName;
+            } 
 
             /**
              * SceneId.

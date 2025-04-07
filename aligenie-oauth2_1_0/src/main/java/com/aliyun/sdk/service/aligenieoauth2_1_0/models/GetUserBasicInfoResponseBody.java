@@ -48,6 +48,10 @@ public class GetUserBasicInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return avatarUrl
      */
@@ -89,6 +93,17 @@ public class GetUserBasicInfoResponseBody extends TeaModel {
         private String openId; 
         private String requestId; 
         private java.util.List<UnionIds> unionIds; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetUserBasicInfoResponseBody model) {
+            this.avatarUrl = model.avatarUrl;
+            this.nickname = model.nickname;
+            this.openId = model.openId;
+            this.requestId = model.requestId;
+            this.unionIds = model.unionIds;
+        } 
 
         /**
          * AvatarUrl.
@@ -179,6 +194,14 @@ public class GetUserBasicInfoResponseBody extends TeaModel {
         public static final class Builder {
             private String organizationId; 
             private String unionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(UnionIds model) {
+                this.organizationId = model.organizationId;
+                this.unionId = model.unionId;
+            } 
 
             /**
              * OrganizationId.

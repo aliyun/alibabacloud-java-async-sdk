@@ -44,6 +44,10 @@ public class QueryDeviceListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return deviceList
      */
@@ -77,6 +81,16 @@ public class QueryDeviceListResponseBody extends TeaModel {
         private String encodeKey; 
         private String encodeType; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryDeviceListResponseBody model) {
+            this.deviceList = model.deviceList;
+            this.encodeKey = model.encodeKey;
+            this.encodeType = model.encodeType;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * DeviceList.
@@ -159,6 +173,14 @@ public class QueryDeviceListResponseBody extends TeaModel {
         public static final class Builder {
             private String organizationId; 
             private String unionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeviceUnionIds model) {
+                this.organizationId = model.organizationId;
+                this.unionId = model.unionId;
+            } 
 
             /**
              * OrganizationId.
@@ -262,6 +284,17 @@ public class QueryDeviceListResponseBody extends TeaModel {
             private String deviceOpenId; 
             private java.util.List<DeviceUnionIds> deviceUnionIds; 
             private String online; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeviceList model) {
+                this.deviceIconUrl = model.deviceIconUrl;
+                this.deviceName = model.deviceName;
+                this.deviceOpenId = model.deviceOpenId;
+                this.deviceUnionIds = model.deviceUnionIds;
+                this.online = model.online;
+            } 
 
             /**
              * DeviceIconUrl.

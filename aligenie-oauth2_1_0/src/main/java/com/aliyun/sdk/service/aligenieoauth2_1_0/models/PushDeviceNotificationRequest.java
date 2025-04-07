@@ -39,7 +39,7 @@ public class PushDeviceNotificationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -131,6 +131,13 @@ public class PushDeviceNotificationRequest extends Request {
         public static final class Builder {
             private String subjectId; 
 
+            private Builder() {
+            } 
+
+            private Builder(TenantInfo model) {
+                this.subjectId = model.subjectId;
+            } 
+
             /**
              * SubjectId.
              */
@@ -189,6 +196,14 @@ public class PushDeviceNotificationRequest extends Request {
         public static final class Builder {
             private String targetIdentity; 
             private String targetType; 
+
+            private Builder() {
+            } 
+
+            private Builder(SendTarget model) {
+                this.targetIdentity = model.targetIdentity;
+                this.targetType = model.targetType;
+            } 
 
             /**
              * TargetIdentity.
@@ -320,6 +335,19 @@ public class PushDeviceNotificationRequest extends Request {
             private String organizationId; 
             private java.util.Map<String, String> placeHolder; 
             private SendTarget sendTarget; 
+
+            private Builder() {
+            } 
+
+            private Builder(PushDeviceNotificationRequestBody model) {
+                this.encodeKey = model.encodeKey;
+                this.encodeType = model.encodeType;
+                this.isDebug = model.isDebug;
+                this.messageTemplateId = model.messageTemplateId;
+                this.organizationId = model.organizationId;
+                this.placeHolder = model.placeHolder;
+                this.sendTarget = model.sendTarget;
+            } 
 
             /**
              * <p>This parameter is required.</p>

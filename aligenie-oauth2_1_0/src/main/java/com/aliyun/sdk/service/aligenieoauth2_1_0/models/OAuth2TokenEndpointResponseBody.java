@@ -52,6 +52,10 @@ public class OAuth2TokenEndpointResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessToken
      */
@@ -101,6 +105,18 @@ public class OAuth2TokenEndpointResponseBody extends TeaModel {
         private String requestId; 
         private String scope; 
         private String tokenType; 
+
+        private Builder() {
+        } 
+
+        private Builder(OAuth2TokenEndpointResponseBody model) {
+            this.accessToken = model.accessToken;
+            this.expiresIn = model.expiresIn;
+            this.refreshToken = model.refreshToken;
+            this.requestId = model.requestId;
+            this.scope = model.scope;
+            this.tokenType = model.tokenType;
+        } 
 
         /**
          * AccessToken.
