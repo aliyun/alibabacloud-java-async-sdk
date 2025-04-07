@@ -72,6 +72,10 @@ public class CreateTempFileUploadUrlResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bucketName
      */
@@ -161,6 +165,23 @@ public class CreateTempFileUploadUrlResponseBody extends TeaModel {
         private String signature; 
         private Boolean success; 
         private String tempFileKey; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateTempFileUploadUrlResponseBody model) {
+            this.bucketName = model.bucketName;
+            this.code = model.code;
+            this.endpoint = model.endpoint;
+            this.expireTime = model.expireTime;
+            this.message = model.message;
+            this.ossAccessKeyId = model.ossAccessKeyId;
+            this.policy = model.policy;
+            this.requestId = model.requestId;
+            this.signature = model.signature;
+            this.success = model.success;
+            this.tempFileKey = model.tempFileKey;
+        } 
 
         /**
          * <p>The name of the OSS bucket to which the file is uploaded.</p>

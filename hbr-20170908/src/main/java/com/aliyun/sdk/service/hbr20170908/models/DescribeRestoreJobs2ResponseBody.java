@@ -60,6 +60,10 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -125,6 +129,20 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
         private RestoreJobs restoreJobs; 
         private Boolean success; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRestoreJobs2ResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.restoreJobs = model.restoreJobs;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The response status code. The status code 200 indicates that the request was successful.</p>
@@ -268,6 +286,14 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
             private Integer batchChannelCount; 
             private Boolean overwriteExisting; 
 
+            private Builder() {
+            } 
+
+            private Builder(OtsDetail model) {
+                this.batchChannelCount = model.batchChannelCount;
+                this.overwriteExisting = model.overwriteExisting;
+            } 
+
             /**
              * <p>The number of channels processed by each Tablestore restore job.</p>
              * 
@@ -376,6 +402,17 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
             private String skippedFiles; 
             private String successFiles; 
             private String totalFiles; 
+
+            private Builder() {
+            } 
+
+            private Builder(Report model) {
+                this.failedFiles = model.failedFiles;
+                this.reportTaskStatus = model.reportTaskStatus;
+                this.skippedFiles = model.skippedFiles;
+                this.successFiles = model.successFiles;
+                this.totalFiles = model.totalFiles;
+            } 
 
             /**
              * <p>The files that failed to be executed.</p>
@@ -1035,6 +1072,60 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
             private Long updatedTime; 
             private String vaultId; 
 
+            private Builder() {
+            } 
+
+            private Builder(RestoreJob model) {
+                this.actualBytes = model.actualBytes;
+                this.actualItems = model.actualItems;
+                this.bytesDone = model.bytesDone;
+                this.bytesTotal = model.bytesTotal;
+                this.clusterId = model.clusterId;
+                this.completeTime = model.completeTime;
+                this.createdTime = model.createdTime;
+                this.crossAccountRoleName = model.crossAccountRoleName;
+                this.crossAccountType = model.crossAccountType;
+                this.crossAccountUserId = model.crossAccountUserId;
+                this.errorFile = model.errorFile;
+                this.errorMessage = model.errorMessage;
+                this.exclude = model.exclude;
+                this.expireTime = model.expireTime;
+                this.failbackDetail = model.failbackDetail;
+                this.include = model.include;
+                this.itemsDone = model.itemsDone;
+                this.itemsTotal = model.itemsTotal;
+                this.meteringBytesDone = model.meteringBytesDone;
+                this.meteringBytesTotal = model.meteringBytesTotal;
+                this.options = model.options;
+                this.otsDetail = model.otsDetail;
+                this.parentId = model.parentId;
+                this.progress = model.progress;
+                this.report = model.report;
+                this.restoreId = model.restoreId;
+                this.restoreType = model.restoreType;
+                this.snapshotHash = model.snapshotHash;
+                this.snapshotId = model.snapshotId;
+                this.sourceType = model.sourceType;
+                this.speed = model.speed;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.storageClass = model.storageClass;
+                this.targetBucket = model.targetBucket;
+                this.targetClientId = model.targetClientId;
+                this.targetCreateTime = model.targetCreateTime;
+                this.targetDataSourceId = model.targetDataSourceId;
+                this.targetFileSystemId = model.targetFileSystemId;
+                this.targetInstanceId = model.targetInstanceId;
+                this.targetInstanceName = model.targetInstanceName;
+                this.targetPath = model.targetPath;
+                this.targetPrefix = model.targetPrefix;
+                this.targetTableName = model.targetTableName;
+                this.targetTime = model.targetTime;
+                this.udmDetail = model.udmDetail;
+                this.updatedTime = model.updatedTime;
+                this.vaultId = model.vaultId;
+            } 
+
             /**
              * <p>The actual amount of data that is restored after duplicates are removed. Unit: bytes.</p>
              * 
@@ -1620,6 +1711,13 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<RestoreJob> restoreJob; 
+
+            private Builder() {
+            } 
+
+            private Builder(RestoreJobs model) {
+                this.restoreJob = model.restoreJob;
+            } 
 
             /**
              * RestoreJob.

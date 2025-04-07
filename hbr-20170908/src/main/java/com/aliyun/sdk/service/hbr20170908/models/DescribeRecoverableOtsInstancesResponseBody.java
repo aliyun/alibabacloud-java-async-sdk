@@ -48,6 +48,10 @@ public class DescribeRecoverableOtsInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class DescribeRecoverableOtsInstancesResponseBody extends TeaModel {
         private java.util.List<OtsInstances> otsInstances; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRecoverableOtsInstancesResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.otsInstances = model.otsInstances;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The response code. The status code 200 indicates that the request was successful.</p>
@@ -195,6 +210,14 @@ public class DescribeRecoverableOtsInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private String instanceName; 
             private java.util.List<String> tableNames; 
+
+            private Builder() {
+            } 
+
+            private Builder(OtsInstances model) {
+                this.instanceName = model.instanceName;
+                this.tableNames = model.tableNames;
+            } 
 
             /**
              * <p>The name of the Tablestore instance that can be restored.</p>

@@ -121,7 +121,7 @@ public class UpdateBackupPlanRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -665,6 +665,20 @@ public class UpdateBackupPlanRequest extends Request {
             private Long retention; 
             private String ruleName; 
             private String schedule; 
+
+            private Builder() {
+            } 
+
+            private Builder(Rule model) {
+                this.backupType = model.backupType;
+                this.destinationRegionId = model.destinationRegionId;
+                this.destinationRetention = model.destinationRetention;
+                this.disabled = model.disabled;
+                this.doCopy = model.doCopy;
+                this.retention = model.retention;
+                this.ruleName = model.ruleName;
+                this.schedule = model.schedule;
+            } 
 
             /**
              * <p>The backup type. Valid value: <strong>COMPLETE</strong>, which indicates full backup.</p>

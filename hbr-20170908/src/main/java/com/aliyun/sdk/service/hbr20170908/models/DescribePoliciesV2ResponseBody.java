@@ -60,6 +60,10 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -125,6 +129,20 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePoliciesV2ResponseBody model) {
+            this.code = model.code;
+            this.maxResults = model.maxResults;
+            this.message = model.message;
+            this.nextToken = model.nextToken;
+            this.policies = model.policies;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The HTTP status code. The status code 200 indicates that the call is successful.</p>
@@ -266,6 +284,14 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
             private java.util.List<String> dataSourceIds; 
             private String sourceType; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataSourceFilters model) {
+                this.dataSourceIds = model.dataSourceIds;
+                this.sourceType = model.sourceType;
+            } 
+
             /**
              * <p>Deprecated.</p>
              */
@@ -354,6 +380,15 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
             private String advancedRetentionType; 
             private Long retention; 
             private Long whichSnapshot; 
+
+            private Builder() {
+            } 
+
+            private Builder(RetentionRules model) {
+                this.advancedRetentionType = model.advancedRetentionType;
+                this.retention = model.retention;
+                this.whichSnapshot = model.whichSnapshot;
+            } 
 
             /**
              * <p>The type of the special retention rule. Valid values:</p>
@@ -455,6 +490,15 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
             private String key; 
             private String operator; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(TagFilters model) {
+                this.key = model.key;
+                this.operator = model.operator;
+                this.value = model.value;
+            } 
 
             /**
              * <p>Tag key</p>
@@ -671,6 +715,25 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
             private String schedule; 
             private java.util.List<TagFilters> tagFilters; 
             private String vaultId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.archiveDays = model.archiveDays;
+                this.backupType = model.backupType;
+                this.dataSourceFilters = model.dataSourceFilters;
+                this.immutable = model.immutable;
+                this.keepLatestSnapshots = model.keepLatestSnapshots;
+                this.replicationRegionId = model.replicationRegionId;
+                this.retention = model.retention;
+                this.retentionRules = model.retentionRules;
+                this.ruleId = model.ruleId;
+                this.ruleType = model.ruleType;
+                this.schedule = model.schedule;
+                this.tagFilters = model.tagFilters;
+                this.vaultId = model.vaultId;
+            } 
 
             /**
              * <p>This parameter is returned only if the value of the <strong>RuleType</strong> parameter is <strong>TRANSITION</strong>. This parameter indicates the time when data is dumped from a backup vault to an archive vault. Unit: days.</p>
@@ -945,6 +1008,20 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
             private String policyType; 
             private java.util.List<Rules> rules; 
             private Long updatedTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Policies model) {
+                this.createdTime = model.createdTime;
+                this.policyBindingCount = model.policyBindingCount;
+                this.policyDescription = model.policyDescription;
+                this.policyId = model.policyId;
+                this.policyName = model.policyName;
+                this.policyType = model.policyType;
+                this.rules = model.rules;
+                this.updatedTime = model.updatedTime;
+            } 
 
             /**
              * <p>The time when the backup policy was created. The value is a UNIX timestamp. Unit: seconds.</p>

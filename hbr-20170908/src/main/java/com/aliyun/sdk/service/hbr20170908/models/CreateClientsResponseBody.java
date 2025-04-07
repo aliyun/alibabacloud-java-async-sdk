@@ -52,6 +52,10 @@ public class CreateClientsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class CreateClientsResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String taskId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateClientsResponseBody model) {
+            this.code = model.code;
+            this.instanceStatuses = model.instanceStatuses;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.taskId = model.taskId;
+        } 
 
         /**
          * <p>The HTTP status code. The status code 200 indicates that the call is successful.</p>
@@ -219,6 +235,14 @@ public class CreateClientsResponseBody extends TeaModel {
             private String instanceId; 
             private Boolean validInstance; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceStatus model) {
+                this.instanceId = model.instanceId;
+                this.validInstance = model.validInstance;
+            } 
+
             /**
              * <p>The ID of the ECS instance.</p>
              * 
@@ -283,6 +307,13 @@ public class CreateClientsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<InstanceStatus> instanceStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceStatuses model) {
+                this.instanceStatus = model.instanceStatus;
+            } 
 
             /**
              * InstanceStatus.

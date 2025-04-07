@@ -60,6 +60,10 @@ public class DescribeContainerClusterResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clusters
      */
@@ -125,6 +129,20 @@ public class DescribeContainerClusterResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeContainerClusterResponseBody model) {
+            this.clusters = model.clusters;
+            this.code = model.code;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The information of clusters.</p>
@@ -336,6 +354,20 @@ public class DescribeContainerClusterResponseBody extends TeaModel {
             private String name; 
             private String networkType; 
             private String token; 
+
+            private Builder() {
+            } 
+
+            private Builder(Clusters model) {
+                this.agentStatus = model.agentStatus;
+                this.clusterId = model.clusterId;
+                this.clusterType = model.clusterType;
+                this.description = model.description;
+                this.identifier = model.identifier;
+                this.name = model.name;
+                this.networkType = model.networkType;
+                this.token = model.token;
+            } 
 
             /**
              * <p>The status of the client. Valid values:</p>

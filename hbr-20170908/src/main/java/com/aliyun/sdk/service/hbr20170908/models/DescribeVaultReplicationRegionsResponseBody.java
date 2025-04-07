@@ -48,6 +48,10 @@ public class DescribeVaultReplicationRegionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class DescribeVaultReplicationRegionsResponseBody extends TeaModel {
         private Regions regions; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVaultReplicationRegionsResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.regions = model.regions;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code. The status code 200 indicates that the call is successful.</p>
@@ -183,6 +198,13 @@ public class DescribeVaultReplicationRegionsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> regionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Regions model) {
+                this.regionId = model.regionId;
+            } 
 
             /**
              * RegionId.

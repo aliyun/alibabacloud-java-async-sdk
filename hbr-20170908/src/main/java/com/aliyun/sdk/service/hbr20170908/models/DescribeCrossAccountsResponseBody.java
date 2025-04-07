@@ -60,6 +60,10 @@ public class DescribeCrossAccountsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -125,6 +129,20 @@ public class DescribeCrossAccountsResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCrossAccountsResponseBody model) {
+            this.code = model.code;
+            this.crossAccounts = model.crossAccounts;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
@@ -325,6 +343,19 @@ public class DescribeCrossAccountsResponseBody extends TeaModel {
             private Long ownerId; 
             private Long updatedTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(CrossAccount model) {
+                this.alias = model.alias;
+                this.createdTime = model.createdTime;
+                this.crossAccountRoleName = model.crossAccountRoleName;
+                this.crossAccountUserId = model.crossAccountUserId;
+                this.id = model.id;
+                this.ownerId = model.ownerId;
+                this.updatedTime = model.updatedTime;
+            } 
+
             /**
              * <p>The account alias. The value can be up to 32 bits in length.</p>
              * 
@@ -440,6 +471,13 @@ public class DescribeCrossAccountsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<CrossAccount> crossAccount; 
+
+            private Builder() {
+            } 
+
+            private Builder(CrossAccounts model) {
+                this.crossAccount = model.crossAccount;
+            } 
 
             /**
              * CrossAccount.

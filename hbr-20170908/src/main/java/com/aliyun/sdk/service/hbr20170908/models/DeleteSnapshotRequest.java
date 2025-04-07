@@ -23,6 +23,7 @@ public class DeleteSnapshotRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Force")
+    @Deprecated
     private Boolean force;
 
     @com.aliyun.core.annotation.Query
@@ -65,7 +66,7 @@ public class DeleteSnapshotRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -156,14 +157,10 @@ public class DeleteSnapshotRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to forcibly delete the most recent backup snapshot. Valid values:</p>
-         * <ul>
-         * <li>true: The system forcibly deletes the most recent backup snapshot.</li>
-         * <li>false (default): The system does not forcibly delete the most recent backup snapshot.</li>
-         * </ul>
+         * <p>This parameter is deprecated.</p>
          * 
          * <strong>example:</strong>
-         * <p>false</p>
+         * <p>Deprected.</p>
          */
         public Builder force(Boolean force) {
             this.putQueryParameter("Force", force);

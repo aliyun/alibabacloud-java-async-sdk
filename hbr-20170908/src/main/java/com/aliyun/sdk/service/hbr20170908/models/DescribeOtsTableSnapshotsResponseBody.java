@@ -56,6 +56,10 @@ public class DescribeOtsTableSnapshotsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -113,6 +117,19 @@ public class DescribeOtsTableSnapshotsResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Snapshots> snapshots; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeOtsTableSnapshotsResponseBody model) {
+            this.code = model.code;
+            this.limit = model.limit;
+            this.message = model.message;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.snapshots = model.snapshots;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
@@ -457,6 +474,32 @@ public class DescribeOtsTableSnapshotsResponseBody extends TeaModel {
             private String tableName; 
             private Long updatedTime; 
             private String vaultId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Snapshots model) {
+                this.actualBytes = model.actualBytes;
+                this.backupType = model.backupType;
+                this.bytesTotal = model.bytesTotal;
+                this.completeTime = model.completeTime;
+                this.createTime = model.createTime;
+                this.createdTime = model.createdTime;
+                this.instanceName = model.instanceName;
+                this.jobId = model.jobId;
+                this.parentSnapshotHash = model.parentSnapshotHash;
+                this.rangeEnd = model.rangeEnd;
+                this.rangeStart = model.rangeStart;
+                this.retention = model.retention;
+                this.snapshotHash = model.snapshotHash;
+                this.snapshotId = model.snapshotId;
+                this.sourceType = model.sourceType;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.tableName = model.tableName;
+                this.updatedTime = model.updatedTime;
+                this.vaultId = model.vaultId;
+            } 
 
             /**
              * <p>The actual data amount of backup snapshots after duplicates are removed. Unit: bytes.</p>

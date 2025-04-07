@@ -74,7 +74,7 @@ public class DescribeOtsTableSnapshotsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -326,6 +326,14 @@ public class DescribeOtsTableSnapshotsRequest extends Request {
         public static final class Builder {
             private String instanceName; 
             private java.util.List<String> tableNames; 
+
+            private Builder() {
+            } 
+
+            private Builder(OtsInstances model) {
+                this.instanceName = model.instanceName;
+                this.tableNames = model.tableNames;
+            } 
 
             /**
              * <p>The name of the Tablestore instance.</p>

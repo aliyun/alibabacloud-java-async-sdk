@@ -50,7 +50,7 @@ public class DescribeBackupPlansRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -139,9 +139,10 @@ public class DescribeBackupPlansRequest extends Request {
          * <ul>
          * <li><strong>ECS_FILE</strong>: Elastic Compute Service (ECS) files</li>
          * <li><strong>OSS</strong>: Object Storage Service (OSS) buckets</li>
-         * <li><strong>NAS</strong>: Apsara File Storage NAS file systems</li>
+         * <li><strong>NAS</strong>: File Storage NAS (NAS) file systems</li>
          * <li><strong>OTS</strong>: Tablestore instances</li>
          * <li><strong>UDM_ECS</strong>: ECS instances</li>
+         * <li><strong>SYNC</strong>: data synchronization</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -203,6 +204,14 @@ public class DescribeBackupPlansRequest extends Request {
         public static final class Builder {
             private String key; 
             private java.util.List<String> values; 
+
+            private Builder() {
+            } 
+
+            private Builder(Filters model) {
+                this.key = model.key;
+                this.values = model.values;
+            } 
 
             /**
              * <p>The keys in the filter. Valid values:</p>

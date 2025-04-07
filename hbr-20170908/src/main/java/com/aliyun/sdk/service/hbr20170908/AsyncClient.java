@@ -272,9 +272,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeletePolicyV2Response> deletePolicyV2(DeletePolicyV2Request request);
 
     /**
-     * <b>description</b> :
-     * <p>If you delete the most recent backup snapshot for a data source, you must set the Force parameter to <code>true</code>. Otherwise, an error occurs.</p>
-     * 
      * @param request the request parameters of DeleteSnapshot  DeleteSnapshotRequest
      * @return DeleteSnapshotResponse
      */

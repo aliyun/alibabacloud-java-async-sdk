@@ -48,6 +48,10 @@ public class ExecutePolicyV2ResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class ExecutePolicyV2ResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ExecutePolicyV2ResponseBody model) {
+            this.code = model.code;
+            this.jobId = model.jobId;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>Return code, 200 indicates success.</p>

@@ -48,6 +48,10 @@ public class GenerateRamPolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GenerateRamPolicyResponseBody extends TeaModel {
         private String policyDocument; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GenerateRamPolicyResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.policyDocument = model.policyDocument;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The response code. The status code 200 indicates that the request was successful.</p>

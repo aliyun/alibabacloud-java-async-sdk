@@ -42,6 +42,10 @@ public class DescribeBackupClientsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("CrossAccountUserId")
     private Long crossAccountUserId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Filters")
+    private java.util.List<Filters> filters;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("InstanceIds")
     private java.util.List<String> instanceIds;
@@ -67,6 +71,7 @@ public class DescribeBackupClientsRequest extends Request {
         this.crossAccountRoleName = builder.crossAccountRoleName;
         this.crossAccountType = builder.crossAccountType;
         this.crossAccountUserId = builder.crossAccountUserId;
+        this.filters = builder.filters;
         this.instanceIds = builder.instanceIds;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -81,7 +86,7 @@ public class DescribeBackupClientsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -129,6 +134,13 @@ public class DescribeBackupClientsRequest extends Request {
     }
 
     /**
+     * @return filters
+     */
+    public java.util.List<Filters> getFilters() {
+        return this.filters;
+    }
+
+    /**
      * @return instanceIds
      */
     public java.util.List<String> getInstanceIds() {
@@ -163,6 +175,7 @@ public class DescribeBackupClientsRequest extends Request {
         private String crossAccountRoleName; 
         private String crossAccountType; 
         private Long crossAccountUserId; 
+        private java.util.List<Filters> filters; 
         private java.util.List<String> instanceIds; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -180,6 +193,7 @@ public class DescribeBackupClientsRequest extends Request {
             this.crossAccountRoleName = request.crossAccountRoleName;
             this.crossAccountType = request.crossAccountType;
             this.crossAccountUserId = request.crossAccountUserId;
+            this.filters = request.filters;
             this.instanceIds = request.instanceIds;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
@@ -269,6 +283,15 @@ public class DescribeBackupClientsRequest extends Request {
         }
 
         /**
+         * Filters.
+         */
+        public Builder filters(java.util.List<Filters> filters) {
+            this.putQueryParameter("Filters", filters);
+            this.filters = filters;
+            return this;
+        }
+
+        /**
          * <p>The IDs of ECS instances.</p>
          * 
          * <strong>example:</strong>
@@ -330,6 +353,81 @@ public class DescribeBackupClientsRequest extends Request {
      *
      * <p>DescribeBackupClientsRequest</p>
      */
+    public static class Filters extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Values")
+        private java.util.List<String> values;
+
+        private Filters(Builder builder) {
+            this.key = builder.key;
+            this.values = builder.values;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Filters create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return values
+         */
+        public java.util.List<String> getValues() {
+            return this.values;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private java.util.List<String> values; 
+
+            private Builder() {
+            } 
+
+            private Builder(Filters model) {
+                this.key = model.key;
+                this.values = model.values;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Values.
+             */
+            public Builder values(java.util.List<String> values) {
+                this.values = values;
+                return this;
+            }
+
+            public Filters build() {
+                return new Filters(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeBackupClientsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeBackupClientsRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -367,6 +465,14 @@ public class DescribeBackupClientsRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key of the backup vault. Valid values of N: 1 to 20.</p>

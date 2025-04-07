@@ -60,6 +60,10 @@ public class DescribeHanaDatabasesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -125,6 +129,20 @@ public class DescribeHanaDatabasesResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeHanaDatabasesResponseBody model) {
+            this.code = model.code;
+            this.hanaDatabases = model.hanaDatabases;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The response code. The status code 200 indicates that the request was successful.</p>
@@ -313,6 +331,18 @@ public class DescribeHanaDatabasesResponseBody extends TeaModel {
             private String serviceName; 
             private Integer sqlPort; 
 
+            private Builder() {
+            } 
+
+            private Builder(HanaDatabase model) {
+                this.activeStatus = model.activeStatus;
+                this.databaseName = model.databaseName;
+                this.detail = model.detail;
+                this.host = model.host;
+                this.serviceName = model.serviceName;
+                this.sqlPort = model.sqlPort;
+            } 
+
             /**
              * <p>Indicates whether the database is started. Valid values:</p>
              * <ul>
@@ -421,6 +451,13 @@ public class DescribeHanaDatabasesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<HanaDatabase> hanaDatabase; 
+
+            private Builder() {
+            } 
+
+            private Builder(HanaDatabases model) {
+                this.hanaDatabase = model.hanaDatabase;
+            } 
 
             /**
              * HanaDatabase.

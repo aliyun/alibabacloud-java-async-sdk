@@ -52,6 +52,10 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
         private java.util.List<Snapshots> snapshots; 
         private Boolean success; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeUdmSnapshotsResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.snapshots = model.snapshots;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The HTTP status code. The status code 200 indicates that the call is successful.</p>
@@ -458,6 +474,34 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
             private String snapshotGroupId; 
             private Boolean systemDisk; 
             private String vmName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Detail model) {
+                this.consistentLevel = model.consistentLevel;
+                this.containOsDisk = model.containOsDisk;
+                this.diskCategory = model.diskCategory;
+                this.diskDevName = model.diskDevName;
+                this.diskHbrSnapshotIdWithDeviceMap = model.diskHbrSnapshotIdWithDeviceMap;
+                this.diskIdList = model.diskIdList;
+                this.downgradeReason = model.downgradeReason;
+                this.hostName = model.hostName;
+                this.instanceIdWithDiskIdListMap = model.instanceIdWithDiskIdListMap;
+                this.instanceName = model.instanceName;
+                this.instanceType = model.instanceType;
+                this.instantAccess = model.instantAccess;
+                this.nativeSnapshotIdList = model.nativeSnapshotIdList;
+                this.osDiskId = model.osDiskId;
+                this.osName = model.osName;
+                this.osNameEn = model.osNameEn;
+                this.osType = model.osType;
+                this.performanceLevel = model.performanceLevel;
+                this.platform = model.platform;
+                this.snapshotGroupId = model.snapshotGroupId;
+                this.systemDisk = model.systemDisk;
+                this.vmName = model.vmName;
+            } 
 
             /**
              * <p>The consistency level.</p>
@@ -1027,6 +1071,37 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
             private Long startTime; 
             private String status; 
             private Long updatedTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Snapshots model) {
+                this.actualBytes = model.actualBytes;
+                this.advancedRetentionType = model.advancedRetentionType;
+                this.backupType = model.backupType;
+                this.bytesTotal = model.bytesTotal;
+                this.canBeDeleted = model.canBeDeleted;
+                this.completeTime = model.completeTime;
+                this.createTime = model.createTime;
+                this.createdTime = model.createdTime;
+                this.detail = model.detail;
+                this.diskId = model.diskId;
+                this.expireTime = model.expireTime;
+                this.instanceId = model.instanceId;
+                this.jobId = model.jobId;
+                this.nativeSnapshotId = model.nativeSnapshotId;
+                this.nativeSnapshotInfo = model.nativeSnapshotInfo;
+                this.parentSnapshotHash = model.parentSnapshotHash;
+                this.prefix = model.prefix;
+                this.realSnapshotTime = model.realSnapshotTime;
+                this.retention = model.retention;
+                this.snapshotHash = model.snapshotHash;
+                this.snapshotId = model.snapshotId;
+                this.sourceType = model.sourceType;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.updatedTime = model.updatedTime;
+            } 
 
             /**
              * <p>The size of the backup snapshot. Unit: bytes.</p>

@@ -49,7 +49,7 @@ public class CreatePolicyV2Request extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -206,6 +206,14 @@ public class CreatePolicyV2Request extends Request {
             private java.util.List<String> dataSourceIds; 
             private String sourceType; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataSourceFilters model) {
+                this.dataSourceIds = model.dataSourceIds;
+                this.sourceType = model.sourceType;
+            } 
+
             /**
              * <p>This parameter is deprecated.</p>
              */
@@ -215,7 +223,7 @@ public class CreatePolicyV2Request extends Request {
             }
 
             /**
-             * <p>The type of the data source. Valid value:</p>
+             * <p>The type of the data source. Valid values:</p>
              * <ul>
              * <li><strong>UDM_ECS</strong>: Elastic Compute Service (ECS) instance This type of data source is supported only if the <strong>PolicyType</strong> parameter is set to <strong>UDM_ECS_ONLY</strong>.</li>
              * <li><strong>OSS</strong>: Object Storage Service (OSS) bucket This type of data source is supported only if the <strong>PolicyType</strong> parameter is set to <strong>STANDARD</strong>.</li>
@@ -294,6 +302,15 @@ public class CreatePolicyV2Request extends Request {
             private String advancedRetentionType; 
             private Long retention; 
             private Long whichSnapshot; 
+
+            private Builder() {
+            } 
+
+            private Builder(RetentionRules model) {
+                this.advancedRetentionType = model.advancedRetentionType;
+                this.retention = model.retention;
+                this.whichSnapshot = model.whichSnapshot;
+            } 
 
             /**
              * <p>The type of the special retention rule. Valid values:</p>
@@ -396,6 +413,15 @@ public class CreatePolicyV2Request extends Request {
             private String key; 
             private String operator; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(TagFilters model) {
+                this.key = model.key;
+                this.operator = model.operator;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -594,6 +620,23 @@ public class CreatePolicyV2Request extends Request {
             private java.util.List<TagFilters> tagFilters; 
             private String vaultId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.backupType = model.backupType;
+                this.dataSourceFilters = model.dataSourceFilters;
+                this.immutable = model.immutable;
+                this.keepLatestSnapshots = model.keepLatestSnapshots;
+                this.replicationRegionId = model.replicationRegionId;
+                this.retention = model.retention;
+                this.retentionRules = model.retentionRules;
+                this.ruleType = model.ruleType;
+                this.schedule = model.schedule;
+                this.tagFilters = model.tagFilters;
+                this.vaultId = model.vaultId;
+            } 
+
             /**
              * <p>This parameter is required only if the <strong>RuleType</strong> parameter is set to <strong>BACKUP</strong>. This parameter specifies the backup type. Valid value: <strong>COMPLETE</strong>, which indicates full backup.</p>
              * 
@@ -651,9 +694,9 @@ public class CreatePolicyV2Request extends Request {
             }
 
             /**
-             * <p>This parameter is required only if the <strong>RuleType</strong> parameter is set to <strong>BACKUP</strong>, <strong>TRANSITION</strong> or <strong>REPLICATION</strong>.</p>
+             * <p>This parameter is required only if the <strong>RuleType</strong> parameter is set to <strong>BACKUP</strong>, <strong>TRANSITION</strong>, or <strong>REPLICATION</strong>.</p>
              * <ul>
-             * <li>If the <strong>RuleType</strong> parameter is set to <strong>BACKUP</strong>, this parameter specifies the retention period of the backup data. The priority is lower than the Retention field of the rule with RuleType=TRANSITION. Minimum value: 1. Maximum value: 364635. Unit: days.</li>
+             * <li>If the <strong>RuleType</strong> parameter is set to <strong>BACKUP</strong>, this parameter specifies the retention period of the backup data. The priority is lower than the retention period when the <strong>RuleType</strong> parameter is set to <strong>TRANSITION</strong>. Minimum value: 1. Maximum value: 364635. Unit: days.</li>
              * <li>If the <strong>RuleType</strong> parameter is set to <strong>TRANSITION</strong>, this parameter specifies the retention period of the backup data. Minimum value: 1. Maximum value: 364635. Unit: days.</li>
              * <li>If the <strong>RuleType</strong> parameter is set to <strong>REPLICATION</strong>, this parameter specifies the retention period of remote backups. Minimum value: 1. Maximum value: 364635. Unit: days.</li>
              * </ul>
@@ -680,7 +723,7 @@ public class CreatePolicyV2Request extends Request {
              * <li><strong>BACKUP</strong>: backup rule</li>
              * <li><strong>TRANSITION</strong>: lifecycle rule</li>
              * <li><strong>REPLICATION</strong>: replication rule</li>
-             * <li><strong>TAG</strong>: tag rule</li>
+             * <li><strong>TAG</strong>: tag-based resource association rule</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -693,11 +736,22 @@ public class CreatePolicyV2Request extends Request {
             }
 
             /**
-             * <p>This parameter is required only if the <strong>RuleType</strong> parameter is set to <strong>BACKUP</strong>. This parameter specifies the backup schedule settings. Format: <code>I|{startTime}|{interval}</code>. The system runs the first backup job at a point in time that is specified in the {startTime} parameter and the subsequent backup jobs at an interval that is specified in the {interval} parameter. The system does not run a backup job before the specified point in time. Each backup job, except the first one, starts only after the previous backup job is completed. For example, <code>I|1631685600|P1D</code> specifies that the system runs the first backup job at 14:00:00 on September 15, 2021 and the subsequent backup jobs once a day.</p>
+             * <p>This parameter is required only if the <strong>RuleType</strong> parameter is set to <strong>BACKUP</strong>. This parameter specifies the backup schedule settings. Formats:</p>
+             * <ul>
+             * <li><p><code>I|{startTime}|{interval}</code>: The system runs the first backup job at a point in time that is specified in the {startTime} parameter and the subsequent backup jobs at an interval that is specified in the {interval} parameter. For example, <code>I|1631685600|P1D</code> indicates that the system runs the first backup job at 14:00:00 on September 15, 2021 and the subsequent backup jobs once a day.</p>
              * <ul>
              * <li>startTime: the time at which the system starts to run a backup job. The time must follow the UNIX time format. Unit: seconds.</li>
-             * <li>interval: the interval at which the system runs a backup job. The interval must follow the ISO 8601 standard. For example, PT1H specifies an interval of 1 hour. P1D specifies an interval of one day.</li>
+             * <li>interval: the interval at which the system runs a backup job. The interval must follow the ISO 8601 standard. For example, <code>PT1H</code> specifies an interval of 1 hour. <code>P1D</code> specifies an interval of one day.</li>
              * </ul>
+             * </li>
+             * <li><p><code>C|{startTime}|{crontab}</code>: The system runs backup jobs at a point in time that is specified in the {startTime} parameter based on the {crontab} expression. For example, C|1631685600|0 0 2 ?* 3,5,7 indicates that the system runs backup jobs at 02:00:00 every Tuesday, Thursday, and Saturday from14:00:00 on September 15, 2021.``</p>
+             * <ul>
+             * <li>startTime: the time at which the system starts to run a backup job. The time must follow the UNIX time format. Unit: seconds.</li>
+             * <li>crontab: the crontab expression. For example, 0 0 2 ?* 3,5,7 indicates 02:00:00 every Tuesday, Thursday, and Saturday.``</li>
+             * </ul>
+             * </li>
+             * </ul>
+             * <p>The system does not run a backup job before the specified point in time. Each backup job, except the first one, starts only after the previous backup job is completed.</p>
              * 
              * <strong>example:</strong>
              * <p>I|1648647166|P1D</p>

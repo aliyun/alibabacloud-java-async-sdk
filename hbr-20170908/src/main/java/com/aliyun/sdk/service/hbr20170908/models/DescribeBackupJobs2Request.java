@@ -55,7 +55,7 @@ public class DescribeBackupJobs2Request extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -246,6 +246,15 @@ public class DescribeBackupJobs2Request extends Request {
             private String key; 
             private String operator; 
             private java.util.List<String> values; 
+
+            private Builder() {
+            } 
+
+            private Builder(Filters model) {
+                this.key = model.key;
+                this.operator = model.operator;
+                this.values = model.values;
+            } 
 
             /**
              * <p>The keys in the filter. Valid values:</p>

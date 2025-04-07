@@ -82,7 +82,7 @@ public class UpdatePolicyBindingRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -374,6 +374,14 @@ public class UpdatePolicyBindingRequest extends Request {
             private Long fetchSliceSize; 
             private Boolean fullOnIncrementFail; 
 
+            private Builder() {
+            } 
+
+            private Builder(CommonFileSystemDetail model) {
+                this.fetchSliceSize = model.fetchSliceSize;
+                this.fullOnIncrementFail = model.fullOnIncrementFail;
+            } 
+
             /**
              * <p>The size of backup shards (the number of files).</p>
              * 
@@ -462,6 +470,15 @@ public class UpdatePolicyBindingRequest extends Request {
             private Boolean ignoreArchiveObject; 
             private String inventoryCleanupPolicy; 
             private String inventoryId; 
+
+            private Builder() {
+            } 
+
+            private Builder(OssDetail model) {
+                this.ignoreArchiveObject = model.ignoreArchiveObject;
+                this.inventoryCleanupPolicy = model.inventoryCleanupPolicy;
+                this.inventoryId = model.inventoryId;
+            } 
 
             /**
              * <p>Do not prompt for archival type objects in task statistics and failed file lists.</p>
@@ -652,6 +669,22 @@ public class UpdatePolicyBindingRequest extends Request {
             private Boolean snapshotGroup; 
             private Long timeoutInSeconds; 
 
+            private Builder() {
+            } 
+
+            private Builder(UdmDetail model) {
+                this.appConsistent = model.appConsistent;
+                this.diskIdList = model.diskIdList;
+                this.enableFsFreeze = model.enableFsFreeze;
+                this.enableWriters = model.enableWriters;
+                this.excludeDiskIdList = model.excludeDiskIdList;
+                this.postScriptPath = model.postScriptPath;
+                this.preScriptPath = model.preScriptPath;
+                this.ramRoleName = model.ramRoleName;
+                this.snapshotGroup = model.snapshotGroup;
+                this.timeoutInSeconds = model.timeoutInSeconds;
+            } 
+
             /**
              * <p>Specifies whether to enable application consistency. You can enable application consistency only if all disks are ESSDs.</p>
              * 
@@ -823,6 +856,15 @@ public class UpdatePolicyBindingRequest extends Request {
             private CommonFileSystemDetail commonFileSystemDetail; 
             private OssDetail ossDetail; 
             private UdmDetail udmDetail; 
+
+            private Builder() {
+            } 
+
+            private Builder(AdvancedOptions model) {
+                this.commonFileSystemDetail = model.commonFileSystemDetail;
+                this.ossDetail = model.ossDetail;
+                this.udmDetail = model.udmDetail;
+            } 
 
             /**
              * <p>The details about large-scale file system backup.</p>

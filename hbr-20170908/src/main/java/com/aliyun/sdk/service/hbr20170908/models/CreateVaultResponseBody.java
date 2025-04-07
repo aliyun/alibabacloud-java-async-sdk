@@ -52,6 +52,10 @@ public class CreateVaultResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class CreateVaultResponseBody extends TeaModel {
         private Boolean success; 
         private String taskId; 
         private String vaultId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateVaultResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.taskId = model.taskId;
+            this.vaultId = model.vaultId;
+        } 
 
         /**
          * <p>The HTTP status code. The status code 200 indicates that the call is successful.</p>

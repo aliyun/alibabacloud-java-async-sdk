@@ -60,6 +60,10 @@ public class DescribeHanaBackupPlansResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -125,6 +129,20 @@ public class DescribeHanaBackupPlansResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeHanaBackupPlansResponseBody model) {
+            this.code = model.code;
+            this.hanaBackupPlans = model.hanaBackupPlans;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The response code. The status code 200 indicates that the request was successful.</p>
@@ -349,6 +367,21 @@ public class DescribeHanaBackupPlansResponseBody extends TeaModel {
             private String schedule; 
             private String vaultId; 
 
+            private Builder() {
+            } 
+
+            private Builder(HanaBackupPlan model) {
+                this.backupPrefix = model.backupPrefix;
+                this.backupType = model.backupType;
+                this.clusterId = model.clusterId;
+                this.databaseName = model.databaseName;
+                this.disabled = model.disabled;
+                this.planId = model.planId;
+                this.planName = model.planName;
+                this.schedule = model.schedule;
+                this.vaultId = model.vaultId;
+            } 
+
             /**
              * <p>The backup prefix.</p>
              * 
@@ -499,6 +532,13 @@ public class DescribeHanaBackupPlansResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<HanaBackupPlan> hanaBackupPlan; 
+
+            private Builder() {
+            } 
+
+            private Builder(HanaBackupPlans model) {
+                this.hanaBackupPlan = model.hanaBackupPlan;
+            } 
 
             /**
              * HanaBackupPlan.

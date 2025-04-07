@@ -39,7 +39,7 @@ public class CreatePolicyBindingsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -145,6 +145,14 @@ public class CreatePolicyBindingsRequest extends Request {
             private Long fetchSliceSize; 
             private Boolean fullOnIncrementFail; 
 
+            private Builder() {
+            } 
+
+            private Builder(CommonFileSystemDetail model) {
+                this.fetchSliceSize = model.fetchSliceSize;
+                this.fullOnIncrementFail = model.fullOnIncrementFail;
+            } 
+
             /**
              * <p>The size of backup shards (the number of files).</p>
              * 
@@ -234,6 +242,15 @@ public class CreatePolicyBindingsRequest extends Request {
             private Long fetchSliceSize; 
             private Boolean fullOnIncrementFail; 
 
+            private Builder() {
+            } 
+
+            private Builder(CommonNasDetail model) {
+                this.clusterId = model.clusterId;
+                this.fetchSliceSize = model.fetchSliceSize;
+                this.fullOnIncrementFail = model.fullOnIncrementFail;
+            } 
+
             /**
              * <p>The ID of the backup client group. When you perform on-premises NAS backup, Cloud Backup selects clients from the specified backup client group.</p>
              * 
@@ -321,6 +338,14 @@ public class CreatePolicyBindingsRequest extends Request {
         public static final class Builder {
             private Boolean advPolicy; 
             private Boolean useVSS; 
+
+            private Builder() {
+            } 
+
+            private Builder(FileDetail model) {
+                this.advPolicy = model.advPolicy;
+                this.useVSS = model.useVSS;
+            } 
 
             /**
              * <p>Specifies whether to use an advanced policy. Valid values:</p>
@@ -414,6 +439,15 @@ public class CreatePolicyBindingsRequest extends Request {
             private Boolean ignoreArchiveObject; 
             private String inventoryCleanupPolicy; 
             private String inventoryId; 
+
+            private Builder() {
+            } 
+
+            private Builder(OssDetail model) {
+                this.ignoreArchiveObject = model.ignoreArchiveObject;
+                this.inventoryCleanupPolicy = model.inventoryCleanupPolicy;
+                this.inventoryId = model.inventoryId;
+            } 
 
             /**
              * <p>Do not prompt for archival type objects in task statistics and failed file lists.</p>
@@ -603,6 +637,22 @@ public class CreatePolicyBindingsRequest extends Request {
             private String ramRoleName; 
             private Boolean snapshotGroup; 
             private Long timeoutInSeconds; 
+
+            private Builder() {
+            } 
+
+            private Builder(UdmDetail model) {
+                this.appConsistent = model.appConsistent;
+                this.diskIdList = model.diskIdList;
+                this.enableFsFreeze = model.enableFsFreeze;
+                this.enableWriters = model.enableWriters;
+                this.excludeDiskIdList = model.excludeDiskIdList;
+                this.postScriptPath = model.postScriptPath;
+                this.preScriptPath = model.preScriptPath;
+                this.ramRoleName = model.ramRoleName;
+                this.snapshotGroup = model.snapshotGroup;
+                this.timeoutInSeconds = model.timeoutInSeconds;
+            } 
 
             /**
              * <p>Specifies whether to enable application consistency. You can enable application consistency only if all disks are ESSDs.</p>
@@ -799,6 +849,17 @@ public class CreatePolicyBindingsRequest extends Request {
             private FileDetail fileDetail; 
             private OssDetail ossDetail; 
             private UdmDetail udmDetail; 
+
+            private Builder() {
+            } 
+
+            private Builder(AdvancedOptions model) {
+                this.commonFileSystemDetail = model.commonFileSystemDetail;
+                this.commonNasDetail = model.commonNasDetail;
+                this.fileDetail = model.fileDetail;
+                this.ossDetail = model.ossDetail;
+                this.udmDetail = model.udmDetail;
+            } 
 
             /**
              * <p>The advanced options for CPFS backup.</p>
@@ -1010,6 +1071,24 @@ public class CreatePolicyBindingsRequest extends Request {
             private String source; 
             private String sourceType; 
             private String speedLimit; 
+
+            private Builder() {
+            } 
+
+            private Builder(PolicyBindingList model) {
+                this.advancedOptions = model.advancedOptions;
+                this.crossAccountRoleName = model.crossAccountRoleName;
+                this.crossAccountType = model.crossAccountType;
+                this.crossAccountUserId = model.crossAccountUserId;
+                this.dataSourceId = model.dataSourceId;
+                this.disabled = model.disabled;
+                this.exclude = model.exclude;
+                this.include = model.include;
+                this.policyBindingDescription = model.policyBindingDescription;
+                this.source = model.source;
+                this.sourceType = model.sourceType;
+                this.speedLimit = model.speedLimit;
+            } 
 
             /**
              * <p>The advanced options.</p>

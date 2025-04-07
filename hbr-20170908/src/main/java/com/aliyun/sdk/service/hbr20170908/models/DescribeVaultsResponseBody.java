@@ -60,6 +60,10 @@ public class DescribeVaultsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -125,6 +129,20 @@ public class DescribeVaultsResponseBody extends TeaModel {
         private Boolean success; 
         private Integer totalCount; 
         private Vaults vaults; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVaultsResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+            this.vaults = model.vaults;
+        } 
 
         /**
          * <p>The HTTP status code. The status code 200 indicates that the call is successful.</p>
@@ -423,6 +441,27 @@ public class DescribeVaultsResponseBody extends TeaModel {
             private Integer ots; 
             private Integer sqlServer; 
 
+            private Builder() {
+            } 
+
+            private Builder(BackupPlanStatistics model) {
+                this.archive = model.archive;
+                this.commonFileSystem = model.commonFileSystem;
+                this.commonNas = model.commonNas;
+                this.csg = model.csg;
+                this.ecsFile = model.ecsFile;
+                this.ecsHana = model.ecsHana;
+                this.isilon = model.isilon;
+                this.localFile = model.localFile;
+                this.localVm = model.localVm;
+                this.mySql = model.mySql;
+                this.nas = model.nas;
+                this.oracle = model.oracle;
+                this.oss = model.oss;
+                this.ots = model.ots;
+                this.sqlServer = model.sqlServer;
+            } 
+
             /**
              * <p>The number of archive plans.</p>
              * 
@@ -639,6 +678,14 @@ public class DescribeVaultsResponseBody extends TeaModel {
             private Integer historicalReplicationProgress; 
             private Long newReplicationProgress; 
 
+            private Builder() {
+            } 
+
+            private Builder(ReplicationProgress model) {
+                this.historicalReplicationProgress = model.historicalReplicationProgress;
+                this.newReplicationProgress = model.newReplicationProgress;
+            } 
+
             /**
              * <p>The progress of historical data synchronization from the backup vault to the mirror vault. Valid values: 0 to 100.</p>
              * 
@@ -700,6 +747,13 @@ public class DescribeVaultsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> sourceType; 
 
+            private Builder() {
+            } 
+
+            private Builder(SourceTypes model) {
+                this.sourceType = model.sourceType;
+            } 
+
             /**
              * SourceType.
              */
@@ -758,6 +812,14 @@ public class DescribeVaultsResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key of the backup vault. Valid values of N: 1 to 20.</p>
@@ -829,6 +891,13 @@ public class DescribeVaultsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
@@ -912,6 +981,16 @@ public class DescribeVaultsResponseBody extends TeaModel {
             private Long trialExpireTime; 
             private Long trialStartTime; 
             private Long trialVaultReleaseTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(TrialInfo model) {
+                this.keepAfterTrialExpiration = model.keepAfterTrialExpiration;
+                this.trialExpireTime = model.trialExpireTime;
+                this.trialStartTime = model.trialStartTime;
+                this.trialVaultReleaseTime = model.trialVaultReleaseTime;
+            } 
 
             /**
              * <p>Indicates whether you are billed based on the pay-as-you-go method after the free trial ends.</p>
@@ -1476,6 +1555,53 @@ public class DescribeVaultsResponseBody extends TeaModel {
             private String vaultType; 
             private Boolean wormEnabled; 
 
+            private Builder() {
+            } 
+
+            private Builder(Vault model) {
+                this.archiveBytesDone = model.archiveBytesDone;
+                this.archiveStorageSize = model.archiveStorageSize;
+                this.backupPlanStatistics = model.backupPlanStatistics;
+                this.bucketName = model.bucketName;
+                this.bytesDone = model.bytesDone;
+                this.chargeType = model.chargeType;
+                this.chargedStorageSize = model.chargedStorageSize;
+                this.compressionAlgorithm = model.compressionAlgorithm;
+                this.createdTime = model.createdTime;
+                this.dedup = model.dedup;
+                this.description = model.description;
+                this.encryptType = model.encryptType;
+                this.indexAvailable = model.indexAvailable;
+                this.indexLevel = model.indexLevel;
+                this.indexUpdateTime = model.indexUpdateTime;
+                this.kmsKeyId = model.kmsKeyId;
+                this.latestReplicationTime = model.latestReplicationTime;
+                this.redundancyType = model.redundancyType;
+                this.replication = model.replication;
+                this.replicationProgress = model.replicationProgress;
+                this.replicationSourceRegionId = model.replicationSourceRegionId;
+                this.replicationSourceVault = model.replicationSourceVault;
+                this.replicationSourceVaultId = model.replicationSourceVaultId;
+                this.replicationTargetRegionId = model.replicationTargetRegionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.retention = model.retention;
+                this.searchEnabled = model.searchEnabled;
+                this.snapshotCount = model.snapshotCount;
+                this.sourceTypes = model.sourceTypes;
+                this.status = model.status;
+                this.storageSize = model.storageSize;
+                this.tags = model.tags;
+                this.trialInfo = model.trialInfo;
+                this.updatedTime = model.updatedTime;
+                this.vaultId = model.vaultId;
+                this.vaultName = model.vaultName;
+                this.vaultRegionId = model.vaultRegionId;
+                this.vaultStatusMessage = model.vaultStatusMessage;
+                this.vaultStorageClass = model.vaultStorageClass;
+                this.vaultType = model.vaultType;
+                this.wormEnabled = model.wormEnabled;
+            } 
+
             /**
              * <p>Archival tier backup data volume. Unit: bytes.</p>
              * 
@@ -1987,6 +2113,13 @@ public class DescribeVaultsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Vault> vault; 
+
+            private Builder() {
+            } 
+
+            private Builder(Vaults model) {
+                this.vault = model.vault;
+            } 
 
             /**
              * Vault.

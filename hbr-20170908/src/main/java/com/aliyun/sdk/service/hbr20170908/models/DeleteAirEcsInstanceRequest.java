@@ -39,7 +39,7 @@ public class DeleteAirEcsInstanceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -73,7 +73,7 @@ public class DeleteAirEcsInstanceRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the ECS instance.</p>
+         * <p>The ID of the Elastic Compute Service (ECS) instance.</p>
          * 
          * <strong>example:</strong>
          * <p>i-uf6ir9y******hvisj</p>

@@ -75,7 +75,7 @@ public class DescribeVaultsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -250,7 +250,10 @@ public class DescribeVaultsRequest extends Request {
         }
 
         /**
-         * VaultName.
+         * <p>The name of the backup vault. The name must be 1 to 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vaultname</p>
          */
         public Builder vaultName(String vaultName) {
             this.putQueryParameter("VaultName", vaultName);
@@ -336,6 +339,14 @@ public class DescribeVaultsRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of the tag.</p>

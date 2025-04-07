@@ -48,6 +48,10 @@ public class CreateHanaBackupPlanResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class CreateHanaBackupPlanResponseBody extends TeaModel {
         private String planId; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateHanaBackupPlanResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.planId = model.planId;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>

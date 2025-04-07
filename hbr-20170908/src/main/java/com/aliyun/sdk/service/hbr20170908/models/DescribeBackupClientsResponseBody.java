@@ -60,6 +60,10 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clients
      */
@@ -125,6 +129,20 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeBackupClientsResponseBody model) {
+            this.clients = model.clients;
+            this.code = model.code;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The queried backup clients.</p>
@@ -376,6 +394,23 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
             private String proxyUser; 
             private String useHttps; 
 
+            private Builder() {
+            } 
+
+            private Builder(Settings model) {
+                this.alertOnPartialComplete = model.alertOnPartialComplete;
+                this.dataNetworkType = model.dataNetworkType;
+                this.dataProxySetting = model.dataProxySetting;
+                this.maxCpuCore = model.maxCpuCore;
+                this.maxMemory = model.maxMemory;
+                this.maxWorker = model.maxWorker;
+                this.proxyHost = model.proxyHost;
+                this.proxyPassword = model.proxyPassword;
+                this.proxyPort = model.proxyPort;
+                this.proxyUser = model.proxyUser;
+                this.useHttps = model.useHttps;
+            } 
+
             /**
              * <p>Indicates whether alerts are generated for partially completed jobs. This parameter is valid only for on-premises file backup and ECS file backup.</p>
              * 
@@ -561,6 +596,14 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key of the backup vault. Valid values of N: 1 to 20</p>
@@ -848,6 +891,31 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
             private java.util.List<Tags> tags; 
             private Long updatedTime; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Clients model) {
+                this.appliance = model.appliance;
+                this.archType = model.archType;
+                this.backupStatus = model.backupStatus;
+                this.clientId = model.clientId;
+                this.clientType = model.clientType;
+                this.clientVersion = model.clientVersion;
+                this.createdTime = model.createdTime;
+                this.hostname = model.hostname;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.lastHeartBeatTime = model.lastHeartBeatTime;
+                this.maxClientVersion = model.maxClientVersion;
+                this.osType = model.osType;
+                this.privateIpV4 = model.privateIpV4;
+                this.settings = model.settings;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.updatedTime = model.updatedTime;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>Indicates whether the client is installed on an all-in-one PC that integrates hardware and monitoring program. Valid values:</p>

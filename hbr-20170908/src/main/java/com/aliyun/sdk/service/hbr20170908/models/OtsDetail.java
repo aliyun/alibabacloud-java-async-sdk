@@ -32,6 +32,10 @@ public class OtsDetail extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return tableNames
      */
@@ -41,6 +45,13 @@ public class OtsDetail extends TeaModel {
 
     public static final class Builder {
         private java.util.List<String> tableNames; 
+
+        private Builder() {
+        } 
+
+        private Builder(OtsDetail model) {
+            this.tableNames = model.tableNames;
+        } 
 
         /**
          * TableNames.

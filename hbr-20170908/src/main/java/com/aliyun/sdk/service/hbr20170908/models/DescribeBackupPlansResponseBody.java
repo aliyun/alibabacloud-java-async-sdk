@@ -60,6 +60,10 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return backupPlans
      */
@@ -125,6 +129,20 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeBackupPlansResponseBody model) {
+            this.backupPlans = model.backupPlans;
+            this.code = model.code;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The queried backup plans.</p>
@@ -277,6 +295,15 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             private String operator; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(HitTag model) {
+                this.key = model.key;
+                this.operator = model.operator;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The tag key.</p>
              * 
@@ -353,6 +380,13 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<HitTag> hitTag; 
 
+            private Builder() {
+            } 
+
+            private Builder(HitTags model) {
+                this.hitTag = model.hitTag;
+            } 
+
             /**
              * HitTag.
              */
@@ -399,6 +433,13 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> tableName; 
+
+            private Builder() {
+            } 
+
+            private Builder(TableNames model) {
+                this.tableName = model.tableName;
+            } 
 
             /**
              * TableName.
@@ -447,6 +488,13 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
         public static final class Builder {
             private TableNames tableNames; 
 
+            private Builder() {
+            } 
+
+            private Builder(OtsDetail model) {
+                this.tableNames = model.tableNames;
+            } 
+
             /**
              * <p>The names of the tables in the Tablestore instance.</p>
              */
@@ -493,6 +541,13 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> path; 
+
+            private Builder() {
+            } 
+
+            private Builder(Paths model) {
+                this.path = model.path;
+            } 
 
             /**
              * Path.
@@ -565,6 +620,15 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             private String resourceId; 
             private String sourceType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Resource model) {
+                this.extra = model.extra;
+                this.resourceId = model.resourceId;
+                this.sourceType = model.sourceType;
+            } 
+
             /**
              * <p>Additional information about the data source.</p>
              * 
@@ -636,6 +700,13 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Resource> resource; 
+
+            private Builder() {
+            } 
+
+            private Builder(Resources model) {
+                this.resource = model.resource;
+            } 
 
             /**
              * Resource.
@@ -780,6 +851,21 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             private String ruleName; 
             private String schedule; 
 
+            private Builder() {
+            } 
+
+            private Builder(Rule model) {
+                this.backupType = model.backupType;
+                this.destinationRegionId = model.destinationRegionId;
+                this.destinationRetention = model.destinationRetention;
+                this.disabled = model.disabled;
+                this.doCopy = model.doCopy;
+                this.retention = model.retention;
+                this.ruleId = model.ruleId;
+                this.ruleName = model.ruleName;
+                this.schedule = model.schedule;
+            } 
+
             /**
              * <p>The backup type. Valid value: <strong>COMPLETE</strong>, which indicates full backup.</p>
              * 
@@ -922,6 +1008,13 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Rule> rule; 
 
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.rule = model.rule;
+            } 
+
             /**
              * Rule.
              */
@@ -1004,6 +1097,16 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             private Long trialExpireTime; 
             private Long trialStartTime; 
             private Long trialVaultReleaseTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(TrialInfo model) {
+                this.keepAfterTrialExpiration = model.keepAfterTrialExpiration;
+                this.trialExpireTime = model.trialExpireTime;
+                this.trialStartTime = model.trialStartTime;
+                this.trialVaultReleaseTime = model.trialVaultReleaseTime;
+            } 
 
             /**
              * <p>Indicates whether you are billed based on the pay-as-you-go method after the free trial ends.</p>
@@ -1580,6 +1683,54 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             private Long updatedTime; 
             private String vaultId; 
 
+            private Builder() {
+            } 
+
+            private Builder(BackupPlan model) {
+                this.backupSourceGroupId = model.backupSourceGroupId;
+                this.backupType = model.backupType;
+                this.bucket = model.bucket;
+                this.changeListPath = model.changeListPath;
+                this.clientId = model.clientId;
+                this.clusterId = model.clusterId;
+                this.createTime = model.createTime;
+                this.createdByTag = model.createdByTag;
+                this.createdTime = model.createdTime;
+                this.crossAccountRoleName = model.crossAccountRoleName;
+                this.crossAccountType = model.crossAccountType;
+                this.crossAccountUserId = model.crossAccountUserId;
+                this.dataSourceId = model.dataSourceId;
+                this.destDataSourceDetail = model.destDataSourceDetail;
+                this.destDataSourceId = model.destDataSourceId;
+                this.destSourceType = model.destSourceType;
+                this.detail = model.detail;
+                this.disabled = model.disabled;
+                this.exclude = model.exclude;
+                this.fileSystemId = model.fileSystemId;
+                this.hitTags = model.hitTags;
+                this.include = model.include;
+                this.instanceGroupId = model.instanceGroupId;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.keepLatestSnapshots = model.keepLatestSnapshots;
+                this.latestExecuteJobId = model.latestExecuteJobId;
+                this.options = model.options;
+                this.otsDetail = model.otsDetail;
+                this.paths = model.paths;
+                this.planId = model.planId;
+                this.planName = model.planName;
+                this.prefix = model.prefix;
+                this.resources = model.resources;
+                this.retention = model.retention;
+                this.rules = model.rules;
+                this.schedule = model.schedule;
+                this.sourceType = model.sourceType;
+                this.speedLimit = model.speedLimit;
+                this.trialInfo = model.trialInfo;
+                this.updatedTime = model.updatedTime;
+                this.vaultId = model.vaultId;
+            } 
+
             /**
              * <p>The ID of the data source group.</p>
              * 
@@ -1996,6 +2147,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
              * <li><strong>NAS</strong>: NAS file systems</li>
              * <li><strong>OTS</strong>: Tablestore instances</li>
              * <li><strong>UDM_ECS</strong>: ECS instances</li>
+             * <li><strong>SYNC</strong>: data synchronization</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2090,6 +2242,13 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<BackupPlan> backupPlan; 
+
+            private Builder() {
+            } 
+
+            private Builder(BackupPlans model) {
+                this.backupPlan = model.backupPlan;
+            } 
 
             /**
              * BackupPlan.

@@ -48,6 +48,10 @@ public class CreateBackupPlanResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class CreateBackupPlanResponseBody extends TeaModel {
         private String planId; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateBackupPlanResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.planId = model.planId;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>Return code, 200 indicates success.</p>

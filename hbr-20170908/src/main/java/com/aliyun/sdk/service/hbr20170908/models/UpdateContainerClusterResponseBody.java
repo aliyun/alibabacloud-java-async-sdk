@@ -52,6 +52,10 @@ public class UpdateContainerClusterResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class UpdateContainerClusterResponseBody extends TeaModel {
         private Boolean success; 
         private String token; 
         private Boolean tokenUpdated; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateContainerClusterResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.token = model.token;
+            this.tokenUpdated = model.tokenUpdated;
+        } 
 
         /**
          * <p>Return code, 200 indicates success.</p>

@@ -60,6 +60,10 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -125,6 +129,20 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeHanaRestoresResponseBody model) {
+            this.code = model.code;
+            this.hanaRestore = model.hanaRestore;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The response code. The status code 200 indicates that the request was successful.</p>
@@ -589,6 +607,41 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
             private String vaultId; 
             private Integer volumeId; 
 
+            private Builder() {
+            } 
+
+            private Builder(HanaRestores model) {
+                this.backupID = model.backupID;
+                this.backupPrefix = model.backupPrefix;
+                this.checkAccess = model.checkAccess;
+                this.clearLog = model.clearLog;
+                this.clusterId = model.clusterId;
+                this.currentPhase = model.currentPhase;
+                this.currentProgress = model.currentProgress;
+                this.databaseName = model.databaseName;
+                this.databaseRestoreId = model.databaseRestoreId;
+                this.endTime = model.endTime;
+                this.logPosition = model.logPosition;
+                this.maxPhase = model.maxPhase;
+                this.maxProgress = model.maxProgress;
+                this.message = model.message;
+                this.mode = model.mode;
+                this.phase = model.phase;
+                this.reachedTime = model.reachedTime;
+                this.recoveryPointInTime = model.recoveryPointInTime;
+                this.restoreId = model.restoreId;
+                this.source = model.source;
+                this.sourceClusterId = model.sourceClusterId;
+                this.startTime = model.startTime;
+                this.state = model.state;
+                this.status = model.status;
+                this.systemCopy = model.systemCopy;
+                this.useCatalog = model.useCatalog;
+                this.useDelta = model.useDelta;
+                this.vaultId = model.vaultId;
+                this.volumeId = model.volumeId;
+            } 
+
             /**
              * <p>The backup ID.</p>
              * 
@@ -968,6 +1021,13 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<HanaRestores> hanaRestores; 
+
+            private Builder() {
+            } 
+
+            private Builder(HanaRestore model) {
+                this.hanaRestores = model.hanaRestores;
+            } 
 
             /**
              * HanaRestores.

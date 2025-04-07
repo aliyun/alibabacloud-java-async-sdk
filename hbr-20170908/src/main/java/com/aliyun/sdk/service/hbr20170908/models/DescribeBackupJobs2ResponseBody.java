@@ -60,6 +60,10 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return backupJobs
      */
@@ -125,6 +129,20 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeBackupJobs2ResponseBody model) {
+            this.backupJobs = model.backupJobs;
+            this.code = model.code;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The returned backup jobs that meet the specified conditions.</p>
@@ -252,6 +270,13 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> diskNativeSnapshotId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DiskNativeSnapshotIdList model) {
+                this.diskNativeSnapshotId = model.diskNativeSnapshotId;
+            } 
 
             /**
              * DiskNativeSnapshotId.
@@ -407,6 +432,22 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             private Boolean doCopy; 
             private java.util.Map<String, ?> instanceInfos; 
             private String nativeSnapshotId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Detail model) {
+                this.destinationNativeSnapshotErrorMessage = model.destinationNativeSnapshotErrorMessage;
+                this.destinationNativeSnapshotId = model.destinationNativeSnapshotId;
+                this.destinationNativeSnapshotProgress = model.destinationNativeSnapshotProgress;
+                this.destinationNativeSnapshotStatus = model.destinationNativeSnapshotStatus;
+                this.destinationRetention = model.destinationRetention;
+                this.destinationSnapshotId = model.destinationSnapshotId;
+                this.diskNativeSnapshotIdList = model.diskNativeSnapshotIdList;
+                this.doCopy = model.doCopy;
+                this.instanceInfos = model.instanceInfos;
+                this.nativeSnapshotId = model.nativeSnapshotId;
+            } 
 
             /**
              * <p>The information about the remote replication failure.</p>
@@ -568,6 +609,13 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> tableName; 
 
+            private Builder() {
+            } 
+
+            private Builder(TableNames model) {
+                this.tableName = model.tableName;
+            } 
+
             /**
              * TableName.
              */
@@ -615,6 +663,13 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
         public static final class Builder {
             private TableNames tableNames; 
 
+            private Builder() {
+            } 
+
+            private Builder(OtsDetail model) {
+                this.tableNames = model.tableNames;
+            } 
+
             /**
              * <p>The names of the destination tables in the Tablestore instance.</p>
              */
@@ -661,6 +716,13 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> path; 
+
+            private Builder() {
+            } 
+
+            private Builder(Paths model) {
+                this.path = model.path;
+            } 
 
             /**
              * Path.
@@ -756,6 +818,17 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             private String skippedFiles; 
             private String successFiles; 
             private String totalFiles; 
+
+            private Builder() {
+            } 
+
+            private Builder(Report model) {
+                this.failedFiles = model.failedFiles;
+                this.reportTaskStatus = model.reportTaskStatus;
+                this.skippedFiles = model.skippedFiles;
+                this.successFiles = model.successFiles;
+                this.totalFiles = model.totalFiles;
+            } 
 
             /**
              * <p>List of failed files</p>
@@ -1403,6 +1476,59 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             private Long updatedTime; 
             private String vaultId; 
 
+            private Builder() {
+            } 
+
+            private Builder(BackupJob model) {
+                this.actualBytes = model.actualBytes;
+                this.actualFiles = model.actualFiles;
+                this.actualItems = model.actualItems;
+                this.backupType = model.backupType;
+                this.bucket = model.bucket;
+                this.bytesDone = model.bytesDone;
+                this.bytesTotal = model.bytesTotal;
+                this.changeListPath = model.changeListPath;
+                this.clientId = model.clientId;
+                this.completeTime = model.completeTime;
+                this.createTime = model.createTime;
+                this.createdTime = model.createdTime;
+                this.crossAccountRoleName = model.crossAccountRoleName;
+                this.crossAccountType = model.crossAccountType;
+                this.crossAccountUserId = model.crossAccountUserId;
+                this.destDataSourceDetail = model.destDataSourceDetail;
+                this.destDataSourceId = model.destDataSourceId;
+                this.destSourceType = model.destSourceType;
+                this.detail = model.detail;
+                this.errorMessage = model.errorMessage;
+                this.exclude = model.exclude;
+                this.fileSystemId = model.fileSystemId;
+                this.filesDone = model.filesDone;
+                this.filesTotal = model.filesTotal;
+                this.identifier = model.identifier;
+                this.include = model.include;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.itemsDone = model.itemsDone;
+                this.itemsTotal = model.itemsTotal;
+                this.jobId = model.jobId;
+                this.jobName = model.jobName;
+                this.options = model.options;
+                this.otsDetail = model.otsDetail;
+                this.paths = model.paths;
+                this.planId = model.planId;
+                this.prefix = model.prefix;
+                this.progress = model.progress;
+                this.report = model.report;
+                this.sourceType = model.sourceType;
+                this.speed = model.speed;
+                this.speedLimit = model.speedLimit;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.tableName = model.tableName;
+                this.updatedTime = model.updatedTime;
+                this.vaultId = model.vaultId;
+            } 
+
             /**
              * <p>The actual amount of data that is backed up after duplicates are removed. Unit: bytes.</p>
              * 
@@ -1970,6 +2096,13 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<BackupJob> backupJob; 
+
+            private Builder() {
+            } 
+
+            private Builder(BackupJobs model) {
+                this.backupJob = model.backupJob;
+            } 
 
             /**
              * BackupJob.

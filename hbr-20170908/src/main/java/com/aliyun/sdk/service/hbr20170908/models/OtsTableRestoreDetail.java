@@ -56,6 +56,10 @@ public class OtsTableRestoreDetail extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return batchChannelCount
      */
@@ -113,6 +117,19 @@ public class OtsTableRestoreDetail extends TeaModel {
         private Boolean restoreIndex; 
         private Boolean restoreSearchIndex; 
         private String searchIndexNameSuffix; 
+
+        private Builder() {
+        } 
+
+        private Builder(OtsTableRestoreDetail model) {
+            this.batchChannelCount = model.batchChannelCount;
+            this.indexNameSuffix = model.indexNameSuffix;
+            this.overwriteExisting = model.overwriteExisting;
+            this.reGenerateAutoIncrementPK = model.reGenerateAutoIncrementPK;
+            this.restoreIndex = model.restoreIndex;
+            this.restoreSearchIndex = model.restoreSearchIndex;
+            this.searchIndexNameSuffix = model.searchIndexNameSuffix;
+        } 
 
         /**
          * BatchChannelCount.

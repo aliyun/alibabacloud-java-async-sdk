@@ -44,6 +44,10 @@ public class Report extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return failedFiles
      */
@@ -77,6 +81,16 @@ public class Report extends TeaModel {
         private String skippedFiles; 
         private String successFiles; 
         private String totalFiles; 
+
+        private Builder() {
+        } 
+
+        private Builder(Report model) {
+            this.failedFiles = model.failedFiles;
+            this.skippedFiles = model.skippedFiles;
+            this.successFiles = model.successFiles;
+            this.totalFiles = model.totalFiles;
+        } 
 
         /**
          * FailedFiles.

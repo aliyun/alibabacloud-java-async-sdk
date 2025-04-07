@@ -52,6 +52,10 @@ public class UninstallBackupClientsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class UninstallBackupClientsResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String taskId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UninstallBackupClientsResponseBody model) {
+            this.code = model.code;
+            this.instanceStatuses = model.instanceStatuses;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.taskId = model.taskId;
+        } 
 
         /**
          * <p>The HTTP status code. The status code 200 indicates that the request is successful.</p>
@@ -230,6 +246,15 @@ public class UninstallBackupClientsResponseBody extends TeaModel {
             private String errorCode; 
             private String instanceId; 
             private Boolean validInstance; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceStatuses model) {
+                this.errorCode = model.errorCode;
+                this.instanceId = model.instanceId;
+                this.validInstance = model.validInstance;
+            } 
 
             /**
              * <p>The error code. Valid values:</p>

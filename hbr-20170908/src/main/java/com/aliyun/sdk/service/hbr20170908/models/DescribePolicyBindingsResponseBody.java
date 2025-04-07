@@ -60,6 +60,10 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -125,6 +129,20 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePolicyBindingsResponseBody model) {
+            this.code = model.code;
+            this.maxResults = model.maxResults;
+            this.message = model.message;
+            this.nextToken = model.nextToken;
+            this.policyBindings = model.policyBindings;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>Return code, 200 indicates success.</p>
@@ -266,6 +284,14 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
             private Long fetchSliceSize; 
             private Boolean fullOnIncrementFail; 
 
+            private Builder() {
+            } 
+
+            private Builder(CommonFileSystemDetail model) {
+                this.fetchSliceSize = model.fetchSliceSize;
+                this.fullOnIncrementFail = model.fullOnIncrementFail;
+            } 
+
             /**
              * <p>Backup shard size (number of files).</p>
              * 
@@ -367,6 +393,16 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
             private Long fetchSliceSize; 
             private Boolean fullOnIncrementFail; 
 
+            private Builder() {
+            } 
+
+            private Builder(CommonNasDetail model) {
+                this.clientId = model.clientId;
+                this.clusterId = model.clusterId;
+                this.fetchSliceSize = model.fetchSliceSize;
+                this.fullOnIncrementFail = model.fullOnIncrementFail;
+            } 
+
             /**
              * <p>Backup client ID.</p>
              * 
@@ -466,6 +502,14 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
             private Boolean advPolicy; 
             private Boolean useVSS; 
 
+            private Builder() {
+            } 
+
+            private Builder(FileDetail model) {
+                this.advPolicy = model.advPolicy;
+                this.useVSS = model.useVSS;
+            } 
+
             /**
              * <p>Whether to use advanced policies. Values:</p>
              * <ul>
@@ -558,6 +602,15 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
             private Boolean ignoreArchiveObject; 
             private String inventoryCleanupPolicy; 
             private String inventoryId; 
+
+            private Builder() {
+            } 
+
+            private Builder(OssDetail model) {
+                this.ignoreArchiveObject = model.ignoreArchiveObject;
+                this.inventoryCleanupPolicy = model.inventoryCleanupPolicy;
+                this.inventoryId = model.inventoryId;
+            } 
 
             /**
              * <p>Do not prompt for archive-type objects in the task statistics and failed file list.</p>
@@ -759,6 +812,23 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
             private String ramRoleName; 
             private Boolean snapshotGroup; 
             private Long timeoutInSeconds; 
+
+            private Builder() {
+            } 
+
+            private Builder(UdmDetail model) {
+                this.appConsistent = model.appConsistent;
+                this.destinationKmsKeyId = model.destinationKmsKeyId;
+                this.diskIdList = model.diskIdList;
+                this.enableFsFreeze = model.enableFsFreeze;
+                this.enableWriters = model.enableWriters;
+                this.excludeDiskIdList = model.excludeDiskIdList;
+                this.postScriptPath = model.postScriptPath;
+                this.preScriptPath = model.preScriptPath;
+                this.ramRoleName = model.ramRoleName;
+                this.snapshotGroup = model.snapshotGroup;
+                this.timeoutInSeconds = model.timeoutInSeconds;
+            } 
 
             /**
              * <p>是否创建应用一致性。仅云盘类型全部为ESSD时，支持创建快照应用一致性。</p>
@@ -967,6 +1037,17 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
             private OssDetail ossDetail; 
             private UdmDetail udmDetail; 
 
+            private Builder() {
+            } 
+
+            private Builder(AdvancedOptions model) {
+                this.commonFileSystemDetail = model.commonFileSystemDetail;
+                this.commonNasDetail = model.commonNasDetail;
+                this.fileDetail = model.fileDetail;
+                this.ossDetail = model.ossDetail;
+                this.udmDetail = model.udmDetail;
+            } 
+
             /**
              * <p>Advanced options for large-scale file system backup.</p>
              */
@@ -1069,6 +1150,15 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
             private String key; 
             private String operator; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(HitTags model) {
+                this.key = model.key;
+                this.operator = model.operator;
+                this.value = model.value;
+            } 
 
             /**
              * <p>Tag key.</p>
@@ -1350,6 +1440,30 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
             private String speedLimit; 
             private Long updatedTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(PolicyBindings model) {
+                this.advancedOptions = model.advancedOptions;
+                this.createdByTag = model.createdByTag;
+                this.createdTime = model.createdTime;
+                this.crossAccountRoleName = model.crossAccountRoleName;
+                this.crossAccountType = model.crossAccountType;
+                this.crossAccountUserId = model.crossAccountUserId;
+                this.dataSourceId = model.dataSourceId;
+                this.disabled = model.disabled;
+                this.exclude = model.exclude;
+                this.hitTags = model.hitTags;
+                this.include = model.include;
+                this.policyBindingDescription = model.policyBindingDescription;
+                this.policyBindingId = model.policyBindingId;
+                this.policyId = model.policyId;
+                this.source = model.source;
+                this.sourceType = model.sourceType;
+                this.speedLimit = model.speedLimit;
+                this.updatedTime = model.updatedTime;
+            } 
+
             /**
              * <p>Advanced options.</p>
              */
@@ -1429,10 +1543,10 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>策略是否对该数据源生效。</p>
+             * <p>Whether the policy is disbaled for this data source.</p>
              * <ul>
-             * <li>true：暂停</li>
-             * <li>false：未暂停</li>
+             * <li>true: disabled</li>
+             * <li>false: Not disabled</li>
              * </ul>
              * 
              * <strong>example:</strong>

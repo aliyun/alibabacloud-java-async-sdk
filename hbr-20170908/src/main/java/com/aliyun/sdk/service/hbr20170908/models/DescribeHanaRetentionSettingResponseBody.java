@@ -68,6 +68,10 @@ public class DescribeHanaRetentionSettingResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clusterId
      */
@@ -149,6 +153,22 @@ public class DescribeHanaRetentionSettingResponseBody extends TeaModel {
         private String schedule; 
         private Boolean success; 
         private String vaultId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeHanaRetentionSettingResponseBody model) {
+            this.clusterId = model.clusterId;
+            this.code = model.code;
+            this.databaseName = model.databaseName;
+            this.disabled = model.disabled;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.retentionDays = model.retentionDays;
+            this.schedule = model.schedule;
+            this.success = model.success;
+            this.vaultId = model.vaultId;
+        } 
 
         /**
          * <p>The ID of the SAP HANA instance.</p>

@@ -52,6 +52,10 @@ public class AddContainerClusterResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clusterId
      */
@@ -101,6 +105,18 @@ public class AddContainerClusterResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String token; 
+
+        private Builder() {
+        } 
+
+        private Builder(AddContainerClusterResponseBody model) {
+            this.clusterId = model.clusterId;
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.token = model.token;
+        } 
 
         /**
          * <p>The ID of the cluster.</p>

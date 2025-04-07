@@ -59,7 +59,7 @@ public class DescribePolicyBindingsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -261,6 +261,15 @@ public class DescribePolicyBindingsRequest extends Request {
             private String key; 
             private String operator; 
             private java.util.List<String> values; 
+
+            private Builder() {
+            } 
+
+            private Builder(Filters model) {
+                this.key = model.key;
+                this.operator = model.operator;
+                this.values = model.values;
+            } 
 
             /**
              * <p>Key in the query filter. Possible values include:</p>

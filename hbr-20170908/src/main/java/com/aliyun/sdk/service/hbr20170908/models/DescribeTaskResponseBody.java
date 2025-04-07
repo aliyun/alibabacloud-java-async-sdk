@@ -72,6 +72,10 @@ public class DescribeTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -161,6 +165,23 @@ public class DescribeTaskResponseBody extends TeaModel {
         private String result; 
         private Boolean success; 
         private Long updatedTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTaskResponseBody model) {
+            this.code = model.code;
+            this.completedTime = model.completedTime;
+            this.createdTime = model.createdTime;
+            this.description = model.description;
+            this.message = model.message;
+            this.name = model.name;
+            this.progress = model.progress;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+            this.updatedTime = model.updatedTime;
+        } 
 
         /**
          * <p>HttpCode</p>

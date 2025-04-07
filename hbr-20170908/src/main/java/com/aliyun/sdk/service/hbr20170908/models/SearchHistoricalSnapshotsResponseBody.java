@@ -60,6 +60,10 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -125,6 +129,20 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
         private Snapshots snapshots; 
         private Boolean success; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(SearchHistoricalSnapshotsResponseBody model) {
+            this.code = model.code;
+            this.limit = model.limit;
+            this.message = model.message;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.snapshots = model.snapshots;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The HTTP status code. The status code 200 indicates that the call is successful.</p>
@@ -252,6 +270,13 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> path; 
+
+            private Builder() {
+            } 
+
+            private Builder(Paths model) {
+                this.path = model.path;
+            } 
 
             /**
              * Path.
@@ -768,6 +793,52 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
             private Boolean useCommonNas; 
             private String vaultId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Snapshot model) {
+                this.actualBytes = model.actualBytes;
+                this.actualItems = model.actualItems;
+                this.archiveTime = model.archiveTime;
+                this.backupType = model.backupType;
+                this.bucket = model.bucket;
+                this.bytesDone = model.bytesDone;
+                this.bytesTotal = model.bytesTotal;
+                this.clientId = model.clientId;
+                this.completeTime = model.completeTime;
+                this.createTime = model.createTime;
+                this.createdTime = model.createdTime;
+                this.errorFile = model.errorFile;
+                this.exclude = model.exclude;
+                this.expireTime = model.expireTime;
+                this.fileSystemId = model.fileSystemId;
+                this.include = model.include;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.itemsDone = model.itemsDone;
+                this.itemsTotal = model.itemsTotal;
+                this.jobId = model.jobId;
+                this.parentSnapshotHash = model.parentSnapshotHash;
+                this.path = model.path;
+                this.paths = model.paths;
+                this.prefix = model.prefix;
+                this.rangeEnd = model.rangeEnd;
+                this.rangeStart = model.rangeStart;
+                this.retention = model.retention;
+                this.snapshotHash = model.snapshotHash;
+                this.snapshotId = model.snapshotId;
+                this.sourceParentSnapshotHash = model.sourceParentSnapshotHash;
+                this.sourceSnapshotHash = model.sourceSnapshotHash;
+                this.sourceType = model.sourceType;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.storageClass = model.storageClass;
+                this.tableName = model.tableName;
+                this.updatedTime = model.updatedTime;
+                this.useCommonNas = model.useCommonNas;
+                this.vaultId = model.vaultId;
+            } 
+
             /**
              * <p>The actual data amount of backup snapshots after duplicates are removed. Unit: bytes.</p>
              * 
@@ -1270,6 +1341,13 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Snapshot> snapshot; 
+
+            private Builder() {
+            } 
+
+            private Builder(Snapshots model) {
+                this.snapshot = model.snapshot;
+            } 
 
             /**
              * Snapshot.

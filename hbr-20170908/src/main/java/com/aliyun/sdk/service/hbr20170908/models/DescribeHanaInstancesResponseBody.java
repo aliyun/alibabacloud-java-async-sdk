@@ -60,6 +60,10 @@ public class DescribeHanaInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -125,6 +129,20 @@ public class DescribeHanaInstancesResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeHanaInstancesResponseBody model) {
+            this.code = model.code;
+            this.hanas = model.hanas;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The response code. The status code 200 indicates that the request was successful.</p>
@@ -265,6 +283,14 @@ public class DescribeHanaInstancesResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The tag key.</p>
              * 
@@ -325,6 +351,13 @@ public class DescribeHanaInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
@@ -553,6 +586,28 @@ public class DescribeHanaInstancesResponseBody extends TeaModel {
             private Boolean validateCertificate; 
             private String vaultId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Hana model) {
+                this.alertSetting = model.alertSetting;
+                this.clusterId = model.clusterId;
+                this.crossAccountRoleName = model.crossAccountRoleName;
+                this.crossAccountType = model.crossAccountType;
+                this.crossAccountUserId = model.crossAccountUserId;
+                this.hanaName = model.hanaName;
+                this.host = model.host;
+                this.instanceNumber = model.instanceNumber;
+                this.resourceGroupId = model.resourceGroupId;
+                this.status = model.status;
+                this.statusMessage = model.statusMessage;
+                this.tags = model.tags;
+                this.useSsl = model.useSsl;
+                this.userName = model.userName;
+                this.validateCertificate = model.validateCertificate;
+                this.vaultId = model.vaultId;
+            } 
+
             /**
              * <p>The alert settings. Valid value: INHERITED, which indicates that the Cloud Backup client sends alert notifications by using the same method configured for the backup vault.</p>
              * 
@@ -778,6 +833,13 @@ public class DescribeHanaInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Hana> hana; 
+
+            private Builder() {
+            } 
+
+            private Builder(Hanas model) {
+                this.hana = model.hana;
+            } 
 
             /**
              * Hana.

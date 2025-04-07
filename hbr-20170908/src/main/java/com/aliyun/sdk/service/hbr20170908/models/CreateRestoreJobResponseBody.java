@@ -48,6 +48,10 @@ public class CreateRestoreJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class CreateRestoreJobResponseBody extends TeaModel {
         private String requestId; 
         private String restoreId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateRestoreJobResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.restoreId = model.restoreId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>Return code, 200 indicates success.</p>

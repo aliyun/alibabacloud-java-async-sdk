@@ -48,6 +48,10 @@ public class DescribeHanaBackupSettingResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class DescribeHanaBackupSettingResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeHanaBackupSettingResponseBody model) {
+            this.code = model.code;
+            this.hanaBackupSetting = model.hanaBackupSetting;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code. The status code 200 indicates that the call is successful.</p>
@@ -267,6 +282,20 @@ public class DescribeHanaBackupSettingResponseBody extends TeaModel {
             private String logBackupParameterFile; 
             private Long logBackupTimeout; 
             private Boolean logBackupUsingBackint; 
+
+            private Builder() {
+            } 
+
+            private Builder(HanaBackupSetting model) {
+                this.catalogBackupParameterFile = model.catalogBackupParameterFile;
+                this.catalogBackupUsingBackint = model.catalogBackupUsingBackint;
+                this.dataBackupParameterFile = model.dataBackupParameterFile;
+                this.databaseName = model.databaseName;
+                this.enableAutoLogBackup = model.enableAutoLogBackup;
+                this.logBackupParameterFile = model.logBackupParameterFile;
+                this.logBackupTimeout = model.logBackupTimeout;
+                this.logBackupUsingBackint = model.logBackupUsingBackint;
+            } 
 
             /**
              * <p>The configuration file for catalog backup.</p>

@@ -60,6 +60,10 @@ public class DescribeClientsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clients
      */
@@ -125,6 +129,20 @@ public class DescribeClientsResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeClientsResponseBody model) {
+            this.clients = model.clients;
+            this.code = model.code;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The Cloud Backup clients.</p>
@@ -445,6 +463,29 @@ public class DescribeClientsResponseBody extends TeaModel {
             private Boolean useHttps; 
             private String vaultId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Client model) {
+                this.alertSetting = model.alertSetting;
+                this.clientId = model.clientId;
+                this.clientName = model.clientName;
+                this.clientType = model.clientType;
+                this.clientVersion = model.clientVersion;
+                this.clusterId = model.clusterId;
+                this.createdTime = model.createdTime;
+                this.heartBeatTime = model.heartBeatTime;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.maxVersion = model.maxVersion;
+                this.networkType = model.networkType;
+                this.status = model.status;
+                this.statusMessage = model.statusMessage;
+                this.updatedTime = model.updatedTime;
+                this.useHttps = model.useHttps;
+                this.vaultId = model.vaultId;
+            } 
+
             /**
              * <p>The alert settings. Valid value: INHERITED, which indicates that the Cloud Backup client sends alert notifications by using the same method configured for the backup vault.</p>
              * 
@@ -523,7 +564,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * HeartBeatTime.
+             * <p>The latest heartbeat time of the Cloud Backup client. This value is a UNIX timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1554347313</p>
              */
             public Builder heartBeatTime(Long heartBeatTime) {
                 this.heartBeatTime = heartBeatTime;
@@ -689,6 +733,13 @@ public class DescribeClientsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Client> client; 
+
+            private Builder() {
+            } 
+
+            private Builder(Clients model) {
+                this.client = model.client;
+            } 
 
             /**
              * Client.
