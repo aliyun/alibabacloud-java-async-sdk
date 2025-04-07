@@ -878,6 +878,9 @@ public class ListApplicationsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cpu")
         private Integer cpu;
 
+        @com.aliyun.core.annotation.NameInMap("DiskSize")
+        private Integer diskSize;
+
         @com.aliyun.core.annotation.NameInMap("EnableIdle")
         private String enableIdle;
 
@@ -929,6 +932,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             this.baseAppId = builder.baseAppId;
             this.children = builder.children;
             this.cpu = builder.cpu;
+            this.diskSize = builder.diskSize;
             this.enableIdle = builder.enableIdle;
             this.imageUrl = builder.imageUrl;
             this.instances = builder.instances;
@@ -1007,6 +1011,13 @@ public class ListApplicationsResponseBody extends TeaModel {
          */
         public Integer getCpu() {
             return this.cpu;
+        }
+
+        /**
+         * @return diskSize
+         */
+        public Integer getDiskSize() {
+            return this.diskSize;
         }
 
         /**
@@ -1116,6 +1127,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             private String baseAppId; 
             private java.util.List<Children> children; 
             private Integer cpu; 
+            private Integer diskSize; 
             private String enableIdle; 
             private String imageUrl; 
             private Integer instances; 
@@ -1143,6 +1155,7 @@ public class ListApplicationsResponseBody extends TeaModel {
                 this.baseAppId = model.baseAppId;
                 this.children = model.children;
                 this.cpu = model.cpu;
+                this.diskSize = model.diskSize;
                 this.enableIdle = model.enableIdle;
                 this.imageUrl = model.imageUrl;
                 this.instances = model.instances;
@@ -1248,6 +1261,14 @@ public class ListApplicationsResponseBody extends TeaModel {
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
+                return this;
+            }
+
+            /**
+             * DiskSize.
+             */
+            public Builder diskSize(Integer diskSize) {
+                this.diskSize = diskSize;
                 return this;
             }
 

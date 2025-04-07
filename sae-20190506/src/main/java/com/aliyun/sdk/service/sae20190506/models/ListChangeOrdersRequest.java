@@ -39,8 +39,16 @@ public class ListChangeOrdersRequest extends Request {
     private String key;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderBy")
+    private String orderBy;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Reverse")
+    private Boolean reverse;
 
     private ListChangeOrdersRequest(Builder builder) {
         super(builder);
@@ -49,7 +57,9 @@ public class ListChangeOrdersRequest extends Request {
         this.coType = builder.coType;
         this.currentPage = builder.currentPage;
         this.key = builder.key;
+        this.orderBy = builder.orderBy;
         this.pageSize = builder.pageSize;
+        this.reverse = builder.reverse;
     }
 
     public static Builder builder() {
@@ -101,10 +111,24 @@ public class ListChangeOrdersRequest extends Request {
     }
 
     /**
+     * @return orderBy
+     */
+    public String getOrderBy() {
+        return this.orderBy;
+    }
+
+    /**
      * @return pageSize
      */
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    /**
+     * @return reverse
+     */
+    public Boolean getReverse() {
+        return this.reverse;
     }
 
     public static final class Builder extends Request.Builder<ListChangeOrdersRequest, Builder> {
@@ -113,7 +137,9 @@ public class ListChangeOrdersRequest extends Request {
         private String coType; 
         private Integer currentPage; 
         private String key; 
+        private String orderBy; 
         private Integer pageSize; 
+        private Boolean reverse; 
 
         private Builder() {
             super();
@@ -126,7 +152,9 @@ public class ListChangeOrdersRequest extends Request {
             this.coType = request.coType;
             this.currentPage = request.currentPage;
             this.key = request.key;
+            this.orderBy = request.orderBy;
             this.pageSize = request.pageSize;
+            this.reverse = request.reverse;
         } 
 
         /**
@@ -213,6 +241,15 @@ public class ListChangeOrdersRequest extends Request {
         }
 
         /**
+         * OrderBy.
+         */
+        public Builder orderBy(String orderBy) {
+            this.putQueryParameter("OrderBy", orderBy);
+            this.orderBy = orderBy;
+            return this;
+        }
+
+        /**
          * <p>test</p>
          * 
          * <strong>example:</strong>
@@ -221,6 +258,15 @@ public class ListChangeOrdersRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * Reverse.
+         */
+        public Builder reverse(Boolean reverse) {
+            this.putQueryParameter("Reverse", reverse);
+            this.reverse = reverse;
             return this;
         }
 

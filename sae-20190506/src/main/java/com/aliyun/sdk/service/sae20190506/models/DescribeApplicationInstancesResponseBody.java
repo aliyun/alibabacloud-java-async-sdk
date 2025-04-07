@@ -367,6 +367,9 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SidecarContainersStatus")
         private java.util.List<SidecarContainersStatus> sidecarContainersStatus;
 
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
+        private Long timestamp;
+
         @com.aliyun.core.annotation.NameInMap("UnhealthyMessage")
         private String unhealthyMessage;
 
@@ -388,6 +391,7 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
             this.mainContainerStatus = builder.mainContainerStatus;
             this.packageVersion = builder.packageVersion;
             this.sidecarContainersStatus = builder.sidecarContainersStatus;
+            this.timestamp = builder.timestamp;
             this.unhealthyMessage = builder.unhealthyMessage;
             this.vSwitchId = builder.vSwitchId;
         }
@@ -499,6 +503,13 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return timestamp
+         */
+        public Long getTimestamp() {
+            return this.timestamp;
+        }
+
+        /**
          * @return unhealthyMessage
          */
         public String getUnhealthyMessage() {
@@ -527,6 +538,7 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
             private String mainContainerStatus; 
             private String packageVersion; 
             private java.util.List<SidecarContainersStatus> sidecarContainersStatus; 
+            private Long timestamp; 
             private String unhealthyMessage; 
             private String vSwitchId; 
 
@@ -548,6 +560,7 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
                 this.mainContainerStatus = model.mainContainerStatus;
                 this.packageVersion = model.packageVersion;
                 this.sidecarContainersStatus = model.sidecarContainersStatus;
+                this.timestamp = model.timestamp;
                 this.unhealthyMessage = model.unhealthyMessage;
                 this.vSwitchId = model.vSwitchId;
             } 
@@ -720,6 +733,14 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
              */
             public Builder sidecarContainersStatus(java.util.List<SidecarContainersStatus> sidecarContainersStatus) {
                 this.sidecarContainersStatus = sidecarContainersStatus;
+                return this;
+            }
+
+            /**
+             * Timestamp.
+             */
+            public Builder timestamp(Long timestamp) {
+                this.timestamp = timestamp;
                 return this;
             }
 

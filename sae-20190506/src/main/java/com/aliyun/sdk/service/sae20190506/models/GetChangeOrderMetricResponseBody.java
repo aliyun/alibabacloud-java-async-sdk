@@ -187,27 +187,43 @@ public class GetChangeOrderMetricResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
+        @com.aliyun.core.annotation.NameInMap("AvgTimeCostMs")
+        private Float avgTimeCostMs;
+
         @com.aliyun.core.annotation.NameInMap("Error")
         private Long error;
 
         @com.aliyun.core.annotation.NameInMap("ErrorPercent")
         private Float errorPercent;
 
+        @com.aliyun.core.annotation.NameInMap("MaxTimeCostMs")
+        private Float maxTimeCostMs;
+
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("OptimizeSuggestions")
+        private String optimizeSuggestions;
+
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
+
+        @com.aliyun.core.annotation.NameInMap("TaskTimeCostMsAvg")
+        private String taskTimeCostMsAvg;
 
         @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
         private Data(Builder builder) {
             this.appId = builder.appId;
+            this.avgTimeCostMs = builder.avgTimeCostMs;
             this.error = builder.error;
             this.errorPercent = builder.errorPercent;
+            this.maxTimeCostMs = builder.maxTimeCostMs;
             this.name = builder.name;
+            this.optimizeSuggestions = builder.optimizeSuggestions;
             this.regionId = builder.regionId;
+            this.taskTimeCostMsAvg = builder.taskTimeCostMsAvg;
             this.total = builder.total;
         }
 
@@ -227,6 +243,13 @@ public class GetChangeOrderMetricResponseBody extends TeaModel {
         }
 
         /**
+         * @return avgTimeCostMs
+         */
+        public Float getAvgTimeCostMs() {
+            return this.avgTimeCostMs;
+        }
+
+        /**
          * @return error
          */
         public Long getError() {
@@ -241,6 +264,13 @@ public class GetChangeOrderMetricResponseBody extends TeaModel {
         }
 
         /**
+         * @return maxTimeCostMs
+         */
+        public Float getMaxTimeCostMs() {
+            return this.maxTimeCostMs;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
@@ -248,10 +278,24 @@ public class GetChangeOrderMetricResponseBody extends TeaModel {
         }
 
         /**
+         * @return optimizeSuggestions
+         */
+        public String getOptimizeSuggestions() {
+            return this.optimizeSuggestions;
+        }
+
+        /**
          * @return regionId
          */
         public String getRegionId() {
             return this.regionId;
+        }
+
+        /**
+         * @return taskTimeCostMsAvg
+         */
+        public String getTaskTimeCostMsAvg() {
+            return this.taskTimeCostMsAvg;
         }
 
         /**
@@ -263,10 +307,14 @@ public class GetChangeOrderMetricResponseBody extends TeaModel {
 
         public static final class Builder {
             private String appId; 
+            private Float avgTimeCostMs; 
             private Long error; 
             private Float errorPercent; 
+            private Float maxTimeCostMs; 
             private String name; 
+            private String optimizeSuggestions; 
             private String regionId; 
+            private String taskTimeCostMsAvg; 
             private Long total; 
 
             private Builder() {
@@ -274,10 +322,14 @@ public class GetChangeOrderMetricResponseBody extends TeaModel {
 
             private Builder(Data model) {
                 this.appId = model.appId;
+                this.avgTimeCostMs = model.avgTimeCostMs;
                 this.error = model.error;
                 this.errorPercent = model.errorPercent;
+                this.maxTimeCostMs = model.maxTimeCostMs;
                 this.name = model.name;
+                this.optimizeSuggestions = model.optimizeSuggestions;
                 this.regionId = model.regionId;
+                this.taskTimeCostMsAvg = model.taskTimeCostMsAvg;
                 this.total = model.total;
             } 
 
@@ -289,6 +341,14 @@ public class GetChangeOrderMetricResponseBody extends TeaModel {
              */
             public Builder appId(String appId) {
                 this.appId = appId;
+                return this;
+            }
+
+            /**
+             * AvgTimeCostMs.
+             */
+            public Builder avgTimeCostMs(Float avgTimeCostMs) {
+                this.avgTimeCostMs = avgTimeCostMs;
                 return this;
             }
 
@@ -315,6 +375,14 @@ public class GetChangeOrderMetricResponseBody extends TeaModel {
             }
 
             /**
+             * MaxTimeCostMs.
+             */
+            public Builder maxTimeCostMs(Float maxTimeCostMs) {
+                this.maxTimeCostMs = maxTimeCostMs;
+                return this;
+            }
+
+            /**
              * <p>The application name.</p>
              * 
              * <strong>example:</strong>
@@ -326,6 +394,14 @@ public class GetChangeOrderMetricResponseBody extends TeaModel {
             }
 
             /**
+             * OptimizeSuggestions.
+             */
+            public Builder optimizeSuggestions(String optimizeSuggestions) {
+                this.optimizeSuggestions = optimizeSuggestions;
+                return this;
+            }
+
+            /**
              * <p>The namespace ID.</p>
              * 
              * <strong>example:</strong>
@@ -333,6 +409,14 @@ public class GetChangeOrderMetricResponseBody extends TeaModel {
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * TaskTimeCostMsAvg.
+             */
+            public Builder taskTimeCostMsAvg(String taskTimeCostMsAvg) {
+                this.taskTimeCostMsAvg = taskTimeCostMsAvg;
                 return this;
             }
 

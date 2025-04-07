@@ -18,8 +18,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetChangeOrderMetricRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    private String appId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AppSource")
     private String appSource;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CoType")
+    private String coType;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CpuStrategy")
@@ -46,7 +54,9 @@ public class GetChangeOrderMetricRequest extends Request {
 
     private GetChangeOrderMetricRequest(Builder builder) {
         super(builder);
+        this.appId = builder.appId;
         this.appSource = builder.appSource;
+        this.coType = builder.coType;
         this.cpuStrategy = builder.cpuStrategy;
         this.createTime = builder.createTime;
         this.limit = builder.limit;
@@ -68,10 +78,24 @@ public class GetChangeOrderMetricRequest extends Request {
     }
 
     /**
+     * @return appId
+     */
+    public String getAppId() {
+        return this.appId;
+    }
+
+    /**
      * @return appSource
      */
     public String getAppSource() {
         return this.appSource;
+    }
+
+    /**
+     * @return coType
+     */
+    public String getCoType() {
+        return this.coType;
     }
 
     /**
@@ -110,7 +134,9 @@ public class GetChangeOrderMetricRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetChangeOrderMetricRequest, Builder> {
+        private String appId; 
         private String appSource; 
+        private String coType; 
         private String cpuStrategy; 
         private String createTime; 
         private Long limit; 
@@ -123,13 +149,24 @@ public class GetChangeOrderMetricRequest extends Request {
 
         private Builder(GetChangeOrderMetricRequest request) {
             super(request);
+            this.appId = request.appId;
             this.appSource = request.appSource;
+            this.coType = request.coType;
             this.cpuStrategy = request.cpuStrategy;
             this.createTime = request.createTime;
             this.limit = request.limit;
             this.orderBy = request.orderBy;
             this.regionId = request.regionId;
         } 
+
+        /**
+         * AppId.
+         */
+        public Builder appId(String appId) {
+            this.putQueryParameter("AppId", appId);
+            this.appId = appId;
+            return this;
+        }
 
         /**
          * <p>The SAE application type. Valid values:</p>
@@ -145,6 +182,15 @@ public class GetChangeOrderMetricRequest extends Request {
         public Builder appSource(String appSource) {
             this.putQueryParameter("AppSource", appSource);
             this.appSource = appSource;
+            return this;
+        }
+
+        /**
+         * CoType.
+         */
+        public Builder coType(String coType) {
+            this.putQueryParameter("CoType", coType);
+            this.coType = coType;
             return this;
         }
 

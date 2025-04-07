@@ -1274,6 +1274,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomImageNetworkType")
         private String customImageNetworkType;
 
+        @com.aliyun.core.annotation.NameInMap("DiskSize")
+        private Integer diskSize;
+
         @com.aliyun.core.annotation.NameInMap("Dotnet")
         private String dotnet;
 
@@ -1486,6 +1489,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             this.cpu = builder.cpu;
             this.customHostAlias = builder.customHostAlias;
             this.customImageNetworkType = builder.customImageNetworkType;
+            this.diskSize = builder.diskSize;
             this.dotnet = builder.dotnet;
             this.edasContainerVersion = builder.edasContainerVersion;
             this.enableAhas = builder.enableAhas;
@@ -1671,6 +1675,13 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
          */
         public String getCustomImageNetworkType() {
             return this.customImageNetworkType;
+        }
+
+        /**
+         * @return diskSize
+         */
+        public Integer getDiskSize() {
+            return this.diskSize;
         }
 
         /**
@@ -2145,6 +2156,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             private Integer cpu; 
             private String customHostAlias; 
             private String customImageNetworkType; 
+            private Integer diskSize; 
             private String dotnet; 
             private String edasContainerVersion; 
             private String enableAhas; 
@@ -2231,6 +2243,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
                 this.cpu = model.cpu;
                 this.customHostAlias = model.customHostAlias;
                 this.customImageNetworkType = model.customImageNetworkType;
+                this.diskSize = model.diskSize;
                 this.dotnet = model.dotnet;
                 this.edasContainerVersion = model.edasContainerVersion;
                 this.enableAhas = model.enableAhas;
@@ -2488,6 +2501,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
              */
             public Builder customImageNetworkType(String customImageNetworkType) {
                 this.customImageNetworkType = customImageNetworkType;
+                return this;
+            }
+
+            /**
+             * DiskSize.
+             */
+            public Builder diskSize(Integer diskSize) {
+                this.diskSize = diskSize;
                 return this;
             }
 

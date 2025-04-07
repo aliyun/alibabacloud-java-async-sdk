@@ -40,6 +40,10 @@ public class DescribeApplicationInstancesRequest extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PipelineId")
+    private String pipelineId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Reverse")
     private Boolean reverse;
 
@@ -50,6 +54,7 @@ public class DescribeApplicationInstancesRequest extends Request {
         this.groupId = builder.groupId;
         this.instanceId = builder.instanceId;
         this.pageSize = builder.pageSize;
+        this.pipelineId = builder.pipelineId;
         this.reverse = builder.reverse;
     }
 
@@ -102,6 +107,13 @@ public class DescribeApplicationInstancesRequest extends Request {
     }
 
     /**
+     * @return pipelineId
+     */
+    public String getPipelineId() {
+        return this.pipelineId;
+    }
+
+    /**
      * @return reverse
      */
     public Boolean getReverse() {
@@ -114,6 +126,7 @@ public class DescribeApplicationInstancesRequest extends Request {
         private String groupId; 
         private String instanceId; 
         private Integer pageSize; 
+        private String pipelineId; 
         private Boolean reverse; 
 
         private Builder() {
@@ -127,6 +140,7 @@ public class DescribeApplicationInstancesRequest extends Request {
             this.groupId = request.groupId;
             this.instanceId = request.instanceId;
             this.pageSize = request.pageSize;
+            this.pipelineId = request.pipelineId;
             this.reverse = request.reverse;
         } 
 
@@ -186,6 +200,15 @@ public class DescribeApplicationInstancesRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * PipelineId.
+         */
+        public Builder pipelineId(String pipelineId) {
+            this.putQueryParameter("PipelineId", pipelineId);
+            this.pipelineId = pipelineId;
             return this;
         }
 

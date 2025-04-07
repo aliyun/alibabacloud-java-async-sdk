@@ -79,6 +79,10 @@ public class CreateApplicationRequest extends Request {
     private Boolean deploy;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DiskSize")
+    private Integer diskSize;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Dotnet")
     private String dotnet;
 
@@ -326,6 +330,7 @@ public class CreateApplicationRequest extends Request {
         this.customHostAlias = builder.customHostAlias;
         this.customImageNetworkType = builder.customImageNetworkType;
         this.deploy = builder.deploy;
+        this.diskSize = builder.diskSize;
         this.dotnet = builder.dotnet;
         this.edasContainerVersion = builder.edasContainerVersion;
         this.enableCpuBurst = builder.enableCpuBurst;
@@ -501,6 +506,13 @@ public class CreateApplicationRequest extends Request {
      */
     public Boolean getDeploy() {
         return this.deploy;
+    }
+
+    /**
+     * @return diskSize
+     */
+    public Integer getDiskSize() {
+        return this.diskSize;
     }
 
     /**
@@ -918,6 +930,7 @@ public class CreateApplicationRequest extends Request {
         private String customHostAlias; 
         private String customImageNetworkType; 
         private Boolean deploy; 
+        private Integer diskSize; 
         private String dotnet; 
         private String edasContainerVersion; 
         private Boolean enableCpuBurst; 
@@ -997,6 +1010,7 @@ public class CreateApplicationRequest extends Request {
             this.customHostAlias = request.customHostAlias;
             this.customImageNetworkType = request.customImageNetworkType;
             this.deploy = request.deploy;
+            this.diskSize = request.diskSize;
             this.dotnet = request.dotnet;
             this.edasContainerVersion = request.edasContainerVersion;
             this.enableCpuBurst = request.enableCpuBurst;
@@ -1225,6 +1239,15 @@ public class CreateApplicationRequest extends Request {
         public Builder deploy(Boolean deploy) {
             this.putQueryParameter("Deploy", deploy);
             this.deploy = deploy;
+            return this;
+        }
+
+        /**
+         * DiskSize.
+         */
+        public Builder diskSize(Integer diskSize) {
+            this.putQueryParameter("DiskSize", diskSize);
+            this.diskSize = diskSize;
             return this;
         }
 

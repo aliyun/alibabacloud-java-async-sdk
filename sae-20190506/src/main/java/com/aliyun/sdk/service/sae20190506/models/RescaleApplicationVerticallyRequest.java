@@ -28,6 +28,10 @@ public class RescaleApplicationVerticallyRequest extends Request {
     private String cpu;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DiskSize")
+    private String diskSize;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Memory")
     @com.aliyun.core.annotation.Validation(required = true)
     private String memory;
@@ -48,6 +52,7 @@ public class RescaleApplicationVerticallyRequest extends Request {
         super(builder);
         this.appId = builder.appId;
         this.cpu = builder.cpu;
+        this.diskSize = builder.diskSize;
         this.memory = builder.memory;
         this.autoEnableApplicationScalingRule = builder.autoEnableApplicationScalingRule;
         this.minReadyInstanceRatio = builder.minReadyInstanceRatio;
@@ -82,6 +87,13 @@ public class RescaleApplicationVerticallyRequest extends Request {
     }
 
     /**
+     * @return diskSize
+     */
+    public String getDiskSize() {
+        return this.diskSize;
+    }
+
+    /**
      * @return memory
      */
     public String getMemory() {
@@ -112,6 +124,7 @@ public class RescaleApplicationVerticallyRequest extends Request {
     public static final class Builder extends Request.Builder<RescaleApplicationVerticallyRequest, Builder> {
         private String appId; 
         private String cpu; 
+        private String diskSize; 
         private String memory; 
         private Boolean autoEnableApplicationScalingRule; 
         private Integer minReadyInstanceRatio; 
@@ -125,6 +138,7 @@ public class RescaleApplicationVerticallyRequest extends Request {
             super(request);
             this.appId = request.appId;
             this.cpu = request.cpu;
+            this.diskSize = request.diskSize;
             this.memory = request.memory;
             this.autoEnableApplicationScalingRule = request.autoEnableApplicationScalingRule;
             this.minReadyInstanceRatio = request.minReadyInstanceRatio;
@@ -154,6 +168,15 @@ public class RescaleApplicationVerticallyRequest extends Request {
         public Builder cpu(String cpu) {
             this.putQueryParameter("Cpu", cpu);
             this.cpu = cpu;
+            return this;
+        }
+
+        /**
+         * DiskSize.
+         */
+        public Builder diskSize(String diskSize) {
+            this.putQueryParameter("DiskSize", diskSize);
+            this.diskSize = diskSize;
             return this;
         }
 
