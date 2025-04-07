@@ -21,6 +21,7 @@ public class CreateKvNamespaceResponseBody extends TeaModel {
     private String description;
 
     @com.aliyun.core.annotation.NameInMap("Namespace")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
     private String namespace;
 
     @com.aliyun.core.annotation.NameInMap("NamespaceId")

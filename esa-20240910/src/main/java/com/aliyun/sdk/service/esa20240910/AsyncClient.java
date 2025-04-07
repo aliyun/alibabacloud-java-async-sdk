@@ -276,6 +276,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateRoutineRelatedRouteResponse> createRoutineRelatedRoute(CreateRoutineRelatedRouteRequest request);
 
     /**
+     * @param request the request parameters of CreateRoutineRoute  CreateRoutineRouteRequest
+     * @return CreateRoutineRouteResponse
+     */
+    CompletableFuture<CreateRoutineRouteResponse> createRoutineRoute(CreateRoutineRouteRequest request);
+
+    /**
      * @param request the request parameters of CreateScheduledPreloadExecutions  CreateScheduledPreloadExecutionsRequest
      * @return CreateScheduledPreloadExecutionsResponse
      */
@@ -578,6 +584,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteRoutineRelatedRouteResponse
      */
     CompletableFuture<DeleteRoutineRelatedRouteResponse> deleteRoutineRelatedRoute(DeleteRoutineRelatedRouteRequest request);
+
+    /**
+     * @param request the request parameters of DeleteRoutineRoute  DeleteRoutineRouteRequest
+     * @return DeleteRoutineRouteResponse
+     */
+    CompletableFuture<DeleteRoutineRouteResponse> deleteRoutineRoute(DeleteRoutineRouteRequest request);
 
     /**
      * @param request the request parameters of DeleteScheduledPreloadExecution  DeleteScheduledPreloadExecutionRequest
@@ -1050,6 +1062,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetRoutineResponse> getRoutine(GetRoutineRequest request);
 
     /**
+     * @param request the request parameters of GetRoutineRoute  GetRoutineRouteRequest
+     * @return GetRoutineRouteResponse
+     */
+    CompletableFuture<GetRoutineRouteResponse> getRoutineRoute(GetRoutineRouteRequest request);
+
+    /**
      * <b>description</b> :
      * <p>  Every time the code of a routine is released to the staging environment, a version number is generated. Such code is for tests only.</p>
      * <ul>
@@ -1467,6 +1485,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListRoutineOptionalSpecsResponse> listRoutineOptionalSpecs(ListRoutineOptionalSpecsRequest request);
 
     /**
+     * @param request the request parameters of ListRoutineRoutes  ListRoutineRoutesRequest
+     * @return ListRoutineRoutesResponse
+     */
+    CompletableFuture<ListRoutineRoutesResponse> listRoutineRoutes(ListRoutineRoutesRequest request);
+
+    /**
      * @param request the request parameters of ListScheduledPreloadExecutions  ListScheduledPreloadExecutionsRequest
      * @return ListScheduledPreloadExecutionsResponse
      */
@@ -1483,6 +1507,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListSiteDeliveryTasksResponse
      */
     CompletableFuture<ListSiteDeliveryTasksResponse> listSiteDeliveryTasks(ListSiteDeliveryTasksRequest request);
+
+    /**
+     * @param request the request parameters of ListSiteRoutes  ListSiteRoutesRequest
+     * @return ListSiteRoutesResponse
+     */
+    CompletableFuture<ListSiteRoutesResponse> listSiteRoutes(ListSiteRoutesRequest request);
 
     /**
      * @param request the request parameters of ListSites  ListSitesRequest
@@ -1884,6 +1914,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateRewriteUrlRuleResponse
      */
     CompletableFuture<UpdateRewriteUrlRuleResponse> updateRewriteUrlRule(UpdateRewriteUrlRuleRequest request);
+
+    /**
+     * @param request the request parameters of UpdateRoutineRoute  UpdateRoutineRouteRequest
+     * @return UpdateRoutineRouteResponse
+     */
+    CompletableFuture<UpdateRoutineRouteResponse> updateRoutineRoute(UpdateRoutineRouteRequest request);
 
     /**
      * @param request the request parameters of UpdateScheduledPreloadExecution  UpdateScheduledPreloadExecutionRequest
