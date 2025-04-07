@@ -52,6 +52,10 @@ public class ListIndicesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListIndicesResponseBody extends TeaModel {
         private String requestId; 
         private String status; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListIndicesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.status = model.status;
+            this.success = model.success;
+        } 
 
         /**
          * <p>HTTP status code</p>
@@ -375,6 +391,27 @@ public class ListIndicesResponseBody extends TeaModel {
             private String sourceType; 
             private String structureType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Indices model) {
+                this.chunkSize = model.chunkSize;
+                this.description = model.description;
+                this.documentIds = model.documentIds;
+                this.embeddingModelName = model.embeddingModelName;
+                this.id = model.id;
+                this.name = model.name;
+                this.overlapSize = model.overlapSize;
+                this.rerankMinScore = model.rerankMinScore;
+                this.rerankModelName = model.rerankModelName;
+                this.separator = model.separator;
+                this.sinkInstanceId = model.sinkInstanceId;
+                this.sinkRegion = model.sinkRegion;
+                this.sinkType = model.sinkType;
+                this.sourceType = model.sourceType;
+                this.structureType = model.structureType;
+            } 
+
             /**
              * <p>The estimated length of chunks. Valid values: [1-2048].</p>
              * 
@@ -647,6 +684,16 @@ public class ListIndicesResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.indices = model.indices;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The list of knowledge bases.</p>

@@ -52,6 +52,10 @@ public class GetIndexJobStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetIndexJobStatusResponseBody extends TeaModel {
         private String requestId; 
         private String status; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetIndexJobStatusResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.status = model.status;
+            this.success = model.success;
+        } 
 
         /**
          * <p>HTTP status code</p>
@@ -267,6 +283,18 @@ public class GetIndexJobStatusResponseBody extends TeaModel {
             private String message; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(Documents model) {
+                this.code = model.code;
+                this.docId = model.docId;
+                this.docName = model.docName;
+                this.gmtModified = model.gmtModified;
+                this.message = model.message;
+                this.status = model.status;
+            } 
+
             /**
              * <p>HTTP status code</p>
              * 
@@ -395,6 +423,15 @@ public class GetIndexJobStatusResponseBody extends TeaModel {
             private java.util.List<Documents> documents; 
             private String jobId; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.documents = model.documents;
+                this.jobId = model.jobId;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The list of imported documents.</p>

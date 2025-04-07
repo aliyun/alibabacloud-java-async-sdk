@@ -52,6 +52,10 @@ public class GetPromptTemplateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return content
      */
@@ -101,6 +105,18 @@ public class GetPromptTemplateResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<String> variables; 
         private String workspaceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetPromptTemplateResponseBody model) {
+            this.content = model.content;
+            this.name = model.name;
+            this.promptTemplateId = model.promptTemplateId;
+            this.requestId = model.requestId;
+            this.variables = model.variables;
+            this.workspaceId = model.workspaceId;
+        } 
 
         /**
          * <p>The template content.</p>

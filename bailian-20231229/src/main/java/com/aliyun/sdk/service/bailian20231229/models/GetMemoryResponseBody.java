@@ -44,6 +44,10 @@ public class GetMemoryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return description
      */
@@ -77,6 +81,16 @@ public class GetMemoryResponseBody extends TeaModel {
         private String memoryId; 
         private String requestId; 
         private String workspaceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMemoryResponseBody model) {
+            this.description = model.description;
+            this.memoryId = model.memoryId;
+            this.requestId = model.requestId;
+            this.workspaceId = model.workspaceId;
+        } 
 
         /**
          * description.

@@ -52,6 +52,10 @@ public class ApplyFileUploadLeaseResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ApplyFileUploadLeaseResponseBody extends TeaModel {
         private String requestId; 
         private String status; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ApplyFileUploadLeaseResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.status = model.status;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code.</p>
@@ -231,6 +247,15 @@ public class ApplyFileUploadLeaseResponseBody extends TeaModel {
             private String method; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(Param model) {
+                this.headers = model.headers;
+                this.method = model.method;
+                this.url = model.url;
+            } 
+
             /**
              * <p>The key-value pair to be placed in the Header. Both the key and the value are strings.</p>
              * 
@@ -331,6 +356,15 @@ public class ApplyFileUploadLeaseResponseBody extends TeaModel {
             private String fileUploadLeaseId; 
             private Param param; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.fileUploadLeaseId = model.fileUploadLeaseId;
+                this.param = model.param;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The unique ID of the lease.</p>

@@ -52,6 +52,10 @@ public class ListIndexDocumentsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListIndexDocumentsResponseBody extends TeaModel {
         private String requestId; 
         private String status; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListIndexDocumentsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.status = model.status;
+            this.success = model.success;
+        } 
 
         /**
          * <p>HTTP status code</p>
@@ -303,6 +319,21 @@ public class ListIndexDocumentsResponseBody extends TeaModel {
             private String sourceId; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(Documents model) {
+                this.code = model.code;
+                this.documentType = model.documentType;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.message = model.message;
+                this.name = model.name;
+                this.size = model.size;
+                this.sourceId = model.sourceId;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The error status code of document import.</p>
              * 
@@ -489,6 +520,17 @@ public class ListIndexDocumentsResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.documents = model.documents;
+                this.indexId = model.indexId;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The list of documents in the knowledge base.</p>

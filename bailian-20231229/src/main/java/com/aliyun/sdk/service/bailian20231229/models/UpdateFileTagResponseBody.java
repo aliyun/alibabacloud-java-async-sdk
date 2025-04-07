@@ -52,6 +52,10 @@ public class UpdateFileTagResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class UpdateFileTagResponseBody extends TeaModel {
         private String requestId; 
         private String status; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateFileTagResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.status = model.status;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -190,6 +206,13 @@ public class UpdateFileTagResponseBody extends TeaModel {
 
         public static final class Builder {
             private String fileId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.fileId = model.fileId;
+            } 
 
             /**
              * FileId.

@@ -48,6 +48,10 @@ public class ListMemoryNodesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -89,6 +93,17 @@ public class ListMemoryNodesResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListMemoryNodesResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.memoryNodes = model.memoryNodes;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * maxResults.
@@ -179,6 +194,14 @@ public class ListMemoryNodesResponseBody extends TeaModel {
         public static final class Builder {
             private String content; 
             private String memoryNodeId; 
+
+            private Builder() {
+            } 
+
+            private Builder(MemoryNodes model) {
+                this.content = model.content;
+                this.memoryNodeId = model.memoryNodeId;
+            } 
 
             /**
              * content.

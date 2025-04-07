@@ -52,6 +52,10 @@ public class ListFileResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListFileResponseBody extends TeaModel {
         private String requestId; 
         private String status; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListFileResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.status = model.status;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -287,6 +303,21 @@ public class ListFileResponseBody extends TeaModel {
             private String status; 
             private java.util.List<String> tags; 
 
+            private Builder() {
+            } 
+
+            private Builder(FileList model) {
+                this.categoryId = model.categoryId;
+                this.createTime = model.createTime;
+                this.fileId = model.fileId;
+                this.fileName = model.fileName;
+                this.fileType = model.fileType;
+                this.parser = model.parser;
+                this.sizeInBytes = model.sizeInBytes;
+                this.status = model.status;
+                this.tags = model.tags;
+            } 
+
             /**
              * CategoryId.
              */
@@ -445,6 +476,17 @@ public class ListFileResponseBody extends TeaModel {
             private Integer maxResults; 
             private String nextToken; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.fileList = model.fileList;
+                this.hasNext = model.hasNext;
+                this.maxResults = model.maxResults;
+                this.nextToken = model.nextToken;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * FileList.

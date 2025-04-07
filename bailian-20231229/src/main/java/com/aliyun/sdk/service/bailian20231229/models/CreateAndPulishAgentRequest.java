@@ -59,7 +59,7 @@ public class CreateAndPulishAgentRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -271,6 +271,17 @@ public class CreateAndPulishAgentRequest extends Request {
             private String region; 
             private String storeCode; 
 
+            private Builder() {
+            } 
+
+            private Builder(HistoryConfig model) {
+                this.enableAdbRecord = model.enableAdbRecord;
+                this.enableRecord = model.enableRecord;
+                this.instanceId = model.instanceId;
+                this.region = model.region;
+                this.storeCode = model.storeCode;
+            } 
+
             /**
              * enableAdbRecord.
              */
@@ -350,6 +361,13 @@ public class CreateAndPulishAgentRequest extends Request {
         public static final class Builder {
             private Boolean enable; 
 
+            private Builder() {
+            } 
+
+            private Builder(LongTermMemory model) {
+                this.enable = model.enable;
+            } 
+
             /**
              * enable.
              */
@@ -420,6 +438,15 @@ public class CreateAndPulishAgentRequest extends Request {
             private Integer dialogRound; 
             private Integer maxTokens; 
             private Double temperature; 
+
+            private Builder() {
+            } 
+
+            private Builder(Parameters model) {
+                this.dialogRound = model.dialogRound;
+                this.maxTokens = model.maxTokens;
+                this.temperature = model.temperature;
+            } 
 
             /**
              * dialogRound.
@@ -616,6 +643,24 @@ public class CreateAndPulishAgentRequest extends Request {
             private Integer retrieveMaxLength; 
             private Integer topK; 
 
+            private Builder() {
+            } 
+
+            private Builder(RagConfig model) {
+                this.answerScope = model.answerScope;
+                this.enableCitation = model.enableCitation;
+                this.enableSearch = model.enableSearch;
+                this.enableWebSearch = model.enableWebSearch;
+                this.fixedReplyDetail = model.fixedReplyDetail;
+                this.knowledgeBaseCodeList = model.knowledgeBaseCodeList;
+                this.promptStrategy = model.promptStrategy;
+                this.ragRejectType = model.ragRejectType;
+                this.rejectFilterPrompt = model.rejectFilterPrompt;
+                this.rejectFilterType = model.rejectFilterType;
+                this.retrieveMaxLength = model.retrieveMaxLength;
+                this.topK = model.topK;
+            } 
+
             /**
              * answerScope.
              */
@@ -751,6 +796,13 @@ public class CreateAndPulishAgentRequest extends Request {
         public static final class Builder {
             private String processingStrategy; 
 
+            private Builder() {
+            } 
+
+            private Builder(SecurityConfig model) {
+                this.processingStrategy = model.processingStrategy;
+            } 
+
             /**
              * processingStrategy.
              */
@@ -798,6 +850,13 @@ public class CreateAndPulishAgentRequest extends Request {
         public static final class Builder {
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tools model) {
+                this.type = model.type;
+            } 
+
             /**
              * type.
              */
@@ -844,6 +903,13 @@ public class CreateAndPulishAgentRequest extends Request {
 
         public static final class Builder {
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(WorkFlows model) {
+                this.type = model.type;
+            } 
 
             /**
              * type.
@@ -964,6 +1030,19 @@ public class CreateAndPulishAgentRequest extends Request {
             private java.util.List<Tools> tools; 
             private java.util.List<WorkFlows> workFlows; 
 
+            private Builder() {
+            } 
+
+            private Builder(ApplicationConfig model) {
+                this.historyConfig = model.historyConfig;
+                this.longTermMemory = model.longTermMemory;
+                this.parameters = model.parameters;
+                this.ragConfig = model.ragConfig;
+                this.securityConfig = model.securityConfig;
+                this.tools = model.tools;
+                this.workFlows = model.workFlows;
+            } 
+
             /**
              * historyConfig.
              */
@@ -1082,6 +1161,15 @@ public class CreateAndPulishAgentRequest extends Request {
             private Boolean enableSample; 
             private java.util.List<String> sampleLibraryIdList; 
             private Integer topK; 
+
+            private Builder() {
+            } 
+
+            private Builder(SampleLibrary model) {
+                this.enableSample = model.enableSample;
+                this.sampleLibraryIdList = model.sampleLibraryIdList;
+                this.topK = model.topK;
+            } 
 
             /**
              * enableSample.

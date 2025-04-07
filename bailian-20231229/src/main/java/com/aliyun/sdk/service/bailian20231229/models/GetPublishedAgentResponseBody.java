@@ -52,6 +52,10 @@ public class GetPublishedAgentResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetPublishedAgentResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetPublishedAgentResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * code.
@@ -236,6 +252,17 @@ public class GetPublishedAgentResponseBody extends TeaModel {
             private String region; 
             private String storeCode; 
 
+            private Builder() {
+            } 
+
+            private Builder(HistoryConfig model) {
+                this.enableAdbRecord = model.enableAdbRecord;
+                this.enableRecord = model.enableRecord;
+                this.instanceId = model.instanceId;
+                this.region = model.region;
+                this.storeCode = model.storeCode;
+            } 
+
             /**
              * enableAdbRecord.
              */
@@ -315,6 +342,13 @@ public class GetPublishedAgentResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean enable; 
 
+            private Builder() {
+            } 
+
+            private Builder(LongTermMemory model) {
+                this.enable = model.enable;
+            } 
+
             /**
              * enable.
              */
@@ -385,6 +419,15 @@ public class GetPublishedAgentResponseBody extends TeaModel {
             private Integer dialogRound; 
             private Integer maxTokens; 
             private Double temperature; 
+
+            private Builder() {
+            } 
+
+            private Builder(Parameters model) {
+                this.dialogRound = model.dialogRound;
+                this.maxTokens = model.maxTokens;
+                this.temperature = model.temperature;
+            } 
 
             /**
              * dialogRound.
@@ -485,6 +528,16 @@ public class GetPublishedAgentResponseBody extends TeaModel {
             private java.util.List<String> knowledgeBaseCodeList; 
             private Integer topK; 
 
+            private Builder() {
+            } 
+
+            private Builder(RagConfig model) {
+                this.enableCitation = model.enableCitation;
+                this.enableSearch = model.enableSearch;
+                this.knowledgeBaseCodeList = model.knowledgeBaseCodeList;
+                this.topK = model.topK;
+            } 
+
             /**
              * enableCitation.
              */
@@ -556,6 +609,13 @@ public class GetPublishedAgentResponseBody extends TeaModel {
         public static final class Builder {
             private String processingStrategy; 
 
+            private Builder() {
+            } 
+
+            private Builder(Security model) {
+                this.processingStrategy = model.processingStrategy;
+            } 
+
             /**
              * processingStrategy.
              */
@@ -603,6 +663,13 @@ public class GetPublishedAgentResponseBody extends TeaModel {
         public static final class Builder {
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tools model) {
+                this.type = model.type;
+            } 
+
             /**
              * type.
              */
@@ -649,6 +716,13 @@ public class GetPublishedAgentResponseBody extends TeaModel {
 
         public static final class Builder {
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(WorkFlows model) {
+                this.type = model.type;
+            } 
 
             /**
              * type.
@@ -768,6 +842,19 @@ public class GetPublishedAgentResponseBody extends TeaModel {
             private Security security; 
             private java.util.List<Tools> tools; 
             private java.util.List<WorkFlows> workFlows; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApplicationConfig model) {
+                this.historyConfig = model.historyConfig;
+                this.longTermMemory = model.longTermMemory;
+                this.parameters = model.parameters;
+                this.ragConfig = model.ragConfig;
+                this.security = model.security;
+                this.tools = model.tools;
+                this.workFlows = model.workFlows;
+            } 
 
             /**
              * historyConfig.
@@ -911,6 +998,17 @@ public class GetPublishedAgentResponseBody extends TeaModel {
             private String instructions; 
             private String modelId; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.applicationConfig = model.applicationConfig;
+                this.code = model.code;
+                this.instructions = model.instructions;
+                this.modelId = model.modelId;
+                this.name = model.name;
+            } 
 
             /**
              * applicationConfig.

@@ -52,6 +52,10 @@ public class ListCategoryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListCategoryResponseBody extends TeaModel {
         private String requestId; 
         private String status; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListCategoryResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.status = model.status;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -239,6 +255,17 @@ public class ListCategoryResponseBody extends TeaModel {
             private Boolean isDefault; 
             private String parentCategoryId; 
 
+            private Builder() {
+            } 
+
+            private Builder(CategoryList model) {
+                this.categoryId = model.categoryId;
+                this.categoryName = model.categoryName;
+                this.categoryType = model.categoryType;
+                this.isDefault = model.isDefault;
+                this.parentCategoryId = model.parentCategoryId;
+            } 
+
             /**
              * CategoryId.
              */
@@ -365,6 +392,17 @@ public class ListCategoryResponseBody extends TeaModel {
             private Integer maxResults; 
             private String nextToken; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.categoryList = model.categoryList;
+                this.hasNext = model.hasNext;
+                this.maxResults = model.maxResults;
+                this.nextToken = model.nextToken;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * CategoryList.

@@ -36,6 +36,10 @@ public class CreateMemoryNodeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return memoryNodeId
      */
@@ -53,6 +57,14 @@ public class CreateMemoryNodeResponseBody extends TeaModel {
     public static final class Builder {
         private String memoryNodeId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateMemoryNodeResponseBody model) {
+            this.memoryNodeId = model.memoryNodeId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * memoryNodeId.

@@ -52,6 +52,10 @@ public class DeleteIndexDocumentResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class DeleteIndexDocumentResponseBody extends TeaModel {
         private String requestId; 
         private String status; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteIndexDocumentResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.status = model.status;
+            this.success = model.success;
+        } 
 
         /**
          * <p>HTTP status code</p>
@@ -206,6 +222,13 @@ public class DeleteIndexDocumentResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> deletedDocument; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.deletedDocument = model.deletedDocument;
+            } 
 
             /**
              * <p>The list of primary key IDs of documents that are deleted.</p>

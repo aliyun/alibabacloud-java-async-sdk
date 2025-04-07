@@ -50,6 +50,10 @@ public class ApplyFileUploadLeaseRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String sizeInBytes;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UseInternalEndpoint")
+    private Boolean useInternalEndpoint;
+
     private ApplyFileUploadLeaseRequest(Builder builder) {
         super(builder);
         this.categoryId = builder.categoryId;
@@ -59,6 +63,7 @@ public class ApplyFileUploadLeaseRequest extends Request {
         this.fileName = builder.fileName;
         this.md5 = builder.md5;
         this.sizeInBytes = builder.sizeInBytes;
+        this.useInternalEndpoint = builder.useInternalEndpoint;
     }
 
     public static Builder builder() {
@@ -69,7 +74,7 @@ public class ApplyFileUploadLeaseRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -123,6 +128,13 @@ public class ApplyFileUploadLeaseRequest extends Request {
         return this.sizeInBytes;
     }
 
+    /**
+     * @return useInternalEndpoint
+     */
+    public Boolean getUseInternalEndpoint() {
+        return this.useInternalEndpoint;
+    }
+
     public static final class Builder extends Request.Builder<ApplyFileUploadLeaseRequest, Builder> {
         private String categoryId; 
         private String workspaceId; 
@@ -131,6 +143,7 @@ public class ApplyFileUploadLeaseRequest extends Request {
         private String fileName; 
         private String md5; 
         private String sizeInBytes; 
+        private Boolean useInternalEndpoint; 
 
         private Builder() {
             super();
@@ -145,6 +158,7 @@ public class ApplyFileUploadLeaseRequest extends Request {
             this.fileName = request.fileName;
             this.md5 = request.md5;
             this.sizeInBytes = request.sizeInBytes;
+            this.useInternalEndpoint = request.useInternalEndpoint;
         } 
 
         /**
@@ -224,6 +238,15 @@ public class ApplyFileUploadLeaseRequest extends Request {
         public Builder sizeInBytes(String sizeInBytes) {
             this.putBodyParameter("SizeInBytes", sizeInBytes);
             this.sizeInBytes = sizeInBytes;
+            return this;
+        }
+
+        /**
+         * UseInternalEndpoint.
+         */
+        public Builder useInternalEndpoint(Boolean useInternalEndpoint) {
+            this.putBodyParameter("UseInternalEndpoint", useInternalEndpoint);
+            this.useInternalEndpoint = useInternalEndpoint;
             return this;
         }
 

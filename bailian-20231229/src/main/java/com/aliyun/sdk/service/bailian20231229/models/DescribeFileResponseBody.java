@@ -52,6 +52,10 @@ public class DescribeFileResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class DescribeFileResponseBody extends TeaModel {
         private String requestId; 
         private String status; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeFileResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.status = model.status;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code.</p>
@@ -302,6 +318,21 @@ public class DescribeFileResponseBody extends TeaModel {
             private Long sizeInBytes; 
             private String status; 
             private java.util.List<String> tags; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.categoryId = model.categoryId;
+                this.createTime = model.createTime;
+                this.fileId = model.fileId;
+                this.fileName = model.fileName;
+                this.fileType = model.fileType;
+                this.parser = model.parser;
+                this.sizeInBytes = model.sizeInBytes;
+                this.status = model.status;
+                this.tags = model.tags;
+            } 
 
             /**
              * <p>The ID of the category to which the document belongs.</p>

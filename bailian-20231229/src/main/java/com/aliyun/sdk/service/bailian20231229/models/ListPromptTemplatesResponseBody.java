@@ -52,6 +52,10 @@ public class ListPromptTemplatesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -101,6 +105,18 @@ public class ListPromptTemplatesResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
         private String workspaceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListPromptTemplatesResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.promptTemplates = model.promptTemplates;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.workspaceId = model.workspaceId;
+        } 
 
         /**
          * <p>The maximum number of returned entries.</p>
@@ -250,6 +266,17 @@ public class ListPromptTemplatesResponseBody extends TeaModel {
             private String promptTemplateId; 
             private String type; 
             private java.util.List<String> variables; 
+
+            private Builder() {
+            } 
+
+            private Builder(PromptTemplates model) {
+                this.content = model.content;
+                this.name = model.name;
+                this.promptTemplateId = model.promptTemplateId;
+                this.type = model.type;
+                this.variables = model.variables;
+            } 
 
             /**
              * <p>The template content</p>

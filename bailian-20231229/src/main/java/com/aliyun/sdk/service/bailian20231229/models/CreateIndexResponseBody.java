@@ -52,6 +52,10 @@ public class CreateIndexResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class CreateIndexResponseBody extends TeaModel {
         private String requestId; 
         private String status; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateIndexResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.status = model.status;
+            this.success = model.success;
+        } 
 
         /**
          * <p>HTTP status code</p>
@@ -206,6 +222,13 @@ public class CreateIndexResponseBody extends TeaModel {
 
         public static final class Builder {
             private String id; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.id = model.id;
+            } 
 
             /**
              * <p>The primary key ID of the knowledge base, <code>IndexId</code>.</p>

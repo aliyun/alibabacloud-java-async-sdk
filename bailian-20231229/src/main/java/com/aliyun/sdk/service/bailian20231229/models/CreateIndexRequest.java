@@ -134,7 +134,7 @@ public class CreateIndexRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -699,6 +699,17 @@ public class CreateIndexRequest extends Request {
             private String name; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Columns model) {
+                this.column = model.column;
+                this.isRecall = model.isRecall;
+                this.isSearch = model.isSearch;
+                this.name = model.name;
+                this.type = model.type;
+            } 
+
             /**
              * Column.
              */
@@ -886,6 +897,22 @@ public class CreateIndexRequest extends Request {
             private String subType; 
             private String table; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataSource model) {
+                this.credentialId = model.credentialId;
+                this.credentialKey = model.credentialKey;
+                this.database = model.database;
+                this.endpoint = model.endpoint;
+                this.isPrivateLink = model.isPrivateLink;
+                this.region = model.region;
+                this.subPath = model.subPath;
+                this.subType = model.subType;
+                this.table = model.table;
+                this.type = model.type;
+            } 
 
             /**
              * <blockquote>
@@ -1085,6 +1112,18 @@ public class CreateIndexRequest extends Request {
             private String key; 
             private String type; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(MetaExtractColumns model) {
+                this.desc = model.desc;
+                this.enableLlm = model.enableLlm;
+                this.enableSearch = model.enableSearch;
+                this.key = model.key;
+                this.type = model.type;
+                this.value = model.value;
+            } 
 
             /**
              * Desc.

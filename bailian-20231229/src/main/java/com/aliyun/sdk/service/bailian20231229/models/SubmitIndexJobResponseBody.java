@@ -52,6 +52,10 @@ public class SubmitIndexJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class SubmitIndexJobResponseBody extends TeaModel {
         private String requestId; 
         private String status; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(SubmitIndexJobResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.status = model.status;
+            this.success = model.success;
+        } 
 
         /**
          * <p>HTTP status code</p>
@@ -218,6 +234,14 @@ public class SubmitIndexJobResponseBody extends TeaModel {
         public static final class Builder {
             private String id; 
             private String indexId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.id = model.id;
+                this.indexId = model.indexId;
+            } 
 
             /**
              * <p>The primary key ID of the job, which is the <code>JobId</code> parameter of the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-getindexjobstatus">GetIndexJobStatus</a> operation.</p>

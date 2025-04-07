@@ -52,6 +52,10 @@ public class AddFileResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class AddFileResponseBody extends TeaModel {
         private String requestId; 
         private String status; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(AddFileResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.status = model.status;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code.</p>
@@ -218,6 +234,14 @@ public class AddFileResponseBody extends TeaModel {
         public static final class Builder {
             private String fileId; 
             private String parser; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.fileId = model.fileId;
+                this.parser = model.parser;
+            } 
 
             /**
              * <p>The primary key ID of the document. We recommend that you store the ID because it is required for all subsequent API operations related to this document.</p>

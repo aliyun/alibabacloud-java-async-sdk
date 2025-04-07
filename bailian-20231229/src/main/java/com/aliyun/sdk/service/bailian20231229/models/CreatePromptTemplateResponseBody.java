@@ -36,6 +36,10 @@ public class CreatePromptTemplateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return promptTemplateId
      */
@@ -53,6 +57,14 @@ public class CreatePromptTemplateResponseBody extends TeaModel {
     public static final class Builder {
         private String promptTemplateId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreatePromptTemplateResponseBody model) {
+            this.promptTemplateId = model.promptTemplateId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * promptTemplateId.

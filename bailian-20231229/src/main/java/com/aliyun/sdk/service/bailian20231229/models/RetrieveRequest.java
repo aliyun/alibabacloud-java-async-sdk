@@ -101,7 +101,7 @@ public class RetrieveRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -458,6 +458,13 @@ public class RetrieveRequest extends Request {
         public static final class Builder {
             private String modelName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Rerank model) {
+                this.modelName = model.modelName;
+            } 
+
             /**
              * <p>The name of the rank model. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values:</p>
              * <ul>
@@ -511,6 +518,13 @@ public class RetrieveRequest extends Request {
 
         public static final class Builder {
             private String modelName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Rewrite model) {
+                this.modelName = model.modelName;
+            } 
 
             /**
              * <p>Conversation rewriting model name. The query rewriting model automatically adjusts the original prompt based on the context to improve retrieval performance. Valid value:</p>

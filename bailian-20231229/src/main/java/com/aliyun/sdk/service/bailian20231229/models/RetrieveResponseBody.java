@@ -52,6 +52,10 @@ public class RetrieveResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class RetrieveResponseBody extends TeaModel {
         private String requestId; 
         private String status; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(RetrieveResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.status = model.status;
+            this.success = model.success;
+        } 
 
         /**
          * <p>HTTP status code</p>
@@ -231,6 +247,15 @@ public class RetrieveResponseBody extends TeaModel {
             private Double score; 
             private String text; 
 
+            private Builder() {
+            } 
+
+            private Builder(Nodes model) {
+                this.metadata = model.metadata;
+                this.score = model.score;
+                this.text = model.text;
+            } 
+
             /**
              * <p>The metadata map of the chunk.</p>
              */
@@ -296,6 +321,13 @@ public class RetrieveResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Nodes> nodes; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.nodes = model.nodes;
+            } 
 
             /**
              * <p>The list of queried chunks.</p>
