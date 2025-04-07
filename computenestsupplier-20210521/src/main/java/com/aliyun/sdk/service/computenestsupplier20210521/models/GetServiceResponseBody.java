@@ -26,6 +26,9 @@ public class GetServiceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("BuildInfo")
     private String buildInfo;
 
+    @com.aliyun.core.annotation.NameInMap("BuildParameters")
+    private String buildParameters;
+
     @com.aliyun.core.annotation.NameInMap("Categories")
     private String categories;
 
@@ -180,6 +183,7 @@ public class GetServiceResponseBody extends TeaModel {
         this.alarmMetadata = builder.alarmMetadata;
         this.approvalType = builder.approvalType;
         this.buildInfo = builder.buildInfo;
+        this.buildParameters = builder.buildParameters;
         this.categories = builder.categories;
         this.commodity = builder.commodity;
         this.complianceMetadata = builder.complianceMetadata;
@@ -263,6 +267,13 @@ public class GetServiceResponseBody extends TeaModel {
      */
     public String getBuildInfo() {
         return this.buildInfo;
+    }
+
+    /**
+     * @return buildParameters
+     */
+    public String getBuildParameters() {
+        return this.buildParameters;
     }
 
     /**
@@ -619,6 +630,7 @@ public class GetServiceResponseBody extends TeaModel {
         private String alarmMetadata; 
         private String approvalType; 
         private String buildInfo; 
+        private String buildParameters; 
         private String categories; 
         private Commodity commodity; 
         private ComplianceMetadata complianceMetadata; 
@@ -677,6 +689,7 @@ public class GetServiceResponseBody extends TeaModel {
             this.alarmMetadata = model.alarmMetadata;
             this.approvalType = model.approvalType;
             this.buildInfo = model.buildInfo;
+            this.buildParameters = model.buildParameters;
             this.categories = model.categories;
             this.commodity = model.commodity;
             this.complianceMetadata = model.complianceMetadata;
@@ -779,6 +792,14 @@ public class GetServiceResponseBody extends TeaModel {
          */
         public Builder buildInfo(String buildInfo) {
             this.buildInfo = buildInfo;
+            return this;
+        }
+
+        /**
+         * BuildParameters.
+         */
+        public Builder buildParameters(String buildParameters) {
+            this.buildParameters = buildParameters;
             return this;
         }
 
