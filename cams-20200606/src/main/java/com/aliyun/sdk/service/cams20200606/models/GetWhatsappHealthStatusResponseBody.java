@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -45,6 +50,10 @@ public class GetWhatsappHealthStatusResponseBody extends TeaModel {
 
     public static GetWhatsappHealthStatusResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -97,6 +106,18 @@ public class GetWhatsappHealthStatusResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetWhatsappHealthStatusResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
          * <p>The details about the access denial.</p>
          * 
@@ -112,7 +133,7 @@ public class GetWhatsappHealthStatusResponseBody extends TeaModel {
          * <p>The response code.</p>
          * <ul>
          * <li>The value OK indicates that the request was successful.</li>
-         * <li>For more information about other response codes, see <a href="https://www.alibabacloud.com/help/zh/cams/latest/api-error-codes">Error codes</a>.</li>
+         * <li>For more information about other response codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -230,6 +251,15 @@ public class GetWhatsappHealthStatusResponseBody extends TeaModel {
             private String errorDescription; 
             private String possibleSolution; 
 
+            private Builder() {
+            } 
+
+            private Builder(Errors model) {
+                this.errorCode = model.errorCode;
+                this.errorDescription = model.errorDescription;
+                this.possibleSolution = model.possibleSolution;
+            } 
+
             /**
              * <p>The error code.</p>
              * 
@@ -287,7 +317,7 @@ public class GetWhatsappHealthStatusResponseBody extends TeaModel {
         private String entityType;
 
         @com.aliyun.core.annotation.NameInMap("Errors")
-        private java.util.List < Errors> errors;
+        private java.util.List<Errors> errors;
 
         @com.aliyun.core.annotation.NameInMap("Language")
         private String language;
@@ -344,7 +374,7 @@ public class GetWhatsappHealthStatusResponseBody extends TeaModel {
         /**
          * @return errors
          */
-        public java.util.List < Errors> getErrors() {
+        public java.util.List<Errors> getErrors() {
             return this.errors;
         }
 
@@ -380,11 +410,25 @@ public class GetWhatsappHealthStatusResponseBody extends TeaModel {
             private String businessId; 
             private String canSendMessage; 
             private String entityType; 
-            private java.util.List < Errors> errors; 
+            private java.util.List<Errors> errors; 
             private String language; 
             private String phoneNumber; 
             private String templateCode; 
             private String wabaId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Entities model) {
+                this.businessId = model.businessId;
+                this.canSendMessage = model.canSendMessage;
+                this.entityType = model.entityType;
+                this.errors = model.errors;
+                this.language = model.language;
+                this.phoneNumber = model.phoneNumber;
+                this.templateCode = model.templateCode;
+                this.wabaId = model.wabaId;
+            } 
 
             /**
              * <p>The Business Manager ID.</p>
@@ -422,7 +466,7 @@ public class GetWhatsappHealthStatusResponseBody extends TeaModel {
             /**
              * <p>The reasons why the messages failed to be sent.</p>
              */
-            public Builder errors(java.util.List < Errors> errors) {
+            public Builder errors(java.util.List<Errors> errors) {
                 this.errors = errors;
                 return this;
             }
@@ -489,7 +533,7 @@ public class GetWhatsappHealthStatusResponseBody extends TeaModel {
         private String canSendMessage;
 
         @com.aliyun.core.annotation.NameInMap("Entities")
-        private java.util.List < Entities> entities;
+        private java.util.List<Entities> entities;
 
         private Data(Builder builder) {
             this.canSendMessage = builder.canSendMessage;
@@ -514,13 +558,21 @@ public class GetWhatsappHealthStatusResponseBody extends TeaModel {
         /**
          * @return entities
          */
-        public java.util.List < Entities> getEntities() {
+        public java.util.List<Entities> getEntities() {
             return this.entities;
         }
 
         public static final class Builder {
             private String canSendMessage; 
-            private java.util.List < Entities> entities; 
+            private java.util.List<Entities> entities; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.canSendMessage = model.canSendMessage;
+                this.entities = model.entities;
+            } 
 
             /**
              * <p>Indicates whether the messages can be sent.</p>
@@ -536,7 +588,7 @@ public class GetWhatsappHealthStatusResponseBody extends TeaModel {
             /**
              * <p>The queried entities.</p>
              */
-            public Builder entities(java.util.List < Entities> entities) {
+            public Builder entities(java.util.List<Entities> entities) {
                 this.entities = entities;
                 return this;
             }

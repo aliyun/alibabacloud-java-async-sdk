@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,6 +46,10 @@ public class BeeBotAssociateResponseBody extends TeaModel {
 
     public static BeeBotAssociateResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class BeeBotAssociateResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(BeeBotAssociateResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The access denied for detailed information.</p>
@@ -187,6 +207,14 @@ public class BeeBotAssociateResponseBody extends TeaModel {
             private String meta; 
             private String title; 
 
+            private Builder() {
+            } 
+
+            private Builder(Associate model) {
+                this.meta = model.meta;
+                this.title = model.title;
+            } 
+
             /**
              * <p>The metadata.</p>
              * 
@@ -224,7 +252,7 @@ public class BeeBotAssociateResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Associate")
-        private java.util.List < Associate> associate;
+        private java.util.List<Associate> associate;
 
         @com.aliyun.core.annotation.NameInMap("MessageId")
         private String messageId;
@@ -249,7 +277,7 @@ public class BeeBotAssociateResponseBody extends TeaModel {
         /**
          * @return associate
          */
-        public java.util.List < Associate> getAssociate() {
+        public java.util.List<Associate> getAssociate() {
             return this.associate;
         }
 
@@ -268,14 +296,23 @@ public class BeeBotAssociateResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Associate> associate; 
+            private java.util.List<Associate> associate; 
             private String messageId; 
             private String sessionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.associate = model.associate;
+                this.messageId = model.messageId;
+                this.sessionId = model.sessionId;
+            } 
 
             /**
              * <p>The list of associated recommendations.</p>
              */
-            public Builder associate(java.util.List < Associate> associate) {
+            public Builder associate(java.util.List<Associate> associate) {
                 this.associate = associate;
                 return this;
             }

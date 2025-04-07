@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ModifyChatappTemplateRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Components")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Components> components;
+    private java.util.List<Components> components;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("CustSpaceId")
@@ -32,7 +37,7 @@ public class ModifyChatappTemplateRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Example")
-    private java.util.Map < String, String > example;
+    private java.util.Map<String, String> example;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("IsvCode")
@@ -45,7 +50,7 @@ public class ModifyChatappTemplateRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("MessageSendTtlSeconds")
-    @com.aliyun.core.annotation.Validation(maximum = 600, minimum = 60)
+    @com.aliyun.core.annotation.Validation(maximum = 2592000, minimum = 30)
     private Integer messageSendTtlSeconds;
 
     @com.aliyun.core.annotation.Body
@@ -83,7 +88,7 @@ public class ModifyChatappTemplateRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -98,7 +103,7 @@ public class ModifyChatappTemplateRequest extends Request {
     /**
      * @return components
      */
-    public java.util.List < Components> getComponents() {
+    public java.util.List<Components> getComponents() {
         return this.components;
     }
 
@@ -119,7 +124,7 @@ public class ModifyChatappTemplateRequest extends Request {
     /**
      * @return example
      */
-    public java.util.Map < String, String > getExample() {
+    public java.util.Map<String, String> getExample() {
         return this.example;
     }
 
@@ -167,10 +172,10 @@ public class ModifyChatappTemplateRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyChatappTemplateRequest, Builder> {
         private String category; 
-        private java.util.List < Components> components; 
+        private java.util.List<Components> components; 
         private String custSpaceId; 
         private String custWabaId; 
-        private java.util.Map < String, String > example; 
+        private java.util.Map<String, String> example; 
         private String isvCode; 
         private String language; 
         private Integer messageSendTtlSeconds; 
@@ -230,7 +235,7 @@ public class ModifyChatappTemplateRequest extends Request {
          * </blockquote>
          * <p>This parameter is required.</p>
          */
-        public Builder components(java.util.List < Components> components) {
+        public Builder components(java.util.List<Components> components) {
             String componentsShrink = shrink(components, "Components", "json");
             this.putBodyParameter("Components", componentsShrink);
             this.components = components;
@@ -267,7 +272,7 @@ public class ModifyChatappTemplateRequest extends Request {
         /**
          * <p>The examples of variables that are used when you create the message template.</p>
          */
-        public Builder example(java.util.Map < String, String > example) {
+        public Builder example(java.util.Map<String, String> example) {
             String exampleShrink = shrink(example, "Example", "json");
             this.putBodyParameter("Example", exampleShrink);
             this.example = example;
@@ -406,6 +411,14 @@ public class ModifyChatappTemplateRequest extends Request {
             private String packageName; 
             private String signatureHash; 
 
+            private Builder() {
+            } 
+
+            private Builder(SupportedApps model) {
+                this.packageName = model.packageName;
+                this.signatureHash = model.signatureHash;
+            } 
+
             /**
              * <p>The Whatsapp template is required when the Category is&quot; Authorisation &quot;and the Button Type is&quot; ONE_TAP/ZERO-TAP&quot;, indicating the signature hash value of the Whatsapp call application.</p>
              * 
@@ -472,7 +485,7 @@ public class ModifyChatappTemplateRequest extends Request {
         private String signatureHash;
 
         @com.aliyun.core.annotation.NameInMap("SupportedApps")
-        private java.util.List < SupportedApps> supportedApps;
+        private java.util.List<SupportedApps> supportedApps;
 
         @com.aliyun.core.annotation.NameInMap("Text")
         private String text;
@@ -578,7 +591,7 @@ public class ModifyChatappTemplateRequest extends Request {
         /**
          * @return supportedApps
          */
-        public java.util.List < SupportedApps> getSupportedApps() {
+        public java.util.List<SupportedApps> getSupportedApps() {
             return this.supportedApps;
         }
 
@@ -620,11 +633,31 @@ public class ModifyChatappTemplateRequest extends Request {
             private String packageName; 
             private String phoneNumber; 
             private String signatureHash; 
-            private java.util.List < SupportedApps> supportedApps; 
+            private java.util.List<SupportedApps> supportedApps; 
             private String text; 
             private String type; 
             private String url; 
             private String urlType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Buttons model) {
+                this.autofillText = model.autofillText;
+                this.couponCode = model.couponCode;
+                this.flowAction = model.flowAction;
+                this.flowId = model.flowId;
+                this.isOptOut = model.isOptOut;
+                this.navigateScreen = model.navigateScreen;
+                this.packageName = model.packageName;
+                this.phoneNumber = model.phoneNumber;
+                this.signatureHash = model.signatureHash;
+                this.supportedApps = model.supportedApps;
+                this.text = model.text;
+                this.type = model.type;
+                this.url = model.url;
+                this.urlType = model.urlType;
+            } 
 
             /**
              * <p>The text of the one-tap autofill button. This parameter is required if Category is set to AUTHENTICATION and the Type sub-parameter of the Buttons parameter is set to ONE_TAP for a WhatsApp message template.</p>
@@ -733,7 +766,7 @@ public class ModifyChatappTemplateRequest extends Request {
             /**
              * <p>List of supported apps.</p>
              */
-            public Builder supportedApps(java.util.List < SupportedApps> supportedApps) {
+            public Builder supportedApps(java.util.List<SupportedApps> supportedApps) {
                 this.supportedApps = supportedApps;
                 return this;
             }
@@ -890,6 +923,17 @@ public class ModifyChatappTemplateRequest extends Request {
             private String url; 
             private String urlType; 
 
+            private Builder() {
+            } 
+
+            private Builder(CardComponentsButtons model) {
+                this.phoneNumber = model.phoneNumber;
+                this.text = model.text;
+                this.type = model.type;
+                this.url = model.url;
+                this.urlType = model.urlType;
+            } 
+
             /**
              * <p>The phone number.</p>
              * 
@@ -970,7 +1014,7 @@ public class ModifyChatappTemplateRequest extends Request {
      */
     public static class CardComponents extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Buttons")
-        private java.util.List < CardComponentsButtons> buttons;
+        private java.util.List<CardComponentsButtons> buttons;
 
         @com.aliyun.core.annotation.NameInMap("Format")
         private String format;
@@ -1004,7 +1048,7 @@ public class ModifyChatappTemplateRequest extends Request {
         /**
          * @return buttons
          */
-        public java.util.List < CardComponentsButtons> getButtons() {
+        public java.util.List<CardComponentsButtons> getButtons() {
             return this.buttons;
         }
 
@@ -1037,16 +1081,27 @@ public class ModifyChatappTemplateRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < CardComponentsButtons> buttons; 
+            private java.util.List<CardComponentsButtons> buttons; 
             private String format; 
             private String text; 
             private String type; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(CardComponents model) {
+                this.buttons = model.buttons;
+                this.format = model.format;
+                this.text = model.text;
+                this.type = model.type;
+                this.url = model.url;
+            } 
+
             /**
              * <p>The buttons. Specify this parameter only if you set the Type sub-parameter of the CardComponents parameter to BUTTONS. A carousel card can contain up to two buttons.</p>
              */
-            public Builder buttons(java.util.List < CardComponentsButtons> buttons) {
+            public Builder buttons(java.util.List<CardComponentsButtons> buttons) {
                 this.buttons = buttons;
                 return this;
             }
@@ -1121,7 +1176,7 @@ public class ModifyChatappTemplateRequest extends Request {
     public static class Cards extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CardComponents")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < CardComponents> cardComponents;
+        private java.util.List<CardComponents> cardComponents;
 
         private Cards(Builder builder) {
             this.cardComponents = builder.cardComponents;
@@ -1138,18 +1193,25 @@ public class ModifyChatappTemplateRequest extends Request {
         /**
          * @return cardComponents
          */
-        public java.util.List < CardComponents> getCardComponents() {
+        public java.util.List<CardComponents> getCardComponents() {
             return this.cardComponents;
         }
 
         public static final class Builder {
-            private java.util.List < CardComponents> cardComponents; 
+            private java.util.List<CardComponents> cardComponents; 
+
+            private Builder() {
+            } 
+
+            private Builder(Cards model) {
+                this.cardComponents = model.cardComponents;
+            } 
 
             /**
              * <p>The components of the carousel card.</p>
              * <p>This parameter is required.</p>
              */
-            public Builder cardComponents(java.util.List < CardComponents> cardComponents) {
+            public Builder cardComponents(java.util.List<CardComponents> cardComponents) {
                 this.cardComponents = cardComponents;
                 return this;
             }
@@ -1172,13 +1234,13 @@ public class ModifyChatappTemplateRequest extends Request {
         private Boolean addSecretRecommendation;
 
         @com.aliyun.core.annotation.NameInMap("Buttons")
-        private java.util.List < Buttons> buttons;
+        private java.util.List<Buttons> buttons;
 
         @com.aliyun.core.annotation.NameInMap("Caption")
         private String caption;
 
         @com.aliyun.core.annotation.NameInMap("Cards")
-        private java.util.List < Cards> cards;
+        private java.util.List<Cards> cards;
 
         @com.aliyun.core.annotation.NameInMap("CodeExpirationMinutes")
         @com.aliyun.core.annotation.Validation(maximum = 90, minimum = 1)
@@ -1247,7 +1309,7 @@ public class ModifyChatappTemplateRequest extends Request {
         /**
          * @return buttons
          */
-        public java.util.List < Buttons> getButtons() {
+        public java.util.List<Buttons> getButtons() {
             return this.buttons;
         }
 
@@ -1261,7 +1323,7 @@ public class ModifyChatappTemplateRequest extends Request {
         /**
          * @return cards
          */
-        public java.util.List < Cards> getCards() {
+        public java.util.List<Cards> getCards() {
             return this.cards;
         }
 
@@ -1337,9 +1399,9 @@ public class ModifyChatappTemplateRequest extends Request {
 
         public static final class Builder {
             private Boolean addSecretRecommendation; 
-            private java.util.List < Buttons> buttons; 
+            private java.util.List<Buttons> buttons; 
             private String caption; 
-            private java.util.List < Cards> cards; 
+            private java.util.List<Cards> cards; 
             private Integer codeExpirationMinutes; 
             private Integer duration; 
             private String fileName; 
@@ -1350,6 +1412,26 @@ public class ModifyChatappTemplateRequest extends Request {
             private String thumbUrl; 
             private String type; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(Components model) {
+                this.addSecretRecommendation = model.addSecretRecommendation;
+                this.buttons = model.buttons;
+                this.caption = model.caption;
+                this.cards = model.cards;
+                this.codeExpirationMinutes = model.codeExpirationMinutes;
+                this.duration = model.duration;
+                this.fileName = model.fileName;
+                this.fileType = model.fileType;
+                this.format = model.format;
+                this.hasExpiration = model.hasExpiration;
+                this.text = model.text;
+                this.thumbUrl = model.thumbUrl;
+                this.type = model.type;
+                this.url = model.url;
+            } 
 
             /**
              * <p>The note indicating that customers cannot share verification codes with others. The note is displayed in the message body. This parameter is valid if Category is set to AUTHENTICATION and the Type sub-parameter of the Components parameter is set to BODY for a WhatsApp message template.</p>
@@ -1378,7 +1460,7 @@ public class ModifyChatappTemplateRequest extends Request {
              * </li>
              * </ul>
              */
-            public Builder buttons(java.util.List < Buttons> buttons) {
+            public Builder buttons(java.util.List<Buttons> buttons) {
                 this.buttons = buttons;
                 return this;
             }
@@ -1400,7 +1482,7 @@ public class ModifyChatappTemplateRequest extends Request {
             /**
              * <p>The carousel cards of the carousel template.</p>
              */
-            public Builder cards(java.util.List < Cards> cards) {
+            public Builder cards(java.util.List<Cards> cards) {
                 this.cards = cards;
                 return this;
             }

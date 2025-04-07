@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -43,6 +48,10 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -60,7 +69,7 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -81,9 +90,20 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
     public static final class Builder {
         private String accessDeniedDetail; 
         private String code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetChatappPhoneNumberMetricResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details about the access denial.</p>
@@ -110,7 +130,7 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
         /**
          * <p>The returned data.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -234,6 +254,18 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
             private String phoneNumber; 
             private Integer sentCount; 
             private Long start; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.deliveredCount = model.deliveredCount;
+                this.end = model.end;
+                this.granularity = model.granularity;
+                this.phoneNumber = model.phoneNumber;
+                this.sentCount = model.sentCount;
+                this.start = model.start;
+            } 
 
             /**
              * <p>The number of delivered messages.</p>

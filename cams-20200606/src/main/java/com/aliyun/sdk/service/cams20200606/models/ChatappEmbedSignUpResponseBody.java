@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class ChatappEmbedSignUpResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Wabas")
-    private java.util.List < Wabas> wabas;
+    private java.util.List<Wabas> wabas;
 
     private ChatappEmbedSignUpResponseBody(Builder builder) {
         this.accessDeniedDetail = builder.accessDeniedDetail;
@@ -41,6 +46,10 @@ public class ChatappEmbedSignUpResponseBody extends TeaModel {
 
     public static ChatappEmbedSignUpResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -74,7 +83,7 @@ public class ChatappEmbedSignUpResponseBody extends TeaModel {
     /**
      * @return wabas
      */
-    public java.util.List < Wabas> getWabas() {
+    public java.util.List<Wabas> getWabas() {
         return this.wabas;
     }
 
@@ -83,7 +92,18 @@ public class ChatappEmbedSignUpResponseBody extends TeaModel {
         private String code; 
         private String message; 
         private String requestId; 
-        private java.util.List < Wabas> wabas; 
+        private java.util.List<Wabas> wabas; 
+
+        private Builder() {
+        } 
+
+        private Builder(ChatappEmbedSignUpResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.wabas = model.wabas;
+        } 
 
         /**
          * <p>The details about the access denial.</p>
@@ -136,7 +156,7 @@ public class ChatappEmbedSignUpResponseBody extends TeaModel {
         /**
          * <p>The list of the WhatsApp Business accounts.</p>
          */
-        public Builder wabas(java.util.List < Wabas> wabas) {
+        public Builder wabas(java.util.List<Wabas> wabas) {
             this.wabas = wabas;
             return this;
         }
@@ -226,6 +246,17 @@ public class ChatappEmbedSignUpResponseBody extends TeaModel {
             private String id; 
             private String messageTemplateNamespace; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(Wabas model) {
+                this.accountReviewStatus = model.accountReviewStatus;
+                this.currency = model.currency;
+                this.id = model.id;
+                this.messageTemplateNamespace = model.messageTemplateNamespace;
+                this.name = model.name;
+            } 
 
             /**
              * <p>The review state of the WABA.</p>

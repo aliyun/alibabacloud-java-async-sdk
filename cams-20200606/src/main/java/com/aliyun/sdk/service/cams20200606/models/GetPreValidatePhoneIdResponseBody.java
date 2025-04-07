@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -39,6 +44,10 @@ public class GetPreValidatePhoneIdResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -72,6 +81,16 @@ public class GetPreValidatePhoneIdResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetPreValidatePhoneIdResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The response code.</p>
@@ -167,6 +186,14 @@ public class GetPreValidatePhoneIdResponseBody extends TeaModel {
         public static final class Builder {
             private String phoneNumber; 
             private String phoneNumberId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.phoneNumber = model.phoneNumber;
+                this.phoneNumberId = model.phoneNumberId;
+            } 
 
             /**
              * <p>The phone number.</p>

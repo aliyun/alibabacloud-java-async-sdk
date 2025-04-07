@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListPhoneMessageQrdlResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -39,6 +44,10 @@ public class ListPhoneMessageQrdlResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -49,7 +58,7 @@ public class ListPhoneMessageQrdlResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -69,9 +78,19 @@ public class ListPhoneMessageQrdlResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListPhoneMessageQrdlResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>If OK is returned, the request was successful.</p>
@@ -87,7 +106,7 @@ public class ListPhoneMessageQrdlResponseBody extends TeaModel {
         /**
          * <p>The returned data.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -211,6 +230,18 @@ public class ListPhoneMessageQrdlResponseBody extends TeaModel {
             private String prefilledMessage; 
             private String qrImageUrl; 
             private String qrdlCode; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.deepLinkUrl = model.deepLinkUrl;
+                this.generateQrImage = model.generateQrImage;
+                this.phoneNumber = model.phoneNumber;
+                this.prefilledMessage = model.prefilledMessage;
+                this.qrImageUrl = model.qrImageUrl;
+                this.qrdlCode = model.qrdlCode;
+            } 
 
             /**
              * <p>The URL of the deep link.</p>

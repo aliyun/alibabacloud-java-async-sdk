@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListChatappTemplateResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("ListTemplate")
-    private java.util.List < ListTemplate> listTemplate;
+    private java.util.List<ListTemplate> listTemplate;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -47,6 +52,10 @@ public class ListChatappTemplateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -64,7 +73,7 @@ public class ListChatappTemplateResponseBody extends TeaModel {
     /**
      * @return listTemplate
      */
-    public java.util.List < ListTemplate> getListTemplate() {
+    public java.util.List<ListTemplate> getListTemplate() {
         return this.listTemplate;
     }
 
@@ -92,10 +101,22 @@ public class ListChatappTemplateResponseBody extends TeaModel {
     public static final class Builder {
         private String accessDeniedDetail; 
         private String code; 
-        private java.util.List < ListTemplate> listTemplate; 
+        private java.util.List<ListTemplate> listTemplate; 
         private String message; 
         private String requestId; 
         private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListChatappTemplateResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.listTemplate = model.listTemplate;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.total = model.total;
+        } 
 
         /**
          * <p>The details about the access denial.</p>
@@ -126,7 +147,7 @@ public class ListChatappTemplateResponseBody extends TeaModel {
         /**
          * <p>The list of the templates.</p>
          */
-        public Builder listTemplate(java.util.List < ListTemplate> listTemplate) {
+        public Builder listTemplate(java.util.List<ListTemplate> listTemplate) {
             this.listTemplate = listTemplate;
             return this;
         }
@@ -285,6 +306,20 @@ public class ListChatappTemplateResponseBody extends TeaModel {
             private String templateCode; 
             private String templateName; 
             private String templateType; 
+
+            private Builder() {
+            } 
+
+            private Builder(ListTemplate model) {
+                this.auditStatus = model.auditStatus;
+                this.category = model.category;
+                this.language = model.language;
+                this.lastUpdateTime = model.lastUpdateTime;
+                this.reason = model.reason;
+                this.templateCode = model.templateCode;
+                this.templateName = model.templateName;
+                this.templateType = model.templateType;
+            } 
 
             /**
              * <p>The review state of the message template. Valid values:</p>

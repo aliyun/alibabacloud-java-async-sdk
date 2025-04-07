@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class TriggerChatFlowRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.Map < String, ? > data;
+    private java.util.Map<String, ?> data;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DiscardTimeMillis")
@@ -70,7 +75,7 @@ public class TriggerChatFlowRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -85,7 +90,7 @@ public class TriggerChatFlowRequest extends Request {
     /**
      * @return data
      */
-    public java.util.Map < String, ? > getData() {
+    public java.util.Map<String, ?> getData() {
         return this.data;
     }
 
@@ -140,7 +145,7 @@ public class TriggerChatFlowRequest extends Request {
 
     public static final class Builder extends Request.Builder<TriggerChatFlowRequest, Builder> {
         private Long claimTimeMillis; 
-        private java.util.Map < String, ? > data; 
+        private java.util.Map<String, ?> data; 
         private Long discardTimeMillis; 
         private String flowCode; 
         private String outId; 
@@ -184,7 +189,7 @@ public class TriggerChatFlowRequest extends Request {
          * <strong>example:</strong>
          * <p>{&quot;my_biz_data_0&quot;: &quot;hi&quot;, &quot;my_biz_data_1&quot;: &quot;1024&quot;}</p>
          */
-        public Builder data(java.util.Map < String, ? > data) {
+        public Builder data(java.util.Map<String, ?> data) {
             String dataShrink = shrink(data, "Data", "json");
             this.putQueryParameter("Data", dataShrink);
             this.data = data;

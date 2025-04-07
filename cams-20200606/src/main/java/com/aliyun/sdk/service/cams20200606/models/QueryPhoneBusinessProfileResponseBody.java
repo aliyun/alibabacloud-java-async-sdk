@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -45,6 +50,10 @@ public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
 
     public static QueryPhoneBusinessProfileResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryPhoneBusinessProfileResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The details about the access denial.</p>
@@ -200,7 +221,7 @@ public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
         private String vertical;
 
         @com.aliyun.core.annotation.NameInMap("Websites")
-        private java.util.List < String > websites;
+        private java.util.List<String> websites;
 
         private Data(Builder builder) {
             this.about = builder.about;
@@ -265,7 +286,7 @@ public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
         /**
          * @return websites
          */
-        public java.util.List < String > getWebsites() {
+        public java.util.List<String> getWebsites() {
             return this.websites;
         }
 
@@ -276,7 +297,20 @@ public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
             private String email; 
             private String profilePictureUrl; 
             private String vertical; 
-            private java.util.List < String > websites; 
+            private java.util.List<String> websites; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.about = model.about;
+                this.address = model.address;
+                this.description = model.description;
+                this.email = model.email;
+                this.profilePictureUrl = model.profilePictureUrl;
+                this.vertical = model.vertical;
+                this.websites = model.websites;
+            } 
 
             /**
              * <p>Regarding.</p>
@@ -347,7 +381,7 @@ public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
             /**
              * <p>The website.</p>
              */
-            public Builder websites(java.util.List < String > websites) {
+            public Builder websites(java.util.List<String> websites) {
                 this.websites = websites;
                 return this;
             }

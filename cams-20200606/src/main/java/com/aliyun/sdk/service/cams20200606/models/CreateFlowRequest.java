@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class CreateFlowRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Categories")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > categories;
+    private java.util.List<String> categories;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("CustSpaceId")
@@ -41,7 +46,7 @@ public class CreateFlowRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -49,7 +54,7 @@ public class CreateFlowRequest extends Request {
     /**
      * @return categories
      */
-    public java.util.List < String > getCategories() {
+    public java.util.List<String> getCategories() {
         return this.categories;
     }
 
@@ -68,7 +73,7 @@ public class CreateFlowRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateFlowRequest, Builder> {
-        private java.util.List < String > categories; 
+        private java.util.List<String> categories; 
         private String custSpaceId; 
         private String flowName; 
 
@@ -87,7 +92,7 @@ public class CreateFlowRequest extends Request {
          * <p>The categories of the Flow.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder categories(java.util.List < String > categories) {
+        public Builder categories(java.util.List<String> categories) {
             String categoriesShrink = shrink(categories, "Categories", "json");
             this.putBodyParameter("Categories", categoriesShrink);
             this.categories = categories;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -45,6 +50,10 @@ public class QueryWabaBusinessInfoResponseBody extends TeaModel {
 
     public static QueryWabaBusinessInfoResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class QueryWabaBusinessInfoResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryWabaBusinessInfoResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The details about the access denial.</p>
@@ -191,6 +212,7 @@ public class QueryWabaBusinessInfoResponseBody extends TeaModel {
         private String verificationStatus;
 
         @com.aliyun.core.annotation.NameInMap("Vertical")
+        @Deprecated
         private String vertical;
 
         private Data(Builder builder) {
@@ -241,6 +263,16 @@ public class QueryWabaBusinessInfoResponseBody extends TeaModel {
             private String businessName; 
             private String verificationStatus; 
             private String vertical; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.businessId = model.businessId;
+                this.businessName = model.businessName;
+                this.verificationStatus = model.verificationStatus;
+                this.vertical = model.vertical;
+            } 
 
             /**
              * <p>The Business Manager ID.</p>

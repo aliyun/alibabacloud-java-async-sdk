@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,6 +46,10 @@ public class BeeBotChatResponseBody extends TeaModel {
 
     public static BeeBotChatResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class BeeBotChatResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(BeeBotChatResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Access denied for detailed information.</p>
@@ -187,6 +207,14 @@ public class BeeBotChatResponseBody extends TeaModel {
             private String knowledgeId; 
             private String title; 
 
+            private Builder() {
+            } 
+
+            private Builder(RelatedKnowledges model) {
+                this.knowledgeId = model.knowledgeId;
+                this.title = model.title;
+            } 
+
             /**
              * <p>The ID of knowledge associated with knowledge.</p>
              * 
@@ -242,7 +270,7 @@ public class BeeBotChatResponseBody extends TeaModel {
         private String id;
 
         @com.aliyun.core.annotation.NameInMap("RelatedKnowledges")
-        private java.util.List < RelatedKnowledges> relatedKnowledges;
+        private java.util.List<RelatedKnowledges> relatedKnowledges;
 
         @com.aliyun.core.annotation.NameInMap("Summary")
         private String summary;
@@ -315,7 +343,7 @@ public class BeeBotChatResponseBody extends TeaModel {
         /**
          * @return relatedKnowledges
          */
-        public java.util.List < RelatedKnowledges> getRelatedKnowledges() {
+        public java.util.List<RelatedKnowledges> getRelatedKnowledges() {
             return this.relatedKnowledges;
         }
 
@@ -340,9 +368,24 @@ public class BeeBotChatResponseBody extends TeaModel {
             private String contentType; 
             private String hitStatement; 
             private String id; 
-            private java.util.List < RelatedKnowledges> relatedKnowledges; 
+            private java.util.List<RelatedKnowledges> relatedKnowledges; 
             private String summary; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(Knowledge model) {
+                this.answerSource = model.answerSource;
+                this.category = model.category;
+                this.content = model.content;
+                this.contentType = model.contentType;
+                this.hitStatement = model.hitStatement;
+                this.id = model.id;
+                this.relatedKnowledges = model.relatedKnowledges;
+                this.summary = model.summary;
+                this.title = model.title;
+            } 
 
             /**
              * <p>Distinguish answer types.</p>
@@ -413,7 +456,7 @@ public class BeeBotChatResponseBody extends TeaModel {
             /**
              * <p>Related knowledge list.</p>
              */
-            public Builder relatedKnowledges(java.util.List < RelatedKnowledges> relatedKnowledges) {
+            public Builder relatedKnowledges(java.util.List<RelatedKnowledges> relatedKnowledges) {
                 this.relatedKnowledges = relatedKnowledges;
                 return this;
             }
@@ -502,6 +545,15 @@ public class BeeBotChatResponseBody extends TeaModel {
             private String answerSource; 
             private String knowledgeId; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(Recommends model) {
+                this.answerSource = model.answerSource;
+                this.knowledgeId = model.knowledgeId;
+                this.title = model.title;
+            } 
 
             /**
              * <p>Clarify the identification of the source.</p>
@@ -611,6 +663,16 @@ public class BeeBotChatResponseBody extends TeaModel {
             private String origin; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Slots model) {
+                this.hit = model.hit;
+                this.name = model.name;
+                this.origin = model.origin;
+                this.value = model.value;
+            } 
+
             /**
              * <p>Whether it hits.</p>
              * 
@@ -682,10 +744,10 @@ public class BeeBotChatResponseBody extends TeaModel {
         private String dialogName;
 
         @com.aliyun.core.annotation.NameInMap("Ext")
-        private java.util.Map < String, ? > ext;
+        private java.util.Map<String, ?> ext;
 
         @com.aliyun.core.annotation.NameInMap("ExternalFlags")
-        private java.util.Map < String, ? > externalFlags;
+        private java.util.Map<String, ?> externalFlags;
 
         @com.aliyun.core.annotation.NameInMap("HitStatement")
         private String hitStatement;
@@ -703,7 +765,7 @@ public class BeeBotChatResponseBody extends TeaModel {
         private String nodeName;
 
         @com.aliyun.core.annotation.NameInMap("Slots")
-        private java.util.List < Slots> slots;
+        private java.util.List<Slots> slots;
 
         @com.aliyun.core.annotation.NameInMap("UserDefinedChatTitle")
         private String userDefinedChatTitle;
@@ -763,14 +825,14 @@ public class BeeBotChatResponseBody extends TeaModel {
         /**
          * @return ext
          */
-        public java.util.Map < String, ? > getExt() {
+        public java.util.Map<String, ?> getExt() {
             return this.ext;
         }
 
         /**
          * @return externalFlags
          */
-        public java.util.Map < String, ? > getExternalFlags() {
+        public java.util.Map<String, ?> getExternalFlags() {
             return this.externalFlags;
         }
 
@@ -812,7 +874,7 @@ public class BeeBotChatResponseBody extends TeaModel {
         /**
          * @return slots
          */
-        public java.util.List < Slots> getSlots() {
+        public java.util.List<Slots> getSlots() {
             return this.slots;
         }
 
@@ -828,15 +890,34 @@ public class BeeBotChatResponseBody extends TeaModel {
             private String content; 
             private String contentType; 
             private String dialogName; 
-            private java.util.Map < String, ? > ext; 
-            private java.util.Map < String, ? > externalFlags; 
+            private java.util.Map<String, ?> ext; 
+            private java.util.Map<String, ?> externalFlags; 
             private String hitStatement; 
             private String intentName; 
             private String metaData; 
             private String nodeId; 
             private String nodeName; 
-            private java.util.List < Slots> slots; 
+            private java.util.List<Slots> slots; 
             private String userDefinedChatTitle; 
+
+            private Builder() {
+            } 
+
+            private Builder(Text model) {
+                this.answerSource = model.answerSource;
+                this.content = model.content;
+                this.contentType = model.contentType;
+                this.dialogName = model.dialogName;
+                this.ext = model.ext;
+                this.externalFlags = model.externalFlags;
+                this.hitStatement = model.hitStatement;
+                this.intentName = model.intentName;
+                this.metaData = model.metaData;
+                this.nodeId = model.nodeId;
+                this.nodeName = model.nodeName;
+                this.slots = model.slots;
+                this.userDefinedChatTitle = model.userDefinedChatTitle;
+            } 
 
             /**
              * <p>Distinguish answer types.</p>
@@ -885,7 +966,7 @@ public class BeeBotChatResponseBody extends TeaModel {
             /**
              * <p>This field returns transparent parameters.</p>
              */
-            public Builder ext(java.util.Map < String, ? > ext) {
+            public Builder ext(java.util.Map<String, ?> ext) {
                 this.ext = ext;
                 return this;
             }
@@ -893,7 +974,7 @@ public class BeeBotChatResponseBody extends TeaModel {
             /**
              * <p>When AnswerSource is BotFramework, this field returns a transparent parameter.</p>
              */
-            public Builder externalFlags(java.util.Map < String, ? > externalFlags) {
+            public Builder externalFlags(java.util.Map<String, ?> externalFlags) {
                 this.externalFlags = externalFlags;
                 return this;
             }
@@ -956,7 +1037,7 @@ public class BeeBotChatResponseBody extends TeaModel {
             /**
              * <p>Slot information list.</p>
              */
-            public Builder slots(java.util.List < Slots> slots) {
+            public Builder slots(java.util.List<Slots> slots) {
                 this.slots = slots;
                 return this;
             }
@@ -996,7 +1077,7 @@ public class BeeBotChatResponseBody extends TeaModel {
         private Knowledge knowledge;
 
         @com.aliyun.core.annotation.NameInMap("Recommends")
-        private java.util.List < Recommends> recommends;
+        private java.util.List<Recommends> recommends;
 
         @com.aliyun.core.annotation.NameInMap("Text")
         private Text text;
@@ -1041,7 +1122,7 @@ public class BeeBotChatResponseBody extends TeaModel {
         /**
          * @return recommends
          */
-        public java.util.List < Recommends> getRecommends() {
+        public java.util.List<Recommends> getRecommends() {
             return this.recommends;
         }
 
@@ -1056,8 +1137,19 @@ public class BeeBotChatResponseBody extends TeaModel {
             private String answerSource; 
             private String answerType; 
             private Knowledge knowledge; 
-            private java.util.List < Recommends> recommends; 
+            private java.util.List<Recommends> recommends; 
             private Text text; 
+
+            private Builder() {
+            } 
+
+            private Builder(Messages model) {
+                this.answerSource = model.answerSource;
+                this.answerType = model.answerType;
+                this.knowledge = model.knowledge;
+                this.recommends = model.recommends;
+                this.text = model.text;
+            } 
 
             /**
              * <p>When AnswerType is Recommended, this field indicates the source of the recommended answer.</p>
@@ -1092,7 +1184,7 @@ public class BeeBotChatResponseBody extends TeaModel {
             /**
              * <p>When AnswerType is Recommended, this field contains a list of Recommendations returned by the robot.</p>
              */
-            public Builder recommends(java.util.List < Recommends> recommends) {
+            public Builder recommends(java.util.List<Recommends> recommends) {
                 this.recommends = recommends;
                 return this;
             }
@@ -1123,7 +1215,7 @@ public class BeeBotChatResponseBody extends TeaModel {
         private String messageId;
 
         @com.aliyun.core.annotation.NameInMap("Messages")
-        private java.util.List < Messages> messages;
+        private java.util.List<Messages> messages;
 
         @com.aliyun.core.annotation.NameInMap("SessionId")
         private String sessionId;
@@ -1152,7 +1244,7 @@ public class BeeBotChatResponseBody extends TeaModel {
         /**
          * @return messages
          */
-        public java.util.List < Messages> getMessages() {
+        public java.util.List<Messages> getMessages() {
             return this.messages;
         }
 
@@ -1165,8 +1257,17 @@ public class BeeBotChatResponseBody extends TeaModel {
 
         public static final class Builder {
             private String messageId; 
-            private java.util.List < Messages> messages; 
+            private java.util.List<Messages> messages; 
             private String sessionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.messageId = model.messageId;
+                this.messages = model.messages;
+                this.sessionId = model.sessionId;
+            } 
 
             /**
              * <p>The ID of the recommended knowledge.</p>
@@ -1182,7 +1283,7 @@ public class BeeBotChatResponseBody extends TeaModel {
             /**
              * <p>The source of the recommended answer. When AnswerType is set to Recommend, a value is returned for this parameter.</p>
              */
-            public Builder messages(java.util.List < Messages> messages) {
+            public Builder messages(java.util.List<Messages> messages) {
                 this.messages = messages;
                 return this;
             }

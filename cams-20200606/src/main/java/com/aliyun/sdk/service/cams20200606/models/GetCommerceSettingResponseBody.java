@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -45,6 +50,10 @@ public class GetCommerceSettingResponseBody extends TeaModel {
 
     public static GetCommerceSettingResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class GetCommerceSettingResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetCommerceSettingResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>Access denied for detailed information.</p>
@@ -217,6 +238,14 @@ public class GetCommerceSettingResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean cartEnable; 
             private Boolean catalogVisible; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.cartEnable = model.cartEnable;
+                this.catalogVisible = model.catalogVisible;
+            } 
 
             /**
              * <p>Indicates whether the shopping cart button is displayed. Valid values:</p>

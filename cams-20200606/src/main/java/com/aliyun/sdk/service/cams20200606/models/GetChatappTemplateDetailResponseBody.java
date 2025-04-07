@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,6 +46,10 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
 
     public static GetChatappTemplateDetailResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetChatappTemplateDetailResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Access denied details.</p>
@@ -230,6 +250,17 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             private String nextTemplateCode; 
             private String nextTemplateName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ExtendAttrs model) {
+                this.action = model.action;
+                this.intentCode = model.intentCode;
+                this.nextLanguageCode = model.nextLanguageCode;
+                this.nextTemplateCode = model.nextTemplateCode;
+                this.nextTemplateName = model.nextTemplateName;
+            } 
+
             /**
              * <p>The event type.</p>
              * 
@@ -336,6 +367,14 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             private String packageName; 
             private String signatureHash; 
 
+            private Builder() {
+            } 
+
+            private Builder(SupportedApps model) {
+                this.packageName = model.packageName;
+                this.signatureHash = model.signatureHash;
+            } 
+
             /**
              * <p>The app package name.</p>
              * 
@@ -403,7 +442,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         private String signatureHash;
 
         @com.aliyun.core.annotation.NameInMap("SupportedApps")
-        private java.util.List < SupportedApps> supportedApps;
+        private java.util.List<SupportedApps> supportedApps;
 
         @com.aliyun.core.annotation.NameInMap("Text")
         private String text;
@@ -516,7 +555,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         /**
          * @return supportedApps
          */
-        public java.util.List < SupportedApps> getSupportedApps() {
+        public java.util.List<SupportedApps> getSupportedApps() {
             return this.supportedApps;
         }
 
@@ -559,11 +598,32 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             private String packageName; 
             private String phoneNumber; 
             private String signatureHash; 
-            private java.util.List < SupportedApps> supportedApps; 
+            private java.util.List<SupportedApps> supportedApps; 
             private String text; 
             private String type; 
             private String url; 
             private String urlType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Buttons model) {
+                this.autofillText = model.autofillText;
+                this.couponCode = model.couponCode;
+                this.extendAttrs = model.extendAttrs;
+                this.flowAction = model.flowAction;
+                this.flowId = model.flowId;
+                this.isOptOut = model.isOptOut;
+                this.navigateScreen = model.navigateScreen;
+                this.packageName = model.packageName;
+                this.phoneNumber = model.phoneNumber;
+                this.signatureHash = model.signatureHash;
+                this.supportedApps = model.supportedApps;
+                this.text = model.text;
+                this.type = model.type;
+                this.url = model.url;
+                this.urlType = model.urlType;
+            } 
 
             /**
              * <p>The text of the one-tap autofill button. This parameter is required if Category is set to AUTHENTICATION and the Type sub-parameter of the Buttons parameter is set to ONE_TAP in a WhatsApp message template.</p>
@@ -675,7 +735,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             /**
              * <p>The apps that support one-tap authentication and zero-tap authentication.</p>
              */
-            public Builder supportedApps(java.util.List < SupportedApps> supportedApps) {
+            public Builder supportedApps(java.util.List<SupportedApps> supportedApps) {
                 this.supportedApps = supportedApps;
                 return this;
             }
@@ -830,6 +890,17 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             private String url; 
             private String urlType; 
 
+            private Builder() {
+            } 
+
+            private Builder(CardComponentsButtons model) {
+                this.phoneNumber = model.phoneNumber;
+                this.text = model.text;
+                this.type = model.type;
+                this.url = model.url;
+                this.urlType = model.urlType;
+            } 
+
             /**
              * <p>The phone number.</p>
              * 
@@ -900,7 +971,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
      */
     public static class CardComponents extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Buttons")
-        private java.util.List < CardComponentsButtons> buttons;
+        private java.util.List<CardComponentsButtons> buttons;
 
         @com.aliyun.core.annotation.NameInMap("Format")
         private String format;
@@ -933,7 +1004,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         /**
          * @return buttons
          */
-        public java.util.List < CardComponentsButtons> getButtons() {
+        public java.util.List<CardComponentsButtons> getButtons() {
             return this.buttons;
         }
 
@@ -966,16 +1037,27 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < CardComponentsButtons> buttons; 
+            private java.util.List<CardComponentsButtons> buttons; 
             private String format; 
             private String text; 
             private String type; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(CardComponents model) {
+                this.buttons = model.buttons;
+                this.format = model.format;
+                this.text = model.text;
+                this.type = model.type;
+                this.url = model.url;
+            } 
+
             /**
              * <p>The buttons of the carousel card.</p>
              */
-            public Builder buttons(java.util.List < CardComponentsButtons> buttons) {
+            public Builder buttons(java.util.List<CardComponentsButtons> buttons) {
                 this.buttons = buttons;
                 return this;
             }
@@ -1039,7 +1121,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
      */
     public static class Cards extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CardComponents")
-        private java.util.List < CardComponents> cardComponents;
+        private java.util.List<CardComponents> cardComponents;
 
         private Cards(Builder builder) {
             this.cardComponents = builder.cardComponents;
@@ -1056,17 +1138,24 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         /**
          * @return cardComponents
          */
-        public java.util.List < CardComponents> getCardComponents() {
+        public java.util.List<CardComponents> getCardComponents() {
             return this.cardComponents;
         }
 
         public static final class Builder {
-            private java.util.List < CardComponents> cardComponents; 
+            private java.util.List<CardComponents> cardComponents; 
+
+            private Builder() {
+            } 
+
+            private Builder(Cards model) {
+                this.cardComponents = model.cardComponents;
+            } 
 
             /**
              * <p>The components of the carousel card.</p>
              */
-            public Builder cardComponents(java.util.List < CardComponents> cardComponents) {
+            public Builder cardComponents(java.util.List<CardComponents> cardComponents) {
                 this.cardComponents = cardComponents;
                 return this;
             }
@@ -1089,13 +1178,13 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         private Boolean addSecretRecommendation;
 
         @com.aliyun.core.annotation.NameInMap("Buttons")
-        private java.util.List < Buttons> buttons;
+        private java.util.List<Buttons> buttons;
 
         @com.aliyun.core.annotation.NameInMap("Caption")
         private String caption;
 
         @com.aliyun.core.annotation.NameInMap("Cards")
-        private java.util.List < Cards> cards;
+        private java.util.List<Cards> cards;
 
         @com.aliyun.core.annotation.NameInMap("CodeExpirationMinutes")
         @com.aliyun.core.annotation.Validation(maximum = 90, minimum = 1)
@@ -1183,7 +1272,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         /**
          * @return buttons
          */
-        public java.util.List < Buttons> getButtons() {
+        public java.util.List<Buttons> getButtons() {
             return this.buttons;
         }
 
@@ -1197,7 +1286,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         /**
          * @return cards
          */
-        public java.util.List < Cards> getCards() {
+        public java.util.List<Cards> getCards() {
             return this.cards;
         }
 
@@ -1308,9 +1397,9 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean addSecretRecommendation; 
-            private java.util.List < Buttons> buttons; 
+            private java.util.List<Buttons> buttons; 
             private String caption; 
-            private java.util.List < Cards> cards; 
+            private java.util.List<Cards> cards; 
             private Integer codeExpirationMinutes; 
             private Integer duration; 
             private String fileName; 
@@ -1326,6 +1415,31 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             private String type; 
             private String url; 
             private Boolean hasExpiration; 
+
+            private Builder() {
+            } 
+
+            private Builder(Components model) {
+                this.addSecretRecommendation = model.addSecretRecommendation;
+                this.buttons = model.buttons;
+                this.caption = model.caption;
+                this.cards = model.cards;
+                this.codeExpirationMinutes = model.codeExpirationMinutes;
+                this.duration = model.duration;
+                this.fileName = model.fileName;
+                this.fileType = model.fileType;
+                this.format = model.format;
+                this.latitude = model.latitude;
+                this.locationAddress = model.locationAddress;
+                this.locationName = model.locationName;
+                this.longitude = model.longitude;
+                this.offerExpirationTimeMs = model.offerExpirationTimeMs;
+                this.text = model.text;
+                this.thumbUrl = model.thumbUrl;
+                this.type = model.type;
+                this.url = model.url;
+                this.hasExpiration = model.hasExpiration;
+            } 
 
             /**
              * <p>The note indicating that customers cannot share verification codes with others. The note is displayed in the message body. This parameter is valid if Category is set to AUTHENTICATION and the Type sub-parameter of the Components parameter is set to BODY for a WhatsApp message template.</p>
@@ -1354,7 +1468,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
              * </li>
              * </ul>
              */
-            public Builder buttons(java.util.List < Buttons> buttons) {
+            public Builder buttons(java.util.List<Buttons> buttons) {
                 this.buttons = buttons;
                 return this;
             }
@@ -1373,7 +1487,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             /**
              * <p>The carousel cards.</p>
              */
-            public Builder cards(java.util.List < Cards> cards) {
+            public Builder cards(java.util.List<Cards> cards) {
                 this.cards = cards;
                 return this;
             }
@@ -1582,10 +1696,10 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         private String category;
 
         @com.aliyun.core.annotation.NameInMap("Components")
-        private java.util.List < Components> components;
+        private java.util.List<Components> components;
 
         @com.aliyun.core.annotation.NameInMap("Example")
-        private java.util.Map < String, String > example;
+        private java.util.Map<String, String> example;
 
         @com.aliyun.core.annotation.NameInMap("Language")
         private String language;
@@ -1648,14 +1762,14 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         /**
          * @return components
          */
-        public java.util.List < Components> getComponents() {
+        public java.util.List<Components> getComponents() {
             return this.components;
         }
 
         /**
          * @return example
          */
-        public java.util.Map < String, String > getExample() {
+        public java.util.Map<String, String> getExample() {
             return this.example;
         }
 
@@ -1711,8 +1825,8 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         public static final class Builder {
             private String auditStatus; 
             private String category; 
-            private java.util.List < Components> components; 
-            private java.util.Map < String, String > example; 
+            private java.util.List<Components> components; 
+            private java.util.Map<String, String> example; 
             private String language; 
             private Integer messageSendTtlSeconds; 
             private String name; 
@@ -1720,6 +1834,23 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             private String reason; 
             private String templateCode; 
             private String templateType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.auditStatus = model.auditStatus;
+                this.category = model.category;
+                this.components = model.components;
+                this.example = model.example;
+                this.language = model.language;
+                this.messageSendTtlSeconds = model.messageSendTtlSeconds;
+                this.name = model.name;
+                this.qualityScore = model.qualityScore;
+                this.reason = model.reason;
+                this.templateCode = model.templateCode;
+                this.templateType = model.templateType;
+            } 
 
             /**
              * <p>The review status of the message template. Valid values:</p>
@@ -1772,7 +1903,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             /**
              * <p>The components of the message template.</p>
              */
-            public Builder components(java.util.List < Components> components) {
+            public Builder components(java.util.List<Components> components) {
                 this.components = components;
                 return this;
             }
@@ -1780,7 +1911,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             /**
              * <p>The examples of variables.</p>
              */
-            public Builder example(java.util.Map < String, String > example) {
+            public Builder example(java.util.Map<String, String> example) {
                 this.example = example;
                 return this;
             }

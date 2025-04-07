@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class UpdateConversationalAutomationRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Commands")
-    private java.util.List < Commands> commands;
+    private java.util.List<Commands> commands;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CustSpaceId")
@@ -36,7 +41,7 @@ public class UpdateConversationalAutomationRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Prompts")
-    private java.util.List < String > prompts;
+    private java.util.List<String> prompts;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
@@ -66,7 +71,7 @@ public class UpdateConversationalAutomationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -74,7 +79,7 @@ public class UpdateConversationalAutomationRequest extends Request {
     /**
      * @return commands
      */
-    public java.util.List < Commands> getCommands() {
+    public java.util.List<Commands> getCommands() {
         return this.commands;
     }
 
@@ -109,7 +114,7 @@ public class UpdateConversationalAutomationRequest extends Request {
     /**
      * @return prompts
      */
-    public java.util.List < String > getPrompts() {
+    public java.util.List<String> getPrompts() {
         return this.prompts;
     }
 
@@ -128,12 +133,12 @@ public class UpdateConversationalAutomationRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateConversationalAutomationRequest, Builder> {
-        private java.util.List < Commands> commands; 
+        private java.util.List<Commands> commands; 
         private String custSpaceId; 
         private Boolean enableWelcomeMessage; 
         private Long ownerId; 
         private String phoneNumber; 
-        private java.util.List < String > prompts; 
+        private java.util.List<String> prompts; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
 
@@ -156,7 +161,7 @@ public class UpdateConversationalAutomationRequest extends Request {
         /**
          * <p>The commands.</p>
          */
-        public Builder commands(java.util.List < Commands> commands) {
+        public Builder commands(java.util.List<Commands> commands) {
             String commandsShrink = shrink(commands, "Commands", "json");
             this.putQueryParameter("Commands", commandsShrink);
             this.commands = commands;
@@ -213,7 +218,7 @@ public class UpdateConversationalAutomationRequest extends Request {
         /**
          * <p>The opening remarks.</p>
          */
-        public Builder prompts(java.util.List < String > prompts) {
+        public Builder prompts(java.util.List<String> prompts) {
             String promptsShrink = shrink(prompts, "Prompts", "json");
             this.putQueryParameter("Prompts", promptsShrink);
             this.prompts = prompts;
@@ -288,6 +293,14 @@ public class UpdateConversationalAutomationRequest extends Request {
         public static final class Builder {
             private String commandDescription; 
             private String commandName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Commands model) {
+                this.commandDescription = model.commandDescription;
+                this.commandName = model.commandName;
+            } 
 
             /**
              * <p>The description of the command.</p>

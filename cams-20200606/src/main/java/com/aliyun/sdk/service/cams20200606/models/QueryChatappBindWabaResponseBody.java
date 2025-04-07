@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -45,6 +50,10 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
 
     public static QueryChatappBindWabaResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryChatappBindWabaResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The details about the access denial.</p>
@@ -185,7 +206,7 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
         private String accountReviewStatus;
 
         @com.aliyun.core.annotation.NameInMap("AuthInternationalRateEligibility")
-        private java.util.Map < String, ? > authInternationalRateEligibility;
+        private java.util.Map<String, ?> authInternationalRateEligibility;
 
         @com.aliyun.core.annotation.NameInMap("BusinessId")
         private String businessId;
@@ -238,7 +259,7 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
         /**
          * @return authInternationalRateEligibility
          */
-        public java.util.Map < String, ? > getAuthInternationalRateEligibility() {
+        public java.util.Map<String, ?> getAuthInternationalRateEligibility() {
             return this.authInternationalRateEligibility;
         }
 
@@ -293,7 +314,7 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
 
         public static final class Builder {
             private String accountReviewStatus; 
-            private java.util.Map < String, ? > authInternationalRateEligibility; 
+            private java.util.Map<String, ?> authInternationalRateEligibility; 
             private String businessId; 
             private String businessName; 
             private String currency; 
@@ -301,6 +322,21 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
             private String messageTemplateNamespace; 
             private String name; 
             private String primaryBusinessLocation; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.accountReviewStatus = model.accountReviewStatus;
+                this.authInternationalRateEligibility = model.authInternationalRateEligibility;
+                this.businessId = model.businessId;
+                this.businessName = model.businessName;
+                this.currency = model.currency;
+                this.id = model.id;
+                this.messageTemplateNamespace = model.messageTemplateNamespace;
+                this.name = model.name;
+                this.primaryBusinessLocation = model.primaryBusinessLocation;
+            } 
 
             /**
              * <p>The review state of the WhatsApp Business account (WABA).</p>
@@ -329,7 +365,7 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
             /**
              * <p>WABA related information.</p>
              */
-            public Builder authInternationalRateEligibility(java.util.Map < String, ? > authInternationalRateEligibility) {
+            public Builder authInternationalRateEligibility(java.util.Map<String, ?> authInternationalRateEligibility) {
                 this.authInternationalRateEligibility = authInternationalRateEligibility;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
     private String message;
 
     @com.aliyun.core.annotation.NameInMap("PhoneNumbers")
-    private java.util.List < PhoneNumbers> phoneNumbers;
+    private java.util.List<PhoneNumbers> phoneNumbers;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -45,6 +50,10 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
 
     public static ChatappSyncPhoneNumberResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -71,7 +80,7 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
     /**
      * @return phoneNumbers
      */
-    public java.util.List < PhoneNumbers> getPhoneNumbers() {
+    public java.util.List<PhoneNumbers> getPhoneNumbers() {
         return this.phoneNumbers;
     }
 
@@ -93,9 +102,21 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
         private String accessDeniedDetail; 
         private String code; 
         private String message; 
-        private java.util.List < PhoneNumbers> phoneNumbers; 
+        private java.util.List<PhoneNumbers> phoneNumbers; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ChatappSyncPhoneNumberResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.message = model.message;
+            this.phoneNumbers = model.phoneNumbers;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * AccessDeniedDetail.
@@ -134,7 +155,7 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
         /**
          * <p>Details of the phone numbers.</p>
          */
-        public Builder phoneNumbers(java.util.List < PhoneNumbers> phoneNumbers) {
+        public Builder phoneNumbers(java.util.List<PhoneNumbers> phoneNumbers) {
             this.phoneNumbers = phoneNumbers;
             return this;
         }
@@ -174,6 +195,9 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CodeVerificationStatus")
         private String codeVerificationStatus;
 
+        @com.aliyun.core.annotation.NameInMap("IsOfficial")
+        private String isOfficial;
+
         @com.aliyun.core.annotation.NameInMap("MessagingLimitTier")
         private String messagingLimitTier;
 
@@ -209,6 +233,7 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
 
         private PhoneNumbers(Builder builder) {
             this.codeVerificationStatus = builder.codeVerificationStatus;
+            this.isOfficial = builder.isOfficial;
             this.messagingLimitTier = builder.messagingLimitTier;
             this.nameStatus = builder.nameStatus;
             this.newNameStatus = builder.newNameStatus;
@@ -235,6 +260,13 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
          */
         public String getCodeVerificationStatus() {
             return this.codeVerificationStatus;
+        }
+
+        /**
+         * @return isOfficial
+         */
+        public String getIsOfficial() {
+            return this.isOfficial;
         }
 
         /**
@@ -316,6 +348,7 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
 
         public static final class Builder {
             private String codeVerificationStatus; 
+            private String isOfficial; 
             private String messagingLimitTier; 
             private String nameStatus; 
             private String newNameStatus; 
@@ -328,6 +361,25 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
             private String upQueue; 
             private String verifiedName; 
 
+            private Builder() {
+            } 
+
+            private Builder(PhoneNumbers model) {
+                this.codeVerificationStatus = model.codeVerificationStatus;
+                this.isOfficial = model.isOfficial;
+                this.messagingLimitTier = model.messagingLimitTier;
+                this.nameStatus = model.nameStatus;
+                this.newNameStatus = model.newNameStatus;
+                this.phoneNumber = model.phoneNumber;
+                this.qualityRating = model.qualityRating;
+                this.status = model.status;
+                this.statusCallbackUrl = model.statusCallbackUrl;
+                this.statusQueue = model.statusQueue;
+                this.upCallbackUrl = model.upCallbackUrl;
+                this.upQueue = model.upQueue;
+                this.verifiedName = model.verifiedName;
+            } 
+
             /**
              * <p>The verification status.</p>
              * 
@@ -336,6 +388,14 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
              */
             public Builder codeVerificationStatus(String codeVerificationStatus) {
                 this.codeVerificationStatus = codeVerificationStatus;
+                return this;
+            }
+
+            /**
+             * IsOfficial.
+             */
+            public Builder isOfficial(String isOfficial) {
+                this.isOfficial = isOfficial;
                 return this;
             }
 

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -45,6 +50,10 @@ public class ListProductResponseBody extends TeaModel {
 
     public static ListProductResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class ListProductResponseBody extends TeaModel {
         private Model model; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListProductResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.message = model.message;
+            this.model = model.model;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The details about the access denial.</p>
@@ -218,6 +239,14 @@ public class ListProductResponseBody extends TeaModel {
             private String after; 
             private String before; 
 
+            private Builder() {
+            } 
+
+            private Builder(Cursors model) {
+                this.after = model.after;
+                this.before = model.before;
+            } 
+
             /**
              * <p>The cursor that points to the end of the page of the returned data.</p>
              * 
@@ -279,6 +308,13 @@ public class ListProductResponseBody extends TeaModel {
         public static final class Builder {
             private Cursors cursors; 
 
+            private Builder() {
+            } 
+
+            private Builder(Paging model) {
+                this.cursors = model.cursors;
+            } 
+
             /**
              * <p>The cursors for pagination.</p>
              */
@@ -302,7 +338,7 @@ public class ListProductResponseBody extends TeaModel {
      */
     public static class Model extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
-        private java.util.List < java.util.Map<String, ?>> data;
+        private java.util.List<java.util.Map<String, ?>> data;
 
         @com.aliyun.core.annotation.NameInMap("Paging")
         private Paging paging;
@@ -323,7 +359,7 @@ public class ListProductResponseBody extends TeaModel {
         /**
          * @return data
          */
-        public java.util.List < java.util.Map<String, ?>> getData() {
+        public java.util.List<java.util.Map<String, ?>> getData() {
             return this.data;
         }
 
@@ -335,13 +371,21 @@ public class ListProductResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < java.util.Map<String, ?>> data; 
+            private java.util.List<java.util.Map<String, ?>> data; 
             private Paging paging; 
+
+            private Builder() {
+            } 
+
+            private Builder(Model model) {
+                this.data = model.data;
+                this.paging = model.paging;
+            } 
 
             /**
              * <p>The returned data.</p>
              */
-            public Builder data(java.util.List < java.util.Map<String, ?>> data) {
+            public Builder data(java.util.List<java.util.Map<String, ?>> data) {
                 this.data = data;
                 return this;
             }

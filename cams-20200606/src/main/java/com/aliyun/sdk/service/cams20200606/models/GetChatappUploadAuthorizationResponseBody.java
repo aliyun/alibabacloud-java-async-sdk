@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,6 +46,10 @@ public class GetChatappUploadAuthorizationResponseBody extends TeaModel {
 
     public static GetChatappUploadAuthorizationResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class GetChatappUploadAuthorizationResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetChatappUploadAuthorizationResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Access denied for detailed information.</p>
@@ -250,6 +270,19 @@ public class GetChatappUploadAuthorizationResponseBody extends TeaModel {
             private String endPoint; 
             private Integer expire; 
             private String securityToken; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.accessKeyId = model.accessKeyId;
+                this.accessKeySecret = model.accessKeySecret;
+                this.bucketName = model.bucketName;
+                this.dir = model.dir;
+                this.endPoint = model.endPoint;
+                this.expire = model.expire;
+                this.securityToken = model.securityToken;
+            } 
 
             /**
              * <p>The AccessKey ID that is used to authorize a user to upload a file to Object Storage Service (OSS).</p>

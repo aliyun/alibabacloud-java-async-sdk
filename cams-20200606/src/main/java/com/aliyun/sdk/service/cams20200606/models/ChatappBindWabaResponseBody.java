@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -45,6 +50,10 @@ public class ChatappBindWabaResponseBody extends TeaModel {
 
     public static ChatappBindWabaResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class ChatappBindWabaResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ChatappBindWabaResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The details about the access denial.</p>
@@ -217,6 +238,14 @@ public class ChatappBindWabaResponseBody extends TeaModel {
         public static final class Builder {
             private String custSpaceId; 
             private String wabaId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.custSpaceId = model.custSpaceId;
+                this.wabaId = model.wabaId;
+            } 
 
             /**
              * <p>The space ID of the user within the independent software vendor (ISV) account.</p>

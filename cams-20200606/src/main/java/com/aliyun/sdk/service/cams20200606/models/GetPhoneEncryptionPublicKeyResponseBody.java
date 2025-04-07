@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -39,6 +44,10 @@ public class GetPhoneEncryptionPublicKeyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -73,11 +82,21 @@ public class GetPhoneEncryptionPublicKeyResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetPhoneEncryptionPublicKeyResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
          * <p>The response code.</p>
          * <ul>
          * <li>The value OK indicates that the request was successful.</li>
-         * <li>For more information about other response codes, see <a href="https://www.alibabacloud.com/help/zh/cams/latest/api-error-codes">Error codes</a>.</li>
+         * <li>For more information about other response codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -179,6 +198,15 @@ public class GetPhoneEncryptionPublicKeyResponseBody extends TeaModel {
             private String encryptionPublicKey; 
             private String encryptionPublicKeyStatus; 
             private String phoneNumber; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.encryptionPublicKey = model.encryptionPublicKey;
+                this.encryptionPublicKeyStatus = model.encryptionPublicKeyStatus;
+                this.phoneNumber = model.phoneNumber;
+            } 
 
             /**
              * <p>The public key.</p>

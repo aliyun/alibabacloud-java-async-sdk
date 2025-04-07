@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -43,6 +48,10 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -60,7 +69,7 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -81,9 +90,20 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
     public static final class Builder {
         private String accessDeniedDetail; 
         private String code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetChatappTemplateMetricResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details about the access denial.</p>
@@ -110,7 +130,7 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
         /**
          * <p>The returned data.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -199,6 +219,15 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
             private Integer count; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Cliented model) {
+                this.buttonContent = model.buttonContent;
+                this.count = model.count;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The text on the button.</p>
              * 
@@ -253,7 +282,7 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cliented")
-        private java.util.List < Cliented> cliented;
+        private java.util.List<Cliented> cliented;
 
         @com.aliyun.core.annotation.NameInMap("DeliveredCount")
         private Integer deliveredCount;
@@ -298,7 +327,7 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
         /**
          * @return cliented
          */
-        public java.util.List < Cliented> getCliented() {
+        public java.util.List<Cliented> getCliented() {
             return this.cliented;
         }
 
@@ -352,7 +381,7 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Cliented> cliented; 
+            private java.util.List<Cliented> cliented; 
             private Integer deliveredCount; 
             private Long end; 
             private String language; 
@@ -361,10 +390,24 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
             private Long start; 
             private String templateCode; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.cliented = model.cliented;
+                this.deliveredCount = model.deliveredCount;
+                this.end = model.end;
+                this.language = model.language;
+                this.readCount = model.readCount;
+                this.sentCount = model.sentCount;
+                this.start = model.start;
+                this.templateCode = model.templateCode;
+            } 
+
             /**
              * <p>The statistics on button clicks.</p>
              */
-            public Builder cliented(java.util.List < Cliented> cliented) {
+            public Builder cliented(java.util.List<Cliented> cliented) {
                 this.cliented = cliented;
                 return this;
             }

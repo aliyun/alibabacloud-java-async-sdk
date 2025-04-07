@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -27,7 +32,7 @@ public class BeeBotAssociateRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Perspective")
-    private java.util.List < String > perspective;
+    private java.util.List<String> perspective;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("RecommendNum")
@@ -61,7 +66,7 @@ public class BeeBotAssociateRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -90,7 +95,7 @@ public class BeeBotAssociateRequest extends Request {
     /**
      * @return perspective
      */
-    public java.util.List < String > getPerspective() {
+    public java.util.List<String> getPerspective() {
         return this.perspective;
     }
 
@@ -119,7 +124,7 @@ public class BeeBotAssociateRequest extends Request {
         private String chatBotInstanceId; 
         private String custSpaceId; 
         private String isvCode; 
-        private java.util.List < String > perspective; 
+        private java.util.List<String> perspective; 
         private Integer recommendNum; 
         private String sessionId; 
         private String utterance; 
@@ -179,7 +184,7 @@ public class BeeBotAssociateRequest extends Request {
         /**
          * <p>The list of codes for answers from different perspectives.</p>
          */
-        public Builder perspective(java.util.List < String > perspective) {
+        public Builder perspective(java.util.List<String> perspective) {
             String perspectiveShrink = shrink(perspective, "Perspective", "json");
             this.putBodyParameter("Perspective", perspectiveShrink);
             this.perspective = perspective;

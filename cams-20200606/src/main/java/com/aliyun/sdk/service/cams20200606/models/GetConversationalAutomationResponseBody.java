@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -45,6 +50,10 @@ public class GetConversationalAutomationResponseBody extends TeaModel {
 
     public static GetConversationalAutomationResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class GetConversationalAutomationResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetConversationalAutomationResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The details about the access denial.</p>
@@ -218,6 +239,14 @@ public class GetConversationalAutomationResponseBody extends TeaModel {
             private String commandDescription; 
             private String commandName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Commands model) {
+                this.commandDescription = model.commandDescription;
+                this.commandName = model.commandName;
+            } 
+
             /**
              * <p>The description of the command.</p>
              * 
@@ -255,7 +284,7 @@ public class GetConversationalAutomationResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Commands")
-        private java.util.List < Commands> commands;
+        private java.util.List<Commands> commands;
 
         @com.aliyun.core.annotation.NameInMap("EnableWelcomeMessage")
         private Boolean enableWelcomeMessage;
@@ -264,7 +293,7 @@ public class GetConversationalAutomationResponseBody extends TeaModel {
         private String phoneNumber;
 
         @com.aliyun.core.annotation.NameInMap("Prompts")
-        private java.util.List < String > prompts;
+        private java.util.List<String> prompts;
 
         private Data(Builder builder) {
             this.commands = builder.commands;
@@ -284,7 +313,7 @@ public class GetConversationalAutomationResponseBody extends TeaModel {
         /**
          * @return commands
          */
-        public java.util.List < Commands> getCommands() {
+        public java.util.List<Commands> getCommands() {
             return this.commands;
         }
 
@@ -305,20 +334,30 @@ public class GetConversationalAutomationResponseBody extends TeaModel {
         /**
          * @return prompts
          */
-        public java.util.List < String > getPrompts() {
+        public java.util.List<String> getPrompts() {
             return this.prompts;
         }
 
         public static final class Builder {
-            private java.util.List < Commands> commands; 
+            private java.util.List<Commands> commands; 
             private Boolean enableWelcomeMessage; 
             private String phoneNumber; 
-            private java.util.List < String > prompts; 
+            private java.util.List<String> prompts; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.commands = model.commands;
+                this.enableWelcomeMessage = model.enableWelcomeMessage;
+                this.phoneNumber = model.phoneNumber;
+                this.prompts = model.prompts;
+            } 
 
             /**
              * <p>The commands.</p>
              */
-            public Builder commands(java.util.List < Commands> commands) {
+            public Builder commands(java.util.List<Commands> commands) {
                 this.commands = commands;
                 return this;
             }
@@ -348,7 +387,7 @@ public class GetConversationalAutomationResponseBody extends TeaModel {
             /**
              * <p>The opening remarks.</p>
              */
-            public Builder prompts(java.util.List < String > prompts) {
+            public Builder prompts(java.util.List<String> prompts) {
                 this.prompts = prompts;
                 return this;
             }

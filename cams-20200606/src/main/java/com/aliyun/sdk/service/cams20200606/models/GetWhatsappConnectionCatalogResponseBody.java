@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class GetWhatsappConnectionCatalogResponseBody extends TeaModel {
     private String message;
 
     @com.aliyun.core.annotation.NameInMap("Model")
-    private java.util.Map < String, ? > model;
+    private java.util.Map<String, ?> model;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -45,6 +50,10 @@ public class GetWhatsappConnectionCatalogResponseBody extends TeaModel {
 
     public static GetWhatsappConnectionCatalogResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -71,7 +80,7 @@ public class GetWhatsappConnectionCatalogResponseBody extends TeaModel {
     /**
      * @return model
      */
-    public java.util.Map < String, ? > getModel() {
+    public java.util.Map<String, ?> getModel() {
         return this.model;
     }
 
@@ -93,9 +102,21 @@ public class GetWhatsappConnectionCatalogResponseBody extends TeaModel {
         private String accessDeniedDetail; 
         private String code; 
         private String message; 
-        private java.util.Map < String, ? > model; 
+        private java.util.Map<String, ?> model; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetWhatsappConnectionCatalogResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.message = model.message;
+            this.model = model.model;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The details about the access denial.</p>
@@ -140,7 +161,7 @@ public class GetWhatsappConnectionCatalogResponseBody extends TeaModel {
          * <strong>example:</strong>
          * <p>{&quot;id&quot;:&quot;200292992&quot;}</p>
          */
-        public Builder model(java.util.Map < String, ? > model) {
+        public Builder model(java.util.Map<String, ?> model) {
             this.model = model;
             return this;
         }

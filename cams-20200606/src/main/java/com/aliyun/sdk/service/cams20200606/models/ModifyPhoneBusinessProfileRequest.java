@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -60,7 +65,7 @@ public class ModifyPhoneBusinessProfileRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Websites")
-    private java.util.List < String > websites;
+    private java.util.List<String> websites;
 
     private ModifyPhoneBusinessProfileRequest(Builder builder) {
         super(builder);
@@ -86,7 +91,7 @@ public class ModifyPhoneBusinessProfileRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -171,7 +176,7 @@ public class ModifyPhoneBusinessProfileRequest extends Request {
     /**
      * @return websites
      */
-    public java.util.List < String > getWebsites() {
+    public java.util.List<String> getWebsites() {
         return this.websites;
     }
 
@@ -187,7 +192,7 @@ public class ModifyPhoneBusinessProfileRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String vertical; 
-        private java.util.List < String > websites; 
+        private java.util.List<String> websites; 
 
         private Builder() {
             super();
@@ -340,7 +345,7 @@ public class ModifyPhoneBusinessProfileRequest extends Request {
         /**
          * <p>The URLs of the websites.</p>
          */
-        public Builder websites(java.util.List < String > websites) {
+        public Builder websites(java.util.List<String> websites) {
             String websitesShrink = shrink(websites, "Websites", "json");
             this.putQueryParameter("Websites", websitesShrink);
             this.websites = websites;

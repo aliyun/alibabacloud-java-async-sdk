@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -64,7 +69,7 @@ public class SendChatappMassMessageRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SenderList")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < SenderList> senderList;
+    private java.util.List<SenderList> senderList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Tag")
@@ -115,7 +120,7 @@ public class SendChatappMassMessageRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -200,7 +205,7 @@ public class SendChatappMassMessageRequest extends Request {
     /**
      * @return senderList
      */
-    public java.util.List < SenderList> getSenderList() {
+    public java.util.List<SenderList> getSenderList() {
         return this.senderList;
     }
 
@@ -251,7 +256,7 @@ public class SendChatappMassMessageRequest extends Request {
         private String isvCode; 
         private String label; 
         private String language; 
-        private java.util.List < SenderList> senderList; 
+        private java.util.List<SenderList> senderList; 
         private String tag; 
         private String taskId; 
         private String templateCode; 
@@ -438,7 +443,7 @@ public class SendChatappMassMessageRequest extends Request {
          * <p>The mobile phone numbers of the message receivers.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder senderList(java.util.List < SenderList> senderList) {
+        public Builder senderList(java.util.List<SenderList> senderList) {
             String senderListShrink = shrink(senderList, "SenderList", "json");
             this.putBodyParameter("SenderList", senderListShrink);
             this.senderList = senderList;
@@ -520,7 +525,7 @@ public class SendChatappMassMessageRequest extends Request {
      */
     public static class FlowAction extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FlowActionData")
-        private java.util.Map < String, String > flowActionData;
+        private java.util.Map<String, String> flowActionData;
 
         @com.aliyun.core.annotation.NameInMap("FlowToken")
         private String flowToken;
@@ -541,7 +546,7 @@ public class SendChatappMassMessageRequest extends Request {
         /**
          * @return flowActionData
          */
-        public java.util.Map < String, String > getFlowActionData() {
+        public java.util.Map<String, String> getFlowActionData() {
             return this.flowActionData;
         }
 
@@ -553,13 +558,21 @@ public class SendChatappMassMessageRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.Map < String, String > flowActionData; 
+            private java.util.Map<String, String> flowActionData; 
             private String flowToken; 
+
+            private Builder() {
+            } 
+
+            private Builder(FlowAction model) {
+                this.flowActionData = model.flowActionData;
+                this.flowToken = model.flowToken;
+            } 
 
             /**
              * <p>The default parameter of the Flow.</p>
              */
-            public Builder flowActionData(java.util.Map < String, String > flowActionData) {
+            public Builder flowActionData(java.util.Map<String, String> flowActionData) {
                 this.flowActionData = flowActionData;
                 return this;
             }
@@ -614,6 +627,13 @@ public class SendChatappMassMessageRequest extends Request {
         public static final class Builder {
             private String productRetailerId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ProductItems model) {
+                this.productRetailerId = model.productRetailerId;
+            } 
+
             /**
              * <p>The retailer ID of the product.</p>
              * 
@@ -640,7 +660,7 @@ public class SendChatappMassMessageRequest extends Request {
      */
     public static class Sections extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ProductItems")
-        private java.util.List < ProductItems> productItems;
+        private java.util.List<ProductItems> productItems;
 
         @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
@@ -661,7 +681,7 @@ public class SendChatappMassMessageRequest extends Request {
         /**
          * @return productItems
          */
-        public java.util.List < ProductItems> getProductItems() {
+        public java.util.List<ProductItems> getProductItems() {
             return this.productItems;
         }
 
@@ -673,13 +693,21 @@ public class SendChatappMassMessageRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < ProductItems> productItems; 
+            private java.util.List<ProductItems> productItems; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(Sections model) {
+                this.productItems = model.productItems;
+                this.title = model.title;
+            } 
 
             /**
              * <p>The products.</p>
              */
-            public Builder productItems(java.util.List < ProductItems> productItems) {
+            public Builder productItems(java.util.List<ProductItems> productItems) {
                 this.productItems = productItems;
                 return this;
             }
@@ -710,7 +738,7 @@ public class SendChatappMassMessageRequest extends Request {
      */
     public static class ProductAction extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Sections")
-        private java.util.List < Sections> sections;
+        private java.util.List<Sections> sections;
 
         @com.aliyun.core.annotation.NameInMap("ThumbnailProductRetailerId")
         private String thumbnailProductRetailerId;
@@ -731,7 +759,7 @@ public class SendChatappMassMessageRequest extends Request {
         /**
          * @return sections
          */
-        public java.util.List < Sections> getSections() {
+        public java.util.List<Sections> getSections() {
             return this.sections;
         }
 
@@ -743,13 +771,21 @@ public class SendChatappMassMessageRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < Sections> sections; 
+            private java.util.List<Sections> sections; 
             private String thumbnailProductRetailerId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProductAction model) {
+                this.sections = model.sections;
+                this.thumbnailProductRetailerId = model.thumbnailProductRetailerId;
+            } 
 
             /**
              * <p>The products. Up to 30 products and 10 categories can be added.</p>
              */
-            public Builder sections(java.util.List < Sections> sections) {
+            public Builder sections(java.util.List<Sections> sections) {
                 this.sections = sections;
                 return this;
             }
@@ -783,13 +819,13 @@ public class SendChatappMassMessageRequest extends Request {
         private FlowAction flowAction;
 
         @com.aliyun.core.annotation.NameInMap("Payload")
-        private java.util.List < String > payload;
+        private java.util.List<String> payload;
 
         @com.aliyun.core.annotation.NameInMap("ProductAction")
         private ProductAction productAction;
 
         @com.aliyun.core.annotation.NameInMap("TemplateParams")
-        private java.util.Map < String, String > templateParams;
+        private java.util.Map<String, String> templateParams;
 
         @com.aliyun.core.annotation.NameInMap("To")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -821,7 +857,7 @@ public class SendChatappMassMessageRequest extends Request {
         /**
          * @return payload
          */
-        public java.util.List < String > getPayload() {
+        public java.util.List<String> getPayload() {
             return this.payload;
         }
 
@@ -835,7 +871,7 @@ public class SendChatappMassMessageRequest extends Request {
         /**
          * @return templateParams
          */
-        public java.util.Map < String, String > getTemplateParams() {
+        public java.util.Map<String, String> getTemplateParams() {
             return this.templateParams;
         }
 
@@ -848,10 +884,21 @@ public class SendChatappMassMessageRequest extends Request {
 
         public static final class Builder {
             private FlowAction flowAction; 
-            private java.util.List < String > payload; 
+            private java.util.List<String> payload; 
             private ProductAction productAction; 
-            private java.util.Map < String, String > templateParams; 
+            private java.util.Map<String, String> templateParams; 
             private String to; 
+
+            private Builder() {
+            } 
+
+            private Builder(SenderList model) {
+                this.flowAction = model.flowAction;
+                this.payload = model.payload;
+                this.productAction = model.productAction;
+                this.templateParams = model.templateParams;
+                this.to = model.to;
+            } 
 
             /**
              * <p>The Flow action.</p>
@@ -864,7 +911,7 @@ public class SendChatappMassMessageRequest extends Request {
             /**
              * <p>The payload of the button.</p>
              */
-            public Builder payload(java.util.List < String > payload) {
+            public Builder payload(java.util.List<String> payload) {
                 this.payload = payload;
                 return this;
             }
@@ -880,7 +927,7 @@ public class SendChatappMassMessageRequest extends Request {
             /**
              * <p>The parameters of the template.</p>
              */
-            public Builder templateParams(java.util.Map < String, String > templateParams) {
+            public Builder templateParams(java.util.Map<String, String> templateParams) {
                 this.templateParams = templateParams;
                 return this;
             }

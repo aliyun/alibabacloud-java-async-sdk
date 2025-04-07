@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,7 +40,7 @@ public class BeeBotChatRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Perspective")
-    private java.util.List < String > perspective;
+    private java.util.List<String> perspective;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SenderId")
@@ -56,7 +61,7 @@ public class BeeBotChatRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("VendorParam")
-    private java.util.Map < String, ? > vendorParam;
+    private java.util.Map<String, ?> vendorParam;
 
     private BeeBotChatRequest(Builder builder) {
         super(builder);
@@ -81,7 +86,7 @@ public class BeeBotChatRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -124,7 +129,7 @@ public class BeeBotChatRequest extends Request {
     /**
      * @return perspective
      */
-    public java.util.List < String > getPerspective() {
+    public java.util.List<String> getPerspective() {
         return this.perspective;
     }
 
@@ -159,7 +164,7 @@ public class BeeBotChatRequest extends Request {
     /**
      * @return vendorParam
      */
-    public java.util.Map < String, ? > getVendorParam() {
+    public java.util.Map<String, ?> getVendorParam() {
         return this.vendorParam;
     }
 
@@ -169,12 +174,12 @@ public class BeeBotChatRequest extends Request {
         private String intentName; 
         private String isvCode; 
         private String knowledgeId; 
-        private java.util.List < String > perspective; 
+        private java.util.List<String> perspective; 
         private String senderId; 
         private String senderNick; 
         private String sessionId; 
         private String utterance; 
-        private java.util.Map < String, ? > vendorParam; 
+        private java.util.Map<String, ?> vendorParam; 
 
         private Builder() {
             super();
@@ -259,7 +264,7 @@ public class BeeBotChatRequest extends Request {
         /**
          * <p>Beijing</p>
          */
-        public Builder perspective(java.util.List < String > perspective) {
+        public Builder perspective(java.util.List<String> perspective) {
             String perspectiveShrink = shrink(perspective, "Perspective", "json");
             this.putBodyParameter("Perspective", perspectiveShrink);
             this.perspective = perspective;
@@ -321,7 +326,7 @@ public class BeeBotChatRequest extends Request {
          * <strong>example:</strong>
          * <p>{&quot;skills&quot;:&quot;chat_search&quot;,&quot;accessToken&quot;:&quot;73f4d5c8e8c334d9b538890bca68ac9a&quot;,&quot;senderStaffId&quot;:&quot;1697204021326&quot;,&quot;senderCorpId&quot;:&quot;dingee291fb2828058b9&quot;}</p>
          */
-        public Builder vendorParam(java.util.Map < String, ? > vendorParam) {
+        public Builder vendorParam(java.util.Map<String, ?> vendorParam) {
             String vendorParamShrink = shrink(vendorParam, "VendorParam", "json");
             this.putBodyParameter("VendorParam", vendorParamShrink);
             this.vendorParam = vendorParam;

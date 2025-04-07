@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,7 +28,7 @@ public class GetPermissionByCodeRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Permissions")
-    private java.util.List < String > permissions;
+    private java.util.List<String> permissions;
 
     private GetPermissionByCodeRequest(Builder builder) {
         super(builder);
@@ -40,7 +45,7 @@ public class GetPermissionByCodeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -62,14 +67,14 @@ public class GetPermissionByCodeRequest extends Request {
     /**
      * @return permissions
      */
-    public java.util.List < String > getPermissions() {
+    public java.util.List<String> getPermissions() {
         return this.permissions;
     }
 
     public static final class Builder extends Request.Builder<GetPermissionByCodeRequest, Builder> {
         private String code; 
         private String custSpaceId; 
-        private java.util.List < String > permissions; 
+        private java.util.List<String> permissions; 
 
         private Builder() {
             super();
@@ -110,7 +115,7 @@ public class GetPermissionByCodeRequest extends Request {
         /**
          * <p>The permissions.</p>
          */
-        public Builder permissions(java.util.List < String > permissions) {
+        public Builder permissions(java.util.List<String> permissions) {
             String permissionsShrink = shrink(permissions, "Permissions", "json");
             this.putBodyParameter("Permissions", permissionsShrink);
             this.permissions = permissions;
