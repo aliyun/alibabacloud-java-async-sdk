@@ -48,6 +48,10 @@ public class GetContactFlowResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetContactFlowResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetContactFlowResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -287,6 +302,23 @@ public class GetContactFlowResponseBody extends TeaModel {
             private Boolean published; 
             private String type; 
             private String updatedTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.contactFlowId = model.contactFlowId;
+                this.createdTime = model.createdTime;
+                this.definition = model.definition;
+                this.description = model.description;
+                this.draftId = model.draftId;
+                this.editor = model.editor;
+                this.instanceId = model.instanceId;
+                this.name = model.name;
+                this.published = model.published;
+                this.type = model.type;
+                this.updatedTime = model.updatedTime;
+            } 
 
             /**
              * ContactFlowId.

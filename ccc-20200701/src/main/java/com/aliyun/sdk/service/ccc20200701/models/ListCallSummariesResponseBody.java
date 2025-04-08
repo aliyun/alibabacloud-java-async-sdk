@@ -52,6 +52,10 @@ public class ListCallSummariesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListCallSummariesResponseBody extends TeaModel {
         private String message; 
         private java.util.List<String> params; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListCallSummariesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.params = model.params;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -247,6 +263,18 @@ public class ListCallSummariesResponseBody extends TeaModel {
             private String creator; 
             private String editor; 
             private String ticketId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.contactId = model.contactId;
+                this.context = model.context;
+                this.createdTime = model.createdTime;
+                this.creator = model.creator;
+                this.editor = model.editor;
+                this.ticketId = model.ticketId;
+            } 
 
             /**
              * ContactId.

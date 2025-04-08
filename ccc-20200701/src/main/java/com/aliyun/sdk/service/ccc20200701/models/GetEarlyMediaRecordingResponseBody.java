@@ -48,6 +48,10 @@ public class GetEarlyMediaRecordingResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetEarlyMediaRecordingResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetEarlyMediaRecordingResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -179,6 +194,14 @@ public class GetEarlyMediaRecordingResponseBody extends TeaModel {
         public static final class Builder {
             private String fileName; 
             private String fileUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.fileName = model.fileName;
+                this.fileUrl = model.fileUrl;
+            } 
 
             /**
              * FileName.

@@ -48,6 +48,10 @@ public class GetHistoricalCampaignReportResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetHistoricalCampaignReportResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetHistoricalCampaignReportResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -251,6 +266,20 @@ public class GetHistoricalCampaignReportResponseBody extends TeaModel {
             private Long callsDialed; 
             private Float connectedRate; 
             private Float occupancyRate; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.abandonRate = model.abandonRate;
+                this.abandonedRate = model.abandonedRate;
+                this.answerRate = model.answerRate;
+                this.callsAbandoned = model.callsAbandoned;
+                this.callsConnected = model.callsConnected;
+                this.callsDialed = model.callsDialed;
+                this.connectedRate = model.connectedRate;
+                this.occupancyRate = model.occupancyRate;
+            } 
 
             /**
              * AbandonRate.

@@ -48,6 +48,10 @@ public class ListCampaignTrendingReportResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class ListCampaignTrendingReportResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListCampaignTrendingReportResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -335,6 +350,27 @@ public class ListCampaignTrendingReportResponseBody extends TeaModel {
             private Long talkingAgents; 
             private Long workAgents; 
             private Long workingAgents; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.breakAgents = model.breakAgents;
+                this.breakingAgents = model.breakingAgents;
+                this.concurrency = model.concurrency;
+                this.datetime = model.datetime;
+                this.loggedInAgents = model.loggedInAgents;
+                this.outboundScenarioBreakingAgents = model.outboundScenarioBreakingAgents;
+                this.outboundScenarioReadyAgents = model.outboundScenarioReadyAgents;
+                this.outboundScenarioTalkingAgents = model.outboundScenarioTalkingAgents;
+                this.outboundScenarioWorkingAgents = model.outboundScenarioWorkingAgents;
+                this.readyAgents = model.readyAgents;
+                this.statsTime = model.statsTime;
+                this.talkAgents = model.talkAgents;
+                this.talkingAgents = model.talkingAgents;
+                this.workAgents = model.workAgents;
+                this.workingAgents = model.workingAgents;
+            } 
 
             /**
              * BreakAgents.

@@ -112,6 +112,10 @@ public class DataPropertiesValue extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return displayName
      */
@@ -281,6 +285,33 @@ public class DataPropertiesValue extends TeaModel {
         private Long createdTime; 
         private Long updatedTime; 
         private String creator; 
+
+        private Builder() {
+        } 
+
+        private Builder(DataPropertiesValue model) {
+            this.displayName = model.displayName;
+            this.description = model.description;
+            this.name = model.name;
+            this.dataType = model.dataType;
+            this.pattern = model.pattern;
+            this.patternErrorMessage = model.patternErrorMessage;
+            this.minLength = model.minLength;
+            this.maxLength = model.maxLength;
+            this.minimum = model.minimum;
+            this.maximum = model.maximum;
+            this.required = model.required;
+            this.system = model.system;
+            this.disabled = model.disabled;
+            this.array = model.array;
+            this.readOnly = model.readOnly;
+            this.editorType = model.editorType;
+            this.attributes = model.attributes;
+            this.displayOrder = model.displayOrder;
+            this.createdTime = model.createdTime;
+            this.updatedTime = model.updatedTime;
+            this.creator = model.creator;
+        } 
 
         /**
          * DisplayName.

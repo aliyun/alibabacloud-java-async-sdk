@@ -48,6 +48,10 @@ public class ListPrivilegesOfUserResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class ListPrivilegesOfUserResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListPrivilegesOfUserResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -191,6 +206,15 @@ public class ListPrivilegesOfUserResponseBody extends TeaModel {
             private String instanceId; 
             private String name; 
             private String scope; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.instanceId = model.instanceId;
+                this.name = model.name;
+                this.scope = model.scope;
+            } 
 
             /**
              * InstanceId.

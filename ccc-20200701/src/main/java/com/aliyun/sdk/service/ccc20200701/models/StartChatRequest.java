@@ -50,7 +50,7 @@ public class StartChatRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -212,6 +212,16 @@ public class StartChatRequest extends Request {
             private String nickname; 
             private String userId; 
             private String userType; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserList model) {
+                this.avatarUrl = model.avatarUrl;
+                this.nickname = model.nickname;
+                this.userId = model.userId;
+                this.userType = model.userType;
+            } 
 
             /**
              * AvatarUrl.

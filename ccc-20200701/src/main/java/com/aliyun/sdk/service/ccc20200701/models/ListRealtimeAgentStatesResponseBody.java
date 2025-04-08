@@ -48,6 +48,10 @@ public class ListRealtimeAgentStatesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class ListRealtimeAgentStatesResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListRealtimeAgentStatesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -348,6 +363,28 @@ public class ListRealtimeAgentStatesResponseBody extends TeaModel {
             private Long stateTime; 
             private String workMode; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.agentId = model.agentId;
+                this.agentName = model.agentName;
+                this.breakCode = model.breakCode;
+                this.callType = model.callType;
+                this.counterParty = model.counterParty;
+                this.duration = model.duration;
+                this.extension = model.extension;
+                this.instanceId = model.instanceId;
+                this.mobile = model.mobile;
+                this.outboundScenario = model.outboundScenario;
+                this.skillGroupIdList = model.skillGroupIdList;
+                this.skillGroupNameList = model.skillGroupNameList;
+                this.state = model.state;
+                this.stateCode = model.stateCode;
+                this.stateTime = model.stateTime;
+                this.workMode = model.workMode;
+            } 
+
             /**
              * AgentId.
              */
@@ -550,6 +587,16 @@ public class ListRealtimeAgentStatesResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.list = model.list;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * List.

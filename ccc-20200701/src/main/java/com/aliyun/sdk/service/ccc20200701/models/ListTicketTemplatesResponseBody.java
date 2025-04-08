@@ -52,6 +52,10 @@ public class ListTicketTemplatesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListTicketTemplatesResponseBody extends TeaModel {
         private String message; 
         private java.util.List<String> params; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTicketTemplatesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.params = model.params;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -427,6 +443,33 @@ public class ListTicketTemplatesResponseBody extends TeaModel {
             private Boolean required; 
             private Boolean system; 
             private Long updatedTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(TicketFields model) {
+                this.array = model.array;
+                this.attribute = model.attribute;
+                this.createdTime = model.createdTime;
+                this.creator = model.creator;
+                this.dataType = model.dataType;
+                this.description = model.description;
+                this.disabled = model.disabled;
+                this.displayName = model.displayName;
+                this.displayOrder = model.displayOrder;
+                this.editorType = model.editorType;
+                this.maxLength = model.maxLength;
+                this.maximum = model.maximum;
+                this.minLength = model.minLength;
+                this.minimum = model.minimum;
+                this.name = model.name;
+                this.pattern = model.pattern;
+                this.patternErrorMessage = model.patternErrorMessage;
+                this.readOnly = model.readOnly;
+                this.required = model.required;
+                this.system = model.system;
+                this.updatedTime = model.updatedTime;
+            } 
 
             /**
              * Array.
@@ -755,6 +798,23 @@ public class ListTicketTemplatesResponseBody extends TeaModel {
             private java.util.List<TicketFields> ticketFields; 
             private Long updatedTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.appliedVersion = model.appliedVersion;
+                this.categoryId = model.categoryId;
+                this.editor = model.editor;
+                this.instanceId = model.instanceId;
+                this.latestVersion = model.latestVersion;
+                this.name = model.name;
+                this.processDefinition = model.processDefinition;
+                this.state = model.state;
+                this.templateId = model.templateId;
+                this.ticketFields = model.ticketFields;
+                this.updatedTime = model.updatedTime;
+            } 
+
             /**
              * AppliedVersion.
              */
@@ -917,6 +977,16 @@ public class ListTicketTemplatesResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.list = model.list;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * List.

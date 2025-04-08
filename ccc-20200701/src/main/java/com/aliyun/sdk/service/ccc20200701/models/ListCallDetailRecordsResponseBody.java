@@ -48,6 +48,10 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListCallDetailRecordsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -576,6 +591,47 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
             private Long talkTime; 
             private Long waitTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.additionalBroker = model.additionalBroker;
+                this.agentIds = model.agentIds;
+                this.agentNames = model.agentNames;
+                this.broker = model.broker;
+                this.callDuration = model.callDuration;
+                this.callIds = model.callIds;
+                this.calledNumber = model.calledNumber;
+                this.calleeLocation = model.calleeLocation;
+                this.callerLocation = model.callerLocation;
+                this.callingNumber = model.callingNumber;
+                this.contactDisposition = model.contactDisposition;
+                this.contactId = model.contactId;
+                this.contactType = model.contactType;
+                this.dialingTime = model.dialingTime;
+                this.earlyMediaState = model.earlyMediaState;
+                this.establishedTime = model.establishedTime;
+                this.heldTime = model.heldTime;
+                this.instanceId = model.instanceId;
+                this.ivrTime = model.ivrTime;
+                this.queueTime = model.queueTime;
+                this.recordingDuration = model.recordingDuration;
+                this.recordingReady = model.recordingReady;
+                this.releaseInitiator = model.releaseInitiator;
+                this.releaseReason = model.releaseReason;
+                this.releaseTime = model.releaseTime;
+                this.ringTime = model.ringTime;
+                this.satisfactionDescription = model.satisfactionDescription;
+                this.satisfactionIndex = model.satisfactionIndex;
+                this.satisfactionSurveyChannel = model.satisfactionSurveyChannel;
+                this.satisfactionSurveyOffered = model.satisfactionSurveyOffered;
+                this.skillGroupIds = model.skillGroupIds;
+                this.skillGroupNames = model.skillGroupNames;
+                this.startTime = model.startTime;
+                this.talkTime = model.talkTime;
+                this.waitTime = model.waitTime;
+            } 
+
             /**
              * AdditionalBroker.
              */
@@ -930,6 +986,16 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.list = model.list;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * List.

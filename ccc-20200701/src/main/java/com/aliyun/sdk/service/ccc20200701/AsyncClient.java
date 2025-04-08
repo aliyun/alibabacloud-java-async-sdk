@@ -1075,6 +1075,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListUsersResponse> listUsers(ListUsersRequest request);
 
     /**
+     * @param request the request parameters of ListVisitorChatMessages  ListVisitorChatMessagesRequest
+     * @return ListVisitorChatMessagesResponse
+     */
+    CompletableFuture<ListVisitorChatMessagesResponse> listVisitorChatMessages(ListVisitorChatMessagesRequest request);
+
+    /**
      * @param request the request parameters of ListVoicemails  ListVoicemailsRequest
      * @return ListVoicemailsResponse
      */

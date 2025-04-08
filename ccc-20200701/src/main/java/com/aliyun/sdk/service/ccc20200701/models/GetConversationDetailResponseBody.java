@@ -48,6 +48,10 @@ public class GetConversationDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetConversationDetailResponseBody extends TeaModel {
         private String message; 
         private java.util.List<Phrases> phrases; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetConversationDetailResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.phrases = model.phrases;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -227,6 +242,18 @@ public class GetConversationDetailResponseBody extends TeaModel {
             private String identity; 
             private String role; 
             private String words; 
+
+            private Builder() {
+            } 
+
+            private Builder(Phrases model) {
+                this.begin = model.begin;
+                this.end = model.end;
+                this.finished = model.finished;
+                this.identity = model.identity;
+                this.role = model.role;
+                this.words = model.words;
+            } 
 
             /**
              * Begin.

@@ -48,6 +48,10 @@ public class ImportAdminsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class ImportAdminsResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ImportAdminsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -215,6 +230,17 @@ public class ImportAdminsResponseBody extends TeaModel {
             private String ramId; 
             private String roleId; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.extension = model.extension;
+                this.instanceId = model.instanceId;
+                this.ramId = model.ramId;
+                this.roleId = model.roleId;
+                this.userId = model.userId;
+            } 
 
             /**
              * Extension.

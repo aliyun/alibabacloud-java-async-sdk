@@ -52,6 +52,10 @@ public class EndConferenceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class EndConferenceResponseBody extends TeaModel {
         private String message; 
         private java.util.List<String> params; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(EndConferenceResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.params = model.params;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -308,6 +324,23 @@ public class EndConferenceResponseBody extends TeaModel {
             private String userExtension; 
             private String userId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ChannelContexts model) {
+                this.callType = model.callType;
+                this.channelId = model.channelId;
+                this.channelState = model.channelState;
+                this.destination = model.destination;
+                this.jobId = model.jobId;
+                this.originator = model.originator;
+                this.releaseInitiator = model.releaseInitiator;
+                this.releaseReason = model.releaseReason;
+                this.timestamp = model.timestamp;
+                this.userExtension = model.userExtension;
+                this.userId = model.userId;
+            } 
+
             /**
              * CallType.
              */
@@ -458,6 +491,15 @@ public class EndConferenceResponseBody extends TeaModel {
             private java.util.List<ChannelContexts> channelContexts; 
             private String instanceId; 
             private String jobId; 
+
+            private Builder() {
+            } 
+
+            private Builder(CallContext model) {
+                this.channelContexts = model.channelContexts;
+                this.instanceId = model.instanceId;
+                this.jobId = model.jobId;
+            } 
 
             /**
              * ChannelContexts.
@@ -642,6 +684,23 @@ public class EndConferenceResponseBody extends TeaModel {
             private String userState; 
             private String workMode; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserContext model) {
+                this.breakCode = model.breakCode;
+                this.deviceId = model.deviceId;
+                this.deviceState = model.deviceState;
+                this.extension = model.extension;
+                this.instanceId = model.instanceId;
+                this.jobId = model.jobId;
+                this.outboundScenario = model.outboundScenario;
+                this.signedSkillGroupIdList = model.signedSkillGroupIdList;
+                this.userId = model.userId;
+                this.userState = model.userState;
+                this.workMode = model.workMode;
+            } 
+
             /**
              * BreakCode.
              */
@@ -792,6 +851,15 @@ public class EndConferenceResponseBody extends TeaModel {
             private CallContext callContext; 
             private Long contextId; 
             private UserContext userContext; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.callContext = model.callContext;
+                this.contextId = model.contextId;
+                this.userContext = model.userContext;
+            } 
 
             /**
              * CallContext.

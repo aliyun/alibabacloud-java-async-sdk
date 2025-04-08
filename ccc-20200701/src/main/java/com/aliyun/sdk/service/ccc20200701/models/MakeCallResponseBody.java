@@ -52,6 +52,10 @@ public class MakeCallResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class MakeCallResponseBody extends TeaModel {
         private String message; 
         private java.util.List<String> params; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(MakeCallResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.params = model.params;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -332,6 +348,25 @@ public class MakeCallResponseBody extends TeaModel {
             private String userExtension; 
             private String userId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ChannelContexts model) {
+                this.callType = model.callType;
+                this.channelFlags = model.channelFlags;
+                this.channelId = model.channelId;
+                this.channelState = model.channelState;
+                this.destination = model.destination;
+                this.jobId = model.jobId;
+                this.mediaType = model.mediaType;
+                this.originator = model.originator;
+                this.releaseInitiator = model.releaseInitiator;
+                this.releaseReason = model.releaseReason;
+                this.timestamp = model.timestamp;
+                this.userExtension = model.userExtension;
+                this.userId = model.userId;
+            } 
+
             /**
              * CallType.
              */
@@ -453,6 +488,9 @@ public class MakeCallResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CallType")
         private String callType;
 
+        @com.aliyun.core.annotation.NameInMap("CallVariables")
+        private String callVariables;
+
         @com.aliyun.core.annotation.NameInMap("ChannelContexts")
         private java.util.List<ChannelContexts> channelContexts;
 
@@ -464,6 +502,7 @@ public class MakeCallResponseBody extends TeaModel {
 
         private CallContext(Builder builder) {
             this.callType = builder.callType;
+            this.callVariables = builder.callVariables;
             this.channelContexts = builder.channelContexts;
             this.instanceId = builder.instanceId;
             this.jobId = builder.jobId;
@@ -482,6 +521,13 @@ public class MakeCallResponseBody extends TeaModel {
          */
         public String getCallType() {
             return this.callType;
+        }
+
+        /**
+         * @return callVariables
+         */
+        public String getCallVariables() {
+            return this.callVariables;
         }
 
         /**
@@ -507,15 +553,35 @@ public class MakeCallResponseBody extends TeaModel {
 
         public static final class Builder {
             private String callType; 
+            private String callVariables; 
             private java.util.List<ChannelContexts> channelContexts; 
             private String instanceId; 
             private String jobId; 
+
+            private Builder() {
+            } 
+
+            private Builder(CallContext model) {
+                this.callType = model.callType;
+                this.callVariables = model.callVariables;
+                this.channelContexts = model.channelContexts;
+                this.instanceId = model.instanceId;
+                this.jobId = model.jobId;
+            } 
 
             /**
              * CallType.
              */
             public Builder callType(String callType) {
                 this.callType = callType;
+                return this;
+            }
+
+            /**
+             * CallVariables.
+             */
+            public Builder callVariables(String callVariables) {
+                this.callVariables = callVariables;
                 return this;
             }
 
@@ -690,6 +756,22 @@ public class MakeCallResponseBody extends TeaModel {
             private String userState; 
             private String workMode; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserContext model) {
+                this.breakCode = model.breakCode;
+                this.deviceId = model.deviceId;
+                this.extension = model.extension;
+                this.instanceId = model.instanceId;
+                this.jobId = model.jobId;
+                this.outboundScenario = model.outboundScenario;
+                this.signedSkillGroupIdList = model.signedSkillGroupIdList;
+                this.userId = model.userId;
+                this.userState = model.userState;
+                this.workMode = model.workMode;
+            } 
+
             /**
              * BreakCode.
              */
@@ -832,6 +914,15 @@ public class MakeCallResponseBody extends TeaModel {
             private CallContext callContext; 
             private Long contextId; 
             private UserContext userContext; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.callContext = model.callContext;
+                this.contextId = model.contextId;
+                this.userContext = model.userContext;
+            } 
 
             /**
              * CallContext.

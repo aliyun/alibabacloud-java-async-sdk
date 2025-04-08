@@ -48,6 +48,10 @@ public class PickOutboundNumbersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class PickOutboundNumbersResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(PickOutboundNumbersResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -192,6 +207,15 @@ public class PickOutboundNumbersResponseBody extends TeaModel {
             private String number; 
             private String province; 
 
+            private Builder() {
+            } 
+
+            private Builder(Callee model) {
+                this.city = model.city;
+                this.number = model.number;
+                this.province = model.province;
+            } 
+
             /**
              * City.
              */
@@ -279,6 +303,15 @@ public class PickOutboundNumbersResponseBody extends TeaModel {
             private String number; 
             private String province; 
 
+            private Builder() {
+            } 
+
+            private Builder(Caller model) {
+                this.city = model.city;
+                this.number = model.number;
+                this.province = model.province;
+            } 
+
             /**
              * City.
              */
@@ -353,6 +386,14 @@ public class PickOutboundNumbersResponseBody extends TeaModel {
         public static final class Builder {
             private Callee callee; 
             private Caller caller; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.callee = model.callee;
+                this.caller = model.caller;
+            } 
 
             /**
              * Callee.

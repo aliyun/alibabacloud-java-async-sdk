@@ -48,6 +48,10 @@ public class GetAudioFileUploadParametersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetAudioFileUploadParametersResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAudioFileUploadParametersResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -227,6 +242,18 @@ public class GetAudioFileUploadParametersResponseBody extends TeaModel {
             private String host; 
             private String policy; 
             private String signature; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.accessKeyId = model.accessKeyId;
+                this.expireTime = model.expireTime;
+                this.filePath = model.filePath;
+                this.host = model.host;
+                this.policy = model.policy;
+                this.signature = model.signature;
+            } 
 
             /**
              * AccessKeyId.

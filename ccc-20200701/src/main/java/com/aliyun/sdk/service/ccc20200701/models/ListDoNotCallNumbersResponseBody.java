@@ -52,6 +52,10 @@ public class ListDoNotCallNumbersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListDoNotCallNumbersResponseBody extends TeaModel {
         private String message; 
         private java.util.List<String> params; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDoNotCallNumbersResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.params = model.params;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -248,6 +264,18 @@ public class ListDoNotCallNumbersResponseBody extends TeaModel {
             private String remark; 
             private String scope; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.createTime = model.createTime;
+                this.createdTime = model.createdTime;
+                this.creator = model.creator;
+                this.number = model.number;
+                this.remark = model.remark;
+                this.scope = model.scope;
+            } 
+
             /**
              * CreateTime.
              */
@@ -370,6 +398,16 @@ public class ListDoNotCallNumbersResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.list = model.list;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * List.

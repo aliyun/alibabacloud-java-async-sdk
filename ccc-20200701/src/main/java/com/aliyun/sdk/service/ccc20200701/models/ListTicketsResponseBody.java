@@ -48,6 +48,10 @@ public class ListTicketsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class ListTicketsResponseBody extends TeaModel {
         private Long httpStatusCode; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTicketsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -456,6 +471,37 @@ public class ListTicketsResponseBody extends TeaModel {
             private String title; 
             private String updatedTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.assignee = model.assignee;
+                this.assigneeName = model.assigneeName;
+                this.categoryId = model.categoryId;
+                this.categoryName = model.categoryName;
+                this.closeCode = model.closeCode;
+                this.comment = model.comment;
+                this.context = model.context;
+                this.createdTime = model.createdTime;
+                this.creator = model.creator;
+                this.creatorName = model.creatorName;
+                this.currentTaskId = model.currentTaskId;
+                this.currentTaskName = model.currentTaskName;
+                this.currentTaskStartTime = model.currentTaskStartTime;
+                this.customerId = model.customerId;
+                this.endTime = model.endTime;
+                this.instanceId = model.instanceId;
+                this.jobId = model.jobId;
+                this.source = model.source;
+                this.startTime = model.startTime;
+                this.state = model.state;
+                this.templateId = model.templateId;
+                this.templateVersion = model.templateVersion;
+                this.ticketId = model.ticketId;
+                this.title = model.title;
+                this.updatedTime = model.updatedTime;
+            } 
+
             /**
              * Assignee.
              */
@@ -730,6 +776,16 @@ public class ListTicketsResponseBody extends TeaModel {
             private Long pageNumber; 
             private Long pageSize; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.list = model.list;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * List.

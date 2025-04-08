@@ -48,6 +48,10 @@ public class ProcessAliMeCallbackOfStagingResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class ProcessAliMeCallbackOfStagingResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ProcessAliMeCallbackOfStagingResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -167,6 +182,13 @@ public class ProcessAliMeCallbackOfStagingResponseBody extends TeaModel {
 
         public static final class Builder {
             private String result; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.result = model.result;
+            } 
 
             /**
              * Result.

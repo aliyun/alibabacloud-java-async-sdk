@@ -120,7 +120,7 @@ public class CreateCampaignRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -519,6 +519,15 @@ public class CreateCampaignRequest extends Request {
             private String customVariables; 
             private String phoneNumber; 
             private String referenceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(CaseList model) {
+                this.customVariables = model.customVariables;
+                this.phoneNumber = model.phoneNumber;
+                this.referenceId = model.referenceId;
+            } 
 
             /**
              * CustomVariables.

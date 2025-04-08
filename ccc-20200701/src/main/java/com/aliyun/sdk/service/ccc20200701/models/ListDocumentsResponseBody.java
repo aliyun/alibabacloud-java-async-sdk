@@ -52,6 +52,10 @@ public class ListDocumentsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListDocumentsResponseBody extends TeaModel {
         private String message; 
         private java.util.List<String> params; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDocumentsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.params = model.params;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -260,6 +276,19 @@ public class ListDocumentsResponseBody extends TeaModel {
             private java.util.Map<String, DataSchemaPropertiesValue> properties; 
             private String updatedTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(Schema model) {
+                this.createdTime = model.createdTime;
+                this.deleted = model.deleted;
+                this.description = model.description;
+                this.id = model.id;
+                this.instanceId = model.instanceId;
+                this.properties = model.properties;
+                this.updatedTime = model.updatedTime;
+            } 
+
             /**
              * CreatedTime.
              */
@@ -393,6 +422,16 @@ public class ListDocumentsResponseBody extends TeaModel {
             private String nextPageToken; 
             private Schema schema; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.documents = model.documents;
+                this.nextPageToken = model.nextPageToken;
+                this.schema = model.schema;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * Documents.

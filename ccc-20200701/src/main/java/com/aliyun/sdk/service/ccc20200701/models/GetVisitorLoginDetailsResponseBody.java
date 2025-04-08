@@ -52,6 +52,10 @@ public class GetVisitorLoginDetailsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetVisitorLoginDetailsResponseBody extends TeaModel {
         private String message; 
         private java.util.List<String> params; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetVisitorLoginDetailsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.params = model.params;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -247,6 +263,18 @@ public class GetVisitorLoginDetailsResponseBody extends TeaModel {
             private String chatLoginToken; 
             private String chatServerUrl; 
             private String chatUserId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.chatAppId = model.chatAppId;
+                this.chatAppKey = model.chatAppKey;
+                this.chatDeviceId = model.chatDeviceId;
+                this.chatLoginToken = model.chatLoginToken;
+                this.chatServerUrl = model.chatServerUrl;
+                this.chatUserId = model.chatUserId;
+            } 
 
             /**
              * ChatAppId.

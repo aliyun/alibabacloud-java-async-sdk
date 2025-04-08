@@ -48,6 +48,10 @@ public class ListAttemptsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class ListAttemptsResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAttemptsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -396,6 +411,32 @@ public class ListAttemptsResponseBody extends TeaModel {
             private Long queueDuration; 
             private String queueId; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.agentEstablishedTime = model.agentEstablishedTime;
+                this.agentId = model.agentId;
+                this.agentRingDuration = model.agentRingDuration;
+                this.assignAgentTime = model.assignAgentTime;
+                this.attemptId = model.attemptId;
+                this.callee = model.callee;
+                this.caller = model.caller;
+                this.campaignId = model.campaignId;
+                this.caseId = model.caseId;
+                this.contactId = model.contactId;
+                this.customerEstablishedTime = model.customerEstablishedTime;
+                this.customerReleasedTime = model.customerReleasedTime;
+                this.dialDuration = model.dialDuration;
+                this.dialTime = model.dialTime;
+                this.enqueueTime = model.enqueueTime;
+                this.enterIvrTime = model.enterIvrTime;
+                this.instanceId = model.instanceId;
+                this.ivrDuration = model.ivrDuration;
+                this.queueDuration = model.queueDuration;
+                this.queueId = model.queueId;
+            } 
+
             /**
              * AgentEstablishedTime.
              */
@@ -630,6 +671,16 @@ public class ListAttemptsResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.list = model.list;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * List.

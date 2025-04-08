@@ -52,6 +52,10 @@ public class GetSchemaResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetSchemaResponseBody extends TeaModel {
         private String message; 
         private java.util.List<String> params; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSchemaResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.params = model.params;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -259,6 +275,19 @@ public class GetSchemaResponseBody extends TeaModel {
             private String instanceId; 
             private java.util.Map<String, DataPropertiesValue> properties; 
             private String updatedTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.createdTime = model.createdTime;
+                this.deleted = model.deleted;
+                this.description = model.description;
+                this.id = model.id;
+                this.instanceId = model.instanceId;
+                this.properties = model.properties;
+                this.updatedTime = model.updatedTime;
+            } 
 
             /**
              * CreatedTime.

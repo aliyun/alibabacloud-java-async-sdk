@@ -51,7 +51,7 @@ public class AddSchemaPropertyRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -378,6 +378,29 @@ public class AddSchemaPropertyRequest extends Request {
             private String patternErrorMessage; 
             private Boolean readOnly; 
             private Boolean required; 
+
+            private Builder() {
+            } 
+
+            private Builder(Property model) {
+                this.array = model.array;
+                this.attributes = model.attributes;
+                this.dataType = model.dataType;
+                this.description = model.description;
+                this.disabled = model.disabled;
+                this.displayName = model.displayName;
+                this.displayOrder = model.displayOrder;
+                this.editorType = model.editorType;
+                this.maxLength = model.maxLength;
+                this.maximum = model.maximum;
+                this.minLength = model.minLength;
+                this.minimum = model.minimum;
+                this.name = model.name;
+                this.pattern = model.pattern;
+                this.patternErrorMessage = model.patternErrorMessage;
+                this.readOnly = model.readOnly;
+                this.required = model.required;
+            } 
 
             /**
              * Array.

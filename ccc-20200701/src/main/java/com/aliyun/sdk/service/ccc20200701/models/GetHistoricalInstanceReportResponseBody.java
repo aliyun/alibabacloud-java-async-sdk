@@ -48,6 +48,10 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetHistoricalInstanceReportResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -179,6 +194,14 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public static final class Builder {
             private String accessChannelType; 
             private Long callsOffered; 
+
+            private Builder() {
+            } 
+
+            private Builder(AccessChannelTypeDetailList model) {
+                this.accessChannelType = model.accessChannelType;
+                this.callsOffered = model.callsOffered;
+            } 
 
             /**
              * AccessChannelType.
@@ -967,6 +990,74 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
             private Long totalWaitTime; 
             private Long totalWorkTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(Inbound model) {
+                this.abandonRate = model.abandonRate;
+                this.accessChannelTypeDetailList = model.accessChannelTypeDetailList;
+                this.averageAbandonTime = model.averageAbandonTime;
+                this.averageAbandonedInIVRTime = model.averageAbandonedInIVRTime;
+                this.averageAbandonedInQueueTime = model.averageAbandonedInQueueTime;
+                this.averageAbandonedInRingTime = model.averageAbandonedInRingTime;
+                this.averageFirstResponseTime = model.averageFirstResponseTime;
+                this.averageHoldTime = model.averageHoldTime;
+                this.averageResponseTime = model.averageResponseTime;
+                this.averageRingTime = model.averageRingTime;
+                this.averageTalkTime = model.averageTalkTime;
+                this.averageWaitTime = model.averageWaitTime;
+                this.averageWorkTime = model.averageWorkTime;
+                this.callsAbandoned = model.callsAbandoned;
+                this.callsAbandonedInIVR = model.callsAbandonedInIVR;
+                this.callsAbandonedInQueue = model.callsAbandonedInQueue;
+                this.callsAbandonedInRing = model.callsAbandonedInRing;
+                this.callsAbandonedInVoiceNavigator = model.callsAbandonedInVoiceNavigator;
+                this.callsAttendedTransferred = model.callsAttendedTransferred;
+                this.callsBlindTransferred = model.callsBlindTransferred;
+                this.callsCausedIVRException = model.callsCausedIVRException;
+                this.callsForwardToOutsideNumber = model.callsForwardToOutsideNumber;
+                this.callsHandled = model.callsHandled;
+                this.callsHold = model.callsHold;
+                this.callsIVRException = model.callsIVRException;
+                this.callsOffered = model.callsOffered;
+                this.callsQueued = model.callsQueued;
+                this.callsQueuingFailed = model.callsQueuingFailed;
+                this.callsQueuingOverflow = model.callsQueuingOverflow;
+                this.callsQueuingTimeout = model.callsQueuingTimeout;
+                this.callsRinged = model.callsRinged;
+                this.callsToVoicemail = model.callsToVoicemail;
+                this.callsVoicemail = model.callsVoicemail;
+                this.handleRate = model.handleRate;
+                this.maxAbandonTime = model.maxAbandonTime;
+                this.maxAbandonedInIVRTime = model.maxAbandonedInIVRTime;
+                this.maxAbandonedInQueueTime = model.maxAbandonedInQueueTime;
+                this.maxAbandonedInRingTime = model.maxAbandonedInRingTime;
+                this.maxHoldTime = model.maxHoldTime;
+                this.maxRingTime = model.maxRingTime;
+                this.maxTalkTime = model.maxTalkTime;
+                this.maxWaitTime = model.maxWaitTime;
+                this.maxWorkTime = model.maxWorkTime;
+                this.satisfactionIndex = model.satisfactionIndex;
+                this.satisfactionRate = model.satisfactionRate;
+                this.satisfactionSurveysOffered = model.satisfactionSurveysOffered;
+                this.satisfactionSurveysResponded = model.satisfactionSurveysResponded;
+                this.serviceLevel15 = model.serviceLevel15;
+                this.serviceLevel20 = model.serviceLevel20;
+                this.serviceLevel30 = model.serviceLevel30;
+                this.totalAbandonTime = model.totalAbandonTime;
+                this.totalAbandonedInIVRTime = model.totalAbandonedInIVRTime;
+                this.totalAbandonedInQueueTime = model.totalAbandonedInQueueTime;
+                this.totalAbandonedInRingTime = model.totalAbandonedInRingTime;
+                this.totalHoldTime = model.totalHoldTime;
+                this.totalMessagesSent = model.totalMessagesSent;
+                this.totalMessagesSentByAgent = model.totalMessagesSentByAgent;
+                this.totalMessagesSentByCustomer = model.totalMessagesSentByCustomer;
+                this.totalRingTime = model.totalRingTime;
+                this.totalTalkTime = model.totalTalkTime;
+                this.totalWaitTime = model.totalWaitTime;
+                this.totalWorkTime = model.totalWorkTime;
+            } 
+
             /**
              * AbandonRate.
              */
@@ -1514,6 +1605,14 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
             private Long callsAnswered; 
             private Long callsDialed; 
 
+            private Builder() {
+            } 
+
+            private Builder(Internal model) {
+                this.callsAnswered = model.callsAnswered;
+                this.callsDialed = model.callsDialed;
+            } 
+
             /**
              * CallsAnswered.
              */
@@ -1868,6 +1967,38 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
             private Long totalRingTime; 
             private Long totalTalkTime; 
             private Long totalWorkTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Outbound model) {
+                this.answerRate = model.answerRate;
+                this.averageDialingTime = model.averageDialingTime;
+                this.averageHoldTime = model.averageHoldTime;
+                this.averageRingTime = model.averageRingTime;
+                this.averageTalkTime = model.averageTalkTime;
+                this.averageWorkTime = model.averageWorkTime;
+                this.callsAnswered = model.callsAnswered;
+                this.callsAttendedTransferred = model.callsAttendedTransferred;
+                this.callsBlindTransferred = model.callsBlindTransferred;
+                this.callsDialed = model.callsDialed;
+                this.callsHold = model.callsHold;
+                this.callsRinged = model.callsRinged;
+                this.maxDialingTime = model.maxDialingTime;
+                this.maxHoldTime = model.maxHoldTime;
+                this.maxRingTime = model.maxRingTime;
+                this.maxTalkTime = model.maxTalkTime;
+                this.maxWorkTime = model.maxWorkTime;
+                this.satisfactionIndex = model.satisfactionIndex;
+                this.satisfactionRate = model.satisfactionRate;
+                this.satisfactionSurveysOffered = model.satisfactionSurveysOffered;
+                this.satisfactionSurveysResponded = model.satisfactionSurveysResponded;
+                this.totalDialingTime = model.totalDialingTime;
+                this.totalHoldTime = model.totalHoldTime;
+                this.totalRingTime = model.totalRingTime;
+                this.totalTalkTime = model.totalTalkTime;
+                this.totalWorkTime = model.totalWorkTime;
+            } 
 
             /**
              * AnswerRate.
@@ -2380,6 +2511,35 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
             private Long totalTalkTime; 
             private Long totalWorkTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(Overall model) {
+                this.averageBreakTime = model.averageBreakTime;
+                this.averageHoldTime = model.averageHoldTime;
+                this.averageReadyTime = model.averageReadyTime;
+                this.averageTalkTime = model.averageTalkTime;
+                this.averageWorkTime = model.averageWorkTime;
+                this.maxBreakTime = model.maxBreakTime;
+                this.maxHoldTime = model.maxHoldTime;
+                this.maxLoggedInAgents = model.maxLoggedInAgents;
+                this.maxReadyTime = model.maxReadyTime;
+                this.maxTalkTime = model.maxTalkTime;
+                this.maxWorkTime = model.maxWorkTime;
+                this.occupancyRate = model.occupancyRate;
+                this.satisfactionIndex = model.satisfactionIndex;
+                this.satisfactionRate = model.satisfactionRate;
+                this.satisfactionSurveysOffered = model.satisfactionSurveysOffered;
+                this.satisfactionSurveysResponded = model.satisfactionSurveysResponded;
+                this.totalBreakTime = model.totalBreakTime;
+                this.totalCalls = model.totalCalls;
+                this.totalHoldTime = model.totalHoldTime;
+                this.totalLoggedInTime = model.totalLoggedInTime;
+                this.totalReadyTime = model.totalReadyTime;
+                this.totalTalkTime = model.totalTalkTime;
+                this.totalWorkTime = model.totalWorkTime;
+            } 
+
             /**
              * AverageBreakTime.
              */
@@ -2638,6 +2798,16 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
             private Internal internal; 
             private Outbound outbound; 
             private Overall overall; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.inbound = model.inbound;
+                this.internal = model.internal;
+                this.outbound = model.outbound;
+                this.overall = model.overall;
+            } 
 
             /**
              * Inbound.

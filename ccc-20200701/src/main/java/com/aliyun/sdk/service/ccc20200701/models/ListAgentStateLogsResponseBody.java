@@ -48,6 +48,10 @@ public class ListAgentStateLogsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class ListAgentStateLogsResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAgentStateLogsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -239,6 +254,19 @@ public class ListAgentStateLogsResponseBody extends TeaModel {
             private String state; 
             private String stateCode; 
             private String workMode; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.breakCode = model.breakCode;
+                this.duration = model.duration;
+                this.outboundScenario = model.outboundScenario;
+                this.startTime = model.startTime;
+                this.state = model.state;
+                this.stateCode = model.stateCode;
+                this.workMode = model.workMode;
+            } 
 
             /**
              * BreakCode.

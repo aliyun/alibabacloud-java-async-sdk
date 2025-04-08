@@ -52,6 +52,10 @@ public class PollUserStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class PollUserStatusResponseBody extends TeaModel {
         private String message; 
         private java.util.List<String> params; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(PollUserStatusResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.params = model.params;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -356,6 +372,27 @@ public class PollUserStatusResponseBody extends TeaModel {
             private String userExtension; 
             private String userId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ChannelContexts model) {
+                this.callType = model.callType;
+                this.channelFlags = model.channelFlags;
+                this.channelId = model.channelId;
+                this.channelState = model.channelState;
+                this.channelVariables = model.channelVariables;
+                this.destination = model.destination;
+                this.index = model.index;
+                this.jobId = model.jobId;
+                this.originator = model.originator;
+                this.releaseInitiator = model.releaseInitiator;
+                this.releaseReason = model.releaseReason;
+                this.skillGroupId = model.skillGroupId;
+                this.timestamp = model.timestamp;
+                this.userExtension = model.userExtension;
+                this.userId = model.userId;
+            } 
+
             /**
              * CallType.
              */
@@ -563,6 +600,17 @@ public class PollUserStatusResponseBody extends TeaModel {
             private String instanceId; 
             private String jobId; 
 
+            private Builder() {
+            } 
+
+            private Builder(CallContext model) {
+                this.callType = model.callType;
+                this.callVariables = model.callVariables;
+                this.channelContexts = model.channelContexts;
+                this.instanceId = model.instanceId;
+                this.jobId = model.jobId;
+            } 
+
             /**
              * CallType.
              */
@@ -714,6 +762,19 @@ public class PollUserStatusResponseBody extends TeaModel {
             private String userId; 
             private String userType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Members model) {
+                this.index = model.index;
+                this.releaseInitiator = model.releaseInitiator;
+                this.releaseReason = model.releaseReason;
+                this.skillGroupId = model.skillGroupId;
+                this.status = model.status;
+                this.userId = model.userId;
+                this.userType = model.userType;
+            } 
+
             /**
              * Index.
              */
@@ -857,6 +918,17 @@ public class PollUserStatusResponseBody extends TeaModel {
             private String jobId; 
             private java.util.List<Members> members; 
 
+            private Builder() {
+            } 
+
+            private Builder(ChatContexts model) {
+                this.callVariables = model.callVariables;
+                this.chatType = model.chatType;
+                this.instanceId = model.instanceId;
+                this.jobId = model.jobId;
+                this.members = model.members;
+            } 
+
             /**
              * CallVariables.
              */
@@ -959,6 +1031,15 @@ public class PollUserStatusResponseBody extends TeaModel {
             private String jobId; 
             private String status; 
             private Long timestamp; 
+
+            private Builder() {
+            } 
+
+            private Builder(ParallelJobList model) {
+                this.jobId = model.jobId;
+                this.status = model.status;
+                this.timestamp = model.timestamp;
+            } 
 
             /**
              * JobId.
@@ -1179,6 +1260,26 @@ public class PollUserStatusResponseBody extends TeaModel {
             private String userState; 
             private String workMode; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserContext model) {
+                this.breakCode = model.breakCode;
+                this.deviceId = model.deviceId;
+                this.extension = model.extension;
+                this.heartbeat = model.heartbeat;
+                this.instanceId = model.instanceId;
+                this.jobId = model.jobId;
+                this.mobile = model.mobile;
+                this.outboundScenario = model.outboundScenario;
+                this.parallelJobList = model.parallelJobList;
+                this.reserved = model.reserved;
+                this.signedSkillGroupIdList = model.signedSkillGroupIdList;
+                this.userId = model.userId;
+                this.userState = model.userState;
+                this.workMode = model.workMode;
+            } 
+
             /**
              * BreakCode.
              */
@@ -1365,6 +1466,16 @@ public class PollUserStatusResponseBody extends TeaModel {
             private java.util.List<ChatContexts> chatContexts; 
             private Long contextId; 
             private UserContext userContext; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.callContext = model.callContext;
+                this.chatContexts = model.chatContexts;
+                this.contextId = model.contextId;
+                this.userContext = model.userContext;
+            } 
 
             /**
              * CallContext.

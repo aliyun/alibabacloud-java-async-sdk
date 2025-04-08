@@ -52,6 +52,10 @@ public class TakeBreakResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class TakeBreakResponseBody extends TeaModel {
         private String message; 
         private java.util.List<String> params; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(TakeBreakResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.params = model.params;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -331,6 +347,25 @@ public class TakeBreakResponseBody extends TeaModel {
             private String userId; 
             private String userState; 
             private String workMode; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.breakCode = model.breakCode;
+                this.deviceId = model.deviceId;
+                this.extension = model.extension;
+                this.heartbeat = model.heartbeat;
+                this.instanceId = model.instanceId;
+                this.jobId = model.jobId;
+                this.mobile = model.mobile;
+                this.outboundScenario = model.outboundScenario;
+                this.reserved = model.reserved;
+                this.signedSkillGroupIdList = model.signedSkillGroupIdList;
+                this.userId = model.userId;
+                this.userState = model.userState;
+                this.workMode = model.workMode;
+            } 
 
             /**
              * BreakCode.

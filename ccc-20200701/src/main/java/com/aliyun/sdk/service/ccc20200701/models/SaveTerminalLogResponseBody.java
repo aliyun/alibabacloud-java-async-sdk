@@ -52,6 +52,10 @@ public class SaveTerminalLogResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class SaveTerminalLogResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Long timeStamp; 
+
+        private Builder() {
+        } 
+
+        private Builder(SaveTerminalLogResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.timeStamp = model.timeStamp;
+        } 
 
         /**
          * Code.

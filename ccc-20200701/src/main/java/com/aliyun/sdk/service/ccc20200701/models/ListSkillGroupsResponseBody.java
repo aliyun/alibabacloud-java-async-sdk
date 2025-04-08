@@ -48,6 +48,10 @@ public class ListSkillGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class ListSkillGroupsResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSkillGroupsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -252,6 +267,20 @@ public class ListSkillGroupsResponseBody extends TeaModel {
             private String skillGroupName; 
             private Integer userCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.description = model.description;
+                this.displayName = model.displayName;
+                this.instanceId = model.instanceId;
+                this.mediaType = model.mediaType;
+                this.phoneNumberCount = model.phoneNumberCount;
+                this.skillGroupId = model.skillGroupId;
+                this.skillGroupName = model.skillGroupName;
+                this.userCount = model.userCount;
+            } 
+
             /**
              * Description.
              */
@@ -390,6 +419,16 @@ public class ListSkillGroupsResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.list = model.list;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * List.

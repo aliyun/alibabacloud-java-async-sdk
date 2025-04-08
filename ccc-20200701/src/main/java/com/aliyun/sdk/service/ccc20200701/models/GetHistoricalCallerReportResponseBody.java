@@ -48,6 +48,10 @@ public class GetHistoricalCallerReportResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetHistoricalCallerReportResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetHistoricalCallerReportResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -179,6 +194,14 @@ public class GetHistoricalCallerReportResponseBody extends TeaModel {
         public static final class Builder {
             private Long lastCallingTime; 
             private Long totalCalls; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.lastCallingTime = model.lastCallingTime;
+                this.totalCalls = model.totalCalls;
+            } 
 
             /**
              * LastCallingTime.

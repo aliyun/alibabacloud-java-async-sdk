@@ -48,6 +48,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetCallDetailRecordResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -192,6 +207,15 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             private String event; 
             private Long eventTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(EventSequence model) {
+                this.duration = model.duration;
+                this.event = model.event;
+                this.eventTime = model.eventTime;
+            } 
+
             /**
              * Duration.
              */
@@ -290,6 +314,16 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             private String agentName; 
             private java.util.List<EventSequence> eventSequence; 
             private String skillGroupId; 
+
+            private Builder() {
+            } 
+
+            private Builder(AgentEvents model) {
+                this.agentId = model.agentId;
+                this.agentName = model.agentName;
+                this.eventSequence = model.eventSequence;
+                this.skillGroupId = model.skillGroupId;
+            } 
 
             /**
              * AgentId.
@@ -409,6 +443,17 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             private Boolean success; 
             private String taskId; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Emotion model) {
+                this.confidence = model.confidence;
+                this.remark = model.remark;
+                this.success = model.success;
+                this.taskId = model.taskId;
+                this.type = model.type;
+            } 
 
             /**
              * Confidence.
@@ -537,6 +582,17 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             private Boolean success; 
             private String taskId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ProblemSolving model) {
+                this.problem = model.problem;
+                this.solution = model.solution;
+                this.solved = model.solved;
+                this.success = model.success;
+                this.taskId = model.taskId;
+            } 
+
             /**
              * Problem.
              */
@@ -652,6 +708,16 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             private Boolean success; 
             private String taskId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Satisfaction model) {
+                this.remark = model.remark;
+                this.satisfactionDescription = model.satisfactionDescription;
+                this.success = model.success;
+                this.taskId = model.taskId;
+            } 
+
             /**
              * Remark.
              */
@@ -746,6 +812,15 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             private Boolean success; 
             private String taskId; 
             private java.util.List<String> tasks; 
+
+            private Builder() {
+            } 
+
+            private Builder(TodoList model) {
+                this.success = model.success;
+                this.taskId = model.taskId;
+                this.tasks = model.tasks;
+            } 
 
             /**
              * Success.
@@ -846,6 +921,16 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             private Satisfaction satisfaction; 
             private TodoList todoList; 
 
+            private Builder() {
+            } 
+
+            private Builder(AnalyticsReport model) {
+                this.emotion = model.emotion;
+                this.problemSolving = model.problemSolving;
+                this.satisfaction = model.satisfaction;
+                this.todoList = model.todoList;
+            } 
+
             /**
              * Emotion.
              */
@@ -929,6 +1014,14 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             private String event; 
             private Long eventTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(CustomerEventsEventSequence model) {
+                this.event = model.event;
+                this.eventTime = model.eventTime;
+            } 
+
             /**
              * Event.
              */
@@ -996,6 +1089,14 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             private String customerId; 
             private java.util.List<CustomerEventsEventSequence> eventSequence; 
 
+            private Builder() {
+            } 
+
+            private Builder(CustomerEvents model) {
+                this.customerId = model.customerId;
+                this.eventSequence = model.eventSequence;
+            } 
+
             /**
              * CustomerId.
              */
@@ -1062,6 +1163,14 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         public static final class Builder {
             private String event; 
             private Long eventTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(IvrEventsEventSequence model) {
+                this.event = model.event;
+                this.eventTime = model.eventTime;
+            } 
 
             /**
              * Event.
@@ -1142,6 +1251,15 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             private String flowId; 
             private String flowType; 
 
+            private Builder() {
+            } 
+
+            private Builder(IvrEvents model) {
+                this.eventSequence = model.eventSequence;
+                this.flowId = model.flowId;
+                this.flowType = model.flowType;
+            } 
+
             /**
              * EventSequence.
              */
@@ -1216,6 +1334,14 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         public static final class Builder {
             private String event; 
             private Long eventTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(QueueEventsEventSequence model) {
+                this.event = model.event;
+                this.eventTime = model.eventTime;
+            } 
 
             /**
              * Event.
@@ -1319,6 +1445,17 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             private String queueId; 
             private String queueName; 
             private Integer queueType; 
+
+            private Builder() {
+            } 
+
+            private Builder(QueueEvents model) {
+                this.eventSequence = model.eventSequence;
+                this.flowId = model.flowId;
+                this.queueId = model.queueId;
+                this.queueName = model.queueName;
+                this.queueType = model.queueType;
+            } 
 
             /**
              * EventSequence.
@@ -1734,6 +1871,41 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             private String skillGroupIds; 
             private String skillGroupNames; 
             private Long startTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.agentEvents = model.agentEvents;
+                this.agentIds = model.agentIds;
+                this.agentNames = model.agentNames;
+                this.analyticsReport = model.analyticsReport;
+                this.analyticsReportReady = model.analyticsReportReady;
+                this.callDuration = model.callDuration;
+                this.calledNumber = model.calledNumber;
+                this.calleeLocation = model.calleeLocation;
+                this.callerLocation = model.callerLocation;
+                this.callingNumber = model.callingNumber;
+                this.contactDisposition = model.contactDisposition;
+                this.contactId = model.contactId;
+                this.contactType = model.contactType;
+                this.customerEvents = model.customerEvents;
+                this.earlyMediaState = model.earlyMediaState;
+                this.establishedTime = model.establishedTime;
+                this.instanceId = model.instanceId;
+                this.ivrEvents = model.ivrEvents;
+                this.queueEvents = model.queueEvents;
+                this.recordingReady = model.recordingReady;
+                this.releaseInitiator = model.releaseInitiator;
+                this.releaseReason = model.releaseReason;
+                this.releaseTime = model.releaseTime;
+                this.satisfaction = model.satisfaction;
+                this.satisfactionSurveyChannel = model.satisfactionSurveyChannel;
+                this.satisfactionSurveyOffered = model.satisfactionSurveyOffered;
+                this.skillGroupIds = model.skillGroupIds;
+                this.skillGroupNames = model.skillGroupNames;
+                this.startTime = model.startTime;
+            } 
 
             /**
              * AgentEvents.

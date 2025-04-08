@@ -48,6 +48,10 @@ public class ListMonoRecordingsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class ListMonoRecordingsResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListMonoRecordingsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -263,6 +278,21 @@ public class ListMonoRecordingsResponseBody extends TeaModel {
             private String ramId; 
             private String skillGroupId; 
             private String startTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.agentId = model.agentId;
+                this.agentName = model.agentName;
+                this.contactId = model.contactId;
+                this.duration = model.duration;
+                this.fileName = model.fileName;
+                this.fileUrl = model.fileUrl;
+                this.ramId = model.ramId;
+                this.skillGroupId = model.skillGroupId;
+                this.startTime = model.startTime;
+            } 
 
             /**
              * AgentId.

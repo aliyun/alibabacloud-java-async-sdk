@@ -52,6 +52,10 @@ public class CreateChatMediaUrlResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class CreateChatMediaUrlResponseBody extends TeaModel {
         private String message; 
         private java.util.List<String> params; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateChatMediaUrlResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.params = model.params;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -199,6 +215,14 @@ public class CreateChatMediaUrlResponseBody extends TeaModel {
         public static final class Builder {
             private String mediaId; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.mediaId = model.mediaId;
+                this.url = model.url;
+            } 
 
             /**
              * MediaId.

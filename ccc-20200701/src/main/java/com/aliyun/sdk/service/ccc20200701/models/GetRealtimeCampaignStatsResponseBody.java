@@ -48,6 +48,10 @@ public class GetRealtimeCampaignStatsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetRealtimeCampaignStatsResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetRealtimeCampaignStatsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -287,6 +302,23 @@ public class GetRealtimeCampaignStatsResponseBody extends TeaModel {
             private Long talkingAgents; 
             private Long totalAgents; 
             private Long workingAgents; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.breakingAgents = model.breakingAgents;
+                this.caps = model.caps;
+                this.loggedInAgents = model.loggedInAgents;
+                this.outboundScenarioBreakingAgents = model.outboundScenarioBreakingAgents;
+                this.outboundScenarioReadyAgents = model.outboundScenarioReadyAgents;
+                this.outboundScenarioTalkingAgents = model.outboundScenarioTalkingAgents;
+                this.outboundScenarioWorkingAgents = model.outboundScenarioWorkingAgents;
+                this.readyAgents = model.readyAgents;
+                this.talkingAgents = model.talkingAgents;
+                this.totalAgents = model.totalAgents;
+                this.workingAgents = model.workingAgents;
+            } 
 
             /**
              * BreakingAgents.

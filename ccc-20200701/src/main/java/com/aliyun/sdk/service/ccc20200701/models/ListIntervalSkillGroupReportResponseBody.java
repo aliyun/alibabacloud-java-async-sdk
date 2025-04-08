@@ -48,6 +48,10 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListIntervalSkillGroupReportResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -347,6 +362,28 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
             private Long totalCustomerRingTime; 
             private Long totalRingTime; 
             private Long totalTalkTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Back2Back model) {
+                this.agentHandleRate = model.agentHandleRate;
+                this.answerRate = model.answerRate;
+                this.averageCustomerRingTime = model.averageCustomerRingTime;
+                this.averageRingTime = model.averageRingTime;
+                this.averageTalkTime = model.averageTalkTime;
+                this.callsAgentHandled = model.callsAgentHandled;
+                this.callsAnswered = model.callsAnswered;
+                this.callsCustomerAnswered = model.callsCustomerAnswered;
+                this.callsDialed = model.callsDialed;
+                this.customerAnswerRate = model.customerAnswerRate;
+                this.maxCustomerRingTime = model.maxCustomerRingTime;
+                this.maxRingTime = model.maxRingTime;
+                this.maxTalkTime = model.maxTalkTime;
+                this.totalCustomerRingTime = model.totalCustomerRingTime;
+                this.totalRingTime = model.totalRingTime;
+                this.totalTalkTime = model.totalTalkTime;
+            } 
 
             /**
              * AgentHandleRate.
@@ -1127,6 +1164,64 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
             private Long totalWaitTime; 
             private Long totalWorkTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(Inbound model) {
+                this.abandonRate = model.abandonRate;
+                this.averageAbandonTime = model.averageAbandonTime;
+                this.averageAbandonedInQueueTime = model.averageAbandonedInQueueTime;
+                this.averageAbandonedInRingTime = model.averageAbandonedInRingTime;
+                this.averageFirstResponseTime = model.averageFirstResponseTime;
+                this.averageHoldTime = model.averageHoldTime;
+                this.averageResponseTime = model.averageResponseTime;
+                this.averageRingTime = model.averageRingTime;
+                this.averageTalkTime = model.averageTalkTime;
+                this.averageWaitTime = model.averageWaitTime;
+                this.averageWorkTime = model.averageWorkTime;
+                this.callsAbandoned = model.callsAbandoned;
+                this.callsAbandonedInQueue = model.callsAbandonedInQueue;
+                this.callsAbandonedInRing = model.callsAbandonedInRing;
+                this.callsAttendedTransferIn = model.callsAttendedTransferIn;
+                this.callsAttendedTransferOut = model.callsAttendedTransferOut;
+                this.callsBlindTransferIn = model.callsBlindTransferIn;
+                this.callsBlindTransferOut = model.callsBlindTransferOut;
+                this.callsHandled = model.callsHandled;
+                this.callsHold = model.callsHold;
+                this.callsOffered = model.callsOffered;
+                this.callsOverflow = model.callsOverflow;
+                this.callsQueued = model.callsQueued;
+                this.callsQueuingOverflow = model.callsQueuingOverflow;
+                this.callsQueuingTimeout = model.callsQueuingTimeout;
+                this.callsRinged = model.callsRinged;
+                this.callsTimeout = model.callsTimeout;
+                this.handleRate = model.handleRate;
+                this.maxAbandonTime = model.maxAbandonTime;
+                this.maxAbandonedInQueueTime = model.maxAbandonedInQueueTime;
+                this.maxAbandonedInRingTime = model.maxAbandonedInRingTime;
+                this.maxHoldTime = model.maxHoldTime;
+                this.maxRingTime = model.maxRingTime;
+                this.maxTalkTime = model.maxTalkTime;
+                this.maxWaitTime = model.maxWaitTime;
+                this.maxWorkTime = model.maxWorkTime;
+                this.satisfactionIndex = model.satisfactionIndex;
+                this.satisfactionRate = model.satisfactionRate;
+                this.satisfactionSurveysOffered = model.satisfactionSurveysOffered;
+                this.satisfactionSurveysResponded = model.satisfactionSurveysResponded;
+                this.serviceLevel20 = model.serviceLevel20;
+                this.totalAbandonTime = model.totalAbandonTime;
+                this.totalAbandonedInQueueTime = model.totalAbandonedInQueueTime;
+                this.totalAbandonedInRingTime = model.totalAbandonedInRingTime;
+                this.totalHoldTime = model.totalHoldTime;
+                this.totalMessagesSent = model.totalMessagesSent;
+                this.totalMessagesSentByAgent = model.totalMessagesSentByAgent;
+                this.totalMessagesSentByCustomer = model.totalMessagesSentByCustomer;
+                this.totalRingTime = model.totalRingTime;
+                this.totalTalkTime = model.totalTalkTime;
+                this.totalWaitTime = model.totalWaitTime;
+                this.totalWorkTime = model.totalWorkTime;
+            } 
+
             /**
              * AbandonRate.
              */
@@ -1906,6 +2001,40 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
             private Long totalTalkTime; 
             private Long totalWorkTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(Outbound model) {
+                this.answerRate = model.answerRate;
+                this.averageDialingTime = model.averageDialingTime;
+                this.averageHoldTime = model.averageHoldTime;
+                this.averageRingTime = model.averageRingTime;
+                this.averageTalkTime = model.averageTalkTime;
+                this.averageWorkTime = model.averageWorkTime;
+                this.callsAnswered = model.callsAnswered;
+                this.callsAttendedTransferIn = model.callsAttendedTransferIn;
+                this.callsAttendedTransferOut = model.callsAttendedTransferOut;
+                this.callsBlindTransferIn = model.callsBlindTransferIn;
+                this.callsBlindTransferOut = model.callsBlindTransferOut;
+                this.callsDialed = model.callsDialed;
+                this.callsHold = model.callsHold;
+                this.callsRinged = model.callsRinged;
+                this.maxDialingTime = model.maxDialingTime;
+                this.maxHoldTime = model.maxHoldTime;
+                this.maxRingTime = model.maxRingTime;
+                this.maxTalkTime = model.maxTalkTime;
+                this.maxWorkTime = model.maxWorkTime;
+                this.satisfactionIndex = model.satisfactionIndex;
+                this.satisfactionRate = model.satisfactionRate;
+                this.satisfactionSurveysOffered = model.satisfactionSurveysOffered;
+                this.satisfactionSurveysResponded = model.satisfactionSurveysResponded;
+                this.totalDialingTime = model.totalDialingTime;
+                this.totalHoldTime = model.totalHoldTime;
+                this.totalRingTime = model.totalRingTime;
+                this.totalTalkTime = model.totalTalkTime;
+                this.totalWorkTime = model.totalWorkTime;
+            } 
+
             /**
              * AnswerRate.
              */
@@ -2192,6 +2321,15 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
             private String breakCode; 
             private Long count; 
             private Long duration; 
+
+            private Builder() {
+            } 
+
+            private Builder(BreakCodeDetailList model) {
+                this.breakCode = model.breakCode;
+                this.count = model.count;
+                this.duration = model.duration;
+            } 
 
             /**
              * BreakCode.
@@ -2520,6 +2658,35 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
             private Long totalTalkTime; 
             private Long totalWorkTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(Overall model) {
+                this.averageBreakTime = model.averageBreakTime;
+                this.averageHoldTime = model.averageHoldTime;
+                this.averageReadyTime = model.averageReadyTime;
+                this.averageTalkTime = model.averageTalkTime;
+                this.averageWorkTime = model.averageWorkTime;
+                this.breakCodeDetailList = model.breakCodeDetailList;
+                this.maxBreakTime = model.maxBreakTime;
+                this.maxHoldTime = model.maxHoldTime;
+                this.maxReadyTime = model.maxReadyTime;
+                this.maxTalkTime = model.maxTalkTime;
+                this.maxWorkTime = model.maxWorkTime;
+                this.occupancyRate = model.occupancyRate;
+                this.satisfactionIndex = model.satisfactionIndex;
+                this.satisfactionRate = model.satisfactionRate;
+                this.satisfactionSurveysOffered = model.satisfactionSurveysOffered;
+                this.satisfactionSurveysResponded = model.satisfactionSurveysResponded;
+                this.totalBreakTime = model.totalBreakTime;
+                this.totalCalls = model.totalCalls;
+                this.totalHoldTime = model.totalHoldTime;
+                this.totalLoggedInTime = model.totalLoggedInTime;
+                this.totalReadyTime = model.totalReadyTime;
+                this.totalTalkTime = model.totalTalkTime;
+                this.totalWorkTime = model.totalWorkTime;
+            } 
+
             /**
              * AverageBreakTime.
              */
@@ -2790,6 +2957,17 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
             private Outbound outbound; 
             private Overall overall; 
             private Long statsTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.back2Back = model.back2Back;
+                this.inbound = model.inbound;
+                this.outbound = model.outbound;
+                this.overall = model.overall;
+                this.statsTime = model.statsTime;
+            } 
 
             /**
              * Back2Back.

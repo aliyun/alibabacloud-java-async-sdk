@@ -52,6 +52,10 @@ public class GetDataChannelCredentialsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetDataChannelCredentialsResponseBody extends TeaModel {
         private String message; 
         private java.util.List<String> params; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDataChannelCredentialsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.params = model.params;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -259,6 +275,19 @@ public class GetDataChannelCredentialsResponseBody extends TeaModel {
             private String password; 
             private String topic; 
             private String userName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.clientId = model.clientId;
+                this.deviceId = model.deviceId;
+                this.endpoint = model.endpoint;
+                this.expiredTime = model.expiredTime;
+                this.password = model.password;
+                this.topic = model.topic;
+                this.userName = model.userName;
+            } 
 
             /**
              * ClientId.

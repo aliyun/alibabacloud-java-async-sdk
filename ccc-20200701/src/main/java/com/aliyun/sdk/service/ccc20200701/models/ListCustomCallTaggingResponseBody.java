@@ -48,6 +48,10 @@ public class ListCustomCallTaggingResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class ListCustomCallTaggingResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListCustomCallTaggingResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -179,6 +194,14 @@ public class ListCustomCallTaggingResponseBody extends TeaModel {
         public static final class Builder {
             private String instanceId; 
             private String tagName; 
+
+            private Builder() {
+            } 
+
+            private Builder(CallTagList model) {
+                this.instanceId = model.instanceId;
+                this.tagName = model.tagName;
+            } 
 
             /**
              * InstanceId.
@@ -294,6 +317,18 @@ public class ListCustomCallTaggingResponseBody extends TeaModel {
             private String instanceId; 
             private String number; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.callTagList = model.callTagList;
+                this.creator = model.creator;
+                this.description = model.description;
+                this.instanceId = model.instanceId;
+                this.number = model.number;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * CallTagList.
@@ -417,6 +452,16 @@ public class ListCustomCallTaggingResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.list = model.list;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * List.

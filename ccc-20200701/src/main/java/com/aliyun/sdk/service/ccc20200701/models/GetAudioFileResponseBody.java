@@ -48,6 +48,10 @@ public class GetAudioFileResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetAudioFileResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAudioFileResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -239,6 +254,19 @@ public class GetAudioFileResponseBody extends TeaModel {
             private String name; 
             private String ossFileKey; 
             private String updatedTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.audioFileName = model.audioFileName;
+                this.audioResourceId = model.audioResourceId;
+                this.createdTime = model.createdTime;
+                this.instanceId = model.instanceId;
+                this.name = model.name;
+                this.ossFileKey = model.ossFileKey;
+                this.updatedTime = model.updatedTime;
+            } 
 
             /**
              * AudioFileName.

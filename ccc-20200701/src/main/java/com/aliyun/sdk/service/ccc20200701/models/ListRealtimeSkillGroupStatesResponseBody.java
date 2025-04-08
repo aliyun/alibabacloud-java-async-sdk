@@ -48,6 +48,10 @@ public class ListRealtimeSkillGroupStatesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class ListRealtimeSkillGroupStatesResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListRealtimeSkillGroupStatesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -179,6 +194,14 @@ public class ListRealtimeSkillGroupStatesResponseBody extends TeaModel {
         public static final class Builder {
             private String breakCode; 
             private Long count; 
+
+            private Builder() {
+            } 
+
+            private Builder(BreakCodeDetailList model) {
+                this.breakCode = model.breakCode;
+                this.count = model.count;
+            } 
 
             /**
              * BreakCode.
@@ -379,6 +402,25 @@ public class ListRealtimeSkillGroupStatesResponseBody extends TeaModel {
             private Long waitingCalls; 
             private Long workingAgents; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.breakCodeDetailList = model.breakCodeDetailList;
+                this.breakingAgents = model.breakingAgents;
+                this.instanceId = model.instanceId;
+                this.loggedInAgents = model.loggedInAgents;
+                this.longestWaitingTime = model.longestWaitingTime;
+                this.outboundScenarioReadyAgents = model.outboundScenarioReadyAgents;
+                this.readyAgents = model.readyAgents;
+                this.skillGroupId = model.skillGroupId;
+                this.skillGroupName = model.skillGroupName;
+                this.talkingAgents = model.talkingAgents;
+                this.totalAgents = model.totalAgents;
+                this.waitingCalls = model.waitingCalls;
+                this.workingAgents = model.workingAgents;
+            } 
+
             /**
              * BreakCodeDetailList.
              */
@@ -557,6 +599,16 @@ public class ListRealtimeSkillGroupStatesResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.list = model.list;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * List.

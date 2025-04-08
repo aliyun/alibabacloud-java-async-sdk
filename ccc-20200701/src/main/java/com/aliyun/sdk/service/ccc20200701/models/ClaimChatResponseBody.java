@@ -52,6 +52,10 @@ public class ClaimChatResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ClaimChatResponseBody extends TeaModel {
         private String message; 
         private java.util.List<String> params; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ClaimChatResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.params = model.params;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -271,6 +287,20 @@ public class ClaimChatResponseBody extends TeaModel {
             private String chatType; 
             private String instanceId; 
             private String jobId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ChatContexts model) {
+                this.accessChannelId = model.accessChannelId;
+                this.accessChannelName = model.accessChannelName;
+                this.accessChannelType = model.accessChannelType;
+                this.beingAssigned = model.beingAssigned;
+                this.callVariables = model.callVariables;
+                this.chatType = model.chatType;
+                this.instanceId = model.instanceId;
+                this.jobId = model.jobId;
+            } 
 
             /**
              * AccessChannelId.
@@ -531,6 +561,26 @@ public class ClaimChatResponseBody extends TeaModel {
             private String userState; 
             private String workMode; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserContext model) {
+                this.breakCode = model.breakCode;
+                this.deviceId = model.deviceId;
+                this.deviceState = model.deviceState;
+                this.extension = model.extension;
+                this.heartbeat = model.heartbeat;
+                this.instanceId = model.instanceId;
+                this.jobId = model.jobId;
+                this.mobile = model.mobile;
+                this.outboundScenario = model.outboundScenario;
+                this.reserved = model.reserved;
+                this.signedSkillGroupIdList = model.signedSkillGroupIdList;
+                this.userId = model.userId;
+                this.userState = model.userState;
+                this.workMode = model.workMode;
+            } 
+
             /**
              * BreakCode.
              */
@@ -705,6 +755,15 @@ public class ClaimChatResponseBody extends TeaModel {
             private java.util.List<ChatContexts> chatContexts; 
             private Long contextId; 
             private UserContext userContext; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.chatContexts = model.chatContexts;
+                this.contextId = model.contextId;
+                this.userContext = model.userContext;
+            } 
 
             /**
              * ChatContexts.

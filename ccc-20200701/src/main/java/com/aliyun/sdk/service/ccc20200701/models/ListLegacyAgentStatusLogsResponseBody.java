@@ -52,6 +52,10 @@ public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListLegacyAgentStatusLogsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -488,6 +504,38 @@ public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
             private String transferNo; 
             private String transferNumber; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.agentDropCall = model.agentDropCall;
+                this.agentNo = model.agentNo;
+                this.aliHangupCause = model.aliHangupCause;
+                this.callDir = model.callDir;
+                this.callId = model.callId;
+                this.callType = model.callType;
+                this.calleeId = model.calleeId;
+                this.callerId = model.callerId;
+                this.connId = model.connId;
+                this.extend1 = model.extend1;
+                this.extend2 = model.extend2;
+                this.extend3 = model.extend3;
+                this.extend4 = model.extend4;
+                this.groupNo = model.groupNo;
+                this.monitedAgentNo = model.monitedAgentNo;
+                this.monitedAgentPhoneNo = model.monitedAgentPhoneNo;
+                this.outboundScenario = model.outboundScenario;
+                this.phoneNo = model.phoneNo;
+                this.statisticDate = model.statisticDate;
+                this.statisticTime = model.statisticTime;
+                this.status = model.status;
+                this.targetRequest = model.targetRequest;
+                this.targetSelect = model.targetSelect;
+                this.tenantId = model.tenantId;
+                this.transferNo = model.transferNo;
+                this.transferNumber = model.transferNumber;
+            } 
+
             /**
              * AgentDropCall.
              */
@@ -770,6 +818,16 @@ public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.list = model.list;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * List.

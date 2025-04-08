@@ -52,6 +52,10 @@ public class ListTicketTasksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListTicketTasksResponseBody extends TeaModel {
         private String message; 
         private java.util.List<String> params; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTicketTasksResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.params = model.params;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -343,6 +359,26 @@ public class ListTicketTasksResponseBody extends TeaModel {
             private String taskId; 
             private String taskName; 
             private String ticketId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.action = model.action;
+                this.assignee = model.assignee;
+                this.assigneeName = model.assigneeName;
+                this.comment = model.comment;
+                this.endTime = model.endTime;
+                this.fileKeys = model.fileKeys;
+                this.fileUrls = model.fileUrls;
+                this.instanceId = model.instanceId;
+                this.startTime = model.startTime;
+                this.taskDefinitionNodeId = model.taskDefinitionNodeId;
+                this.taskDefinitionNodeType = model.taskDefinitionNodeType;
+                this.taskId = model.taskId;
+                this.taskName = model.taskName;
+                this.ticketId = model.ticketId;
+            } 
 
             /**
              * Action.

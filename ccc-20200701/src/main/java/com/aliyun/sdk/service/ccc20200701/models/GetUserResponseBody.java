@@ -52,6 +52,10 @@ public class GetUserResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetUserResponseBody extends TeaModel {
         private String message; 
         private java.util.List<String> params; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetUserResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.params = model.params;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -367,6 +383,28 @@ public class GetUserResponseBody extends TeaModel {
             private String roleName; 
             private String userId; 
             private String workMode; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.avatarUrl = model.avatarUrl;
+                this.deviceExt = model.deviceExt;
+                this.deviceId = model.deviceId;
+                this.deviceState = model.deviceState;
+                this.displayId = model.displayId;
+                this.displayName = model.displayName;
+                this.email = model.email;
+                this.extension = model.extension;
+                this.instanceId = model.instanceId;
+                this.loginName = model.loginName;
+                this.mobile = model.mobile;
+                this.nickname = model.nickname;
+                this.roleId = model.roleId;
+                this.roleName = model.roleName;
+                this.userId = model.userId;
+                this.workMode = model.workMode;
+            } 
 
             /**
              * AvatarUrl.

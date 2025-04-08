@@ -48,6 +48,10 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListPhoneNumbersResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -203,6 +218,16 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
             private String instanceId; 
             private String name; 
             private String skillGroupId; 
+
+            private Builder() {
+            } 
+
+            private Builder(SkillGroups model) {
+                this.displayName = model.displayName;
+                this.instanceId = model.instanceId;
+                this.name = model.name;
+                this.skillGroupId = model.skillGroupId;
+            } 
 
             /**
              * DisplayName.
@@ -419,6 +444,25 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
             private String usage; 
             private String userId; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.active = model.active;
+                this.city = model.city;
+                this.contactFlowId = model.contactFlowId;
+                this.contactFlowName = model.contactFlowName;
+                this.createTime = model.createTime;
+                this.instanceId = model.instanceId;
+                this.number = model.number;
+                this.provider = model.provider;
+                this.province = model.province;
+                this.skillGroups = model.skillGroups;
+                this.tags = model.tags;
+                this.usage = model.usage;
+                this.userId = model.userId;
+            } 
+
             /**
              * Active.
              */
@@ -597,6 +641,16 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.list = model.list;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * List.

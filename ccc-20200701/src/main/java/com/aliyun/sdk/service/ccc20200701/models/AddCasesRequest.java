@@ -46,7 +46,7 @@ public class AddCasesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -208,6 +208,17 @@ public class AddCasesRequest extends Request {
             private String maskedCallee; 
             private String phoneNumber; 
             private String referenceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(CaseList model) {
+                this.caller = model.caller;
+                this.customVariables = model.customVariables;
+                this.maskedCallee = model.maskedCallee;
+                this.phoneNumber = model.phoneNumber;
+                this.referenceId = model.referenceId;
+            } 
 
             /**
              * Caller.

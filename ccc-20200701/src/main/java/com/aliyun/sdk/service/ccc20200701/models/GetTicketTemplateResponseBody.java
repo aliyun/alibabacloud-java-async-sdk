@@ -52,6 +52,10 @@ public class GetTicketTemplateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetTicketTemplateResponseBody extends TeaModel {
         private String message; 
         private java.util.List<String> params; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTicketTemplateResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.params = model.params;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -428,6 +444,33 @@ public class GetTicketTemplateResponseBody extends TeaModel {
             private Boolean system; 
             private Long updatedTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(TicketFields model) {
+                this.array = model.array;
+                this.attributes = model.attributes;
+                this.createdTime = model.createdTime;
+                this.creator = model.creator;
+                this.dataType = model.dataType;
+                this.description = model.description;
+                this.disabled = model.disabled;
+                this.displayName = model.displayName;
+                this.displayOrder = model.displayOrder;
+                this.editorType = model.editorType;
+                this.maxLength = model.maxLength;
+                this.maximum = model.maximum;
+                this.minLength = model.minLength;
+                this.minimum = model.minimum;
+                this.name = model.name;
+                this.pattern = model.pattern;
+                this.patternErrorMessage = model.patternErrorMessage;
+                this.readOnly = model.readOnly;
+                this.required = model.required;
+                this.system = model.system;
+                this.updatedTime = model.updatedTime;
+            } 
+
             /**
              * Array.
              */
@@ -730,6 +773,21 @@ public class GetTicketTemplateResponseBody extends TeaModel {
             private String templateId; 
             private java.util.List<TicketFields> ticketFields; 
             private Long updatedTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.categoryId = model.categoryId;
+                this.editor = model.editor;
+                this.instanceId = model.instanceId;
+                this.name = model.name;
+                this.processDefinition = model.processDefinition;
+                this.state = model.state;
+                this.templateId = model.templateId;
+                this.ticketFields = model.ticketFields;
+                this.updatedTime = model.updatedTime;
+            } 
 
             /**
              * CategoryId.

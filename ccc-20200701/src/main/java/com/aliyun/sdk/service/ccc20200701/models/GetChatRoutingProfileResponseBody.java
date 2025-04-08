@@ -48,6 +48,10 @@ public class GetChatRoutingProfileResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetChatRoutingProfileResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetChatRoutingProfileResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -203,6 +218,16 @@ public class GetChatRoutingProfileResponseBody extends TeaModel {
             private String chatSettings; 
             private String distributionSettings; 
             private String routingType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.agentConcurrencySettings = model.agentConcurrencySettings;
+                this.chatSettings = model.chatSettings;
+                this.distributionSettings = model.distributionSettings;
+                this.routingType = model.routingType;
+            } 
 
             /**
              * AgentConcurrencySettings.

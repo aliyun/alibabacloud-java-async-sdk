@@ -52,6 +52,10 @@ public class ListRamUsersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListRamUsersResponseBody extends TeaModel {
         private String message; 
         private java.util.List<String> params; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListRamUsersResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.params = model.params;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -260,6 +276,19 @@ public class ListRamUsersResponseBody extends TeaModel {
             private Boolean primary; 
             private String ramId; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.aliyunUid = model.aliyunUid;
+                this.displayName = model.displayName;
+                this.email = model.email;
+                this.loginName = model.loginName;
+                this.mobile = model.mobile;
+                this.primary = model.primary;
+                this.ramId = model.ramId;
+            } 
+
             /**
              * AliyunUid.
              */
@@ -390,6 +419,16 @@ public class ListRamUsersResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.list = model.list;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * List.

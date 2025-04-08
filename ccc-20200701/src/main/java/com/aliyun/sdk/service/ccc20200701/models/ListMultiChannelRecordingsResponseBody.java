@@ -48,6 +48,10 @@ public class ListMultiChannelRecordingsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class ListMultiChannelRecordingsResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListMultiChannelRecordingsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -179,6 +194,14 @@ public class ListMultiChannelRecordingsResponseBody extends TeaModel {
         public static final class Builder {
             private Long endTime; 
             private Long startTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(HoldTimeSegments model) {
+                this.endTime = model.endTime;
+                this.startTime = model.startTime;
+            } 
 
             /**
              * EndTime.
@@ -354,6 +377,23 @@ public class ListMultiChannelRecordingsResponseBody extends TeaModel {
             private String ramId; 
             private String skillGroupId; 
             private Long startTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.agentChannelId = model.agentChannelId;
+                this.agentId = model.agentId;
+                this.agentName = model.agentName;
+                this.contactId = model.contactId;
+                this.duration = model.duration;
+                this.fileName = model.fileName;
+                this.fileUrl = model.fileUrl;
+                this.holdTimeSegments = model.holdTimeSegments;
+                this.ramId = model.ramId;
+                this.skillGroupId = model.skillGroupId;
+                this.startTime = model.startTime;
+            } 
 
             /**
              * AgentChannelId.

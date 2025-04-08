@@ -52,6 +52,10 @@ public class ListLegacyQueueEventLogsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListLegacyQueueEventLogsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListLegacyQueueEventLogsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -308,6 +324,23 @@ public class ListLegacyQueueEventLogsResponseBody extends TeaModel {
             private String tenantId; 
             private String vq; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.acid = model.acid;
+                this.ani = model.ani;
+                this.answerPhone = model.answerPhone;
+                this.answerTime = model.answerTime;
+                this.cause = model.cause;
+                this.dnis = model.dnis;
+                this.id = model.id;
+                this.queueTime = model.queueTime;
+                this.statisticDate = model.statisticDate;
+                this.tenantId = model.tenantId;
+                this.vq = model.vq;
+            } 
+
             /**
              * Acid.
              */
@@ -470,6 +503,16 @@ public class ListLegacyQueueEventLogsResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.list = model.list;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * List.

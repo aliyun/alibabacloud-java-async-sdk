@@ -48,6 +48,10 @@ public class ListSkillLevelsOfUserResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class ListSkillLevelsOfUserResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSkillLevelsOfUserResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -204,6 +219,16 @@ public class ListSkillLevelsOfUserResponseBody extends TeaModel {
             private String skillGroupName; 
             private String skillLevel; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.mediaType = model.mediaType;
+                this.skillGroupId = model.skillGroupId;
+                this.skillGroupName = model.skillGroupName;
+                this.skillLevel = model.skillLevel;
+            } 
+
             /**
              * MediaType.
              */
@@ -310,6 +335,16 @@ public class ListSkillLevelsOfUserResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.list = model.list;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * List.

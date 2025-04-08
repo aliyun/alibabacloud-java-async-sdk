@@ -48,6 +48,10 @@ public class GetRealtimeInstanceStatesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetRealtimeInstanceStatesResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetRealtimeInstanceStatesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -179,6 +194,14 @@ public class GetRealtimeInstanceStatesResponseBody extends TeaModel {
         public static final class Builder {
             private String breakCode; 
             private Long count; 
+
+            private Builder() {
+            } 
+
+            private Builder(BreakCodeDetailList model) {
+                this.breakCode = model.breakCode;
+                this.count = model.count;
+            } 
 
             /**
              * BreakCode.
@@ -354,6 +377,23 @@ public class GetRealtimeInstanceStatesResponseBody extends TeaModel {
             private Long totalAgents; 
             private Long waitingCalls; 
             private Long workingAgents; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.breakCodeDetailList = model.breakCodeDetailList;
+                this.breakingAgents = model.breakingAgents;
+                this.instanceId = model.instanceId;
+                this.interactiveCalls = model.interactiveCalls;
+                this.loggedInAgents = model.loggedInAgents;
+                this.longestWaitingTime = model.longestWaitingTime;
+                this.readyAgents = model.readyAgents;
+                this.talkingAgents = model.talkingAgents;
+                this.totalAgents = model.totalAgents;
+                this.waitingCalls = model.waitingCalls;
+                this.workingAgents = model.workingAgents;
+            } 
 
             /**
              * BreakCodeDetailList.

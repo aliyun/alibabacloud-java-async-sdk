@@ -48,6 +48,10 @@ public class ListGroupChatMessagesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class ListGroupChatMessagesResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListGroupChatMessagesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -252,6 +267,20 @@ public class ListGroupChatMessagesResponseBody extends TeaModel {
             private String senderType; 
             private Long timestamp; 
 
+            private Builder() {
+            } 
+
+            private Builder(Messages model) {
+                this.content = model.content;
+                this.jobId = model.jobId;
+                this.recalled = model.recalled;
+                this.senderAvatarUrl = model.senderAvatarUrl;
+                this.senderId = model.senderId;
+                this.senderName = model.senderName;
+                this.senderType = model.senderType;
+                this.timestamp = model.timestamp;
+            } 
+
             /**
              * Content.
              */
@@ -366,6 +395,14 @@ public class ListGroupChatMessagesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Messages> messages; 
             private String nextPageToken; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.messages = model.messages;
+                this.nextPageToken = model.nextPageToken;
+            } 
 
             /**
              * Messages.

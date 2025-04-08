@@ -48,6 +48,10 @@ public class ListContactFlowsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class ListContactFlowsResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListContactFlowsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -300,6 +315,24 @@ public class ListContactFlowsResponseBody extends TeaModel {
             private String type; 
             private String updatedTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.contactFlowId = model.contactFlowId;
+                this.createdTime = model.createdTime;
+                this.definition = model.definition;
+                this.description = model.description;
+                this.draftId = model.draftId;
+                this.editor = model.editor;
+                this.instanceId = model.instanceId;
+                this.name = model.name;
+                this.numberList = model.numberList;
+                this.published = model.published;
+                this.type = model.type;
+                this.updatedTime = model.updatedTime;
+            } 
+
             /**
              * ContactFlowId.
              */
@@ -470,6 +503,16 @@ public class ListContactFlowsResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.list = model.list;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * List.

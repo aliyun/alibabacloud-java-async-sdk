@@ -48,6 +48,10 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListInstancesOfUserResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -275,6 +290,22 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
             private String roleName; 
             private String userId; 
             private String workMode; 
+
+            private Builder() {
+            } 
+
+            private Builder(AdminList model) {
+                this.displayName = model.displayName;
+                this.email = model.email;
+                this.extension = model.extension;
+                this.instanceId = model.instanceId;
+                this.loginName = model.loginName;
+                this.mobile = model.mobile;
+                this.roleId = model.roleId;
+                this.roleName = model.roleName;
+                this.userId = model.userId;
+                this.workMode = model.workMode;
+            } 
 
             /**
              * DisplayName.
@@ -467,6 +498,19 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
             private String skillGroupId; 
             private Integer userCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(SkillGroups model) {
+                this.description = model.description;
+                this.displayName = model.displayName;
+                this.instanceId = model.instanceId;
+                this.name = model.name;
+                this.phoneNumberCount = model.phoneNumberCount;
+                this.skillGroupId = model.skillGroupId;
+                this.userCount = model.userCount;
+            } 
+
             /**
              * Description.
              */
@@ -657,6 +701,21 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
             private java.util.List<SkillGroups> skillGroups; 
             private String usage; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(NumberList model) {
+                this.active = model.active;
+                this.city = model.city;
+                this.contactFlowId = model.contactFlowId;
+                this.instanceId = model.instanceId;
+                this.number = model.number;
+                this.province = model.province;
+                this.skillGroups = model.skillGroups;
+                this.usage = model.usage;
+                this.userId = model.userId;
+            } 
 
             /**
              * Active.
@@ -865,6 +924,21 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
             private java.util.List<NumberList> numberList; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.adminList = model.adminList;
+                this.aliyunUid = model.aliyunUid;
+                this.consoleUrl = model.consoleUrl;
+                this.description = model.description;
+                this.domainName = model.domainName;
+                this.id = model.id;
+                this.name = model.name;
+                this.numberList = model.numberList;
+                this.status = model.status;
+            } 
+
             /**
              * AdminList.
              */
@@ -1011,6 +1085,16 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.list = model.list;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * List.

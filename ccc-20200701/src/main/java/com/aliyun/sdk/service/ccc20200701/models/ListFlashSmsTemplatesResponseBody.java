@@ -52,6 +52,10 @@ public class ListFlashSmsTemplatesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListFlashSmsTemplatesResponseBody extends TeaModel {
         private String message; 
         private java.util.List<String> params; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListFlashSmsTemplatesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.params = model.params;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -199,6 +215,14 @@ public class ListFlashSmsTemplatesResponseBody extends TeaModel {
         public static final class Builder {
             private String templateId; 
             private String templateName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.templateId = model.templateId;
+                this.templateName = model.templateName;
+            } 
 
             /**
              * TemplateId.

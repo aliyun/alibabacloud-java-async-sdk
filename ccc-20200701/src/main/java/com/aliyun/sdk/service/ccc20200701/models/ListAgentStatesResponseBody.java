@@ -52,6 +52,10 @@ public class ListAgentStatesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListAgentStatesResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAgentStatesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -284,6 +300,21 @@ public class ListAgentStatesResponseBody extends TeaModel {
             private String state; 
             private String stateDuration; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.agentId = model.agentId;
+                this.agentName = model.agentName;
+                this.breakCode = model.breakCode;
+                this.dn = model.dn;
+                this.instanceId = model.instanceId;
+                this.loginName = model.loginName;
+                this.outboundScenario = model.outboundScenario;
+                this.state = model.state;
+                this.stateDuration = model.stateDuration;
+            } 
+
             /**
              * AgentId.
              */
@@ -430,6 +461,16 @@ public class ListAgentStatesResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.list = model.list;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * List.

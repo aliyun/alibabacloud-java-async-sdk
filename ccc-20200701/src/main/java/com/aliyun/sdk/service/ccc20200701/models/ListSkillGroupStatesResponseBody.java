@@ -52,6 +52,10 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSkillGroupStatesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -380,6 +396,29 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
             private Long waitingCallsLevel30; 
             private Long workingAgents; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.averageWaitingTime = model.averageWaitingTime;
+                this.breakingAgents = model.breakingAgents;
+                this.inboundTalkingAgents = model.inboundTalkingAgents;
+                this.instanceId = model.instanceId;
+                this.loggedInAgents = model.loggedInAgents;
+                this.longestCall = model.longestCall;
+                this.outboundScenarioReadyAgents = model.outboundScenarioReadyAgents;
+                this.outboundTalkingAgents = model.outboundTalkingAgents;
+                this.readyAgents = model.readyAgents;
+                this.skillGroupId = model.skillGroupId;
+                this.skillGroupName = model.skillGroupName;
+                this.talkingAgents = model.talkingAgents;
+                this.waitingCalls = model.waitingCalls;
+                this.waitingCallsLevel10 = model.waitingCallsLevel10;
+                this.waitingCallsLevel20 = model.waitingCallsLevel20;
+                this.waitingCallsLevel30 = model.waitingCallsLevel30;
+                this.workingAgents = model.workingAgents;
+            } 
+
             /**
              * AverageWaitingTime.
              */
@@ -590,6 +629,16 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.list = model.list;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * List.

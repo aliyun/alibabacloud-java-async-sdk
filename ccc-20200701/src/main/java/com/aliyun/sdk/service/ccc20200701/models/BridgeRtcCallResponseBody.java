@@ -52,6 +52,10 @@ public class BridgeRtcCallResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class BridgeRtcCallResponseBody extends TeaModel {
         private String message; 
         private java.util.List<String> params; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(BridgeRtcCallResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.params = model.params;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -211,6 +227,15 @@ public class BridgeRtcCallResponseBody extends TeaModel {
             private String instanceId; 
             private String jobId; 
             private String tokenInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.instanceId = model.instanceId;
+                this.jobId = model.jobId;
+                this.tokenInfo = model.tokenInfo;
+            } 
 
             /**
              * InstanceId.

@@ -52,6 +52,10 @@ public class GetLoginDetailsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetLoginDetailsResponseBody extends TeaModel {
         private String message; 
         private java.util.List<String> params; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetLoginDetailsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.params = model.params;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -427,6 +443,33 @@ public class GetLoginDetailsResponseBody extends TeaModel {
             private String userKey; 
             private String userKey2; 
             private String workMode; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.agentServerUrl = model.agentServerUrl;
+                this.avatarUrl = model.avatarUrl;
+                this.chatAppId = model.chatAppId;
+                this.chatAppKey = model.chatAppKey;
+                this.chatDeviceId = model.chatDeviceId;
+                this.chatLoginToken = model.chatLoginToken;
+                this.chatServerUrl = model.chatServerUrl;
+                this.chatUserId = model.chatUserId;
+                this.deviceExt = model.deviceExt;
+                this.deviceId = model.deviceId;
+                this.deviceState = model.deviceState;
+                this.displayName = model.displayName;
+                this.extension = model.extension;
+                this.nickname = model.nickname;
+                this.signature = model.signature;
+                this.signature2 = model.signature2;
+                this.sipServerUrl = model.sipServerUrl;
+                this.userId = model.userId;
+                this.userKey = model.userKey;
+                this.userKey2 = model.userKey2;
+                this.workMode = model.workMode;
+            } 
 
             /**
              * AgentServerUrl.

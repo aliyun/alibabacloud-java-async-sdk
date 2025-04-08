@@ -48,6 +48,10 @@ public class GetTicketSummaryReportResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetTicketSummaryReportResponseBody extends TeaModel {
         private Long httpStatusCode; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTicketSummaryReportResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -191,6 +206,15 @@ public class GetTicketSummaryReportResponseBody extends TeaModel {
             private String ticketsAssigned; 
             private String ticketsCreated; 
             private String ticketsParticipated; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.ticketsAssigned = model.ticketsAssigned;
+                this.ticketsCreated = model.ticketsCreated;
+                this.ticketsParticipated = model.ticketsParticipated;
+            } 
 
             /**
              * TicketsAssigned.

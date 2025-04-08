@@ -52,6 +52,10 @@ public class HoldCallResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class HoldCallResponseBody extends TeaModel {
         private String message; 
         private java.util.List<String> params; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(HoldCallResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.params = model.params;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -320,6 +336,24 @@ public class HoldCallResponseBody extends TeaModel {
             private String userExtension; 
             private String userId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ChannelContexts model) {
+                this.callType = model.callType;
+                this.channelId = model.channelId;
+                this.channelState = model.channelState;
+                this.destination = model.destination;
+                this.jobId = model.jobId;
+                this.originator = model.originator;
+                this.releaseInitiator = model.releaseInitiator;
+                this.releaseReason = model.releaseReason;
+                this.skillGroupId = model.skillGroupId;
+                this.timestamp = model.timestamp;
+                this.userExtension = model.userExtension;
+                this.userId = model.userId;
+            } 
+
             /**
              * CallType.
              */
@@ -490,6 +524,16 @@ public class HoldCallResponseBody extends TeaModel {
             private java.util.List<ChannelContexts> channelContexts; 
             private String instanceId; 
             private String jobId; 
+
+            private Builder() {
+            } 
+
+            private Builder(CallContext model) {
+                this.callType = model.callType;
+                this.channelContexts = model.channelContexts;
+                this.instanceId = model.instanceId;
+                this.jobId = model.jobId;
+            } 
 
             /**
              * CallType.
@@ -706,6 +750,25 @@ public class HoldCallResponseBody extends TeaModel {
             private String userState; 
             private String workMode; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserContext model) {
+                this.breakCode = model.breakCode;
+                this.deviceId = model.deviceId;
+                this.extension = model.extension;
+                this.heartbeat = model.heartbeat;
+                this.instanceId = model.instanceId;
+                this.jobId = model.jobId;
+                this.mobile = model.mobile;
+                this.outboundScenario = model.outboundScenario;
+                this.reserved = model.reserved;
+                this.signedSkillGroupIdList = model.signedSkillGroupIdList;
+                this.userId = model.userId;
+                this.userState = model.userState;
+                this.workMode = model.workMode;
+            } 
+
             /**
              * BreakCode.
              */
@@ -860,6 +923,14 @@ public class HoldCallResponseBody extends TeaModel {
         public static final class Builder {
             private CallContext callContext; 
             private UserContext userContext; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.callContext = model.callContext;
+                this.userContext = model.userContext;
+            } 
 
             /**
              * CallContext.

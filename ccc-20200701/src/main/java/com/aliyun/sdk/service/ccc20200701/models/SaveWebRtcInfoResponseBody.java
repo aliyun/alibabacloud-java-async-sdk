@@ -56,6 +56,10 @@ public class SaveWebRtcInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -113,6 +117,19 @@ public class SaveWebRtcInfoResponseBody extends TeaModel {
         private Long rowCount; 
         private Boolean success; 
         private Long timeStamp; 
+
+        private Builder() {
+        } 
+
+        private Builder(SaveWebRtcInfoResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.rowCount = model.rowCount;
+            this.success = model.success;
+            this.timeStamp = model.timeStamp;
+        } 
 
         /**
          * Code.

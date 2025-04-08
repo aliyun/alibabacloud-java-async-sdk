@@ -66,7 +66,7 @@ public class ListDocumentsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -265,6 +265,14 @@ public class ListDocumentsRequest extends Request {
         public static final class Builder {
             private String order; 
             private String propertyName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Sorts model) {
+                this.order = model.order;
+                this.propertyName = model.propertyName;
+            } 
 
             /**
              * Order.

@@ -48,6 +48,10 @@ public class ListIntervalAgentReportResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class ListIntervalAgentReportResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListIntervalAgentReportResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -348,6 +363,28 @@ public class ListIntervalAgentReportResponseBody extends TeaModel {
             private Long totalRingTime; 
             private Long totalTalkTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(Back2Back model) {
+                this.agentHandleRate = model.agentHandleRate;
+                this.answerRate = model.answerRate;
+                this.averageCustomerRingTime = model.averageCustomerRingTime;
+                this.averageRingTime = model.averageRingTime;
+                this.averageTalkTime = model.averageTalkTime;
+                this.callsAgentHandled = model.callsAgentHandled;
+                this.callsAnswered = model.callsAnswered;
+                this.callsCustomerAnswered = model.callsCustomerAnswered;
+                this.callsDialed = model.callsDialed;
+                this.customerAnswerRate = model.customerAnswerRate;
+                this.maxCustomerRingTime = model.maxCustomerRingTime;
+                this.maxRingTime = model.maxRingTime;
+                this.maxTalkTime = model.maxTalkTime;
+                this.totalCustomerRingTime = model.totalCustomerRingTime;
+                this.totalRingTime = model.totalRingTime;
+                this.totalTalkTime = model.totalTalkTime;
+            } 
+
             /**
              * AgentHandleRate.
              */
@@ -526,6 +563,14 @@ public class ListIntervalAgentReportResponseBody extends TeaModel {
         public static final class Builder {
             private String accessChannelType; 
             private Long callsOffered; 
+
+            private Builder() {
+            } 
+
+            private Builder(AccessChannelTypeDetails model) {
+                this.accessChannelType = model.accessChannelType;
+                this.callsOffered = model.callsOffered;
+            } 
 
             /**
              * AccessChannelType.
@@ -954,6 +999,44 @@ public class ListIntervalAgentReportResponseBody extends TeaModel {
             private Long totalTalkTime; 
             private Long totalWorkTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(Inbound model) {
+                this.accessChannelTypeDetails = model.accessChannelTypeDetails;
+                this.averageFirstResponseTime = model.averageFirstResponseTime;
+                this.averageHoldTime = model.averageHoldTime;
+                this.averageResponseTime = model.averageResponseTime;
+                this.averageRingTime = model.averageRingTime;
+                this.averageTalkTime = model.averageTalkTime;
+                this.averageWorkTime = model.averageWorkTime;
+                this.callsAttendedTransferIn = model.callsAttendedTransferIn;
+                this.callsAttendedTransferOut = model.callsAttendedTransferOut;
+                this.callsBlindTransferIn = model.callsBlindTransferIn;
+                this.callsBlindTransferOut = model.callsBlindTransferOut;
+                this.callsHandled = model.callsHandled;
+                this.callsHold = model.callsHold;
+                this.callsOffered = model.callsOffered;
+                this.callsRinged = model.callsRinged;
+                this.handleRate = model.handleRate;
+                this.maxHoldTime = model.maxHoldTime;
+                this.maxRingTime = model.maxRingTime;
+                this.maxTalkTime = model.maxTalkTime;
+                this.maxWorkTime = model.maxWorkTime;
+                this.satisfactionIndex = model.satisfactionIndex;
+                this.satisfactionRate = model.satisfactionRate;
+                this.satisfactionSurveysOffered = model.satisfactionSurveysOffered;
+                this.satisfactionSurveysResponded = model.satisfactionSurveysResponded;
+                this.serviceLevel15 = model.serviceLevel15;
+                this.totalHoldTime = model.totalHoldTime;
+                this.totalMessagesSent = model.totalMessagesSent;
+                this.totalMessagesSentByAgent = model.totalMessagesSentByAgent;
+                this.totalMessagesSentByCustomer = model.totalMessagesSentByCustomer;
+                this.totalRingTime = model.totalRingTime;
+                this.totalTalkTime = model.totalTalkTime;
+                this.totalWorkTime = model.totalWorkTime;
+            } 
+
             /**
              * AccessChannelTypeDetails.
              */
@@ -1308,6 +1391,18 @@ public class ListIntervalAgentReportResponseBody extends TeaModel {
             private Long callsHandled; 
             private Long callsOffered; 
             private Long callsTalked; 
+
+            private Builder() {
+            } 
+
+            private Builder(Internal model) {
+                this.averageTalkTime = model.averageTalkTime;
+                this.callsAnswered = model.callsAnswered;
+                this.callsDialed = model.callsDialed;
+                this.callsHandled = model.callsHandled;
+                this.callsOffered = model.callsOffered;
+                this.callsTalked = model.callsTalked;
+            } 
 
             /**
              * AverageTalkTime.
@@ -1720,6 +1815,40 @@ public class ListIntervalAgentReportResponseBody extends TeaModel {
             private Long totalTalkTime; 
             private Long totalWorkTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(Outbound model) {
+                this.answerRate = model.answerRate;
+                this.averageDialingTime = model.averageDialingTime;
+                this.averageHoldTime = model.averageHoldTime;
+                this.averageRingTime = model.averageRingTime;
+                this.averageTalkTime = model.averageTalkTime;
+                this.averageWorkTime = model.averageWorkTime;
+                this.callsAnswered = model.callsAnswered;
+                this.callsAttendedTransferIn = model.callsAttendedTransferIn;
+                this.callsAttendedTransferOut = model.callsAttendedTransferOut;
+                this.callsBlindTransferIn = model.callsBlindTransferIn;
+                this.callsBlindTransferOut = model.callsBlindTransferOut;
+                this.callsDialed = model.callsDialed;
+                this.callsHold = model.callsHold;
+                this.callsRinged = model.callsRinged;
+                this.maxDialingTime = model.maxDialingTime;
+                this.maxHoldTime = model.maxHoldTime;
+                this.maxRingTime = model.maxRingTime;
+                this.maxTalkTime = model.maxTalkTime;
+                this.maxWorkTime = model.maxWorkTime;
+                this.satisfactionIndex = model.satisfactionIndex;
+                this.satisfactionRate = model.satisfactionRate;
+                this.satisfactionSurveysOffered = model.satisfactionSurveysOffered;
+                this.satisfactionSurveysResponded = model.satisfactionSurveysResponded;
+                this.totalDialingTime = model.totalDialingTime;
+                this.totalHoldTime = model.totalHoldTime;
+                this.totalRingTime = model.totalRingTime;
+                this.totalTalkTime = model.totalTalkTime;
+                this.totalWorkTime = model.totalWorkTime;
+            } 
+
             /**
              * AnswerRate.
              */
@@ -2006,6 +2135,15 @@ public class ListIntervalAgentReportResponseBody extends TeaModel {
             private String breakCode; 
             private Long count; 
             private Long duration; 
+
+            private Builder() {
+            } 
+
+            private Builder(BreakCodeDetailList model) {
+                this.breakCode = model.breakCode;
+                this.count = model.count;
+                this.duration = model.duration;
+            } 
 
             /**
              * BreakCode.
@@ -2478,6 +2616,47 @@ public class ListIntervalAgentReportResponseBody extends TeaModel {
             private Long totalTalkTime; 
             private Long totalWorkTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(Overall model) {
+                this.averageBreakTime = model.averageBreakTime;
+                this.averageHoldTime = model.averageHoldTime;
+                this.averageReadyTime = model.averageReadyTime;
+                this.averageTalkTime = model.averageTalkTime;
+                this.averageWorkTime = model.averageWorkTime;
+                this.breakCodeDetailList = model.breakCodeDetailList;
+                this.firstCheckInTime = model.firstCheckInTime;
+                this.lastCheckOutTime = model.lastCheckOutTime;
+                this.lastCheckoutTime = model.lastCheckoutTime;
+                this.maxBreakTime = model.maxBreakTime;
+                this.maxHoldTime = model.maxHoldTime;
+                this.maxReadyTime = model.maxReadyTime;
+                this.maxTalkTime = model.maxTalkTime;
+                this.maxWorkTime = model.maxWorkTime;
+                this.occupancyRate = model.occupancyRate;
+                this.satisfactionIndex = model.satisfactionIndex;
+                this.satisfactionRate = model.satisfactionRate;
+                this.satisfactionSurveysOffered = model.satisfactionSurveysOffered;
+                this.satisfactionSurveysResponded = model.satisfactionSurveysResponded;
+                this.totalBreakTime = model.totalBreakTime;
+                this.totalCalls = model.totalCalls;
+                this.totalHoldTime = model.totalHoldTime;
+                this.totalLoggedInTime = model.totalLoggedInTime;
+                this.totalOffSiteLoggedInTime = model.totalOffSiteLoggedInTime;
+                this.totalOffSiteOnlineTime = model.totalOffSiteOnlineTime;
+                this.totalOfficePhoneLoggedInTime = model.totalOfficePhoneLoggedInTime;
+                this.totalOfficePhoneOnlineTime = model.totalOfficePhoneOnlineTime;
+                this.totalOnSiteLoggedInTime = model.totalOnSiteLoggedInTime;
+                this.totalOnSiteOnlineTime = model.totalOnSiteOnlineTime;
+                this.totalOutboundScenarioLoggedInTime = model.totalOutboundScenarioLoggedInTime;
+                this.totalOutboundScenarioReadyTime = model.totalOutboundScenarioReadyTime;
+                this.totalOutboundScenarioTime = model.totalOutboundScenarioTime;
+                this.totalReadyTime = model.totalReadyTime;
+                this.totalTalkTime = model.totalTalkTime;
+                this.totalWorkTime = model.totalWorkTime;
+            } 
+
             /**
              * AverageBreakTime.
              */
@@ -2856,6 +3035,18 @@ public class ListIntervalAgentReportResponseBody extends TeaModel {
             private Outbound outbound; 
             private Overall overall; 
             private Long statsTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.back2Back = model.back2Back;
+                this.inbound = model.inbound;
+                this.internal = model.internal;
+                this.outbound = model.outbound;
+                this.overall = model.overall;
+                this.statsTime = model.statsTime;
+            } 
 
             /**
              * Back2Back.

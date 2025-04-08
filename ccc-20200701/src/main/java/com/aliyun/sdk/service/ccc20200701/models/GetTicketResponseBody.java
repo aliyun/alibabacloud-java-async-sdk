@@ -52,6 +52,10 @@ public class GetTicketResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetTicketResponseBody extends TeaModel {
         private String message; 
         private java.util.List<String> params; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTicketResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.params = model.params;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -475,6 +491,37 @@ public class GetTicketResponseBody extends TeaModel {
             private String ticketId; 
             private String title; 
             private Long updatedTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.assignee = model.assignee;
+                this.assigneeName = model.assigneeName;
+                this.categoryId = model.categoryId;
+                this.categoryName = model.categoryName;
+                this.closeCode = model.closeCode;
+                this.comment = model.comment;
+                this.context = model.context;
+                this.createdTime = model.createdTime;
+                this.creator = model.creator;
+                this.creatorName = model.creatorName;
+                this.currentTaskId = model.currentTaskId;
+                this.currentTaskName = model.currentTaskName;
+                this.currentTaskStartTime = model.currentTaskStartTime;
+                this.customerId = model.customerId;
+                this.endTime = model.endTime;
+                this.instanceId = model.instanceId;
+                this.jobId = model.jobId;
+                this.source = model.source;
+                this.startTime = model.startTime;
+                this.state = model.state;
+                this.templateId = model.templateId;
+                this.templateVersion = model.templateVersion;
+                this.ticketId = model.ticketId;
+                this.title = model.title;
+                this.updatedTime = model.updatedTime;
+            } 
 
             /**
              * Assignee.

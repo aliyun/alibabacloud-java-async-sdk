@@ -44,6 +44,10 @@ public class GetCampaignResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class GetCampaignResponseBody extends TeaModel {
         private Data data; 
         private Long httpStatusCode; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetCampaignResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -411,6 +425,35 @@ public class GetCampaignResponseBody extends TeaModel {
             private String strategyParameters; 
             private String strategyType; 
             private Long totalCases; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.actualEndTime = model.actualEndTime;
+                this.actualStartTime = model.actualStartTime;
+                this.campaignId = model.campaignId;
+                this.casesAborted = model.casesAborted;
+                this.casesConnected = model.casesConnected;
+                this.casesUncompleted = model.casesUncompleted;
+                this.casesUncompletedAfterAttempt = model.casesUncompletedAfterAttempt;
+                this.casesUncompletedAfterAttempted = model.casesUncompletedAfterAttempted;
+                this.completionRate = model.completionRate;
+                this.contactFlowId = model.contactFlowId;
+                this.maxAttemptCount = model.maxAttemptCount;
+                this.minAttemptInterval = model.minAttemptInterval;
+                this.name = model.name;
+                this.planedEndTime = model.planedEndTime;
+                this.planedStartTime = model.planedStartTime;
+                this.queueId = model.queueId;
+                this.queueName = model.queueName;
+                this.simulation = model.simulation;
+                this.simulationParameters = model.simulationParameters;
+                this.state = model.state;
+                this.strategyParameters = model.strategyParameters;
+                this.strategyType = model.strategyType;
+                this.totalCases = model.totalCases;
+            } 
 
             /**
              * ActualEndTime.

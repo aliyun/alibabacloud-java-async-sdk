@@ -48,6 +48,10 @@ public class ListPersonalNumbersOfUserResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class ListPersonalNumbersOfUserResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListPersonalNumbersOfUserResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -228,6 +243,18 @@ public class ListPersonalNumbersOfUserResponseBody extends TeaModel {
             private String number; 
             private String province; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.active = model.active;
+                this.city = model.city;
+                this.contactFlowId = model.contactFlowId;
+                this.instanceId = model.instanceId;
+                this.number = model.number;
+                this.province = model.province;
+            } 
+
             /**
              * Active.
              */
@@ -350,6 +377,16 @@ public class ListPersonalNumbersOfUserResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.list = model.list;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * List.

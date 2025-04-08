@@ -52,6 +52,10 @@ public class ListDevicesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListDevicesResponseBody extends TeaModel {
         private String message; 
         private java.util.List<String> params; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDevicesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.params = model.params;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -271,6 +287,20 @@ public class ListDevicesResponseBody extends TeaModel {
             private String extension; 
             private String instanceId; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.callId = model.callId;
+                this.contact = model.contact;
+                this.deviceId = model.deviceId;
+                this.deviceType = model.deviceType;
+                this.expires = model.expires;
+                this.extension = model.extension;
+                this.instanceId = model.instanceId;
+                this.userId = model.userId;
+            } 
 
             /**
              * CallId.

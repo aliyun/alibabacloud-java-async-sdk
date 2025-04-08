@@ -52,6 +52,10 @@ public class GetDocumentUploadParametersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetDocumentUploadParametersResponseBody extends TeaModel {
         private String message; 
         private java.util.List<String> params; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDocumentUploadParametersResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.params = model.params;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -247,6 +263,18 @@ public class GetDocumentUploadParametersResponseBody extends TeaModel {
             private String host; 
             private String policy; 
             private String signature; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.accessKeyId = model.accessKeyId;
+                this.expireTime = model.expireTime;
+                this.filePath = model.filePath;
+                this.host = model.host;
+                this.policy = model.policy;
+                this.signature = model.signature;
+            } 
 
             /**
              * AccessKeyId.

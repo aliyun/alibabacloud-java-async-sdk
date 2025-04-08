@@ -48,6 +48,10 @@ public class ListCasesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class ListCasesResponseBody extends TeaModel {
         private Long httpStatusCode; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListCasesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -252,6 +267,20 @@ public class ListCasesResponseBody extends TeaModel {
             private String phoneNumber; 
             private String state; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.abandonPhase = model.abandonPhase;
+                this.abandonType = model.abandonType;
+                this.attemptCount = model.attemptCount;
+                this.caseId = model.caseId;
+                this.customVariables = model.customVariables;
+                this.failureReason = model.failureReason;
+                this.phoneNumber = model.phoneNumber;
+                this.state = model.state;
+            } 
+
             /**
              * AbandonPhase.
              */
@@ -390,6 +419,16 @@ public class ListCasesResponseBody extends TeaModel {
             private Long pageNumber; 
             private Long pageSize; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.list = model.list;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * List.

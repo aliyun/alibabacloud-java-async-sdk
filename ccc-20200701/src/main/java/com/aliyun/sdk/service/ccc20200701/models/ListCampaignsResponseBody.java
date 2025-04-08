@@ -52,6 +52,10 @@ public class ListCampaignsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListCampaignsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListCampaignsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -416,6 +432,32 @@ public class ListCampaignsResponseBody extends TeaModel {
             private String strategyType; 
             private Long totalCases; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.actualEndTime = model.actualEndTime;
+                this.actualStartTime = model.actualStartTime;
+                this.campaignId = model.campaignId;
+                this.casesAborted = model.casesAborted;
+                this.casesConnected = model.casesConnected;
+                this.casesUncompleted = model.casesUncompleted;
+                this.completionRate = model.completionRate;
+                this.contactFlowId = model.contactFlowId;
+                this.maxAttemptCount = model.maxAttemptCount;
+                this.minAttemptInterval = model.minAttemptInterval;
+                this.name = model.name;
+                this.planedEndTime = model.planedEndTime;
+                this.planedStartTime = model.planedStartTime;
+                this.queueId = model.queueId;
+                this.queueName = model.queueName;
+                this.simulation = model.simulation;
+                this.state = model.state;
+                this.strategyParameters = model.strategyParameters;
+                this.strategyType = model.strategyType;
+                this.totalCases = model.totalCases;
+            } 
+
             /**
              * ActualEndTime.
              */
@@ -650,6 +692,16 @@ public class ListCampaignsResponseBody extends TeaModel {
             private Long pageNumber; 
             private Long pageSize; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.list = model.list;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * List.

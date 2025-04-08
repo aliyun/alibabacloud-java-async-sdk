@@ -52,6 +52,10 @@ public class ListConfigItemsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListConfigItemsResponseBody extends TeaModel {
         private String message; 
         private java.util.List<String> params; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListConfigItemsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.params = model.params;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -235,6 +251,17 @@ public class ListConfigItemsResponseBody extends TeaModel {
             private String objectId; 
             private String objectType; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.instanceId = model.instanceId;
+                this.name = model.name;
+                this.objectId = model.objectId;
+                this.objectType = model.objectType;
+                this.value = model.value;
+            } 
 
             /**
              * InstanceId.

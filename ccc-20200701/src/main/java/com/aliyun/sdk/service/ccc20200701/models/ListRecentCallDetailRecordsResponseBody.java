@@ -48,6 +48,10 @@ public class ListRecentCallDetailRecordsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class ListRecentCallDetailRecordsResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListRecentCallDetailRecordsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -288,6 +303,23 @@ public class ListRecentCallDetailRecordsResponseBody extends TeaModel {
             private String skillGroupIds; 
             private Long startTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.agentIds = model.agentIds;
+                this.callDuration = model.callDuration;
+                this.calledNumber = model.calledNumber;
+                this.callingNumber = model.callingNumber;
+                this.contactDisposition = model.contactDisposition;
+                this.contactId = model.contactId;
+                this.contactType = model.contactType;
+                this.duration = model.duration;
+                this.instanceId = model.instanceId;
+                this.skillGroupIds = model.skillGroupIds;
+                this.startTime = model.startTime;
+            } 
+
             /**
              * AgentIds.
              */
@@ -450,6 +482,16 @@ public class ListRecentCallDetailRecordsResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.list = model.list;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * List.

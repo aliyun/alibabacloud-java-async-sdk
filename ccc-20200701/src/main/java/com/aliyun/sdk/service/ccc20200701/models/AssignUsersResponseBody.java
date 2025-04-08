@@ -52,6 +52,10 @@ public class AssignUsersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class AssignUsersResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String workflowId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AssignUsersResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.workflowId = model.workflowId;
+        } 
 
         /**
          * Code.

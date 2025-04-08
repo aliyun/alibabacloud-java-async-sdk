@@ -52,6 +52,10 @@ public class GetTurnCredentialsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetTurnCredentialsResponseBody extends TeaModel {
         private String message; 
         private java.util.List<String> params; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTurnCredentialsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.params = model.params;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -199,6 +215,14 @@ public class GetTurnCredentialsResponseBody extends TeaModel {
         public static final class Builder {
             private String password; 
             private String userName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.password = model.password;
+                this.userName = model.userName;
+            } 
 
             /**
              * Password.

@@ -52,6 +52,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         private PagedSkillGroupSummaryReport pagedSkillGroupSummaryReport; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSkillGroupSummaryReportsSinceMidnightResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.pagedSkillGroupSummaryReport = model.pagedSkillGroupSummaryReport;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -619,6 +635,49 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             private Long totalRingTime; 
             private Long totalTalkTime; 
             private Long totalWorkTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Inbound model) {
+                this.abandonedInQueueOfQueueCount = model.abandonedInQueueOfQueueCount;
+                this.answeredByAgentOfQueueCount = model.answeredByAgentOfQueueCount;
+                this.answeredByAgentOfQueueMaxWaitTimeDuration = model.answeredByAgentOfQueueMaxWaitTimeDuration;
+                this.answeredByAgentOfQueueWaitTimeDuration = model.answeredByAgentOfQueueWaitTimeDuration;
+                this.averageRingTime = model.averageRingTime;
+                this.averageTalkTime = model.averageTalkTime;
+                this.averageWorkTime = model.averageWorkTime;
+                this.callsAbandoned = model.callsAbandoned;
+                this.callsAttendedTransferOut = model.callsAttendedTransferOut;
+                this.callsBlindTransferOut = model.callsBlindTransferOut;
+                this.callsHandled = model.callsHandled;
+                this.callsOffered = model.callsOffered;
+                this.callsOverflow = model.callsOverflow;
+                this.callsQueuingCanceled = model.callsQueuingCanceled;
+                this.callsQueuingFailure = model.callsQueuingFailure;
+                this.callsQueuingRerouted = model.callsQueuingRerouted;
+                this.callsQueuingTimeout = model.callsQueuingTimeout;
+                this.callsServiceLevel10 = model.callsServiceLevel10;
+                this.callsServiceLevel20 = model.callsServiceLevel20;
+                this.callsServiceLevel30 = model.callsServiceLevel30;
+                this.callsTimeout = model.callsTimeout;
+                this.giveUpByAgentOfQueueCount = model.giveUpByAgentOfQueueCount;
+                this.handleRate = model.handleRate;
+                this.inComingQueueOfQueueCount = model.inComingQueueOfQueueCount;
+                this.maxRingTime = model.maxRingTime;
+                this.maxTalkTime = model.maxTalkTime;
+                this.maxWorkTime = model.maxWorkTime;
+                this.overFlowInQueueOfQueueCount = model.overFlowInQueueOfQueueCount;
+                this.queueMaxWaitTimeDuration = model.queueMaxWaitTimeDuration;
+                this.queueWaitTimeDuration = model.queueWaitTimeDuration;
+                this.satisfactionIndex = model.satisfactionIndex;
+                this.satisfactionSurveysOffered = model.satisfactionSurveysOffered;
+                this.satisfactionSurveysResponded = model.satisfactionSurveysResponded;
+                this.serviceLevel20 = model.serviceLevel20;
+                this.totalRingTime = model.totalRingTime;
+                this.totalTalkTime = model.totalTalkTime;
+                this.totalWorkTime = model.totalWorkTime;
+            } 
 
             /**
              * AbandonedInQueueOfQueueCount.
@@ -1267,6 +1326,39 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             private Long totalWaitTime; 
             private Long totalWorkTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(Outbound model) {
+                this.answerRate = model.answerRate;
+                this.averageDialingTime = model.averageDialingTime;
+                this.averageTalkTime = model.averageTalkTime;
+                this.averageWorkTime = model.averageWorkTime;
+                this.callsAbandoned = model.callsAbandoned;
+                this.callsAgentHandled = model.callsAgentHandled;
+                this.callsAnswered = model.callsAnswered;
+                this.callsDialed = model.callsDialed;
+                this.callsOffered = model.callsOffered;
+                this.callsQueuingCancelled = model.callsQueuingCancelled;
+                this.callsQueuingFailed = model.callsQueuingFailed;
+                this.callsQueuingFailure = model.callsQueuingFailure;
+                this.callsQueuingOverflow = model.callsQueuingOverflow;
+                this.callsQueuingRerouted = model.callsQueuingRerouted;
+                this.callsQueuingTimeout = model.callsQueuingTimeout;
+                this.callsServiceLevel30 = model.callsServiceLevel30;
+                this.callsServiceLevel30V2 = model.callsServiceLevel30V2;
+                this.maxDialingTime = model.maxDialingTime;
+                this.maxTalkTime = model.maxTalkTime;
+                this.maxWorkTime = model.maxWorkTime;
+                this.satisfactionIndex = model.satisfactionIndex;
+                this.satisfactionSurveysOffered = model.satisfactionSurveysOffered;
+                this.satisfactionSurveysResponded = model.satisfactionSurveysResponded;
+                this.totalDialingTime = model.totalDialingTime;
+                this.totalTalkTime = model.totalTalkTime;
+                this.totalWaitTime = model.totalWaitTime;
+                this.totalWorkTime = model.totalWorkTime;
+            } 
+
             /**
              * AnswerRate.
              */
@@ -1702,6 +1794,28 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             private Long totalTalkTime; 
             private Long totalWorkTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(Overall model) {
+                this.averageReadyTime = model.averageReadyTime;
+                this.averageTalkTime = model.averageTalkTime;
+                this.averageWorkTime = model.averageWorkTime;
+                this.maxReadyTime = model.maxReadyTime;
+                this.maxTalkTime = model.maxTalkTime;
+                this.maxWorkTime = model.maxWorkTime;
+                this.occupancyRate = model.occupancyRate;
+                this.satisfactionIndex = model.satisfactionIndex;
+                this.satisfactionSurveysOffered = model.satisfactionSurveysOffered;
+                this.satisfactionSurveysResponded = model.satisfactionSurveysResponded;
+                this.totalBreakTime = model.totalBreakTime;
+                this.totalCalls = model.totalCalls;
+                this.totalLoggedInTime = model.totalLoggedInTime;
+                this.totalReadyTime = model.totalReadyTime;
+                this.totalTalkTime = model.totalTalkTime;
+                this.totalWorkTime = model.totalWorkTime;
+            } 
+
             /**
              * AverageReadyTime.
              */
@@ -1941,6 +2055,19 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             private String skillGroupName; 
             private String timestamp; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.inbound = model.inbound;
+                this.instanceId = model.instanceId;
+                this.outbound = model.outbound;
+                this.overall = model.overall;
+                this.skillGroupId = model.skillGroupId;
+                this.skillGroupName = model.skillGroupName;
+                this.timestamp = model.timestamp;
+            } 
+
             /**
              * Inbound.
              */
@@ -2071,6 +2198,16 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PagedSkillGroupSummaryReport model) {
+                this.list = model.list;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * List.

@@ -52,6 +52,10 @@ public class ListSmsMetadataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListSmsMetadataResponseBody extends TeaModel {
         private String message; 
         private java.util.List<String> params; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSmsMetadataResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.params = model.params;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -272,6 +288,20 @@ public class ListSmsMetadataResponseBody extends TeaModel {
             private String smsMetadataId; 
             private String templateCode; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.aliyunUid = model.aliyunUid;
+                this.description = model.description;
+                this.instanceId = model.instanceId;
+                this.name = model.name;
+                this.scenario = model.scenario;
+                this.signName = model.signName;
+                this.smsMetadataId = model.smsMetadataId;
+                this.templateCode = model.templateCode;
+            } 
+
             /**
              * AliyunUid.
              */
@@ -410,6 +440,16 @@ public class ListSmsMetadataResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.list = model.list;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * List.

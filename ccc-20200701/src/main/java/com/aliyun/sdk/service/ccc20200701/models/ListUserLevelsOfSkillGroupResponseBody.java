@@ -48,6 +48,10 @@ public class ListUserLevelsOfSkillGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class ListUserLevelsOfSkillGroupResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListUserLevelsOfSkillGroupResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -264,6 +279,21 @@ public class ListUserLevelsOfSkillGroupResponseBody extends TeaModel {
             private Integer skillLevel; 
             private String userId; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.displayName = model.displayName;
+                this.loginName = model.loginName;
+                this.ramId = model.ramId;
+                this.roleId = model.roleId;
+                this.roleName = model.roleName;
+                this.skillGroupId = model.skillGroupId;
+                this.skillGroupName = model.skillGroupName;
+                this.skillLevel = model.skillLevel;
+                this.userId = model.userId;
+            } 
+
             /**
              * DisplayName.
              */
@@ -410,6 +440,16 @@ public class ListUserLevelsOfSkillGroupResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.list = model.list;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * List.

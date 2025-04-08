@@ -52,6 +52,10 @@ public class ListUsersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListUsersResponseBody extends TeaModel {
         private String message; 
         private java.util.List<String> params; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListUsersResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.params = model.params;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -236,6 +252,17 @@ public class ListUsersResponseBody extends TeaModel {
             private String province; 
             private String usage; 
 
+            private Builder() {
+            } 
+
+            private Builder(PersonalOutboundNumberList model) {
+                this.active = model.active;
+                this.city = model.city;
+                this.number = model.number;
+                this.province = model.province;
+                this.usage = model.usage;
+            } 
+
             /**
              * Active.
              */
@@ -338,6 +365,15 @@ public class ListUsersResponseBody extends TeaModel {
             private String skillGroupId; 
             private String skillGroupName; 
             private Integer skillLevel; 
+
+            private Builder() {
+            } 
+
+            private Builder(SkillLevelList model) {
+                this.skillGroupId = model.skillGroupId;
+                this.skillGroupName = model.skillGroupName;
+                this.skillLevel = model.skillLevel;
+            } 
 
             /**
              * SkillGroupId.
@@ -606,6 +642,30 @@ public class ListUsersResponseBody extends TeaModel {
             private String userId; 
             private String workMode; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.deviceExt = model.deviceExt;
+                this.deviceId = model.deviceId;
+                this.deviceState = model.deviceState;
+                this.displayId = model.displayId;
+                this.displayName = model.displayName;
+                this.email = model.email;
+                this.extension = model.extension;
+                this.loginName = model.loginName;
+                this.mobile = model.mobile;
+                this.personalOutboundNumberList = model.personalOutboundNumberList;
+                this.primary = model.primary;
+                this.primaryAccount = model.primaryAccount;
+                this.ramId = model.ramId;
+                this.roleId = model.roleId;
+                this.roleName = model.roleName;
+                this.skillLevelList = model.skillLevelList;
+                this.userId = model.userId;
+                this.workMode = model.workMode;
+            } 
+
             /**
              * DeviceExt.
              */
@@ -824,6 +884,16 @@ public class ListUsersResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.list = model.list;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * List.

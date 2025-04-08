@@ -48,6 +48,10 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListIvrTrackingDetailsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -348,6 +363,28 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
             private String nodeType; 
             private java.util.Map<String, ?> nodeVariables; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.callee = model.callee;
+                this.caller = model.caller;
+                this.channelId = model.channelId;
+                this.channelVariables = model.channelVariables;
+                this.contactId = model.contactId;
+                this.enterTime = model.enterTime;
+                this.flowId = model.flowId;
+                this.flowName = model.flowName;
+                this.instance = model.instance;
+                this.leaveTime = model.leaveTime;
+                this.nodeExitCode = model.nodeExitCode;
+                this.nodeId = model.nodeId;
+                this.nodeName = model.nodeName;
+                this.nodeProperties = model.nodeProperties;
+                this.nodeType = model.nodeType;
+                this.nodeVariables = model.nodeVariables;
+            } 
+
             /**
              * Callee.
              */
@@ -550,6 +587,16 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.list = model.list;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * List.

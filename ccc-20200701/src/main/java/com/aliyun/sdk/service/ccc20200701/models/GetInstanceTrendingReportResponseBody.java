@@ -48,6 +48,10 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetInstanceTrendingReportResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -240,6 +255,19 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
             private Long statsTime; 
             private Long totalCalls; 
 
+            private Builder() {
+            } 
+
+            private Builder(Inbound model) {
+                this.callsAbandonedInIVR = model.callsAbandonedInIVR;
+                this.callsAbandonedInQueue = model.callsAbandonedInQueue;
+                this.callsAbandonedInRing = model.callsAbandonedInRing;
+                this.callsHandled = model.callsHandled;
+                this.callsQueued = model.callsQueued;
+                this.statsTime = model.statsTime;
+                this.totalCalls = model.totalCalls;
+            } 
+
             /**
              * CallsAbandonedInIVR.
              */
@@ -359,6 +387,15 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
             private Long statsTime; 
             private Long totalCalls; 
 
+            private Builder() {
+            } 
+
+            private Builder(Outbound model) {
+                this.callsAnswered = model.callsAnswered;
+                this.statsTime = model.statsTime;
+                this.totalCalls = model.totalCalls;
+            } 
+
             /**
              * CallsAnswered.
              */
@@ -433,6 +470,14 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
         public static final class Builder {
             private Long maxLoggedInAgents; 
             private Long statsTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Overall model) {
+                this.maxLoggedInAgents = model.maxLoggedInAgents;
+                this.statsTime = model.statsTime;
+            } 
 
             /**
              * MaxLoggedInAgents.
@@ -512,6 +557,15 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
             private java.util.List<Inbound> inbound; 
             private java.util.List<Outbound> outbound; 
             private java.util.List<Overall> overall; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.inbound = model.inbound;
+                this.outbound = model.outbound;
+                this.overall = model.overall;
+            } 
 
             /**
              * Inbound.

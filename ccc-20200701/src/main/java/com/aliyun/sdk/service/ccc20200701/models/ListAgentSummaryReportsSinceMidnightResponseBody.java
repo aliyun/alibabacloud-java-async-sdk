@@ -52,6 +52,10 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
         private PagedAgentSummaryReport pagedAgentSummaryReport; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAgentSummaryReportsSinceMidnightResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.pagedAgentSummaryReport = model.pagedAgentSummaryReport;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -367,6 +383,28 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
             private Long totalRingTime; 
             private Long totalTalkTime; 
             private Long totalWorkTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Inbound model) {
+                this.averageRingTime = model.averageRingTime;
+                this.averageTalkTime = model.averageTalkTime;
+                this.averageWorkTime = model.averageWorkTime;
+                this.callsHandled = model.callsHandled;
+                this.callsOffered = model.callsOffered;
+                this.handleRate = model.handleRate;
+                this.maxRingTime = model.maxRingTime;
+                this.maxTalkTime = model.maxTalkTime;
+                this.maxWorkTime = model.maxWorkTime;
+                this.satisfactionIndex = model.satisfactionIndex;
+                this.satisfactionSurveysOffered = model.satisfactionSurveysOffered;
+                this.satisfactionSurveysResponded = model.satisfactionSurveysResponded;
+                this.serviceLevel20 = model.serviceLevel20;
+                this.totalRingTime = model.totalRingTime;
+                this.totalTalkTime = model.totalTalkTime;
+                this.totalWorkTime = model.totalWorkTime;
+            } 
 
             /**
              * AverageRingTime.
@@ -702,6 +740,27 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
             private Long totalDialingTime; 
             private Long totalTalkTime; 
             private Long totalWorkTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Outbound model) {
+                this.answerRate = model.answerRate;
+                this.averageDialingTime = model.averageDialingTime;
+                this.averageTalkTime = model.averageTalkTime;
+                this.averageWorkTime = model.averageWorkTime;
+                this.callsAnswered = model.callsAnswered;
+                this.callsDialed = model.callsDialed;
+                this.maxDialingTime = model.maxDialingTime;
+                this.maxTalkTime = model.maxTalkTime;
+                this.maxWorkTime = model.maxWorkTime;
+                this.satisfactionIndex = model.satisfactionIndex;
+                this.satisfactionSurveysOffered = model.satisfactionSurveysOffered;
+                this.satisfactionSurveysResponded = model.satisfactionSurveysResponded;
+                this.totalDialingTime = model.totalDialingTime;
+                this.totalTalkTime = model.totalTalkTime;
+                this.totalWorkTime = model.totalWorkTime;
+            } 
 
             /**
              * AnswerRate.
@@ -1054,6 +1113,29 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
             private Long totalTalkTime; 
             private Long totalWorkTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(Overall model) {
+                this.averageReadyTime = model.averageReadyTime;
+                this.averageTalkTime = model.averageTalkTime;
+                this.averageWorkTime = model.averageWorkTime;
+                this.maxReadyTime = model.maxReadyTime;
+                this.maxTalkTime = model.maxTalkTime;
+                this.maxWorkTime = model.maxWorkTime;
+                this.occupancyRate = model.occupancyRate;
+                this.oneTransferCalls = model.oneTransferCalls;
+                this.satisfactionIndex = model.satisfactionIndex;
+                this.satisfactionSurveysOffered = model.satisfactionSurveysOffered;
+                this.satisfactionSurveysResponded = model.satisfactionSurveysResponded;
+                this.totalBreakTime = model.totalBreakTime;
+                this.totalCalls = model.totalCalls;
+                this.totalLoggedInTime = model.totalLoggedInTime;
+                this.totalReadyTime = model.totalReadyTime;
+                this.totalTalkTime = model.totalTalkTime;
+                this.totalWorkTime = model.totalWorkTime;
+            } 
+
             /**
              * AverageReadyTime.
              */
@@ -1337,6 +1419,22 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
             private String skillGroupNames; 
             private String timestamp; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.agentId = model.agentId;
+                this.agentName = model.agentName;
+                this.inbound = model.inbound;
+                this.instanceId = model.instanceId;
+                this.loginName = model.loginName;
+                this.outbound = model.outbound;
+                this.overall = model.overall;
+                this.skillGroupIds = model.skillGroupIds;
+                this.skillGroupNames = model.skillGroupNames;
+                this.timestamp = model.timestamp;
+            } 
+
             /**
              * AgentId.
              */
@@ -1491,6 +1589,16 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PagedAgentSummaryReport model) {
+                this.list = model.list;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * List.

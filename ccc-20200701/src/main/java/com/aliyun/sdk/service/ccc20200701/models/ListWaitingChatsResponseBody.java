@@ -48,6 +48,10 @@ public class ListWaitingChatsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class ListWaitingChatsResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListWaitingChatsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -192,6 +207,15 @@ public class ListWaitingChatsResponseBody extends TeaModel {
             private String senderId; 
             private String senderType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Messages model) {
+                this.content = model.content;
+                this.senderId = model.senderId;
+                this.senderType = model.senderType;
+            } 
+
             /**
              * Content.
              */
@@ -290,6 +314,16 @@ public class ListWaitingChatsResponseBody extends TeaModel {
             private String userId; 
             private String userName; 
             private String userType; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserList model) {
+                this.avatarUrl = model.avatarUrl;
+                this.userId = model.userId;
+                this.userName = model.userName;
+                this.userType = model.userType;
+            } 
 
             /**
              * AvatarUrl.
@@ -457,6 +491,21 @@ public class ListWaitingChatsResponseBody extends TeaModel {
             private java.util.List<Messages> messages; 
             private String skillGroupId; 
             private java.util.List<UserList> userList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.accessChannelId = model.accessChannelId;
+                this.accessChannelType = model.accessChannelType;
+                this.beingAssigned = model.beingAssigned;
+                this.chatConversationId = model.chatConversationId;
+                this.enqueueTime = model.enqueueTime;
+                this.jobId = model.jobId;
+                this.messages = model.messages;
+                this.skillGroupId = model.skillGroupId;
+                this.userList = model.userList;
+            } 
 
             /**
              * AccessChannelId.

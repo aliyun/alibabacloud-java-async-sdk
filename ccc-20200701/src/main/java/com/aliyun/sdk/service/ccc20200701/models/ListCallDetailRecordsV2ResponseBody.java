@@ -48,6 +48,10 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListCallDetailRecordsV2ResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -215,6 +230,17 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
             private Boolean success; 
             private String taskId; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Emotion model) {
+                this.confidence = model.confidence;
+                this.remark = model.remark;
+                this.success = model.success;
+                this.taskId = model.taskId;
+                this.type = model.type;
+            } 
 
             /**
              * Confidence.
@@ -343,6 +369,17 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
             private Boolean success; 
             private String taskId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ProblemSolving model) {
+                this.problem = model.problem;
+                this.solution = model.solution;
+                this.solved = model.solved;
+                this.success = model.success;
+                this.taskId = model.taskId;
+            } 
+
             /**
              * Problem.
              */
@@ -458,6 +495,16 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
             private Boolean success; 
             private String taskId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Satisfaction model) {
+                this.remark = model.remark;
+                this.satisfactionDescription = model.satisfactionDescription;
+                this.success = model.success;
+                this.taskId = model.taskId;
+            } 
+
             /**
              * Remark.
              */
@@ -552,6 +599,15 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
             private Boolean success; 
             private String taskId; 
             private java.util.List<String> tasks; 
+
+            private Builder() {
+            } 
+
+            private Builder(TodoList model) {
+                this.success = model.success;
+                this.taskId = model.taskId;
+                this.tasks = model.tasks;
+            } 
 
             /**
              * Success.
@@ -651,6 +707,16 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
             private ProblemSolving problemSolving; 
             private Satisfaction satisfaction; 
             private TodoList todoList; 
+
+            private Builder() {
+            } 
+
+            private Builder(AnalyticsReport model) {
+                this.emotion = model.emotion;
+                this.problemSolving = model.problemSolving;
+                this.satisfaction = model.satisfaction;
+                this.todoList = model.todoList;
+            } 
 
             /**
              * Emotion.
@@ -1371,6 +1437,67 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
             private Long transferCount; 
             private Long waitTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.accessChannelName = model.accessChannelName;
+                this.accessChannelType = model.accessChannelType;
+                this.accessChannelUserId = model.accessChannelUserId;
+                this.accessChannelUserName = model.accessChannelUserName;
+                this.additionalBroker = model.additionalBroker;
+                this.agentIds = model.agentIds;
+                this.agentNames = model.agentNames;
+                this.analyticsReport = model.analyticsReport;
+                this.analyticsReportReady = model.analyticsReportReady;
+                this.broker = model.broker;
+                this.callDuration = model.callDuration;
+                this.callIds = model.callIds;
+                this.calledNumber = model.calledNumber;
+                this.calleeLocation = model.calleeLocation;
+                this.callerLocation = model.callerLocation;
+                this.callingNumber = model.callingNumber;
+                this.clientAppName = model.clientAppName;
+                this.clientIpAddress = model.clientIpAddress;
+                this.clientLocation = model.clientLocation;
+                this.clientUserAgent = model.clientUserAgent;
+                this.contactDisposition = model.contactDisposition;
+                this.contactId = model.contactId;
+                this.contactType = model.contactType;
+                this.dialingTime = model.dialingTime;
+                this.earlyMediaState = model.earlyMediaState;
+                this.earlyMediaText = model.earlyMediaText;
+                this.establishedTime = model.establishedTime;
+                this.firstResponseTime = model.firstResponseTime;
+                this.heldTime = model.heldTime;
+                this.instanceId = model.instanceId;
+                this.ivrTime = model.ivrTime;
+                this.mediaType = model.mediaType;
+                this.messagesSent = model.messagesSent;
+                this.messagesSentByAgent = model.messagesSentByAgent;
+                this.messagesSentByCustomer = model.messagesSentByCustomer;
+                this.offSiteAgentIds = model.offSiteAgentIds;
+                this.offsiteAgentDestinationNumbers = model.offsiteAgentDestinationNumbers;
+                this.offsiteAgentOriginatorNumbers = model.offsiteAgentOriginatorNumbers;
+                this.queueTime = model.queueTime;
+                this.recordingDuration = model.recordingDuration;
+                this.recordingReady = model.recordingReady;
+                this.releaseInitiator = model.releaseInitiator;
+                this.releaseReason = model.releaseReason;
+                this.releaseTime = model.releaseTime;
+                this.ringTime = model.ringTime;
+                this.satisfactionDescription = model.satisfactionDescription;
+                this.satisfactionIndex = model.satisfactionIndex;
+                this.satisfactionSurveyChannel = model.satisfactionSurveyChannel;
+                this.satisfactionSurveyOffered = model.satisfactionSurveyOffered;
+                this.skillGroupIds = model.skillGroupIds;
+                this.skillGroupNames = model.skillGroupNames;
+                this.startTime = model.startTime;
+                this.talkTime = model.talkTime;
+                this.transferCount = model.transferCount;
+                this.waitTime = model.waitTime;
+            } 
+
             /**
              * AccessChannelName.
              */
@@ -1885,6 +2012,16 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.list = model.list;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * List.
