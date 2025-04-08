@@ -40,6 +40,10 @@ public class DetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instance
      */
@@ -65,6 +69,15 @@ public class DetailResponseBody extends TeaModel {
         private Instance instance; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DetailResponseBody model) {
+            this.instance = model.instance;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The details about the instance.</p>
@@ -217,6 +230,20 @@ public class DetailResponseBody extends TeaModel {
             private Long totalCount; 
             private String utcCreate; 
             private String utcExpireTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Instance model) {
+                this.capacity = model.capacity;
+                this.name = model.name;
+                this.qps = model.qps;
+                this.region = model.region;
+                this.serviceType = model.serviceType;
+                this.totalCount = model.totalCount;
+                this.utcCreate = model.utcCreate;
+                this.utcExpireTime = model.utcExpireTime;
+            } 
 
             /**
              * <p>The capacity of the plan. Unit: × 10,000 images.</p>

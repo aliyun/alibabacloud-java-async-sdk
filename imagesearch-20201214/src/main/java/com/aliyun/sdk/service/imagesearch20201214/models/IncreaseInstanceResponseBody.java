@@ -40,6 +40,10 @@ public class IncreaseInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -65,6 +69,15 @@ public class IncreaseInstanceResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(IncreaseInstanceResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The information about the task.</p>
@@ -145,6 +158,14 @@ public class IncreaseInstanceResponseBody extends TeaModel {
         public static final class Builder {
             private String id; 
             private String incrementStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.id = model.id;
+                this.incrementStatus = model.incrementStatus;
+            } 
 
             /**
              * <p>The ID of the task.</p>

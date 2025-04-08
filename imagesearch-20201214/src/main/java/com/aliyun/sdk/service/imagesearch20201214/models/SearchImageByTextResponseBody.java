@@ -12,11 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link SearchImageByNameResponseBody} extends {@link TeaModel}
+ * {@link SearchImageByTextResponseBody} extends {@link TeaModel}
  *
- * <p>SearchImageByNameResponseBody</p>
+ * <p>SearchImageByTextResponseBody</p>
  */
-public class SearchImageByNameResponseBody extends TeaModel {
+public class SearchImageByTextResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
+    private AccessDeniedDetail accessDeniedDetail;
+
     @com.aliyun.core.annotation.NameInMap("Auctions")
     private java.util.List<Auctions> auctions;
 
@@ -38,7 +41,8 @@ public class SearchImageByNameResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private SearchImageByNameResponseBody(Builder builder) {
+    private SearchImageByTextResponseBody(Builder builder) {
+        this.accessDeniedDetail = builder.accessDeniedDetail;
         this.auctions = builder.auctions;
         this.code = builder.code;
         this.head = builder.head;
@@ -52,12 +56,19 @@ public class SearchImageByNameResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static SearchImageByNameResponseBody create() {
+    public static SearchImageByTextResponseBody create() {
         return builder().build();
     }
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return accessDeniedDetail
+     */
+    public AccessDeniedDetail getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     /**
@@ -110,6 +121,7 @@ public class SearchImageByNameResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private AccessDeniedDetail accessDeniedDetail; 
         private java.util.List<Auctions> auctions; 
         private Integer code; 
         private Head head; 
@@ -121,7 +133,8 @@ public class SearchImageByNameResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(SearchImageByNameResponseBody model) {
+        private Builder(SearchImageByTextResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
             this.auctions = model.auctions;
             this.code = model.code;
             this.head = model.head;
@@ -132,7 +145,15 @@ public class SearchImageByNameResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The product descriptions returned.</p>
+         * AccessDeniedDetail.
+         */
+        public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
+            this.accessDeniedDetail = accessDeniedDetail;
+            return this;
+        }
+
+        /**
+         * Auctions.
          */
         public Builder auctions(java.util.List<Auctions> auctions) {
             this.auctions = auctions;
@@ -140,14 +161,7 @@ public class SearchImageByNameResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned.</p>
-         * <ul>
-         * <li>A value of 0 indicates that the operation is successful.</li>
-         * <li>Values other than 0 indicate errors.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
+         * Code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -155,7 +169,7 @@ public class SearchImageByNameResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The summary of the search result.</p>
+         * Head.
          */
         public Builder head(Head head) {
             this.head = head;
@@ -163,10 +177,7 @@ public class SearchImageByNameResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>success</p>
+         * Msg.
          */
         public Builder msg(String msg) {
             this.msg = msg;
@@ -174,7 +185,7 @@ public class SearchImageByNameResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information such as the system-selected category and result of subject recognition.</p>
+         * PicInfo.
          */
         public Builder picInfo(PicInfo picInfo) {
             this.picInfo = picInfo;
@@ -182,10 +193,7 @@ public class SearchImageByNameResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>36C43E96-8F68-44AA-B1AF-B1F7AB94A6C1</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,27 +201,204 @@ public class SearchImageByNameResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
             return this;
         }
 
-        public SearchImageByNameResponseBody build() {
-            return new SearchImageByNameResponseBody(this);
+        public SearchImageByTextResponseBody build() {
+            return new SearchImageByTextResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link SearchImageByNameResponseBody} extends {@link TeaModel}
+     * {@link SearchImageByTextResponseBody} extends {@link TeaModel}
      *
-     * <p>SearchImageByNameResponseBody</p>
+     * <p>SearchImageByTextResponseBody</p>
+     */
+    public static class AccessDeniedDetail extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AuthAction")
+        private String authAction;
+
+        @com.aliyun.core.annotation.NameInMap("AuthPrincipalDisplayName")
+        private String authPrincipalDisplayName;
+
+        @com.aliyun.core.annotation.NameInMap("AuthPrincipalOwnerId")
+        private String authPrincipalOwnerId;
+
+        @com.aliyun.core.annotation.NameInMap("AuthPrincipalType")
+        private String authPrincipalType;
+
+        @com.aliyun.core.annotation.NameInMap("EncodedDiagnosticMessage")
+        private String encodedDiagnosticMessage;
+
+        @com.aliyun.core.annotation.NameInMap("NoPermissionType")
+        private String noPermissionType;
+
+        @com.aliyun.core.annotation.NameInMap("PolicyType")
+        private String policyType;
+
+        private AccessDeniedDetail(Builder builder) {
+            this.authAction = builder.authAction;
+            this.authPrincipalDisplayName = builder.authPrincipalDisplayName;
+            this.authPrincipalOwnerId = builder.authPrincipalOwnerId;
+            this.authPrincipalType = builder.authPrincipalType;
+            this.encodedDiagnosticMessage = builder.encodedDiagnosticMessage;
+            this.noPermissionType = builder.noPermissionType;
+            this.policyType = builder.policyType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AccessDeniedDetail create() {
+            return builder().build();
+        }
+
+        /**
+         * @return authAction
+         */
+        public String getAuthAction() {
+            return this.authAction;
+        }
+
+        /**
+         * @return authPrincipalDisplayName
+         */
+        public String getAuthPrincipalDisplayName() {
+            return this.authPrincipalDisplayName;
+        }
+
+        /**
+         * @return authPrincipalOwnerId
+         */
+        public String getAuthPrincipalOwnerId() {
+            return this.authPrincipalOwnerId;
+        }
+
+        /**
+         * @return authPrincipalType
+         */
+        public String getAuthPrincipalType() {
+            return this.authPrincipalType;
+        }
+
+        /**
+         * @return encodedDiagnosticMessage
+         */
+        public String getEncodedDiagnosticMessage() {
+            return this.encodedDiagnosticMessage;
+        }
+
+        /**
+         * @return noPermissionType
+         */
+        public String getNoPermissionType() {
+            return this.noPermissionType;
+        }
+
+        /**
+         * @return policyType
+         */
+        public String getPolicyType() {
+            return this.policyType;
+        }
+
+        public static final class Builder {
+            private String authAction; 
+            private String authPrincipalDisplayName; 
+            private String authPrincipalOwnerId; 
+            private String authPrincipalType; 
+            private String encodedDiagnosticMessage; 
+            private String noPermissionType; 
+            private String policyType; 
+
+            private Builder() {
+            } 
+
+            private Builder(AccessDeniedDetail model) {
+                this.authAction = model.authAction;
+                this.authPrincipalDisplayName = model.authPrincipalDisplayName;
+                this.authPrincipalOwnerId = model.authPrincipalOwnerId;
+                this.authPrincipalType = model.authPrincipalType;
+                this.encodedDiagnosticMessage = model.encodedDiagnosticMessage;
+                this.noPermissionType = model.noPermissionType;
+                this.policyType = model.policyType;
+            } 
+
+            /**
+             * AuthAction.
+             */
+            public Builder authAction(String authAction) {
+                this.authAction = authAction;
+                return this;
+            }
+
+            /**
+             * AuthPrincipalDisplayName.
+             */
+            public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
+                this.authPrincipalDisplayName = authPrincipalDisplayName;
+                return this;
+            }
+
+            /**
+             * AuthPrincipalOwnerId.
+             */
+            public Builder authPrincipalOwnerId(String authPrincipalOwnerId) {
+                this.authPrincipalOwnerId = authPrincipalOwnerId;
+                return this;
+            }
+
+            /**
+             * AuthPrincipalType.
+             */
+            public Builder authPrincipalType(String authPrincipalType) {
+                this.authPrincipalType = authPrincipalType;
+                return this;
+            }
+
+            /**
+             * EncodedDiagnosticMessage.
+             */
+            public Builder encodedDiagnosticMessage(String encodedDiagnosticMessage) {
+                this.encodedDiagnosticMessage = encodedDiagnosticMessage;
+                return this;
+            }
+
+            /**
+             * NoPermissionType.
+             */
+            public Builder noPermissionType(String noPermissionType) {
+                this.noPermissionType = noPermissionType;
+                return this;
+            }
+
+            /**
+             * PolicyType.
+             */
+            public Builder policyType(String policyType) {
+                this.policyType = policyType;
+                return this;
+            }
+
+            public AccessDeniedDetail build() {
+                return new AccessDeniedDetail(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link SearchImageByTextResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchImageByTextResponseBody</p>
      */
     public static class Auctions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CategoryId")
@@ -243,9 +428,6 @@ public class SearchImageByNameResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Score")
         private Float score;
 
-        @com.aliyun.core.annotation.NameInMap("SortExprValues")
-        private String sortExprValues;
-
         @com.aliyun.core.annotation.NameInMap("StrAttr")
         private String strAttr;
 
@@ -268,7 +450,6 @@ public class SearchImageByNameResponseBody extends TeaModel {
             this.picName = builder.picName;
             this.productId = builder.productId;
             this.score = builder.score;
-            this.sortExprValues = builder.sortExprValues;
             this.strAttr = builder.strAttr;
             this.strAttr2 = builder.strAttr2;
             this.strAttr3 = builder.strAttr3;
@@ -347,13 +528,6 @@ public class SearchImageByNameResponseBody extends TeaModel {
         }
 
         /**
-         * @return sortExprValues
-         */
-        public String getSortExprValues() {
-            return this.sortExprValues;
-        }
-
-        /**
          * @return strAttr
          */
         public String getStrAttr() {
@@ -391,7 +565,6 @@ public class SearchImageByNameResponseBody extends TeaModel {
             private String picName; 
             private String productId; 
             private Float score; 
-            private String sortExprValues; 
             private String strAttr; 
             private String strAttr2; 
             private String strAttr3; 
@@ -410,7 +583,6 @@ public class SearchImageByNameResponseBody extends TeaModel {
                 this.picName = model.picName;
                 this.productId = model.productId;
                 this.score = model.score;
-                this.sortExprValues = model.sortExprValues;
                 this.strAttr = model.strAttr;
                 this.strAttr2 = model.strAttr2;
                 this.strAttr3 = model.strAttr3;
@@ -418,10 +590,7 @@ public class SearchImageByNameResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The category of the image.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>20</p>
+             * CategoryId.
              */
             public Builder categoryId(Integer categoryId) {
                 this.categoryId = categoryId;
@@ -429,10 +598,7 @@ public class SearchImageByNameResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user-defined content.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>zidingyi</p>
+             * CustomContent.
              */
             public Builder customContent(String customContent) {
                 this.customContent = customContent;
@@ -440,10 +606,7 @@ public class SearchImageByNameResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The attribute, which is an integer.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * IntAttr.
              */
             public Builder intAttr(Integer intAttr) {
                 this.intAttr = intAttr;
@@ -475,10 +638,7 @@ public class SearchImageByNameResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the image.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2092061_1.jpg</p>
+             * PicName.
              */
             public Builder picName(String picName) {
                 this.picName = picName;
@@ -486,10 +646,7 @@ public class SearchImageByNameResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the product.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2092061_1</p>
+             * ProductId.
              */
             public Builder productId(String productId) {
                 this.productId = productId;
@@ -497,13 +654,7 @@ public class SearchImageByNameResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The similarity score of the returned image. Valid values: 0 to 1.</p>
-             * <blockquote>
-             * <p> To use this feature, you must upgrade the SDK to version 3.1.1.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * Score.
              */
             public Builder score(Float score) {
                 this.score = score;
@@ -511,29 +662,7 @@ public class SearchImageByNameResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The score information about the image.</p>
-             * <blockquote>
-             * <ul>
-             * <li>This parameter is not supported. We recommend that you use the Score parameter.</li>
-             * <li>The SortExprValues parameter indicates a 2-tuple in which values are separated by a semicolon (;). The first value indicates the correlation score of the returned image. A greater value indicates a higher correlation with the sample image. Different algorithms are used.</li>
-             * <li>If the value of CategoryId is within the value range from 0 to 2, the value range of SortExprValues is from 0 to 7.33136443711219e+24.</li>
-             * <li>If the value of CategoryId is not within the value range from 0 to 2, the value range of SortExprValues is from 0 to 5.37633353624177e+24. If the returned image is identical with the sample image, the highest correlation score is generated.</li>
-             * </ul>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>5.37633353624177e+24;0</p>
-             */
-            public Builder sortExprValues(String sortExprValues) {
-                this.sortExprValues = sortExprValues;
-                return this;
-            }
-
-            /**
-             * <p>The attribute, which is a string.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ss</p>
+             * StrAttr.
              */
             public Builder strAttr(String strAttr) {
                 this.strAttr = strAttr;
@@ -573,9 +702,9 @@ public class SearchImageByNameResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link SearchImageByNameResponseBody} extends {@link TeaModel}
+     * {@link SearchImageByTextResponseBody} extends {@link TeaModel}
      *
-     * <p>SearchImageByNameResponseBody</p>
+     * <p>SearchImageByTextResponseBody</p>
      */
     public static class Head extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DocsFound")
@@ -637,10 +766,7 @@ public class SearchImageByNameResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of images returned.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>10</p>
+             * DocsFound.
              */
             public Builder docsFound(Integer docsFound) {
                 this.docsFound = docsFound;
@@ -648,10 +774,7 @@ public class SearchImageByNameResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of images that match the search conditions on the Image Search instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>10000</p>
+             * DocsReturn.
              */
             public Builder docsReturn(Integer docsReturn) {
                 this.docsReturn = docsReturn;
@@ -659,10 +782,7 @@ public class SearchImageByNameResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time it takes to complete the search process. Unit: milliseconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>95</p>
+             * SearchTime.
              */
             public Builder searchTime(Integer searchTime) {
                 this.searchTime = searchTime;
@@ -678,9 +798,9 @@ public class SearchImageByNameResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link SearchImageByNameResponseBody} extends {@link TeaModel}
+     * {@link SearchImageByTextResponseBody} extends {@link TeaModel}
      *
-     * <p>SearchImageByNameResponseBody</p>
+     * <p>SearchImageByTextResponseBody</p>
      */
     public static class AllCategories extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
@@ -729,10 +849,7 @@ public class SearchImageByNameResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the category.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>other</p>
+             * Id.
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -740,10 +857,7 @@ public class SearchImageByNameResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the category.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>88888888</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -759,86 +873,16 @@ public class SearchImageByNameResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link SearchImageByNameResponseBody} extends {@link TeaModel}
+     * {@link SearchImageByTextResponseBody} extends {@link TeaModel}
      *
-     * <p>SearchImageByNameResponseBody</p>
-     */
-    public static class MultiRegion extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("Region")
-        private String region;
-
-        private MultiRegion(Builder builder) {
-            this.region = builder.region;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static MultiRegion create() {
-            return builder().build();
-        }
-
-        /**
-         * @return region
-         */
-        public String getRegion() {
-            return this.region;
-        }
-
-        public static final class Builder {
-            private String region; 
-
-            private Builder() {
-            } 
-
-            private Builder(MultiRegion model) {
-                this.region = model.region;
-            } 
-
-            /**
-             * <p>The result of subject recognition.</p>
-             * <p>The subject area of the image, in the format of x1,x2,y1,y2. Specifically, x1 and y1 specify the upper-left pixel, and x2 and y2 specify the lower-right pixel. If a subject area is specified in the request, the specified subject area prevails.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>280,486,232,351</p>
-             */
-            public Builder region(String region) {
-                this.region = region;
-                return this;
-            }
-
-            public MultiRegion build() {
-                return new MultiRegion(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link SearchImageByNameResponseBody} extends {@link TeaModel}
-     *
-     * <p>SearchImageByNameResponseBody</p>
+     * <p>SearchImageByTextResponseBody</p>
      */
     public static class PicInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllCategories")
         private java.util.List<AllCategories> allCategories;
 
-        @com.aliyun.core.annotation.NameInMap("CategoryId")
-        private Integer categoryId;
-
-        @com.aliyun.core.annotation.NameInMap("MultiRegion")
-        private java.util.List<MultiRegion> multiRegion;
-
-        @com.aliyun.core.annotation.NameInMap("Region")
-        private String region;
-
         private PicInfo(Builder builder) {
             this.allCategories = builder.allCategories;
-            this.categoryId = builder.categoryId;
-            this.multiRegion = builder.multiRegion;
-            this.region = builder.region;
         }
 
         public static Builder builder() {
@@ -856,80 +900,21 @@ public class SearchImageByNameResponseBody extends TeaModel {
             return this.allCategories;
         }
 
-        /**
-         * @return categoryId
-         */
-        public Integer getCategoryId() {
-            return this.categoryId;
-        }
-
-        /**
-         * @return multiRegion
-         */
-        public java.util.List<MultiRegion> getMultiRegion() {
-            return this.multiRegion;
-        }
-
-        /**
-         * @return region
-         */
-        public String getRegion() {
-            return this.region;
-        }
-
         public static final class Builder {
             private java.util.List<AllCategories> allCategories; 
-            private Integer categoryId; 
-            private java.util.List<MultiRegion> multiRegion; 
-            private String region; 
 
             private Builder() {
             } 
 
             private Builder(PicInfo model) {
                 this.allCategories = model.allCategories;
-                this.categoryId = model.categoryId;
-                this.multiRegion = model.multiRegion;
-                this.region = model.region;
             } 
 
             /**
-             * <p>The categories that are supported by the system.</p>
+             * AllCategories.
              */
             public Builder allCategories(java.util.List<AllCategories> allCategories) {
                 this.allCategories = allCategories;
-                return this;
-            }
-
-            /**
-             * <p>The category selected by the system.</p>
-             * <p>If a category is specified in the request, the specified category prevails.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>20</p>
-             */
-            public Builder categoryId(Integer categoryId) {
-                this.categoryId = categoryId;
-                return this;
-            }
-
-            /**
-             * <p>The recognized subjects.</p>
-             */
-            public Builder multiRegion(java.util.List<MultiRegion> multiRegion) {
-                this.multiRegion = multiRegion;
-                return this;
-            }
-
-            /**
-             * <p>The result of subject recognition.</p>
-             * <p>The subject area of the image, in the format of x1,x2,y1,y2. Specifically, x1 and y1 specify the upper-left pixel, and x2 and y2 specify the lower-right pixel. If a subject area is specified in the request, the specified subject area prevails.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>280,486,232,351</p>
-             */
-            public Builder region(String region) {
-                this.region = region;
                 return this;
             }
 

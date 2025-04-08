@@ -48,6 +48,10 @@ public class DeleteImageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class DeleteImageResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteImageResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code returned.</p>
@@ -183,6 +198,13 @@ public class DeleteImageResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> picNames; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.picNames = model.picNames;
+            } 
 
             /**
              * <p>The name (PicName) of the deleted image.</p>

@@ -36,6 +36,10 @@ public class DumpMetaListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DumpMetaListResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DumpMetaListResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the task that is used to export metadata.</p>
@@ -182,6 +194,19 @@ public class DumpMetaListResponseBody extends TeaModel {
             private String status; 
             private String utcCreate; 
             private Long utcModified; 
+
+            private Builder() {
+            } 
+
+            private Builder(DumpMetaList model) {
+                this.code = model.code;
+                this.id = model.id;
+                this.metaUrl = model.metaUrl;
+                this.msg = model.msg;
+                this.status = model.status;
+                this.utcCreate = model.utcCreate;
+                this.utcModified = model.utcModified;
+            } 
 
             /**
              * <p>The error code returned.</p>
@@ -343,6 +368,16 @@ public class DumpMetaListResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.dumpMetaList = model.dumpMetaList;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>A list of tasks that are used to export metadata.</p>

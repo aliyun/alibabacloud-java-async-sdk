@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DumpMetaResponse} extends {@link TeaModel}
+ * {@link SearchImageByTextResponse} extends {@link TeaModel}
  *
- * <p>DumpMetaResponse</p>
+ * <p>SearchImageByTextResponse</p>
  */
-public class DumpMetaResponse extends Response {
+public class SearchImageByTextResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class DumpMetaResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private DumpMetaResponseBody body;
+    private SearchImageByTextResponseBody body;
 
-    private DumpMetaResponse(BuilderImpl builder) {
+    private SearchImageByTextResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DumpMetaResponse create() {
+    public static SearchImageByTextResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class DumpMetaResponse extends Response {
     /**
      * @return body
      */
-    public DumpMetaResponseBody getBody() {
+    public SearchImageByTextResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DumpMetaResponse, Builder> {
+    public interface Builder extends Response.Builder<SearchImageByTextResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DumpMetaResponseBody body);
+        Builder body(SearchImageByTextResponseBody body);
 
         @Override
-        DumpMetaResponse build();
+        SearchImageByTextResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DumpMetaResponse, Builder>
+            extends Response.BuilderImpl<SearchImageByTextResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private DumpMetaResponseBody body; 
+        private SearchImageByTextResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DumpMetaResponse response) {
+        private BuilderImpl(SearchImageByTextResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class DumpMetaResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DumpMetaResponseBody body) {
+        public Builder body(SearchImageByTextResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DumpMetaResponse build() {
-            return new DumpMetaResponse(this);
+        public SearchImageByTextResponse build() {
+            return new SearchImageByTextResponse(this);
         } 
 
     } 

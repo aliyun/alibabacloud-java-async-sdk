@@ -40,6 +40,10 @@ public class DumpMetaResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -65,6 +69,15 @@ public class DumpMetaResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DumpMetaResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The information about the export task.</p>
@@ -145,6 +158,14 @@ public class DumpMetaResponseBody extends TeaModel {
         public static final class Builder {
             private String dumpMetaStatus; 
             private String id; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.dumpMetaStatus = model.dumpMetaStatus;
+                this.id = model.id;
+            } 
 
             /**
              * <p>The status of the export task.</p>

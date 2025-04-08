@@ -36,6 +36,10 @@ public class IncreaseListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class IncreaseListResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(IncreaseListResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the batch task.</p>
@@ -219,6 +231,22 @@ public class IncreaseListResponseBody extends TeaModel {
             private String utcCreate; 
             private Long utcModified; 
 
+            private Builder() {
+            } 
+
+            private Builder(Instance model) {
+                this.bucketName = model.bucketName;
+                this.callbackAddress = model.callbackAddress;
+                this.code = model.code;
+                this.errorUrl = model.errorUrl;
+                this.id = model.id;
+                this.msg = model.msg;
+                this.path = model.path;
+                this.status = model.status;
+                this.utcCreate = model.utcCreate;
+                this.utcModified = model.utcModified;
+            } 
+
             /**
              * <p>The name of the Object Storage Service (OSS) bucket.</p>
              * 
@@ -377,6 +405,13 @@ public class IncreaseListResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Instance> instance; 
 
+            private Builder() {
+            } 
+
+            private Builder(Increments model) {
+                this.instance = model.instance;
+            } 
+
             /**
              * Instance.
              */
@@ -459,6 +494,16 @@ public class IncreaseListResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.increments = model.increments;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>A list of batch tasks.</p>
