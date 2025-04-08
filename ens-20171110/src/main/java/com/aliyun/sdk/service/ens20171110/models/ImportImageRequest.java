@@ -60,7 +60,6 @@ public class ImportImageRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OSVersion")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String OSVersion;
 
     @com.aliyun.core.annotation.Query
@@ -314,10 +313,7 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>6.8</p>
+         * OSVersion.
          */
         public Builder OSVersion(String OSVersion) {
             this.putQueryParameter("OSVersion", OSVersion);
