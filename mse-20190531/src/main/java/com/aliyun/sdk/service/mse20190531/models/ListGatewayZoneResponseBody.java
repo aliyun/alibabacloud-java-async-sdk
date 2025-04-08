@@ -273,11 +273,15 @@ public class ListGatewayZoneResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LocalName")
         private String localName;
 
+        @com.aliyun.core.annotation.NameInMap("SupportQat")
+        private Boolean supportQat;
+
         @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private Data(Builder builder) {
             this.localName = builder.localName;
+            this.supportQat = builder.supportQat;
             this.zoneId = builder.zoneId;
         }
 
@@ -297,6 +301,13 @@ public class ListGatewayZoneResponseBody extends TeaModel {
         }
 
         /**
+         * @return supportQat
+         */
+        public Boolean getSupportQat() {
+            return this.supportQat;
+        }
+
+        /**
          * @return zoneId
          */
         public String getZoneId() {
@@ -305,6 +316,7 @@ public class ListGatewayZoneResponseBody extends TeaModel {
 
         public static final class Builder {
             private String localName; 
+            private Boolean supportQat; 
             private String zoneId; 
 
             private Builder() {
@@ -312,6 +324,7 @@ public class ListGatewayZoneResponseBody extends TeaModel {
 
             private Builder(Data model) {
                 this.localName = model.localName;
+                this.supportQat = model.supportQat;
                 this.zoneId = model.zoneId;
             } 
 
@@ -323,6 +336,14 @@ public class ListGatewayZoneResponseBody extends TeaModel {
              */
             public Builder localName(String localName) {
                 this.localName = localName;
+                return this;
+            }
+
+            /**
+             * SupportQat.
+             */
+            public Builder supportQat(Boolean supportQat) {
+                this.supportQat = supportQat;
                 return this;
             }
 

@@ -920,6 +920,9 @@ public class GetGatewayConfigResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnableGzip")
         private Boolean enableGzip;
 
+        @com.aliyun.core.annotation.NameInMap("EnableGzipHardwareAccelerate")
+        private Boolean enableGzipHardwareAccelerate;
+
         @com.aliyun.core.annotation.NameInMap("EnableHardwareAccelerate")
         private Boolean enableHardwareAccelerate;
 
@@ -997,6 +1000,7 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             this.enableCustomAuthConfigPush = builder.enableCustomAuthConfigPush;
             this.enableGenerateRequestId = builder.enableGenerateRequestId;
             this.enableGzip = builder.enableGzip;
+            this.enableGzipHardwareAccelerate = builder.enableGzipHardwareAccelerate;
             this.enableHardwareAccelerate = builder.enableHardwareAccelerate;
             this.enableHttp2 = builder.enableHttp2;
             this.enableHttp3 = builder.enableHttp3;
@@ -1077,6 +1081,13 @@ public class GetGatewayConfigResponseBody extends TeaModel {
          */
         public Boolean getEnableGzip() {
             return this.enableGzip;
+        }
+
+        /**
+         * @return enableGzipHardwareAccelerate
+         */
+        public Boolean getEnableGzipHardwareAccelerate() {
+            return this.enableGzipHardwareAccelerate;
         }
 
         /**
@@ -1248,6 +1259,7 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             private String enableCustomAuthConfigPush; 
             private Boolean enableGenerateRequestId; 
             private Boolean enableGzip; 
+            private Boolean enableGzipHardwareAccelerate; 
             private Boolean enableHardwareAccelerate; 
             private Boolean enableHttp2; 
             private Boolean enableHttp3; 
@@ -1283,6 +1295,7 @@ public class GetGatewayConfigResponseBody extends TeaModel {
                 this.enableCustomAuthConfigPush = model.enableCustomAuthConfigPush;
                 this.enableGenerateRequestId = model.enableGenerateRequestId;
                 this.enableGzip = model.enableGzip;
+                this.enableGzipHardwareAccelerate = model.enableGzipHardwareAccelerate;
                 this.enableHardwareAccelerate = model.enableHardwareAccelerate;
                 this.enableHttp2 = model.enableHttp2;
                 this.enableHttp3 = model.enableHttp3;
@@ -1361,6 +1374,14 @@ public class GetGatewayConfigResponseBody extends TeaModel {
              */
             public Builder enableGzip(Boolean enableGzip) {
                 this.enableGzip = enableGzip;
+                return this;
+            }
+
+            /**
+             * EnableGzipHardwareAccelerate.
+             */
+            public Builder enableGzipHardwareAccelerate(Boolean enableGzipHardwareAccelerate) {
+                this.enableGzipHardwareAccelerate = enableGzipHardwareAccelerate;
                 return this;
             }
 

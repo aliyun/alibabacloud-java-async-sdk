@@ -279,6 +279,9 @@ public class ListGatewayDomainResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
+        @com.aliyun.core.annotation.NameInMap("IsManaged")
+        private Boolean isManaged;
+
         @com.aliyun.core.annotation.NameInMap("MustHttps")
         private Boolean mustHttps;
 
@@ -309,6 +312,7 @@ public class ListGatewayDomainResponseBody extends TeaModel {
             this.gmtModified = builder.gmtModified;
             this.http2 = builder.http2;
             this.id = builder.id;
+            this.isManaged = builder.isManaged;
             this.mustHttps = builder.mustHttps;
             this.name = builder.name;
             this.protocol = builder.protocol;
@@ -383,6 +387,13 @@ public class ListGatewayDomainResponseBody extends TeaModel {
         }
 
         /**
+         * @return isManaged
+         */
+        public Boolean getIsManaged() {
+            return this.isManaged;
+        }
+
+        /**
          * @return mustHttps
          */
         public Boolean getMustHttps() {
@@ -440,6 +451,7 @@ public class ListGatewayDomainResponseBody extends TeaModel {
             private String gmtModified; 
             private String http2; 
             private Long id; 
+            private Boolean isManaged; 
             private Boolean mustHttps; 
             private String name; 
             private String protocol; 
@@ -460,6 +472,7 @@ public class ListGatewayDomainResponseBody extends TeaModel {
                 this.gmtModified = model.gmtModified;
                 this.http2 = model.http2;
                 this.id = model.id;
+                this.isManaged = model.isManaged;
                 this.mustHttps = model.mustHttps;
                 this.name = model.name;
                 this.protocol = model.protocol;
@@ -556,6 +569,14 @@ public class ListGatewayDomainResponseBody extends TeaModel {
              */
             public Builder id(Long id) {
                 this.id = id;
+                return this;
+            }
+
+            /**
+             * IsManaged.
+             */
+            public Builder isManaged(Boolean isManaged) {
+                this.isManaged = isManaged;
                 return this;
             }
 

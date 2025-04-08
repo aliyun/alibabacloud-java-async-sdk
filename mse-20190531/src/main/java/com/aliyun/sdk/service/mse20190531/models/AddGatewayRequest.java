@@ -47,7 +47,12 @@ public class AddGatewayRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InternetSlbSpec")
+    @Deprecated
     private String internetSlbSpec;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ManagedEntryNetworkType")
+    private String managedEntryNetworkType;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MserVersion")
@@ -80,6 +85,7 @@ public class AddGatewayRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SlbSpec")
+    @Deprecated
     private String slbSpec;
 
     @com.aliyun.core.annotation.Query
@@ -121,6 +127,7 @@ public class AddGatewayRequest extends Request {
         this.enableXtrace = builder.enableXtrace;
         this.enterpriseSecurityGroup = builder.enterpriseSecurityGroup;
         this.internetSlbSpec = builder.internetSlbSpec;
+        this.managedEntryNetworkType = builder.managedEntryNetworkType;
         this.mserVersion = builder.mserVersion;
         this.name = builder.name;
         this.nlbNetworkType = builder.nlbNetworkType;
@@ -205,6 +212,13 @@ public class AddGatewayRequest extends Request {
      */
     public String getInternetSlbSpec() {
         return this.internetSlbSpec;
+    }
+
+    /**
+     * @return managedEntryNetworkType
+     */
+    public String getManagedEntryNetworkType() {
+        return this.managedEntryNetworkType;
     }
 
     /**
@@ -321,6 +335,7 @@ public class AddGatewayRequest extends Request {
         private Boolean enableXtrace; 
         private Boolean enterpriseSecurityGroup; 
         private String internetSlbSpec; 
+        private String managedEntryNetworkType; 
         private String mserVersion; 
         private String name; 
         private String nlbNetworkType; 
@@ -351,6 +366,7 @@ public class AddGatewayRequest extends Request {
             this.enableXtrace = request.enableXtrace;
             this.enterpriseSecurityGroup = request.enterpriseSecurityGroup;
             this.internetSlbSpec = request.internetSlbSpec;
+            this.managedEntryNetworkType = request.managedEntryNetworkType;
             this.mserVersion = request.mserVersion;
             this.name = request.name;
             this.nlbNetworkType = request.nlbNetworkType;
@@ -483,6 +499,15 @@ public class AddGatewayRequest extends Request {
         public Builder internetSlbSpec(String internetSlbSpec) {
             this.putQueryParameter("InternetSlbSpec", internetSlbSpec);
             this.internetSlbSpec = internetSlbSpec;
+            return this;
+        }
+
+        /**
+         * ManagedEntryNetworkType.
+         */
+        public Builder managedEntryNetworkType(String managedEntryNetworkType) {
+            this.putQueryParameter("ManagedEntryNetworkType", managedEntryNetworkType);
+            this.managedEntryNetworkType = managedEntryNetworkType;
             return this;
         }
 

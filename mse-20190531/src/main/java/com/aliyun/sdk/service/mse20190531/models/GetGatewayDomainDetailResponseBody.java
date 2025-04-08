@@ -240,6 +240,9 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
+        @com.aliyun.core.annotation.NameInMap("IsManaged")
+        private Boolean isManaged;
+
         @com.aliyun.core.annotation.NameInMap("Issuer")
         private String issuer;
 
@@ -276,6 +279,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             this.gmtModified = builder.gmtModified;
             this.http2 = builder.http2;
             this.id = builder.id;
+            this.isManaged = builder.isManaged;
             this.issuer = builder.issuer;
             this.mustHttps = builder.mustHttps;
             this.name = builder.name;
@@ -392,6 +396,13 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return isManaged
+         */
+        public Boolean getIsManaged() {
+            return this.isManaged;
+        }
+
+        /**
          * @return issuer
          */
         public String getIssuer() {
@@ -455,6 +466,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             private String gmtModified; 
             private String http2; 
             private Long id; 
+            private Boolean isManaged; 
             private String issuer; 
             private Boolean mustHttps; 
             private String name; 
@@ -481,6 +493,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
                 this.gmtModified = model.gmtModified;
                 this.http2 = model.http2;
                 this.id = model.id;
+                this.isManaged = model.isManaged;
                 this.issuer = model.issuer;
                 this.mustHttps = model.mustHttps;
                 this.name = model.name;
@@ -646,6 +659,14 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
              */
             public Builder id(Long id) {
                 this.id = id;
+                return this;
+            }
+
+            /**
+             * IsManaged.
+             */
+            public Builder isManaged(Boolean isManaged) {
+                this.isManaged = isManaged;
                 return this;
             }
 
