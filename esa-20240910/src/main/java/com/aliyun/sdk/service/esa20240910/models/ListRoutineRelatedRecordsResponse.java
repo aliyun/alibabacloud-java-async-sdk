@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ListRoutineOptionalSpecsResponse} extends {@link TeaModel}
+ * {@link ListRoutineRelatedRecordsResponse} extends {@link TeaModel}
  *
- * <p>ListRoutineOptionalSpecsResponse</p>
+ * <p>ListRoutineRelatedRecordsResponse</p>
  */
-public class ListRoutineOptionalSpecsResponse extends Response {
+public class ListRoutineRelatedRecordsResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class ListRoutineOptionalSpecsResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private ListRoutineOptionalSpecsResponseBody body;
+    private ListRoutineRelatedRecordsResponseBody body;
 
-    private ListRoutineOptionalSpecsResponse(BuilderImpl builder) {
+    private ListRoutineRelatedRecordsResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static ListRoutineOptionalSpecsResponse create() {
+    public static ListRoutineRelatedRecordsResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class ListRoutineOptionalSpecsResponse extends Response {
     /**
      * @return body
      */
-    public ListRoutineOptionalSpecsResponseBody getBody() {
+    public ListRoutineRelatedRecordsResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<ListRoutineOptionalSpecsResponse, Builder> {
+    public interface Builder extends Response.Builder<ListRoutineRelatedRecordsResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(ListRoutineOptionalSpecsResponseBody body);
+        Builder body(ListRoutineRelatedRecordsResponseBody body);
 
         @Override
-        ListRoutineOptionalSpecsResponse build();
+        ListRoutineRelatedRecordsResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<ListRoutineOptionalSpecsResponse, Builder>
+            extends Response.BuilderImpl<ListRoutineRelatedRecordsResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private ListRoutineOptionalSpecsResponseBody body; 
+        private ListRoutineRelatedRecordsResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(ListRoutineOptionalSpecsResponse response) {
+        private BuilderImpl(ListRoutineRelatedRecordsResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class ListRoutineOptionalSpecsResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(ListRoutineOptionalSpecsResponseBody body) {
+        public Builder body(ListRoutineRelatedRecordsResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public ListRoutineOptionalSpecsResponse build() {
-            return new ListRoutineOptionalSpecsResponse(this);
+        public ListRoutineRelatedRecordsResponse build() {
+            return new ListRoutineRelatedRecordsResponse(this);
         } 
 
     } 

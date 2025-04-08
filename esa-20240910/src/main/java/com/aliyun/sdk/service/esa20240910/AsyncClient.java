@@ -1476,13 +1476,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListRoutineCanaryAreasResponse> listRoutineCanaryAreas(ListRoutineCanaryAreasRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>You can call this operation to query the specifications that you can select for a routine.</p>
-     * 
-     * @param request the request parameters of ListRoutineOptionalSpecs  ListRoutineOptionalSpecsRequest
-     * @return ListRoutineOptionalSpecsResponse
+     * @param request the request parameters of ListRoutineRelatedRecords  ListRoutineRelatedRecordsRequest
+     * @return ListRoutineRelatedRecordsResponse
      */
-    CompletableFuture<ListRoutineOptionalSpecsResponse> listRoutineOptionalSpecs(ListRoutineOptionalSpecsRequest request);
+    CompletableFuture<ListRoutineRelatedRecordsResponse> listRoutineRelatedRecords(ListRoutineRelatedRecordsRequest request);
 
     /**
      * @param request the request parameters of ListRoutineRoutes  ListRoutineRoutesRequest
@@ -1543,6 +1540,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListUserRatePlanInstancesResponse
      */
     CompletableFuture<ListUserRatePlanInstancesResponse> listUserRatePlanInstances(ListUserRatePlanInstancesRequest request);
+
+    /**
+     * @param request the request parameters of ListUserRoutines  ListUserRoutinesRequest
+     * @return ListUserRoutinesResponse
+     */
+    CompletableFuture<ListUserRoutinesResponse> listUserRoutines(ListUserRoutinesRequest request);
 
     /**
      * @param request the request parameters of ListWafManagedRules  ListWafManagedRulesRequest

@@ -207,7 +207,7 @@ public class ListRoutineRoutesResponseBody extends TeaModel {
         private Integer sequence;
 
         @com.aliyun.core.annotation.NameInMap("SiteId")
-        private String siteId;
+        private Long siteId;
 
         @com.aliyun.core.annotation.NameInMap("SiteName")
         private String siteName;
@@ -304,7 +304,7 @@ public class ListRoutineRoutesResponseBody extends TeaModel {
         /**
          * @return siteId
          */
-        public String getSiteId() {
+        public Long getSiteId() {
             return this.siteId;
         }
 
@@ -332,7 +332,7 @@ public class ListRoutineRoutesResponseBody extends TeaModel {
             private String routineName; 
             private String rule; 
             private Integer sequence; 
-            private String siteId; 
+            private Long siteId; 
             private String siteName; 
             private Integer siteVersion; 
 
@@ -429,7 +429,7 @@ public class ListRoutineRoutesResponseBody extends TeaModel {
             /**
              * SiteId.
              */
-            public Builder siteId(String siteId) {
+            public Builder siteId(Long siteId) {
                 this.siteId = siteId;
                 return this;
             }

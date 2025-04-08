@@ -22,10 +22,18 @@ public class RollbackEdgeContainerAppVersionRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true, maxLength = 64, minLength = 20)
     private String appId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Percentage")
+    private Integer percentage;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Remarks")
     @com.aliyun.core.annotation.Validation(maxLength = 1024)
     private String remarks;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UsedPercent")
+    private Boolean usedPercent;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VersionId")
@@ -35,7 +43,9 @@ public class RollbackEdgeContainerAppVersionRequest extends Request {
     private RollbackEdgeContainerAppVersionRequest(Builder builder) {
         super(builder);
         this.appId = builder.appId;
+        this.percentage = builder.percentage;
         this.remarks = builder.remarks;
+        this.usedPercent = builder.usedPercent;
         this.versionId = builder.versionId;
     }
 
@@ -60,10 +70,24 @@ public class RollbackEdgeContainerAppVersionRequest extends Request {
     }
 
     /**
+     * @return percentage
+     */
+    public Integer getPercentage() {
+        return this.percentage;
+    }
+
+    /**
      * @return remarks
      */
     public String getRemarks() {
         return this.remarks;
+    }
+
+    /**
+     * @return usedPercent
+     */
+    public Boolean getUsedPercent() {
+        return this.usedPercent;
     }
 
     /**
@@ -75,7 +99,9 @@ public class RollbackEdgeContainerAppVersionRequest extends Request {
 
     public static final class Builder extends Request.Builder<RollbackEdgeContainerAppVersionRequest, Builder> {
         private String appId; 
+        private Integer percentage; 
         private String remarks; 
+        private Boolean usedPercent; 
         private String versionId; 
 
         private Builder() {
@@ -85,7 +111,9 @@ public class RollbackEdgeContainerAppVersionRequest extends Request {
         private Builder(RollbackEdgeContainerAppVersionRequest request) {
             super(request);
             this.appId = request.appId;
+            this.percentage = request.percentage;
             this.remarks = request.remarks;
+            this.usedPercent = request.usedPercent;
             this.versionId = request.versionId;
         } 
 
@@ -103,6 +131,15 @@ public class RollbackEdgeContainerAppVersionRequest extends Request {
         }
 
         /**
+         * Percentage.
+         */
+        public Builder percentage(Integer percentage) {
+            this.putQueryParameter("Percentage", percentage);
+            this.percentage = percentage;
+            return this;
+        }
+
+        /**
          * <p>The remarks.</p>
          * 
          * <strong>example:</strong>
@@ -111,6 +148,15 @@ public class RollbackEdgeContainerAppVersionRequest extends Request {
         public Builder remarks(String remarks) {
             this.putBodyParameter("Remarks", remarks);
             this.remarks = remarks;
+            return this;
+        }
+
+        /**
+         * UsedPercent.
+         */
+        public Builder usedPercent(Boolean usedPercent) {
+            this.putQueryParameter("UsedPercent", usedPercent);
+            this.usedPercent = usedPercent;
             return this;
         }
 

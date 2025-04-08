@@ -182,15 +182,11 @@ public class GetRoutineResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Env")
         private String env;
 
-        @com.aliyun.core.annotation.NameInMap("SpecName")
-        private String specName;
-
         private Envs(Builder builder) {
             this.canaryAreaList = builder.canaryAreaList;
             this.canaryCodeVersion = builder.canaryCodeVersion;
             this.codeVersion = builder.codeVersion;
             this.env = builder.env;
-            this.specName = builder.specName;
         }
 
         public static Builder builder() {
@@ -229,19 +225,11 @@ public class GetRoutineResponseBody extends TeaModel {
             return this.env;
         }
 
-        /**
-         * @return specName
-         */
-        public String getSpecName() {
-            return this.specName;
-        }
-
         public static final class Builder {
             private java.util.List<String> canaryAreaList; 
             private String canaryCodeVersion; 
             private String codeVersion; 
             private String env; 
-            private String specName; 
 
             private Builder() {
             } 
@@ -251,7 +239,6 @@ public class GetRoutineResponseBody extends TeaModel {
                 this.canaryCodeVersion = model.canaryCodeVersion;
                 this.codeVersion = model.codeVersion;
                 this.env = model.env;
-                this.specName = model.specName;
             } 
 
             /**
@@ -292,17 +279,6 @@ public class GetRoutineResponseBody extends TeaModel {
              */
             public Builder env(String env) {
                 this.env = env;
-                return this;
-            }
-
-            /**
-             * <p>The specification.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>5ms</p>
-             */
-            public Builder specName(String specName) {
-                this.specName = specName;
                 return this;
             }
 

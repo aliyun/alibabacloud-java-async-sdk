@@ -18,14 +18,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class PublishRoutineCodeVersionRequest extends Request {
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("CanaryAreaList")
-    private java.util.List<String> canaryAreaList;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("CanaryCodeVersion")
-    private String canaryCodeVersion;
-
-    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("CodeVersion")
     private String codeVersion;
 
@@ -41,8 +33,6 @@ public class PublishRoutineCodeVersionRequest extends Request {
 
     private PublishRoutineCodeVersionRequest(Builder builder) {
         super(builder);
-        this.canaryAreaList = builder.canaryAreaList;
-        this.canaryCodeVersion = builder.canaryCodeVersion;
         this.codeVersion = builder.codeVersion;
         this.env = builder.env;
         this.name = builder.name;
@@ -59,20 +49,6 @@ public class PublishRoutineCodeVersionRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return canaryAreaList
-     */
-    public java.util.List<String> getCanaryAreaList() {
-        return this.canaryAreaList;
-    }
-
-    /**
-     * @return canaryCodeVersion
-     */
-    public String getCanaryCodeVersion() {
-        return this.canaryCodeVersion;
     }
 
     /**
@@ -97,8 +73,6 @@ public class PublishRoutineCodeVersionRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<PublishRoutineCodeVersionRequest, Builder> {
-        private java.util.List<String> canaryAreaList; 
-        private String canaryCodeVersion; 
         private String codeVersion; 
         private String env; 
         private String name; 
@@ -109,34 +83,10 @@ public class PublishRoutineCodeVersionRequest extends Request {
 
         private Builder(PublishRoutineCodeVersionRequest request) {
             super(request);
-            this.canaryAreaList = request.canaryAreaList;
-            this.canaryCodeVersion = request.canaryCodeVersion;
             this.codeVersion = request.codeVersion;
             this.env = request.env;
             this.name = request.name;
         } 
-
-        /**
-         * <p>The regions for canary release.</p>
-         */
-        public Builder canaryAreaList(java.util.List<String> canaryAreaList) {
-            String canaryAreaListShrink = shrink(canaryAreaList, "CanaryAreaList", "json");
-            this.putBodyParameter("CanaryAreaList", canaryAreaListShrink);
-            this.canaryAreaList = canaryAreaList;
-            return this;
-        }
-
-        /**
-         * <p>The version number for canary release.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1710120201067203242</p>
-         */
-        public Builder canaryCodeVersion(String canaryCodeVersion) {
-            this.putBodyParameter("CanaryCodeVersion", canaryCodeVersion);
-            this.canaryCodeVersion = canaryCodeVersion;
-            return this;
-        }
 
         /**
          * <p>The code version to be released.</p>

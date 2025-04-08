@@ -26,15 +26,10 @@ public class CreateRoutineRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("SpecName")
-    private String specName;
-
     private CreateRoutineRequest(Builder builder) {
         super(builder);
         this.description = builder.description;
         this.name = builder.name;
-        this.specName = builder.specName;
     }
 
     public static Builder builder() {
@@ -64,17 +59,9 @@ public class CreateRoutineRequest extends Request {
         return this.name;
     }
 
-    /**
-     * @return specName
-     */
-    public String getSpecName() {
-        return this.specName;
-    }
-
     public static final class Builder extends Request.Builder<CreateRoutineRequest, Builder> {
         private String description; 
         private String name; 
-        private String specName; 
 
         private Builder() {
             super();
@@ -84,7 +71,6 @@ public class CreateRoutineRequest extends Request {
             super(request);
             this.description = request.description;
             this.name = request.name;
-            this.specName = request.specName;
         } 
 
         /**
@@ -109,18 +95,6 @@ public class CreateRoutineRequest extends Request {
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
             this.name = name;
-            return this;
-        }
-
-        /**
-         * <p>The specification of the routine.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>5ms</p>
-         */
-        public Builder specName(String specName) {
-            this.putBodyParameter("SpecName", specName);
-            this.specName = specName;
             return this;
         }
 
