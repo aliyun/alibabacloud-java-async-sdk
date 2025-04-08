@@ -36,6 +36,10 @@ public class DescribeAllDBInstanceClassResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return classCodeList
      */
@@ -53,6 +57,14 @@ public class DescribeAllDBInstanceClassResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<ClassCodeList> classCodeList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAllDBInstanceClassResponseBody model) {
+            this.classCodeList = model.classCodeList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The instance specifications.</p>
@@ -179,6 +191,19 @@ public class DescribeAllDBInstanceClassResponseBody extends TeaModel {
             private Long memoryInGB; 
             private Long minStorageInGB; 
             private Long stepStorageInGB; 
+
+            private Builder() {
+            } 
+
+            private Builder(ClassCodeList model) {
+                this.classCode = model.classCode;
+                this.cpuCores = model.cpuCores;
+                this.defaultStorageInGB = model.defaultStorageInGB;
+                this.maxStorageInGB = model.maxStorageInGB;
+                this.memoryInGB = model.memoryInGB;
+                this.minStorageInGB = model.minStorageInGB;
+                this.stepStorageInGB = model.stepStorageInGB;
+            } 
 
             /**
              * ClassCode.

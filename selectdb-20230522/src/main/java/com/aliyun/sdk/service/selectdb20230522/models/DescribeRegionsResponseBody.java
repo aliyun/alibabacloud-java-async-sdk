@@ -36,6 +36,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return regionModelList
      */
@@ -54,8 +58,16 @@ public class DescribeRegionsResponseBody extends TeaModel {
         private java.util.List<RegionModelList> regionModelList; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeRegionsResponseBody model) {
+            this.regionModelList = model.regionModelList;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * RegionModelList.
+         * <p>An array of regions.</p>
          */
         public Builder regionModelList(java.util.List<RegionModelList> regionModelList) {
             this.regionModelList = regionModelList;
@@ -63,7 +75,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F8900A96-67F7-5274-A41B-7722E1ECF8C9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -192,8 +207,22 @@ public class DescribeRegionsResponseBody extends TeaModel {
             private Boolean vpcEnabled; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Zones model) {
+                this.description = model.description;
+                this.disabled = model.disabled;
+                this.label = model.label;
+                this.name = model.name;
+                this.regionId = model.regionId;
+                this.subDomain = model.subDomain;
+                this.vpcEnabled = model.vpcEnabled;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
-             * Description.
+             * <p>The zone description.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -201,7 +230,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * Disabled.
+             * <p>Indicates whether the VPC is disabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder disabled(Boolean disabled) {
                 this.disabled = disabled;
@@ -209,7 +241,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * Label.
+             * <p>The label.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -217,7 +252,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The zone name.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -225,7 +260,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -233,7 +271,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * SubDomain.
+             * <p>The subdomain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing-h-aliyun</p>
              */
             public Builder subDomain(String subDomain) {
                 this.subDomain = subDomain;
@@ -241,7 +282,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * VpcEnabled.
+             * <p>Indicates whether the VPC is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder vpcEnabled(Boolean vpcEnabled) {
                 this.vpcEnabled = vpcEnabled;
@@ -249,7 +293,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * <p>Indicates whether the virtual private cloud (VPC) is available.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing-h</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -307,8 +354,19 @@ public class DescribeRegionsResponseBody extends TeaModel {
             private String regionId; 
             private java.util.List<Zones> zones; 
 
+            private Builder() {
+            } 
+
+            private Builder(RegionModelList model) {
+                this.regionId = model.regionId;
+                this.zones = model.zones;
+            } 
+
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -316,7 +374,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * Zones.
+             * <p>An array of zones.</p>
              */
             public Builder zones(java.util.List<Zones> zones) {
                 this.zones = zones;

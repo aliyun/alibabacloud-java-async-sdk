@@ -36,6 +36,10 @@ public class DeleteDBClusterResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DeleteDBClusterResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteDBClusterResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Data.
@@ -119,6 +131,14 @@ public class DeleteDBClusterResponseBody extends TeaModel {
         public static final class Builder {
             private String DBInstanceId; 
             private String orderId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.DBInstanceId = model.DBInstanceId;
+                this.orderId = model.orderId;
+            } 
 
             /**
              * DBInstanceId.

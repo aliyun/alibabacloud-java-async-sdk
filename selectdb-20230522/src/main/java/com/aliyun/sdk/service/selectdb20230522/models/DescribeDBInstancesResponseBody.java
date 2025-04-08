@@ -48,6 +48,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -89,6 +93,17 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         private Long pageSize; 
         private String requestId; 
         private Long totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBInstancesResponseBody model) {
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * <p>The details about each instance returned.</p>
@@ -159,6 +174,81 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
      *
      * <p>DescribeDBInstancesResponseBody</p>
      */
+    public static class MultiZone extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("VSwitchIds")
+        private java.util.List<String> vSwitchIds;
+
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
+        private String zoneId;
+
+        private MultiZone(Builder builder) {
+            this.vSwitchIds = builder.vSwitchIds;
+            this.zoneId = builder.zoneId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MultiZone create() {
+            return builder().build();
+        }
+
+        /**
+         * @return vSwitchIds
+         */
+        public java.util.List<String> getVSwitchIds() {
+            return this.vSwitchIds;
+        }
+
+        /**
+         * @return zoneId
+         */
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> vSwitchIds; 
+            private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(MultiZone model) {
+                this.vSwitchIds = model.vSwitchIds;
+                this.zoneId = model.zoneId;
+            } 
+
+            /**
+             * VSwitchIds.
+             */
+            public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
+                this.vSwitchIds = vSwitchIds;
+                return this;
+            }
+
+            /**
+             * ZoneId.
+             */
+            public Builder zoneId(String zoneId) {
+                this.zoneId = zoneId;
+                return this;
+            }
+
+            public MultiZone build() {
+                return new MultiZone(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeDBInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstancesResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
@@ -196,6 +286,14 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private String tagKey; 
             private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
 
             /**
              * TagKey.
@@ -239,11 +337,17 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBInstanceId")
         private String DBInstanceId;
 
+        @com.aliyun.core.annotation.NameInMap("DeployScheme")
+        private String deployScheme;
+
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
         @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
+
+        @com.aliyun.core.annotation.NameInMap("EngineMinorVersion")
+        private String engineMinorVersion;
 
         @com.aliyun.core.annotation.NameInMap("EngineVersion")
         private String engineVersion;
@@ -280,6 +384,9 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("MaintainStarttime")
         private String maintainStarttime;
+
+        @com.aliyun.core.annotation.NameInMap("MultiZone")
+        private java.util.List<MultiZone> multiZone;
 
         @com.aliyun.core.annotation.NameInMap("ObjectStoreSize")
         private Long objectStoreSize;
@@ -346,8 +453,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             this.chargeType = builder.chargeType;
             this.clusterCount = builder.clusterCount;
             this.DBInstanceId = builder.DBInstanceId;
+            this.deployScheme = builder.deployScheme;
             this.description = builder.description;
             this.engine = builder.engine;
+            this.engineMinorVersion = builder.engineMinorVersion;
             this.engineVersion = builder.engineVersion;
             this.expireTime = builder.expireTime;
             this.gmtCreated = builder.gmtCreated;
@@ -360,6 +469,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             this.maintainEndtime = builder.maintainEndtime;
             this.maintainStartTimeStr = builder.maintainStartTimeStr;
             this.maintainStarttime = builder.maintainStarttime;
+            this.multiZone = builder.multiZone;
             this.objectStoreSize = builder.objectStoreSize;
             this.parentInstance = builder.parentInstance;
             this.regionId = builder.regionId;
@@ -419,6 +529,13 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return deployScheme
+         */
+        public String getDeployScheme() {
+            return this.deployScheme;
+        }
+
+        /**
          * @return description
          */
         public String getDescription() {
@@ -430,6 +547,13 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
          */
         public String getEngine() {
             return this.engine;
+        }
+
+        /**
+         * @return engineMinorVersion
+         */
+        public String getEngineMinorVersion() {
+            return this.engineMinorVersion;
         }
 
         /**
@@ -514,6 +638,13 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
          */
         public String getMaintainStarttime() {
             return this.maintainStarttime;
+        }
+
+        /**
+         * @return multiZone
+         */
+        public java.util.List<MultiZone> getMultiZone() {
+            return this.multiZone;
         }
 
         /**
@@ -661,8 +792,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             private String chargeType; 
             private Integer clusterCount; 
             private String DBInstanceId; 
+            private String deployScheme; 
             private String description; 
             private String engine; 
+            private String engineMinorVersion; 
             private String engineVersion; 
             private String expireTime; 
             private String gmtCreated; 
@@ -675,6 +808,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             private String maintainEndtime; 
             private String maintainStartTimeStr; 
             private String maintainStarttime; 
+            private java.util.List<MultiZone> multiZone; 
             private Long objectStoreSize; 
             private String parentInstance; 
             private String regionId; 
@@ -695,6 +829,53 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             private String vswitchId; 
             private String zoneId; 
             private String connectionString; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.category = model.category;
+                this.chargeType = model.chargeType;
+                this.clusterCount = model.clusterCount;
+                this.DBInstanceId = model.DBInstanceId;
+                this.deployScheme = model.deployScheme;
+                this.description = model.description;
+                this.engine = model.engine;
+                this.engineMinorVersion = model.engineMinorVersion;
+                this.engineVersion = model.engineVersion;
+                this.expireTime = model.expireTime;
+                this.gmtCreated = model.gmtCreated;
+                this.gmtModified = model.gmtModified;
+                this.instanceUsedType = model.instanceUsedType;
+                this.isDeleted = model.isDeleted;
+                this.lockMode = model.lockMode;
+                this.lockReason = model.lockReason;
+                this.maintainEndTimeStr = model.maintainEndTimeStr;
+                this.maintainEndtime = model.maintainEndtime;
+                this.maintainStartTimeStr = model.maintainStartTimeStr;
+                this.maintainStarttime = model.maintainStarttime;
+                this.multiZone = model.multiZone;
+                this.objectStoreSize = model.objectStoreSize;
+                this.parentInstance = model.parentInstance;
+                this.regionId = model.regionId;
+                this.resourceCpu = model.resourceCpu;
+                this.resourceGroupId = model.resourceGroupId;
+                this.resourceMemory = model.resourceMemory;
+                this.scaleMax = model.scaleMax;
+                this.scaleMin = model.scaleMin;
+                this.scaleReplica = model.scaleReplica;
+                this.status = model.status;
+                this.storageSize = model.storageSize;
+                this.storageType = model.storageType;
+                this.tags = model.tags;
+                this.tenantClusterId = model.tenantClusterId;
+                this.tenantToken = model.tenantToken;
+                this.tenantUserId = model.tenantUserId;
+                this.vpcId = model.vpcId;
+                this.vswitchId = model.vswitchId;
+                this.zoneId = model.zoneId;
+                this.connectionString = model.connectionString;
+            } 
 
             /**
              * <p>The edition of the instance. Default value: basic.</p>
@@ -745,6 +926,14 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
+             * DeployScheme.
+             */
+            public Builder deployScheme(String deployScheme) {
+                this.deployScheme = deployScheme;
+                return this;
+            }
+
+            /**
              * <p>The description of the instance.</p>
              */
             public Builder description(String description) {
@@ -760,6 +949,14 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
              */
             public Builder engine(String engine) {
                 this.engine = engine;
+                return this;
+            }
+
+            /**
+             * EngineMinorVersion.
+             */
+            public Builder engineMinorVersion(String engineMinorVersion) {
+                this.engineMinorVersion = engineMinorVersion;
                 return this;
             }
 
@@ -887,6 +1084,14 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
              */
             public Builder maintainStarttime(String maintainStarttime) {
                 this.maintainStarttime = maintainStarttime;
+                return this;
+            }
+
+            /**
+             * MultiZone.
+             */
+            public Builder multiZone(java.util.List<MultiZone> multiZone) {
+                this.multiZone = multiZone;
                 return this;
             }
 

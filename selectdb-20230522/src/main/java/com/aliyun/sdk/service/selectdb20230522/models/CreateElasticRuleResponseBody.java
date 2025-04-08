@@ -36,6 +36,10 @@ public class CreateElasticRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class CreateElasticRuleResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateElasticRuleResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -170,6 +182,18 @@ public class CreateElasticRuleResponseBody extends TeaModel {
             private String elasticRuleStartTime; 
             private String executionPeriod; 
             private Long ruleId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.clusterClass = model.clusterClass;
+                this.clusterId = model.clusterId;
+                this.dbInstanceId = model.dbInstanceId;
+                this.elasticRuleStartTime = model.elasticRuleStartTime;
+                this.executionPeriod = model.executionPeriod;
+                this.ruleId = model.ruleId;
+            } 
 
             /**
              * <p>The rule for computing resources of the required cluster.</p>

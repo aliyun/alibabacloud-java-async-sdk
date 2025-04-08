@@ -48,6 +48,10 @@ public class DescribeDBClusterConfigChangeLogsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -89,6 +93,17 @@ public class DescribeDBClusterConfigChangeLogsResponseBody extends TeaModel {
         private String dynamicCode; 
         private String dynamicMessage; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBClusterConfigChangeLogsResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.data = model.data;
+            this.dynamicCode = model.dynamicCode;
+            this.dynamicMessage = model.dynamicMessage;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * AccessDeniedDetail.
@@ -246,6 +261,19 @@ public class DescribeDBClusterConfigChangeLogsResponseBody extends TeaModel {
             private String newValue; 
             private String oldValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(ParamChangeLogs model) {
+                this.gmtCreated = model.gmtCreated;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.isApplied = model.isApplied;
+                this.name = model.name;
+                this.newValue = model.newValue;
+                this.oldValue = model.oldValue;
+            } 
+
             /**
              * GmtCreated.
              */
@@ -397,6 +425,17 @@ public class DescribeDBClusterConfigChangeLogsResponseBody extends TeaModel {
             private String dbInstanceName; 
             private java.util.List<ParamChangeLogs> paramChangeLogs; 
             private Integer taskId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.dbClusterId = model.dbClusterId;
+                this.dbInstanceId = model.dbInstanceId;
+                this.dbInstanceName = model.dbInstanceName;
+                this.paramChangeLogs = model.paramChangeLogs;
+                this.taskId = model.taskId;
+            } 
 
             /**
              * <p>The cluster ID.</p>

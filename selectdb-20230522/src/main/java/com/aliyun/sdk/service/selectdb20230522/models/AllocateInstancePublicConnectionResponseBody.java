@@ -40,6 +40,10 @@ public class AllocateInstancePublicConnectionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceName
      */
@@ -65,6 +69,15 @@ public class AllocateInstancePublicConnectionResponseBody extends TeaModel {
         private String instanceName; 
         private String requestId; 
         private Long taskId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AllocateInstancePublicConnectionResponseBody model) {
+            this.instanceName = model.instanceName;
+            this.requestId = model.requestId;
+            this.taskId = model.taskId;
+        } 
 
         /**
          * <p>The name of the instance.</p>

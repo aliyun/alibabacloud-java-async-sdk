@@ -40,6 +40,10 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBClustersNetInfos
      */
@@ -65,6 +69,15 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         private java.util.List<DBClustersNetInfos> DBClustersNetInfos; 
         private java.util.List<DBInstanceNetInfos> DBInstanceNetInfos; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBInstanceNetInfoResponseBody model) {
+            this.DBClustersNetInfos = model.DBClustersNetInfos;
+            this.DBInstanceNetInfos = model.DBInstanceNetInfos;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The network information about the backend (BE) clusters.</p>
@@ -142,6 +155,14 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         public static final class Builder {
             private Integer port; 
             private String protocol; 
+
+            private Builder() {
+            } 
+
+            private Builder(PortList model) {
+                this.port = model.port;
+                this.protocol = model.protocol;
+            } 
 
             /**
              * <p>The port that is used to connect to the BE cluster.</p>
@@ -300,6 +321,21 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             private String vpcInstanceId; 
             private String vswitchId; 
 
+            private Builder() {
+            } 
+
+            private Builder(DBClustersNetInfos model) {
+                this.clusterId = model.clusterId;
+                this.connectionString = model.connectionString;
+                this.ip = model.ip;
+                this.netType = model.netType;
+                this.portList = model.portList;
+                this.userVisible = model.userVisible;
+                this.vpcId = model.vpcId;
+                this.vpcInstanceId = model.vpcInstanceId;
+                this.vswitchId = model.vswitchId;
+            } 
+
             /**
              * <p>The cluster ID.</p>
              * 
@@ -446,6 +482,14 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         public static final class Builder {
             private Integer port; 
             private String protocol; 
+
+            private Builder() {
+            } 
+
+            private Builder(DBInstanceNetInfosPortList model) {
+                this.port = model.port;
+                this.protocol = model.protocol;
+            } 
 
             /**
              * <p>The port that is used to connect to the instance.</p>
@@ -607,6 +651,21 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             private String vpcId; 
             private String vpcInstanceId; 
             private String vswitchId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DBInstanceNetInfos model) {
+                this.clusterId = model.clusterId;
+                this.connectionString = model.connectionString;
+                this.ip = model.ip;
+                this.netType = model.netType;
+                this.portList = model.portList;
+                this.userVisible = model.userVisible;
+                this.vpcId = model.vpcId;
+                this.vpcInstanceId = model.vpcInstanceId;
+                this.vswitchId = model.vswitchId;
+            } 
 
             /**
              * <p>The cluster ID.</p>

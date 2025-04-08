@@ -48,6 +48,10 @@ public class DescribeDBClusterConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -89,6 +93,17 @@ public class DescribeDBClusterConfigResponseBody extends TeaModel {
         private String dynamicCode; 
         private String dynamicMessage; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBClusterConfigResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.data = model.data;
+            this.dynamicCode = model.dynamicCode;
+            this.dynamicMessage = model.dynamicMessage;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details about the access denial. This parameter is returned only if Resource Access Management (RAM) authentication failed.</p>
@@ -264,6 +279,20 @@ public class DescribeDBClusterConfigResponseBody extends TeaModel {
             private String paramCategory; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Params model) {
+                this.comment = model.comment;
+                this.defaultValue = model.defaultValue;
+                this.isDynamic = model.isDynamic;
+                this.isUserModifiable = model.isUserModifiable;
+                this.name = model.name;
+                this.optional = model.optional;
+                this.paramCategory = model.paramCategory;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The comments on the parameter.</p>
              */
@@ -432,6 +461,17 @@ public class DescribeDBClusterConfigResponseBody extends TeaModel {
             private String dbInstanceName; 
             private java.util.List<Params> params; 
             private Integer taskId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.dbClusterId = model.dbClusterId;
+                this.dbInstanceId = model.dbInstanceId;
+                this.dbInstanceName = model.dbInstanceName;
+                this.params = model.params;
+                this.taskId = model.taskId;
+            } 
 
             /**
              * <p>The cluster ID.</p>

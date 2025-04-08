@@ -48,6 +48,10 @@ public class ModifyDBClusterConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -89,6 +93,17 @@ public class ModifyDBClusterConfigResponseBody extends TeaModel {
         private String dynamicCode; 
         private String dynamicMessage; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyDBClusterConfigResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.data = model.data;
+            this.dynamicCode = model.dynamicCode;
+            this.dynamicMessage = model.dynamicMessage;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * AccessDeniedDetail.
@@ -209,6 +224,16 @@ public class ModifyDBClusterConfigResponseBody extends TeaModel {
             private String dbInstanceId; 
             private String dbInstanceName; 
             private Integer taskId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.dbClusterId = model.dbClusterId;
+                this.dbInstanceId = model.dbInstanceId;
+                this.dbInstanceName = model.dbInstanceName;
+                this.taskId = model.taskId;
+            } 
 
             /**
              * DbClusterId.

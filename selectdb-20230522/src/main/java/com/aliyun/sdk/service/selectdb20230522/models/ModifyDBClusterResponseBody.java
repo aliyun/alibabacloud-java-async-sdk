@@ -40,6 +40,10 @@ public class ModifyDBClusterResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBInstanceId
      */
@@ -65,6 +69,15 @@ public class ModifyDBClusterResponseBody extends TeaModel {
         private String DBInstanceId; 
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyDBClusterResponseBody model) {
+            this.DBInstanceId = model.DBInstanceId;
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>代表资源一级ID的资源属性字段</p>
@@ -154,6 +167,15 @@ public class ModifyDBClusterResponseBody extends TeaModel {
             private String DBClusterId; 
             private String DBInstanceId; 
             private Long orderId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.DBClusterId = model.DBClusterId;
+                this.DBInstanceId = model.DBInstanceId;
+                this.orderId = model.orderId;
+            } 
 
             /**
              * DBClusterId.

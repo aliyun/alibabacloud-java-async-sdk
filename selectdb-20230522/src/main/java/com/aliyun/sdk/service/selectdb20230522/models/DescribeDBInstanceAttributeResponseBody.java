@@ -32,6 +32,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
+    @com.aliyun.core.annotation.NameInMap("DeployScheme")
+    private String deployScheme;
+
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
@@ -62,6 +65,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("MaintainStarttime")
     private String maintainStarttime;
 
+    @com.aliyun.core.annotation.NameInMap("MultiZone")
+    private java.util.List<MultiZone> multiZone;
+
     @com.aliyun.core.annotation.NameInMap("ObjectStoreSize")
     private Long objectStoreSize;
 
@@ -89,6 +95,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Tags")
     private java.util.List<Tags> tags;
 
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
+    private String vSwitchId;
+
     @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
@@ -101,6 +110,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         this.createTime = builder.createTime;
         this.DBClusterList = builder.DBClusterList;
         this.DBInstanceId = builder.DBInstanceId;
+        this.deployScheme = builder.deployScheme;
         this.description = builder.description;
         this.engine = builder.engine;
         this.engineMinorVersion = builder.engineMinorVersion;
@@ -111,6 +121,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         this.lockReason = builder.lockReason;
         this.maintainEndtime = builder.maintainEndtime;
         this.maintainStarttime = builder.maintainStarttime;
+        this.multiZone = builder.multiZone;
         this.objectStoreSize = builder.objectStoreSize;
         this.regionId = builder.regionId;
         this.requestId = builder.requestId;
@@ -120,6 +131,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         this.storageSize = builder.storageSize;
         this.subDomain = builder.subDomain;
         this.tags = builder.tags;
+        this.vSwitchId = builder.vSwitchId;
         this.vpcId = builder.vpcId;
         this.zoneId = builder.zoneId;
     }
@@ -130,6 +142,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
     public static DescribeDBInstanceAttributeResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -165,6 +181,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    /**
+     * @return deployScheme
+     */
+    public String getDeployScheme() {
+        return this.deployScheme;
     }
 
     /**
@@ -238,6 +261,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return multiZone
+     */
+    public java.util.List<MultiZone> getMultiZone() {
+        return this.multiZone;
+    }
+
+    /**
      * @return objectStoreSize
      */
     public Long getObjectStoreSize() {
@@ -301,6 +331,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return vSwitchId
+     */
+    public String getVSwitchId() {
+        return this.vSwitchId;
+    }
+
+    /**
      * @return vpcId
      */
     public String getVpcId() {
@@ -320,6 +357,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         private String createTime; 
         private java.util.List<DBClusterList> DBClusterList; 
         private String DBInstanceId; 
+        private String deployScheme; 
         private String description; 
         private String engine; 
         private String engineMinorVersion; 
@@ -330,6 +368,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         private String lockReason; 
         private String maintainEndtime; 
         private String maintainStarttime; 
+        private java.util.List<MultiZone> multiZone; 
         private Long objectStoreSize; 
         private String regionId; 
         private String requestId; 
@@ -339,8 +378,44 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         private Long storageSize; 
         private String subDomain; 
         private java.util.List<Tags> tags; 
+        private String vSwitchId; 
         private String vpcId; 
         private String zoneId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBInstanceAttributeResponseBody model) {
+            this.canUpgradeVersions = model.canUpgradeVersions;
+            this.chargeType = model.chargeType;
+            this.createTime = model.createTime;
+            this.DBClusterList = model.DBClusterList;
+            this.DBInstanceId = model.DBInstanceId;
+            this.deployScheme = model.deployScheme;
+            this.description = model.description;
+            this.engine = model.engine;
+            this.engineMinorVersion = model.engineMinorVersion;
+            this.engineVersion = model.engineVersion;
+            this.expireTime = model.expireTime;
+            this.gmtModified = model.gmtModified;
+            this.lockMode = model.lockMode;
+            this.lockReason = model.lockReason;
+            this.maintainEndtime = model.maintainEndtime;
+            this.maintainStarttime = model.maintainStarttime;
+            this.multiZone = model.multiZone;
+            this.objectStoreSize = model.objectStoreSize;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+            this.resourceCpu = model.resourceCpu;
+            this.resourceGroupId = model.resourceGroupId;
+            this.status = model.status;
+            this.storageSize = model.storageSize;
+            this.subDomain = model.subDomain;
+            this.tags = model.tags;
+            this.vSwitchId = model.vSwitchId;
+            this.vpcId = model.vpcId;
+            this.zoneId = model.zoneId;
+        } 
 
         /**
          * <p>The information returned.</p>
@@ -392,6 +467,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
+            return this;
+        }
+
+        /**
+         * DeployScheme.
+         */
+        public Builder deployScheme(String deployScheme) {
+            this.deployScheme = deployScheme;
             return this;
         }
 
@@ -506,6 +589,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * MultiZone.
+         */
+        public Builder multiZone(java.util.List<MultiZone> multiZone) {
+            this.multiZone = multiZone;
+            return this;
+        }
+
+        /**
          * <p>The storage capacity of the instance.</p>
          * 
          * <strong>example:</strong>
@@ -610,6 +701,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * VSwitchId.
+         */
+        public Builder vSwitchId(String vSwitchId) {
+            this.vSwitchId = vSwitchId;
+            return this;
+        }
+
+        /**
          * <p>The VPC ID.</p>
          * 
          * <strong>example:</strong>
@@ -653,6 +752,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
 
+        @com.aliyun.core.annotation.NameInMap("ClusterBinding")
+        private String clusterBinding;
+
         @com.aliyun.core.annotation.NameInMap("CpuCores")
         private Long cpuCores;
 
@@ -689,10 +791,20 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("SubDomain")
+        private String subDomain;
+
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
+        private String vSwitchId;
+
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
+        private String zoneId;
+
         private DBClusterList(Builder builder) {
             this.cacheStorageSizeGB = builder.cacheStorageSizeGB;
             this.cacheStorageType = builder.cacheStorageType;
             this.chargeType = builder.chargeType;
+            this.clusterBinding = builder.clusterBinding;
             this.cpuCores = builder.cpuCores;
             this.createdTime = builder.createdTime;
             this.dbClusterClass = builder.dbClusterClass;
@@ -705,6 +817,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.scalingRulesEnable = builder.scalingRulesEnable;
             this.startTime = builder.startTime;
             this.status = builder.status;
+            this.subDomain = builder.subDomain;
+            this.vSwitchId = builder.vSwitchId;
+            this.zoneId = builder.zoneId;
         }
 
         public static Builder builder() {
@@ -734,6 +849,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          */
         public String getChargeType() {
             return this.chargeType;
+        }
+
+        /**
+         * @return clusterBinding
+         */
+        public String getClusterBinding() {
+            return this.clusterBinding;
         }
 
         /**
@@ -820,10 +942,32 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             return this.status;
         }
 
+        /**
+         * @return subDomain
+         */
+        public String getSubDomain() {
+            return this.subDomain;
+        }
+
+        /**
+         * @return vSwitchId
+         */
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        /**
+         * @return zoneId
+         */
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
         public static final class Builder {
             private String cacheStorageSizeGB; 
             private String cacheStorageType; 
             private String chargeType; 
+            private String clusterBinding; 
             private Long cpuCores; 
             private String createdTime; 
             private String dbClusterClass; 
@@ -836,6 +980,34 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private Boolean scalingRulesEnable; 
             private String startTime; 
             private String status; 
+            private String subDomain; 
+            private String vSwitchId; 
+            private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DBClusterList model) {
+                this.cacheStorageSizeGB = model.cacheStorageSizeGB;
+                this.cacheStorageType = model.cacheStorageType;
+                this.chargeType = model.chargeType;
+                this.clusterBinding = model.clusterBinding;
+                this.cpuCores = model.cpuCores;
+                this.createdTime = model.createdTime;
+                this.dbClusterClass = model.dbClusterClass;
+                this.dbClusterId = model.dbClusterId;
+                this.dbClusterName = model.dbClusterName;
+                this.dbInstanceName = model.dbInstanceName;
+                this.memory = model.memory;
+                this.modifiedTime = model.modifiedTime;
+                this.performanceLevel = model.performanceLevel;
+                this.scalingRulesEnable = model.scalingRulesEnable;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.subDomain = model.subDomain;
+                this.vSwitchId = model.vSwitchId;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>The cache size. Unit: GB.</p>
@@ -871,6 +1043,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
+                return this;
+            }
+
+            /**
+             * ClusterBinding.
+             */
+            public Builder clusterBinding(String clusterBinding) {
+                this.clusterBinding = clusterBinding;
                 return this;
             }
 
@@ -1020,8 +1200,158 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
                 return this;
             }
 
+            /**
+             * <p>The subdomain zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing-h-aliyun</p>
+             */
+            public Builder subDomain(String subDomain) {
+                this.subDomain = subDomain;
+                return this;
+            }
+
+            /**
+             * VSwitchId.
+             */
+            public Builder vSwitchId(String vSwitchId) {
+                this.vSwitchId = vSwitchId;
+                return this;
+            }
+
+            /**
+             * <p>The Zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing-h</p>
+             */
+            public Builder zoneId(String zoneId) {
+                this.zoneId = zoneId;
+                return this;
+            }
+
             public DBClusterList build() {
                 return new DBClusterList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeDBInstanceAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceAttributeResponseBody</p>
+     */
+    public static class MultiZone extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AvailableIpCount")
+        private Long availableIpCount;
+
+        @com.aliyun.core.annotation.NameInMap("Cidr")
+        private String cidr;
+
+        @com.aliyun.core.annotation.NameInMap("VSwitchIds")
+        private java.util.List<String> vSwitchIds;
+
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
+        private String zoneId;
+
+        private MultiZone(Builder builder) {
+            this.availableIpCount = builder.availableIpCount;
+            this.cidr = builder.cidr;
+            this.vSwitchIds = builder.vSwitchIds;
+            this.zoneId = builder.zoneId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MultiZone create() {
+            return builder().build();
+        }
+
+        /**
+         * @return availableIpCount
+         */
+        public Long getAvailableIpCount() {
+            return this.availableIpCount;
+        }
+
+        /**
+         * @return cidr
+         */
+        public String getCidr() {
+            return this.cidr;
+        }
+
+        /**
+         * @return vSwitchIds
+         */
+        public java.util.List<String> getVSwitchIds() {
+            return this.vSwitchIds;
+        }
+
+        /**
+         * @return zoneId
+         */
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
+        public static final class Builder {
+            private Long availableIpCount; 
+            private String cidr; 
+            private java.util.List<String> vSwitchIds; 
+            private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(MultiZone model) {
+                this.availableIpCount = model.availableIpCount;
+                this.cidr = model.cidr;
+                this.vSwitchIds = model.vSwitchIds;
+                this.zoneId = model.zoneId;
+            } 
+
+            /**
+             * AvailableIpCount.
+             */
+            public Builder availableIpCount(Long availableIpCount) {
+                this.availableIpCount = availableIpCount;
+                return this;
+            }
+
+            /**
+             * Cidr.
+             */
+            public Builder cidr(String cidr) {
+                this.cidr = cidr;
+                return this;
+            }
+
+            /**
+             * VSwitchIds.
+             */
+            public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
+                this.vSwitchIds = vSwitchIds;
+                return this;
+            }
+
+            /**
+             * <p>The Zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing-h</p>
+             */
+            public Builder zoneId(String zoneId) {
+                this.zoneId = zoneId;
+                return this;
+            }
+
+            public MultiZone build() {
+                return new MultiZone(this);
             } 
 
         } 
@@ -1070,6 +1400,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public static final class Builder {
             private String tagKey; 
             private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
 
             /**
              * <p>The tag key.</p>

@@ -60,6 +60,10 @@ public class ModifySecurityIPListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBInstanceName
      */
@@ -125,6 +129,20 @@ public class ModifySecurityIPListResponseBody extends TeaModel {
         private String securityIPType; 
         private Long taskId; 
         private String whitelistNetType; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifySecurityIPListResponseBody model) {
+            this.DBInstanceName = model.DBInstanceName;
+            this.groupName = model.groupName;
+            this.groupTag = model.groupTag;
+            this.requestId = model.requestId;
+            this.securityIPList = model.securityIPList;
+            this.securityIPType = model.securityIPType;
+            this.taskId = model.taskId;
+            this.whitelistNetType = model.whitelistNetType;
+        } 
 
         /**
          * <p>The name of the instance.</p>

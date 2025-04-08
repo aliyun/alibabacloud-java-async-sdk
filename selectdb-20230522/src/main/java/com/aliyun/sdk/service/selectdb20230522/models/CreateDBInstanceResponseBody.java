@@ -36,6 +36,10 @@ public class CreateDBInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -54,8 +58,16 @@ public class CreateDBInstanceResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateDBInstanceResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * Data.
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -63,7 +75,10 @@ public class CreateDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4773E4EC-025D-509F-AEA9-D53123FDFB0F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -120,8 +135,19 @@ public class CreateDBInstanceResponseBody extends TeaModel {
             private String DBInstanceId; 
             private Long orderId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.DBInstanceId = model.DBInstanceId;
+                this.orderId = model.orderId;
+            } 
+
             /**
-             * DBInstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>selectdb-cn-7213cjv****</p>
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -129,7 +155,10 @@ public class CreateDBInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * OrderId.
+             * <p>The order ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>21137950671****</p>
              */
             public Builder orderId(Long orderId) {
                 this.orderId = orderId;

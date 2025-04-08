@@ -45,6 +45,10 @@ public class CreateDBInstanceRequest extends Request {
     private String DBInstanceDescription;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeployScheme")
+    private String deployScheme;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Engine")
     private String engine;
 
@@ -52,6 +56,10 @@ public class CreateDBInstanceRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("EngineVersion")
     @com.aliyun.core.annotation.Validation(required = true)
     private String engineVersion;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MultiZone")
+    private java.util.List<MultiZone> multiZone;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Period")
@@ -105,8 +113,10 @@ public class CreateDBInstanceRequest extends Request {
         this.connectionString = builder.connectionString;
         this.DBInstanceClass = builder.DBInstanceClass;
         this.DBInstanceDescription = builder.DBInstanceDescription;
+        this.deployScheme = builder.deployScheme;
         this.engine = builder.engine;
         this.engineVersion = builder.engineVersion;
+        this.multiZone = builder.multiZone;
         this.period = builder.period;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
@@ -127,7 +137,7 @@ public class CreateDBInstanceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -175,6 +185,13 @@ public class CreateDBInstanceRequest extends Request {
     }
 
     /**
+     * @return deployScheme
+     */
+    public String getDeployScheme() {
+        return this.deployScheme;
+    }
+
+    /**
      * @return engine
      */
     public String getEngine() {
@@ -186,6 +203,13 @@ public class CreateDBInstanceRequest extends Request {
      */
     public String getEngineVersion() {
         return this.engineVersion;
+    }
+
+    /**
+     * @return multiZone
+     */
+    public java.util.List<MultiZone> getMultiZone() {
+        return this.multiZone;
     }
 
     /**
@@ -265,8 +289,10 @@ public class CreateDBInstanceRequest extends Request {
         private String connectionString; 
         private String DBInstanceClass; 
         private String DBInstanceDescription; 
+        private String deployScheme; 
         private String engine; 
         private String engineVersion; 
+        private java.util.List<MultiZone> multiZone; 
         private String period; 
         private String regionId; 
         private String resourceGroupId; 
@@ -290,8 +316,10 @@ public class CreateDBInstanceRequest extends Request {
             this.connectionString = request.connectionString;
             this.DBInstanceClass = request.DBInstanceClass;
             this.DBInstanceDescription = request.DBInstanceDescription;
+            this.deployScheme = request.deployScheme;
             this.engine = request.engine;
             this.engineVersion = request.engineVersion;
+            this.multiZone = request.multiZone;
             this.period = request.period;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
@@ -305,6 +333,7 @@ public class CreateDBInstanceRequest extends Request {
         } 
 
         /**
+         * <p>The reserved cache size.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -317,6 +346,11 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
+         * <p>The billing method of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Postpaid</strong>: pay-as-you-go</li>
+         * <li><strong>Prepaid</strong>: subscription</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -329,7 +363,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AB</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -338,7 +375,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * ConnectionString.
+         * <p>The instance endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>selectdb-cn-7213c8y****-public.selectdbfe.pre.rds.aliyuncs.com</p>
          */
         public Builder connectionString(String connectionString) {
             this.putQueryParameter("ConnectionString", connectionString);
@@ -347,6 +387,12 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
+         * <p>The specifications of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>selectdb.xlarge</strong>: 4 CPU cores and 32 GB of memory</li>
+         * <li><strong>selectdb.2xlarge</strong>: 8 CPU cores and 64 GB of memory</li>
+         * <li><strong>selectdb.4xlarge</strong>: 16 CPU cores and 128 GB of memory</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -359,7 +405,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * DBInstanceDescription.
+         * <p>The instance description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The instance is created for testing.</p>
          */
         public Builder DBInstanceDescription(String DBInstanceDescription) {
             this.putQueryParameter("DBInstanceDescription", DBInstanceDescription);
@@ -368,7 +417,16 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The type of the database. Default value: <strong>selectdb</strong>.</p>
+         * DeployScheme.
+         */
+        public Builder deployScheme(String deployScheme) {
+            this.putQueryParameter("DeployScheme", deployScheme);
+            this.deployScheme = deployScheme;
+            return this;
+        }
+
+        /**
+         * <p>The database engine of the instance. Default value: <strong>selectdb</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>selectdb</p>
@@ -380,6 +438,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
+         * <p>The database engine version of the instance. Default value: <strong>2.4</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -392,7 +451,27 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * Period.
+         * MultiZone.
+         */
+        public Builder multiZone(java.util.List<MultiZone> multiZone) {
+            String multiZoneShrink = shrink(multiZone, "MultiZone", "json");
+            this.putQueryParameter("MultiZone", multiZoneShrink);
+            this.multiZone = multiZone;
+            return this;
+        }
+
+        /**
+         * <p>The unit of the subscription duration of the cluster. Valid values:</p>
+         * <ul>
+         * <li><strong>Year</strong>: subscription on a yearly basis.</li>
+         * <li><strong>Month</strong>: subscription on a monthly basis.</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter takes effect and is required only when <strong>ChargeType</strong> is set to <strong>Prepaid</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -401,6 +480,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -413,7 +493,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>代表资源组的资源属性字段</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aekzt2zaluvuvqa_fake</p>
@@ -434,7 +514,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * SecurityIPList.
+         * <p>The IP addresses in the whitelist of the instance. Separate multiple IP addresses with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.1.1</p>
          */
         public Builder securityIPList(String securityIPList) {
             this.putQueryParameter("SecurityIPList", securityIPList);
@@ -443,7 +526,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The instance tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             String tagShrink = shrink(tag, "Tag", "json");
@@ -453,7 +536,17 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * UsedTime.
+         * <p>The subscription duration of the instance.</p>
+         * <ul>
+         * <li>Valid values when Period is set to Year: 1, 2, 3, and 5 (integer)</li>
+         * <li>Valid values when Period is set to Month: 1 to 9 (integer)</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter takes effect and is required only when <strong>ChargeType</strong> is set to <strong>Prepaid</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder usedTime(Integer usedTime) {
             this.putQueryParameter("UsedTime", usedTime);
@@ -462,6 +555,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
+         * <p>The vSwitch ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -474,7 +568,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>VPC ID。</p>
+         * <p>The virtual private cloud (VPC) ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -487,6 +581,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
+         * <p>The zone ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -505,6 +600,85 @@ public class CreateDBInstanceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateDBInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDBInstanceRequest</p>
+     */
+    public static class MultiZone extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("VSwitchIds")
+        private java.util.List<String> vSwitchIds;
+
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
+        private String zoneId;
+
+        private MultiZone(Builder builder) {
+            this.vSwitchIds = builder.vSwitchIds;
+            this.zoneId = builder.zoneId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MultiZone create() {
+            return builder().build();
+        }
+
+        /**
+         * @return vSwitchIds
+         */
+        public java.util.List<String> getVSwitchIds() {
+            return this.vSwitchIds;
+        }
+
+        /**
+         * @return zoneId
+         */
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> vSwitchIds; 
+            private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(MultiZone model) {
+                this.vSwitchIds = model.vSwitchIds;
+                this.zoneId = model.zoneId;
+            } 
+
+            /**
+             * VSwitchIds.
+             */
+            public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
+                this.vSwitchIds = vSwitchIds;
+                return this;
+            }
+
+            /**
+             * <p>The zone ID.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-e</p>
+             */
+            public Builder zoneId(String zoneId) {
+                this.zoneId = zoneId;
+                return this;
+            }
+
+            public MultiZone build() {
+                return new MultiZone(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link CreateDBInstanceRequest} extends {@link TeaModel}
@@ -549,8 +723,19 @@ public class CreateDBInstanceRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -558,7 +743,10 @@ public class CreateDBInstanceRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

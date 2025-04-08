@@ -36,6 +36,10 @@ public class CheckServiceLinkedRoleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return hasServiceLinkedRole
      */
@@ -53,6 +57,14 @@ public class CheckServiceLinkedRoleResponseBody extends TeaModel {
     public static final class Builder {
         private Boolean hasServiceLinkedRole; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CheckServiceLinkedRoleResponseBody model) {
+            this.hasServiceLinkedRole = model.hasServiceLinkedRole;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * HasServiceLinkedRole.

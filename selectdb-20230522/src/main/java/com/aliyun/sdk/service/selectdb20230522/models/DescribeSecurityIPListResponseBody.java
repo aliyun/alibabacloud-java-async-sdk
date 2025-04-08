@@ -40,6 +40,10 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBInstanceName
      */
@@ -65,6 +69,15 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
         private String DBInstanceName; 
         private java.util.List<GroupItems> groupItems; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSecurityIPListResponseBody model) {
+            this.DBInstanceName = model.DBInstanceName;
+            this.groupItems = model.groupItems;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The instance ID.</p>
@@ -181,6 +194,17 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
             private String groupTag; 
             private String securityIPList; 
             private String whitelistNetType; 
+
+            private Builder() {
+            } 
+
+            private Builder(GroupItems model) {
+                this.aecurityIPType = model.aecurityIPType;
+                this.groupName = model.groupName;
+                this.groupTag = model.groupTag;
+                this.securityIPList = model.securityIPList;
+                this.whitelistNetType = model.whitelistNetType;
+            } 
 
             /**
              * <p>The IP address type. Valid values:</p>

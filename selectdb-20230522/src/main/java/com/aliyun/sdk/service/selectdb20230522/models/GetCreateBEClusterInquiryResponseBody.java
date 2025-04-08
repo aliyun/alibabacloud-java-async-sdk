@@ -36,6 +36,10 @@ public class GetCreateBEClusterInquiryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetCreateBEClusterInquiryResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetCreateBEClusterInquiryResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information returned.</p>
@@ -122,6 +134,14 @@ public class GetCreateBEClusterInquiryResponseBody extends TeaModel {
         public static final class Builder {
             private String currency; 
             private String tradeAmount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.currency = model.currency;
+                this.tradeAmount = model.tradeAmount;
+            } 
 
             /**
              * <p>The currency.</p>

@@ -36,6 +36,10 @@ public class EnDisableScalingRulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class EnDisableScalingRulesResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(EnDisableScalingRulesResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -134,6 +146,15 @@ public class EnDisableScalingRulesResponseBody extends TeaModel {
             private String clusterId; 
             private String dbInstanceId; 
             private Boolean scalingRulesEnable; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.clusterId = model.clusterId;
+                this.dbInstanceId = model.dbInstanceId;
+                this.scalingRulesEnable = model.scalingRulesEnable;
+            } 
 
             /**
              * <p>The cluster ID.</p>

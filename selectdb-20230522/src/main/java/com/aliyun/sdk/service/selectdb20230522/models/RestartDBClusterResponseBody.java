@@ -36,6 +36,10 @@ public class RestartDBClusterResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class RestartDBClusterResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(RestartDBClusterResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information returned.</p>
@@ -122,6 +134,14 @@ public class RestartDBClusterResponseBody extends TeaModel {
         public static final class Builder {
             private String DBClusterId; 
             private String DBInstanceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.DBClusterId = model.DBClusterId;
+                this.DBInstanceId = model.DBInstanceId;
+            } 
 
             /**
              * <p>The cluster ID.</p>
