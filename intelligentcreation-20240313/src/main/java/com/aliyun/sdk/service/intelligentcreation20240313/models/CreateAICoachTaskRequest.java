@@ -26,6 +26,10 @@ public class CreateAICoachTaskRequest extends Request {
     private String scriptRecordId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("studentAudioUrl")
+    private String studentAudioUrl;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("studentId")
     private String studentId;
 
@@ -33,6 +37,7 @@ public class CreateAICoachTaskRequest extends Request {
         super(builder);
         this.requestId = builder.requestId;
         this.scriptRecordId = builder.scriptRecordId;
+        this.studentAudioUrl = builder.studentAudioUrl;
         this.studentId = builder.studentId;
     }
 
@@ -64,6 +69,13 @@ public class CreateAICoachTaskRequest extends Request {
     }
 
     /**
+     * @return studentAudioUrl
+     */
+    public String getStudentAudioUrl() {
+        return this.studentAudioUrl;
+    }
+
+    /**
      * @return studentId
      */
     public String getStudentId() {
@@ -73,6 +85,7 @@ public class CreateAICoachTaskRequest extends Request {
     public static final class Builder extends Request.Builder<CreateAICoachTaskRequest, Builder> {
         private String requestId; 
         private String scriptRecordId; 
+        private String studentAudioUrl; 
         private String studentId; 
 
         private Builder() {
@@ -83,6 +96,7 @@ public class CreateAICoachTaskRequest extends Request {
             super(request);
             this.requestId = request.requestId;
             this.scriptRecordId = request.scriptRecordId;
+            this.studentAudioUrl = request.studentAudioUrl;
             this.studentId = request.studentId;
         } 
 
@@ -101,6 +115,15 @@ public class CreateAICoachTaskRequest extends Request {
         public Builder scriptRecordId(String scriptRecordId) {
             this.putBodyParameter("scriptRecordId", scriptRecordId);
             this.scriptRecordId = scriptRecordId;
+            return this;
+        }
+
+        /**
+         * studentAudioUrl.
+         */
+        public Builder studentAudioUrl(String studentAudioUrl) {
+            this.putBodyParameter("studentAudioUrl", studentAudioUrl);
+            this.studentAudioUrl = studentAudioUrl;
             return this;
         }
 

@@ -17,8 +17,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetAICoachScriptResponseBody</p>
  */
 public class GetAICoachScriptResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("appendQuestionFlag")
+    private Boolean appendQuestionFlag;
+
     @com.aliyun.core.annotation.NameInMap("assessmentScope")
     private String assessmentScope;
+
+    @com.aliyun.core.annotation.NameInMap("checkCheatConfig")
+    private CheckCheatConfig checkCheatConfig;
 
     @com.aliyun.core.annotation.NameInMap("completeStrategy")
     private CompleteStrategy completeStrategy;
@@ -105,7 +111,9 @@ public class GetAICoachScriptResponseBody extends TeaModel {
     private Weights weights;
 
     private GetAICoachScriptResponseBody(Builder builder) {
+        this.appendQuestionFlag = builder.appendQuestionFlag;
         this.assessmentScope = builder.assessmentScope;
+        this.checkCheatConfig = builder.checkCheatConfig;
         this.completeStrategy = builder.completeStrategy;
         this.coverUrl = builder.coverUrl;
         this.dialogueInputTextLimit = builder.dialogueInputTextLimit;
@@ -149,10 +157,24 @@ public class GetAICoachScriptResponseBody extends TeaModel {
     }
 
     /**
+     * @return appendQuestionFlag
+     */
+    public Boolean getAppendQuestionFlag() {
+        return this.appendQuestionFlag;
+    }
+
+    /**
      * @return assessmentScope
      */
     public String getAssessmentScope() {
         return this.assessmentScope;
+    }
+
+    /**
+     * @return checkCheatConfig
+     */
+    public CheckCheatConfig getCheckCheatConfig() {
+        return this.checkCheatConfig;
     }
 
     /**
@@ -352,7 +374,9 @@ public class GetAICoachScriptResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Boolean appendQuestionFlag; 
         private String assessmentScope; 
+        private CheckCheatConfig checkCheatConfig; 
         private CompleteStrategy completeStrategy; 
         private String coverUrl; 
         private Integer dialogueInputTextLimit; 
@@ -386,7 +410,9 @@ public class GetAICoachScriptResponseBody extends TeaModel {
         } 
 
         private Builder(GetAICoachScriptResponseBody model) {
+            this.appendQuestionFlag = model.appendQuestionFlag;
             this.assessmentScope = model.assessmentScope;
+            this.checkCheatConfig = model.checkCheatConfig;
             this.completeStrategy = model.completeStrategy;
             this.coverUrl = model.coverUrl;
             this.dialogueInputTextLimit = model.dialogueInputTextLimit;
@@ -418,10 +444,26 @@ public class GetAICoachScriptResponseBody extends TeaModel {
         } 
 
         /**
+         * appendQuestionFlag.
+         */
+        public Builder appendQuestionFlag(Boolean appendQuestionFlag) {
+            this.appendQuestionFlag = appendQuestionFlag;
+            return this;
+        }
+
+        /**
          * assessmentScope.
          */
         public Builder assessmentScope(String assessmentScope) {
             this.assessmentScope = assessmentScope;
+            return this;
+        }
+
+        /**
+         * checkCheatConfig.
+         */
+        public Builder checkCheatConfig(CheckCheatConfig checkCheatConfig) {
+            this.checkCheatConfig = checkCheatConfig;
             return this;
         }
 
@@ -655,6 +697,81 @@ public class GetAICoachScriptResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAICoachScriptResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAICoachScriptResponseBody</p>
+     */
+    public static class CheckCheatConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("checkImage")
+        private Boolean checkImage;
+
+        @com.aliyun.core.annotation.NameInMap("checkVoice")
+        private Boolean checkVoice;
+
+        private CheckCheatConfig(Builder builder) {
+            this.checkImage = builder.checkImage;
+            this.checkVoice = builder.checkVoice;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CheckCheatConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return checkImage
+         */
+        public Boolean getCheckImage() {
+            return this.checkImage;
+        }
+
+        /**
+         * @return checkVoice
+         */
+        public Boolean getCheckVoice() {
+            return this.checkVoice;
+        }
+
+        public static final class Builder {
+            private Boolean checkImage; 
+            private Boolean checkVoice; 
+
+            private Builder() {
+            } 
+
+            private Builder(CheckCheatConfig model) {
+                this.checkImage = model.checkImage;
+                this.checkVoice = model.checkVoice;
+            } 
+
+            /**
+             * checkImage.
+             */
+            public Builder checkImage(Boolean checkImage) {
+                this.checkImage = checkImage;
+                return this;
+            }
+
+            /**
+             * checkVoice.
+             */
+            public Builder checkVoice(Boolean checkVoice) {
+                this.checkVoice = checkVoice;
+                return this;
+            }
+
+            public CheckCheatConfig build() {
+                return new CheckCheatConfig(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link GetAICoachScriptResponseBody} extends {@link TeaModel}
