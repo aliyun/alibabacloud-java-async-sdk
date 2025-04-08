@@ -205,7 +205,7 @@ public class DescribeEciScalingConfigurationsRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. Pages start from page 1.</p>
+         * <p>The page number. Pages start from page 1.</p>
          * <p>Default value: 1.</p>
          * 
          * <strong>example:</strong>
@@ -218,7 +218,7 @@ public class DescribeEciScalingConfigurationsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Maximum value: 50.</p>
+         * <p>The number of entries per page. Maximum value: 50.</p>
          * <p>Default value: 10.</p>
          * 
          * <strong>example:</strong>

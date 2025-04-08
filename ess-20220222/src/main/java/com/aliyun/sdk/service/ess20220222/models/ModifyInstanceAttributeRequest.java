@@ -23,8 +23,11 @@ public class ModifyInstanceAttributeRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
+    private java.util.List<String> instanceIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
@@ -48,6 +51,7 @@ public class ModifyInstanceAttributeRequest extends Request {
         super(builder);
         this.entrusted = builder.entrusted;
         this.instanceId = builder.instanceId;
+        this.instanceIds = builder.instanceIds;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -82,6 +86,13 @@ public class ModifyInstanceAttributeRequest extends Request {
     }
 
     /**
+     * @return instanceIds
+     */
+    public java.util.List<String> getInstanceIds() {
+        return this.instanceIds;
+    }
+
+    /**
      * @return ownerId
      */
     public Long getOwnerId() {
@@ -112,6 +123,7 @@ public class ModifyInstanceAttributeRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyInstanceAttributeRequest, Builder> {
         private Boolean entrusted; 
         private String instanceId; 
+        private java.util.List<String> instanceIds; 
         private Long ownerId; 
         private String regionId; 
         private String resourceOwnerAccount; 
@@ -125,6 +137,7 @@ public class ModifyInstanceAttributeRequest extends Request {
             super(request);
             this.entrusted = request.entrusted;
             this.instanceId = request.instanceId;
+            this.instanceIds = request.instanceIds;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
@@ -152,7 +165,6 @@ public class ModifyInstanceAttributeRequest extends Request {
 
         /**
          * <p>The ID of the ECS instance.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>i-bp109k5j3dum1ce6****</p>
@@ -160,6 +172,15 @@ public class ModifyInstanceAttributeRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * InstanceIds.
+         */
+        public Builder instanceIds(java.util.List<String> instanceIds) {
+            this.putQueryParameter("InstanceIds", instanceIds);
+            this.instanceIds = instanceIds;
             return this;
         }
 
