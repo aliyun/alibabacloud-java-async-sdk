@@ -17,8 +17,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeNotifyConfigResponseBody</p>
  */
 public class DescribeNotifyConfigResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AudioOssPath")
+    private String audioOssPath;
+
     @com.aliyun.core.annotation.NameInMap("CallbackUrl")
     private String callbackUrl;
+
+    @com.aliyun.core.annotation.NameInMap("EnableAudioRecording")
+    private Boolean enableAudioRecording;
 
     @com.aliyun.core.annotation.NameInMap("EnableNotify")
     private Boolean enableNotify;
@@ -33,7 +39,9 @@ public class DescribeNotifyConfigResponseBody extends TeaModel {
     private String token;
 
     private DescribeNotifyConfigResponseBody(Builder builder) {
+        this.audioOssPath = builder.audioOssPath;
         this.callbackUrl = builder.callbackUrl;
+        this.enableAudioRecording = builder.enableAudioRecording;
         this.enableNotify = builder.enableNotify;
         this.eventTypes = builder.eventTypes;
         this.requestId = builder.requestId;
@@ -53,10 +61,24 @@ public class DescribeNotifyConfigResponseBody extends TeaModel {
     }
 
     /**
+     * @return audioOssPath
+     */
+    public String getAudioOssPath() {
+        return this.audioOssPath;
+    }
+
+    /**
      * @return callbackUrl
      */
     public String getCallbackUrl() {
         return this.callbackUrl;
+    }
+
+    /**
+     * @return enableAudioRecording
+     */
+    public Boolean getEnableAudioRecording() {
+        return this.enableAudioRecording;
     }
 
     /**
@@ -88,7 +110,9 @@ public class DescribeNotifyConfigResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String audioOssPath; 
         private String callbackUrl; 
+        private Boolean enableAudioRecording; 
         private Boolean enableNotify; 
         private String eventTypes; 
         private String requestId; 
@@ -98,7 +122,9 @@ public class DescribeNotifyConfigResponseBody extends TeaModel {
         } 
 
         private Builder(DescribeNotifyConfigResponseBody model) {
+            this.audioOssPath = model.audioOssPath;
             this.callbackUrl = model.callbackUrl;
+            this.enableAudioRecording = model.enableAudioRecording;
             this.enableNotify = model.enableNotify;
             this.eventTypes = model.eventTypes;
             this.requestId = model.requestId;
@@ -106,10 +132,26 @@ public class DescribeNotifyConfigResponseBody extends TeaModel {
         } 
 
         /**
+         * AudioOssPath.
+         */
+        public Builder audioOssPath(String audioOssPath) {
+            this.audioOssPath = audioOssPath;
+            return this;
+        }
+
+        /**
          * CallbackUrl.
          */
         public Builder callbackUrl(String callbackUrl) {
             this.callbackUrl = callbackUrl;
+            return this;
+        }
+
+        /**
+         * EnableAudioRecording.
+         */
+        public Builder enableAudioRecording(Boolean enableAudioRecording) {
+            this.enableAudioRecording = enableAudioRecording;
             return this;
         }
 

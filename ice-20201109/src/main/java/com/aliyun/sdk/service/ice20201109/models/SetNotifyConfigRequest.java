@@ -23,8 +23,16 @@ public class SetNotifyConfigRequest extends Request {
     private String AIAgentId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AudioOssPath")
+    private String audioOssPath;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CallbackUrl")
     private String callbackUrl;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableAudioRecording")
+    private Boolean enableAudioRecording;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EnableNotify")
@@ -42,7 +50,9 @@ public class SetNotifyConfigRequest extends Request {
     private SetNotifyConfigRequest(Builder builder) {
         super(builder);
         this.AIAgentId = builder.AIAgentId;
+        this.audioOssPath = builder.audioOssPath;
         this.callbackUrl = builder.callbackUrl;
+        this.enableAudioRecording = builder.enableAudioRecording;
         this.enableNotify = builder.enableNotify;
         this.eventTypes = builder.eventTypes;
         this.token = builder.token;
@@ -69,10 +79,24 @@ public class SetNotifyConfigRequest extends Request {
     }
 
     /**
+     * @return audioOssPath
+     */
+    public String getAudioOssPath() {
+        return this.audioOssPath;
+    }
+
+    /**
      * @return callbackUrl
      */
     public String getCallbackUrl() {
         return this.callbackUrl;
+    }
+
+    /**
+     * @return enableAudioRecording
+     */
+    public Boolean getEnableAudioRecording() {
+        return this.enableAudioRecording;
     }
 
     /**
@@ -98,7 +122,9 @@ public class SetNotifyConfigRequest extends Request {
 
     public static final class Builder extends Request.Builder<SetNotifyConfigRequest, Builder> {
         private String AIAgentId; 
+        private String audioOssPath; 
         private String callbackUrl; 
+        private Boolean enableAudioRecording; 
         private Boolean enableNotify; 
         private String eventTypes; 
         private String token; 
@@ -110,7 +136,9 @@ public class SetNotifyConfigRequest extends Request {
         private Builder(SetNotifyConfigRequest request) {
             super(request);
             this.AIAgentId = request.AIAgentId;
+            this.audioOssPath = request.audioOssPath;
             this.callbackUrl = request.callbackUrl;
+            this.enableAudioRecording = request.enableAudioRecording;
             this.enableNotify = request.enableNotify;
             this.eventTypes = request.eventTypes;
             this.token = request.token;
@@ -130,6 +158,15 @@ public class SetNotifyConfigRequest extends Request {
         }
 
         /**
+         * AudioOssPath.
+         */
+        public Builder audioOssPath(String audioOssPath) {
+            this.putQueryParameter("AudioOssPath", audioOssPath);
+            this.audioOssPath = audioOssPath;
+            return this;
+        }
+
+        /**
          * <p>The URL for receiving callback notifications. By default, this parameter is left empty.</p>
          * 
          * <strong>example:</strong>
@@ -138,6 +175,15 @@ public class SetNotifyConfigRequest extends Request {
         public Builder callbackUrl(String callbackUrl) {
             this.putQueryParameter("CallbackUrl", callbackUrl);
             this.callbackUrl = callbackUrl;
+            return this;
+        }
+
+        /**
+         * EnableAudioRecording.
+         */
+        public Builder enableAudioRecording(Boolean enableAudioRecording) {
+            this.putQueryParameter("EnableAudioRecording", enableAudioRecording);
+            this.enableAudioRecording = enableAudioRecording;
             return this;
         }
 

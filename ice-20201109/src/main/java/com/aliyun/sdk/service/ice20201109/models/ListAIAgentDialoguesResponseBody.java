@@ -94,7 +94,148 @@ public class ListAIAgentDialoguesResponseBody extends TeaModel {
      *
      * <p>ListAIAgentDialoguesResponseBody</p>
      */
+    public static class AttachedFileList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Format")
+        private String format;
+
+        @com.aliyun.core.annotation.NameInMap("Id")
+        private String id;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private Integer type;
+
+        @com.aliyun.core.annotation.NameInMap("Url")
+        private String url;
+
+        private AttachedFileList(Builder builder) {
+            this.format = builder.format;
+            this.id = builder.id;
+            this.name = builder.name;
+            this.type = builder.type;
+            this.url = builder.url;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AttachedFileList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return format
+         */
+        public String getFormat() {
+            return this.format;
+        }
+
+        /**
+         * @return id
+         */
+        public String getId() {
+            return this.id;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return type
+         */
+        public Integer getType() {
+            return this.type;
+        }
+
+        /**
+         * @return url
+         */
+        public String getUrl() {
+            return this.url;
+        }
+
+        public static final class Builder {
+            private String format; 
+            private String id; 
+            private String name; 
+            private Integer type; 
+            private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(AttachedFileList model) {
+                this.format = model.format;
+                this.id = model.id;
+                this.name = model.name;
+                this.type = model.type;
+                this.url = model.url;
+            } 
+
+            /**
+             * Format.
+             */
+            public Builder format(String format) {
+                this.format = format;
+                return this;
+            }
+
+            /**
+             * Id.
+             */
+            public Builder id(String id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(Integer type) {
+                this.type = type;
+                return this;
+            }
+
+            /**
+             * Url.
+             */
+            public Builder url(String url) {
+                this.url = url;
+                return this;
+            }
+
+            public AttachedFileList build() {
+                return new AttachedFileList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListAIAgentDialoguesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAIAgentDialoguesResponseBody</p>
+     */
     public static class Dialogues extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AttachedFileList")
+        private java.util.List<AttachedFileList> attachedFileList;
+
         @com.aliyun.core.annotation.NameInMap("DialogueId")
         private String dialogueId;
 
@@ -120,6 +261,7 @@ public class ListAIAgentDialoguesResponseBody extends TeaModel {
         private String type;
 
         private Dialogues(Builder builder) {
+            this.attachedFileList = builder.attachedFileList;
             this.dialogueId = builder.dialogueId;
             this.producer = builder.producer;
             this.reasoningText = builder.reasoningText;
@@ -136,6 +278,13 @@ public class ListAIAgentDialoguesResponseBody extends TeaModel {
 
         public static Dialogues create() {
             return builder().build();
+        }
+
+        /**
+         * @return attachedFileList
+         */
+        public java.util.List<AttachedFileList> getAttachedFileList() {
+            return this.attachedFileList;
         }
 
         /**
@@ -195,6 +344,7 @@ public class ListAIAgentDialoguesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List<AttachedFileList> attachedFileList; 
             private String dialogueId; 
             private String producer; 
             private String reasoningText; 
@@ -208,6 +358,7 @@ public class ListAIAgentDialoguesResponseBody extends TeaModel {
             } 
 
             private Builder(Dialogues model) {
+                this.attachedFileList = model.attachedFileList;
                 this.dialogueId = model.dialogueId;
                 this.producer = model.producer;
                 this.reasoningText = model.reasoningText;
@@ -217,6 +368,14 @@ public class ListAIAgentDialoguesResponseBody extends TeaModel {
                 this.time = model.time;
                 this.type = model.type;
             } 
+
+            /**
+             * AttachedFileList.
+             */
+            public Builder attachedFileList(java.util.List<AttachedFileList> attachedFileList) {
+                this.attachedFileList = attachedFileList;
+                return this;
+            }
 
             /**
              * DialogueId.
