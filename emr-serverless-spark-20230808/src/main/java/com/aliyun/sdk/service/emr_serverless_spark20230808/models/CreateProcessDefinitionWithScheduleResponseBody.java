@@ -56,6 +56,10 @@ public class CreateProcessDefinitionWithScheduleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -114,8 +118,24 @@ public class CreateProcessDefinitionWithScheduleResponseBody extends TeaModel {
         private String requestId; 
         private String success; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateProcessDefinitionWithScheduleResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.failed = model.failed;
+            this.httpStatusCode = model.httpStatusCode;
+            this.msg = model.msg;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * code.
+         * <p>The code that is returned by the backend server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1400009</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -123,7 +143,7 @@ public class CreateProcessDefinitionWithScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -131,7 +151,10 @@ public class CreateProcessDefinitionWithScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * failed.
+         * <p>Indicates whether the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder failed(String failed) {
             this.failed = failed;
@@ -139,7 +162,10 @@ public class CreateProcessDefinitionWithScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -147,7 +173,10 @@ public class CreateProcessDefinitionWithScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * msg.
+         * <p>The description of the returned code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>No permission for resource action</p>
          */
         public Builder msg(String msg) {
             this.msg = msg;
@@ -155,7 +184,10 @@ public class CreateProcessDefinitionWithScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -163,7 +195,10 @@ public class CreateProcessDefinitionWithScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -220,8 +255,19 @@ public class CreateProcessDefinitionWithScheduleResponseBody extends TeaModel {
             private Long code; 
             private Integer id; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.code = model.code;
+                this.id = model.id;
+            } 
+
             /**
-             * code.
+             * <p>The workflow ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>160************</p>
              */
             public Builder code(Long code) {
                 this.code = code;
@@ -229,7 +275,10 @@ public class CreateProcessDefinitionWithScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * <p>The serial number of the workflow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12342</p>
              */
             public Builder id(Integer id) {
                 this.id = id;

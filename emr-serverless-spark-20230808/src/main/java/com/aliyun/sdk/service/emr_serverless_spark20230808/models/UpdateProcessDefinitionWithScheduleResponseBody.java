@@ -56,6 +56,10 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -114,8 +118,24 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
         private String requestId; 
         private String success; 
 
+        private Builder() {
+        } 
+
+        private Builder(UpdateProcessDefinitionWithScheduleResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.failed = model.failed;
+            this.httpStatusCode = model.httpStatusCode;
+            this.msg = model.msg;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * code.
+         * <p>The code that is returned by the backend server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1400009</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -123,7 +143,7 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -131,7 +151,10 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * failed.
+         * <p>Indicates whether the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder failed(String failed) {
             this.failed = failed;
@@ -139,7 +162,10 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -147,7 +173,10 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * msg.
+         * <p>The description of the returned code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>No permission for resource action</p>
          */
         public Builder msg(String msg) {
             this.msg = msg;
@@ -155,7 +184,7 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
@@ -166,7 +195,10 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -427,8 +459,36 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
             private Integer version; 
             private String versionHashCode; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.alertEmailAddress = model.alertEmailAddress;
+                this.bizId = model.bizId;
+                this.code = model.code;
+                this.createTime = model.createTime;
+                this.crontab = model.crontab;
+                this.description = model.description;
+                this.endTime = model.endTime;
+                this.executionType = model.executionType;
+                this.id = model.id;
+                this.name = model.name;
+                this.projectName = model.projectName;
+                this.releaseState = model.releaseState;
+                this.startTime = model.startTime;
+                this.timezoneId = model.timezoneId;
+                this.updateTime = model.updateTime;
+                this.userId = model.userId;
+                this.userName = model.userName;
+                this.version = model.version;
+                this.versionHashCode = model.versionHashCode;
+            } 
+
             /**
-             * alertEmailAddress.
+             * <p>The email address to receive alerts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:foo_bar@spark.alert.invalid.com">foo_bar@spark.alert.invalid.com</a></p>
              */
             public Builder alertEmailAddress(String alertEmailAddress) {
                 this.alertEmailAddress = alertEmailAddress;
@@ -436,7 +496,10 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * bizId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alicloud_ack_one_cluster</p>
              */
             public Builder bizId(String bizId) {
                 this.bizId = bizId;
@@ -444,7 +507,10 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * code.
+             * <p>The workflow ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12***********</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -452,7 +518,10 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * createTime.
+             * <p>The time when the workflow was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-09-05T02:03:19Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -460,7 +529,10 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * crontab.
+             * <p>The CRON expression that is used for scheduling.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0 0 0 * * ?</p>
              */
             public Builder crontab(String crontab) {
                 this.crontab = crontab;
@@ -468,7 +540,10 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The node description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -476,7 +551,10 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * endTime.
+             * <p>The end of the end time range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1710432000000</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -484,7 +562,10 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * executionType.
+             * <p>The execution policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SERIAL</p>
              */
             public Builder executionType(String executionType) {
                 this.executionType = executionType;
@@ -492,7 +573,10 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * <p>The serial number of the workflow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123223</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -500,7 +584,10 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The name of the workflow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ods_batch_workflow</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -508,7 +595,10 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * projectName.
+             * <p>The name of the project to which the workflow belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>w-********</p>
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -516,7 +606,10 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * releaseState.
+             * <p>The status of the workflow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ONLINE</p>
              */
             public Builder releaseState(String releaseState) {
                 this.releaseState = releaseState;
@@ -524,7 +617,10 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * startTime.
+             * <p>The start time of the scheduling.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -532,7 +628,10 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * timezoneId.
+             * <p>The ID of the time zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Asia/Shanghai</p>
              */
             public Builder timezoneId(String timezoneId) {
                 this.timezoneId = timezoneId;
@@ -540,7 +639,10 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * updateTime.
+             * <p>The time when the workflow was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-03-05T06:24:27Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -548,7 +650,10 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * userId.
+             * <p>The ID of the user that is used to initiate a scheduling.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>113*********</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -556,7 +661,10 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * userName.
+             * <p>The name of the user that is used to initiate a scheduling.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>w-********</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -564,7 +672,10 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * <p>The version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder version(Integer version) {
                 this.version = version;
@@ -572,7 +683,10 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * versionHashCode.
+             * <p>The hash code of the version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dwerf*********</p>
              */
             public Builder versionHashCode(String versionHashCode) {
                 this.versionHashCode = versionHashCode;

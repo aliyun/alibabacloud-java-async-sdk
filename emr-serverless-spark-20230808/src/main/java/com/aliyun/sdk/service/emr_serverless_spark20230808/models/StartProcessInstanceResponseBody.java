@@ -56,6 +56,10 @@ public class StartProcessInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -114,8 +118,24 @@ public class StartProcessInstanceResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(StartProcessInstanceResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.failed = model.failed;
+            this.httpStatusCode = model.httpStatusCode;
+            this.msg = model.msg;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * code.
+         * <p>The code that is returned by the backend server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1400009</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -123,7 +143,10 @@ public class StartProcessInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The data returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;sessionBizId&quot;: &quot;sc-dc85644dba1c8c63&quot;, &quot;bizId&quot;: &quot;st-aeed3b0d4f87418a9a9dcbd757477658&quot;, &quot;gmtCreated&quot;: &quot;Thu Sep 12 02:28:45 UTC 2024&quot;}</p>
          */
         public Builder data(Object data) {
             this.data = data;
@@ -131,7 +154,10 @@ public class StartProcessInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * failed.
+         * <p>Indicates whether the workflow fails to be run manually.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder failed(Boolean failed) {
             this.failed = failed;
@@ -139,7 +165,10 @@ public class StartProcessInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -147,7 +176,10 @@ public class StartProcessInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * msg.
+         * <p>The description of the returned code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>No permission for resource action</p>
          */
         public Builder msg(String msg) {
             this.msg = msg;
@@ -155,7 +187,7 @@ public class StartProcessInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
@@ -166,7 +198,10 @@ public class StartProcessInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

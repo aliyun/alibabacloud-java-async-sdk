@@ -36,6 +36,10 @@ public class ListLogContentsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return listLogContent
      */
@@ -54,8 +58,16 @@ public class ListLogContentsResponseBody extends TeaModel {
         private ListLogContent listLogContent; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListLogContentsResponseBody model) {
+            this.listLogContent = model.listLogContent;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * listLogContent.
+         * <p>Log content.</p>
          */
         public Builder listLogContent(ListLogContent listLogContent) {
             this.listLogContent = listLogContent;
@@ -63,7 +75,7 @@ public class ListLogContentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求ID。</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
@@ -111,8 +123,18 @@ public class ListLogContentsResponseBody extends TeaModel {
         public static final class Builder {
             private String lineContent; 
 
+            private Builder() {
+            } 
+
+            private Builder(Contents model) {
+                this.lineContent = model.lineContent;
+            } 
+
             /**
-             * LineContent.
+             * <p>Log line content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>spark pi is 3.14\n</p>
              */
             public Builder lineContent(String lineContent) {
                 this.lineContent = lineContent;
@@ -170,8 +192,16 @@ public class ListLogContentsResponseBody extends TeaModel {
             private java.util.List<Contents> contents; 
             private Long totalLength; 
 
+            private Builder() {
+            } 
+
+            private Builder(ListLogContent model) {
+                this.contents = model.contents;
+                this.totalLength = model.totalLength;
+            } 
+
             /**
-             * contents.
+             * <p>List of log line contents.</p>
              */
             public Builder contents(java.util.List<Contents> contents) {
                 this.contents = contents;
@@ -179,7 +209,10 @@ public class ListLogContentsResponseBody extends TeaModel {
             }
 
             /**
-             * totalLength.
+             * <p>Total number of log lines.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalLength(Long totalLength) {
                 this.totalLength = totalLength;

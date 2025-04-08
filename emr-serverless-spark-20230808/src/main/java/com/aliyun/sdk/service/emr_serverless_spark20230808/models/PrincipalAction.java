@@ -36,6 +36,10 @@ public class PrincipalAction extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return actionArn
      */
@@ -53,6 +57,14 @@ public class PrincipalAction extends TeaModel {
     public static final class Builder {
         private String actionArn; 
         private String principalArn; 
+
+        private Builder() {
+        } 
+
+        private Builder(PrincipalAction model) {
+            this.actionArn = model.actionArn;
+            this.principalArn = model.principalArn;
+        } 
 
         /**
          * actionArn.

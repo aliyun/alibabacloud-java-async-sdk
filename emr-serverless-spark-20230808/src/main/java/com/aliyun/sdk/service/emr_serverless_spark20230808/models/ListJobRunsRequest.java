@@ -43,6 +43,10 @@ public class ListJobRunsRequest extends Request {
     private Integer maxResults;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("minDuration")
+    private Long minDuration;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
@@ -78,6 +82,7 @@ public class ListJobRunsRequest extends Request {
         this.jobRunDeploymentId = builder.jobRunDeploymentId;
         this.jobRunId = builder.jobRunId;
         this.maxResults = builder.maxResults;
+        this.minDuration = builder.minDuration;
         this.name = builder.name;
         this.nextToken = builder.nextToken;
         this.regionId = builder.regionId;
@@ -95,7 +100,7 @@ public class ListJobRunsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -140,6 +145,13 @@ public class ListJobRunsRequest extends Request {
      */
     public Integer getMaxResults() {
         return this.maxResults;
+    }
+
+    /**
+     * @return minDuration
+     */
+    public Long getMinDuration() {
+        return this.minDuration;
     }
 
     /**
@@ -198,6 +210,7 @@ public class ListJobRunsRequest extends Request {
         private String jobRunDeploymentId; 
         private String jobRunId; 
         private Integer maxResults; 
+        private Long minDuration; 
         private String name; 
         private String nextToken; 
         private String regionId; 
@@ -218,6 +231,7 @@ public class ListJobRunsRequest extends Request {
             this.jobRunDeploymentId = request.jobRunDeploymentId;
             this.jobRunId = request.jobRunId;
             this.maxResults = request.maxResults;
+            this.minDuration = request.minDuration;
             this.name = request.name;
             this.nextToken = request.nextToken;
             this.regionId = request.regionId;
@@ -292,6 +306,15 @@ public class ListJobRunsRequest extends Request {
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
             this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * minDuration.
+         */
+        public Builder minDuration(Long minDuration) {
+            this.putQueryParameter("minDuration", minDuration);
+            this.minDuration = minDuration;
             return this;
         }
 
@@ -427,6 +450,14 @@ public class ListJobRunsRequest extends Request {
             private Long endTime; 
             private Long startTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(EndTime model) {
+                this.endTime = model.endTime;
+                this.startTime = model.startTime;
+            } 
+
             /**
              * <p>The end of the end time range.</p>
              * 
@@ -500,6 +531,14 @@ public class ListJobRunsRequest extends Request {
             private Long endTime; 
             private Long startTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(StartTime model) {
+                this.endTime = model.endTime;
+                this.startTime = model.startTime;
+            } 
+
             /**
              * <p>The end of the start time range.</p>
              * 
@@ -572,6 +611,14 @@ public class ListJobRunsRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of tag N.</p>

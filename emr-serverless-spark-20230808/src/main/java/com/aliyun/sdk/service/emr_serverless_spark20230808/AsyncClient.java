@@ -38,10 +38,34 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateProcessDefinitionWithScheduleResponse> createProcessDefinitionWithSchedule(CreateProcessDefinitionWithScheduleRequest request);
 
     /**
+     * @param request the request parameters of CreateSessionCluster  CreateSessionClusterRequest
+     * @return CreateSessionClusterResponse
+     */
+    CompletableFuture<CreateSessionClusterResponse> createSessionCluster(CreateSessionClusterRequest request);
+
+    /**
      * @param request the request parameters of CreateSqlStatement  CreateSqlStatementRequest
      * @return CreateSqlStatementResponse
      */
     CompletableFuture<CreateSqlStatementResponse> createSqlStatement(CreateSqlStatementRequest request);
+
+    /**
+     * @param request the request parameters of CreateWorkspace  CreateWorkspaceRequest
+     * @return CreateWorkspaceResponse
+     */
+    CompletableFuture<CreateWorkspaceResponse> createWorkspace(CreateWorkspaceRequest request);
+
+    /**
+     * @param request the request parameters of GetCuHours  GetCuHoursRequest
+     * @return GetCuHoursResponse
+     */
+    CompletableFuture<GetCuHoursResponse> getCuHours(GetCuHoursRequest request);
+
+    /**
+     * @param request the request parameters of GetDoctorApplication  GetDoctorApplicationRequest
+     * @return GetDoctorApplicationResponse
+     */
+    CompletableFuture<GetDoctorApplicationResponse> getDoctorApplication(GetDoctorApplicationRequest request);
 
     /**
      * @param request the request parameters of GetJobRun  GetJobRunRequest
@@ -78,6 +102,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListJobRunsResponse
      */
     CompletableFuture<ListJobRunsResponse> listJobRuns(ListJobRunsRequest request);
+
+    /**
+     * @param request the request parameters of ListKyuubiSparkApplications  ListKyuubiSparkApplicationsRequest
+     * @return ListKyuubiSparkApplicationsResponse
+     */
+    CompletableFuture<ListKyuubiSparkApplicationsResponse> listKyuubiSparkApplications(ListKyuubiSparkApplicationsRequest request);
 
     /**
      * @param request the request parameters of ListLogContents  ListLogContentsRequest

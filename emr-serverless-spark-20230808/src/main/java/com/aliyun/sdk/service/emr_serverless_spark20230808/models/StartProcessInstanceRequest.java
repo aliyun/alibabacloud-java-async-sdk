@@ -23,6 +23,22 @@ public class StartProcessInstanceRequest extends Request {
     private String bizId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("action")
+    private String action;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("comments")
+    private String comments;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("email")
+    private String email;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("interval")
+    private String interval;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("isProd")
     private Boolean isProd;
 
@@ -55,6 +71,10 @@ public class StartProcessInstanceRequest extends Request {
     private StartProcessInstanceRequest(Builder builder) {
         super(builder);
         this.bizId = builder.bizId;
+        this.action = builder.action;
+        this.comments = builder.comments;
+        this.email = builder.email;
+        this.interval = builder.interval;
         this.isProd = builder.isProd;
         this.processDefinitionCode = builder.processDefinitionCode;
         this.productNamespace = builder.productNamespace;
@@ -72,7 +92,7 @@ public class StartProcessInstanceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -82,6 +102,34 @@ public class StartProcessInstanceRequest extends Request {
      */
     public String getBizId() {
         return this.bizId;
+    }
+
+    /**
+     * @return action
+     */
+    public String getAction() {
+        return this.action;
+    }
+
+    /**
+     * @return comments
+     */
+    public String getComments() {
+        return this.comments;
+    }
+
+    /**
+     * @return email
+     */
+    public String getEmail() {
+        return this.email;
+    }
+
+    /**
+     * @return interval
+     */
+    public String getInterval() {
+        return this.interval;
     }
 
     /**
@@ -135,6 +183,10 @@ public class StartProcessInstanceRequest extends Request {
 
     public static final class Builder extends Request.Builder<StartProcessInstanceRequest, Builder> {
         private String bizId; 
+        private String action; 
+        private String comments; 
+        private String email; 
+        private String interval; 
         private Boolean isProd; 
         private Long processDefinitionCode; 
         private String productNamespace; 
@@ -150,6 +202,10 @@ public class StartProcessInstanceRequest extends Request {
         private Builder(StartProcessInstanceRequest request) {
             super(request);
             this.bizId = request.bizId;
+            this.action = request.action;
+            this.comments = request.comments;
+            this.email = request.email;
+            this.interval = request.interval;
             this.isProd = request.isProd;
             this.processDefinitionCode = request.processDefinitionCode;
             this.productNamespace = request.productNamespace;
@@ -160,6 +216,7 @@ public class StartProcessInstanceRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -172,7 +229,46 @@ public class StartProcessInstanceRequest extends Request {
         }
 
         /**
-         * isProd.
+         * action.
+         */
+        public Builder action(String action) {
+            this.putQueryParameter("action", action);
+            this.action = action;
+            return this;
+        }
+
+        /**
+         * comments.
+         */
+        public Builder comments(String comments) {
+            this.putQueryParameter("comments", comments);
+            this.comments = comments;
+            return this;
+        }
+
+        /**
+         * email.
+         */
+        public Builder email(String email) {
+            this.putQueryParameter("email", email);
+            this.email = email;
+            return this;
+        }
+
+        /**
+         * interval.
+         */
+        public Builder interval(String interval) {
+            this.putQueryParameter("interval", interval);
+            this.interval = interval;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to run the workflow in the production environment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isProd(Boolean isProd) {
             this.putQueryParameter("isProd", isProd);
@@ -181,6 +277,7 @@ public class StartProcessInstanceRequest extends Request {
         }
 
         /**
+         * <p>The workflow ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -193,6 +290,7 @@ public class StartProcessInstanceRequest extends Request {
         }
 
         /**
+         * <p>The code of the service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -205,7 +303,10 @@ public class StartProcessInstanceRequest extends Request {
         }
 
         /**
-         * regionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("regionId", regionId);
@@ -214,7 +315,10 @@ public class StartProcessInstanceRequest extends Request {
         }
 
         /**
-         * runtimeQueue.
+         * <p>The queue on which the workflow runs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root_queue</p>
          */
         public Builder runtimeQueue(String runtimeQueue) {
             this.putQueryParameter("runtimeQueue", runtimeQueue);
@@ -223,7 +327,10 @@ public class StartProcessInstanceRequest extends Request {
         }
 
         /**
-         * versionHashCode.
+         * <p>The hash code of the version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dh*********</p>
          */
         public Builder versionHashCode(String versionHashCode) {
             this.putQueryParameter("versionHashCode", versionHashCode);
@@ -232,7 +339,10 @@ public class StartProcessInstanceRequest extends Request {
         }
 
         /**
-         * versionNumber.
+         * <p>The version number of the workflow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder versionNumber(Integer versionNumber) {
             this.putQueryParameter("versionNumber", versionNumber);

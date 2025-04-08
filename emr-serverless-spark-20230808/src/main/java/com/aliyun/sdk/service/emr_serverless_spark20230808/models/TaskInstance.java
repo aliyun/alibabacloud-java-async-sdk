@@ -60,6 +60,10 @@ public class TaskInstance extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bizId
      */
@@ -125,6 +129,20 @@ public class TaskInstance extends TeaModel {
         private Task taskInfo; 
         private String taskStatus; 
         private String workspaceBizId; 
+
+        private Builder() {
+        } 
+
+        private Builder(TaskInstance model) {
+            this.bizId = model.bizId;
+            this.creator = model.creator;
+            this.fenixRunId = model.fenixRunId;
+            this.gmtCreated = model.gmtCreated;
+            this.taskBizId = model.taskBizId;
+            this.taskInfo = model.taskInfo;
+            this.taskStatus = model.taskStatus;
+            this.workspaceBizId = model.workspaceBizId;
+        } 
 
         /**
          * bizId.

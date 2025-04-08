@@ -36,6 +36,10 @@ public class GetJobRunResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return jobRun
      */
@@ -53,6 +57,14 @@ public class GetJobRunResponseBody extends TeaModel {
     public static final class Builder {
         private JobRun jobRun; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetJobRunResponseBody model) {
+            this.jobRun = model.jobRun;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of the job.</p>
@@ -110,6 +122,13 @@ public class GetJobRunResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Configuration> configurations; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConfigurationOverrides model) {
+                this.configurations = model.configurations;
+            } 
 
             /**
              * <p>The configurations.</p>
@@ -169,6 +188,14 @@ public class GetJobRunResponseBody extends TeaModel {
         public static final class Builder {
             private String code; 
             private String message; 
+
+            private Builder() {
+            } 
+
+            private Builder(StateChangeReason model) {
+                this.code = model.code;
+                this.message = model.message;
+            } 
 
             /**
              * <p>The error code.</p>
@@ -458,6 +485,32 @@ public class GetJobRunResponseBody extends TeaModel {
             private java.util.List<Tag> tags; 
             private String webUI; 
             private String workspaceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(JobRun model) {
+                this.codeType = model.codeType;
+                this.configurationOverrides = model.configurationOverrides;
+                this.displayReleaseVersion = model.displayReleaseVersion;
+                this.endTime = model.endTime;
+                this.environmentId = model.environmentId;
+                this.executionTimeoutSeconds = model.executionTimeoutSeconds;
+                this.fusion = model.fusion;
+                this.jobDriver = model.jobDriver;
+                this.jobRunId = model.jobRunId;
+                this.log = model.log;
+                this.name = model.name;
+                this.releaseVersion = model.releaseVersion;
+                this.resourceOwnerId = model.resourceOwnerId;
+                this.resourceQueueId = model.resourceQueueId;
+                this.state = model.state;
+                this.stateChangeReason = model.stateChangeReason;
+                this.submitTime = model.submitTime;
+                this.tags = model.tags;
+                this.webUI = model.webUI;
+                this.workspaceId = model.workspaceId;
+            } 
 
             /**
              * <p>The code type of the job. Valid values:</p>

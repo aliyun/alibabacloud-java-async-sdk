@@ -48,6 +48,10 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -89,6 +93,17 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         private java.util.List<Queues> queues; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListWorkspaceQueuesResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.queues = model.queues;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The maximum number of entries returned.</p>
@@ -228,6 +243,17 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             private String description; 
             private String displayName; 
 
+            private Builder() {
+            } 
+
+            private Builder(AllowActions model) {
+                this.actionArn = model.actionArn;
+                this.actionName = model.actionName;
+                this.dependencies = model.dependencies;
+                this.description = model.description;
+                this.displayName = model.displayName;
+            } 
+
             /**
              * <p>The Alibaba Cloud Resource Name (ARN) of a behavior.</p>
              * 
@@ -300,6 +326,9 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("allowActions")
         private java.util.List<AllowActions> allowActions;
 
+        @com.aliyun.core.annotation.NameInMap("createTime")
+        private Long createTime;
+
         @com.aliyun.core.annotation.NameInMap("creator")
         private String creator;
 
@@ -311,6 +340,9 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("minResource")
         private String minResource;
+
+        @com.aliyun.core.annotation.NameInMap("paymentType")
+        private String paymentType;
 
         @com.aliyun.core.annotation.NameInMap("properties")
         private String properties;
@@ -338,10 +370,12 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
 
         private Queues(Builder builder) {
             this.allowActions = builder.allowActions;
+            this.createTime = builder.createTime;
             this.creator = builder.creator;
             this.environments = builder.environments;
             this.maxResource = builder.maxResource;
             this.minResource = builder.minResource;
+            this.paymentType = builder.paymentType;
             this.properties = builder.properties;
             this.queueName = builder.queueName;
             this.queueScope = builder.queueScope;
@@ -365,6 +399,13 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
          */
         public java.util.List<AllowActions> getAllowActions() {
             return this.allowActions;
+        }
+
+        /**
+         * @return createTime
+         */
+        public Long getCreateTime() {
+            return this.createTime;
         }
 
         /**
@@ -393,6 +434,13 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
          */
         public String getMinResource() {
             return this.minResource;
+        }
+
+        /**
+         * @return paymentType
+         */
+        public String getPaymentType() {
+            return this.paymentType;
         }
 
         /**
@@ -453,10 +501,12 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<AllowActions> allowActions; 
+            private Long createTime; 
             private String creator; 
             private java.util.List<String> environments; 
             private String maxResource; 
             private String minResource; 
+            private String paymentType; 
             private String properties; 
             private String queueName; 
             private String queueScope; 
@@ -466,11 +516,40 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             private String usedResource; 
             private String workspaceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Queues model) {
+                this.allowActions = model.allowActions;
+                this.createTime = model.createTime;
+                this.creator = model.creator;
+                this.environments = model.environments;
+                this.maxResource = model.maxResource;
+                this.minResource = model.minResource;
+                this.paymentType = model.paymentType;
+                this.properties = model.properties;
+                this.queueName = model.queueName;
+                this.queueScope = model.queueScope;
+                this.queueStatus = model.queueStatus;
+                this.queueType = model.queueType;
+                this.regionId = model.regionId;
+                this.usedResource = model.usedResource;
+                this.workspaceId = model.workspaceId;
+            } 
+
             /**
              * <p>The operations allowed for the queue.</p>
              */
             public Builder allowActions(java.util.List<AllowActions> allowActions) {
                 this.allowActions = allowActions;
+                return this;
+            }
+
+            /**
+             * createTime.
+             */
+            public Builder createTime(Long createTime) {
+                this.createTime = createTime;
                 return this;
             }
 
@@ -512,6 +591,14 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
              */
             public Builder minResource(String minResource) {
                 this.minResource = minResource;
+                return this;
+            }
+
+            /**
+             * paymentType.
+             */
+            public Builder paymentType(String paymentType) {
+                this.paymentType = paymentType;
                 return this;
             }
 

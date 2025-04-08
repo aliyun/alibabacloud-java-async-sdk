@@ -56,6 +56,10 @@ public class TaskSnapshot extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bizId
      */
@@ -113,6 +117,19 @@ public class TaskSnapshot extends TeaModel {
         private String message; 
         private String taskBizId; 
         private String version; 
+
+        private Builder() {
+        } 
+
+        private Builder(TaskSnapshot model) {
+            this.bizId = model.bizId;
+            this.commiter = model.commiter;
+            this.gmtCreated = model.gmtCreated;
+            this.item = model.item;
+            this.message = model.message;
+            this.taskBizId = model.taskBizId;
+            this.version = model.version;
+        } 
 
         /**
          * bizId.

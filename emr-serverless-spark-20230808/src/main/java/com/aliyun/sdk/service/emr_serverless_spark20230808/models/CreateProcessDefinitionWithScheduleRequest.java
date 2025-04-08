@@ -37,6 +37,10 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
     private String executionType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("globalParams")
+    private java.util.List<GlobalParams> globalParams;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("name")
     @com.aliyun.core.annotation.Validation(required = true)
     private String name;
@@ -98,6 +102,7 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
         this.alertEmailAddress = builder.alertEmailAddress;
         this.description = builder.description;
         this.executionType = builder.executionType;
+        this.globalParams = builder.globalParams;
         this.name = builder.name;
         this.productNamespace = builder.productNamespace;
         this.publish = builder.publish;
@@ -121,7 +126,7 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -152,6 +157,13 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
      */
     public String getExecutionType() {
         return this.executionType;
+    }
+
+    /**
+     * @return globalParams
+     */
+    public java.util.List<GlobalParams> getGlobalParams() {
+        return this.globalParams;
     }
 
     /**
@@ -250,6 +262,7 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
         private String alertEmailAddress; 
         private String description; 
         private String executionType; 
+        private java.util.List<GlobalParams> globalParams; 
         private String name; 
         private String productNamespace; 
         private Boolean publish; 
@@ -274,6 +287,7 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
             this.alertEmailAddress = request.alertEmailAddress;
             this.description = request.description;
             this.executionType = request.executionType;
+            this.globalParams = request.globalParams;
             this.name = request.name;
             this.productNamespace = request.productNamespace;
             this.publish = request.publish;
@@ -290,6 +304,7 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -302,7 +317,10 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
         }
 
         /**
-         * alertEmailAddress.
+         * <p>The email address to receive alerts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:foo_bar@spark.alert.invalid.com">foo_bar@spark.alert.invalid.com</a></p>
          */
         public Builder alertEmailAddress(String alertEmailAddress) {
             this.putQueryParameter("alertEmailAddress", alertEmailAddress);
@@ -311,6 +329,7 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
         }
 
         /**
+         * <p>The description of the workflow.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -323,6 +342,7 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
         }
 
         /**
+         * <p>The execution policy</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -335,6 +355,17 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
         }
 
         /**
+         * globalParams.
+         */
+        public Builder globalParams(java.util.List<GlobalParams> globalParams) {
+            String globalParamsShrink = shrink(globalParams, "globalParams", "json");
+            this.putQueryParameter("globalParams", globalParamsShrink);
+            this.globalParams = globalParams;
+            return this;
+        }
+
+        /**
+         * <p>The name of the workflow.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -347,6 +378,7 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
         }
 
         /**
+         * <p>The code of the service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -359,7 +391,10 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
         }
 
         /**
-         * publish.
+         * <p>Specifies whether to publish the workflow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder publish(Boolean publish) {
             this.putQueryParameter("publish", publish);
@@ -368,7 +403,10 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
         }
 
         /**
-         * regionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("regionId", regionId);
@@ -377,7 +415,10 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
         }
 
         /**
-         * resourceQueue.
+         * <p>The resource queue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root_queue</p>
          */
         public Builder resourceQueue(String resourceQueue) {
             this.putQueryParameter("resourceQueue", resourceQueue);
@@ -386,7 +427,10 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
         }
 
         /**
-         * retryTimes.
+         * <p>The number of retries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder retryTimes(Integer retryTimes) {
             this.putQueryParameter("retryTimes", retryTimes);
@@ -395,7 +439,10 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
         }
 
         /**
-         * runAs.
+         * <p>The ID of the Alibaba Cloud account used by the user who creates the workflow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>113***************</p>
          */
         public Builder runAs(String runAs) {
             this.putQueryParameter("runAs", runAs);
@@ -404,7 +451,7 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
         }
 
         /**
-         * schedule.
+         * <p>The scheduling settings.</p>
          */
         public Builder schedule(Schedule schedule) {
             String scheduleShrink = shrink(schedule, "schedule", "json");
@@ -414,7 +461,7 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
         }
 
         /**
-         * tags.
+         * <p>The tags.</p>
          */
         public Builder tags(java.util.Map<String, String> tags) {
             String tagsShrink = shrink(tags, "tags", "json");
@@ -424,6 +471,7 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
         }
 
         /**
+         * <p>The descriptions of all nodes in the workflow.</p>
          * <p>This parameter is required.</p>
          */
         public Builder taskDefinitionJson(java.util.List<TaskDefinitionJson> taskDefinitionJson) {
@@ -434,7 +482,10 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
         }
 
         /**
-         * taskParallelism.
+         * <p>The node parallelism.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder taskParallelism(Integer taskParallelism) {
             this.putQueryParameter("taskParallelism", taskParallelism);
@@ -443,6 +494,7 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
         }
 
         /**
+         * <p>The dependencies of all nodes in the workflow. preTaskCode specifies the ID of an upstream node, and postTaskCode specifies the ID of a downstream node. The ID of each node is unique. If a node does not have an upstream node, set preTaskCode to 0.</p>
          * <p>This parameter is required.</p>
          */
         public Builder taskRelationJson(java.util.List<TaskRelationJson> taskRelationJson) {
@@ -453,7 +505,10 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
         }
 
         /**
-         * timeout.
+         * <p>The default timeout period of the workflow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder timeout(Integer timeout) {
             this.putQueryParameter("timeout", timeout);
@@ -468,6 +523,123 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateProcessDefinitionWithScheduleRequest} extends {@link TeaModel}
+     *
+     * <p>CreateProcessDefinitionWithScheduleRequest</p>
+     */
+    public static class GlobalParams extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("direct")
+        private String direct;
+
+        @com.aliyun.core.annotation.NameInMap("prop")
+        private String prop;
+
+        @com.aliyun.core.annotation.NameInMap("type")
+        private String type;
+
+        @com.aliyun.core.annotation.NameInMap("value")
+        private String value;
+
+        private GlobalParams(Builder builder) {
+            this.direct = builder.direct;
+            this.prop = builder.prop;
+            this.type = builder.type;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static GlobalParams create() {
+            return builder().build();
+        }
+
+        /**
+         * @return direct
+         */
+        public String getDirect() {
+            return this.direct;
+        }
+
+        /**
+         * @return prop
+         */
+        public String getProp() {
+            return this.prop;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String direct; 
+            private String prop; 
+            private String type; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(GlobalParams model) {
+                this.direct = model.direct;
+                this.prop = model.prop;
+                this.type = model.type;
+                this.value = model.value;
+            } 
+
+            /**
+             * direct.
+             */
+            public Builder direct(String direct) {
+                this.direct = direct;
+                return this;
+            }
+
+            /**
+             * prop.
+             */
+            public Builder prop(String prop) {
+                this.prop = prop;
+                return this;
+            }
+
+            /**
+             * type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            /**
+             * value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public GlobalParams build() {
+                return new GlobalParams(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link CreateProcessDefinitionWithScheduleRequest} extends {@link TeaModel}
@@ -536,8 +708,21 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
             private String startTime; 
             private String timezoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Schedule model) {
+                this.crontab = model.crontab;
+                this.endTime = model.endTime;
+                this.startTime = model.startTime;
+                this.timezoneId = model.timezoneId;
+            } 
+
             /**
-             * crontab.
+             * <p>The CRON expression that is used for scheduling.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0 0 0 * * ?</p>
              */
             public Builder crontab(String crontab) {
                 this.crontab = crontab;
@@ -545,7 +730,10 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
-             * endTime.
+             * <p>The end time of the scheduling.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-12-23 16:13:27</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -553,7 +741,10 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
-             * startTime.
+             * <p>The start time of the scheduling.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-12-23 16:13:27</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -561,7 +752,10 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
-             * timezoneId.
+             * <p>The ID of the time zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Asia/Shanghai</p>
              */
             public Builder timezoneId(String timezoneId) {
                 this.timezoneId = timezoneId;
@@ -570,6 +764,123 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
 
             public Schedule build() {
                 return new Schedule(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateProcessDefinitionWithScheduleRequest} extends {@link TeaModel}
+     *
+     * <p>CreateProcessDefinitionWithScheduleRequest</p>
+     */
+    public static class LocalParams extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("direct")
+        private String direct;
+
+        @com.aliyun.core.annotation.NameInMap("prop")
+        private String prop;
+
+        @com.aliyun.core.annotation.NameInMap("type")
+        private String type;
+
+        @com.aliyun.core.annotation.NameInMap("value")
+        private String value;
+
+        private LocalParams(Builder builder) {
+            this.direct = builder.direct;
+            this.prop = builder.prop;
+            this.type = builder.type;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static LocalParams create() {
+            return builder().build();
+        }
+
+        /**
+         * @return direct
+         */
+        public String getDirect() {
+            return this.direct;
+        }
+
+        /**
+         * @return prop
+         */
+        public String getProp() {
+            return this.prop;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String direct; 
+            private String prop; 
+            private String type; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(LocalParams model) {
+                this.direct = model.direct;
+                this.prop = model.prop;
+                this.type = model.type;
+                this.value = model.value;
+            } 
+
+            /**
+             * direct.
+             */
+            public Builder direct(String direct) {
+                this.direct = direct;
+                return this;
+            }
+
+            /**
+             * prop.
+             */
+            public Builder prop(String prop) {
+                this.prop = prop;
+                return this;
+            }
+
+            /**
+             * type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            /**
+             * value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public LocalParams build() {
+                return new LocalParams(this);
             } 
 
         } 
@@ -619,8 +930,19 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(SparkConf model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * key.
+             * <p>The key of the SparkConf object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>spark.dynamicAllocation.enabled</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -628,7 +950,10 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
-             * value.
+             * <p>The value of the SparkConf object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -657,6 +982,9 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
 
         @com.aliyun.core.annotation.NameInMap("fusion")
         private Boolean fusion;
+
+        @com.aliyun.core.annotation.NameInMap("localParams")
+        private java.util.List<LocalParams> localParams;
 
         @com.aliyun.core.annotation.NameInMap("resourceQueueId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -701,6 +1029,7 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
             this.displaySparkVersion = builder.displaySparkVersion;
             this.environmentId = builder.environmentId;
             this.fusion = builder.fusion;
+            this.localParams = builder.localParams;
             this.resourceQueueId = builder.resourceQueueId;
             this.sparkConf = builder.sparkConf;
             this.sparkDriverCores = builder.sparkDriverCores;
@@ -742,6 +1071,13 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
          */
         public Boolean getFusion() {
             return this.fusion;
+        }
+
+        /**
+         * @return localParams
+         */
+        public java.util.List<LocalParams> getLocalParams() {
+            return this.localParams;
         }
 
         /**
@@ -832,6 +1168,7 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
             private String displaySparkVersion; 
             private String environmentId; 
             private Boolean fusion; 
+            private java.util.List<LocalParams> localParams; 
             private String resourceQueueId; 
             private java.util.List<SparkConf> sparkConf; 
             private Integer sparkDriverCores; 
@@ -845,8 +1182,33 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
             private String type; 
             private String workspaceBizId; 
 
+            private Builder() {
+            } 
+
+            private Builder(TaskParams model) {
+                this.displaySparkVersion = model.displaySparkVersion;
+                this.environmentId = model.environmentId;
+                this.fusion = model.fusion;
+                this.localParams = model.localParams;
+                this.resourceQueueId = model.resourceQueueId;
+                this.sparkConf = model.sparkConf;
+                this.sparkDriverCores = model.sparkDriverCores;
+                this.sparkDriverMemory = model.sparkDriverMemory;
+                this.sparkExecutorCores = model.sparkExecutorCores;
+                this.sparkExecutorMemory = model.sparkExecutorMemory;
+                this.sparkLogLevel = model.sparkLogLevel;
+                this.sparkLogPath = model.sparkLogPath;
+                this.sparkVersion = model.sparkVersion;
+                this.taskBizId = model.taskBizId;
+                this.type = model.type;
+                this.workspaceBizId = model.workspaceBizId;
+            } 
+
             /**
-             * displaySparkVersion.
+             * <p>The displayed version of the Spark engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>esr-4.0.0 (Spark 3.5.2, Scala 2.12)</p>
              */
             public Builder displaySparkVersion(String displaySparkVersion) {
                 this.displaySparkVersion = displaySparkVersion;
@@ -854,7 +1216,10 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
-             * environmentId.
+             * <p>The environment ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env-crhq2h5lhtgju93buhkg</p>
              */
             public Builder environmentId(String environmentId) {
                 this.environmentId = environmentId;
@@ -862,7 +1227,10 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
-             * fusion.
+             * <p>Specifies whether to enable Fusion engine for acceleration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder fusion(Boolean fusion) {
                 this.fusion = fusion;
@@ -870,6 +1238,15 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
+             * localParams.
+             */
+            public Builder localParams(java.util.List<LocalParams> localParams) {
+                this.localParams = localParams;
+                return this;
+            }
+
+            /**
+             * <p>The name of the resource queue on which the job runs.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -881,7 +1258,7 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
-             * sparkConf.
+             * <p>The configurations of the Spark job.</p>
              */
             public Builder sparkConf(java.util.List<SparkConf> sparkConf) {
                 this.sparkConf = sparkConf;
@@ -889,7 +1266,10 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
-             * sparkDriverCores.
+             * <p>The number of driver cores of the Spark job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sparkDriverCores(Integer sparkDriverCores) {
                 this.sparkDriverCores = sparkDriverCores;
@@ -897,7 +1277,10 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
-             * sparkDriverMemory.
+             * <p>The size of driver memory of the Spark job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4g</p>
              */
             public Builder sparkDriverMemory(Long sparkDriverMemory) {
                 this.sparkDriverMemory = sparkDriverMemory;
@@ -905,7 +1288,10 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
-             * sparkExecutorCores.
+             * <p>The number of executor cores of the Spark job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sparkExecutorCores(Integer sparkExecutorCores) {
                 this.sparkExecutorCores = sparkExecutorCores;
@@ -913,7 +1299,10 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
-             * sparkExecutorMemory.
+             * <p>The size of executor memory of the Spark job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4g</p>
              */
             public Builder sparkExecutorMemory(Long sparkExecutorMemory) {
                 this.sparkExecutorMemory = sparkExecutorMemory;
@@ -921,7 +1310,10 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
-             * sparkLogLevel.
+             * <p>The level of the Spark log.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>INFO</p>
              */
             public Builder sparkLogLevel(String sparkLogLevel) {
                 this.sparkLogLevel = sparkLogLevel;
@@ -929,7 +1321,7 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
-             * sparkLogPath.
+             * <p>The path where the operational logs of the Spark job are stored.</p>
              */
             public Builder sparkLogPath(String sparkLogPath) {
                 this.sparkLogPath = sparkLogPath;
@@ -937,7 +1329,10 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
-             * sparkVersion.
+             * <p>The version of the Spark engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>esr-4.0.0 (Spark 3.5.2, Scala 2.12)</p>
              */
             public Builder sparkVersion(String sparkVersion) {
                 this.sparkVersion = sparkVersion;
@@ -945,6 +1340,7 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
+             * <p>The ID of the data development job.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -956,7 +1352,10 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
-             * type.
+             * <p>The type of the Spark job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VPC</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -964,6 +1363,7 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
+             * <p>The workspace ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1137,8 +1537,28 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
             private String taskType; 
             private Integer timeout; 
 
+            private Builder() {
+            } 
+
+            private Builder(TaskDefinitionJson model) {
+                this.alertEmailAddress = model.alertEmailAddress;
+                this.code = model.code;
+                this.description = model.description;
+                this.failAlertEnable = model.failAlertEnable;
+                this.failRetryTimes = model.failRetryTimes;
+                this.name = model.name;
+                this.startAlertEnable = model.startAlertEnable;
+                this.tags = model.tags;
+                this.taskParams = model.taskParams;
+                this.taskType = model.taskType;
+                this.timeout = model.timeout;
+            } 
+
             /**
-             * alertEmailAddress.
+             * <p>The email address to receive alerts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:foo_bar@spark.alert.invalid.com">foo_bar@spark.alert.invalid.com</a></p>
              */
             public Builder alertEmailAddress(String alertEmailAddress) {
                 this.alertEmailAddress = alertEmailAddress;
@@ -1146,6 +1566,7 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
+             * <p>The node ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1157,10 +1578,10 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
-             * <p>This parameter is required.</p>
+             * <p>The node description.</p>
              * 
              * <strong>example:</strong>
-             * <p>ods batch workflow</p>
+             * <p>ods transform task</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1168,7 +1589,10 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
-             * failAlertEnable.
+             * <p>Specifies whether to send alerts when the node fails.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder failAlertEnable(Boolean failAlertEnable) {
                 this.failAlertEnable = failAlertEnable;
@@ -1176,7 +1600,10 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
-             * failRetryTimes.
+             * <p>The number of retries when the node fails.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder failRetryTimes(Integer failRetryTimes) {
                 this.failRetryTimes = failRetryTimes;
@@ -1184,6 +1611,7 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
+             * <p>The name of the node.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1195,7 +1623,10 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
-             * startAlertEnable.
+             * <p>Specifies whether to send alerts when the node is started.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder startAlertEnable(Boolean startAlertEnable) {
                 this.startAlertEnable = startAlertEnable;
@@ -1203,7 +1634,7 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
-             * tags.
+             * <p>The tags.</p>
              */
             public Builder tags(java.util.Map<String, String> tags) {
                 this.tags = tags;
@@ -1211,6 +1642,7 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
+             * <p>The job parameters.</p>
              * <p>This parameter is required.</p>
              */
             public Builder taskParams(TaskParams taskParams) {
@@ -1219,6 +1651,7 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
+             * <p>The type of the node.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1230,7 +1663,10 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
-             * timeout.
+             * <p>The timeout period of the callback. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1200</p>
              */
             public Builder timeout(Integer timeout) {
                 this.timeout = timeout;
@@ -1329,7 +1765,19 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
             private Long preTaskCode; 
             private Integer preTaskVersion; 
 
+            private Builder() {
+            } 
+
+            private Builder(TaskRelationJson model) {
+                this.name = model.name;
+                this.postTaskCode = model.postTaskCode;
+                this.postTaskVersion = model.postTaskVersion;
+                this.preTaskCode = model.preTaskCode;
+                this.preTaskVersion = model.preTaskVersion;
+            } 
+
             /**
+             * <p>The name of the node topology. You can enter a workflow name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1341,6 +1789,7 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
+             * <p>The ID of the downstream node.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1352,6 +1801,7 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
+             * <p>The version of the downstream node.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1363,6 +1813,7 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
+             * <p>The ID of the upstream node.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1374,6 +1825,7 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
+             * <p>The version of the upstream node.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

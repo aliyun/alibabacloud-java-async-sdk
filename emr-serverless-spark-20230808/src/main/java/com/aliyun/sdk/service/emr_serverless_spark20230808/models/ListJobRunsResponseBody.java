@@ -48,6 +48,10 @@ public class ListJobRunsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return jobRuns
      */
@@ -90,6 +94,17 @@ public class ListJobRunsResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListJobRunsResponseBody model) {
+            this.jobRuns = model.jobRuns;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
          * <p>The Spark jobs.</p>
          */
@@ -110,7 +125,7 @@ public class ListJobRunsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * <p>A pagination token.</p>
          * 
          * <strong>example:</strong>
          * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
@@ -180,6 +195,13 @@ public class ListJobRunsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Configuration> configurations; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConfigurationOverrides model) {
+                this.configurations = model.configurations;
+            } 
+
             /**
              * <p>The SparkConf objects.</p>
              */
@@ -239,6 +261,14 @@ public class ListJobRunsResponseBody extends TeaModel {
             private String code; 
             private String message; 
 
+            private Builder() {
+            } 
+
+            private Builder(StateChangeReason model) {
+                this.code = model.code;
+                this.message = model.message;
+            } 
+
             /**
              * <p>The error code.</p>
              * 
@@ -285,7 +315,7 @@ public class ListJobRunsResponseBody extends TeaModel {
         private String creator;
 
         @com.aliyun.core.annotation.NameInMap("cuHours")
-        private Long cuHours;
+        private Double cuHours;
 
         @com.aliyun.core.annotation.NameInMap("displayReleaseVersion")
         private String displayReleaseVersion;
@@ -394,7 +424,7 @@ public class ListJobRunsResponseBody extends TeaModel {
         /**
          * @return cuHours
          */
-        public Long getCuHours() {
+        public Double getCuHours() {
             return this.cuHours;
         }
 
@@ -521,7 +551,7 @@ public class ListJobRunsResponseBody extends TeaModel {
             private String codeType; 
             private ConfigurationOverrides configurationOverrides; 
             private String creator; 
-            private Long cuHours; 
+            private Double cuHours; 
             private String displayReleaseVersion; 
             private Long endTime; 
             private Integer executionTimeoutSeconds; 
@@ -539,6 +569,33 @@ public class ListJobRunsResponseBody extends TeaModel {
             private Long vcoreSeconds; 
             private String webUI; 
             private String workspaceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(JobRuns model) {
+                this.codeType = model.codeType;
+                this.configurationOverrides = model.configurationOverrides;
+                this.creator = model.creator;
+                this.cuHours = model.cuHours;
+                this.displayReleaseVersion = model.displayReleaseVersion;
+                this.endTime = model.endTime;
+                this.executionTimeoutSeconds = model.executionTimeoutSeconds;
+                this.fusion = model.fusion;
+                this.jobDriver = model.jobDriver;
+                this.jobRunId = model.jobRunId;
+                this.log = model.log;
+                this.mbSeconds = model.mbSeconds;
+                this.name = model.name;
+                this.releaseVersion = model.releaseVersion;
+                this.state = model.state;
+                this.stateChangeReason = model.stateChangeReason;
+                this.submitTime = model.submitTime;
+                this.tags = model.tags;
+                this.vcoreSeconds = model.vcoreSeconds;
+                this.webUI = model.webUI;
+                this.workspaceId = model.workspaceId;
+            } 
 
             /**
              * <p>The code type of the job. Valid values:</p>
@@ -574,15 +631,21 @@ public class ListJobRunsResponseBody extends TeaModel {
             }
 
             /**
-             * cuHours.
+             * <p>The number of CUs consumed during a specified cycle of a task. The value is an estimated value. Refer to your Alibaba Cloud bill for the actual number of consumed CUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.059</p>
              */
-            public Builder cuHours(Long cuHours) {
+            public Builder cuHours(Double cuHours) {
                 this.cuHours = cuHours;
                 return this;
             }
 
             /**
-             * displayReleaseVersion.
+             * <p>The version of Spark on which the jobs run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>esr-3.0.0 (Spark 3.4.3, Scala 2.12)</p>
              */
             public Builder displayReleaseVersion(String displayReleaseVersion) {
                 this.displayReleaseVersion = displayReleaseVersion;
@@ -612,7 +675,10 @@ public class ListJobRunsResponseBody extends TeaModel {
             }
 
             /**
-             * fusion.
+             * <p>Indicates whether the Fusion engine is used for acceleration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder fusion(Boolean fusion) {
                 this.fusion = fusion;
@@ -647,7 +713,10 @@ public class ListJobRunsResponseBody extends TeaModel {
             }
 
             /**
-             * mbSeconds.
+             * <p>The total amount of memory allocated to the job multiplied by the running duration (seconds).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>33030784</p>
              */
             public Builder mbSeconds(Long mbSeconds) {
                 this.mbSeconds = mbSeconds;
@@ -715,7 +784,10 @@ public class ListJobRunsResponseBody extends TeaModel {
             }
 
             /**
-             * vcoreSeconds.
+             * <p>The total number of CPU cores allocated to the job multiplied by the running duration (seconds).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8236</p>
              */
             public Builder vcoreSeconds(Long vcoreSeconds) {
                 this.vcoreSeconds = vcoreSeconds;

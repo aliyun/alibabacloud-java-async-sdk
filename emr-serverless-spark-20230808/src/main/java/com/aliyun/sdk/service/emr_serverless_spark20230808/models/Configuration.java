@@ -40,6 +40,10 @@ public class Configuration extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return configFileName
      */
@@ -65,6 +69,15 @@ public class Configuration extends TeaModel {
         private String configFileName; 
         private String configItemKey; 
         private String configItemValue; 
+
+        private Builder() {
+        } 
+
+        private Builder(Configuration model) {
+            this.configFileName = model.configFileName;
+            this.configItemKey = model.configItemKey;
+            this.configItemValue = model.configItemValue;
+        } 
 
         /**
          * configFileName.

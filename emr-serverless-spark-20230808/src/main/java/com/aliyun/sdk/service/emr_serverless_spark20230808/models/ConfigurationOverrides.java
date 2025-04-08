@@ -32,6 +32,10 @@ public class ConfigurationOverrides extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return configurations
      */
@@ -41,6 +45,13 @@ public class ConfigurationOverrides extends TeaModel {
 
     public static final class Builder {
         private java.util.List<Configurations> configurations; 
+
+        private Builder() {
+        } 
+
+        private Builder(ConfigurationOverrides model) {
+            this.configurations = model.configurations;
+        } 
 
         /**
          * configurations.
@@ -111,6 +122,15 @@ public class ConfigurationOverrides extends TeaModel {
             private String configFileName; 
             private String configItemKey; 
             private String configItemValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Configurations model) {
+                this.configFileName = model.configFileName;
+                this.configItemKey = model.configItemKey;
+                this.configItemValue = model.configItemValue;
+            } 
 
             /**
              * configFileName.

@@ -36,6 +36,10 @@ public class CreateSqlStatementResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class CreateSqlStatementResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateSqlStatementResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -111,8 +123,15 @@ public class CreateSqlStatementResponseBody extends TeaModel {
         public static final class Builder {
             private String statementId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.statementId = model.statementId;
+            } 
+
             /**
-             * <p>The ID of the SQL query.</p>
+             * <p>The interactive query ID.</p>
              * 
              * <strong>example:</strong>
              * <p>st-1231dfafadfa***</p>

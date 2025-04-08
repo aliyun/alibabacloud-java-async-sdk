@@ -36,6 +36,10 @@ public class StopSessionClusterResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -54,6 +58,14 @@ public class StopSessionClusterResponseBody extends TeaModel {
         private String requestId; 
         private String sessionClusterId; 
 
+        private Builder() {
+        } 
+
+        private Builder(StopSessionClusterResponseBody model) {
+            this.requestId = model.requestId;
+            this.sessionClusterId = model.sessionClusterId;
+        } 
+
         /**
          * <p>The request ID.</p>
          * 
@@ -66,7 +78,7 @@ public class StopSessionClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The workspace ID.</p>
+         * <p>The session ID.</p>
          * 
          * <strong>example:</strong>
          * <p>w-******</p>

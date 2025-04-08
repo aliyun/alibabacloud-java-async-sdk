@@ -44,6 +44,10 @@ public class RunLog extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return driverStartup
      */
@@ -77,6 +81,16 @@ public class RunLog extends TeaModel {
         private String driverStdError; 
         private String driverStdOut; 
         private String driverSyslog; 
+
+        private Builder() {
+        } 
+
+        private Builder(RunLog model) {
+            this.driverStartup = model.driverStartup;
+            this.driverStdError = model.driverStdError;
+            this.driverStdOut = model.driverStdOut;
+            this.driverSyslog = model.driverSyslog;
+        } 
 
         /**
          * driverStartup.

@@ -44,7 +44,7 @@ public class GetTemplateRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -112,10 +112,6 @@ public class GetTemplateRequest extends Request {
 
         /**
          * <p>The template type.</p>
-         * <ul>
-         * <li>TASK</li>
-         * <li>SESSION</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>TASK</p>

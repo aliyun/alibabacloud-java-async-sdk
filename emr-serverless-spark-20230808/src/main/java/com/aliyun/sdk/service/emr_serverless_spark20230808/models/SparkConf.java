@@ -38,6 +38,10 @@ public class SparkConf extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return key
      */
@@ -55,6 +59,14 @@ public class SparkConf extends TeaModel {
     public static final class Builder {
         private String key; 
         private String value; 
+
+        private Builder() {
+        } 
+
+        private Builder(SparkConf model) {
+            this.key = model.key;
+            this.value = model.value;
+        } 
 
         /**
          * <p>This parameter is required.</p>

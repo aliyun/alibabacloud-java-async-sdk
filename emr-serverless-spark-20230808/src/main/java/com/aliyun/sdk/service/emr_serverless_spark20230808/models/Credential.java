@@ -63,6 +63,10 @@ public class Credential extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessId
      */
@@ -120,6 +124,19 @@ public class Credential extends TeaModel {
         private String policy; 
         private String securityToken; 
         private String signature; 
+
+        private Builder() {
+        } 
+
+        private Builder(Credential model) {
+            this.accessId = model.accessId;
+            this.dir = model.dir;
+            this.expire = model.expire;
+            this.host = model.host;
+            this.policy = model.policy;
+            this.securityToken = model.securityToken;
+            this.signature = model.signature;
+        } 
 
         /**
          * <p>This parameter is required.</p>

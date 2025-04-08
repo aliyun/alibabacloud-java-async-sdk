@@ -36,6 +36,10 @@ public class GetSqlStatementResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetSqlStatementResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSqlStatementResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The response parameters.</p>
@@ -89,11 +101,15 @@ public class GetSqlStatementResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("rows")
         private String rows;
 
+        @com.aliyun.core.annotation.NameInMap("rowsFilePath")
+        private String rowsFilePath;
+
         @com.aliyun.core.annotation.NameInMap("schema")
         private String schema;
 
         private SqlOutputs(Builder builder) {
             this.rows = builder.rows;
+            this.rowsFilePath = builder.rowsFilePath;
             this.schema = builder.schema;
         }
 
@@ -113,6 +129,13 @@ public class GetSqlStatementResponseBody extends TeaModel {
         }
 
         /**
+         * @return rowsFilePath
+         */
+        public String getRowsFilePath() {
+            return this.rowsFilePath;
+        }
+
+        /**
          * @return schema
          */
         public String getSchema() {
@@ -121,7 +144,17 @@ public class GetSqlStatementResponseBody extends TeaModel {
 
         public static final class Builder {
             private String rows; 
+            private String rowsFilePath; 
             private String schema; 
+
+            private Builder() {
+            } 
+
+            private Builder(SqlOutputs model) {
+                this.rows = model.rows;
+                this.rowsFilePath = model.rowsFilePath;
+                this.schema = model.schema;
+            } 
 
             /**
              * <p>The queried data, which is a string in the JSON format.</p>
@@ -131,6 +164,14 @@ public class GetSqlStatementResponseBody extends TeaModel {
              */
             public Builder rows(String rows) {
                 this.rows = rows;
+                return this;
+            }
+
+            /**
+             * rowsFilePath.
+             */
+            public Builder rowsFilePath(String rowsFilePath) {
+                this.rowsFilePath = rowsFilePath;
                 return this;
             }
 
@@ -243,6 +284,18 @@ public class GetSqlStatementResponseBody extends TeaModel {
             private java.util.List<SqlOutputs> sqlOutputs; 
             private String state; 
             private String statementId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.executionTime = model.executionTime;
+                this.sqlErrorCode = model.sqlErrorCode;
+                this.sqlErrorMessage = model.sqlErrorMessage;
+                this.sqlOutputs = model.sqlOutputs;
+                this.state = model.state;
+                this.statementId = model.statementId;
+            } 
 
             /**
              * <p>The list of time that is consumed by SQL queries.</p>

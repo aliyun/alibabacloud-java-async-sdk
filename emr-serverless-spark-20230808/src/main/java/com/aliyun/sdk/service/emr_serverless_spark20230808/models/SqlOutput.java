@@ -36,6 +36,10 @@ public class SqlOutput extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return rows
      */
@@ -53,6 +57,14 @@ public class SqlOutput extends TeaModel {
     public static final class Builder {
         private java.util.List<Rows> rows; 
         private Schema schema; 
+
+        private Builder() {
+        } 
+
+        private Builder(SqlOutput model) {
+            this.rows = model.rows;
+            this.schema = model.schema;
+        } 
 
         /**
          * rows.
@@ -107,6 +119,13 @@ public class SqlOutput extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> values; 
+
+            private Builder() {
+            } 
+
+            private Builder(Rows model) {
+                this.values = model.values;
+            } 
 
             /**
              * values.
@@ -179,6 +198,15 @@ public class SqlOutput extends TeaModel {
             private Boolean nullable; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Fields model) {
+                this.name = model.name;
+                this.nullable = model.nullable;
+                this.type = model.type;
+            } 
+
             /**
              * name.
              */
@@ -241,6 +269,13 @@ public class SqlOutput extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Fields> fields; 
+
+            private Builder() {
+            } 
+
+            private Builder(Schema model) {
+                this.fields = model.fields;
+            } 
 
             /**
              * fields.

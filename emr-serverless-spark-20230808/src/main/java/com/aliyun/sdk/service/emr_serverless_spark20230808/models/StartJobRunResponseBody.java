@@ -36,6 +36,10 @@ public class StartJobRunResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return jobRunId
      */
@@ -53,6 +57,14 @@ public class StartJobRunResponseBody extends TeaModel {
     public static final class Builder {
         private String jobRunId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(StartJobRunResponseBody model) {
+            this.jobRunId = model.jobRunId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The job ID.</p>

@@ -50,6 +50,9 @@ public class Artifact extends TeaModel {
     @com.aliyun.core.annotation.Validation(required = true)
     private Long modifier;
 
+    @com.aliyun.core.annotation.NameInMap("modifierName")
+    private String modifierName;
+
     @com.aliyun.core.annotation.NameInMap("name")
     @com.aliyun.core.annotation.Validation(required = true)
     private String name;
@@ -64,6 +67,7 @@ public class Artifact extends TeaModel {
         this.gmtModified = builder.gmtModified;
         this.location = builder.location;
         this.modifier = builder.modifier;
+        this.modifierName = builder.modifierName;
         this.name = builder.name;
     }
 
@@ -73,6 +77,10 @@ public class Artifact extends TeaModel {
 
     public static Artifact create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -139,6 +147,13 @@ public class Artifact extends TeaModel {
     }
 
     /**
+     * @return modifierName
+     */
+    public String getModifierName() {
+        return this.modifierName;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
@@ -155,7 +170,25 @@ public class Artifact extends TeaModel {
         private String gmtModified; 
         private String location; 
         private Long modifier; 
+        private String modifierName; 
         private String name; 
+
+        private Builder() {
+        } 
+
+        private Builder(Artifact model) {
+            this.bizId = model.bizId;
+            this.catagoryBizId = model.catagoryBizId;
+            this.creator = model.creator;
+            this.credential = model.credential;
+            this.fullPath = model.fullPath;
+            this.gmtCreated = model.gmtCreated;
+            this.gmtModified = model.gmtModified;
+            this.location = model.location;
+            this.modifier = model.modifier;
+            this.modifierName = model.modifierName;
+            this.name = model.name;
+        } 
 
         /**
          * <p>This parameter is required.</p>
@@ -226,6 +259,14 @@ public class Artifact extends TeaModel {
          */
         public Builder modifier(Long modifier) {
             this.modifier = modifier;
+            return this;
+        }
+
+        /**
+         * modifierName.
+         */
+        public Builder modifierName(String modifierName) {
+            this.modifierName = modifierName;
             return this;
         }
 

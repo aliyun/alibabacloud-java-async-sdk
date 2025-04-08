@@ -36,6 +36,10 @@ public class GetSessionClusterResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetSessionClusterResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private SessionCluster sessionCluster; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSessionClusterResponseBody model) {
+            this.requestId = model.requestId;
+            this.sessionCluster = model.sessionCluster;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -135,6 +147,15 @@ public class GetSessionClusterResponseBody extends TeaModel {
             private String configItemKey; 
             private String configItemValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(ApplicationConfigs model) {
+                this.configFileName = model.configFileName;
+                this.configItemKey = model.configItemKey;
+                this.configItemValue = model.configItemValue;
+            } 
+
             /**
              * <p>The name of the configuration file.</p>
              * 
@@ -207,8 +228,19 @@ public class GetSessionClusterResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean enable; 
 
+            private Builder() {
+            } 
+
+            private Builder(AutoStartConfiguration model) {
+                this.enable = model.enable;
+            } 
+
             /**
              * <p>Indicates whether automatic startup is enabled.</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -269,8 +301,20 @@ public class GetSessionClusterResponseBody extends TeaModel {
             private Boolean enable; 
             private Integer idleTimeoutMinutes; 
 
+            private Builder() {
+            } 
+
+            private Builder(AutoStopConfiguration model) {
+                this.enable = model.enable;
+                this.idleTimeoutMinutes = model.idleTimeoutMinutes;
+            } 
+
             /**
              * <p>Indicates whether automatic termination is enabled.</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -342,6 +386,14 @@ public class GetSessionClusterResponseBody extends TeaModel {
             private String code; 
             private String message; 
 
+            private Builder() {
+            } 
+
+            private Builder(StateChangeReason model) {
+                this.code = model.code;
+                this.message = model.message;
+            } 
+
             /**
              * <p>The status change code.</p>
              * 
@@ -402,6 +454,9 @@ public class GetSessionClusterResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("envId")
         private String envId;
 
+        @com.aliyun.core.annotation.NameInMap("extra")
+        private String extra;
+
         @com.aliyun.core.annotation.NameInMap("fusion")
         private Boolean fusion;
 
@@ -453,6 +508,7 @@ public class GetSessionClusterResponseBody extends TeaModel {
             this.domainInner = builder.domainInner;
             this.draftId = builder.draftId;
             this.envId = builder.envId;
+            this.extra = builder.extra;
             this.fusion = builder.fusion;
             this.gmtCreate = builder.gmtCreate;
             this.kind = builder.kind;
@@ -531,6 +587,13 @@ public class GetSessionClusterResponseBody extends TeaModel {
          */
         public String getEnvId() {
             return this.envId;
+        }
+
+        /**
+         * @return extra
+         */
+        public String getExtra() {
+            return this.extra;
         }
 
         /**
@@ -640,6 +703,7 @@ public class GetSessionClusterResponseBody extends TeaModel {
             private String domainInner; 
             private String draftId; 
             private String envId; 
+            private String extra; 
             private Boolean fusion; 
             private Long gmtCreate; 
             private String kind; 
@@ -655,6 +719,35 @@ public class GetSessionClusterResponseBody extends TeaModel {
             private String webUI; 
             private String workspaceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(SessionCluster model) {
+                this.applicationConfigs = model.applicationConfigs;
+                this.autoStartConfiguration = model.autoStartConfiguration;
+                this.autoStopConfiguration = model.autoStopConfiguration;
+                this.displayReleaseVersion = model.displayReleaseVersion;
+                this.domain = model.domain;
+                this.domainInner = model.domainInner;
+                this.draftId = model.draftId;
+                this.envId = model.envId;
+                this.extra = model.extra;
+                this.fusion = model.fusion;
+                this.gmtCreate = model.gmtCreate;
+                this.kind = model.kind;
+                this.name = model.name;
+                this.queueName = model.queueName;
+                this.releaseVersion = model.releaseVersion;
+                this.sessionClusterId = model.sessionClusterId;
+                this.startTime = model.startTime;
+                this.state = model.state;
+                this.stateChangeReason = model.stateChangeReason;
+                this.userId = model.userId;
+                this.userName = model.userName;
+                this.webUI = model.webUI;
+                this.workspaceId = model.workspaceId;
+            } 
+
             /**
              * <p>The Spark configurations.</p>
              */
@@ -664,7 +757,7 @@ public class GetSessionClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The automatic startup configurations.</p>
+             * <p>Indicates whether automatic startup is enabled.</p>
              */
             public Builder autoStartConfiguration(AutoStartConfiguration autoStartConfiguration) {
                 this.autoStartConfiguration = autoStartConfiguration;
@@ -672,7 +765,7 @@ public class GetSessionClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The automatic termination configurations.</p>
+             * <p>Indicates whether automatic termination is enabled.</p>
              */
             public Builder autoStopConfiguration(AutoStopConfiguration autoStopConfiguration) {
                 this.autoStopConfiguration = autoStopConfiguration;
@@ -731,6 +824,17 @@ public class GetSessionClusterResponseBody extends TeaModel {
              */
             public Builder envId(String envId) {
                 this.envId = envId;
+                return this;
+            }
+
+            /**
+             * <p>The additional metadata of the session.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;extraInfoKey&quot;:&quot;extraInfoValue&quot;}</p>
+             */
+            public Builder extra(String extra) {
+                this.extra = extra;
                 return this;
             }
 
@@ -795,7 +899,7 @@ public class GetSessionClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of E-MapReduce (EMR) Serverless Spark.</p>
+             * <p>The version of Serverless Spark.</p>
              * 
              * <strong>example:</strong>
              * <p>esr-2.2(Java Runtime)</p>
@@ -829,6 +933,13 @@ public class GetSessionClusterResponseBody extends TeaModel {
 
             /**
              * <p>The job status.</p>
+             * <ul>
+             * <li>Starting</li>
+             * <li>Running</li>
+             * <li>Stopping</li>
+             * <li>Stopped</li>
+             * <li>Error</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Running</p>

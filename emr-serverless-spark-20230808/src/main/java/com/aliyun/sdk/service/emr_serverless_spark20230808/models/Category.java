@@ -67,6 +67,10 @@ public class Category extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bizId
      */
@@ -132,6 +136,20 @@ public class Category extends TeaModel {
         private String name; 
         private String parentBizId; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(Category model) {
+            this.bizId = model.bizId;
+            this.creator = model.creator;
+            this.gmtCreated = model.gmtCreated;
+            this.gmtModified = model.gmtModified;
+            this.modifier = model.modifier;
+            this.name = model.name;
+            this.parentBizId = model.parentBizId;
+            this.type = model.type;
+        } 
 
         /**
          * <p>This parameter is required.</p>

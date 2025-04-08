@@ -32,6 +32,10 @@ public class JobDriver extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return sparkSubmit
      */
@@ -41,6 +45,13 @@ public class JobDriver extends TeaModel {
 
     public static final class Builder {
         private SparkSubmit sparkSubmit; 
+
+        private Builder() {
+        } 
+
+        private Builder(JobDriver model) {
+            this.sparkSubmit = model.sparkSubmit;
+        } 
 
         /**
          * sparkSubmit.
@@ -111,6 +122,15 @@ public class JobDriver extends TeaModel {
             private String entryPoint; 
             private java.util.List<String> entryPointArguments; 
             private String sparkSubmitParameters; 
+
+            private Builder() {
+            } 
+
+            private Builder(SparkSubmit model) {
+                this.entryPoint = model.entryPoint;
+                this.entryPointArguments = model.entryPointArguments;
+                this.sparkSubmitParameters = model.sparkSubmitParameters;
+            } 
 
             /**
              * entryPoint.

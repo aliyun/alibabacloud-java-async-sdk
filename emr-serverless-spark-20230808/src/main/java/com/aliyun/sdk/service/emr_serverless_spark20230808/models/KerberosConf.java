@@ -68,6 +68,10 @@ public class KerberosConf extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return creator
      */
@@ -149,6 +153,22 @@ public class KerberosConf extends TeaModel {
         private String name; 
         private String networkServiceId; 
         private String workspaceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(KerberosConf model) {
+            this.creator = model.creator;
+            this.enabled = model.enabled;
+            this.gmtCreated = model.gmtCreated;
+            this.gmtModified = model.gmtModified;
+            this.kerberosConfId = model.kerberosConfId;
+            this.keytabs = model.keytabs;
+            this.krb5Conf = model.krb5Conf;
+            this.name = model.name;
+            this.networkServiceId = model.networkServiceId;
+            this.workspaceId = model.workspaceId;
+        } 
 
         /**
          * creator.

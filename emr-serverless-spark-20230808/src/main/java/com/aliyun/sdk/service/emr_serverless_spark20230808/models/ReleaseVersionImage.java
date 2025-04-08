@@ -40,6 +40,10 @@ public class ReleaseVersionImage extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cpuArchitecture
      */
@@ -65,6 +69,15 @@ public class ReleaseVersionImage extends TeaModel {
         private String cpuArchitecture; 
         private String imageId; 
         private String runtimeEngineType; 
+
+        private Builder() {
+        } 
+
+        private Builder(ReleaseVersionImage model) {
+            this.cpuArchitecture = model.cpuArchitecture;
+            this.imageId = model.imageId;
+            this.runtimeEngineType = model.runtimeEngineType;
+        } 
 
         /**
          * cpuArchitecture.

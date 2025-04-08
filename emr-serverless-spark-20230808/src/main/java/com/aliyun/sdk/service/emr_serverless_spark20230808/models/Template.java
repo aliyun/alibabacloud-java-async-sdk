@@ -99,6 +99,10 @@ public class Template extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return creator
      */
@@ -220,6 +224,27 @@ public class Template extends TeaModel {
         private String sparkLogPath; 
         private String sparkVersion; 
         private String templateType; 
+
+        private Builder() {
+        } 
+
+        private Builder(Template model) {
+            this.creator = model.creator;
+            this.displaySparkVersion = model.displaySparkVersion;
+            this.fusion = model.fusion;
+            this.gmtCreated = model.gmtCreated;
+            this.gmtModified = model.gmtModified;
+            this.modifier = model.modifier;
+            this.sparkConf = model.sparkConf;
+            this.sparkDriverCores = model.sparkDriverCores;
+            this.sparkDriverMemory = model.sparkDriverMemory;
+            this.sparkExecutorCores = model.sparkExecutorCores;
+            this.sparkExecutorMemory = model.sparkExecutorMemory;
+            this.sparkLogLevel = model.sparkLogLevel;
+            this.sparkLogPath = model.sparkLogPath;
+            this.sparkVersion = model.sparkVersion;
+            this.templateType = model.templateType;
+        } 
 
         /**
          * <p>This parameter is required.</p>

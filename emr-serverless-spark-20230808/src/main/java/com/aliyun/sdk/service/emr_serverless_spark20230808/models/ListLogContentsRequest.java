@@ -54,7 +54,7 @@ public class ListLogContentsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -115,7 +115,10 @@ public class ListLogContentsRequest extends Request {
         } 
 
         /**
-         * workspaceId.
+         * <p>Workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>w-72704d9fb0******</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -124,7 +127,7 @@ public class ListLogContentsRequest extends Request {
         }
 
         /**
-         * fileName.
+         * <p>Full path of the file.</p>
          */
         public Builder fileName(String fileName) {
             this.putQueryParameter("fileName", fileName);
@@ -133,7 +136,10 @@ public class ListLogContentsRequest extends Request {
         }
 
         /**
-         * length.
+         * <p>Length of the log.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9999</p>
          */
         public Builder length(Integer length) {
             this.putQueryParameter("length", length);
@@ -142,7 +148,10 @@ public class ListLogContentsRequest extends Request {
         }
 
         /**
-         * offset.
+         * <p>Start line for query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder offset(Integer offset) {
             this.putQueryParameter("offset", offset);
@@ -151,7 +160,10 @@ public class ListLogContentsRequest extends Request {
         }
 
         /**
-         * regionId.
+         * <p>Region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("regionId", regionId);

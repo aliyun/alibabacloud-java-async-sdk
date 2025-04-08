@@ -100,7 +100,7 @@ public class StartJobRunRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -293,7 +293,10 @@ public class StartJobRunRequest extends Request {
         }
 
         /**
-         * displayReleaseVersion.
+         * <p>The version of the Spark engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>esr-3.3.1</p>
          */
         public Builder displayReleaseVersion(String displayReleaseVersion) {
             this.putBodyParameter("displayReleaseVersion", displayReleaseVersion);
@@ -314,7 +317,10 @@ public class StartJobRunRequest extends Request {
         }
 
         /**
-         * fusion.
+         * <p>Specifies whether to enable Fusion engine for acceleration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder fusion(Boolean fusion) {
             this.putBodyParameter("fusion", fusion);
@@ -344,7 +350,7 @@ public class StartJobRunRequest extends Request {
         }
 
         /**
-         * <p>The job name.</p>
+         * <p>The name of the job.</p>
          * 
          * <strong>example:</strong>
          * <p>spark_job_name</p>
@@ -380,7 +386,7 @@ public class StartJobRunRequest extends Request {
         }
 
         /**
-         * <p>The tags.</p>
+         * <p>The tags of the job.</p>
          */
         public Builder tags(java.util.List<Tag> tags) {
             this.putBodyParameter("tags", tags);
@@ -463,6 +469,15 @@ public class StartJobRunRequest extends Request {
             private String configItemKey; 
             private String configItemValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Configurations model) {
+                this.configFileName = model.configFileName;
+                this.configItemKey = model.configItemKey;
+                this.configItemValue = model.configItemValue;
+            } 
+
             /**
              * <p>The configuration file of SparkConf.</p>
              * 
@@ -534,6 +549,13 @@ public class StartJobRunRequest extends Request {
 
         public static final class Builder {
             private java.util.List<Configurations> configurations; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConfigurationOverrides model) {
+                this.configurations = model.configurations;
+            } 
 
             /**
              * <p>The SparkConf objects.</p>

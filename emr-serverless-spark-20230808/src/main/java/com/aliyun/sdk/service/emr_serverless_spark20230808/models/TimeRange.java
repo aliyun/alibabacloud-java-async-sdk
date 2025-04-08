@@ -36,6 +36,10 @@ public class TimeRange extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return endTime
      */
@@ -53,6 +57,14 @@ public class TimeRange extends TeaModel {
     public static final class Builder {
         private Long endTime; 
         private Long startTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(TimeRange model) {
+            this.endTime = model.endTime;
+            this.startTime = model.startTime;
+        } 
 
         /**
          * <p>时间范围结束时间。</p>

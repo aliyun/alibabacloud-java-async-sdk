@@ -36,6 +36,10 @@ public class StartSessionClusterResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class StartSessionClusterResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String sessionClusterId; 
+
+        private Builder() {
+        } 
+
+        private Builder(StartSessionClusterResponseBody model) {
+            this.requestId = model.requestId;
+            this.sessionClusterId = model.sessionClusterId;
+        } 
 
         /**
          * <p>The request ID.</p>

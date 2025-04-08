@@ -48,6 +48,10 @@ public class ListSessionClustersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -89,6 +93,17 @@ public class ListSessionClustersResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<SessionClusters> sessionClusters; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSessionClustersResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.sessionClusters = model.sessionClusters;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The maximum number of entries returned.</p>
@@ -204,6 +219,15 @@ public class ListSessionClustersResponseBody extends TeaModel {
             private String configItemKey; 
             private String configItemValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(ApplicationConfigs model) {
+                this.configFileName = model.configFileName;
+                this.configItemKey = model.configItemKey;
+                this.configItemValue = model.configItemValue;
+            } 
+
             /**
              * <p>The name of the configuration file.</p>
              * 
@@ -276,6 +300,13 @@ public class ListSessionClustersResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean enable; 
 
+            private Builder() {
+            } 
+
+            private Builder(AutoStartConfiguration model) {
+                this.enable = model.enable;
+            } 
+
             /**
              * <p>Indicates whether automatic startup is enabled.</p>
              * 
@@ -337,6 +368,14 @@ public class ListSessionClustersResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean enable; 
             private Integer idleTimeoutMinutes; 
+
+            private Builder() {
+            } 
+
+            private Builder(AutoStopConfiguration model) {
+                this.enable = model.enable;
+                this.idleTimeoutMinutes = model.idleTimeoutMinutes;
+            } 
 
             /**
              * <p>Indicates whether automatic termination is enabled.</p>
@@ -411,6 +450,14 @@ public class ListSessionClustersResponseBody extends TeaModel {
             private String code; 
             private String message; 
 
+            private Builder() {
+            } 
+
+            private Builder(StateChangeReason model) {
+                this.code = model.code;
+                this.message = model.message;
+            } 
+
             /**
              * <p>The status change code.</p>
              * 
@@ -468,6 +515,9 @@ public class ListSessionClustersResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("draftId")
         private String draftId;
 
+        @com.aliyun.core.annotation.NameInMap("extra")
+        private String extra;
+
         @com.aliyun.core.annotation.NameInMap("fusion")
         private Boolean fusion;
 
@@ -518,6 +568,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
             this.domain = builder.domain;
             this.domainInner = builder.domainInner;
             this.draftId = builder.draftId;
+            this.extra = builder.extra;
             this.fusion = builder.fusion;
             this.gmtCreate = builder.gmtCreate;
             this.kind = builder.kind;
@@ -589,6 +640,13 @@ public class ListSessionClustersResponseBody extends TeaModel {
          */
         public String getDraftId() {
             return this.draftId;
+        }
+
+        /**
+         * @return extra
+         */
+        public String getExtra() {
+            return this.extra;
         }
 
         /**
@@ -697,6 +755,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
             private String domain; 
             private String domainInner; 
             private String draftId; 
+            private String extra; 
             private Boolean fusion; 
             private Long gmtCreate; 
             private String kind; 
@@ -711,6 +770,34 @@ public class ListSessionClustersResponseBody extends TeaModel {
             private String userName; 
             private String webUI; 
             private String workspaceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(SessionClusters model) {
+                this.applicationConfigs = model.applicationConfigs;
+                this.autoStartConfiguration = model.autoStartConfiguration;
+                this.autoStopConfiguration = model.autoStopConfiguration;
+                this.displayReleaseVersion = model.displayReleaseVersion;
+                this.domain = model.domain;
+                this.domainInner = model.domainInner;
+                this.draftId = model.draftId;
+                this.extra = model.extra;
+                this.fusion = model.fusion;
+                this.gmtCreate = model.gmtCreate;
+                this.kind = model.kind;
+                this.name = model.name;
+                this.queueName = model.queueName;
+                this.releaseVersion = model.releaseVersion;
+                this.sessionClusterId = model.sessionClusterId;
+                this.startTime = model.startTime;
+                this.state = model.state;
+                this.stateChangeReason = model.stateChangeReason;
+                this.userId = model.userId;
+                this.userName = model.userName;
+                this.webUI = model.webUI;
+                this.workspaceId = model.workspaceId;
+            } 
 
             /**
              * <p>The session configurations, which are equivalent to the configurations of the Spark job.</p>
@@ -777,6 +864,14 @@ public class ListSessionClustersResponseBody extends TeaModel {
              */
             public Builder draftId(String draftId) {
                 this.draftId = draftId;
+                return this;
+            }
+
+            /**
+             * extra.
+             */
+            public Builder extra(String extra) {
+                this.extra = extra;
                 return this;
             }
 

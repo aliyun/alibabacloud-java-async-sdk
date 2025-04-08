@@ -34,6 +34,10 @@ public class ListReleaseVersionsRequest extends Request {
     private String releaseVersionStatus;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("serviceFilter")
+    private String serviceFilter;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("workspaceId")
     private String workspaceId;
 
@@ -43,6 +47,7 @@ public class ListReleaseVersionsRequest extends Request {
         this.releaseType = builder.releaseType;
         this.releaseVersion = builder.releaseVersion;
         this.releaseVersionStatus = builder.releaseVersionStatus;
+        this.serviceFilter = builder.serviceFilter;
         this.workspaceId = builder.workspaceId;
     }
 
@@ -54,7 +59,7 @@ public class ListReleaseVersionsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -88,6 +93,13 @@ public class ListReleaseVersionsRequest extends Request {
     }
 
     /**
+     * @return serviceFilter
+     */
+    public String getServiceFilter() {
+        return this.serviceFilter;
+    }
+
+    /**
      * @return workspaceId
      */
     public String getWorkspaceId() {
@@ -99,6 +111,7 @@ public class ListReleaseVersionsRequest extends Request {
         private String releaseType; 
         private String releaseVersion; 
         private String releaseVersionStatus; 
+        private String serviceFilter; 
         private String workspaceId; 
 
         private Builder() {
@@ -111,6 +124,7 @@ public class ListReleaseVersionsRequest extends Request {
             this.releaseType = request.releaseType;
             this.releaseVersion = request.releaseVersion;
             this.releaseVersionStatus = request.releaseVersionStatus;
+            this.serviceFilter = request.serviceFilter;
             this.workspaceId = request.workspaceId;
         } 
 
@@ -169,6 +183,15 @@ public class ListReleaseVersionsRequest extends Request {
         public Builder releaseVersionStatus(String releaseVersionStatus) {
             this.putQueryParameter("releaseVersionStatus", releaseVersionStatus);
             this.releaseVersionStatus = releaseVersionStatus;
+            return this;
+        }
+
+        /**
+         * serviceFilter.
+         */
+        public Builder serviceFilter(String serviceFilter) {
+            this.putQueryParameter("serviceFilter", serviceFilter);
+            this.serviceFilter = serviceFilter;
             return this;
         }
 

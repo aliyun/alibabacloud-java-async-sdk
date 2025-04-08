@@ -91,6 +91,9 @@ public class Task extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("jars")
     private java.util.List<String> jars;
 
+    @com.aliyun.core.annotation.NameInMap("kernelId")
+    private String kernelId;
+
     @com.aliyun.core.annotation.NameInMap("lastRunResourceQueueId")
     private String lastRunResourceQueueId;
 
@@ -102,8 +105,14 @@ public class Task extends TeaModel {
     @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
+    @com.aliyun.core.annotation.NameInMap("params")
+    private java.util.Map<String, String> params;
+
     @com.aliyun.core.annotation.NameInMap("pyFiles")
     private java.util.List<String> pyFiles;
+
+    @com.aliyun.core.annotation.NameInMap("sessionClusterId")
+    private String sessionClusterId;
 
     @com.aliyun.core.annotation.NameInMap("sparkArgs")
     private String sparkArgs;
@@ -179,10 +188,13 @@ public class Task extends TeaModel {
         this.hasCommited = builder.hasCommited;
         this.isStreaming = builder.isStreaming;
         this.jars = builder.jars;
+        this.kernelId = builder.kernelId;
         this.lastRunResourceQueueId = builder.lastRunResourceQueueId;
         this.modifier = builder.modifier;
         this.name = builder.name;
+        this.params = builder.params;
         this.pyFiles = builder.pyFiles;
+        this.sessionClusterId = builder.sessionClusterId;
         this.sparkArgs = builder.sparkArgs;
         this.sparkConf = builder.sparkConf;
         this.sparkDriverCores = builder.sparkDriverCores;
@@ -205,6 +217,10 @@ public class Task extends TeaModel {
 
     public static Task create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -369,6 +385,13 @@ public class Task extends TeaModel {
     }
 
     /**
+     * @return kernelId
+     */
+    public String getKernelId() {
+        return this.kernelId;
+    }
+
+    /**
      * @return lastRunResourceQueueId
      */
     public String getLastRunResourceQueueId() {
@@ -390,10 +413,24 @@ public class Task extends TeaModel {
     }
 
     /**
+     * @return params
+     */
+    public java.util.Map<String, String> getParams() {
+        return this.params;
+    }
+
+    /**
      * @return pyFiles
      */
     public java.util.List<String> getPyFiles() {
         return this.pyFiles;
+    }
+
+    /**
+     * @return sessionClusterId
+     */
+    public String getSessionClusterId() {
+        return this.sessionClusterId;
     }
 
     /**
@@ -518,10 +555,13 @@ public class Task extends TeaModel {
         private Boolean hasCommited; 
         private Boolean isStreaming; 
         private java.util.List<String> jars; 
+        private String kernelId; 
         private String lastRunResourceQueueId; 
         private Long modifier; 
         private String name; 
+        private java.util.Map<String, String> params; 
         private java.util.List<String> pyFiles; 
+        private String sessionClusterId; 
         private String sparkArgs; 
         private java.util.List<SparkConf> sparkConf; 
         private Integer sparkDriverCores; 
@@ -536,6 +576,56 @@ public class Task extends TeaModel {
         private java.util.Map<String, String> tags; 
         private Integer timeout; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(Task model) {
+            this.archives = model.archives;
+            this.artifactUrl = model.artifactUrl;
+            this.bizId = model.bizId;
+            this.categoryBizId = model.categoryBizId;
+            this.content = model.content;
+            this.creator = model.creator;
+            this.credential = model.credential;
+            this.defaultCatalogId = model.defaultCatalogId;
+            this.defaultDatabase = model.defaultDatabase;
+            this.defaultResourceQueueId = model.defaultResourceQueueId;
+            this.defaultSqlComputeId = model.defaultSqlComputeId;
+            this.deploymentId = model.deploymentId;
+            this.environmentId = model.environmentId;
+            this.extraArtifactIds = model.extraArtifactIds;
+            this.extraSparkSubmitParams = model.extraSparkSubmitParams;
+            this.files = model.files;
+            this.fusion = model.fusion;
+            this.gmtCreated = model.gmtCreated;
+            this.gmtModified = model.gmtModified;
+            this.hasChanged = model.hasChanged;
+            this.hasCommited = model.hasCommited;
+            this.isStreaming = model.isStreaming;
+            this.jars = model.jars;
+            this.kernelId = model.kernelId;
+            this.lastRunResourceQueueId = model.lastRunResourceQueueId;
+            this.modifier = model.modifier;
+            this.name = model.name;
+            this.params = model.params;
+            this.pyFiles = model.pyFiles;
+            this.sessionClusterId = model.sessionClusterId;
+            this.sparkArgs = model.sparkArgs;
+            this.sparkConf = model.sparkConf;
+            this.sparkDriverCores = model.sparkDriverCores;
+            this.sparkDriverMemory = model.sparkDriverMemory;
+            this.sparkEntrypoint = model.sparkEntrypoint;
+            this.sparkExecutorCores = model.sparkExecutorCores;
+            this.sparkExecutorMemory = model.sparkExecutorMemory;
+            this.sparkLogLevel = model.sparkLogLevel;
+            this.sparkLogPath = model.sparkLogPath;
+            this.sparkSubmitClause = model.sparkSubmitClause;
+            this.sparkVersion = model.sparkVersion;
+            this.tags = model.tags;
+            this.timeout = model.timeout;
+            this.type = model.type;
+        } 
 
         /**
          * archives.
@@ -722,6 +812,14 @@ public class Task extends TeaModel {
         }
 
         /**
+         * kernelId.
+         */
+        public Builder kernelId(String kernelId) {
+            this.kernelId = kernelId;
+            return this;
+        }
+
+        /**
          * lastRunResourceQueueId.
          */
         public Builder lastRunResourceQueueId(String lastRunResourceQueueId) {
@@ -746,10 +844,26 @@ public class Task extends TeaModel {
         }
 
         /**
+         * params.
+         */
+        public Builder params(java.util.Map<String, String> params) {
+            this.params = params;
+            return this;
+        }
+
+        /**
          * pyFiles.
          */
         public Builder pyFiles(java.util.List<String> pyFiles) {
             this.pyFiles = pyFiles;
+            return this;
+        }
+
+        /**
+         * sessionClusterId.
+         */
+        public Builder sessionClusterId(String sessionClusterId) {
+            this.sessionClusterId = sessionClusterId;
             return this;
         }
 
@@ -986,6 +1100,20 @@ public class Task extends TeaModel {
             private String policy; 
             private String securityToken; 
             private String signature; 
+
+            private Builder() {
+            } 
+
+            private Builder(Credential model) {
+                this.accessId = model.accessId;
+                this.accessUrl = model.accessUrl;
+                this.expire = model.expire;
+                this.host = model.host;
+                this.path = model.path;
+                this.policy = model.policy;
+                this.securityToken = model.securityToken;
+                this.signature = model.signature;
+            } 
 
             /**
              * accessId.
