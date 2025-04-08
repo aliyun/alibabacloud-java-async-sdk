@@ -98,8 +98,11 @@ public class SearchProductsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("categoryId")
         private Long categoryId;
 
+        @com.aliyun.core.annotation.NameInMap("isLeaf")
+        private Boolean isLeaf;
+
         @com.aliyun.core.annotation.NameInMap("level")
-        private Boolean level;
+        private Integer level;
 
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
@@ -109,6 +112,7 @@ public class SearchProductsResponseBody extends TeaModel {
 
         private CategoryChain(Builder builder) {
             this.categoryId = builder.categoryId;
+            this.isLeaf = builder.isLeaf;
             this.level = builder.level;
             this.name = builder.name;
             this.parentId = builder.parentId;
@@ -130,9 +134,16 @@ public class SearchProductsResponseBody extends TeaModel {
         }
 
         /**
+         * @return isLeaf
+         */
+        public Boolean getIsLeaf() {
+            return this.isLeaf;
+        }
+
+        /**
          * @return level
          */
-        public Boolean getLevel() {
+        public Integer getLevel() {
             return this.level;
         }
 
@@ -152,7 +163,8 @@ public class SearchProductsResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long categoryId; 
-            private Boolean level; 
+            private Boolean isLeaf; 
+            private Integer level; 
             private String name; 
             private Long parentId; 
 
@@ -161,6 +173,7 @@ public class SearchProductsResponseBody extends TeaModel {
 
             private Builder(CategoryChain model) {
                 this.categoryId = model.categoryId;
+                this.isLeaf = model.isLeaf;
                 this.level = model.level;
                 this.name = model.name;
                 this.parentId = model.parentId;
@@ -175,9 +188,17 @@ public class SearchProductsResponseBody extends TeaModel {
             }
 
             /**
+             * isLeaf.
+             */
+            public Builder isLeaf(Boolean isLeaf) {
+                this.isLeaf = isLeaf;
+                return this;
+            }
+
+            /**
              * level.
              */
-            public Builder level(Boolean level) {
+            public Builder level(Integer level) {
                 this.level = level;
                 return this;
             }
