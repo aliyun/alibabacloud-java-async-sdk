@@ -30,6 +30,10 @@ public class ListServicesRequest extends Request {
     private String groupName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IncludeNoWorkspace")
+    private Boolean includeNoWorkspace;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Label")
     private java.util.Map<String, String> label;
 
@@ -94,6 +98,7 @@ public class ListServicesRequest extends Request {
         this.filter = builder.filter;
         this.gateway = builder.gateway;
         this.groupName = builder.groupName;
+        this.includeNoWorkspace = builder.includeNoWorkspace;
         this.label = builder.label;
         this.order = builder.order;
         this.pageNumber = builder.pageNumber;
@@ -143,6 +148,13 @@ public class ListServicesRequest extends Request {
      */
     public String getGroupName() {
         return this.groupName;
+    }
+
+    /**
+     * @return includeNoWorkspace
+     */
+    public Boolean getIncludeNoWorkspace() {
+        return this.includeNoWorkspace;
     }
 
     /**
@@ -254,6 +266,7 @@ public class ListServicesRequest extends Request {
         private String filter; 
         private String gateway; 
         private String groupName; 
+        private Boolean includeNoWorkspace; 
         private java.util.Map<String, String> label; 
         private String order; 
         private Integer pageNumber; 
@@ -279,6 +292,7 @@ public class ListServicesRequest extends Request {
             this.filter = request.filter;
             this.gateway = request.gateway;
             this.groupName = request.groupName;
+            this.includeNoWorkspace = request.includeNoWorkspace;
             this.label = request.label;
             this.order = request.order;
             this.pageNumber = request.pageNumber;
@@ -329,6 +343,15 @@ public class ListServicesRequest extends Request {
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
             this.groupName = groupName;
+            return this;
+        }
+
+        /**
+         * IncludeNoWorkspace.
+         */
+        public Builder includeNoWorkspace(Boolean includeNoWorkspace) {
+            this.putQueryParameter("IncludeNoWorkspace", includeNoWorkspace);
+            this.includeNoWorkspace = includeNoWorkspace;
             return this;
         }
 
