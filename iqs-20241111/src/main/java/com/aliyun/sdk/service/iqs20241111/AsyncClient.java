@@ -39,4 +39,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<GenericSearchResponse> genericSearch(GenericSearchRequest request);
 
+    /**
+     * @param request the request parameters of GlobalSearch  GlobalSearchRequest
+     * @return GlobalSearchResponse
+     */
+    CompletableFuture<GlobalSearchResponse> globalSearch(GlobalSearchRequest request);
+
 }
