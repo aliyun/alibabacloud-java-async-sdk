@@ -46,7 +46,7 @@ public class CreateImageAnalyzeTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -189,6 +189,16 @@ public class CreateImageAnalyzeTaskRequest extends Request {
             private String fileName; 
             private String fileType; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(Document model) {
+                this.content = model.content;
+                this.fileName = model.fileName;
+                this.fileType = model.fileType;
+                this.url = model.url;
+            } 
 
             /**
              * content.

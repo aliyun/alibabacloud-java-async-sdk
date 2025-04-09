@@ -44,6 +44,10 @@ public class GetDocumentRankResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return latency
      */
@@ -77,6 +81,16 @@ public class GetDocumentRankResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private Usage usage; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDocumentRankResponseBody model) {
+            this.latency = model.latency;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.usage = model.usage;
+        } 
 
         /**
          * latency.
@@ -160,6 +174,14 @@ public class GetDocumentRankResponseBody extends TeaModel {
             private Integer index; 
             private Double score; 
 
+            private Builder() {
+            } 
+
+            private Builder(Scores model) {
+                this.index = model.index;
+                this.score = model.score;
+            } 
+
             /**
              * index.
              */
@@ -215,6 +237,13 @@ public class GetDocumentRankResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Scores> scores; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.scores = model.scores;
+            } 
+
             /**
              * scores.
              */
@@ -261,6 +290,13 @@ public class GetDocumentRankResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long docCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Usage model) {
+                this.docCount = model.docCount;
+            } 
 
             /**
              * doc_count.

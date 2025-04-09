@@ -44,6 +44,10 @@ public class GetQueryAnalysisResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return latency
      */
@@ -77,6 +81,16 @@ public class GetQueryAnalysisResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private Usage usage; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetQueryAnalysisResponseBody model) {
+            this.latency = model.latency;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.usage = model.usage;
+        } 
 
         /**
          * latency.
@@ -184,6 +198,16 @@ public class GetQueryAnalysisResponseBody extends TeaModel {
             private String query; 
             private java.util.Map<String, ?> sql; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.intent = model.intent;
+                this.queries = model.queries;
+                this.query = model.query;
+                this.sql = model.sql;
+            } 
+
             /**
              * intent.
              */
@@ -278,6 +302,15 @@ public class GetQueryAnalysisResponseBody extends TeaModel {
             private Long inputTokens; 
             private Long outputTokens; 
             private Long totalTokens; 
+
+            private Builder() {
+            } 
+
+            private Builder(Usage model) {
+                this.inputTokens = model.inputTokens;
+                this.outputTokens = model.outputTokens;
+                this.totalTokens = model.totalTokens;
+            } 
 
             /**
              * input_tokens.

@@ -44,6 +44,10 @@ public class GetEmbeddingTuningResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return latency
      */
@@ -77,6 +81,16 @@ public class GetEmbeddingTuningResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private Usage usage; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetEmbeddingTuningResponseBody model) {
+            this.latency = model.latency;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.usage = model.usage;
+        } 
 
         /**
          * latency.
@@ -148,6 +162,13 @@ public class GetEmbeddingTuningResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<java.util.List<Float>> output; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.output = model.output;
+            } 
+
             /**
              * output.
              */
@@ -194,6 +215,13 @@ public class GetEmbeddingTuningResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer docCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Usage model) {
+                this.docCount = model.docCount;
+            } 
 
             /**
              * doc_count.

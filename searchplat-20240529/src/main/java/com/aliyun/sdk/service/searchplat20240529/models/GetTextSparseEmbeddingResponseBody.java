@@ -44,6 +44,10 @@ public class GetTextSparseEmbeddingResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return latency
      */
@@ -77,6 +81,16 @@ public class GetTextSparseEmbeddingResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private Usage usage; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTextSparseEmbeddingResponseBody model) {
+            this.latency = model.latency;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.usage = model.usage;
+        } 
 
         /**
          * latency.
@@ -172,6 +186,15 @@ public class GetTextSparseEmbeddingResponseBody extends TeaModel {
             private Integer tokenId; 
             private Float weight; 
 
+            private Builder() {
+            } 
+
+            private Builder(Embedding model) {
+                this.token = model.token;
+                this.tokenId = model.tokenId;
+                this.weight = model.weight;
+            } 
+
             /**
              * token.
              */
@@ -247,6 +270,14 @@ public class GetTextSparseEmbeddingResponseBody extends TeaModel {
             private java.util.List<Embedding> embedding; 
             private Integer index; 
 
+            private Builder() {
+            } 
+
+            private Builder(SparseEmbeddings model) {
+                this.embedding = model.embedding;
+                this.index = model.index;
+            } 
+
             /**
              * embedding.
              */
@@ -302,6 +333,13 @@ public class GetTextSparseEmbeddingResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<SparseEmbeddings> sparseEmbeddings; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.sparseEmbeddings = model.sparseEmbeddings;
+            } 
+
             /**
              * sparse_embeddings.
              */
@@ -348,6 +386,13 @@ public class GetTextSparseEmbeddingResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long tokenCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Usage model) {
+                this.tokenCount = model.tokenCount;
+            } 
 
             /**
              * token_count.

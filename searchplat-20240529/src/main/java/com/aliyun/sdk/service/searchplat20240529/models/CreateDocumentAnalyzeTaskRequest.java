@@ -35,12 +35,17 @@ public class CreateDocumentAnalyzeTaskRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("output")
     private Output output;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("strategy")
+    private Strategy strategy;
+
     private CreateDocumentAnalyzeTaskRequest(Builder builder) {
         super(builder);
         this.workspaceName = builder.workspaceName;
         this.serviceId = builder.serviceId;
         this.document = builder.document;
         this.output = builder.output;
+        this.strategy = builder.strategy;
     }
 
     public static Builder builder() {
@@ -51,7 +56,7 @@ public class CreateDocumentAnalyzeTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -84,11 +89,19 @@ public class CreateDocumentAnalyzeTaskRequest extends Request {
         return this.output;
     }
 
+    /**
+     * @return strategy
+     */
+    public Strategy getStrategy() {
+        return this.strategy;
+    }
+
     public static final class Builder extends Request.Builder<CreateDocumentAnalyzeTaskRequest, Builder> {
         private String workspaceName; 
         private String serviceId; 
         private Document document; 
         private Output output; 
+        private Strategy strategy; 
 
         private Builder() {
             super();
@@ -100,6 +113,7 @@ public class CreateDocumentAnalyzeTaskRequest extends Request {
             this.serviceId = request.serviceId;
             this.document = request.document;
             this.output = request.output;
+            this.strategy = request.strategy;
         } 
 
         /**
@@ -135,6 +149,15 @@ public class CreateDocumentAnalyzeTaskRequest extends Request {
         public Builder output(Output output) {
             this.putBodyParameter("output", output);
             this.output = output;
+            return this;
+        }
+
+        /**
+         * strategy.
+         */
+        public Builder strategy(Strategy strategy) {
+            this.putBodyParameter("strategy", strategy);
+            this.strategy = strategy;
             return this;
         }
 
@@ -213,6 +236,16 @@ public class CreateDocumentAnalyzeTaskRequest extends Request {
             private String fileType; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(Document model) {
+                this.content = model.content;
+                this.fileName = model.fileName;
+                this.fileType = model.fileType;
+                this.url = model.url;
+            } 
+
             /**
              * content.
              */
@@ -284,6 +317,13 @@ public class CreateDocumentAnalyzeTaskRequest extends Request {
         public static final class Builder {
             private String imageStorage; 
 
+            private Builder() {
+            } 
+
+            private Builder(Output model) {
+                this.imageStorage = model.imageStorage;
+            } 
+
             /**
              * image_storage.
              */
@@ -294,6 +334,60 @@ public class CreateDocumentAnalyzeTaskRequest extends Request {
 
             public Output build() {
                 return new Output(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateDocumentAnalyzeTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDocumentAnalyzeTaskRequest</p>
+     */
+    public static class Strategy extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("enable_semantic")
+        private Boolean enableSemantic;
+
+        private Strategy(Builder builder) {
+            this.enableSemantic = builder.enableSemantic;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Strategy create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enableSemantic
+         */
+        public Boolean getEnableSemantic() {
+            return this.enableSemantic;
+        }
+
+        public static final class Builder {
+            private Boolean enableSemantic; 
+
+            private Builder() {
+            } 
+
+            private Builder(Strategy model) {
+                this.enableSemantic = model.enableSemantic;
+            } 
+
+            /**
+             * enable_semantic.
+             */
+            public Builder enableSemantic(Boolean enableSemantic) {
+                this.enableSemantic = enableSemantic;
+                return this;
+            }
+
+            public Strategy build() {
+                return new Strategy(this);
             } 
 
         } 

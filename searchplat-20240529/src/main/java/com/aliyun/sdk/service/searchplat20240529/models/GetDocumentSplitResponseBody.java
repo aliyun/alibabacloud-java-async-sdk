@@ -44,6 +44,10 @@ public class GetDocumentSplitResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return latency
      */
@@ -77,6 +81,16 @@ public class GetDocumentSplitResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private Usage usage; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDocumentSplitResponseBody model) {
+            this.latency = model.latency;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.usage = model.usage;
+        } 
 
         /**
          * latency.
@@ -160,6 +174,14 @@ public class GetDocumentSplitResponseBody extends TeaModel {
             private String content; 
             private java.util.Map<String, String> meta; 
 
+            private Builder() {
+            } 
+
+            private Builder(Chunks model) {
+                this.content = model.content;
+                this.meta = model.meta;
+            } 
+
             /**
              * content.
              */
@@ -227,6 +249,14 @@ public class GetDocumentSplitResponseBody extends TeaModel {
             private String content; 
             private java.util.Map<String, String> meta; 
 
+            private Builder() {
+            } 
+
+            private Builder(RichTexts model) {
+                this.content = model.content;
+                this.meta = model.meta;
+            } 
+
             /**
              * content.
              */
@@ -293,6 +323,14 @@ public class GetDocumentSplitResponseBody extends TeaModel {
         public static final class Builder {
             private String content; 
             private java.util.Map<String, String> meta; 
+
+            private Builder() {
+            } 
+
+            private Builder(Sentences model) {
+                this.content = model.content;
+                this.meta = model.meta;
+            } 
 
             /**
              * content.
@@ -385,6 +423,16 @@ public class GetDocumentSplitResponseBody extends TeaModel {
             private java.util.List<RichTexts> richTexts; 
             private java.util.List<Sentences> sentences; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.chunks = model.chunks;
+                this.nodes = model.nodes;
+                this.richTexts = model.richTexts;
+                this.sentences = model.sentences;
+            } 
+
             /**
              * chunks.
              */
@@ -455,6 +503,13 @@ public class GetDocumentSplitResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long tokenCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Usage model) {
+                this.tokenCount = model.tokenCount;
+            } 
 
             /**
              * token_count.

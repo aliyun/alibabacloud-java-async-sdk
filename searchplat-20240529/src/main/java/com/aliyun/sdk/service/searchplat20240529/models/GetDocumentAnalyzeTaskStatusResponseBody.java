@@ -44,6 +44,10 @@ public class GetDocumentAnalyzeTaskStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return latency
      */
@@ -77,6 +81,16 @@ public class GetDocumentAnalyzeTaskStatusResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private Usage usage; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDocumentAnalyzeTaskStatusResponseBody model) {
+            this.latency = model.latency;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.usage = model.usage;
+        } 
 
         /**
          * latency.
@@ -171,6 +185,15 @@ public class GetDocumentAnalyzeTaskStatusResponseBody extends TeaModel {
             private String content; 
             private String contentType; 
             private Integer pageNum; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.content = model.content;
+                this.contentType = model.contentType;
+                this.pageNum = model.pageNum;
+            } 
 
             /**
              * content.
@@ -271,6 +294,16 @@ public class GetDocumentAnalyzeTaskStatusResponseBody extends TeaModel {
             private String status; 
             private String taskId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.data = model.data;
+                this.error = model.error;
+                this.status = model.status;
+                this.taskId = model.taskId;
+            } 
+
             /**
              * data.
              */
@@ -365,6 +398,15 @@ public class GetDocumentAnalyzeTaskStatusResponseBody extends TeaModel {
             private Long imageCount; 
             private Long tableCount; 
             private Long tokenCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Usage model) {
+                this.imageCount = model.imageCount;
+                this.tableCount = model.tableCount;
+                this.tokenCount = model.tokenCount;
+            } 
 
             /**
              * image_count.

@@ -40,6 +40,10 @@ public class CreateImageAnalyzeTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return latency
      */
@@ -65,6 +69,15 @@ public class CreateImageAnalyzeTaskResponseBody extends TeaModel {
         private Integer latency; 
         private String requestId; 
         private Result result; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateImageAnalyzeTaskResponseBody model) {
+            this.latency = model.latency;
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * latency.
@@ -127,6 +140,13 @@ public class CreateImageAnalyzeTaskResponseBody extends TeaModel {
 
         public static final class Builder {
             private String taskId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.taskId = model.taskId;
+            } 
 
             /**
              * task_id.

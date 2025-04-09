@@ -44,6 +44,10 @@ public class GetWebSearchResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return latency
      */
@@ -77,6 +81,16 @@ public class GetWebSearchResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private Usage usage; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetWebSearchResponseBody model) {
+            this.latency = model.latency;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.usage = model.usage;
+        } 
 
         /**
          * latency.
@@ -196,6 +210,17 @@ public class GetWebSearchResponseBody extends TeaModel {
             private String snippet; 
             private String tilte; 
 
+            private Builder() {
+            } 
+
+            private Builder(SearchResult model) {
+                this.content = model.content;
+                this.link = model.link;
+                this.position = model.position;
+                this.snippet = model.snippet;
+                this.tilte = model.tilte;
+            } 
+
             /**
              * content.
              */
@@ -274,6 +299,13 @@ public class GetWebSearchResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SearchResult> searchResult; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.searchResult = model.searchResult;
+            } 
 
             /**
              * search_result.
@@ -393,6 +425,19 @@ public class GetWebSearchResponseBody extends TeaModel {
             private Long rewrite_model_output_tokens; 
             private Long rewrite_model_total_tokens; 
             private Long searchCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Usage model) {
+                this.filter_model_input_tokens = model.filter_model_input_tokens;
+                this.filter_model_output_tokens = model.filter_model_output_tokens;
+                this.filter_model_total_tokens = model.filter_model_total_tokens;
+                this.rewrite_model_input_tokens = model.rewrite_model_input_tokens;
+                this.rewrite_model_output_tokens = model.rewrite_model_output_tokens;
+                this.rewrite_model_total_tokens = model.rewrite_model_total_tokens;
+                this.searchCount = model.searchCount;
+            } 
 
             /**
              * filter_model.input_tokens.

@@ -44,6 +44,10 @@ public class GetTextEmbeddingResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return latency
      */
@@ -77,6 +81,16 @@ public class GetTextEmbeddingResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private Usage usage; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTextEmbeddingResponseBody model) {
+            this.latency = model.latency;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.usage = model.usage;
+        } 
 
         /**
          * latency.
@@ -160,6 +174,14 @@ public class GetTextEmbeddingResponseBody extends TeaModel {
             private java.util.List<Double> embedding; 
             private Integer index; 
 
+            private Builder() {
+            } 
+
+            private Builder(Embeddings model) {
+                this.embedding = model.embedding;
+                this.index = model.index;
+            } 
+
             /**
              * embedding.
              */
@@ -215,6 +237,13 @@ public class GetTextEmbeddingResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Embeddings> embeddings; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.embeddings = model.embeddings;
+            } 
+
             /**
              * embeddings.
              */
@@ -261,6 +290,13 @@ public class GetTextEmbeddingResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long tokenCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Usage model) {
+                this.tokenCount = model.tokenCount;
+            } 
 
             /**
              * token_count.

@@ -52,7 +52,7 @@ public class GetDocumentSplitRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -202,6 +202,15 @@ public class GetDocumentSplitRequest extends Request {
             private String contentEncoding; 
             private String contentType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Document model) {
+                this.content = model.content;
+                this.contentEncoding = model.contentEncoding;
+                this.contentType = model.contentType;
+            } 
+
             /**
              * content.
              */
@@ -288,6 +297,15 @@ public class GetDocumentSplitRequest extends Request {
             private String computeType; 
             private Long maxChunkSize; 
             private Boolean needSentence; 
+
+            private Builder() {
+            } 
+
+            private Builder(Strategy model) {
+                this.computeType = model.computeType;
+                this.maxChunkSize = model.maxChunkSize;
+                this.needSentence = model.needSentence;
+            } 
 
             /**
              * compute_type.

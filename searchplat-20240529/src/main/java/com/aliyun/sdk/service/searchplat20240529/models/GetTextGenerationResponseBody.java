@@ -44,6 +44,10 @@ public class GetTextGenerationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return latency
      */
@@ -77,6 +81,16 @@ public class GetTextGenerationResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private Usage usage; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTextGenerationResponseBody model) {
+            this.latency = model.latency;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.usage = model.usage;
+        } 
 
         /**
          * latency.
@@ -160,6 +174,14 @@ public class GetTextGenerationResponseBody extends TeaModel {
             private String title; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(SearchResults model) {
+                this.title = model.title;
+                this.url = model.url;
+            } 
+
             /**
              * title.
              */
@@ -226,6 +248,14 @@ public class GetTextGenerationResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<SearchResults> searchResults; 
             private String text; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.searchResults = model.searchResults;
+                this.text = model.text;
+            } 
 
             /**
              * search_results.
@@ -305,6 +335,15 @@ public class GetTextGenerationResponseBody extends TeaModel {
             private Long inputTokens; 
             private Long outputTokens; 
             private Long totalTokens; 
+
+            private Builder() {
+            } 
+
+            private Builder(Usage model) {
+                this.inputTokens = model.inputTokens;
+                this.outputTokens = model.outputTokens;
+                this.totalTokens = model.totalTokens;
+            } 
 
             /**
              * input_tokens.

@@ -57,7 +57,7 @@ public class GetQueryAnalysisRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -213,6 +213,14 @@ public class GetQueryAnalysisRequest extends Request {
             private String name; 
             private java.util.Map<String, ?> parameters; 
 
+            private Builder() {
+            } 
+
+            private Builder(Functions model) {
+                this.name = model.name;
+                this.parameters = model.parameters;
+            } 
+
             /**
              * name.
              */
@@ -279,6 +287,14 @@ public class GetQueryAnalysisRequest extends Request {
         public static final class Builder {
             private String content; 
             private String role; 
+
+            private Builder() {
+            } 
+
+            private Builder(History model) {
+                this.content = model.content;
+                this.role = model.role;
+            } 
 
             /**
              * content.
