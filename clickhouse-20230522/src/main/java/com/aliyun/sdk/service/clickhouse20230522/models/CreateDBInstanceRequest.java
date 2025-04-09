@@ -51,6 +51,10 @@ public class CreateDBInstanceRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ScaleMax")
     private String scaleMax;
 
@@ -84,6 +88,7 @@ public class CreateDBInstanceRequest extends Request {
         this.engineVersion = builder.engineVersion;
         this.multiZone = builder.multiZone;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.scaleMax = builder.scaleMax;
         this.scaleMin = builder.scaleMin;
         this.sourceDBInstanceId = builder.sourceDBInstanceId;
@@ -162,6 +167,13 @@ public class CreateDBInstanceRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return scaleMax
      */
     public String getScaleMax() {
@@ -212,6 +224,7 @@ public class CreateDBInstanceRequest extends Request {
         private String engineVersion; 
         private java.util.List<MultiZone> multiZone; 
         private String regionId; 
+        private String resourceGroupId; 
         private String scaleMax; 
         private String scaleMin; 
         private String sourceDBInstanceId; 
@@ -233,6 +246,7 @@ public class CreateDBInstanceRequest extends Request {
             this.engineVersion = request.engineVersion;
             this.multiZone = request.multiZone;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.scaleMax = request.scaleMax;
             this.scaleMin = request.scaleMin;
             this.sourceDBInstanceId = request.sourceDBInstanceId;
@@ -337,6 +351,15 @@ public class CreateDBInstanceRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 
