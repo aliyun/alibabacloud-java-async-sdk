@@ -48,6 +48,10 @@ public class QueryMessageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class QueryMessageResponseBody extends TeaModel {
         private java.util.List<MessageList> messageList; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryMessageResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.messageList = model.messageList;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The returned HTTP status code. If the request is successful, 200 is returned.</p>
@@ -339,6 +354,26 @@ public class QueryMessageResponseBody extends TeaModel {
             private Integer truncatedValueSize; 
             private String value; 
             private Boolean valueTruncated; 
+
+            private Builder() {
+            } 
+
+            private Builder(MessageList model) {
+                this.checksum = model.checksum;
+                this.key = model.key;
+                this.keyTruncated = model.keyTruncated;
+                this.offset = model.offset;
+                this.partition = model.partition;
+                this.serializedKeySize = model.serializedKeySize;
+                this.serializedValueSize = model.serializedValueSize;
+                this.timestamp = model.timestamp;
+                this.timestampType = model.timestampType;
+                this.topic = model.topic;
+                this.truncatedKeySize = model.truncatedKeySize;
+                this.truncatedValueSize = model.truncatedValueSize;
+                this.value = model.value;
+                this.valueTruncated = model.valueTruncated;
+            } 
 
             /**
              * <p>The check value of the chaincode.</p>

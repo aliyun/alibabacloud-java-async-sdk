@@ -91,7 +91,7 @@ public class UpgradePrePayOrderRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -660,6 +660,30 @@ public class UpgradePrePayOrderRequest extends Request {
             private Integer zooKeeperCU; 
             private Integer zooKeeperReplica; 
             private Integer zooKeeperStorage; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConfluentConfig model) {
+                this.connectCU = model.connectCU;
+                this.connectReplica = model.connectReplica;
+                this.controlCenterCU = model.controlCenterCU;
+                this.controlCenterReplica = model.controlCenterReplica;
+                this.controlCenterStorage = model.controlCenterStorage;
+                this.kafkaCU = model.kafkaCU;
+                this.kafkaReplica = model.kafkaReplica;
+                this.kafkaRestProxyCU = model.kafkaRestProxyCU;
+                this.kafkaRestProxyReplica = model.kafkaRestProxyReplica;
+                this.kafkaStorage = model.kafkaStorage;
+                this.ksqlCU = model.ksqlCU;
+                this.ksqlReplica = model.ksqlReplica;
+                this.ksqlStorage = model.ksqlStorage;
+                this.schemaRegistryCU = model.schemaRegistryCU;
+                this.schemaRegistryReplica = model.schemaRegistryReplica;
+                this.zooKeeperCU = model.zooKeeperCU;
+                this.zooKeeperReplica = model.zooKeeperReplica;
+                this.zooKeeperStorage = model.zooKeeperStorage;
+            } 
 
             /**
              * ConnectCU.

@@ -48,6 +48,10 @@ public class DescribeAclsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class DescribeAclsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAclsResponseBody model) {
+            this.code = model.code;
+            this.kafkaAclList = model.kafkaAclList;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.</p>
@@ -252,6 +267,19 @@ public class DescribeAclsResponseBody extends TeaModel {
             private String host; 
             private String username; 
 
+            private Builder() {
+            } 
+
+            private Builder(KafkaAclVO model) {
+                this.aclOperationType = model.aclOperationType;
+                this.aclPermissionType = model.aclPermissionType;
+                this.aclResourceName = model.aclResourceName;
+                this.aclResourcePatternType = model.aclResourcePatternType;
+                this.aclResourceType = model.aclResourceType;
+                this.host = model.host;
+                this.username = model.username;
+            } 
+
             /**
              * <p>The types of operations allowed by the ACL. Separate multiple operation types with commas (,).</p>
              * <ul>
@@ -398,6 +426,13 @@ public class DescribeAclsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<KafkaAclVO> kafkaAclVO; 
+
+            private Builder() {
+            } 
+
+            private Builder(KafkaAclList model) {
+                this.kafkaAclVO = model.kafkaAclVO;
+            } 
 
             /**
              * KafkaAclVO.

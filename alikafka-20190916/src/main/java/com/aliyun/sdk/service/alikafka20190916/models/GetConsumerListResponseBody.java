@@ -60,6 +60,10 @@ public class GetConsumerListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -125,6 +129,20 @@ public class GetConsumerListResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Long total; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetConsumerListResponseBody model) {
+            this.code = model.code;
+            this.consumerList = model.consumerList;
+            this.currentPage = model.currentPage;
+            this.message = model.message;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.total = model.total;
+        } 
 
         /**
          * <p>The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.</p>
@@ -261,6 +279,14 @@ public class GetConsumerListResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(TagVO model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The tag key.</p>
              * 
@@ -321,6 +347,13 @@ public class GetConsumerListResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<TagVO> tagVO; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagVO = model.tagVO;
+            } 
 
             /**
              * TagVO.
@@ -441,6 +474,19 @@ public class GetConsumerListResponseBody extends TeaModel {
             private String remark; 
             private Tags tags; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConsumerVO model) {
+                this.automaticallyCreatedGroup = model.automaticallyCreatedGroup;
+                this.consumerId = model.consumerId;
+                this.createTime = model.createTime;
+                this.instanceId = model.instanceId;
+                this.regionId = model.regionId;
+                this.remark = model.remark;
+                this.tags = model.tags;
+            } 
+
             /**
              * <p>Indicates that the consumer group was automatically created by the system.</p>
              * 
@@ -553,6 +599,13 @@ public class GetConsumerListResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ConsumerVO> consumerVO; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConsumerList model) {
+                this.consumerVO = model.consumerVO;
+            } 
 
             /**
              * ConsumerVO.

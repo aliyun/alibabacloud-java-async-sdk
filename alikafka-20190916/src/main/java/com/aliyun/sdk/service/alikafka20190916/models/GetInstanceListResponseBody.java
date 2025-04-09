@@ -48,6 +48,10 @@ public class GetInstanceListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetInstanceListResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetInstanceListResponseBody model) {
+            this.code = model.code;
+            this.instanceList = model.instanceList;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code returned. The HTTP status code 200 indicates that the call is successful.</p>
@@ -384,6 +399,30 @@ public class GetInstanceListResponseBody extends TeaModel {
             private Integer zooKeeperReplica; 
             private Integer zooKeeperStorage; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConfluentConfig model) {
+                this.connectCU = model.connectCU;
+                this.connectReplica = model.connectReplica;
+                this.controlCenterCU = model.controlCenterCU;
+                this.controlCenterReplica = model.controlCenterReplica;
+                this.controlCenterStorage = model.controlCenterStorage;
+                this.kafkaCU = model.kafkaCU;
+                this.kafkaReplica = model.kafkaReplica;
+                this.kafkaRestProxyCU = model.kafkaRestProxyCU;
+                this.kafkaRestProxyReplica = model.kafkaRestProxyReplica;
+                this.kafkaStorage = model.kafkaStorage;
+                this.ksqlCU = model.ksqlCU;
+                this.ksqlReplica = model.ksqlReplica;
+                this.ksqlStorage = model.ksqlStorage;
+                this.schemaRegistryCU = model.schemaRegistryCU;
+                this.schemaRegistryReplica = model.schemaRegistryReplica;
+                this.zooKeeperCU = model.zooKeeperCU;
+                this.zooKeeperReplica = model.zooKeeperReplica;
+                this.zooKeeperStorage = model.zooKeeperStorage;
+            } 
+
             /**
              * <p>The number of CPU cores of Connect.</p>
              * 
@@ -633,6 +672,14 @@ public class GetInstanceListResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(TagVO model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The tag key.</p>
              * 
@@ -694,6 +741,13 @@ public class GetInstanceListResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<TagVO> tagVO; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagVO = model.tagVO;
+            } 
+
             /**
              * TagVO.
              */
@@ -740,6 +794,13 @@ public class GetInstanceListResponseBody extends TeaModel {
 
         public static final class Builder {
             private String current2OpenSourceVersion; 
+
+            private Builder() {
+            } 
+
+            private Builder(UpgradeServiceDetailInfo model) {
+                this.current2OpenSourceVersion = model.current2OpenSourceVersion;
+            } 
 
             /**
              * <p>The open source Apache Kafka version that corresponds to the instance.</p>
@@ -790,6 +851,13 @@ public class GetInstanceListResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> vSwitchIds; 
+
+            private Builder() {
+            } 
+
+            private Builder(VSwitchIds model) {
+                this.vSwitchIds = model.vSwitchIds;
+            } 
 
             /**
              * VSwitchIds.
@@ -1413,6 +1481,61 @@ public class GetInstanceListResponseBody extends TeaModel {
             private String vpcSaslDomainEndpoint; 
             private String vpcSaslEndPoint; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceVO model) {
+                this.allConfig = model.allConfig;
+                this.autoCreateGroupEnable = model.autoCreateGroupEnable;
+                this.autoCreateTopicEnable = model.autoCreateTopicEnable;
+                this.backupZoneId = model.backupZoneId;
+                this.confluentConfig = model.confluentConfig;
+                this.createTime = model.createTime;
+                this.defaultPartitionNum = model.defaultPartitionNum;
+                this.deployType = model.deployType;
+                this.diskSize = model.diskSize;
+                this.diskType = model.diskType;
+                this.domainEndpoint = model.domainEndpoint;
+                this.eipMax = model.eipMax;
+                this.endPoint = model.endPoint;
+                this.expiredTime = model.expiredTime;
+                this.instanceId = model.instanceId;
+                this.ioMax = model.ioMax;
+                this.ioMaxRead = model.ioMaxRead;
+                this.ioMaxSpec = model.ioMaxSpec;
+                this.ioMaxWrite = model.ioMaxWrite;
+                this.kmsKeyId = model.kmsKeyId;
+                this.msgRetain = model.msgRetain;
+                this.name = model.name;
+                this.paidType = model.paidType;
+                this.regionId = model.regionId;
+                this.reservedPublishCapacity = model.reservedPublishCapacity;
+                this.reservedSubscribeCapacity = model.reservedSubscribeCapacity;
+                this.resourceGroupId = model.resourceGroupId;
+                this.saslDomainEndpoint = model.saslDomainEndpoint;
+                this.saslEndPoint = model.saslEndPoint;
+                this.securityGroup = model.securityGroup;
+                this.series = model.series;
+                this.serviceStatus = model.serviceStatus;
+                this.specType = model.specType;
+                this.sslDomainEndpoint = model.sslDomainEndpoint;
+                this.sslEndPoint = model.sslEndPoint;
+                this.standardZoneId = model.standardZoneId;
+                this.tags = model.tags;
+                this.topicNumLimit = model.topicNumLimit;
+                this.upgradeServiceDetailInfo = model.upgradeServiceDetailInfo;
+                this.usedGroupCount = model.usedGroupCount;
+                this.usedPartitionCount = model.usedPartitionCount;
+                this.usedTopicCount = model.usedTopicCount;
+                this.vSwitchId = model.vSwitchId;
+                this.vSwitchIds = model.vSwitchIds;
+                this.viewInstanceStatusCode = model.viewInstanceStatusCode;
+                this.vpcId = model.vpcId;
+                this.vpcSaslDomainEndpoint = model.vpcSaslDomainEndpoint;
+                this.vpcSaslEndPoint = model.vpcSaslEndPoint;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>The configurations of the deployed ApsaraMQ for Kafka instance.</p>
@@ -2077,6 +2200,13 @@ public class GetInstanceListResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<InstanceVO> instanceVO; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceList model) {
+                this.instanceVO = model.instanceVO;
+            } 
 
             /**
              * InstanceVO.

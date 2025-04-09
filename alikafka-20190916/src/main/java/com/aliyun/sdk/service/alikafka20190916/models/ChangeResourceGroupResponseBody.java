@@ -48,6 +48,10 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
         private String newResourceGroupId; 
         private String requestId; 
         private Long success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ChangeResourceGroupResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.newResourceGroupId = model.newResourceGroupId;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.</p>

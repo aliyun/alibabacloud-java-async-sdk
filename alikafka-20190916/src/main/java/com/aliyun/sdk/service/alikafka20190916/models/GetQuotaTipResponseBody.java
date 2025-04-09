@@ -48,6 +48,10 @@ public class GetQuotaTipResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetQuotaTipResponseBody extends TeaModel {
         private QuotaData quotaData; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetQuotaTipResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.quotaData = model.quotaData;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.</p>
@@ -299,6 +314,23 @@ public class GetQuotaTipResponseBody extends TeaModel {
             private Integer topicNumOfBuy; 
             private Integer topicQuota; 
             private Integer topicUsed; 
+
+            private Builder() {
+            } 
+
+            private Builder(QuotaData model) {
+                this.groupLeft = model.groupLeft;
+                this.groupUsed = model.groupUsed;
+                this.isPartitionBuy = model.isPartitionBuy;
+                this.partitionLeft = model.partitionLeft;
+                this.partitionNumOfBuy = model.partitionNumOfBuy;
+                this.partitionQuota = model.partitionQuota;
+                this.partitionUsed = model.partitionUsed;
+                this.topicLeft = model.topicLeft;
+                this.topicNumOfBuy = model.topicNumOfBuy;
+                this.topicQuota = model.topicQuota;
+                this.topicUsed = model.topicUsed;
+            } 
 
             /**
              * <p>The number of available groups.</p>

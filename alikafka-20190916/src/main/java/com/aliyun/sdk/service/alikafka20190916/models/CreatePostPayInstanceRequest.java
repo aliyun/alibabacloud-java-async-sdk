@@ -91,7 +91,7 @@ public class CreatePostPayInstanceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -380,6 +380,14 @@ public class CreatePostPayInstanceRequest extends Request {
             private Long reservedPublishCapacity; 
             private Long reservedSubscribeCapacity; 
 
+            private Builder() {
+            } 
+
+            private Builder(ServerlessConfig model) {
+                this.reservedPublishCapacity = model.reservedPublishCapacity;
+                this.reservedSubscribeCapacity = model.reservedSubscribeCapacity;
+            } 
+
             /**
              * ReservedPublishCapacity.
              */
@@ -447,6 +455,14 @@ public class CreatePostPayInstanceRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>This parameter is required.</p>

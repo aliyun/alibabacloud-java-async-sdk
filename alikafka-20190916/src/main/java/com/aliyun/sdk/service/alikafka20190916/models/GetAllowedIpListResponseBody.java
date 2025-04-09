@@ -48,6 +48,10 @@ public class GetAllowedIpListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return allowedList
      */
@@ -89,6 +93,17 @@ public class GetAllowedIpListResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAllowedIpListResponseBody model) {
+            this.allowedList = model.allowedList;
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The IP address whitelist.</p>
@@ -161,13 +176,29 @@ public class GetAllowedIpListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllowedIpList")
         private java.util.List<String> allowedIpList;
 
+        @com.aliyun.core.annotation.NameInMap("BlackIPList")
+        private java.util.List<String> blackIPList;
+
+        @com.aliyun.core.annotation.NameInMap("BlackIPMap")
+        private java.util.Map<String, String> blackIPMap;
+
         @com.aliyun.core.annotation.NameInMap("PortRange")
         private String portRange;
+
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
+        private String securityGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("UserDefinedSharedSecurityGroup")
+        private Boolean userDefinedSharedSecurityGroup;
 
         private InternetList(Builder builder) {
             this.allowedIpGroup = builder.allowedIpGroup;
             this.allowedIpList = builder.allowedIpList;
+            this.blackIPList = builder.blackIPList;
+            this.blackIPMap = builder.blackIPMap;
             this.portRange = builder.portRange;
+            this.securityGroupId = builder.securityGroupId;
+            this.userDefinedSharedSecurityGroup = builder.userDefinedSharedSecurityGroup;
         }
 
         public static Builder builder() {
@@ -193,16 +224,61 @@ public class GetAllowedIpListResponseBody extends TeaModel {
         }
 
         /**
+         * @return blackIPList
+         */
+        public java.util.List<String> getBlackIPList() {
+            return this.blackIPList;
+        }
+
+        /**
+         * @return blackIPMap
+         */
+        public java.util.Map<String, String> getBlackIPMap() {
+            return this.blackIPMap;
+        }
+
+        /**
          * @return portRange
          */
         public String getPortRange() {
             return this.portRange;
         }
 
+        /**
+         * @return securityGroupId
+         */
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        /**
+         * @return userDefinedSharedSecurityGroup
+         */
+        public Boolean getUserDefinedSharedSecurityGroup() {
+            return this.userDefinedSharedSecurityGroup;
+        }
+
         public static final class Builder {
             private java.util.Map<String, String> allowedIpGroup; 
             private java.util.List<String> allowedIpList; 
+            private java.util.List<String> blackIPList; 
+            private java.util.Map<String, String> blackIPMap; 
             private String portRange; 
+            private String securityGroupId; 
+            private Boolean userDefinedSharedSecurityGroup; 
+
+            private Builder() {
+            } 
+
+            private Builder(InternetList model) {
+                this.allowedIpGroup = model.allowedIpGroup;
+                this.allowedIpList = model.allowedIpList;
+                this.blackIPList = model.blackIPList;
+                this.blackIPMap = model.blackIPMap;
+                this.portRange = model.portRange;
+                this.securityGroupId = model.securityGroupId;
+                this.userDefinedSharedSecurityGroup = model.userDefinedSharedSecurityGroup;
+            } 
 
             /**
              * <p>The group to which the IP address whitelist belongs.</p>
@@ -221,6 +297,22 @@ public class GetAllowedIpListResponseBody extends TeaModel {
             }
 
             /**
+             * BlackIPList.
+             */
+            public Builder blackIPList(java.util.List<String> blackIPList) {
+                this.blackIPList = blackIPList;
+                return this;
+            }
+
+            /**
+             * BlackIPMap.
+             */
+            public Builder blackIPMap(java.util.Map<String, String> blackIPMap) {
+                this.blackIPMap = blackIPMap;
+                return this;
+            }
+
+            /**
              * <p>The port range. Valid value:</p>
              * <p><strong>9093/9093</strong>.</p>
              * 
@@ -229,6 +321,22 @@ public class GetAllowedIpListResponseBody extends TeaModel {
              */
             public Builder portRange(String portRange) {
                 this.portRange = portRange;
+                return this;
+            }
+
+            /**
+             * SecurityGroupId.
+             */
+            public Builder securityGroupId(String securityGroupId) {
+                this.securityGroupId = securityGroupId;
+                return this;
+            }
+
+            /**
+             * UserDefinedSharedSecurityGroup.
+             */
+            public Builder userDefinedSharedSecurityGroup(Boolean userDefinedSharedSecurityGroup) {
+                this.userDefinedSharedSecurityGroup = userDefinedSharedSecurityGroup;
                 return this;
             }
 
@@ -252,13 +360,29 @@ public class GetAllowedIpListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllowedIpList")
         private java.util.List<String> allowedIpList;
 
+        @com.aliyun.core.annotation.NameInMap("BlackIPList")
+        private java.util.List<String> blackIPList;
+
+        @com.aliyun.core.annotation.NameInMap("BlackIPMap")
+        private java.util.Map<String, String> blackIPMap;
+
         @com.aliyun.core.annotation.NameInMap("PortRange")
         private String portRange;
+
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
+        private String securityGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("UserDefinedSharedSecurityGroup")
+        private Boolean userDefinedSharedSecurityGroup;
 
         private VpcList(Builder builder) {
             this.allowedIpGroup = builder.allowedIpGroup;
             this.allowedIpList = builder.allowedIpList;
+            this.blackIPList = builder.blackIPList;
+            this.blackIPMap = builder.blackIPMap;
             this.portRange = builder.portRange;
+            this.securityGroupId = builder.securityGroupId;
+            this.userDefinedSharedSecurityGroup = builder.userDefinedSharedSecurityGroup;
         }
 
         public static Builder builder() {
@@ -284,16 +408,61 @@ public class GetAllowedIpListResponseBody extends TeaModel {
         }
 
         /**
+         * @return blackIPList
+         */
+        public java.util.List<String> getBlackIPList() {
+            return this.blackIPList;
+        }
+
+        /**
+         * @return blackIPMap
+         */
+        public java.util.Map<String, String> getBlackIPMap() {
+            return this.blackIPMap;
+        }
+
+        /**
          * @return portRange
          */
         public String getPortRange() {
             return this.portRange;
         }
 
+        /**
+         * @return securityGroupId
+         */
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        /**
+         * @return userDefinedSharedSecurityGroup
+         */
+        public Boolean getUserDefinedSharedSecurityGroup() {
+            return this.userDefinedSharedSecurityGroup;
+        }
+
         public static final class Builder {
             private java.util.Map<String, String> allowedIpGroup; 
             private java.util.List<String> allowedIpList; 
+            private java.util.List<String> blackIPList; 
+            private java.util.Map<String, String> blackIPMap; 
             private String portRange; 
+            private String securityGroupId; 
+            private Boolean userDefinedSharedSecurityGroup; 
+
+            private Builder() {
+            } 
+
+            private Builder(VpcList model) {
+                this.allowedIpGroup = model.allowedIpGroup;
+                this.allowedIpList = model.allowedIpList;
+                this.blackIPList = model.blackIPList;
+                this.blackIPMap = model.blackIPMap;
+                this.portRange = model.portRange;
+                this.securityGroupId = model.securityGroupId;
+                this.userDefinedSharedSecurityGroup = model.userDefinedSharedSecurityGroup;
+            } 
 
             /**
              * <p>The group to which the IP address whitelist belongs.</p>
@@ -312,6 +481,22 @@ public class GetAllowedIpListResponseBody extends TeaModel {
             }
 
             /**
+             * BlackIPList.
+             */
+            public Builder blackIPList(java.util.List<String> blackIPList) {
+                this.blackIPList = blackIPList;
+                return this;
+            }
+
+            /**
+             * BlackIPMap.
+             */
+            public Builder blackIPMap(java.util.Map<String, String> blackIPMap) {
+                this.blackIPMap = blackIPMap;
+                return this;
+            }
+
+            /**
              * <p>The port range. Valid value:</p>
              * <p><strong>9092/9092</strong>.</p>
              * 
@@ -320,6 +505,22 @@ public class GetAllowedIpListResponseBody extends TeaModel {
              */
             public Builder portRange(String portRange) {
                 this.portRange = portRange;
+                return this;
+            }
+
+            /**
+             * SecurityGroupId.
+             */
+            public Builder securityGroupId(String securityGroupId) {
+                this.securityGroupId = securityGroupId;
+                return this;
+            }
+
+            /**
+             * UserDefinedSharedSecurityGroup.
+             */
+            public Builder userDefinedSharedSecurityGroup(Boolean userDefinedSharedSecurityGroup) {
+                this.userDefinedSharedSecurityGroup = userDefinedSharedSecurityGroup;
                 return this;
             }
 
@@ -385,6 +586,15 @@ public class GetAllowedIpListResponseBody extends TeaModel {
             private Integer deployType; 
             private java.util.List<InternetList> internetList; 
             private java.util.List<VpcList> vpcList; 
+
+            private Builder() {
+            } 
+
+            private Builder(AllowedList model) {
+                this.deployType = model.deployType;
+                this.internetList = model.internetList;
+                this.vpcList = model.vpcList;
+            } 
 
             /**
              * <p>The deployment mode of the instance. Valid values:</p>

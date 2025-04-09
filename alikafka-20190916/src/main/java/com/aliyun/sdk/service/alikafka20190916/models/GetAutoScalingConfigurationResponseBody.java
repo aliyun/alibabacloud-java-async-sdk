@@ -48,6 +48,10 @@ public class GetAutoScalingConfigurationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetAutoScalingConfigurationResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAutoScalingConfigurationResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The response code. The value 200 indicates that the request was successful.</p>
@@ -179,6 +194,13 @@ public class GetAutoScalingConfigurationResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> weeklyTypes; 
+
+            private Builder() {
+            } 
+
+            private Builder(WeeklyTypes model) {
+                this.weeklyTypes = model.weeklyTypes;
+            } 
 
             /**
              * WeeklyTypes.
@@ -370,6 +392,25 @@ public class GetAutoScalingConfigurationResponseBody extends TeaModel {
             private String scheduleType; 
             private String timeZone; 
             private WeeklyTypes weeklyTypes; 
+
+            private Builder() {
+            } 
+
+            private Builder(ScheduledScalingRules model) {
+                this.durationMinutes = model.durationMinutes;
+                this.enable = model.enable;
+                this.estimatedElasticScalingDownTimeSecs = model.estimatedElasticScalingDownTimeSecs;
+                this.estimatedElasticScalingUpTimeSecs = model.estimatedElasticScalingUpTimeSecs;
+                this.firstScheduledTime = model.firstScheduledTime;
+                this.repeatType = model.repeatType;
+                this.reservedPubFlow = model.reservedPubFlow;
+                this.reservedSubFlow = model.reservedSubFlow;
+                this.ruleId = model.ruleId;
+                this.ruleName = model.ruleName;
+                this.scheduleType = model.scheduleType;
+                this.timeZone = model.timeZone;
+                this.weeklyTypes = model.weeklyTypes;
+            } 
 
             /**
              * <p>The duration of a scheduled scaling task. Unit: minutes.</p>
@@ -564,6 +605,13 @@ public class GetAutoScalingConfigurationResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<ScheduledScalingRules> scheduledScalingRules; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataScheduledScalingRules model) {
+                this.scheduledScalingRules = model.scheduledScalingRules;
+            } 
+
             /**
              * ScheduledScalingRules.
              */
@@ -610,6 +658,13 @@ public class GetAutoScalingConfigurationResponseBody extends TeaModel {
 
         public static final class Builder {
             private DataScheduledScalingRules scheduledScalingRules; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.scheduledScalingRules = model.scheduledScalingRules;
+            } 
 
             /**
              * <p>The scheduled scaling rules.</p>

@@ -48,6 +48,10 @@ public class GetTopicStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetTopicStatusResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private TopicStatus topicStatus; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTopicStatusResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.topicStatus = model.topicStatus;
+        } 
 
         /**
          * <p>The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.</p>
@@ -228,6 +243,17 @@ public class GetTopicStatusResponseBody extends TeaModel {
             private Integer partition; 
             private String topic; 
 
+            private Builder() {
+            } 
+
+            private Builder(OffsetTable model) {
+                this.lastUpdateTimestamp = model.lastUpdateTimestamp;
+                this.maxOffset = model.maxOffset;
+                this.minOffset = model.minOffset;
+                this.partition = model.partition;
+                this.topic = model.topic;
+            } 
+
             /**
              * <p>The last time when the partition was modified.</p>
              * 
@@ -322,6 +348,13 @@ public class GetTopicStatusResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<OffsetTable> offsetTable; 
 
+            private Builder() {
+            } 
+
+            private Builder(TopicStatusOffsetTable model) {
+                this.offsetTable = model.offsetTable;
+            } 
+
             /**
              * OffsetTable.
              */
@@ -392,6 +425,15 @@ public class GetTopicStatusResponseBody extends TeaModel {
             private Long lastTimeStamp; 
             private TopicStatusOffsetTable offsetTable; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(TopicStatus model) {
+                this.lastTimeStamp = model.lastTimeStamp;
+                this.offsetTable = model.offsetTable;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The time when the last consumed message was generated.</p>

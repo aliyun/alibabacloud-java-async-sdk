@@ -48,6 +48,10 @@ public class CreatePrePayOrderResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class CreatePrePayOrderResponseBody extends TeaModel {
         private String orderId; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreatePrePayOrderResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.</p>

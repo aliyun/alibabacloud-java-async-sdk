@@ -48,6 +48,10 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetConsumerProgressResponseBody model) {
+            this.code = model.code;
+            this.consumerProgress = model.consumerProgress;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The returned HTTP status code. If the request is successful, 200 is returned.</p>
@@ -240,6 +255,18 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             private Boolean rebalanceSuccess; 
             private Long rebalanceTimeConsuming; 
 
+            private Builder() {
+            } 
+
+            private Builder(RebalanceInfoList model) {
+                this.generation = model.generation;
+                this.groupId = model.groupId;
+                this.lastRebalanceTimestamp = model.lastRebalanceTimestamp;
+                this.reason = model.reason;
+                this.rebalanceSuccess = model.rebalanceSuccess;
+                this.rebalanceTimeConsuming = model.rebalanceTimeConsuming;
+            } 
+
             /**
              * <p>The number of rebalances.</p>
              * 
@@ -344,6 +371,13 @@ public class GetConsumerProgressResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<RebalanceInfoList> rebalanceInfoList; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConsumerProgressRebalanceInfoList model) {
+                this.rebalanceInfoList = model.rebalanceInfoList;
+            } 
 
             /**
              * RebalanceInfoList.
@@ -464,6 +498,19 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             private String memberId; 
             private Integer partition; 
 
+            private Builder() {
+            } 
+
+            private Builder(OffsetList model) {
+                this.brokerOffset = model.brokerOffset;
+                this.clientId = model.clientId;
+                this.clientIp = model.clientIp;
+                this.consumerOffset = model.consumerOffset;
+                this.lastTimestamp = model.lastTimestamp;
+                this.memberId = model.memberId;
+                this.partition = model.partition;
+            } 
+
             /**
              * <p>The latest offset in the partition of the topic.</p>
              * 
@@ -580,6 +627,13 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<OffsetList> offsetList; 
 
+            private Builder() {
+            } 
+
+            private Builder(TopicListOffsetList model) {
+                this.offsetList = model.offsetList;
+            } 
+
             /**
              * OffsetList.
              */
@@ -663,6 +717,16 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             private String topic; 
             private Long totalDiff; 
 
+            private Builder() {
+            } 
+
+            private Builder(TopicList model) {
+                this.lastTimestamp = model.lastTimestamp;
+                this.offsetList = model.offsetList;
+                this.topic = model.topic;
+                this.totalDiff = model.totalDiff;
+            } 
+
             /**
              * <p>The time when the last consumed message in the topic was generated.</p>
              * 
@@ -742,6 +806,13 @@ public class GetConsumerProgressResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<TopicList> topicList; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConsumerProgressTopicList model) {
+                this.topicList = model.topicList;
+            } 
 
             /**
              * TopicList.
@@ -825,6 +896,16 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             private ConsumerProgressRebalanceInfoList rebalanceInfoList; 
             private ConsumerProgressTopicList topicList; 
             private Long totalDiff; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConsumerProgress model) {
+                this.lastTimestamp = model.lastTimestamp;
+                this.rebalanceInfoList = model.rebalanceInfoList;
+                this.topicList = model.topicList;
+                this.totalDiff = model.totalDiff;
+            } 
 
             /**
              * <p>The time when the last message consumed by the consumer group was generated.</p>

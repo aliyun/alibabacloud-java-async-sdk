@@ -48,6 +48,10 @@ public class GetTopicSubscribeStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetTopicSubscribeStatusResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private TopicSubscribeStatus topicSubscribeStatus; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTopicSubscribeStatusResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.topicSubscribeStatus = model.topicSubscribeStatus;
+        } 
 
         /**
          * <p>The HTTP status code.</p>
@@ -191,6 +206,14 @@ public class GetTopicSubscribeStatusResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> consumerGroups; 
             private String topic; 
+
+            private Builder() {
+            } 
+
+            private Builder(TopicSubscribeStatus model) {
+                this.consumerGroups = model.consumerGroups;
+                this.topic = model.topic;
+            } 
 
             /**
              * <p>The groups that subscribe to the topic.</p>

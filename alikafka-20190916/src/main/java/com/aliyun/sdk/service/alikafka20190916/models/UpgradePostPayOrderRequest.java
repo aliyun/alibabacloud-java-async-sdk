@@ -86,7 +86,7 @@ public class UpgradePostPayOrderRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -451,6 +451,14 @@ public class UpgradePostPayOrderRequest extends Request {
         public static final class Builder {
             private Long reservedPublishCapacity; 
             private Long reservedSubscribeCapacity; 
+
+            private Builder() {
+            } 
+
+            private Builder(ServerlessConfig model) {
+                this.reservedPublishCapacity = model.reservedPublishCapacity;
+                this.reservedSubscribeCapacity = model.reservedSubscribeCapacity;
+            } 
 
             /**
              * <p>The reserved capacity for publishing messages. You can specify only an integer for this parameter. Minimum value: 60.</p>

@@ -60,6 +60,10 @@ public class GetTopicListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -125,6 +129,20 @@ public class GetTopicListResponseBody extends TeaModel {
         private Boolean success; 
         private TopicList topicList; 
         private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTopicListResponseBody model) {
+            this.code = model.code;
+            this.currentPage = model.currentPage;
+            this.message = model.message;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.topicList = model.topicList;
+            this.total = model.total;
+        } 
 
         /**
          * <p>The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.</p>
@@ -261,6 +279,14 @@ public class GetTopicListResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(TagVO model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The tag key.</p>
              * 
@@ -321,6 +347,13 @@ public class GetTopicListResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<TagVO> tagVO; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagVO = model.tagVO;
+            } 
 
             /**
              * TagVO.
@@ -512,6 +545,25 @@ public class GetTopicListResponseBody extends TeaModel {
             private Tags tags; 
             private String topic; 
             private String topicConfig; 
+
+            private Builder() {
+            } 
+
+            private Builder(TopicVO model) {
+                this.autoCreate = model.autoCreate;
+                this.compactTopic = model.compactTopic;
+                this.createTime = model.createTime;
+                this.instanceId = model.instanceId;
+                this.localTopic = model.localTopic;
+                this.partitionNum = model.partitionNum;
+                this.regionId = model.regionId;
+                this.remark = model.remark;
+                this.status = model.status;
+                this.statusName = model.statusName;
+                this.tags = model.tags;
+                this.topic = model.topic;
+                this.topicConfig = model.topicConfig;
+            } 
 
             /**
              * <p>Indicates whether the topic was automatically created.</p>
@@ -711,6 +763,13 @@ public class GetTopicListResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<TopicVO> topicVO; 
+
+            private Builder() {
+            } 
+
+            private Builder(TopicList model) {
+                this.topicVO = model.topicVO;
+            } 
 
             /**
              * TopicVO.

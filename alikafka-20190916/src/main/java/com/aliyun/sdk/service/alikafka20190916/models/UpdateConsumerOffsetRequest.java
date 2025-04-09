@@ -68,7 +68,7 @@ public class UpdateConsumerOffsetRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -301,6 +301,14 @@ public class UpdateConsumerOffsetRequest extends Request {
         public static final class Builder {
             private Long offset; 
             private Integer partition; 
+
+            private Builder() {
+            } 
+
+            private Builder(Offsets model) {
+                this.offset = model.offset;
+                this.partition = model.partition;
+            } 
 
             /**
              * <p>The consumer offset of the partition.</p>

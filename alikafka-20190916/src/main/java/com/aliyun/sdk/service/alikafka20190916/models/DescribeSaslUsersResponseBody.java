@@ -48,6 +48,10 @@ public class DescribeSaslUsersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class DescribeSaslUsersResponseBody extends TeaModel {
         private String requestId; 
         private SaslUserList saslUserList; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSaslUsersResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.saslUserList = model.saslUserList;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.</p>
@@ -216,6 +231,16 @@ public class DescribeSaslUsersResponseBody extends TeaModel {
             private String type; 
             private String username; 
 
+            private Builder() {
+            } 
+
+            private Builder(SaslUserVO model) {
+                this.mechanism = model.mechanism;
+                this.password = model.password;
+                this.type = model.type;
+                this.username = model.username;
+            } 
+
             /**
              * <p>The encryption method.</p>
              * <blockquote>
@@ -307,6 +332,13 @@ public class DescribeSaslUsersResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SaslUserVO> saslUserVO; 
+
+            private Builder() {
+            } 
+
+            private Builder(SaslUserList model) {
+                this.saslUserVO = model.saslUserVO;
+            } 
 
             /**
              * SaslUserVO.
