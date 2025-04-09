@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeJobDataParsingTaskProgressResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeJobDataParsingTaskProgressResponseBody</p>
  */
 public class DescribeJobDataParsingTaskProgressResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Progress")
+    @com.aliyun.core.annotation.NameInMap("Progress")
     private Progress progress;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeJobDataParsingTaskProgressResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class DescribeJobDataParsingTaskProgressResponseBody extends TeaModel {
 
     public static DescribeJobDataParsingTaskProgressResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class DescribeJobDataParsingTaskProgressResponseBody extends TeaModel {
         private Progress progress; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeJobDataParsingTaskProgressResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.progress = model.progress;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -151,23 +172,29 @@ public class DescribeJobDataParsingTaskProgressResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeJobDataParsingTaskProgressResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeJobDataParsingTaskProgressResponseBody</p>
+     */
     public static class Progress extends TeaModel {
-        @NameInMap("FailErrorCode")
+        @com.aliyun.core.annotation.NameInMap("FailErrorCode")
         private String failErrorCode;
 
-        @NameInMap("FailReason")
+        @com.aliyun.core.annotation.NameInMap("FailReason")
         private String failReason;
 
-        @NameInMap("FeedbackUrl")
+        @com.aliyun.core.annotation.NameInMap("FeedbackUrl")
         private String feedbackUrl;
 
-        @NameInMap("HandledJobCount")
+        @com.aliyun.core.annotation.NameInMap("HandledJobCount")
         private Integer handledJobCount;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TotalJobCount")
+        @com.aliyun.core.annotation.NameInMap("TotalJobCount")
         private Integer totalJobCount;
 
         private Progress(Builder builder) {
@@ -236,6 +263,18 @@ public class DescribeJobDataParsingTaskProgressResponseBody extends TeaModel {
             private Integer handledJobCount; 
             private String status; 
             private Integer totalJobCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Progress model) {
+                this.failErrorCode = model.failErrorCode;
+                this.failReason = model.failReason;
+                this.feedbackUrl = model.feedbackUrl;
+                this.handledJobCount = model.handledJobCount;
+                this.status = model.status;
+                this.totalJobCount = model.totalJobCount;
+            } 
 
             /**
              * FailErrorCode.

@@ -1,23 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateInstanceBindNumberRequest} extends {@link RequestModel}
  *
  * <p>CreateInstanceBindNumberRequest</p>
  */
 public class CreateInstanceBindNumberRequest extends Request {
-    @Query
-    @NameInMap("InstanceList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceList")
     private String instanceList;
 
-    @Query
-    @NameInMap("Number")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Number")
     private String number;
 
     private CreateInstanceBindNumberRequest(Builder builder) {
@@ -34,7 +39,7 @@ public class CreateInstanceBindNumberRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -68,7 +73,7 @@ public class CreateInstanceBindNumberRequest extends Request {
         } 
 
         /**
-         * 智能外呼实例ID。
+         * InstanceList.
          */
         public Builder instanceList(String instanceList) {
             this.putQueryParameter("InstanceList", instanceList);

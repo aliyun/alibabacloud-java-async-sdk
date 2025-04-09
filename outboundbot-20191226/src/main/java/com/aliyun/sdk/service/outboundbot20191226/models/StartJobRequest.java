@@ -1,41 +1,46 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartJobRequest} extends {@link RequestModel}
  *
  * <p>StartJobRequest</p>
  */
 public class StartJobRequest extends Request {
-    @Query
-    @NameInMap("CallingNumber")
-    private java.util.List < String > callingNumber;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallingNumber")
+    private java.util.List<String> callingNumber;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("JobGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobGroupId")
     private String jobGroupId;
 
-    @Query
-    @NameInMap("JobJson")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobJson")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String jobJson;
 
-    @Query
-    @NameInMap("ScenarioId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScenarioId")
     private String scenarioId;
 
-    @Query
-    @NameInMap("ScriptId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScriptId")
     private String scriptId;
 
     private StartJobRequest(Builder builder) {
@@ -56,7 +61,7 @@ public class StartJobRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -64,7 +69,7 @@ public class StartJobRequest extends Request {
     /**
      * @return callingNumber
      */
-    public java.util.List < String > getCallingNumber() {
+    public java.util.List<String> getCallingNumber() {
         return this.callingNumber;
     }
 
@@ -104,7 +109,7 @@ public class StartJobRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<StartJobRequest, Builder> {
-        private java.util.List < String > callingNumber; 
+        private java.util.List<String> callingNumber; 
         private String instanceId; 
         private String jobGroupId; 
         private String jobJson; 
@@ -128,14 +133,17 @@ public class StartJobRequest extends Request {
         /**
          * CallingNumber.
          */
-        public Builder callingNumber(java.util.List < String > callingNumber) {
+        public Builder callingNumber(java.util.List<String> callingNumber) {
             this.putQueryParameter("CallingNumber", callingNumber);
             this.callingNumber = callingNumber;
             return this;
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>da37319b-6c83-4268-9f19-814aed62e401</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -153,7 +161,7 @@ public class StartJobRequest extends Request {
         }
 
         /**
-         * JobJson.
+         * <p>This parameter is required.</p>
          */
         public Builder jobJson(String jobJson) {
             this.putQueryParameter("JobJson", jobJson);

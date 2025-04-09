@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDialogueFlowRequest} extends {@link RequestModel}
  *
  * <p>CreateDialogueFlowRequest</p>
  */
 public class CreateDialogueFlowRequest extends Request {
-    @Query
-    @NameInMap("DialogueFlowType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DialogueFlowType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dialogueFlowType;
 
-    @Query
-    @NameInMap("DialogueName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DialogueName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dialogueName;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("ScriptId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScriptId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scriptId;
 
     private CreateDialogueFlowRequest(Builder builder) {
@@ -48,7 +53,7 @@ public class CreateDialogueFlowRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -100,7 +105,10 @@ public class CreateDialogueFlowRequest extends Request {
         } 
 
         /**
-         * DialogueFlowType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MainFlow</p>
          */
         public Builder dialogueFlowType(String dialogueFlowType) {
             this.putQueryParameter("DialogueFlowType", dialogueFlowType);
@@ -109,7 +117,7 @@ public class CreateDialogueFlowRequest extends Request {
         }
 
         /**
-         * DialogueName.
+         * <p>This parameter is required.</p>
          */
         public Builder dialogueName(String dialogueName) {
             this.putQueryParameter("DialogueName", dialogueName);
@@ -118,7 +126,10 @@ public class CreateDialogueFlowRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>174952ab-9825-4cc9-a5e2-de82d7fa4cdd</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -127,7 +138,10 @@ public class CreateDialogueFlowRequest extends Request {
         }
 
         /**
-         * ScriptId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d0bf93dd-1a54-4f00-819e-c75502d38681</p>
          */
         public Builder scriptId(String scriptId) {
             this.putQueryParameter("ScriptId", scriptId);

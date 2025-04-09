@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGlobalQuestionRequest} extends {@link RequestModel}
  *
  * <p>DescribeGlobalQuestionRequest</p>
  */
 public class DescribeGlobalQuestionRequest extends Request {
-    @Query
-    @NameInMap("GlobalQuestionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GlobalQuestionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String globalQuestionId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("ScriptId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScriptId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scriptId;
 
     private DescribeGlobalQuestionRequest(Builder builder) {
@@ -42,7 +47,7 @@ public class DescribeGlobalQuestionRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -85,7 +90,10 @@ public class DescribeGlobalQuestionRequest extends Request {
         } 
 
         /**
-         * GlobalQuestionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e851e242-ad67-4507-96a2-d4114564dcec</p>
          */
         public Builder globalQuestionId(String globalQuestionId) {
             this.putQueryParameter("GlobalQuestionId", globalQuestionId);
@@ -94,7 +102,10 @@ public class DescribeGlobalQuestionRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7cefbff0-8d50-4d6f-b93c-73cee23c1555</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -103,7 +114,10 @@ public class DescribeGlobalQuestionRequest extends Request {
         }
 
         /**
-         * ScriptId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b7ee988b-2837-4bc1-9d56-f76e7c831f60</p>
          */
         public Builder scriptId(String scriptId) {
             this.putQueryParameter("ScriptId", scriptId);

@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSummaryInfoRequest} extends {@link RequestModel}
  *
  * <p>GetSummaryInfoRequest</p>
  */
 public class GetSummaryInfoRequest extends Request {
-    @Query
-    @NameInMap("InstanceIdList")
-    private java.util.List < String > instanceIdList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceIdList")
+    private java.util.List<String> instanceIdList;
 
     private GetSummaryInfoRequest(Builder builder) {
         super(builder);
@@ -29,7 +34,7 @@ public class GetSummaryInfoRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -37,12 +42,12 @@ public class GetSummaryInfoRequest extends Request {
     /**
      * @return instanceIdList
      */
-    public java.util.List < String > getInstanceIdList() {
+    public java.util.List<String> getInstanceIdList() {
         return this.instanceIdList;
     }
 
     public static final class Builder extends Request.Builder<GetSummaryInfoRequest, Builder> {
-        private java.util.List < String > instanceIdList; 
+        private java.util.List<String> instanceIdList; 
 
         private Builder() {
             super();
@@ -56,7 +61,7 @@ public class GetSummaryInfoRequest extends Request {
         /**
          * InstanceIdList.
          */
-        public Builder instanceIdList(java.util.List < String > instanceIdList) {
+        public Builder instanceIdList(java.util.List<String> instanceIdList) {
             this.putQueryParameter("InstanceIdList", instanceIdList);
             this.instanceIdList = instanceIdList;
             return this;

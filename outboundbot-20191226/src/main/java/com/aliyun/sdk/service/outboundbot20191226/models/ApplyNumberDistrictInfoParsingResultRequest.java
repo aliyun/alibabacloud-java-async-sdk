@@ -1,19 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ApplyNumberDistrictInfoParsingResultRequest} extends {@link RequestModel}
  *
  * <p>ApplyNumberDistrictInfoParsingResultRequest</p>
  */
 public class ApplyNumberDistrictInfoParsingResultRequest extends Request {
-    @Query
-    @NameInMap("VersionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VersionId")
     private String versionId;
 
     private ApplyNumberDistrictInfoParsingResultRequest(Builder builder) {
@@ -29,7 +34,7 @@ public class ApplyNumberDistrictInfoParsingResultRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }

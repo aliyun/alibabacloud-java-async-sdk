@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeScriptResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeScriptResponseBody</p>
  */
 public class DescribeScriptResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("NlsConfig")
+    @com.aliyun.core.annotation.NameInMap("NlsConfig")
     private String nlsConfig;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Script")
+    @com.aliyun.core.annotation.NameInMap("Script")
     private Script script;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeScriptResponseBody(Builder builder) {
@@ -49,6 +54,10 @@ public class DescribeScriptResponseBody extends TeaModel {
 
     public static DescribeScriptResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -108,6 +117,19 @@ public class DescribeScriptResponseBody extends TeaModel {
         private String requestId; 
         private Script script; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeScriptResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.nlsConfig = model.nlsConfig;
+            this.requestId = model.requestId;
+            this.script = model.script;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -171,60 +193,82 @@ public class DescribeScriptResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeScriptResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeScriptResponseBody</p>
+     */
     public static class Script extends TeaModel {
-        @NameInMap("AsrConfig")
+        @com.aliyun.core.annotation.NameInMap("AgentId")
+        private Long agentId;
+
+        @com.aliyun.core.annotation.NameInMap("AgentKey")
+        private String agentKey;
+
+        @com.aliyun.core.annotation.NameInMap("AgentLlm")
+        private Boolean agentLlm;
+
+        @com.aliyun.core.annotation.NameInMap("AsrConfig")
         private String asrConfig;
 
-        @NameInMap("ChatbotId")
+        @com.aliyun.core.annotation.NameInMap("ChatConfig")
+        private String chatConfig;
+
+        @com.aliyun.core.annotation.NameInMap("ChatbotId")
         private String chatbotId;
 
-        @NameInMap("DebugStatus")
+        @com.aliyun.core.annotation.NameInMap("DebugStatus")
         private String debugStatus;
 
-        @NameInMap("EmotionEnable")
+        @com.aliyun.core.annotation.NameInMap("EmotionEnable")
         private Boolean emotionEnable;
 
-        @NameInMap("Industry")
+        @com.aliyun.core.annotation.NameInMap("Industry")
         private String industry;
 
-        @NameInMap("IsDebugDrafted")
+        @com.aliyun.core.annotation.NameInMap("IsDebugDrafted")
         private Boolean isDebugDrafted;
 
-        @NameInMap("IsDrafted")
+        @com.aliyun.core.annotation.NameInMap("IsDrafted")
         private Boolean isDrafted;
 
-        @NameInMap("LongWaitEnable")
+        @com.aliyun.core.annotation.NameInMap("LongWaitEnable")
         private Boolean longWaitEnable;
 
-        @NameInMap("MiniPlaybackEnable")
+        @com.aliyun.core.annotation.NameInMap("MiniPlaybackEnable")
         private Boolean miniPlaybackEnable;
 
-        @NameInMap("NewBargeInEnable")
+        @com.aliyun.core.annotation.NameInMap("NewBargeInEnable")
         private Boolean newBargeInEnable;
 
-        @NameInMap("Scene")
+        @com.aliyun.core.annotation.NameInMap("Scene")
         private String scene;
 
-        @NameInMap("ScriptDescription")
+        @com.aliyun.core.annotation.NameInMap("ScriptDescription")
         private String scriptDescription;
 
-        @NameInMap("ScriptId")
+        @com.aliyun.core.annotation.NameInMap("ScriptId")
         private String scriptId;
 
-        @NameInMap("ScriptName")
+        @com.aliyun.core.annotation.NameInMap("ScriptName")
         private String scriptName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TtsConfig")
+        @com.aliyun.core.annotation.NameInMap("TtsConfig")
         private String ttsConfig;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
         private Script(Builder builder) {
+            this.agentId = builder.agentId;
+            this.agentKey = builder.agentKey;
+            this.agentLlm = builder.agentLlm;
             this.asrConfig = builder.asrConfig;
+            this.chatConfig = builder.chatConfig;
             this.chatbotId = builder.chatbotId;
             this.debugStatus = builder.debugStatus;
             this.emotionEnable = builder.emotionEnable;
@@ -252,10 +296,38 @@ public class DescribeScriptResponseBody extends TeaModel {
         }
 
         /**
+         * @return agentId
+         */
+        public Long getAgentId() {
+            return this.agentId;
+        }
+
+        /**
+         * @return agentKey
+         */
+        public String getAgentKey() {
+            return this.agentKey;
+        }
+
+        /**
+         * @return agentLlm
+         */
+        public Boolean getAgentLlm() {
+            return this.agentLlm;
+        }
+
+        /**
          * @return asrConfig
          */
         public String getAsrConfig() {
             return this.asrConfig;
+        }
+
+        /**
+         * @return chatConfig
+         */
+        public String getChatConfig() {
+            return this.chatConfig;
         }
 
         /**
@@ -371,7 +443,11 @@ public class DescribeScriptResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Long agentId; 
+            private String agentKey; 
+            private Boolean agentLlm; 
             private String asrConfig; 
+            private String chatConfig; 
             private String chatbotId; 
             private String debugStatus; 
             private Boolean emotionEnable; 
@@ -389,11 +465,70 @@ public class DescribeScriptResponseBody extends TeaModel {
             private String ttsConfig; 
             private Long updateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(Script model) {
+                this.agentId = model.agentId;
+                this.agentKey = model.agentKey;
+                this.agentLlm = model.agentLlm;
+                this.asrConfig = model.asrConfig;
+                this.chatConfig = model.chatConfig;
+                this.chatbotId = model.chatbotId;
+                this.debugStatus = model.debugStatus;
+                this.emotionEnable = model.emotionEnable;
+                this.industry = model.industry;
+                this.isDebugDrafted = model.isDebugDrafted;
+                this.isDrafted = model.isDrafted;
+                this.longWaitEnable = model.longWaitEnable;
+                this.miniPlaybackEnable = model.miniPlaybackEnable;
+                this.newBargeInEnable = model.newBargeInEnable;
+                this.scene = model.scene;
+                this.scriptDescription = model.scriptDescription;
+                this.scriptId = model.scriptId;
+                this.scriptName = model.scriptName;
+                this.status = model.status;
+                this.ttsConfig = model.ttsConfig;
+                this.updateTime = model.updateTime;
+            } 
+
+            /**
+             * AgentId.
+             */
+            public Builder agentId(Long agentId) {
+                this.agentId = agentId;
+                return this;
+            }
+
+            /**
+             * AgentKey.
+             */
+            public Builder agentKey(String agentKey) {
+                this.agentKey = agentKey;
+                return this;
+            }
+
+            /**
+             * AgentLlm.
+             */
+            public Builder agentLlm(Boolean agentLlm) {
+                this.agentLlm = agentLlm;
+                return this;
+            }
+
             /**
              * AsrConfig.
              */
             public Builder asrConfig(String asrConfig) {
                 this.asrConfig = asrConfig;
+                return this;
+            }
+
+            /**
+             * ChatConfig.
+             */
+            public Builder chatConfig(String chatConfig) {
+                this.chatConfig = chatConfig;
                 return this;
             }
 

@@ -1,37 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartJobResponseBody} extends {@link TeaModel}
  *
  * <p>StartJobResponseBody</p>
  */
 public class StartJobResponseBody extends TeaModel {
-    @NameInMap("CallIds")
-    private java.util.List < CallIds> callIds;
+    @com.aliyun.core.annotation.NameInMap("CallIds")
+    private java.util.List<CallIds> callIds;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TaskIds")
-    private java.util.List < TaskIds> taskIds;
+    @com.aliyun.core.annotation.NameInMap("TaskIds")
+    private java.util.List<TaskIds> taskIds;
 
     private StartJobResponseBody(Builder builder) {
         this.callIds = builder.callIds;
@@ -51,10 +56,14 @@ public class StartJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return callIds
      */
-    public java.util.List < CallIds> getCallIds() {
+    public java.util.List<CallIds> getCallIds() {
         return this.callIds;
     }
 
@@ -96,23 +105,36 @@ public class StartJobResponseBody extends TeaModel {
     /**
      * @return taskIds
      */
-    public java.util.List < TaskIds> getTaskIds() {
+    public java.util.List<TaskIds> getTaskIds() {
         return this.taskIds;
     }
 
     public static final class Builder {
-        private java.util.List < CallIds> callIds; 
+        private java.util.List<CallIds> callIds; 
         private String code; 
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
         private Boolean success; 
-        private java.util.List < TaskIds> taskIds; 
+        private java.util.List<TaskIds> taskIds; 
+
+        private Builder() {
+        } 
+
+        private Builder(StartJobResponseBody model) {
+            this.callIds = model.callIds;
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.taskIds = model.taskIds;
+        } 
 
         /**
          * CallIds.
          */
-        public Builder callIds(java.util.List < CallIds> callIds) {
+        public Builder callIds(java.util.List<CallIds> callIds) {
             this.callIds = callIds;
             return this;
         }
@@ -160,7 +182,7 @@ public class StartJobResponseBody extends TeaModel {
         /**
          * TaskIds.
          */
-        public Builder taskIds(java.util.List < TaskIds> taskIds) {
+        public Builder taskIds(java.util.List<TaskIds> taskIds) {
             this.taskIds = taskIds;
             return this;
         }
@@ -171,11 +193,17 @@ public class StartJobResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link StartJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>StartJobResponseBody</p>
+     */
     public static class CallIds extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private CallIds(Builder builder) {
@@ -209,6 +237,14 @@ public class StartJobResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(CallIds model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * Key.
              */
@@ -232,11 +268,17 @@ public class StartJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link StartJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>StartJobResponseBody</p>
+     */
     public static class TaskIds extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private TaskIds(Builder builder) {
@@ -269,6 +311,14 @@ public class StartJobResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(TaskIds model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * Key.

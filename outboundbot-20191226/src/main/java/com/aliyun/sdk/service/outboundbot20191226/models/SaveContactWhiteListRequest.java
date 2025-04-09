@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveContactWhiteListRequest} extends {@link RequestModel}
  *
  * <p>SaveContactWhiteListRequest</p>
  */
 public class SaveContactWhiteListRequest extends Request {
-    @Query
-    @NameInMap("ContactWhiteListList")
-    private java.util.List < String > contactWhiteListList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactWhiteListList")
+    private java.util.List<String> contactWhiteListList;
 
-    @Query
-    @NameInMap("ContactWhiteListsJson")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactWhiteListsJson")
     private String contactWhiteListsJson;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
     private SaveContactWhiteListRequest(Builder builder) {
@@ -40,7 +45,7 @@ public class SaveContactWhiteListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -48,7 +53,7 @@ public class SaveContactWhiteListRequest extends Request {
     /**
      * @return contactWhiteListList
      */
-    public java.util.List < String > getContactWhiteListList() {
+    public java.util.List<String> getContactWhiteListList() {
         return this.contactWhiteListList;
     }
 
@@ -67,7 +72,7 @@ public class SaveContactWhiteListRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SaveContactWhiteListRequest, Builder> {
-        private java.util.List < String > contactWhiteListList; 
+        private java.util.List<String> contactWhiteListList; 
         private String contactWhiteListsJson; 
         private String instanceId; 
 
@@ -85,7 +90,7 @@ public class SaveContactWhiteListRequest extends Request {
         /**
          * ContactWhiteListList.
          */
-        public Builder contactWhiteListList(java.util.List < String > contactWhiteListList) {
+        public Builder contactWhiteListList(java.util.List<String> contactWhiteListList) {
             this.putQueryParameter("ContactWhiteListList", contactWhiteListList);
             this.contactWhiteListList = contactWhiteListList;
             return this;
@@ -101,7 +106,10 @@ public class SaveContactWhiteListRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c415bb6c-2e6f-46aa-afd9-3b65b6dbe2bc</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

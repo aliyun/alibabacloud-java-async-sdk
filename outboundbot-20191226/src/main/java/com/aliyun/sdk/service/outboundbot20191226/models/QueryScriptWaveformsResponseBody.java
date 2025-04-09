@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryScriptWaveformsResponseBody} extends {@link TeaModel}
  *
  * <p>QueryScriptWaveformsResponseBody</p>
  */
 public class QueryScriptWaveformsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ScriptWaveforms")
-    private java.util.List < ScriptWaveforms> scriptWaveforms;
+    @com.aliyun.core.annotation.NameInMap("ScriptWaveforms")
+    private java.util.List<ScriptWaveforms> scriptWaveforms;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryScriptWaveformsResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class QueryScriptWaveformsResponseBody extends TeaModel {
 
     public static QueryScriptWaveformsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -78,7 +87,7 @@ public class QueryScriptWaveformsResponseBody extends TeaModel {
     /**
      * @return scriptWaveforms
      */
-    public java.util.List < ScriptWaveforms> getScriptWaveforms() {
+    public java.util.List<ScriptWaveforms> getScriptWaveforms() {
         return this.scriptWaveforms;
     }
 
@@ -94,8 +103,20 @@ public class QueryScriptWaveformsResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
-        private java.util.List < ScriptWaveforms> scriptWaveforms; 
+        private java.util.List<ScriptWaveforms> scriptWaveforms; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryScriptWaveformsResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.scriptWaveforms = model.scriptWaveforms;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -132,7 +153,7 @@ public class QueryScriptWaveformsResponseBody extends TeaModel {
         /**
          * ScriptWaveforms.
          */
-        public Builder scriptWaveforms(java.util.List < ScriptWaveforms> scriptWaveforms) {
+        public Builder scriptWaveforms(java.util.List<ScriptWaveforms> scriptWaveforms) {
             this.scriptWaveforms = scriptWaveforms;
             return this;
         }
@@ -151,20 +172,26 @@ public class QueryScriptWaveformsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryScriptWaveformsResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryScriptWaveformsResponseBody</p>
+     */
     public static class ScriptWaveforms extends TeaModel {
-        @NameInMap("FileId")
+        @com.aliyun.core.annotation.NameInMap("FileId")
         private String fileId;
 
-        @NameInMap("FileName")
+        @com.aliyun.core.annotation.NameInMap("FileName")
         private String fileName;
 
-        @NameInMap("ScriptContent")
+        @com.aliyun.core.annotation.NameInMap("ScriptContent")
         private String scriptContent;
 
-        @NameInMap("ScriptId")
+        @com.aliyun.core.annotation.NameInMap("ScriptId")
         private String scriptId;
 
-        @NameInMap("ScriptWaveformId")
+        @com.aliyun.core.annotation.NameInMap("ScriptWaveformId")
         private String scriptWaveformId;
 
         private ScriptWaveforms(Builder builder) {
@@ -224,6 +251,17 @@ public class QueryScriptWaveformsResponseBody extends TeaModel {
             private String scriptContent; 
             private String scriptId; 
             private String scriptWaveformId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ScriptWaveforms model) {
+                this.fileId = model.fileId;
+                this.fileName = model.fileName;
+                this.scriptContent = model.scriptContent;
+                this.scriptId = model.scriptId;
+                this.scriptWaveformId = model.scriptWaveformId;
+            } 
 
             /**
              * FileId.

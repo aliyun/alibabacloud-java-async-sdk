@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AssignJobsResponseBody} extends {@link TeaModel}
  *
  * <p>AssignJobsResponseBody</p>
  */
 public class AssignJobsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("JobGroupId")
+    @com.aliyun.core.annotation.NameInMap("JobGroupId")
     private String jobGroupId;
 
-    @NameInMap("JobsId")
-    private java.util.List < String > jobsId;
+    @com.aliyun.core.annotation.NameInMap("JobsId")
+    private java.util.List<String> jobsId;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private AssignJobsResponseBody(Builder builder) {
@@ -49,6 +54,10 @@ public class AssignJobsResponseBody extends TeaModel {
 
     public static AssignJobsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -75,7 +84,7 @@ public class AssignJobsResponseBody extends TeaModel {
     /**
      * @return jobsId
      */
-    public java.util.List < String > getJobsId() {
+    public java.util.List<String> getJobsId() {
         return this.jobsId;
     }
 
@@ -104,10 +113,23 @@ public class AssignJobsResponseBody extends TeaModel {
         private String code; 
         private Integer httpStatusCode; 
         private String jobGroupId; 
-        private java.util.List < String > jobsId; 
+        private java.util.List<String> jobsId; 
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(AssignJobsResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.jobGroupId = model.jobGroupId;
+            this.jobsId = model.jobsId;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -136,7 +158,7 @@ public class AssignJobsResponseBody extends TeaModel {
         /**
          * JobsId.
          */
-        public Builder jobsId(java.util.List < String > jobsId) {
+        public Builder jobsId(java.util.List<String> jobsId) {
             this.jobsId = jobsId;
             return this;
         }

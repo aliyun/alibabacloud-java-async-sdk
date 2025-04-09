@@ -1,23 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GenerateUploadUrlRequest} extends {@link RequestModel}
  *
  * <p>GenerateUploadUrlRequest</p>
  */
 public class GenerateUploadUrlRequest extends Request {
-    @Query
-    @NameInMap("FileName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileName")
     private String fileName;
 
-    @Query
-    @NameInMap("Key")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Key")
     private String key;
 
     private GenerateUploadUrlRequest(Builder builder) {
@@ -34,7 +39,7 @@ public class GenerateUploadUrlRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }

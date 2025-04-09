@@ -1,26 +1,31 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListJobsRequest} extends {@link RequestModel}
  *
  * <p>ListJobsRequest</p>
  */
 public class ListJobsRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("JobId")
-    @Validation(required = true)
-    private java.util.List < String > jobId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> jobId;
 
     private ListJobsRequest(Builder builder) {
         super(builder);
@@ -36,7 +41,7 @@ public class ListJobsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -51,13 +56,13 @@ public class ListJobsRequest extends Request {
     /**
      * @return jobId
      */
-    public java.util.List < String > getJobId() {
+    public java.util.List<String> getJobId() {
         return this.jobId;
     }
 
     public static final class Builder extends Request.Builder<ListJobsRequest, Builder> {
         private String instanceId; 
-        private java.util.List < String > jobId; 
+        private java.util.List<String> jobId; 
 
         private Builder() {
             super();
@@ -70,7 +75,10 @@ public class ListJobsRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>af81a389-91f0-4157-8d82-720edd02b66a</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -79,9 +87,12 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * JobId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24fb9a8d-f20e-4ee2-a11c-094dda68c5cc</p>
          */
-        public Builder jobId(java.util.List < String > jobId) {
+        public Builder jobId(java.util.List<String> jobId) {
             this.putQueryParameter("JobId", jobId);
             this.jobId = jobId;
             return this;

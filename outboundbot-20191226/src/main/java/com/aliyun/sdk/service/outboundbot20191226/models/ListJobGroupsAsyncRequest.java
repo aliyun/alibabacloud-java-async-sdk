@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListJobGroupsAsyncRequest} extends {@link RequestModel}
  *
  * <p>ListJobGroupsAsyncRequest</p>
  */
 public class ListJobGroupsAsyncRequest extends Request {
-    @Query
-    @NameInMap("AsyncTaskId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AsyncTaskId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String asyncTaskId;
 
     private ListJobGroupsAsyncRequest(Builder builder) {
@@ -30,7 +35,7 @@ public class ListJobGroupsAsyncRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -55,7 +60,10 @@ public class ListJobGroupsAsyncRequest extends Request {
         } 
 
         /**
-         * AsyncTaskId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6243d904-939d-42ce-a8e4-886a139e77a3</p>
          */
         public Builder asyncTaskId(String asyncTaskId) {
             this.putQueryParameter("AsyncTaskId", asyncTaskId);

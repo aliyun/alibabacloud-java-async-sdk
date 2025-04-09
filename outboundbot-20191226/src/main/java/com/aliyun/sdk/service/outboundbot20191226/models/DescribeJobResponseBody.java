@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeJobResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeJobResponseBody</p>
  */
 public class DescribeJobResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Job")
+    @com.aliyun.core.annotation.NameInMap("Job")
     private Job job;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeJobResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class DescribeJobResponseBody extends TeaModel {
 
     public static DescribeJobResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class DescribeJobResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeJobResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.job = model.job;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -151,29 +172,35 @@ public class DescribeJobResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeJobResponseBody</p>
+     */
     public static class Contacts extends TeaModel {
-        @NameInMap("ContactId")
+        @com.aliyun.core.annotation.NameInMap("ContactId")
         private String contactId;
 
-        @NameInMap("ContactName")
+        @com.aliyun.core.annotation.NameInMap("ContactName")
         private String contactName;
 
-        @NameInMap("Honorific")
+        @com.aliyun.core.annotation.NameInMap("Honorific")
         private String honorific;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("PhoneNumber")
+        @com.aliyun.core.annotation.NameInMap("PhoneNumber")
         private String phoneNumber;
 
-        @NameInMap("ReferenceId")
+        @com.aliyun.core.annotation.NameInMap("ReferenceId")
         private String referenceId;
 
-        @NameInMap("Role")
+        @com.aliyun.core.annotation.NameInMap("Role")
         private String role;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
         private Contacts(Builder builder) {
@@ -261,6 +288,20 @@ public class DescribeJobResponseBody extends TeaModel {
             private String role; 
             private String state; 
 
+            private Builder() {
+            } 
+
+            private Builder(Contacts model) {
+                this.contactId = model.contactId;
+                this.contactName = model.contactName;
+                this.honorific = model.honorific;
+                this.jobId = model.jobId;
+                this.phoneNumber = model.phoneNumber;
+                this.referenceId = model.referenceId;
+                this.role = model.role;
+                this.state = model.state;
+            } 
+
             /**
              * ContactId.
              */
@@ -332,11 +373,17 @@ public class DescribeJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeJobResponseBody</p>
+     */
     public static class Extras extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Extras(Builder builder) {
@@ -370,6 +417,14 @@ public class DescribeJobResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Extras model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * Key.
              */
@@ -393,47 +448,53 @@ public class DescribeJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeJobResponseBody</p>
+     */
     public static class Script extends TeaModel {
-        @NameInMap("AsrConfig")
+        @com.aliyun.core.annotation.NameInMap("AsrConfig")
         private String asrConfig;
 
-        @NameInMap("ChatbotId")
+        @com.aliyun.core.annotation.NameInMap("ChatbotId")
         private String chatbotId;
 
-        @NameInMap("DebugStatus")
+        @com.aliyun.core.annotation.NameInMap("DebugStatus")
         private String debugStatus;
 
-        @NameInMap("Industry")
+        @com.aliyun.core.annotation.NameInMap("Industry")
         private String industry;
 
-        @NameInMap("IsDebugDrafted")
+        @com.aliyun.core.annotation.NameInMap("IsDebugDrafted")
         private Boolean isDebugDrafted;
 
-        @NameInMap("IsDrafted")
+        @com.aliyun.core.annotation.NameInMap("IsDrafted")
         private Boolean isDrafted;
 
-        @NameInMap("MiniPlaybackConfigEnabled")
+        @com.aliyun.core.annotation.NameInMap("MiniPlaybackConfigEnabled")
         private Boolean miniPlaybackConfigEnabled;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Scene")
+        @com.aliyun.core.annotation.NameInMap("Scene")
         private String scene;
 
-        @NameInMap("ScriptDescription")
+        @com.aliyun.core.annotation.NameInMap("ScriptDescription")
         private String scriptDescription;
 
-        @NameInMap("ScriptId")
+        @com.aliyun.core.annotation.NameInMap("ScriptId")
         private String scriptId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TtsConfig")
+        @com.aliyun.core.annotation.NameInMap("TtsConfig")
         private String ttsConfig;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
         private Script(Builder builder) {
@@ -575,6 +636,26 @@ public class DescribeJobResponseBody extends TeaModel {
             private String ttsConfig; 
             private Long updateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(Script model) {
+                this.asrConfig = model.asrConfig;
+                this.chatbotId = model.chatbotId;
+                this.debugStatus = model.debugStatus;
+                this.industry = model.industry;
+                this.isDebugDrafted = model.isDebugDrafted;
+                this.isDrafted = model.isDrafted;
+                this.miniPlaybackConfigEnabled = model.miniPlaybackConfigEnabled;
+                this.name = model.name;
+                this.scene = model.scene;
+                this.scriptDescription = model.scriptDescription;
+                this.scriptId = model.scriptId;
+                this.status = model.status;
+                this.ttsConfig = model.ttsConfig;
+                this.updateTime = model.updateTime;
+            } 
+
             /**
              * AsrConfig.
              */
@@ -694,14 +775,20 @@ public class DescribeJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeJobResponseBody</p>
+     */
     public static class Summary extends TeaModel {
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("SummaryName")
+        @com.aliyun.core.annotation.NameInMap("SummaryName")
         private String summaryName;
 
         private Summary(Builder builder) {
@@ -744,6 +831,15 @@ public class DescribeJobResponseBody extends TeaModel {
             private String content; 
             private String summaryName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Summary model) {
+                this.category = model.category;
+                this.content = model.content;
+                this.summaryName = model.summaryName;
+            } 
+
             /**
              * Category.
              */
@@ -775,29 +871,35 @@ public class DescribeJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeJobResponseBody</p>
+     */
     public static class Contact extends TeaModel {
-        @NameInMap("ContactId")
+        @com.aliyun.core.annotation.NameInMap("ContactId")
         private String contactId;
 
-        @NameInMap("ContactName")
+        @com.aliyun.core.annotation.NameInMap("ContactName")
         private String contactName;
 
-        @NameInMap("Honorific")
+        @com.aliyun.core.annotation.NameInMap("Honorific")
         private String honorific;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("PhoneNumber")
+        @com.aliyun.core.annotation.NameInMap("PhoneNumber")
         private String phoneNumber;
 
-        @NameInMap("ReferenceId")
+        @com.aliyun.core.annotation.NameInMap("ReferenceId")
         private String referenceId;
 
-        @NameInMap("Role")
+        @com.aliyun.core.annotation.NameInMap("Role")
         private String role;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
         private Contact(Builder builder) {
@@ -885,6 +987,20 @@ public class DescribeJobResponseBody extends TeaModel {
             private String role; 
             private String state; 
 
+            private Builder() {
+            } 
+
+            private Builder(Contact model) {
+                this.contactId = model.contactId;
+                this.contactName = model.contactName;
+                this.honorific = model.honorific;
+                this.jobId = model.jobId;
+                this.phoneNumber = model.phoneNumber;
+                this.referenceId = model.referenceId;
+                this.role = model.role;
+                this.state = model.state;
+            } 
+
             /**
              * ContactId.
              */
@@ -956,14 +1072,20 @@ public class DescribeJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeJobResponseBody</p>
+     */
     public static class ConversationSummary extends TeaModel {
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("SummaryName")
+        @com.aliyun.core.annotation.NameInMap("SummaryName")
         private String summaryName;
 
         private ConversationSummary(Builder builder) {
@@ -1006,6 +1128,15 @@ public class DescribeJobResponseBody extends TeaModel {
             private String content; 
             private String summaryName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConversationSummary model) {
+                this.category = model.category;
+                this.content = model.content;
+                this.summaryName = model.summaryName;
+            } 
+
             /**
              * Category.
              */
@@ -1037,26 +1168,32 @@ public class DescribeJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeJobResponseBody</p>
+     */
     public static class Conversation extends TeaModel {
-        @NameInMap("Action")
+        @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
 
-        @NameInMap("ActionParams")
+        @com.aliyun.core.annotation.NameInMap("ActionParams")
         private String actionParams;
 
-        @NameInMap("Script")
+        @com.aliyun.core.annotation.NameInMap("Script")
         private String script;
 
-        @NameInMap("SequenceId")
+        @com.aliyun.core.annotation.NameInMap("SequenceId")
         private String sequenceId;
 
-        @NameInMap("Speaker")
+        @com.aliyun.core.annotation.NameInMap("Speaker")
         private String speaker;
 
-        @NameInMap("Summary")
-        private java.util.List < ConversationSummary> summary;
+        @com.aliyun.core.annotation.NameInMap("Summary")
+        private java.util.List<ConversationSummary> summary;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
 
         private Conversation(Builder builder) {
@@ -1115,7 +1252,7 @@ public class DescribeJobResponseBody extends TeaModel {
         /**
          * @return summary
          */
-        public java.util.List < ConversationSummary> getSummary() {
+        public java.util.List<ConversationSummary> getSummary() {
             return this.summary;
         }
 
@@ -1132,8 +1269,21 @@ public class DescribeJobResponseBody extends TeaModel {
             private String script; 
             private String sequenceId; 
             private String speaker; 
-            private java.util.List < ConversationSummary> summary; 
+            private java.util.List<ConversationSummary> summary; 
             private Long timestamp; 
+
+            private Builder() {
+            } 
+
+            private Builder(Conversation model) {
+                this.action = model.action;
+                this.actionParams = model.actionParams;
+                this.script = model.script;
+                this.sequenceId = model.sequenceId;
+                this.speaker = model.speaker;
+                this.summary = model.summary;
+                this.timestamp = model.timestamp;
+            } 
 
             /**
              * Action.
@@ -1178,7 +1328,7 @@ public class DescribeJobResponseBody extends TeaModel {
             /**
              * Summary.
              */
-            public Builder summary(java.util.List < ConversationSummary> summary) {
+            public Builder summary(java.util.List<ConversationSummary> summary) {
                 this.summary = summary;
                 return this;
             }
@@ -1198,59 +1348,74 @@ public class DescribeJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeJobResponseBody</p>
+     */
     public static class Tasks extends TeaModel {
-        @NameInMap("ActualTime")
+        @com.aliyun.core.annotation.NameInMap("ActualTime")
         private Long actualTime;
 
-        @NameInMap("Brief")
+        @com.aliyun.core.annotation.NameInMap("Brief")
         private String brief;
 
-        @NameInMap("CallId")
+        @com.aliyun.core.annotation.NameInMap("CallId")
         private String callId;
 
-        @NameInMap("CalledNumber")
+        @com.aliyun.core.annotation.NameInMap("CalledNumber")
         private String calledNumber;
 
-        @NameInMap("CallingNumber")
+        @com.aliyun.core.annotation.NameInMap("CallingNumber")
         private String callingNumber;
 
-        @NameInMap("ChatbotId")
+        @com.aliyun.core.annotation.NameInMap("ChatbotId")
         private String chatbotId;
 
-        @NameInMap("Contact")
+        @com.aliyun.core.annotation.NameInMap("Contact")
         private Contact contact;
 
-        @NameInMap("Conversation")
-        private java.util.List < Conversation> conversation;
+        @com.aliyun.core.annotation.NameInMap("Conversation")
+        private java.util.List<Conversation> conversation;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Integer duration;
 
-        @NameInMap("EndReason")
+        @com.aliyun.core.annotation.NameInMap("EndReason")
         private String endReason;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("HangUpDirection")
+        @com.aliyun.core.annotation.NameInMap("HangUpDirection")
         private String hangUpDirection;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("PlanedTime")
+        @com.aliyun.core.annotation.NameInMap("PlanedTime")
         private Long planedTime;
 
-        @NameInMap("RingingDuration")
+        @com.aliyun.core.annotation.NameInMap("RealRingingDuration")
+        private Long realRingingDuration;
+
+        @com.aliyun.core.annotation.NameInMap("RingingDuration")
         private Long ringingDuration;
 
-        @NameInMap("ScenarioId")
+        @com.aliyun.core.annotation.NameInMap("ScenarioId")
         private String scenarioId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("SipCode")
+        private String sipCode;
+
+        @com.aliyun.core.annotation.NameInMap("SipDuration")
+        private Long sipDuration;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
         private Tasks(Builder builder) {
@@ -1268,8 +1433,11 @@ public class DescribeJobResponseBody extends TeaModel {
             this.hangUpDirection = builder.hangUpDirection;
             this.jobId = builder.jobId;
             this.planedTime = builder.planedTime;
+            this.realRingingDuration = builder.realRingingDuration;
             this.ringingDuration = builder.ringingDuration;
             this.scenarioId = builder.scenarioId;
+            this.sipCode = builder.sipCode;
+            this.sipDuration = builder.sipDuration;
             this.status = builder.status;
             this.taskId = builder.taskId;
         }
@@ -1334,7 +1502,7 @@ public class DescribeJobResponseBody extends TeaModel {
         /**
          * @return conversation
          */
-        public java.util.List < Conversation> getConversation() {
+        public java.util.List<Conversation> getConversation() {
             return this.conversation;
         }
 
@@ -1381,6 +1549,13 @@ public class DescribeJobResponseBody extends TeaModel {
         }
 
         /**
+         * @return realRingingDuration
+         */
+        public Long getRealRingingDuration() {
+            return this.realRingingDuration;
+        }
+
+        /**
          * @return ringingDuration
          */
         public Long getRingingDuration() {
@@ -1392,6 +1567,20 @@ public class DescribeJobResponseBody extends TeaModel {
          */
         public String getScenarioId() {
             return this.scenarioId;
+        }
+
+        /**
+         * @return sipCode
+         */
+        public String getSipCode() {
+            return this.sipCode;
+        }
+
+        /**
+         * @return sipDuration
+         */
+        public Long getSipDuration() {
+            return this.sipDuration;
         }
 
         /**
@@ -1416,17 +1605,47 @@ public class DescribeJobResponseBody extends TeaModel {
             private String callingNumber; 
             private String chatbotId; 
             private Contact contact; 
-            private java.util.List < Conversation> conversation; 
+            private java.util.List<Conversation> conversation; 
             private Integer duration; 
             private String endReason; 
             private Long endTime; 
             private String hangUpDirection; 
             private String jobId; 
             private Long planedTime; 
+            private Long realRingingDuration; 
             private Long ringingDuration; 
             private String scenarioId; 
+            private String sipCode; 
+            private Long sipDuration; 
             private String status; 
             private String taskId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tasks model) {
+                this.actualTime = model.actualTime;
+                this.brief = model.brief;
+                this.callId = model.callId;
+                this.calledNumber = model.calledNumber;
+                this.callingNumber = model.callingNumber;
+                this.chatbotId = model.chatbotId;
+                this.contact = model.contact;
+                this.conversation = model.conversation;
+                this.duration = model.duration;
+                this.endReason = model.endReason;
+                this.endTime = model.endTime;
+                this.hangUpDirection = model.hangUpDirection;
+                this.jobId = model.jobId;
+                this.planedTime = model.planedTime;
+                this.realRingingDuration = model.realRingingDuration;
+                this.ringingDuration = model.ringingDuration;
+                this.scenarioId = model.scenarioId;
+                this.sipCode = model.sipCode;
+                this.sipDuration = model.sipDuration;
+                this.status = model.status;
+                this.taskId = model.taskId;
+            } 
 
             /**
              * ActualTime.
@@ -1487,7 +1706,7 @@ public class DescribeJobResponseBody extends TeaModel {
             /**
              * Conversation.
              */
-            public Builder conversation(java.util.List < Conversation> conversation) {
+            public Builder conversation(java.util.List<Conversation> conversation) {
                 this.conversation = conversation;
                 return this;
             }
@@ -1541,6 +1760,14 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
+             * RealRingingDuration.
+             */
+            public Builder realRingingDuration(Long realRingingDuration) {
+                this.realRingingDuration = realRingingDuration;
+                return this;
+            }
+
+            /**
              * RingingDuration.
              */
             public Builder ringingDuration(Long ringingDuration) {
@@ -1553,6 +1780,22 @@ public class DescribeJobResponseBody extends TeaModel {
              */
             public Builder scenarioId(String scenarioId) {
                 this.scenarioId = scenarioId;
+                return this;
+            }
+
+            /**
+             * SipCode.
+             */
+            public Builder sipCode(String sipCode) {
+                this.sipCode = sipCode;
+                return this;
+            }
+
+            /**
+             * SipDuration.
+             */
+            public Builder sipDuration(Long sipDuration) {
+                this.sipDuration = sipDuration;
                 return this;
             }
 
@@ -1579,69 +1822,75 @@ public class DescribeJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeJobResponseBody</p>
+     */
     public static class Job extends TeaModel {
-        @NameInMap("ActualTime")
+        @com.aliyun.core.annotation.NameInMap("ActualTime")
         private Long actualTime;
 
-        @NameInMap("CalledNumber")
+        @com.aliyun.core.annotation.NameInMap("CalledNumber")
         private String calledNumber;
 
-        @NameInMap("CallingNumbers")
-        private java.util.List < String > callingNumbers;
+        @com.aliyun.core.annotation.NameInMap("CallingNumbers")
+        private java.util.List<String> callingNumbers;
 
-        @NameInMap("Contacts")
-        private java.util.List < Contacts> contacts;
+        @com.aliyun.core.annotation.NameInMap("Contacts")
+        private java.util.List<Contacts> contacts;
 
-        @NameInMap("DsReport")
+        @com.aliyun.core.annotation.NameInMap("DsReport")
         private String dsReport;
 
-        @NameInMap("EndReason")
+        @com.aliyun.core.annotation.NameInMap("EndReason")
         private Integer endReason;
 
-        @NameInMap("Extras")
-        private java.util.List < Extras> extras;
+        @com.aliyun.core.annotation.NameInMap("Extras")
+        private java.util.List<Extras> extras;
 
-        @NameInMap("FailureReason")
+        @com.aliyun.core.annotation.NameInMap("FailureReason")
         private String failureReason;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("JobGroupId")
+        @com.aliyun.core.annotation.NameInMap("JobGroupId")
         private String jobGroupId;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("NextExecutionTime")
+        @com.aliyun.core.annotation.NameInMap("NextExecutionTime")
         private Long nextExecutionTime;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
-        @NameInMap("ReferenceId")
+        @com.aliyun.core.annotation.NameInMap("ReferenceId")
         private String referenceId;
 
-        @NameInMap("ScenarioId")
+        @com.aliyun.core.annotation.NameInMap("ScenarioId")
         private String scenarioId;
 
-        @NameInMap("Script")
+        @com.aliyun.core.annotation.NameInMap("Script")
         private Script script;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StrategyId")
+        @com.aliyun.core.annotation.NameInMap("StrategyId")
         private String strategyId;
 
-        @NameInMap("Summary")
-        private java.util.List < Summary> summary;
+        @com.aliyun.core.annotation.NameInMap("Summary")
+        private java.util.List<Summary> summary;
 
-        @NameInMap("SystemPriority")
+        @com.aliyun.core.annotation.NameInMap("SystemPriority")
         private Integer systemPriority;
 
-        @NameInMap("Tasks")
-        private java.util.List < Tasks> tasks;
+        @com.aliyun.core.annotation.NameInMap("Tasks")
+        private java.util.List<Tasks> tasks;
 
         private Job(Builder builder) {
             this.actualTime = builder.actualTime;
@@ -1692,14 +1941,14 @@ public class DescribeJobResponseBody extends TeaModel {
         /**
          * @return callingNumbers
          */
-        public java.util.List < String > getCallingNumbers() {
+        public java.util.List<String> getCallingNumbers() {
             return this.callingNumbers;
         }
 
         /**
          * @return contacts
          */
-        public java.util.List < Contacts> getContacts() {
+        public java.util.List<Contacts> getContacts() {
             return this.contacts;
         }
 
@@ -1720,7 +1969,7 @@ public class DescribeJobResponseBody extends TeaModel {
         /**
          * @return extras
          */
-        public java.util.List < Extras> getExtras() {
+        public java.util.List<Extras> getExtras() {
             return this.extras;
         }
 
@@ -1804,7 +2053,7 @@ public class DescribeJobResponseBody extends TeaModel {
         /**
          * @return summary
          */
-        public java.util.List < Summary> getSummary() {
+        public java.util.List<Summary> getSummary() {
             return this.summary;
         }
 
@@ -1818,18 +2067,18 @@ public class DescribeJobResponseBody extends TeaModel {
         /**
          * @return tasks
          */
-        public java.util.List < Tasks> getTasks() {
+        public java.util.List<Tasks> getTasks() {
             return this.tasks;
         }
 
         public static final class Builder {
             private Long actualTime; 
             private String calledNumber; 
-            private java.util.List < String > callingNumbers; 
-            private java.util.List < Contacts> contacts; 
+            private java.util.List<String> callingNumbers; 
+            private java.util.List<Contacts> contacts; 
             private String dsReport; 
             private Integer endReason; 
-            private java.util.List < Extras> extras; 
+            private java.util.List<Extras> extras; 
             private String failureReason; 
             private String instanceId; 
             private String jobGroupId; 
@@ -1841,9 +2090,36 @@ public class DescribeJobResponseBody extends TeaModel {
             private Script script; 
             private String status; 
             private String strategyId; 
-            private java.util.List < Summary> summary; 
+            private java.util.List<Summary> summary; 
             private Integer systemPriority; 
-            private java.util.List < Tasks> tasks; 
+            private java.util.List<Tasks> tasks; 
+
+            private Builder() {
+            } 
+
+            private Builder(Job model) {
+                this.actualTime = model.actualTime;
+                this.calledNumber = model.calledNumber;
+                this.callingNumbers = model.callingNumbers;
+                this.contacts = model.contacts;
+                this.dsReport = model.dsReport;
+                this.endReason = model.endReason;
+                this.extras = model.extras;
+                this.failureReason = model.failureReason;
+                this.instanceId = model.instanceId;
+                this.jobGroupId = model.jobGroupId;
+                this.jobId = model.jobId;
+                this.nextExecutionTime = model.nextExecutionTime;
+                this.priority = model.priority;
+                this.referenceId = model.referenceId;
+                this.scenarioId = model.scenarioId;
+                this.script = model.script;
+                this.status = model.status;
+                this.strategyId = model.strategyId;
+                this.summary = model.summary;
+                this.systemPriority = model.systemPriority;
+                this.tasks = model.tasks;
+            } 
 
             /**
              * ActualTime.
@@ -1864,7 +2140,7 @@ public class DescribeJobResponseBody extends TeaModel {
             /**
              * CallingNumbers.
              */
-            public Builder callingNumbers(java.util.List < String > callingNumbers) {
+            public Builder callingNumbers(java.util.List<String> callingNumbers) {
                 this.callingNumbers = callingNumbers;
                 return this;
             }
@@ -1872,7 +2148,7 @@ public class DescribeJobResponseBody extends TeaModel {
             /**
              * Contacts.
              */
-            public Builder contacts(java.util.List < Contacts> contacts) {
+            public Builder contacts(java.util.List<Contacts> contacts) {
                 this.contacts = contacts;
                 return this;
             }
@@ -1896,7 +2172,7 @@ public class DescribeJobResponseBody extends TeaModel {
             /**
              * Extras.
              */
-            public Builder extras(java.util.List < Extras> extras) {
+            public Builder extras(java.util.List<Extras> extras) {
                 this.extras = extras;
                 return this;
             }
@@ -1992,7 +2268,7 @@ public class DescribeJobResponseBody extends TeaModel {
             /**
              * Summary.
              */
-            public Builder summary(java.util.List < Summary> summary) {
+            public Builder summary(java.util.List<Summary> summary) {
                 this.summary = summary;
                 return this;
             }
@@ -2008,7 +2284,7 @@ public class DescribeJobResponseBody extends TeaModel {
             /**
              * Tasks.
              */
-            public Builder tasks(java.util.List < Tasks> tasks) {
+            public Builder tasks(java.util.List<Tasks> tasks) {
                 this.tasks = tasks;
                 return this;
             }

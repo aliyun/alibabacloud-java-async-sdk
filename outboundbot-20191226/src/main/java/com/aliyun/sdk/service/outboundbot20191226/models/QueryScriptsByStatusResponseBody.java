@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryScriptsByStatusResponseBody} extends {@link TeaModel}
  *
  * <p>QueryScriptsByStatusResponseBody</p>
  */
 public class QueryScriptsByStatusResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Scripts")
+    @com.aliyun.core.annotation.NameInMap("Scripts")
     private Scripts scripts;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryScriptsByStatusResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class QueryScriptsByStatusResponseBody extends TeaModel {
 
     public static QueryScriptsByStatusResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class QueryScriptsByStatusResponseBody extends TeaModel {
         private String requestId; 
         private Scripts scripts; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryScriptsByStatusResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.scripts = model.scripts;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -151,41 +172,47 @@ public class QueryScriptsByStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryScriptsByStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryScriptsByStatusResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("AppliedVersion")
+        @com.aliyun.core.annotation.NameInMap("AppliedVersion")
         private String appliedVersion;
 
-        @NameInMap("DebugStatus")
+        @com.aliyun.core.annotation.NameInMap("DebugStatus")
         private String debugStatus;
 
-        @NameInMap("DebugVersion")
+        @com.aliyun.core.annotation.NameInMap("DebugVersion")
         private String debugVersion;
 
-        @NameInMap("Industry")
+        @com.aliyun.core.annotation.NameInMap("Industry")
         private String industry;
 
-        @NameInMap("IsDebugDrafted")
+        @com.aliyun.core.annotation.NameInMap("IsDebugDrafted")
         private Boolean isDebugDrafted;
 
-        @NameInMap("IsDrafted")
+        @com.aliyun.core.annotation.NameInMap("IsDrafted")
         private Boolean isDrafted;
 
-        @NameInMap("Scene")
+        @com.aliyun.core.annotation.NameInMap("Scene")
         private String scene;
 
-        @NameInMap("ScriptDescription")
+        @com.aliyun.core.annotation.NameInMap("ScriptDescription")
         private String scriptDescription;
 
-        @NameInMap("ScriptId")
+        @com.aliyun.core.annotation.NameInMap("ScriptId")
         private String scriptId;
 
-        @NameInMap("ScriptName")
+        @com.aliyun.core.annotation.NameInMap("ScriptName")
         private String scriptName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
         private List(Builder builder) {
@@ -309,6 +336,24 @@ public class QueryScriptsByStatusResponseBody extends TeaModel {
             private String status; 
             private Long updateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.appliedVersion = model.appliedVersion;
+                this.debugStatus = model.debugStatus;
+                this.debugVersion = model.debugVersion;
+                this.industry = model.industry;
+                this.isDebugDrafted = model.isDebugDrafted;
+                this.isDrafted = model.isDrafted;
+                this.scene = model.scene;
+                this.scriptDescription = model.scriptDescription;
+                this.scriptId = model.scriptId;
+                this.scriptName = model.scriptName;
+                this.status = model.status;
+                this.updateTime = model.updateTime;
+            } 
+
             /**
              * AppliedVersion.
              */
@@ -412,17 +457,23 @@ public class QueryScriptsByStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryScriptsByStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryScriptsByStatusResponseBody</p>
+     */
     public static class Scripts extends TeaModel {
-        @NameInMap("List")
-        private java.util.List < List> list;
+        @com.aliyun.core.annotation.NameInMap("List")
+        private java.util.List<List> list;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Scripts(Builder builder) {
@@ -443,7 +494,7 @@ public class QueryScriptsByStatusResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -469,15 +520,25 @@ public class QueryScriptsByStatusResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(Scripts model) {
+                this.list = model.list;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
+
             /**
              * List.
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }

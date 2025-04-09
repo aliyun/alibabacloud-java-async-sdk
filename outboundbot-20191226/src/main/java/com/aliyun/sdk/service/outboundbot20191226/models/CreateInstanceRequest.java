@@ -1,41 +1,46 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateInstanceRequest} extends {@link RequestModel}
  *
  * <p>CreateInstanceRequest</p>
  */
 public class CreateInstanceRequest extends Request {
-    @Query
-    @NameInMap("CallingNumber")
-    private java.util.List < String > callingNumber;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallingNumber")
+    private java.util.List<String> callingNumber;
 
-    @Query
-    @NameInMap("InstanceDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceDescription")
     private String instanceDescription;
 
-    @Query
-    @NameInMap("InstanceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceName;
 
-    @Query
-    @NameInMap("MaxConcurrentConversation")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxConcurrentConversation")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer maxConcurrentConversation;
 
-    @Query
-    @NameInMap("NluServiceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NluServiceType")
     private String nluServiceType;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
     private CreateInstanceRequest(Builder builder) {
@@ -56,7 +61,7 @@ public class CreateInstanceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -64,7 +69,7 @@ public class CreateInstanceRequest extends Request {
     /**
      * @return callingNumber
      */
-    public java.util.List < String > getCallingNumber() {
+    public java.util.List<String> getCallingNumber() {
         return this.callingNumber;
     }
 
@@ -104,7 +109,7 @@ public class CreateInstanceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateInstanceRequest, Builder> {
-        private java.util.List < String > callingNumber; 
+        private java.util.List<String> callingNumber; 
         private String instanceDescription; 
         private String instanceName; 
         private Integer maxConcurrentConversation; 
@@ -128,7 +133,7 @@ public class CreateInstanceRequest extends Request {
         /**
          * CallingNumber.
          */
-        public Builder callingNumber(java.util.List < String > callingNumber) {
+        public Builder callingNumber(java.util.List<String> callingNumber) {
             this.putQueryParameter("CallingNumber", callingNumber);
             this.callingNumber = callingNumber;
             return this;
@@ -144,7 +149,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * InstanceName.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -153,7 +158,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * MaxConcurrentConversation.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder maxConcurrentConversation(Integer maxConcurrentConversation) {
             this.putQueryParameter("MaxConcurrentConversation", maxConcurrentConversation);

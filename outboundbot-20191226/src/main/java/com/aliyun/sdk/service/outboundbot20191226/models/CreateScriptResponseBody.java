@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateScriptResponseBody} extends {@link TeaModel}
  *
  * <p>CreateScriptResponseBody</p>
  */
 public class CreateScriptResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Script")
+    @com.aliyun.core.annotation.NameInMap("Script")
     private Script script;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CreateScriptResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class CreateScriptResponseBody extends TeaModel {
 
     public static CreateScriptResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class CreateScriptResponseBody extends TeaModel {
         private String requestId; 
         private Script script; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateScriptResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.script = model.script;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -151,35 +172,47 @@ public class CreateScriptResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateScriptResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateScriptResponseBody</p>
+     */
     public static class Script extends TeaModel {
-        @NameInMap("DebugStatus")
+        @com.aliyun.core.annotation.NameInMap("DebugStatus")
         private String debugStatus;
 
-        @NameInMap("Industry")
+        @com.aliyun.core.annotation.NameInMap("Industry")
         private String industry;
 
-        @NameInMap("IsDebugDrafted")
+        @com.aliyun.core.annotation.NameInMap("IsDebugDrafted")
         private Boolean isDebugDrafted;
 
-        @NameInMap("IsDrafted")
+        @com.aliyun.core.annotation.NameInMap("IsDrafted")
         private Boolean isDrafted;
 
-        @NameInMap("Scene")
+        @com.aliyun.core.annotation.NameInMap("NluAccessType")
+        private String nluAccessType;
+
+        @com.aliyun.core.annotation.NameInMap("NluEngine")
+        private String nluEngine;
+
+        @com.aliyun.core.annotation.NameInMap("Scene")
         private String scene;
 
-        @NameInMap("ScriptDescription")
+        @com.aliyun.core.annotation.NameInMap("ScriptDescription")
         private String scriptDescription;
 
-        @NameInMap("ScriptId")
+        @com.aliyun.core.annotation.NameInMap("ScriptId")
         private String scriptId;
 
-        @NameInMap("ScriptName")
+        @com.aliyun.core.annotation.NameInMap("ScriptName")
         private String scriptName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
         private Script(Builder builder) {
@@ -187,6 +220,8 @@ public class CreateScriptResponseBody extends TeaModel {
             this.industry = builder.industry;
             this.isDebugDrafted = builder.isDebugDrafted;
             this.isDrafted = builder.isDrafted;
+            this.nluAccessType = builder.nluAccessType;
+            this.nluEngine = builder.nluEngine;
             this.scene = builder.scene;
             this.scriptDescription = builder.scriptDescription;
             this.scriptId = builder.scriptId;
@@ -229,6 +264,20 @@ public class CreateScriptResponseBody extends TeaModel {
          */
         public Boolean getIsDrafted() {
             return this.isDrafted;
+        }
+
+        /**
+         * @return nluAccessType
+         */
+        public String getNluAccessType() {
+            return this.nluAccessType;
+        }
+
+        /**
+         * @return nluEngine
+         */
+        public String getNluEngine() {
+            return this.nluEngine;
         }
 
         /**
@@ -278,12 +327,32 @@ public class CreateScriptResponseBody extends TeaModel {
             private String industry; 
             private Boolean isDebugDrafted; 
             private Boolean isDrafted; 
+            private String nluAccessType; 
+            private String nluEngine; 
             private String scene; 
             private String scriptDescription; 
             private String scriptId; 
             private String scriptName; 
             private String status; 
             private Long updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Script model) {
+                this.debugStatus = model.debugStatus;
+                this.industry = model.industry;
+                this.isDebugDrafted = model.isDebugDrafted;
+                this.isDrafted = model.isDrafted;
+                this.nluAccessType = model.nluAccessType;
+                this.nluEngine = model.nluEngine;
+                this.scene = model.scene;
+                this.scriptDescription = model.scriptDescription;
+                this.scriptId = model.scriptId;
+                this.scriptName = model.scriptName;
+                this.status = model.status;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * DebugStatus.
@@ -314,6 +383,22 @@ public class CreateScriptResponseBody extends TeaModel {
              */
             public Builder isDrafted(Boolean isDrafted) {
                 this.isDrafted = isDrafted;
+                return this;
+            }
+
+            /**
+             * NluAccessType.
+             */
+            public Builder nluAccessType(String nluAccessType) {
+                this.nluAccessType = nluAccessType;
+                return this;
+            }
+
+            /**
+             * NluEngine.
+             */
+            public Builder nluEngine(String nluEngine) {
+                this.nluEngine = nluEngine;
                 return this;
             }
 

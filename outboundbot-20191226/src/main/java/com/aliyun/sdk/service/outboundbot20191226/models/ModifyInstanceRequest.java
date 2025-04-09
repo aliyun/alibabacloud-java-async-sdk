@@ -1,37 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyInstanceRequest} extends {@link RequestModel}
  *
  * <p>ModifyInstanceRequest</p>
  */
 public class ModifyInstanceRequest extends Request {
-    @Query
-    @NameInMap("CallingNumber")
-    private java.util.List < String > callingNumber;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallingNumber")
+    private java.util.List<String> callingNumber;
 
-    @Query
-    @NameInMap("InstanceDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceDescription")
     private String instanceDescription;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("InstanceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
     private String instanceName;
 
-    @Query
-    @NameInMap("MaxConcurrentConversation")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxConcurrentConversation")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer maxConcurrentConversation;
 
     private ModifyInstanceRequest(Builder builder) {
@@ -51,7 +56,7 @@ public class ModifyInstanceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -59,7 +64,7 @@ public class ModifyInstanceRequest extends Request {
     /**
      * @return callingNumber
      */
-    public java.util.List < String > getCallingNumber() {
+    public java.util.List<String> getCallingNumber() {
         return this.callingNumber;
     }
 
@@ -92,7 +97,7 @@ public class ModifyInstanceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyInstanceRequest, Builder> {
-        private java.util.List < String > callingNumber; 
+        private java.util.List<String> callingNumber; 
         private String instanceDescription; 
         private String instanceId; 
         private String instanceName; 
@@ -114,7 +119,7 @@ public class ModifyInstanceRequest extends Request {
         /**
          * CallingNumber.
          */
-        public Builder callingNumber(java.util.List < String > callingNumber) {
+        public Builder callingNumber(java.util.List<String> callingNumber) {
             this.putQueryParameter("CallingNumber", callingNumber);
             this.callingNumber = callingNumber;
             return this;
@@ -130,7 +135,10 @@ public class ModifyInstanceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90515b5-6115-4ccf-83e2-52d5bfaf2ddf</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -148,7 +156,10 @@ public class ModifyInstanceRequest extends Request {
         }
 
         /**
-         * MaxConcurrentConversation.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder maxConcurrentConversation(Integer maxConcurrentConversation) {
             this.putQueryParameter("MaxConcurrentConversation", maxConcurrentConversation);

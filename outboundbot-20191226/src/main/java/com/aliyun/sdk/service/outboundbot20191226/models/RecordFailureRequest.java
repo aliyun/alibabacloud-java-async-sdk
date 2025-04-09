@@ -1,54 +1,59 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RecordFailureRequest} extends {@link RequestModel}
  *
  * <p>RecordFailureRequest</p>
  */
 public class RecordFailureRequest extends Request {
-    @Query
-    @NameInMap("ActualTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ActualTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long actualTime;
 
-    @Query
-    @NameInMap("CallId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String callId;
 
-    @Query
-    @NameInMap("CalledNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CalledNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String calledNumber;
 
-    @Query
-    @NameInMap("CallingNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallingNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String callingNumber;
 
-    @Query
-    @NameInMap("DispositionCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DispositionCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dispositionCode;
 
-    @Query
-    @NameInMap("ExceptionCodes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExceptionCodes")
     private String exceptionCodes;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("TaskId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String taskId;
 
     private RecordFailureRequest(Builder builder) {
@@ -71,7 +76,7 @@ public class RecordFailureRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -159,7 +164,10 @@ public class RecordFailureRequest extends Request {
         } 
 
         /**
-         * ActualTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1579055782000</p>
          */
         public Builder actualTime(Long actualTime) {
             this.putQueryParameter("ActualTime", actualTime);
@@ -168,7 +176,10 @@ public class RecordFailureRequest extends Request {
         }
 
         /**
-         * CallId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4f21446e-324e-46f2-bf62-7f341fb004ea</p>
          */
         public Builder callId(String callId) {
             this.putQueryParameter("CallId", callId);
@@ -177,7 +188,10 @@ public class RecordFailureRequest extends Request {
         }
 
         /**
-         * CalledNumber.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>135815****</p>
          */
         public Builder calledNumber(String calledNumber) {
             this.putQueryParameter("CalledNumber", calledNumber);
@@ -186,7 +200,10 @@ public class RecordFailureRequest extends Request {
         }
 
         /**
-         * CallingNumber.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10086</p>
          */
         public Builder callingNumber(String callingNumber) {
             this.putQueryParameter("CallingNumber", callingNumber);
@@ -195,7 +212,10 @@ public class RecordFailureRequest extends Request {
         }
 
         /**
-         * DispositionCode.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OutOfService</p>
          */
         public Builder dispositionCode(String dispositionCode) {
             this.putQueryParameter("DispositionCode", dispositionCode);
@@ -213,7 +233,10 @@ public class RecordFailureRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9ab43460-c0b9-40e2-8447-48d82c97fc67</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -222,7 +245,10 @@ public class RecordFailureRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d2295c0e-3bc3-48a5-9f56-b185db2be909</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

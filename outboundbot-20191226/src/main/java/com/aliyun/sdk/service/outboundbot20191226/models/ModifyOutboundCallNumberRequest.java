@@ -1,40 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyOutboundCallNumberRequest} extends {@link RequestModel}
  *
  * <p>ModifyOutboundCallNumberRequest</p>
  */
 public class ModifyOutboundCallNumberRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("Number")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Number")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String number;
 
-    @Query
-    @NameInMap("OutboundCallNumberId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutboundCallNumberId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String outboundCallNumberId;
 
-    @Query
-    @NameInMap("RateLimitCount")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RateLimitCount")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer rateLimitCount;
 
-    @Query
-    @NameInMap("RateLimitPeriod")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RateLimitPeriod")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer rateLimitPeriod;
 
     private ModifyOutboundCallNumberRequest(Builder builder) {
@@ -54,7 +59,7 @@ public class ModifyOutboundCallNumberRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -115,7 +120,10 @@ public class ModifyOutboundCallNumberRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>52e80b02-0126-4556-a1e6-ef5b3747ed53/a9a3ddc7-d7d7-48cd-82b5-b31bb5510e71_2a66f8ad-dfbb-4980-9b84-439171295a11.xlsx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -124,7 +132,10 @@ public class ModifyOutboundCallNumberRequest extends Request {
         }
 
         /**
-         * Number.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10088</p>
          */
         public Builder number(String number) {
             this.putQueryParameter("Number", number);
@@ -133,7 +144,10 @@ public class ModifyOutboundCallNumberRequest extends Request {
         }
 
         /**
-         * OutboundCallNumberId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fa0e21e9-caab-4629-9121-1e341243d599</p>
          */
         public Builder outboundCallNumberId(String outboundCallNumberId) {
             this.putQueryParameter("OutboundCallNumberId", outboundCallNumberId);
@@ -142,7 +156,10 @@ public class ModifyOutboundCallNumberRequest extends Request {
         }
 
         /**
-         * RateLimitCount.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder rateLimitCount(Integer rateLimitCount) {
             this.putQueryParameter("RateLimitCount", rateLimitCount);
@@ -151,7 +168,10 @@ public class ModifyOutboundCallNumberRequest extends Request {
         }
 
         /**
-         * RateLimitPeriod.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder rateLimitPeriod(Integer rateLimitPeriod) {
             this.putQueryParameter("RateLimitPeriod", rateLimitPeriod);

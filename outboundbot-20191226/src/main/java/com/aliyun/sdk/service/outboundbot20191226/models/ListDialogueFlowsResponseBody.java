@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDialogueFlowsResponseBody} extends {@link TeaModel}
  *
  * <p>ListDialogueFlowsResponseBody</p>
  */
 public class ListDialogueFlowsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("DialogueFlows")
-    private java.util.List < DialogueFlows> dialogueFlows;
+    @com.aliyun.core.annotation.NameInMap("DialogueFlows")
+    private java.util.List<DialogueFlows> dialogueFlows;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListDialogueFlowsResponseBody(Builder builder) {
@@ -47,6 +52,10 @@ public class ListDialogueFlowsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -57,7 +66,7 @@ public class ListDialogueFlowsResponseBody extends TeaModel {
     /**
      * @return dialogueFlows
      */
-    public java.util.List < DialogueFlows> getDialogueFlows() {
+    public java.util.List<DialogueFlows> getDialogueFlows() {
         return this.dialogueFlows;
     }
 
@@ -91,11 +100,23 @@ public class ListDialogueFlowsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < DialogueFlows> dialogueFlows; 
+        private java.util.List<DialogueFlows> dialogueFlows; 
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDialogueFlowsResponseBody model) {
+            this.code = model.code;
+            this.dialogueFlows = model.dialogueFlows;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -108,7 +129,7 @@ public class ListDialogueFlowsResponseBody extends TeaModel {
         /**
          * DialogueFlows.
          */
-        public Builder dialogueFlows(java.util.List < DialogueFlows> dialogueFlows) {
+        public Builder dialogueFlows(java.util.List<DialogueFlows> dialogueFlows) {
             this.dialogueFlows = dialogueFlows;
             return this;
         }
@@ -151,23 +172,29 @@ public class ListDialogueFlowsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDialogueFlowsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDialogueFlowsResponseBody</p>
+     */
     public static class DialogueFlows extends TeaModel {
-        @NameInMap("DialogueFlowDefinition")
+        @com.aliyun.core.annotation.NameInMap("DialogueFlowDefinition")
         private String dialogueFlowDefinition;
 
-        @NameInMap("DialogueFlowId")
+        @com.aliyun.core.annotation.NameInMap("DialogueFlowId")
         private String dialogueFlowId;
 
-        @NameInMap("DialogueFlowName")
+        @com.aliyun.core.annotation.NameInMap("DialogueFlowName")
         private String dialogueFlowName;
 
-        @NameInMap("DialogueFlowType")
+        @com.aliyun.core.annotation.NameInMap("DialogueFlowType")
         private String dialogueFlowType;
 
-        @NameInMap("ScriptId")
+        @com.aliyun.core.annotation.NameInMap("ScriptId")
         private String scriptId;
 
-        @NameInMap("ScriptVersion")
+        @com.aliyun.core.annotation.NameInMap("ScriptVersion")
         private String scriptVersion;
 
         private DialogueFlows(Builder builder) {
@@ -236,6 +263,18 @@ public class ListDialogueFlowsResponseBody extends TeaModel {
             private String dialogueFlowType; 
             private String scriptId; 
             private String scriptVersion; 
+
+            private Builder() {
+            } 
+
+            private Builder(DialogueFlows model) {
+                this.dialogueFlowDefinition = model.dialogueFlowDefinition;
+                this.dialogueFlowId = model.dialogueFlowId;
+                this.dialogueFlowName = model.dialogueFlowName;
+                this.dialogueFlowType = model.dialogueFlowType;
+                this.scriptId = model.scriptId;
+                this.scriptVersion = model.scriptVersion;
+            } 
 
             /**
              * DialogueFlowDefinition.

@@ -1,37 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTagHitsSummaryResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTagHitsSummaryResponseBody</p>
  */
 public class DescribeTagHitsSummaryResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TagGroups")
-    private java.util.List < TagGroups> tagGroups;
+    @com.aliyun.core.annotation.NameInMap("TagGroups")
+    private java.util.List<TagGroups> tagGroups;
 
-    @NameInMap("TagHitsList")
-    private java.util.List < TagHitsList> tagHitsList;
+    @com.aliyun.core.annotation.NameInMap("TagHitsList")
+    private java.util.List<TagHitsList> tagHitsList;
 
     private DescribeTagHitsSummaryResponseBody(Builder builder) {
         this.code = builder.code;
@@ -49,6 +54,10 @@ public class DescribeTagHitsSummaryResponseBody extends TeaModel {
 
     public static DescribeTagHitsSummaryResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -89,14 +98,14 @@ public class DescribeTagHitsSummaryResponseBody extends TeaModel {
     /**
      * @return tagGroups
      */
-    public java.util.List < TagGroups> getTagGroups() {
+    public java.util.List<TagGroups> getTagGroups() {
         return this.tagGroups;
     }
 
     /**
      * @return tagHitsList
      */
-    public java.util.List < TagHitsList> getTagHitsList() {
+    public java.util.List<TagHitsList> getTagHitsList() {
         return this.tagHitsList;
     }
 
@@ -106,8 +115,21 @@ public class DescribeTagHitsSummaryResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
-        private java.util.List < TagGroups> tagGroups; 
-        private java.util.List < TagHitsList> tagHitsList; 
+        private java.util.List<TagGroups> tagGroups; 
+        private java.util.List<TagHitsList> tagHitsList; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTagHitsSummaryResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.tagGroups = model.tagGroups;
+            this.tagHitsList = model.tagHitsList;
+        } 
 
         /**
          * Code.
@@ -152,7 +174,7 @@ public class DescribeTagHitsSummaryResponseBody extends TeaModel {
         /**
          * TagGroups.
          */
-        public Builder tagGroups(java.util.List < TagGroups> tagGroups) {
+        public Builder tagGroups(java.util.List<TagGroups> tagGroups) {
             this.tagGroups = tagGroups;
             return this;
         }
@@ -160,7 +182,7 @@ public class DescribeTagHitsSummaryResponseBody extends TeaModel {
         /**
          * TagHitsList.
          */
-        public Builder tagHitsList(java.util.List < TagHitsList> tagHitsList) {
+        public Builder tagHitsList(java.util.List<TagHitsList> tagHitsList) {
             this.tagHitsList = tagHitsList;
             return this;
         }
@@ -171,17 +193,23 @@ public class DescribeTagHitsSummaryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTagHitsSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTagHitsSummaryResponseBody</p>
+     */
     public static class TagGroups extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("ScriptId")
+        @com.aliyun.core.annotation.NameInMap("ScriptId")
         private String scriptId;
 
-        @NameInMap("TagGroup")
+        @com.aliyun.core.annotation.NameInMap("TagGroup")
         private String tagGroup;
 
-        @NameInMap("TagGroupIndex")
+        @com.aliyun.core.annotation.NameInMap("TagGroupIndex")
         private Integer tagGroupIndex;
 
         private TagGroups(Builder builder) {
@@ -233,8 +261,21 @@ public class DescribeTagHitsSummaryResponseBody extends TeaModel {
             private String tagGroup; 
             private Integer tagGroupIndex; 
 
+            private Builder() {
+            } 
+
+            private Builder(TagGroups model) {
+                this.id = model.id;
+                this.scriptId = model.scriptId;
+                this.tagGroup = model.tagGroup;
+                this.tagGroupIndex = model.tagGroupIndex;
+            } 
+
             /**
-             * ID
+             * <p>ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8bb6f8ca-85a3-49f8-86a5-3127902a2156</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -272,14 +313,20 @@ public class DescribeTagHitsSummaryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTagHitsSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTagHitsSummaryResponseBody</p>
+     */
     public static class TagHitsList extends TeaModel {
-        @NameInMap("HitCount")
+        @com.aliyun.core.annotation.NameInMap("HitCount")
         private Integer hitCount;
 
-        @NameInMap("TagGroup")
+        @com.aliyun.core.annotation.NameInMap("TagGroup")
         private String tagGroup;
 
-        @NameInMap("TagName")
+        @com.aliyun.core.annotation.NameInMap("TagName")
         private String tagName;
 
         private TagHitsList(Builder builder) {
@@ -321,6 +368,15 @@ public class DescribeTagHitsSummaryResponseBody extends TeaModel {
             private Integer hitCount; 
             private String tagGroup; 
             private String tagName; 
+
+            private Builder() {
+            } 
+
+            private Builder(TagHitsList model) {
+                this.hitCount = model.hitCount;
+                this.tagGroup = model.tagGroup;
+                this.tagName = model.tagName;
+            } 
 
             /**
              * HitCount.

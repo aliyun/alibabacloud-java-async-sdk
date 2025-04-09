@@ -1,51 +1,56 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeIntentStatisticsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeIntentStatisticsResponseBody</p>
  */
 public class DescribeIntentStatisticsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("GlobalIntentNum")
+    @com.aliyun.core.annotation.NameInMap("GlobalIntentNum")
     private Integer globalIntentNum;
 
-    @NameInMap("GlobalIntents")
-    private java.util.List < GlobalIntents> globalIntents;
+    @com.aliyun.core.annotation.NameInMap("GlobalIntents")
+    private java.util.List<GlobalIntents> globalIntents;
 
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("IntentsAfterNoAnswer")
-    private java.util.List < IntentsAfterNoAnswer> intentsAfterNoAnswer;
+    @com.aliyun.core.annotation.NameInMap("IntentsAfterNoAnswer")
+    private java.util.List<IntentsAfterNoAnswer> intentsAfterNoAnswer;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("ProcessIntentNum")
+    @com.aliyun.core.annotation.NameInMap("ProcessIntentNum")
     private Integer processIntentNum;
 
-    @NameInMap("ProcessIntents")
-    private java.util.List < ProcessIntents> processIntents;
+    @com.aliyun.core.annotation.NameInMap("ProcessIntents")
+    private java.util.List<ProcessIntents> processIntents;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeIntentStatisticsResponseBody(Builder builder) {
@@ -71,6 +76,10 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -88,7 +97,7 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
     /**
      * @return globalIntents
      */
-    public java.util.List < GlobalIntents> getGlobalIntents() {
+    public java.util.List<GlobalIntents> getGlobalIntents() {
         return this.globalIntents;
     }
 
@@ -116,7 +125,7 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
     /**
      * @return intentsAfterNoAnswer
      */
-    public java.util.List < IntentsAfterNoAnswer> getIntentsAfterNoAnswer() {
+    public java.util.List<IntentsAfterNoAnswer> getIntentsAfterNoAnswer() {
         return this.intentsAfterNoAnswer;
     }
 
@@ -137,7 +146,7 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
     /**
      * @return processIntents
      */
-    public java.util.List < ProcessIntents> getProcessIntents() {
+    public java.util.List<ProcessIntents> getProcessIntents() {
         return this.processIntents;
     }
 
@@ -158,16 +167,34 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
     public static final class Builder {
         private String code; 
         private Integer globalIntentNum; 
-        private java.util.List < GlobalIntents> globalIntents; 
+        private java.util.List<GlobalIntents> globalIntents; 
         private String groupId; 
         private Integer httpStatusCode; 
         private String instanceId; 
-        private java.util.List < IntentsAfterNoAnswer> intentsAfterNoAnswer; 
+        private java.util.List<IntentsAfterNoAnswer> intentsAfterNoAnswer; 
         private String message; 
         private Integer processIntentNum; 
-        private java.util.List < ProcessIntents> processIntents; 
+        private java.util.List<ProcessIntents> processIntents; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeIntentStatisticsResponseBody model) {
+            this.code = model.code;
+            this.globalIntentNum = model.globalIntentNum;
+            this.globalIntents = model.globalIntents;
+            this.groupId = model.groupId;
+            this.httpStatusCode = model.httpStatusCode;
+            this.instanceId = model.instanceId;
+            this.intentsAfterNoAnswer = model.intentsAfterNoAnswer;
+            this.message = model.message;
+            this.processIntentNum = model.processIntentNum;
+            this.processIntents = model.processIntents;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -188,7 +215,7 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
         /**
          * GlobalIntents.
          */
-        public Builder globalIntents(java.util.List < GlobalIntents> globalIntents) {
+        public Builder globalIntents(java.util.List<GlobalIntents> globalIntents) {
             this.globalIntents = globalIntents;
             return this;
         }
@@ -220,7 +247,7 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
         /**
          * IntentsAfterNoAnswer.
          */
-        public Builder intentsAfterNoAnswer(java.util.List < IntentsAfterNoAnswer> intentsAfterNoAnswer) {
+        public Builder intentsAfterNoAnswer(java.util.List<IntentsAfterNoAnswer> intentsAfterNoAnswer) {
             this.intentsAfterNoAnswer = intentsAfterNoAnswer;
             return this;
         }
@@ -244,7 +271,7 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
         /**
          * ProcessIntents.
          */
-        public Builder processIntents(java.util.List < ProcessIntents> processIntents) {
+        public Builder processIntents(java.util.List<ProcessIntents> processIntents) {
             this.processIntents = processIntents;
             return this;
         }
@@ -271,26 +298,32 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeIntentStatisticsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIntentStatisticsResponseBody</p>
+     */
     public static class GlobalIntents extends TeaModel {
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("HitAfterNoAnswer")
+        @com.aliyun.core.annotation.NameInMap("HitAfterNoAnswer")
         private Integer hitAfterNoAnswer;
 
-        @NameInMap("HitNum")
+        @com.aliyun.core.annotation.NameInMap("HitNum")
         private Integer hitNum;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("IntentId")
+        @com.aliyun.core.annotation.NameInMap("IntentId")
         private String intentId;
 
-        @NameInMap("IntentName")
+        @com.aliyun.core.annotation.NameInMap("IntentName")
         private String intentName;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private GlobalIntents(Builder builder) {
@@ -369,6 +402,19 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
             private String intentName; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(GlobalIntents model) {
+                this.groupId = model.groupId;
+                this.hitAfterNoAnswer = model.hitAfterNoAnswer;
+                this.hitNum = model.hitNum;
+                this.instanceId = model.instanceId;
+                this.intentId = model.intentId;
+                this.intentName = model.intentName;
+                this.type = model.type;
+            } 
+
             /**
              * GroupId.
              */
@@ -432,12 +478,34 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeIntentStatisticsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIntentStatisticsResponseBody</p>
+     */
     public static class IntentsAfterNoAnswer extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
+        private String groupId;
+
+        @com.aliyun.core.annotation.NameInMap("HitAfterNoAnswer")
+        private Integer hitAfterNoAnswer;
+
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
+        @com.aliyun.core.annotation.NameInMap("IntentId")
+        private String intentId;
+
+        @com.aliyun.core.annotation.NameInMap("IntentName")
+        private String intentName;
+
         private IntentsAfterNoAnswer(Builder builder) {
+            this.groupId = builder.groupId;
+            this.hitAfterNoAnswer = builder.hitAfterNoAnswer;
             this.instanceId = builder.instanceId;
+            this.intentId = builder.intentId;
+            this.intentName = builder.intentName;
         }
 
         public static Builder builder() {
@@ -449,20 +517,95 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
         }
 
         /**
+         * @return groupId
+         */
+        public String getGroupId() {
+            return this.groupId;
+        }
+
+        /**
+         * @return hitAfterNoAnswer
+         */
+        public Integer getHitAfterNoAnswer() {
+            return this.hitAfterNoAnswer;
+        }
+
+        /**
          * @return instanceId
          */
         public String getInstanceId() {
             return this.instanceId;
         }
 
+        /**
+         * @return intentId
+         */
+        public String getIntentId() {
+            return this.intentId;
+        }
+
+        /**
+         * @return intentName
+         */
+        public String getIntentName() {
+            return this.intentName;
+        }
+
         public static final class Builder {
+            private String groupId; 
+            private Integer hitAfterNoAnswer; 
             private String instanceId; 
+            private String intentId; 
+            private String intentName; 
+
+            private Builder() {
+            } 
+
+            private Builder(IntentsAfterNoAnswer model) {
+                this.groupId = model.groupId;
+                this.hitAfterNoAnswer = model.hitAfterNoAnswer;
+                this.instanceId = model.instanceId;
+                this.intentId = model.intentId;
+                this.intentName = model.intentName;
+            } 
+
+            /**
+             * GroupId.
+             */
+            public Builder groupId(String groupId) {
+                this.groupId = groupId;
+                return this;
+            }
+
+            /**
+             * HitAfterNoAnswer.
+             */
+            public Builder hitAfterNoAnswer(Integer hitAfterNoAnswer) {
+                this.hitAfterNoAnswer = hitAfterNoAnswer;
+                return this;
+            }
 
             /**
              * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * IntentId.
+             */
+            public Builder intentId(String intentId) {
+                this.intentId = intentId;
+                return this;
+            }
+
+            /**
+             * IntentName.
+             */
+            public Builder intentName(String intentName) {
+                this.intentName = intentName;
                 return this;
             }
 
@@ -473,26 +616,35 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeIntentStatisticsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIntentStatisticsResponseBody</p>
+     */
     public static class ProcessIntents extends TeaModel {
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("HitAfterNoAnswer")
+        @com.aliyun.core.annotation.NameInMap("HitAfterNoAnswer")
         private Integer hitAfterNoAnswer;
 
-        @NameInMap("HitNum")
+        @com.aliyun.core.annotation.NameInMap("HitNum")
         private Integer hitNum;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("IntentId")
+        @com.aliyun.core.annotation.NameInMap("IntentId")
         private String intentId;
 
-        @NameInMap("IntentName")
+        @com.aliyun.core.annotation.NameInMap("IntentName")
         private String intentName;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("RateDisplay")
+        private String rateDisplay;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private ProcessIntents(Builder builder) {
@@ -502,6 +654,7 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
             this.instanceId = builder.instanceId;
             this.intentId = builder.intentId;
             this.intentName = builder.intentName;
+            this.rateDisplay = builder.rateDisplay;
             this.type = builder.type;
         }
 
@@ -556,6 +709,13 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
         }
 
         /**
+         * @return rateDisplay
+         */
+        public String getRateDisplay() {
+            return this.rateDisplay;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -569,7 +729,22 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
             private String instanceId; 
             private String intentId; 
             private String intentName; 
+            private String rateDisplay; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProcessIntents model) {
+                this.groupId = model.groupId;
+                this.hitAfterNoAnswer = model.hitAfterNoAnswer;
+                this.hitNum = model.hitNum;
+                this.instanceId = model.instanceId;
+                this.intentId = model.intentId;
+                this.intentName = model.intentName;
+                this.rateDisplay = model.rateDisplay;
+                this.type = model.type;
+            } 
 
             /**
              * GroupId.
@@ -616,6 +791,14 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
              */
             public Builder intentName(String intentName) {
                 this.intentName = intentName;
+                return this;
+            }
+
+            /**
+             * RateDisplay.
+             */
+            public Builder rateDisplay(String rateDisplay) {
+                this.rateDisplay = rateDisplay;
                 return this;
             }
 

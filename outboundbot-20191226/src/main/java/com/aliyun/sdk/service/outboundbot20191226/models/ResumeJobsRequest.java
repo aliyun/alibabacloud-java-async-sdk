@@ -1,41 +1,46 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ResumeJobsRequest} extends {@link RequestModel}
  *
  * <p>ResumeJobsRequest</p>
  */
 public class ResumeJobsRequest extends Request {
-    @Query
-    @NameInMap("All")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("All")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean all;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("JobGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobGroupId")
     private String jobGroupId;
 
-    @Query
-    @NameInMap("JobId")
-    private java.util.List < String > jobId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobId")
+    private java.util.List<String> jobId;
 
-    @Query
-    @NameInMap("JobReferenceId")
-    private java.util.List < String > jobReferenceId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobReferenceId")
+    private java.util.List<String> jobReferenceId;
 
-    @Query
-    @NameInMap("ScenarioId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScenarioId")
     private String scenarioId;
 
     private ResumeJobsRequest(Builder builder) {
@@ -56,7 +61,7 @@ public class ResumeJobsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -85,14 +90,14 @@ public class ResumeJobsRequest extends Request {
     /**
      * @return jobId
      */
-    public java.util.List < String > getJobId() {
+    public java.util.List<String> getJobId() {
         return this.jobId;
     }
 
     /**
      * @return jobReferenceId
      */
-    public java.util.List < String > getJobReferenceId() {
+    public java.util.List<String> getJobReferenceId() {
         return this.jobReferenceId;
     }
 
@@ -107,8 +112,8 @@ public class ResumeJobsRequest extends Request {
         private Boolean all; 
         private String instanceId; 
         private String jobGroupId; 
-        private java.util.List < String > jobId; 
-        private java.util.List < String > jobReferenceId; 
+        private java.util.List<String> jobId; 
+        private java.util.List<String> jobReferenceId; 
         private String scenarioId; 
 
         private Builder() {
@@ -126,7 +131,10 @@ public class ResumeJobsRequest extends Request {
         } 
 
         /**
-         * All.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -135,7 +143,10 @@ public class ResumeJobsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>af81a389-91f0-4157-8d82-720edd02b66a</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -155,7 +166,7 @@ public class ResumeJobsRequest extends Request {
         /**
          * JobId.
          */
-        public Builder jobId(java.util.List < String > jobId) {
+        public Builder jobId(java.util.List<String> jobId) {
             this.putQueryParameter("JobId", jobId);
             this.jobId = jobId;
             return this;
@@ -164,7 +175,7 @@ public class ResumeJobsRequest extends Request {
         /**
          * JobReferenceId.
          */
-        public Builder jobReferenceId(java.util.List < String > jobReferenceId) {
+        public Builder jobReferenceId(java.util.List<String> jobReferenceId) {
             this.putQueryParameter("JobReferenceId", jobReferenceId);
             this.jobReferenceId = jobReferenceId;
             return this;

@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateJobDataParsingTaskRequest} extends {@link RequestModel}
  *
  * <p>CreateJobDataParsingTaskRequest</p>
  */
 public class CreateJobDataParsingTaskRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("JobFilePath")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobFilePath")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String jobFilePath;
 
     private CreateJobDataParsingTaskRequest(Builder builder) {
@@ -36,7 +41,7 @@ public class CreateJobDataParsingTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -70,7 +75,10 @@ public class CreateJobDataParsingTaskRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b3865dc3-40fa-4afd-9fe4-dc7cda305a24</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -79,7 +87,7 @@ public class CreateJobDataParsingTaskRequest extends Request {
         }
 
         /**
-         * JobFilePath.
+         * <p>This parameter is required.</p>
          */
         public Builder jobFilePath(String jobFilePath) {
             this.putQueryParameter("JobFilePath", jobFilePath);

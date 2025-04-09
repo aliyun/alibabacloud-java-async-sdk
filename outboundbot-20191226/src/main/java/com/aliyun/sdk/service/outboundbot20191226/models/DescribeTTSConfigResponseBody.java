@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTTSConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTTSConfigResponseBody</p>
  */
 public class DescribeTTSConfigResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TTSConfig")
+    @com.aliyun.core.annotation.NameInMap("TTSConfig")
     private TTSConfig TTSConfig;
 
     private DescribeTTSConfigResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
 
     public static DescribeTTSConfigResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private TTSConfig TTSConfig; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTTSConfigResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.TTSConfig = model.TTSConfig;
+        } 
 
         /**
          * Code.
@@ -151,23 +172,29 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTTSConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTTSConfigResponseBody</p>
+     */
     public static class TTSConfig extends TeaModel {
-        @NameInMap("AppKey")
+        @com.aliyun.core.annotation.NameInMap("AppKey")
         private String appKey;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("NlsServiceType")
+        @com.aliyun.core.annotation.NameInMap("NlsServiceType")
         private String nlsServiceType;
 
-        @NameInMap("SpeechRate")
+        @com.aliyun.core.annotation.NameInMap("SpeechRate")
         private String speechRate;
 
-        @NameInMap("Voice")
+        @com.aliyun.core.annotation.NameInMap("Voice")
         private String voice;
 
-        @NameInMap("Volume")
+        @com.aliyun.core.annotation.NameInMap("Volume")
         private String volume;
 
         private TTSConfig(Builder builder) {
@@ -236,6 +263,18 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
             private String speechRate; 
             private String voice; 
             private String volume; 
+
+            private Builder() {
+            } 
+
+            private Builder(TTSConfig model) {
+                this.appKey = model.appKey;
+                this.instanceId = model.instanceId;
+                this.nlsServiceType = model.nlsServiceType;
+                this.speechRate = model.speechRate;
+                this.voice = model.voice;
+                this.volume = model.volume;
+            } 
 
             /**
              * AppKey.

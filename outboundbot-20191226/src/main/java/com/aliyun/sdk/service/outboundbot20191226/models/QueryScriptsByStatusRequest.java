@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryScriptsByStatusRequest} extends {@link RequestModel}
  *
  * <p>QueryScriptsByStatusRequest</p>
  */
 public class QueryScriptsByStatusRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("PageNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("StatusList")
-    @Validation(required = true)
-    private java.util.List < String > statusList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StatusList")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> statusList;
 
     private QueryScriptsByStatusRequest(Builder builder) {
         super(builder);
@@ -48,7 +53,7 @@ public class QueryScriptsByStatusRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -77,7 +82,7 @@ public class QueryScriptsByStatusRequest extends Request {
     /**
      * @return statusList
      */
-    public java.util.List < String > getStatusList() {
+    public java.util.List<String> getStatusList() {
         return this.statusList;
     }
 
@@ -85,7 +90,7 @@ public class QueryScriptsByStatusRequest extends Request {
         private String instanceId; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private java.util.List < String > statusList; 
+        private java.util.List<String> statusList; 
 
         private Builder() {
             super();
@@ -100,7 +105,10 @@ public class QueryScriptsByStatusRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>361c8a53-0e29-42f3-8aa7-c7752d010399</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -109,7 +117,10 @@ public class QueryScriptsByStatusRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -118,7 +129,10 @@ public class QueryScriptsByStatusRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -127,9 +141,9 @@ public class QueryScriptsByStatusRequest extends Request {
         }
 
         /**
-         * StatusList.
+         * <p>This parameter is required.</p>
          */
-        public Builder statusList(java.util.List < String > statusList) {
+        public Builder statusList(java.util.List<String> statusList) {
             this.putQueryParameter("StatusList", statusList);
             this.statusList = statusList;
             return this;

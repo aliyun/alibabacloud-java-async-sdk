@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeScriptVoiceConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeScriptVoiceConfigResponseBody</p>
  */
 public class DescribeScriptVoiceConfigResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ScriptVoiceConfig")
+    @com.aliyun.core.annotation.NameInMap("ScriptVoiceConfig")
     private ScriptVoiceConfig scriptVoiceConfig;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeScriptVoiceConfigResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class DescribeScriptVoiceConfigResponseBody extends TeaModel {
 
     public static DescribeScriptVoiceConfigResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class DescribeScriptVoiceConfigResponseBody extends TeaModel {
         private String requestId; 
         private ScriptVoiceConfig scriptVoiceConfig; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeScriptVoiceConfigResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.scriptVoiceConfig = model.scriptVoiceConfig;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -151,26 +172,32 @@ public class DescribeScriptVoiceConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeScriptVoiceConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeScriptVoiceConfigResponseBody</p>
+     */
     public static class ScriptVoiceConfig extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("ScriptContent")
+        @com.aliyun.core.annotation.NameInMap("ScriptContent")
         private String scriptContent;
 
-        @NameInMap("ScriptId")
+        @com.aliyun.core.annotation.NameInMap("ScriptId")
         private String scriptId;
 
-        @NameInMap("ScriptVoiceConfigId")
+        @com.aliyun.core.annotation.NameInMap("ScriptVoiceConfigId")
         private String scriptVoiceConfigId;
 
-        @NameInMap("ScriptWaveformRelation")
+        @com.aliyun.core.annotation.NameInMap("ScriptWaveformRelation")
         private String scriptWaveformRelation;
 
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private ScriptVoiceConfig(Builder builder) {
@@ -248,6 +275,19 @@ public class DescribeScriptVoiceConfigResponseBody extends TeaModel {
             private String scriptWaveformRelation; 
             private String source; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(ScriptVoiceConfig model) {
+                this.instanceId = model.instanceId;
+                this.scriptContent = model.scriptContent;
+                this.scriptId = model.scriptId;
+                this.scriptVoiceConfigId = model.scriptVoiceConfigId;
+                this.scriptWaveformRelation = model.scriptWaveformRelation;
+                this.source = model.source;
+                this.type = model.type;
+            } 
 
             /**
              * InstanceId.

@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListScriptVoiceConfigsResponseBody} extends {@link TeaModel}
  *
  * <p>ListScriptVoiceConfigsResponseBody</p>
  */
 public class ListScriptVoiceConfigsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ScriptVoiceConfigs")
+    @com.aliyun.core.annotation.NameInMap("ScriptVoiceConfigs")
     private ScriptVoiceConfigs scriptVoiceConfigs;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListScriptVoiceConfigsResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class ListScriptVoiceConfigsResponseBody extends TeaModel {
 
     public static ListScriptVoiceConfigsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class ListScriptVoiceConfigsResponseBody extends TeaModel {
         private String requestId; 
         private ScriptVoiceConfigs scriptVoiceConfigs; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListScriptVoiceConfigsResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.scriptVoiceConfigs = model.scriptVoiceConfigs;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -151,26 +172,32 @@ public class ListScriptVoiceConfigsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListScriptVoiceConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListScriptVoiceConfigsResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("ScriptContent")
+        @com.aliyun.core.annotation.NameInMap("ScriptContent")
         private String scriptContent;
 
-        @NameInMap("ScriptId")
+        @com.aliyun.core.annotation.NameInMap("ScriptId")
         private String scriptId;
 
-        @NameInMap("ScriptVoiceConfigId")
+        @com.aliyun.core.annotation.NameInMap("ScriptVoiceConfigId")
         private String scriptVoiceConfigId;
 
-        @NameInMap("ScriptWaveformRelation")
+        @com.aliyun.core.annotation.NameInMap("ScriptWaveformRelation")
         private String scriptWaveformRelation;
 
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private List(Builder builder) {
@@ -249,6 +276,19 @@ public class ListScriptVoiceConfigsResponseBody extends TeaModel {
             private String source; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.instanceId = model.instanceId;
+                this.scriptContent = model.scriptContent;
+                this.scriptId = model.scriptId;
+                this.scriptVoiceConfigId = model.scriptVoiceConfigId;
+                this.scriptWaveformRelation = model.scriptWaveformRelation;
+                this.source = model.source;
+                this.type = model.type;
+            } 
+
             /**
              * InstanceId.
              */
@@ -312,17 +352,23 @@ public class ListScriptVoiceConfigsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListScriptVoiceConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListScriptVoiceConfigsResponseBody</p>
+     */
     public static class ScriptVoiceConfigs extends TeaModel {
-        @NameInMap("List")
-        private java.util.List < List> list;
+        @com.aliyun.core.annotation.NameInMap("List")
+        private java.util.List<List> list;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private ScriptVoiceConfigs(Builder builder) {
@@ -343,7 +389,7 @@ public class ListScriptVoiceConfigsResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -369,15 +415,25 @@ public class ListScriptVoiceConfigsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(ScriptVoiceConfigs model) {
+                this.list = model.list;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
+
             /**
              * List.
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }

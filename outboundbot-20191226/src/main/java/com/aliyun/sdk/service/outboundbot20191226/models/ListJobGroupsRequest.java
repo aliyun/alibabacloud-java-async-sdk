@@ -1,50 +1,59 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListJobGroupsRequest} extends {@link RequestModel}
  *
  * <p>ListJobGroupsRequest</p>
  */
 public class ListJobGroupsRequest extends Request {
-    @Query
-    @NameInMap("AsyncQuery")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AsyncQuery")
     private Boolean asyncQuery;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private Long endTime;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("JobGroupStatusFilter")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobGroupStatusFilter")
     private String jobGroupStatusFilter;
 
-    @Query
-    @NameInMap("PageNumber")
-    @Validation(required = true, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OnlyMinConcurrencyEnabled")
+    private Boolean onlyMinConcurrencyEnabled;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Validation(required = true, minimum = 1)
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true, maximum = 1000)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 100)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("SearchText")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SearchText")
     private String searchText;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private Long startTime;
 
     private ListJobGroupsRequest(Builder builder) {
@@ -53,6 +62,7 @@ public class ListJobGroupsRequest extends Request {
         this.endTime = builder.endTime;
         this.instanceId = builder.instanceId;
         this.jobGroupStatusFilter = builder.jobGroupStatusFilter;
+        this.onlyMinConcurrencyEnabled = builder.onlyMinConcurrencyEnabled;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.searchText = builder.searchText;
@@ -67,7 +77,7 @@ public class ListJobGroupsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -98,6 +108,13 @@ public class ListJobGroupsRequest extends Request {
      */
     public String getJobGroupStatusFilter() {
         return this.jobGroupStatusFilter;
+    }
+
+    /**
+     * @return onlyMinConcurrencyEnabled
+     */
+    public Boolean getOnlyMinConcurrencyEnabled() {
+        return this.onlyMinConcurrencyEnabled;
     }
 
     /**
@@ -133,6 +150,7 @@ public class ListJobGroupsRequest extends Request {
         private Long endTime; 
         private String instanceId; 
         private String jobGroupStatusFilter; 
+        private Boolean onlyMinConcurrencyEnabled; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String searchText; 
@@ -148,6 +166,7 @@ public class ListJobGroupsRequest extends Request {
             this.endTime = request.endTime;
             this.instanceId = request.instanceId;
             this.jobGroupStatusFilter = request.jobGroupStatusFilter;
+            this.onlyMinConcurrencyEnabled = request.onlyMinConcurrencyEnabled;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.searchText = request.searchText;
@@ -173,7 +192,10 @@ public class ListJobGroupsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>174952ab-9825-4cc9-a5e2-de82d7fa4cdd</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -191,7 +213,19 @@ public class ListJobGroupsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * OnlyMinConcurrencyEnabled.
+         */
+        public Builder onlyMinConcurrencyEnabled(Boolean onlyMinConcurrencyEnabled) {
+            this.putQueryParameter("OnlyMinConcurrencyEnabled", onlyMinConcurrencyEnabled);
+            this.onlyMinConcurrencyEnabled = onlyMinConcurrencyEnabled;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -200,7 +234,10 @@ public class ListJobGroupsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGroupExecutingInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeGroupExecutingInfoResponseBody</p>
  */
 public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("ExecutingInfo")
+    @com.aliyun.core.annotation.NameInMap("ExecutingInfo")
     private ExecutingInfo executingInfo;
 
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeGroupExecutingInfoResponseBody(Builder builder) {
@@ -53,6 +58,10 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
 
     public static DescribeGroupExecutingInfoResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -120,6 +129,20 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeGroupExecutingInfoResponseBody model) {
+            this.code = model.code;
+            this.executingInfo = model.executingInfo;
+            this.groupId = model.groupId;
+            this.httpStatusCode = model.httpStatusCode;
+            this.instanceId = model.instanceId;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -191,29 +214,35 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeGroupExecutingInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGroupExecutingInfoResponseBody</p>
+     */
     public static class JobsProgress extends TeaModel {
-        @NameInMap("CancelledNum")
+        @com.aliyun.core.annotation.NameInMap("CancelledNum")
         private Integer cancelledNum;
 
-        @NameInMap("ExecutingNum")
+        @com.aliyun.core.annotation.NameInMap("ExecutingNum")
         private Integer executingNum;
 
-        @NameInMap("FailedNum")
+        @com.aliyun.core.annotation.NameInMap("FailedNum")
         private Integer failedNum;
 
-        @NameInMap("PausedNum")
+        @com.aliyun.core.annotation.NameInMap("PausedNum")
         private Integer pausedNum;
 
-        @NameInMap("SchedulingNum")
+        @com.aliyun.core.annotation.NameInMap("SchedulingNum")
         private Integer schedulingNum;
 
-        @NameInMap("TotalCompletedNum")
+        @com.aliyun.core.annotation.NameInMap("TotalCompletedNum")
         private Integer totalCompletedNum;
 
-        @NameInMap("TotalJobs")
+        @com.aliyun.core.annotation.NameInMap("TotalJobs")
         private Integer totalJobs;
 
-        @NameInMap("TotalNotAnsweredNum")
+        @com.aliyun.core.annotation.NameInMap("TotalNotAnsweredNum")
         private Integer totalNotAnsweredNum;
 
         private JobsProgress(Builder builder) {
@@ -301,6 +330,20 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
             private Integer totalJobs; 
             private Integer totalNotAnsweredNum; 
 
+            private Builder() {
+            } 
+
+            private Builder(JobsProgress model) {
+                this.cancelledNum = model.cancelledNum;
+                this.executingNum = model.executingNum;
+                this.failedNum = model.failedNum;
+                this.pausedNum = model.pausedNum;
+                this.schedulingNum = model.schedulingNum;
+                this.totalCompletedNum = model.totalCompletedNum;
+                this.totalJobs = model.totalJobs;
+                this.totalNotAnsweredNum = model.totalNotAnsweredNum;
+            } 
+
             /**
              * CancelledNum.
              */
@@ -372,35 +415,44 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeGroupExecutingInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGroupExecutingInfoResponseBody</p>
+     */
     public static class ExecutingInfo extends TeaModel {
-        @NameInMap("CallFailedNum")
+        @com.aliyun.core.annotation.NameInMap("CallFailedNum")
         private Integer callFailedNum;
 
-        @NameInMap("CallNum")
+        @com.aliyun.core.annotation.NameInMap("CallNum")
         private Integer callNum;
 
-        @NameInMap("CreatorName")
+        @com.aliyun.core.annotation.NameInMap("CreatorName")
         private String creatorName;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("FinishedNum")
+        @com.aliyun.core.annotation.NameInMap("FinishedNum")
         private Integer finishedNum;
 
-        @NameInMap("HangUpByClientNum")
+        @com.aliyun.core.annotation.NameInMap("HangUpByClientNum")
         private Integer hangUpByClientNum;
 
-        @NameInMap("JobsProgress")
+        @com.aliyun.core.annotation.NameInMap("JobsProgress")
         private JobsProgress jobsProgress;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("NoInteractionNum")
+        private Integer noInteractionNum;
+
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
-        @NameInMap("TransferByIntentNum")
+        @com.aliyun.core.annotation.NameInMap("TransferByIntentNum")
         private Integer transferByIntentNum;
 
-        @NameInMap("TransferByNoAnswer")
+        @com.aliyun.core.annotation.NameInMap("TransferByNoAnswer")
         private Integer transferByNoAnswer;
 
         private ExecutingInfo(Builder builder) {
@@ -411,6 +463,7 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
             this.finishedNum = builder.finishedNum;
             this.hangUpByClientNum = builder.hangUpByClientNum;
             this.jobsProgress = builder.jobsProgress;
+            this.noInteractionNum = builder.noInteractionNum;
             this.startTime = builder.startTime;
             this.transferByIntentNum = builder.transferByIntentNum;
             this.transferByNoAnswer = builder.transferByNoAnswer;
@@ -474,6 +527,13 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return noInteractionNum
+         */
+        public Integer getNoInteractionNum() {
+            return this.noInteractionNum;
+        }
+
+        /**
          * @return startTime
          */
         public Long getStartTime() {
@@ -502,9 +562,27 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
             private Integer finishedNum; 
             private Integer hangUpByClientNum; 
             private JobsProgress jobsProgress; 
+            private Integer noInteractionNum; 
             private Long startTime; 
             private Integer transferByIntentNum; 
             private Integer transferByNoAnswer; 
+
+            private Builder() {
+            } 
+
+            private Builder(ExecutingInfo model) {
+                this.callFailedNum = model.callFailedNum;
+                this.callNum = model.callNum;
+                this.creatorName = model.creatorName;
+                this.endTime = model.endTime;
+                this.finishedNum = model.finishedNum;
+                this.hangUpByClientNum = model.hangUpByClientNum;
+                this.jobsProgress = model.jobsProgress;
+                this.noInteractionNum = model.noInteractionNum;
+                this.startTime = model.startTime;
+                this.transferByIntentNum = model.transferByIntentNum;
+                this.transferByNoAnswer = model.transferByNoAnswer;
+            } 
 
             /**
              * CallFailedNum.
@@ -559,6 +637,14 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
              */
             public Builder jobsProgress(JobsProgress jobsProgress) {
                 this.jobsProgress = jobsProgress;
+                return this;
+            }
+
+            /**
+             * NoInteractionNum.
+             */
+            public Builder noInteractionNum(Integer noInteractionNum) {
+                this.noInteractionNum = noInteractionNum;
                 return this;
             }
 

@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SuspendCallRequest} extends {@link RequestModel}
  *
  * <p>SuspendCallRequest</p>
  */
 public class SuspendCallRequest extends Request {
-    @Query
-    @NameInMap("CalledNumbers")
-    private java.util.List < String > calledNumbers;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CalledNumbers")
+    private java.util.List<String> calledNumbers;
 
-    @Query
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
     private SuspendCallRequest(Builder builder) {
@@ -40,7 +45,7 @@ public class SuspendCallRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -48,7 +53,7 @@ public class SuspendCallRequest extends Request {
     /**
      * @return calledNumbers
      */
-    public java.util.List < String > getCalledNumbers() {
+    public java.util.List<String> getCalledNumbers() {
         return this.calledNumbers;
     }
 
@@ -67,7 +72,7 @@ public class SuspendCallRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SuspendCallRequest, Builder> {
-        private java.util.List < String > calledNumbers; 
+        private java.util.List<String> calledNumbers; 
         private String groupId; 
         private String instanceId; 
 
@@ -85,7 +90,7 @@ public class SuspendCallRequest extends Request {
         /**
          * CalledNumbers.
          */
-        public Builder calledNumbers(java.util.List < String > calledNumbers) {
+        public Builder calledNumbers(java.util.List<String> calledNumbers) {
             this.putQueryParameter("CalledNumbers", calledNumbers);
             this.calledNumbers = calledNumbers;
             return this;
@@ -101,7 +106,10 @@ public class SuspendCallRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a5fc6490-ef1e-4666-870a-07a4e586c414</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

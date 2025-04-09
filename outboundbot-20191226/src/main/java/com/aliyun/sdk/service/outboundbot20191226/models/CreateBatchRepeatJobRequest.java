@@ -1,66 +1,79 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateBatchRepeatJobRequest} extends {@link RequestModel}
  *
  * <p>CreateBatchRepeatJobRequest</p>
  */
 public class CreateBatchRepeatJobRequest extends Request {
-    @Query
-    @NameInMap("CallingNumber")
-    private java.util.List < String > callingNumber;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallingNumber")
+    private java.util.List<String> callingNumber;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("FilterStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FilterStatus")
     private String filterStatus;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FlashSmsExtras")
+    private String flashSmsExtras;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("MinConcurrency")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinConcurrency")
     private Long minConcurrency;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("Priority")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Priority")
     private String priority;
 
-    @Query
-    @NameInMap("RecallStrategyJson")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RecallCallingNumber")
+    private java.util.List<String> recallCallingNumber;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RecallStrategyJson")
     private String recallStrategyJson;
 
-    @Query
-    @NameInMap("RingingDuration")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RingingDuration")
     private Long ringingDuration;
 
-    @Query
-    @NameInMap("ScriptId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScriptId")
     private String scriptId;
 
-    @Query
-    @NameInMap("SourceGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceGroupId;
 
-    @Query
-    @NameInMap("StrategyJson")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StrategyJson")
     private String strategyJson;
 
     private CreateBatchRepeatJobRequest(Builder builder) {
@@ -68,10 +81,12 @@ public class CreateBatchRepeatJobRequest extends Request {
         this.callingNumber = builder.callingNumber;
         this.description = builder.description;
         this.filterStatus = builder.filterStatus;
+        this.flashSmsExtras = builder.flashSmsExtras;
         this.instanceId = builder.instanceId;
         this.minConcurrency = builder.minConcurrency;
         this.name = builder.name;
         this.priority = builder.priority;
+        this.recallCallingNumber = builder.recallCallingNumber;
         this.recallStrategyJson = builder.recallStrategyJson;
         this.ringingDuration = builder.ringingDuration;
         this.scriptId = builder.scriptId;
@@ -87,7 +102,7 @@ public class CreateBatchRepeatJobRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -95,7 +110,7 @@ public class CreateBatchRepeatJobRequest extends Request {
     /**
      * @return callingNumber
      */
-    public java.util.List < String > getCallingNumber() {
+    public java.util.List<String> getCallingNumber() {
         return this.callingNumber;
     }
 
@@ -111,6 +126,13 @@ public class CreateBatchRepeatJobRequest extends Request {
      */
     public String getFilterStatus() {
         return this.filterStatus;
+    }
+
+    /**
+     * @return flashSmsExtras
+     */
+    public String getFlashSmsExtras() {
+        return this.flashSmsExtras;
     }
 
     /**
@@ -139,6 +161,13 @@ public class CreateBatchRepeatJobRequest extends Request {
      */
     public String getPriority() {
         return this.priority;
+    }
+
+    /**
+     * @return recallCallingNumber
+     */
+    public java.util.List<String> getRecallCallingNumber() {
+        return this.recallCallingNumber;
     }
 
     /**
@@ -177,13 +206,15 @@ public class CreateBatchRepeatJobRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateBatchRepeatJobRequest, Builder> {
-        private java.util.List < String > callingNumber; 
+        private java.util.List<String> callingNumber; 
         private String description; 
         private String filterStatus; 
+        private String flashSmsExtras; 
         private String instanceId; 
         private Long minConcurrency; 
         private String name; 
         private String priority; 
+        private java.util.List<String> recallCallingNumber; 
         private String recallStrategyJson; 
         private Long ringingDuration; 
         private String scriptId; 
@@ -199,10 +230,12 @@ public class CreateBatchRepeatJobRequest extends Request {
             this.callingNumber = request.callingNumber;
             this.description = request.description;
             this.filterStatus = request.filterStatus;
+            this.flashSmsExtras = request.flashSmsExtras;
             this.instanceId = request.instanceId;
             this.minConcurrency = request.minConcurrency;
             this.name = request.name;
             this.priority = request.priority;
+            this.recallCallingNumber = request.recallCallingNumber;
             this.recallStrategyJson = request.recallStrategyJson;
             this.ringingDuration = request.ringingDuration;
             this.scriptId = request.scriptId;
@@ -213,7 +246,7 @@ public class CreateBatchRepeatJobRequest extends Request {
         /**
          * CallingNumber.
          */
-        public Builder callingNumber(java.util.List < String > callingNumber) {
+        public Builder callingNumber(java.util.List<String> callingNumber) {
             this.putQueryParameter("CallingNumber", callingNumber);
             this.callingNumber = callingNumber;
             return this;
@@ -238,7 +271,19 @@ public class CreateBatchRepeatJobRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * FlashSmsExtras.
+         */
+        public Builder flashSmsExtras(String flashSmsExtras) {
+            this.putQueryParameter("FlashSmsExtras", flashSmsExtras);
+            this.flashSmsExtras = flashSmsExtras;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2bfa5ae4-7185-4227-a3b8-328f26f11be1</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -256,7 +301,10 @@ public class CreateBatchRepeatJobRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -270,6 +318,15 @@ public class CreateBatchRepeatJobRequest extends Request {
         public Builder priority(String priority) {
             this.putQueryParameter("Priority", priority);
             this.priority = priority;
+            return this;
+        }
+
+        /**
+         * RecallCallingNumber.
+         */
+        public Builder recallCallingNumber(java.util.List<String> recallCallingNumber) {
+            this.putQueryParameter("RecallCallingNumber", recallCallingNumber);
+            this.recallCallingNumber = recallCallingNumber;
             return this;
         }
 
@@ -301,7 +358,10 @@ public class CreateBatchRepeatJobRequest extends Request {
         }
 
         /**
-         * SourceGroupId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c4f8a3d3-2e94-4bd4-aef8-e35f663d4847</p>
          */
         public Builder sourceGroupId(String sourceGroupId) {
             this.putQueryParameter("SourceGroupId", sourceGroupId);

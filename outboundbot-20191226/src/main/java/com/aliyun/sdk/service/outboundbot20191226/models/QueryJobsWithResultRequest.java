@@ -1,70 +1,90 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryJobsWithResultRequest} extends {@link RequestModel}
  *
  * <p>QueryJobsWithResultRequest</p>
  */
 public class QueryJobsWithResultRequest extends Request {
-    @Query
-    @NameInMap("HasAnsweredFilter")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndActualTimeFilter")
+    private Long endActualTimeFilter;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HasAnsweredFilter")
     private Boolean hasAnsweredFilter;
 
-    @Query
-    @NameInMap("HasHangUpByRejectionFilter")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HasHangUpByRejectionFilter")
     private Boolean hasHangUpByRejectionFilter;
 
-    @Query
-    @NameInMap("HasReachedEndOfFlowFilter")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HasReachedEndOfFlowFilter")
     private Boolean hasReachedEndOfFlowFilter;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("JobGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobFailureReasonsFilter")
+    private String jobFailureReasonsFilter;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String jobGroupId;
 
-    @Query
-    @NameInMap("JobStatusFilter")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobStatusFilter")
     private String jobStatusFilter;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("QueryText")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryText")
     private String queryText;
 
-    @Query
-    @NameInMap("TaskStatusFilter")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartActualTimeFilter")
+    private Long startActualTimeFilter;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskStatusFilter")
     private String taskStatusFilter;
 
     private QueryJobsWithResultRequest(Builder builder) {
         super(builder);
+        this.endActualTimeFilter = builder.endActualTimeFilter;
         this.hasAnsweredFilter = builder.hasAnsweredFilter;
         this.hasHangUpByRejectionFilter = builder.hasHangUpByRejectionFilter;
         this.hasReachedEndOfFlowFilter = builder.hasReachedEndOfFlowFilter;
         this.instanceId = builder.instanceId;
+        this.jobFailureReasonsFilter = builder.jobFailureReasonsFilter;
         this.jobGroupId = builder.jobGroupId;
         this.jobStatusFilter = builder.jobStatusFilter;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.queryText = builder.queryText;
+        this.startActualTimeFilter = builder.startActualTimeFilter;
         this.taskStatusFilter = builder.taskStatusFilter;
     }
 
@@ -76,9 +96,16 @@ public class QueryJobsWithResultRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return endActualTimeFilter
+     */
+    public Long getEndActualTimeFilter() {
+        return this.endActualTimeFilter;
     }
 
     /**
@@ -107,6 +134,13 @@ public class QueryJobsWithResultRequest extends Request {
      */
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    /**
+     * @return jobFailureReasonsFilter
+     */
+    public String getJobFailureReasonsFilter() {
+        return this.jobFailureReasonsFilter;
     }
 
     /**
@@ -145,6 +179,13 @@ public class QueryJobsWithResultRequest extends Request {
     }
 
     /**
+     * @return startActualTimeFilter
+     */
+    public Long getStartActualTimeFilter() {
+        return this.startActualTimeFilter;
+    }
+
+    /**
      * @return taskStatusFilter
      */
     public String getTaskStatusFilter() {
@@ -152,15 +193,18 @@ public class QueryJobsWithResultRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<QueryJobsWithResultRequest, Builder> {
+        private Long endActualTimeFilter; 
         private Boolean hasAnsweredFilter; 
         private Boolean hasHangUpByRejectionFilter; 
         private Boolean hasReachedEndOfFlowFilter; 
         private String instanceId; 
+        private String jobFailureReasonsFilter; 
         private String jobGroupId; 
         private String jobStatusFilter; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String queryText; 
+        private Long startActualTimeFilter; 
         private String taskStatusFilter; 
 
         private Builder() {
@@ -169,17 +213,29 @@ public class QueryJobsWithResultRequest extends Request {
 
         private Builder(QueryJobsWithResultRequest request) {
             super(request);
+            this.endActualTimeFilter = request.endActualTimeFilter;
             this.hasAnsweredFilter = request.hasAnsweredFilter;
             this.hasHangUpByRejectionFilter = request.hasHangUpByRejectionFilter;
             this.hasReachedEndOfFlowFilter = request.hasReachedEndOfFlowFilter;
             this.instanceId = request.instanceId;
+            this.jobFailureReasonsFilter = request.jobFailureReasonsFilter;
             this.jobGroupId = request.jobGroupId;
             this.jobStatusFilter = request.jobStatusFilter;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.queryText = request.queryText;
+            this.startActualTimeFilter = request.startActualTimeFilter;
             this.taskStatusFilter = request.taskStatusFilter;
         } 
+
+        /**
+         * EndActualTimeFilter.
+         */
+        public Builder endActualTimeFilter(Long endActualTimeFilter) {
+            this.putQueryParameter("EndActualTimeFilter", endActualTimeFilter);
+            this.endActualTimeFilter = endActualTimeFilter;
+            return this;
+        }
 
         /**
          * HasAnsweredFilter.
@@ -209,7 +265,10 @@ public class QueryJobsWithResultRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9d53cd72-4050-4419-8c17-acc0bf158147</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -218,7 +277,19 @@ public class QueryJobsWithResultRequest extends Request {
         }
 
         /**
-         * JobGroupId.
+         * JobFailureReasonsFilter.
+         */
+        public Builder jobFailureReasonsFilter(String jobFailureReasonsFilter) {
+            this.putQueryParameter("JobFailureReasonsFilter", jobFailureReasonsFilter);
+            this.jobFailureReasonsFilter = jobFailureReasonsFilter;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ad16fc35-d824-4102-a606-2be51c1aa6dd</p>
          */
         public Builder jobGroupId(String jobGroupId) {
             this.putQueryParameter("JobGroupId", jobGroupId);
@@ -259,6 +330,15 @@ public class QueryJobsWithResultRequest extends Request {
         public Builder queryText(String queryText) {
             this.putQueryParameter("QueryText", queryText);
             this.queryText = queryText;
+            return this;
+        }
+
+        /**
+         * StartActualTimeFilter.
+         */
+        public Builder startActualTimeFilter(Long startActualTimeFilter) {
+            this.putQueryParameter("StartActualTimeFilter", startActualTimeFilter);
+            this.startActualTimeFilter = startActualTimeFilter;
             return this;
         }
 

@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListJobsByGroupResponseBody} extends {@link TeaModel}
  *
  * <p>ListJobsByGroupResponseBody</p>
  */
 public class ListJobsByGroupResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Jobs")
+    @com.aliyun.core.annotation.NameInMap("Jobs")
     private Jobs jobs;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListJobsByGroupResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class ListJobsByGroupResponseBody extends TeaModel {
 
     public static ListJobsByGroupResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class ListJobsByGroupResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListJobsByGroupResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.jobs = model.jobs;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -151,29 +172,35 @@ public class ListJobsByGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListJobsByGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListJobsByGroupResponseBody</p>
+     */
     public static class Contacts extends TeaModel {
-        @NameInMap("ContactId")
+        @com.aliyun.core.annotation.NameInMap("ContactId")
         private String contactId;
 
-        @NameInMap("ContactName")
+        @com.aliyun.core.annotation.NameInMap("ContactName")
         private String contactName;
 
-        @NameInMap("Honorific")
+        @com.aliyun.core.annotation.NameInMap("Honorific")
         private String honorific;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("PhoneNumber")
+        @com.aliyun.core.annotation.NameInMap("PhoneNumber")
         private String phoneNumber;
 
-        @NameInMap("ReferenceId")
+        @com.aliyun.core.annotation.NameInMap("ReferenceId")
         private String referenceId;
 
-        @NameInMap("Role")
+        @com.aliyun.core.annotation.NameInMap("Role")
         private String role;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
         private Contacts(Builder builder) {
@@ -261,6 +288,20 @@ public class ListJobsByGroupResponseBody extends TeaModel {
             private String role; 
             private String state; 
 
+            private Builder() {
+            } 
+
+            private Builder(Contacts model) {
+                this.contactId = model.contactId;
+                this.contactName = model.contactName;
+                this.honorific = model.honorific;
+                this.jobId = model.jobId;
+                this.phoneNumber = model.phoneNumber;
+                this.referenceId = model.referenceId;
+                this.role = model.role;
+                this.state = model.state;
+            } 
+
             /**
              * ContactId.
              */
@@ -332,11 +373,17 @@ public class ListJobsByGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListJobsByGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListJobsByGroupResponseBody</p>
+     */
     public static class Extras extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Extras(Builder builder) {
@@ -370,6 +417,14 @@ public class ListJobsByGroupResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Extras model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * Key.
              */
@@ -393,29 +448,35 @@ public class ListJobsByGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListJobsByGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListJobsByGroupResponseBody</p>
+     */
     public static class Summary extends TeaModel {
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("ConversationDetailId")
+        @com.aliyun.core.annotation.NameInMap("ConversationDetailId")
         private String conversationDetailId;
 
-        @NameInMap("JobGroupId")
+        @com.aliyun.core.annotation.NameInMap("JobGroupId")
         private String jobGroupId;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("SummaryId")
+        @com.aliyun.core.annotation.NameInMap("SummaryId")
         private String summaryId;
 
-        @NameInMap("SummaryName")
+        @com.aliyun.core.annotation.NameInMap("SummaryName")
         private String summaryName;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
         private Summary(Builder builder) {
@@ -503,6 +564,20 @@ public class ListJobsByGroupResponseBody extends TeaModel {
             private String summaryName; 
             private String taskId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Summary model) {
+                this.category = model.category;
+                this.content = model.content;
+                this.conversationDetailId = model.conversationDetailId;
+                this.jobGroupId = model.jobGroupId;
+                this.jobId = model.jobId;
+                this.summaryId = model.summaryId;
+                this.summaryName = model.summaryName;
+                this.taskId = model.taskId;
+            } 
+
             /**
              * Category.
              */
@@ -574,44 +649,50 @@ public class ListJobsByGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListJobsByGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListJobsByGroupResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("CallingNumbers")
-        private java.util.List < String > callingNumbers;
+        @com.aliyun.core.annotation.NameInMap("CallingNumbers")
+        private java.util.List<String> callingNumbers;
 
-        @NameInMap("Contacts")
-        private java.util.List < Contacts> contacts;
+        @com.aliyun.core.annotation.NameInMap("Contacts")
+        private java.util.List<Contacts> contacts;
 
-        @NameInMap("Extras")
-        private java.util.List < Extras> extras;
+        @com.aliyun.core.annotation.NameInMap("Extras")
+        private java.util.List<Extras> extras;
 
-        @NameInMap("FailureReason")
+        @com.aliyun.core.annotation.NameInMap("FailureReason")
         private String failureReason;
 
-        @NameInMap("JobGroupId")
+        @com.aliyun.core.annotation.NameInMap("JobGroupId")
         private String jobGroupId;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
-        @NameInMap("ReferenceId")
+        @com.aliyun.core.annotation.NameInMap("ReferenceId")
         private String referenceId;
 
-        @NameInMap("ScenarioId")
+        @com.aliyun.core.annotation.NameInMap("ScenarioId")
         private String scenarioId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StrategyId")
+        @com.aliyun.core.annotation.NameInMap("StrategyId")
         private String strategyId;
 
-        @NameInMap("Summary")
-        private java.util.List < Summary> summary;
+        @com.aliyun.core.annotation.NameInMap("Summary")
+        private java.util.List<Summary> summary;
 
-        @NameInMap("SystemPriority")
+        @com.aliyun.core.annotation.NameInMap("SystemPriority")
         private Integer systemPriority;
 
         private List(Builder builder) {
@@ -641,21 +722,21 @@ public class ListJobsByGroupResponseBody extends TeaModel {
         /**
          * @return callingNumbers
          */
-        public java.util.List < String > getCallingNumbers() {
+        public java.util.List<String> getCallingNumbers() {
             return this.callingNumbers;
         }
 
         /**
          * @return contacts
          */
-        public java.util.List < Contacts> getContacts() {
+        public java.util.List<Contacts> getContacts() {
             return this.contacts;
         }
 
         /**
          * @return extras
          */
-        public java.util.List < Extras> getExtras() {
+        public java.util.List<Extras> getExtras() {
             return this.extras;
         }
 
@@ -718,7 +799,7 @@ public class ListJobsByGroupResponseBody extends TeaModel {
         /**
          * @return summary
          */
-        public java.util.List < Summary> getSummary() {
+        public java.util.List<Summary> getSummary() {
             return this.summary;
         }
 
@@ -730,9 +811,9 @@ public class ListJobsByGroupResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > callingNumbers; 
-            private java.util.List < Contacts> contacts; 
-            private java.util.List < Extras> extras; 
+            private java.util.List<String> callingNumbers; 
+            private java.util.List<Contacts> contacts; 
+            private java.util.List<Extras> extras; 
             private String failureReason; 
             private String jobGroupId; 
             private String jobId; 
@@ -741,13 +822,32 @@ public class ListJobsByGroupResponseBody extends TeaModel {
             private String scenarioId; 
             private String status; 
             private String strategyId; 
-            private java.util.List < Summary> summary; 
+            private java.util.List<Summary> summary; 
             private Integer systemPriority; 
+
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.callingNumbers = model.callingNumbers;
+                this.contacts = model.contacts;
+                this.extras = model.extras;
+                this.failureReason = model.failureReason;
+                this.jobGroupId = model.jobGroupId;
+                this.jobId = model.jobId;
+                this.priority = model.priority;
+                this.referenceId = model.referenceId;
+                this.scenarioId = model.scenarioId;
+                this.status = model.status;
+                this.strategyId = model.strategyId;
+                this.summary = model.summary;
+                this.systemPriority = model.systemPriority;
+            } 
 
             /**
              * CallingNumbers.
              */
-            public Builder callingNumbers(java.util.List < String > callingNumbers) {
+            public Builder callingNumbers(java.util.List<String> callingNumbers) {
                 this.callingNumbers = callingNumbers;
                 return this;
             }
@@ -755,7 +855,7 @@ public class ListJobsByGroupResponseBody extends TeaModel {
             /**
              * Contacts.
              */
-            public Builder contacts(java.util.List < Contacts> contacts) {
+            public Builder contacts(java.util.List<Contacts> contacts) {
                 this.contacts = contacts;
                 return this;
             }
@@ -763,7 +863,7 @@ public class ListJobsByGroupResponseBody extends TeaModel {
             /**
              * Extras.
              */
-            public Builder extras(java.util.List < Extras> extras) {
+            public Builder extras(java.util.List<Extras> extras) {
                 this.extras = extras;
                 return this;
             }
@@ -835,7 +935,7 @@ public class ListJobsByGroupResponseBody extends TeaModel {
             /**
              * Summary.
              */
-            public Builder summary(java.util.List < Summary> summary) {
+            public Builder summary(java.util.List<Summary> summary) {
                 this.summary = summary;
                 return this;
             }
@@ -855,17 +955,23 @@ public class ListJobsByGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListJobsByGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListJobsByGroupResponseBody</p>
+     */
     public static class Jobs extends TeaModel {
-        @NameInMap("List")
-        private java.util.List < List> list;
+        @com.aliyun.core.annotation.NameInMap("List")
+        private java.util.List<List> list;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Jobs(Builder builder) {
@@ -886,7 +992,7 @@ public class ListJobsByGroupResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -912,15 +1018,25 @@ public class ListJobsByGroupResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(Jobs model) {
+                this.list = model.list;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
+
             /**
              * List.
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }

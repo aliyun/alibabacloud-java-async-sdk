@@ -1,49 +1,54 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AssignJobsRequest} extends {@link RequestModel}
  *
  * <p>AssignJobsRequest</p>
  */
 public class AssignJobsRequest extends Request {
-    @Query
-    @NameInMap("CallingNumber")
-    private java.util.List < String > callingNumber;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallingNumber")
+    private java.util.List<String> callingNumber;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("IsAsynchrony")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsAsynchrony")
     private Boolean isAsynchrony;
 
-    @Query
-    @NameInMap("JobDataParsingTaskId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobDataParsingTaskId")
     private String jobDataParsingTaskId;
 
-    @Query
-    @NameInMap("JobGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String jobGroupId;
 
-    @Query
-    @NameInMap("JobsJson")
-    private java.util.List < String > jobsJson;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobsJson")
+    private java.util.List<String> jobsJson;
 
-    @Query
-    @NameInMap("RosterType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RosterType")
     private String rosterType;
 
-    @Query
-    @NameInMap("StrategyJson")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StrategyJson")
     private String strategyJson;
 
     private AssignJobsRequest(Builder builder) {
@@ -66,7 +71,7 @@ public class AssignJobsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -74,7 +79,7 @@ public class AssignJobsRequest extends Request {
     /**
      * @return callingNumber
      */
-    public java.util.List < String > getCallingNumber() {
+    public java.util.List<String> getCallingNumber() {
         return this.callingNumber;
     }
 
@@ -109,7 +114,7 @@ public class AssignJobsRequest extends Request {
     /**
      * @return jobsJson
      */
-    public java.util.List < String > getJobsJson() {
+    public java.util.List<String> getJobsJson() {
         return this.jobsJson;
     }
 
@@ -128,12 +133,12 @@ public class AssignJobsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AssignJobsRequest, Builder> {
-        private java.util.List < String > callingNumber; 
+        private java.util.List<String> callingNumber; 
         private String instanceId; 
         private Boolean isAsynchrony; 
         private String jobDataParsingTaskId; 
         private String jobGroupId; 
-        private java.util.List < String > jobsJson; 
+        private java.util.List<String> jobsJson; 
         private String rosterType; 
         private String strategyJson; 
 
@@ -156,14 +161,17 @@ public class AssignJobsRequest extends Request {
         /**
          * CallingNumber.
          */
-        public Builder callingNumber(java.util.List < String > callingNumber) {
+        public Builder callingNumber(java.util.List<String> callingNumber) {
             this.putQueryParameter("CallingNumber", callingNumber);
             this.callingNumber = callingNumber;
             return this;
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12f3dd08-0c55-44ce-9b64-e69d35ed3a76</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -190,7 +198,10 @@ public class AssignJobsRequest extends Request {
         }
 
         /**
-         * JobGroupId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d004cfd2-6a81-491c-83c6-cbe186620c95</p>
          */
         public Builder jobGroupId(String jobGroupId) {
             this.putQueryParameter("JobGroupId", jobGroupId);
@@ -201,7 +212,7 @@ public class AssignJobsRequest extends Request {
         /**
          * JobsJson.
          */
-        public Builder jobsJson(java.util.List < String > jobsJson) {
+        public Builder jobsJson(java.util.List<String> jobsJson) {
             this.putQueryParameter("JobsJson", jobsJson);
             this.jobsJson = jobsJson;
             return this;

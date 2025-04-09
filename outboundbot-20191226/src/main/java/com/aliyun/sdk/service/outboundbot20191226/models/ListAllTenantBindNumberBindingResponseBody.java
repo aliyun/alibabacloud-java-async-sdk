@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAllTenantBindNumberBindingResponseBody} extends {@link TeaModel}
  *
  * <p>ListAllTenantBindNumberBindingResponseBody</p>
  */
 public class ListAllTenantBindNumberBindingResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListAllTenantBindNumberBindingResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class ListAllTenantBindNumberBindingResponseBody extends TeaModel {
 
     public static ListAllTenantBindNumberBindingResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class ListAllTenantBindNumberBindingResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAllTenantBindNumberBindingResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -151,23 +172,29 @@ public class ListAllTenantBindNumberBindingResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAllTenantBindNumberBindingResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAllTenantBindNumberBindingResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("BillingType")
+        @com.aliyun.core.annotation.NameInMap("BillingType")
         private String billingType;
 
-        @NameInMap("BindingId")
+        @com.aliyun.core.annotation.NameInMap("BindingId")
         private String bindingId;
 
-        @NameInMap("InstanceNameList")
-        private java.util.List < String > instanceNameList;
+        @com.aliyun.core.annotation.NameInMap("InstanceNameList")
+        private java.util.List<String> instanceNameList;
 
-        @NameInMap("Number")
+        @com.aliyun.core.annotation.NameInMap("Number")
         private String number;
 
-        @NameInMap("SerializedParams")
+        @com.aliyun.core.annotation.NameInMap("SerializedParams")
         private String serializedParams;
 
-        @NameInMap("TrunkName")
+        @com.aliyun.core.annotation.NameInMap("TrunkName")
         private String trunkName;
 
         private List(Builder builder) {
@@ -204,7 +231,7 @@ public class ListAllTenantBindNumberBindingResponseBody extends TeaModel {
         /**
          * @return instanceNameList
          */
-        public java.util.List < String > getInstanceNameList() {
+        public java.util.List<String> getInstanceNameList() {
             return this.instanceNameList;
         }
 
@@ -232,10 +259,22 @@ public class ListAllTenantBindNumberBindingResponseBody extends TeaModel {
         public static final class Builder {
             private String billingType; 
             private String bindingId; 
-            private java.util.List < String > instanceNameList; 
+            private java.util.List<String> instanceNameList; 
             private String number; 
             private String serializedParams; 
             private String trunkName; 
+
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.billingType = model.billingType;
+                this.bindingId = model.bindingId;
+                this.instanceNameList = model.instanceNameList;
+                this.number = model.number;
+                this.serializedParams = model.serializedParams;
+                this.trunkName = model.trunkName;
+            } 
 
             /**
              * BillingType.
@@ -256,7 +295,7 @@ public class ListAllTenantBindNumberBindingResponseBody extends TeaModel {
             /**
              * InstanceNameList.
              */
-            public Builder instanceNameList(java.util.List < String > instanceNameList) {
+            public Builder instanceNameList(java.util.List<String> instanceNameList) {
                 this.instanceNameList = instanceNameList;
                 return this;
             }
@@ -292,9 +331,15 @@ public class ListAllTenantBindNumberBindingResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAllTenantBindNumberBindingResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAllTenantBindNumberBindingResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("List")
-        private java.util.List < List> list;
+        @com.aliyun.core.annotation.NameInMap("List")
+        private java.util.List<List> list;
 
         private Data(Builder builder) {
             this.list = builder.list;
@@ -311,17 +356,24 @@ public class ListAllTenantBindNumberBindingResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
         public static final class Builder {
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.list = model.list;
+            } 
 
             /**
              * List.
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }

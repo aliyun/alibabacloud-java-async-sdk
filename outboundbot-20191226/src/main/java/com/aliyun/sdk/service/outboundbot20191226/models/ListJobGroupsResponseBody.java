@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListJobGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>ListJobGroupsResponseBody</p>
  */
 public class ListJobGroupsResponseBody extends TeaModel {
-    @NameInMap("AsyncTaskId")
+    @com.aliyun.core.annotation.NameInMap("AsyncTaskId")
     private String asyncTaskId;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("JobGroups")
+    @com.aliyun.core.annotation.NameInMap("JobGroups")
     private JobGroups jobGroups;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListJobGroupsResponseBody(Builder builder) {
@@ -49,6 +54,10 @@ public class ListJobGroupsResponseBody extends TeaModel {
 
     public static ListJobGroupsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -108,6 +117,19 @@ public class ListJobGroupsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListJobGroupsResponseBody model) {
+            this.asyncTaskId = model.asyncTaskId;
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.jobGroups = model.jobGroups;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * AsyncTaskId.
@@ -171,14 +193,20 @@ public class ListJobGroupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListJobGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListJobGroupsResponseBody</p>
+     */
     public static class ExportProgress extends TeaModel {
-        @NameInMap("FileHttpUrl")
+        @com.aliyun.core.annotation.NameInMap("FileHttpUrl")
         private String fileHttpUrl;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private ExportProgress(Builder builder) {
@@ -221,6 +249,15 @@ public class ListJobGroupsResponseBody extends TeaModel {
             private String progress; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(ExportProgress model) {
+                this.fileHttpUrl = model.fileHttpUrl;
+                this.progress = model.progress;
+                this.status = model.status;
+            } 
+
             /**
              * FileHttpUrl.
              */
@@ -252,38 +289,44 @@ public class ListJobGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListJobGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListJobGroupsResponseBody</p>
+     */
     public static class Progress extends TeaModel {
-        @NameInMap("CancelledNum")
+        @com.aliyun.core.annotation.NameInMap("CancelledNum")
         private Integer cancelledNum;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Integer duration;
 
-        @NameInMap("ExecutingNum")
+        @com.aliyun.core.annotation.NameInMap("ExecutingNum")
         private Integer executingNum;
 
-        @NameInMap("FailedNum")
+        @com.aliyun.core.annotation.NameInMap("FailedNum")
         private Integer failedNum;
 
-        @NameInMap("PausedNum")
+        @com.aliyun.core.annotation.NameInMap("PausedNum")
         private Integer pausedNum;
 
-        @NameInMap("Scheduling")
+        @com.aliyun.core.annotation.NameInMap("Scheduling")
         private Integer scheduling;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TotalCompleted")
+        @com.aliyun.core.annotation.NameInMap("TotalCompleted")
         private Integer totalCompleted;
 
-        @NameInMap("TotalJobs")
+        @com.aliyun.core.annotation.NameInMap("TotalJobs")
         private Integer totalJobs;
 
-        @NameInMap("TotalNotAnswered")
+        @com.aliyun.core.annotation.NameInMap("TotalNotAnswered")
         private Integer totalNotAnswered;
 
         private Progress(Builder builder) {
@@ -398,6 +441,23 @@ public class ListJobGroupsResponseBody extends TeaModel {
             private Integer totalJobs; 
             private Integer totalNotAnswered; 
 
+            private Builder() {
+            } 
+
+            private Builder(Progress model) {
+                this.cancelledNum = model.cancelledNum;
+                this.duration = model.duration;
+                this.executingNum = model.executingNum;
+                this.failedNum = model.failedNum;
+                this.pausedNum = model.pausedNum;
+                this.scheduling = model.scheduling;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.totalCompleted = model.totalCompleted;
+                this.totalJobs = model.totalJobs;
+                this.totalNotAnswered = model.totalNotAnswered;
+            } 
+
             /**
              * CancelledNum.
              */
@@ -493,11 +553,17 @@ public class ListJobGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListJobGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListJobGroupsResponseBody</p>
+     */
     public static class Strategy extends TeaModel {
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
         private Strategy(Builder builder) {
@@ -531,6 +597,14 @@ public class ListJobGroupsResponseBody extends TeaModel {
             private Long endTime; 
             private Long startTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(Strategy model) {
+                this.endTime = model.endTime;
+                this.startTime = model.startTime;
+            } 
+
             /**
              * EndTime.
              */
@@ -554,47 +628,56 @@ public class ListJobGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListJobGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListJobGroupsResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private Long creationTime;
 
-        @NameInMap("ExportProgress")
+        @com.aliyun.core.annotation.NameInMap("ExportProgress")
         private ExportProgress exportProgress;
 
-        @NameInMap("JobDataParsingTaskId")
+        @com.aliyun.core.annotation.NameInMap("JobDataParsingTaskId")
         private String jobDataParsingTaskId;
 
-        @NameInMap("JobGroupDescription")
+        @com.aliyun.core.annotation.NameInMap("JobGroupDescription")
         private String jobGroupDescription;
 
-        @NameInMap("JobGroupId")
+        @com.aliyun.core.annotation.NameInMap("JobGroupId")
         private String jobGroupId;
 
-        @NameInMap("JobGroupName")
+        @com.aliyun.core.annotation.NameInMap("JobGroupName")
         private String jobGroupName;
 
-        @NameInMap("ModifyTime")
+        @com.aliyun.core.annotation.NameInMap("MinConcurrency")
+        private Integer minConcurrency;
+
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private String modifyTime;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private Progress progress;
 
-        @NameInMap("ScriptId")
+        @com.aliyun.core.annotation.NameInMap("ScriptId")
         private String scriptId;
 
-        @NameInMap("ScriptName")
+        @com.aliyun.core.annotation.NameInMap("ScriptName")
         private String scriptName;
 
-        @NameInMap("ScriptVersion")
+        @com.aliyun.core.annotation.NameInMap("ScriptVersion")
         private String scriptVersion;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Strategy")
+        @com.aliyun.core.annotation.NameInMap("Strategy")
         private Strategy strategy;
 
-        @NameInMap("TotalCallNum")
+        @com.aliyun.core.annotation.NameInMap("TotalCallNum")
         private Integer totalCallNum;
 
         private List(Builder builder) {
@@ -604,6 +687,7 @@ public class ListJobGroupsResponseBody extends TeaModel {
             this.jobGroupDescription = builder.jobGroupDescription;
             this.jobGroupId = builder.jobGroupId;
             this.jobGroupName = builder.jobGroupName;
+            this.minConcurrency = builder.minConcurrency;
             this.modifyTime = builder.modifyTime;
             this.progress = builder.progress;
             this.scriptId = builder.scriptId;
@@ -662,6 +746,13 @@ public class ListJobGroupsResponseBody extends TeaModel {
          */
         public String getJobGroupName() {
             return this.jobGroupName;
+        }
+
+        /**
+         * @return minConcurrency
+         */
+        public Integer getMinConcurrency() {
+            return this.minConcurrency;
         }
 
         /**
@@ -727,6 +818,7 @@ public class ListJobGroupsResponseBody extends TeaModel {
             private String jobGroupDescription; 
             private String jobGroupId; 
             private String jobGroupName; 
+            private Integer minConcurrency; 
             private String modifyTime; 
             private Progress progress; 
             private String scriptId; 
@@ -735,6 +827,27 @@ public class ListJobGroupsResponseBody extends TeaModel {
             private String status; 
             private Strategy strategy; 
             private Integer totalCallNum; 
+
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.creationTime = model.creationTime;
+                this.exportProgress = model.exportProgress;
+                this.jobDataParsingTaskId = model.jobDataParsingTaskId;
+                this.jobGroupDescription = model.jobGroupDescription;
+                this.jobGroupId = model.jobGroupId;
+                this.jobGroupName = model.jobGroupName;
+                this.minConcurrency = model.minConcurrency;
+                this.modifyTime = model.modifyTime;
+                this.progress = model.progress;
+                this.scriptId = model.scriptId;
+                this.scriptName = model.scriptName;
+                this.scriptVersion = model.scriptVersion;
+                this.status = model.status;
+                this.strategy = model.strategy;
+                this.totalCallNum = model.totalCallNum;
+            } 
 
             /**
              * CreationTime.
@@ -781,6 +894,14 @@ public class ListJobGroupsResponseBody extends TeaModel {
              */
             public Builder jobGroupName(String jobGroupName) {
                 this.jobGroupName = jobGroupName;
+                return this;
+            }
+
+            /**
+             * MinConcurrency.
+             */
+            public Builder minConcurrency(Integer minConcurrency) {
+                this.minConcurrency = minConcurrency;
                 return this;
             }
 
@@ -855,17 +976,23 @@ public class ListJobGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListJobGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListJobGroupsResponseBody</p>
+     */
     public static class JobGroups extends TeaModel {
-        @NameInMap("List")
-        private java.util.List < List> list;
+        @com.aliyun.core.annotation.NameInMap("List")
+        private java.util.List<List> list;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private JobGroups(Builder builder) {
@@ -886,7 +1013,7 @@ public class ListJobGroupsResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -912,15 +1039,25 @@ public class ListJobGroupsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(JobGroups model) {
+                this.list = model.list;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
+
             /**
              * List.
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }

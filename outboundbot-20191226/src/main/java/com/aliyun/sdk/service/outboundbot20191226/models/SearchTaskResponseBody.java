@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchTaskResponseBody} extends {@link TeaModel}
  *
  * <p>SearchTaskResponseBody</p>
  */
 public class SearchTaskResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageIndex")
+    @com.aliyun.core.annotation.NameInMap("PageIndex")
     private Integer pageIndex;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SearchTaskInfoList")
-    private java.util.List < SearchTaskInfoList> searchTaskInfoList;
+    @com.aliyun.core.annotation.NameInMap("SearchTaskInfoList")
+    private java.util.List<SearchTaskInfoList> searchTaskInfoList;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Long total;
 
     private SearchTaskResponseBody(Builder builder) {
@@ -57,6 +62,10 @@ public class SearchTaskResponseBody extends TeaModel {
 
     public static SearchTaskResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -104,7 +113,7 @@ public class SearchTaskResponseBody extends TeaModel {
     /**
      * @return searchTaskInfoList
      */
-    public java.util.List < SearchTaskInfoList> getSearchTaskInfoList() {
+    public java.util.List<SearchTaskInfoList> getSearchTaskInfoList() {
         return this.searchTaskInfoList;
     }
 
@@ -129,9 +138,24 @@ public class SearchTaskResponseBody extends TeaModel {
         private Integer pageIndex; 
         private Integer pageSize; 
         private String requestId; 
-        private java.util.List < SearchTaskInfoList> searchTaskInfoList; 
+        private java.util.List<SearchTaskInfoList> searchTaskInfoList; 
         private Boolean success; 
         private Long total; 
+
+        private Builder() {
+        } 
+
+        private Builder(SearchTaskResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.pageIndex = model.pageIndex;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.searchTaskInfoList = model.searchTaskInfoList;
+            this.success = model.success;
+            this.total = model.total;
+        } 
 
         /**
          * Code.
@@ -184,7 +208,7 @@ public class SearchTaskResponseBody extends TeaModel {
         /**
          * SearchTaskInfoList.
          */
-        public Builder searchTaskInfoList(java.util.List < SearchTaskInfoList> searchTaskInfoList) {
+        public Builder searchTaskInfoList(java.util.List<SearchTaskInfoList> searchTaskInfoList) {
             this.searchTaskInfoList = searchTaskInfoList;
             return this;
         }
@@ -211,89 +235,95 @@ public class SearchTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SearchTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchTaskResponseBody</p>
+     */
     public static class SearchTaskInfoList extends TeaModel {
-        @NameInMap("ActualTime")
+        @com.aliyun.core.annotation.NameInMap("ActualTime")
         private Long actualTime;
 
-        @NameInMap("CallDuration")
+        @com.aliyun.core.annotation.NameInMap("CallDuration")
         private Integer callDuration;
 
-        @NameInMap("CallDurationDisplay")
+        @com.aliyun.core.annotation.NameInMap("CallDurationDisplay")
         private String callDurationDisplay;
 
-        @NameInMap("CalledNumber")
+        @com.aliyun.core.annotation.NameInMap("CalledNumber")
         private String calledNumber;
 
-        @NameInMap("DialException")
+        @com.aliyun.core.annotation.NameInMap("DialException")
         private String dialException;
 
-        @NameInMap("DialExceptionCodes")
-        private java.util.List < String > dialExceptionCodes;
+        @com.aliyun.core.annotation.NameInMap("DialExceptionCodes")
+        private java.util.List<String> dialExceptionCodes;
 
-        @NameInMap("DialExceptionOld")
+        @com.aliyun.core.annotation.NameInMap("DialExceptionOld")
         private String dialExceptionOld;
 
-        @NameInMap("HasAnswered")
+        @com.aliyun.core.annotation.NameInMap("HasAnswered")
         private Boolean hasAnswered;
 
-        @NameInMap("HasHangUpByRejection")
+        @com.aliyun.core.annotation.NameInMap("HasHangUpByRejection")
         private Boolean hasHangUpByRejection;
 
-        @NameInMap("HasLastPlaybackCompleted")
+        @com.aliyun.core.annotation.NameInMap("HasLastPlaybackCompleted")
         private Boolean hasLastPlaybackCompleted;
 
-        @NameInMap("HasReachedEndOfFlow")
+        @com.aliyun.core.annotation.NameInMap("HasReachedEndOfFlow")
         private Boolean hasReachedEndOfFlow;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("JobGroupId")
+        @com.aliyun.core.annotation.NameInMap("JobGroupId")
         private String jobGroupId;
 
-        @NameInMap("JobGroupName")
+        @com.aliyun.core.annotation.NameInMap("JobGroupName")
         private String jobGroupName;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("JobStatus")
+        @com.aliyun.core.annotation.NameInMap("JobStatus")
         private Integer jobStatus;
 
-        @NameInMap("JobStatusName")
+        @com.aliyun.core.annotation.NameInMap("JobStatusName")
         private String jobStatusName;
 
-        @NameInMap("JobStatusString")
+        @com.aliyun.core.annotation.NameInMap("JobStatusString")
         private String jobStatusString;
 
-        @NameInMap("RecordingDuration")
+        @com.aliyun.core.annotation.NameInMap("RecordingDuration")
         private Integer recordingDuration;
 
-        @NameInMap("ScriptName")
+        @com.aliyun.core.annotation.NameInMap("ScriptName")
         private String scriptName;
 
-        @NameInMap("TaskCreateTime")
+        @com.aliyun.core.annotation.NameInMap("TaskCreateTime")
         private Long taskCreateTime;
 
-        @NameInMap("TaskEndReason")
+        @com.aliyun.core.annotation.NameInMap("TaskEndReason")
         private Integer taskEndReason;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
-        @NameInMap("TaskStatus")
+        @com.aliyun.core.annotation.NameInMap("TaskStatus")
         private Integer taskStatus;
 
-        @NameInMap("TaskStatusName")
+        @com.aliyun.core.annotation.NameInMap("TaskStatusName")
         private String taskStatusName;
 
-        @NameInMap("TaskStatusString")
+        @com.aliyun.core.annotation.NameInMap("TaskStatusString")
         private String taskStatusString;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
         private SearchTaskInfoList(Builder builder) {
@@ -373,7 +403,7 @@ public class SearchTaskResponseBody extends TeaModel {
         /**
          * @return dialExceptionCodes
          */
-        public java.util.List < String > getDialExceptionCodes() {
+        public java.util.List<String> getDialExceptionCodes() {
             return this.dialExceptionCodes;
         }
 
@@ -537,7 +567,7 @@ public class SearchTaskResponseBody extends TeaModel {
             private String callDurationDisplay; 
             private String calledNumber; 
             private String dialException; 
-            private java.util.List < String > dialExceptionCodes; 
+            private java.util.List<String> dialExceptionCodes; 
             private String dialExceptionOld; 
             private Boolean hasAnswered; 
             private Boolean hasHangUpByRejection; 
@@ -560,6 +590,40 @@ public class SearchTaskResponseBody extends TeaModel {
             private String taskStatusString; 
             private String userId; 
             private String userName; 
+
+            private Builder() {
+            } 
+
+            private Builder(SearchTaskInfoList model) {
+                this.actualTime = model.actualTime;
+                this.callDuration = model.callDuration;
+                this.callDurationDisplay = model.callDurationDisplay;
+                this.calledNumber = model.calledNumber;
+                this.dialException = model.dialException;
+                this.dialExceptionCodes = model.dialExceptionCodes;
+                this.dialExceptionOld = model.dialExceptionOld;
+                this.hasAnswered = model.hasAnswered;
+                this.hasHangUpByRejection = model.hasHangUpByRejection;
+                this.hasLastPlaybackCompleted = model.hasLastPlaybackCompleted;
+                this.hasReachedEndOfFlow = model.hasReachedEndOfFlow;
+                this.instanceId = model.instanceId;
+                this.jobGroupId = model.jobGroupId;
+                this.jobGroupName = model.jobGroupName;
+                this.jobId = model.jobId;
+                this.jobStatus = model.jobStatus;
+                this.jobStatusName = model.jobStatusName;
+                this.jobStatusString = model.jobStatusString;
+                this.recordingDuration = model.recordingDuration;
+                this.scriptName = model.scriptName;
+                this.taskCreateTime = model.taskCreateTime;
+                this.taskEndReason = model.taskEndReason;
+                this.taskId = model.taskId;
+                this.taskStatus = model.taskStatus;
+                this.taskStatusName = model.taskStatusName;
+                this.taskStatusString = model.taskStatusString;
+                this.userId = model.userId;
+                this.userName = model.userName;
+            } 
 
             /**
              * ActualTime.
@@ -604,7 +668,7 @@ public class SearchTaskResponseBody extends TeaModel {
             /**
              * DialExceptionCodes.
              */
-            public Builder dialExceptionCodes(java.util.List < String > dialExceptionCodes) {
+            public Builder dialExceptionCodes(java.util.List<String> dialExceptionCodes) {
                 this.dialExceptionCodes = dialExceptionCodes;
                 return this;
             }

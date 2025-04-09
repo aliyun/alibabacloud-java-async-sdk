@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteOutboundCallNumberRequest} extends {@link RequestModel}
  *
  * <p>DeleteOutboundCallNumberRequest</p>
  */
 public class DeleteOutboundCallNumberRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("OutboundCallNumberId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutboundCallNumberId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String outboundCallNumberId;
 
     private DeleteOutboundCallNumberRequest(Builder builder) {
@@ -36,7 +41,7 @@ public class DeleteOutboundCallNumberRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -70,7 +75,10 @@ public class DeleteOutboundCallNumberRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33014787-cc13-49d3-ab2f-a98aa8f15fbb</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -79,7 +87,10 @@ public class DeleteOutboundCallNumberRequest extends Request {
         }
 
         /**
-         * OutboundCallNumberId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ffa367e0-58f3-43b6-9615-c63db99c5add</p>
          */
         public Builder outboundCallNumberId(String outboundCallNumberId) {
             this.putQueryParameter("OutboundCallNumberId", outboundCallNumberId);

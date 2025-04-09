@@ -1,35 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitScriptReviewRequest} extends {@link RequestModel}
  *
  * <p>SubmitScriptReviewRequest</p>
  */
 public class SubmitScriptReviewRequest extends Request {
-    @Query
-    @NameInMap("Description")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String description;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("From")
+    private String from;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("ScriptId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScriptId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scriptId;
 
     private SubmitScriptReviewRequest(Builder builder) {
         super(builder);
         this.description = builder.description;
+        this.from = builder.from;
         this.instanceId = builder.instanceId;
         this.scriptId = builder.scriptId;
     }
@@ -42,7 +52,7 @@ public class SubmitScriptReviewRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -52,6 +62,13 @@ public class SubmitScriptReviewRequest extends Request {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return from
+     */
+    public String getFrom() {
+        return this.from;
     }
 
     /**
@@ -70,6 +87,7 @@ public class SubmitScriptReviewRequest extends Request {
 
     public static final class Builder extends Request.Builder<SubmitScriptReviewRequest, Builder> {
         private String description; 
+        private String from; 
         private String instanceId; 
         private String scriptId; 
 
@@ -80,12 +98,13 @@ public class SubmitScriptReviewRequest extends Request {
         private Builder(SubmitScriptReviewRequest request) {
             super(request);
             this.description = request.description;
+            this.from = request.from;
             this.instanceId = request.instanceId;
             this.scriptId = request.scriptId;
         } 
 
         /**
-         * Description.
+         * <p>This parameter is required.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -94,7 +113,19 @@ public class SubmitScriptReviewRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * From.
+         */
+        public Builder from(String from) {
+            this.putQueryParameter("From", from);
+            this.from = from;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>af81a389-91f0-4157-8d82-720edd02b66a</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -103,7 +134,10 @@ public class SubmitScriptReviewRequest extends Request {
         }
 
         /**
-         * ScriptId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b0f35dd1-0337-402e-9c4f-3a6c2426950a</p>
          */
         public Builder scriptId(String scriptId) {
             this.putQueryParameter("ScriptId", scriptId);

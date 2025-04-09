@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateOutboundCallNumberRequest} extends {@link RequestModel}
  *
  * <p>CreateOutboundCallNumberRequest</p>
  */
 public class CreateOutboundCallNumberRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("Number")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Number")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String number;
 
-    @Query
-    @NameInMap("RateLimitCount")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RateLimitCount")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer rateLimitCount;
 
-    @Query
-    @NameInMap("RateLimitPeriod")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RateLimitPeriod")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer rateLimitPeriod;
 
     private CreateOutboundCallNumberRequest(Builder builder) {
@@ -48,7 +53,7 @@ public class CreateOutboundCallNumberRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -100,7 +105,10 @@ public class CreateOutboundCallNumberRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>174952ab-9825-4cc9-a5e2-de82d7fa4cdd</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -109,7 +117,10 @@ public class CreateOutboundCallNumberRequest extends Request {
         }
 
         /**
-         * Number.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>95187</p>
          */
         public Builder number(String number) {
             this.putQueryParameter("Number", number);
@@ -118,7 +129,10 @@ public class CreateOutboundCallNumberRequest extends Request {
         }
 
         /**
-         * RateLimitCount.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder rateLimitCount(Integer rateLimitCount) {
             this.putQueryParameter("RateLimitCount", rateLimitCount);
@@ -127,7 +141,10 @@ public class CreateOutboundCallNumberRequest extends Request {
         }
 
         /**
-         * RateLimitPeriod.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120</p>
          */
         public Builder rateLimitPeriod(Integer rateLimitPeriod) {
             this.putQueryParameter("RateLimitPeriod", rateLimitPeriod);

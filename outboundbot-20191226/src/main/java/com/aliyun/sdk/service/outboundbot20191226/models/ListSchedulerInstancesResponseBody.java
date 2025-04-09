@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSchedulerInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>ListSchedulerInstancesResponseBody</p>
  */
 public class ListSchedulerInstancesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SchedulerInstances")
-    private java.util.List < SchedulerInstances> schedulerInstances;
+    @com.aliyun.core.annotation.NameInMap("SchedulerInstances")
+    private java.util.List<SchedulerInstances> schedulerInstances;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListSchedulerInstancesResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class ListSchedulerInstancesResponseBody extends TeaModel {
 
     public static ListSchedulerInstancesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -78,7 +87,7 @@ public class ListSchedulerInstancesResponseBody extends TeaModel {
     /**
      * @return schedulerInstances
      */
-    public java.util.List < SchedulerInstances> getSchedulerInstances() {
+    public java.util.List<SchedulerInstances> getSchedulerInstances() {
         return this.schedulerInstances;
     }
 
@@ -94,8 +103,20 @@ public class ListSchedulerInstancesResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
-        private java.util.List < SchedulerInstances> schedulerInstances; 
+        private java.util.List<SchedulerInstances> schedulerInstances; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSchedulerInstancesResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.schedulerInstances = model.schedulerInstances;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -132,7 +153,7 @@ public class ListSchedulerInstancesResponseBody extends TeaModel {
         /**
          * SchedulerInstances.
          */
-        public Builder schedulerInstances(java.util.List < SchedulerInstances> schedulerInstances) {
+        public Builder schedulerInstances(java.util.List<SchedulerInstances> schedulerInstances) {
             this.schedulerInstances = schedulerInstances;
             return this;
         }
@@ -151,20 +172,26 @@ public class ListSchedulerInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSchedulerInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSchedulerInstancesResponseBody</p>
+     */
     public static class SchedulerInstances extends TeaModel {
-        @NameInMap("BaseStrategy")
+        @com.aliyun.core.annotation.NameInMap("BaseStrategy")
         private String baseStrategy;
 
-        @NameInMap("Business")
+        @com.aliyun.core.annotation.NameInMap("Business")
         private String business;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("MaxConcurrency")
+        @com.aliyun.core.annotation.NameInMap("MaxConcurrency")
         private Integer maxConcurrency;
 
-        @NameInMap("OwnerId")
+        @com.aliyun.core.annotation.NameInMap("OwnerId")
         private String ownerId;
 
         private SchedulerInstances(Builder builder) {
@@ -224,6 +251,17 @@ public class ListSchedulerInstancesResponseBody extends TeaModel {
             private String instanceId; 
             private Integer maxConcurrency; 
             private String ownerId; 
+
+            private Builder() {
+            } 
+
+            private Builder(SchedulerInstances model) {
+                this.baseStrategy = model.baseStrategy;
+                this.business = model.business;
+                this.instanceId = model.instanceId;
+                this.maxConcurrency = model.maxConcurrency;
+                this.ownerId = model.ownerId;
+            } 
 
             /**
              * BaseStrategy.

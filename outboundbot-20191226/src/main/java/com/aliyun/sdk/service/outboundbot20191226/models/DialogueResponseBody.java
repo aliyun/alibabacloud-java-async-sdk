@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DialogueResponseBody} extends {@link TeaModel}
  *
  * <p>DialogueResponseBody</p>
  */
 public class DialogueResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Feedback")
+    @com.aliyun.core.annotation.NameInMap("Feedback")
     private Feedback feedback;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DialogueResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class DialogueResponseBody extends TeaModel {
 
     public static DialogueResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class DialogueResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DialogueResponseBody model) {
+            this.code = model.code;
+            this.feedback = model.feedback;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -151,20 +172,26 @@ public class DialogueResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DialogueResponseBody} extends {@link TeaModel}
+     *
+     * <p>DialogueResponseBody</p>
+     */
     public static class Feedback extends TeaModel {
-        @NameInMap("Action")
+        @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
 
-        @NameInMap("ActionParams")
+        @com.aliyun.core.annotation.NameInMap("ActionParams")
         private String actionParams;
 
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("ContentParams")
+        @com.aliyun.core.annotation.NameInMap("ContentParams")
         private String contentParams;
 
-        @NameInMap("Interruptible")
+        @com.aliyun.core.annotation.NameInMap("Interruptible")
         private Boolean interruptible;
 
         private Feedback(Builder builder) {
@@ -225,6 +252,17 @@ public class DialogueResponseBody extends TeaModel {
             private String contentParams; 
             private Boolean interruptible; 
 
+            private Builder() {
+            } 
+
+            private Builder(Feedback model) {
+                this.action = model.action;
+                this.actionParams = model.actionParams;
+                this.content = model.content;
+                this.contentParams = model.contentParams;
+                this.interruptible = model.interruptible;
+            } 
+
             /**
              * Action.
              */
@@ -250,7 +288,10 @@ public class DialogueResponseBody extends TeaModel {
             }
 
             /**
-             * ContentParams.
+             * <p>已废弃</p>
+             * 
+             * <strong>example:</strong>
+             * <p>“”</p>
              */
             public Builder contentParams(String contentParams) {
                 this.contentParams = contentParams;

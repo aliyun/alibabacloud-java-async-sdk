@@ -1,43 +1,52 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetBaseStrategyPeriodResponseBody} extends {@link TeaModel}
  *
  * <p>GetBaseStrategyPeriodResponseBody</p>
  */
 public class GetBaseStrategyPeriodResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("OnlyWeekdays")
+    @com.aliyun.core.annotation.NameInMap("OnlyWeekdays")
     private Boolean onlyWeekdays;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("OnlyWorkdays")
+    private Boolean onlyWorkdays;
+
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("WorkingTime")
-    private java.util.List < WorkingTime> workingTime;
+    @com.aliyun.core.annotation.NameInMap("WorkingTime")
+    private java.util.List<WorkingTime> workingTime;
 
     private GetBaseStrategyPeriodResponseBody(Builder builder) {
         this.code = builder.code;
         this.httpStatusCode = builder.httpStatusCode;
         this.message = builder.message;
         this.onlyWeekdays = builder.onlyWeekdays;
+        this.onlyWorkdays = builder.onlyWorkdays;
         this.requestId = builder.requestId;
         this.success = builder.success;
         this.workingTime = builder.workingTime;
@@ -49,6 +58,10 @@ public class GetBaseStrategyPeriodResponseBody extends TeaModel {
 
     public static GetBaseStrategyPeriodResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -80,6 +93,13 @@ public class GetBaseStrategyPeriodResponseBody extends TeaModel {
     }
 
     /**
+     * @return onlyWorkdays
+     */
+    public Boolean getOnlyWorkdays() {
+        return this.onlyWorkdays;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -96,7 +116,7 @@ public class GetBaseStrategyPeriodResponseBody extends TeaModel {
     /**
      * @return workingTime
      */
-    public java.util.List < WorkingTime> getWorkingTime() {
+    public java.util.List<WorkingTime> getWorkingTime() {
         return this.workingTime;
     }
 
@@ -105,9 +125,24 @@ public class GetBaseStrategyPeriodResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String message; 
         private Boolean onlyWeekdays; 
+        private Boolean onlyWorkdays; 
         private String requestId; 
         private Boolean success; 
-        private java.util.List < WorkingTime> workingTime; 
+        private java.util.List<WorkingTime> workingTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetBaseStrategyPeriodResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.onlyWeekdays = model.onlyWeekdays;
+            this.onlyWorkdays = model.onlyWorkdays;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.workingTime = model.workingTime;
+        } 
 
         /**
          * Code.
@@ -142,6 +177,14 @@ public class GetBaseStrategyPeriodResponseBody extends TeaModel {
         }
 
         /**
+         * OnlyWorkdays.
+         */
+        public Builder onlyWorkdays(Boolean onlyWorkdays) {
+            this.onlyWorkdays = onlyWorkdays;
+            return this;
+        }
+
+        /**
          * RequestId.
          */
         public Builder requestId(String requestId) {
@@ -160,7 +203,7 @@ public class GetBaseStrategyPeriodResponseBody extends TeaModel {
         /**
          * WorkingTime.
          */
-        public Builder workingTime(java.util.List < WorkingTime> workingTime) {
+        public Builder workingTime(java.util.List<WorkingTime> workingTime) {
             this.workingTime = workingTime;
             return this;
         }
@@ -171,17 +214,23 @@ public class GetBaseStrategyPeriodResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetBaseStrategyPeriodResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetBaseStrategyPeriodResponseBody</p>
+     */
     public static class WorkingTime extends TeaModel {
-        @NameInMap("BeginTime")
+        @com.aliyun.core.annotation.NameInMap("BeginTime")
         private String beginTime;
 
-        @NameInMap("BeginTimeMillis")
+        @com.aliyun.core.annotation.NameInMap("BeginTimeMillis")
         private Long beginTimeMillis;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("EndTimeMillis")
+        @com.aliyun.core.annotation.NameInMap("EndTimeMillis")
         private Long endTimeMillis;
 
         private WorkingTime(Builder builder) {
@@ -232,6 +281,16 @@ public class GetBaseStrategyPeriodResponseBody extends TeaModel {
             private Long beginTimeMillis; 
             private String endTime; 
             private Long endTimeMillis; 
+
+            private Builder() {
+            } 
+
+            private Builder(WorkingTime model) {
+                this.beginTime = model.beginTime;
+                this.beginTimeMillis = model.beginTimeMillis;
+                this.endTime = model.endTime;
+                this.endTimeMillis = model.endTimeMillis;
+            } 
 
             /**
              * BeginTime.

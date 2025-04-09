@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetContactWhiteListResponseBody} extends {@link TeaModel}
  *
  * <p>GetContactWhiteListResponseBody</p>
  */
 public class GetContactWhiteListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("ContactWhitelistList")
+    @com.aliyun.core.annotation.NameInMap("ContactWhitelistList")
     private ContactWhitelistList contactWhitelistList;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetContactWhiteListResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class GetContactWhiteListResponseBody extends TeaModel {
 
     public static GetContactWhiteListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class GetContactWhiteListResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetContactWhiteListResponseBody model) {
+            this.code = model.code;
+            this.contactWhitelistList = model.contactWhitelistList;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -151,29 +172,35 @@ public class GetContactWhiteListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetContactWhiteListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetContactWhiteListResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("ContactWhiteListId")
+        @com.aliyun.core.annotation.NameInMap("ContactWhiteListId")
         private String contactWhiteListId;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private Long creationTime;
 
-        @NameInMap("Creator")
+        @com.aliyun.core.annotation.NameInMap("Creator")
         private String creator;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Operator")
+        @com.aliyun.core.annotation.NameInMap("Operator")
         private String operator;
 
-        @NameInMap("PhoneNumber")
+        @com.aliyun.core.annotation.NameInMap("PhoneNumber")
         private String phoneNumber;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
         private List(Builder builder) {
@@ -261,6 +288,20 @@ public class GetContactWhiteListResponseBody extends TeaModel {
             private String phoneNumber; 
             private String remark; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.contactWhiteListId = model.contactWhiteListId;
+                this.creationTime = model.creationTime;
+                this.creator = model.creator;
+                this.instanceId = model.instanceId;
+                this.name = model.name;
+                this.operator = model.operator;
+                this.phoneNumber = model.phoneNumber;
+                this.remark = model.remark;
+            } 
+
             /**
              * ContactWhiteListId.
              */
@@ -332,17 +373,23 @@ public class GetContactWhiteListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetContactWhiteListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetContactWhiteListResponseBody</p>
+     */
     public static class ContactWhitelistList extends TeaModel {
-        @NameInMap("List")
-        private java.util.List < List> list;
+        @com.aliyun.core.annotation.NameInMap("List")
+        private java.util.List<List> list;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private ContactWhitelistList(Builder builder) {
@@ -363,7 +410,7 @@ public class GetContactWhiteListResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -389,15 +436,25 @@ public class GetContactWhiteListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(ContactWhitelistList model) {
+                this.list = model.list;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
+
             /**
              * List.
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }

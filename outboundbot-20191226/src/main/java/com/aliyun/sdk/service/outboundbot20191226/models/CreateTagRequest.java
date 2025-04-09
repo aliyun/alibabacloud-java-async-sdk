@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTagRequest} extends {@link RequestModel}
  *
  * <p>CreateTagRequest</p>
  */
 public class CreateTagRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("ScriptId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScriptId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scriptId;
 
-    @Query
-    @NameInMap("TagGroup")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TagGroup")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tagGroup;
 
-    @Query
-    @NameInMap("TagName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TagName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tagName;
 
     private CreateTagRequest(Builder builder) {
@@ -48,7 +53,7 @@ public class CreateTagRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -100,7 +105,10 @@ public class CreateTagRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>174952ab-9825-4cc9-a5e2-de82d7fa4cdd</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -109,7 +117,10 @@ public class CreateTagRequest extends Request {
         }
 
         /**
-         * ScriptId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>797203ac-3874-422f-838f-d4cd63c72681</p>
          */
         public Builder scriptId(String scriptId) {
             this.putQueryParameter("ScriptId", scriptId);
@@ -118,7 +129,7 @@ public class CreateTagRequest extends Request {
         }
 
         /**
-         * TagGroup.
+         * <p>This parameter is required.</p>
          */
         public Builder tagGroup(String tagGroup) {
             this.putQueryParameter("TagGroup", tagGroup);
@@ -127,7 +138,7 @@ public class CreateTagRequest extends Request {
         }
 
         /**
-         * TagName.
+         * <p>This parameter is required.</p>
          */
         public Builder tagName(String tagName) {
             this.putQueryParameter("TagName", tagName);

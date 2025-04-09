@@ -1,42 +1,59 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>ListInstancesResponseBody</p>
  */
 public class ListInstancesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Instances")
-    private java.util.List < Instances> instances;
+    @com.aliyun.core.annotation.NameInMap("Instances")
+    private java.util.List<Instances> instances;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    private Integer pageNumber;
+
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    private Integer pageSize;
+
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
+
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
+    private Integer totalCount;
 
     private ListInstancesResponseBody(Builder builder) {
         this.code = builder.code;
         this.httpStatusCode = builder.httpStatusCode;
         this.instances = builder.instances;
         this.message = builder.message;
+        this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
         this.success = builder.success;
+        this.totalCount = builder.totalCount;
     }
 
     public static Builder builder() {
@@ -45,6 +62,10 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static ListInstancesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -64,7 +85,7 @@ public class ListInstancesResponseBody extends TeaModel {
     /**
      * @return instances
      */
-    public java.util.List < Instances> getInstances() {
+    public java.util.List<Instances> getInstances() {
         return this.instances;
     }
 
@@ -73,6 +94,20 @@ public class ListInstancesResponseBody extends TeaModel {
      */
     public String getMessage() {
         return this.message;
+    }
+
+    /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     /**
@@ -89,13 +124,38 @@ public class ListInstancesResponseBody extends TeaModel {
         return this.success;
     }
 
+    /**
+     * @return totalCount
+     */
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public static final class Builder {
         private String code; 
         private Integer httpStatusCode; 
-        private java.util.List < Instances> instances; 
+        private java.util.List<Instances> instances; 
         private String message; 
+        private Integer pageNumber; 
+        private Integer pageSize; 
         private String requestId; 
         private Boolean success; 
+        private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListInstancesResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.instances = model.instances;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Code.
@@ -116,7 +176,7 @@ public class ListInstancesResponseBody extends TeaModel {
         /**
          * Instances.
          */
-        public Builder instances(java.util.List < Instances> instances) {
+        public Builder instances(java.util.List<Instances> instances) {
             this.instances = instances;
             return this;
         }
@@ -126,6 +186,22 @@ public class ListInstancesResponseBody extends TeaModel {
          */
         public Builder message(String message) {
             this.message = message;
+            return this;
+        }
+
+        /**
+         * PageNumber.
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.pageSize = pageSize;
             return this;
         }
 
@@ -145,17 +221,31 @@ public class ListInstancesResponseBody extends TeaModel {
             return this;
         }
 
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+
         public ListInstancesResponseBody build() {
             return new ListInstancesResponseBody(this);
         } 
 
     } 
 
+    /**
+     * 
+     * {@link ListInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstancesResponseBody</p>
+     */
     public static class ResourceTags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private ResourceTags(Builder builder) {
@@ -189,6 +279,14 @@ public class ListInstancesResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResourceTags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * Key.
              */
@@ -212,39 +310,45 @@ public class ListInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstancesResponseBody</p>
+     */
     public static class Instances extends TeaModel {
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private Long creationTime;
 
-        @NameInMap("CreatorId")
+        @com.aliyun.core.annotation.NameInMap("CreatorId")
         private Long creatorId;
 
-        @NameInMap("CreatorName")
+        @com.aliyun.core.annotation.NameInMap("CreatorName")
         private String creatorName;
 
-        @NameInMap("InstanceDescription")
+        @com.aliyun.core.annotation.NameInMap("InstanceDescription")
         private String instanceDescription;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("IsPreset")
+        @com.aliyun.core.annotation.NameInMap("IsPreset")
         private Boolean isPreset;
 
-        @NameInMap("MaxConcurrentConversation")
+        @com.aliyun.core.annotation.NameInMap("MaxConcurrentConversation")
         private Integer maxConcurrentConversation;
 
-        @NameInMap("OwnerName")
+        @com.aliyun.core.annotation.NameInMap("OwnerName")
         private String ownerName;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("ResourceTags")
-        private java.util.List < ResourceTags> resourceTags;
+        @com.aliyun.core.annotation.NameInMap("ResourceTags")
+        private java.util.List<ResourceTags> resourceTags;
 
         private Instances(Builder builder) {
             this.creationTime = builder.creationTime;
@@ -341,7 +445,7 @@ public class ListInstancesResponseBody extends TeaModel {
         /**
          * @return resourceTags
          */
-        public java.util.List < ResourceTags> getResourceTags() {
+        public java.util.List<ResourceTags> getResourceTags() {
             return this.resourceTags;
         }
 
@@ -356,7 +460,24 @@ public class ListInstancesResponseBody extends TeaModel {
             private Integer maxConcurrentConversation; 
             private String ownerName; 
             private String resourceGroupId; 
-            private java.util.List < ResourceTags> resourceTags; 
+            private java.util.List<ResourceTags> resourceTags; 
+
+            private Builder() {
+            } 
+
+            private Builder(Instances model) {
+                this.creationTime = model.creationTime;
+                this.creatorId = model.creatorId;
+                this.creatorName = model.creatorName;
+                this.instanceDescription = model.instanceDescription;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.isPreset = model.isPreset;
+                this.maxConcurrentConversation = model.maxConcurrentConversation;
+                this.ownerName = model.ownerName;
+                this.resourceGroupId = model.resourceGroupId;
+                this.resourceTags = model.resourceTags;
+            } 
 
             /**
              * CreationTime.
@@ -441,7 +562,7 @@ public class ListInstancesResponseBody extends TeaModel {
             /**
              * ResourceTags.
              */
-            public Builder resourceTags(java.util.List < ResourceTags> resourceTags) {
+            public Builder resourceTags(java.util.List<ResourceTags> resourceTags) {
                 this.resourceTags = resourceTags;
                 return this;
             }

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDialogueNodeStatisticsRequest} extends {@link RequestModel}
  *
  * <p>DescribeDialogueNodeStatisticsRequest</p>
  */
 public class DescribeDialogueNodeStatisticsRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("JobGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String jobGroupId;
 
-    @Query
-    @NameInMap("Limit")
-    @Validation(required = true, maximum = 999)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Limit")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 999)
     private Integer limit;
 
     private DescribeDialogueNodeStatisticsRequest(Builder builder) {
@@ -42,7 +47,7 @@ public class DescribeDialogueNodeStatisticsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -85,7 +90,10 @@ public class DescribeDialogueNodeStatisticsRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aeff669b-388f-4619-82af-81e177df5628</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -94,7 +102,10 @@ public class DescribeDialogueNodeStatisticsRequest extends Request {
         }
 
         /**
-         * JobGroupId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a3c670d1-01bf-491d-b9aa-759b1a82f47c</p>
          */
         public Builder jobGroupId(String jobGroupId) {
             this.putQueryParameter("JobGroupId", jobGroupId);
@@ -103,7 +114,10 @@ public class DescribeDialogueNodeStatisticsRequest extends Request {
         }
 
         /**
-         * Limit.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("Limit", limit);

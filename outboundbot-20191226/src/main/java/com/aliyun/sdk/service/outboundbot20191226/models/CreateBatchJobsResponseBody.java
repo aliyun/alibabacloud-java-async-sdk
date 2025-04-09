@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateBatchJobsResponseBody} extends {@link TeaModel}
  *
  * <p>CreateBatchJobsResponseBody</p>
  */
 public class CreateBatchJobsResponseBody extends TeaModel {
-    @NameInMap("BatchJob")
+    @com.aliyun.core.annotation.NameInMap("BatchJob")
     private BatchJob batchJob;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CreateBatchJobsResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class CreateBatchJobsResponseBody extends TeaModel {
 
     public static CreateBatchJobsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class CreateBatchJobsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateBatchJobsResponseBody model) {
+            this.batchJob = model.batchJob;
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * BatchJob.
@@ -151,11 +172,17 @@ public class CreateBatchJobsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateBatchJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateBatchJobsResponseBody</p>
+     */
     public static class WorkingTime extends TeaModel {
-        @NameInMap("BeginTime")
+        @com.aliyun.core.annotation.NameInMap("BeginTime")
         private String beginTime;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
         private WorkingTime(Builder builder) {
@@ -189,6 +216,14 @@ public class CreateBatchJobsResponseBody extends TeaModel {
             private String beginTime; 
             private String endTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(WorkingTime model) {
+                this.beginTime = model.beginTime;
+                this.endTime = model.endTime;
+            } 
+
             /**
              * BeginTime.
              */
@@ -212,51 +247,57 @@ public class CreateBatchJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateBatchJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateBatchJobsResponseBody</p>
+     */
     public static class Strategy extends TeaModel {
-        @NameInMap("Customized")
+        @com.aliyun.core.annotation.NameInMap("Customized")
         private String customized;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("FollowUpStrategy")
+        @com.aliyun.core.annotation.NameInMap("FollowUpStrategy")
         private String followUpStrategy;
 
-        @NameInMap("IsTemplate")
+        @com.aliyun.core.annotation.NameInMap("IsTemplate")
         private Boolean isTemplate;
 
-        @NameInMap("MaxAttemptsPerDay")
+        @com.aliyun.core.annotation.NameInMap("MaxAttemptsPerDay")
         private Integer maxAttemptsPerDay;
 
-        @NameInMap("MinAttemptInterval")
+        @com.aliyun.core.annotation.NameInMap("MinAttemptInterval")
         private Integer minAttemptInterval;
 
-        @NameInMap("RepeatBy")
+        @com.aliyun.core.annotation.NameInMap("RepeatBy")
         private String repeatBy;
 
-        @NameInMap("RepeatDays")
-        private java.util.List < String > repeatDays;
+        @com.aliyun.core.annotation.NameInMap("RepeatDays")
+        private java.util.List<String> repeatDays;
 
-        @NameInMap("RoutingStrategy")
+        @com.aliyun.core.annotation.NameInMap("RoutingStrategy")
         private String routingStrategy;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
-        @NameInMap("StrategyDescription")
+        @com.aliyun.core.annotation.NameInMap("StrategyDescription")
         private String strategyDescription;
 
-        @NameInMap("StrategyId")
+        @com.aliyun.core.annotation.NameInMap("StrategyId")
         private String strategyId;
 
-        @NameInMap("StrategyName")
+        @com.aliyun.core.annotation.NameInMap("StrategyName")
         private String strategyName;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("WorkingTime")
-        private java.util.List < WorkingTime> workingTime;
+        @com.aliyun.core.annotation.NameInMap("WorkingTime")
+        private java.util.List<WorkingTime> workingTime;
 
         private Strategy(Builder builder) {
             this.customized = builder.customized;
@@ -336,7 +377,7 @@ public class CreateBatchJobsResponseBody extends TeaModel {
         /**
          * @return repeatDays
          */
-        public java.util.List < String > getRepeatDays() {
+        public java.util.List<String> getRepeatDays() {
             return this.repeatDays;
         }
 
@@ -385,7 +426,7 @@ public class CreateBatchJobsResponseBody extends TeaModel {
         /**
          * @return workingTime
          */
-        public java.util.List < WorkingTime> getWorkingTime() {
+        public java.util.List<WorkingTime> getWorkingTime() {
             return this.workingTime;
         }
 
@@ -397,14 +438,35 @@ public class CreateBatchJobsResponseBody extends TeaModel {
             private Integer maxAttemptsPerDay; 
             private Integer minAttemptInterval; 
             private String repeatBy; 
-            private java.util.List < String > repeatDays; 
+            private java.util.List<String> repeatDays; 
             private String routingStrategy; 
             private Long startTime; 
             private String strategyDescription; 
             private String strategyId; 
             private String strategyName; 
             private String type; 
-            private java.util.List < WorkingTime> workingTime; 
+            private java.util.List<WorkingTime> workingTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Strategy model) {
+                this.customized = model.customized;
+                this.endTime = model.endTime;
+                this.followUpStrategy = model.followUpStrategy;
+                this.isTemplate = model.isTemplate;
+                this.maxAttemptsPerDay = model.maxAttemptsPerDay;
+                this.minAttemptInterval = model.minAttemptInterval;
+                this.repeatBy = model.repeatBy;
+                this.repeatDays = model.repeatDays;
+                this.routingStrategy = model.routingStrategy;
+                this.startTime = model.startTime;
+                this.strategyDescription = model.strategyDescription;
+                this.strategyId = model.strategyId;
+                this.strategyName = model.strategyName;
+                this.type = model.type;
+                this.workingTime = model.workingTime;
+            } 
 
             /**
              * Customized.
@@ -465,7 +527,7 @@ public class CreateBatchJobsResponseBody extends TeaModel {
             /**
              * RepeatDays.
              */
-            public Builder repeatDays(java.util.List < String > repeatDays) {
+            public Builder repeatDays(java.util.List<String> repeatDays) {
                 this.repeatDays = repeatDays;
                 return this;
             }
@@ -521,7 +583,7 @@ public class CreateBatchJobsResponseBody extends TeaModel {
             /**
              * WorkingTime.
              */
-            public Builder workingTime(java.util.List < WorkingTime> workingTime) {
+            public Builder workingTime(java.util.List<WorkingTime> workingTime) {
                 this.workingTime = workingTime;
                 return this;
             }
@@ -533,29 +595,35 @@ public class CreateBatchJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateBatchJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateBatchJobsResponseBody</p>
+     */
     public static class BatchJob extends TeaModel {
-        @NameInMap("BatchJobId")
+        @com.aliyun.core.annotation.NameInMap("BatchJobId")
         private String batchJobId;
 
-        @NameInMap("CallingNumbers")
-        private java.util.List < String > callingNumbers;
+        @com.aliyun.core.annotation.NameInMap("CallingNumbers")
+        private java.util.List<String> callingNumbers;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private Long creationTime;
 
-        @NameInMap("JobFilePath")
+        @com.aliyun.core.annotation.NameInMap("JobFilePath")
         private String jobFilePath;
 
-        @NameInMap("JobGroupDescription")
+        @com.aliyun.core.annotation.NameInMap("JobGroupDescription")
         private String jobGroupDescription;
 
-        @NameInMap("JobGroupName")
+        @com.aliyun.core.annotation.NameInMap("JobGroupName")
         private String jobGroupName;
 
-        @NameInMap("ScenarioId")
+        @com.aliyun.core.annotation.NameInMap("ScenarioId")
         private String scenarioId;
 
-        @NameInMap("Strategy")
+        @com.aliyun.core.annotation.NameInMap("Strategy")
         private Strategy strategy;
 
         private BatchJob(Builder builder) {
@@ -587,7 +655,7 @@ public class CreateBatchJobsResponseBody extends TeaModel {
         /**
          * @return callingNumbers
          */
-        public java.util.List < String > getCallingNumbers() {
+        public java.util.List<String> getCallingNumbers() {
             return this.callingNumbers;
         }
 
@@ -635,13 +703,27 @@ public class CreateBatchJobsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String batchJobId; 
-            private java.util.List < String > callingNumbers; 
+            private java.util.List<String> callingNumbers; 
             private Long creationTime; 
             private String jobFilePath; 
             private String jobGroupDescription; 
             private String jobGroupName; 
             private String scenarioId; 
             private Strategy strategy; 
+
+            private Builder() {
+            } 
+
+            private Builder(BatchJob model) {
+                this.batchJobId = model.batchJobId;
+                this.callingNumbers = model.callingNumbers;
+                this.creationTime = model.creationTime;
+                this.jobFilePath = model.jobFilePath;
+                this.jobGroupDescription = model.jobGroupDescription;
+                this.jobGroupName = model.jobGroupName;
+                this.scenarioId = model.scenarioId;
+                this.strategy = model.strategy;
+            } 
 
             /**
              * BatchJobId.
@@ -654,7 +736,7 @@ public class CreateBatchJobsResponseBody extends TeaModel {
             /**
              * CallingNumbers.
              */
-            public Builder callingNumbers(java.util.List < String > callingNumbers) {
+            public Builder callingNumbers(java.util.List<String> callingNumbers) {
                 this.callingNumbers = callingNumbers;
                 return this;
             }

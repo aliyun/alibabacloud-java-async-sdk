@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListIntentsResponseBody} extends {@link TeaModel}
  *
  * <p>ListIntentsResponseBody</p>
  */
 public class ListIntentsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Intents")
+    @com.aliyun.core.annotation.NameInMap("Intents")
     private Intents intents;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListIntentsResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class ListIntentsResponseBody extends TeaModel {
 
     public static ListIntentsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class ListIntentsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListIntentsResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.intents = model.intents;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -151,29 +172,35 @@ public class ListIntentsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListIntentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListIntentsResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("IntentDescription")
+        @com.aliyun.core.annotation.NameInMap("IntentDescription")
         private String intentDescription;
 
-        @NameInMap("IntentId")
+        @com.aliyun.core.annotation.NameInMap("IntentId")
         private String intentId;
 
-        @NameInMap("IntentName")
+        @com.aliyun.core.annotation.NameInMap("IntentName")
         private String intentName;
 
-        @NameInMap("Keywords")
+        @com.aliyun.core.annotation.NameInMap("Keywords")
         private String keywords;
 
-        @NameInMap("ScriptId")
+        @com.aliyun.core.annotation.NameInMap("ScriptId")
         private String scriptId;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
-        @NameInMap("Utterances")
+        @com.aliyun.core.annotation.NameInMap("Utterances")
         private String utterances;
 
         private List(Builder builder) {
@@ -261,6 +288,20 @@ public class ListIntentsResponseBody extends TeaModel {
             private Long updateTime; 
             private String utterances; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.createTime = model.createTime;
+                this.intentDescription = model.intentDescription;
+                this.intentId = model.intentId;
+                this.intentName = model.intentName;
+                this.keywords = model.keywords;
+                this.scriptId = model.scriptId;
+                this.updateTime = model.updateTime;
+                this.utterances = model.utterances;
+            } 
+
             /**
              * CreateTime.
              */
@@ -332,17 +373,23 @@ public class ListIntentsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListIntentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListIntentsResponseBody</p>
+     */
     public static class Intents extends TeaModel {
-        @NameInMap("List")
-        private java.util.List < List> list;
+        @com.aliyun.core.annotation.NameInMap("List")
+        private java.util.List<List> list;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Intents(Builder builder) {
@@ -363,7 +410,7 @@ public class ListIntentsResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -389,15 +436,25 @@ public class ListIntentsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(Intents model) {
+                this.list = model.list;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
+
             /**
              * List.
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }

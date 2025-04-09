@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateInstanceBindNumberResponseBody} extends {@link TeaModel}
  *
  * <p>CreateInstanceBindNumberResponseBody</p>
  */
 public class CreateInstanceBindNumberResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CreateInstanceBindNumberResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class CreateInstanceBindNumberResponseBody extends TeaModel {
 
     public static CreateInstanceBindNumberResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class CreateInstanceBindNumberResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateInstanceBindNumberResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -151,11 +172,17 @@ public class CreateInstanceBindNumberResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateInstanceBindNumberResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateInstanceBindNumberResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private Boolean success;
 
         private List(Builder builder) {
@@ -189,6 +216,14 @@ public class CreateInstanceBindNumberResponseBody extends TeaModel {
             private String instanceId; 
             private Boolean success; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.instanceId = model.instanceId;
+                this.success = model.success;
+            } 
+
             /**
              * InstanceId.
              */
@@ -212,9 +247,15 @@ public class CreateInstanceBindNumberResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateInstanceBindNumberResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateInstanceBindNumberResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("List")
-        private java.util.List < List> list;
+        @com.aliyun.core.annotation.NameInMap("List")
+        private java.util.List<List> list;
 
         private Data(Builder builder) {
             this.list = builder.list;
@@ -231,17 +272,24 @@ public class CreateInstanceBindNumberResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
         public static final class Builder {
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.list = model.list;
+            } 
 
             /**
              * List.
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }

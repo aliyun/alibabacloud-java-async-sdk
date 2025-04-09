@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveContactBlockListRequest} extends {@link RequestModel}
  *
  * <p>SaveContactBlockListRequest</p>
  */
 public class SaveContactBlockListRequest extends Request {
-    @Query
-    @NameInMap("ContactBlockListList")
-    private java.util.List < String > contactBlockListList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactBlockListList")
+    private java.util.List<String> contactBlockListList;
 
-    @Query
-    @NameInMap("ContactBlockListsJson")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactBlockListsJson")
     private String contactBlockListsJson;
 
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
     private SaveContactBlockListRequest(Builder builder) {
@@ -39,7 +44,7 @@ public class SaveContactBlockListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -47,7 +52,7 @@ public class SaveContactBlockListRequest extends Request {
     /**
      * @return contactBlockListList
      */
-    public java.util.List < String > getContactBlockListList() {
+    public java.util.List<String> getContactBlockListList() {
         return this.contactBlockListList;
     }
 
@@ -66,7 +71,7 @@ public class SaveContactBlockListRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SaveContactBlockListRequest, Builder> {
-        private java.util.List < String > contactBlockListList; 
+        private java.util.List<String> contactBlockListList; 
         private String contactBlockListsJson; 
         private String instanceId; 
 
@@ -84,7 +89,7 @@ public class SaveContactBlockListRequest extends Request {
         /**
          * ContactBlockListList.
          */
-        public Builder contactBlockListList(java.util.List < String > contactBlockListList) {
+        public Builder contactBlockListList(java.util.List<String> contactBlockListList) {
             this.putQueryParameter("ContactBlockListList", contactBlockListList);
             this.contactBlockListList = contactBlockListList;
             return this;

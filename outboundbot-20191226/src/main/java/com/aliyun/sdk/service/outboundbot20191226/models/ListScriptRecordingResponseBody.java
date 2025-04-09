@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListScriptRecordingResponseBody} extends {@link TeaModel}
  *
  * <p>ListScriptRecordingResponseBody</p>
  */
 public class ListScriptRecordingResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ScriptRecordings")
-    private java.util.List < ScriptRecordings> scriptRecordings;
+    @com.aliyun.core.annotation.NameInMap("ScriptRecordings")
+    private java.util.List<ScriptRecordings> scriptRecordings;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListScriptRecordingResponseBody(Builder builder) {
@@ -57,6 +62,10 @@ public class ListScriptRecordingResponseBody extends TeaModel {
 
     public static ListScriptRecordingResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -104,7 +113,7 @@ public class ListScriptRecordingResponseBody extends TeaModel {
     /**
      * @return scriptRecordings
      */
-    public java.util.List < ScriptRecordings> getScriptRecordings() {
+    public java.util.List<ScriptRecordings> getScriptRecordings() {
         return this.scriptRecordings;
     }
 
@@ -129,9 +138,24 @@ public class ListScriptRecordingResponseBody extends TeaModel {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
-        private java.util.List < ScriptRecordings> scriptRecordings; 
+        private java.util.List<ScriptRecordings> scriptRecordings; 
         private Boolean success; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListScriptRecordingResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.scriptRecordings = model.scriptRecordings;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Code.
@@ -184,7 +208,7 @@ public class ListScriptRecordingResponseBody extends TeaModel {
         /**
          * ScriptRecordings.
          */
-        public Builder scriptRecordings(java.util.List < ScriptRecordings> scriptRecordings) {
+        public Builder scriptRecordings(java.util.List<ScriptRecordings> scriptRecordings) {
             this.scriptRecordings = scriptRecordings;
             return this;
         }
@@ -211,44 +235,53 @@ public class ListScriptRecordingResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListScriptRecordingResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListScriptRecordingResponseBody</p>
+     */
     public static class ScriptRecordings extends TeaModel {
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private Long gmtModified;
 
-        @NameInMap("GmtUpload")
+        @com.aliyun.core.annotation.NameInMap("GmtUpload")
         private Long gmtUpload;
 
-        @NameInMap("InnerId")
+        @com.aliyun.core.annotation.NameInMap("InnerId")
         private String innerId;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("RecordingContent")
+        @com.aliyun.core.annotation.NameInMap("RecordingContent")
         private String recordingContent;
 
-        @NameInMap("RecordingDuration")
+        @com.aliyun.core.annotation.NameInMap("RecordingDuration")
         private Integer recordingDuration;
 
-        @NameInMap("RecordingName")
+        @com.aliyun.core.annotation.NameInMap("RecordingName")
         private String recordingName;
 
-        @NameInMap("ScriptId")
+        @com.aliyun.core.annotation.NameInMap("RefId")
+        private String refId;
+
+        @com.aliyun.core.annotation.NameInMap("ScriptId")
         private String scriptId;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private Integer state;
 
-        @NameInMap("StateExtend")
+        @com.aliyun.core.annotation.NameInMap("StateExtend")
         private String stateExtend;
 
-        @NameInMap("StorageUuid")
+        @com.aliyun.core.annotation.NameInMap("StorageUuid")
         private String storageUuid;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
         private ScriptRecordings(Builder builder) {
@@ -260,6 +293,7 @@ public class ListScriptRecordingResponseBody extends TeaModel {
             this.recordingContent = builder.recordingContent;
             this.recordingDuration = builder.recordingDuration;
             this.recordingName = builder.recordingName;
+            this.refId = builder.refId;
             this.scriptId = builder.scriptId;
             this.state = builder.state;
             this.stateExtend = builder.stateExtend;
@@ -332,6 +366,13 @@ public class ListScriptRecordingResponseBody extends TeaModel {
         }
 
         /**
+         * @return refId
+         */
+        public String getRefId() {
+            return this.refId;
+        }
+
+        /**
          * @return scriptId
          */
         public String getScriptId() {
@@ -375,11 +416,32 @@ public class ListScriptRecordingResponseBody extends TeaModel {
             private String recordingContent; 
             private Integer recordingDuration; 
             private String recordingName; 
+            private String refId; 
             private String scriptId; 
             private Integer state; 
             private String stateExtend; 
             private String storageUuid; 
             private String uuid; 
+
+            private Builder() {
+            } 
+
+            private Builder(ScriptRecordings model) {
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.gmtUpload = model.gmtUpload;
+                this.innerId = model.innerId;
+                this.instanceId = model.instanceId;
+                this.recordingContent = model.recordingContent;
+                this.recordingDuration = model.recordingDuration;
+                this.recordingName = model.recordingName;
+                this.refId = model.refId;
+                this.scriptId = model.scriptId;
+                this.state = model.state;
+                this.stateExtend = model.stateExtend;
+                this.storageUuid = model.storageUuid;
+                this.uuid = model.uuid;
+            } 
 
             /**
              * GmtCreate.
@@ -442,6 +504,14 @@ public class ListScriptRecordingResponseBody extends TeaModel {
              */
             public Builder recordingName(String recordingName) {
                 this.recordingName = recordingName;
+                return this;
+            }
+
+            /**
+             * RefId.
+             */
+            public Builder refId(String refId) {
+                this.refId = refId;
                 return this;
             }
 

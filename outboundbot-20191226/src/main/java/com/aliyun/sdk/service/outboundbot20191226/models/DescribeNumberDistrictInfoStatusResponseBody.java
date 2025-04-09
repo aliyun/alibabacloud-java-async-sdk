@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNumberDistrictInfoStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeNumberDistrictInfoStatusResponseBody</p>
  */
 public class DescribeNumberDistrictInfoStatusResponseBody extends TeaModel {
-    @NameInMap("AppliedVersion")
+    @com.aliyun.core.annotation.NameInMap("AppliedVersion")
     private AppliedVersion appliedVersion;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("ParsingVersion")
+    @com.aliyun.core.annotation.NameInMap("ParsingVersion")
     private ParsingVersion parsingVersion;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeNumberDistrictInfoStatusResponseBody(Builder builder) {
@@ -53,6 +58,10 @@ public class DescribeNumberDistrictInfoStatusResponseBody extends TeaModel {
 
     public static DescribeNumberDistrictInfoStatusResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -121,8 +130,22 @@ public class DescribeNumberDistrictInfoStatusResponseBody extends TeaModel {
         private String status; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeNumberDistrictInfoStatusResponseBody model) {
+            this.appliedVersion = model.appliedVersion;
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.parsingVersion = model.parsingVersion;
+            this.requestId = model.requestId;
+            this.status = model.status;
+            this.success = model.success;
+        } 
+
         /**
-         * 已生效的号码库版本信息
+         * AppliedVersion.
          */
         public Builder appliedVersion(AppliedVersion appliedVersion) {
             this.appliedVersion = appliedVersion;
@@ -154,7 +177,7 @@ public class DescribeNumberDistrictInfoStatusResponseBody extends TeaModel {
         }
 
         /**
-         * 正在解析的号码库
+         * ParsingVersion.
          */
         public Builder parsingVersion(ParsingVersion parsingVersion) {
             this.parsingVersion = parsingVersion;
@@ -170,7 +193,7 @@ public class DescribeNumberDistrictInfoStatusResponseBody extends TeaModel {
         }
 
         /**
-         * 号码库状态
+         * Status.
          */
         public Builder status(String status) {
             this.status = status;
@@ -191,14 +214,20 @@ public class DescribeNumberDistrictInfoStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeNumberDistrictInfoStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNumberDistrictInfoStatusResponseBody</p>
+     */
     public static class AppliedVersion extends TeaModel {
-        @NameInMap("FileName")
+        @com.aliyun.core.annotation.NameInMap("FileName")
         private String fileName;
 
-        @NameInMap("FileSize")
+        @com.aliyun.core.annotation.NameInMap("FileSize")
         private Long fileSize;
 
-        @NameInMap("VersionId")
+        @com.aliyun.core.annotation.NameInMap("VersionId")
         private String versionId;
 
         private AppliedVersion(Builder builder) {
@@ -241,8 +270,17 @@ public class DescribeNumberDistrictInfoStatusResponseBody extends TeaModel {
             private Long fileSize; 
             private String versionId; 
 
+            private Builder() {
+            } 
+
+            private Builder(AppliedVersion model) {
+                this.fileName = model.fileName;
+                this.fileSize = model.fileSize;
+                this.versionId = model.versionId;
+            } 
+
             /**
-             * 号码库文件名
+             * FileName.
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -250,7 +288,7 @@ public class DescribeNumberDistrictInfoStatusResponseBody extends TeaModel {
             }
 
             /**
-             * 号码库文件大小
+             * FileSize.
              */
             public Builder fileSize(Long fileSize) {
                 this.fileSize = fileSize;
@@ -258,7 +296,7 @@ public class DescribeNumberDistrictInfoStatusResponseBody extends TeaModel {
             }
 
             /**
-             * 版本ID
+             * VersionId.
              */
             public Builder versionId(String versionId) {
                 this.versionId = versionId;
@@ -272,17 +310,23 @@ public class DescribeNumberDistrictInfoStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeNumberDistrictInfoStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNumberDistrictInfoStatusResponseBody</p>
+     */
     public static class ParsingVersion extends TeaModel {
-        @NameInMap("FileName")
+        @com.aliyun.core.annotation.NameInMap("FileName")
         private String fileName;
 
-        @NameInMap("FileSize")
+        @com.aliyun.core.annotation.NameInMap("FileSize")
         private Long fileSize;
 
-        @NameInMap("ParseProgress")
+        @com.aliyun.core.annotation.NameInMap("ParseProgress")
         private Long parseProgress;
 
-        @NameInMap("VersionId")
+        @com.aliyun.core.annotation.NameInMap("VersionId")
         private String versionId;
 
         private ParsingVersion(Builder builder) {
@@ -334,8 +378,18 @@ public class DescribeNumberDistrictInfoStatusResponseBody extends TeaModel {
             private Long parseProgress; 
             private String versionId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ParsingVersion model) {
+                this.fileName = model.fileName;
+                this.fileSize = model.fileSize;
+                this.parseProgress = model.parseProgress;
+                this.versionId = model.versionId;
+            } 
+
             /**
-             * 号码库文件名
+             * FileName.
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -343,7 +397,7 @@ public class DescribeNumberDistrictInfoStatusResponseBody extends TeaModel {
             }
 
             /**
-             * 号码库文件大小
+             * FileSize.
              */
             public Builder fileSize(Long fileSize) {
                 this.fileSize = fileSize;
@@ -351,7 +405,7 @@ public class DescribeNumberDistrictInfoStatusResponseBody extends TeaModel {
             }
 
             /**
-             * 号码库解析进度
+             * ParseProgress.
              */
             public Builder parseProgress(Long parseProgress) {
                 this.parseProgress = parseProgress;
@@ -359,7 +413,7 @@ public class DescribeNumberDistrictInfoStatusResponseBody extends TeaModel {
             }
 
             /**
-             * 版本ID
+             * VersionId.
              */
             public Builder versionId(String versionId) {
                 this.versionId = versionId;

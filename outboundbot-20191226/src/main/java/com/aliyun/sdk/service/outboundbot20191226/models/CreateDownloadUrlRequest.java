@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDownloadUrlRequest} extends {@link RequestModel}
  *
  * <p>CreateDownloadUrlRequest</p>
  */
 public class CreateDownloadUrlRequest extends Request {
-    @Query
-    @NameInMap("DownloadTaskId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DownloadTaskId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String downloadTaskId;
 
-    @Query
-    @NameInMap("FileId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fileId;
 
     private CreateDownloadUrlRequest(Builder builder) {
@@ -36,7 +41,7 @@ public class CreateDownloadUrlRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -70,7 +75,10 @@ public class CreateDownloadUrlRequest extends Request {
         } 
 
         /**
-         * DownloadTaskId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>137da36b41304bcd999a0a7895dc6881</p>
          */
         public Builder downloadTaskId(String downloadTaskId) {
             this.putQueryParameter("DownloadTaskId", downloadTaskId);
@@ -79,7 +87,10 @@ public class CreateDownloadUrlRequest extends Request {
         }
 
         /**
-         * FileId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6f91885fa24b4c408d8f4eb392fd8ae6</p>
          */
         public Builder fileId(String fileId) {
             this.putQueryParameter("FileId", fileId);

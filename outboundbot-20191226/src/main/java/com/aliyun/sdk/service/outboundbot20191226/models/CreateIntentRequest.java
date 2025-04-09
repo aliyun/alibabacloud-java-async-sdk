@@ -1,43 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateIntentRequest} extends {@link RequestModel}
  *
  * <p>CreateIntentRequest</p>
  */
 public class CreateIntentRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("IntentDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IntentDescription")
     private String intentDescription;
 
-    @Query
-    @NameInMap("IntentName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IntentName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String intentName;
 
-    @Query
-    @NameInMap("Keywords")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Keywords")
     private String keywords;
 
-    @Query
-    @NameInMap("ScriptId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScriptId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scriptId;
 
-    @Query
-    @NameInMap("Utterances")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Utterances")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String utterances;
 
     private CreateIntentRequest(Builder builder) {
@@ -58,7 +63,7 @@ public class CreateIntentRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -128,7 +133,10 @@ public class CreateIntentRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>361c8a53-0e29-42f3-8aa7-c7752d010399</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -146,7 +154,7 @@ public class CreateIntentRequest extends Request {
         }
 
         /**
-         * IntentName.
+         * <p>This parameter is required.</p>
          */
         public Builder intentName(String intentName) {
             this.putQueryParameter("IntentName", intentName);
@@ -164,7 +172,10 @@ public class CreateIntentRequest extends Request {
         }
 
         /**
-         * ScriptId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b06fad9a-cc74-4ab6-b3a5-8d062adebf2c</p>
          */
         public Builder scriptId(String scriptId) {
             this.putQueryParameter("ScriptId", scriptId);
@@ -173,7 +184,7 @@ public class CreateIntentRequest extends Request {
         }
 
         /**
-         * Utterances.
+         * <p>This parameter is required.</p>
          */
         public Builder utterances(String utterances) {
             this.putQueryParameter("Utterances", utterances);

@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateJobGroupExportTaskRequest} extends {@link RequestModel}
  *
  * <p>CreateJobGroupExportTaskRequest</p>
  */
 public class CreateJobGroupExportTaskRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("JobGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobGroupId")
     private String jobGroupId;
 
-    @Query
-    @NameInMap("Option")
-    private java.util.List < String > option;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Option")
+    private java.util.List<String> option;
 
     private CreateJobGroupExportTaskRequest(Builder builder) {
         super(builder);
@@ -40,7 +45,7 @@ public class CreateJobGroupExportTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -62,14 +67,14 @@ public class CreateJobGroupExportTaskRequest extends Request {
     /**
      * @return option
      */
-    public java.util.List < String > getOption() {
+    public java.util.List<String> getOption() {
         return this.option;
     }
 
     public static final class Builder extends Request.Builder<CreateJobGroupExportTaskRequest, Builder> {
         private String instanceId; 
         private String jobGroupId; 
-        private java.util.List < String > option; 
+        private java.util.List<String> option; 
 
         private Builder() {
             super();
@@ -83,7 +88,10 @@ public class CreateJobGroupExportTaskRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a4274627-265f-4e14-b2d6-4ee7d4f8593e</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -103,7 +111,7 @@ public class CreateJobGroupExportTaskRequest extends Request {
         /**
          * Option.
          */
-        public Builder option(java.util.List < String > option) {
+        public Builder option(java.util.List<String> option) {
             this.putQueryParameter("Option", option);
             this.option = option;
             return this;

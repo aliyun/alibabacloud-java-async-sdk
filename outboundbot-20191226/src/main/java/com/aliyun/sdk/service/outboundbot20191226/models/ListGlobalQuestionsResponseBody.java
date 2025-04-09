@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListGlobalQuestionsResponseBody} extends {@link TeaModel}
  *
  * <p>ListGlobalQuestionsResponseBody</p>
  */
 public class ListGlobalQuestionsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("GlobalQuestions")
+    @com.aliyun.core.annotation.NameInMap("GlobalQuestions")
     private GlobalQuestions globalQuestions;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListGlobalQuestionsResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class ListGlobalQuestionsResponseBody extends TeaModel {
 
     public static ListGlobalQuestionsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class ListGlobalQuestionsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListGlobalQuestionsResponseBody model) {
+            this.code = model.code;
+            this.globalQuestions = model.globalQuestions;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -151,23 +172,29 @@ public class ListGlobalQuestionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListGlobalQuestionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGlobalQuestionsResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("Answers")
+        @com.aliyun.core.annotation.NameInMap("Answers")
         private String answers;
 
-        @NameInMap("GlobalQuestionId")
+        @com.aliyun.core.annotation.NameInMap("GlobalQuestionId")
         private String globalQuestionId;
 
-        @NameInMap("GlobalQuestionName")
+        @com.aliyun.core.annotation.NameInMap("GlobalQuestionName")
         private String globalQuestionName;
 
-        @NameInMap("GlobalQuestionType")
+        @com.aliyun.core.annotation.NameInMap("GlobalQuestionType")
         private String globalQuestionType;
 
-        @NameInMap("Questions")
+        @com.aliyun.core.annotation.NameInMap("Questions")
         private String questions;
 
-        @NameInMap("ScriptId")
+        @com.aliyun.core.annotation.NameInMap("ScriptId")
         private String scriptId;
 
         private List(Builder builder) {
@@ -237,6 +264,18 @@ public class ListGlobalQuestionsResponseBody extends TeaModel {
             private String questions; 
             private String scriptId; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.answers = model.answers;
+                this.globalQuestionId = model.globalQuestionId;
+                this.globalQuestionName = model.globalQuestionName;
+                this.globalQuestionType = model.globalQuestionType;
+                this.questions = model.questions;
+                this.scriptId = model.scriptId;
+            } 
+
             /**
              * Answers.
              */
@@ -292,17 +331,23 @@ public class ListGlobalQuestionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListGlobalQuestionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGlobalQuestionsResponseBody</p>
+     */
     public static class GlobalQuestions extends TeaModel {
-        @NameInMap("List")
-        private java.util.List < List> list;
+        @com.aliyun.core.annotation.NameInMap("List")
+        private java.util.List<List> list;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private GlobalQuestions(Builder builder) {
@@ -323,7 +368,7 @@ public class ListGlobalQuestionsResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -349,15 +394,25 @@ public class ListGlobalQuestionsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(GlobalQuestions model) {
+                this.list = model.list;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
+
             /**
              * List.
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }

@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeIntentResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeIntentResponseBody</p>
  */
 public class DescribeIntentResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Intent")
+    @com.aliyun.core.annotation.NameInMap("Intent")
     private Intent intent;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeIntentResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class DescribeIntentResponseBody extends TeaModel {
 
     public static DescribeIntentResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class DescribeIntentResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeIntentResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.intent = model.intent;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -151,29 +172,35 @@ public class DescribeIntentResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeIntentResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIntentResponseBody</p>
+     */
     public static class Intent extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("IntentDescription")
+        @com.aliyun.core.annotation.NameInMap("IntentDescription")
         private String intentDescription;
 
-        @NameInMap("IntentId")
+        @com.aliyun.core.annotation.NameInMap("IntentId")
         private String intentId;
 
-        @NameInMap("IntentName")
+        @com.aliyun.core.annotation.NameInMap("IntentName")
         private String intentName;
 
-        @NameInMap("Keywords")
+        @com.aliyun.core.annotation.NameInMap("Keywords")
         private String keywords;
 
-        @NameInMap("ScriptId")
+        @com.aliyun.core.annotation.NameInMap("ScriptId")
         private String scriptId;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
-        @NameInMap("Utterances")
+        @com.aliyun.core.annotation.NameInMap("Utterances")
         private String utterances;
 
         private Intent(Builder builder) {
@@ -260,6 +287,20 @@ public class DescribeIntentResponseBody extends TeaModel {
             private String scriptId; 
             private Long updateTime; 
             private String utterances; 
+
+            private Builder() {
+            } 
+
+            private Builder(Intent model) {
+                this.createTime = model.createTime;
+                this.intentDescription = model.intentDescription;
+                this.intentId = model.intentId;
+                this.intentName = model.intentName;
+                this.keywords = model.keywords;
+                this.scriptId = model.scriptId;
+                this.updateTime = model.updateTime;
+                this.utterances = model.utterances;
+            } 
 
             /**
              * CreateTime.

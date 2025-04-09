@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyScriptVoiceConfigRequest} extends {@link RequestModel}
  *
  * <p>ModifyScriptVoiceConfigRequest</p>
  */
 public class ModifyScriptVoiceConfigRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("ScriptId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScriptId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scriptId;
 
-    @Query
-    @NameInMap("ScriptVoiceConfigId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScriptVoiceConfigId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scriptVoiceConfigId;
 
-    @Query
-    @NameInMap("ScriptWaveformRelation")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScriptWaveformRelation")
     private String scriptWaveformRelation;
 
-    @Query
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     private ModifyScriptVoiceConfigRequest(Builder builder) {
@@ -53,7 +58,7 @@ public class ModifyScriptVoiceConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -114,7 +119,10 @@ public class ModifyScriptVoiceConfigRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bdd49242-114c-4045-b1d1-25ccc1756c75</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -123,7 +131,10 @@ public class ModifyScriptVoiceConfigRequest extends Request {
         }
 
         /**
-         * ScriptId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1d7a26e0-628b-4c3c-9918-7f2e23273f54</p>
          */
         public Builder scriptId(String scriptId) {
             this.putQueryParameter("ScriptId", scriptId);
@@ -132,7 +143,10 @@ public class ModifyScriptVoiceConfigRequest extends Request {
         }
 
         /**
-         * ScriptVoiceConfigId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e15cc646-50e5-4bc0-87ec-e4f2d1063b90</p>
          */
         public Builder scriptVoiceConfigId(String scriptVoiceConfigId) {
             this.putQueryParameter("ScriptVoiceConfigId", scriptVoiceConfigId);
@@ -150,7 +164,10 @@ public class ModifyScriptVoiceConfigRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WAVEFORM</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

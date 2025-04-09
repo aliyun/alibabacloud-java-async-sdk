@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSummaryInfoResponseBody} extends {@link TeaModel}
  *
  * <p>GetSummaryInfoResponseBody</p>
  */
 public class GetSummaryInfoResponseBody extends TeaModel {
-    @NameInMap("AgentBotInstanceSummaryList")
-    private java.util.List < AgentBotInstanceSummaryList> agentBotInstanceSummaryList;
+    @com.aliyun.core.annotation.NameInMap("AgentBotInstanceSummaryList")
+    private java.util.List<AgentBotInstanceSummaryList> agentBotInstanceSummaryList;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetSummaryInfoResponseBody(Builder builder) {
@@ -47,10 +52,14 @@ public class GetSummaryInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return agentBotInstanceSummaryList
      */
-    public java.util.List < AgentBotInstanceSummaryList> getAgentBotInstanceSummaryList() {
+    public java.util.List<AgentBotInstanceSummaryList> getAgentBotInstanceSummaryList() {
         return this.agentBotInstanceSummaryList;
     }
 
@@ -90,17 +99,29 @@ public class GetSummaryInfoResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AgentBotInstanceSummaryList> agentBotInstanceSummaryList; 
+        private java.util.List<AgentBotInstanceSummaryList> agentBotInstanceSummaryList; 
         private String code; 
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetSummaryInfoResponseBody model) {
+            this.agentBotInstanceSummaryList = model.agentBotInstanceSummaryList;
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
          * AgentBotInstanceSummaryList.
          */
-        public Builder agentBotInstanceSummaryList(java.util.List < AgentBotInstanceSummaryList> agentBotInstanceSummaryList) {
+        public Builder agentBotInstanceSummaryList(java.util.List<AgentBotInstanceSummaryList> agentBotInstanceSummaryList) {
             this.agentBotInstanceSummaryList = agentBotInstanceSummaryList;
             return this;
         }
@@ -151,17 +172,23 @@ public class GetSummaryInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetSummaryInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSummaryInfoResponseBody</p>
+     */
     public static class AgentBotInstanceSummaryList extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("TotalCallCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCallCount")
         private Long totalCallCount;
 
-        @NameInMap("TotalCallTime")
+        @com.aliyun.core.annotation.NameInMap("TotalCallTime")
         private Long totalCallTime;
 
-        @NameInMap("UsedRecordingStorageSpace")
+        @com.aliyun.core.annotation.NameInMap("UsedRecordingStorageSpace")
         private Integer usedRecordingStorageSpace;
 
         private AgentBotInstanceSummaryList(Builder builder) {
@@ -212,6 +239,16 @@ public class GetSummaryInfoResponseBody extends TeaModel {
             private Long totalCallCount; 
             private Long totalCallTime; 
             private Integer usedRecordingStorageSpace; 
+
+            private Builder() {
+            } 
+
+            private Builder(AgentBotInstanceSummaryList model) {
+                this.instanceId = model.instanceId;
+                this.totalCallCount = model.totalCallCount;
+                this.totalCallTime = model.totalCallTime;
+                this.usedRecordingStorageSpace = model.usedRecordingStorageSpace;
+            } 
 
             /**
              * InstanceId.

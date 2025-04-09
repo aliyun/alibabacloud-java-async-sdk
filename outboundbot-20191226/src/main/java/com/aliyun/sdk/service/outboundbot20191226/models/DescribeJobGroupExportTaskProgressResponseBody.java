@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeJobGroupExportTaskProgressResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeJobGroupExportTaskProgressResponseBody</p>
  */
 public class DescribeJobGroupExportTaskProgressResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("FileHttpUrl")
+    @com.aliyun.core.annotation.NameInMap("FileHttpUrl")
     private String fileHttpUrl;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Progress")
+    @com.aliyun.core.annotation.NameInMap("Progress")
     private Float progress;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeJobGroupExportTaskProgressResponseBody(Builder builder) {
@@ -49,6 +54,10 @@ public class DescribeJobGroupExportTaskProgressResponseBody extends TeaModel {
 
     public static DescribeJobGroupExportTaskProgressResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -108,6 +117,19 @@ public class DescribeJobGroupExportTaskProgressResponseBody extends TeaModel {
         private Float progress; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeJobGroupExportTaskProgressResponseBody model) {
+            this.code = model.code;
+            this.fileHttpUrl = model.fileHttpUrl;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.progress = model.progress;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.

@@ -1,59 +1,64 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyBatchJobsRequest} extends {@link RequestModel}
  *
  * <p>ModifyBatchJobsRequest</p>
  */
 public class ModifyBatchJobsRequest extends Request {
-    @Query
-    @NameInMap("BatchJobName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BatchJobName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String batchJobName;
 
-    @Query
-    @NameInMap("CallingNumber")
-    private java.util.List < String > callingNumber;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallingNumber")
+    private java.util.List<String> callingNumber;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("JobFilePath")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobFilePath")
     private String jobFilePath;
 
-    @Query
-    @NameInMap("JobGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String jobGroupId;
 
-    @Query
-    @NameInMap("ScenarioId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScenarioId")
     private String scenarioId;
 
-    @Query
-    @NameInMap("ScriptId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScriptId")
     private String scriptId;
 
-    @Query
-    @NameInMap("StrategyJson")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StrategyJson")
     private String strategyJson;
 
-    @Query
-    @NameInMap("Submitted")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Submitted")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean submitted;
 
     private ModifyBatchJobsRequest(Builder builder) {
@@ -78,7 +83,7 @@ public class ModifyBatchJobsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -93,7 +98,7 @@ public class ModifyBatchJobsRequest extends Request {
     /**
      * @return callingNumber
      */
-    public java.util.List < String > getCallingNumber() {
+    public java.util.List<String> getCallingNumber() {
         return this.callingNumber;
     }
 
@@ -155,7 +160,7 @@ public class ModifyBatchJobsRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyBatchJobsRequest, Builder> {
         private String batchJobName; 
-        private java.util.List < String > callingNumber; 
+        private java.util.List<String> callingNumber; 
         private String description; 
         private String instanceId; 
         private String jobFilePath; 
@@ -184,7 +189,7 @@ public class ModifyBatchJobsRequest extends Request {
         } 
 
         /**
-         * BatchJobName.
+         * <p>This parameter is required.</p>
          */
         public Builder batchJobName(String batchJobName) {
             this.putQueryParameter("BatchJobName", batchJobName);
@@ -195,7 +200,7 @@ public class ModifyBatchJobsRequest extends Request {
         /**
          * CallingNumber.
          */
-        public Builder callingNumber(java.util.List < String > callingNumber) {
+        public Builder callingNumber(java.util.List<String> callingNumber) {
             this.putQueryParameter("CallingNumber", callingNumber);
             this.callingNumber = callingNumber;
             return this;
@@ -211,7 +216,10 @@ public class ModifyBatchJobsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>174952ab-9825-4cc9-a5e2-de82d7fa4cdd</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -229,7 +237,10 @@ public class ModifyBatchJobsRequest extends Request {
         }
 
         /**
-         * JobGroupId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c6a668d1-3145-4048-9101-cb3678bb8884</p>
          */
         public Builder jobGroupId(String jobGroupId) {
             this.putQueryParameter("JobGroupId", jobGroupId);
@@ -265,7 +276,10 @@ public class ModifyBatchJobsRequest extends Request {
         }
 
         /**
-         * Submitted.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder submitted(Boolean submitted) {
             this.putQueryParameter("Submitted", submitted);

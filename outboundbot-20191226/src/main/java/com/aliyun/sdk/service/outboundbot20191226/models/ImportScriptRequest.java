@@ -1,30 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ImportScriptRequest} extends {@link RequestModel}
  *
  * <p>ImportScriptRequest</p>
  */
 public class ImportScriptRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("SignatureUrl")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NluEngine")
+    private String nluEngine;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SignatureUrl")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String signatureUrl;
 
     private ImportScriptRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.nluEngine = builder.nluEngine;
         this.signatureUrl = builder.signatureUrl;
     }
 
@@ -36,7 +46,7 @@ public class ImportScriptRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -49,6 +59,13 @@ public class ImportScriptRequest extends Request {
     }
 
     /**
+     * @return nluEngine
+     */
+    public String getNluEngine() {
+        return this.nluEngine;
+    }
+
+    /**
      * @return signatureUrl
      */
     public String getSignatureUrl() {
@@ -57,6 +74,7 @@ public class ImportScriptRequest extends Request {
 
     public static final class Builder extends Request.Builder<ImportScriptRequest, Builder> {
         private String instanceId; 
+        private String nluEngine; 
         private String signatureUrl; 
 
         private Builder() {
@@ -66,11 +84,12 @@ public class ImportScriptRequest extends Request {
         private Builder(ImportScriptRequest request) {
             super(request);
             this.instanceId = request.instanceId;
+            this.nluEngine = request.nluEngine;
             this.signatureUrl = request.signatureUrl;
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -79,7 +98,16 @@ public class ImportScriptRequest extends Request {
         }
 
         /**
-         * SignatureUrl.
+         * NluEngine.
+         */
+        public Builder nluEngine(String nluEngine) {
+            this.putQueryParameter("NluEngine", nluEngine);
+            this.nluEngine = nluEngine;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
          */
         public Builder signatureUrl(String signatureUrl) {
             this.putQueryParameter("SignatureUrl", signatureUrl);

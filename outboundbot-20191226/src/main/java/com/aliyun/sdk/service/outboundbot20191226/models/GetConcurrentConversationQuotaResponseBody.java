@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetConcurrentConversationQuotaResponseBody} extends {@link TeaModel}
  *
  * <p>GetConcurrentConversationQuotaResponseBody</p>
  */
 public class GetConcurrentConversationQuotaResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("MaxConcurrent")
+    @com.aliyun.core.annotation.NameInMap("MaxConcurrent")
     private Integer maxConcurrent;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RemainingConcurrent")
+    @com.aliyun.core.annotation.NameInMap("RemainingConcurrent")
     private Integer remainingConcurrent;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetConcurrentConversationQuotaResponseBody(Builder builder) {
@@ -49,6 +54,10 @@ public class GetConcurrentConversationQuotaResponseBody extends TeaModel {
 
     public static GetConcurrentConversationQuotaResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -109,6 +118,19 @@ public class GetConcurrentConversationQuotaResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetConcurrentConversationQuotaResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.maxConcurrent = model.maxConcurrent;
+            this.message = model.message;
+            this.remainingConcurrent = model.remainingConcurrent;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
          * Code.
          */
@@ -126,7 +148,10 @@ public class GetConcurrentConversationQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * maxConcurrent
+         * <p>maxConcurrent</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxConcurrent(Integer maxConcurrent) {
             this.maxConcurrent = maxConcurrent;

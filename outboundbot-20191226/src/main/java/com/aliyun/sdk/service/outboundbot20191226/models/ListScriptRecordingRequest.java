@@ -1,47 +1,56 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListScriptRecordingRequest} extends {@link RequestModel}
  *
  * <p>ListScriptRecordingRequest</p>
  */
 public class ListScriptRecordingRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("PageNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ScriptId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RefIdsJson")
+    private String refIdsJson;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScriptId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scriptId;
 
-    @Query
-    @NameInMap("Search")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Search")
     private String search;
 
-    @Query
-    @NameInMap("StatesJson")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StatesJson")
     private String statesJson;
 
-    @Query
-    @NameInMap("UuidsJson")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UuidsJson")
     private String uuidsJson;
 
     private ListScriptRecordingRequest(Builder builder) {
@@ -49,6 +58,7 @@ public class ListScriptRecordingRequest extends Request {
         this.instanceId = builder.instanceId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.refIdsJson = builder.refIdsJson;
         this.scriptId = builder.scriptId;
         this.search = builder.search;
         this.statesJson = builder.statesJson;
@@ -63,7 +73,7 @@ public class ListScriptRecordingRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -87,6 +97,13 @@ public class ListScriptRecordingRequest extends Request {
      */
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    /**
+     * @return refIdsJson
+     */
+    public String getRefIdsJson() {
+        return this.refIdsJson;
     }
 
     /**
@@ -121,6 +138,7 @@ public class ListScriptRecordingRequest extends Request {
         private String instanceId; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String refIdsJson; 
         private String scriptId; 
         private String search; 
         private String statesJson; 
@@ -135,6 +153,7 @@ public class ListScriptRecordingRequest extends Request {
             this.instanceId = request.instanceId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.refIdsJson = request.refIdsJson;
             this.scriptId = request.scriptId;
             this.search = request.search;
             this.statesJson = request.statesJson;
@@ -142,7 +161,10 @@ public class ListScriptRecordingRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c209abb3-6804-4a75-b2c7-dd55c8c61b6a</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -151,7 +173,10 @@ public class ListScriptRecordingRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -160,7 +185,10 @@ public class ListScriptRecordingRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -169,7 +197,19 @@ public class ListScriptRecordingRequest extends Request {
         }
 
         /**
-         * ScriptId.
+         * RefIdsJson.
+         */
+        public Builder refIdsJson(String refIdsJson) {
+            this.putQueryParameter("RefIdsJson", refIdsJson);
+            this.refIdsJson = refIdsJson;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d004cfd2-6a81-491c-83c6-cbe186620c95</p>
          */
         public Builder scriptId(String scriptId) {
             this.putQueryParameter("ScriptId", scriptId);

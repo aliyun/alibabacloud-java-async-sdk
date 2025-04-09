@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitRecordingRequest} extends {@link RequestModel}
  *
  * <p>SubmitRecordingRequest</p>
  */
 public class SubmitRecordingRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("MergedRecording")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MergedRecording")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String mergedRecording;
 
-    @Query
-    @NameInMap("ResourceRecording")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceRecording")
     private String resourceRecording;
 
-    @Query
-    @NameInMap("TaskId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String taskId;
 
     private SubmitRecordingRequest(Builder builder) {
@@ -47,7 +52,7 @@ public class SubmitRecordingRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -99,7 +104,10 @@ public class SubmitRecordingRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>af81a389-91f0-4157-8d82-720edd02b66a</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -108,7 +116,10 @@ public class SubmitRecordingRequest extends Request {
         }
 
         /**
-         * MergedRecording.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;contactId&quot;:&quot;3d35c0487cc041abb7ad0ce61752601f&quot;,&quot;duration&quot;:27,&quot;fileName&quot;:&quot;ce2659e5-a20b-4f8e-91b5-5cd909c6b96e_3d35c0487cc041abb7ad0ce61752601f.wav&quot;,&quot;filePath&quot;:&quot;oss://ForCompatibility/waveforms/&quot;,&quot;startTime&quot;:1579057583670,&quot;type&quot;:&quot;Merged&quot;}</p>
          */
         public Builder mergedRecording(String mergedRecording) {
             this.putQueryParameter("MergedRecording", mergedRecording);
@@ -126,7 +137,10 @@ public class SubmitRecordingRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e4e2a770-b97b-465a-80d8-06dca008c503</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

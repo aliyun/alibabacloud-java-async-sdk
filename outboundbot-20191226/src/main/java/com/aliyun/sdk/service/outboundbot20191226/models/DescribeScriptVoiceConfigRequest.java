@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeScriptVoiceConfigRequest} extends {@link RequestModel}
  *
  * <p>DescribeScriptVoiceConfigRequest</p>
  */
 public class DescribeScriptVoiceConfigRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("ScriptId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScriptId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scriptId;
 
-    @Query
-    @NameInMap("ScriptVoiceConfigId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScriptVoiceConfigId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scriptVoiceConfigId;
 
     private DescribeScriptVoiceConfigRequest(Builder builder) {
@@ -42,7 +47,7 @@ public class DescribeScriptVoiceConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -85,7 +90,10 @@ public class DescribeScriptVoiceConfigRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8fa1953f-4a84-46d8-b80c-8ce9cf684fb3</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -94,7 +102,10 @@ public class DescribeScriptVoiceConfigRequest extends Request {
         }
 
         /**
-         * ScriptId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>28c4bcaf-5ab1-495e-8966-3206bf9ee733</p>
          */
         public Builder scriptId(String scriptId) {
             this.putQueryParameter("ScriptId", scriptId);
@@ -103,7 +114,10 @@ public class DescribeScriptVoiceConfigRequest extends Request {
         }
 
         /**
-         * ScriptVoiceConfigId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2a07b634-e15d-445f-bbcb-fc4ea2df7b87</p>
          */
         public Builder scriptVoiceConfigId(String scriptVoiceConfigId) {
             this.putQueryParameter("ScriptVoiceConfigId", scriptVoiceConfigId);

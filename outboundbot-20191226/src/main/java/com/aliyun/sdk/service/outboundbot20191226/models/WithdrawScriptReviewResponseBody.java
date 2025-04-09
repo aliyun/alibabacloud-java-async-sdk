@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link WithdrawScriptReviewResponseBody} extends {@link TeaModel}
  *
  * <p>WithdrawScriptReviewResponseBody</p>
  */
 public class WithdrawScriptReviewResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Script")
+    @com.aliyun.core.annotation.NameInMap("Script")
     private Script script;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private WithdrawScriptReviewResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class WithdrawScriptReviewResponseBody extends TeaModel {
 
     public static WithdrawScriptReviewResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class WithdrawScriptReviewResponseBody extends TeaModel {
         private String requestId; 
         private Script script; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(WithdrawScriptReviewResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.script = model.script;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -151,35 +172,41 @@ public class WithdrawScriptReviewResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link WithdrawScriptReviewResponseBody} extends {@link TeaModel}
+     *
+     * <p>WithdrawScriptReviewResponseBody</p>
+     */
     public static class Script extends TeaModel {
-        @NameInMap("DebugStatus")
+        @com.aliyun.core.annotation.NameInMap("DebugStatus")
         private String debugStatus;
 
-        @NameInMap("Industry")
+        @com.aliyun.core.annotation.NameInMap("Industry")
         private String industry;
 
-        @NameInMap("IsDebugDrafted")
+        @com.aliyun.core.annotation.NameInMap("IsDebugDrafted")
         private Boolean isDebugDrafted;
 
-        @NameInMap("IsDrafted")
+        @com.aliyun.core.annotation.NameInMap("IsDrafted")
         private Boolean isDrafted;
 
-        @NameInMap("Scene")
+        @com.aliyun.core.annotation.NameInMap("Scene")
         private String scene;
 
-        @NameInMap("ScriptDescription")
+        @com.aliyun.core.annotation.NameInMap("ScriptDescription")
         private String scriptDescription;
 
-        @NameInMap("ScriptId")
+        @com.aliyun.core.annotation.NameInMap("ScriptId")
         private String scriptId;
 
-        @NameInMap("ScriptName")
+        @com.aliyun.core.annotation.NameInMap("ScriptName")
         private String scriptName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
         private Script(Builder builder) {
@@ -284,6 +311,22 @@ public class WithdrawScriptReviewResponseBody extends TeaModel {
             private String scriptName; 
             private String status; 
             private Long updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Script model) {
+                this.debugStatus = model.debugStatus;
+                this.industry = model.industry;
+                this.isDebugDrafted = model.isDebugDrafted;
+                this.isDrafted = model.isDrafted;
+                this.scene = model.scene;
+                this.scriptDescription = model.scriptDescription;
+                this.scriptId = model.scriptId;
+                this.scriptName = model.scriptName;
+                this.status = model.status;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * DebugStatus.

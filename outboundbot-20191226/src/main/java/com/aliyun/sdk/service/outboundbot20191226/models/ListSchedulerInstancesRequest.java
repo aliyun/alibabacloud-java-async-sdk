@@ -1,19 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSchedulerInstancesRequest} extends {@link RequestModel}
  *
  * <p>ListSchedulerInstancesRequest</p>
  */
 public class ListSchedulerInstancesRequest extends Request {
-    @Query
-    @NameInMap("InstanceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceOwnerId")
     private Long instanceOwnerId;
 
     private ListSchedulerInstancesRequest(Builder builder) {
@@ -29,7 +34,7 @@ public class ListSchedulerInstancesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }

@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeJobDataParsingTaskProgressRequest} extends {@link RequestModel}
  *
  * <p>DescribeJobDataParsingTaskProgressRequest</p>
  */
 public class DescribeJobDataParsingTaskProgressRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("JobDataParsingTaskId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobDataParsingTaskId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String jobDataParsingTaskId;
 
     private DescribeJobDataParsingTaskProgressRequest(Builder builder) {
@@ -36,7 +41,7 @@ public class DescribeJobDataParsingTaskProgressRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -70,7 +75,10 @@ public class DescribeJobDataParsingTaskProgressRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c209abb3-6804-4a75-b2c7-dd55c8c61b6a</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -79,7 +87,10 @@ public class DescribeJobDataParsingTaskProgressRequest extends Request {
         }
 
         /**
-         * JobDataParsingTaskId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50d5e164-9365-4261-980e-3d979c2c948c</p>
          */
         public Builder jobDataParsingTaskId(String jobDataParsingTaskId) {
             this.putQueryParameter("JobDataParsingTaskId", jobDataParsingTaskId);

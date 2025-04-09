@@ -1,37 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyTagGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyTagGroupsResponseBody</p>
  */
 public class ModifyTagGroupsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TagGroups")
-    private java.util.List < TagGroups> tagGroups;
+    @com.aliyun.core.annotation.NameInMap("TagGroups")
+    private java.util.List<TagGroups> tagGroups;
 
-    @NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List<Tags> tags;
 
     private ModifyTagGroupsResponseBody(Builder builder) {
         this.code = builder.code;
@@ -49,6 +54,10 @@ public class ModifyTagGroupsResponseBody extends TeaModel {
 
     public static ModifyTagGroupsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -89,14 +98,14 @@ public class ModifyTagGroupsResponseBody extends TeaModel {
     /**
      * @return tagGroups
      */
-    public java.util.List < TagGroups> getTagGroups() {
+    public java.util.List<TagGroups> getTagGroups() {
         return this.tagGroups;
     }
 
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
@@ -106,8 +115,21 @@ public class ModifyTagGroupsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
-        private java.util.List < TagGroups> tagGroups; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<TagGroups> tagGroups; 
+        private java.util.List<Tags> tags; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyTagGroupsResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.tagGroups = model.tagGroups;
+            this.tags = model.tags;
+        } 
 
         /**
          * Code.
@@ -152,7 +174,7 @@ public class ModifyTagGroupsResponseBody extends TeaModel {
         /**
          * TagGroups.
          */
-        public Builder tagGroups(java.util.List < TagGroups> tagGroups) {
+        public Builder tagGroups(java.util.List<TagGroups> tagGroups) {
             this.tagGroups = tagGroups;
             return this;
         }
@@ -160,7 +182,7 @@ public class ModifyTagGroupsResponseBody extends TeaModel {
         /**
          * Tags.
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.tags = tags;
             return this;
         }
@@ -171,17 +193,23 @@ public class ModifyTagGroupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyTagGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModifyTagGroupsResponseBody</p>
+     */
     public static class TagGroups extends TeaModel {
-        @NameInMap("ScriptId")
+        @com.aliyun.core.annotation.NameInMap("ScriptId")
         private String scriptId;
 
-        @NameInMap("TagGroup")
+        @com.aliyun.core.annotation.NameInMap("TagGroup")
         private String tagGroup;
 
-        @NameInMap("TagGroupId")
+        @com.aliyun.core.annotation.NameInMap("TagGroupId")
         private String tagGroupId;
 
-        @NameInMap("TagGroupIndex")
+        @com.aliyun.core.annotation.NameInMap("TagGroupIndex")
         private Integer tagGroupIndex;
 
         private TagGroups(Builder builder) {
@@ -233,6 +261,16 @@ public class ModifyTagGroupsResponseBody extends TeaModel {
             private String tagGroupId; 
             private Integer tagGroupIndex; 
 
+            private Builder() {
+            } 
+
+            private Builder(TagGroups model) {
+                this.scriptId = model.scriptId;
+                this.tagGroup = model.tagGroup;
+                this.tagGroupId = model.tagGroupId;
+                this.tagGroupIndex = model.tagGroupIndex;
+            } 
+
             /**
              * ScriptId.
              */
@@ -272,20 +310,26 @@ public class ModifyTagGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyTagGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModifyTagGroupsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("ScriptId")
+        @com.aliyun.core.annotation.NameInMap("ScriptId")
         private String scriptId;
 
-        @NameInMap("TagGroup")
+        @com.aliyun.core.annotation.NameInMap("TagGroup")
         private String tagGroup;
 
-        @NameInMap("TagId")
+        @com.aliyun.core.annotation.NameInMap("TagId")
         private String tagId;
 
-        @NameInMap("TagIndex")
+        @com.aliyun.core.annotation.NameInMap("TagIndex")
         private Integer tagIndex;
 
-        @NameInMap("TagName")
+        @com.aliyun.core.annotation.NameInMap("TagName")
         private String tagName;
 
         private Tags(Builder builder) {
@@ -345,6 +389,17 @@ public class ModifyTagGroupsResponseBody extends TeaModel {
             private String tagId; 
             private Integer tagIndex; 
             private String tagName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.scriptId = model.scriptId;
+                this.tagGroup = model.tagGroup;
+                this.tagId = model.tagId;
+                this.tagIndex = model.tagIndex;
+                this.tagName = model.tagName;
+            } 
 
             /**
              * ScriptId.

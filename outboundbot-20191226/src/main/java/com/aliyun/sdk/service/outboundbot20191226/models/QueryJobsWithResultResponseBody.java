@@ -1,37 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryJobsWithResultResponseBody} extends {@link TeaModel}
  *
  * <p>QueryJobsWithResultResponseBody</p>
  */
 public class QueryJobsWithResultResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Jobs")
+    @com.aliyun.core.annotation.NameInMap("Jobs")
     private Jobs jobs;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("VariableNames")
-    private java.util.List < String > variableNames;
+    @com.aliyun.core.annotation.NameInMap("VariableNames")
+    private java.util.List<String> variableNames;
 
     private QueryJobsWithResultResponseBody(Builder builder) {
         this.code = builder.code;
@@ -49,6 +54,10 @@ public class QueryJobsWithResultResponseBody extends TeaModel {
 
     public static QueryJobsWithResultResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,7 +105,7 @@ public class QueryJobsWithResultResponseBody extends TeaModel {
     /**
      * @return variableNames
      */
-    public java.util.List < String > getVariableNames() {
+    public java.util.List<String> getVariableNames() {
         return this.variableNames;
     }
 
@@ -107,10 +116,26 @@ public class QueryJobsWithResultResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
-        private java.util.List < String > variableNames; 
+        private java.util.List<String> variableNames; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryJobsWithResultResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.jobs = model.jobs;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.variableNames = model.variableNames;
+        } 
 
         /**
-         * Code.
+         * <p>Code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -160,7 +185,7 @@ public class QueryJobsWithResultResponseBody extends TeaModel {
         /**
          * VariableNames.
          */
-        public Builder variableNames(java.util.List < String > variableNames) {
+        public Builder variableNames(java.util.List<String> variableNames) {
             this.variableNames = variableNames;
             return this;
         }
@@ -171,35 +196,41 @@ public class QueryJobsWithResultResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryJobsWithResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryJobsWithResultResponseBody</p>
+     */
     public static class Contact extends TeaModel {
-        @NameInMap("Honorific")
+        @com.aliyun.core.annotation.NameInMap("Honorific")
         private String honorific;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("JobUuid")
+        @com.aliyun.core.annotation.NameInMap("JobUuid")
         private String jobUuid;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PhoneNumber")
+        @com.aliyun.core.annotation.NameInMap("PhoneNumber")
         private String phoneNumber;
 
-        @NameInMap("PreferredPhoneNumber")
+        @com.aliyun.core.annotation.NameInMap("PreferredPhoneNumber")
         private String preferredPhoneNumber;
 
-        @NameInMap("ReferenceId")
+        @com.aliyun.core.annotation.NameInMap("ReferenceId")
         private String referenceId;
 
-        @NameInMap("Role")
+        @com.aliyun.core.annotation.NameInMap("Role")
         private String role;
 
-        @NameInMap("Round")
+        @com.aliyun.core.annotation.NameInMap("Round")
         private Integer round;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
         private Contact(Builder builder) {
@@ -305,6 +336,22 @@ public class QueryJobsWithResultResponseBody extends TeaModel {
             private Integer round; 
             private String state; 
 
+            private Builder() {
+            } 
+
+            private Builder(Contact model) {
+                this.honorific = model.honorific;
+                this.id = model.id;
+                this.jobUuid = model.jobUuid;
+                this.name = model.name;
+                this.phoneNumber = model.phoneNumber;
+                this.preferredPhoneNumber = model.preferredPhoneNumber;
+                this.referenceId = model.referenceId;
+                this.role = model.role;
+                this.round = model.round;
+                this.state = model.state;
+            } 
+
             /**
              * Honorific.
              */
@@ -392,11 +439,17 @@ public class QueryJobsWithResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryJobsWithResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryJobsWithResultResponseBody</p>
+     */
     public static class DialExceptionCodes extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Hint")
+        @com.aliyun.core.annotation.NameInMap("Hint")
         private String hint;
 
         private DialExceptionCodes(Builder builder) {
@@ -430,8 +483,19 @@ public class QueryJobsWithResultResponseBody extends TeaModel {
             private String code; 
             private String hint; 
 
+            private Builder() {
+            } 
+
+            private Builder(DialExceptionCodes model) {
+                this.code = model.code;
+                this.hint = model.hint;
+            } 
+
             /**
-             * Code.
+             * <p>Code</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OK</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -453,11 +517,17 @@ public class QueryJobsWithResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryJobsWithResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryJobsWithResultResponseBody</p>
+     */
     public static class Extras extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Extras(Builder builder) {
@@ -491,8 +561,16 @@ public class QueryJobsWithResultResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Extras model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * Key.
+             * <p>Key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -500,7 +578,7 @@ public class QueryJobsWithResultResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>Value</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -514,11 +592,17 @@ public class QueryJobsWithResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryJobsWithResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryJobsWithResultResponseBody</p>
+     */
     public static class TagHits extends TeaModel {
-        @NameInMap("TagGroup")
+        @com.aliyun.core.annotation.NameInMap("TagGroup")
         private String tagGroup;
 
-        @NameInMap("TagName")
+        @com.aliyun.core.annotation.NameInMap("TagName")
         private String tagName;
 
         private TagHits(Builder builder) {
@@ -552,6 +636,14 @@ public class QueryJobsWithResultResponseBody extends TeaModel {
             private String tagGroup; 
             private String tagName; 
 
+            private Builder() {
+            } 
+
+            private Builder(TagHits model) {
+                this.tagGroup = model.tagGroup;
+                this.tagName = model.tagName;
+            } 
+
             /**
              * TagGroup.
              */
@@ -575,47 +667,53 @@ public class QueryJobsWithResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryJobsWithResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryJobsWithResultResponseBody</p>
+     */
     public static class LatestTask extends TeaModel {
-        @NameInMap("CallDuration")
+        @com.aliyun.core.annotation.NameInMap("CallDuration")
         private Integer callDuration;
 
-        @NameInMap("CallDurationDisplay")
+        @com.aliyun.core.annotation.NameInMap("CallDurationDisplay")
         private String callDurationDisplay;
 
-        @NameInMap("CallTime")
+        @com.aliyun.core.annotation.NameInMap("CallTime")
         private Long callTime;
 
-        @NameInMap("Contact")
+        @com.aliyun.core.annotation.NameInMap("Contact")
         private Contact contact;
 
-        @NameInMap("DialExceptionCodes")
-        private java.util.List < DialExceptionCodes> dialExceptionCodes;
+        @com.aliyun.core.annotation.NameInMap("DialExceptionCodes")
+        private java.util.List<DialExceptionCodes> dialExceptionCodes;
 
-        @NameInMap("Extras")
-        private java.util.List < Extras> extras;
+        @com.aliyun.core.annotation.NameInMap("Extras")
+        private java.util.List<Extras> extras;
 
-        @NameInMap("HasAnswered")
+        @com.aliyun.core.annotation.NameInMap("HasAnswered")
         private Boolean hasAnswered;
 
-        @NameInMap("HasHangUpByRejection")
+        @com.aliyun.core.annotation.NameInMap("HasHangUpByRejection")
         private Boolean hasHangUpByRejection;
 
-        @NameInMap("HasLastPlaybackCompleted")
+        @com.aliyun.core.annotation.NameInMap("HasLastPlaybackCompleted")
         private Boolean hasLastPlaybackCompleted;
 
-        @NameInMap("HasReachedEndOfFlow")
+        @com.aliyun.core.annotation.NameInMap("HasReachedEndOfFlow")
         private Boolean hasReachedEndOfFlow;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StatusName")
+        @com.aliyun.core.annotation.NameInMap("StatusName")
         private String statusName;
 
-        @NameInMap("TagHits")
-        private java.util.List < TagHits> tagHits;
+        @com.aliyun.core.annotation.NameInMap("TagHits")
+        private java.util.List<TagHits> tagHits;
 
-        @NameInMap("TaskEndReason")
+        @com.aliyun.core.annotation.NameInMap("TaskEndReason")
         private String taskEndReason;
 
         private LatestTask(Builder builder) {
@@ -674,14 +772,14 @@ public class QueryJobsWithResultResponseBody extends TeaModel {
         /**
          * @return dialExceptionCodes
          */
-        public java.util.List < DialExceptionCodes> getDialExceptionCodes() {
+        public java.util.List<DialExceptionCodes> getDialExceptionCodes() {
             return this.dialExceptionCodes;
         }
 
         /**
          * @return extras
          */
-        public java.util.List < Extras> getExtras() {
+        public java.util.List<Extras> getExtras() {
             return this.extras;
         }
 
@@ -730,7 +828,7 @@ public class QueryJobsWithResultResponseBody extends TeaModel {
         /**
          * @return tagHits
          */
-        public java.util.List < TagHits> getTagHits() {
+        public java.util.List<TagHits> getTagHits() {
             return this.tagHits;
         }
 
@@ -746,16 +844,36 @@ public class QueryJobsWithResultResponseBody extends TeaModel {
             private String callDurationDisplay; 
             private Long callTime; 
             private Contact contact; 
-            private java.util.List < DialExceptionCodes> dialExceptionCodes; 
-            private java.util.List < Extras> extras; 
+            private java.util.List<DialExceptionCodes> dialExceptionCodes; 
+            private java.util.List<Extras> extras; 
             private Boolean hasAnswered; 
             private Boolean hasHangUpByRejection; 
             private Boolean hasLastPlaybackCompleted; 
             private Boolean hasReachedEndOfFlow; 
             private String status; 
             private String statusName; 
-            private java.util.List < TagHits> tagHits; 
+            private java.util.List<TagHits> tagHits; 
             private String taskEndReason; 
+
+            private Builder() {
+            } 
+
+            private Builder(LatestTask model) {
+                this.callDuration = model.callDuration;
+                this.callDurationDisplay = model.callDurationDisplay;
+                this.callTime = model.callTime;
+                this.contact = model.contact;
+                this.dialExceptionCodes = model.dialExceptionCodes;
+                this.extras = model.extras;
+                this.hasAnswered = model.hasAnswered;
+                this.hasHangUpByRejection = model.hasHangUpByRejection;
+                this.hasLastPlaybackCompleted = model.hasLastPlaybackCompleted;
+                this.hasReachedEndOfFlow = model.hasReachedEndOfFlow;
+                this.status = model.status;
+                this.statusName = model.statusName;
+                this.tagHits = model.tagHits;
+                this.taskEndReason = model.taskEndReason;
+            } 
 
             /**
              * CallDuration.
@@ -792,7 +910,7 @@ public class QueryJobsWithResultResponseBody extends TeaModel {
             /**
              * DialExceptionCodes.
              */
-            public Builder dialExceptionCodes(java.util.List < DialExceptionCodes> dialExceptionCodes) {
+            public Builder dialExceptionCodes(java.util.List<DialExceptionCodes> dialExceptionCodes) {
                 this.dialExceptionCodes = dialExceptionCodes;
                 return this;
             }
@@ -800,7 +918,7 @@ public class QueryJobsWithResultResponseBody extends TeaModel {
             /**
              * Extras.
              */
-            public Builder extras(java.util.List < Extras> extras) {
+            public Builder extras(java.util.List<Extras> extras) {
                 this.extras = extras;
                 return this;
             }
@@ -856,7 +974,7 @@ public class QueryJobsWithResultResponseBody extends TeaModel {
             /**
              * TagHits.
              */
-            public Builder tagHits(java.util.List < TagHits> tagHits) {
+            public Builder tagHits(java.util.List<TagHits> tagHits) {
                 this.tagHits = tagHits;
                 return this;
             }
@@ -876,20 +994,26 @@ public class QueryJobsWithResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryJobsWithResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryJobsWithResultResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("JobFailureReason")
+        @com.aliyun.core.annotation.NameInMap("JobFailureReason")
         private String jobFailureReason;
 
-        @NameInMap("LatestTask")
+        @com.aliyun.core.annotation.NameInMap("LatestTask")
         private LatestTask latestTask;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StatusName")
+        @com.aliyun.core.annotation.NameInMap("StatusName")
         private String statusName;
 
         private List(Builder builder) {
@@ -950,6 +1074,17 @@ public class QueryJobsWithResultResponseBody extends TeaModel {
             private String status; 
             private String statusName; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.id = model.id;
+                this.jobFailureReason = model.jobFailureReason;
+                this.latestTask = model.latestTask;
+                this.status = model.status;
+                this.statusName = model.statusName;
+            } 
+
             /**
              * Id.
              */
@@ -997,20 +1132,26 @@ public class QueryJobsWithResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryJobsWithResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryJobsWithResultResponseBody</p>
+     */
     public static class Jobs extends TeaModel {
-        @NameInMap("List")
-        private java.util.List < List> list;
+        @com.aliyun.core.annotation.NameInMap("List")
+        private java.util.List<List> list;
 
-        @NameInMap("PageCount")
+        @com.aliyun.core.annotation.NameInMap("PageCount")
         private Integer pageCount;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("RowCount")
+        @com.aliyun.core.annotation.NameInMap("RowCount")
         private Integer rowCount;
 
         private Jobs(Builder builder) {
@@ -1032,7 +1173,7 @@ public class QueryJobsWithResultResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -1065,16 +1206,27 @@ public class QueryJobsWithResultResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private Integer pageCount; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer rowCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(Jobs model) {
+                this.list = model.list;
+                this.pageCount = model.pageCount;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.rowCount = model.rowCount;
+            } 
+
             /**
              * List.
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }

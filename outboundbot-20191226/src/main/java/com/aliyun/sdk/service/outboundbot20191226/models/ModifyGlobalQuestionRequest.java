@@ -1,50 +1,55 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyGlobalQuestionRequest} extends {@link RequestModel}
  *
  * <p>ModifyGlobalQuestionRequest</p>
  */
 public class ModifyGlobalQuestionRequest extends Request {
-    @Query
-    @NameInMap("Answers")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Answers")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String answers;
 
-    @Query
-    @NameInMap("GlobalQuestionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GlobalQuestionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String globalQuestionId;
 
-    @Query
-    @NameInMap("GlobalQuestionName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GlobalQuestionName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String globalQuestionName;
 
-    @Query
-    @NameInMap("GlobalQuestionType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GlobalQuestionType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String globalQuestionType;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("Questions")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Questions")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String questions;
 
-    @Query
-    @NameInMap("ScriptId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScriptId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scriptId;
 
     private ModifyGlobalQuestionRequest(Builder builder) {
@@ -66,7 +71,7 @@ public class ModifyGlobalQuestionRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -145,7 +150,7 @@ public class ModifyGlobalQuestionRequest extends Request {
         } 
 
         /**
-         * Answers.
+         * <p>This parameter is required.</p>
          */
         public Builder answers(String answers) {
             this.putQueryParameter("Answers", answers);
@@ -154,7 +159,10 @@ public class ModifyGlobalQuestionRequest extends Request {
         }
 
         /**
-         * GlobalQuestionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ad80de88-1661-445a-92ec-bf88dc45d581</p>
          */
         public Builder globalQuestionId(String globalQuestionId) {
             this.putQueryParameter("GlobalQuestionId", globalQuestionId);
@@ -163,7 +171,7 @@ public class ModifyGlobalQuestionRequest extends Request {
         }
 
         /**
-         * GlobalQuestionName.
+         * <p>This parameter is required.</p>
          */
         public Builder globalQuestionName(String globalQuestionName) {
             this.putQueryParameter("GlobalQuestionName", globalQuestionName);
@@ -172,7 +180,10 @@ public class ModifyGlobalQuestionRequest extends Request {
         }
 
         /**
-         * GlobalQuestionType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>COMMON</p>
          */
         public Builder globalQuestionType(String globalQuestionType) {
             this.putQueryParameter("GlobalQuestionType", globalQuestionType);
@@ -181,7 +192,10 @@ public class ModifyGlobalQuestionRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8fa1953f-4a84-46d8-b80c-8ce9cf684fb3</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -190,7 +204,7 @@ public class ModifyGlobalQuestionRequest extends Request {
         }
 
         /**
-         * Questions.
+         * <p>This parameter is required.</p>
          */
         public Builder questions(String questions) {
             this.putQueryParameter("Questions", questions);
@@ -199,7 +213,10 @@ public class ModifyGlobalQuestionRequest extends Request {
         }
 
         /**
-         * ScriptId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19ac2375-53e3-477f-abe9-6cd334227981</p>
          */
         public Builder scriptId(String scriptId) {
             this.putQueryParameter("ScriptId", scriptId);

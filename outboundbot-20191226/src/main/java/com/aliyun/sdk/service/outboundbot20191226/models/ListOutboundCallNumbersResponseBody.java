@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListOutboundCallNumbersResponseBody} extends {@link TeaModel}
  *
  * <p>ListOutboundCallNumbersResponseBody</p>
  */
 public class ListOutboundCallNumbersResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("OutboundCallNumbers")
+    @com.aliyun.core.annotation.NameInMap("OutboundCallNumbers")
     private OutboundCallNumbers outboundCallNumbers;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListOutboundCallNumbersResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class ListOutboundCallNumbersResponseBody extends TeaModel {
 
     public static ListOutboundCallNumbersResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class ListOutboundCallNumbersResponseBody extends TeaModel {
         private OutboundCallNumbers outboundCallNumbers; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListOutboundCallNumbersResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.outboundCallNumbers = model.outboundCallNumbers;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -151,17 +172,23 @@ public class ListOutboundCallNumbersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListOutboundCallNumbersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListOutboundCallNumbersResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("Number")
+        @com.aliyun.core.annotation.NameInMap("Number")
         private String number;
 
-        @NameInMap("OutboundCallNumberId")
+        @com.aliyun.core.annotation.NameInMap("OutboundCallNumberId")
         private String outboundCallNumberId;
 
-        @NameInMap("RateLimitCount")
+        @com.aliyun.core.annotation.NameInMap("RateLimitCount")
         private String rateLimitCount;
 
-        @NameInMap("RateLimitPeriod")
+        @com.aliyun.core.annotation.NameInMap("RateLimitPeriod")
         private String rateLimitPeriod;
 
         private List(Builder builder) {
@@ -213,6 +240,16 @@ public class ListOutboundCallNumbersResponseBody extends TeaModel {
             private String rateLimitCount; 
             private String rateLimitPeriod; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.number = model.number;
+                this.outboundCallNumberId = model.outboundCallNumberId;
+                this.rateLimitCount = model.rateLimitCount;
+                this.rateLimitPeriod = model.rateLimitPeriod;
+            } 
+
             /**
              * Number.
              */
@@ -252,17 +289,23 @@ public class ListOutboundCallNumbersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListOutboundCallNumbersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListOutboundCallNumbersResponseBody</p>
+     */
     public static class OutboundCallNumbers extends TeaModel {
-        @NameInMap("List")
-        private java.util.List < List> list;
+        @com.aliyun.core.annotation.NameInMap("List")
+        private java.util.List<List> list;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private OutboundCallNumbers(Builder builder) {
@@ -283,7 +326,7 @@ public class ListOutboundCallNumbersResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -309,15 +352,25 @@ public class ListOutboundCallNumbersResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(OutboundCallNumbers model) {
+                this.list = model.list;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
+
             /**
              * List.
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }

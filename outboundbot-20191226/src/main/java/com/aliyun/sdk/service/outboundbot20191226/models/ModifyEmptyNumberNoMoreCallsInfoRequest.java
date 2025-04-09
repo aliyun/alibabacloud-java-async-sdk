@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyEmptyNumberNoMoreCallsInfoRequest} extends {@link RequestModel}
  *
  * <p>ModifyEmptyNumberNoMoreCallsInfoRequest</p>
  */
 public class ModifyEmptyNumberNoMoreCallsInfoRequest extends Request {
-    @Query
-    @NameInMap("EmptyNumberNoMoreCalls")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EmptyNumberNoMoreCalls")
     private Boolean emptyNumberNoMoreCalls;
 
-    @Query
-    @NameInMap("EntryId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EntryId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String entryId;
 
-    @Query
-    @NameInMap("StrategyLevel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StrategyLevel")
     private Integer strategyLevel;
 
     private ModifyEmptyNumberNoMoreCallsInfoRequest(Builder builder) {
@@ -40,7 +45,7 @@ public class ModifyEmptyNumberNoMoreCallsInfoRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -92,7 +97,10 @@ public class ModifyEmptyNumberNoMoreCallsInfoRequest extends Request {
         }
 
         /**
-         * EntryId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6cc9f5ca-2cb6-4cc7-a46b-2bbfd3e61b22</p>
          */
         public Builder entryId(String entryId) {
             this.putQueryParameter("EntryId", entryId);

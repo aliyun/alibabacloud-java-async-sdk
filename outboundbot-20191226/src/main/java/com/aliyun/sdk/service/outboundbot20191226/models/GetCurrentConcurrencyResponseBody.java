@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCurrentConcurrencyResponseBody} extends {@link TeaModel}
  *
  * <p>GetCurrentConcurrencyResponseBody</p>
  */
 public class GetCurrentConcurrencyResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("CurrentConcurrency")
+    @com.aliyun.core.annotation.NameInMap("CurrentConcurrency")
     private Integer currentConcurrency;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("MaxConcurrentConversation")
+    @com.aliyun.core.annotation.NameInMap("MaxConcurrentConversation")
     private Integer maxConcurrentConversation;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetCurrentConcurrencyResponseBody(Builder builder) {
@@ -53,6 +58,10 @@ public class GetCurrentConcurrencyResponseBody extends TeaModel {
 
     public static GetCurrentConcurrencyResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -120,6 +129,20 @@ public class GetCurrentConcurrencyResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetCurrentConcurrencyResponseBody model) {
+            this.code = model.code;
+            this.currentConcurrency = model.currentConcurrency;
+            this.httpStatusCode = model.httpStatusCode;
+            this.instanceId = model.instanceId;
+            this.maxConcurrentConversation = model.maxConcurrentConversation;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.

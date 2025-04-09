@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.outboundbot20191226.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveMaxAttemptsPerDayRequest} extends {@link RequestModel}
  *
  * <p>SaveMaxAttemptsPerDayRequest</p>
  */
 public class SaveMaxAttemptsPerDayRequest extends Request {
-    @Query
-    @NameInMap("EntryId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EntryId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String entryId;
 
-    @Query
-    @NameInMap("MaxAttemptsPerDay")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxAttemptsPerDay")
     private Integer maxAttemptsPerDay;
 
-    @Query
-    @NameInMap("StrategyLevel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StrategyLevel")
     private Integer strategyLevel;
 
     private SaveMaxAttemptsPerDayRequest(Builder builder) {
@@ -40,7 +45,7 @@ public class SaveMaxAttemptsPerDayRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -83,7 +88,10 @@ public class SaveMaxAttemptsPerDayRequest extends Request {
         } 
 
         /**
-         * EntryId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c8bf820a-6a8a-47bc-99bf-97593df8faa8</p>
          */
         public Builder entryId(String entryId) {
             this.putQueryParameter("EntryId", entryId);
