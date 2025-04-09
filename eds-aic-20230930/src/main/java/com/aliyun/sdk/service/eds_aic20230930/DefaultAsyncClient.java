@@ -125,6 +125,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ChangeCloudPhoneNode  ChangeCloudPhoneNodeRequest
+     * @return ChangeCloudPhoneNodeResponse
+     */
+    @Override
+    public CompletableFuture<ChangeCloudPhoneNodeResponse> changeCloudPhoneNode(ChangeCloudPhoneNodeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ChangeCloudPhoneNode").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ChangeCloudPhoneNodeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ChangeCloudPhoneNodeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CheckResourceStock  CheckResourceStockRequest
      * @return CheckResourceStockResponse
      */
@@ -733,6 +751,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<EndCoordinationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ExpandDataVolume  ExpandDataVolumeRequest
+     * @return ExpandDataVolumeResponse
+     */
+    @Override
+    public CompletableFuture<ExpandDataVolumeResponse> expandDataVolume(ExpandDataVolumeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ExpandDataVolume").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ExpandDataVolumeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ExpandDataVolumeResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

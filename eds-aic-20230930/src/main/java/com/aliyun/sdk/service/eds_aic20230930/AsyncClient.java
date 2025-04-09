@@ -57,6 +57,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<BatchGetAcpConnectionTicketResponse> batchGetAcpConnectionTicket(BatchGetAcpConnectionTicketRequest request);
 
     /**
+     * @param request the request parameters of ChangeCloudPhoneNode  ChangeCloudPhoneNodeRequest
+     * @return ChangeCloudPhoneNodeResponse
+     */
+    CompletableFuture<ChangeCloudPhoneNodeResponse> changeCloudPhoneNode(ChangeCloudPhoneNodeRequest request);
+
+    /**
      * @param request the request parameters of CheckResourceStock  CheckResourceStockRequest
      * @return CheckResourceStockResponse
      */
@@ -309,6 +315,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return EndCoordinationResponse
      */
     CompletableFuture<EndCoordinationResponse> endCoordination(EndCoordinationRequest request);
+
+    /**
+     * @param request the request parameters of ExpandDataVolume  ExpandDataVolumeRequest
+     * @return ExpandDataVolumeResponse
+     */
+    CompletableFuture<ExpandDataVolumeResponse> expandDataVolume(ExpandDataVolumeRequest request);
 
     /**
      * <b>description</b> :
