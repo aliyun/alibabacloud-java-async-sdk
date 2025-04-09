@@ -329,6 +329,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetDialogDetail  GetDialogDetailRequest
+     * @return GetDialogDetailResponse
+     */
+    @Override
+    public CompletableFuture<GetDialogDetailResponse> getDialogDetail(GetDialogDetailRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetDialogDetail").setMethod(HttpMethod.GET).setPathRegex("/{workspaceId}/api/virtualHuman/dialog/detail").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetDialogDetailResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetDialogDetailResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetDocumentChunkList  GetDocumentChunkListRequest
      * @return GetDocumentChunkListResponse
      */
