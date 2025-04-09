@@ -40,6 +40,10 @@ public class CreateListenerResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return jobId
      */
@@ -65,6 +69,15 @@ public class CreateListenerResponseBody extends TeaModel {
         private String jobId; 
         private String listenerId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateListenerResponseBody model) {
+            this.jobId = model.jobId;
+            this.listenerId = model.listenerId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The asynchronous task ID.</p>

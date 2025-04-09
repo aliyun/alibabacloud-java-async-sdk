@@ -44,6 +44,10 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -77,6 +81,16 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(MoveResourceGroupResponseBody model) {
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -160,6 +174,13 @@ public class MoveResourceGroupResponseBody extends TeaModel {
 
         public static final class Builder {
             private String resourceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.resourceId = model.resourceId;
+            } 
 
             /**
              * <p>The ID of the resource. You can specify up to 50 resource IDs in each call.</p>

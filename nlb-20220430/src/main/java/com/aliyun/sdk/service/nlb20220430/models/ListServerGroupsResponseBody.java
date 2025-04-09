@@ -48,6 +48,10 @@ public class ListServerGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -89,6 +93,17 @@ public class ListServerGroupsResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<ServerGroups> serverGroups; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListServerGroupsResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.serverGroups = model.serverGroups;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>100</strong>.</p>
@@ -177,6 +192,9 @@ public class ListServerGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HealthCheckHttpCode")
         private java.util.List<String> healthCheckHttpCode;
 
+        @com.aliyun.core.annotation.NameInMap("HealthCheckHttpVersion")
+        private String healthCheckHttpVersion;
+
         @com.aliyun.core.annotation.NameInMap("HealthCheckInterval")
         private Integer healthCheckInterval;
 
@@ -205,6 +223,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
             this.healthCheckEnabled = builder.healthCheckEnabled;
             this.healthCheckExp = builder.healthCheckExp;
             this.healthCheckHttpCode = builder.healthCheckHttpCode;
+            this.healthCheckHttpVersion = builder.healthCheckHttpVersion;
             this.healthCheckInterval = builder.healthCheckInterval;
             this.healthCheckReq = builder.healthCheckReq;
             this.healthCheckType = builder.healthCheckType;
@@ -265,6 +284,13 @@ public class ListServerGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return healthCheckHttpVersion
+         */
+        public String getHealthCheckHttpVersion() {
+            return this.healthCheckHttpVersion;
+        }
+
+        /**
          * @return healthCheckInterval
          */
         public Integer getHealthCheckInterval() {
@@ -320,6 +346,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
             private Boolean healthCheckEnabled; 
             private String healthCheckExp; 
             private java.util.List<String> healthCheckHttpCode; 
+            private String healthCheckHttpVersion; 
             private Integer healthCheckInterval; 
             private String healthCheckReq; 
             private String healthCheckType; 
@@ -327,6 +354,26 @@ public class ListServerGroupsResponseBody extends TeaModel {
             private Integer healthyThreshold; 
             private String httpCheckMethod; 
             private Integer unhealthyThreshold; 
+
+            private Builder() {
+            } 
+
+            private Builder(HealthCheck model) {
+                this.healthCheckConnectPort = model.healthCheckConnectPort;
+                this.healthCheckConnectTimeout = model.healthCheckConnectTimeout;
+                this.healthCheckDomain = model.healthCheckDomain;
+                this.healthCheckEnabled = model.healthCheckEnabled;
+                this.healthCheckExp = model.healthCheckExp;
+                this.healthCheckHttpCode = model.healthCheckHttpCode;
+                this.healthCheckHttpVersion = model.healthCheckHttpVersion;
+                this.healthCheckInterval = model.healthCheckInterval;
+                this.healthCheckReq = model.healthCheckReq;
+                this.healthCheckType = model.healthCheckType;
+                this.healthCheckUrl = model.healthCheckUrl;
+                this.healthyThreshold = model.healthyThreshold;
+                this.httpCheckMethod = model.httpCheckMethod;
+                this.unhealthyThreshold = model.unhealthyThreshold;
+            } 
 
             /**
              * <p>The backend port that is used for health checks.</p>
@@ -342,7 +389,8 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum timeout period of a health check. Unit: seconds. Valid values: <strong>1</strong> to <strong>300</strong>.</p>
+             * <p>The maximum timeout period of a health check response. Unit: seconds. Default value: <strong>5</strong>.</p>
+             * <p>Valid values: <strong>1</strong> to <strong>300</strong></p>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -386,7 +434,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The response string of UDP health checks. The string must be 1 to 64 characters in length, and can contain letters and digits.</p>
+             * <p>The response string of UDP health checks. The string must be 1 to 512 characters in length, and can contain letters and digits.</p>
              * 
              * <strong>example:</strong>
              * <p>ok</p>
@@ -408,8 +456,19 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The interval at which health checks are performed. Unit: seconds.</p>
-             * <p>Valid values: <strong>5</strong> to <strong>50</strong>.</p>
+             * HealthCheckHttpVersion.
+             */
+            public Builder healthCheckHttpVersion(String healthCheckHttpVersion) {
+                this.healthCheckHttpVersion = healthCheckHttpVersion;
+                return this;
+            }
+
+            /**
+             * <p>The interval at which health checks are performed. Unit: seconds. Default value: <strong>5</strong>.</p>
+             * <ul>
+             * <li>If you set <strong>HealthCheckType</strong> to <strong>TCP</strong> or <strong>HTTP</strong>, valid values are <strong>1 to 50</strong>.</li>
+             * <li>If you set <strong>HealthCheckType</strong> to <strong>UDP</strong>, valid values are <strong>1 to 300</strong>. Set the health check interval equal to or larger than the response timeout period to ensure that UDP response timeouts are not determined as no responses.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -420,7 +479,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The request string of UDP health checks. The string must be 1 to 64 characters in length, and can contain letters and digits.</p>
+             * <p>The request string of UDP health checks. The string must be 1 to 512 characters in length, and can contain letters and digits.</p>
              * 
              * <strong>example:</strong>
              * <p>hello</p>
@@ -548,6 +607,14 @@ public class ListServerGroupsResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key. At most 10 tag keys are returned.</p>
@@ -827,6 +894,31 @@ public class ListServerGroupsResponseBody extends TeaModel {
             private String serverGroupType; 
             private java.util.List<Tags> tags; 
             private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ServerGroups model) {
+                this.addressIPVersion = model.addressIPVersion;
+                this.aliUid = model.aliUid;
+                this.anyPortEnabled = model.anyPortEnabled;
+                this.connectionDrainEnabled = model.connectionDrainEnabled;
+                this.connectionDrainTimeout = model.connectionDrainTimeout;
+                this.healthCheck = model.healthCheck;
+                this.preserveClientIpEnabled = model.preserveClientIpEnabled;
+                this.protocol = model.protocol;
+                this.regionId = model.regionId;
+                this.relatedLoadBalancerIds = model.relatedLoadBalancerIds;
+                this.resourceGroupId = model.resourceGroupId;
+                this.scheduler = model.scheduler;
+                this.serverCount = model.serverCount;
+                this.serverGroupId = model.serverGroupId;
+                this.serverGroupName = model.serverGroupName;
+                this.serverGroupStatus = model.serverGroupStatus;
+                this.serverGroupType = model.serverGroupType;
+                this.tags = model.tags;
+                this.vpcId = model.vpcId;
+            } 
 
             /**
              * <p>The IP version. Valid values:</p>

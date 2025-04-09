@@ -83,14 +83,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>protocol</strong> specifies the protocol used to forward requests to the backend servers.</p>
+     * <p><em>CreateServerGroup</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/445904.html">GetJobStatus</a> operation to query the creation status of the task.</p>
      * <ul>
-     * <li>NLB instances support only backend server groups that use TCP, UDP, or SSL over TCP.</li>
-     * <li><strong>CreateServerGroup</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/445904.html">GetJobStatus</a> operation to query the creation status of the task.<ul>
      * <li>If the task is in the <strong>Succeeded</strong> status, the server group is created.</li>
      * <li>If the task is in the <strong>Processing</strong> status, the server group is being created.</li>
-     * </ul>
-     * </li>
      * </ul>
      * 
      * @param request the request parameters of CreateServerGroup  CreateServerGroupRequest
@@ -290,6 +286,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RemoveServersFromServerGroupResponse> removeServersFromServerGroup(RemoveServersFromServerGroupRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This operation is used to configure a data warehouse for the fine-grained monitoring feature. If a listener in the current region has fine-grained monitoring enabled, you must disable fine-grained monitoring before you can configure a warehouse.</p>
+     * 
      * @param request the request parameters of SetHdMonitorRegionConfig  SetHdMonitorRegionConfigRequest
      * @return SetHdMonitorRegionConfigResponse
      */
@@ -304,7 +303,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>If a Network Load Balancer (NLB) instance is deployed only in one zone, you cannot remove the NLB instance from the zone.</p>
+     * <p> If the NLB instance is deployed in only one zone, you cannot remove the EIP or VIP from the DNS record.</p>
      * </blockquote>
      * 
      * @param request the request parameters of StartShiftLoadBalancerZones  StartShiftLoadBalancerZonesRequest

@@ -71,7 +71,7 @@ public class CreateSecurityPolicyRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -159,8 +159,8 @@ public class CreateSecurityPolicyRequest extends Request {
         } 
 
         /**
-         * <p>The supported cipher suites, which are determined by the TLS protocol version. You can specify at most 32 cipher suites.</p>
-         * <p>TLS 1.0 and TLS 1.1 support the following cipher suites:</p>
+         * <p>The cipher suites supported by the security policy. Valid values of this parameter vary based on TlsVersions. A security policy supports up to 32 cipher suites.</p>
+         * <p>TLSv1.0 and TLSv1.1 support the following cipher suites:</p>
          * <ul>
          * <li><strong>ECDHE-ECDSA-AES128-SHA</strong></li>
          * <li><strong>ECDHE-ECDSA-AES256-SHA</strong></li>
@@ -170,7 +170,7 @@ public class CreateSecurityPolicyRequest extends Request {
          * <li><strong>AES256-SHA</strong></li>
          * <li><strong>DES-CBC3-SHA</strong></li>
          * </ul>
-         * <p>TLS 1.2 supports the following cipher suites:</p>
+         * <p>TLSv1.2 supports the following cipher suites:</p>
          * <ul>
          * <li><strong>ECDHE-ECDSA-AES128-SHA</strong></li>
          * <li><strong>ECDHE-ECDSA-AES256-SHA</strong></li>
@@ -192,7 +192,7 @@ public class CreateSecurityPolicyRequest extends Request {
          * <li><strong>AES128-SHA256</strong></li>
          * <li><strong>AES256-SHA256</strong></li>
          * </ul>
-         * <p>TLS 1.3 supports the following cipher suites:</p>
+         * <p>TLSv1.3 supports the following cipher suites:</p>
          * <ul>
          * <li><strong>TLS_AES_128_GCM_SHA256</strong></li>
          * <li><strong>TLS_AES_256_GCM_SHA384</strong></li>
@@ -209,10 +209,10 @@ public class CreateSecurityPolicyRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the value, but you must ensure that it is unique among all requests. ClientToken can contain only ASCII characters.</p>
+         * <p>The client token used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token. Ensure that the token is unique among different requests. Only ASCII characters are allowed.</p>
          * <blockquote>
-         * <p> If you do not set this parameter, <strong>ClientToken</strong> is set to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> for each API request may be different.</p>
+         * <p> If you do not set this parameter, the value of <strong>RequestId</strong> is used.**** The value of <strong>RequestId</strong> is different for each request.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -225,10 +225,10 @@ public class CreateSecurityPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether only to precheck the request. Valid values:</p>
+         * <p>Specifies whether to perform a dry run. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: checks the request but does not create the security policy. The system prechecks the required parameters, request syntax, and limits. If the request fails the precheck, an error message is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
-         * <li><strong>false</strong> (default): sends the request. If the request passes the precheck, an HTTP 2xx status code is returned and the operation is performed.</li>
+         * <li><strong>true</strong>: validates the request without performing the operation. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the validation, the corresponding error message is returned. If the request passes the validation, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): validates the request and performs the operation. If the request passes the validation, a 2xx HTTP status code is returned and the operation is performed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -254,7 +254,7 @@ public class CreateSecurityPolicyRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The ID of the resource group to which the security policy belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-atstuj3rtop****</p>
@@ -267,7 +267,7 @@ public class CreateSecurityPolicyRequest extends Request {
 
         /**
          * <p>The name of the security policy.</p>
-         * <p>The name must be 1 to 200 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-).</p>
+         * <p>It must be 1 to 200 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>TLSCipherPolicy</p>
@@ -288,7 +288,7 @@ public class CreateSecurityPolicyRequest extends Request {
         }
 
         /**
-         * <p>The supported versions of the Transport Layer Security (TLS) protocol. Valid values: <strong>TLSv1.0</strong>, <strong>TLSv1.1</strong>, <strong>TLSv1.2</strong>, and <strong>TLSv1.3</strong>.</p>
+         * <p>The Transport Layer Security (TLS) versions supported by the security policy. Valid values: <strong>TLSv1.0</strong>, <strong>TLSv1.1</strong>, <strong>TLSv1.2</strong>, and <strong>TLSv1.3</strong>.</p>
          * <p>This parameter is required.</p>
          */
         public Builder tlsVersions(java.util.List<String> tlsVersions) {
@@ -348,9 +348,17 @@ public class CreateSecurityPolicyRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * <p>The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
-             * <p>The tag key can be up to 64 characters in length and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+             * <p>The key of the tag. It must be 1 to 64 characters in length, cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>. It can contain letters, digits, underscores (_), periods (.), colons (:), forward slashes (/), equal signs (=), plus signs (+), minus signs (-), and at signs (@).</p>
+             * <p>You can add up to 20 tags for the security policy in each call.</p>
              * 
              * <strong>example:</strong>
              * <p>KeyTest</p>
@@ -361,8 +369,8 @@ public class CreateSecurityPolicyRequest extends Request {
             }
 
             /**
-             * <p>The value of the tag. You can specify up to 20 tag values. The tag value can be an empty string.</p>
-             * <p>The tag value can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. The tag value cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The value of the tag. It must be 1 to 128 characters in length, cannot start with <code>acs:</code> or <code>aliyun</code>, and cannot contain <code>http://</code> or <code>https://</code>. It can contain letters, digits, underscores (_), periods (.), colons (:), forward slashes (/), equal signs (=), plus signs (+), minus signs (-), and at signs (@).</p>
+             * <p>You can add up to 20 tags for the security policy in each call.</p>
              * 
              * <strong>example:</strong>
              * <p>ValueTest</p>

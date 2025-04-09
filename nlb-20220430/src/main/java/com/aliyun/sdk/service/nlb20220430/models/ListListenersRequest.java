@@ -69,7 +69,7 @@ public class ListListenersRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -157,7 +157,7 @@ public class ListListenersRequest extends Request {
         } 
 
         /**
-         * <p>The listener IDs.</p>
+         * <p>The listener IDs. You can specify up to 20 listeners.</p>
          */
         public Builder listenerIds(java.util.List<String> listenerIds) {
             this.putQueryParameter("ListenerIds", listenerIds);
@@ -166,7 +166,7 @@ public class ListListenersRequest extends Request {
         }
 
         /**
-         * <p>The listening protocol. Valid values: <strong>TCP</strong>, <strong>UDP</strong>, and <strong>TCPSSL</strong>.</p>
+         * <p>The listener protocol. Valid values: <strong>TCP</strong>, <strong>UDP</strong>, and <strong>TCPSSL</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>TCPSSL</p>
@@ -178,7 +178,7 @@ public class ListListenersRequest extends Request {
         }
 
         /**
-         * <p>The ID of the NLB instance. You can query up to 20 NLB instances at a time.</p>
+         * <p>The IDs of the NLB instances. You can specify up to 20 instances.</p>
          */
         public Builder loadBalancerIds(java.util.List<String> loadBalancerIds) {
             this.putQueryParameter("LoadBalancerIds", loadBalancerIds);
@@ -187,7 +187,7 @@ public class ListListenersRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+         * <p>The number of entries to return in each call. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong></p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -199,10 +199,10 @@ public class ListListenersRequest extends Request {
         }
 
         /**
-         * <p>The token that is used for the next query. Valid values:</p>
+         * <p>The pagination token used to specify a particular page of results. Valid values:</p>
          * <ul>
-         * <li>If this is your first query or no next query is to be sent, ignore this parameter.</li>
-         * <li>If a next query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</li>
+         * <li>Leave this parameter empty for the first query or the only query.</li>
+         * <li>Set this parameter to the value of NextToken obtained from the previous query.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -230,8 +230,8 @@ public class ListListenersRequest extends Request {
         /**
          * <p>Specifies whether to enable fine-grained monitoring. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: yes</li>
-         * <li><strong>false</strong>: no</li>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -303,9 +303,17 @@ public class ListListenersRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * <p>The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
-             * <p>The tag key can be up to 64 characters in length and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+             * <p>The key of the tag. You can specify up to 20 tags. The tag key cannot be an empty string.</p>
+             * <p>It can be up to 64 characters in length, cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>env</p>
@@ -316,8 +324,8 @@ public class ListListenersRequest extends Request {
             }
 
             /**
-             * <p>The value of the tag. You can specify up to 10 tag values.</p>
-             * <p>The tag value can be up to 128 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+             * <p>The value of the tag. You can specify up to 20 tags. The tag value can be an empty string.</p>
+             * <p>It can be up to 128 characters in length, cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>product</p>

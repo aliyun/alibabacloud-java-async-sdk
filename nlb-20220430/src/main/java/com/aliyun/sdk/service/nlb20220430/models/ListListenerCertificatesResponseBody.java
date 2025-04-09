@@ -52,6 +52,10 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return certificateIds
      */
@@ -102,6 +106,18 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListListenerCertificatesResponseBody model) {
+            this.certificateIds = model.certificateIds;
+            this.certificates = model.certificates;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
          * <p>The server certificates.</p>
          */
@@ -119,7 +135,7 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+         * <p>The number of entries returned per page. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>20</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -239,6 +255,16 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
             private String certificateType; 
             private Boolean isDefault; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Certificates model) {
+                this.certificateId = model.certificateId;
+                this.certificateType = model.certificateType;
+                this.isDefault = model.isDefault;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The ID of the certificate. Only one server certificate is supported.</p>

@@ -40,6 +40,10 @@ public class CreateServerGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return jobId
      */
@@ -65,6 +69,15 @@ public class CreateServerGroupResponseBody extends TeaModel {
         private String jobId; 
         private String requestId; 
         private String serverGroupId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateServerGroupResponseBody model) {
+            this.jobId = model.jobId;
+            this.requestId = model.requestId;
+            this.serverGroupId = model.serverGroupId;
+        } 
 
         /**
          * <p>The ID of the asynchronous task.</p>

@@ -36,6 +36,10 @@ public class DescribeZonesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeZonesResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<Zones> zones; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeZonesResponseBody model) {
+            this.requestId = model.requestId;
+            this.zones = model.zones;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -122,6 +134,14 @@ public class DescribeZonesResponseBody extends TeaModel {
         public static final class Builder {
             private String localName; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Zones model) {
+                this.localName = model.localName;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>The zone name.</p>

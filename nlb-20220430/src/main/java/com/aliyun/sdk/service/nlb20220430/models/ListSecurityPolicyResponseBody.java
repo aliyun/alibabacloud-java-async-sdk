@@ -48,6 +48,10 @@ public class ListSecurityPolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -89,6 +93,17 @@ public class ListSecurityPolicyResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<SecurityPolicies> securityPolicies; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSecurityPolicyResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.securityPolicies = model.securityPolicies;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The number of entries per page.</p>
@@ -220,6 +235,16 @@ public class ListSecurityPolicyResponseBody extends TeaModel {
             private String listenerProtocol; 
             private String loadBalancerId; 
 
+            private Builder() {
+            } 
+
+            private Builder(RelatedListeners model) {
+                this.listenerId = model.listenerId;
+                this.listenerPort = model.listenerPort;
+                this.listenerProtocol = model.listenerProtocol;
+                this.loadBalancerId = model.loadBalancerId;
+            } 
+
             /**
              * <p>The listener ID.</p>
              * 
@@ -314,6 +339,14 @@ public class ListSecurityPolicyResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key. You can specify up to 10 tag keys.</p>
@@ -473,6 +506,21 @@ public class ListSecurityPolicyResponseBody extends TeaModel {
             private String securityPolicyStatus; 
             private java.util.List<Tags> tags; 
             private String tlsVersion; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecurityPolicies model) {
+                this.ciphers = model.ciphers;
+                this.regionId = model.regionId;
+                this.relatedListeners = model.relatedListeners;
+                this.resourceGroupId = model.resourceGroupId;
+                this.securityPolicyId = model.securityPolicyId;
+                this.securityPolicyName = model.securityPolicyName;
+                this.securityPolicyStatus = model.securityPolicyStatus;
+                this.tags = model.tags;
+                this.tlsVersion = model.tlsVersion;
+            } 
 
             /**
              * <p>The supported cipher suites, which are determined by the TLS protocol version. You can specify at most 32 cipher suites.</p>

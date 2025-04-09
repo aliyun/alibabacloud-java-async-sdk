@@ -53,7 +53,7 @@ public class MoveResourceGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -118,7 +118,7 @@ public class MoveResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the NLB instance.</p>
+         * <p>The region ID of the resource.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,7 +131,7 @@ public class MoveResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The ID of the resource.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,7 +144,7 @@ public class MoveResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>The type of the resource. Valid values:</p>
+         * <p>The type of resource. Valid values:</p>
          * <ul>
          * <li><strong>loadbalancer</strong>: a Network Load Balancer (NLB) instance</li>
          * <li><strong>securitypolicy</strong>: a security policy</li>

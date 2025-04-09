@@ -59,7 +59,7 @@ public class ListServerGroupServersRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -129,7 +129,7 @@ public class ListServerGroupServersRequest extends Request {
         } 
 
         /**
-         * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+         * <p>The number of entries to return in each call. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -141,10 +141,10 @@ public class ListServerGroupServersRequest extends Request {
         }
 
         /**
-         * <p>The token that is used for the next query. Valid values:</p>
+         * <p>The pagination token used to specify a particular page of results. Valid values:</p>
          * <ul>
-         * <li>If this is your first query or no next query is to be sent, ignore this parameter.</li>
-         * <li>If a next query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</li>
+         * <li>Left this parameter empty if this is the first query or the only query.</li>
+         * <li>Set this parameter to the value of NextToken obtained from the previous query.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -182,7 +182,7 @@ public class ListServerGroupServersRequest extends Request {
         }
 
         /**
-         * <p>The server IDs. You can specify at most 40 servers in each call.</p>
+         * <p>The IDs of the backend servers. You can specify up to 40 backend servers in each call.</p>
          */
         public Builder serverIds(java.util.List<String> serverIds) {
             this.putBodyParameter("ServerIds", serverIds);
@@ -191,7 +191,7 @@ public class ListServerGroupServersRequest extends Request {
         }
 
         /**
-         * <p>A list of server IP addresses. You can specify at most 40 servers in each call.</p>
+         * <p>The IP addresses of the backend servers. You can specify up to 40 backend servers in each call.</p>
          */
         public Builder serverIps(java.util.List<String> serverIps) {
             this.putBodyParameter("ServerIps", serverIps);

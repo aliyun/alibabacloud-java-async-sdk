@@ -48,6 +48,10 @@ public class ListListenersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return listeners
      */
@@ -89,6 +93,17 @@ public class ListListenersResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListListenersResponseBody model) {
+            this.listeners = model.listeners;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The listeners.</p>
@@ -208,6 +223,15 @@ public class ListListenersResponseBody extends TeaModel {
             private Boolean ppv2PrivateLinkEpsIdEnabled; 
             private Boolean ppv2VpcIdEnabled; 
 
+            private Builder() {
+            } 
+
+            private Builder(ProxyProtocolV2Config model) {
+                this.ppv2PrivateLinkEpIdEnabled = model.ppv2PrivateLinkEpIdEnabled;
+                this.ppv2PrivateLinkEpsIdEnabled = model.ppv2PrivateLinkEpsIdEnabled;
+                this.ppv2VpcIdEnabled = model.ppv2VpcIdEnabled;
+            } 
+
             /**
              * <p>Indicates whether the Proxy protocol passes the PrivateLinkEpId parameter to backend servers. Valid values:</p>
              * <ul>
@@ -303,6 +327,14 @@ public class ListListenersResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -628,6 +660,35 @@ public class ListListenersResponseBody extends TeaModel {
             private String serverGroupId; 
             private String startPort; 
             private java.util.List<Tags> tags; 
+
+            private Builder() {
+            } 
+
+            private Builder(Listeners model) {
+                this.alpnEnabled = model.alpnEnabled;
+                this.alpnPolicy = model.alpnPolicy;
+                this.caCertificateIds = model.caCertificateIds;
+                this.caEnabled = model.caEnabled;
+                this.certificateIds = model.certificateIds;
+                this.cps = model.cps;
+                this.endPort = model.endPort;
+                this.idleTimeout = model.idleTimeout;
+                this.listenerDescription = model.listenerDescription;
+                this.listenerId = model.listenerId;
+                this.listenerPort = model.listenerPort;
+                this.listenerProtocol = model.listenerProtocol;
+                this.listenerStatus = model.listenerStatus;
+                this.loadBalancerId = model.loadBalancerId;
+                this.mss = model.mss;
+                this.proxyProtocolEnabled = model.proxyProtocolEnabled;
+                this.proxyProtocolV2Config = model.proxyProtocolV2Config;
+                this.regionId = model.regionId;
+                this.secSensorEnabled = model.secSensorEnabled;
+                this.securityPolicyId = model.securityPolicyId;
+                this.serverGroupId = model.serverGroupId;
+                this.startPort = model.startPort;
+                this.tags = model.tags;
+            } 
 
             /**
              * <p>Indicates whether Application-Layer Protocol Negotiation (ALPN) is enabled. Valid values:</p>

@@ -48,6 +48,10 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return loadBalancers
      */
@@ -89,6 +93,17 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListLoadBalancersResponseBody model) {
+            this.loadBalancers = model.loadBalancers;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The NLB instances.</p>
@@ -208,6 +223,15 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             private String enabledTime; 
             private String reason; 
 
+            private Builder() {
+            } 
+
+            private Builder(DeletionProtectionConfig model) {
+                this.enabled = model.enabled;
+                this.enabledTime = model.enabledTime;
+                this.reason = model.reason;
+            } 
+
             /**
              * <p>Indicates whether deletion protection is enabled. Valid values:</p>
              * <ul>
@@ -284,6 +308,13 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         public static final class Builder {
             private String payType; 
 
+            private Builder() {
+            } 
+
+            private Builder(LoadBalancerBillingConfig model) {
+                this.payType = model.payType;
+            } 
+
             /**
              * <p>The billing method of the NLB instance. Only <strong>PostPay</strong> is supported, which indicates the pay-as-you-go billing method.</p>
              * 
@@ -357,6 +388,15 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             private String enabledTime; 
             private String reason; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(ModificationProtectionConfig model) {
+                this.enabledTime = model.enabledTime;
+                this.reason = model.reason;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The time when the configuration read-only mode was enabled. The time is displayed in UTC in <code>yyyy-MM-ddTHH:mm:ssZ</code> format.</p>
@@ -450,6 +490,14 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             private String lockReason; 
             private String lockType; 
 
+            private Builder() {
+            } 
+
+            private Builder(OperationLocks model) {
+                this.lockReason = model.lockReason;
+                this.lockType = model.lockType;
+            } 
+
             /**
              * <p>The reason why the NLB instance is locked.</p>
              * 
@@ -528,6 +576,14 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -661,6 +717,19 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             private String privateIPv4HcStatus; 
             private String privateIPv6HcStatus; 
             private String publicIPv4Address; 
+
+            private Builder() {
+            } 
+
+            private Builder(LoadBalancerAddresses model) {
+                this.allocationId = model.allocationId;
+                this.eniId = model.eniId;
+                this.ipv6Address = model.ipv6Address;
+                this.privateIPv4Address = model.privateIPv4Address;
+                this.privateIPv4HcStatus = model.privateIPv4HcStatus;
+                this.privateIPv6HcStatus = model.privateIPv6HcStatus;
+                this.publicIPv4Address = model.publicIPv4Address;
+            } 
 
             /**
              * <p>The ID of the elastic IP address (EIP).</p>
@@ -827,6 +896,16 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             private String status; 
             private String vSwitchId; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ZoneMappings model) {
+                this.loadBalancerAddresses = model.loadBalancerAddresses;
+                this.status = model.status;
+                this.vSwitchId = model.vSwitchId;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>The IP addresses that are used by the NLB instance.</p>
@@ -1171,6 +1250,34 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             private java.util.List<Tags> tags; 
             private String vpcId; 
             private java.util.List<ZoneMappings> zoneMappings; 
+
+            private Builder() {
+            } 
+
+            private Builder(LoadBalancers model) {
+                this.addressIpVersion = model.addressIpVersion;
+                this.addressType = model.addressType;
+                this.bandwidthPackageId = model.bandwidthPackageId;
+                this.createTime = model.createTime;
+                this.crossZoneEnabled = model.crossZoneEnabled;
+                this.DNSName = model.DNSName;
+                this.deletionProtectionConfig = model.deletionProtectionConfig;
+                this.ipv6AddressType = model.ipv6AddressType;
+                this.loadBalancerBillingConfig = model.loadBalancerBillingConfig;
+                this.loadBalancerBusinessStatus = model.loadBalancerBusinessStatus;
+                this.loadBalancerId = model.loadBalancerId;
+                this.loadBalancerName = model.loadBalancerName;
+                this.loadBalancerStatus = model.loadBalancerStatus;
+                this.loadBalancerType = model.loadBalancerType;
+                this.modificationProtectionConfig = model.modificationProtectionConfig;
+                this.operationLocks = model.operationLocks;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.securityGroupIds = model.securityGroupIds;
+                this.tags = model.tags;
+                this.vpcId = model.vpcId;
+                this.zoneMappings = model.zoneMappings;
+            } 
 
             /**
              * <p>The IP version. Valid values:</p>

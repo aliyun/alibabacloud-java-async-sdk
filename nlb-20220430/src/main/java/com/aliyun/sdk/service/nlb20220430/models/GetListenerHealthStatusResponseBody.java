@@ -48,6 +48,10 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return listenerHealthStatus
      */
@@ -90,8 +94,19 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetListenerHealthStatusResponseBody model) {
+            this.listenerHealthStatus = model.listenerHealthStatus;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * <p>The health check status of the server groups that are associated with the listener.</p>
+         * <p>The health check status of the server group of the listener.</p>
          */
         public Builder listenerHealthStatus(java.util.List<ListenerHealthStatus> listenerHealthStatus) {
             this.listenerHealthStatus = listenerHealthStatus;
@@ -183,6 +198,13 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
 
         public static final class Builder {
             private String reasonCode; 
+
+            private Builder() {
+            } 
+
+            private Builder(Reason model) {
+                this.reasonCode = model.reasonCode;
+            } 
 
             /**
              * <p>The reason why the <strong>status</strong> is abnormal. Valid values:</p>
@@ -290,6 +312,17 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             private String serverIp; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(NonNormalServers model) {
+                this.port = model.port;
+                this.reason = model.reason;
+                this.serverId = model.serverId;
+                this.serverIp = model.serverIp;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The backend port.</p>
              * 
@@ -336,7 +369,6 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
              * <ul>
              * <li><strong>Initial</strong>: indicates that health checks are configured for the NLB instance, but no data was found.</li>
              * <li><strong>Unhealthy</strong>: indicates that the backend server consecutively fails health checks.</li>
-             * <li><strong>Unused</strong>: indicates that the weight of the backend server is 0.</li>
              * <li><strong>Unavailable</strong>: indicates that health checks are disabled.</li>
              * </ul>
              * 
@@ -410,6 +442,15 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             private Boolean heathCheckEnabled; 
             private java.util.List<NonNormalServers> nonNormalServers; 
             private String serverGroupId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ServerGroupInfos model) {
+                this.heathCheckEnabled = model.heathCheckEnabled;
+                this.nonNormalServers = model.nonNormalServers;
+                this.serverGroupId = model.serverGroupId;
+            } 
 
             /**
              * <p>Indicates whether the health check feature is enabled. Valid values:</p>
@@ -519,6 +560,16 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             private Integer listenerPort; 
             private String listenerProtocol; 
             private java.util.List<ServerGroupInfos> serverGroupInfos; 
+
+            private Builder() {
+            } 
+
+            private Builder(ListenerHealthStatus model) {
+                this.listenerId = model.listenerId;
+                this.listenerPort = model.listenerPort;
+                this.listenerProtocol = model.listenerProtocol;
+                this.serverGroupInfos = model.serverGroupInfos;
+            } 
 
             /**
              * <p>The ID of the listener of the NLB instance.</p>

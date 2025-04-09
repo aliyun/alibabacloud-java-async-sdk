@@ -74,7 +74,7 @@ public class ListServerGroupsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -183,10 +183,10 @@ public class ListServerGroupsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <p>The pagination token used in the next request to retrieve a new page of results. Valid values:</p>
          * <ul>
-         * <li>You do not need to specify this parameter for the first request.</li>
-         * <li>You must specify the token that is obtained from the previous query as the value of NextToken.</li>
+         * <li>For the first request and last request, you do not need to specify this parameter.</li>
+         * <li>You must specify the token obtained from the previous query as the value of NextToken.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -224,7 +224,7 @@ public class ListServerGroupsRequest extends Request {
         }
 
         /**
-         * <p>The server group ID. You can specify up to 20 server group IDs in each call.</p>
+         * <p>The server group IDs. You can specify up to 20 server group IDs in each call.</p>
          */
         public Builder serverGroupIds(java.util.List<String> serverGroupIds) {
             this.putBodyParameter("ServerGroupIds", serverGroupIds);
@@ -244,7 +244,7 @@ public class ListServerGroupsRequest extends Request {
         /**
          * <p>The type of server group. Valid values:</p>
          * <ul>
-         * <li><strong>Instance</strong> : allows you to add servers of the <strong>Ecs</strong>, <strong>Ens</strong>, and <strong>Eci</strong> types.</li>
+         * <li><strong>Instance</strong>: allows you to add servers of the <strong>Ecs</strong>, <strong>Ens</strong>, and <strong>Eci</strong> types.</li>
          * <li><strong>Ip</strong>: allows you to add servers by specifying IP addresses.</li>
          * </ul>
          * 
@@ -267,7 +267,7 @@ public class ListServerGroupsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the virtual private cloud (VPC) to which the server group belongs.</p>
+         * <p>The ID of the virtual private cloud (VPC) in which the server group is deployed.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp15zckdt37pq72zv****</p>
@@ -329,9 +329,17 @@ public class ListServerGroupsRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The key of the tag. You can specify up to 10 tag keys.</p>
-             * <p>The tag key can be up to 64 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+             * <p>The tag key can be up to 64 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>Test</p>
@@ -343,7 +351,7 @@ public class ListServerGroupsRequest extends Request {
 
             /**
              * <p>The value of the tag. You can specify up to 10 tag values.</p>
-             * <p>The tag value can be up to 128 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+             * <p>The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> and <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>Test</p>

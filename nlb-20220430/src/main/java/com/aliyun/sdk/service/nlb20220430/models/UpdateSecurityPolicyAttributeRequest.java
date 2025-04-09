@@ -65,7 +65,7 @@ public class UpdateSecurityPolicyAttributeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -144,8 +144,8 @@ public class UpdateSecurityPolicyAttributeRequest extends Request {
         } 
 
         /**
-         * <p>The supported cipher suites, which are determined by the TLS protocol version. You can specify at most 32 cipher suites.</p>
-         * <p>TLS 1.0 and TLS 1.1 support the following cipher suites:</p>
+         * <p>The supported cipher suites. Valid values of this parameter vary base on the value of TlsVersions. You can specify up to 32 cipher suites.</p>
+         * <p>TLSv1.0 and TLSv1.1 support the following cipher suites:</p>
          * <ul>
          * <li><strong>ECDHE-ECDSA-AES128-SHA</strong></li>
          * <li><strong>ECDHE-ECDSA-AES256-SHA</strong></li>
@@ -155,7 +155,7 @@ public class UpdateSecurityPolicyAttributeRequest extends Request {
          * <li><strong>AES256-SHA</strong></li>
          * <li><strong>DES-CBC3-SHA</strong></li>
          * </ul>
-         * <p>TLS 1.2 supports the following cipher suites:</p>
+         * <p>TLSv1.2 supports the following cipher suites:</p>
          * <ul>
          * <li><strong>ECDHE-ECDSA-AES128-SHA</strong></li>
          * <li><strong>ECDHE-ECDSA-AES256-SHA</strong></li>
@@ -177,7 +177,7 @@ public class UpdateSecurityPolicyAttributeRequest extends Request {
          * <li><strong>AES128-SHA256</strong></li>
          * <li><strong>AES256-SHA256</strong></li>
          * </ul>
-         * <p>TLS 1.3 supports the following cipher suites:</p>
+         * <p>TLSv1.3 supports the following cipher suites:</p>
          * <ul>
          * <li><strong>TLS_AES_128_GCM_SHA256</strong></li>
          * <li><strong>TLS_AES_256_GCM_SHA384</strong></li>
@@ -193,10 +193,10 @@ public class UpdateSecurityPolicyAttributeRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <p>The client token used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token. Ensure that the token is unique among different requests. Only ASCII characters are allowed.</p>
          * <blockquote>
-         * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * <p> If you do not set this parameter, the value of <strong>RequestId</strong> is used.**** The value of <strong>RequestId</strong> is different for each request.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -209,10 +209,10 @@ public class UpdateSecurityPolicyAttributeRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform a dry run, without performing the actual request. Valid values:</p>
+         * <p>Specifies whether to perform a dry run. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-         * <li><strong>false</strong>(default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * <li><strong>true</strong>: validates the request without performing the operation. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the validation, the corresponding error message is returned. If the request passes the validation, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): validates the request and performs the operation. If the request passes the validation, a 2xx HTTP status code is returned and the operation is performed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -225,8 +225,8 @@ public class UpdateSecurityPolicyAttributeRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the NLB instance.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to obtain the region ID.</p>
+         * <p>The ID of the region where the NLB instance is deployed.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -264,7 +264,7 @@ public class UpdateSecurityPolicyAttributeRequest extends Request {
         }
 
         /**
-         * <p>The supported versions of the Transport Layer Security (TLS) protocol. Valid values: <strong>TLSv1.0</strong>, <strong>TLSv1.1</strong>, <strong>TLSv1.2</strong>, and <strong>TLSv1.3</strong>. You can specify at most four TLS protocol versions.</p>
+         * <p>The supported TLS versions. Valid values: <strong>TLSv1.0</strong>, <strong>TLSv1.1</strong>, <strong>TLSv1.2</strong>, and <strong>TLSv1.3</strong>. You can specify up to four TLS versions.</p>
          */
         public Builder tlsVersions(java.util.List<String> tlsVersions) {
             this.putBodyParameter("TlsVersions", tlsVersions);

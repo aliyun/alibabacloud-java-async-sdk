@@ -40,6 +40,10 @@ public class CreateSecurityPolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return jobId
      */
@@ -65,6 +69,15 @@ public class CreateSecurityPolicyResponseBody extends TeaModel {
         private String jobId; 
         private String requestId; 
         private String securityPolicyId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateSecurityPolicyResponseBody model) {
+            this.jobId = model.jobId;
+            this.requestId = model.requestId;
+            this.securityPolicyId = model.securityPolicyId;
+        } 
 
         /**
          * <p>The ID of the asynchronous task.</p>

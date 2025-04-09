@@ -36,6 +36,10 @@ public class ListSystemSecurityPolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class ListSystemSecurityPolicyResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<SecurityPolicies> securityPolicies; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSystemSecurityPolicyResponseBody model) {
+            this.requestId = model.requestId;
+            this.securityPolicies = model.securityPolicies;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -146,6 +158,16 @@ public class ListSystemSecurityPolicyResponseBody extends TeaModel {
             private String securityPolicyId; 
             private String securityPolicyName; 
             private String tlsVersion; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecurityPolicies model) {
+                this.ciphers = model.ciphers;
+                this.securityPolicyId = model.securityPolicyId;
+                this.securityPolicyName = model.securityPolicyName;
+                this.tlsVersion = model.tlsVersion;
+            } 
 
             /**
              * <p>The cipher suite.</p>

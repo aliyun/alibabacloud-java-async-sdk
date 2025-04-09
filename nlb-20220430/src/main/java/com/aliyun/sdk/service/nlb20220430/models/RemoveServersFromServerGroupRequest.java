@@ -56,7 +56,7 @@ public class RemoveServersFromServerGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -117,10 +117,10 @@ public class RemoveServersFromServerGroupRequest extends Request {
         } 
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <p>The client token used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token. Ensure that the token is unique among different requests. Only ASCII characters are allowed.</p>
          * <blockquote>
-         * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * <p> If you do not set this parameter, the value of <strong>RequestId</strong> is used.**** The value of <strong>RequestId</strong> is different for each request.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -133,10 +133,10 @@ public class RemoveServersFromServerGroupRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform a dry run, without performing the actual request. Valid values:</p>
+         * <p>Specifies whether to perform a dry run. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-         * <li><strong>false</strong>(default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * <li><strong>true</strong>: validates the request without performing the operation. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the validation, the corresponding error message is returned. If the request passes the validation, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): validates the request and performs the operation. If the request passes the validation, a 2xx HTTP status code is returned and the operation is performed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -149,7 +149,7 @@ public class RemoveServersFromServerGroupRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the NLB instance.</p>
+         * <p>The ID of the region where the NLB instance is deployed.</p>
          * <p>You can call the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * 
          * <strong>example:</strong>
@@ -175,7 +175,7 @@ public class RemoveServersFromServerGroupRequest extends Request {
         }
 
         /**
-         * <p>The server groups. You can specify at most 200 server groups in each call.</p>
+         * <p>The backend servers. You can specify up to 200 backend servers in each call.</p>
          * <p>This parameter is required.</p>
          */
         public Builder servers(java.util.List<Servers> servers) {
@@ -261,8 +261,18 @@ public class RemoveServersFromServerGroupRequest extends Request {
             private String serverIp; 
             private String serverType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Servers model) {
+                this.port = model.port;
+                this.serverId = model.serverId;
+                this.serverIp = model.serverIp;
+                this.serverType = model.serverType;
+            } 
+
             /**
-             * <p>The port that is used by the backend server. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+             * <p>The port that is used by the backend server. Valid values: <strong>0</strong> to <strong>65535</strong>. If you do not set this parameter, the default value <strong>0</strong> is used.</p>
              * 
              * <strong>example:</strong>
              * <p>443</p>
@@ -273,10 +283,10 @@ public class RemoveServersFromServerGroupRequest extends Request {
             }
 
             /**
-             * <p>The ID of the server group.</p>
+             * <p>The backend server ID.</p>
              * <ul>
-             * <li>If the server group is of the <strong>Instance</strong> type, set this parameter to the IDs of <strong>Elastic Compute Service (ECS) instances</strong>, <strong>elastic network interfaces (ENIs)</strong>, or <strong>elastic container instances</strong>.</li>
-             * <li>If the server group is of the <strong>Ip</strong> type, set this parameter to IP addresses.</li>
+             * <li>If the server group is of the <strong>Instance</strong> type, set this parameter to the IDs of servers of the <strong>Ecs</strong>, <strong>Eni</strong>, or <strong>Eci</strong> type.</li>
+             * <li>If the server group is of the <strong>Ip</strong> type, set ServerId to IP addresses.</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -289,7 +299,7 @@ public class RemoveServersFromServerGroupRequest extends Request {
             }
 
             /**
-             * <p>The IP addresses of servers. If the server group type is <strong>Ip</strong>, set the ServerId parameter to IP addresses.</p>
+             * <p>The IP addresses of the server. If the server group type is <strong>Ip</strong>, set the ServerId parameter to IP addresses.</p>
              * 
              * <strong>example:</strong>
              * <p>192.168.6.6</p>
@@ -300,12 +310,12 @@ public class RemoveServersFromServerGroupRequest extends Request {
             }
 
             /**
-             * <p>The type of backend server. Valid values:</p>
+             * <p>The type of the backend server. Valid values:</p>
              * <ul>
-             * <li><strong>Ecs</strong>: ECS instance</li>
-             * <li><strong>Eni</strong>: ENI</li>
-             * <li><strong>Eci</strong>: elastic container instance</li>
-             * <li><strong>Ip</strong>: IP address</li>
+             * <li><strong>Ecs</strong>: the Elastic Compute Service (ECS) instance</li>
+             * <li><strong>Eni</strong>: the elastic network interface (ENI)</li>
+             * <li><strong>Eci</strong>: the elastic container instance</li>
+             * <li><strong>Ip</strong>: the IP address</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 

@@ -40,7 +40,7 @@ public class GetListenerHealthStatusRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -74,7 +74,7 @@ public class GetListenerHealthStatusRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the listener of the NLB instance.</p>
+         * <p>The ID of the listener on the NLB instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

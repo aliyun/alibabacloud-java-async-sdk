@@ -40,6 +40,10 @@ public class CreateLoadBalancerResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return loadbalancerId
      */
@@ -65,6 +69,15 @@ public class CreateLoadBalancerResponseBody extends TeaModel {
         private String loadbalancerId; 
         private Long orderId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateLoadBalancerResponseBody model) {
+            this.loadbalancerId = model.loadbalancerId;
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the NLB instance.</p>

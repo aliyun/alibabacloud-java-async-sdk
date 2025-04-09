@@ -56,7 +56,7 @@ public class AddServersToServerGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -117,10 +117,10 @@ public class AddServersToServerGroupRequest extends Request {
         } 
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the value, but you must ensure that it is unique among all requests. ClientToken can contain only ASCII characters.</p>
+         * <p>The client token used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token. Ensure that the token is unique among different requests. Only ASCII characters are allowed.</p>
          * <blockquote>
-         * <p> If you do not set this parameter, <strong>ClientToken</strong> is set to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> of each API request may be different.</p>
+         * <p> If you do not set this parameter, the value of <strong>RequestId</strong> is used.**** The value of <strong>RequestId</strong> is different for each request.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -133,10 +133,10 @@ public class AddServersToServerGroupRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether only to precheck the request. Valid values:</p>
+         * <p>Specifies whether to perform a dry run. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: prechecks the request but does not add the servers to the server group. The system prechecks the required parameters, request syntax, and limits. If the request fails the precheck, an error message is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
-         * <li><strong>false</strong> (default): sends the request. If the request passes the precheck, an HTTP 2xx status code is returned and the operation is performed.</li>
+         * <li><strong>true</strong>: validates the request without performing the operation. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the validation, the corresponding error message is returned. If the request passes the validation, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): validates the request and performs the operation. If the request passes the validation, a 2xx HTTP status code is returned and the operation is performed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -162,7 +162,7 @@ public class AddServersToServerGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the server group.</p>
+         * <p>The server group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -175,9 +175,9 @@ public class AddServersToServerGroupRequest extends Request {
         }
 
         /**
-         * <p>The backend servers.</p>
+         * <p>The backend servers that you want to add.</p>
          * <blockquote>
-         * <p> You can add at most 200 backend servers in each call.</p>
+         * <p> You can add up to 200 backend servers in each call.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          */
@@ -288,6 +288,18 @@ public class AddServersToServerGroupRequest extends Request {
             private String serverType; 
             private Integer weight; 
 
+            private Builder() {
+            } 
+
+            private Builder(Servers model) {
+                this.description = model.description;
+                this.port = model.port;
+                this.serverId = model.serverId;
+                this.serverIp = model.serverIp;
+                this.serverType = model.serverType;
+                this.weight = model.weight;
+            } 
+
             /**
              * <p>The description of the backend server.</p>
              * <p>The description must be 2 to 256 characters in length, and can contain letters, digits, commas (,), periods (.), semicolons (;), forward slashes (/), at sings (@), underscores (_), and hyphens (-).</p>
@@ -301,8 +313,8 @@ public class AddServersToServerGroupRequest extends Request {
             }
 
             /**
-             * <p>The port that is used by the backend server. Valid values: <strong>0 to 65535</strong>. If you do not specify a port, the default value <strong>0</strong> is used.</p>
-             * <p>If you enable all-port forwarding, you do not need to specify a port when you add a backend server. The default port is port 0. NLB forwards requests to the requested ports. To determine whether all-port forwarding is enabled, call the <a href="https://help.aliyun.com/document_detail/445895.html">ListServerGroups</a> API operation and check the value of the <strong>AnyPortEnabled</strong> parameter.</p>
+             * <p>The port that is used by the backend server to provide services. Valid values: <strong>0 to 65535</strong>. If you do not set this parameter, the default value <strong>0</strong> is used.</p>
+             * <p>If multi-port forwarding is enabled, you do not need to set this parameter. The default value 0 is used. NLB forwards requests to the requested ports. To determine whether multi-port forwarding is enabled, call the <a href="https://help.aliyun.com/document_detail/445895.html">ListServerGroups</a> operation and check the value of the <strong>AnyPortEnabled</strong> parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>443</p>
@@ -313,10 +325,10 @@ public class AddServersToServerGroupRequest extends Request {
             }
 
             /**
-             * <p>The ID of the server group.</p>
+             * <p>The backend server ID.</p>
              * <ul>
              * <li>If the server group is of the <strong>Instance</strong> type, set this parameter to the IDs of <strong>Elastic Compute Service (ECS) instances</strong>, <strong>elastic network interfaces (ENIs)</strong>, or <strong>elastic container instances</strong>.</li>
-             * <li>If the server group is of the <strong>Ip</strong> type, set this parameter to IP addresses.</li>
+             * <li>If the server group is of the <strong>Ip</strong> type, set ServerId to IP addresses.</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -329,7 +341,7 @@ public class AddServersToServerGroupRequest extends Request {
             }
 
             /**
-             * <p>The IP addresses of servers. If the server group type is <strong>Ip</strong>, set the ServerId parameter to IP addresses.</p>
+             * <p>The IP address of the backend server. If the server group type is <strong>Ip</strong>, set the ServerId parameter to IP addresses.</p>
              * 
              * <strong>example:</strong>
              * <p>192.168.6.6</p>
@@ -342,10 +354,10 @@ public class AddServersToServerGroupRequest extends Request {
             /**
              * <p>The type of the backend server. Valid values:</p>
              * <ul>
-             * <li><strong>Ecs</strong>: ECS instance</li>
-             * <li><strong>Eni</strong>: ENI</li>
-             * <li><strong>Eci</strong>: elastic container instance</li>
-             * <li><strong>Ip</strong>: IP address</li>
+             * <li><strong>Ecs</strong>: the ECS instance</li>
+             * <li><strong>Eni</strong>: the ENI</li>
+             * <li><strong>Eci</strong>: the elastic container instance</li>
+             * <li><strong>Ip</strong>: the IP address</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -358,7 +370,7 @@ public class AddServersToServerGroupRequest extends Request {
             }
 
             /**
-             * <p>The weight of the backend server. Valid values: <strong>0</strong> to <strong>100</strong>. Default value: <strong>100</strong>. If the value is set to <strong>0</strong>, no requests are forwarded to the server.</p>
+             * <p>The weight of the backend server. Valid values: <strong>0</strong> to <strong>100</strong>. Default value: <strong>100</strong>. If this parameter is set to <strong>0</strong>, no requests are forwarded to the server.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>

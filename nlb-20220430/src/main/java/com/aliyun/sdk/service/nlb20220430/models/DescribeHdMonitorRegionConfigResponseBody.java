@@ -44,6 +44,10 @@ public class DescribeHdMonitorRegionConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return logProject
      */
@@ -78,8 +82,21 @@ public class DescribeHdMonitorRegionConfigResponseBody extends TeaModel {
         private String regionId; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeHdMonitorRegionConfigResponseBody model) {
+            this.logProject = model.logProject;
+            this.metricStore = model.metricStore;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * LogProject.
+         * <p>The name of the Log Service project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hdmonitor-cn-hangzhou-223794579283657556</p>
          */
         public Builder logProject(String logProject) {
             this.logProject = logProject;
@@ -87,7 +104,10 @@ public class DescribeHdMonitorRegionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * MetricStore.
+         * <p>The name of the Metricstore in Simple Log Service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hdmonitor-cn-hangzhou-metricStore-1</p>
          */
         public Builder metricStore(String metricStore) {
             this.metricStore = metricStore;
@@ -95,7 +115,11 @@ public class DescribeHdMonitorRegionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the NLB instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to obtain the region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -103,7 +127,10 @@ public class DescribeHdMonitorRegionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>54B48E3D-DF70-471B-AA93-08E683A1B45</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -48,6 +48,10 @@ public class ListServerGroupServersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -89,6 +93,17 @@ public class ListServerGroupServersResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Servers> servers; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListServerGroupServersResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.servers = model.servers;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The number of entries returned per page.</p>
@@ -280,6 +295,21 @@ public class ListServerGroupServersResponseBody extends TeaModel {
             private Integer weight; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Servers model) {
+                this.description = model.description;
+                this.port = model.port;
+                this.serverGroupId = model.serverGroupId;
+                this.serverId = model.serverId;
+                this.serverIp = model.serverIp;
+                this.serverType = model.serverType;
+                this.status = model.status;
+                this.weight = model.weight;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
              * <p>The description of the backend server.</p>
              * 
@@ -317,7 +347,7 @@ public class ListServerGroupServersResponseBody extends TeaModel {
              * <p>The ID of the server group.</p>
              * 
              * <strong>example:</strong>
-             * <p>ecs-bp67acfmxazb4p****</p>
+             * <p>i-bp67acfmxazb4p****</p>
              */
             public Builder serverId(String serverId) {
                 this.serverId = serverId;
