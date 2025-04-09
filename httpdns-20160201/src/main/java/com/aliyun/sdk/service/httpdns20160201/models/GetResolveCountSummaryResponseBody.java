@@ -36,6 +36,10 @@ public class GetResolveCountSummaryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetResolveCountSummaryResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private ResolveSummary resolveSummary; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetResolveCountSummaryResponseBody model) {
+            this.requestId = model.requestId;
+            this.resolveSummary = model.resolveSummary;
+        } 
 
         /**
          * RequestId.
@@ -92,18 +104,26 @@ public class GetResolveCountSummaryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Http6")
         private Long http6;
 
+        @com.aliyun.core.annotation.NameInMap("HttpAes")
+        private String httpAes;
+
         @com.aliyun.core.annotation.NameInMap("Https")
         private Long https;
 
         @com.aliyun.core.annotation.NameInMap("Https6")
         private Long https6;
 
+        @com.aliyun.core.annotation.NameInMap("HttpsAes")
+        private String httpsAes;
+
         private ResolveSummary(Builder builder) {
             this.doh = builder.doh;
             this.http = builder.http;
             this.http6 = builder.http6;
+            this.httpAes = builder.httpAes;
             this.https = builder.https;
             this.https6 = builder.https6;
+            this.httpsAes = builder.httpsAes;
         }
 
         public static Builder builder() {
@@ -136,6 +156,13 @@ public class GetResolveCountSummaryResponseBody extends TeaModel {
         }
 
         /**
+         * @return httpAes
+         */
+        public String getHttpAes() {
+            return this.httpAes;
+        }
+
+        /**
          * @return https
          */
         public Long getHttps() {
@@ -149,12 +176,34 @@ public class GetResolveCountSummaryResponseBody extends TeaModel {
             return this.https6;
         }
 
+        /**
+         * @return httpsAes
+         */
+        public String getHttpsAes() {
+            return this.httpsAes;
+        }
+
         public static final class Builder {
             private Long doh; 
             private Long http; 
             private Long http6; 
+            private String httpAes; 
             private Long https; 
             private Long https6; 
+            private String httpsAes; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResolveSummary model) {
+                this.doh = model.doh;
+                this.http = model.http;
+                this.http6 = model.http6;
+                this.httpAes = model.httpAes;
+                this.https = model.https;
+                this.https6 = model.https6;
+                this.httpsAes = model.httpsAes;
+            } 
 
             /**
              * Doh.
@@ -181,6 +230,14 @@ public class GetResolveCountSummaryResponseBody extends TeaModel {
             }
 
             /**
+             * HttpAes.
+             */
+            public Builder httpAes(String httpAes) {
+                this.httpAes = httpAes;
+                return this;
+            }
+
+            /**
              * Https.
              */
             public Builder https(Long https) {
@@ -193,6 +250,14 @@ public class GetResolveCountSummaryResponseBody extends TeaModel {
              */
             public Builder https6(Long https6) {
                 this.https6 = https6;
+                return this;
+            }
+
+            /**
+             * HttpsAes.
+             */
+            public Builder httpsAes(String httpsAes) {
+                this.httpsAes = httpsAes;
                 return this;
             }
 

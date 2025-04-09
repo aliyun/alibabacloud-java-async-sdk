@@ -48,6 +48,10 @@ public class ListDomainsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domainInfos
      */
@@ -89,6 +93,17 @@ public class ListDomainsResponseBody extends TeaModel {
         private Long pageSize; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDomainsResponseBody model) {
+            this.domainInfos = model.domainInfos;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * DomainInfos.
@@ -146,6 +161,12 @@ public class ListDomainsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
+        @com.aliyun.core.annotation.NameInMap("ResolveHttpAes")
+        private Long resolveHttpAes;
+
+        @com.aliyun.core.annotation.NameInMap("ResolveHttpsAes")
+        private Long resolveHttpsAes;
+
         @com.aliyun.core.annotation.NameInMap("Resolved")
         private Long resolved;
 
@@ -166,6 +187,8 @@ public class ListDomainsResponseBody extends TeaModel {
 
         private DomainInfo(Builder builder) {
             this.domainName = builder.domainName;
+            this.resolveHttpAes = builder.resolveHttpAes;
+            this.resolveHttpsAes = builder.resolveHttpsAes;
             this.resolved = builder.resolved;
             this.resolved6 = builder.resolved6;
             this.resolvedDoh = builder.resolvedDoh;
@@ -187,6 +210,20 @@ public class ListDomainsResponseBody extends TeaModel {
          */
         public String getDomainName() {
             return this.domainName;
+        }
+
+        /**
+         * @return resolveHttpAes
+         */
+        public Long getResolveHttpAes() {
+            return this.resolveHttpAes;
+        }
+
+        /**
+         * @return resolveHttpsAes
+         */
+        public Long getResolveHttpsAes() {
+            return this.resolveHttpsAes;
         }
 
         /**
@@ -233,6 +270,8 @@ public class ListDomainsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String domainName; 
+            private Long resolveHttpAes; 
+            private Long resolveHttpsAes; 
             private Long resolved; 
             private Long resolved6; 
             private Long resolvedDoh; 
@@ -240,11 +279,42 @@ public class ListDomainsResponseBody extends TeaModel {
             private Long resolvedHttps6; 
             private Long timeModified; 
 
+            private Builder() {
+            } 
+
+            private Builder(DomainInfo model) {
+                this.domainName = model.domainName;
+                this.resolveHttpAes = model.resolveHttpAes;
+                this.resolveHttpsAes = model.resolveHttpsAes;
+                this.resolved = model.resolved;
+                this.resolved6 = model.resolved6;
+                this.resolvedDoh = model.resolvedDoh;
+                this.resolvedHttps = model.resolvedHttps;
+                this.resolvedHttps6 = model.resolvedHttps6;
+                this.timeModified = model.timeModified;
+            } 
+
             /**
              * DomainName.
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
+                return this;
+            }
+
+            /**
+             * ResolveHttpAes.
+             */
+            public Builder resolveHttpAes(Long resolveHttpAes) {
+                this.resolveHttpAes = resolveHttpAes;
+                return this;
+            }
+
+            /**
+             * ResolveHttpsAes.
+             */
+            public Builder resolveHttpsAes(Long resolveHttpsAes) {
+                this.resolveHttpsAes = resolveHttpsAes;
                 return this;
             }
 
@@ -334,6 +404,13 @@ public class ListDomainsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DomainInfo> domainInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(DomainInfos model) {
+                this.domainInfo = model.domainInfo;
+            } 
 
             /**
              * DomainInfo.

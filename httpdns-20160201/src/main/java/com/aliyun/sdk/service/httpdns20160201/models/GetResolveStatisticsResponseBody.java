@@ -36,6 +36,10 @@ public class GetResolveStatisticsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataPoints
      */
@@ -53,6 +57,14 @@ public class GetResolveStatisticsResponseBody extends TeaModel {
     public static final class Builder {
         private DataPoints dataPoints; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetResolveStatisticsResponseBody model) {
+            this.dataPoints = model.dataPoints;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * DataPoints.
@@ -120,6 +132,14 @@ public class GetResolveStatisticsResponseBody extends TeaModel {
             private Integer count; 
             private Integer time; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataPoint model) {
+                this.count = model.count;
+                this.time = model.time;
+            } 
+
             /**
              * Count.
              */
@@ -174,6 +194,13 @@ public class GetResolveStatisticsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DataPoint> dataPoint; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataPoints model) {
+                this.dataPoint = model.dataPoint;
+            } 
 
             /**
              * DataPoint.

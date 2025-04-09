@@ -36,6 +36,10 @@ public class GetAccountInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accountInfo
      */
@@ -53,6 +57,14 @@ public class GetAccountInfoResponseBody extends TeaModel {
     public static final class Builder {
         private AccountInfo accountInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAccountInfoResponseBody model) {
+            this.accountInfo = model.accountInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * AccountInfo.
@@ -98,6 +110,12 @@ public class GetAccountInfoResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MonthFreeCount")
         private Integer monthFreeCount;
 
+        @com.aliyun.core.annotation.NameInMap("MonthHttpAesResolveCount")
+        private Long monthHttpAesResolveCount;
+
+        @com.aliyun.core.annotation.NameInMap("MonthHttpsAesResolveCount")
+        private Long monthHttpsAesResolveCount;
+
         @com.aliyun.core.annotation.NameInMap("MonthHttpsResolveCount")
         private Integer monthHttpsResolveCount;
 
@@ -128,6 +146,8 @@ public class GetAccountInfoResponseBody extends TeaModel {
             this.dohResolveAllEnabled = builder.dohResolveAllEnabled;
             this.monthDohResolveCount = builder.monthDohResolveCount;
             this.monthFreeCount = builder.monthFreeCount;
+            this.monthHttpAesResolveCount = builder.monthHttpAesResolveCount;
+            this.monthHttpsAesResolveCount = builder.monthHttpsAesResolveCount;
             this.monthHttpsResolveCount = builder.monthHttpsResolveCount;
             this.monthResolveCount = builder.monthResolveCount;
             this.packageCount = builder.packageCount;
@@ -179,6 +199,20 @@ public class GetAccountInfoResponseBody extends TeaModel {
          */
         public Integer getMonthFreeCount() {
             return this.monthFreeCount;
+        }
+
+        /**
+         * @return monthHttpAesResolveCount
+         */
+        public Long getMonthHttpAesResolveCount() {
+            return this.monthHttpAesResolveCount;
+        }
+
+        /**
+         * @return monthHttpsAesResolveCount
+         */
+        public Long getMonthHttpsAesResolveCount() {
+            return this.monthHttpsAesResolveCount;
         }
 
         /**
@@ -243,6 +277,8 @@ public class GetAccountInfoResponseBody extends TeaModel {
             private Boolean dohResolveAllEnabled; 
             private Long monthDohResolveCount; 
             private Integer monthFreeCount; 
+            private Long monthHttpAesResolveCount; 
+            private Long monthHttpsAesResolveCount; 
             private Integer monthHttpsResolveCount; 
             private Integer monthResolveCount; 
             private Integer packageCount; 
@@ -251,6 +287,27 @@ public class GetAccountInfoResponseBody extends TeaModel {
             private Long unsignedCount; 
             private Boolean unsignedEnabled; 
             private Integer userStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(AccountInfo model) {
+                this.accountId = model.accountId;
+                this.dohEnabled = model.dohEnabled;
+                this.dohResolveAllEnabled = model.dohResolveAllEnabled;
+                this.monthDohResolveCount = model.monthDohResolveCount;
+                this.monthFreeCount = model.monthFreeCount;
+                this.monthHttpAesResolveCount = model.monthHttpAesResolveCount;
+                this.monthHttpsAesResolveCount = model.monthHttpsAesResolveCount;
+                this.monthHttpsResolveCount = model.monthHttpsResolveCount;
+                this.monthResolveCount = model.monthResolveCount;
+                this.packageCount = model.packageCount;
+                this.signSecret = model.signSecret;
+                this.signedCount = model.signedCount;
+                this.unsignedCount = model.unsignedCount;
+                this.unsignedEnabled = model.unsignedEnabled;
+                this.userStatus = model.userStatus;
+            } 
 
             /**
              * AccountId.
@@ -289,6 +346,22 @@ public class GetAccountInfoResponseBody extends TeaModel {
              */
             public Builder monthFreeCount(Integer monthFreeCount) {
                 this.monthFreeCount = monthFreeCount;
+                return this;
+            }
+
+            /**
+             * MonthHttpAesResolveCount.
+             */
+            public Builder monthHttpAesResolveCount(Long monthHttpAesResolveCount) {
+                this.monthHttpAesResolveCount = monthHttpAesResolveCount;
+                return this;
+            }
+
+            /**
+             * MonthHttpsAesResolveCount.
+             */
+            public Builder monthHttpsAesResolveCount(Long monthHttpsAesResolveCount) {
+                this.monthHttpsAesResolveCount = monthHttpsAesResolveCount;
                 return this;
             }
 

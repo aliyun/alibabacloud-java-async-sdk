@@ -48,6 +48,10 @@ public class DescribeDomainsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domains
      */
@@ -89,6 +93,17 @@ public class DescribeDomainsResponseBody extends TeaModel {
         private Long pageSize; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainsResponseBody model) {
+            this.domains = model.domains;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Domains.
@@ -168,6 +183,13 @@ public class DescribeDomainsResponseBody extends TeaModel {
         public static final class Builder {
             private String domainName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Domain model) {
+                this.domainName = model.domainName;
+            } 
+
             /**
              * DomainName.
              */
@@ -214,6 +236,13 @@ public class DescribeDomainsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Domain> domain; 
+
+            private Builder() {
+            } 
+
+            private Builder(Domains model) {
+                this.domain = model.domain;
+            } 
 
             /**
              * Domain.
