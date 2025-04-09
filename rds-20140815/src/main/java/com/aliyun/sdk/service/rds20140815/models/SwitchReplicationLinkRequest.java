@@ -104,6 +104,7 @@ public class SwitchReplicationLinkRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the source or primary instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,6 +126,7 @@ public class SwitchReplicationLinkRequest extends Request {
         }
 
         /**
+         * <p>The name of the destination DR instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,6 +139,7 @@ public class SwitchReplicationLinkRequest extends Request {
         }
 
         /**
+         * <p>The ID of the region in which the destination DR instance resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -12,15 +12,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link RebootRCInstancesResponseBody} extends {@link TeaModel}
+ * {@link ModifyRCDiskSpecResponseBody} extends {@link TeaModel}
  *
- * <p>RebootRCInstancesResponseBody</p>
+ * <p>ModifyRCDiskSpecResponseBody</p>
  */
-public class RebootRCInstancesResponseBody extends TeaModel {
+public class ModifyRCDiskSpecResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("OrderId")
+    private Long orderId;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private RebootRCInstancesResponseBody(Builder builder) {
+    private ModifyRCDiskSpecResponseBody(Builder builder) {
+        this.orderId = builder.orderId;
         this.requestId = builder.requestId;
     }
 
@@ -28,12 +32,19 @@ public class RebootRCInstancesResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static RebootRCInstancesResponseBody create() {
+    public static ModifyRCDiskSpecResponseBody create() {
         return builder().build();
     }
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return orderId
+     */
+    public Long getOrderId() {
+        return this.orderId;
     }
 
     /**
@@ -44,28 +55,35 @@ public class RebootRCInstancesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Long orderId; 
         private String requestId; 
 
         private Builder() {
         } 
 
-        private Builder(RebootRCInstancesResponseBody model) {
+        private Builder(ModifyRCDiskSpecResponseBody model) {
+            this.orderId = model.orderId;
             this.requestId = model.requestId;
         } 
 
         /**
-         * <p>The request ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>32A5B40E-50DA-5166-9B22-35F00C5D1BC6</p>
+         * OrderId.
+         */
+        public Builder orderId(Long orderId) {
+            this.orderId = orderId;
+            return this;
+        }
+
+        /**
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public RebootRCInstancesResponseBody build() {
-            return new RebootRCInstancesResponseBody(this);
+        public ModifyRCDiskSpecResponseBody build() {
+            return new ModifyRCDiskSpecResponseBody(this);
         } 
 
     } 

@@ -341,9 +341,9 @@ public class ModifyDBProxyRequest extends Request {
         }
 
         /**
-         * <p>The network type of the instance. Set the value to <strong>VPC</strong>.</p>
+         * <p>The network type of the instance. Only the VPC network type is supported. Set the value to <strong>VPC</strong>.</p>
          * <blockquote>
-         * <p>This parameter is required if you enable the database proxy feature for an ApsaraDB RDS for MySQL instance that uses cloud disks or an ApsaraDB RDS for PostgreSQL instance.</p>
+         * <p> If you enable the database proxy feature for the instance, you must specify this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -431,9 +431,9 @@ public class ModifyDBProxyRequest extends Request {
         }
 
         /**
-         * <p>The ID of the virtual private cloud (VPC) to which the instance belongs. You can call the DescribeDBInstanceAttribute operation to query the VPC ID.</p>
+         * <p>The ID of the virtual private cloud (VPC) to which the instance belongs. You can call the DescribeDBInstanceAttribute operation to query the ID.</p>
          * <blockquote>
-         * <p> This parameter is required if you enable the database proxy feature for an ApsaraDB RDS for MySQL instance that uses cloud disks or an ApsaraDB RDS for PostgreSQL instance.</p>
+         * <p> If you enable the database proxy feature for the instance, you must specify this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -446,9 +446,9 @@ public class ModifyDBProxyRequest extends Request {
         }
 
         /**
-         * <p>The vSwitch ID of the instance. You can call the DescribeDBInstanceAttribute operation to query the vSwitch ID.</p>
+         * <p>The ID of the vSwitch to which the instance belongs. You can call the DescribeDBInstanceAttribute operation to query the ID.</p>
          * <blockquote>
-         * <p> This parameter is required if you enable the database proxy feature for an ApsaraDB RDS for MySQL instance that uses cloud disks or an ApsaraDB RDS for PostgreSQL instance.</p>
+         * <p> If you enable the database proxy feature for the instance, you must specify this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

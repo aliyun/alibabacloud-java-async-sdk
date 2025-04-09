@@ -331,6 +331,9 @@ public class ModifyRCInstanceChargeTypeRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rc-dh2jf9n6j4s14926****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -349,6 +352,9 @@ public class ModifyRCInstanceChargeTypeRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Postpaid</p>
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -376,6 +382,9 @@ public class ModifyRCInstanceChargeTypeRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

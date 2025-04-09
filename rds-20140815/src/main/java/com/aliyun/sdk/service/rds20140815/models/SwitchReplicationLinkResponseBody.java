@@ -93,7 +93,10 @@ public class SwitchReplicationLinkResponseBody extends TeaModel {
         } 
 
         /**
-         * DBInstanceId.
+         * <p>The ID of the DR instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>135****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -101,7 +104,10 @@ public class SwitchReplicationLinkResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2F2DD69B-90AF-1E72-923C-87575658A9D9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +115,10 @@ public class SwitchReplicationLinkResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>159****</p>
          */
         public Builder taskId(Long taskId) {
             this.taskId = taskId;
@@ -117,7 +126,10 @@ public class SwitchReplicationLinkResponseBody extends TeaModel {
         }
 
         /**
-         * TaskName.
+         * <p>The task name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zbtest</p>
          */
         public Builder taskName(String taskName) {
             this.taskName = taskName;

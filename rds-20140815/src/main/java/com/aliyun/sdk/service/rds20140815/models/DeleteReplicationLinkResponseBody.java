@@ -93,7 +93,7 @@ public class DeleteReplicationLinkResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The ID of the DR instance.</p>
          * 
          * <strong>example:</strong>
          * <p>pgm-bp1trqb4p1xd****</p>
@@ -115,7 +115,7 @@ public class DeleteReplicationLinkResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the task.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3472****</p>
@@ -126,7 +126,7 @@ public class DeleteReplicationLinkResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the task.</p>
+         * <p>The task name.</p>
          * 
          * <strong>example:</strong>
          * <p>test01</p>

@@ -215,7 +215,7 @@ public class CreateReplicationLinkRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The ID of the DR instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -228,10 +228,10 @@ public class CreateReplicationLinkRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform a dry run. Valid values:</p>
+         * <p>Specifies whether to perform a dry run before the system creates the DR instance. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: performs a dry run but does not create the instance. The system checks items such as the request parameters, request format, service limits, and available resources.</li>
-         * <li><strong>false</strong> (default): performs a dry run and sends the request. If the request passes the dry run, the instance is created.</li>
+         * <li><strong>true</strong>: performs a dry run but does not create the instance. The system checks the request parameters, request syntax, limits, and available resources.</li>
+         * <li><strong>false</strong> (default): performs a dry run and the actual request. If the request passes the dry run, the instance is directly created.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -269,7 +269,7 @@ public class CreateReplicationLinkRequest extends Request {
         }
 
         /**
-         * <p>The endpoint of the source instance.</p>
+         * <p>The endpoint of the source ApsaraDB RDS for PostgreSQL instance or the IP address of the source ApsaraDB RDS for SQL Server instance.</p>
          * 
          * <strong>example:</strong>
          * <p>pgm-****.pg.rds.aliyuncs.com</p>
@@ -283,8 +283,8 @@ public class CreateReplicationLinkRequest extends Request {
         /**
          * <p>The type of the source instance. Valid values:</p>
          * <ul>
-         * <li><strong>other</strong>: other instances</li>
-         * <li><strong>aliyunRDS</strong>: an ApsaraDB RDS instance</li>
+         * <li><strong>other</strong>: other instances. <strong>SQL Server instances are not supported.</strong></li>
+         * <li><strong>aliyunRDS</strong>: an ApsaraDB RDS instance.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -297,10 +297,7 @@ public class CreateReplicationLinkRequest extends Request {
         }
 
         /**
-         * <p>The name of the source instance.</p>
-         * <blockquote>
-         * <p> This parameter is required when you set the <strong>SourceCategory</strong> parameter to <strong>aliyunRDS</strong>.</p>
-         * </blockquote>
+         * <p>The name of the source instance. If you set <strong>SourceCategory</strong> to <strong>aliyunRDS</strong>, this parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>testInstance</p>
@@ -312,10 +309,7 @@ public class CreateReplicationLinkRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the source instance.</p>
-         * <blockquote>
-         * <p> This parameter is required when you set the <strong>SourceCategory</strong> parameter to <strong>aliyunRDS</strong>.</p>
-         * </blockquote>
+         * <p>The region ID of the source instance. If you set <strong>SourceCategory</strong> to <strong>aliyunRDS</strong>, this parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -339,7 +333,10 @@ public class CreateReplicationLinkRequest extends Request {
         }
 
         /**
-         * TargetAddress.
+         * <p>The IP address of the DR instance of the ApsaraDB RDS for SQL Server instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.XXX.XX.XXX</p>
          */
         public Builder targetAddress(String targetAddress) {
             this.putQueryParameter("TargetAddress", targetAddress);
@@ -360,7 +357,7 @@ public class CreateReplicationLinkRequest extends Request {
         }
 
         /**
-         * <p>The name of the task. You can specify a custom task name. If you do not specify this parameter, ApsaraDB RDS automatically generates a task name.</p>
+         * <p>The task name of the dry run. You can specify a custom task name. If you do not specify this parameter, ApsaraDB RDS automatically generates a task name.</p>
          * 
          * <strong>example:</strong>
          * <p>test01</p>

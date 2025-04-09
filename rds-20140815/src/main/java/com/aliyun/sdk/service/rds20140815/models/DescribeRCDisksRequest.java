@@ -31,7 +31,7 @@ public class DescribeRCDisksRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
-    @com.aliyun.core.annotation.Validation(maximum = 50, minimum = 1)
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Long pageSize;
 
     @com.aliyun.core.annotation.Query

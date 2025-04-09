@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRCInstanceAttributeResponseBody</p>
  */
 public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AutoRenew")
+    private Boolean autoRenew;
+
     @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
@@ -153,6 +156,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     private String zoneId;
 
     private DescribeRCInstanceAttributeResponseBody(Builder builder) {
+        this.autoRenew = builder.autoRenew;
         this.clusterId = builder.clusterId;
         this.cpu = builder.cpu;
         this.createMode = builder.createMode;
@@ -210,6 +214,13 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return autoRenew
+     */
+    public Boolean getAutoRenew() {
+        return this.autoRenew;
     }
 
     /**
@@ -528,6 +539,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Boolean autoRenew; 
         private String clusterId; 
         private Integer cpu; 
         private Integer createMode; 
@@ -578,6 +590,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         } 
 
         private Builder(DescribeRCInstanceAttributeResponseBody model) {
+            this.autoRenew = model.autoRenew;
             this.clusterId = model.clusterId;
             this.cpu = model.cpu;
             this.createMode = model.createMode;
@@ -624,6 +637,14 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
             this.vpcAttributes = model.vpcAttributes;
             this.zoneId = model.zoneId;
         } 
+
+        /**
+         * AutoRenew.
+         */
+        public Builder autoRenew(Boolean autoRenew) {
+            this.autoRenew = autoRenew;
+            return this;
+        }
 
         /**
          * <p>The ID of the cluster to which the instance belongs.</p>

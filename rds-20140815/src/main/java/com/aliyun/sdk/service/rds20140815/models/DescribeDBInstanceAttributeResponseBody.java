@@ -1221,6 +1221,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReadOnlyDBInstanceIds")
         private ReadOnlyDBInstanceIds readOnlyDBInstanceIds;
 
+        @com.aliyun.core.annotation.NameInMap("ReadOnlyStatus")
+        private String readOnlyStatus;
+
         @com.aliyun.core.annotation.NameInMap("ReadonlyInstanceSQLDelayedTime")
         private String readonlyInstanceSQLDelayedTime;
 
@@ -1345,6 +1348,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.port = builder.port;
             this.proxyType = builder.proxyType;
             this.readOnlyDBInstanceIds = builder.readOnlyDBInstanceIds;
+            this.readOnlyStatus = builder.readOnlyStatus;
             this.readonlyInstanceSQLDelayedTime = builder.readonlyInstanceSQLDelayedTime;
             this.regionId = builder.regionId;
             this.resourceGroupId = builder.resourceGroupId;
@@ -1817,6 +1821,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return readOnlyStatus
+         */
+        public String getReadOnlyStatus() {
+            return this.readOnlyStatus;
+        }
+
+        /**
          * @return readonlyInstanceSQLDelayedTime
          */
         public String getReadonlyInstanceSQLDelayedTime() {
@@ -2020,6 +2031,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String port; 
             private Integer proxyType; 
             private ReadOnlyDBInstanceIds readOnlyDBInstanceIds; 
+            private String readOnlyStatus; 
             private String readonlyInstanceSQLDelayedTime; 
             private String regionId; 
             private String resourceGroupId; 
@@ -2108,6 +2120,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
                 this.port = model.port;
                 this.proxyType = model.proxyType;
                 this.readOnlyDBInstanceIds = model.readOnlyDBInstanceIds;
+                this.readOnlyStatus = model.readOnlyStatus;
                 this.readonlyInstanceSQLDelayedTime = model.readonlyInstanceSQLDelayedTime;
                 this.regionId = model.regionId;
                 this.resourceGroupId = model.resourceGroupId;
@@ -2914,6 +2927,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder readOnlyDBInstanceIds(ReadOnlyDBInstanceIds readOnlyDBInstanceIds) {
                 this.readOnlyDBInstanceIds = readOnlyDBInstanceIds;
+                return this;
+            }
+
+            /**
+             * ReadOnlyStatus.
+             */
+            public Builder readOnlyStatus(String readOnlyStatus) {
+                this.readOnlyStatus = readOnlyStatus;
                 return this;
             }
 

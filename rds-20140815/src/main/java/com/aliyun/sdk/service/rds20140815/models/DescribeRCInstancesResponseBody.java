@@ -403,9 +403,129 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
      *
      * <p>DescribeRCInstancesResponseBody</p>
      */
+    public static class VpcAttributes extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("NatIpAddress")
+        private String natIpAddress;
+
+        @com.aliyun.core.annotation.NameInMap("PrivateIpAddress")
+        private java.util.List<String> privateIpAddress;
+
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
+        private String vSwitchId;
+
+        @com.aliyun.core.annotation.NameInMap("VpcId")
+        private String vpcId;
+
+        private VpcAttributes(Builder builder) {
+            this.natIpAddress = builder.natIpAddress;
+            this.privateIpAddress = builder.privateIpAddress;
+            this.vSwitchId = builder.vSwitchId;
+            this.vpcId = builder.vpcId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VpcAttributes create() {
+            return builder().build();
+        }
+
+        /**
+         * @return natIpAddress
+         */
+        public String getNatIpAddress() {
+            return this.natIpAddress;
+        }
+
+        /**
+         * @return privateIpAddress
+         */
+        public java.util.List<String> getPrivateIpAddress() {
+            return this.privateIpAddress;
+        }
+
+        /**
+         * @return vSwitchId
+         */
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        /**
+         * @return vpcId
+         */
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        public static final class Builder {
+            private String natIpAddress; 
+            private java.util.List<String> privateIpAddress; 
+            private String vSwitchId; 
+            private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(VpcAttributes model) {
+                this.natIpAddress = model.natIpAddress;
+                this.privateIpAddress = model.privateIpAddress;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+            } 
+
+            /**
+             * NatIpAddress.
+             */
+            public Builder natIpAddress(String natIpAddress) {
+                this.natIpAddress = natIpAddress;
+                return this;
+            }
+
+            /**
+             * PrivateIpAddress.
+             */
+            public Builder privateIpAddress(java.util.List<String> privateIpAddress) {
+                this.privateIpAddress = privateIpAddress;
+                return this;
+            }
+
+            /**
+             * VSwitchId.
+             */
+            public Builder vSwitchId(String vSwitchId) {
+                this.vSwitchId = vSwitchId;
+                return this;
+            }
+
+            /**
+             * VpcId.
+             */
+            public Builder vpcId(String vpcId) {
+                this.vpcId = vpcId;
+                return this;
+            }
+
+            public VpcAttributes build() {
+                return new VpcAttributes(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeRCInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRCInstancesResponseBody</p>
+     */
     public static class RCInstances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClusterName")
         private String clusterName;
+
+        @com.aliyun.core.annotation.NameInMap("Cpu")
+        private Integer cpu;
 
         @com.aliyun.core.annotation.NameInMap("CreateMode")
         private String createMode;
@@ -413,8 +533,14 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DbType")
         private String dbType;
 
+        @com.aliyun.core.annotation.NameInMap("DeploymentSetId")
+        private String deploymentSetId;
+
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
+
+        @com.aliyun.core.annotation.NameInMap("ExpiredTime")
+        private String expiredTime;
 
         @com.aliyun.core.annotation.NameInMap("GmtCreated")
         private String gmtCreated;
@@ -424,6 +550,9 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("HostName")
         private String hostName;
+
+        @com.aliyun.core.annotation.NameInMap("ImageId")
+        private String imageId;
 
         @com.aliyun.core.annotation.NameInMap("InstanceChargeType")
         private String instanceChargeType;
@@ -436,6 +565,9 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("InstanceTypeFamily")
         private String instanceTypeFamily;
+
+        @com.aliyun.core.annotation.NameInMap("Memory")
+        private Integer memory;
 
         @com.aliyun.core.annotation.NameInMap("PublicIp")
         private String publicIp;
@@ -458,6 +590,9 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List<Tags> tags;
 
+        @com.aliyun.core.annotation.NameInMap("VpcAttributes")
+        private VpcAttributes vpcAttributes;
+
         @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
@@ -466,16 +601,21 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
 
         private RCInstances(Builder builder) {
             this.clusterName = builder.clusterName;
+            this.cpu = builder.cpu;
             this.createMode = builder.createMode;
             this.dbType = builder.dbType;
+            this.deploymentSetId = builder.deploymentSetId;
             this.description = builder.description;
+            this.expiredTime = builder.expiredTime;
             this.gmtCreated = builder.gmtCreated;
             this.hostIp = builder.hostIp;
             this.hostName = builder.hostName;
+            this.imageId = builder.imageId;
             this.instanceChargeType = builder.instanceChargeType;
             this.instanceId = builder.instanceId;
             this.instanceType = builder.instanceType;
             this.instanceTypeFamily = builder.instanceTypeFamily;
+            this.memory = builder.memory;
             this.publicIp = builder.publicIp;
             this.regionId = builder.regionId;
             this.securityGroupId = builder.securityGroupId;
@@ -483,6 +623,7 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             this.status = builder.status;
             this.tagResources = builder.tagResources;
             this.tags = builder.tags;
+            this.vpcAttributes = builder.vpcAttributes;
             this.vpcId = builder.vpcId;
             this.zoneId = builder.zoneId;
         }
@@ -503,6 +644,13 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return cpu
+         */
+        public Integer getCpu() {
+            return this.cpu;
+        }
+
+        /**
          * @return createMode
          */
         public String getCreateMode() {
@@ -517,10 +665,24 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return deploymentSetId
+         */
+        public String getDeploymentSetId() {
+            return this.deploymentSetId;
+        }
+
+        /**
          * @return description
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return expiredTime
+         */
+        public String getExpiredTime() {
+            return this.expiredTime;
         }
 
         /**
@@ -542,6 +704,13 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
          */
         public String getHostName() {
             return this.hostName;
+        }
+
+        /**
+         * @return imageId
+         */
+        public String getImageId() {
+            return this.imageId;
         }
 
         /**
@@ -570,6 +739,13 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
          */
         public String getInstanceTypeFamily() {
             return this.instanceTypeFamily;
+        }
+
+        /**
+         * @return memory
+         */
+        public Integer getMemory() {
+            return this.memory;
         }
 
         /**
@@ -622,6 +798,13 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return vpcAttributes
+         */
+        public VpcAttributes getVpcAttributes() {
+            return this.vpcAttributes;
+        }
+
+        /**
          * @return vpcId
          */
         public String getVpcId() {
@@ -637,16 +820,21 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String clusterName; 
+            private Integer cpu; 
             private String createMode; 
             private String dbType; 
+            private String deploymentSetId; 
             private String description; 
+            private String expiredTime; 
             private String gmtCreated; 
             private String hostIp; 
             private String hostName; 
+            private String imageId; 
             private String instanceChargeType; 
             private String instanceId; 
             private String instanceType; 
             private String instanceTypeFamily; 
+            private Integer memory; 
             private String publicIp; 
             private String regionId; 
             private String securityGroupId; 
@@ -654,6 +842,7 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             private String status; 
             private java.util.List<TagResources> tagResources; 
             private java.util.List<Tags> tags; 
+            private VpcAttributes vpcAttributes; 
             private String vpcId; 
             private String zoneId; 
 
@@ -662,16 +851,21 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
 
             private Builder(RCInstances model) {
                 this.clusterName = model.clusterName;
+                this.cpu = model.cpu;
                 this.createMode = model.createMode;
                 this.dbType = model.dbType;
+                this.deploymentSetId = model.deploymentSetId;
                 this.description = model.description;
+                this.expiredTime = model.expiredTime;
                 this.gmtCreated = model.gmtCreated;
                 this.hostIp = model.hostIp;
                 this.hostName = model.hostName;
+                this.imageId = model.imageId;
                 this.instanceChargeType = model.instanceChargeType;
                 this.instanceId = model.instanceId;
                 this.instanceType = model.instanceType;
                 this.instanceTypeFamily = model.instanceTypeFamily;
+                this.memory = model.memory;
                 this.publicIp = model.publicIp;
                 this.regionId = model.regionId;
                 this.securityGroupId = model.securityGroupId;
@@ -679,6 +873,7 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
                 this.status = model.status;
                 this.tagResources = model.tagResources;
                 this.tags = model.tags;
+                this.vpcAttributes = model.vpcAttributes;
                 this.vpcId = model.vpcId;
                 this.zoneId = model.zoneId;
             } 
@@ -691,6 +886,14 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
+                return this;
+            }
+
+            /**
+             * Cpu.
+             */
+            public Builder cpu(Integer cpu) {
+                this.cpu = cpu;
                 return this;
             }
 
@@ -714,6 +917,14 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             }
 
             /**
+             * DeploymentSetId.
+             */
+            public Builder deploymentSetId(String deploymentSetId) {
+                this.deploymentSetId = deploymentSetId;
+                return this;
+            }
+
+            /**
              * <p>The instance description.</p>
              * 
              * <strong>example:</strong>
@@ -721,6 +932,14 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * ExpiredTime.
+             */
+            public Builder expiredTime(String expiredTime) {
+                this.expiredTime = expiredTime;
                 return this;
             }
 
@@ -758,6 +977,14 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             }
 
             /**
+             * ImageId.
+             */
+            public Builder imageId(String imageId) {
+                this.imageId = imageId;
+                return this;
+            }
+
+            /**
              * InstanceChargeType.
              */
             public Builder instanceChargeType(String instanceChargeType) {
@@ -789,6 +1016,14 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
              */
             public Builder instanceTypeFamily(String instanceTypeFamily) {
                 this.instanceTypeFamily = instanceTypeFamily;
+                return this;
+            }
+
+            /**
+             * Memory.
+             */
+            public Builder memory(Integer memory) {
+                this.memory = memory;
                 return this;
             }
 
@@ -861,6 +1096,14 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
+                return this;
+            }
+
+            /**
+             * VpcAttributes.
+             */
+            public Builder vpcAttributes(VpcAttributes vpcAttributes) {
+                this.vpcAttributes = vpcAttributes;
                 return this;
             }
 

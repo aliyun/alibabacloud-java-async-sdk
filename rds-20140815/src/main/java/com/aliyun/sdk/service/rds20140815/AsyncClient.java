@@ -867,9 +867,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Supported database engine</h3>
+     * <h3><a href="#"></a>Supported database engines</h3>
      * <ul>
      * <li>PostgreSQL</li>
+     * <li>SQL Server<blockquote>
+     * <p> The parameters vary based on database engines.</p>
+     * </blockquote>
+     * </li>
      * </ul>
      * 
      * @param request the request parameters of CreateReplicationLink  CreateReplicationLinkRequest
@@ -1247,9 +1251,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Supported database engine</h3>
+     * <h3><a href="#"></a>Supported database engines</h3>
      * <ul>
      * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteReplicationLink  DeleteReplicationLinkRequest
@@ -2728,6 +2733,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeRCInstanceAttributeResponse> describeRCInstanceAttribute(DescribeRCInstanceAttributeRequest request);
 
     /**
+     * @param request the request parameters of DescribeRCInstanceTypeFamilies  DescribeRCInstanceTypeFamiliesRequest
+     * @return DescribeRCInstanceTypeFamiliesResponse
+     */
+    CompletableFuture<DescribeRCInstanceTypeFamiliesResponse> describeRCInstanceTypeFamilies(DescribeRCInstanceTypeFamiliesRequest request);
+
+    /**
+     * @param request the request parameters of DescribeRCInstanceTypes  DescribeRCInstanceTypesRequest
+     * @return DescribeRCInstanceTypesResponse
+     */
+    CompletableFuture<DescribeRCInstanceTypesResponse> describeRCInstanceTypes(DescribeRCInstanceTypesRequest request);
+
+    /**
      * <b>description</b> :
      * <p>The address returned is valid only for 15 seconds. If you do not use the returned address to establish a connection within 15 seconds, the address expires and you must call the operation again to obtain a new address.</p>
      * 
@@ -3932,17 +3949,16 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h3>Supported database engines</h3>
+     * <h3><a href="#"></a>Supported database engines</h3>
      * <ul>
      * <li>MySQL</li>
      * <li>PostgreSQL</li>
      * <li>SQL Server</li>
      * <li>MariaDB</li>
      * </ul>
-     * <h3>References</h3>
-     * <blockquote>
-     * <p>Fees are generated if the call is successful. Before you call this operation, carefully read the following documentation:</p>
-     * </blockquote>
+     * <h3><a href="#"></a>Billing details</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/57178.html">Fees for specification changes</a> are generated if the call is successful. Before you call this operation, carefully read the following topics.</p>
+     * <h3><a href="#"></a>References</h3>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/96061.html">Change the specifications of an ApsaraDB RDS for MySQL instance</a></li>
      * <li><a href="https://help.aliyun.com/document_detail/96750.html">Change the specifications of an ApsaraDB RDS for PostgreSQL instance</a></li>
@@ -4315,6 +4331,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyParameterGroupResponse> modifyParameterGroup(ModifyParameterGroupRequest request);
 
     /**
+     * @param request the request parameters of ModifyRCDiskSpec  ModifyRCDiskSpecRequest
+     * @return ModifyRCDiskSpecResponse
+     */
+    CompletableFuture<ModifyRCDiskSpecResponse> modifyRCDiskSpec(ModifyRCDiskSpecRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Before you call this operation, make sure that you are familiar with the billing methods, pricing, and refund rules of RDS Custom.
      * Before you call this operation, take note of the following items:</p>
@@ -4595,6 +4617,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RebootRCInstanceResponse> rebootRCInstance(RebootRCInstanceRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>SQL Server</p>
+     * 
      * @param request the request parameters of RebootRCInstances  RebootRCInstancesRequest
      * @return RebootRCInstancesResponse
      */
@@ -5098,6 +5124,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SwitchDBInstanceVpcResponse> switchDBInstanceVpc(SwitchDBInstanceVpcRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>SQL Server</p>
+     * 
      * @param request the request parameters of SwitchReplicationLink  SwitchReplicationLinkRequest
      * @return SwitchReplicationLinkResponse
      */
