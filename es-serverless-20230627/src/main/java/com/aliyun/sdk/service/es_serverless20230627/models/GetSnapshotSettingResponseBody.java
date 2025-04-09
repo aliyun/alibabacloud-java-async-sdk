@@ -36,6 +36,10 @@ public class GetSnapshotSettingResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetSnapshotSettingResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Result result; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSnapshotSettingResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * requestId.
@@ -119,6 +131,14 @@ public class GetSnapshotSettingResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean enable; 
             private String quartzRegex; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.enable = model.enable;
+                this.quartzRegex = model.quartzRegex;
+            } 
 
             /**
              * enable.

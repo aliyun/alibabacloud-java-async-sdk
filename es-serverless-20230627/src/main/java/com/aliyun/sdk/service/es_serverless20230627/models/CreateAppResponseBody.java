@@ -36,6 +36,10 @@ public class CreateAppResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class CreateAppResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Result result; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateAppResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * requestId.
@@ -83,10 +95,14 @@ public class CreateAppResponseBody extends TeaModel {
      * <p>CreateAppResponseBody</p>
      */
     public static class Result extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("appId")
+        private String appId;
+
         @com.aliyun.core.annotation.NameInMap("instaneId")
         private String instaneId;
 
         private Result(Builder builder) {
+            this.appId = builder.appId;
             this.instaneId = builder.instaneId;
         }
 
@@ -99,6 +115,13 @@ public class CreateAppResponseBody extends TeaModel {
         }
 
         /**
+         * @return appId
+         */
+        public String getAppId() {
+            return this.appId;
+        }
+
+        /**
          * @return instaneId
          */
         public String getInstaneId() {
@@ -106,7 +129,24 @@ public class CreateAppResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String appId; 
             private String instaneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.appId = model.appId;
+                this.instaneId = model.instaneId;
+            } 
+
+            /**
+             * appId.
+             */
+            public Builder appId(String appId) {
+                this.appId = appId;
+                return this;
+            }
 
             /**
              * instaneId.

@@ -61,7 +61,7 @@ public class UpdateDictRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -238,6 +238,14 @@ public class UpdateDictRequest extends Request {
             private String bucketName; 
             private String key; 
 
+            private Builder() {
+            } 
+
+            private Builder(OssObject model) {
+                this.bucketName = model.bucketName;
+                this.key = model.key;
+            } 
+
             /**
              * bucketName.
              */
@@ -304,6 +312,14 @@ public class UpdateDictRequest extends Request {
         public static final class Builder {
             private String name; 
             private OssObject ossObject; 
+
+            private Builder() {
+            } 
+
+            private Builder(Files model) {
+                this.name = model.name;
+                this.ossObject = model.ossObject;
+            } 
 
             /**
              * name.

@@ -36,6 +36,10 @@ public class GetAppResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetAppResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Result result; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAppResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * requestId.
@@ -119,6 +131,14 @@ public class GetAppResponseBody extends TeaModel {
         public static final class Builder {
             private String groupName; 
             private java.util.List<String> ips; 
+
+            private Builder() {
+            } 
+
+            private Builder(WhiteIpGroup model) {
+                this.groupName = model.groupName;
+                this.ips = model.ips;
+            } 
 
             /**
              * groupName.
@@ -223,6 +243,17 @@ public class GetAppResponseBody extends TeaModel {
             private String type; 
             private java.util.List<WhiteIpGroup> whiteIpGroup; 
 
+            private Builder() {
+            } 
+
+            private Builder(Network model) {
+                this.domain = model.domain;
+                this.enabled = model.enabled;
+                this.port = model.port;
+                this.type = model.type;
+                this.whiteIpGroup = model.whiteIpGroup;
+            } 
+
             /**
              * domain.
              */
@@ -313,6 +344,14 @@ public class GetAppResponseBody extends TeaModel {
         public static final class Builder {
             private String groupName; 
             private java.util.List<String> ips; 
+
+            private Builder() {
+            } 
+
+            private Builder(PrivateNetworkWhiteIpGroup model) {
+                this.groupName = model.groupName;
+                this.ips = model.ips;
+            } 
 
             /**
              * groupName.
@@ -440,6 +479,19 @@ public class GetAppResponseBody extends TeaModel {
             private String type; 
             private String vpcId; 
             private java.util.List<PrivateNetworkWhiteIpGroup> whiteIpGroup; 
+
+            private Builder() {
+            } 
+
+            private Builder(PrivateNetwork model) {
+                this.domain = model.domain;
+                this.enabled = model.enabled;
+                this.port = model.port;
+                this.pvlEndpointId = model.pvlEndpointId;
+                this.type = model.type;
+                this.vpcId = model.vpcId;
+                this.whiteIpGroup = model.whiteIpGroup;
+            } 
 
             /**
              * domain.
@@ -679,6 +731,25 @@ public class GetAppResponseBody extends TeaModel {
             private String regionId; 
             private String status; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.appId = model.appId;
+                this.appName = model.appName;
+                this.appType = model.appType;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.instanceId = model.instanceId;
+                this.modifiedTime = model.modifiedTime;
+                this.network = model.network;
+                this.ownerId = model.ownerId;
+                this.privateNetwork = model.privateNetwork;
+                this.regionId = model.regionId;
+                this.status = model.status;
+                this.version = model.version;
+            } 
 
             /**
              * appId.

@@ -36,6 +36,10 @@ public class GetAppQuotaResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetAppQuotaResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Result result; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAppQuotaResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * requestId.
@@ -144,6 +156,16 @@ public class GetAppQuotaResponseBody extends TeaModel {
             private Long minValue; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Limiters model) {
+                this.immutable = model.immutable;
+                this.maxValue = model.maxValue;
+                this.minValue = model.minValue;
+                this.type = model.type;
+            } 
+
             /**
              * immutable.
              */
@@ -215,6 +237,13 @@ public class GetAppQuotaResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Limiters> limiters; 
 
+            private Builder() {
+            } 
+
+            private Builder(LimiterInfo model) {
+                this.limiters = model.limiters;
+            } 
+
             /**
              * limiters.
              */
@@ -273,6 +302,14 @@ public class GetAppQuotaResponseBody extends TeaModel {
         public static final class Builder {
             private LimiterInfo limiterInfo; 
             private java.util.Map<String, ?> quotaInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.limiterInfo = model.limiterInfo;
+                this.quotaInfo = model.quotaInfo;
+            } 
 
             /**
              * limiterInfo.

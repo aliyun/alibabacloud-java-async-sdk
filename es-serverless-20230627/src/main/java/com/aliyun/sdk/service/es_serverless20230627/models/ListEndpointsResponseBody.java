@@ -40,6 +40,10 @@ public class ListEndpointsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class ListEndpointsResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Result> result; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListEndpointsResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * requestId.
@@ -139,6 +152,14 @@ public class ListEndpointsResponseBody extends TeaModel {
         public static final class Builder {
             private String vSwitchId; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(EndpointZones model) {
+                this.vSwitchId = model.vSwitchId;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * vSwitchId.
@@ -326,6 +347,24 @@ public class ListEndpointsResponseBody extends TeaModel {
             private String type; 
             private Integer updated; 
             private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.connectionStatus = model.connectionStatus;
+                this.created = model.created;
+                this.domain = model.domain;
+                this.endpointId = model.endpointId;
+                this.endpointZones = model.endpointZones;
+                this.name = model.name;
+                this.resourceId = model.resourceId;
+                this.securityGroupIds = model.securityGroupIds;
+                this.status = model.status;
+                this.type = model.type;
+                this.updated = model.updated;
+                this.vpcId = model.vpcId;
+            } 
 
             /**
              * connectionStatus.

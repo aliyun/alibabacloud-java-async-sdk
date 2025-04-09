@@ -36,6 +36,10 @@ public class GetSpecReviewTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetSpecReviewTaskResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Result result; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSpecReviewTaskResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * requestId.
@@ -263,6 +275,26 @@ public class GetSpecReviewTaskResponseBody extends TeaModel {
             private String source; 
             private String status; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.id = model.id;
+                this.appName = model.appName;
+                this.applyLimiter = model.applyLimiter;
+                this.applyQuota = model.applyQuota;
+                this.applyReason = model.applyReason;
+                this.effectiveLimiter = model.effectiveLimiter;
+                this.effectiveQuota = model.effectiveQuota;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.oldLimiter = model.oldLimiter;
+                this.oldQuota = model.oldQuota;
+                this.source = model.source;
+                this.status = model.status;
+                this.type = model.type;
+            } 
 
             /**
              * <p>代表资源一级ID的资源属性字段</p>

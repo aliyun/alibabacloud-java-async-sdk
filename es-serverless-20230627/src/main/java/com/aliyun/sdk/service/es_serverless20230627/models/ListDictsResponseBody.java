@@ -40,6 +40,10 @@ public class ListDictsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class ListDictsResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Result> result; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDictsResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * requestId.
@@ -163,6 +176,16 @@ public class ListDictsResponseBody extends TeaModel {
             private String name; 
             private String sourceType; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.downloadUrl = model.downloadUrl;
+                this.name = model.name;
+                this.sourceType = model.sourceType;
+                this.type = model.type;
+            } 
 
             /**
              * downloadUrl.

@@ -87,7 +87,7 @@ public class CreateAppRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -352,6 +352,14 @@ public class CreateAppRequest extends Request {
             private String password; 
             private String username; 
 
+            private Builder() {
+            } 
+
+            private Builder(BasicAuth model) {
+                this.password = model.password;
+                this.username = model.username;
+            } 
+
             /**
              * password.
              */
@@ -406,6 +414,13 @@ public class CreateAppRequest extends Request {
 
         public static final class Builder {
             private java.util.List<BasicAuth> basicAuth; 
+
+            private Builder() {
+            } 
+
+            private Builder(Authentication model) {
+                this.basicAuth = model.basicAuth;
+            } 
 
             /**
              * basicAuth.
@@ -465,6 +480,14 @@ public class CreateAppRequest extends Request {
         public static final class Builder {
             private String groupName; 
             private java.util.List<String> ips; 
+
+            private Builder() {
+            } 
+
+            private Builder(WhiteIpGroup model) {
+                this.groupName = model.groupName;
+                this.ips = model.ips;
+            } 
 
             /**
              * groupName.
@@ -569,6 +592,17 @@ public class CreateAppRequest extends Request {
             private String type; 
             private java.util.List<WhiteIpGroup> whiteIpGroup; 
 
+            private Builder() {
+            } 
+
+            private Builder(Network model) {
+                this.domain = model.domain;
+                this.enabled = model.enabled;
+                this.port = model.port;
+                this.type = model.type;
+                this.whiteIpGroup = model.whiteIpGroup;
+            } 
+
             /**
              * domain.
              */
@@ -659,6 +693,14 @@ public class CreateAppRequest extends Request {
         public static final class Builder {
             private String groupName; 
             private java.util.List<String> ips; 
+
+            private Builder() {
+            } 
+
+            private Builder(PrivateNetworkWhiteIpGroup model) {
+                this.groupName = model.groupName;
+                this.ips = model.ips;
+            } 
 
             /**
              * groupName.
@@ -763,6 +805,17 @@ public class CreateAppRequest extends Request {
             private String vpcId; 
             private java.util.List<PrivateNetworkWhiteIpGroup> whiteIpGroup; 
 
+            private Builder() {
+            } 
+
+            private Builder(PrivateNetwork model) {
+                this.enabled = model.enabled;
+                this.pvlEndpointId = model.pvlEndpointId;
+                this.type = model.type;
+                this.vpcId = model.vpcId;
+                this.whiteIpGroup = model.whiteIpGroup;
+            } 
+
             /**
              * enabled.
              */
@@ -865,6 +918,15 @@ public class CreateAppRequest extends Request {
             private String appType; 
             private Integer cu; 
             private Integer storage; 
+
+            private Builder() {
+            } 
+
+            private Builder(QuotaInfo model) {
+                this.appType = model.appType;
+                this.cu = model.cu;
+                this.storage = model.storage;
+            } 
 
             /**
              * appType.

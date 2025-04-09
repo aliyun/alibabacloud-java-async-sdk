@@ -36,6 +36,10 @@ public class DeleteEndpointResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DeleteEndpointResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Boolean result; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteEndpointResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * requestId.

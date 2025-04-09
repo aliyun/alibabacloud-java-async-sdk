@@ -36,6 +36,10 @@ public class ListIndicesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class ListIndicesResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<?> result; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListIndicesResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * <p>Id of the request</p>

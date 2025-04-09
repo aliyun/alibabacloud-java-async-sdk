@@ -44,6 +44,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextToken
      */
@@ -77,6 +81,16 @@ public class ListSnapshotsResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<java.util.Map<String, ?>> result; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSnapshotsResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * nextToken.

@@ -36,6 +36,10 @@ public class DeleteAppResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DeleteAppResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Result result; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteAppResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * requestId.
@@ -107,6 +119,13 @@ public class DeleteAppResponseBody extends TeaModel {
 
         public static final class Builder {
             private String instanceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.instanceId = model.instanceId;
+            } 
 
             /**
              * instanceId.

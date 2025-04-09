@@ -48,6 +48,10 @@ public class GetMonitorDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetMonitorDataResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Result> result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMonitorDataResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * code.
@@ -227,6 +242,18 @@ public class GetMonitorDataResponseBody extends TeaModel {
             private String metric; 
             private Float summary; 
             private java.util.Map<String, ?> tags; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.dps = model.dps;
+                this.integrity = model.integrity;
+                this.messageWatermark = model.messageWatermark;
+                this.metric = model.metric;
+                this.summary = model.summary;
+                this.tags = model.tags;
+            } 
 
             /**
              * dps.

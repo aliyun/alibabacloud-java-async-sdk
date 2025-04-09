@@ -40,6 +40,10 @@ public class ListSpecReviewTasksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class ListSpecReviewTasksResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Result> result; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSpecReviewTasksResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>Id of the request</p>
@@ -202,6 +215,19 @@ public class ListSpecReviewTasksResponseBody extends TeaModel {
             private String source; 
             private String status; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.id = model.id;
+                this.appName = model.appName;
+                this.applyReason = model.applyReason;
+                this.gmtCreate = model.gmtCreate;
+                this.source = model.source;
+                this.status = model.status;
+                this.type = model.type;
+            } 
 
             /**
              * <p>代表资源一级ID的资源属性字段</p>

@@ -51,7 +51,7 @@ public class CreateEndpointRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -191,6 +191,14 @@ public class CreateEndpointRequest extends Request {
         public static final class Builder {
             private String vswitchId; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(EndpointZones model) {
+                this.vswitchId = model.vswitchId;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * vswitchId.

@@ -41,6 +41,10 @@ public class ListAppsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -66,6 +70,15 @@ public class ListAppsResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Result> result; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAppsResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * requestId.
@@ -251,6 +264,23 @@ public class ListAppsResponseBody extends TeaModel {
             private String regionId; 
             private String status; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.appId = model.appId;
+                this.appName = model.appName;
+                this.appType = model.appType;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.instanceId = model.instanceId;
+                this.modifiedTime = model.modifiedTime;
+                this.ownerId = model.ownerId;
+                this.regionId = model.regionId;
+                this.status = model.status;
+                this.version = model.version;
+            } 
 
             /**
              * appId.
