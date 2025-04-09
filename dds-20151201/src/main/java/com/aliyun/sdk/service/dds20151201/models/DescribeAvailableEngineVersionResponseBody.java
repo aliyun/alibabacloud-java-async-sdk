@@ -36,6 +36,10 @@ public class DescribeAvailableEngineVersionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return engineVersions
      */
@@ -53,6 +57,14 @@ public class DescribeAvailableEngineVersionResponseBody extends TeaModel {
     public static final class Builder {
         private EngineVersions engineVersions; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAvailableEngineVersionResponseBody model) {
+            this.engineVersions = model.engineVersions;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The list of one or more engine versions to which an ApsaraDB for MongoDB instance can be upgraded.</p>
@@ -113,6 +125,13 @@ public class DescribeAvailableEngineVersionResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> engineVersion; 
+
+            private Builder() {
+            } 
+
+            private Builder(EngineVersions model) {
+                this.engineVersion = model.engineVersion;
+            } 
 
             /**
              * EngineVersion.

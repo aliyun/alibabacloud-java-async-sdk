@@ -36,6 +36,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBInstances
      */
@@ -53,6 +57,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     public static final class Builder {
         private DBInstances DBInstances; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBInstanceAttributeResponseBody model) {
+            this.DBInstances = model.DBInstances;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The instance details.</p>
@@ -231,6 +243,23 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private Integer port; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConfigserverAttribute model) {
+                this.connectString = model.connectString;
+                this.currentKernelVersion = model.currentKernelVersion;
+                this.lockMode = model.lockMode;
+                this.maxConnections = model.maxConnections;
+                this.maxIOPS = model.maxIOPS;
+                this.nodeClass = model.nodeClass;
+                this.nodeDescription = model.nodeDescription;
+                this.nodeId = model.nodeId;
+                this.nodeStorage = model.nodeStorage;
+                this.port = model.port;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The endpoint of the Configserver node.</p>
              * 
@@ -397,6 +426,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ConfigserverAttribute> configserverAttribute; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConfigserverList model) {
+                this.configserverAttribute = model.configserverAttribute;
+            } 
 
             /**
              * ConfigserverAttribute.
@@ -601,6 +637,26 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String vSwitchId; 
             private String vpcCloudInstanceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(MongosAttribute model) {
+                this.connectSting = model.connectSting;
+                this.connectString = model.connectString;
+                this.currentKernelVersion = model.currentKernelVersion;
+                this.lockMode = model.lockMode;
+                this.maxConnections = model.maxConnections;
+                this.maxIOPS = model.maxIOPS;
+                this.nodeClass = model.nodeClass;
+                this.nodeDescription = model.nodeDescription;
+                this.nodeId = model.nodeId;
+                this.port = model.port;
+                this.status = model.status;
+                this.VPCId = model.VPCId;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcCloudInstanceId = model.vpcCloudInstanceId;
+            } 
+
             /**
              * <p>The endpoint of the mongos node.</p>
              * 
@@ -613,10 +669,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The endpoint of the Configserver node.</p>
+             * <p>The endpoint of the mongos node.</p>
              * 
              * <strong>example:</strong>
-             * <p>dds-bp18b0934e7053e4-cs****.mongodb.rds.aliyuncs.com</p>
+             * <p>s-bp1d8c262a15****.mongodb.rds.aliyuncs.com</p>
              */
             public Builder connectString(String connectString) {
                 this.connectString = connectString;
@@ -807,6 +863,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<MongosAttribute> mongosAttribute; 
 
+            private Builder() {
+            } 
+
+            private Builder(MongosList model) {
+                this.mongosAttribute = model.mongosAttribute;
+            } 
+
             /**
              * MongosAttribute.
              */
@@ -925,6 +988,19 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String VPCCloudInstanceId; 
             private String VPCId; 
             private String vSwitchId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ReplicaSet model) {
+                this.connectionDomain = model.connectionDomain;
+                this.connectionPort = model.connectionPort;
+                this.networkType = model.networkType;
+                this.replicaSetRole = model.replicaSetRole;
+                this.VPCCloudInstanceId = model.VPCCloudInstanceId;
+                this.VPCId = model.VPCId;
+                this.vSwitchId = model.vSwitchId;
+            } 
 
             /**
              * <p>The endpoint of the node.</p>
@@ -1058,6 +1134,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ReplicaSet> replicaSet; 
+
+            private Builder() {
+            } 
+
+            private Builder(ReplicaSets model) {
+                this.replicaSet = model.replicaSet;
+            } 
 
             /**
              * ReplicaSet.
@@ -1250,6 +1333,25 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private Integer readonlyReplicas; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(ShardAttribute model) {
+                this.connectString = model.connectString;
+                this.currentKernelVersion = model.currentKernelVersion;
+                this.lockMode = model.lockMode;
+                this.maxConnections = model.maxConnections;
+                this.maxDiskMbps = model.maxDiskMbps;
+                this.maxIOPS = model.maxIOPS;
+                this.nodeClass = model.nodeClass;
+                this.nodeDescription = model.nodeDescription;
+                this.nodeId = model.nodeId;
+                this.nodeStorage = model.nodeStorage;
+                this.port = model.port;
+                this.readonlyReplicas = model.readonlyReplicas;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The endpoint of the shard node.</p>
              * 
@@ -1439,6 +1541,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<ShardAttribute> shardAttribute; 
 
+            private Builder() {
+            } 
+
+            private Builder(ShardList model) {
+                this.shardAttribute = model.shardAttribute;
+            } 
+
             /**
              * ShardAttribute.
              */
@@ -1497,6 +1606,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -1558,6 +1675,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
@@ -2217,6 +2341,64 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String vSwitchId; 
             private String vpcAuthMode; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DBInstance model) {
+                this.burstingEnabled = model.burstingEnabled;
+                this.capacityUnit = model.capacityUnit;
+                this.chargeType = model.chargeType;
+                this.configserverList = model.configserverList;
+                this.creationTime = model.creationTime;
+                this.currentKernelVersion = model.currentKernelVersion;
+                this.DBInstanceClass = model.DBInstanceClass;
+                this.DBInstanceDescription = model.DBInstanceDescription;
+                this.DBInstanceId = model.DBInstanceId;
+                this.DBInstanceOrderStatus = model.DBInstanceOrderStatus;
+                this.DBInstanceReleaseProtection = model.DBInstanceReleaseProtection;
+                this.DBInstanceStatus = model.DBInstanceStatus;
+                this.DBInstanceStorage = model.DBInstanceStorage;
+                this.DBInstanceType = model.DBInstanceType;
+                this.destroyTime = model.destroyTime;
+                this.encrypted = model.encrypted;
+                this.encryptionKey = model.encryptionKey;
+                this.engine = model.engine;
+                this.engineVersion = model.engineVersion;
+                this.expireTime = model.expireTime;
+                this.hiddenZoneId = model.hiddenZoneId;
+                this.kindCode = model.kindCode;
+                this.lastDowngradeTime = model.lastDowngradeTime;
+                this.lockMode = model.lockMode;
+                this.maintainEndTime = model.maintainEndTime;
+                this.maintainStartTime = model.maintainStartTime;
+                this.maxConnections = model.maxConnections;
+                this.maxIOPS = model.maxIOPS;
+                this.maxMBPS = model.maxMBPS;
+                this.mongosList = model.mongosList;
+                this.networkType = model.networkType;
+                this.protocolType = model.protocolType;
+                this.provisionedIops = model.provisionedIops;
+                this.readonlyReplicas = model.readonlyReplicas;
+                this.regionId = model.regionId;
+                this.replacateId = model.replacateId;
+                this.replicaSetName = model.replicaSetName;
+                this.replicaSets = model.replicaSets;
+                this.replicationFactor = model.replicationFactor;
+                this.resourceGroupId = model.resourceGroupId;
+                this.secondaryZoneId = model.secondaryZoneId;
+                this.shardList = model.shardList;
+                this.storageEngine = model.storageEngine;
+                this.storageType = model.storageType;
+                this.syncPercent = model.syncPercent;
+                this.tags = model.tags;
+                this.useClusterBackup = model.useClusterBackup;
+                this.VPCCloudInstanceIds = model.VPCCloudInstanceIds;
+                this.VPCId = model.VPCId;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcAuthMode = model.vpcAuthMode;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>Indicates whether performance burst is enabled for the ESSD AutoPL disk.</p>
@@ -2971,6 +3153,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DBInstance> DBInstance; 
+
+            private Builder() {
+            } 
+
+            private Builder(DBInstances model) {
+                this.DBInstance = model.DBInstance;
+            } 
 
             /**
              * DBInstance.

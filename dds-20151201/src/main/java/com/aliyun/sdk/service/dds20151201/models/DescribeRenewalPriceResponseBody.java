@@ -44,6 +44,10 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return order
      */
@@ -77,6 +81,16 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
         private String requestId; 
         private Rules rules; 
         private SubOrders subOrders; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRenewalPriceResponseBody model) {
+            this.order = model.order;
+            this.requestId = model.requestId;
+            this.rules = model.rules;
+            this.subOrders = model.subOrders;
+        } 
 
         /**
          * <p>The list of orders.</p>
@@ -187,6 +201,16 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             private String isSelected; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(Coupon model) {
+                this.couponNo = model.couponNo;
+                this.description = model.description;
+                this.isSelected = model.isSelected;
+                this.name = model.name;
+            } 
+
             /**
              * <p>The coupon number.</p>
              * 
@@ -270,6 +294,13 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Coupon> coupon; 
 
+            private Builder() {
+            } 
+
+            private Builder(Coupons model) {
+                this.coupon = model.coupon;
+            } 
+
             /**
              * Coupon.
              */
@@ -316,6 +347,13 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> ruleId; 
+
+            private Builder() {
+            } 
+
+            private Builder(RuleIds model) {
+                this.ruleId = model.ruleId;
+            } 
 
             /**
              * RuleId.
@@ -423,6 +461,18 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             private Float originalAmount; 
             private RuleIds ruleIds; 
             private Float tradeAmount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Order model) {
+                this.coupons = model.coupons;
+                this.currency = model.currency;
+                this.discountAmount = model.discountAmount;
+                this.originalAmount = model.originalAmount;
+                this.ruleIds = model.ruleIds;
+                this.tradeAmount = model.tradeAmount;
+            } 
 
             /**
              * <p>Details about the coupons.</p>
@@ -551,6 +601,15 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             private Long ruleDescId; 
             private String title; 
 
+            private Builder() {
+            } 
+
+            private Builder(Rule model) {
+                this.name = model.name;
+                this.ruleDescId = model.ruleDescId;
+                this.title = model.title;
+            } 
+
             /**
              * <p>The name of the rule.</p>
              * 
@@ -623,6 +682,13 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Rule> rule; 
 
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.rule = model.rule;
+            } 
+
             /**
              * Rule.
              */
@@ -669,6 +735,13 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> ruleId; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubOrderRuleIds model) {
+                this.ruleId = model.ruleId;
+            } 
 
             /**
              * RuleId.
@@ -765,6 +838,17 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             private SubOrderRuleIds ruleIds; 
             private Float tradeAmount; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubOrder model) {
+                this.discountAmount = model.discountAmount;
+                this.instanceId = model.instanceId;
+                this.originalAmount = model.originalAmount;
+                this.ruleIds = model.ruleIds;
+                this.tradeAmount = model.tradeAmount;
+            } 
+
             /**
              * <p>The discount amount of the order.</p>
              * 
@@ -855,6 +939,13 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SubOrder> subOrder; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubOrders model) {
+                this.subOrder = model.subOrder;
+            } 
 
             /**
              * SubOrder.

@@ -36,6 +36,10 @@ public class DescribeInstanceRecoverTimeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeInstanceRecoverTimeResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<RestoreRanges> restoreRanges; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceRecoverTimeResponseBody model) {
+            this.requestId = model.requestId;
+            this.restoreRanges = model.restoreRanges;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -134,6 +146,15 @@ public class DescribeInstanceRecoverTimeResponseBody extends TeaModel {
             private String restoreBeginTime; 
             private String restoreEndTime; 
             private String restoreType; 
+
+            private Builder() {
+            } 
+
+            private Builder(RestoreRanges model) {
+                this.restoreBeginTime = model.restoreBeginTime;
+                this.restoreEndTime = model.restoreEndTime;
+                this.restoreType = model.restoreType;
+            } 
 
             /**
              * <p>The beginning of the time range to which data can be restored.</p>

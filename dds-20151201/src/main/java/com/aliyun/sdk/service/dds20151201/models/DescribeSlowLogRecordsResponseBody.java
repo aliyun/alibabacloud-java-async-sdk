@@ -52,6 +52,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return engine
      */
@@ -101,6 +105,18 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         private Integer pageRecordCount; 
         private String requestId; 
         private Integer totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSlowLogRecordsResponseBody model) {
+            this.engine = model.engine;
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageRecordCount = model.pageRecordCount;
+            this.requestId = model.requestId;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * <p>The database engine.</p>
@@ -311,6 +327,22 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             private String SQLText; 
             private String tableName; 
 
+            private Builder() {
+            } 
+
+            private Builder(LogRecords model) {
+                this.accountName = model.accountName;
+                this.DBName = model.DBName;
+                this.docsExamined = model.docsExamined;
+                this.executionStartTime = model.executionStartTime;
+                this.hostAddress = model.hostAddress;
+                this.keysExamined = model.keysExamined;
+                this.queryTimes = model.queryTimes;
+                this.returnRowCounts = model.returnRowCounts;
+                this.SQLText = model.SQLText;
+                this.tableName = model.tableName;
+            } 
+
             /**
              * <p>The username of the database account that performs the operation.</p>
              * 
@@ -459,6 +491,13 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<LogRecords> logRecords; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.logRecords = model.logRecords;
+            } 
 
             /**
              * LogRecords.

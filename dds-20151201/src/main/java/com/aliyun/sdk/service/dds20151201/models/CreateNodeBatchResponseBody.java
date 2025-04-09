@@ -40,6 +40,10 @@ public class CreateNodeBatchResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nodeId
      */
@@ -65,6 +69,15 @@ public class CreateNodeBatchResponseBody extends TeaModel {
         private String nodeId; 
         private String orderId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateNodeBatchResponseBody model) {
+            this.nodeId = model.nodeId;
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the added mongos or shard node.</p>

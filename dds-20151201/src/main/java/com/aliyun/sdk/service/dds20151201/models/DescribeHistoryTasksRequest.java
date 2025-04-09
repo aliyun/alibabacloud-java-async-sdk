@@ -49,6 +49,10 @@ public class DescribeHistoryTasksRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -86,6 +90,7 @@ public class DescribeHistoryTasksRequest extends Request {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.status = builder.status;
@@ -103,7 +108,7 @@ public class DescribeHistoryTasksRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -155,6 +160,13 @@ public class DescribeHistoryTasksRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     /**
@@ -214,6 +226,7 @@ public class DescribeHistoryTasksRequest extends Request {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String regionId; 
+        private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String status; 
@@ -235,6 +248,7 @@ public class DescribeHistoryTasksRequest extends Request {
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.status = request.status;
@@ -294,7 +308,7 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. The value must be a positive integer. Default value: 1</p>
+         * <p>The number of the page to return. The value must be a positive integer. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -306,7 +320,7 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Valid values: 10 to 100. Default value: 10</p>
+         * <p>The number of entries per page. Valid values: 10 to 100. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -326,6 +340,18 @@ public class DescribeHistoryTasksRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek2inrfrnw3xby</p>
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

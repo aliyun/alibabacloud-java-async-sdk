@@ -48,6 +48,10 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -89,6 +93,17 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
         private Integer pageRecordCount; 
         private String requestId; 
         private Integer totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAuditRecordsResponseBody model) {
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageRecordCount = model.pageRecordCount;
+            this.requestId = model.requestId;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * <p>An array that consists of the information of audit log entries.</p>
@@ -276,6 +291,21 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
             private String threadID; 
             private Long totalExecutionTimes; 
 
+            private Builder() {
+            } 
+
+            private Builder(SQLRecord model) {
+                this.accountName = model.accountName;
+                this.DBName = model.DBName;
+                this.executeTime = model.executeTime;
+                this.hostAddress = model.hostAddress;
+                this.returnRowCounts = model.returnRowCounts;
+                this.syntax = model.syntax;
+                this.tableName = model.tableName;
+                this.threadID = model.threadID;
+                this.totalExecutionTimes = model.totalExecutionTimes;
+            } 
+
             /**
              * <p>The account of the database.</p>
              * 
@@ -413,6 +443,13 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SQLRecord> SQLRecord; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.SQLRecord = model.SQLRecord;
+            } 
 
             /**
              * SQLRecord.

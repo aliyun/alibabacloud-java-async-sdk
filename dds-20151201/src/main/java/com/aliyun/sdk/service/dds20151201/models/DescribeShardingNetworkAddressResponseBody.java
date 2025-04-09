@@ -40,6 +40,10 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return compatibleConnections
      */
@@ -65,6 +69,15 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
         private CompatibleConnections compatibleConnections; 
         private NetworkAddresses networkAddresses; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeShardingNetworkAddressResponseBody model) {
+            this.compatibleConnections = model.compatibleConnections;
+            this.networkAddresses = model.networkAddresses;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The endpoints of DynamoDB-compatible instances.</p>
@@ -203,6 +216,19 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             private String VPCId; 
             private String vswitchId; 
 
+            private Builder() {
+            } 
+
+            private Builder(CompatibleConnection model) {
+                this.expiredTime = model.expiredTime;
+                this.IPAddress = model.IPAddress;
+                this.networkAddress = model.networkAddress;
+                this.networkType = model.networkType;
+                this.port = model.port;
+                this.VPCId = model.VPCId;
+                this.vswitchId = model.vswitchId;
+            } 
+
             /**
              * <p>The remaining duration of the classic network endpoint. Unit: seconds.</p>
              * 
@@ -329,6 +355,13 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<CompatibleConnection> compatibleConnection; 
+
+            private Builder() {
+            } 
+
+            private Builder(CompatibleConnections model) {
+                this.compatibleConnection = model.compatibleConnection;
+            } 
 
             /**
              * CompatibleConnection.
@@ -508,6 +541,24 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             private String txtRecord; 
             private String VPCId; 
             private String vswitchId; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetworkAddress model) {
+                this.connectionType = model.connectionType;
+                this.expiredTime = model.expiredTime;
+                this.IPAddress = model.IPAddress;
+                this.networkAddress = model.networkAddress;
+                this.networkType = model.networkType;
+                this.nodeId = model.nodeId;
+                this.nodeType = model.nodeType;
+                this.port = model.port;
+                this.role = model.role;
+                this.txtRecord = model.txtRecord;
+                this.VPCId = model.VPCId;
+                this.vswitchId = model.vswitchId;
+            } 
 
             /**
              * <p>The public endpoint type. Valid values:</p>
@@ -703,6 +754,13 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<NetworkAddress> networkAddress; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetworkAddresses model) {
+                this.networkAddress = model.networkAddress;
+            } 
 
             /**
              * <p>The connection string of the instance.</p>

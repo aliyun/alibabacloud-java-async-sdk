@@ -44,6 +44,10 @@ public class EvaluateResourceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBInstanceAvailable
      */
@@ -77,6 +81,16 @@ public class EvaluateResourceResponseBody extends TeaModel {
         private String engine; 
         private String engineVersion; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(EvaluateResourceResponseBody model) {
+            this.DBInstanceAvailable = model.DBInstanceAvailable;
+            this.engine = model.engine;
+            this.engineVersion = model.engineVersion;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Indicates whether the resources are sufficient in the region. Valid values:</p>

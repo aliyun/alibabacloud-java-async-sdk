@@ -48,6 +48,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return backups
      */
@@ -89,6 +93,17 @@ public class DescribeBackupsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeBackupsResponseBody model) {
+            this.backups = model.backups;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The details of the backup set.</p>
@@ -365,6 +380,28 @@ public class DescribeBackupsResponseBody extends TeaModel {
             private String engineVersion; 
             private Boolean isAvail; 
 
+            private Builder() {
+            } 
+
+            private Builder(Backup model) {
+                this.backupDBNames = model.backupDBNames;
+                this.backupDownloadURL = model.backupDownloadURL;
+                this.backupEndTime = model.backupEndTime;
+                this.backupId = model.backupId;
+                this.backupIntranetDownloadURL = model.backupIntranetDownloadURL;
+                this.backupJobId = model.backupJobId;
+                this.backupMethod = model.backupMethod;
+                this.backupMode = model.backupMode;
+                this.backupName = model.backupName;
+                this.backupScale = model.backupScale;
+                this.backupSize = model.backupSize;
+                this.backupStartTime = model.backupStartTime;
+                this.backupStatus = model.backupStatus;
+                this.backupType = model.backupType;
+                this.engineVersion = model.engineVersion;
+                this.isAvail = model.isAvail;
+            } 
+
             /**
              * <p>The name of the database that has been backed up.</p>
              * 
@@ -605,6 +642,13 @@ public class DescribeBackupsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Backup> backup; 
+
+            private Builder() {
+            } 
+
+            private Builder(Backups model) {
+                this.backup = model.backup;
+            } 
 
             /**
              * Backup.

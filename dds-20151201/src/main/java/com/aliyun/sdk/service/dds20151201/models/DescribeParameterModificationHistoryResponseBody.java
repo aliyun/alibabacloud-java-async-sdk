@@ -36,6 +36,10 @@ public class DescribeParameterModificationHistoryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return historicalParameters
      */
@@ -53,6 +57,14 @@ public class DescribeParameterModificationHistoryResponseBody extends TeaModel {
     public static final class Builder {
         private HistoricalParameters historicalParameters; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeParameterModificationHistoryResponseBody model) {
+            this.historicalParameters = model.historicalParameters;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Details about the parameter modification records.</p>
@@ -147,6 +159,16 @@ public class DescribeParameterModificationHistoryResponseBody extends TeaModel {
             private String oldParameterValue; 
             private String parameterName; 
 
+            private Builder() {
+            } 
+
+            private Builder(HistoricalParameter model) {
+                this.modifyTime = model.modifyTime;
+                this.newParameterValue = model.newParameterValue;
+                this.oldParameterValue = model.oldParameterValue;
+                this.parameterName = model.parameterName;
+            } 
+
             /**
              * <p>The time when the parameter was modified. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
              * 
@@ -229,6 +251,13 @@ public class DescribeParameterModificationHistoryResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<HistoricalParameter> historicalParameter; 
+
+            private Builder() {
+            } 
+
+            private Builder(HistoricalParameters model) {
+                this.historicalParameter = model.historicalParameter;
+            } 
 
             /**
              * HistoricalParameter.

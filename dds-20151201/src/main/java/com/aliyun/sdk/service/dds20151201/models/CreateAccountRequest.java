@@ -77,7 +77,7 @@ public class CreateAccountRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -209,7 +209,18 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * CharacterType.
+         * <p>The type of the account that you want to create. Valid values:</p>
+         * <ul>
+         * <li><strong>db</strong> (default): shard account (available)</li>
+         * <li><strong>cs</strong>: ConfigServer account</li>
+         * <li><strong>normal</strong>: replica set account</li>
+         * </ul>
+         * <blockquote>
+         * <p> You can set this parameter only to <strong>db</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>db</p>
          */
         public Builder characterType(String characterType) {
             this.putQueryParameter("CharacterType", characterType);

@@ -76,6 +76,10 @@ public class DescribeMongoDBLogConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return enableAudit
      */
@@ -173,6 +177,24 @@ public class DescribeMongoDBLogConfigResponseBody extends TeaModel {
         private Long usedStorageForStandard; 
         private Long usedStorageForTrail; 
         private String userProjectName; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeMongoDBLogConfigResponseBody model) {
+            this.enableAudit = model.enableAudit;
+            this.isEtlMetaExist = model.isEtlMetaExist;
+            this.isUserProjectLogstoreExist = model.isUserProjectLogstoreExist;
+            this.preserveStorageForStandard = model.preserveStorageForStandard;
+            this.preserveStorageForTrail = model.preserveStorageForTrail;
+            this.requestId = model.requestId;
+            this.serviceType = model.serviceType;
+            this.ttlForStandard = model.ttlForStandard;
+            this.ttlForTrail = model.ttlForTrail;
+            this.usedStorageForStandard = model.usedStorageForStandard;
+            this.usedStorageForTrail = model.usedStorageForTrail;
+            this.userProjectName = model.userProjectName;
+        } 
 
         /**
          * <p>Indicates whether to enable the audit log feature.</p>

@@ -36,6 +36,10 @@ public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return keyIds
      */
@@ -53,6 +57,14 @@ public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
     public static final class Builder {
         private KeyIds keyIds; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeUserEncryptionKeyListResponseBody model) {
+            this.keyIds = model.keyIds;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The list of custom keys.</p>
@@ -110,6 +122,13 @@ public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> keyId; 
+
+            private Builder() {
+            } 
+
+            private Builder(KeyIds model) {
+                this.keyId = model.keyId;
+            } 
 
             /**
              * KeyId.

@@ -40,6 +40,10 @@ public class CheckRecoveryConditionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBInstanceName
      */
@@ -65,6 +69,15 @@ public class CheckRecoveryConditionResponseBody extends TeaModel {
         private String DBInstanceName; 
         private Boolean isValid; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CheckRecoveryConditionResponseBody model) {
+            this.DBInstanceName = model.DBInstanceName;
+            this.isValid = model.isValid;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The instance ID</p>

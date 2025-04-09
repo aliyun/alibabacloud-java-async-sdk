@@ -36,6 +36,10 @@ public class DescribeAuditPolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return logAuditStatus
      */
@@ -53,6 +57,14 @@ public class DescribeAuditPolicyResponseBody extends TeaModel {
     public static final class Builder {
         private String logAuditStatus; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAuditPolicyResponseBody model) {
+            this.logAuditStatus = model.logAuditStatus;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Indicates whether the log audit feature is enabled. Valid values:</p>

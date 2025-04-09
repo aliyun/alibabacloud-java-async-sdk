@@ -48,6 +48,10 @@ public class DescribeBackupDBsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return databases
      */
@@ -89,6 +93,17 @@ public class DescribeBackupDBsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeBackupDBsResponseBody model) {
+            this.databases = model.databases;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The details of the databases.</p>
@@ -180,6 +195,13 @@ public class DescribeBackupDBsResponseBody extends TeaModel {
         public static final class Builder {
             private String DBName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Database model) {
+                this.DBName = model.DBName;
+            } 
+
             /**
              * <p>The name of the database.</p>
              * 
@@ -229,6 +251,13 @@ public class DescribeBackupDBsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Database> database; 
+
+            private Builder() {
+            } 
+
+            private Builder(Databases model) {
+                this.database = model.database;
+            } 
 
             /**
              * Database.

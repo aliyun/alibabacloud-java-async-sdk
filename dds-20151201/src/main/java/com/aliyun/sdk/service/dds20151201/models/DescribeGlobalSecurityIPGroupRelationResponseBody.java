@@ -40,6 +40,10 @@ public class DescribeGlobalSecurityIPGroupRelationResponseBody extends TeaModel 
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBClusterId
      */
@@ -65,6 +69,15 @@ public class DescribeGlobalSecurityIPGroupRelationResponseBody extends TeaModel 
         private String DBClusterId; 
         private java.util.List<GlobalSecurityIPGroupRel> globalSecurityIPGroupRel; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeGlobalSecurityIPGroupRelationResponseBody model) {
+            this.DBClusterId = model.DBClusterId;
+            this.globalSecurityIPGroupRel = model.globalSecurityIPGroupRel;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The instance ID.</p>
@@ -169,6 +182,16 @@ public class DescribeGlobalSecurityIPGroupRelationResponseBody extends TeaModel 
             private String globalIgName; 
             private String globalSecurityGroupId; 
             private String regionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(GlobalSecurityIPGroupRel model) {
+                this.gIpList = model.gIpList;
+                this.globalIgName = model.globalIgName;
+                this.globalSecurityGroupId = model.globalSecurityGroupId;
+                this.regionId = model.regionId;
+            } 
 
             /**
              * <p>The IP addresses in the whitelist template.</p>

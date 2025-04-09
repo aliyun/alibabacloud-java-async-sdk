@@ -44,6 +44,10 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return endTime
      */
@@ -77,6 +81,16 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         private PerformanceKeys performanceKeys; 
         private String requestId; 
         private String startTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBInstancePerformanceResponseBody model) {
+            this.endTime = model.endTime;
+            this.performanceKeys = model.performanceKeys;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+        } 
 
         /**
          * <p>The end of the queried time range. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time is displayed in UTC.</p>
@@ -169,6 +183,14 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
             private String date; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(PerformanceValue model) {
+                this.date = model.date;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The date and time when the metric value was generated.</p>
              * 
@@ -229,6 +251,13 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<PerformanceValue> performanceValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(PerformanceValues model) {
+                this.performanceValue = model.performanceValue;
+            } 
 
             /**
              * PerformanceValue.
@@ -313,6 +342,16 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
             private String unit; 
             private String valueFormat; 
 
+            private Builder() {
+            } 
+
+            private Builder(PerformanceKey model) {
+                this.key = model.key;
+                this.performanceValues = model.performanceValues;
+                this.unit = model.unit;
+                this.valueFormat = model.valueFormat;
+            } 
+
             /**
              * <p>The performance metrics that are returned.</p>
              * 
@@ -393,6 +432,13 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<PerformanceKey> performanceKey; 
+
+            private Builder() {
+            } 
+
+            private Builder(PerformanceKeys model) {
+                this.performanceKey = model.performanceKey;
+            } 
 
             /**
              * PerformanceKey.

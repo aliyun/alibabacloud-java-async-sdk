@@ -36,6 +36,10 @@ public class DescribeKernelReleaseNotesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return releaseNotes
      */
@@ -53,6 +57,14 @@ public class DescribeKernelReleaseNotesResponseBody extends TeaModel {
     public static final class Builder {
         private ReleaseNotes releaseNotes; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeKernelReleaseNotesResponseBody model) {
+            this.releaseNotes = model.releaseNotes;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The list of the version release notes.</p>
@@ -123,6 +135,14 @@ public class DescribeKernelReleaseNotesResponseBody extends TeaModel {
             private String kernelVersion; 
             private String releaseNote; 
 
+            private Builder() {
+            } 
+
+            private Builder(ReleaseNote model) {
+                this.kernelVersion = model.kernelVersion;
+                this.releaseNote = model.releaseNote;
+            } 
+
             /**
              * <p>The version number.</p>
              * 
@@ -183,6 +203,13 @@ public class DescribeKernelReleaseNotesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ReleaseNote> releaseNote; 
+
+            private Builder() {
+            } 
+
+            private Builder(ReleaseNotes model) {
+                this.releaseNote = model.releaseNote;
+            } 
 
             /**
              * <p>The release notes.</p>

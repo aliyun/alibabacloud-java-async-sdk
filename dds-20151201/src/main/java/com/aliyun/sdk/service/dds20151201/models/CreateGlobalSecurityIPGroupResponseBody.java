@@ -36,6 +36,10 @@ public class CreateGlobalSecurityIPGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return globalSecurityIPGroup
      */
@@ -53,6 +57,14 @@ public class CreateGlobalSecurityIPGroupResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<GlobalSecurityIPGroup> globalSecurityIPGroup; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateGlobalSecurityIPGroupResponseBody model) {
+            this.globalSecurityIPGroup = model.globalSecurityIPGroup;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The IP whitelist templates.</p>
@@ -146,6 +158,16 @@ public class CreateGlobalSecurityIPGroupResponseBody extends TeaModel {
             private String globalIgName; 
             private String globalSecurityGroupId; 
             private String regionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(GlobalSecurityIPGroup model) {
+                this.gIpList = model.gIpList;
+                this.globalIgName = model.globalIgName;
+                this.globalSecurityGroupId = model.globalSecurityGroupId;
+                this.regionId = model.regionId;
+            } 
 
             /**
              * <p>The IP addresses in the whitelist template.</p>

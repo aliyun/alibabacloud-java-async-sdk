@@ -36,6 +36,10 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private ZoneInfos zoneInfos; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRoleZoneInfoResponseBody model) {
+            this.requestId = model.requestId;
+            this.zoneInfos = model.zoneInfos;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -158,6 +170,17 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
             private String roleId; 
             private String roleType; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ZoneInfo model) {
+                this.insName = model.insName;
+                this.nodeType = model.nodeType;
+                this.roleId = model.roleId;
+                this.roleType = model.roleType;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>The ID of the node.</p>
@@ -266,6 +289,13 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ZoneInfo> zoneInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(ZoneInfos model) {
+                this.zoneInfo = model.zoneInfo;
+            } 
 
             /**
              * ZoneInfo.

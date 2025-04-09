@@ -40,6 +40,10 @@ public class DescribeActiveOperationTaskCountResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return needPop
      */
@@ -65,6 +69,15 @@ public class DescribeActiveOperationTaskCountResponseBody extends TeaModel {
         private Integer needPop; 
         private String requestId; 
         private Integer taskCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeActiveOperationTaskCountResponseBody model) {
+            this.needPop = model.needPop;
+            this.requestId = model.requestId;
+            this.taskCount = model.taskCount;
+        } 
 
         /**
          * <p>Indicates whether any O&amp;M tasks need pop-up windows to notify users actions. Valid values:</p>

@@ -64,6 +64,10 @@ public class DescribeActiveOperationTasksRequest extends Request {
     private String region;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -92,6 +96,7 @@ public class DescribeActiveOperationTasksRequest extends Request {
         this.pageSize = builder.pageSize;
         this.productId = builder.productId;
         this.region = builder.region;
+        this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.status = builder.status;
@@ -106,7 +111,7 @@ public class DescribeActiveOperationTasksRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -189,6 +194,13 @@ public class DescribeActiveOperationTasksRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -228,6 +240,7 @@ public class DescribeActiveOperationTasksRequest extends Request {
         private Integer pageSize; 
         private String productId; 
         private String region; 
+        private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private Integer status; 
@@ -250,6 +263,7 @@ public class DescribeActiveOperationTasksRequest extends Request {
             this.pageSize = request.pageSize;
             this.productId = request.productId;
             this.region = request.region;
+            this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.status = request.status;
@@ -348,7 +362,7 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * <p>The page number of the page to return.</p>
+         * <p>The number of the page to return. Specify the parameter to a positive integer that is greater than <strong>0</strong>. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -360,7 +374,7 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Valid values: <strong>30, 50, and 100</strong>. Default value: <strong>30</strong>.</p>
+         * <p>The number of entries to return on each page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>. Default value: <strong>30</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -395,6 +409,18 @@ public class DescribeActiveOperationTasksRequest extends Request {
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
             this.region = region;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmyiu4ekp****</p>
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

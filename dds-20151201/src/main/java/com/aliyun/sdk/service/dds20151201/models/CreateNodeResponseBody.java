@@ -40,6 +40,10 @@ public class CreateNodeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nodeId
      */
@@ -65,6 +69,15 @@ public class CreateNodeResponseBody extends TeaModel {
         private String nodeId; 
         private String orderId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateNodeResponseBody model) {
+            this.nodeId = model.nodeId;
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The node ID.</p>

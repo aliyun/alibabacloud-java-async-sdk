@@ -48,6 +48,10 @@ public class DescribeDBInstanceTDEInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return encryptionKey
      */
@@ -89,6 +93,17 @@ public class DescribeDBInstanceTDEInfoResponseBody extends TeaModel {
         private String requestId; 
         private String roleARN; 
         private String TDEStatus; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBInstanceTDEInfoResponseBody model) {
+            this.encryptionKey = model.encryptionKey;
+            this.encryptorName = model.encryptorName;
+            this.requestId = model.requestId;
+            this.roleARN = model.roleARN;
+            this.TDEStatus = model.TDEStatus;
+        } 
 
         /**
          * <p>实例的自定义密钥。</p>

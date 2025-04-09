@@ -36,6 +36,10 @@ public class DescribeActiveOperationTaskTypeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeActiveOperationTaskTypeResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<TypeList> typeList; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeActiveOperationTaskTypeResponseBody model) {
+            this.requestId = model.requestId;
+            this.typeList = model.typeList;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -146,6 +158,16 @@ public class DescribeActiveOperationTaskTypeResponseBody extends TeaModel {
             private String taskType; 
             private String taskTypeInfoEn; 
             private String taskTypeInfoZh; 
+
+            private Builder() {
+            } 
+
+            private Builder(TypeList model) {
+                this.count = model.count;
+                this.taskType = model.taskType;
+                this.taskTypeInfoEn = model.taskTypeInfoEn;
+                this.taskTypeInfoZh = model.taskTypeInfoZh;
+            } 
 
             /**
              * <p>The number of pending tasks.</p>

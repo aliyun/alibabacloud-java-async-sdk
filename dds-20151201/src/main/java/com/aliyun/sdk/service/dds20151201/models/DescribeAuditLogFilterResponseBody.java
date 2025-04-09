@@ -40,6 +40,10 @@ public class DescribeAuditLogFilterResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return filter
      */
@@ -65,6 +69,15 @@ public class DescribeAuditLogFilterResponseBody extends TeaModel {
         private String filter; 
         private String requestId; 
         private String roleType; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAuditLogFilterResponseBody model) {
+            this.filter = model.filter;
+            this.requestId = model.requestId;
+            this.roleType = model.roleType;
+        } 
 
         /**
          * <p>The type of the audit log entries. Valid values:</p>

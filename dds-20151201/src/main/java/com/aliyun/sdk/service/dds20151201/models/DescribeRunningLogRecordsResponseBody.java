@@ -52,6 +52,10 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return engine
      */
@@ -101,6 +105,18 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
         private Integer pageRecordCount; 
         private String requestId; 
         private Integer totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRunningLogRecordsResponseBody model) {
+            this.engine = model.engine;
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageRecordCount = model.pageRecordCount;
+            this.requestId = model.requestId;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * <p>The database engine.</p>
@@ -239,6 +255,16 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
             private String content; 
             private String createTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(LogRecords model) {
+                this.category = model.category;
+                this.connInfo = model.connInfo;
+                this.content = model.content;
+                this.createTime = model.createTime;
+            } 
+
             /**
              * <p>The category of the log entry.</p>
              * 
@@ -321,6 +347,13 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<LogRecords> logRecords; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.logRecords = model.logRecords;
+            } 
 
             /**
              * LogRecords.

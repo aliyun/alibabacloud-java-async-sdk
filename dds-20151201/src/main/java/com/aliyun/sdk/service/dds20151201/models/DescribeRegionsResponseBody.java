@@ -36,6 +36,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return regions
      */
@@ -53,6 +57,14 @@ public class DescribeRegionsResponseBody extends TeaModel {
     public static final class Builder {
         private Regions regions; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRegionsResponseBody model) {
+            this.regions = model.regions;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The regions.</p>
@@ -135,6 +147,15 @@ public class DescribeRegionsResponseBody extends TeaModel {
             private String zoneId; 
             private String zoneName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Zone model) {
+                this.vpcEnabled = model.vpcEnabled;
+                this.zoneId = model.zoneId;
+                this.zoneName = model.zoneName;
+            } 
+
             /**
              * <p>Indicates whether a virtual private cloud (VPC) is supported. Valid values:</p>
              * <ul>
@@ -215,6 +236,13 @@ public class DescribeRegionsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Zone> zone; 
+
+            private Builder() {
+            } 
+
+            private Builder(Zones model) {
+                this.zone = model.zone;
+            } 
 
             /**
              * Zone.
@@ -298,6 +326,16 @@ public class DescribeRegionsResponseBody extends TeaModel {
             private String regionId; 
             private String regionName; 
             private Zones zones; 
+
+            private Builder() {
+            } 
+
+            private Builder(DdsRegion model) {
+                this.endPoint = model.endPoint;
+                this.regionId = model.regionId;
+                this.regionName = model.regionName;
+                this.zones = model.zones;
+            } 
 
             /**
              * <p>The public endpoint of the region.</p>
@@ -387,6 +425,13 @@ public class DescribeRegionsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DdsRegion> ddsRegion; 
+
+            private Builder() {
+            } 
+
+            private Builder(Regions model) {
+                this.ddsRegion = model.ddsRegion;
+            } 
 
             /**
              * DdsRegion.

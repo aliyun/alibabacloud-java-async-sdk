@@ -40,6 +40,10 @@ public class DeleteNodeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return orderId
      */
@@ -65,6 +69,15 @@ public class DeleteNodeResponseBody extends TeaModel {
         private String orderId; 
         private String requestId; 
         private Integer taskId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteNodeResponseBody model) {
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+            this.taskId = model.taskId;
+        } 
 
         /**
          * <p>The order ID.</p>

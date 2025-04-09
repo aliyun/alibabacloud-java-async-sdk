@@ -36,6 +36,10 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return backupJobs
      */
@@ -53,6 +57,14 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<BackupJobs> backupJobs; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeBackupTasksResponseBody model) {
+            this.backupJobs = model.backupJobs;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of the backup task.</p>
@@ -158,6 +170,17 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
             private String backupjobId; 
             private String jobMode; 
             private String progress; 
+
+            private Builder() {
+            } 
+
+            private Builder(BackupJobs model) {
+                this.backupSetStatus = model.backupSetStatus;
+                this.backupStartTime = model.backupStartTime;
+                this.backupjobId = model.backupjobId;
+                this.jobMode = model.jobMode;
+                this.progress = model.progress;
+            } 
 
             /**
              * <p>The backup task status. Valid values:</p>

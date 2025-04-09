@@ -115,7 +115,7 @@ public class DescribeDBInstancesOverviewRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -462,7 +462,10 @@ public class DescribeDBInstancesOverviewRequest extends Request {
         }
 
         /**
-         * ShowTags.
+         * <p>Specifies whether to display instance tags. Default value: False.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder showTags(Boolean showTags) {
             this.putQueryParameter("ShowTags", showTags);

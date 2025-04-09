@@ -52,6 +52,10 @@ public class DescribePriceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return order
      */
@@ -101,6 +105,18 @@ public class DescribePriceResponseBody extends TeaModel {
         private Rules rules; 
         private SubOrders subOrders; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePriceResponseBody model) {
+            this.order = model.order;
+            this.orderParams = model.orderParams;
+            this.requestId = model.requestId;
+            this.rules = model.rules;
+            this.subOrders = model.subOrders;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * <p>The order information.</p>
@@ -199,6 +215,13 @@ public class DescribePriceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Long> promotionRuleId; 
+
+            private Builder() {
+            } 
+
+            private Builder(PromotionRuleIdList model) {
+                this.promotionRuleId = model.promotionRuleId;
+            } 
 
             /**
              * PromotionRuleId.
@@ -330,6 +353,20 @@ public class DescribePriceResponseBody extends TeaModel {
             private String optionCode; 
             private String promotionOptionCode; 
             private PromotionRuleIdList promotionRuleIdList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Coupon model) {
+                this.activityCategory = model.activityCategory;
+                this.couponNo = model.couponNo;
+                this.description = model.description;
+                this.isSelected = model.isSelected;
+                this.name = model.name;
+                this.optionCode = model.optionCode;
+                this.promotionOptionCode = model.promotionOptionCode;
+                this.promotionRuleIdList = model.promotionRuleIdList;
+            } 
 
             /**
              * <p>The activity type of the coupon. Valid values:</p>
@@ -463,6 +500,13 @@ public class DescribePriceResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Coupon> coupon; 
 
+            private Builder() {
+            } 
+
+            private Builder(Coupons model) {
+                this.coupon = model.coupon;
+            } 
+
             /**
              * Coupon.
              */
@@ -509,6 +553,13 @@ public class DescribePriceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Long> optionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(OptionIds model) {
+                this.optionId = model.optionId;
+            } 
 
             /**
              * OptionId.
@@ -628,6 +679,19 @@ public class DescribePriceResponseBody extends TeaModel {
             private String optionCode; 
             private OptionIds optionIds; 
             private Double prodFee; 
+
+            private Builder() {
+            } 
+
+            private Builder(ContractActivity model) {
+                this.activityId = model.activityId;
+                this.activityName = model.activityName;
+                this.finalFee = model.finalFee;
+                this.finalPromFee = model.finalPromFee;
+                this.optionCode = model.optionCode;
+                this.optionIds = model.optionIds;
+                this.prodFee = model.prodFee;
+            } 
 
             /**
              * <p>The activity ID.</p>
@@ -850,6 +914,22 @@ public class DescribePriceResponseBody extends TeaModel {
             private Double monthPrice; 
             private Double originalStandAmount; 
 
+            private Builder() {
+            } 
+
+            private Builder(DepreciateInfo model) {
+                this.cheapRate = model.cheapRate;
+                this.cheapStandAmount = model.cheapStandAmount;
+                this.contractActivity = model.contractActivity;
+                this.differential = model.differential;
+                this.differentialName = model.differentialName;
+                this.isContractActivity = model.isContractActivity;
+                this.isShow = model.isShow;
+                this.listPrice = model.listPrice;
+                this.monthPrice = model.monthPrice;
+                this.originalStandAmount = model.originalStandAmount;
+            } 
+
             /**
              * <p>The price reduction rate.</p>
              * 
@@ -995,6 +1075,13 @@ public class DescribePriceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> ruleId; 
+
+            private Builder() {
+            } 
+
+            private Builder(RuleIds model) {
+                this.ruleId = model.ruleId;
+            } 
 
             /**
              * RuleId.
@@ -1222,6 +1309,28 @@ public class DescribePriceResponseBody extends TeaModel {
             private Double standDiscountPrice; 
             private Double standPrice; 
             private String tradeAmount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Order model) {
+                this.code = model.code;
+                this.contractActivity = model.contractActivity;
+                this.coupons = model.coupons;
+                this.currency = model.currency;
+                this.depreciateInfo = model.depreciateInfo;
+                this.discountAmount = model.discountAmount;
+                this.isContractActivity = model.isContractActivity;
+                this.message = model.message;
+                this.optionalPromotions = model.optionalPromotions;
+                this.originalAmount = model.originalAmount;
+                this.promDetailList = model.promDetailList;
+                this.ruleIds = model.ruleIds;
+                this.showDiscountInfo = model.showDiscountInfo;
+                this.standDiscountPrice = model.standDiscountPrice;
+                this.standPrice = model.standPrice;
+                this.tradeAmount = model.tradeAmount;
+            } 
 
             /**
              * <p>The order code.</p>
@@ -1453,6 +1562,15 @@ public class DescribePriceResponseBody extends TeaModel {
             private Long ruleDescId; 
             private String title; 
 
+            private Builder() {
+            } 
+
+            private Builder(Rule model) {
+                this.name = model.name;
+                this.ruleDescId = model.ruleDescId;
+                this.title = model.title;
+            } 
+
             /**
              * <p>The rule name.</p>
              * 
@@ -1525,6 +1643,13 @@ public class DescribePriceResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Rule> rule; 
 
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.rule = model.rule;
+            } 
+
             /**
              * Rule.
              */
@@ -1571,6 +1696,13 @@ public class DescribePriceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Long> optionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ContractActivityOptionIds model) {
+                this.optionId = model.optionId;
+            } 
 
             /**
              * OptionId.
@@ -1690,6 +1822,19 @@ public class DescribePriceResponseBody extends TeaModel {
             private String optionCode; 
             private ContractActivityOptionIds optionIds; 
             private Double prodFee; 
+
+            private Builder() {
+            } 
+
+            private Builder(DepreciateInfoContractActivity model) {
+                this.activityId = model.activityId;
+                this.activityName = model.activityName;
+                this.finalFee = model.finalFee;
+                this.finalPromFee = model.finalPromFee;
+                this.optionCode = model.optionCode;
+                this.optionIds = model.optionIds;
+                this.prodFee = model.prodFee;
+            } 
 
             /**
              * <p>The activity ID.</p>
@@ -1923,6 +2068,23 @@ public class DescribePriceResponseBody extends TeaModel {
             private Double monthPrice; 
             private Double originalStandAmount; 
             private String startTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubOrderDepreciateInfo model) {
+                this.cheapRate = model.cheapRate;
+                this.cheapStandAmount = model.cheapStandAmount;
+                this.contractActivity = model.contractActivity;
+                this.differential = model.differential;
+                this.differentialName = model.differentialName;
+                this.isContractActivity = model.isContractActivity;
+                this.isShow = model.isShow;
+                this.listPrice = model.listPrice;
+                this.monthPrice = model.monthPrice;
+                this.originalStandAmount = model.originalStandAmount;
+                this.startTime = model.startTime;
+            } 
 
             /**
              * <p>The price reduction rate.</p>
@@ -2177,6 +2339,21 @@ public class DescribePriceResponseBody extends TeaModel {
             private Double monthPrice; 
             private Double originalStandAmount; 
 
+            private Builder() {
+            } 
+
+            private Builder(ModuleInstanceDepreciateInfo model) {
+                this.cheapRate = model.cheapRate;
+                this.cheapStandAmount = model.cheapStandAmount;
+                this.differential = model.differential;
+                this.differentialName = model.differentialName;
+                this.isContractActivity = model.isContractActivity;
+                this.isShow = model.isShow;
+                this.listPrice = model.listPrice;
+                this.monthPrice = model.monthPrice;
+                this.originalStandAmount = model.originalStandAmount;
+            } 
+
             /**
              * <p>The price reduction rate.</p>
              * 
@@ -2351,6 +2528,16 @@ public class DescribePriceResponseBody extends TeaModel {
             private String type; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(ModuleAttr model) {
+                this.code = model.code;
+                this.name = model.name;
+                this.type = model.type;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The attribute code.</p>
              * 
@@ -2433,6 +2620,13 @@ public class DescribePriceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ModuleAttr> moduleAttr; 
+
+            private Builder() {
+            } 
+
+            private Builder(ModuleAttrs model) {
+                this.moduleAttr = model.moduleAttr;
+            } 
 
             /**
              * moduleAttr.
@@ -2565,6 +2759,20 @@ public class DescribePriceResponseBody extends TeaModel {
             private Long promotionId; 
             private String promotionName; 
 
+            private Builder() {
+            } 
+
+            private Builder(PromDetail model) {
+                this.activityExtInfo = model.activityExtInfo;
+                this.derivedPromType = model.derivedPromType;
+                this.finalPromFee = model.finalPromFee;
+                this.optionCode = model.optionCode;
+                this.promType = model.promType;
+                this.promotionCode = model.promotionCode;
+                this.promotionId = model.promotionId;
+                this.promotionName = model.promotionName;
+            } 
+
             /**
              * <p>The additional promotion information.</p>
              * 
@@ -2693,6 +2901,13 @@ public class DescribePriceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<PromDetail> promDetail; 
+
+            private Builder() {
+            } 
+
+            private Builder(PromDetailList model) {
+                this.promDetail = model.promDetail;
+            } 
 
             /**
              * PromDetail.
@@ -2933,6 +3148,29 @@ public class DescribePriceResponseBody extends TeaModel {
             private String priceType; 
             private String priceUnit; 
 
+            private Builder() {
+            } 
+
+            private Builder(ModuleInstance model) {
+                this.contractActivity = model.contractActivity;
+                this.cycleFee = model.cycleFee;
+                this.depreciateInfo = model.depreciateInfo;
+                this.discountFee = model.discountFee;
+                this.moduleAttrs = model.moduleAttrs;
+                this.moduleCode = model.moduleCode;
+                this.moduleId = model.moduleId;
+                this.moduleName = model.moduleName;
+                this.needOrderPay = model.needOrderPay;
+                this.payFee = model.payFee;
+                this.pricingModule = model.pricingModule;
+                this.promDetailList = model.promDetailList;
+                this.standDiscountPrice = model.standDiscountPrice;
+                this.standPrice = model.standPrice;
+                this.totalProductFee = model.totalProductFee;
+                this.priceType = model.priceType;
+                this.priceUnit = model.priceUnit;
+            } 
+
             /**
              * <p>Indicates whether the contract promotion is hit.</p>
              * 
@@ -3057,7 +3295,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The discount.</p>
+             * <p>The discounted price.</p>
              * 
              * <strong>example:</strong>
              * <p>451.00</p>
@@ -3090,7 +3328,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * priceType.
+             * <p>The price type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>monthPrice</p>
              */
             public Builder priceType(String priceType) {
                 this.priceType = priceType;
@@ -3098,7 +3339,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * priceUnit.
+             * <p>The unit of the price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxx</p>
              */
             public Builder priceUnit(String priceUnit) {
                 this.priceUnit = priceUnit;
@@ -3143,6 +3387,13 @@ public class DescribePriceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ModuleInstance> moduleInstance; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubOrderModuleInstance model) {
+                this.moduleInstance = model.moduleInstance;
+            } 
 
             /**
              * ModuleInstance.
@@ -3191,6 +3442,13 @@ public class DescribePriceResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> promotionRuleId; 
 
+            private Builder() {
+            } 
+
+            private Builder(OptionalPromotionPromotionRuleIdList model) {
+                this.promotionRuleId = model.promotionRuleId;
+            } 
+
             /**
              * promotionRuleId.
              */
@@ -3237,6 +3495,13 @@ public class DescribePriceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> targetArticleItemCode; 
+
+            private Builder() {
+            } 
+
+            private Builder(TargetArticleItemCodes model) {
+                this.targetArticleItemCode = model.targetArticleItemCode;
+            } 
 
             /**
              * targetArticleItemCode.
@@ -3393,6 +3658,22 @@ public class DescribePriceResponseBody extends TeaModel {
             private Boolean show; 
             private TargetArticleItemCodes targetArticleItemCodes; 
 
+            private Builder() {
+            } 
+
+            private Builder(OptionalPromotion model) {
+                this.activityCategory = model.activityCategory;
+                this.activityExtInfo = model.activityExtInfo;
+                this.canPromFee = model.canPromFee;
+                this.optionCode = model.optionCode;
+                this.promotionName = model.promotionName;
+                this.promotionOptionNo = model.promotionOptionNo;
+                this.promotionRuleIdList = model.promotionRuleIdList;
+                this.selected = model.selected;
+                this.show = model.show;
+                this.targetArticleItemCodes = model.targetArticleItemCodes;
+            } 
+
             /**
              * <p>The activity type.</p>
              * 
@@ -3462,7 +3743,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IDs of the rules that correspond to the coupon.</p>
+             * <p>The promotion IDs.</p>
              */
             public Builder promotionRuleIdList(OptionalPromotionPromotionRuleIdList promotionRuleIdList) {
                 this.promotionRuleIdList = promotionRuleIdList;
@@ -3537,6 +3818,13 @@ public class DescribePriceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<OptionalPromotion> optionalPromotion; 
+
+            private Builder() {
+            } 
+
+            private Builder(OptionalPromotions model) {
+                this.optionalPromotion = model.optionalPromotion;
+            } 
 
             /**
              * OptionalPromotion.
@@ -3669,6 +3957,20 @@ public class DescribePriceResponseBody extends TeaModel {
             private Long promotionId; 
             private String promotionName; 
 
+            private Builder() {
+            } 
+
+            private Builder(PromDetailListPromDetail model) {
+                this.activityExtInfo = model.activityExtInfo;
+                this.derivedPromType = model.derivedPromType;
+                this.finalPromFee = model.finalPromFee;
+                this.optionCode = model.optionCode;
+                this.promType = model.promType;
+                this.promotionCode = model.promotionCode;
+                this.promotionId = model.promotionId;
+                this.promotionName = model.promotionName;
+            } 
+
             /**
              * <p>The additional activity information.</p>
              * 
@@ -3798,6 +4100,13 @@ public class DescribePriceResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<PromDetailListPromDetail> promDetail; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubOrderPromDetailList model) {
+                this.promDetail = model.promDetail;
+            } 
+
             /**
              * PromDetail.
              */
@@ -3844,6 +4153,13 @@ public class DescribePriceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> ruleId; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubOrderRuleIds model) {
+                this.ruleId = model.ruleId;
+            } 
 
             /**
              * RuleId.
@@ -4048,6 +4364,26 @@ public class DescribePriceResponseBody extends TeaModel {
             private Double standPrice; 
             private String tradeAmount; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubOrder model) {
+                this.contractActivity = model.contractActivity;
+                this.depreciateInfo = model.depreciateInfo;
+                this.discountAmount = model.discountAmount;
+                this.instanceId = model.instanceId;
+                this.isContractActivity = model.isContractActivity;
+                this.isNewOfficialActivity = model.isNewOfficialActivity;
+                this.moduleInstance = model.moduleInstance;
+                this.optionalPromotions = model.optionalPromotions;
+                this.originalAmount = model.originalAmount;
+                this.promDetailList = model.promDetailList;
+                this.ruleIds = model.ruleIds;
+                this.standDiscountPrice = model.standDiscountPrice;
+                this.standPrice = model.standPrice;
+                this.tradeAmount = model.tradeAmount;
+            } 
+
             /**
              * <p>Indicates whether the contract promotion is hit.</p>
              * 
@@ -4225,6 +4561,13 @@ public class DescribePriceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SubOrder> subOrder; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubOrders model) {
+                this.subOrder = model.subOrder;
+            } 
 
             /**
              * SubOrder.

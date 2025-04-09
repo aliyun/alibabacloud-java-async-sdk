@@ -44,6 +44,10 @@ public class DescribeBackupStorageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return freeSize
      */
@@ -77,6 +81,16 @@ public class DescribeBackupStorageResponseBody extends TeaModel {
         private Long fullStorageSize; 
         private Long logStorageSize; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeBackupStorageResponseBody model) {
+            this.freeSize = model.freeSize;
+            this.fullStorageSize = model.fullStorageSize;
+            this.logStorageSize = model.logStorageSize;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The free quota for the storage capacity used for backup. Unit: bytes.</p>

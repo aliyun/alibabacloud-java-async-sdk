@@ -40,6 +40,10 @@ public class DescribeActiveOperationMaintenanceConfigResponseBody extends TeaMod
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return config
      */
@@ -65,6 +69,15 @@ public class DescribeActiveOperationMaintenanceConfigResponseBody extends TeaMod
         private Config config; 
         private Integer hasConfig; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeActiveOperationMaintenanceConfigResponseBody model) {
+            this.config = model.config;
+            this.hasConfig = model.hasConfig;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The description of the configuration.</p>
@@ -209,6 +222,19 @@ public class DescribeActiveOperationMaintenanceConfigResponseBody extends TeaMod
             private String maintainStartTime; 
             private String modifiedTime; 
             private Integer status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Config model) {
+                this.createdTime = model.createdTime;
+                this.cycleTime = model.cycleTime;
+                this.cycleType = model.cycleType;
+                this.maintainEndTime = model.maintainEndTime;
+                this.maintainStartTime = model.maintainStartTime;
+                this.modifiedTime = model.modifiedTime;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The time when the O&amp;M task was created. The timefollows the <em>yyyy-mm-dd</em>t<em>hh:mm:ss</em>z format. The time is displayed in UTC.</p>

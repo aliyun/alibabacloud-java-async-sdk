@@ -104,6 +104,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return backupInterval
      */
@@ -257,6 +261,31 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         private String requestId; 
         private String snapshotBackupType; 
         private String srcRegion; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeBackupPolicyResponseBody model) {
+            this.backupInterval = model.backupInterval;
+            this.backupRetentionPeriod = model.backupRetentionPeriod;
+            this.backupRetentionPolicyOnClusterDeletion = model.backupRetentionPolicyOnClusterDeletion;
+            this.crossBackupPeriod = model.crossBackupPeriod;
+            this.crossLogRetentionType = model.crossLogRetentionType;
+            this.crossLogRetentionValue = model.crossLogRetentionValue;
+            this.crossRetentionType = model.crossRetentionType;
+            this.crossRetentionValue = model.crossRetentionValue;
+            this.destRegion = model.destRegion;
+            this.enableBackupLog = model.enableBackupLog;
+            this.enableCrossLogBackup = model.enableCrossLogBackup;
+            this.highFrequencyBackupRetention = model.highFrequencyBackupRetention;
+            this.logBackupRetentionPeriod = model.logBackupRetentionPeriod;
+            this.preferredBackupPeriod = model.preferredBackupPeriod;
+            this.preferredBackupTime = model.preferredBackupTime;
+            this.preferredNextBackupTime = model.preferredNextBackupTime;
+            this.requestId = model.requestId;
+            this.snapshotBackupType = model.snapshotBackupType;
+            this.srcRegion = model.srcRegion;
+        } 
 
         /**
          * <p>The frequency at which high-frequency backup is created. Valid values:</p>

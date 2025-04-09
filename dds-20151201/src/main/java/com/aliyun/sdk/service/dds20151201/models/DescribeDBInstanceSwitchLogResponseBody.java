@@ -52,6 +52,10 @@ public class DescribeDBInstanceSwitchLogResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBInstanceId
      */
@@ -101,6 +105,18 @@ public class DescribeDBInstanceSwitchLogResponseBody extends TeaModel {
         private Long pageSize; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBInstanceSwitchLogResponseBody model) {
+            this.DBInstanceId = model.DBInstanceId;
+            this.logItems = model.logItems;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The instance ID.</p>
@@ -238,6 +254,16 @@ public class DescribeDBInstanceSwitchLogResponseBody extends TeaModel {
             private String switchCode; 
             private String switchStatus; 
             private String switchTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(LogItems model) {
+                this.nodeId = model.nodeId;
+                this.switchCode = model.switchCode;
+                this.switchStatus = model.switchStatus;
+                this.switchTime = model.switchTime;
+            } 
 
             /**
              * <p>The ID of the replica set instance or the ID of the node on which a primary/secondary switchover is performed.</p>

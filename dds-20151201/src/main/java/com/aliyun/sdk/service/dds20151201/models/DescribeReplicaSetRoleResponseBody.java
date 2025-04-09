@@ -40,6 +40,10 @@ public class DescribeReplicaSetRoleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBInstanceId
      */
@@ -65,6 +69,15 @@ public class DescribeReplicaSetRoleResponseBody extends TeaModel {
         private String DBInstanceId; 
         private ReplicaSets replicaSets; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeReplicaSetRoleResponseBody model) {
+            this.DBInstanceId = model.DBInstanceId;
+            this.replicaSets = model.replicaSets;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The instance ID.</p>
@@ -206,6 +219,19 @@ public class DescribeReplicaSetRoleResponseBody extends TeaModel {
             private String replicaSetRole; 
             private String roleId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ReplicaSet model) {
+                this.connectionDomain = model.connectionDomain;
+                this.connectionPort = model.connectionPort;
+                this.connectionType = model.connectionType;
+                this.expiredTime = model.expiredTime;
+                this.networkType = model.networkType;
+                this.replicaSetRole = model.replicaSetRole;
+                this.roleId = model.roleId;
+            } 
+
             /**
              * <p>The endpoint of the node.</p>
              * 
@@ -330,6 +356,13 @@ public class DescribeReplicaSetRoleResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ReplicaSet> replicaSet; 
+
+            private Builder() {
+            } 
+
+            private Builder(ReplicaSets model) {
+                this.replicaSet = model.replicaSet;
+            } 
 
             /**
              * ReplicaSet.

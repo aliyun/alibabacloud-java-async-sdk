@@ -38,33 +38,26 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("cn-wulanchabu", "mongodb.aliyuncs.com"),
             new TeaPair("cn-hangzhou", "mongodb.aliyuncs.com"),
             new TeaPair("cn-shanghai", "mongodb.aliyuncs.com"),
-            new TeaPair("cn-nanjing", "mongodb.cn-nanjing.aliyuncs.com"),
-            new TeaPair("cn-fuzhou", "mongodb.cn-fuzhou.aliyuncs.com"),
             new TeaPair("cn-shenzhen", "mongodb.aliyuncs.com"),
             new TeaPair("cn-heyuan", "mongodb.aliyuncs.com"),
             new TeaPair("cn-guangzhou", "mongodb.aliyuncs.com"),
             new TeaPair("cn-chengdu", "mongodb.cn-chengdu.aliyuncs.com"),
             new TeaPair("cn-hongkong", "mongodb.cn-hongkong.aliyuncs.com"),
             new TeaPair("ap-northeast-1", "mongodb.ap-northeast-1.aliyuncs.com"),
-            new TeaPair("ap-northeast-2", "mongodb.ap-northeast-2.aliyuncs.com"),
             new TeaPair("ap-southeast-1", "mongodb.ap-southeast-1.aliyuncs.com"),
             new TeaPair("ap-southeast-2", "mongodb.ap-southeast-2.aliyuncs.com"),
             new TeaPair("ap-southeast-3", "mongodb.ap-southeast-3.aliyuncs.com"),
             new TeaPair("ap-southeast-5", "mongodb.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("ap-southeast-6", "mongodb.ap-southeast-6.aliyuncs.com"),
-            new TeaPair("ap-southeast-7", "mongodb.ap-southeast-7.aliyuncs.com"),
-            new TeaPair("cn-zhengzhou-jva", "mongodb.cn-zhengzhou-jva.aliyuncs.com"),
             new TeaPair("us-east-1", "mongodb.us-east-1.aliyuncs.com"),
             new TeaPair("us-west-1", "mongodb.us-west-1.aliyuncs.com"),
             new TeaPair("eu-west-1", "mongodb.eu-west-1.aliyuncs.com"),
             new TeaPair("eu-central-1", "mongodb.eu-central-1.aliyuncs.com"),
             new TeaPair("ap-south-1", "mongodb.ap-south-1.aliyuncs.com"),
             new TeaPair("me-east-1", "mongodb.me-east-1.aliyuncs.com"),
-            new TeaPair("me-central-1", "mongodb.me-central-1.aliyuncs.com"),
             new TeaPair("cn-hangzhou-finance", "mongodb.aliyuncs.com"),
             new TeaPair("cn-shanghai-finance-1", "mongodb.aliyuncs.com"),
             new TeaPair("cn-shenzhen-finance-1", "mongodb.aliyuncs.com"),
-            new TeaPair("cn-north-2-gov-1", "mongodb.aliyuncs.com"),
+            new TeaPair("cn-north-2-gov-1", "mongodb.cn-north-2-gov-1.aliyuncs.com"),
             new TeaPair("ap-northeast-2-pop", "mongodb.aliyuncs.com"),
             new TeaPair("cn-beijing-finance-1", "mongodb.aliyuncs.com"),
             new TeaPair("cn-beijing-finance-pop", "mongodb.aliyuncs.com"),
@@ -948,6 +941,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeDBInstanceSSLResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeDBInstanceSpecInfo  DescribeDBInstanceSpecInfoRequest
+     * @return DescribeDBInstanceSpecInfoResponse
+     */
+    @Override
+    public CompletableFuture<DescribeDBInstanceSpecInfoResponse> describeDBInstanceSpecInfo(DescribeDBInstanceSpecInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDBInstanceSpecInfo").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDBInstanceSpecInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeDBInstanceSpecInfoResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

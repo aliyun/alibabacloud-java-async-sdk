@@ -48,6 +48,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -89,6 +93,17 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeHistoryTasksResponseBody model) {
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The task objects.</p>
@@ -201,7 +216,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         private String startTime;
 
         @com.aliyun.core.annotation.NameInMap("Status")
-        private Integer status;
+        private String status;
 
         @com.aliyun.core.annotation.NameInMap("TaskDetail")
         private String taskDetail;
@@ -354,7 +369,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         /**
          * @return status
          */
-        public Integer getStatus() {
+        public String getStatus() {
             return this.status;
         }
 
@@ -402,11 +417,37 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             private String regionId; 
             private Integer remainTime; 
             private String startTime; 
-            private Integer status; 
+            private String status; 
             private String taskDetail; 
             private String taskId; 
             private String taskType; 
             private String uid; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.actionInfo = model.actionInfo;
+                this.callerSource = model.callerSource;
+                this.callerUid = model.callerUid;
+                this.currentStepName = model.currentStepName;
+                this.dbType = model.dbType;
+                this.endTime = model.endTime;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.instanceType = model.instanceType;
+                this.product = model.product;
+                this.progress = model.progress;
+                this.reasonCode = model.reasonCode;
+                this.regionId = model.regionId;
+                this.remainTime = model.remainTime;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.taskDetail = model.taskDetail;
+                this.taskId = model.taskId;
+                this.taskType = model.taskType;
+                this.uid = model.uid;
+            } 
 
             /**
              * <p>A set of allowed actions that can be taken on the task. The system matches the current step name and status of the task to the available actions specified by ActionInfo. If no matching action is found, the current status of the task does not support any action. Example:</p>
@@ -615,7 +656,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>Succeed</p>
              */
-            public Builder status(Integer status) {
+            public Builder status(String status) {
                 this.status = status;
                 return this;
             }

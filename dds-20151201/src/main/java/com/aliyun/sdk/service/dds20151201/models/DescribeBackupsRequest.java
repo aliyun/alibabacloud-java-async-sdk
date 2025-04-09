@@ -100,7 +100,7 @@ public class DescribeBackupsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -340,7 +340,7 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. The value must be a positive integer that does not exceed the maximum value of the INTEGER data type. Default value: <strong>1</strong>.</p>
+         * <p>The page number. Pages start from page 1. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

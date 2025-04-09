@@ -36,6 +36,10 @@ public class DescribeAvailabilityZonesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return availableZones
      */
@@ -53,6 +57,14 @@ public class DescribeAvailabilityZonesResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<AvailableZones> availableZones; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAvailabilityZonesResponseBody model) {
+            this.availableZones = model.availableZones;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of the zones in which you can create ApsaraDB for MongoDB instances.</p>
@@ -134,6 +146,15 @@ public class DescribeAvailabilityZonesResponseBody extends TeaModel {
             private String regionId; 
             private String zoneId; 
             private String zoneName; 
+
+            private Builder() {
+            } 
+
+            private Builder(AvailableZones model) {
+                this.regionId = model.regionId;
+                this.zoneId = model.zoneId;
+                this.zoneName = model.zoneName;
+            } 
 
             /**
              * <p>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the latest available regions.</p>

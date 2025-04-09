@@ -48,6 +48,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBInstances
      */
@@ -89,6 +93,17 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBInstancesResponseBody model) {
+            this.DBInstances = model.DBInstances;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The details of the instance.</p>
@@ -204,6 +219,15 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             private String nodeDescription; 
             private String nodeId; 
 
+            private Builder() {
+            } 
+
+            private Builder(MongosAttribute model) {
+                this.nodeClass = model.nodeClass;
+                this.nodeDescription = model.nodeDescription;
+                this.nodeId = model.nodeId;
+            } 
+
             /**
              * <p>The instance type of the mongos node.</p>
              * 
@@ -275,6 +299,13 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<MongosAttribute> mongosAttribute; 
+
+            private Builder() {
+            } 
+
+            private Builder(MongosList model) {
+                this.mongosAttribute = model.mongosAttribute;
+            } 
 
             /**
              * MongosAttribute.
@@ -371,6 +402,17 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             private Integer nodeStorage; 
             private Integer readonlyReplicas; 
 
+            private Builder() {
+            } 
+
+            private Builder(ShardAttribute model) {
+                this.nodeClass = model.nodeClass;
+                this.nodeDescription = model.nodeDescription;
+                this.nodeId = model.nodeId;
+                this.nodeStorage = model.nodeStorage;
+                this.readonlyReplicas = model.readonlyReplicas;
+            } 
+
             /**
              * <p>The instance type of the shard node.</p>
              * 
@@ -465,6 +507,13 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<ShardAttribute> shardAttribute; 
 
+            private Builder() {
+            } 
+
+            private Builder(ShardList model) {
+                this.shardAttribute = model.shardAttribute;
+            } 
+
             /**
              * ShardAttribute.
              */
@@ -523,6 +572,14 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -584,6 +641,13 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
@@ -979,6 +1043,42 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             private Tags tags; 
             private String vpcAuthMode; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DBInstance model) {
+                this.backupRetentionPolicy = model.backupRetentionPolicy;
+                this.capacityUnit = model.capacityUnit;
+                this.chargeType = model.chargeType;
+                this.creationTime = model.creationTime;
+                this.DBInstanceClass = model.DBInstanceClass;
+                this.DBInstanceDescription = model.DBInstanceDescription;
+                this.DBInstanceId = model.DBInstanceId;
+                this.DBInstanceStatus = model.DBInstanceStatus;
+                this.DBInstanceStorage = model.DBInstanceStorage;
+                this.DBInstanceType = model.DBInstanceType;
+                this.destroyTime = model.destroyTime;
+                this.engine = model.engine;
+                this.engineVersion = model.engineVersion;
+                this.expireTime = model.expireTime;
+                this.hiddenZoneId = model.hiddenZoneId;
+                this.kindCode = model.kindCode;
+                this.lastDowngradeTime = model.lastDowngradeTime;
+                this.lockMode = model.lockMode;
+                this.mongosList = model.mongosList;
+                this.networkType = model.networkType;
+                this.regionId = model.regionId;
+                this.releaseTime = model.releaseTime;
+                this.replicationFactor = model.replicationFactor;
+                this.resourceGroupId = model.resourceGroupId;
+                this.secondaryZoneId = model.secondaryZoneId;
+                this.shardList = model.shardList;
+                this.storageType = model.storageType;
+                this.tags = model.tags;
+                this.vpcAuthMode = model.vpcAuthMode;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>The backup retention policy configured for the instance. Valid values:</p>
@@ -1457,6 +1557,13 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DBInstance> DBInstance; 
+
+            private Builder() {
+            } 
+
+            private Builder(DBInstances model) {
+                this.DBInstance = model.DBInstance;
+            } 
 
             /**
              * DBInstance.

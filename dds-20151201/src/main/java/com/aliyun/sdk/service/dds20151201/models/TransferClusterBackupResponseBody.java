@@ -36,6 +36,10 @@ public class TransferClusterBackupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return alreadyDone
      */
@@ -53,6 +57,14 @@ public class TransferClusterBackupResponseBody extends TeaModel {
     public static final class Builder {
         private String alreadyDone; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(TransferClusterBackupResponseBody model) {
+            this.alreadyDone = model.alreadyDone;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Indicates whether the instance is switched to the cluster backup mode. If the value of this parameter is <strong>1</strong>, the instance is switched to the cluster backup mode.</p>

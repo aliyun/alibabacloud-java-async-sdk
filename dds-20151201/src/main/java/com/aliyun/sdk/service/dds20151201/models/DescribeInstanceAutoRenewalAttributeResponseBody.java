@@ -48,6 +48,10 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -89,6 +93,17 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
         private Integer pageNumber; 
         private Integer pageRecordCount; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceAutoRenewalAttributeResponseBody model) {
+            this.items = model.items;
+            this.itemsNumbers = model.itemsNumbers;
+            this.pageNumber = model.pageNumber;
+            this.pageRecordCount = model.pageRecordCount;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Details about returned entries.</p>
@@ -228,6 +243,17 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
             private String duration; 
             private String regionId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Item model) {
+                this.autoRenew = model.autoRenew;
+                this.DBInstanceType = model.DBInstanceType;
+                this.dbInstanceId = model.dbInstanceId;
+                this.duration = model.duration;
+                this.regionId = model.regionId;
+            } 
+
             /**
              * <p>Indicates whether auto-renewal is enabled for the instance. Valid values:</p>
              * <ul>
@@ -335,6 +361,13 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Item> item; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.item = model.item;
+            } 
 
             /**
              * Item.

@@ -48,6 +48,10 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -89,6 +93,17 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeActiveOperationTaskResponseBody model) {
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * <p>The list of tasks.</p>
@@ -335,6 +350,26 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
             private String switchTime; 
             private String taskParams; 
             private String taskType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.createdTime = model.createdTime;
+                this.dbType = model.dbType;
+                this.deadline = model.deadline;
+                this.id = model.id;
+                this.insName = model.insName;
+                this.modifiedTime = model.modifiedTime;
+                this.prepareInterval = model.prepareInterval;
+                this.region = model.region;
+                this.resultInfo = model.resultInfo;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.switchTime = model.switchTime;
+                this.taskParams = model.taskParams;
+                this.taskType = model.taskType;
+            } 
 
             /**
              * <p>The time when the task was created. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</p>

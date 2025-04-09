@@ -48,6 +48,10 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clusterBackups
      */
@@ -89,6 +93,17 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeClusterBackupsResponseBody model) {
+            this.clusterBackups = model.clusterBackups;
+            this.maxResults = model.maxResults;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The cluster backup sets. A cluster backup file contains the backup sets of each node.</p>
@@ -215,6 +230,16 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             private String nodeId; 
             private String nodeType; 
             private String storageSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(ExtraInfo model) {
+                this.instanceClass = model.instanceClass;
+                this.nodeId = model.nodeId;
+                this.nodeType = model.nodeType;
+                this.storageSize = model.storageSize;
+            } 
 
             /**
              * <p>The instance type of the node.</p>
@@ -419,6 +444,23 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             private String instanceName; 
             private String isAvail; 
 
+            private Builder() {
+            } 
+
+            private Builder(Backups model) {
+                this.backupDownloadURL = model.backupDownloadURL;
+                this.backupEndTime = model.backupEndTime;
+                this.backupId = model.backupId;
+                this.backupIntranetDownloadURL = model.backupIntranetDownloadURL;
+                this.backupName = model.backupName;
+                this.backupSize = model.backupSize;
+                this.backupStartTime = model.backupStartTime;
+                this.backupStatus = model.backupStatus;
+                this.extraInfo = model.extraInfo;
+                this.instanceName = model.instanceName;
+                this.isAvail = model.isAvail;
+            } 
+
             /**
              * <p>The URL that is used to download the backup set over the Internet. If the backup set cannot be downloaded, an empty string is returned.</p>
              * 
@@ -583,6 +625,13 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String registryFromHistory; 
+
+            private Builder() {
+            } 
+
+            private Builder(ClusterBackupsExtraInfo model) {
+                this.registryFromHistory = model.registryFromHistory;
+            } 
 
             /**
              * <p>Indicates whether the cluster backups are migrated from the historical backup sets. If the value of this parameter is <strong>1</strong>, the cluster backups are migrated from the historical backup sets.</p>
@@ -765,6 +814,24 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             private ClusterBackupsExtraInfo extraInfo; 
             private Integer isAvail; 
             private String progress; 
+
+            private Builder() {
+            } 
+
+            private Builder(ClusterBackups model) {
+                this.attachLogStatus = model.attachLogStatus;
+                this.backups = model.backups;
+                this.clusterBackupEndTime = model.clusterBackupEndTime;
+                this.clusterBackupId = model.clusterBackupId;
+                this.clusterBackupMode = model.clusterBackupMode;
+                this.clusterBackupSize = model.clusterBackupSize;
+                this.clusterBackupStartTime = model.clusterBackupStartTime;
+                this.clusterBackupStatus = model.clusterBackupStatus;
+                this.engineVersion = model.engineVersion;
+                this.extraInfo = model.extraInfo;
+                this.isAvail = model.isAvail;
+                this.progress = model.progress;
+            } 
 
             /**
              * <p>The backup status. Valid values:</p>

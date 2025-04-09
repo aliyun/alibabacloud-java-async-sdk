@@ -48,6 +48,10 @@ public class DescribeParametersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return configParameters
      */
@@ -89,6 +93,17 @@ public class DescribeParametersResponseBody extends TeaModel {
         private String engineVersion; 
         private String requestId; 
         private RunningParameters runningParameters; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeParametersResponseBody model) {
+            this.configParameters = model.configParameters;
+            this.engine = model.engine;
+            this.engineVersion = model.engineVersion;
+            this.requestId = model.requestId;
+            this.runningParameters = model.runningParameters;
+        } 
 
         /**
          * <p>The parameter settings in the configuration template.</p>
@@ -237,6 +252,18 @@ public class DescribeParametersResponseBody extends TeaModel {
             private String parameterName; 
             private String parameterValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Parameter model) {
+                this.checkingCode = model.checkingCode;
+                this.forceRestart = model.forceRestart;
+                this.modifiableStatus = model.modifiableStatus;
+                this.parameterDescription = model.parameterDescription;
+                this.parameterName = model.parameterName;
+                this.parameterValue = model.parameterValue;
+            } 
+
             /**
              * <p>The valid values of the parameter.</p>
              * 
@@ -349,6 +376,13 @@ public class DescribeParametersResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Parameter> parameter; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConfigParameters model) {
+                this.parameter = model.parameter;
+            } 
 
             /**
              * Parameter.
@@ -468,6 +502,19 @@ public class DescribeParametersResponseBody extends TeaModel {
             private String parameterDescription; 
             private String parameterName; 
             private String parameterValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(RunningParametersParameter model) {
+                this.characterType = model.characterType;
+                this.checkingCode = model.checkingCode;
+                this.forceRestart = model.forceRestart;
+                this.modifiableStatus = model.modifiableStatus;
+                this.parameterDescription = model.parameterDescription;
+                this.parameterName = model.parameterName;
+                this.parameterValue = model.parameterValue;
+            } 
 
             /**
              * <p>实例的角色类型，取值说明：</p>
@@ -597,6 +644,13 @@ public class DescribeParametersResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<RunningParametersParameter> parameter; 
+
+            private Builder() {
+            } 
+
+            private Builder(RunningParameters model) {
+                this.parameter = model.parameter;
+            } 
 
             /**
              * Parameter.

@@ -48,6 +48,10 @@ public class DescribeRestoreDBInstanceListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBInstances
      */
@@ -89,6 +93,17 @@ public class DescribeRestoreDBInstanceListResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRestoreDBInstanceListResponseBody model) {
+            this.DBInstances = model.DBInstances;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>DB instances list.</p>
@@ -312,6 +327,24 @@ public class DescribeRestoreDBInstanceListResponseBody extends TeaModel {
             private String secondaryZoneId; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(DBInstance model) {
+                this.creationTime = model.creationTime;
+                this.DBInstanceDescription = model.DBInstanceDescription;
+                this.DBInstanceId = model.DBInstanceId;
+                this.DBInstanceStatus = model.DBInstanceStatus;
+                this.DBInstanceType = model.DBInstanceType;
+                this.engineVersion = model.engineVersion;
+                this.hiddenZoneId = model.hiddenZoneId;
+                this.isDeleted = model.isDeleted;
+                this.lockMode = model.lockMode;
+                this.regionId = model.regionId;
+                this.secondaryZoneId = model.secondaryZoneId;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
              * <p>The time of instance creation, formatted as <i>yyyy-MM-dd</i>T<i>HH:00:00</i>Z (UTC time).</p>
              * 
@@ -506,6 +539,13 @@ public class DescribeRestoreDBInstanceListResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DBInstance> DBInstance; 
+
+            private Builder() {
+            } 
+
+            private Builder(DBInstances model) {
+                this.DBInstance = model.DBInstance;
+            } 
 
             /**
              * DBInstance.

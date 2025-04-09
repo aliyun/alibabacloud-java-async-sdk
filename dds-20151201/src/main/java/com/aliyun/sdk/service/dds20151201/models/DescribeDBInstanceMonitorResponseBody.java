@@ -36,6 +36,10 @@ public class DescribeDBInstanceMonitorResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return granularity
      */
@@ -53,6 +57,14 @@ public class DescribeDBInstanceMonitorResponseBody extends TeaModel {
     public static final class Builder {
         private String granularity; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBInstanceMonitorResponseBody model) {
+            this.granularity = model.granularity;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The collection frequency of monitoring data for the instance. Valid value: <strong>5</strong>. Unit: seconds.</p>

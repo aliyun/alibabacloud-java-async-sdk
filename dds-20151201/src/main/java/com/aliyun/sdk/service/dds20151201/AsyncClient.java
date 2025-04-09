@@ -387,6 +387,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDBInstanceSSLResponse> describeDBInstanceSSL(DescribeDBInstanceSSLRequest request);
 
     /**
+     * @param request the request parameters of DescribeDBInstanceSpecInfo  DescribeDBInstanceSpecInfoRequest
+     * @return DescribeDBInstanceSpecInfoResponse
+     */
+    CompletableFuture<DescribeDBInstanceSpecInfoResponse> describeDBInstanceSpecInfo(DescribeDBInstanceSpecInfoRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Before you call this operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:</p>
      * <ul>

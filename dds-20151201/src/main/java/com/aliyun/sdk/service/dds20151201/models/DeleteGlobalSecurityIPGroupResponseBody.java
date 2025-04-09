@@ -32,6 +32,10 @@ public class DeleteGlobalSecurityIPGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -41,6 +45,13 @@ public class DeleteGlobalSecurityIPGroupResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteGlobalSecurityIPGroupResponseBody model) {
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The unique ID of the request. If the request fails, provide this ID for technical support to troubleshoot the failure.</p>

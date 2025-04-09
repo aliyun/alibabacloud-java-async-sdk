@@ -35,6 +35,10 @@ public class ModifyActiveOperationTasksRequest extends Request {
     private Long ownerId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -53,6 +57,7 @@ public class ModifyActiveOperationTasksRequest extends Request {
         this.immediateStart = builder.immediateStart;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.switchTime = builder.switchTime;
@@ -66,7 +71,7 @@ public class ModifyActiveOperationTasksRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -100,6 +105,13 @@ public class ModifyActiveOperationTasksRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -125,6 +137,7 @@ public class ModifyActiveOperationTasksRequest extends Request {
         private Integer immediateStart; 
         private String ownerAccount; 
         private Long ownerId; 
+        private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String switchTime; 
@@ -139,6 +152,7 @@ public class ModifyActiveOperationTasksRequest extends Request {
             this.immediateStart = request.immediateStart;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.switchTime = request.switchTime;
@@ -197,6 +211,18 @@ public class ModifyActiveOperationTasksRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmyiu4ekp****</p>
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

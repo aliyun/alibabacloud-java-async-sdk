@@ -36,6 +36,10 @@ public class DescribeActiveOperationTaskRegionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return regionList
      */
@@ -53,6 +57,14 @@ public class DescribeActiveOperationTaskRegionResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<RegionList> regionList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeActiveOperationTaskRegionResponseBody model) {
+            this.regionList = model.regionList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The region ID.</p>
@@ -122,6 +134,14 @@ public class DescribeActiveOperationTaskRegionResponseBody extends TeaModel {
         public static final class Builder {
             private Integer count; 
             private String region; 
+
+            private Builder() {
+            } 
+
+            private Builder(RegionList model) {
+                this.count = model.count;
+                this.region = model.region;
+            } 
 
             /**
              * <p>The total number of tasks.</p>

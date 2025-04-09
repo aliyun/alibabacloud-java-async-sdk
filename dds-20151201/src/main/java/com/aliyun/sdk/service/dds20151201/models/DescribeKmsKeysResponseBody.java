@@ -36,6 +36,10 @@ public class DescribeKmsKeysResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return kmsKeys
      */
@@ -53,6 +57,14 @@ public class DescribeKmsKeysResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<KmsKeys> kmsKeys; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeKmsKeysResponseBody model) {
+            this.kmsKeys = model.kmsKeys;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The KMS keys.</p>
@@ -122,6 +134,14 @@ public class DescribeKmsKeysResponseBody extends TeaModel {
         public static final class Builder {
             private String keyAlias; 
             private String keyId; 
+
+            private Builder() {
+            } 
+
+            private Builder(KmsKeys model) {
+                this.keyAlias = model.keyAlias;
+                this.keyId = model.keyId;
+            } 
 
             /**
              * <p>The alias of the key.</p>

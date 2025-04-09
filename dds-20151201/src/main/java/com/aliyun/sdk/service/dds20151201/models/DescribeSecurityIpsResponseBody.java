@@ -40,6 +40,10 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
         private String requestId; 
         private SecurityIpGroups securityIpGroups; 
         private String securityIps; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSecurityIpsResponseBody model) {
+            this.requestId = model.requestId;
+            this.securityIpGroups = model.securityIpGroups;
+            this.securityIps = model.securityIps;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -158,6 +171,15 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
             private String securityIpGroupName; 
             private String securityIpList; 
 
+            private Builder() {
+            } 
+
+            private Builder(SecurityIpGroup model) {
+                this.securityIpGroupAttribute = model.securityIpGroupAttribute;
+                this.securityIpGroupName = model.securityIpGroupName;
+                this.securityIpList = model.securityIpList;
+            } 
+
             /**
              * <p>The attribute of the IP address whitelist.</p>
              * 
@@ -229,6 +251,13 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SecurityIpGroup> securityIpGroup; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecurityIpGroups model) {
+                this.securityIpGroup = model.securityIpGroup;
+            } 
 
             /**
              * SecurityIpGroup.

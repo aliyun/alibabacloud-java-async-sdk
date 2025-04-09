@@ -40,6 +40,10 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBInstances
      */
@@ -65,6 +69,15 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
         private java.util.List<DBInstances> DBInstances; 
         private String requestId; 
         private String totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBInstancesOverviewResponseBody model) {
+            this.DBInstances = model.DBInstances;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The information of instances.</p>
@@ -157,6 +170,15 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
             private String nodeClass; 
             private String nodeDescription; 
             private String nodeId; 
+
+            private Builder() {
+            } 
+
+            private Builder(MongosList model) {
+                this.nodeClass = model.nodeClass;
+                this.nodeDescription = model.nodeDescription;
+                this.nodeId = model.nodeId;
+            } 
 
             /**
              * <p>The instance type of the mongos node.</p>
@@ -278,6 +300,17 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
             private Integer nodeStorage; 
             private Integer readonlyReplicas; 
 
+            private Builder() {
+            } 
+
+            private Builder(ShardList model) {
+                this.nodeClass = model.nodeClass;
+                this.nodeDescription = model.nodeDescription;
+                this.nodeId = model.nodeId;
+                this.nodeStorage = model.nodeStorage;
+                this.readonlyReplicas = model.readonlyReplicas;
+            } 
+
             /**
              * <p>The instance type of the shard node.</p>
              * 
@@ -383,6 +416,14 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key. Valid values of N: <strong>1</strong> to <strong>20</strong>.</p>
@@ -742,6 +783,37 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
             private java.util.List<Tags> tags; 
             private String vpcAuthMode; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DBInstances model) {
+                this.capacityUnit = model.capacityUnit;
+                this.chargeType = model.chargeType;
+                this.creationTime = model.creationTime;
+                this.DBInstanceClass = model.DBInstanceClass;
+                this.DBInstanceDescription = model.DBInstanceDescription;
+                this.DBInstanceId = model.DBInstanceId;
+                this.DBInstanceStatus = model.DBInstanceStatus;
+                this.DBInstanceStorage = model.DBInstanceStorage;
+                this.DBInstanceType = model.DBInstanceType;
+                this.destroyTime = model.destroyTime;
+                this.engine = model.engine;
+                this.engineVersion = model.engineVersion;
+                this.expireTime = model.expireTime;
+                this.kindCode = model.kindCode;
+                this.lastDowngradeTime = model.lastDowngradeTime;
+                this.lockMode = model.lockMode;
+                this.mongosList = model.mongosList;
+                this.networkType = model.networkType;
+                this.regionId = model.regionId;
+                this.replicationFactor = model.replicationFactor;
+                this.resourceGroupId = model.resourceGroupId;
+                this.shardList = model.shardList;
+                this.tags = model.tags;
+                this.vpcAuthMode = model.vpcAuthMode;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>The read and write throughput consumed by the instance.</p>
