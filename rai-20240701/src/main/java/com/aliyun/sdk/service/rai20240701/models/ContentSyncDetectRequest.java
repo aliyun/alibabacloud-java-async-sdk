@@ -49,7 +49,7 @@ public class ContentSyncDetectRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -174,6 +174,13 @@ public class ContentSyncDetectRequest extends Request {
 
         public static final class Builder {
             private String content; 
+
+            private Builder() {
+            } 
+
+            private Builder(ServiceParameter model) {
+                this.content = model.content;
+            } 
 
             /**
              * content.

@@ -148,6 +148,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetModelInputContentDetectResult  GetModelInputContentDetectResultRequest
+     * @return GetModelInputContentDetectResultResponse
+     */
+    @Override
+    public CompletableFuture<GetModelInputContentDetectResultResponse> getModelInputContentDetectResult(GetModelInputContentDetectResultRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetModelInputContentDetectResult").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetModelInputContentDetectResultResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetModelInputContentDetectResultResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetModelOutputContentDetectResult  GetModelOutputContentDetectResultRequest
+     * @return GetModelOutputContentDetectResultResponse
+     */
+    @Override
+    public CompletableFuture<GetModelOutputContentDetectResultResponse> getModelOutputContentDetectResult(GetModelOutputContentDetectResultRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetModelOutputContentDetectResult").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetModelOutputContentDetectResultResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetModelOutputContentDetectResultResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListSensitiveWord  ListSensitiveWordRequest
      * @return ListSensitiveWordResponse
      */
@@ -160,6 +196,78 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListSensitiveWordResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModelInputContentAsyncDetect  ModelInputContentAsyncDetectRequest
+     * @return ModelInputContentAsyncDetectResponse
+     */
+    @Override
+    public CompletableFuture<ModelInputContentAsyncDetectResponse> modelInputContentAsyncDetect(ModelInputContentAsyncDetectRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModelInputContentAsyncDetect").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModelInputContentAsyncDetectResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModelInputContentAsyncDetectResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModelInputContentSyncDetect  ModelInputContentSyncDetectRequest
+     * @return ModelInputContentSyncDetectResponse
+     */
+    @Override
+    public CompletableFuture<ModelInputContentSyncDetectResponse> modelInputContentSyncDetect(ModelInputContentSyncDetectRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModelInputContentSyncDetect").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModelInputContentSyncDetectResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModelInputContentSyncDetectResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModelOutputContentAsyncDetect  ModelOutputContentAsyncDetectRequest
+     * @return ModelOutputContentAsyncDetectResponse
+     */
+    @Override
+    public CompletableFuture<ModelOutputContentAsyncDetectResponse> modelOutputContentAsyncDetect(ModelOutputContentAsyncDetectRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModelOutputContentAsyncDetect").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModelOutputContentAsyncDetectResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModelOutputContentAsyncDetectResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModelOutputContentSyncDetect  ModelOutputContentSyncDetectRequest
+     * @return ModelOutputContentSyncDetectResponse
+     */
+    @Override
+    public CompletableFuture<ModelOutputContentSyncDetectResponse> modelOutputContentSyncDetect(ModelOutputContentSyncDetectRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModelOutputContentSyncDetect").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModelOutputContentSyncDetectResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModelOutputContentSyncDetectResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

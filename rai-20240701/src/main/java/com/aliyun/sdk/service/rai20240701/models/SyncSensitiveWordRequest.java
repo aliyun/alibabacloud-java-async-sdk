@@ -44,7 +44,7 @@ public class SyncSensitiveWordRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -189,6 +189,16 @@ public class SyncSensitiveWordRequest extends Request {
             private Integer status; 
             private String word; 
 
+            private Builder() {
+            } 
+
+            private Builder(SensitiveWordList model) {
+                this.id = model.id;
+                this.label = model.label;
+                this.status = model.status;
+                this.word = model.word;
+            } 
+
             /**
              * Id.
              */
@@ -259,6 +269,13 @@ public class SyncSensitiveWordRequest extends Request {
 
         public static final class Builder {
             private java.util.List<SensitiveWordList> sensitiveWordList; 
+
+            private Builder() {
+            } 
+
+            private Builder(BodyData model) {
+                this.sensitiveWordList = model.sensitiveWordList;
+            } 
 
             /**
              * SensitiveWordList.

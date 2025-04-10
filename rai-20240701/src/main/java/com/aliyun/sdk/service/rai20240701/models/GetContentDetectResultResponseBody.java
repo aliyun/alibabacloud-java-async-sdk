@@ -52,6 +52,10 @@ public class GetContentDetectResultResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetContentDetectResultResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetContentDetectResultResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -212,6 +228,15 @@ public class GetContentDetectResultResponseBody extends TeaModel {
             private Integer riskResult; 
             private Integer status; 
 
+            private Builder() {
+            } 
+
+            private Builder(DetectResultList model) {
+                this.riskInfo = model.riskInfo;
+                this.riskResult = model.riskResult;
+                this.status = model.status;
+            } 
+
             /**
              * RiskInfo.
              */
@@ -322,6 +347,17 @@ public class GetContentDetectResultResponseBody extends TeaModel {
             private String taskId; 
             private Integer taskStatus; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.detectResultList = model.detectResultList;
+                this.processedCount = model.processedCount;
+                this.taskId = model.taskId;
+                this.taskStatus = model.taskStatus;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * DetectResultList.

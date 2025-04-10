@@ -12,16 +12,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ContentAsyncDetectResponseBody} extends {@link TeaModel}
+ * {@link ModelInputContentAsyncDetectResponseBody} extends {@link TeaModel}
  *
- * <p>ContentAsyncDetectResponseBody</p>
+ * <p>ModelInputContentAsyncDetectResponseBody</p>
  */
-public class ContentAsyncDetectResponseBody extends TeaModel {
+public class ModelInputContentAsyncDetectResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
-
-    @com.aliyun.core.annotation.NameInMap("Data")
-    private Data data;
 
     @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
@@ -35,20 +32,23 @@ public class ContentAsyncDetectResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private ContentAsyncDetectResponseBody(Builder builder) {
+    @com.aliyun.core.annotation.NameInMap("TaskId")
+    private String taskId;
+
+    private ModelInputContentAsyncDetectResponseBody(Builder builder) {
         this.code = builder.code;
-        this.data = builder.data;
         this.httpStatusCode = builder.httpStatusCode;
         this.message = builder.message;
         this.requestId = builder.requestId;
         this.success = builder.success;
+        this.taskId = builder.taskId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ContentAsyncDetectResponseBody create() {
+    public static ModelInputContentAsyncDetectResponseBody create() {
         return builder().build();
     }
 
@@ -61,13 +61,6 @@ public class ContentAsyncDetectResponseBody extends TeaModel {
      */
     public String getCode() {
         return this.code;
-    }
-
-    /**
-     * @return data
-     */
-    public Data getData() {
-        return this.data;
     }
 
     /**
@@ -98,24 +91,31 @@ public class ContentAsyncDetectResponseBody extends TeaModel {
         return this.success;
     }
 
+    /**
+     * @return taskId
+     */
+    public String getTaskId() {
+        return this.taskId;
+    }
+
     public static final class Builder {
         private String code; 
-        private Data data; 
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
         private Boolean success; 
+        private String taskId; 
 
         private Builder() {
         } 
 
-        private Builder(ContentAsyncDetectResponseBody model) {
+        private Builder(ModelInputContentAsyncDetectResponseBody model) {
             this.code = model.code;
-            this.data = model.data;
             this.httpStatusCode = model.httpStatusCode;
             this.message = model.message;
             this.requestId = model.requestId;
             this.success = model.success;
+            this.taskId = model.taskId;
         } 
 
         /**
@@ -123,14 +123,6 @@ public class ContentAsyncDetectResponseBody extends TeaModel {
          */
         public Builder code(String code) {
             this.code = code;
-            return this;
-        }
-
-        /**
-         * Data.
-         */
-        public Builder data(Data data) {
-            this.data = data;
             return this;
         }
 
@@ -166,64 +158,18 @@ public class ContentAsyncDetectResponseBody extends TeaModel {
             return this;
         }
 
-        public ContentAsyncDetectResponseBody build() {
-            return new ContentAsyncDetectResponseBody(this);
+        /**
+         * TaskId.
+         */
+        public Builder taskId(String taskId) {
+            this.taskId = taskId;
+            return this;
+        }
+
+        public ModelInputContentAsyncDetectResponseBody build() {
+            return new ModelInputContentAsyncDetectResponseBody(this);
         } 
 
     } 
 
-    /**
-     * 
-     * {@link ContentAsyncDetectResponseBody} extends {@link TeaModel}
-     *
-     * <p>ContentAsyncDetectResponseBody</p>
-     */
-    public static class Data extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("TaskId")
-        private String taskId;
-
-        private Data(Builder builder) {
-            this.taskId = builder.taskId;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Data create() {
-            return builder().build();
-        }
-
-        /**
-         * @return taskId
-         */
-        public String getTaskId() {
-            return this.taskId;
-        }
-
-        public static final class Builder {
-            private String taskId; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.taskId = model.taskId;
-            } 
-
-            /**
-             * TaskId.
-             */
-            public Builder taskId(String taskId) {
-                this.taskId = taskId;
-                return this;
-            }
-
-            public Data build() {
-                return new Data(this);
-            } 
-
-        } 
-
-    }
 }

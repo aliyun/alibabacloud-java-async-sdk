@@ -12,25 +12,30 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CheckAccountRequest} extends {@link RequestModel}
+ * {@link GetModelInputContentDetectResultRequest} extends {@link RequestModel}
  *
- * <p>CheckAccountRequest</p>
+ * <p>GetModelInputContentDetectResultRequest</p>
  */
-public class CheckAccountRequest extends Request {
+public class GetModelInputContentDetectResultRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    private CheckAccountRequest(Builder builder) {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskId")
+    private String taskId;
+
+    private GetModelInputContentDetectResultRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.taskId = builder.taskId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static CheckAccountRequest create() {
+    public static GetModelInputContentDetectResultRequest create() {
         return builder().build();
     }
 
@@ -46,16 +51,25 @@ public class CheckAccountRequest extends Request {
         return this.regionId;
     }
 
-    public static final class Builder extends Request.Builder<CheckAccountRequest, Builder> {
+    /**
+     * @return taskId
+     */
+    public String getTaskId() {
+        return this.taskId;
+    }
+
+    public static final class Builder extends Request.Builder<GetModelInputContentDetectResultRequest, Builder> {
         private String regionId; 
+        private String taskId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CheckAccountRequest request) {
+        private Builder(GetModelInputContentDetectResultRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.taskId = request.taskId;
         } 
 
         /**
@@ -67,9 +81,18 @@ public class CheckAccountRequest extends Request {
             return this;
         }
 
+        /**
+         * TaskId.
+         */
+        public Builder taskId(String taskId) {
+            this.putQueryParameter("TaskId", taskId);
+            this.taskId = taskId;
+            return this;
+        }
+
         @Override
-        public CheckAccountRequest build() {
-            return new CheckAccountRequest(this);
+        public GetModelInputContentDetectResultRequest build() {
+            return new GetModelInputContentDetectResultRequest(this);
         } 
 
     } 

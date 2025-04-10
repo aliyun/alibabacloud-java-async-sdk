@@ -52,6 +52,10 @@ public class ListSensitiveWordResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListSensitiveWordResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSensitiveWordResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -212,6 +228,15 @@ public class ListSensitiveWordResponseBody extends TeaModel {
             private String label; 
             private String word; 
 
+            private Builder() {
+            } 
+
+            private Builder(SensitiveWordList model) {
+                this.id = model.id;
+                this.label = model.label;
+                this.word = model.word;
+            } 
+
             /**
              * Id.
              */
@@ -322,6 +347,17 @@ public class ListSensitiveWordResponseBody extends TeaModel {
             private Integer pageSize; 
             private java.util.List<SensitiveWordList> sensitiveWordList; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.maxCount = model.maxCount;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.sensitiveWordList = model.sensitiveWordList;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * MaxCount.

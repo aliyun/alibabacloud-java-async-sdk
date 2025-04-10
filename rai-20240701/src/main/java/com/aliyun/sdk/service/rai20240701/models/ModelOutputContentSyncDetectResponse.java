@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CheckAccountResponse} extends {@link TeaModel}
+ * {@link ModelOutputContentSyncDetectResponse} extends {@link TeaModel}
  *
- * <p>CheckAccountResponse</p>
+ * <p>ModelOutputContentSyncDetectResponse</p>
  */
-public class CheckAccountResponse extends Response {
+public class ModelOutputContentSyncDetectResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class CheckAccountResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private CheckAccountResponseBody body;
+    private ModelOutputContentSyncDetectResponseBody body;
 
-    private CheckAccountResponse(BuilderImpl builder) {
+    private ModelOutputContentSyncDetectResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static CheckAccountResponse create() {
+    public static ModelOutputContentSyncDetectResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class CheckAccountResponse extends Response {
     /**
      * @return body
      */
-    public CheckAccountResponseBody getBody() {
+    public ModelOutputContentSyncDetectResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<CheckAccountResponse, Builder> {
+    public interface Builder extends Response.Builder<ModelOutputContentSyncDetectResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(CheckAccountResponseBody body);
+        Builder body(ModelOutputContentSyncDetectResponseBody body);
 
         @Override
-        CheckAccountResponse build();
+        ModelOutputContentSyncDetectResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<CheckAccountResponse, Builder>
+            extends Response.BuilderImpl<ModelOutputContentSyncDetectResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private CheckAccountResponseBody body; 
+        private ModelOutputContentSyncDetectResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(CheckAccountResponse response) {
+        private BuilderImpl(ModelOutputContentSyncDetectResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class CheckAccountResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(CheckAccountResponseBody body) {
+        public Builder body(ModelOutputContentSyncDetectResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public CheckAccountResponse build() {
-            return new CheckAccountResponse(this);
+        public ModelOutputContentSyncDetectResponse build() {
+            return new ModelOutputContentSyncDetectResponse(this);
         } 
 
     } 

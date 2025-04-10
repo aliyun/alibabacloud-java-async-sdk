@@ -12,11 +12,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ContentAsyncDetectRequest} extends {@link RequestModel}
+ * {@link ModelOutputContentAsyncDetectRequest} extends {@link RequestModel}
  *
- * <p>ContentAsyncDetectRequest</p>
+ * <p>ModelOutputContentAsyncDetectRequest</p>
  */
-public class ContentAsyncDetectRequest extends Request {
+public class ModelOutputContentAsyncDetectRequest extends Request {
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BodyData")
+    private BodyData bodyData;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyIdentifier")
+    private String policyIdentifier;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
@@ -29,29 +37,40 @@ public class ContentAsyncDetectRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ServiceName")
     private String serviceName;
 
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("serviceParameter")
-    private ServiceParameter serviceParameter;
-
-    private ContentAsyncDetectRequest(Builder builder) {
+    private ModelOutputContentAsyncDetectRequest(Builder builder) {
         super(builder);
+        this.bodyData = builder.bodyData;
+        this.policyIdentifier = builder.policyIdentifier;
         this.regionId = builder.regionId;
         this.sceneName = builder.sceneName;
         this.serviceName = builder.serviceName;
-        this.serviceParameter = builder.serviceParameter;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ContentAsyncDetectRequest create() {
+    public static ModelOutputContentAsyncDetectRequest create() {
         return builder().build();
     }
 
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return bodyData
+     */
+    public BodyData getBodyData() {
+        return this.bodyData;
+    }
+
+    /**
+     * @return policyIdentifier
+     */
+    public String getPolicyIdentifier() {
+        return this.policyIdentifier;
     }
 
     /**
@@ -75,30 +94,44 @@ public class ContentAsyncDetectRequest extends Request {
         return this.serviceName;
     }
 
-    /**
-     * @return serviceParameter
-     */
-    public ServiceParameter getServiceParameter() {
-        return this.serviceParameter;
-    }
-
-    public static final class Builder extends Request.Builder<ContentAsyncDetectRequest, Builder> {
+    public static final class Builder extends Request.Builder<ModelOutputContentAsyncDetectRequest, Builder> {
+        private BodyData bodyData; 
+        private String policyIdentifier; 
         private String regionId; 
         private String sceneName; 
         private String serviceName; 
-        private ServiceParameter serviceParameter; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ContentAsyncDetectRequest request) {
+        private Builder(ModelOutputContentAsyncDetectRequest request) {
             super(request);
+            this.bodyData = request.bodyData;
+            this.policyIdentifier = request.policyIdentifier;
             this.regionId = request.regionId;
             this.sceneName = request.sceneName;
             this.serviceName = request.serviceName;
-            this.serviceParameter = request.serviceParameter;
         } 
+
+        /**
+         * BodyData.
+         */
+        public Builder bodyData(BodyData bodyData) {
+            String bodyDataShrink = shrink(bodyData, "BodyData", "json");
+            this.putBodyParameter("BodyData", bodyDataShrink);
+            this.bodyData = bodyData;
+            return this;
+        }
+
+        /**
+         * PolicyIdentifier.
+         */
+        public Builder policyIdentifier(String policyIdentifier) {
+            this.putQueryParameter("PolicyIdentifier", policyIdentifier);
+            this.policyIdentifier = policyIdentifier;
+            return this;
+        }
 
         /**
          * RegionId.
@@ -127,33 +160,24 @@ public class ContentAsyncDetectRequest extends Request {
             return this;
         }
 
-        /**
-         * serviceParameter.
-         */
-        public Builder serviceParameter(ServiceParameter serviceParameter) {
-            this.putBodyParameter("serviceParameter", serviceParameter);
-            this.serviceParameter = serviceParameter;
-            return this;
-        }
-
         @Override
-        public ContentAsyncDetectRequest build() {
-            return new ContentAsyncDetectRequest(this);
+        public ModelOutputContentAsyncDetectRequest build() {
+            return new ModelOutputContentAsyncDetectRequest(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link ContentAsyncDetectRequest} extends {@link TeaModel}
+     * {@link ModelOutputContentAsyncDetectRequest} extends {@link TeaModel}
      *
-     * <p>ContentAsyncDetectRequest</p>
+     * <p>ModelOutputContentAsyncDetectRequest</p>
      */
-    public static class ServiceParameter extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("content")
+    public static class BodyData extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        private ServiceParameter(Builder builder) {
+        private BodyData(Builder builder) {
             this.content = builder.content;
         }
 
@@ -161,7 +185,7 @@ public class ContentAsyncDetectRequest extends Request {
             return new Builder();
         }
 
-        public static ServiceParameter create() {
+        public static BodyData create() {
             return builder().build();
         }
 
@@ -178,20 +202,20 @@ public class ContentAsyncDetectRequest extends Request {
             private Builder() {
             } 
 
-            private Builder(ServiceParameter model) {
+            private Builder(BodyData model) {
                 this.content = model.content;
             } 
 
             /**
-             * content.
+             * Content.
              */
             public Builder content(String content) {
                 this.content = content;
                 return this;
             }
 
-            public ServiceParameter build() {
-                return new ServiceParameter(this);
+            public BodyData build() {
+                return new BodyData(this);
             } 
 
         } 
