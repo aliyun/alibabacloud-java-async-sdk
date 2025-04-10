@@ -280,6 +280,81 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
      *
      * <p>DescribeNatGatewaysResponseBody</p>
      */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TagKey")
+        private String tagKey;
+
+        @com.aliyun.core.annotation.NameInMap("TagValue")
+        private String tagValue;
+
+        private Tags(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
+            /**
+             * TagKey.
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * TagValue.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeNatGatewaysResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNatGatewaysResponseBody</p>
+     */
     public static class NatGateways extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
@@ -305,6 +380,9 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
+
         @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
@@ -317,6 +395,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             this.networkId = builder.networkId;
             this.spec = builder.spec;
             this.status = builder.status;
+            this.tags = builder.tags;
             this.vSwitchId = builder.vSwitchId;
         }
 
@@ -385,6 +464,13 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public java.util.List<Tags> getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return vSwitchId
          */
         public String getVSwitchId() {
@@ -400,6 +486,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             private String networkId; 
             private String spec; 
             private String status; 
+            private java.util.List<Tags> tags; 
             private String vSwitchId; 
 
             private Builder() {
@@ -414,6 +501,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
                 this.networkId = model.networkId;
                 this.spec = model.spec;
                 this.status = model.status;
+                this.tags = model.tags;
                 this.vSwitchId = model.vSwitchId;
             } 
 
@@ -504,6 +592,14 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List<Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 
