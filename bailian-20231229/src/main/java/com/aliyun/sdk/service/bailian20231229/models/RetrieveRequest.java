@@ -48,6 +48,10 @@ public class RetrieveRequest extends Request {
     private String query;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryHistory")
+    private java.util.List<QueryHistory> queryHistory;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Rerank")
     private java.util.List<Rerank> rerank;
 
@@ -84,6 +88,7 @@ public class RetrieveRequest extends Request {
         this.images = builder.images;
         this.indexId = builder.indexId;
         this.query = builder.query;
+        this.queryHistory = builder.queryHistory;
         this.rerank = builder.rerank;
         this.rerankMinScore = builder.rerankMinScore;
         this.rerankTopN = builder.rerankTopN;
@@ -156,6 +161,13 @@ public class RetrieveRequest extends Request {
     }
 
     /**
+     * @return queryHistory
+     */
+    public java.util.List<QueryHistory> getQueryHistory() {
+        return this.queryHistory;
+    }
+
+    /**
      * @return rerank
      */
     public java.util.List<Rerank> getRerank() {
@@ -212,6 +224,7 @@ public class RetrieveRequest extends Request {
         private java.util.List<String> images; 
         private String indexId; 
         private String query; 
+        private java.util.List<QueryHistory> queryHistory; 
         private java.util.List<Rerank> rerank; 
         private Float rerankMinScore; 
         private Integer rerankTopN; 
@@ -233,6 +246,7 @@ public class RetrieveRequest extends Request {
             this.images = request.images;
             this.indexId = request.indexId;
             this.query = request.query;
+            this.queryHistory = request.queryHistory;
             this.rerank = request.rerank;
             this.rerankMinScore = request.rerankMinScore;
             this.rerankTopN = request.rerankTopN;
@@ -335,6 +349,16 @@ public class RetrieveRequest extends Request {
         }
 
         /**
+         * QueryHistory.
+         */
+        public Builder queryHistory(java.util.List<QueryHistory> queryHistory) {
+            String queryHistoryShrink = shrink(queryHistory, "QueryHistory", "json");
+            this.putQueryParameter("QueryHistory", queryHistoryShrink);
+            this.queryHistory = queryHistory;
+            return this;
+        }
+
+        /**
          * <p>Ranking configurations.</p>
          */
         public Builder rerank(java.util.List<Rerank> rerank) {
@@ -426,6 +450,81 @@ public class RetrieveRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link RetrieveRequest} extends {@link TeaModel}
+     *
+     * <p>RetrieveRequest</p>
+     */
+    public static class QueryHistory extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("content")
+        private String content;
+
+        @com.aliyun.core.annotation.NameInMap("role")
+        private String role;
+
+        private QueryHistory(Builder builder) {
+            this.content = builder.content;
+            this.role = builder.role;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static QueryHistory create() {
+            return builder().build();
+        }
+
+        /**
+         * @return content
+         */
+        public String getContent() {
+            return this.content;
+        }
+
+        /**
+         * @return role
+         */
+        public String getRole() {
+            return this.role;
+        }
+
+        public static final class Builder {
+            private String content; 
+            private String role; 
+
+            private Builder() {
+            } 
+
+            private Builder(QueryHistory model) {
+                this.content = model.content;
+                this.role = model.role;
+            } 
+
+            /**
+             * content.
+             */
+            public Builder content(String content) {
+                this.content = content;
+                return this;
+            }
+
+            /**
+             * role.
+             */
+            public Builder role(String role) {
+                this.role = role;
+                return this;
+            }
+
+            public QueryHistory build() {
+                return new QueryHistory(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link RetrieveRequest} extends {@link TeaModel}
