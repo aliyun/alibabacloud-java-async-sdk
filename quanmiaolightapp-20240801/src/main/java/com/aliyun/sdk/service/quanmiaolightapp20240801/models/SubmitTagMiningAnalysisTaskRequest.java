@@ -27,6 +27,10 @@ public class SubmitTagMiningAnalysisTaskRequest extends Request {
     private String workspaceId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("apiKey")
+    private String apiKey;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("businessType")
     private String businessType;
 
@@ -63,6 +67,7 @@ public class SubmitTagMiningAnalysisTaskRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.workspaceId = builder.workspaceId;
+        this.apiKey = builder.apiKey;
         this.businessType = builder.businessType;
         this.contents = builder.contents;
         this.extraInfo = builder.extraInfo;
@@ -98,6 +103,13 @@ public class SubmitTagMiningAnalysisTaskRequest extends Request {
      */
     public String getWorkspaceId() {
         return this.workspaceId;
+    }
+
+    /**
+     * @return apiKey
+     */
+    public String getApiKey() {
+        return this.apiKey;
     }
 
     /**
@@ -159,6 +171,7 @@ public class SubmitTagMiningAnalysisTaskRequest extends Request {
     public static final class Builder extends Request.Builder<SubmitTagMiningAnalysisTaskRequest, Builder> {
         private String regionId; 
         private String workspaceId; 
+        private String apiKey; 
         private String businessType; 
         private java.util.List<String> contents; 
         private String extraInfo; 
@@ -176,6 +189,7 @@ public class SubmitTagMiningAnalysisTaskRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.workspaceId = request.workspaceId;
+            this.apiKey = request.apiKey;
             this.businessType = request.businessType;
             this.contents = request.contents;
             this.extraInfo = request.extraInfo;
@@ -204,6 +218,15 @@ public class SubmitTagMiningAnalysisTaskRequest extends Request {
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
             this.workspaceId = workspaceId;
+            return this;
+        }
+
+        /**
+         * apiKey.
+         */
+        public Builder apiKey(String apiKey) {
+            this.putBodyParameter("apiKey", apiKey);
+            this.apiKey = apiKey;
             return this;
         }
 
