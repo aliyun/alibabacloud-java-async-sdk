@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SelectResourceResponseBody</p>
  */
 public class SelectResourceResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("aliyunUid")
+    private String aliyunUid;
+
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
@@ -24,6 +27,7 @@ public class SelectResourceResponseBody extends TeaModel {
     private java.util.List<ResourceInfoList> resourceInfoList;
 
     private SelectResourceResponseBody(Builder builder) {
+        this.aliyunUid = builder.aliyunUid;
         this.requestId = builder.requestId;
         this.resourceInfoList = builder.resourceInfoList;
     }
@@ -41,6 +45,13 @@ public class SelectResourceResponseBody extends TeaModel {
     }
 
     /**
+     * @return aliyunUid
+     */
+    public String getAliyunUid() {
+        return this.aliyunUid;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -55,6 +66,7 @@ public class SelectResourceResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String aliyunUid; 
         private String requestId; 
         private java.util.List<ResourceInfoList> resourceInfoList; 
 
@@ -62,9 +74,18 @@ public class SelectResourceResponseBody extends TeaModel {
         } 
 
         private Builder(SelectResourceResponseBody model) {
+            this.aliyunUid = model.aliyunUid;
             this.requestId = model.requestId;
             this.resourceInfoList = model.resourceInfoList;
         } 
+
+        /**
+         * aliyunUid.
+         */
+        public Builder aliyunUid(String aliyunUid) {
+            this.aliyunUid = aliyunUid;
+            return this;
+        }
 
         /**
          * requestId.
