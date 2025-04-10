@@ -45,6 +45,10 @@ public class ListAppsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("status")
     private String status;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("tags")
+    private String tags;
+
     private ListAppsRequest(Builder builder) {
         super(builder);
         this.appName = builder.appName;
@@ -54,6 +58,7 @@ public class ListAppsRequest extends Request {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.status = builder.status;
+        this.tags = builder.tags;
     }
 
     public static Builder builder() {
@@ -118,6 +123,13 @@ public class ListAppsRequest extends Request {
         return this.status;
     }
 
+    /**
+     * @return tags
+     */
+    public String getTags() {
+        return this.tags;
+    }
+
     public static final class Builder extends Request.Builder<ListAppsRequest, Builder> {
         private String appName; 
         private String createTime; 
@@ -126,6 +138,7 @@ public class ListAppsRequest extends Request {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String status; 
+        private String tags; 
 
         private Builder() {
             super();
@@ -140,6 +153,7 @@ public class ListAppsRequest extends Request {
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.status = request.status;
+            this.tags = request.tags;
         } 
 
         /**
@@ -202,6 +216,15 @@ public class ListAppsRequest extends Request {
         public Builder status(String status) {
             this.putQueryParameter("status", status);
             this.status = status;
+            return this;
+        }
+
+        /**
+         * tags.
+         */
+        public Builder tags(String tags) {
+            this.putQueryParameter("tags", tags);
+            this.tags = tags;
             return this;
         }
 

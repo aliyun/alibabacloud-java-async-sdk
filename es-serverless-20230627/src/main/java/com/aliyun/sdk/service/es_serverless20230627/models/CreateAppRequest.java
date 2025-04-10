@@ -57,8 +57,16 @@ public class CreateAppRequest extends Request {
     private String scenario;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("tags")
+    private java.util.List<Tags> tags;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("version")
     private String version;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("clientToken")
+    private String clientToken;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("dryRun")
@@ -75,7 +83,9 @@ public class CreateAppRequest extends Request {
         this.quotaInfo = builder.quotaInfo;
         this.regionId = builder.regionId;
         this.scenario = builder.scenario;
+        this.tags = builder.tags;
         this.version = builder.version;
+        this.clientToken = builder.clientToken;
         this.dryRun = builder.dryRun;
     }
 
@@ -156,10 +166,24 @@ public class CreateAppRequest extends Request {
     }
 
     /**
+     * @return tags
+     */
+    public java.util.List<Tags> getTags() {
+        return this.tags;
+    }
+
+    /**
      * @return version
      */
     public String getVersion() {
         return this.version;
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -179,7 +203,9 @@ public class CreateAppRequest extends Request {
         private QuotaInfo quotaInfo; 
         private String regionId; 
         private String scenario; 
+        private java.util.List<Tags> tags; 
         private String version; 
+        private String clientToken; 
         private Boolean dryRun; 
 
         private Builder() {
@@ -197,7 +223,9 @@ public class CreateAppRequest extends Request {
             this.quotaInfo = request.quotaInfo;
             this.regionId = request.regionId;
             this.scenario = request.scenario;
+            this.tags = request.tags;
             this.version = request.version;
+            this.clientToken = request.clientToken;
             this.dryRun = request.dryRun;
         } 
 
@@ -284,11 +312,29 @@ public class CreateAppRequest extends Request {
         }
 
         /**
+         * tags.
+         */
+        public Builder tags(java.util.List<Tags> tags) {
+            this.putBodyParameter("tags", tags);
+            this.tags = tags;
+            return this;
+        }
+
+        /**
          * version.
          */
         public Builder version(String version) {
             this.putBodyParameter("version", version);
             this.version = version;
+            return this;
+        }
+
+        /**
+         * clientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("clientToken", clientToken);
+            this.clientToken = clientToken;
             return this;
         }
 
@@ -954,6 +1000,81 @@ public class CreateAppRequest extends Request {
 
             public QuotaInfo build() {
                 return new QuotaInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateAppRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAppRequest</p>
+     */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
             } 
 
         } 

@@ -562,6 +562,81 @@ public class GetAppResponseBody extends TeaModel {
      *
      * <p>GetAppResponseBody</p>
      */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetAppResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAppResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("appId")
         private String appId;
@@ -571,6 +646,9 @@ public class GetAppResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("appType")
         private String appType;
+
+        @com.aliyun.core.annotation.NameInMap("chargeType")
+        private String chargeType;
 
         @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;
@@ -596,8 +674,14 @@ public class GetAppResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("regionId")
         private String regionId;
 
+        @com.aliyun.core.annotation.NameInMap("scenario")
+        private String scenario;
+
         @com.aliyun.core.annotation.NameInMap("status")
         private String status;
+
+        @com.aliyun.core.annotation.NameInMap("tags")
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("version")
         private String version;
@@ -606,6 +690,7 @@ public class GetAppResponseBody extends TeaModel {
             this.appId = builder.appId;
             this.appName = builder.appName;
             this.appType = builder.appType;
+            this.chargeType = builder.chargeType;
             this.createTime = builder.createTime;
             this.description = builder.description;
             this.instanceId = builder.instanceId;
@@ -614,7 +699,9 @@ public class GetAppResponseBody extends TeaModel {
             this.ownerId = builder.ownerId;
             this.privateNetwork = builder.privateNetwork;
             this.regionId = builder.regionId;
+            this.scenario = builder.scenario;
             this.status = builder.status;
+            this.tags = builder.tags;
             this.version = builder.version;
         }
 
@@ -645,6 +732,13 @@ public class GetAppResponseBody extends TeaModel {
          */
         public String getAppType() {
             return this.appType;
+        }
+
+        /**
+         * @return chargeType
+         */
+        public String getChargeType() {
+            return this.chargeType;
         }
 
         /**
@@ -704,10 +798,24 @@ public class GetAppResponseBody extends TeaModel {
         }
 
         /**
+         * @return scenario
+         */
+        public String getScenario() {
+            return this.scenario;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
             return this.status;
+        }
+
+        /**
+         * @return tags
+         */
+        public java.util.List<Tags> getTags() {
+            return this.tags;
         }
 
         /**
@@ -721,6 +829,7 @@ public class GetAppResponseBody extends TeaModel {
             private String appId; 
             private String appName; 
             private String appType; 
+            private String chargeType; 
             private String createTime; 
             private String description; 
             private String instanceId; 
@@ -729,7 +838,9 @@ public class GetAppResponseBody extends TeaModel {
             private String ownerId; 
             private java.util.List<PrivateNetwork> privateNetwork; 
             private String regionId; 
+            private String scenario; 
             private String status; 
+            private java.util.List<Tags> tags; 
             private String version; 
 
             private Builder() {
@@ -739,6 +850,7 @@ public class GetAppResponseBody extends TeaModel {
                 this.appId = model.appId;
                 this.appName = model.appName;
                 this.appType = model.appType;
+                this.chargeType = model.chargeType;
                 this.createTime = model.createTime;
                 this.description = model.description;
                 this.instanceId = model.instanceId;
@@ -747,7 +859,9 @@ public class GetAppResponseBody extends TeaModel {
                 this.ownerId = model.ownerId;
                 this.privateNetwork = model.privateNetwork;
                 this.regionId = model.regionId;
+                this.scenario = model.scenario;
                 this.status = model.status;
+                this.tags = model.tags;
                 this.version = model.version;
             } 
 
@@ -772,6 +886,14 @@ public class GetAppResponseBody extends TeaModel {
              */
             public Builder appType(String appType) {
                 this.appType = appType;
+                return this;
+            }
+
+            /**
+             * chargeType.
+             */
+            public Builder chargeType(String chargeType) {
+                this.chargeType = chargeType;
                 return this;
             }
 
@@ -840,10 +962,26 @@ public class GetAppResponseBody extends TeaModel {
             }
 
             /**
+             * scenario.
+             */
+            public Builder scenario(String scenario) {
+                this.scenario = scenario;
+                return this;
+            }
+
+            /**
              * status.
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * tags.
+             */
+            public Builder tags(java.util.List<Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 
