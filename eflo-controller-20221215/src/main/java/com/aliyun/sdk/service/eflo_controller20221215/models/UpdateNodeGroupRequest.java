@@ -110,7 +110,10 @@ public class UpdateNodeGroupRequest extends Request {
         }
 
         /**
-         * NewNodeGroupName.
+         * <p>Node group name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-update</p>
          */
         public Builder newNodeGroupName(String newNodeGroupName) {
             this.putBodyParameter("NewNodeGroupName", newNodeGroupName);
@@ -119,7 +122,10 @@ public class UpdateNodeGroupRequest extends Request {
         }
 
         /**
-         * NodeGroupId.
+         * <p>Node group ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i120021051733814190732</p>
          */
         public Builder nodeGroupId(String nodeGroupId) {
             this.putBodyParameter("NodeGroupId", nodeGroupId);
@@ -128,7 +134,12 @@ public class UpdateNodeGroupRequest extends Request {
         }
 
         /**
-         * UserData.
+         * <p>user data</p>
+         * 
+         * <strong>example:</strong>
+         * <p>#!/bin/bash
+         * uptime
+         * echo &quot;aaaaaaa&quot; &gt;&gt; /tmp/ttttt20250110141010.sh</p>
          */
         public Builder userData(String userData) {
             this.putBodyParameter("UserData", userData);

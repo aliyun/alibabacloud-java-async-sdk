@@ -26,6 +26,9 @@ public class DescribeNodeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
+    @com.aliyun.core.annotation.NameInMap("Disks")
+    private java.util.List<Disks> disks;
+
     @com.aliyun.core.annotation.NameInMap("ExpiredTime")
     private String expiredTime;
 
@@ -78,6 +81,7 @@ public class DescribeNodeResponseBody extends TeaModel {
         this.clusterId = builder.clusterId;
         this.clusterName = builder.clusterName;
         this.createTime = builder.createTime;
+        this.disks = builder.disks;
         this.expiredTime = builder.expiredTime;
         this.hostname = builder.hostname;
         this.hpnZone = builder.hpnZone;
@@ -127,6 +131,13 @@ public class DescribeNodeResponseBody extends TeaModel {
      */
     public String getCreateTime() {
         return this.createTime;
+    }
+
+    /**
+     * @return disks
+     */
+    public java.util.List<Disks> getDisks() {
+        return this.disks;
     }
 
     /**
@@ -245,6 +256,7 @@ public class DescribeNodeResponseBody extends TeaModel {
         private String clusterId; 
         private String clusterName; 
         private String createTime; 
+        private java.util.List<Disks> disks; 
         private String expiredTime; 
         private String hostname; 
         private String hpnZone; 
@@ -269,6 +281,7 @@ public class DescribeNodeResponseBody extends TeaModel {
             this.clusterId = model.clusterId;
             this.clusterName = model.clusterName;
             this.createTime = model.createTime;
+            this.disks = model.disks;
             this.expiredTime = model.expiredTime;
             this.hostname = model.hostname;
             this.hpnZone = model.hpnZone;
@@ -317,6 +330,14 @@ public class DescribeNodeResponseBody extends TeaModel {
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
+            return this;
+        }
+
+        /**
+         * Disks.
+         */
+        public Builder disks(java.util.List<Disks> disks) {
+            this.disks = disks;
             return this;
         }
 
@@ -450,7 +471,7 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>资源组ID</p>
+         * <p>Resource group ID</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmywpvugkh7kq</p>
@@ -472,7 +493,12 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * UserData.
+         * <p>The script by user defined</p>
+         * 
+         * <strong>example:</strong>
+         * <p>#!/bin/bash
+         * uptime
+         * echo &quot;aaaaaaa&quot; &gt;&gt; /tmp/ttttt20250110141010.sh</p>
          */
         public Builder userData(String userData) {
             this.userData = userData;
@@ -496,6 +522,144 @@ public class DescribeNodeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeNodeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNodeResponseBody</p>
+     */
+    public static class Disks extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Category")
+        private String category;
+
+        @com.aliyun.core.annotation.NameInMap("DiskId")
+        private String diskId;
+
+        @com.aliyun.core.annotation.NameInMap("PerformanceLevel")
+        private String performanceLevel;
+
+        @com.aliyun.core.annotation.NameInMap("Size")
+        private Integer size;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
+        private Disks(Builder builder) {
+            this.category = builder.category;
+            this.diskId = builder.diskId;
+            this.performanceLevel = builder.performanceLevel;
+            this.size = builder.size;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Disks create() {
+            return builder().build();
+        }
+
+        /**
+         * @return category
+         */
+        public String getCategory() {
+            return this.category;
+        }
+
+        /**
+         * @return diskId
+         */
+        public String getDiskId() {
+            return this.diskId;
+        }
+
+        /**
+         * @return performanceLevel
+         */
+        public String getPerformanceLevel() {
+            return this.performanceLevel;
+        }
+
+        /**
+         * @return size
+         */
+        public Integer getSize() {
+            return this.size;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private String category; 
+            private String diskId; 
+            private String performanceLevel; 
+            private Integer size; 
+            private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Disks model) {
+                this.category = model.category;
+                this.diskId = model.diskId;
+                this.performanceLevel = model.performanceLevel;
+                this.size = model.size;
+                this.type = model.type;
+            } 
+
+            /**
+             * Category.
+             */
+            public Builder category(String category) {
+                this.category = category;
+                return this;
+            }
+
+            /**
+             * DiskId.
+             */
+            public Builder diskId(String diskId) {
+                this.diskId = diskId;
+                return this;
+            }
+
+            /**
+             * PerformanceLevel.
+             */
+            public Builder performanceLevel(String performanceLevel) {
+                this.performanceLevel = performanceLevel;
+                return this;
+            }
+
+            /**
+             * Size.
+             */
+            public Builder size(Integer size) {
+                this.size = size;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public Disks build() {
+                return new Disks(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link DescribeNodeResponseBody} extends {@link TeaModel}

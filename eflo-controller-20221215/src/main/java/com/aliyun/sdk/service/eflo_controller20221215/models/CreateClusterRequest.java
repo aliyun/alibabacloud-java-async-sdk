@@ -1888,6 +1888,102 @@ public class CreateClusterRequest extends Request {
      *
      * <p>CreateClusterRequest</p>
      */
+    public static class SystemDisk extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Category")
+        private String category;
+
+        @com.aliyun.core.annotation.NameInMap("PerformanceLevel")
+        private String performanceLevel;
+
+        @com.aliyun.core.annotation.NameInMap("Size")
+        private Integer size;
+
+        private SystemDisk(Builder builder) {
+            this.category = builder.category;
+            this.performanceLevel = builder.performanceLevel;
+            this.size = builder.size;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SystemDisk create() {
+            return builder().build();
+        }
+
+        /**
+         * @return category
+         */
+        public String getCategory() {
+            return this.category;
+        }
+
+        /**
+         * @return performanceLevel
+         */
+        public String getPerformanceLevel() {
+            return this.performanceLevel;
+        }
+
+        /**
+         * @return size
+         */
+        public Integer getSize() {
+            return this.size;
+        }
+
+        public static final class Builder {
+            private String category; 
+            private String performanceLevel; 
+            private Integer size; 
+
+            private Builder() {
+            } 
+
+            private Builder(SystemDisk model) {
+                this.category = model.category;
+                this.performanceLevel = model.performanceLevel;
+                this.size = model.size;
+            } 
+
+            /**
+             * Category.
+             */
+            public Builder category(String category) {
+                this.category = category;
+                return this;
+            }
+
+            /**
+             * PerformanceLevel.
+             */
+            public Builder performanceLevel(String performanceLevel) {
+                this.performanceLevel = performanceLevel;
+                return this;
+            }
+
+            /**
+             * Size.
+             */
+            public Builder size(Integer size) {
+                this.size = size;
+                return this;
+            }
+
+            public SystemDisk build() {
+                return new SystemDisk(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateClusterRequest} extends {@link TeaModel}
+     *
+     * <p>CreateClusterRequest</p>
+     */
     public static class NodeGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
@@ -1904,6 +2000,9 @@ public class CreateClusterRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Nodes")
         private java.util.List<Nodes> nodes;
 
+        @com.aliyun.core.annotation.NameInMap("SystemDisk")
+        private SystemDisk systemDisk;
+
         @com.aliyun.core.annotation.NameInMap("UserData")
         private String userData;
 
@@ -1916,6 +2015,7 @@ public class CreateClusterRequest extends Request {
             this.nodeGroupDescription = builder.nodeGroupDescription;
             this.nodeGroupName = builder.nodeGroupName;
             this.nodes = builder.nodes;
+            this.systemDisk = builder.systemDisk;
             this.userData = builder.userData;
             this.zoneId = builder.zoneId;
         }
@@ -1964,6 +2064,13 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
+         * @return systemDisk
+         */
+        public SystemDisk getSystemDisk() {
+            return this.systemDisk;
+        }
+
+        /**
          * @return userData
          */
         public String getUserData() {
@@ -1983,6 +2090,7 @@ public class CreateClusterRequest extends Request {
             private String nodeGroupDescription; 
             private String nodeGroupName; 
             private java.util.List<Nodes> nodes; 
+            private SystemDisk systemDisk; 
             private String userData; 
             private String zoneId; 
 
@@ -1995,6 +2103,7 @@ public class CreateClusterRequest extends Request {
                 this.nodeGroupDescription = model.nodeGroupDescription;
                 this.nodeGroupName = model.nodeGroupName;
                 this.nodes = model.nodes;
+                this.systemDisk = model.systemDisk;
                 this.userData = model.userData;
                 this.zoneId = model.zoneId;
             } 
@@ -2048,6 +2157,14 @@ public class CreateClusterRequest extends Request {
              */
             public Builder nodes(java.util.List<Nodes> nodes) {
                 this.nodes = nodes;
+                return this;
+            }
+
+            /**
+             * SystemDisk.
+             */
+            public Builder systemDisk(SystemDisk systemDisk) {
+                this.systemDisk = systemDisk;
                 return this;
             }
 

@@ -158,7 +158,10 @@ public class DescribeDiagnosticResultResponseBody extends TeaModel {
         } 
 
         /**
-         * ClusterId.
+         * <p>Cluster ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i118913031696573280136</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -166,7 +169,10 @@ public class DescribeDiagnosticResultResponseBody extends TeaModel {
         }
 
         /**
-         * CreatedTime.
+         * <p>Device creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-06-15T10:17:56</p>
          */
         public Builder createdTime(String createdTime) {
             this.createdTime = createdTime;
@@ -174,7 +180,10 @@ public class DescribeDiagnosticResultResponseBody extends TeaModel {
         }
 
         /**
-         * DiagnosticId.
+         * <p>Diagnostic ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>diag-i155363241720059671316</p>
          */
         public Builder diagnosticId(String diagnosticId) {
             this.diagnosticId = diagnosticId;
@@ -182,7 +191,7 @@ public class DescribeDiagnosticResultResponseBody extends TeaModel {
         }
 
         /**
-         * DiagnosticResults.
+         * <p>Diagnostic Information</p>
          */
         public Builder diagnosticResults(java.util.List<?> diagnosticResults) {
             this.diagnosticResults = diagnosticResults;
@@ -190,7 +199,10 @@ public class DescribeDiagnosticResultResponseBody extends TeaModel {
         }
 
         /**
-         * DiagnosticState.
+         * <p>Diagnostic State</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Fault</p>
          */
         public Builder diagnosticState(String diagnosticState) {
             this.diagnosticState = diagnosticState;
@@ -198,7 +210,10 @@ public class DescribeDiagnosticResultResponseBody extends TeaModel {
         }
 
         /**
-         * DiagnosticType.
+         * <p>Diagnostic Type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CheckByAiJobLogs</p>
          */
         public Builder diagnosticType(String diagnosticType) {
             this.diagnosticType = diagnosticType;
@@ -206,7 +221,10 @@ public class DescribeDiagnosticResultResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * <p>End time of node anomaly issues. Represented according to the ISO8601 standard, in a timezone-aware format, formatted as yyyy-MM-ddTHH:mm:ss+0800</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-06-11T10:00:30</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -214,7 +232,7 @@ public class DescribeDiagnosticResultResponseBody extends TeaModel {
         }
 
         /**
-         * NodeIds.
+         * <p>List of Node IDs</p>
          */
         public Builder nodeIds(java.util.List<String> nodeIds) {
             this.nodeIds = nodeIds;
@@ -222,7 +240,10 @@ public class DescribeDiagnosticResultResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8F065DDD-6996-5973-9691-9EC57BD0072E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -160,7 +160,7 @@ public class ListClustersRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>tag info</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -230,7 +230,10 @@ public class ListClustersRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The key of tag object</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key_aa</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -238,7 +241,10 @@ public class ListClustersRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of tag object</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value_aa</p>
              */
             public Builder value(String value) {
                 this.value = value;

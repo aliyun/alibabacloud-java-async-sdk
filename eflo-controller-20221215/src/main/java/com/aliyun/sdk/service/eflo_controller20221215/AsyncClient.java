@@ -62,6 +62,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateNetTestTaskResponse> createNetTestTask(CreateNetTestTaskRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>An interface for creating a session, which returns the frontend EndPoint and initiates a periodic task to track the session status</p>
+     * 
      * @param request the request parameters of CreateNodeGroup  CreateNodeGroupRequest
      * @return CreateNodeGroupResponse
      */
@@ -83,6 +86,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteClusterResponse> deleteCluster(DeleteClusterRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>An interface for creating a session, which returns the front-end EndPoint and initiates a periodic task to track the session status.</p>
+     * 
      * @param request the request parameters of DeleteNodeGroup  DeleteNodeGroupRequest
      * @return DeleteNodeGroupResponse
      */
@@ -95,6 +101,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeClusterResponse> describeCluster(DescribeClusterRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>An interface for creating a session, which returns the front-end EndPoint and initiates a periodic task to track the session status.</p>
+     * 
      * @param request the request parameters of DescribeDiagnosticResult  DescribeDiagnosticResultRequest
      * @return DescribeDiagnosticResultResponse
      */
@@ -284,6 +293,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>An interface for creating a session, which returns the front-end EndPoint and initiates a periodic task to track the session status.</p>
+     * 
      * @param request the request parameters of UpdateNodeGroup  UpdateNodeGroupRequest
      * @return UpdateNodeGroupResponse
      */

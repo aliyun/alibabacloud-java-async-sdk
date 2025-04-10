@@ -202,7 +202,10 @@ public class ListClusterNodesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>resource group id</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-xxkxkllss</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);
@@ -211,7 +214,7 @@ public class ListClusterNodesRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>tag information</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -281,7 +284,10 @@ public class ListClusterNodesRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The key of tag object</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aa_key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -289,7 +295,10 @@ public class ListClusterNodesRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of tag object</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aa_value</p>
              */
             public Builder value(String value) {
                 this.value = value;

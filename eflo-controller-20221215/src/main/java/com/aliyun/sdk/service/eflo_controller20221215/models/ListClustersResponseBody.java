@@ -168,7 +168,10 @@ public class ListClustersResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>The key of tag object</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aa_key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -176,7 +179,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of tag object</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aa_value</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -557,7 +563,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>tag information</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;

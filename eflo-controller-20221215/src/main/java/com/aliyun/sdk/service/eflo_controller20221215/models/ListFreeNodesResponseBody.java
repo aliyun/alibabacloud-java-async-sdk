@@ -168,7 +168,10 @@ public class ListFreeNodesResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>The key of tag object</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aa_key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -176,7 +179,10 @@ public class ListFreeNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of tag object</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aa_vakye</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -360,7 +366,10 @@ public class ListFreeNodesResponseBody extends TeaModel {
             } 
 
             /**
-             * CommodityCode.
+             * <p>Product Code</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bccluster_eflocomputing_public_cn</p>
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -423,7 +432,10 @@ public class ListFreeNodesResponseBody extends TeaModel {
             }
 
             /**
-             * OperatingState.
+             * <p>Node status</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Unused</p>
              */
             public Builder operatingState(String operatingState) {
                 this.operatingState = operatingState;
@@ -453,7 +465,7 @@ public class ListFreeNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>Tags Info</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;

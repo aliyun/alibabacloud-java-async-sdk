@@ -96,7 +96,10 @@ public class DeleteNodeGroupRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * <p>Cluster ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i114444141733395242745</p>
          */
         public Builder clusterId(String clusterId) {
             this.putBodyParameter("ClusterId", clusterId);
@@ -105,7 +108,10 @@ public class DeleteNodeGroupRequest extends Request {
         }
 
         /**
-         * NodeGroupId.
+         * <p>Node Group ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i121824791737080429819</p>
          */
         public Builder nodeGroupId(String nodeGroupId) {
             this.putBodyParameter("NodeGroupId", nodeGroupId);

@@ -154,6 +154,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>An interface for creating a session, which returns the frontend EndPoint and initiates a periodic task to track the session status</p>
+     * 
      * @param request the request parameters of CreateNodeGroup  CreateNodeGroupRequest
      * @return CreateNodeGroupResponse
      */
@@ -211,6 +214,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>An interface for creating a session, which returns the front-end EndPoint and initiates a periodic task to track the session status.</p>
+     * 
      * @param request the request parameters of DeleteNodeGroup  DeleteNodeGroupRequest
      * @return DeleteNodeGroupResponse
      */
@@ -247,6 +253,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>An interface for creating a session, which returns the front-end EndPoint and initiates a periodic task to track the session status.</p>
+     * 
      * @param request the request parameters of DescribeDiagnosticResult  DescribeDiagnosticResultRequest
      * @return DescribeDiagnosticResultResponse
      */
@@ -784,6 +793,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>An interface for creating a session, which returns the front-end EndPoint and initiates a periodic task to track the session status.</p>
+     * 
      * @param request the request parameters of UpdateNodeGroup  UpdateNodeGroupRequest
      * @return UpdateNodeGroupResponse
      */

@@ -697,7 +697,10 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * Hostname.
+             * <p>Host name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i22c11282.eu95sqa</p>
              */
             public Builder hostname(String hostname) {
                 this.hostname = hostname;
@@ -871,7 +874,10 @@ public class ExtendClusterRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The key of tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my_key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -879,7 +885,10 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my_value</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1242,7 +1251,13 @@ public class ExtendClusterRequest extends Request {
             } 
 
             /**
-             * Amount.
+             * <p>Number of nodes to purchase. Value range: 0–500.</p>
+             * <p>If the Amount parameter is set to 0, no nodes will be purchased. Existing nodes will be used for scaling.
+             * If the Amount parameter is set to 1–500, the specified number of nodes will be purchased and used for scaling.
+             * Default value: 0</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder amount(Long amount) {
                 this.amount = amount;
@@ -1250,7 +1265,15 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * AutoRenew.
+             * <p>Whether to enable auto-renewal for purchased nodes.
+             * Conditions: This parameter takes effect only when the Amount parameter is set to a non-zero value and the ChargeType is PrePaid.
+             * Valid values:</p>
+             * <p>True: Enable auto-renewal.
+             * False: Disable auto-renewal.
+             * Default value: False</p>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder autoRenew(Boolean autoRenew) {
                 this.autoRenew = autoRenew;
@@ -1258,7 +1281,15 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * ChargeType.
+             * <p>Billing method for nodes.
+             * This parameter takes effect only when the Amount parameter is set to a value other than 0.
+             * Valid values:</p>
+             * <p>PrePaid: Subscription (prepaid).
+             * PostPaid: Pay-as-you-go (postpaid).
+             * Default value: PrePaid</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PostPaid</p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -1266,7 +1297,8 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * Hostnames.
+             * <p>The hostnames of purchased nodes.
+             * This parameter takes effect only when the Amount parameter is set to a non-zero value.</p>
              */
             public Builder hostnames(java.util.List<String> hostnames) {
                 this.hostnames = hostnames;
@@ -1274,10 +1306,10 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * <p>Login Password</p>
+             * <p>The login password of node.</p>
              * 
              * <strong>example:</strong>
-             * <hr>
+             * <p>Addk(*78</p>
              */
             public Builder loginPassword(String loginPassword) {
                 this.loginPassword = loginPassword;
@@ -1296,7 +1328,7 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * NodeTag.
+             * <p>The tag of node</p>
              */
             public Builder nodeTag(java.util.List<NodeTag> nodeTag) {
                 this.nodeTag = nodeTag;
@@ -1312,7 +1344,12 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * Period.
+             * <p>Purchase duration for nodes (unit: month).
+             * Valid values: 1, 6, 12, 24, 36, 48.
+             * Conditions: This parameter takes effect only when the Amount parameter is set to a non-zero value and the ChargeType is PrePaid.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder period(Long period) {
                 this.period = period;
@@ -1332,10 +1369,10 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * <p>VSwitch ID</p>
+             * <p>VSwitch Id</p>
              * 
              * <strong>example:</strong>
-             * <p>vsw-bp169pi5fj151rrms4sia</p>
+             * <p>vsw-0jly2d537ejphyq6h13ke</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -1343,10 +1380,10 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * <p>VPC ID</p>
+             * <p>Vpc Id</p>
              * 
              * <strong>example:</strong>
-             * <p>vpc-0jlasms92fdxqd3wlf8ny</p>
+             * <p>vpc-zq1econyv63tvyci5hefw</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

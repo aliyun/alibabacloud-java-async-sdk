@@ -297,7 +297,10 @@ public class ListClusterNodesResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>The key of tag object</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aa_key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -305,7 +308,10 @@ public class ListClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of tag object</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aa_value</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -593,7 +599,10 @@ public class ListClusterNodesResponseBody extends TeaModel {
             } 
 
             /**
-             * CommodityCode.
+             * <p>product code</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bcccluster</p>
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -656,7 +665,10 @@ public class ListClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageName.
+             * <p>image name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alinux3_x86_AMD_R_Host_D3_E3_24.13.00_UEFI_N_250121</p>
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -738,7 +750,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>tag information</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -746,7 +758,10 @@ public class ListClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>task id</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i28ddkdkkdkdd</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -754,7 +769,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>专有网络交换机ID</p>
+             * <p>The vSwitch ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-bp1mxqhw8o20tgv3xk47h</p>
@@ -765,7 +780,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>专有网络ID</p>
+             * <p>VPC ID</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-0jltf9vinjz3if3lltdy7</p>

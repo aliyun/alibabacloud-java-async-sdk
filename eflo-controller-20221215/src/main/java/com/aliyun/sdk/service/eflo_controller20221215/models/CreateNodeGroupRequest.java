@@ -112,6 +112,7 @@ public class CreateNodeGroupRequest extends Request {
         }
 
         /**
+         * <p>Cluster ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,6 +125,7 @@ public class CreateNodeGroupRequest extends Request {
         }
 
         /**
+         * <p>Node ID.</p>
          * <p>This parameter is required.</p>
          */
         public Builder nodeGroup(NodeGroup nodeGroup) {
@@ -134,7 +136,7 @@ public class CreateNodeGroupRequest extends Request {
         }
 
         /**
-         * NodeUnit.
+         * <p>Node information</p>
          */
         public Builder nodeUnit(java.util.Map<String, ?> nodeUnit) {
             String nodeUnitShrink = shrink(nodeUnit, "NodeUnit", "json");
@@ -150,6 +152,102 @@ public class CreateNodeGroupRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateNodeGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateNodeGroupRequest</p>
+     */
+    public static class SystemDisk extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Category")
+        private String category;
+
+        @com.aliyun.core.annotation.NameInMap("PerformanceLevel")
+        private String performanceLevel;
+
+        @com.aliyun.core.annotation.NameInMap("Size")
+        private Integer size;
+
+        private SystemDisk(Builder builder) {
+            this.category = builder.category;
+            this.performanceLevel = builder.performanceLevel;
+            this.size = builder.size;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SystemDisk create() {
+            return builder().build();
+        }
+
+        /**
+         * @return category
+         */
+        public String getCategory() {
+            return this.category;
+        }
+
+        /**
+         * @return performanceLevel
+         */
+        public String getPerformanceLevel() {
+            return this.performanceLevel;
+        }
+
+        /**
+         * @return size
+         */
+        public Integer getSize() {
+            return this.size;
+        }
+
+        public static final class Builder {
+            private String category; 
+            private String performanceLevel; 
+            private Integer size; 
+
+            private Builder() {
+            } 
+
+            private Builder(SystemDisk model) {
+                this.category = model.category;
+                this.performanceLevel = model.performanceLevel;
+                this.size = model.size;
+            } 
+
+            /**
+             * Category.
+             */
+            public Builder category(String category) {
+                this.category = category;
+                return this;
+            }
+
+            /**
+             * PerformanceLevel.
+             */
+            public Builder performanceLevel(String performanceLevel) {
+                this.performanceLevel = performanceLevel;
+                return this;
+            }
+
+            /**
+             * Size.
+             */
+            public Builder size(Integer size) {
+                this.size = size;
+                return this;
+            }
+
+            public SystemDisk build() {
+                return new SystemDisk(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link CreateNodeGroupRequest} extends {@link TeaModel}
@@ -176,6 +274,9 @@ public class CreateNodeGroupRequest extends Request {
         @com.aliyun.core.annotation.Validation(required = true)
         private String nodeGroupName;
 
+        @com.aliyun.core.annotation.NameInMap("SystemDisk")
+        private SystemDisk systemDisk;
+
         @com.aliyun.core.annotation.NameInMap("UserData")
         private String userData;
 
@@ -185,6 +286,7 @@ public class CreateNodeGroupRequest extends Request {
             this.machineType = builder.machineType;
             this.nodeGroupDescription = builder.nodeGroupDescription;
             this.nodeGroupName = builder.nodeGroupName;
+            this.systemDisk = builder.systemDisk;
             this.userData = builder.userData;
         }
 
@@ -232,6 +334,13 @@ public class CreateNodeGroupRequest extends Request {
         }
 
         /**
+         * @return systemDisk
+         */
+        public SystemDisk getSystemDisk() {
+            return this.systemDisk;
+        }
+
+        /**
          * @return userData
          */
         public String getUserData() {
@@ -244,6 +353,7 @@ public class CreateNodeGroupRequest extends Request {
             private String machineType; 
             private String nodeGroupDescription; 
             private String nodeGroupName; 
+            private SystemDisk systemDisk; 
             private String userData; 
 
             private Builder() {
@@ -255,10 +365,12 @@ public class CreateNodeGroupRequest extends Request {
                 this.machineType = model.machineType;
                 this.nodeGroupDescription = model.nodeGroupDescription;
                 this.nodeGroupName = model.nodeGroupName;
+                this.systemDisk = model.systemDisk;
                 this.userData = model.userData;
             } 
 
             /**
+             * <p>Availability Zone</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -270,6 +382,7 @@ public class CreateNodeGroupRequest extends Request {
             }
 
             /**
+             * <p>Image ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -281,6 +394,7 @@ public class CreateNodeGroupRequest extends Request {
             }
 
             /**
+             * <p>Machine type</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -292,7 +406,10 @@ public class CreateNodeGroupRequest extends Request {
             }
 
             /**
-             * NodeGroupDescription.
+             * <p>Node group description</p>
+             * 
+             * <strong>example:</strong>
+             * <p>describe for node group</p>
              */
             public Builder nodeGroupDescription(String nodeGroupDescription) {
                 this.nodeGroupDescription = nodeGroupDescription;
@@ -300,6 +417,7 @@ public class CreateNodeGroupRequest extends Request {
             }
 
             /**
+             * <p>Node group name</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -311,7 +429,20 @@ public class CreateNodeGroupRequest extends Request {
             }
 
             /**
-             * UserData.
+             * SystemDisk.
+             */
+            public Builder systemDisk(SystemDisk systemDisk) {
+                this.systemDisk = systemDisk;
+                return this;
+            }
+
+            /**
+             * <p>user data</p>
+             * 
+             * <strong>example:</strong>
+             * <p>#!/bin/bash
+             * uptime
+             * echo &quot;aaaaaaa&quot; &gt;&gt; /tmp/ttttt20250110141010.sh</p>
              */
             public Builder userData(String userData) {
                 this.userData = userData;

@@ -82,7 +82,10 @@ public class DescribeDiagnosticResultRequest extends Request {
         }
 
         /**
-         * DiagnosticId.
+         * <p>Diagnostic ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>diag-i151942361720577788844</p>
          */
         public Builder diagnosticId(String diagnosticId) {
             this.putBodyParameter("DiagnosticId", diagnosticId);

@@ -80,7 +80,10 @@ public class CreateNodeGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * NodeGroupId.
+         * <p>Node group ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ng-ec3c96ff0aa4c60d</p>
          */
         public Builder nodeGroupId(String nodeGroupId) {
             this.nodeGroupId = nodeGroupId;
@@ -88,7 +91,10 @@ public class CreateNodeGroupResponseBody extends TeaModel {
         }
 
         /**
-         * NodeGroupName.
+         * <p>Node group name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>emr-default</p>
          */
         public Builder nodeGroupName(String nodeGroupName) {
             this.nodeGroupName = nodeGroupName;
@@ -96,7 +102,7 @@ public class CreateNodeGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request</p>
          * 
          * <strong>example:</strong>
          * <p>887FA855-89F4-5DB3-B305-C5879EC480E6</p>
