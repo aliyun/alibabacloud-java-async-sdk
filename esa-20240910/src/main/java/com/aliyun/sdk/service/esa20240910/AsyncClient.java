@@ -1258,6 +1258,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListCertificatesResponse> listCertificates(ListCertificatesRequest request);
 
     /**
+     * @param request the request parameters of ListCertificatesByRecord  ListCertificatesByRecordRequest
+     * @return ListCertificatesByRecordResponse
+     */
+    CompletableFuture<ListCertificatesByRecordResponse> listCertificatesByRecord(ListCertificatesByRecordRequest request);
+
+    /**
      * @param request the request parameters of ListCiphers  ListCiphersRequest
      * @return ListCiphersResponse
      */

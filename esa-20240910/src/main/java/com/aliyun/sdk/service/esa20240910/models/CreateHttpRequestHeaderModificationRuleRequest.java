@@ -255,12 +255,16 @@ public class CreateHttpRequestHeaderModificationRuleRequest extends Request {
         @com.aliyun.core.annotation.Validation(required = true)
         private String operation;
 
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
         @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private RequestHeaderModification(Builder builder) {
             this.name = builder.name;
             this.operation = builder.operation;
+            this.type = builder.type;
             this.value = builder.value;
         }
 
@@ -287,6 +291,13 @@ public class CreateHttpRequestHeaderModificationRuleRequest extends Request {
         }
 
         /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        /**
          * @return value
          */
         public String getValue() {
@@ -296,6 +307,7 @@ public class CreateHttpRequestHeaderModificationRuleRequest extends Request {
         public static final class Builder {
             private String name; 
             private String operation; 
+            private String type; 
             private String value; 
 
             private Builder() {
@@ -304,6 +316,7 @@ public class CreateHttpRequestHeaderModificationRuleRequest extends Request {
             private Builder(RequestHeaderModification model) {
                 this.name = model.name;
                 this.operation = model.operation;
+                this.type = model.type;
                 this.value = model.value;
             } 
 
@@ -333,6 +346,14 @@ public class CreateHttpRequestHeaderModificationRuleRequest extends Request {
              */
             public Builder operation(String operation) {
                 this.operation = operation;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
                 return this;
             }
 
