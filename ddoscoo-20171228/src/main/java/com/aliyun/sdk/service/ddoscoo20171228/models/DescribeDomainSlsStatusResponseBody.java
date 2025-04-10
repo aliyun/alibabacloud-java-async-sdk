@@ -44,6 +44,10 @@ public class DescribeDomainSlsStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -77,6 +81,16 @@ public class DescribeDomainSlsStatusResponseBody extends TeaModel {
         private String slsLogstore; 
         private String slsProject; 
         private Boolean slsStatus; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainSlsStatusResponseBody model) {
+            this.requestId = model.requestId;
+            this.slsLogstore = model.slsLogstore;
+            this.slsProject = model.slsProject;
+            this.slsStatus = model.slsStatus;
+        } 
 
         /**
          * RequestId.

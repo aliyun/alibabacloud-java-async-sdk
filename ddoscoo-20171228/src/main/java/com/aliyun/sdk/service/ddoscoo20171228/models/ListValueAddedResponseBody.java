@@ -36,6 +36,10 @@ public class ListValueAddedResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class ListValueAddedResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<ValueAddedList> valueAddedList; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListValueAddedResponseBody model) {
+            this.requestId = model.requestId;
+            this.valueAddedList = model.valueAddedList;
+        } 
 
         /**
          * RequestId.
@@ -167,6 +179,18 @@ public class ListValueAddedResponseBody extends TeaModel {
             private Long logSize; 
             private Integer status; 
             private String storeRegion; 
+
+            private Builder() {
+            } 
+
+            private Builder(ValueAddedList model) {
+                this.expireTime = model.expireTime;
+                this.gmtCreate = model.gmtCreate;
+                this.instanceId = model.instanceId;
+                this.logSize = model.logSize;
+                this.status = model.status;
+                this.storeRegion = model.storeRegion;
+            } 
 
             /**
              * ExpireTime.

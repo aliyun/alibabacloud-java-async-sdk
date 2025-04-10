@@ -40,6 +40,10 @@ public class ListAsyncTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return asyncTasks
      */
@@ -65,6 +69,15 @@ public class ListAsyncTaskResponseBody extends TeaModel {
         private java.util.List<AsyncTasks> asyncTasks; 
         private String requestId; 
         private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAsyncTaskResponseBody model) {
+            this.asyncTasks = model.asyncTasks;
+            this.requestId = model.requestId;
+            this.total = model.total;
+        } 
 
         /**
          * AsyncTasks.
@@ -199,6 +212,19 @@ public class ListAsyncTaskResponseBody extends TeaModel {
             private String taskResult; 
             private Integer taskStatus; 
             private Integer taskType; 
+
+            private Builder() {
+            } 
+
+            private Builder(AsyncTasks model) {
+                this.endTime = model.endTime;
+                this.startTime = model.startTime;
+                this.taskId = model.taskId;
+                this.taskParams = model.taskParams;
+                this.taskResult = model.taskResult;
+                this.taskStatus = model.taskStatus;
+                this.taskType = model.taskType;
+            } 
 
             /**
              * EndTime.

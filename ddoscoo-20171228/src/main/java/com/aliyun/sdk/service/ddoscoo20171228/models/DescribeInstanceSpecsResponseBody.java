@@ -36,6 +36,10 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceSpecs
      */
@@ -53,6 +57,14 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<InstanceSpecs> instanceSpecs; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceSpecsResponseBody model) {
+            this.instanceSpecs = model.instanceSpecs;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * InstanceSpecs.
@@ -215,6 +227,22 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             private Integer portLimit; 
             private Integer qpsLimit; 
             private Integer siteLimit; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceSpecs model) {
+                this.bandwidthMbps = model.bandwidthMbps;
+                this.baseBandwidth = model.baseBandwidth;
+                this.defenseCount = model.defenseCount;
+                this.domainLimit = model.domainLimit;
+                this.elasticBandwidth = model.elasticBandwidth;
+                this.functionVersion = model.functionVersion;
+                this.instanceId = model.instanceId;
+                this.portLimit = model.portLimit;
+                this.qpsLimit = model.qpsLimit;
+                this.siteLimit = model.siteLimit;
+            } 
 
             /**
              * BandwidthMbps.

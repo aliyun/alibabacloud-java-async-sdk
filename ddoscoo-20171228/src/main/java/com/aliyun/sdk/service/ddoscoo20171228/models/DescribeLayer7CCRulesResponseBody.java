@@ -40,6 +40,10 @@ public class DescribeLayer7CCRulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return layer7CCRules
      */
@@ -65,6 +69,15 @@ public class DescribeLayer7CCRulesResponseBody extends TeaModel {
         private java.util.List<Layer7CCRules> layer7CCRules; 
         private String requestId; 
         private Long total; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeLayer7CCRulesResponseBody model) {
+            this.layer7CCRules = model.layer7CCRules;
+            this.requestId = model.requestId;
+            this.total = model.total;
+        } 
 
         /**
          * Layer7CCRules.
@@ -199,6 +212,19 @@ public class DescribeLayer7CCRulesResponseBody extends TeaModel {
             private String name; 
             private Integer ttl; 
             private String uri; 
+
+            private Builder() {
+            } 
+
+            private Builder(Layer7CCRules model) {
+                this.act = model.act;
+                this.count = model.count;
+                this.interval = model.interval;
+                this.mode = model.mode;
+                this.name = model.name;
+                this.ttl = model.ttl;
+                this.uri = model.uri;
+            } 
 
             /**
              * Act.

@@ -36,6 +36,10 @@ public class DescribleLayer7InstanceRelationsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return layer7InstanceRelations
      */
@@ -53,6 +57,14 @@ public class DescribleLayer7InstanceRelationsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Layer7InstanceRelations> layer7InstanceRelations; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribleLayer7InstanceRelationsResponseBody model) {
+            this.layer7InstanceRelations = model.layer7InstanceRelations;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Layer7InstanceRelations.
@@ -156,6 +168,17 @@ public class DescribleLayer7InstanceRelationsResponseBody extends TeaModel {
             private String ipMode; 
             private String ipVersion; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceDetails model) {
+                this.eipList = model.eipList;
+                this.functionVersion = model.functionVersion;
+                this.instanceId = model.instanceId;
+                this.ipMode = model.ipMode;
+                this.ipVersion = model.ipVersion;
+            } 
+
             /**
              * EipList.
              */
@@ -246,6 +269,14 @@ public class DescribleLayer7InstanceRelationsResponseBody extends TeaModel {
         public static final class Builder {
             private String domain; 
             private java.util.List<InstanceDetails> instanceDetails; 
+
+            private Builder() {
+            } 
+
+            private Builder(Layer7InstanceRelations model) {
+                this.domain = model.domain;
+                this.instanceDetails = model.instanceDetails;
+            } 
 
             /**
              * Domain.

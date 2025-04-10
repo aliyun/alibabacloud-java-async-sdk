@@ -40,6 +40,10 @@ public class DescribeDomainOverviewResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxHttp
      */
@@ -65,6 +69,15 @@ public class DescribeDomainOverviewResponseBody extends TeaModel {
         private Long maxHttp; 
         private Long maxHttps; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainOverviewResponseBody model) {
+            this.maxHttp = model.maxHttp;
+            this.maxHttps = model.maxHttps;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * MaxHttp.

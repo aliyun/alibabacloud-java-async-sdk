@@ -36,6 +36,10 @@ public class DescribeSimpleDomainsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domainList
      */
@@ -53,6 +57,14 @@ public class DescribeSimpleDomainsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<String> domainList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSimpleDomainsResponseBody model) {
+            this.domainList = model.domainList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * DomainList.

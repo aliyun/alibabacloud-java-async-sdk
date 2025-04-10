@@ -48,6 +48,10 @@ public class ListTagKeysResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return currentPage
      */
@@ -89,6 +93,17 @@ public class ListTagKeysResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<TagKeys> tagKeys; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTagKeysResponseBody model) {
+            this.currentPage = model.currentPage;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.tagKeys = model.tagKeys;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * CurrentPage.
@@ -179,6 +194,14 @@ public class ListTagKeysResponseBody extends TeaModel {
         public static final class Builder {
             private Integer tagCount; 
             private String tagKey; 
+
+            private Builder() {
+            } 
+
+            private Builder(TagKeys model) {
+                this.tagCount = model.tagCount;
+                this.tagKey = model.tagKey;
+            } 
 
             /**
              * TagCount.

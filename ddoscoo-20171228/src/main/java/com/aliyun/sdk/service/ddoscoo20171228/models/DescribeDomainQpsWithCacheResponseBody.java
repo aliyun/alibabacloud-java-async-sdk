@@ -76,6 +76,10 @@ public class DescribeDomainQpsWithCacheResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return blocks
      */
@@ -173,6 +177,24 @@ public class DescribeDomainQpsWithCacheResponseBody extends TeaModel {
         private String requestId; 
         private Long startTime; 
         private java.util.List<String> totals; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainQpsWithCacheResponseBody model) {
+            this.blocks = model.blocks;
+            this.cacheHits = model.cacheHits;
+            this.ccBlockQps = model.ccBlockQps;
+            this.ccJsQps = model.ccJsQps;
+            this.interval = model.interval;
+            this.ipBlockQps = model.ipBlockQps;
+            this.preciseBlocks = model.preciseBlocks;
+            this.preciseJsQps = model.preciseJsQps;
+            this.regionBlocks = model.regionBlocks;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+            this.totals = model.totals;
+        } 
 
         /**
          * Blocks.

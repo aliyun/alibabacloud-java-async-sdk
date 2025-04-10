@@ -36,6 +36,10 @@ public class ListLayer7CustomPortsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return layer7CustomPorts
      */
@@ -53,6 +57,14 @@ public class ListLayer7CustomPortsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Layer7CustomPorts> layer7CustomPorts; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListLayer7CustomPortsResponseBody model) {
+            this.layer7CustomPorts = model.layer7CustomPorts;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Layer7CustomPorts.
@@ -131,6 +143,15 @@ public class ListLayer7CustomPortsResponseBody extends TeaModel {
             private String flag; 
             private java.util.List<String> proxyPorts; 
             private String proxyType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Layer7CustomPorts model) {
+                this.flag = model.flag;
+                this.proxyPorts = model.proxyPorts;
+                this.proxyType = model.proxyType;
+            } 
 
             /**
              * Flag.

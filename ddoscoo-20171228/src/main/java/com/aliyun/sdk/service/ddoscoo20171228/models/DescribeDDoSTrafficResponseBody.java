@@ -44,6 +44,10 @@ public class DescribeDDoSTrafficResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dDoSTrafficPoints
      */
@@ -77,6 +81,16 @@ public class DescribeDDoSTrafficResponseBody extends TeaModel {
         private Long defenseInBytes; 
         private String requestId; 
         private Long sourceInBytes; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDDoSTrafficResponseBody model) {
+            this.dDoSTrafficPoints = model.dDoSTrafficPoints;
+            this.defenseInBytes = model.defenseInBytes;
+            this.requestId = model.requestId;
+            this.sourceInBytes = model.sourceInBytes;
+        } 
 
         /**
          * DDoSTrafficPoints.
@@ -171,6 +185,15 @@ public class DescribeDDoSTrafficResponseBody extends TeaModel {
             private Long defenseMaxInBps; 
             private Long sourceMaxInBps; 
             private Long time; 
+
+            private Builder() {
+            } 
+
+            private Builder(DDoSTrafficPoints model) {
+                this.defenseMaxInBps = model.defenseMaxInBps;
+                this.sourceMaxInBps = model.sourceMaxInBps;
+                this.time = model.time;
+            } 
 
             /**
              * DefenseMaxInBps.

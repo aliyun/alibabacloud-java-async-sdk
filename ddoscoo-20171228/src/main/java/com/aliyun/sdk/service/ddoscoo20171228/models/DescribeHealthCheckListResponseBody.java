@@ -36,6 +36,10 @@ public class DescribeHealthCheckListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return listeners
      */
@@ -53,6 +57,14 @@ public class DescribeHealthCheckListResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Listeners> listeners; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeHealthCheckListResponseBody model) {
+            this.listeners = model.listeners;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Listeners.
@@ -192,6 +204,20 @@ public class DescribeHealthCheckListResponseBody extends TeaModel {
             private Integer up; 
             private String uri; 
 
+            private Builder() {
+            } 
+
+            private Builder(HealthCheck model) {
+                this.domain = model.domain;
+                this.down = model.down;
+                this.interval = model.interval;
+                this.port = model.port;
+                this.timeout = model.timeout;
+                this.type = model.type;
+                this.up = model.up;
+                this.uri = model.uri;
+            } 
+
             /**
              * Domain.
              */
@@ -330,6 +356,16 @@ public class DescribeHealthCheckListResponseBody extends TeaModel {
             private HealthCheck healthCheck; 
             private String instanceId; 
             private String protocol; 
+
+            private Builder() {
+            } 
+
+            private Builder(Listeners model) {
+                this.frontendPort = model.frontendPort;
+                this.healthCheck = model.healthCheck;
+                this.instanceId = model.instanceId;
+                this.protocol = model.protocol;
+            } 
 
             /**
              * FrontendPort.

@@ -36,6 +36,10 @@ public class DescribeDomainAccessModeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domainModeList
      */
@@ -53,6 +57,14 @@ public class DescribeDomainAccessModeResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<DomainModeList> domainModeList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainAccessModeResponseBody model) {
+            this.domainModeList = model.domainModeList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * DomainModeList.
@@ -119,6 +131,14 @@ public class DescribeDomainAccessModeResponseBody extends TeaModel {
         public static final class Builder {
             private Integer accessMode; 
             private String domain; 
+
+            private Builder() {
+            } 
+
+            private Builder(DomainModeList model) {
+                this.accessMode = model.accessMode;
+                this.domain = model.domain;
+            } 
 
             /**
              * AccessMode.

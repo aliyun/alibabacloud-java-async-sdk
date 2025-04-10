@@ -40,6 +40,10 @@ public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<SlsConfigStatusList> slsConfigStatusList; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeBatchSlsDispatchStatusResponseBody model) {
+            this.requestId = model.requestId;
+            this.slsConfigStatusList = model.slsConfigStatusList;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * RequestId.
@@ -139,6 +152,14 @@ public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
         public static final class Builder {
             private String domain; 
             private Boolean enable; 
+
+            private Builder() {
+            } 
+
+            private Builder(SlsConfigStatusList model) {
+                this.domain = model.domain;
+                this.enable = model.enable;
+            } 
 
             /**
              * Domain.

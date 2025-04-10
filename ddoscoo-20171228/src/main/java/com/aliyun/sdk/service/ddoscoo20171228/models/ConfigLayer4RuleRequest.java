@@ -30,11 +30,16 @@ public class ConfigLayer4RuleRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ProxyEnable")
     private Long proxyEnable;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UsTimeout")
+    private UsTimeout usTimeout;
+
     private ConfigLayer4RuleRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.listeners = builder.listeners;
         this.proxyEnable = builder.proxyEnable;
+        this.usTimeout = builder.usTimeout;
     }
 
     public static Builder builder() {
@@ -45,7 +50,7 @@ public class ConfigLayer4RuleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -71,10 +76,18 @@ public class ConfigLayer4RuleRequest extends Request {
         return this.proxyEnable;
     }
 
+    /**
+     * @return usTimeout
+     */
+    public UsTimeout getUsTimeout() {
+        return this.usTimeout;
+    }
+
     public static final class Builder extends Request.Builder<ConfigLayer4RuleRequest, Builder> {
         private String regionId; 
         private String listeners; 
         private Long proxyEnable; 
+        private UsTimeout usTimeout; 
 
         private Builder() {
             super();
@@ -85,6 +98,7 @@ public class ConfigLayer4RuleRequest extends Request {
             this.regionId = request.regionId;
             this.listeners = request.listeners;
             this.proxyEnable = request.proxyEnable;
+            this.usTimeout = request.usTimeout;
         } 
 
         /**
@@ -117,6 +131,16 @@ public class ConfigLayer4RuleRequest extends Request {
             return this;
         }
 
+        /**
+         * UsTimeout.
+         */
+        public Builder usTimeout(UsTimeout usTimeout) {
+            String usTimeoutShrink = shrink(usTimeout, "UsTimeout", "json");
+            this.putQueryParameter("UsTimeout", usTimeoutShrink);
+            this.usTimeout = usTimeout;
+            return this;
+        }
+
         @Override
         public ConfigLayer4RuleRequest build() {
             return new ConfigLayer4RuleRequest(this);
@@ -124,4 +148,79 @@ public class ConfigLayer4RuleRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ConfigLayer4RuleRequest} extends {@link TeaModel}
+     *
+     * <p>ConfigLayer4RuleRequest</p>
+     */
+    public static class UsTimeout extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ConnectTimeout")
+        private Long connectTimeout;
+
+        @com.aliyun.core.annotation.NameInMap("RsTimeout")
+        private Long rsTimeout;
+
+        private UsTimeout(Builder builder) {
+            this.connectTimeout = builder.connectTimeout;
+            this.rsTimeout = builder.rsTimeout;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static UsTimeout create() {
+            return builder().build();
+        }
+
+        /**
+         * @return connectTimeout
+         */
+        public Long getConnectTimeout() {
+            return this.connectTimeout;
+        }
+
+        /**
+         * @return rsTimeout
+         */
+        public Long getRsTimeout() {
+            return this.rsTimeout;
+        }
+
+        public static final class Builder {
+            private Long connectTimeout; 
+            private Long rsTimeout; 
+
+            private Builder() {
+            } 
+
+            private Builder(UsTimeout model) {
+                this.connectTimeout = model.connectTimeout;
+                this.rsTimeout = model.rsTimeout;
+            } 
+
+            /**
+             * ConnectTimeout.
+             */
+            public Builder connectTimeout(Long connectTimeout) {
+                this.connectTimeout = connectTimeout;
+                return this;
+            }
+
+            /**
+             * RsTimeout.
+             */
+            public Builder rsTimeout(Long rsTimeout) {
+                this.rsTimeout = rsTimeout;
+                return this;
+            }
+
+            public UsTimeout build() {
+                return new UsTimeout(this);
+            } 
+
+        } 
+
+    }
 }

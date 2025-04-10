@@ -36,6 +36,10 @@ public class DescribeLayer4RuleAttributesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return listeners
      */
@@ -53,6 +57,14 @@ public class DescribeLayer4RuleAttributesResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Listeners> listeners; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeLayer4RuleAttributesResponseBody model) {
+            this.listeners = model.listeners;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Listeners.
@@ -144,6 +156,16 @@ public class DescribeLayer4RuleAttributesResponseBody extends TeaModel {
             private Integer expires; 
             private Integer type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Sblack model) {
+                this.cnt = model.cnt;
+                this.during = model.during;
+                this.expires = model.expires;
+                this.type = model.type;
+            } 
+
             /**
              * Cnt.
              */
@@ -215,6 +237,13 @@ public class DescribeLayer4RuleAttributesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Sblack> sblack; 
 
+            private Builder() {
+            } 
+
+            private Builder(Cc model) {
+                this.sblack = model.sblack;
+            } 
+
             /**
              * Sblack.
              */
@@ -273,6 +302,14 @@ public class DescribeLayer4RuleAttributesResponseBody extends TeaModel {
         public static final class Builder {
             private Integer max; 
             private Integer min; 
+
+            private Builder() {
+            } 
+
+            private Builder(PayloadLen model) {
+                this.max = model.max;
+                this.min = model.min;
+            } 
 
             /**
              * Max.
@@ -364,6 +401,16 @@ public class DescribeLayer4RuleAttributesResponseBody extends TeaModel {
             private Integer cpsEnable; 
             private Integer maxconn; 
             private Integer maxconnEnable; 
+
+            private Builder() {
+            } 
+
+            private Builder(Sla model) {
+                this.cps = model.cps;
+                this.cpsEnable = model.cpsEnable;
+                this.maxconn = model.maxconn;
+                this.maxconnEnable = model.maxconnEnable;
+            } 
 
             /**
              * Cps.
@@ -507,6 +554,19 @@ public class DescribeLayer4RuleAttributesResponseBody extends TeaModel {
             private Integer maxconn; 
             private Integer maxconnEnable; 
             private Long pps; 
+
+            private Builder() {
+            } 
+
+            private Builder(Slimit model) {
+                this.bps = model.bps;
+                this.cps = model.cps;
+                this.cpsEnable = model.cpsEnable;
+                this.cpsMode = model.cpsMode;
+                this.maxconn = model.maxconn;
+                this.maxconnEnable = model.maxconnEnable;
+                this.pps = model.pps;
+            } 
 
             /**
              * Bps.
@@ -675,6 +735,19 @@ public class DescribeLayer4RuleAttributesResponseBody extends TeaModel {
             private Slimit slimit; 
             private String synproxy; 
 
+            private Builder() {
+            } 
+
+            private Builder(Config model) {
+                this.cc = model.cc;
+                this.nodataConn = model.nodataConn;
+                this.payloadLen = model.payloadLen;
+                this.persistenceTimeout = model.persistenceTimeout;
+                this.sla = model.sla;
+                this.slimit = model.slimit;
+                this.synproxy = model.synproxy;
+            } 
+
             /**
              * Cc.
              */
@@ -805,6 +878,16 @@ public class DescribeLayer4RuleAttributesResponseBody extends TeaModel {
             private Integer frontendPort; 
             private String instanceId; 
             private String protocol; 
+
+            private Builder() {
+            } 
+
+            private Builder(Listeners model) {
+                this.config = model.config;
+                this.frontendPort = model.frontendPort;
+                this.instanceId = model.instanceId;
+                this.protocol = model.protocol;
+            } 
 
             /**
              * Config.

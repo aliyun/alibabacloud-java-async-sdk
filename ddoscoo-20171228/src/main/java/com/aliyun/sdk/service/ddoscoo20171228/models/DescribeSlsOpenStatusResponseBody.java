@@ -36,6 +36,10 @@ public class DescribeSlsOpenStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeSlsOpenStatusResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Boolean slsOpenStatus; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSlsOpenStatusResponseBody model) {
+            this.requestId = model.requestId;
+            this.slsOpenStatus = model.slsOpenStatus;
+        } 
 
         /**
          * RequestId.

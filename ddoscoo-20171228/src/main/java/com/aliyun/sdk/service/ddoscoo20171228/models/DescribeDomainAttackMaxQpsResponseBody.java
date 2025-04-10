@@ -36,6 +36,10 @@ public class DescribeDomainAttackMaxQpsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return qps
      */
@@ -53,6 +57,14 @@ public class DescribeDomainAttackMaxQpsResponseBody extends TeaModel {
     public static final class Builder {
         private String qps; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainAttackMaxQpsResponseBody model) {
+            this.qps = model.qps;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Qps.

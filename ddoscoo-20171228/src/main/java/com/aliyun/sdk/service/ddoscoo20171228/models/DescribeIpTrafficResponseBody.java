@@ -52,6 +52,10 @@ public class DescribeIpTrafficResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return avgInBps
      */
@@ -101,6 +105,18 @@ public class DescribeIpTrafficResponseBody extends TeaModel {
         private Long maxInBps; 
         private Long maxOutBps; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeIpTrafficResponseBody model) {
+            this.avgInBps = model.avgInBps;
+            this.avgOutBps = model.avgOutBps;
+            this.ipTrafficPoints = model.ipTrafficPoints;
+            this.maxInBps = model.maxInBps;
+            this.maxOutBps = model.maxOutBps;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * AvgInBps.
@@ -247,6 +263,18 @@ public class DescribeIpTrafficResponseBody extends TeaModel {
             private Long maxInbps; 
             private Long maxOutbps; 
             private Long time; 
+
+            private Builder() {
+            } 
+
+            private Builder(IpTrafficPoints model) {
+                this.actConns = model.actConns;
+                this.cps = model.cps;
+                this.inactConns = model.inactConns;
+                this.maxInbps = model.maxInbps;
+                this.maxOutbps = model.maxOutbps;
+                this.time = model.time;
+            } 
 
             /**
              * ActConns.

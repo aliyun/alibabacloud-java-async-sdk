@@ -40,6 +40,10 @@ public class DescribeOpEntitiesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return opEntities
      */
@@ -65,6 +69,15 @@ public class DescribeOpEntitiesResponseBody extends TeaModel {
         private java.util.List<OpEntities> opEntities; 
         private String requestId; 
         private Long total; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeOpEntitiesResponseBody model) {
+            this.opEntities = model.opEntities;
+            this.requestId = model.requestId;
+            this.total = model.total;
+        } 
 
         /**
          * OpEntities.
@@ -187,6 +200,18 @@ public class DescribeOpEntitiesResponseBody extends TeaModel {
             private String opAccount; 
             private Integer opAction; 
             private String opDesc; 
+
+            private Builder() {
+            } 
+
+            private Builder(OpEntities model) {
+                this.entityObject = model.entityObject;
+                this.entityType = model.entityType;
+                this.gmtCreate = model.gmtCreate;
+                this.opAccount = model.opAccount;
+                this.opAction = model.opAction;
+                this.opDesc = model.opDesc;
+            } 
 
             /**
              * EntityObject.

@@ -40,6 +40,10 @@ public class DescribeDomainAttackEventListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataList
      */
@@ -65,6 +69,15 @@ public class DescribeDomainAttackEventListResponseBody extends TeaModel {
         private java.util.List<DataList> dataList; 
         private String requestId; 
         private Long total; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainAttackEventListResponseBody model) {
+            this.dataList = model.dataList;
+            this.requestId = model.requestId;
+            this.total = model.total;
+        } 
 
         /**
          * DataList.
@@ -163,6 +176,16 @@ public class DescribeDomainAttackEventListResponseBody extends TeaModel {
             private Long endTime; 
             private Long maxQps; 
             private Long startTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataList model) {
+                this.domain = model.domain;
+                this.endTime = model.endTime;
+                this.maxQps = model.maxQps;
+                this.startTime = model.startTime;
+            } 
 
             /**
              * Domain.

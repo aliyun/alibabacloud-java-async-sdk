@@ -36,6 +36,10 @@ public class DescribleCertListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return certList
      */
@@ -53,6 +57,14 @@ public class DescribleCertListResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<CertList> certList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribleCertListResponseBody model) {
+            this.certList = model.certList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * CertList.
@@ -191,6 +203,20 @@ public class DescribleCertListResponseBody extends TeaModel {
             private String issuer; 
             private String name; 
             private String startDate; 
+
+            private Builder() {
+            } 
+
+            private Builder(CertList model) {
+                this.certIdentifier = model.certIdentifier;
+                this.common = model.common;
+                this.domainRelated = model.domainRelated;
+                this.endDate = model.endDate;
+                this.id = model.id;
+                this.issuer = model.issuer;
+                this.name = model.name;
+                this.startDate = model.startDate;
+            } 
 
             /**
              * CertIdentifier.

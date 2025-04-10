@@ -36,6 +36,10 @@ public class DescribeSlsEmptyCountResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return availableCount
      */
@@ -53,6 +57,14 @@ public class DescribeSlsEmptyCountResponseBody extends TeaModel {
     public static final class Builder {
         private Integer availableCount; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSlsEmptyCountResponseBody model) {
+            this.availableCount = model.availableCount;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * AvailableCount.

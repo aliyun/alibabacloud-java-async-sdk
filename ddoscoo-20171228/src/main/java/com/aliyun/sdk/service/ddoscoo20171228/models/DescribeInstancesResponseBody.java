@@ -40,6 +40,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instances
      */
@@ -65,6 +69,15 @@ public class DescribeInstancesResponseBody extends TeaModel {
         private java.util.List<Instances> instances; 
         private String requestId; 
         private Long total; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstancesResponseBody model) {
+            this.instances = model.instances;
+            this.requestId = model.requestId;
+            this.total = model.total;
+        } 
 
         /**
          * Instances.
@@ -211,6 +224,20 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String instanceId; 
             private String remark; 
             private Integer status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Instances model) {
+                this.debtStatus = model.debtStatus;
+                this.edition = model.edition;
+                this.enabled = model.enabled;
+                this.expireTime = model.expireTime;
+                this.gmtCreate = model.gmtCreate;
+                this.instanceId = model.instanceId;
+                this.remark = model.remark;
+                this.status = model.status;
+            } 
 
             /**
              * DebtStatus.

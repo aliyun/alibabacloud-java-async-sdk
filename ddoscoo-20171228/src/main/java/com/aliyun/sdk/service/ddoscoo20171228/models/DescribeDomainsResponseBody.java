@@ -40,6 +40,10 @@ public class DescribeDomainsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domains
      */
@@ -65,6 +69,15 @@ public class DescribeDomainsResponseBody extends TeaModel {
         private java.util.List<Domains> domains; 
         private String requestId; 
         private Long total; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainsResponseBody model) {
+            this.domains = model.domains;
+            this.requestId = model.requestId;
+            this.total = model.total;
+        } 
 
         /**
          * Domains.
@@ -140,6 +153,14 @@ public class DescribeDomainsResponseBody extends TeaModel {
             private java.util.List<String> proxyPorts; 
             private String proxyType; 
 
+            private Builder() {
+            } 
+
+            private Builder(ProxyTypeList model) {
+                this.proxyPorts = model.proxyPorts;
+                this.proxyType = model.proxyType;
+            } 
+
             /**
              * ProxyPorts.
              */
@@ -206,6 +227,14 @@ public class DescribeDomainsResponseBody extends TeaModel {
         public static final class Builder {
             private String realServer; 
             private Integer rsType; 
+
+            private Builder() {
+            } 
+
+            private Builder(RealServers model) {
+                this.realServer = model.realServer;
+                this.rsType = model.rsType;
+            } 
 
             /**
              * RealServer.
@@ -417,6 +446,26 @@ public class DescribeDomainsResponseBody extends TeaModel {
             private String sslCiphers; 
             private String sslProtocols; 
             private java.util.List<String> whiteList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Domains model) {
+                this.blackList = model.blackList;
+                this.ccEnabled = model.ccEnabled;
+                this.ccRuleEnabled = model.ccRuleEnabled;
+                this.ccTemplate = model.ccTemplate;
+                this.certName = model.certName;
+                this.certRegion = model.certRegion;
+                this.cname = model.cname;
+                this.domain = model.domain;
+                this.http2Enable = model.http2Enable;
+                this.proxyTypeList = model.proxyTypeList;
+                this.realServers = model.realServers;
+                this.sslCiphers = model.sslCiphers;
+                this.sslProtocols = model.sslProtocols;
+                this.whiteList = model.whiteList;
+            } 
 
             /**
              * BlackList.

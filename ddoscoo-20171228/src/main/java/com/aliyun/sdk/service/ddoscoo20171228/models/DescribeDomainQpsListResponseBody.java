@@ -36,6 +36,10 @@ public class DescribeDomainQpsListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataList
      */
@@ -53,6 +57,14 @@ public class DescribeDomainQpsListResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<DataList> dataList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainQpsListResponseBody model) {
+            this.dataList = model.dataList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * DataList.
@@ -191,6 +203,20 @@ public class DescribeDomainQpsListResponseBody extends TeaModel {
             private Long maxQps; 
             private Long totalCount; 
             private Long totalQps; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataList model) {
+                this.attackQps = model.attackQps;
+                this.cacheHits = model.cacheHits;
+                this.index = model.index;
+                this.maxAttackQps = model.maxAttackQps;
+                this.maxNormalQps = model.maxNormalQps;
+                this.maxQps = model.maxQps;
+                this.totalCount = model.totalCount;
+                this.totalQps = model.totalQps;
+            } 
 
             /**
              * AttackQps.

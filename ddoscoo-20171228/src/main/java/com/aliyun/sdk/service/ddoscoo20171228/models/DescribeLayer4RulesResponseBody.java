@@ -40,6 +40,10 @@ public class DescribeLayer4RulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return listeners
      */
@@ -65,6 +69,15 @@ public class DescribeLayer4RulesResponseBody extends TeaModel {
         private java.util.List<Listeners> listeners; 
         private String requestId; 
         private Long total; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeLayer4RulesResponseBody model) {
+            this.listeners = model.listeners;
+            this.requestId = model.requestId;
+            this.total = model.total;
+        } 
 
         /**
          * <p>Detailed configuration of port forwarding rules, including the forwarding port, forwarding protocol, and origin server addresses, etc.</p>
@@ -102,6 +115,81 @@ public class DescribeLayer4RulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLayer4RulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLayer4RulesResponseBody</p>
+     */
+    public static class UsTimeout extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ConnectTimeout")
+        private Long connectTimeout;
+
+        @com.aliyun.core.annotation.NameInMap("RsTimeout")
+        private Long rsTimeout;
+
+        private UsTimeout(Builder builder) {
+            this.connectTimeout = builder.connectTimeout;
+            this.rsTimeout = builder.rsTimeout;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static UsTimeout create() {
+            return builder().build();
+        }
+
+        /**
+         * @return connectTimeout
+         */
+        public Long getConnectTimeout() {
+            return this.connectTimeout;
+        }
+
+        /**
+         * @return rsTimeout
+         */
+        public Long getRsTimeout() {
+            return this.rsTimeout;
+        }
+
+        public static final class Builder {
+            private Long connectTimeout; 
+            private Long rsTimeout; 
+
+            private Builder() {
+            } 
+
+            private Builder(UsTimeout model) {
+                this.connectTimeout = model.connectTimeout;
+                this.rsTimeout = model.rsTimeout;
+            } 
+
+            /**
+             * ConnectTimeout.
+             */
+            public Builder connectTimeout(Long connectTimeout) {
+                this.connectTimeout = connectTimeout;
+                return this;
+            }
+
+            /**
+             * RsTimeout.
+             */
+            public Builder rsTimeout(Long rsTimeout) {
+                this.rsTimeout = rsTimeout;
+                return this;
+            }
+
+            public UsTimeout build() {
+                return new UsTimeout(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link DescribeLayer4RulesResponseBody} extends {@link TeaModel}
@@ -148,6 +236,9 @@ public class DescribeLayer4RulesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
+        @com.aliyun.core.annotation.NameInMap("UsTimeout")
+        private UsTimeout usTimeout;
+
         private Listeners(Builder builder) {
             this.backendPort = builder.backendPort;
             this.bakMode = builder.bakMode;
@@ -162,6 +253,7 @@ public class DescribeLayer4RulesResponseBody extends TeaModel {
             this.proxyStatus = builder.proxyStatus;
             this.realServers = builder.realServers;
             this.remark = builder.remark;
+            this.usTimeout = builder.usTimeout;
         }
 
         public static Builder builder() {
@@ -263,6 +355,13 @@ public class DescribeLayer4RulesResponseBody extends TeaModel {
             return this.remark;
         }
 
+        /**
+         * @return usTimeout
+         */
+        public UsTimeout getUsTimeout() {
+            return this.usTimeout;
+        }
+
         public static final class Builder {
             private Integer backendPort; 
             private Integer bakMode; 
@@ -277,6 +376,27 @@ public class DescribeLayer4RulesResponseBody extends TeaModel {
             private String proxyStatus; 
             private java.util.List<String> realServers; 
             private String remark; 
+            private UsTimeout usTimeout; 
+
+            private Builder() {
+            } 
+
+            private Builder(Listeners model) {
+                this.backendPort = model.backendPort;
+                this.bakMode = model.bakMode;
+                this.currentIndex = model.currentIndex;
+                this.eip = model.eip;
+                this.frontendPort = model.frontendPort;
+                this.instanceId = model.instanceId;
+                this.isAutoCreate = model.isAutoCreate;
+                this.payloadRuleEnable = model.payloadRuleEnable;
+                this.protocol = model.protocol;
+                this.proxyEnable = model.proxyEnable;
+                this.proxyStatus = model.proxyStatus;
+                this.realServers = model.realServers;
+                this.remark = model.remark;
+                this.usTimeout = model.usTimeout;
+            } 
 
             /**
              * <p>The origin server port.</p>
@@ -439,6 +559,14 @@ public class DescribeLayer4RulesResponseBody extends TeaModel {
              */
             public Builder remark(String remark) {
                 this.remark = remark;
+                return this;
+            }
+
+            /**
+             * UsTimeout.
+             */
+            public Builder usTimeout(UsTimeout usTimeout) {
+                this.usTimeout = usTimeout;
                 return this;
             }
 

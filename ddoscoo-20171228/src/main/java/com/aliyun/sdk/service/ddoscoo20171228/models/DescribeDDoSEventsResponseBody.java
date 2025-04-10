@@ -40,6 +40,10 @@ public class DescribeDDoSEventsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return events
      */
@@ -65,6 +69,15 @@ public class DescribeDDoSEventsResponseBody extends TeaModel {
         private java.util.List<Events> events; 
         private String requestId; 
         private Long total; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDDoSEventsResponseBody model) {
+            this.events = model.events;
+            this.requestId = model.requestId;
+            this.total = model.total;
+        } 
 
         /**
          * Events.
@@ -163,6 +176,16 @@ public class DescribeDDoSEventsResponseBody extends TeaModel {
             private Integer interval; 
             private Long startTime; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Events model) {
+                this.endTime = model.endTime;
+                this.interval = model.interval;
+                this.startTime = model.startTime;
+                this.status = model.status;
+            } 
 
             /**
              * EndTime.

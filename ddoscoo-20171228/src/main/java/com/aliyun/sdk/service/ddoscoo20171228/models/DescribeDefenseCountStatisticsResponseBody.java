@@ -36,6 +36,10 @@ public class DescribeDefenseCountStatisticsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return defenseCountStatistics
      */
@@ -53,6 +57,14 @@ public class DescribeDefenseCountStatisticsResponseBody extends TeaModel {
     public static final class Builder {
         private DefenseCountStatistics defenseCountStatistics; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDefenseCountStatisticsResponseBody model) {
+            this.defenseCountStatistics = model.defenseCountStatistics;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * DefenseCountStatistics.
@@ -131,6 +143,15 @@ public class DescribeDefenseCountStatisticsResponseBody extends TeaModel {
             private Integer defenseCountTotalUsageOfCurrentMonth; 
             private Integer flowPackCountRemain; 
             private Integer maxUsableDefenseCountCurrentMonth; 
+
+            private Builder() {
+            } 
+
+            private Builder(DefenseCountStatistics model) {
+                this.defenseCountTotalUsageOfCurrentMonth = model.defenseCountTotalUsageOfCurrentMonth;
+                this.flowPackCountRemain = model.flowPackCountRemain;
+                this.maxUsableDefenseCountCurrentMonth = model.maxUsableDefenseCountCurrentMonth;
+            } 
 
             /**
              * DefenseCountTotalUsageOfCurrentMonth.

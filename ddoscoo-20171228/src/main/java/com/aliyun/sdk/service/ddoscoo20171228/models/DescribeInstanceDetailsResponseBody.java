@@ -36,6 +36,10 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceDetails
      */
@@ -53,6 +57,14 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<InstanceDetails> instanceDetails; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceDetailsResponseBody model) {
+            this.instanceDetails = model.instanceDetails;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * InstanceDetails.
@@ -119,6 +131,14 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
         public static final class Builder {
             private String eip; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(EipInfoList model) {
+                this.eip = model.eip;
+                this.status = model.status;
+            } 
 
             /**
              * Eip.
@@ -198,6 +218,15 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
             private java.util.List<EipInfoList> eipInfoList; 
             private String instanceId; 
             private String line; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceDetails model) {
+                this.eipInfoList = model.eipInfoList;
+                this.instanceId = model.instanceId;
+                this.line = model.line;
+            } 
 
             /**
              * EipInfoList.
