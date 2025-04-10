@@ -66,6 +66,10 @@ public class DescribeAndroidInstancesRequest extends Request {
     private String nodeName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OfficeSiteIds")
+    private java.util.List<String> officeSiteIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SaleMode")
     private String saleMode;
 
@@ -91,6 +95,7 @@ public class DescribeAndroidInstancesRequest extends Request {
         this.nextToken = builder.nextToken;
         this.nodeId = builder.nodeId;
         this.nodeName = builder.nodeName;
+        this.officeSiteIds = builder.officeSiteIds;
         this.saleMode = builder.saleMode;
         this.status = builder.status;
         this.tag = builder.tag;
@@ -194,6 +199,13 @@ public class DescribeAndroidInstancesRequest extends Request {
     }
 
     /**
+     * @return officeSiteIds
+     */
+    public java.util.List<String> getOfficeSiteIds() {
+        return this.officeSiteIds;
+    }
+
+    /**
      * @return saleMode
      */
     public String getSaleMode() {
@@ -227,6 +239,7 @@ public class DescribeAndroidInstancesRequest extends Request {
         private String nextToken; 
         private String nodeId; 
         private String nodeName; 
+        private java.util.List<String> officeSiteIds; 
         private String saleMode; 
         private String status; 
         private java.util.List<Tag> tag; 
@@ -249,6 +262,7 @@ public class DescribeAndroidInstancesRequest extends Request {
             this.nextToken = request.nextToken;
             this.nodeId = request.nodeId;
             this.nodeName = request.nodeName;
+            this.officeSiteIds = request.officeSiteIds;
             this.saleMode = request.saleMode;
             this.status = request.status;
             this.tag = request.tag;
@@ -394,6 +408,15 @@ public class DescribeAndroidInstancesRequest extends Request {
         public Builder nodeName(String nodeName) {
             this.putQueryParameter("NodeName", nodeName);
             this.nodeName = nodeName;
+            return this;
+        }
+
+        /**
+         * OfficeSiteIds.
+         */
+        public Builder officeSiteIds(java.util.List<String> officeSiteIds) {
+            this.putQueryParameter("OfficeSiteIds", officeSiteIds);
+            this.officeSiteIds = officeSiteIds;
             return this;
         }
 
