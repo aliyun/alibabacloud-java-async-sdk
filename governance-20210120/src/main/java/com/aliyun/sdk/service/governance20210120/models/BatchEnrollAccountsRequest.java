@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.governance20210120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class BatchEnrollAccountsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Accounts")
-    private java.util.List < Accounts> accounts;
+    private java.util.List<Accounts> accounts;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BaselineId")
@@ -22,7 +27,7 @@ public class BatchEnrollAccountsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BaselineItems")
-    private java.util.List < BaselineItems> baselineItems;
+    private java.util.List<BaselineItems> baselineItems;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -44,7 +49,7 @@ public class BatchEnrollAccountsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -52,7 +57,7 @@ public class BatchEnrollAccountsRequest extends Request {
     /**
      * @return accounts
      */
-    public java.util.List < Accounts> getAccounts() {
+    public java.util.List<Accounts> getAccounts() {
         return this.accounts;
     }
 
@@ -66,7 +71,7 @@ public class BatchEnrollAccountsRequest extends Request {
     /**
      * @return baselineItems
      */
-    public java.util.List < BaselineItems> getBaselineItems() {
+    public java.util.List<BaselineItems> getBaselineItems() {
         return this.baselineItems;
     }
 
@@ -78,9 +83,9 @@ public class BatchEnrollAccountsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<BatchEnrollAccountsRequest, Builder> {
-        private java.util.List < Accounts> accounts; 
+        private java.util.List<Accounts> accounts; 
         private String baselineId; 
-        private java.util.List < BaselineItems> baselineItems; 
+        private java.util.List<BaselineItems> baselineItems; 
         private String regionId; 
 
         private Builder() {
@@ -98,7 +103,7 @@ public class BatchEnrollAccountsRequest extends Request {
         /**
          * <p>The resource accounts.</p>
          */
-        public Builder accounts(java.util.List < Accounts> accounts) {
+        public Builder accounts(java.util.List<Accounts> accounts) {
             this.putQueryParameter("Accounts", accounts);
             this.accounts = accounts;
             return this;
@@ -121,7 +126,7 @@ public class BatchEnrollAccountsRequest extends Request {
          * <p>The baseline items.</p>
          * <p>If this parameter is specified, the configurations of the baseline items are merged with the baseline applied to the specified account. The configurations of the same baseline items are subject to the configurations of this parameter. We recommend that you leave this parameter empty and configure the <code>BaselineId</code> parameter to specify an account baseline and apply the configurations of the account baseline to the account.</p>
          */
-        public Builder baselineItems(java.util.List < BaselineItems> baselineItems) {
+        public Builder baselineItems(java.util.List<BaselineItems> baselineItems) {
             this.putQueryParameter("BaselineItems", baselineItems);
             this.baselineItems = baselineItems;
             return this;
@@ -177,6 +182,13 @@ public class BatchEnrollAccountsRequest extends Request {
 
         public static final class Builder {
             private Long accountUid; 
+
+            private Builder() {
+            } 
+
+            private Builder(Accounts model) {
+                this.accountUid = model.accountUid;
+            } 
 
             /**
              * <p>The account ID. This parameter is required.</p>
@@ -263,6 +275,16 @@ public class BatchEnrollAccountsRequest extends Request {
             private String name; 
             private Boolean skip; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(BaselineItems model) {
+                this.config = model.config;
+                this.name = model.name;
+                this.skip = model.skip;
+                this.version = model.version;
+            } 
 
             /**
              * <p>The configurations of the baseline item.</p>

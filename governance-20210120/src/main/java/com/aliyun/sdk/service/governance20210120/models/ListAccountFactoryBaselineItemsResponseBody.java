@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.governance20210120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListAccountFactoryBaselineItemsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("BaselineItems")
-    private java.util.List < BaselineItems> baselineItems;
+    private java.util.List<BaselineItems> baselineItems;
 
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
@@ -35,10 +40,14 @@ public class ListAccountFactoryBaselineItemsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return baselineItems
      */
-    public java.util.List < BaselineItems> getBaselineItems() {
+    public java.util.List<BaselineItems> getBaselineItems() {
         return this.baselineItems;
     }
 
@@ -57,14 +66,23 @@ public class ListAccountFactoryBaselineItemsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < BaselineItems> baselineItems; 
+        private java.util.List<BaselineItems> baselineItems; 
         private String nextToken; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAccountFactoryBaselineItemsResponseBody model) {
+            this.baselineItems = model.baselineItems;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The baseline items.</p>
          */
-        public Builder baselineItems(java.util.List < BaselineItems> baselineItems) {
+        public Builder baselineItems(java.util.List<BaselineItems> baselineItems) {
             this.baselineItems = baselineItems;
             return this;
         }
@@ -153,6 +171,15 @@ public class ListAccountFactoryBaselineItemsResponseBody extends TeaModel {
             private String type; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(DependsOn model) {
+                this.name = model.name;
+                this.type = model.type;
+                this.version = model.version;
+            } 
+
             /**
              * <p>The name of the baseline item.</p>
              * 
@@ -201,7 +228,7 @@ public class ListAccountFactoryBaselineItemsResponseBody extends TeaModel {
      */
     public static class BaselineItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DependsOn")
-        private java.util.List < DependsOn> dependsOn;
+        private java.util.List<DependsOn> dependsOn;
 
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -234,7 +261,7 @@ public class ListAccountFactoryBaselineItemsResponseBody extends TeaModel {
         /**
          * @return dependsOn
          */
-        public java.util.List < DependsOn> getDependsOn() {
+        public java.util.List<DependsOn> getDependsOn() {
             return this.dependsOn;
         }
 
@@ -267,16 +294,27 @@ public class ListAccountFactoryBaselineItemsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < DependsOn> dependsOn; 
+            private java.util.List<DependsOn> dependsOn; 
             private String description; 
             private String name; 
             private String type; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(BaselineItems model) {
+                this.dependsOn = model.dependsOn;
+                this.description = model.description;
+                this.name = model.name;
+                this.type = model.type;
+                this.version = model.version;
+            } 
+
             /**
              * <p>The dependency of the baseline item.</p>
              */
-            public Builder dependsOn(java.util.List < DependsOn> dependsOn) {
+            public Builder dependsOn(java.util.List<DependsOn> dependsOn) {
                 this.dependsOn = dependsOn;
                 return this;
             }

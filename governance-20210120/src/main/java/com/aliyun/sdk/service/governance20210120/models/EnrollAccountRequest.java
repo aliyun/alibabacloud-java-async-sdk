@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.governance20210120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -26,7 +31,7 @@ public class EnrollAccountRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BaselineItems")
-    private java.util.List < BaselineItems> baselineItems;
+    private java.util.List<BaselineItems> baselineItems;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DisplayName")
@@ -50,7 +55,7 @@ public class EnrollAccountRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     private EnrollAccountRequest(Builder builder) {
         super(builder);
@@ -74,7 +79,7 @@ public class EnrollAccountRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -103,7 +108,7 @@ public class EnrollAccountRequest extends Request {
     /**
      * @return baselineItems
      */
-    public java.util.List < BaselineItems> getBaselineItems() {
+    public java.util.List<BaselineItems> getBaselineItems() {
         return this.baselineItems;
     }
 
@@ -145,7 +150,7 @@ public class EnrollAccountRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -153,13 +158,13 @@ public class EnrollAccountRequest extends Request {
         private String accountNamePrefix; 
         private Long accountUid; 
         private String baselineId; 
-        private java.util.List < BaselineItems> baselineItems; 
+        private java.util.List<BaselineItems> baselineItems; 
         private String displayName; 
         private String folderId; 
         private Long payerAccountUid; 
         private String regionId; 
         private String resellAccountType; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -225,10 +230,10 @@ public class EnrollAccountRequest extends Request {
         }
 
         /**
-         * <p>An array that contains baseline items.</p>
-         * <p>If this parameter is specified, the configurations of the baseline items are merged with the baseline of the specified account. The configurations of the same baseline items are subject to the configuration of this parameter. We recommend that you leave this parameter empty and configure the <code>BaselineId</code> parameter to specify an account baseline and apply the configuration of the account baseline to the account.</p>
+         * <p>The array that contains baseline items.</p>
+         * <p>If this parameter is specified, the configurations of the baseline items are merged with the baseline applied to the specified account. The configurations of the same baseline items are subject to the configurations of this parameter. We recommend that you leave this parameter empty and configure the <code>BaselineId</code> parameter to specify an account baseline and apply the configurations of the account baseline to the account.</p>
          */
-        public Builder baselineItems(java.util.List < BaselineItems> baselineItems) {
+        public Builder baselineItems(java.util.List<BaselineItems> baselineItems) {
             this.putQueryParameter("BaselineItems", baselineItems);
             this.baselineItems = baselineItems;
             return this;
@@ -316,7 +321,7 @@ public class EnrollAccountRequest extends Request {
         /**
          * <p>The tags. You can specify up to 20 tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             String tagShrink = shrink(tag, "Tag", "json");
             this.putQueryParameter("Tag", tagShrink);
             this.tag = tag;
@@ -398,6 +403,16 @@ public class EnrollAccountRequest extends Request {
             private Boolean skip; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(BaselineItems model) {
+                this.config = model.config;
+                this.name = model.name;
+                this.skip = model.skip;
+                this.version = model.version;
+            } 
+
             /**
              * <p>The configurations of the baseline item.</p>
              * 
@@ -421,7 +436,7 @@ public class EnrollAccountRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to skip the baseline item. Valid values:</p>
+             * <p>Whether to skip the baseline item. Valid values:</p>
              * <ul>
              * <li>false: The baseline item is not skipped.</li>
              * <li>true: The baseline item is skipped.</li>
@@ -496,6 +511,14 @@ public class EnrollAccountRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>

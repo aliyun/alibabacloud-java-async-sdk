@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.governance20210120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class ListAccountFactoryBaselineItemsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Names")
-    private java.util.List < String > names;
+    private java.util.List<String> names;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NextToken")
@@ -34,7 +39,7 @@ public class ListAccountFactoryBaselineItemsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Versions")
-    private java.util.List < String > versions;
+    private java.util.List<String> versions;
 
     private ListAccountFactoryBaselineItemsRequest(Builder builder) {
         super(builder);
@@ -54,7 +59,7 @@ public class ListAccountFactoryBaselineItemsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -69,7 +74,7 @@ public class ListAccountFactoryBaselineItemsRequest extends Request {
     /**
      * @return names
      */
-    public java.util.List < String > getNames() {
+    public java.util.List<String> getNames() {
         return this.names;
     }
 
@@ -97,17 +102,17 @@ public class ListAccountFactoryBaselineItemsRequest extends Request {
     /**
      * @return versions
      */
-    public java.util.List < String > getVersions() {
+    public java.util.List<String> getVersions() {
         return this.versions;
     }
 
     public static final class Builder extends Request.Builder<ListAccountFactoryBaselineItemsRequest, Builder> {
         private Integer maxResults; 
-        private java.util.List < String > names; 
+        private java.util.List<String> names; 
         private String nextToken; 
         private String regionId; 
         private String type; 
-        private java.util.List < String > versions; 
+        private java.util.List<String> versions; 
 
         private Builder() {
             super();
@@ -124,8 +129,8 @@ public class ListAccountFactoryBaselineItemsRequest extends Request {
         } 
 
         /**
-         * <p>The number of entries per page.</p>
-         * <p>Valid values: 1 to 100. Default value: 10</p>
+         * <p>The maximum number of entries per page.</p>
+         * <p>Valid values: 1 to 100. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -139,7 +144,7 @@ public class ListAccountFactoryBaselineItemsRequest extends Request {
         /**
          * <p>The names of the baseline items.</p>
          */
-        public Builder names(java.util.List < String > names) {
+        public Builder names(java.util.List<String> names) {
             this.putQueryParameter("Names", names);
             this.names = names;
             return this;
@@ -184,7 +189,7 @@ public class ListAccountFactoryBaselineItemsRequest extends Request {
         /**
          * <p>The versions of the baseline items.</p>
          */
-        public Builder versions(java.util.List < String > versions) {
+        public Builder versions(java.util.List<String> versions) {
             this.putQueryParameter("Versions", versions);
             this.versions = versions;
             return this;

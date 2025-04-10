@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.governance20210120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
     private String baselineId;
 
     @com.aliyun.core.annotation.NameInMap("BaselineItems")
-    private java.util.List < BaselineItems> baselineItems;
+    private java.util.List<BaselineItems> baselineItems;
 
     @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
@@ -46,7 +51,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
     private Long payerAccountUid;
 
     @com.aliyun.core.annotation.NameInMap("Progress")
-    private java.util.List < Progress> progress;
+    private java.util.List<Progress> progress;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -83,6 +88,10 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accountUid
      */
@@ -100,7 +109,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
     /**
      * @return baselineItems
      */
-    public java.util.List < BaselineItems> getBaselineItems() {
+    public java.util.List<BaselineItems> getBaselineItems() {
         return this.baselineItems;
     }
 
@@ -163,7 +172,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
     /**
      * @return progress
      */
-    public java.util.List < Progress> getProgress() {
+    public java.util.List<Progress> getProgress() {
         return this.progress;
     }
 
@@ -191,7 +200,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
     public static final class Builder {
         private Long accountUid; 
         private String baselineId; 
-        private java.util.List < BaselineItems> baselineItems; 
+        private java.util.List<BaselineItems> baselineItems; 
         private String createTime; 
         private String displayName; 
         private ErrorInfo errorInfo; 
@@ -200,10 +209,31 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         private Inputs inputs; 
         private Long masterAccountUid; 
         private Long payerAccountUid; 
-        private java.util.List < Progress> progress; 
+        private java.util.List<Progress> progress; 
         private String requestId; 
         private String status; 
         private String updateTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetEnrolledAccountResponseBody model) {
+            this.accountUid = model.accountUid;
+            this.baselineId = model.baselineId;
+            this.baselineItems = model.baselineItems;
+            this.createTime = model.createTime;
+            this.displayName = model.displayName;
+            this.errorInfo = model.errorInfo;
+            this.folderId = model.folderId;
+            this.initialized = model.initialized;
+            this.inputs = model.inputs;
+            this.masterAccountUid = model.masterAccountUid;
+            this.payerAccountUid = model.payerAccountUid;
+            this.progress = model.progress;
+            this.requestId = model.requestId;
+            this.status = model.status;
+            this.updateTime = model.updateTime;
+        } 
 
         /**
          * <p>The account ID.</p>
@@ -228,9 +258,9 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>An array that contains baseline items.</p>
+         * <p>The array that contains baseline items.</p>
          */
-        public Builder baselineItems(java.util.List < BaselineItems> baselineItems) {
+        public Builder baselineItems(java.util.List<BaselineItems> baselineItems) {
             this.baselineItems = baselineItems;
             return this;
         }
@@ -295,7 +325,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The input parameters that are used when the account was registered.</p>
+         * <p>Input parameters used to create an account.</p>
          */
         public Builder inputs(Inputs inputs) {
             this.inputs = inputs;
@@ -327,7 +357,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         /**
          * <p>The progress of the applying the baseline to the account.</p>
          */
-        public Builder progress(java.util.List < Progress> progress) {
+        public Builder progress(java.util.List<Progress> progress) {
             this.progress = progress;
             return this;
         }
@@ -363,7 +393,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the information about the account was updated.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-11-01T02:38:27Z</p>
@@ -447,8 +477,18 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
             private Boolean skip; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(BaselineItems model) {
+                this.config = model.config;
+                this.name = model.name;
+                this.skip = model.skip;
+                this.version = model.version;
+            } 
+
             /**
-             * <p>The configurations of the baseline item.</p>
+             * <p>The configuration of the baseline item.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;Notifications&quot;:[{&quot;GroupKey&quot;:&quot;account_msg&quot;,&quot;Contacts&quot;:[{&quot;Name&quot;:&quot;aa&quot;}],&quot;PmsgStatus&quot;:1,&quot;EmailStatus&quot;:1,&quot;SmsStatus&quot;:1}]}</p>
@@ -570,6 +610,16 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
             private String recommend; 
             private String requestId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ErrorInfo model) {
+                this.code = model.code;
+                this.message = model.message;
+                this.recommend = model.recommend;
+                this.requestId = model.requestId;
+            } 
+
             /**
              * <p>The error code.</p>
              * 
@@ -689,6 +739,16 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
             private Boolean skip; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(InputsBaselineItems model) {
+                this.config = model.config;
+                this.name = model.name;
+                this.skip = model.skip;
+                this.version = model.version;
+            } 
+
             /**
              * <p>The configurations of the baseline item.</p>
              * 
@@ -788,8 +848,19 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>product</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -797,7 +868,10 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>governance</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -825,7 +899,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         private Long accountUid;
 
         @com.aliyun.core.annotation.NameInMap("BaselineItems")
-        private java.util.List < InputsBaselineItems> baselineItems;
+        private java.util.List<InputsBaselineItems> baselineItems;
 
         @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
@@ -837,7 +911,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         private Long payerAccountUid;
 
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        private java.util.List<Tag> tag;
 
         private Inputs(Builder builder) {
             this.accountNamePrefix = builder.accountNamePrefix;
@@ -874,7 +948,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         /**
          * @return baselineItems
          */
-        public java.util.List < InputsBaselineItems> getBaselineItems() {
+        public java.util.List<InputsBaselineItems> getBaselineItems() {
             return this.baselineItems;
         }
 
@@ -902,18 +976,31 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
             private String accountNamePrefix; 
             private Long accountUid; 
-            private java.util.List < InputsBaselineItems> baselineItems; 
+            private java.util.List<InputsBaselineItems> baselineItems; 
             private String displayName; 
             private String folderId; 
             private Long payerAccountUid; 
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Inputs model) {
+                this.accountNamePrefix = model.accountNamePrefix;
+                this.accountUid = model.accountUid;
+                this.baselineItems = model.baselineItems;
+                this.displayName = model.displayName;
+                this.folderId = model.folderId;
+                this.payerAccountUid = model.payerAccountUid;
+                this.tag = model.tag;
+            } 
 
             /**
              * <p>The prefix of the account name.</p>
@@ -940,7 +1027,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
             /**
              * <p>The baseline items.</p>
              */
-            public Builder baselineItems(java.util.List < InputsBaselineItems> baselineItems) {
+            public Builder baselineItems(java.util.List<InputsBaselineItems> baselineItems) {
                 this.baselineItems = baselineItems;
                 return this;
             }
@@ -979,9 +1066,9 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
             }
 
             /**
-             * Tag.
+             * <p>The tag.</p>
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -1036,6 +1123,14 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         public static final class Builder {
             private String name; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Progress model) {
+                this.name = model.name;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The name of the baseline item.</p>

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.governance20210120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListEvaluationMetadataResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("EvaluationMetadata")
-    private java.util.List < EvaluationMetadata> evaluationMetadata;
+    private java.util.List<EvaluationMetadata> evaluationMetadata;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -31,10 +36,14 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return evaluationMetadata
      */
-    public java.util.List < EvaluationMetadata> getEvaluationMetadata() {
+    public java.util.List<EvaluationMetadata> getEvaluationMetadata() {
         return this.evaluationMetadata;
     }
 
@@ -46,13 +55,21 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < EvaluationMetadata> evaluationMetadata; 
+        private java.util.List<EvaluationMetadata> evaluationMetadata; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListEvaluationMetadataResponseBody model) {
+            this.evaluationMetadata = model.evaluationMetadata;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The metadata of a governance maturity check.</p>
          */
-        public Builder evaluationMetadata(java.util.List < EvaluationMetadata> evaluationMetadata) {
+        public Builder evaluationMetadata(java.util.List<EvaluationMetadata> evaluationMetadata) {
             this.evaluationMetadata = evaluationMetadata;
             return this;
         }
@@ -142,8 +159,21 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
             private String content; 
             private String title; 
 
+            private Builder() {
+            } 
+
+            private Builder(Guidance model) {
+                this.buttonName = model.buttonName;
+                this.buttonRef = model.buttonRef;
+                this.content = model.content;
+                this.title = model.title;
+            } 
+
             /**
              * <p>The display name of the fixing button.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Manual fixing</p>
              */
             public Builder buttonName(String buttonName) {
                 this.buttonName = buttonName;
@@ -163,6 +193,9 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
 
             /**
              * <p>The fixing procedure.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>You must replace the AccessKey pair of your Alibaba Cloud account. To do so, perform the following steps:</br>1. Log on to the RAM console. In the left-side navigation pane, choose Identities &gt; Users. On the Users page, click Create User.</br>2. On the Create User page, enter a logon name and select OpenAPI Access for the Access Mode parameter.</br>3. After the RAM user is created, save the AccessKey pair. Then, find the user that you created on the Users page and click Add Permissions in the Actions column. In the Grant Permission panel, find the AdministratorAccess policy and attach it to the RAM user.</br>4. In a program, replace the AccessKey pair of the Alibaba Cloud account with the AccessKey pair of the RAM user created in the previous step and check whether the program runs as expected in the test environment.</br>5. If the program runs as expected, publish the program to the production environment and disable the previous AccessKey pair of your Alibaba Cloud account. Then, check whether the program runs as expected.</br>6. If the program runs as expected, delete the disabled AccessKey pair after the specified period of time, such as 90 days.</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -171,6 +204,9 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
 
             /**
              * <p>The title of the fixing procedure.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Scenario 3: AccessKey pair that is used within the last 90 days</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -201,7 +237,7 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
         private String description;
 
         @com.aliyun.core.annotation.NameInMap("Guidance")
-        private java.util.List < Guidance> guidance;
+        private java.util.List<Guidance> guidance;
 
         @com.aliyun.core.annotation.NameInMap("Notice")
         private String notice;
@@ -250,7 +286,7 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
         /**
          * @return guidance
          */
-        public java.util.List < Guidance> getGuidance() {
+        public java.util.List<Guidance> getGuidance() {
             return this.guidance;
         }
 
@@ -272,9 +308,21 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
             private String classification; 
             private String costDescription; 
             private String description; 
-            private java.util.List < Guidance> guidance; 
+            private java.util.List<Guidance> guidance; 
             private String notice; 
             private String suggestion; 
+
+            private Builder() {
+            } 
+
+            private Builder(Actions model) {
+                this.classification = model.classification;
+                this.costDescription = model.costDescription;
+                this.description = model.description;
+                this.guidance = model.guidance;
+                this.notice = model.notice;
+                this.suggestion = model.suggestion;
+            } 
 
             /**
              * <p>The fixing method.</p>
@@ -292,6 +340,9 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
 
             /**
              * <p>The fixing cost.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>You are not charged for this operation.</p>
              */
             public Builder costDescription(String costDescription) {
                 this.costDescription = costDescription;
@@ -303,6 +354,9 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
              * <blockquote>
              * <p> This parameter is returned only if the value of <code>RemediationType</code> is <code>Analysis</code>.</p>
              * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>Console logon is enabled for the RAM user. The RAM user owns an AccessKey pair that is never used.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -312,13 +366,16 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
             /**
              * <p>The content of the fixing items.</p>
              */
-            public Builder guidance(java.util.List < Guidance> guidance) {
+            public Builder guidance(java.util.List<Guidance> guidance) {
                 this.guidance = guidance;
                 return this;
             }
 
             /**
              * <p>The usage notes of the fixing item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The BestPracticesForIdentityAndPermissions compliance package is enabled in Cloud Config to check the settings and usage of the AccessKey pair, Alibaba Cloud account, and RAM users.</p>
              */
             public Builder notice(String notice) {
                 this.notice = notice;
@@ -330,6 +387,9 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
              * <blockquote>
              * <p> This parameter is returned only if the value of <code>RemediationType</code> is <code>Analysis</code>.</p>
              * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>Console logon is enabled for the RAM user and the RAM user owns an AccessKey pair, while the AccessKey pair has never been used by the RAM user. We recommend that you disable the AccessKey pair for 90 days. If no related issue occurs during this period, you can delete the AccessKey pair.</p>
              */
             public Builder suggestion(String suggestion) {
                 this.suggestion = suggestion;
@@ -351,7 +411,7 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
      */
     public static class Remediation extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Actions")
-        private java.util.List < Actions> actions;
+        private java.util.List<Actions> actions;
 
         @com.aliyun.core.annotation.NameInMap("RemediationType")
         private String remediationType;
@@ -372,7 +432,7 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
         /**
          * @return actions
          */
-        public java.util.List < Actions> getActions() {
+        public java.util.List<Actions> getActions() {
             return this.actions;
         }
 
@@ -384,13 +444,21 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Actions> actions; 
+            private java.util.List<Actions> actions; 
             private String remediationType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Remediation model) {
+                this.actions = model.actions;
+                this.remediationType = model.remediationType;
+            } 
 
             /**
              * <p>The fixing operations.</p>
              */
-            public Builder actions(java.util.List < Actions> actions) {
+            public Builder actions(java.util.List<Actions> actions) {
                 this.actions = actions;
                 return this;
             }
@@ -426,7 +494,7 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
      */
     public static class RemediationMetadata extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Remediation")
-        private java.util.List < Remediation> remediation;
+        private java.util.List<Remediation> remediation;
 
         private RemediationMetadata(Builder builder) {
             this.remediation = builder.remediation;
@@ -443,17 +511,24 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
         /**
          * @return remediation
          */
-        public java.util.List < Remediation> getRemediation() {
+        public java.util.List<Remediation> getRemediation() {
             return this.remediation;
         }
 
         public static final class Builder {
-            private java.util.List < Remediation> remediation; 
+            private java.util.List<Remediation> remediation; 
+
+            private Builder() {
+            } 
+
+            private Builder(RemediationMetadata model) {
+                this.remediation = model.remediation;
+            } 
 
             /**
              * <p>The fixing items.</p>
              */
-            public Builder remediation(java.util.List < Remediation> remediation) {
+            public Builder remediation(java.util.List<Remediation> remediation) {
                 this.remediation = remediation;
                 return this;
             }
@@ -521,8 +596,20 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
             private String propertyName; 
             private String propertyType; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResourcePropertyMetadata model) {
+                this.displayName = model.displayName;
+                this.propertyName = model.propertyName;
+                this.propertyType = model.propertyType;
+            } 
+
             /**
              * <p>The display name of the resource property.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AccessKey Pair Last Used At</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -566,7 +653,7 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
      */
     public static class ResourceMetadata extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourcePropertyMetadata")
-        private java.util.List < ResourcePropertyMetadata> resourcePropertyMetadata;
+        private java.util.List<ResourcePropertyMetadata> resourcePropertyMetadata;
 
         private ResourceMetadata(Builder builder) {
             this.resourcePropertyMetadata = builder.resourcePropertyMetadata;
@@ -583,17 +670,24 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
         /**
          * @return resourcePropertyMetadata
          */
-        public java.util.List < ResourcePropertyMetadata> getResourcePropertyMetadata() {
+        public java.util.List<ResourcePropertyMetadata> getResourcePropertyMetadata() {
             return this.resourcePropertyMetadata;
         }
 
         public static final class Builder {
-            private java.util.List < ResourcePropertyMetadata> resourcePropertyMetadata; 
+            private java.util.List<ResourcePropertyMetadata> resourcePropertyMetadata; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceMetadata model) {
+                this.resourcePropertyMetadata = model.resourcePropertyMetadata;
+            } 
 
             /**
              * <p>The metadata of the resource properties.</p>
              */
-            public Builder resourcePropertyMetadata(java.util.List < ResourcePropertyMetadata> resourcePropertyMetadata) {
+            public Builder resourcePropertyMetadata(java.util.List<ResourcePropertyMetadata> resourcePropertyMetadata) {
                 this.resourcePropertyMetadata = resourcePropertyMetadata;
                 return this;
             }
@@ -733,6 +827,21 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
             private String scope; 
             private String stage; 
 
+            private Builder() {
+            } 
+
+            private Builder(Metadata model) {
+                this.category = model.category;
+                this.description = model.description;
+                this.displayName = model.displayName;
+                this.id = model.id;
+                this.recommendationLevel = model.recommendationLevel;
+                this.remediationMetadata = model.remediationMetadata;
+                this.resourceMetadata = model.resourceMetadata;
+                this.scope = model.scope;
+                this.stage = model.stage;
+            } 
+
             /**
              * <p>The category of the check item.</p>
              * 
@@ -746,6 +855,9 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
 
             /**
              * <p>The description of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>If you use an AccessKey pair of an Alibaba Cloud account, you have full permissions on the resources of the account. You cannot set limits on the account, such as setting limits on source IP addresses or access duration. If the AccessKey pair is leaked, resources within the account are exposed to high security risks. If your Alibaba Cloud account has an existing AccessKey pair, the check result is Non-compliant.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -754,6 +866,9 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
 
             /**
              * <p>The display name of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>An AccessKey pair is enabled for the Alibaba Cloud account.</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -843,7 +958,7 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
      */
     public static class EvaluationMetadata extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Metadata")
-        private java.util.List < Metadata> metadata;
+        private java.util.List<Metadata> metadata;
 
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
@@ -864,7 +979,7 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
         /**
          * @return metadata
          */
-        public java.util.List < Metadata> getMetadata() {
+        public java.util.List<Metadata> getMetadata() {
             return this.metadata;
         }
 
@@ -876,13 +991,21 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Metadata> metadata; 
+            private java.util.List<Metadata> metadata; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(EvaluationMetadata model) {
+                this.metadata = model.metadata;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The metadata objects of a specific metadata type.</p>
              */
-            public Builder metadata(java.util.List < Metadata> metadata) {
+            public Builder metadata(java.util.List<Metadata> metadata) {
                 this.metadata = metadata;
                 return this;
             }

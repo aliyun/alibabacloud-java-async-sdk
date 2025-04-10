@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.governance20210120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class RunEvaluationRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MetricIds")
-    private java.util.List < String > metricIds;
+    private java.util.List<String> metricIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -44,7 +49,7 @@ public class RunEvaluationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -59,7 +64,7 @@ public class RunEvaluationRequest extends Request {
     /**
      * @return metricIds
      */
-    public java.util.List < String > getMetricIds() {
+    public java.util.List<String> getMetricIds() {
         return this.metricIds;
     }
 
@@ -79,7 +84,7 @@ public class RunEvaluationRequest extends Request {
 
     public static final class Builder extends Request.Builder<RunEvaluationRequest, Builder> {
         private Long accountId; 
-        private java.util.List < String > metricIds; 
+        private java.util.List<String> metricIds; 
         private String regionId; 
         private String scope; 
 
@@ -108,9 +113,9 @@ public class RunEvaluationRequest extends Request {
         }
 
         /**
-         * MetricIds.
+         * <p>The IDs of the check items to be checked.</p>
          */
-        public Builder metricIds(java.util.List < String > metricIds) {
+        public Builder metricIds(java.util.List<String> metricIds) {
             String metricIdsShrink = shrink(metricIds, "MetricIds", "json");
             this.putQueryParameter("MetricIds", metricIdsShrink);
             this.metricIds = metricIds;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.governance20210120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListEnrolledAccountsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("EnrolledAccounts")
-    private java.util.List < EnrolledAccounts> enrolledAccounts;
+    private java.util.List<EnrolledAccounts> enrolledAccounts;
 
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
@@ -35,10 +40,14 @@ public class ListEnrolledAccountsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return enrolledAccounts
      */
-    public java.util.List < EnrolledAccounts> getEnrolledAccounts() {
+    public java.util.List<EnrolledAccounts> getEnrolledAccounts() {
         return this.enrolledAccounts;
     }
 
@@ -57,14 +66,23 @@ public class ListEnrolledAccountsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < EnrolledAccounts> enrolledAccounts; 
+        private java.util.List<EnrolledAccounts> enrolledAccounts; 
         private String nextToken; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListEnrolledAccountsResponseBody model) {
+            this.enrolledAccounts = model.enrolledAccounts;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>The accounts.</p>
+         * <p>The enrolled accounts.</p>
          */
-        public Builder enrolledAccounts(java.util.List < EnrolledAccounts> enrolledAccounts) {
+        public Builder enrolledAccounts(java.util.List<EnrolledAccounts> enrolledAccounts) {
             this.enrolledAccounts = enrolledAccounts;
             return this;
         }
@@ -213,6 +231,20 @@ public class ListEnrolledAccountsResponseBody extends TeaModel {
             private String status; 
             private String updateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(EnrolledAccounts model) {
+                this.accountUid = model.accountUid;
+                this.baselineId = model.baselineId;
+                this.createTime = model.createTime;
+                this.displayName = model.displayName;
+                this.folderId = model.folderId;
+                this.payerAccountUid = model.payerAccountUid;
+                this.status = model.status;
+                this.updateTime = model.updateTime;
+            } 
+
             /**
              * <p>The account ID.</p>
              * 
@@ -225,7 +257,7 @@ public class ListEnrolledAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The baseline ID.</p>
+             * <p>The ID of the baseline that is implemented.</p>
              * 
              * <strong>example:</strong>
              * <p>afb-bp1durvn3lgqe28v****</p>
@@ -236,7 +268,7 @@ public class ListEnrolledAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time at which the account was created.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-11-01T02:38:27Z</p>
@@ -269,7 +301,7 @@ public class ListEnrolledAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the billing account.</p>
+             * <p>The ID of the settlement account.</p>
              * 
              * <strong>example:</strong>
              * <p>13161210500*****</p>
@@ -280,14 +312,14 @@ public class ListEnrolledAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation status of the account. Valid values:</p>
+             * <p>The creation status. Valid values:</p>
              * <ul>
-             * <li>Pending: The account is waiting to be created.</li>
+             * <li>Pending: The account is pending to be created.</li>
              * <li>Running: The account is being created.</li>
              * <li>Finished: The account is created.</li>
-             * <li>Failed: The account failed to be created.</li>
+             * <li>Failed: The account fails to be created.</li>
              * <li>Scheduling: The account is being scheduled.</li>
-             * <li>ScheduleFailed: The account failed to be scheduled.</li>
+             * <li>ScheduleFailed: The account fails to be scheduled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -299,7 +331,7 @@ public class ListEnrolledAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the information about the account was updated.</p>
+             * <p>The update time.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-11-01T02:38:27Z</p>

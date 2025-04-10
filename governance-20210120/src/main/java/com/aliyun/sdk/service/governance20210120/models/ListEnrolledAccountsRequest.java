@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.governance20210120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -40,7 +45,7 @@ public class ListEnrolledAccountsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -83,7 +88,7 @@ public class ListEnrolledAccountsRequest extends Request {
         } 
 
         /**
-         * <p>The maximum number of entries to return on each page.</p>
+         * <p>The maximum number of entries per page.</p>
          * <p>Valid values: 1 to 100. Default value: 10.</p>
          * 
          * <strong>example:</strong>
@@ -96,7 +101,8 @@ public class ListEnrolledAccountsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.</p>
+         * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.</p>
+         * <p>You do not need to specify this parameter for the first request.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAALHWGpGoYCcYMxiFfmlhvh62Xr2DzYbz/SAfc*****</p>

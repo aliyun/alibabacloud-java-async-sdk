@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.governance20210120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -32,6 +37,10 @@ public class ListEvaluationMetricDetailsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnapshotId")
+    private String snapshotId;
+
     private ListEvaluationMetricDetailsRequest(Builder builder) {
         super(builder);
         this.accountId = builder.accountId;
@@ -39,6 +48,7 @@ public class ListEvaluationMetricDetailsRequest extends Request {
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.regionId = builder.regionId;
+        this.snapshotId = builder.snapshotId;
     }
 
     public static Builder builder() {
@@ -49,7 +59,7 @@ public class ListEvaluationMetricDetailsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -89,12 +99,20 @@ public class ListEvaluationMetricDetailsRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return snapshotId
+     */
+    public String getSnapshotId() {
+        return this.snapshotId;
+    }
+
     public static final class Builder extends Request.Builder<ListEvaluationMetricDetailsRequest, Builder> {
         private Long accountId; 
         private String id; 
         private Integer maxResults; 
         private String nextToken; 
         private String regionId; 
+        private String snapshotId; 
 
         private Builder() {
             super();
@@ -107,10 +125,11 @@ public class ListEvaluationMetricDetailsRequest extends Request {
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.regionId = request.regionId;
+            this.snapshotId = request.snapshotId;
         } 
 
         /**
-         * <p>The account ID of the member. This parameter takes effect only when a multi-account governance maturity check is performed.</p>
+         * <p>The Alibaba Cloud account ID of the member. This parameter takes effect only when a multi-account governance maturity check is performed.</p>
          * 
          * <strong>example:</strong>
          * <p>103144549568****</p>
@@ -167,6 +186,15 @@ public class ListEvaluationMetricDetailsRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * SnapshotId.
+         */
+        public Builder snapshotId(String snapshotId) {
+            this.putQueryParameter("SnapshotId", snapshotId);
+            this.snapshotId = snapshotId;
             return this;
         }
 

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.governance20210120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,6 +40,10 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accountId
      */
@@ -60,6 +69,15 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
         private Long accountId; 
         private String requestId; 
         private Results results; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListEvaluationResultsResponseBody model) {
+            this.accountId = model.accountId;
+            this.requestId = model.requestId;
+            this.results = model.results;
+        } 
 
         /**
          * <p>The Alibaba Cloud account ID of the member.</p>
@@ -141,6 +159,14 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
             private String code; 
             private String message; 
 
+            private Builder() {
+            } 
+
+            private Builder(ErrorInfo model) {
+                this.code = model.code;
+                this.message = model.message;
+            } 
+
             /**
              * <p>The error code.</p>
              * 
@@ -201,6 +227,13 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer nonCompliant; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourcesSummary model) {
+                this.nonCompliant = model.nonCompliant;
+            } 
 
             /**
              * <p>The number of non-compliant resources.</p>
@@ -324,6 +357,19 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
             private String risk; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(MetricResults model) {
+                this.errorInfo = model.errorInfo;
+                this.evaluationTime = model.evaluationTime;
+                this.id = model.id;
+                this.resourcesSummary = model.resourcesSummary;
+                this.result = model.result;
+                this.risk = model.risk;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The error information.</p>
              * <blockquote>
@@ -426,7 +472,7 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
         private String evaluationTime;
 
         @com.aliyun.core.annotation.NameInMap("MetricResults")
-        private java.util.List < MetricResults> metricResults;
+        private java.util.List<MetricResults> metricResults;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
@@ -459,7 +505,7 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
         /**
          * @return metricResults
          */
-        public java.util.List < MetricResults> getMetricResults() {
+        public java.util.List<MetricResults> getMetricResults() {
             return this.metricResults;
         }
 
@@ -479,9 +525,19 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String evaluationTime; 
-            private java.util.List < MetricResults> metricResults; 
+            private java.util.List<MetricResults> metricResults; 
             private String status; 
             private Double totalScore; 
+
+            private Builder() {
+            } 
+
+            private Builder(Results model) {
+                this.evaluationTime = model.evaluationTime;
+                this.metricResults = model.metricResults;
+                this.status = model.status;
+                this.totalScore = model.totalScore;
+            } 
 
             /**
              * <p>The end time of the overall check. The time is displayed in UTC.</p>
@@ -497,7 +553,7 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
             /**
              * <p>The check results.</p>
              */
-            public Builder metricResults(java.util.List < MetricResults> metricResults) {
+            public Builder metricResults(java.util.List<MetricResults> metricResults) {
                 this.metricResults = metricResults;
                 return this;
             }

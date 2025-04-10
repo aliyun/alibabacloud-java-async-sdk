@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.governance20210120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListEvaluationMetricDetailsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Resources")
-    private java.util.List < Resources> resources;
+    private java.util.List<Resources> resources;
 
     private ListEvaluationMetricDetailsResponseBody(Builder builder) {
         this.nextToken = builder.nextToken;
@@ -33,6 +38,10 @@ public class ListEvaluationMetricDetailsResponseBody extends TeaModel {
 
     public static ListEvaluationMetricDetailsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -52,14 +61,23 @@ public class ListEvaluationMetricDetailsResponseBody extends TeaModel {
     /**
      * @return resources
      */
-    public java.util.List < Resources> getResources() {
+    public java.util.List<Resources> getResources() {
         return this.resources;
     }
 
     public static final class Builder {
         private String nextToken; 
         private String requestId; 
-        private java.util.List < Resources> resources; 
+        private java.util.List<Resources> resources; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListEvaluationMetricDetailsResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.resources = model.resources;
+        } 
 
         /**
          * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
@@ -86,7 +104,7 @@ public class ListEvaluationMetricDetailsResponseBody extends TeaModel {
         /**
          * <p>The details of the non-compliant resources.</p>
          */
-        public Builder resources(java.util.List < Resources> resources) {
+        public Builder resources(java.util.List<Resources> resources) {
             this.resources = resources;
             return this;
         }
@@ -141,6 +159,14 @@ public class ListEvaluationMetricDetailsResponseBody extends TeaModel {
             private String propertyName; 
             private String propertyValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResourceProperties model) {
+                this.propertyName = model.propertyName;
+                this.propertyValue = model.propertyValue;
+            } 
+
             /**
              * <p>The name of the resource attribute.</p>
              * 
@@ -154,6 +180,9 @@ public class ListEvaluationMetricDetailsResponseBody extends TeaModel {
 
             /**
              * <p>The value of the resource attribute.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example</p>
              */
             public Builder propertyValue(String propertyValue) {
                 this.propertyValue = propertyValue;
@@ -193,7 +222,7 @@ public class ListEvaluationMetricDetailsResponseBody extends TeaModel {
         private Long resourceOwnerId;
 
         @com.aliyun.core.annotation.NameInMap("ResourceProperties")
-        private java.util.List < ResourceProperties> resourceProperties;
+        private java.util.List<ResourceProperties> resourceProperties;
 
         @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
@@ -262,7 +291,7 @@ public class ListEvaluationMetricDetailsResponseBody extends TeaModel {
         /**
          * @return resourceProperties
          */
-        public java.util.List < ResourceProperties> getResourceProperties() {
+        public java.util.List<ResourceProperties> getResourceProperties() {
             return this.resourceProperties;
         }
 
@@ -280,16 +309,30 @@ public class ListEvaluationMetricDetailsResponseBody extends TeaModel {
             private String resourceId; 
             private String resourceName; 
             private Long resourceOwnerId; 
-            private java.util.List < ResourceProperties> resourceProperties; 
+            private java.util.List<ResourceProperties> resourceProperties; 
             private String resourceType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Resources model) {
+                this.complianceType = model.complianceType;
+                this.regionId = model.regionId;
+                this.resourceClassification = model.resourceClassification;
+                this.resourceId = model.resourceId;
+                this.resourceName = model.resourceName;
+                this.resourceOwnerId = model.resourceOwnerId;
+                this.resourceProperties = model.resourceProperties;
+                this.resourceType = model.resourceType;
+            } 
+
             /**
-             * <p>合规状态。取值：</p>
+             * <p>The compliance status of the resource. Valid values:</p>
              * <ul>
-             * <li>NonCompliant：不合规。</li>
-             * <li>Excluded：已忽略。</li>
-             * <li>PendingExclusion：已忽略未生效。</li>
-             * <li>PendingInclusion：已取消忽略未生效。</li>
+             * <li>NonCompliant: non-compliant.</li>
+             * <li>Excluded: ignored.</li>
+             * <li>PendingExclusion: to be ignored.</li>
+             * <li>PendingInclusion: to be unignored.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -326,7 +369,7 @@ public class ListEvaluationMetricDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource ID.</p>
+             * <p>The ID of the resource.</p>
              * 
              * <strong>example:</strong>
              * <p>26435103783237****</p>
@@ -338,6 +381,9 @@ public class ListEvaluationMetricDetailsResponseBody extends TeaModel {
 
             /**
              * <p>The name of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
@@ -358,7 +404,7 @@ public class ListEvaluationMetricDetailsResponseBody extends TeaModel {
             /**
              * <p>The attributes of the resource.</p>
              */
-            public Builder resourceProperties(java.util.List < ResourceProperties> resourceProperties) {
+            public Builder resourceProperties(java.util.List<ResourceProperties> resourceProperties) {
                 this.resourceProperties = resourceProperties;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.governance20210120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListAccountFactoryBaselinesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Baselines")
-    private java.util.List < Baselines> baselines;
+    private java.util.List<Baselines> baselines;
 
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
@@ -35,10 +40,14 @@ public class ListAccountFactoryBaselinesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return baselines
      */
-    public java.util.List < Baselines> getBaselines() {
+    public java.util.List<Baselines> getBaselines() {
         return this.baselines;
     }
 
@@ -57,14 +66,23 @@ public class ListAccountFactoryBaselinesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Baselines> baselines; 
+        private java.util.List<Baselines> baselines; 
         private String nextToken; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAccountFactoryBaselinesResponseBody model) {
+            this.baselines = model.baselines;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The baselines.</p>
          */
-        public Builder baselines(java.util.List < Baselines> baselines) {
+        public Builder baselines(java.util.List<Baselines> baselines) {
             this.baselines = baselines;
             return this;
         }
@@ -188,6 +206,18 @@ public class ListAccountFactoryBaselinesResponseBody extends TeaModel {
             private String description; 
             private String type; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Baselines model) {
+                this.baselineId = model.baselineId;
+                this.baselineName = model.baselineName;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.type = model.type;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The baseline ID.</p>

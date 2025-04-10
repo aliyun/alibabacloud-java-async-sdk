@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.governance20210120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class GetAccountFactoryBaselineResponseBody extends TeaModel {
     private String baselineId;
 
     @com.aliyun.core.annotation.NameInMap("BaselineItems")
-    private java.util.List < BaselineItems> baselineItems;
+    private java.util.List<BaselineItems> baselineItems;
 
     @com.aliyun.core.annotation.NameInMap("BaselineName")
     private String baselineName;
@@ -55,6 +60,10 @@ public class GetAccountFactoryBaselineResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return baselineId
      */
@@ -65,7 +74,7 @@ public class GetAccountFactoryBaselineResponseBody extends TeaModel {
     /**
      * @return baselineItems
      */
-    public java.util.List < BaselineItems> getBaselineItems() {
+    public java.util.List<BaselineItems> getBaselineItems() {
         return this.baselineItems;
     }
 
@@ -113,13 +122,27 @@ public class GetAccountFactoryBaselineResponseBody extends TeaModel {
 
     public static final class Builder {
         private String baselineId; 
-        private java.util.List < BaselineItems> baselineItems; 
+        private java.util.List<BaselineItems> baselineItems; 
         private String baselineName; 
         private String createTime; 
         private String description; 
         private String requestId; 
         private String type; 
         private String updateTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAccountFactoryBaselineResponseBody model) {
+            this.baselineId = model.baselineId;
+            this.baselineItems = model.baselineItems;
+            this.baselineName = model.baselineName;
+            this.createTime = model.createTime;
+            this.description = model.description;
+            this.requestId = model.requestId;
+            this.type = model.type;
+            this.updateTime = model.updateTime;
+        } 
 
         /**
          * <p>The baseline ID.</p>
@@ -135,7 +158,7 @@ public class GetAccountFactoryBaselineResponseBody extends TeaModel {
         /**
          * <p>The baseline items.</p>
          */
-        public Builder baselineItems(java.util.List < BaselineItems> baselineItems) {
+        public Builder baselineItems(java.util.List<BaselineItems> baselineItems) {
             this.baselineItems = baselineItems;
             return this;
         }
@@ -271,6 +294,15 @@ public class GetAccountFactoryBaselineResponseBody extends TeaModel {
             private String config; 
             private String name; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(BaselineItems model) {
+                this.config = model.config;
+                this.name = model.name;
+                this.version = model.version;
+            } 
 
             /**
              * <p>The configuration of the baseline item.</p>

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.governance20210120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class EnrollAccountResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accountUid
      */
@@ -48,6 +57,14 @@ public class EnrollAccountResponseBody extends TeaModel {
     public static final class Builder {
         private Long accountUid; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(EnrollAccountResponseBody model) {
+            this.accountUid = model.accountUid;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The account ID.</p>

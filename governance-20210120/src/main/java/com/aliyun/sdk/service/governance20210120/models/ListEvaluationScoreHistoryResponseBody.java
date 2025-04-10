@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.governance20210120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class ListEvaluationScoreHistoryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,6 +57,14 @@ public class ListEvaluationScoreHistoryResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private ScoreHistory scoreHistory; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListEvaluationScoreHistoryResponseBody model) {
+            this.requestId = model.requestId;
+            this.scoreHistory = model.scoreHistory;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -118,6 +135,14 @@ public class ListEvaluationScoreHistoryResponseBody extends TeaModel {
             private String evaluationTime; 
             private Double score; 
 
+            private Builder() {
+            } 
+
+            private Builder(TotalScoreHistory model) {
+                this.evaluationTime = model.evaluationTime;
+                this.score = model.score;
+            } 
+
             /**
              * <p>The time when the score was generated. The time is in UTC.</p>
              * 
@@ -156,7 +181,7 @@ public class ListEvaluationScoreHistoryResponseBody extends TeaModel {
      */
     public static class ScoreHistory extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TotalScoreHistory")
-        private java.util.List < TotalScoreHistory> totalScoreHistory;
+        private java.util.List<TotalScoreHistory> totalScoreHistory;
 
         private ScoreHistory(Builder builder) {
             this.totalScoreHistory = builder.totalScoreHistory;
@@ -173,17 +198,24 @@ public class ListEvaluationScoreHistoryResponseBody extends TeaModel {
         /**
          * @return totalScoreHistory
          */
-        public java.util.List < TotalScoreHistory> getTotalScoreHistory() {
+        public java.util.List<TotalScoreHistory> getTotalScoreHistory() {
             return this.totalScoreHistory;
         }
 
         public static final class Builder {
-            private java.util.List < TotalScoreHistory> totalScoreHistory; 
+            private java.util.List<TotalScoreHistory> totalScoreHistory; 
+
+            private Builder() {
+            } 
+
+            private Builder(ScoreHistory model) {
+                this.totalScoreHistory = model.totalScoreHistory;
+            } 
 
             /**
              * <p>The historical scores.</p>
              */
-            public Builder totalScoreHistory(java.util.List < TotalScoreHistory> totalScoreHistory) {
+            public Builder totalScoreHistory(java.util.List<TotalScoreHistory> totalScoreHistory) {
                 this.totalScoreHistory = totalScoreHistory;
                 return this;
             }

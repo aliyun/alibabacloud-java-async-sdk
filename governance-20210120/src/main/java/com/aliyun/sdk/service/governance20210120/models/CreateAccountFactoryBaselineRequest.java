@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.governance20210120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CreateAccountFactoryBaselineRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BaselineItems")
-    private java.util.List < BaselineItems> baselineItems;
+    private java.util.List<BaselineItems> baselineItems;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BaselineName")
@@ -44,7 +49,7 @@ public class CreateAccountFactoryBaselineRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -52,7 +57,7 @@ public class CreateAccountFactoryBaselineRequest extends Request {
     /**
      * @return baselineItems
      */
-    public java.util.List < BaselineItems> getBaselineItems() {
+    public java.util.List<BaselineItems> getBaselineItems() {
         return this.baselineItems;
     }
 
@@ -78,7 +83,7 @@ public class CreateAccountFactoryBaselineRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateAccountFactoryBaselineRequest, Builder> {
-        private java.util.List < BaselineItems> baselineItems; 
+        private java.util.List<BaselineItems> baselineItems; 
         private String baselineName; 
         private String description; 
         private String regionId; 
@@ -96,10 +101,10 @@ public class CreateAccountFactoryBaselineRequest extends Request {
         } 
 
         /**
-         * <p>The baseline items.</p>
+         * <p>An array that contains the baseline items.</p>
          * <p>You can call the <a href="~~ListAccountFactoryBaselineItems~~">ListAccountFactoryBaselineItems</a> operation to query a list of baseline items supported by the account factory in Cloud Governance Center.</p>
          */
-        public Builder baselineItems(java.util.List < BaselineItems> baselineItems) {
+        public Builder baselineItems(java.util.List<BaselineItems> baselineItems) {
             this.putQueryParameter("BaselineItems", baselineItems);
             this.baselineItems = baselineItems;
             return this;
@@ -203,6 +208,15 @@ public class CreateAccountFactoryBaselineRequest extends Request {
             private String config; 
             private String name; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(BaselineItems model) {
+                this.config = model.config;
+                this.name = model.name;
+                this.version = model.version;
+            } 
 
             /**
              * <p>The configurations of the baseline item. The value of this parameter is a JSON string.</p>
