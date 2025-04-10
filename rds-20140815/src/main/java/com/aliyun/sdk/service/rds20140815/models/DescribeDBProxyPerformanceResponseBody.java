@@ -332,6 +332,9 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
+        @com.aliyun.core.annotation.NameInMap("Node")
+        private String node;
+
         @com.aliyun.core.annotation.NameInMap("Service")
         private String service;
 
@@ -343,6 +346,7 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
 
         private PerformanceKey(Builder builder) {
             this.key = builder.key;
+            this.node = builder.node;
             this.service = builder.service;
             this.valueFormat = builder.valueFormat;
             this.values = builder.values;
@@ -361,6 +365,13 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
          */
         public String getKey() {
             return this.key;
+        }
+
+        /**
+         * @return node
+         */
+        public String getNode() {
+            return this.node;
         }
 
         /**
@@ -386,6 +397,7 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
 
         public static final class Builder {
             private String key; 
+            private String node; 
             private String service; 
             private String valueFormat; 
             private Values values; 
@@ -395,6 +407,7 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
 
             private Builder(PerformanceKey model) {
                 this.key = model.key;
+                this.node = model.node;
                 this.service = model.service;
                 this.valueFormat = model.valueFormat;
                 this.values = model.values;
@@ -408,6 +421,14 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
              */
             public Builder key(String key) {
                 this.key = key;
+                return this;
+            }
+
+            /**
+             * Node.
+             */
+            public Builder node(String node) {
+                this.node = node;
                 return this;
             }
 
