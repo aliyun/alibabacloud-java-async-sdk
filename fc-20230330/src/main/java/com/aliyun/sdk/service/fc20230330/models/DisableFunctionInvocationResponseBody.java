@@ -54,7 +54,10 @@ public class DisableFunctionInvocationResponseBody extends TeaModel {
         } 
 
         /**
-         * success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

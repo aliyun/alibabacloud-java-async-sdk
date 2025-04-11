@@ -87,7 +87,10 @@ public class DisableFunctionInvocationRequest extends Request {
         } 
 
         /**
-         * functionName.
+         * <p>The name of the function whose invocation you want to disable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>helloworld</p>
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -96,7 +99,10 @@ public class DisableFunctionInvocationRequest extends Request {
         }
 
         /**
-         * abortOngoingRequest.
+         * <p>Specifies whether to immediately terminate all ongoing requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder abortOngoingRequest(Boolean abortOngoingRequest) {
             this.putBodyParameter("abortOngoingRequest", abortOngoingRequest);
@@ -105,7 +111,7 @@ public class DisableFunctionInvocationRequest extends Request {
         }
 
         /**
-         * reason.
+         * <p>The reason for disabling the function&quot;s invocation.</p>
          */
         public Builder reason(String reason) {
             this.putBodyParameter("reason", reason);

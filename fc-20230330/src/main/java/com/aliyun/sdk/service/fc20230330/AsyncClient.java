@@ -124,6 +124,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteVpcBindingResponse> deleteVpcBinding(DeleteVpcBindingRequest request);
 
     /**
+     * @param request the request parameters of DescribeRegions  DescribeRegionsRequest
+     * @return DescribeRegionsResponse
+     */
+    CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Exercise caution when you call this operation on a function in a production environment, as improper deactivation may lead to business disruptions.</p>
+     * 
      * @param request the request parameters of DisableFunctionInvocation  DisableFunctionInvocationRequest
      * @return DisableFunctionInvocationResponse
      */
@@ -248,6 +257,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListFunctionVersionsResponse> listFunctionVersions(ListFunctionVersionsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>ListFunctions returns only a subset of a function\&quot;s attribute fields. To obtain the additional fields, which include state, stateReasonCode, stateReason, lastUpdateStatus, lastUpdateStatusReasonCode, and lastUpdateStatusReason, use <a href="https://help.aliyun.com/document_detail/2618610.html">GetFunction</a>.</p>
+     * 
      * @param request the request parameters of ListFunctions  ListFunctionsRequest
      * @return ListFunctionsResponse
      */
