@@ -48,6 +48,10 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
         private String requestId; 
         private RouteServiceEntries routeServiceEntries; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRouteServicesInCenResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.routeServiceEntries = model.routeServiceEntries;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number of the returned page.</p>
@@ -179,6 +194,13 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> cidr; 
+
+            private Builder() {
+            } 
+
+            private Builder(Cidrs model) {
+                this.cidr = model.cidr;
+            } 
 
             /**
              * Cidr.
@@ -311,6 +333,20 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
             private String hostVpcId; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(RouteServiceEntry model) {
+                this.accessRegionId = model.accessRegionId;
+                this.cenId = model.cenId;
+                this.cidrs = model.cidrs;
+                this.description = model.description;
+                this.host = model.host;
+                this.hostRegionId = model.hostRegionId;
+                this.hostVpcId = model.hostVpcId;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The ID of the region where the cloud service is accessed.</p>
              * 
@@ -439,6 +475,13 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<RouteServiceEntry> routeServiceEntry; 
+
+            private Builder() {
+            } 
+
+            private Builder(RouteServiceEntries model) {
+                this.routeServiceEntry = model.routeServiceEntry;
+            } 
 
             /**
              * RouteServiceEntry.

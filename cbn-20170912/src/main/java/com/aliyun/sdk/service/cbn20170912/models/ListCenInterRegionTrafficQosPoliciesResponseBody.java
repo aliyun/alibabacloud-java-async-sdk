@@ -48,6 +48,10 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -89,6 +93,17 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
         private java.util.List<TrafficQosPolicies> trafficQosPolicies; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListCenInterRegionTrafficQosPoliciesResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.trafficQosPolicies = model.trafficQosPolicies;
+        } 
 
         /**
          * <p>The number of entries returned per page.</p>
@@ -255,6 +270,19 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
             private String qosQueueId; 
             private String qosQueueName; 
             private Integer remainBandwidthPercent; 
+
+            private Builder() {
+            } 
+
+            private Builder(TrafficQosQueues model) {
+                this.bandwidth = model.bandwidth;
+                this.dscps = model.dscps;
+                this.effectiveBandwidth = model.effectiveBandwidth;
+                this.qosQueueDescription = model.qosQueueDescription;
+                this.qosQueueId = model.qosQueueId;
+                this.qosQueueName = model.qosQueueName;
+                this.remainBandwidthPercent = model.remainBandwidthPercent;
+            } 
 
             /**
              * <p>If the QoS queues are assigned absolute bandwidth values, this parameter indicates the absolute bandwidth value that is allocated to the queue.</p>
@@ -452,6 +480,20 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
             private java.util.List<TrafficQosQueues> trafficQosQueues; 
             private String transitRouterAttachmentId; 
             private String transitRouterId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TrafficQosPolicies model) {
+                this.bandwidthGuaranteeMode = model.bandwidthGuaranteeMode;
+                this.trafficQosPolicyDescription = model.trafficQosPolicyDescription;
+                this.trafficQosPolicyId = model.trafficQosPolicyId;
+                this.trafficQosPolicyName = model.trafficQosPolicyName;
+                this.trafficQosPolicyStatus = model.trafficQosPolicyStatus;
+                this.trafficQosQueues = model.trafficQosQueues;
+                this.transitRouterAttachmentId = model.transitRouterAttachmentId;
+                this.transitRouterId = model.transitRouterId;
+            } 
 
             /**
              * <p>The guaranteed bandwidth mode.</p>

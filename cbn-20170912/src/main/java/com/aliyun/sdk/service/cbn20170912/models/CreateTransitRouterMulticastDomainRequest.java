@@ -94,7 +94,7 @@ public class CreateTransitRouterMulticastDomainRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -412,6 +412,13 @@ public class CreateTransitRouterMulticastDomainRequest extends Request {
         public static final class Builder {
             private String igmpv2Support; 
 
+            private Builder() {
+            } 
+
+            private Builder(Options model) {
+                this.igmpv2Support = model.igmpv2Support;
+            } 
+
             /**
              * <p>Indicates whether the IGMP feature is enabled for the multicast domain. Once enabled, hosts can dynamically join or leave multicast groups by using IGMP protocol. Valid values:</p>
              * <ul>
@@ -483,6 +490,14 @@ public class CreateTransitRouterMulticastDomainRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>

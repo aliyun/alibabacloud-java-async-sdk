@@ -70,7 +70,7 @@ public class AddTraficMatchRuleToTrafficMarkingPolicyRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -370,6 +370,20 @@ public class AddTraficMatchRuleToTrafficMarkingPolicyRequest extends Request {
             private java.util.List<Integer> srcPortRange; 
             private String trafficMatchRuleDescription; 
             private String trafficMatchRuleName; 
+
+            private Builder() {
+            } 
+
+            private Builder(TrafficMatchRules model) {
+                this.dstCidr = model.dstCidr;
+                this.dstPortRange = model.dstPortRange;
+                this.matchDscp = model.matchDscp;
+                this.protocol = model.protocol;
+                this.srcCidr = model.srcCidr;
+                this.srcPortRange = model.srcPortRange;
+                this.trafficMatchRuleDescription = model.trafficMatchRuleDescription;
+                this.trafficMatchRuleName = model.trafficMatchRuleName;
+            } 
 
             /**
              * <p>The destination CIDR block that is used to match packets.</p>

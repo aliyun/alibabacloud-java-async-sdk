@@ -36,6 +36,10 @@ public class DescribeCenGeographicSpanRemainingBandwidthResponseBody extends Tea
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return remainingBandwidth
      */
@@ -53,6 +57,14 @@ public class DescribeCenGeographicSpanRemainingBandwidthResponseBody extends Tea
     public static final class Builder {
         private Long remainingBandwidth; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCenGeographicSpanRemainingBandwidthResponseBody model) {
+            this.remainingBandwidth = model.remainingBandwidth;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The remaining bandwidth of the bandwidth plan. Unit: Mbit/s.</p>

@@ -99,7 +99,7 @@ public class ListTransitRoutersRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -455,6 +455,14 @@ public class ListTransitRoutersRequest extends Request {
             private String key; 
             private java.util.List<String> value; 
 
+            private Builder() {
+            } 
+
+            private Builder(FeatureFilter model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The value of the field that is used to enable or disable a feature of the transit router. Supported fields:</p>
              * <ul>
@@ -531,6 +539,14 @@ public class ListTransitRoutersRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>

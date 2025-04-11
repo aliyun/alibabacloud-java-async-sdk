@@ -96,7 +96,7 @@ public class CreateTransitRouterRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -436,6 +436,14 @@ public class CreateTransitRouterRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The tag key.</p>
              * <p>The tag keys cannot be an empty string. The tag key can be up to 64 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
@@ -536,6 +544,16 @@ public class CreateTransitRouterRequest extends Request {
             private String description; 
             private String name; 
             private Boolean publishCidrRoute; 
+
+            private Builder() {
+            } 
+
+            private Builder(TransitRouterCidrList model) {
+                this.cidr = model.cidr;
+                this.description = model.description;
+                this.name = model.name;
+                this.publishCidrRoute = model.publishCidrRoute;
+            } 
 
             /**
              * <p>The CIDR block of the transit router.</p>

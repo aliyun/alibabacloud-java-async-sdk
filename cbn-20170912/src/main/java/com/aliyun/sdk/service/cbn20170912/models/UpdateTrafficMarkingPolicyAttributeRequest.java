@@ -85,7 +85,7 @@ public class UpdateTrafficMarkingPolicyAttributeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -460,6 +460,21 @@ public class UpdateTrafficMarkingPolicyAttributeRequest extends Request {
             private String trafficMatchRuleDescription; 
             private String trafficMatchRuleName; 
 
+            private Builder() {
+            } 
+
+            private Builder(AddTrafficMatchRules model) {
+                this.addressFamily = model.addressFamily;
+                this.dstCidr = model.dstCidr;
+                this.dstPortRange = model.dstPortRange;
+                this.matchDscp = model.matchDscp;
+                this.protocol = model.protocol;
+                this.srcCidr = model.srcCidr;
+                this.srcPortRange = model.srcPortRange;
+                this.trafficMatchRuleDescription = model.trafficMatchRuleDescription;
+                this.trafficMatchRuleName = model.trafficMatchRuleName;
+            } 
+
             /**
              * <p>The address family. Valid values: You can set the value to IPv4 or IPv6, or leave the value empty.</p>
              * 
@@ -733,6 +748,21 @@ public class UpdateTrafficMarkingPolicyAttributeRequest extends Request {
             private java.util.List<Integer> srcPortRange; 
             private String trafficMatchRuleDescription; 
             private String trafficMatchRuleName; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeleteTrafficMatchRules model) {
+                this.addressFamily = model.addressFamily;
+                this.dstCidr = model.dstCidr;
+                this.dstPortRange = model.dstPortRange;
+                this.matchDscp = model.matchDscp;
+                this.protocol = model.protocol;
+                this.srcCidr = model.srcCidr;
+                this.srcPortRange = model.srcPortRange;
+                this.trafficMatchRuleDescription = model.trafficMatchRuleDescription;
+                this.trafficMatchRuleName = model.trafficMatchRuleName;
+            } 
 
             /**
              * <p>The address family. Valid values: You can set the value to IPv4 or IPv6, or leave the value empty.</p>

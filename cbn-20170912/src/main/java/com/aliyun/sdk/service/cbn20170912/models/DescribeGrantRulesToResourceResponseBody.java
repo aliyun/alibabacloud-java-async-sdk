@@ -48,6 +48,10 @@ public class DescribeGrantRulesToResourceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return grantRules
      */
@@ -89,6 +93,17 @@ public class DescribeGrantRulesToResourceResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeGrantRulesToResourceResponseBody model) {
+            this.grantRules = model.grantRules;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The permissions that are granted to the CEN instance.</p>
@@ -222,6 +237,16 @@ public class DescribeGrantRulesToResourceResponseBody extends TeaModel {
             private Long cenOwnerId; 
             private String createTime; 
             private String orderType; 
+
+            private Builder() {
+            } 
+
+            private Builder(GrantRules model) {
+                this.cenId = model.cenId;
+                this.cenOwnerId = model.cenOwnerId;
+                this.createTime = model.createTime;
+                this.orderType = model.orderType;
+            } 
 
             /**
              * <p>The ID of the CEN instance.</p>

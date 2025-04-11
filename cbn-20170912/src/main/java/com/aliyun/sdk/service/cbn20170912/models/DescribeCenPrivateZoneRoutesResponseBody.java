@@ -56,6 +56,10 @@ public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cenId
      */
@@ -113,6 +117,19 @@ public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
         private PrivateZoneInfos privateZoneInfos; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCenPrivateZoneRoutesResponseBody model) {
+            this.cenId = model.cenId;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.privateZoneDnsServers = model.privateZoneDnsServers;
+            this.privateZoneInfos = model.privateZoneInfos;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The ID of the CEN instance.</p>
@@ -262,6 +279,16 @@ public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
             private String hostVpcId; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(PrivateZoneInfo model) {
+                this.accessRegionId = model.accessRegionId;
+                this.hostRegionId = model.hostRegionId;
+                this.hostVpcId = model.hostVpcId;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The ID of the region where PrivateZone is accessed.</p>
              * 
@@ -349,6 +376,13 @@ public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<PrivateZoneInfo> privateZoneInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(PrivateZoneInfos model) {
+                this.privateZoneInfo = model.privateZoneInfo;
+            } 
 
             /**
              * PrivateZoneInfo.

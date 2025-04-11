@@ -48,6 +48,10 @@ public class ListTransitRoutersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class ListTransitRoutersResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
         private java.util.List<TransitRouters> transitRouters; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTransitRoutersResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.transitRouters = model.transitRouters;
+        } 
 
         /**
          * <p>The page number of the returned page.</p>
@@ -191,6 +206,14 @@ public class ListTransitRoutersResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -300,6 +323,17 @@ public class ListTransitRoutersResponseBody extends TeaModel {
             private String name; 
             private Boolean publishCidrRoute; 
             private String transitRouterCidrId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TransitRouterCidrList model) {
+                this.cidr = model.cidr;
+                this.description = model.description;
+                this.name = model.name;
+                this.publishCidrRoute = model.publishCidrRoute;
+                this.transitRouterCidrId = model.transitRouterCidrId;
+            } 
 
             /**
              * <p>The CIDR block of the transit router.</p>
@@ -534,6 +568,24 @@ public class ListTransitRoutersResponseBody extends TeaModel {
             private String transitRouterId; 
             private String transitRouterName; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(TransitRouters model) {
+                this.aliUid = model.aliUid;
+                this.cenId = model.cenId;
+                this.creationTime = model.creationTime;
+                this.regionId = model.regionId;
+                this.status = model.status;
+                this.supportMulticast = model.supportMulticast;
+                this.tags = model.tags;
+                this.transitRouterCidrList = model.transitRouterCidrList;
+                this.transitRouterDescription = model.transitRouterDescription;
+                this.transitRouterId = model.transitRouterId;
+                this.transitRouterName = model.transitRouterName;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The ID of the Alibaba Cloud account to which the CEN instance belongs.</p>

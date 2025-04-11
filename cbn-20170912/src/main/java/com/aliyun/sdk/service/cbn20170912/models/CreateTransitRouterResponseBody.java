@@ -36,6 +36,10 @@ public class CreateTransitRouterResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class CreateTransitRouterResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String transitRouterId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateTransitRouterResponseBody model) {
+            this.requestId = model.requestId;
+            this.transitRouterId = model.transitRouterId;
+        } 
 
         /**
          * <p>The ID of the request.</p>

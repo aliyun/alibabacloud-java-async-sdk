@@ -91,7 +91,7 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -443,6 +443,17 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
             private String qosQueueDescription; 
             private String qosQueueName; 
             private String remainBandwidthPercent; 
+
+            private Builder() {
+            } 
+
+            private Builder(TrafficQosQueues model) {
+                this.bandwidth = model.bandwidth;
+                this.dscps = model.dscps;
+                this.qosQueueDescription = model.qosQueueDescription;
+                this.qosQueueName = model.qosQueueName;
+                this.remainBandwidthPercent = model.remainBandwidthPercent;
+            } 
 
             /**
              * <p>The absolute bandwidth that can be consumed by the QoS queue. Unit: Mbit/s.</p>

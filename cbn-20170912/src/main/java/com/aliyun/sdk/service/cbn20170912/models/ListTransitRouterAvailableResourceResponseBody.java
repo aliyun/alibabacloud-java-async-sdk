@@ -48,6 +48,10 @@ public class ListTransitRouterAvailableResourceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return availableZones
      */
@@ -89,6 +93,17 @@ public class ListTransitRouterAvailableResourceResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<String> slaveZones; 
         private Boolean supportMulticast; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTransitRouterAvailableResourceResponseBody model) {
+            this.availableZones = model.availableZones;
+            this.masterZones = model.masterZones;
+            this.requestId = model.requestId;
+            this.slaveZones = model.slaveZones;
+            this.supportMulticast = model.supportMulticast;
+        } 
 
         /**
          * <p>A list of zone IDs.</p>

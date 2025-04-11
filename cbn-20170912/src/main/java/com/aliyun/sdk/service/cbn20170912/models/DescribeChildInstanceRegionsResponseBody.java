@@ -36,6 +36,10 @@ public class DescribeChildInstanceRegionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return regions
      */
@@ -53,6 +57,14 @@ public class DescribeChildInstanceRegionsResponseBody extends TeaModel {
     public static final class Builder {
         private Regions regions; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeChildInstanceRegionsResponseBody model) {
+            this.regions = model.regions;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>A list of regions.</p>
@@ -123,6 +135,14 @@ public class DescribeChildInstanceRegionsResponseBody extends TeaModel {
             private String localName; 
             private String regionId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Region model) {
+                this.localName = model.localName;
+                this.regionId = model.regionId;
+            } 
+
             /**
              * <p>The name of the region.</p>
              * 
@@ -183,6 +203,13 @@ public class DescribeChildInstanceRegionsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Region> region; 
+
+            private Builder() {
+            } 
+
+            private Builder(Regions model) {
+                this.region = model.region;
+            } 
 
             /**
              * Region.

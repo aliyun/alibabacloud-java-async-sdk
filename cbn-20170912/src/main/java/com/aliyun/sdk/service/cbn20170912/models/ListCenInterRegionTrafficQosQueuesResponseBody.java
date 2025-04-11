@@ -40,6 +40,10 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextToken
      */
@@ -65,6 +69,15 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private java.util.List<TrafficQosQueues> trafficQosQueues; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListCenInterRegionTrafficQosQueuesResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.trafficQosQueues = model.trafficQosQueues;
+        } 
 
         /**
          * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
@@ -257,6 +270,23 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
             private String trafficQosQueueName; 
             private String transitRouterAttachmentId; 
             private String transitRouterId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TrafficQosQueues model) {
+                this.bandwidth = model.bandwidth;
+                this.dscps = model.dscps;
+                this.effectiveBandwidth = model.effectiveBandwidth;
+                this.remainBandwidthPercent = model.remainBandwidthPercent;
+                this.status = model.status;
+                this.trafficQosPolicyId = model.trafficQosPolicyId;
+                this.trafficQosQueueDescription = model.trafficQosQueueDescription;
+                this.trafficQosQueueId = model.trafficQosQueueId;
+                this.trafficQosQueueName = model.trafficQosQueueName;
+                this.transitRouterAttachmentId = model.transitRouterAttachmentId;
+                this.transitRouterId = model.transitRouterId;
+            } 
 
             /**
              * <p>The absolute bandwidth value that can be allocated to the current queue.</p>

@@ -48,6 +48,10 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -89,6 +93,17 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
         private java.util.List<TransitRouterRouteTables> transitRouterRouteTables; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTransitRouterRouteTablesResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.transitRouterRouteTables = model.transitRouterRouteTables;
+        } 
 
         /**
          * <p>The number of entries returned per page.</p>
@@ -184,6 +199,13 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
         public static final class Builder {
             private String multiRegionECMP; 
 
+            private Builder() {
+            } 
+
+            private Builder(RouteTableOptions model) {
+                this.multiRegionECMP = model.multiRegionECMP;
+            } 
+
             /**
              * <p>Indicates whether ECMP routing is enabled. Valid values:</p>
              * <ul>
@@ -249,6 +271,14 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -418,6 +448,22 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
             private String transitRouterRouteTableName; 
             private String transitRouterRouteTableStatus; 
             private String transitRouterRouteTableType; 
+
+            private Builder() {
+            } 
+
+            private Builder(TransitRouterRouteTables model) {
+                this.createTime = model.createTime;
+                this.regionId = model.regionId;
+                this.routeTableOptions = model.routeTableOptions;
+                this.tags = model.tags;
+                this.transitRouterId = model.transitRouterId;
+                this.transitRouterRouteTableDescription = model.transitRouterRouteTableDescription;
+                this.transitRouterRouteTableId = model.transitRouterRouteTableId;
+                this.transitRouterRouteTableName = model.transitRouterRouteTableName;
+                this.transitRouterRouteTableStatus = model.transitRouterRouteTableStatus;
+                this.transitRouterRouteTableType = model.transitRouterRouteTableType;
+            } 
 
             /**
              * <p>The time when the route table was created.</p>

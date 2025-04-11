@@ -68,6 +68,10 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cenId
      */
@@ -149,6 +153,22 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
         private String childInstanceType; 
         private String requestId; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCenAttachedChildInstanceAttributeResponseBody model) {
+            this.cenId = model.cenId;
+            this.childInstanceAttachTime = model.childInstanceAttachTime;
+            this.childInstanceAttributes = model.childInstanceAttributes;
+            this.childInstanceId = model.childInstanceId;
+            this.childInstanceName = model.childInstanceName;
+            this.childInstanceOwnerId = model.childInstanceOwnerId;
+            this.childInstanceRegionId = model.childInstanceRegionId;
+            this.childInstanceType = model.childInstanceType;
+            this.requestId = model.requestId;
+            this.status = model.status;
+        } 
 
         /**
          * <p>The ID of the CEN instance.</p>
@@ -318,6 +338,14 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
             private String ipv6CidrBlock; 
             private String ipv6Isp; 
 
+            private Builder() {
+            } 
+
+            private Builder(Ipv6CidrBlock model) {
+                this.ipv6CidrBlock = model.ipv6CidrBlock;
+                this.ipv6Isp = model.ipv6Isp;
+            } 
+
             /**
              * <p>The IPv6 CIDR block of the VPC.</p>
              * 
@@ -388,6 +416,13 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
         public static final class Builder {
             private java.util.List<Ipv6CidrBlock> ipv6CidrBlock; 
 
+            private Builder() {
+            } 
+
+            private Builder(Ipv6CidrBlocks model) {
+                this.ipv6CidrBlock = model.ipv6CidrBlock;
+            } 
+
             /**
              * ipv6CidrBlock.
              */
@@ -434,6 +469,13 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
 
         public static final class Builder {
             private java.util.List<String> secondaryCidrBlock; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecondaryCidrBlocks model) {
+                this.secondaryCidrBlock = model.secondaryCidrBlock;
+            } 
 
             /**
              * secondaryCidrBlock.
@@ -517,6 +559,16 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
             private String ipv6CidrBlock; 
             private Ipv6CidrBlocks ipv6CidrBlocks; 
             private SecondaryCidrBlocks secondaryCidrBlocks; 
+
+            private Builder() {
+            } 
+
+            private Builder(ChildInstanceAttributes model) {
+                this.cidrBlock = model.cidrBlock;
+                this.ipv6CidrBlock = model.ipv6CidrBlock;
+                this.ipv6CidrBlocks = model.ipv6CidrBlocks;
+                this.secondaryCidrBlocks = model.secondaryCidrBlocks;
+            } 
 
             /**
              * <p>The IPv4 CIDR block of the VPC.</p>

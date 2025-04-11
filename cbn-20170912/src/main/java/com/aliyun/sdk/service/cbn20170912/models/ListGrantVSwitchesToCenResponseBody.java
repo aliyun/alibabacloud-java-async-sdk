@@ -48,6 +48,10 @@ public class ListGrantVSwitchesToCenResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class ListGrantVSwitchesToCenResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
         private java.util.List<VSwitches> vSwitches; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListGrantVSwitchesToCenResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.vSwitches = model.vSwitches;
+        } 
 
         /**
          * <p>The page number of the returned page.</p>
@@ -215,6 +230,16 @@ public class ListGrantVSwitchesToCenResponseBody extends TeaModel {
             private String vSwitchName; 
             private String vpcId; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(VSwitches model) {
+                this.vSwitchId = model.vSwitchId;
+                this.vSwitchName = model.vSwitchName;
+                this.vpcId = model.vpcId;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>The ID of the vSwitch.</p>

@@ -48,6 +48,10 @@ public class DescribeCensResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cens
      */
@@ -89,6 +93,17 @@ public class DescribeCensResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCensResponseBody model) {
+            this.cens = model.cens;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The information about the CEN instance.</p>
@@ -180,6 +195,13 @@ public class DescribeCensResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> cenBandwidthPackageId; 
 
+            private Builder() {
+            } 
+
+            private Builder(CenBandwidthPackageIds model) {
+                this.cenBandwidthPackageId = model.cenBandwidthPackageId;
+            } 
+
             /**
              * CenBandwidthPackageId.
              */
@@ -238,6 +260,14 @@ public class DescribeCensResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -299,6 +329,13 @@ public class DescribeCensResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
@@ -455,6 +492,22 @@ public class DescribeCensResponseBody extends TeaModel {
             private String status; 
             private Tags tags; 
 
+            private Builder() {
+            } 
+
+            private Builder(Cen model) {
+                this.cenBandwidthPackageIds = model.cenBandwidthPackageIds;
+                this.cenId = model.cenId;
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.ipv6Level = model.ipv6Level;
+                this.name = model.name;
+                this.protectionLevel = model.protectionLevel;
+                this.resourceGroupId = model.resourceGroupId;
+                this.status = model.status;
+                this.tags = model.tags;
+            } 
+
             /**
              * <p>The IDs of the bandwidth plans that are associated with the CEN instance.</p>
              */
@@ -608,6 +661,13 @@ public class DescribeCensResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Cen> cen; 
+
+            private Builder() {
+            } 
+
+            private Builder(Cens model) {
+                this.cen = model.cen;
+            } 
 
             /**
              * Cen.

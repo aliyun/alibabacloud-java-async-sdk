@@ -48,6 +48,10 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cenRouteEntries
      */
@@ -89,6 +93,17 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCenChildInstanceRouteEntriesResponseBody model) {
+            this.cenRouteEntries = model.cenRouteEntries;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The information about the route.</p>
@@ -180,6 +195,13 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> asPath; 
 
+            private Builder() {
+            } 
+
+            private Builder(AsPaths model) {
+                this.asPath = model.asPath;
+            } 
+
             /**
              * AsPath.
              */
@@ -238,6 +260,14 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
         public static final class Builder {
             private String regionId; 
             private String routeMapId; 
+
+            private Builder() {
+            } 
+
+            private Builder(CenRouteMapRecord model) {
+                this.regionId = model.regionId;
+                this.routeMapId = model.routeMapId;
+            } 
 
             /**
              * <p>The region ID of the routing policy.</p>
@@ -300,6 +330,13 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<CenRouteMapRecord> cenRouteMapRecord; 
 
+            private Builder() {
+            } 
+
+            private Builder(CenRouteMapRecords model) {
+                this.cenRouteMapRecord = model.cenRouteMapRecord;
+            } 
+
             /**
              * CenRouteMapRecord.
              */
@@ -346,6 +383,13 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> community; 
+
+            private Builder() {
+            } 
+
+            private Builder(Communities model) {
+                this.community = model.community;
+            } 
 
             /**
              * Community.
@@ -441,6 +485,17 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
             private String instanceType; 
             private String regionId; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Conflict model) {
+                this.destinationCidrBlock = model.destinationCidrBlock;
+                this.instanceId = model.instanceId;
+                this.instanceType = model.instanceType;
+                this.regionId = model.regionId;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The destination CIDR block of the overlapping route.</p>
@@ -545,6 +600,13 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Conflict> conflict; 
+
+            private Builder() {
+            } 
+
+            private Builder(Conflicts model) {
+                this.conflict = model.conflict;
+            } 
 
             /**
              * Conflict.
@@ -736,6 +798,25 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
             private String routeTableId; 
             private String status; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(CenRouteEntry model) {
+                this.asPaths = model.asPaths;
+                this.cenRouteMapRecords = model.cenRouteMapRecords;
+                this.communities = model.communities;
+                this.conflicts = model.conflicts;
+                this.destinationCidrBlock = model.destinationCidrBlock;
+                this.nextHopInstanceId = model.nextHopInstanceId;
+                this.nextHopRegionId = model.nextHopRegionId;
+                this.nextHopType = model.nextHopType;
+                this.operationalMode = model.operationalMode;
+                this.publishStatus = model.publishStatus;
+                this.routeTableId = model.routeTableId;
+                this.status = model.status;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The AS paths of the routes.</p>
@@ -949,6 +1030,13 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<CenRouteEntry> cenRouteEntry; 
+
+            private Builder() {
+            } 
+
+            private Builder(CenRouteEntries model) {
+                this.cenRouteEntry = model.cenRouteEntry;
+            } 
 
             /**
              * CenRouteEntry.

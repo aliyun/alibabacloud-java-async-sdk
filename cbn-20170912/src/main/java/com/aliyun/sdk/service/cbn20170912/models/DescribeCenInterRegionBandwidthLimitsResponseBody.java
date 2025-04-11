@@ -48,6 +48,10 @@ public class DescribeCenInterRegionBandwidthLimitsResponseBody extends TeaModel 
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cenInterRegionBandwidthLimits
      */
@@ -89,6 +93,17 @@ public class DescribeCenInterRegionBandwidthLimitsResponseBody extends TeaModel 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCenInterRegionBandwidthLimitsResponseBody model) {
+            this.cenInterRegionBandwidthLimits = model.cenInterRegionBandwidthLimits;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>A list of inter-region connections.</p>
@@ -264,6 +279,20 @@ public class DescribeCenInterRegionBandwidthLimitsResponseBody extends TeaModel 
             private String oppositeRegionId; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(CenInterRegionBandwidthLimit model) {
+                this.bandwidthLimit = model.bandwidthLimit;
+                this.bandwidthPackageId = model.bandwidthPackageId;
+                this.bandwidthType = model.bandwidthType;
+                this.cenId = model.cenId;
+                this.geographicSpanId = model.geographicSpanId;
+                this.localRegionId = model.localRegionId;
+                this.oppositeRegionId = model.oppositeRegionId;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The maximum bandwidth of the inter-region connection. Unit: Mbit/s.</p>
              * 
@@ -399,6 +428,13 @@ public class DescribeCenInterRegionBandwidthLimitsResponseBody extends TeaModel 
 
         public static final class Builder {
             private java.util.List<CenInterRegionBandwidthLimit> cenInterRegionBandwidthLimit; 
+
+            private Builder() {
+            } 
+
+            private Builder(CenInterRegionBandwidthLimits model) {
+                this.cenInterRegionBandwidthLimit = model.cenInterRegionBandwidthLimit;
+            } 
 
             /**
              * CenInterRegionBandwidthLimit.

@@ -48,6 +48,10 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -89,6 +93,17 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
         private java.util.List<TransitRouterAttachments> transitRouterAttachments; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTransitRouterVpcAttachmentsResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.transitRouterAttachments = model.transitRouterAttachments;
+        } 
 
         /**
          * <p>The number of entries returned per page.</p>
@@ -196,6 +211,14 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The tag key.</p>
              * 
@@ -280,6 +303,15 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
             private String networkInterfaceId; 
             private String vSwitchId; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ZoneMappings model) {
+                this.networkInterfaceId = model.networkInterfaceId;
+                this.vSwitchId = model.vSwitchId;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>The ID of the ENI created by the Enterprise Edition transit router in the vSwitch.</p>
@@ -544,6 +576,29 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
             private Long vpcOwnerId; 
             private String vpcRegionId; 
             private java.util.List<ZoneMappings> zoneMappings; 
+
+            private Builder() {
+            } 
+
+            private Builder(TransitRouterAttachments model) {
+                this.autoPublishRouteEnabled = model.autoPublishRouteEnabled;
+                this.cenId = model.cenId;
+                this.chargeType = model.chargeType;
+                this.creationTime = model.creationTime;
+                this.orderType = model.orderType;
+                this.resourceType = model.resourceType;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.transitRouterAttachmentDescription = model.transitRouterAttachmentDescription;
+                this.transitRouterAttachmentId = model.transitRouterAttachmentId;
+                this.transitRouterAttachmentName = model.transitRouterAttachmentName;
+                this.transitRouterId = model.transitRouterId;
+                this.transitRouterVPCAttachmentOptions = model.transitRouterVPCAttachmentOptions;
+                this.vpcId = model.vpcId;
+                this.vpcOwnerId = model.vpcOwnerId;
+                this.vpcRegionId = model.vpcRegionId;
+                this.zoneMappings = model.zoneMappings;
+            } 
 
             /**
              * <p>Indicates whether the Enterprise Edition transit router can automatically advertise routes to the VPC. Valid values:</p>

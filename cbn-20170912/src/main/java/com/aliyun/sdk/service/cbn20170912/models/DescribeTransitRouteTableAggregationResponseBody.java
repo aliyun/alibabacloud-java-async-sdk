@@ -48,6 +48,10 @@ public class DescribeTransitRouteTableAggregationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return count
      */
@@ -89,6 +93,17 @@ public class DescribeTransitRouteTableAggregationResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTransitRouteTableAggregationResponseBody model) {
+            this.count = model.count;
+            this.data = model.data;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.total = model.total;
+        } 
 
         /**
          * <p>The number of entries returned per page.</p>
@@ -268,6 +283,20 @@ public class DescribeTransitRouteTableAggregationResponseBody extends TeaModel {
             private String trRouteTableId; 
             private String transitRouteTableAggregationCidr; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.routeType = model.routeType;
+                this.scope = model.scope;
+                this.scopeList = model.scopeList;
+                this.status = model.status;
+                this.trRouteTableId = model.trRouteTableId;
+                this.transitRouteTableAggregationCidr = model.transitRouteTableAggregationCidr;
+            } 
+
             /**
              * <p>The description of the aggregate route.</p>
              * 
@@ -315,7 +344,10 @@ public class DescribeTransitRouteTableAggregationResponseBody extends TeaModel {
             }
 
             /**
-             * ScopeList.
+             * <p>The list of propagation ranges of the aggregation route.</p>
+             * <blockquote>
+             * <p> You must specify at least one of the following attributes: Aggregation Scope and Aggregate Scope List. We recommend that you specify the latter. The elements in the two attributes cannot be duplicate.</p>
+             * </blockquote>
              */
             public Builder scopeList(java.util.List<String> scopeList) {
                 this.scopeList = scopeList;

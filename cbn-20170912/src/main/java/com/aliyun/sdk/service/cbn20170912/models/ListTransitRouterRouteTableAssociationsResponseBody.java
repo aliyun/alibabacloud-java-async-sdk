@@ -48,6 +48,10 @@ public class ListTransitRouterRouteTableAssociationsResponseBody extends TeaMode
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -89,6 +93,17 @@ public class ListTransitRouterRouteTableAssociationsResponseBody extends TeaMode
         private String requestId; 
         private Integer totalCount; 
         private java.util.List<TransitRouterAssociations> transitRouterAssociations; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTransitRouterRouteTableAssociationsResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.transitRouterAssociations = model.transitRouterAssociations;
+        } 
 
         /**
          * <p>The number of entries returned per page.</p>
@@ -231,6 +246,17 @@ public class ListTransitRouterRouteTableAssociationsResponseBody extends TeaMode
             private String status; 
             private String transitRouterAttachmentId; 
             private String transitRouterRouteTableId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TransitRouterAssociations model) {
+                this.resourceId = model.resourceId;
+                this.resourceType = model.resourceType;
+                this.status = model.status;
+                this.transitRouterAttachmentId = model.transitRouterAttachmentId;
+                this.transitRouterRouteTableId = model.transitRouterRouteTableId;
+            } 
 
             /**
              * <p>The ID of the next hop.</p>

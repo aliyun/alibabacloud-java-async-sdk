@@ -48,6 +48,10 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -89,6 +93,17 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
         private java.util.List<TransitRouterAttachments> transitRouterAttachments; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTransitRouterVpnAttachmentsResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.transitRouterAttachments = model.transitRouterAttachments;
+        } 
 
         /**
          * <p>The number of entries returned per page.</p>
@@ -196,6 +211,14 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The tag key.</p>
              * 
@@ -256,6 +279,13 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Zones model) {
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>The zone ID.</p>
@@ -487,6 +517,28 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
             private Long vpnOwnerId; 
             private String vpnRegionId; 
             private java.util.List<Zones> zones; 
+
+            private Builder() {
+            } 
+
+            private Builder(TransitRouterAttachments model) {
+                this.autoPublishRouteEnabled = model.autoPublishRouteEnabled;
+                this.cenId = model.cenId;
+                this.chargeType = model.chargeType;
+                this.creationTime = model.creationTime;
+                this.orderType = model.orderType;
+                this.resourceType = model.resourceType;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.transitRouterAttachmentDescription = model.transitRouterAttachmentDescription;
+                this.transitRouterAttachmentId = model.transitRouterAttachmentId;
+                this.transitRouterAttachmentName = model.transitRouterAttachmentName;
+                this.transitRouterId = model.transitRouterId;
+                this.vpnId = model.vpnId;
+                this.vpnOwnerId = model.vpnOwnerId;
+                this.vpnRegionId = model.vpnRegionId;
+                this.zones = model.zones;
+            } 
 
             /**
              * <p>Indicates the transit router can automatically advertise routes to the IPsec connection. Valid values:</p>

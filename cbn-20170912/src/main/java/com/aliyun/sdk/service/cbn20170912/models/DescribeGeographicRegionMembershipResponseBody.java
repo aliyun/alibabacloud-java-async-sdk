@@ -48,6 +48,10 @@ public class DescribeGeographicRegionMembershipResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribeGeographicRegionMembershipResponseBody extends TeaModel {
         private RegionIds regionIds; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeGeographicRegionMembershipResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.regionIds = model.regionIds;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number of the returned page.</p>
@@ -180,6 +195,13 @@ public class DescribeGeographicRegionMembershipResponseBody extends TeaModel {
         public static final class Builder {
             private String regionId; 
 
+            private Builder() {
+            } 
+
+            private Builder(RegionId model) {
+                this.regionId = model.regionId;
+            } 
+
             /**
              * <p>The ID of the region.</p>
              * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
@@ -230,6 +252,13 @@ public class DescribeGeographicRegionMembershipResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<RegionId> regionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(RegionIds model) {
+                this.regionId = model.regionId;
+            } 
 
             /**
              * <p>The ID of the region.</p>

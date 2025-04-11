@@ -48,6 +48,10 @@ public class DescribePublishedRouteEntriesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribePublishedRouteEntriesResponseBody extends TeaModel {
         private PublishedRouteEntries publishedRouteEntries; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePublishedRouteEntriesResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.publishedRouteEntries = model.publishedRouteEntries;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number of the returned page.</p>
@@ -228,6 +243,17 @@ public class DescribePublishedRouteEntriesResponseBody extends TeaModel {
             private String regionId; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(Conflict model) {
+                this.destinationCidrBlock = model.destinationCidrBlock;
+                this.instanceId = model.instanceId;
+                this.instanceType = model.instanceType;
+                this.regionId = model.regionId;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The destination CIDR block of the conflicting route.</p>
              * 
@@ -330,6 +356,13 @@ public class DescribePublishedRouteEntriesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Conflict> conflict; 
+
+            private Builder() {
+            } 
+
+            private Builder(Conflicts model) {
+                this.conflict = model.conflict;
+            } 
 
             /**
              * Conflict.
@@ -461,6 +494,20 @@ public class DescribePublishedRouteEntriesResponseBody extends TeaModel {
             private Boolean operationalMode; 
             private String publishStatus; 
             private String routeType; 
+
+            private Builder() {
+            } 
+
+            private Builder(PublishedRouteEntry model) {
+                this.childInstanceRouteTableId = model.childInstanceRouteTableId;
+                this.conflicts = model.conflicts;
+                this.destinationCidrBlock = model.destinationCidrBlock;
+                this.nextHopId = model.nextHopId;
+                this.nextHopType = model.nextHopType;
+                this.operationalMode = model.operationalMode;
+                this.publishStatus = model.publishStatus;
+                this.routeType = model.routeType;
+            } 
 
             /**
              * <p>The ID of the route table configured on the network instance.</p>
@@ -621,6 +668,13 @@ public class DescribePublishedRouteEntriesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<PublishedRouteEntry> publishedRouteEntry; 
+
+            private Builder() {
+            } 
+
+            private Builder(PublishedRouteEntries model) {
+                this.publishedRouteEntry = model.publishedRouteEntry;
+            } 
 
             /**
              * PublishedRouteEntry.

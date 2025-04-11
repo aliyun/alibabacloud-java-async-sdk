@@ -48,6 +48,10 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cenBandwidthPackages
      */
@@ -89,6 +93,17 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCenBandwidthPackagesResponseBody model) {
+            this.cenBandwidthPackages = model.cenBandwidthPackages;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The details about the bandwidth plan.</p>
@@ -180,6 +195,13 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> cenId; 
 
+            private Builder() {
+            } 
+
+            private Builder(CenIds model) {
+                this.cenId = model.cenId;
+            } 
+
             /**
              * CenId.
              */
@@ -262,6 +284,16 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
             private String geographicSpanId; 
             private String localRegionId; 
             private String oppositeRegionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(OrginInterRegionBandwidthLimit model) {
+                this.bandwidthLimit = model.bandwidthLimit;
+                this.geographicSpanId = model.geographicSpanId;
+                this.localRegionId = model.localRegionId;
+                this.oppositeRegionId = model.oppositeRegionId;
+            } 
 
             /**
              * <p>The maximum bandwidth value for the inter-region connection.</p>
@@ -346,6 +378,13 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<OrginInterRegionBandwidthLimit> orginInterRegionBandwidthLimit; 
 
+            private Builder() {
+            } 
+
+            private Builder(OrginInterRegionBandwidthLimits model) {
+                this.orginInterRegionBandwidthLimit = model.orginInterRegionBandwidthLimit;
+            } 
+
             /**
              * OrginInterRegionBandwidthLimit.
              */
@@ -404,6 +443,14 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -465,6 +512,13 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
@@ -764,6 +818,34 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
             private String resourceGroupId; 
             private String status; 
             private Tags tags; 
+
+            private Builder() {
+            } 
+
+            private Builder(CenBandwidthPackage model) {
+                this.bandwidth = model.bandwidth;
+                this.bandwidthPackageChargeType = model.bandwidthPackageChargeType;
+                this.businessStatus = model.businessStatus;
+                this.cenBandwidthPackageId = model.cenBandwidthPackageId;
+                this.cenIds = model.cenIds;
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.expiredTime = model.expiredTime;
+                this.geographicRegionAId = model.geographicRegionAId;
+                this.geographicRegionBId = model.geographicRegionBId;
+                this.geographicSpanId = model.geographicSpanId;
+                this.hasReservationData = model.hasReservationData;
+                this.isCrossBorder = model.isCrossBorder;
+                this.name = model.name;
+                this.orginInterRegionBandwidthLimits = model.orginInterRegionBandwidthLimits;
+                this.reservationActiveTime = model.reservationActiveTime;
+                this.reservationBandwidth = model.reservationBandwidth;
+                this.reservationInternetChargeType = model.reservationInternetChargeType;
+                this.reservationOrderType = model.reservationOrderType;
+                this.resourceGroupId = model.resourceGroupId;
+                this.status = model.status;
+                this.tags = model.tags;
+            } 
 
             /**
              * <p>The maximum bandwidth of the bandwidth plan.</p>
@@ -1072,6 +1154,13 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<CenBandwidthPackage> cenBandwidthPackage; 
+
+            private Builder() {
+            } 
+
+            private Builder(CenBandwidthPackages model) {
+                this.cenBandwidthPackage = model.cenBandwidthPackage;
+            } 
 
             /**
              * CenBandwidthPackage.

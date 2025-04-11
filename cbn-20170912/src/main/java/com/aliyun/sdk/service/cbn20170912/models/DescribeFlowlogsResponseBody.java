@@ -52,6 +52,10 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return flowLogs
      */
@@ -101,6 +105,18 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
         private String requestId; 
         private String success; 
         private String totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeFlowlogsResponseBody model) {
+            this.flowLogs = model.flowLogs;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The information about the flow log.</p>
@@ -219,6 +235,14 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The tag key.</p>
              * 
@@ -279,6 +303,13 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
@@ -495,6 +526,27 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
             private String transitRouterAttachmentId; 
             private String transitRouterId; 
 
+            private Builder() {
+            } 
+
+            private Builder(FlowLog model) {
+                this.cenId = model.cenId;
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.flowLogId = model.flowLogId;
+                this.flowLogName = model.flowLogName;
+                this.flowLogVersion = model.flowLogVersion;
+                this.interval = model.interval;
+                this.logFormatString = model.logFormatString;
+                this.logStoreName = model.logStoreName;
+                this.projectName = model.projectName;
+                this.regionId = model.regionId;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.transitRouterAttachmentId = model.transitRouterAttachmentId;
+                this.transitRouterId = model.transitRouterId;
+            } 
+
             /**
              * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
              * 
@@ -702,6 +754,13 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<FlowLog> flowLog; 
+
+            private Builder() {
+            } 
+
+            private Builder(FlowLogs model) {
+                this.flowLog = model.flowLog;
+            } 
 
             /**
              * FlowLog.

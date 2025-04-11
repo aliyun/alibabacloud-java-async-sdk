@@ -80,7 +80,7 @@ public class ModifyTransitRouterMulticastDomainRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -336,6 +336,13 @@ public class ModifyTransitRouterMulticastDomainRequest extends Request {
 
         public static final class Builder {
             private String igmpv2Support; 
+
+            private Builder() {
+            } 
+
+            private Builder(Options model) {
+                this.igmpv2Support = model.igmpv2Support;
+            } 
 
             /**
              * <p>Indicates whether the IGMP feature is enabled for the multicast domain. Once enabled, hosts can dynamically join or leave multicast groups by using the IGMP protocol. Default value: <strong>enable</strong>.</p>

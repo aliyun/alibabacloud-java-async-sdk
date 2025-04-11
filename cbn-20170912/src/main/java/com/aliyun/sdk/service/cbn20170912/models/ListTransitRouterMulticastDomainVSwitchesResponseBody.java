@@ -48,6 +48,10 @@ public class ListTransitRouterMulticastDomainVSwitchesResponseBody extends TeaMo
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -89,6 +93,17 @@ public class ListTransitRouterMulticastDomainVSwitchesResponseBody extends TeaMo
         private String requestId; 
         private Integer totalCount; 
         private java.util.List<String> vSwitchIds; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTransitRouterMulticastDomainVSwitchesResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.vSwitchIds = model.vSwitchIds;
+        } 
 
         /**
          * MaxResults.

@@ -44,6 +44,10 @@ public class DescribeTransitRouteTableAggregationDetailResponseBody extends TeaM
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return count
      */
@@ -77,6 +81,16 @@ public class DescribeTransitRouteTableAggregationDetailResponseBody extends TeaM
         private java.util.List<Data> data; 
         private String requestId; 
         private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTransitRouteTableAggregationDetailResponseBody model) {
+            this.count = model.count;
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.total = model.total;
+        } 
 
         /**
          * <p>The number of entries returned per page.</p>
@@ -180,6 +194,15 @@ public class DescribeTransitRouteTableAggregationDetailResponseBody extends TeaM
             private String description; 
             private String instanceId; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.description = model.description;
+                this.instanceId = model.instanceId;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The error message returned if the configuration of the aggregate route fails.</p>

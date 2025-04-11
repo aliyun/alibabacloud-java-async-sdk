@@ -48,6 +48,10 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
         private VbrHealthChecks vbrHealthChecks; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCenVbrHealthCheckResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.vbrHealthChecks = model.vbrHealthChecks;
+        } 
 
         /**
          * <p>The page number of the returned page.</p>
@@ -276,6 +291,21 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
             private String vbrInstanceId; 
             private String vbrInstanceRegionId; 
 
+            private Builder() {
+            } 
+
+            private Builder(VbrHealthCheck model) {
+                this.cenId = model.cenId;
+                this.description = model.description;
+                this.healthCheckInterval = model.healthCheckInterval;
+                this.healthCheckOnly = model.healthCheckOnly;
+                this.healthCheckSourceIp = model.healthCheckSourceIp;
+                this.healthCheckTargetIp = model.healthCheckTargetIp;
+                this.healthyThreshold = model.healthyThreshold;
+                this.vbrInstanceId = model.vbrInstanceId;
+                this.vbrInstanceRegionId = model.vbrInstanceRegionId;
+            } 
+
             /**
              * <p>The ID of the CEN instance.</p>
              * 
@@ -423,6 +453,13 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<VbrHealthCheck> vbrHealthCheck; 
+
+            private Builder() {
+            } 
+
+            private Builder(VbrHealthChecks model) {
+                this.vbrHealthCheck = model.vbrHealthCheck;
+            } 
 
             /**
              * VbrHealthCheck.

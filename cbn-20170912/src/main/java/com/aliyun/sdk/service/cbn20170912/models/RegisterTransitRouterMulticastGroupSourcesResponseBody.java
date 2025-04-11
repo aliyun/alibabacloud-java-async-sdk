@@ -32,6 +32,10 @@ public class RegisterTransitRouterMulticastGroupSourcesResponseBody extends TeaM
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -41,6 +45,13 @@ public class RegisterTransitRouterMulticastGroupSourcesResponseBody extends TeaM
 
     public static final class Builder {
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(RegisterTransitRouterMulticastGroupSourcesResponseBody model) {
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The request ID.</p>

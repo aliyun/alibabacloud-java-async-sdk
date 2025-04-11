@@ -36,6 +36,10 @@ public class CreateCenResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cenId
      */
@@ -53,6 +57,14 @@ public class CreateCenResponseBody extends TeaModel {
     public static final class Builder {
         private String cenId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateCenResponseBody model) {
+            this.cenId = model.cenId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The CEN instance ID.</p>

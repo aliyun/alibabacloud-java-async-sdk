@@ -48,6 +48,10 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -89,6 +93,17 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
         private java.util.List<TransitRouterRouteEntries> transitRouterRouteEntries; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTransitRouterRouteEntriesResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.transitRouterRouteEntries = model.transitRouterRouteEntries;
+        } 
 
         /**
          * <p>The number of entries per page.</p>
@@ -243,6 +258,18 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
             private String originInstanceType; 
             private String originRouteType; 
             private Integer preference; 
+
+            private Builder() {
+            } 
+
+            private Builder(PathAttributes model) {
+                this.asPaths = model.asPaths;
+                this.communities = model.communities;
+                this.originInstanceId = model.originInstanceId;
+                this.originInstanceType = model.originInstanceType;
+                this.originRouteType = model.originRouteType;
+                this.preference = model.preference;
+            } 
 
             /**
              * <p>The route AS path.</p>
@@ -549,6 +576,29 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
             private String transitRouterRouteEntryOriginResourceType; 
             private String transitRouterRouteEntryStatus; 
             private String transitRouterRouteEntryType; 
+
+            private Builder() {
+            } 
+
+            private Builder(TransitRouterRouteEntries model) {
+                this.createTime = model.createTime;
+                this.operationalMode = model.operationalMode;
+                this.pathAttributes = model.pathAttributes;
+                this.prefixListId = model.prefixListId;
+                this.tag = model.tag;
+                this.transitRouterRouteEntryDescription = model.transitRouterRouteEntryDescription;
+                this.transitRouterRouteEntryDestinationCidrBlock = model.transitRouterRouteEntryDestinationCidrBlock;
+                this.transitRouterRouteEntryId = model.transitRouterRouteEntryId;
+                this.transitRouterRouteEntryName = model.transitRouterRouteEntryName;
+                this.transitRouterRouteEntryNextHopId = model.transitRouterRouteEntryNextHopId;
+                this.transitRouterRouteEntryNextHopResourceId = model.transitRouterRouteEntryNextHopResourceId;
+                this.transitRouterRouteEntryNextHopResourceType = model.transitRouterRouteEntryNextHopResourceType;
+                this.transitRouterRouteEntryNextHopType = model.transitRouterRouteEntryNextHopType;
+                this.transitRouterRouteEntryOriginResourceId = model.transitRouterRouteEntryOriginResourceId;
+                this.transitRouterRouteEntryOriginResourceType = model.transitRouterRouteEntryOriginResourceType;
+                this.transitRouterRouteEntryStatus = model.transitRouterRouteEntryStatus;
+                this.transitRouterRouteEntryType = model.transitRouterRouteEntryType;
+            } 
 
             /**
              * <p>The time when the route entry was created.</p>

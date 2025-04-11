@@ -48,6 +48,10 @@ public class ListTransitRouterRouteTablePropagationsResponseBody extends TeaMode
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -89,6 +93,17 @@ public class ListTransitRouterRouteTablePropagationsResponseBody extends TeaMode
         private String requestId; 
         private Integer totalCount; 
         private java.util.List<TransitRouterPropagations> transitRouterPropagations; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTransitRouterRouteTablePropagationsResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.transitRouterPropagations = model.transitRouterPropagations;
+        } 
 
         /**
          * <p>The number of entries returned per page.</p>
@@ -227,6 +242,17 @@ public class ListTransitRouterRouteTablePropagationsResponseBody extends TeaMode
             private String status; 
             private String transitRouterAttachmentId; 
             private String transitRouterRouteTableId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TransitRouterPropagations model) {
+                this.resourceId = model.resourceId;
+                this.resourceType = model.resourceType;
+                this.status = model.status;
+                this.transitRouterAttachmentId = model.transitRouterAttachmentId;
+                this.transitRouterRouteTableId = model.transitRouterRouteTableId;
+            } 
 
             /**
              * <p>The ID of the network instance.</p>

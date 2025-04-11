@@ -84,7 +84,7 @@ public class DescribeCenBandwidthPackagesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -372,6 +372,14 @@ public class DescribeCenBandwidthPackagesRequest extends Request {
             private String key; 
             private java.util.List<String> value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Filter model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The filter conditions. You can use filter conditions to filter the bandwidth plans that you want to query. The following filter conditions are supported:</p>
              * <ul>
@@ -458,6 +466,14 @@ public class DescribeCenBandwidthPackagesRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag keys.</p>

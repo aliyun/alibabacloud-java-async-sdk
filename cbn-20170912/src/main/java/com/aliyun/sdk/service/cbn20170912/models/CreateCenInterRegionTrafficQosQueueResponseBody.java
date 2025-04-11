@@ -36,6 +36,10 @@ public class CreateCenInterRegionTrafficQosQueueResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return qosQueueId
      */
@@ -53,6 +57,14 @@ public class CreateCenInterRegionTrafficQosQueueResponseBody extends TeaModel {
     public static final class Builder {
         private String qosQueueId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateCenInterRegionTrafficQosQueueResponseBody model) {
+            this.qosQueueId = model.qosQueueId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the queue.</p>

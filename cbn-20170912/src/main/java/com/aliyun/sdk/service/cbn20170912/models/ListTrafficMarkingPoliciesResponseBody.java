@@ -48,6 +48,10 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -89,6 +93,17 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
         private java.util.List<TrafficMarkingPolicies> trafficMarkingPolicies; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTrafficMarkingPoliciesResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.trafficMarkingPolicies = model.trafficMarkingPolicies;
+        } 
 
         /**
          * <p>The number of entries returned on each page.</p>
@@ -303,6 +318,23 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
             private String trafficMatchRuleId; 
             private String trafficMatchRuleName; 
             private String trafficMatchRuleStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(TrafficMatchRules model) {
+                this.addressFamily = model.addressFamily;
+                this.dstCidr = model.dstCidr;
+                this.dstPortRange = model.dstPortRange;
+                this.matchDscp = model.matchDscp;
+                this.protocol = model.protocol;
+                this.srcCidr = model.srcCidr;
+                this.srcPortRange = model.srcPortRange;
+                this.trafficMatchRuleDescription = model.trafficMatchRuleDescription;
+                this.trafficMatchRuleId = model.trafficMatchRuleId;
+                this.trafficMatchRuleName = model.trafficMatchRuleName;
+                this.trafficMatchRuleStatus = model.trafficMatchRuleStatus;
+            } 
 
             /**
              * <p>The address family. You can set the value to IPv4 or IPv6, or leave the value empty.</p>
@@ -552,6 +584,20 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
             private String trafficMarkingPolicyStatus; 
             private java.util.List<TrafficMatchRules> trafficMatchRules; 
             private String transitRouterId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TrafficMarkingPolicies model) {
+                this.markingDscp = model.markingDscp;
+                this.priority = model.priority;
+                this.trafficMarkingPolicyDescription = model.trafficMarkingPolicyDescription;
+                this.trafficMarkingPolicyId = model.trafficMarkingPolicyId;
+                this.trafficMarkingPolicyName = model.trafficMarkingPolicyName;
+                this.trafficMarkingPolicyStatus = model.trafficMarkingPolicyStatus;
+                this.trafficMatchRules = model.trafficMatchRules;
+                this.transitRouterId = model.transitRouterId;
+            } 
 
             /**
              * <p>The Differentiated Service Code Point (DSCP) value of the traffic marking policy.</p>

@@ -48,6 +48,10 @@ public class DescribeRouteConflictResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribeRouteConflictResponseBody extends TeaModel {
         private String requestId; 
         private RouteConflicts routeConflicts; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRouteConflictResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.routeConflicts = model.routeConflicts;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number of the returned page.</p>
@@ -228,6 +243,17 @@ public class DescribeRouteConflictResponseBody extends TeaModel {
             private String regionId; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(RouteConflict model) {
+                this.destinationCidrBlock = model.destinationCidrBlock;
+                this.instanceId = model.instanceId;
+                this.instanceType = model.instanceType;
+                this.regionId = model.regionId;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The destination CIDR block of the overlapping route.</p>
              * 
@@ -330,6 +356,13 @@ public class DescribeRouteConflictResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<RouteConflict> routeConflict; 
+
+            private Builder() {
+            } 
+
+            private Builder(RouteConflicts model) {
+                this.routeConflict = model.routeConflict;
+            } 
 
             /**
              * RouteConflict.

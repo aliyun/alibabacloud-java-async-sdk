@@ -48,6 +48,10 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return grantRules
      */
@@ -89,6 +93,17 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeGrantRulesToCenResponseBody model) {
+            this.grantRules = model.grantRules;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The permissions that are granted to the CEN instance.</p>
@@ -271,6 +286,20 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
             private Long createTime; 
             private String orderType; 
 
+            private Builder() {
+            } 
+
+            private Builder(GrantRule model) {
+                this.cenId = model.cenId;
+                this.cenOwnerId = model.cenOwnerId;
+                this.childInstanceId = model.childInstanceId;
+                this.childInstanceOwnerId = model.childInstanceOwnerId;
+                this.childInstanceRegionId = model.childInstanceRegionId;
+                this.childInstanceType = model.childInstanceType;
+                this.createTime = model.createTime;
+                this.orderType = model.orderType;
+            } 
+
             /**
              * <p>The ID of the CEN instance.</p>
              * 
@@ -408,6 +437,13 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<GrantRule> grantRule; 
+
+            private Builder() {
+            } 
+
+            private Builder(GrantRules model) {
+                this.grantRule = model.grantRule;
+            } 
 
             /**
              * GrantRule.

@@ -48,6 +48,10 @@ public class ListTransitRouterMulticastDomainAssociationsResponseBody extends Te
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -89,6 +93,17 @@ public class ListTransitRouterMulticastDomainAssociationsResponseBody extends Te
         private String requestId; 
         private Integer totalCount; 
         private java.util.List<TransitRouterMulticastAssociations> transitRouterMulticastAssociations; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTransitRouterMulticastDomainAssociationsResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.transitRouterMulticastAssociations = model.transitRouterMulticastAssociations;
+        } 
 
         /**
          * <p>The number of entries returned on each page.</p>
@@ -255,6 +270,19 @@ public class ListTransitRouterMulticastDomainAssociationsResponseBody extends Te
             private String transitRouterAttachmentId; 
             private String transitRouterMulticastDomainId; 
             private String vSwitchId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TransitRouterMulticastAssociations model) {
+                this.resourceId = model.resourceId;
+                this.resourceOwnerId = model.resourceOwnerId;
+                this.resourceType = model.resourceType;
+                this.status = model.status;
+                this.transitRouterAttachmentId = model.transitRouterAttachmentId;
+                this.transitRouterMulticastDomainId = model.transitRouterMulticastDomainId;
+                this.vSwitchId = model.vSwitchId;
+            } 
 
             /**
              * <p>The ID of the resource associated with the multicast domain.</p>

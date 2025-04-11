@@ -95,7 +95,7 @@ public class ListTransitRouterRouteTablesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -423,6 +423,13 @@ public class ListTransitRouterRouteTablesRequest extends Request {
         public static final class Builder {
             private String multiRegionECMP; 
 
+            private Builder() {
+            } 
+
+            private Builder(RouteTableOptions model) {
+                this.multiRegionECMP = model.multiRegionECMP;
+            } 
+
             /**
              * <p>Specifies whether to enable equal-cost multi-path (ECMP) routing. Valid values:</p>
              * <ul>
@@ -488,6 +495,14 @@ public class ListTransitRouterRouteTablesRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>

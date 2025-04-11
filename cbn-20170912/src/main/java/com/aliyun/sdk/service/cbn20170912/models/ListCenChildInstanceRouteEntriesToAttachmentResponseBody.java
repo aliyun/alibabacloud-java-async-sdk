@@ -40,6 +40,10 @@ public class ListCenChildInstanceRouteEntriesToAttachmentResponseBody extends Te
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextToken
      */
@@ -65,6 +69,15 @@ public class ListCenChildInstanceRouteEntriesToAttachmentResponseBody extends Te
         private String nextToken; 
         private String requestId; 
         private java.util.List<RouteEntry> routeEntry; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListCenChildInstanceRouteEntriesToAttachmentResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.routeEntry = model.routeEntry;
+        } 
 
         /**
          * <p>The token that determines the start point of the next query. Valid values:</p>
@@ -197,6 +210,18 @@ public class ListCenChildInstanceRouteEntriesToAttachmentResponseBody extends Te
             private String serviceType; 
             private String status; 
             private String transitRouterAttachmentId; 
+
+            private Builder() {
+            } 
+
+            private Builder(RouteEntry model) {
+                this.cenId = model.cenId;
+                this.childInstanceRouteTableId = model.childInstanceRouteTableId;
+                this.destinationCidrBlock = model.destinationCidrBlock;
+                this.serviceType = model.serviceType;
+                this.status = model.status;
+                this.transitRouterAttachmentId = model.transitRouterAttachmentId;
+            } 
 
             /**
              * <p>The ID of the CEN instance.</p>

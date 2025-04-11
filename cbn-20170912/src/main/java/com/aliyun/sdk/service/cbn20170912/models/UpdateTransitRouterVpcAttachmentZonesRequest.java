@@ -75,7 +75,7 @@ public class UpdateTransitRouterVpcAttachmentZonesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -321,6 +321,14 @@ public class UpdateTransitRouterVpcAttachmentZonesRequest extends Request {
             private String vSwitchId; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(AddZoneMappings model) {
+                this.vSwitchId = model.vSwitchId;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
              * <p>The ID of the vSwitch that you want to add to the VPC connection.</p>
              * <p>You can specify at most 10 vSwitches in each call.</p>
@@ -399,6 +407,14 @@ public class UpdateTransitRouterVpcAttachmentZonesRequest extends Request {
         public static final class Builder {
             private String vSwitchId; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(RemoveZoneMappings model) {
+                this.vSwitchId = model.vSwitchId;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>The ID of the vSwitch that you want to remove from the VPC connection.</p>

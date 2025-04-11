@@ -36,6 +36,10 @@ public class ListTransitRouterCidrResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cidrLists
      */
@@ -53,6 +57,14 @@ public class ListTransitRouterCidrResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<CidrLists> cidrLists; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTransitRouterCidrResponseBody model) {
+            this.cidrLists = model.cidrLists;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the CIDR block.</p>
@@ -182,6 +194,19 @@ public class ListTransitRouterCidrResponseBody extends TeaModel {
             private Boolean publishCidrRoute; 
             private String transitRouterCidrId; 
             private String transitRouterId; 
+
+            private Builder() {
+            } 
+
+            private Builder(CidrLists model) {
+                this.cidr = model.cidr;
+                this.description = model.description;
+                this.family = model.family;
+                this.name = model.name;
+                this.publishCidrRoute = model.publishCidrRoute;
+                this.transitRouterCidrId = model.transitRouterCidrId;
+                this.transitRouterId = model.transitRouterId;
+            } 
 
             /**
              * <p>The CIDR block of the transit router.</p>

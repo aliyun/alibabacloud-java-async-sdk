@@ -40,6 +40,10 @@ public class CreateCenBandwidthPackageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cenBandwidthPackageId
      */
@@ -65,6 +69,15 @@ public class CreateCenBandwidthPackageResponseBody extends TeaModel {
         private String cenBandwidthPackageId; 
         private String cenBandwidthPackageOrderId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateCenBandwidthPackageResponseBody model) {
+            this.cenBandwidthPackageId = model.cenBandwidthPackageId;
+            this.cenBandwidthPackageOrderId = model.cenBandwidthPackageOrderId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the bandwidth plan.</p>

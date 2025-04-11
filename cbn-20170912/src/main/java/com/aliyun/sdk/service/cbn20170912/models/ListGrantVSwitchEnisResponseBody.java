@@ -48,6 +48,10 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return grantVSwitchEnis
      */
@@ -89,6 +93,17 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private String totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListGrantVSwitchEnisResponseBody model) {
+            this.grantVSwitchEnis = model.grantVSwitchEnis;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The information about the ENI.</p>
@@ -254,6 +269,19 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
             private Boolean transitRouterFlag; 
             private String vSwitchId; 
             private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(GrantVSwitchEnis model) {
+                this.description = model.description;
+                this.networkInterfaceId = model.networkInterfaceId;
+                this.networkInterfaceName = model.networkInterfaceName;
+                this.primaryIpAddress = model.primaryIpAddress;
+                this.transitRouterFlag = model.transitRouterFlag;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+            } 
 
             /**
              * <p>The ENI description.</p>

@@ -32,6 +32,10 @@ public class RemoveTraficMatchRuleFromTrafficMarkingPolicyResponseBody extends T
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -41,6 +45,13 @@ public class RemoveTraficMatchRuleFromTrafficMarkingPolicyResponseBody extends T
 
     public static final class Builder {
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(RemoveTraficMatchRuleFromTrafficMarkingPolicyResponseBody model) {
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The request ID.</p>

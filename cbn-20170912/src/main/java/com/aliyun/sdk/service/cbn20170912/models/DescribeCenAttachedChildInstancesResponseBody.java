@@ -48,6 +48,10 @@ public class DescribeCenAttachedChildInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return childInstances
      */
@@ -89,6 +93,17 @@ public class DescribeCenAttachedChildInstancesResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCenAttachedChildInstancesResponseBody model) {
+            this.childInstances = model.childInstances;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The information about the network instances.</p>
@@ -252,6 +267,19 @@ public class DescribeCenAttachedChildInstancesResponseBody extends TeaModel {
             private String childInstanceType; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(ChildInstance model) {
+                this.cenId = model.cenId;
+                this.childInstanceAttachTime = model.childInstanceAttachTime;
+                this.childInstanceId = model.childInstanceId;
+                this.childInstanceOwnerId = model.childInstanceOwnerId;
+                this.childInstanceRegionId = model.childInstanceRegionId;
+                this.childInstanceType = model.childInstanceType;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The ID of the CEN instance.</p>
              * 
@@ -378,6 +406,13 @@ public class DescribeCenAttachedChildInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ChildInstance> childInstance; 
+
+            private Builder() {
+            } 
+
+            private Builder(ChildInstances model) {
+                this.childInstance = model.childInstance;
+            } 
 
             /**
              * ChildInstance.

@@ -48,6 +48,10 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         private String requestId; 
         private RouteMaps routeMaps; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCenRouteMapsResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.routeMaps = model.routeMaps;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number of the returned page.</p>
@@ -180,6 +195,13 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> destinationChildInstanceType; 
 
+            private Builder() {
+            } 
+
+            private Builder(DestinationChildInstanceTypes model) {
+                this.destinationChildInstanceType = model.destinationChildInstanceType;
+            } 
+
             /**
              * DestinationChildInstanceType.
              */
@@ -226,6 +248,13 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> destinationCidrBlock; 
+
+            private Builder() {
+            } 
+
+            private Builder(DestinationCidrBlocks model) {
+                this.destinationCidrBlock = model.destinationCidrBlock;
+            } 
 
             /**
              * DestinationCidrBlock.
@@ -274,6 +303,13 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> destinationInstanceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(DestinationInstanceIds model) {
+                this.destinationInstanceId = model.destinationInstanceId;
+            } 
+
             /**
              * DestinationInstanceId.
              */
@@ -320,6 +356,13 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> destinationRegionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DestinationRegionIds model) {
+                this.destinationRegionId = model.destinationRegionId;
+            } 
 
             /**
              * DestinationRegionId.
@@ -368,6 +411,13 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> destinationRouteTableId; 
 
+            private Builder() {
+            } 
+
+            private Builder(DestinationRouteTableIds model) {
+                this.destinationRouteTableId = model.destinationRouteTableId;
+            } 
+
             /**
              * DestinationRouteTableId.
              */
@@ -414,6 +464,13 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> matchAsn; 
+
+            private Builder() {
+            } 
+
+            private Builder(MatchAsns model) {
+                this.matchAsn = model.matchAsn;
+            } 
 
             /**
              * MatchAsn.
@@ -462,6 +519,13 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> matchCommunity; 
 
+            private Builder() {
+            } 
+
+            private Builder(MatchCommunitySet model) {
+                this.matchCommunity = model.matchCommunity;
+            } 
+
             /**
              * MatchCommunity.
              */
@@ -508,6 +572,13 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> operateCommunity; 
+
+            private Builder() {
+            } 
+
+            private Builder(OperateCommunitySet model) {
+                this.operateCommunity = model.operateCommunity;
+            } 
 
             /**
              * OperateCommunity.
@@ -556,6 +627,13 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> asPath; 
 
+            private Builder() {
+            } 
+
+            private Builder(PrependAsPath model) {
+                this.asPath = model.asPath;
+            } 
+
             /**
              * AsPath.
              */
@@ -602,6 +680,13 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> routeType; 
+
+            private Builder() {
+            } 
+
+            private Builder(RouteTypes model) {
+                this.routeType = model.routeType;
+            } 
 
             /**
              * RouteType.
@@ -650,6 +735,13 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> sourceChildInstanceType; 
 
+            private Builder() {
+            } 
+
+            private Builder(SourceChildInstanceTypes model) {
+                this.sourceChildInstanceType = model.sourceChildInstanceType;
+            } 
+
             /**
              * SourceChildInstanceType.
              */
@@ -696,6 +788,13 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> sourceInstanceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(SourceInstanceIds model) {
+                this.sourceInstanceId = model.sourceInstanceId;
+            } 
 
             /**
              * SourceInstanceId.
@@ -744,6 +843,13 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> sourceRegionId; 
 
+            private Builder() {
+            } 
+
+            private Builder(SourceRegionIds model) {
+                this.sourceRegionId = model.sourceRegionId;
+            } 
+
             /**
              * SourceRegionId.
              */
@@ -790,6 +896,13 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> sourceRouteTableId; 
+
+            private Builder() {
+            } 
+
+            private Builder(SourceRouteTableIds model) {
+                this.sourceRouteTableId = model.sourceRouteTableId;
+            } 
 
             /**
              * SourceRouteTableId.
@@ -1209,6 +1322,44 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             private String status; 
             private String transitRouterRouteTableId; 
             private String transmitDirection; 
+
+            private Builder() {
+            } 
+
+            private Builder(RouteMap model) {
+                this.asPathMatchMode = model.asPathMatchMode;
+                this.cenId = model.cenId;
+                this.cenRegionId = model.cenRegionId;
+                this.cidrMatchMode = model.cidrMatchMode;
+                this.communityMatchMode = model.communityMatchMode;
+                this.communityOperateMode = model.communityOperateMode;
+                this.description = model.description;
+                this.destinationChildInstanceTypes = model.destinationChildInstanceTypes;
+                this.destinationCidrBlocks = model.destinationCidrBlocks;
+                this.destinationInstanceIds = model.destinationInstanceIds;
+                this.destinationInstanceIdsReverseMatch = model.destinationInstanceIdsReverseMatch;
+                this.destinationRegionIds = model.destinationRegionIds;
+                this.destinationRouteTableIds = model.destinationRouteTableIds;
+                this.mapResult = model.mapResult;
+                this.matchAddressType = model.matchAddressType;
+                this.matchAsns = model.matchAsns;
+                this.matchCommunitySet = model.matchCommunitySet;
+                this.nextPriority = model.nextPriority;
+                this.operateCommunitySet = model.operateCommunitySet;
+                this.preference = model.preference;
+                this.prependAsPath = model.prependAsPath;
+                this.priority = model.priority;
+                this.routeMapId = model.routeMapId;
+                this.routeTypes = model.routeTypes;
+                this.sourceChildInstanceTypes = model.sourceChildInstanceTypes;
+                this.sourceInstanceIds = model.sourceInstanceIds;
+                this.sourceInstanceIdsReverseMatch = model.sourceInstanceIdsReverseMatch;
+                this.sourceRegionIds = model.sourceRegionIds;
+                this.sourceRouteTableIds = model.sourceRouteTableIds;
+                this.status = model.status;
+                this.transitRouterRouteTableId = model.transitRouterRouteTableId;
+                this.transmitDirection = model.transmitDirection;
+            } 
 
             /**
              * <p>The match method that is used to match routes based on the AS path.</p>
@@ -1631,6 +1782,13 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<RouteMap> routeMap; 
+
+            private Builder() {
+            } 
+
+            private Builder(RouteMaps model) {
+                this.routeMap = model.routeMap;
+            } 
 
             /**
              * RouteMap.

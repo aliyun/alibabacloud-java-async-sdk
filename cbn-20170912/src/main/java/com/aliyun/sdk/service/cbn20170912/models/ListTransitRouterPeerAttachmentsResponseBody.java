@@ -48,6 +48,10 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -89,6 +93,17 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
         private java.util.List<TransitRouterAttachments> transitRouterAttachments; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTransitRouterPeerAttachmentsResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.transitRouterAttachments = model.transitRouterAttachments;
+        } 
 
         /**
          * <p>The number of entries returned per page.</p>
@@ -195,6 +210,14 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -472,6 +495,31 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
             private String transitRouterAttachmentId; 
             private String transitRouterAttachmentName; 
             private String transitRouterId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TransitRouterAttachments model) {
+                this.autoPublishRouteEnabled = model.autoPublishRouteEnabled;
+                this.bandwidth = model.bandwidth;
+                this.bandwidthType = model.bandwidthType;
+                this.cenBandwidthPackageId = model.cenBandwidthPackageId;
+                this.cenId = model.cenId;
+                this.creationTime = model.creationTime;
+                this.defaultLinkType = model.defaultLinkType;
+                this.geographicSpanId = model.geographicSpanId;
+                this.peerTransitRouterId = model.peerTransitRouterId;
+                this.peerTransitRouterOwnerId = model.peerTransitRouterOwnerId;
+                this.peerTransitRouterRegionId = model.peerTransitRouterRegionId;
+                this.regionId = model.regionId;
+                this.resourceType = model.resourceType;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.transitRouterAttachmentDescription = model.transitRouterAttachmentDescription;
+                this.transitRouterAttachmentId = model.transitRouterAttachmentId;
+                this.transitRouterAttachmentName = model.transitRouterAttachmentName;
+                this.transitRouterId = model.transitRouterId;
+            } 
 
             /**
              * <p>Indicates whether the local Enterprise Edition transit router automatically advertises routes of the cross-region connection to the peer transit router. Valid values:</p>

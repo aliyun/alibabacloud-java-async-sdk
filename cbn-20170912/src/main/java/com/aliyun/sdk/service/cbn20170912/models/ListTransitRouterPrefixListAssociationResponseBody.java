@@ -48,6 +48,10 @@ public class ListTransitRouterPrefixListAssociationResponseBody extends TeaModel
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class ListTransitRouterPrefixListAssociationResponseBody extends TeaModel
         private java.util.List<PrefixLists> prefixLists; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTransitRouterPrefixListAssociationResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.prefixLists = model.prefixLists;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number of the returned page.</p>
@@ -263,6 +278,20 @@ public class ListTransitRouterPrefixListAssociationResponseBody extends TeaModel
             private String status; 
             private String transitRouterId; 
             private String transitRouterTableId; 
+
+            private Builder() {
+            } 
+
+            private Builder(PrefixLists model) {
+                this.nextHop = model.nextHop;
+                this.nextHopInstanceId = model.nextHopInstanceId;
+                this.nextHopType = model.nextHopType;
+                this.ownerUid = model.ownerUid;
+                this.prefixListId = model.prefixListId;
+                this.status = model.status;
+                this.transitRouterId = model.transitRouterId;
+                this.transitRouterTableId = model.transitRouterTableId;
+            } 
 
             /**
              * <p>The ID of the next hop.</p>

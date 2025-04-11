@@ -36,6 +36,10 @@ public class CheckTransitRouterServiceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return enabled
      */
@@ -53,6 +57,14 @@ public class CheckTransitRouterServiceResponseBody extends TeaModel {
     public static final class Builder {
         private String enabled; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CheckTransitRouterServiceResponseBody model) {
+            this.enabled = model.enabled;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Indicates whether the transit router feature is activated.</p>

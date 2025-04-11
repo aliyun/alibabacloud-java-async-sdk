@@ -36,6 +36,10 @@ public class CreateTrafficMarkingPolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class CreateTrafficMarkingPolicyResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String trafficMarkingPolicyId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateTrafficMarkingPolicyResponseBody model) {
+            this.requestId = model.requestId;
+            this.trafficMarkingPolicyId = model.trafficMarkingPolicyId;
+        } 
 
         /**
          * <p>The ID of the request.</p>

@@ -121,7 +121,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -567,6 +567,14 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The tag key.</p>
              * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
@@ -645,6 +653,14 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
         public static final class Builder {
             private String vSwitchId; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ZoneMappings model) {
+                this.vSwitchId = model.vSwitchId;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>A vSwitch that is deployed in the zone that supports Enterprise Edition transit routers.</p>

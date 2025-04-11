@@ -48,6 +48,10 @@ public class ListTransitRouterCidrAllocationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -89,6 +93,17 @@ public class ListTransitRouterCidrAllocationResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
         private java.util.List<TransitRouterCidrAllocations> transitRouterCidrAllocations; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTransitRouterCidrAllocationResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.transitRouterCidrAllocations = model.transitRouterCidrAllocations;
+        } 
 
         /**
          * <p>The number of entries returned per page.</p>
@@ -235,6 +250,17 @@ public class ListTransitRouterCidrAllocationResponseBody extends TeaModel {
             private String attachmentName; 
             private String cidr; 
             private String transitRouterCidrId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TransitRouterCidrAllocations model) {
+                this.allocatedCidrBlock = model.allocatedCidrBlock;
+                this.attachmentId = model.attachmentId;
+                this.attachmentName = model.attachmentName;
+                this.cidr = model.cidr;
+                this.transitRouterCidrId = model.transitRouterCidrId;
+            } 
 
             /**
              * <p>The CIDR blocks that have IP addresses allocated to network instances.</p>

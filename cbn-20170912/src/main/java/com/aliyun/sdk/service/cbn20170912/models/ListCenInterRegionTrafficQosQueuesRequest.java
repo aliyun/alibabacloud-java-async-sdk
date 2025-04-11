@@ -94,7 +94,7 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -423,6 +423,14 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends Request {
         public static final class Builder {
             private Long gte; 
             private Long lte; 
+
+            private Builder() {
+            } 
+
+            private Builder(EffectiveBandwidthFilter model) {
+                this.gte = model.gte;
+                this.lte = model.lte;
+            } 
 
             /**
              * <p>The actual bandwidth is equal to or larger than the specified value.</p>

@@ -132,7 +132,7 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -636,6 +636,14 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
         public static final class Builder {
             private String key; 
             private java.util.List<String> value; 
+
+            private Builder() {
+            } 
+
+            private Builder(RouteFilter model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The match pattern for filtering CIDR blocks. Valid values:</p>

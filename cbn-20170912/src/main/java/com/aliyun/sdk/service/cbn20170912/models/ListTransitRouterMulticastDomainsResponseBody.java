@@ -48,6 +48,10 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -89,6 +93,17 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
         private java.util.List<TransitRouterMulticastDomains> transitRouterMulticastDomains; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTransitRouterMulticastDomainsResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.transitRouterMulticastDomains = model.transitRouterMulticastDomains;
+        } 
 
         /**
          * <p>The number of entries returned per page.</p>
@@ -184,6 +199,13 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
         public static final class Builder {
             private String igmpv2Support; 
 
+            private Builder() {
+            } 
+
+            private Builder(Options model) {
+                this.igmpv2Support = model.igmpv2Support;
+            } 
+
             /**
              * <p>Indicates whether the IGMP feature is enabled for the multicast domain.</p>
              * 
@@ -245,6 +267,14 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -402,6 +432,21 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
             private String transitRouterMulticastDomainDescription; 
             private String transitRouterMulticastDomainId; 
             private String transitRouterMulticastDomainName; 
+
+            private Builder() {
+            } 
+
+            private Builder(TransitRouterMulticastDomains model) {
+                this.cenId = model.cenId;
+                this.options = model.options;
+                this.regionId = model.regionId;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.transitRouterId = model.transitRouterId;
+                this.transitRouterMulticastDomainDescription = model.transitRouterMulticastDomainDescription;
+                this.transitRouterMulticastDomainId = model.transitRouterMulticastDomainId;
+                this.transitRouterMulticastDomainName = model.transitRouterMulticastDomainName;
+            } 
 
             /**
              * <p>The CEN instance ID.</p>

@@ -48,6 +48,10 @@ public class ListTransitRouterMulticastGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -89,6 +93,17 @@ public class ListTransitRouterMulticastGroupsResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
         private java.util.List<TransitRouterMulticastGroups> transitRouterMulticastGroups; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTransitRouterMulticastGroupsResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.transitRouterMulticastGroups = model.transitRouterMulticastGroups;
+        } 
 
         /**
          * <p>The number of entries returned per page.</p>
@@ -339,6 +354,26 @@ public class ListTransitRouterMulticastGroupsResponseBody extends TeaModel {
             private String transitRouterAttachmentId; 
             private String transitRouterMulticastDomainId; 
             private String vSwitchId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TransitRouterMulticastGroups model) {
+                this.groupIpAddress = model.groupIpAddress;
+                this.groupMember = model.groupMember;
+                this.groupSource = model.groupSource;
+                this.memberType = model.memberType;
+                this.networkInterfaceId = model.networkInterfaceId;
+                this.peerTransitRouterMulticastDomainId = model.peerTransitRouterMulticastDomainId;
+                this.resourceId = model.resourceId;
+                this.resourceOwnerId = model.resourceOwnerId;
+                this.resourceType = model.resourceType;
+                this.sourceType = model.sourceType;
+                this.status = model.status;
+                this.transitRouterAttachmentId = model.transitRouterAttachmentId;
+                this.transitRouterMulticastDomainId = model.transitRouterMulticastDomainId;
+                this.vSwitchId = model.vSwitchId;
+            } 
 
             /**
              * <p>The IP address of the multicast group to which the multicast resource belongs.</p>

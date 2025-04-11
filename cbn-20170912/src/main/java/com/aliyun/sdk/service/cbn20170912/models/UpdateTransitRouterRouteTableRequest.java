@@ -80,7 +80,7 @@ public class UpdateTransitRouterRouteTableRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -339,6 +339,13 @@ public class UpdateTransitRouterRouteTableRequest extends Request {
 
         public static final class Builder {
             private String multiRegionECMP; 
+
+            private Builder() {
+            } 
+
+            private Builder(RouteTableOptions model) {
+                this.multiRegionECMP = model.multiRegionECMP;
+            } 
 
             /**
              * <p>Indicates whether multi-region ECMP routing is enabled. Valid values:</p>

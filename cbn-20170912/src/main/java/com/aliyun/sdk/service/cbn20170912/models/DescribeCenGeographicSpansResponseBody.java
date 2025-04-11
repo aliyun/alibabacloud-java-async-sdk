@@ -48,6 +48,10 @@ public class DescribeCenGeographicSpansResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return geographicSpanModels
      */
@@ -89,6 +93,17 @@ public class DescribeCenGeographicSpansResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCenGeographicSpansResponseBody model) {
+            this.geographicSpanModels = model.geographicSpanModels;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>A list of areas.</p>
@@ -204,6 +219,15 @@ public class DescribeCenGeographicSpansResponseBody extends TeaModel {
             private String localGeoRegionId; 
             private String oppositeGeoRegionId; 
 
+            private Builder() {
+            } 
+
+            private Builder(GeographicSpanModel model) {
+                this.geographicSpanId = model.geographicSpanId;
+                this.localGeoRegionId = model.localGeoRegionId;
+                this.oppositeGeoRegionId = model.oppositeGeoRegionId;
+            } 
+
             /**
              * <p>The ID of the pair of connected areas.</p>
              * 
@@ -275,6 +299,13 @@ public class DescribeCenGeographicSpansResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<GeographicSpanModel> geographicSpanModel; 
+
+            private Builder() {
+            } 
+
+            private Builder(GeographicSpanModels model) {
+                this.geographicSpanModel = model.geographicSpanModel;
+            } 
 
             /**
              * GeographicSpanModel.

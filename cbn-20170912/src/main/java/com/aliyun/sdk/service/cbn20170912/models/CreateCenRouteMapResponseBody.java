@@ -36,6 +36,10 @@ public class CreateCenRouteMapResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class CreateCenRouteMapResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String routeMapId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateCenRouteMapResponseBody model) {
+            this.requestId = model.requestId;
+            this.routeMapId = model.routeMapId;
+        } 
 
         /**
          * <p>The ID of the request.</p>

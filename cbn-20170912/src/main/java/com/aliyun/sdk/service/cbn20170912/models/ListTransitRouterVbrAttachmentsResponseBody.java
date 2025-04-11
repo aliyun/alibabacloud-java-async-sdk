@@ -48,6 +48,10 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -89,6 +93,17 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
         private java.util.List<TransitRouterAttachments> transitRouterAttachments; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTransitRouterVbrAttachmentsResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.transitRouterAttachments = model.transitRouterAttachments;
+        } 
 
         /**
          * <p>The number of entries returned per page.</p>
@@ -191,6 +206,14 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -408,6 +431,26 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
             private String vbrId; 
             private Long vbrOwnerId; 
             private String vbrRegionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TransitRouterAttachments model) {
+                this.autoPublishRouteEnabled = model.autoPublishRouteEnabled;
+                this.cenId = model.cenId;
+                this.creationTime = model.creationTime;
+                this.orderType = model.orderType;
+                this.resourceType = model.resourceType;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.transitRouterAttachmentDescription = model.transitRouterAttachmentDescription;
+                this.transitRouterAttachmentId = model.transitRouterAttachmentId;
+                this.transitRouterAttachmentName = model.transitRouterAttachmentName;
+                this.transitRouterId = model.transitRouterId;
+                this.vbrId = model.vbrId;
+                this.vbrOwnerId = model.vbrOwnerId;
+                this.vbrRegionId = model.vbrRegionId;
+            } 
 
             /**
              * <p>Indicates whether the Enterprise Edition transit router is allowed to automatically advertise routes to the VBR. Valid values:</p>
