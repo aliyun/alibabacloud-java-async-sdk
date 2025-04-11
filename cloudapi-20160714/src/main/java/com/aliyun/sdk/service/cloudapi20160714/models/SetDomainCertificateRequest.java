@@ -53,6 +53,10 @@ public class SetDomainCertificateRequest extends Request {
     private String securityToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SslOcspCacheEnable")
+    private Boolean sslOcspCacheEnable;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SslOcspEnable")
     private Boolean sslOcspEnable;
 
@@ -70,6 +74,7 @@ public class SetDomainCertificateRequest extends Request {
         this.domainName = builder.domainName;
         this.groupId = builder.groupId;
         this.securityToken = builder.securityToken;
+        this.sslOcspCacheEnable = builder.sslOcspCacheEnable;
         this.sslOcspEnable = builder.sslOcspEnable;
         this.sslVerifyDepth = builder.sslVerifyDepth;
     }
@@ -144,6 +149,13 @@ public class SetDomainCertificateRequest extends Request {
     }
 
     /**
+     * @return sslOcspCacheEnable
+     */
+    public Boolean getSslOcspCacheEnable() {
+        return this.sslOcspCacheEnable;
+    }
+
+    /**
      * @return sslOcspEnable
      */
     public Boolean getSslOcspEnable() {
@@ -166,6 +178,7 @@ public class SetDomainCertificateRequest extends Request {
         private String domainName; 
         private String groupId; 
         private String securityToken; 
+        private Boolean sslOcspCacheEnable; 
         private Boolean sslOcspEnable; 
         private String sslVerifyDepth; 
 
@@ -183,6 +196,7 @@ public class SetDomainCertificateRequest extends Request {
             this.domainName = request.domainName;
             this.groupId = request.groupId;
             this.securityToken = request.securityToken;
+            this.sslOcspCacheEnable = request.sslOcspCacheEnable;
             this.sslOcspEnable = request.sslOcspEnable;
             this.sslVerifyDepth = request.sslVerifyDepth;
         } 
@@ -280,6 +294,18 @@ public class SetDomainCertificateRequest extends Request {
         public Builder securityToken(String securityToken) {
             this.putQueryParameter("SecurityToken", securityToken);
             this.securityToken = securityToken;
+            return this;
+        }
+
+        /**
+         * <p>If enable ssl OCSP cache.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
+         */
+        public Builder sslOcspCacheEnable(Boolean sslOcspCacheEnable) {
+            this.putQueryParameter("SslOcspCacheEnable", sslOcspCacheEnable);
+            this.sslOcspCacheEnable = sslOcspCacheEnable;
             return this;
         }
 

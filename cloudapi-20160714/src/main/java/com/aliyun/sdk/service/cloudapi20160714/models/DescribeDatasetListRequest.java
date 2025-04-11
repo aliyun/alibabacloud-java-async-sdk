@@ -141,7 +141,10 @@ public class DescribeDatasetListRequest extends Request {
         }
 
         /**
-         * DatasetName.
+         * <p>The name of the dataset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IPwhitelist</p>
          */
         public Builder datasetName(String datasetName) {
             this.putQueryParameter("DatasetName", datasetName);
