@@ -158,6 +158,9 @@ public class DescribeAppsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
+        @com.aliyun.core.annotation.NameInMap("AppType")
+        private String appType;
+
         @com.aliyun.core.annotation.NameInMap("BizRegionId")
         private String bizRegionId;
 
@@ -193,6 +196,7 @@ public class DescribeAppsResponseBody extends TeaModel {
             this.apkSize = builder.apkSize;
             this.appId = builder.appId;
             this.appName = builder.appName;
+            this.appType = builder.appType;
             this.bizRegionId = builder.bizRegionId;
             this.description = builder.description;
             this.gmtCreate = builder.gmtCreate;
@@ -239,6 +243,13 @@ public class DescribeAppsResponseBody extends TeaModel {
          */
         public String getAppName() {
             return this.appName;
+        }
+
+        /**
+         * @return appType
+         */
+        public String getAppType() {
+            return this.appType;
         }
 
         /**
@@ -316,6 +327,7 @@ public class DescribeAppsResponseBody extends TeaModel {
             private String apkSize; 
             private Integer appId; 
             private String appName; 
+            private String appType; 
             private String bizRegionId; 
             private String description; 
             private String gmtCreate; 
@@ -335,6 +347,7 @@ public class DescribeAppsResponseBody extends TeaModel {
                 this.apkSize = model.apkSize;
                 this.appId = model.appId;
                 this.appName = model.appName;
+                this.appType = model.appType;
                 this.bizRegionId = model.bizRegionId;
                 this.description = model.description;
                 this.gmtCreate = model.gmtCreate;
@@ -388,6 +401,14 @@ public class DescribeAppsResponseBody extends TeaModel {
              */
             public Builder appName(String appName) {
                 this.appName = appName;
+                return this;
+            }
+
+            /**
+             * AppType.
+             */
+            public Builder appType(String appType) {
+                this.appType = appType;
                 return this;
             }
 

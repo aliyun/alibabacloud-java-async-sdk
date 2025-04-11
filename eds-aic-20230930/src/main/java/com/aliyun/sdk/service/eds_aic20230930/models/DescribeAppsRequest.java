@@ -26,6 +26,10 @@ public class DescribeAppsRequest extends Request {
     private String appName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppType")
+    private String appType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BizRegionId")
     private String bizRegionId;
 
@@ -54,6 +58,7 @@ public class DescribeAppsRequest extends Request {
         super(builder);
         this.appIdList = builder.appIdList;
         this.appName = builder.appName;
+        this.appType = builder.appType;
         this.bizRegionId = builder.bizRegionId;
         this.installationStatus = builder.installationStatus;
         this.mD5 = builder.mD5;
@@ -87,6 +92,13 @@ public class DescribeAppsRequest extends Request {
      */
     public String getAppName() {
         return this.appName;
+    }
+
+    /**
+     * @return appType
+     */
+    public String getAppType() {
+        return this.appType;
     }
 
     /**
@@ -134,6 +146,7 @@ public class DescribeAppsRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeAppsRequest, Builder> {
         private java.util.List<String> appIdList; 
         private String appName; 
+        private String appType; 
         private String bizRegionId; 
         private String installationStatus; 
         private String mD5; 
@@ -149,6 +162,7 @@ public class DescribeAppsRequest extends Request {
             super(request);
             this.appIdList = request.appIdList;
             this.appName = request.appName;
+            this.appType = request.appType;
             this.bizRegionId = request.bizRegionId;
             this.installationStatus = request.installationStatus;
             this.mD5 = request.mD5;
@@ -175,6 +189,15 @@ public class DescribeAppsRequest extends Request {
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
             this.appName = appName;
+            return this;
+        }
+
+        /**
+         * AppType.
+         */
+        public Builder appType(String appType) {
+            this.putQueryParameter("AppType", appType);
+            this.appType = appType;
             return this;
         }
 

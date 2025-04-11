@@ -53,6 +53,10 @@ public class CreateAppRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("OssAppUrl")
     private String ossAppUrl;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SignApk")
+    private String signApk;
+
     private CreateAppRequest(Builder builder) {
         super(builder);
         this.appName = builder.appName;
@@ -64,6 +68,7 @@ public class CreateAppRequest extends Request {
         this.iconUrl = builder.iconUrl;
         this.installParam = builder.installParam;
         this.ossAppUrl = builder.ossAppUrl;
+        this.signApk = builder.signApk;
     }
 
     public static Builder builder() {
@@ -142,6 +147,13 @@ public class CreateAppRequest extends Request {
         return this.ossAppUrl;
     }
 
+    /**
+     * @return signApk
+     */
+    public String getSignApk() {
+        return this.signApk;
+    }
+
     public static final class Builder extends Request.Builder<CreateAppRequest, Builder> {
         private String appName; 
         private String bizRegionId; 
@@ -152,6 +164,7 @@ public class CreateAppRequest extends Request {
         private String iconUrl; 
         private String installParam; 
         private String ossAppUrl; 
+        private String signApk; 
 
         private Builder() {
             super();
@@ -168,6 +181,7 @@ public class CreateAppRequest extends Request {
             this.iconUrl = request.iconUrl;
             this.installParam = request.installParam;
             this.ossAppUrl = request.ossAppUrl;
+            this.signApk = request.signApk;
         } 
 
         /**
@@ -302,6 +316,15 @@ public class CreateAppRequest extends Request {
         public Builder ossAppUrl(String ossAppUrl) {
             this.putQueryParameter("OssAppUrl", ossAppUrl);
             this.ossAppUrl = ossAppUrl;
+            return this;
+        }
+
+        /**
+         * SignApk.
+         */
+        public Builder signApk(String signApk) {
+            this.putQueryParameter("SignApk", signApk);
+            this.signApk = signApk;
             return this;
         }
 
