@@ -99,6 +99,10 @@ public class ModifyDtsJobEndpointRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Username")
     private String username;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZeroEtlJob")
+    private Boolean zeroEtlJob;
+
     private ModifyDtsJobEndpointRequest(Builder builder) {
         super(builder);
         this.aliyunUid = builder.aliyunUid;
@@ -121,6 +125,7 @@ public class ModifyDtsJobEndpointRequest extends Request {
         this.shardUsername = builder.shardUsername;
         this.synchronizationDirection = builder.synchronizationDirection;
         this.username = builder.username;
+        this.zeroEtlJob = builder.zeroEtlJob;
     }
 
     public static Builder builder() {
@@ -276,6 +281,13 @@ public class ModifyDtsJobEndpointRequest extends Request {
         return this.username;
     }
 
+    /**
+     * @return zeroEtlJob
+     */
+    public Boolean getZeroEtlJob() {
+        return this.zeroEtlJob;
+    }
+
     public static final class Builder extends Request.Builder<ModifyDtsJobEndpointRequest, Builder> {
         private String aliyunUid; 
         private String database; 
@@ -297,6 +309,7 @@ public class ModifyDtsJobEndpointRequest extends Request {
         private String shardUsername; 
         private String synchronizationDirection; 
         private String username; 
+        private Boolean zeroEtlJob; 
 
         private Builder() {
             super();
@@ -324,6 +337,7 @@ public class ModifyDtsJobEndpointRequest extends Request {
             this.shardUsername = request.shardUsername;
             this.synchronizationDirection = request.synchronizationDirection;
             this.username = request.username;
+            this.zeroEtlJob = request.zeroEtlJob;
         } 
 
         /**
@@ -633,6 +647,15 @@ public class ModifyDtsJobEndpointRequest extends Request {
         public Builder username(String username) {
             this.putQueryParameter("Username", username);
             this.username = username;
+            return this;
+        }
+
+        /**
+         * ZeroEtlJob.
+         */
+        public Builder zeroEtlJob(Boolean zeroEtlJob) {
+            this.putQueryParameter("ZeroEtlJob", zeroEtlJob);
+            this.zeroEtlJob = zeroEtlJob;
             return this;
         }
 

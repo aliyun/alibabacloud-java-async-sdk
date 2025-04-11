@@ -1800,6 +1800,9 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
      * <p>DescribeDtsJobDetailResponseBody</p>
      */
     public static class DestinationEndpoint extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AliyunUid")
+        private String aliyunUid;
+
         @com.aliyun.core.annotation.NameInMap("CanModifyPassword")
         private Boolean canModifyPassword;
 
@@ -1827,6 +1830,9 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
+        @com.aliyun.core.annotation.NameInMap("RoleName")
+        private String roleName;
+
         @com.aliyun.core.annotation.NameInMap("SslSolutionEnum")
         private String sslSolutionEnum;
 
@@ -1834,6 +1840,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         private String userName;
 
         private DestinationEndpoint(Builder builder) {
+            this.aliyunUid = builder.aliyunUid;
             this.canModifyPassword = builder.canModifyPassword;
             this.databaseName = builder.databaseName;
             this.engineName = builder.engineName;
@@ -1843,6 +1850,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             this.oracleSID = builder.oracleSID;
             this.port = builder.port;
             this.region = builder.region;
+            this.roleName = builder.roleName;
             this.sslSolutionEnum = builder.sslSolutionEnum;
             this.userName = builder.userName;
         }
@@ -1853,6 +1861,13 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
 
         public static DestinationEndpoint create() {
             return builder().build();
+        }
+
+        /**
+         * @return aliyunUid
+         */
+        public String getAliyunUid() {
+            return this.aliyunUid;
         }
 
         /**
@@ -1919,6 +1934,13 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return roleName
+         */
+        public String getRoleName() {
+            return this.roleName;
+        }
+
+        /**
          * @return sslSolutionEnum
          */
         public String getSslSolutionEnum() {
@@ -1933,6 +1955,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String aliyunUid; 
             private Boolean canModifyPassword; 
             private String databaseName; 
             private String engineName; 
@@ -1942,6 +1965,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String oracleSID; 
             private String port; 
             private String region; 
+            private String roleName; 
             private String sslSolutionEnum; 
             private String userName; 
 
@@ -1949,6 +1973,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             } 
 
             private Builder(DestinationEndpoint model) {
+                this.aliyunUid = model.aliyunUid;
                 this.canModifyPassword = model.canModifyPassword;
                 this.databaseName = model.databaseName;
                 this.engineName = model.engineName;
@@ -1958,9 +1983,18 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
                 this.oracleSID = model.oracleSID;
                 this.port = model.port;
                 this.region = model.region;
+                this.roleName = model.roleName;
                 this.sslSolutionEnum = model.sslSolutionEnum;
                 this.userName = model.userName;
             } 
+
+            /**
+             * AliyunUid.
+             */
+            public Builder aliyunUid(String aliyunUid) {
+                this.aliyunUid = aliyunUid;
+                return this;
+            }
 
             /**
              * <p>Indicates whether the password can be modified. Valid values:</p>
@@ -2065,6 +2099,14 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
              */
             public Builder region(String region) {
                 this.region = region;
+                return this;
+            }
+
+            /**
+             * RoleName.
+             */
+            public Builder roleName(String roleName) {
+                this.roleName = roleName;
                 return this;
             }
 
