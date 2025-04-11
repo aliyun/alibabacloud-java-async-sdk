@@ -442,6 +442,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetAllSheetsResponse> getAllSheets(GetAllSheetsRequest request);
 
     /**
+     * @param request the request parameters of GetAssistantCapability  GetAssistantCapabilityRequest
+     * @return GetAssistantCapabilityResponse
+     */
+    CompletableFuture<GetAssistantCapabilityResponse> getAssistantCapability(GetAssistantCapabilityRequest request);
+
+    /**
      * @param request the request parameters of GetConversaionSpace  GetConversaionSpaceRequest
      * @return GetConversaionSpaceResponse
      */

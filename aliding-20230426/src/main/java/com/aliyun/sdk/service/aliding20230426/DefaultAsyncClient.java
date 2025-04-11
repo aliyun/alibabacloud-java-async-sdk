@@ -1311,6 +1311,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetAssistantCapability  GetAssistantCapabilityRequest
+     * @return GetAssistantCapabilityResponse
+     */
+    @Override
+    public CompletableFuture<GetAssistantCapabilityResponse> getAssistantCapability(GetAssistantCapabilityRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetAssistantCapability").setMethod(HttpMethod.POST).setPathRegex("/ai/v1/assistant/getAssistantCapability").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetAssistantCapabilityResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetAssistantCapabilityResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetConversaionSpace  GetConversaionSpaceRequest
      * @return GetConversaionSpaceResponse
      */
