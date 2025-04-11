@@ -137,10 +137,14 @@ public class ListWafTemplateRulesRequest extends Request {
      * <p>ListWafTemplateRulesRequest</p>
      */
     public static class QueryArgs extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Kinds")
+        private java.util.List<String> kinds;
+
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private QueryArgs(Builder builder) {
+            this.kinds = builder.kinds;
             this.type = builder.type;
         }
 
@@ -153,6 +157,13 @@ public class ListWafTemplateRulesRequest extends Request {
         }
 
         /**
+         * @return kinds
+         */
+        public java.util.List<String> getKinds() {
+            return this.kinds;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -160,14 +171,24 @@ public class ListWafTemplateRulesRequest extends Request {
         }
 
         public static final class Builder {
+            private java.util.List<String> kinds; 
             private String type; 
 
             private Builder() {
             } 
 
             private Builder(QueryArgs model) {
+                this.kinds = model.kinds;
                 this.type = model.type;
             } 
+
+            /**
+             * Kinds.
+             */
+            public Builder kinds(java.util.List<String> kinds) {
+                this.kinds = kinds;
+                return this;
+            }
 
             /**
              * <p>Rule type.</p>
