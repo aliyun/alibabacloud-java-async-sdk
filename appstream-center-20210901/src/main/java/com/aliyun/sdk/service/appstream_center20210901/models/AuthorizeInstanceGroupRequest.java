@@ -143,7 +143,10 @@ public class AuthorizeInstanceGroupRequest extends Request {
         }
 
         /**
-         * AppInstancePersistentId.
+         * <p>持久会话ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>p-0cc7s3mw2fg4j****</p>
          */
         public Builder appInstancePersistentId(String appInstancePersistentId) {
             this.putBodyParameter("AppInstancePersistentId", appInstancePersistentId);
@@ -152,7 +155,7 @@ public class AuthorizeInstanceGroupRequest extends Request {
         }
 
         /**
-         * AuthorizeUserIds.
+         * <p>The IDs of the users that you want to add to the authorization list of the delivery group. You can specify 1 to 100 user IDs.</p>
          */
         public Builder authorizeUserIds(java.util.List<String> authorizeUserIds) {
             this.putBodyParameter("AuthorizeUserIds", authorizeUserIds);
@@ -173,7 +176,7 @@ public class AuthorizeInstanceGroupRequest extends Request {
         }
 
         /**
-         * UnAuthorizeUserIds.
+         * <p>The IDs of the users that you want to remove from the authorization list of the delivery group. You can specify 1 to 100 user IDs.</p>
          */
         public Builder unAuthorizeUserIds(java.util.List<String> unAuthorizeUserIds) {
             this.putBodyParameter("UnAuthorizeUserIds", unAuthorizeUserIds);
@@ -182,7 +185,7 @@ public class AuthorizeInstanceGroupRequest extends Request {
         }
 
         /**
-         * UserMeta.
+         * <p>The user information.</p>
          */
         public Builder userMeta(UserMeta userMeta) {
             String userMetaShrink = shrink(userMeta, "UserMeta", "json");
@@ -251,7 +254,10 @@ public class AuthorizeInstanceGroupRequest extends Request {
             } 
 
             /**
-             * AdDomain.
+             * <p>The AD domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder adDomain(String adDomain) {
                 this.adDomain = adDomain;
@@ -259,7 +265,15 @@ public class AuthorizeInstanceGroupRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>The user type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>ad: Active Directory (AD) account</li>
+             * <li>simple: convenience account</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>simple</p>
              */
             public Builder type(String type) {
                 this.type = type;
