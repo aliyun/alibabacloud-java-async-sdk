@@ -38,6 +38,10 @@ public class ListEvaluationMetricDetailsRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Scope")
+    private String scope;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SnapshotId")
     private String snapshotId;
 
@@ -48,6 +52,7 @@ public class ListEvaluationMetricDetailsRequest extends Request {
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.regionId = builder.regionId;
+        this.scope = builder.scope;
         this.snapshotId = builder.snapshotId;
     }
 
@@ -100,6 +105,13 @@ public class ListEvaluationMetricDetailsRequest extends Request {
     }
 
     /**
+     * @return scope
+     */
+    public String getScope() {
+        return this.scope;
+    }
+
+    /**
      * @return snapshotId
      */
     public String getSnapshotId() {
@@ -112,6 +124,7 @@ public class ListEvaluationMetricDetailsRequest extends Request {
         private Integer maxResults; 
         private String nextToken; 
         private String regionId; 
+        private String scope; 
         private String snapshotId; 
 
         private Builder() {
@@ -125,6 +138,7 @@ public class ListEvaluationMetricDetailsRequest extends Request {
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.regionId = request.regionId;
+            this.scope = request.scope;
             this.snapshotId = request.snapshotId;
         } 
 
@@ -186,6 +200,15 @@ public class ListEvaluationMetricDetailsRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * Scope.
+         */
+        public Builder scope(String scope) {
+            this.putQueryParameter("Scope", scope);
+            this.scope = scope;
             return this;
         }
 

@@ -30,6 +30,10 @@ public class ListEvaluationResultsRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Scope")
+    private String scope;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SnapshotId")
     private String snapshotId;
 
@@ -38,6 +42,7 @@ public class ListEvaluationResultsRequest extends Request {
         this.accountId = builder.accountId;
         this.filters = builder.filters;
         this.regionId = builder.regionId;
+        this.scope = builder.scope;
         this.snapshotId = builder.snapshotId;
     }
 
@@ -76,6 +81,13 @@ public class ListEvaluationResultsRequest extends Request {
     }
 
     /**
+     * @return scope
+     */
+    public String getScope() {
+        return this.scope;
+    }
+
+    /**
      * @return snapshotId
      */
     public String getSnapshotId() {
@@ -86,6 +98,7 @@ public class ListEvaluationResultsRequest extends Request {
         private Long accountId; 
         private java.util.List<Filters> filters; 
         private String regionId; 
+        private String scope; 
         private String snapshotId; 
 
         private Builder() {
@@ -97,6 +110,7 @@ public class ListEvaluationResultsRequest extends Request {
             this.accountId = request.accountId;
             this.filters = request.filters;
             this.regionId = request.regionId;
+            this.scope = request.scope;
             this.snapshotId = request.snapshotId;
         } 
 
@@ -130,6 +144,15 @@ public class ListEvaluationResultsRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * Scope.
+         */
+        public Builder scope(String scope) {
+            this.putQueryParameter("Scope", scope);
+            this.scope = scope;
             return this;
         }
 

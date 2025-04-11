@@ -121,6 +121,60 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
      *
      * <p>ListEvaluationResultsResponseBody</p>
      */
+    public static class AccountSummary extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("NonCompliant")
+        private Integer nonCompliant;
+
+        private AccountSummary(Builder builder) {
+            this.nonCompliant = builder.nonCompliant;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AccountSummary create() {
+            return builder().build();
+        }
+
+        /**
+         * @return nonCompliant
+         */
+        public Integer getNonCompliant() {
+            return this.nonCompliant;
+        }
+
+        public static final class Builder {
+            private Integer nonCompliant; 
+
+            private Builder() {
+            } 
+
+            private Builder(AccountSummary model) {
+                this.nonCompliant = model.nonCompliant;
+            } 
+
+            /**
+             * NonCompliant.
+             */
+            public Builder nonCompliant(Integer nonCompliant) {
+                this.nonCompliant = nonCompliant;
+                return this;
+            }
+
+            public AccountSummary build() {
+                return new AccountSummary(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListEvaluationResultsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEvaluationResultsResponseBody</p>
+     */
     public static class ErrorInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
@@ -260,6 +314,9 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
      * <p>ListEvaluationResultsResponseBody</p>
      */
     public static class MetricResults extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AccountSummary")
+        private AccountSummary accountSummary;
+
         @com.aliyun.core.annotation.NameInMap("ErrorInfo")
         private ErrorInfo errorInfo;
 
@@ -282,6 +339,7 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
         private String status;
 
         private MetricResults(Builder builder) {
+            this.accountSummary = builder.accountSummary;
             this.errorInfo = builder.errorInfo;
             this.evaluationTime = builder.evaluationTime;
             this.id = builder.id;
@@ -297,6 +355,13 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
 
         public static MetricResults create() {
             return builder().build();
+        }
+
+        /**
+         * @return accountSummary
+         */
+        public AccountSummary getAccountSummary() {
+            return this.accountSummary;
         }
 
         /**
@@ -349,6 +414,7 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private AccountSummary accountSummary; 
             private ErrorInfo errorInfo; 
             private String evaluationTime; 
             private String id; 
@@ -361,6 +427,7 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
             } 
 
             private Builder(MetricResults model) {
+                this.accountSummary = model.accountSummary;
                 this.errorInfo = model.errorInfo;
                 this.evaluationTime = model.evaluationTime;
                 this.id = model.id;
@@ -369,6 +436,14 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
                 this.risk = model.risk;
                 this.status = model.status;
             } 
+
+            /**
+             * AccountSummary.
+             */
+            public Builder accountSummary(AccountSummary accountSummary) {
+                this.accountSummary = accountSummary;
+                return this;
+            }
 
             /**
              * <p>The error information.</p>
