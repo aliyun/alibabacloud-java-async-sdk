@@ -40,6 +40,10 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return policies
      */
@@ -65,6 +69,15 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
         private java.util.List<Policies> policies; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSceneDefensePoliciesResponseBody model) {
+            this.policies = model.policies;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>An array that consists of the configurations of the scenario-specific custom policy.</p>
@@ -173,6 +186,16 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
             private Integer policyType; 
             private Integer status; 
             private String oldValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(RuntimePolicies model) {
+                this.newValue = model.newValue;
+                this.policyType = model.policyType;
+                this.status = model.status;
+                this.oldValue = model.oldValue;
+            } 
 
             /**
              * <p>The protection rule that is applied when the policy takes effect.</p>
@@ -369,6 +392,21 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
             private Long startTime; 
             private Integer status; 
             private String template; 
+
+            private Builder() {
+            } 
+
+            private Builder(Policies model) {
+                this.done = model.done;
+                this.endTime = model.endTime;
+                this.name = model.name;
+                this.objectCount = model.objectCount;
+                this.policyId = model.policyId;
+                this.runtimePolicies = model.runtimePolicies;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.template = model.template;
+            } 
 
             /**
              * <p>The execution status of the policy. Valid values:</p>

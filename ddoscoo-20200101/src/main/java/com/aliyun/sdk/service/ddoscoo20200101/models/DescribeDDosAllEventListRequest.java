@@ -17,6 +17,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDDosAllEventListRequest</p>
  */
 public class DescribeDDosAllEventListRequest extends Request {
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndTime")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -43,6 +47,7 @@ public class DescribeDDosAllEventListRequest extends Request {
 
     private DescribeDDosAllEventListRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.endTime = builder.endTime;
         this.eventType = builder.eventType;
         this.pageNumber = builder.pageNumber;
@@ -58,9 +63,16 @@ public class DescribeDDosAllEventListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -99,6 +111,7 @@ public class DescribeDDosAllEventListRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeDDosAllEventListRequest, Builder> {
+        private String regionId; 
         private Long endTime; 
         private String eventType; 
         private Integer pageNumber; 
@@ -111,12 +124,22 @@ public class DescribeDDosAllEventListRequest extends Request {
 
         private Builder(DescribeDDosAllEventListRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.endTime = request.endTime;
             this.eventType = request.eventType;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.startTime = request.startTime;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * <p>The end of the time range to query. The DDoS attack events occur before <strong>EndTime</strong> are queried. This value is a UNIX timestamp. Unit: seconds.</p>

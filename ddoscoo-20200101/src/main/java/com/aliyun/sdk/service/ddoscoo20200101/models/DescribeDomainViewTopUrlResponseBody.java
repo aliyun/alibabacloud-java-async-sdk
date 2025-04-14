@@ -36,6 +36,10 @@ public class DescribeDomainViewTopUrlResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeDomainViewTopUrlResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<UrlList> urlList; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainViewTopUrlResponseBody model) {
+            this.requestId = model.requestId;
+            this.urlList = model.urlList;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -134,6 +146,15 @@ public class DescribeDomainViewTopUrlResponseBody extends TeaModel {
             private Long count; 
             private String domain; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(UrlList model) {
+                this.count = model.count;
+                this.domain = model.domain;
+                this.url = model.url;
+            } 
 
             /**
              * <p>The total number of requests.</p>

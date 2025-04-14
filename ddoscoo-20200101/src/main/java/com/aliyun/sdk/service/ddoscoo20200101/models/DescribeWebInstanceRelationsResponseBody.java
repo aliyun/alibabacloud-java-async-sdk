@@ -36,6 +36,10 @@ public class DescribeWebInstanceRelationsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeWebInstanceRelationsResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<WebInstanceRelations> webInstanceRelations; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeWebInstanceRelationsResponseBody model) {
+            this.requestId = model.requestId;
+            this.webInstanceRelations = model.webInstanceRelations;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -134,6 +146,15 @@ public class DescribeWebInstanceRelationsResponseBody extends TeaModel {
             private java.util.List<String> eipList; 
             private String functionVersion; 
             private String instanceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceDetails model) {
+                this.eipList = model.eipList;
+                this.functionVersion = model.functionVersion;
+                this.instanceId = model.instanceId;
+            } 
 
             /**
              * <p>The IP addresses of the instance.</p>
@@ -219,6 +240,14 @@ public class DescribeWebInstanceRelationsResponseBody extends TeaModel {
         public static final class Builder {
             private String domain; 
             private java.util.List<InstanceDetails> instanceDetails; 
+
+            private Builder() {
+            } 
+
+            private Builder(WebInstanceRelations model) {
+                this.domain = model.domain;
+                this.instanceDetails = model.instanceDetails;
+            } 
 
             /**
              * <p>The domain name of the website.</p>

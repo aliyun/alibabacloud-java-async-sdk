@@ -36,6 +36,10 @@ public class DescribeBlackholeStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return blackholeStatus
      */
@@ -53,6 +57,14 @@ public class DescribeBlackholeStatusResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<BlackholeStatus> blackholeStatus; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeBlackholeStatusResponseBody model) {
+            this.blackholeStatus = model.blackholeStatus;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>An array that consists of the blackhole filtering status of the instance.</p>
@@ -146,6 +158,16 @@ public class DescribeBlackholeStatusResponseBody extends TeaModel {
             private Long endTime; 
             private String ip; 
             private Long startTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(BlackholeStatus model) {
+                this.blackStatus = model.blackStatus;
+                this.endTime = model.endTime;
+                this.ip = model.ip;
+                this.startTime = model.startTime;
+            } 
 
             /**
              * <p>Indicates whether blackhole filtering is triggered for the instance. Valid values:</p>

@@ -48,6 +48,10 @@ public class DescribeTagKeysResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribeTagKeysResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<TagKeys> tagKeys; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTagKeysResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.tagKeys = model.tagKeys;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number of the returned page.</p>
@@ -191,6 +206,14 @@ public class DescribeTagKeysResponseBody extends TeaModel {
         public static final class Builder {
             private Integer tagCount; 
             private String tagKey; 
+
+            private Builder() {
+            } 
+
+            private Builder(TagKeys model) {
+                this.tagCount = model.tagCount;
+                this.tagKey = model.tagKey;
+            } 
 
             /**
              * <p>The number of Anti-DDoS Proxy (Chinese Mainland) instances to which the tag key is added.</p>

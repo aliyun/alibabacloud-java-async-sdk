@@ -36,6 +36,10 @@ public class DescribeDomainSecurityProfileResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeDomainSecurityProfileResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<Result> result; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainSecurityProfileResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
@@ -119,6 +131,14 @@ public class DescribeDomainSecurityProfileResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean globalEnable; 
             private String globalMode; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.globalEnable = model.globalEnable;
+                this.globalMode = model.globalMode;
+            } 
 
             /**
              * <p>Indicates whether the global mitigation policy is enabled. Valid values:</p>

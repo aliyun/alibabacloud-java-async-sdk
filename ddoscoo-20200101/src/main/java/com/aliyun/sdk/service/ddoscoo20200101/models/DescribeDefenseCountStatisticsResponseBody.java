@@ -36,6 +36,10 @@ public class DescribeDefenseCountStatisticsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return defenseCountStatistics
      */
@@ -53,6 +57,14 @@ public class DescribeDefenseCountStatisticsResponseBody extends TeaModel {
     public static final class Builder {
         private DefenseCountStatistics defenseCountStatistics; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDefenseCountStatisticsResponseBody model) {
+            this.defenseCountStatistics = model.defenseCountStatistics;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The statistics on the number of advanced mitigation sessions.</p>
@@ -146,6 +158,16 @@ public class DescribeDefenseCountStatisticsResponseBody extends TeaModel {
             private Integer flowPackCountRemain; 
             private Integer maxUsableDefenseCountCurrentMonth; 
             private Integer secHighSpeedCountRemain; 
+
+            private Builder() {
+            } 
+
+            private Builder(DefenseCountStatistics model) {
+                this.defenseCountTotalUsageOfCurrentMonth = model.defenseCountTotalUsageOfCurrentMonth;
+                this.flowPackCountRemain = model.flowPackCountRemain;
+                this.maxUsableDefenseCountCurrentMonth = model.maxUsableDefenseCountCurrentMonth;
+                this.secHighSpeedCountRemain = model.secHighSpeedCountRemain;
+            } 
 
             /**
              * <p>The number of advanced mitigation sessions that are used within the current calendar month.</p>

@@ -36,6 +36,10 @@ public class DescribeDomainQPSListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domainQPSList
      */
@@ -53,6 +57,14 @@ public class DescribeDomainQPSListResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<DomainQPSList> domainQPSList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainQPSListResponseBody model) {
+            this.domainQPSList = model.domainQPSList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>An array that consists of the statistics on the QPS of the website.</p>
@@ -206,6 +218,21 @@ public class DescribeDomainQPSListResponseBody extends TeaModel {
             private Long time; 
             private Long totalCount; 
             private Long totalQps; 
+
+            private Builder() {
+            } 
+
+            private Builder(DomainQPSList model) {
+                this.attackQps = model.attackQps;
+                this.cacheHits = model.cacheHits;
+                this.index = model.index;
+                this.maxAttackQps = model.maxAttackQps;
+                this.maxNormalQps = model.maxNormalQps;
+                this.maxQps = model.maxQps;
+                this.time = model.time;
+                this.totalCount = model.totalCount;
+                this.totalQps = model.totalQps;
+            } 
 
             /**
              * <p>The attack QPS.</p>

@@ -36,6 +36,10 @@ public class DescribeWebCcProtectSwitchResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return protectSwitchList
      */
@@ -53,6 +57,14 @@ public class DescribeWebCcProtectSwitchResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<ProtectSwitchList> protectSwitchList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeWebCcProtectSwitchResponseBody model) {
+            this.protectSwitchList = model.protectSwitchList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The status of each mitigation policy for the website.</p>
@@ -230,6 +242,23 @@ public class DescribeWebCcProtectSwitchResponseBody extends TeaModel {
             private String domain; 
             private Integer preciseRuleEnable; 
             private Integer regionBlockEnable; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProtectSwitchList model) {
+                this.aiMode = model.aiMode;
+                this.aiRuleEnable = model.aiRuleEnable;
+                this.aiTemplate = model.aiTemplate;
+                this.blackWhiteListEnable = model.blackWhiteListEnable;
+                this.ccCustomRuleEnable = model.ccCustomRuleEnable;
+                this.ccEnable = model.ccEnable;
+                this.ccGlobalSwitch = model.ccGlobalSwitch;
+                this.ccTemplate = model.ccTemplate;
+                this.domain = model.domain;
+                this.preciseRuleEnable = model.preciseRuleEnable;
+                this.regionBlockEnable = model.regionBlockEnable;
+            } 
 
             /**
              * <p>The mode of Intelligent Protection. Valid values:</p>

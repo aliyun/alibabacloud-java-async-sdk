@@ -48,6 +48,10 @@ public class DescribePortConnsCountResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return actConns
      */
@@ -89,6 +93,17 @@ public class DescribePortConnsCountResponseBody extends TeaModel {
         private Long cps; 
         private Long inActConns; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePortConnsCountResponseBody model) {
+            this.actConns = model.actConns;
+            this.conns = model.conns;
+            this.cps = model.cps;
+            this.inActConns = model.inActConns;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The number of active connections.</p>

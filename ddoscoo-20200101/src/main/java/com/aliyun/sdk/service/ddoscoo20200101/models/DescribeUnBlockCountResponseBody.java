@@ -40,6 +40,10 @@ public class DescribeUnBlockCountResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return remainCount
      */
@@ -65,6 +69,15 @@ public class DescribeUnBlockCountResponseBody extends TeaModel {
         private Integer remainCount; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeUnBlockCountResponseBody model) {
+            this.remainCount = model.remainCount;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The remaining number of times that you can enable the near-origin traffic diversion feature.</p>

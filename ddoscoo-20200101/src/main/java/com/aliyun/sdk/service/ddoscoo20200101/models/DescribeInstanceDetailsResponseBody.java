@@ -36,6 +36,10 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceDetails
      */
@@ -53,6 +57,14 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<InstanceDetails> instanceDetails; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceDetailsResponseBody model) {
+            this.instanceDetails = model.instanceDetails;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The IP address and ISP line information about the Anti-DDoS Proxy instance.</p>
@@ -194,6 +206,20 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
             private Boolean ssl13Enabled; 
             private String status; 
             private String tlsVersion; 
+
+            private Builder() {
+            } 
+
+            private Builder(EipInfos model) {
+                this.certConfigured = model.certConfigured;
+                this.eip = model.eip;
+                this.functionVersion = model.functionVersion;
+                this.ipMode = model.ipMode;
+                this.ipVersion = model.ipVersion;
+                this.ssl13Enabled = model.ssl13Enabled;
+                this.status = model.status;
+                this.tlsVersion = model.tlsVersion;
+            } 
 
             /**
              * <p>Indicates whether a custom certificate is configured.</p>
@@ -360,6 +386,15 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
             private java.util.List<EipInfos> eipInfos; 
             private String instanceId; 
             private String line; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceDetails model) {
+                this.eipInfos = model.eipInfos;
+                this.instanceId = model.instanceId;
+                this.line = model.line;
+            } 
 
             /**
              * <p>The IP address information about the Anti-DDoS Proxy instance.</p>

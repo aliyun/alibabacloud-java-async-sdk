@@ -36,6 +36,10 @@ public class DescribeHeadersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return customHeader
      */
@@ -53,6 +57,14 @@ public class DescribeHeadersResponseBody extends TeaModel {
     public static final class Builder {
         private CustomHeader customHeader; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeHeadersResponseBody model) {
+            this.customHeader = model.customHeader;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the custom header.</p>
@@ -122,6 +134,14 @@ public class DescribeHeadersResponseBody extends TeaModel {
         public static final class Builder {
             private String domain; 
             private String headers; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomHeader model) {
+                this.domain = model.domain;
+                this.headers = model.headers;
+            } 
 
             /**
              * <p>The domain name of the website.</p>

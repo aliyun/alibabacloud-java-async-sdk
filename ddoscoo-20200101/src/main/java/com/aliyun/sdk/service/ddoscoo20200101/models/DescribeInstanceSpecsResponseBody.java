@@ -36,6 +36,10 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceSpecs
      */
@@ -53,6 +57,14 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<InstanceSpecs> instanceSpecs; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceSpecsResponseBody model) {
+            this.instanceSpecs = model.instanceSpecs;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of the specifications of the instance.</p>
@@ -302,6 +314,29 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             private Integer qpsLimit; 
             private Long realLimitBw; 
             private Integer siteLimit; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceSpecs model) {
+                this.bandwidthMbps = model.bandwidthMbps;
+                this.baseBandwidth = model.baseBandwidth;
+                this.connLimit = model.connLimit;
+                this.cpsLimit = model.cpsLimit;
+                this.defenseCount = model.defenseCount;
+                this.domainLimit = model.domainLimit;
+                this.elasticBandwidth = model.elasticBandwidth;
+                this.elasticBw = model.elasticBw;
+                this.elasticBwModel = model.elasticBwModel;
+                this.elasticQps = model.elasticQps;
+                this.elasticQpsMode = model.elasticQpsMode;
+                this.functionVersion = model.functionVersion;
+                this.instanceId = model.instanceId;
+                this.portLimit = model.portLimit;
+                this.qpsLimit = model.qpsLimit;
+                this.realLimitBw = model.realLimitBw;
+                this.siteLimit = model.siteLimit;
+            } 
 
             /**
              * <p>The clean bandwidth. Unit: Mbit/s.</p>

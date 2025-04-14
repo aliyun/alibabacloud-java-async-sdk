@@ -36,6 +36,10 @@ public class DescribeDomainBpsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domainBps
      */
@@ -53,6 +57,14 @@ public class DescribeDomainBpsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<DomainBps> domainBps; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainBpsResponseBody model) {
+            this.domainBps = model.domainBps;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The bandwidths.</p>
@@ -134,6 +146,15 @@ public class DescribeDomainBpsResponseBody extends TeaModel {
             private Long inBps; 
             private Long index; 
             private Long outBps; 
+
+            private Builder() {
+            } 
+
+            private Builder(DomainBps model) {
+                this.inBps = model.inBps;
+                this.index = model.index;
+                this.outBps = model.outBps;
+            } 
 
             /**
              * <p>The inbound bandwidth. Unit: bit/s.</p>

@@ -36,6 +36,10 @@ public class DescribeDomainStatusCodeListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeDomainStatusCodeListResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<StatusCodeList> statusCodeList; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainStatusCodeListResponseBody model) {
+            this.requestId = model.requestId;
+            this.statusCodeList = model.statusCodeList;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -290,6 +302,28 @@ public class DescribeDomainStatusCodeListResponseBody extends TeaModel {
             private Long status504; 
             private Long status5XX; 
             private Long time; 
+
+            private Builder() {
+            } 
+
+            private Builder(StatusCodeList model) {
+                this.index = model.index;
+                this.status200 = model.status200;
+                this.status2XX = model.status2XX;
+                this.status3XX = model.status3XX;
+                this.status403 = model.status403;
+                this.status404 = model.status404;
+                this.status405 = model.status405;
+                this.status410 = model.status410;
+                this.status499 = model.status499;
+                this.status4XX = model.status4XX;
+                this.status501 = model.status501;
+                this.status502 = model.status502;
+                this.status503 = model.status503;
+                this.status504 = model.status504;
+                this.status5XX = model.status5XX;
+                this.time = model.time;
+            } 
 
             /**
              * <p>The index number of the returned data.</p>

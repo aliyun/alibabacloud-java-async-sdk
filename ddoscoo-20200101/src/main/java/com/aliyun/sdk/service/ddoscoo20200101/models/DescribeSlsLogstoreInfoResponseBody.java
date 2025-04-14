@@ -52,6 +52,10 @@ public class DescribeSlsLogstoreInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return logStore
      */
@@ -101,6 +105,18 @@ public class DescribeSlsLogstoreInfoResponseBody extends TeaModel {
         private String requestId; 
         private Integer ttl; 
         private Long used; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSlsLogstoreInfoResponseBody model) {
+            this.logStore = model.logStore;
+            this.project = model.project;
+            this.quota = model.quota;
+            this.requestId = model.requestId;
+            this.ttl = model.ttl;
+            this.used = model.used;
+        } 
 
         /**
          * <p>The Logstore of the Anti-DDoS Pro or Anti-DDoS Premium instance.</p>

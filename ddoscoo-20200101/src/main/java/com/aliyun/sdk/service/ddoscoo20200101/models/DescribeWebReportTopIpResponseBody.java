@@ -36,6 +36,10 @@ public class DescribeWebReportTopIpResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataList
      */
@@ -54,8 +58,16 @@ public class DescribeWebReportTopIpResponseBody extends TeaModel {
         private java.util.List<DataList> dataList; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeWebReportTopIpResponseBody model) {
+            this.dataList = model.dataList;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>The response parameters.</p>
+         * <p>The information about the IP addresses.</p>
          */
         public Builder dataList(java.util.List<DataList> dataList) {
             this.dataList = dataList;
@@ -146,6 +158,16 @@ public class DescribeWebReportTopIpResponseBody extends TeaModel {
             private Long count; 
             private String isp; 
             private String sourceIp; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataList model) {
+                this.areaId = model.areaId;
+                this.count = model.count;
+                this.isp = model.isp;
+                this.sourceIp = model.sourceIp;
+            } 
 
             /**
              * <p>The ID of the location.</p>

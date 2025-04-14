@@ -31,6 +31,10 @@ public class DescribeDomainViewTopUrlRequest extends Request {
     private Long endTime;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Inerval")
+    private Long inerval;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
@@ -49,6 +53,7 @@ public class DescribeDomainViewTopUrlRequest extends Request {
         this.regionId = builder.regionId;
         this.domain = builder.domain;
         this.endTime = builder.endTime;
+        this.inerval = builder.inerval;
         this.resourceGroupId = builder.resourceGroupId;
         this.startTime = builder.startTime;
         this.top = builder.top;
@@ -62,7 +67,7 @@ public class DescribeDomainViewTopUrlRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -86,6 +91,13 @@ public class DescribeDomainViewTopUrlRequest extends Request {
      */
     public Long getEndTime() {
         return this.endTime;
+    }
+
+    /**
+     * @return inerval
+     */
+    public Long getInerval() {
+        return this.inerval;
     }
 
     /**
@@ -113,6 +125,7 @@ public class DescribeDomainViewTopUrlRequest extends Request {
         private String regionId; 
         private String domain; 
         private Long endTime; 
+        private Long inerval; 
         private String resourceGroupId; 
         private Long startTime; 
         private Integer top; 
@@ -126,6 +139,7 @@ public class DescribeDomainViewTopUrlRequest extends Request {
             this.regionId = request.regionId;
             this.domain = request.domain;
             this.endTime = request.endTime;
+            this.inerval = request.inerval;
             this.resourceGroupId = request.resourceGroupId;
             this.startTime = request.startTime;
             this.top = request.top;
@@ -168,6 +182,15 @@ public class DescribeDomainViewTopUrlRequest extends Request {
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
             this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * Inerval.
+         */
+        public Builder inerval(Long inerval) {
+            this.putQueryParameter("Inerval", inerval);
+            this.inerval = inerval;
             return this;
         }
 

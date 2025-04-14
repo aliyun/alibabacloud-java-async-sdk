@@ -36,6 +36,10 @@ public class DescribeBlockStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeBlockStatusResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<StatusList> statusList; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeBlockStatusResponseBody model) {
+            this.requestId = model.requestId;
+            this.statusList = model.statusList;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -146,6 +158,16 @@ public class DescribeBlockStatusResponseBody extends TeaModel {
             private Long endTime; 
             private String line; 
             private Long startTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(BlockStatusList model) {
+                this.blockStatus = model.blockStatus;
+                this.endTime = model.endTime;
+                this.line = model.line;
+                this.startTime = model.startTime;
+            } 
 
             /**
              * <p>The blocking status of the network traffic. Valid values:</p>
@@ -249,6 +271,14 @@ public class DescribeBlockStatusResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<BlockStatusList> blockStatusList; 
             private String ip; 
+
+            private Builder() {
+            } 
+
+            private Builder(StatusList model) {
+                this.blockStatusList = model.blockStatusList;
+                this.ip = model.ip;
+            } 
 
             /**
              * <p>An array that consists of details of the Diversion from Origin Server configuration.</p>

@@ -40,6 +40,10 @@ public class DescribeNetworkRulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return networkRules
      */
@@ -66,8 +70,17 @@ public class DescribeNetworkRulesResponseBody extends TeaModel {
         private String requestId; 
         private Long totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeNetworkRulesResponseBody model) {
+            this.networkRules = model.networkRules;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * <p>The details of the port forwarding rule.</p>
+         * <p>The details of the port forwarding rules.</p>
          */
         public Builder networkRules(java.util.List<NetworkRules> networkRules) {
             this.networkRules = networkRules;
@@ -242,6 +255,22 @@ public class DescribeNetworkRulesResponseBody extends TeaModel {
             private java.util.List<String> realServers; 
             private String remark; 
 
+            private Builder() {
+            } 
+
+            private Builder(NetworkRules model) {
+                this.backendPort = model.backendPort;
+                this.frontendPort = model.frontendPort;
+                this.instanceId = model.instanceId;
+                this.isAutoCreate = model.isAutoCreate;
+                this.payloadRuleEnable = model.payloadRuleEnable;
+                this.protocol = model.protocol;
+                this.proxyEnable = model.proxyEnable;
+                this.proxyStatus = model.proxyStatus;
+                this.realServers = model.realServers;
+                this.remark = model.remark;
+            } 
+
             /**
              * <p>The port of the origin server.</p>
              * 
@@ -291,7 +320,14 @@ public class DescribeNetworkRulesResponseBody extends TeaModel {
             }
 
             /**
-             * PayloadRuleEnable.
+             * <p>Indicates whether the payload filtering rule is enabled. Valid values:</p>
+             * <ul>
+             * <li>1: enabled.</li>
+             * <li>0: disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder payloadRuleEnable(Long payloadRuleEnable) {
                 this.payloadRuleEnable = payloadRuleEnable;
@@ -314,7 +350,14 @@ public class DescribeNetworkRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ProxyEnable.
+             * <p>Indicates whether the traffic diversion switch is on. Valid values:</p>
+             * <ul>
+             * <li>0: on.</li>
+             * <li>1: off.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder proxyEnable(Long proxyEnable) {
                 this.proxyEnable = proxyEnable;
@@ -322,7 +365,14 @@ public class DescribeNetworkRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ProxyStatus.
+             * <p>The status of traffic diversion. Valid values:</p>
+             * <ul>
+             * <li>on: Traffic diversion takes effect.</li>
+             * <li>off: Traffic diversion does not take effect.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder proxyStatus(String proxyStatus) {
                 this.proxyStatus = proxyStatus;

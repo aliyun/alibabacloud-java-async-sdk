@@ -36,6 +36,10 @@ public class DescribeWebAreaBlockConfigsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return areaBlockConfigs
      */
@@ -53,6 +57,14 @@ public class DescribeWebAreaBlockConfigsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<AreaBlockConfigs> areaBlockConfigs; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeWebAreaBlockConfigsResponseBody model) {
+            this.areaBlockConfigs = model.areaBlockConfigs;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>An array that consists of the configurations of the Location Blacklist (Domain Names) policy.</p>
@@ -122,6 +134,14 @@ public class DescribeWebAreaBlockConfigsResponseBody extends TeaModel {
         public static final class Builder {
             private Integer block; 
             private String region; 
+
+            private Builder() {
+            } 
+
+            private Builder(RegionList model) {
+                this.block = model.block;
+                this.region = model.region;
+            } 
 
             /**
              * <p>Indicates whether the location is blocked. Valid values:</p>
@@ -199,6 +219,14 @@ public class DescribeWebAreaBlockConfigsResponseBody extends TeaModel {
         public static final class Builder {
             private String domain; 
             private java.util.List<RegionList> regionList; 
+
+            private Builder() {
+            } 
+
+            private Builder(AreaBlockConfigs model) {
+                this.domain = model.domain;
+                this.regionList = model.regionList;
+            } 
 
             /**
              * <p>The domain name of the website.</p>

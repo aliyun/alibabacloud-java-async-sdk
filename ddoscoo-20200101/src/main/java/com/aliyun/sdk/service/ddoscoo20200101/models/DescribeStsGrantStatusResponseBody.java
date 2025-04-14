@@ -36,6 +36,10 @@ public class DescribeStsGrantStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeStsGrantStatusResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private StsGrant stsGrant; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeStsGrantStatusResponseBody model) {
+            this.requestId = model.requestId;
+            this.stsGrant = model.stsGrant;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -110,6 +122,13 @@ public class DescribeStsGrantStatusResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer status; 
+
+            private Builder() {
+            } 
+
+            private Builder(StsGrant model) {
+                this.status = model.status;
+            } 
 
             /**
              * <p>The authorization status. Valid values:</p>

@@ -36,6 +36,10 @@ public class DescribeHealthCheckListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return healthCheckList
      */
@@ -53,6 +57,14 @@ public class DescribeHealthCheckListResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<HealthCheckList> healthCheckList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeHealthCheckListResponseBody model) {
+            this.healthCheckList = model.healthCheckList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>An array that consists of information about the health check configuration.</p>
@@ -194,6 +206,20 @@ public class DescribeHealthCheckListResponseBody extends TeaModel {
             private String type; 
             private Integer up; 
             private String uri; 
+
+            private Builder() {
+            } 
+
+            private Builder(HealthCheck model) {
+                this.domain = model.domain;
+                this.down = model.down;
+                this.interval = model.interval;
+                this.port = model.port;
+                this.timeout = model.timeout;
+                this.type = model.type;
+                this.up = model.up;
+                this.uri = model.uri;
+            } 
 
             /**
              * <p>The domain name.</p>
@@ -367,6 +393,16 @@ public class DescribeHealthCheckListResponseBody extends TeaModel {
             private HealthCheck healthCheck; 
             private String instanceId; 
             private String protocol; 
+
+            private Builder() {
+            } 
+
+            private Builder(HealthCheckList model) {
+                this.frontendPort = model.frontendPort;
+                this.healthCheck = model.healthCheck;
+                this.instanceId = model.instanceId;
+                this.protocol = model.protocol;
+            } 
 
             /**
              * <p>The forwarding port.</p>

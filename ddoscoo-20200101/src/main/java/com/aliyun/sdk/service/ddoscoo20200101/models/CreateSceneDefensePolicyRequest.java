@@ -58,7 +58,7 @@ public class CreateSceneDefensePolicyRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -169,8 +169,8 @@ public class CreateSceneDefensePolicyRequest extends Request {
         /**
          * <p>The template of the policy. Valid values:</p>
          * <ul>
-         * <li><strong>promotion</strong>: important activity</li>
-         * <li><strong>bypass</strong>: all traffic forwarded</li>
+         * <li><strong>promotion</strong>: important activity.</li>
+         * <li><strong>bypass</strong>: all traffic forwarded.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

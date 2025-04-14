@@ -36,6 +36,10 @@ public class DescribeWebCustomPortsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeWebCustomPortsResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<WebCustomPorts> webCustomPorts; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeWebCustomPortsResponseBody model) {
+            this.requestId = model.requestId;
+            this.webCustomPorts = model.webCustomPorts;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -122,6 +134,14 @@ public class DescribeWebCustomPortsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> proxyPorts; 
             private String proxyType; 
+
+            private Builder() {
+            } 
+
+            private Builder(WebCustomPorts model) {
+                this.proxyPorts = model.proxyPorts;
+                this.proxyType = model.proxyType;
+            } 
 
             /**
              * <p>An array that consists of supported custom ports.</p>

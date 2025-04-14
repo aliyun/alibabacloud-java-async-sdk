@@ -56,7 +56,7 @@ public class DescribeDomainH2FingerprintRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }

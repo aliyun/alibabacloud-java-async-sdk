@@ -40,6 +40,10 @@ public class DescribeDefenseRecordsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return defenseRecords
      */
@@ -65,6 +69,15 @@ public class DescribeDefenseRecordsResponseBody extends TeaModel {
         private java.util.List<DefenseRecords> defenseRecords; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDefenseRecordsResponseBody model) {
+            this.defenseRecords = model.defenseRecords;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>An array that consists of details of the log of an advanced mitigation session.</p>
@@ -193,6 +206,18 @@ public class DescribeDefenseRecordsResponseBody extends TeaModel {
             private String instanceId; 
             private Long startTime; 
             private Integer status; 
+
+            private Builder() {
+            } 
+
+            private Builder(DefenseRecords model) {
+                this.attackPeak = model.attackPeak;
+                this.endTime = model.endTime;
+                this.eventCount = model.eventCount;
+                this.instanceId = model.instanceId;
+                this.startTime = model.startTime;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The peak attack traffic. Unit: bit/s.</p>

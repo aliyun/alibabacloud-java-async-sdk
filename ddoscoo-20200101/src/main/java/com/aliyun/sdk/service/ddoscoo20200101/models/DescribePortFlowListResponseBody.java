@@ -36,6 +36,10 @@ public class DescribePortFlowListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return portFlowList
      */
@@ -53,6 +57,14 @@ public class DescribePortFlowListResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<PortFlowList> portFlowList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePortFlowListResponseBody model) {
+            this.portFlowList = model.portFlowList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned traffic data.</p>
@@ -302,6 +314,29 @@ public class DescribePortFlowListResponseBody extends TeaModel {
             private Long slaPpsDropBps; 
             private Long slaPpsDropPps; 
             private Long time; 
+
+            private Builder() {
+            } 
+
+            private Builder(PortFlowList model) {
+                this.attackBps = model.attackBps;
+                this.attackPps = model.attackPps;
+                this.inBps = model.inBps;
+                this.inPps = model.inPps;
+                this.index = model.index;
+                this.outBps = model.outBps;
+                this.outPps = model.outPps;
+                this.region = model.region;
+                this.slaBpsDropBps = model.slaBpsDropBps;
+                this.slaBpsDropPps = model.slaBpsDropPps;
+                this.slaConnDropBps = model.slaConnDropBps;
+                this.slaConnDropPps = model.slaConnDropPps;
+                this.slaCpsDropBps = model.slaCpsDropBps;
+                this.slaCpsDropPps = model.slaCpsDropPps;
+                this.slaPpsDropBps = model.slaPpsDropBps;
+                this.slaPpsDropPps = model.slaPpsDropPps;
+                this.time = model.time;
+            } 
 
             /**
              * <p>The bandwidth of attack traffic. Unit: bit/s.</p>

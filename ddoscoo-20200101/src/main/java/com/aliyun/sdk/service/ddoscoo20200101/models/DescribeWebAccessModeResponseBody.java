@@ -36,6 +36,10 @@ public class DescribeWebAccessModeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domainModes
      */
@@ -53,6 +57,14 @@ public class DescribeWebAccessModeResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<DomainModes> domainModes; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeWebAccessModeResponseBody model) {
+            this.domainModes = model.domainModes;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>An array consisting of the modes in which the website service is added.</p>
@@ -122,6 +134,14 @@ public class DescribeWebAccessModeResponseBody extends TeaModel {
         public static final class Builder {
             private Integer accessMode; 
             private String domain; 
+
+            private Builder() {
+            } 
+
+            private Builder(DomainModes model) {
+                this.accessMode = model.accessMode;
+                this.domain = model.domain;
+            } 
 
             /**
              * <p>The mode in which the website service is added. Valid values:</p>

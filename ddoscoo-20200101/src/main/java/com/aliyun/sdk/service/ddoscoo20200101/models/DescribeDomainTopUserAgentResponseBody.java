@@ -36,6 +36,10 @@ public class DescribeDomainTopUserAgentResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domainTopUa
      */
@@ -53,6 +57,14 @@ public class DescribeDomainTopUserAgentResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<DomainTopUa> domainTopUa; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainTopUserAgentResponseBody model) {
+            this.domainTopUa = model.domainTopUa;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the user agents.</p>
@@ -134,6 +146,15 @@ public class DescribeDomainTopUserAgentResponseBody extends TeaModel {
             private String domain; 
             private Long pv; 
             private String userAgent; 
+
+            private Builder() {
+            } 
+
+            private Builder(DomainTopUa model) {
+                this.domain = model.domain;
+                this.pv = model.pv;
+                this.userAgent = model.userAgent;
+            } 
 
             /**
              * <p>The domain name of the website.</p>

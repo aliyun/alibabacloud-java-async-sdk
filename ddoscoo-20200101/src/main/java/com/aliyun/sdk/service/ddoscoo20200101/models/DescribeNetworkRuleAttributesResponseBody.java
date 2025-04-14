@@ -36,6 +36,10 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return networkRuleAttributes
      */
@@ -53,6 +57,14 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<NetworkRuleAttributes> networkRuleAttributes; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeNetworkRuleAttributesResponseBody model) {
+            this.networkRuleAttributes = model.networkRuleAttributes;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>An array that consists of the mitigation settings of the port forwarding rule for a non-website service. The mitigation settings include session persistence and DDoS mitigation policies.</p>
@@ -147,6 +159,16 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             private Integer expires; 
             private Integer type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Sblack model) {
+                this.cnt = model.cnt;
+                this.during = model.during;
+                this.expires = model.expires;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The threshold that the number of connections initiated from a source IP address can exceed the limit. Set the value to <strong>5</strong>. If the number of connections initiated from a source IP address exceeds the limit five times during the check, the source IP address is added to the blacklist.</p>
              * 
@@ -236,6 +258,13 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Sblack> sblack; 
 
+            private Builder() {
+            } 
+
+            private Builder(Cc model) {
+                this.sblack = model.sblack;
+            } 
+
             /**
              * <p>The protection policy that a source IP address is added to the blacklist when the number of connections initiated from the IP address frequently exceeds the limit.</p>
              */
@@ -294,6 +323,14 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
         public static final class Builder {
             private Integer max; 
             private Integer min; 
+
+            private Builder() {
+            } 
+
+            private Builder(PayloadLen model) {
+                this.max = model.max;
+                this.min = model.min;
+            } 
 
             /**
              * <p>The maximum length of a packet. Valid values: <strong>0</strong> to <strong>6000</strong>. Unit: bytes.</p>
@@ -391,6 +428,16 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             private Integer cpsEnable; 
             private Integer maxconn; 
             private Integer maxconnEnable; 
+
+            private Builder() {
+            } 
+
+            private Builder(Sla model) {
+                this.cps = model.cps;
+                this.cpsEnable = model.cpsEnable;
+                this.maxconn = model.maxconn;
+                this.maxconnEnable = model.maxconnEnable;
+            } 
 
             /**
              * <p>The maximum number of new connections per second that can be established over the port of the destination instance. Valid values: <strong>100</strong> to <strong>100000</strong>.</p>
@@ -554,6 +601,19 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             private Integer maxconn; 
             private Integer maxconnEnable; 
             private Long pps; 
+
+            private Builder() {
+            } 
+
+            private Builder(Slimit model) {
+                this.bps = model.bps;
+                this.cps = model.cps;
+                this.cpsEnable = model.cpsEnable;
+                this.cpsMode = model.cpsMode;
+                this.maxconn = model.maxconn;
+                this.maxconnEnable = model.maxconnEnable;
+                this.pps = model.pps;
+            } 
 
             /**
              * <p>The bandwidth limit for a source IP address. Valid values: <strong>1024</strong> to <strong>268435456</strong>. Unit: bytes/s. Default value: <strong>0</strong>, which indicates that the bandwidth for a source IP address is unlimited.</p>
@@ -755,6 +815,19 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             private Slimit slimit; 
             private String synproxy; 
 
+            private Builder() {
+            } 
+
+            private Builder(Config model) {
+                this.cc = model.cc;
+                this.nodataConn = model.nodataConn;
+                this.payloadLen = model.payloadLen;
+                this.persistenceTimeout = model.persistenceTimeout;
+                this.sla = model.sla;
+                this.slimit = model.slimit;
+                this.synproxy = model.synproxy;
+            } 
+
             /**
              * <p>The protection policy applied when the number of connections initiated from a source IP address frequently exceeds the limit.</p>
              */
@@ -902,6 +975,16 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             private Integer frontendPort; 
             private String instanceId; 
             private String protocol; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetworkRuleAttributes model) {
+                this.config = model.config;
+                this.frontendPort = model.frontendPort;
+                this.instanceId = model.instanceId;
+                this.protocol = model.protocol;
+            } 
 
             /**
              * <p>The mitigation settings of the port forwarding rule.</p>

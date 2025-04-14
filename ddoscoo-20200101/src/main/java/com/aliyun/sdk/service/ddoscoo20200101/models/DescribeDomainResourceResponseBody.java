@@ -40,6 +40,10 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
         private String requestId; 
         private Long totalCount; 
         private java.util.List<WebRules> webRules; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainResourceResponseBody model) {
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.webRules = model.webRules;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -145,6 +158,14 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> proxyPorts; 
             private String proxyType; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProxyTypes model) {
+                this.proxyPorts = model.proxyPorts;
+                this.proxyType = model.proxyType;
+            } 
 
             /**
              * <p>The port numbers.</p>
@@ -497,6 +518,37 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
             private String sslCiphers; 
             private String sslProtocols; 
             private java.util.List<String> whiteList; 
+
+            private Builder() {
+            } 
+
+            private Builder(WebRules model) {
+                this.blackList = model.blackList;
+                this.ccEnabled = model.ccEnabled;
+                this.ccRuleEnabled = model.ccRuleEnabled;
+                this.ccTemplate = model.ccTemplate;
+                this.certName = model.certName;
+                this.cname = model.cname;
+                this.customCiphers = model.customCiphers;
+                this.domain = model.domain;
+                this.http2Enable = model.http2Enable;
+                this.http2HttpsEnable = model.http2HttpsEnable;
+                this.https2HttpEnable = model.https2HttpEnable;
+                this.httpsExt = model.httpsExt;
+                this.instanceIds = model.instanceIds;
+                this.ocspEnabled = model.ocspEnabled;
+                this.policyMode = model.policyMode;
+                this.proxyEnabled = model.proxyEnabled;
+                this.proxyTypes = model.proxyTypes;
+                this.punishReason = model.punishReason;
+                this.punishStatus = model.punishStatus;
+                this.realServers = model.realServers;
+                this.rsType = model.rsType;
+                this.ssl13Enabled = model.ssl13Enabled;
+                this.sslCiphers = model.sslCiphers;
+                this.sslProtocols = model.sslProtocols;
+                this.whiteList = model.whiteList;
+            } 
 
             /**
              * <p>The IP addresses that are included in the blacklist of the domain name.</p>

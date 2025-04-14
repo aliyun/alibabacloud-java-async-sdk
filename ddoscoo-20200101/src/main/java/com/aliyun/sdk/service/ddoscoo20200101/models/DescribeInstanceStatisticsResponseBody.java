@@ -36,6 +36,10 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceStatistics
      */
@@ -53,6 +57,14 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<InstanceStatistics> instanceStatistics; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceStatisticsResponseBody model) {
+            this.instanceStatistics = model.instanceStatistics;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The statistics on the instance.</p>
@@ -158,6 +170,17 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
             private String instanceId; 
             private Integer portUsage; 
             private Integer siteUsage; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceStatistics model) {
+                this.defenseCountUsage = model.defenseCountUsage;
+                this.domainUsage = model.domainUsage;
+                this.instanceId = model.instanceId;
+                this.portUsage = model.portUsage;
+                this.siteUsage = model.siteUsage;
+            } 
 
             /**
              * <p>The number of advanced mitigation sessions that are used in this month.</p>

@@ -17,6 +17,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeWebReportTopIpRequest</p>
  */
 public class DescribeWebReportTopIpRequest extends Request {
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Domain")
     private String domain;
@@ -47,6 +51,7 @@ public class DescribeWebReportTopIpRequest extends Request {
 
     private DescribeWebReportTopIpRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.domain = builder.domain;
         this.endTime = builder.endTime;
         this.interval = builder.interval;
@@ -63,9 +68,16 @@ public class DescribeWebReportTopIpRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -111,6 +123,7 @@ public class DescribeWebReportTopIpRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeWebReportTopIpRequest, Builder> {
+        private String regionId; 
         private String domain; 
         private Long endTime; 
         private Integer interval; 
@@ -124,6 +137,7 @@ public class DescribeWebReportTopIpRequest extends Request {
 
         private Builder(DescribeWebReportTopIpRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.domain = request.domain;
             this.endTime = request.endTime;
             this.interval = request.interval;
@@ -131,6 +145,15 @@ public class DescribeWebReportTopIpRequest extends Request {
             this.startTime = request.startTime;
             this.top = request.top;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * <p>The domain name of the website.</p>
@@ -182,7 +205,7 @@ public class DescribeWebReportTopIpRequest extends Request {
         }
 
         /**
-         * <p>The source of the statistics. Valid value:</p>
+         * <p>The source of the statistics. Valid values:</p>
          * <ul>
          * <li><strong>visit</strong>: indicates all IP addresses.</li>
          * <li><strong>block</strong>: indicates blocked IP addresses.</li>

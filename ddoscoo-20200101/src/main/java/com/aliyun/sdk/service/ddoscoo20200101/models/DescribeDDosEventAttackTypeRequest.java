@@ -17,6 +17,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDDosEventAttackTypeRequest</p>
  */
 public class DescribeDDosEventAttackTypeRequest extends Request {
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EventType")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -34,6 +38,7 @@ public class DescribeDDosEventAttackTypeRequest extends Request {
 
     private DescribeDDosEventAttackTypeRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.eventType = builder.eventType;
         this.ip = builder.ip;
         this.startTime = builder.startTime;
@@ -47,9 +52,16 @@ public class DescribeDDosEventAttackTypeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -74,6 +86,7 @@ public class DescribeDDosEventAttackTypeRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeDDosEventAttackTypeRequest, Builder> {
+        private String regionId; 
         private String eventType; 
         private String ip; 
         private Long startTime; 
@@ -84,10 +97,20 @@ public class DescribeDDosEventAttackTypeRequest extends Request {
 
         private Builder(DescribeDDosEventAttackTypeRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.eventType = request.eventType;
             this.ip = request.ip;
             this.startTime = request.startTime;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * <p>The type of the attack event that you want to query. Valid values:</p>

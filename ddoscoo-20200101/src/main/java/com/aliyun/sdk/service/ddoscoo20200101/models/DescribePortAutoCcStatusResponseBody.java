@@ -36,6 +36,10 @@ public class DescribePortAutoCcStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return portAutoCcStatus
      */
@@ -53,6 +57,14 @@ public class DescribePortAutoCcStatusResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<PortAutoCcStatus> portAutoCcStatus; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePortAutoCcStatusResponseBody model) {
+            this.portAutoCcStatus = model.portAutoCcStatus;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>An array that consists of the configurations of the Intelligent Protection policy.</p>
@@ -146,6 +158,16 @@ public class DescribePortAutoCcStatusResponseBody extends TeaModel {
             private String _switch; 
             private String webMode; 
             private String webSwitch; 
+
+            private Builder() {
+            } 
+
+            private Builder(PortAutoCcStatus model) {
+                this.mode = model.mode;
+                this._switch = model._switch;
+                this.webMode = model.webMode;
+                this.webSwitch = model.webSwitch;
+            } 
 
             /**
              * <p>The mode of the Intelligent Protection policy. Valid values:</p>

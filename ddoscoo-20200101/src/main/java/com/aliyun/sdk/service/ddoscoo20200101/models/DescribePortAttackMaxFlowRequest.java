@@ -57,7 +57,7 @@ public class DescribePortAttackMaxFlowRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -143,7 +143,7 @@ public class DescribePortAttackMaxFlowRequest extends Request {
         }
 
         /**
-         * <p>An array that consists of the IDs of instances to query.</p>
+         * <p>The IDs of the Anti-DDoS Proxy instances to query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

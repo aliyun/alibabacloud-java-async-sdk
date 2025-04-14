@@ -40,6 +40,10 @@ public class DescribeInstanceExtResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceExtSpecs
      */
@@ -65,6 +69,15 @@ public class DescribeInstanceExtResponseBody extends TeaModel {
         private java.util.List<InstanceExtSpecs> instanceExtSpecs; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceExtResponseBody model) {
+            this.instanceExtSpecs = model.instanceExtSpecs;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The extended information about the Anti-DDoS Proxy instance.</p>
@@ -181,6 +194,17 @@ public class DescribeInstanceExtResponseBody extends TeaModel {
             private Long normalBandwidth; 
             private Long productPlan; 
             private String servicePartner; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceExtSpecs model) {
+                this.functionVersion = model.functionVersion;
+                this.instanceId = model.instanceId;
+                this.normalBandwidth = model.normalBandwidth;
+                this.productPlan = model.productPlan;
+                this.servicePartner = model.servicePartner;
+            } 
 
             /**
              * <p>The function plan. Valid values:</p>

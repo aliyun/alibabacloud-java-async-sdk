@@ -36,6 +36,10 @@ public class DescribePortConnsListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return connsList
      */
@@ -53,6 +57,14 @@ public class DescribePortConnsListResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<ConnsList> connsList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePortConnsListResponseBody model) {
+            this.connsList = model.connsList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Details about the connections established over the port.</p>
@@ -158,6 +170,17 @@ public class DescribePortConnsListResponseBody extends TeaModel {
             private Long cps; 
             private Long inActConns; 
             private Long index; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConnsList model) {
+                this.actConns = model.actConns;
+                this.conns = model.conns;
+                this.cps = model.cps;
+                this.inActConns = model.inActConns;
+                this.index = model.index;
+            } 
 
             /**
              * <p>The number of active connections.</p>

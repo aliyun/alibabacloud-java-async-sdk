@@ -36,6 +36,10 @@ public class DescribePortViewSourceProvincesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -54,6 +58,14 @@ public class DescribePortViewSourceProvincesResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<SourceProvinces> sourceProvinces; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribePortViewSourceProvincesResponseBody model) {
+            this.requestId = model.requestId;
+            this.sourceProvinces = model.sourceProvinces;
+        } 
+
         /**
          * <p>The ID of the request.</p>
          * 
@@ -66,7 +78,7 @@ public class DescribePortViewSourceProvincesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Details about the administrative region in China from which the requests are sent.</p>
+         * <p>The details of the administrative region in China from which the requests are sent.</p>
          */
         public Builder sourceProvinces(java.util.List<SourceProvinces> sourceProvinces) {
             this.sourceProvinces = sourceProvinces;
@@ -122,6 +134,14 @@ public class DescribePortViewSourceProvincesResponseBody extends TeaModel {
         public static final class Builder {
             private Long count; 
             private String provinceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(SourceProvinces model) {
+                this.count = model.count;
+                this.provinceId = model.provinceId;
+            } 
 
             /**
              * <p>The total number of requests that are sent from the ISP.</p>

@@ -52,7 +52,7 @@ public class AddAutoCcBlacklistRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -113,6 +113,13 @@ public class AddAutoCcBlacklistRequest extends Request {
         }
 
         /**
+         * <p>The IP addresses that you want to manage. This parameter is a JSON string. The string contains the following field:</p>
+         * <ul>
+         * <li><strong>src</strong>: the IP address. This field is required and must be of the STRING type.</li>
+         * </ul>
+         * <blockquote>
+         * <p> You can manually add up to 2,000 IP addresses to the IP address blacklist. Separate multiple IP addresses with spaces or line breaks.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

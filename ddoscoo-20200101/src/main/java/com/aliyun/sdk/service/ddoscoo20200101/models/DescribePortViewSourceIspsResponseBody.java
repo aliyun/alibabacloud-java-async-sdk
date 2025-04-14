@@ -36,6 +36,10 @@ public class DescribePortViewSourceIspsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return isps
      */
@@ -53,6 +57,14 @@ public class DescribePortViewSourceIspsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Isps> isps; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePortViewSourceIspsResponseBody model) {
+            this.isps = model.isps;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>An array that consists of the details of the ISP.</p>
@@ -122,6 +134,14 @@ public class DescribePortViewSourceIspsResponseBody extends TeaModel {
         public static final class Builder {
             private Long count; 
             private String ispId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Isps model) {
+                this.count = model.count;
+                this.ispId = model.ispId;
+            } 
 
             /**
              * <p>The total number of requests that are sent from the ISP.</p>

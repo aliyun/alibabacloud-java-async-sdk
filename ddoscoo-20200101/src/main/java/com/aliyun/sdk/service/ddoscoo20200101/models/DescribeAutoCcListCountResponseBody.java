@@ -40,6 +40,10 @@ public class DescribeAutoCcListCountResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return blackCount
      */
@@ -65,6 +69,15 @@ public class DescribeAutoCcListCountResponseBody extends TeaModel {
         private Integer blackCount; 
         private String requestId; 
         private Integer whiteCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAutoCcListCountResponseBody model) {
+            this.blackCount = model.blackCount;
+            this.requestId = model.requestId;
+            this.whiteCount = model.whiteCount;
+        } 
 
         /**
          * <p>The total number of IP addresses in the blacklist.</p>

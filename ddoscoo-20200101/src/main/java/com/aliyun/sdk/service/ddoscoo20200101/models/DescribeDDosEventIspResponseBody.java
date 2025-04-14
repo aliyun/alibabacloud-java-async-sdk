@@ -36,6 +36,10 @@ public class DescribeDDosEventIspResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return isps
      */
@@ -53,6 +57,14 @@ public class DescribeDDosEventIspResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Isps> isps; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDDosEventIspResponseBody model) {
+            this.isps = model.isps;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ISPs for the volumetric attack.</p>
@@ -122,6 +134,14 @@ public class DescribeDDosEventIspResponseBody extends TeaModel {
         public static final class Builder {
             private Long inPkts; 
             private String isp; 
+
+            private Builder() {
+            } 
+
+            private Builder(Isps model) {
+                this.inPkts = model.inPkts;
+                this.isp = model.isp;
+            } 
 
             /**
              * <p>The number of request packets that were sent from the ISP.</p>

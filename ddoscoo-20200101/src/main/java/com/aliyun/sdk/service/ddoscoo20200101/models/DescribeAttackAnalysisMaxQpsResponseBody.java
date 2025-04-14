@@ -36,6 +36,10 @@ public class DescribeAttackAnalysisMaxQpsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return qps
      */
@@ -53,6 +57,14 @@ public class DescribeAttackAnalysisMaxQpsResponseBody extends TeaModel {
     public static final class Builder {
         private Long qps; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAttackAnalysisMaxQpsResponseBody model) {
+            this.qps = model.qps;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The peak queries per second (QPS) of DDoS attacks. Units: QPS.</p>

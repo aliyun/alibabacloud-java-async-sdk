@@ -36,6 +36,10 @@ public class DescribeNetworkRegionBlockResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return config
      */
@@ -53,6 +57,14 @@ public class DescribeNetworkRegionBlockResponseBody extends TeaModel {
     public static final class Builder {
         private Config config; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeNetworkRegionBlockResponseBody model) {
+            this.config = model.config;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The configuration of blocked locations.</p>
@@ -134,6 +146,15 @@ public class DescribeNetworkRegionBlockResponseBody extends TeaModel {
             private java.util.List<Long> countries; 
             private java.util.List<Long> provinces; 
             private String regionBlockSwitch; 
+
+            private Builder() {
+            } 
+
+            private Builder(Config model) {
+                this.countries = model.countries;
+                this.provinces = model.provinces;
+                this.regionBlockSwitch = model.regionBlockSwitch;
+            } 
 
             /**
              * <p>The codes of the countries or areas from which the requests are blocked.</p>

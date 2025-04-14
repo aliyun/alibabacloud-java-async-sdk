@@ -17,6 +17,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDDosEventMaxRequest</p>
  */
 public class DescribeDDosEventMaxRequest extends Request {
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndTime")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -29,6 +33,7 @@ public class DescribeDDosEventMaxRequest extends Request {
 
     private DescribeDDosEventMaxRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.endTime = builder.endTime;
         this.startTime = builder.startTime;
     }
@@ -41,9 +46,16 @@ public class DescribeDDosEventMaxRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -61,6 +73,7 @@ public class DescribeDDosEventMaxRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeDDosEventMaxRequest, Builder> {
+        private String regionId; 
         private Long endTime; 
         private Long startTime; 
 
@@ -70,9 +83,19 @@ public class DescribeDDosEventMaxRequest extends Request {
 
         private Builder(DescribeDDosEventMaxRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.endTime = request.endTime;
             this.startTime = request.startTime;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>

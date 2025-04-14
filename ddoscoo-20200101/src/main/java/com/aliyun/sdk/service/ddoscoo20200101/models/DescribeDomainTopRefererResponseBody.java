@@ -36,6 +36,10 @@ public class DescribeDomainTopRefererResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domainTopReferer
      */
@@ -53,6 +57,14 @@ public class DescribeDomainTopRefererResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<DomainTopReferer> domainTopReferer; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainTopRefererResponseBody model) {
+            this.domainTopReferer = model.domainTopReferer;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about top referers.</p>
@@ -134,6 +146,15 @@ public class DescribeDomainTopRefererResponseBody extends TeaModel {
             private String domain; 
             private Long pv; 
             private String referer; 
+
+            private Builder() {
+            } 
+
+            private Builder(DomainTopReferer model) {
+                this.domain = model.domain;
+                this.pv = model.pv;
+                this.referer = model.referer;
+            } 
 
             /**
              * <p>The domain name of the website.</p>

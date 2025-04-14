@@ -40,6 +40,10 @@ public class DescribePortResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return networkRules
      */
@@ -65,6 +69,15 @@ public class DescribePortResponseBody extends TeaModel {
         private java.util.List<NetworkRules> networkRules; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePortResponseBody model) {
+            this.networkRules = model.networkRules;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>An array that consists of port forwarding rules.</p>
@@ -193,6 +206,18 @@ public class DescribePortResponseBody extends TeaModel {
             private String instanceId; 
             private Boolean isAutoCreate; 
             private java.util.List<String> realServers; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetworkRules model) {
+                this.backendPort = model.backendPort;
+                this.frontendPort = model.frontendPort;
+                this.frontendProtocol = model.frontendProtocol;
+                this.instanceId = model.instanceId;
+                this.isAutoCreate = model.isAutoCreate;
+                this.realServers = model.realServers;
+            } 
 
             /**
              * <p>The port of the origin server.</p>

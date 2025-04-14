@@ -46,7 +46,7 @@ public class ModifyOcspStatusRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -116,10 +116,13 @@ public class ModifyOcspStatusRequest extends Request {
         /**
          * <p>Specifies whether to enable the OCSP feature. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: yes</li>
-         * <li><strong>0</strong>: no</li>
+         * <li><strong>1</strong>: yes.</li>
+         * <li><strong>0</strong>: no.</li>
          * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder enable(Integer enable) {
             this.putQueryParameter("Enable", enable);

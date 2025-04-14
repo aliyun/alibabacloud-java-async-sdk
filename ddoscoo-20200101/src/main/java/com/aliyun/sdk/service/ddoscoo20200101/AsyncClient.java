@@ -56,6 +56,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ConfigDomainSecurityProfileResponse> configDomainSecurityProfile(ConfigDomainSecurityProfileRequest request);
 
     /**
+     * @param request the request parameters of ConfigL7GlobalRule  ConfigL7GlobalRuleRequest
+     * @return ConfigL7GlobalRuleResponse
+     */
+    CompletableFuture<ConfigL7GlobalRuleResponse> configL7GlobalRule(ConfigL7GlobalRuleRequest request);
+
+    /**
      * <b>description</b> :
      * <p>If multiple origin servers are configured for a website that is added to Anti-DDoS Pro or Anti-DDoS Premium, you can modify the load balancing algorithms for back-to-origin traffic based on back-to-origin policies. The IP hash algorithm is used by default. You can change the algorithm to the round-robin or least response time algorithm. For more information, see the description of the <strong>Policy</strong> parameter in the &quot;Request parameters&quot; section of this topic.</p>
      * 
@@ -364,6 +370,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeBlockStatusResponse> describeBlockStatus(DescribeBlockStatusRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This operation is used to query all applicable certificates of a domain name that you want to add to Anti-DDoS Proxy. Multiple certificates may be queried for a domain name. You can use an exact domain name to query exact-domain certificates or wildcard-domain certificates.</p>
+     * <blockquote>
+     * <p> If you want to query the certificate that is in use for the current domain name, you can call the <a href="https://help.aliyun.com/document_detail/473610.html">DescribeWebRules</a> operation to obtain the values of the CertName and CertRegion parameters. Then, you can call the <a href="https://help.aliyun.com/document_detail/411733.html">ListUserCertificateOrder</a> operation of Certificate Management Service to query the ID and other details of the certificate by using the value of the CertName parameter.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of DescribeCerts  DescribeCertsRequest
      * @return DescribeCertsResponse
      */
@@ -688,6 +700,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeInstancesResponse
      */
     CompletableFuture<DescribeInstancesResponse> describeInstances(DescribeInstancesRequest request);
+
+    /**
+     * @param request the request parameters of DescribeL7GlobalRule  DescribeL7GlobalRuleRequest
+     * @return DescribeL7GlobalRuleResponse
+     */
+    CompletableFuture<DescribeL7GlobalRuleResponse> describeL7GlobalRule(DescribeL7GlobalRuleRequest request);
 
     /**
      * @param request the request parameters of DescribeL7RsPolicy  DescribeL7RsPolicyRequest
@@ -1388,6 +1406,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyWebPreciseAccessSwitchResponse> modifyWebPreciseAccessSwitch(ModifyWebPreciseAccessSwitchRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Debugging</h2>
+     * <p><a href="https://api.aliyun.com/#product=ddoscoo%5C&api=ModifyWebRule%5C&type=RPC%5C&version=2020-01-01">OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.</a></p>
+     * 
      * @param request the request parameters of ModifyWebRule  ModifyWebRuleRequest
      * @return ModifyWebRuleResponse
      */

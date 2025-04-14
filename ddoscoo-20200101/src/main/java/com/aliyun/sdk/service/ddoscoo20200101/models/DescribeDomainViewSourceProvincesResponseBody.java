@@ -36,6 +36,10 @@ public class DescribeDomainViewSourceProvincesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeDomainViewSourceProvincesResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<SourceProvinces> sourceProvinces; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainViewSourceProvincesResponseBody model) {
+            this.requestId = model.requestId;
+            this.sourceProvinces = model.sourceProvinces;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -122,6 +134,14 @@ public class DescribeDomainViewSourceProvincesResponseBody extends TeaModel {
         public static final class Builder {
             private Long count; 
             private String provinceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(SourceProvinces model) {
+                this.count = model.count;
+                this.provinceId = model.provinceId;
+            } 
 
             /**
              * <p>The total number of requests.</p>

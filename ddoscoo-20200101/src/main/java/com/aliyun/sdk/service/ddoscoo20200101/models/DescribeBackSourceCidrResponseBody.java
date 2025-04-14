@@ -36,6 +36,10 @@ public class DescribeBackSourceCidrResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cidrs
      */
@@ -53,6 +57,14 @@ public class DescribeBackSourceCidrResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<String> cidrs; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeBackSourceCidrResponseBody model) {
+            this.cidrs = model.cidrs;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>An array that consists of the back-to-origin CIDR blocks of the instance.</p>

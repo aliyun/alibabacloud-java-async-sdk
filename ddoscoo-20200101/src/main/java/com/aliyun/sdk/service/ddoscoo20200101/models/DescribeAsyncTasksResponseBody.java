@@ -40,6 +40,10 @@ public class DescribeAsyncTasksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return asyncTasks
      */
@@ -65,6 +69,15 @@ public class DescribeAsyncTasksResponseBody extends TeaModel {
         private java.util.List<AsyncTasks> asyncTasks; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAsyncTasksResponseBody model) {
+            this.asyncTasks = model.asyncTasks;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>An array that consists of the details of the asynchronous export tasks.</p>
@@ -205,6 +218,19 @@ public class DescribeAsyncTasksResponseBody extends TeaModel {
             private String taskResult; 
             private Integer taskStatus; 
             private Integer taskType; 
+
+            private Builder() {
+            } 
+
+            private Builder(AsyncTasks model) {
+                this.endTime = model.endTime;
+                this.startTime = model.startTime;
+                this.taskId = model.taskId;
+                this.taskParams = model.taskParams;
+                this.taskResult = model.taskResult;
+                this.taskStatus = model.taskStatus;
+                this.taskType = model.taskType;
+            } 
 
             /**
              * <p>The end time of the task. This value is a UNIX timestamp. Unit: milliseconds.</p>

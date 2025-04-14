@@ -40,6 +40,10 @@ public class CreateSchedulerRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cname
      */
@@ -65,6 +69,15 @@ public class CreateSchedulerRuleResponseBody extends TeaModel {
         private String cname; 
         private String requestId; 
         private String ruleName; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateSchedulerRuleResponseBody model) {
+            this.cname = model.cname;
+            this.requestId = model.requestId;
+            this.ruleName = model.ruleName;
+        } 
 
         /**
          * <p>The CNAME that is assigned by Sec-Traffic Manager for the scheduling rule.</p>

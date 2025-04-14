@@ -36,6 +36,10 @@ public class DescribePortCcAttackTopIPResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribePortCcAttackTopIPResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<TopIp> topIp; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePortCcAttackTopIPResponseBody model) {
+            this.requestId = model.requestId;
+            this.topIp = model.topIp;
+        } 
 
         /**
          * <p>The request ID, which is used to locate and troubleshoot issues.</p>
@@ -134,6 +146,15 @@ public class DescribePortCcAttackTopIPResponseBody extends TeaModel {
             private String areaId; 
             private Long pv; 
             private String srcIp; 
+
+            private Builder() {
+            } 
+
+            private Builder(TopIp model) {
+                this.areaId = model.areaId;
+                this.pv = model.pv;
+                this.srcIp = model.srcIp;
+            } 
 
             /**
              * <p>The code of the location from which the attack is initiated. For more information, see <a href="https://help.aliyun.com/document_detail/167926.html">Codes of administrative regions in China and codes of countries and areas</a>. For example, <strong>110000</strong> indicates Beijing, China, and <strong>us</strong> indicates the United States.</p>

@@ -40,6 +40,10 @@ public class DescribeWebCCRulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class DescribeWebCCRulesResponseBody extends TeaModel {
         private String requestId; 
         private Long totalCount; 
         private java.util.List<WebCCRules> webCCRules; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeWebCCRulesResponseBody model) {
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.webCCRules = model.webCCRules;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -205,6 +218,19 @@ public class DescribeWebCCRulesResponseBody extends TeaModel {
             private String name; 
             private Integer ttl; 
             private String uri; 
+
+            private Builder() {
+            } 
+
+            private Builder(WebCCRules model) {
+                this.act = model.act;
+                this.count = model.count;
+                this.interval = model.interval;
+                this.mode = model.mode;
+                this.name = model.name;
+                this.ttl = model.ttl;
+                this.uri = model.uri;
+            } 
 
             /**
              * <p>The action triggered if the rule is matched. Valid values:</p>

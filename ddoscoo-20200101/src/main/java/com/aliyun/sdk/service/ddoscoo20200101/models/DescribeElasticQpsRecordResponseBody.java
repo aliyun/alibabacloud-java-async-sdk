@@ -36,6 +36,10 @@ public class DescribeElasticQpsRecordResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return elasticQpsList
      */
@@ -53,6 +57,14 @@ public class DescribeElasticQpsRecordResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<ElasticQpsList> elasticQpsList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeElasticQpsRecordResponseBody model) {
+            this.elasticQpsList = model.elasticQpsList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The QPS information about the instance.</p>
@@ -206,6 +218,21 @@ public class DescribeElasticQpsRecordResponseBody extends TeaModel {
             private Long qps; 
             private Long qpsPeak; 
             private Long status; 
+
+            private Builder() {
+            } 
+
+            private Builder(ElasticQpsList model) {
+                this.date = model.date;
+                this.instanceId = model.instanceId;
+                this.ip = model.ip;
+                this.opsElasticQps = model.opsElasticQps;
+                this.opsQps = model.opsQps;
+                this.originQps = model.originQps;
+                this.qps = model.qps;
+                this.qpsPeak = model.qpsPeak;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The timestamp. Unit: milliseconds.</p>

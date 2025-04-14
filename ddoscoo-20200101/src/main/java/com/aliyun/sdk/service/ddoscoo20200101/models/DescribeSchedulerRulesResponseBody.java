@@ -40,6 +40,10 @@ public class DescribeSchedulerRulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class DescribeSchedulerRulesResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<SchedulerRules> schedulerRules; 
         private String totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSchedulerRulesResponseBody model) {
+            this.requestId = model.requestId;
+            this.schedulerRules = model.schedulerRules;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * RequestId.
@@ -128,6 +141,13 @@ public class DescribeSchedulerRulesResponseBody extends TeaModel {
         public static final class Builder {
             private String cloudInstanceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ParamData model) {
+                this.cloudInstanceId = model.cloudInstanceId;
+            } 
+
             /**
              * CloudInstanceId.
              */
@@ -186,6 +206,14 @@ public class DescribeSchedulerRulesResponseBody extends TeaModel {
         public static final class Builder {
             private ParamData paramData; 
             private String paramType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Param model) {
+                this.paramData = model.paramData;
+                this.paramType = model.paramType;
+            } 
 
             /**
              * ParamData.
@@ -325,6 +353,20 @@ public class DescribeSchedulerRulesResponseBody extends TeaModel {
             private String type; 
             private String value; 
             private Integer valueType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.line = model.line;
+                this.priority = model.priority;
+                this.regionId = model.regionId;
+                this.restoreDelay = model.restoreDelay;
+                this.status = model.status;
+                this.type = model.type;
+                this.value = model.value;
+                this.valueType = model.valueType;
+            } 
 
             /**
              * Line.
@@ -476,6 +518,17 @@ public class DescribeSchedulerRulesResponseBody extends TeaModel {
             private String ruleName; 
             private String ruleType; 
             private java.util.List<Rules> rules; 
+
+            private Builder() {
+            } 
+
+            private Builder(SchedulerRules model) {
+                this.cname = model.cname;
+                this.param = model.param;
+                this.ruleName = model.ruleName;
+                this.ruleType = model.ruleType;
+                this.rules = model.rules;
+            } 
 
             /**
              * Cname.

@@ -40,6 +40,10 @@ public class DescribeUnBlackholeCountResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return remainCount
      */
@@ -65,6 +69,15 @@ public class DescribeUnBlackholeCountResponseBody extends TeaModel {
         private Integer remainCount; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeUnBlackholeCountResponseBody model) {
+            this.remainCount = model.remainCount;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The remaining quota that you can deactivate blackhole filtering.</p>

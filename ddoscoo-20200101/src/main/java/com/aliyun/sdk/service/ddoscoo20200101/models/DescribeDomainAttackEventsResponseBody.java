@@ -40,6 +40,10 @@ public class DescribeDomainAttackEventsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domainAttackEvents
      */
@@ -65,6 +69,15 @@ public class DescribeDomainAttackEventsResponseBody extends TeaModel {
         private java.util.List<DomainAttackEvents> domainAttackEvents; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainAttackEventsResponseBody model) {
+            this.domainAttackEvents = model.domainAttackEvents;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>An array that consists of the details of the DDoS attack event.</p>
@@ -169,6 +182,16 @@ public class DescribeDomainAttackEventsResponseBody extends TeaModel {
             private Long endTime; 
             private Long maxQps; 
             private Long startTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(DomainAttackEvents model) {
+                this.domain = model.domain;
+                this.endTime = model.endTime;
+                this.maxQps = model.maxQps;
+                this.startTime = model.startTime;
+            } 
 
             /**
              * <p>The attacked domain name.</p>

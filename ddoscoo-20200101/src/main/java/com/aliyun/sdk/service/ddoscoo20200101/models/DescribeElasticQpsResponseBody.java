@@ -36,6 +36,10 @@ public class DescribeElasticQpsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return elasticQps
      */
@@ -53,6 +57,14 @@ public class DescribeElasticQpsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<ElasticQps> elasticQps; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeElasticQpsResponseBody model) {
+            this.elasticQps = model.elasticQps;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the burstable QPS.</p>
@@ -206,6 +218,21 @@ public class DescribeElasticQpsResponseBody extends TeaModel {
             private Long status4; 
             private Long status5; 
             private Long ups; 
+
+            private Builder() {
+            } 
+
+            private Builder(ElasticQps model) {
+                this.index = model.index;
+                this.maxNormalQps = model.maxNormalQps;
+                this.maxQps = model.maxQps;
+                this.pv = model.pv;
+                this.status2 = model.status2;
+                this.status3 = model.status3;
+                this.status4 = model.status4;
+                this.status5 = model.status5;
+                this.ups = model.ups;
+            } 
 
             /**
              * <p>The index number of the returned data.</p>

@@ -36,6 +36,10 @@ public class DescribeDomainH2FingerprintResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domainH2Fp
      */
@@ -53,6 +57,14 @@ public class DescribeDomainH2FingerprintResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<DomainH2Fp> domainH2Fp; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainH2FingerprintResponseBody model) {
+            this.domainH2Fp = model.domainH2Fp;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about top N HTTP/2 fingerprints.</p>
@@ -134,6 +146,15 @@ public class DescribeDomainH2FingerprintResponseBody extends TeaModel {
             private String domain; 
             private String h2Fingerprint; 
             private Long pv; 
+
+            private Builder() {
+            } 
+
+            private Builder(DomainH2Fp model) {
+                this.domain = model.domain;
+                this.h2Fingerprint = model.h2Fingerprint;
+                this.pv = model.pv;
+            } 
 
             /**
              * <p>The domain name of the website.</p>

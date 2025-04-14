@@ -36,6 +36,10 @@ public class DescribeDomainTopHttpMethodResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domainTopMethod
      */
@@ -53,6 +57,14 @@ public class DescribeDomainTopHttpMethodResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<DomainTopMethod> domainTopMethod; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainTopHttpMethodResponseBody model) {
+            this.domainTopMethod = model.domainTopMethod;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about top HTTP methods.</p>
@@ -134,6 +146,15 @@ public class DescribeDomainTopHttpMethodResponseBody extends TeaModel {
             private String domain; 
             private String httpMethod; 
             private Long pv; 
+
+            private Builder() {
+            } 
+
+            private Builder(DomainTopMethod model) {
+                this.domain = model.domain;
+                this.httpMethod = model.httpMethod;
+                this.pv = model.pv;
+            } 
 
             /**
              * <p>The domain name of the website.</p>

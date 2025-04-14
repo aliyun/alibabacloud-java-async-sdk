@@ -64,6 +64,10 @@ public class DescribeLayer4RulePolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return backendPort
      */
@@ -137,6 +141,21 @@ public class DescribeLayer4RulePolicyResponseBody extends TeaModel {
         private java.util.List<PriRealServers> priRealServers; 
         private String requestId; 
         private java.util.List<SecRealServers> secRealServers; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeLayer4RulePolicyResponseBody model) {
+            this.backendPort = model.backendPort;
+            this.bakMode = model.bakMode;
+            this.currentIndex = model.currentIndex;
+            this.forwardProtocol = model.forwardProtocol;
+            this.frontendPort = model.frontendPort;
+            this.instanceId = model.instanceId;
+            this.priRealServers = model.priRealServers;
+            this.requestId = model.requestId;
+            this.secRealServers = model.secRealServers;
+        } 
 
         /**
          * <p>The port of the origin server.</p>
@@ -337,6 +356,18 @@ public class DescribeLayer4RulePolicyResponseBody extends TeaModel {
             private String protocol; 
             private String realServer; 
 
+            private Builder() {
+            } 
+
+            private Builder(PriRealServers model) {
+                this.currentIndex = model.currentIndex;
+                this.eip = model.eip;
+                this.frontendPort = model.frontendPort;
+                this.instanceId = model.instanceId;
+                this.protocol = model.protocol;
+                this.realServer = model.realServer;
+            } 
+
             /**
              * <p>The origin server that is used to receive service traffic. Valid values:</p>
              * <ul>
@@ -505,6 +536,18 @@ public class DescribeLayer4RulePolicyResponseBody extends TeaModel {
             private String instanceId; 
             private String protocol; 
             private String realServer; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecRealServers model) {
+                this.currentIndex = model.currentIndex;
+                this.eip = model.eip;
+                this.frontendPort = model.frontendPort;
+                this.instanceId = model.instanceId;
+                this.protocol = model.protocol;
+                this.realServer = model.realServer;
+            } 
 
             /**
              * <p>The origin server that is used to receive service traffic. Valid values:</p>

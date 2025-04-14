@@ -44,6 +44,10 @@ public class DescribeDDosEventMaxResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cps
      */
@@ -77,6 +81,16 @@ public class DescribeDDosEventMaxResponseBody extends TeaModel {
         private Long mbps; 
         private Long qps; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDDosEventMaxResponseBody model) {
+            this.cps = model.cps;
+            this.mbps = model.mbps;
+            this.qps = model.qps;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The peak of connection flood attacks. Unit: connections per seconds (CPS).</p>

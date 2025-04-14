@@ -40,6 +40,10 @@ public class DescribeDDoSEventsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dDoSEvents
      */
@@ -65,6 +69,15 @@ public class DescribeDDoSEventsResponseBody extends TeaModel {
         private java.util.List<DDoSEvents> dDoSEvents; 
         private String requestId; 
         private Long total; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDDoSEventsResponseBody model) {
+            this.dDoSEvents = model.dDoSEvents;
+            this.requestId = model.requestId;
+            this.total = model.total;
+        } 
 
         /**
          * <p>The DDoS attack events.</p>
@@ -217,6 +230,20 @@ public class DescribeDDoSEventsResponseBody extends TeaModel {
             private Long pps; 
             private String region; 
             private Long startTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(DDoSEvents model) {
+                this.bps = model.bps;
+                this.endTime = model.endTime;
+                this.eventType = model.eventType;
+                this.ip = model.ip;
+                this.port = model.port;
+                this.pps = model.pps;
+                this.region = model.region;
+                this.startTime = model.startTime;
+            } 
 
             /**
              * <p>The bandwidth of attack traffic. Unit: bit/s.</p>

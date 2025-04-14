@@ -48,6 +48,10 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return attributes
      */
@@ -89,6 +93,17 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
         private String requestId; 
         private Long rsAttrRwTimeoutMax; 
         private Integer upstreamRetry; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeL7RsPolicyResponseBody model) {
+            this.attributes = model.attributes;
+            this.proxyMode = model.proxyMode;
+            this.requestId = model.requestId;
+            this.rsAttrRwTimeoutMax = model.rsAttrRwTimeoutMax;
+            this.upstreamRetry = model.upstreamRetry;
+        } 
 
         /**
          * <p>The details about the parameters for back-to-origin settings.</p>
@@ -261,6 +276,19 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
             private Integer sendTimeout; 
             private Integer weight; 
 
+            private Builder() {
+            } 
+
+            private Builder(Attribute model) {
+                this.connectTimeout = model.connectTimeout;
+                this.failTimeout = model.failTimeout;
+                this.maxFails = model.maxFails;
+                this.mode = model.mode;
+                this.readTimeout = model.readTimeout;
+                this.sendTimeout = model.sendTimeout;
+                this.weight = model.weight;
+            } 
+
             /**
              * <p>The timeout period for a new connection. Valid values: <strong>1</strong> to <strong>10</strong>. Unit: seconds. Default value: <strong>5</strong>.</p>
              * 
@@ -405,6 +433,15 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
             private Attribute attribute; 
             private String realServer; 
             private Integer rsType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Attributes model) {
+                this.attribute = model.attribute;
+                this.realServer = model.realServer;
+                this.rsType = model.rsType;
+            } 
 
             /**
              * <p>The parameters for back-to-origin settings.</p>

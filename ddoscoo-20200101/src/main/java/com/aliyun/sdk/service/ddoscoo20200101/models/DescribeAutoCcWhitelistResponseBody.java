@@ -40,6 +40,10 @@ public class DescribeAutoCcWhitelistResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return autoCcWhitelist
      */
@@ -65,6 +69,15 @@ public class DescribeAutoCcWhitelistResponseBody extends TeaModel {
         private java.util.List<AutoCcWhitelist> autoCcWhitelist; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAutoCcWhitelistResponseBody model) {
+            this.autoCcWhitelist = model.autoCcWhitelist;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>An array that consists of details of the IP address in the whitelist of the instance.</p>
@@ -169,6 +182,16 @@ public class DescribeAutoCcWhitelistResponseBody extends TeaModel {
             private Long endTime; 
             private String sourceIp; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(AutoCcWhitelist model) {
+                this.destIp = model.destIp;
+                this.endTime = model.endTime;
+                this.sourceIp = model.sourceIp;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The IP address of the instance.</p>

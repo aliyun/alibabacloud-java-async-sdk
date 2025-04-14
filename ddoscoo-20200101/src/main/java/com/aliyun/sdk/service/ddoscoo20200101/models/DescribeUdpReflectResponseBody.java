@@ -36,6 +36,10 @@ public class DescribeUdpReflectResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeUdpReflectResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<String> udpSports; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeUdpReflectResponseBody model) {
+            this.requestId = model.requestId;
+            this.udpSports = model.udpSports;
+        } 
 
         /**
          * <p>The ID of the request.</p>

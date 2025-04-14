@@ -36,6 +36,10 @@ public class DescribeWebCacheConfigsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domainCacheConfigs
      */
@@ -53,6 +57,14 @@ public class DescribeWebCacheConfigsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<DomainCacheConfigs> domainCacheConfigs; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeWebCacheConfigsResponseBody model) {
+            this.domainCacheConfigs = model.domainCacheConfigs;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>An array that consists of Static Page Caching configurations.</p>
@@ -146,6 +158,16 @@ public class DescribeWebCacheConfigsResponseBody extends TeaModel {
             private String mode; 
             private String name; 
             private String uri; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomRules model) {
+                this.cacheTtl = model.cacheTtl;
+                this.mode = model.mode;
+                this.name = model.name;
+                this.uri = model.uri;
+            } 
 
             /**
              * <p>The expiration time of the page cache. Unit: seconds.</p>
@@ -270,6 +292,16 @@ public class DescribeWebCacheConfigsResponseBody extends TeaModel {
             private String domain; 
             private Integer enable; 
             private String mode; 
+
+            private Builder() {
+            } 
+
+            private Builder(DomainCacheConfigs model) {
+                this.customRules = model.customRules;
+                this.domain = model.domain;
+                this.enable = model.enable;
+                this.mode = model.mode;
+            } 
 
             /**
              * <p>An array that consists of custom caching rules.</p>

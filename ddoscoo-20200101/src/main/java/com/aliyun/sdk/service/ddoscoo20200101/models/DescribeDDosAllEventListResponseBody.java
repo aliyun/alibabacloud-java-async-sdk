@@ -40,6 +40,10 @@ public class DescribeDDosAllEventListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return attackEvents
      */
@@ -66,8 +70,17 @@ public class DescribeDDosAllEventListResponseBody extends TeaModel {
         private String requestId; 
         private Long total; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeDDosAllEventListResponseBody model) {
+            this.attackEvents = model.attackEvents;
+            this.requestId = model.requestId;
+            this.total = model.total;
+        } 
+
         /**
-         * <p>An array that consists of attack events.</p>
+         * <p>The DDoS attack events.</p>
          */
         public Builder attackEvents(java.util.List<AttackEvents> attackEvents) {
             this.attackEvents = attackEvents;
@@ -217,6 +230,20 @@ public class DescribeDDosAllEventListResponseBody extends TeaModel {
             private String port; 
             private Long pps; 
             private Long startTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(AttackEvents model) {
+                this.area = model.area;
+                this.endTime = model.endTime;
+                this.eventType = model.eventType;
+                this.ip = model.ip;
+                this.mbps = model.mbps;
+                this.port = model.port;
+                this.pps = model.pps;
+                this.startTime = model.startTime;
+            } 
 
             /**
              * <p>The source location or region from which the attack was initiated. Valid values:</p>

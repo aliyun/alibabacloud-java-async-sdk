@@ -69,7 +69,7 @@ public class ModifyDomainResourceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -293,6 +293,14 @@ public class ModifyDomainResourceRequest extends Request {
         public static final class Builder {
             private java.util.List<Integer> proxyPorts; 
             private String proxyType; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProxyTypes model) {
+                this.proxyPorts = model.proxyPorts;
+                this.proxyType = model.proxyType;
+            } 
 
             /**
              * <p>The port numbers.</p>

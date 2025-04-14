@@ -36,6 +36,10 @@ public class DescribePortMaxConnsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return portMaxConns
      */
@@ -54,8 +58,16 @@ public class DescribePortMaxConnsResponseBody extends TeaModel {
         private java.util.List<PortMaxConns> portMaxConns; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribePortMaxConnsResponseBody model) {
+            this.portMaxConns = model.portMaxConns;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>An array consisting of the details of the maximum number of connections that are established over a port of the instance.</p>
+         * <p>The details of the maximum number of connections that can be established over a port of the instance.</p>
          */
         public Builder portMaxConns(java.util.List<PortMaxConns> portMaxConns) {
             this.portMaxConns = portMaxConns;
@@ -134,6 +146,15 @@ public class DescribePortMaxConnsResponseBody extends TeaModel {
             private Long cps; 
             private String ip; 
             private String port; 
+
+            private Builder() {
+            } 
+
+            private Builder(PortMaxConns model) {
+                this.cps = model.cps;
+                this.ip = model.ip;
+                this.port = model.port;
+            } 
 
             /**
              * <p>The maximum number of connections per second (CPS).</p>

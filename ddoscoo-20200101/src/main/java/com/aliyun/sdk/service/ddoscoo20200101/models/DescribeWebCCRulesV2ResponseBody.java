@@ -44,6 +44,10 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domain
      */
@@ -77,6 +81,16 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
         private String requestId; 
         private String totalCount; 
         private java.util.List<WebCCRules> webCCRules; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeWebCCRulesV2ResponseBody model) {
+            this.domain = model.domain;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.webCCRules = model.webCCRules;
+        } 
 
         /**
          * <p>The domain name of the website.</p>
@@ -204,6 +218,17 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             private String field; 
             private String headerName; 
             private String matchMethod; 
+
+            private Builder() {
+            } 
+
+            private Builder(Condition model) {
+                this.content = model.content;
+                this.contentList = model.contentList;
+                this.field = model.field;
+                this.headerName = model.headerName;
+                this.matchMethod = model.matchMethod;
+            } 
 
             /**
              * <p>The match content.</p>
@@ -350,6 +375,17 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             private Integer threshold; 
             private Integer ttl; 
 
+            private Builder() {
+            } 
+
+            private Builder(RateLimit model) {
+                this.interval = model.interval;
+                this.subKey = model.subKey;
+                this.target = model.target;
+                this.threshold = model.threshold;
+                this.ttl = model.ttl;
+            } 
+
             /**
              * <p>The statistical period. Unit: seconds.</p>
              * 
@@ -471,6 +507,15 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             private String field; 
             private String headerName; 
             private String mode; 
+
+            private Builder() {
+            } 
+
+            private Builder(Statistics model) {
+                this.field = model.field;
+                this.headerName = model.headerName;
+                this.mode = model.mode;
+            } 
 
             /**
              * <p>The statistical method. Valid values:</p>
@@ -600,6 +645,17 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             private Boolean enabled; 
             private Integer ratioThreshold; 
             private Boolean useRatio; 
+
+            private Builder() {
+            } 
+
+            private Builder(StatusCode model) {
+                this.code = model.code;
+                this.countThreshold = model.countThreshold;
+                this.enabled = model.enabled;
+                this.ratioThreshold = model.ratioThreshold;
+                this.useRatio = model.useRatio;
+            } 
 
             /**
              * <p>The status code. Valid values: <strong>100</strong> to <strong>599</strong>.</p>
@@ -827,6 +883,23 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             private Integer ttl; 
             private String uri; 
 
+            private Builder() {
+            } 
+
+            private Builder(RuleDetail model) {
+                this.action = model.action;
+                this.condition = model.condition;
+                this.count = model.count;
+                this.interval = model.interval;
+                this.mode = model.mode;
+                this.name = model.name;
+                this.rateLimit = model.rateLimit;
+                this.statistics = model.statistics;
+                this.statusCode = model.statusCode;
+                this.ttl = model.ttl;
+                this.uri = model.uri;
+            } 
+
             /**
              * <p>The action triggered if the rule is matched. Valid values:</p>
              * <ul>
@@ -1010,6 +1083,16 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             private String name; 
             private String owner; 
             private RuleDetail ruleDetail; 
+
+            private Builder() {
+            } 
+
+            private Builder(WebCCRules model) {
+                this.expires = model.expires;
+                this.name = model.name;
+                this.owner = model.owner;
+                this.ruleDetail = model.ruleDetail;
+            } 
 
             /**
              * <p>The validity period of the rule. Unit: seconds. If the Action parameter is set to block, the system blocks the requests that match the rule within the validity period of the rule. The value 0 indicates that the rule is permanently valid.</p>

@@ -40,6 +40,10 @@ public class DescribeSlaEventListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class DescribeSlaEventListResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<SlaEvent> slaEvent; 
         private Long total; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSlaEventListResponseBody model) {
+            this.requestId = model.requestId;
+            this.slaEvent = model.slaEvent;
+            this.total = model.total;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -169,6 +182,16 @@ public class DescribeSlaEventListResponseBody extends TeaModel {
             private String ip; 
             private String region; 
             private Long startTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(SlaEvent model) {
+                this.endTime = model.endTime;
+                this.ip = model.ip;
+                this.region = model.region;
+                this.startTime = model.startTime;
+            } 
 
             /**
              * <p>The end of the time range. Unit: seconds.</p>

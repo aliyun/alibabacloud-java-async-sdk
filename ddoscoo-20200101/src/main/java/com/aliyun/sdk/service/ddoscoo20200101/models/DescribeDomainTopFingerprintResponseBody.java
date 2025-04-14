@@ -36,6 +36,10 @@ public class DescribeDomainTopFingerprintResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domainTopFp
      */
@@ -53,6 +57,14 @@ public class DescribeDomainTopFingerprintResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<DomainTopFp> domainTopFp; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainTopFingerprintResponseBody model) {
+            this.domainTopFp = model.domainTopFp;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the fingerprints of the clients.</p>
@@ -134,6 +146,15 @@ public class DescribeDomainTopFingerprintResponseBody extends TeaModel {
             private String domain; 
             private String fingerprinting; 
             private Long pv; 
+
+            private Builder() {
+            } 
+
+            private Builder(DomainTopFp model) {
+                this.domain = model.domain;
+                this.fingerprinting = model.fingerprinting;
+                this.pv = model.pv;
+            } 
 
             /**
              * <p>The domain name of the website.</p>

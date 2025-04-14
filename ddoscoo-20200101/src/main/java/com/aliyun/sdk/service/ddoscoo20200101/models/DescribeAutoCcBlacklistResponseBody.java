@@ -40,6 +40,10 @@ public class DescribeAutoCcBlacklistResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return autoCcBlacklist
      */
@@ -65,6 +69,15 @@ public class DescribeAutoCcBlacklistResponseBody extends TeaModel {
         private java.util.List<AutoCcBlacklist> autoCcBlacklist; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAutoCcBlacklistResponseBody model) {
+            this.autoCcBlacklist = model.autoCcBlacklist;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>An array that consists of the details of the IP addresses in the blacklist of the instance.</p>
@@ -169,6 +182,16 @@ public class DescribeAutoCcBlacklistResponseBody extends TeaModel {
             private Long endTime; 
             private String sourceIp; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(AutoCcBlacklist model) {
+                this.destIp = model.destIp;
+                this.endTime = model.endTime;
+                this.sourceIp = model.sourceIp;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The IP address of the instance.</p>

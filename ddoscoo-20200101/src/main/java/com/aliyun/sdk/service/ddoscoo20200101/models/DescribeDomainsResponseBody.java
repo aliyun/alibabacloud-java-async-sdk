@@ -36,6 +36,10 @@ public class DescribeDomainsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domains
      */
@@ -53,6 +57,14 @@ public class DescribeDomainsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<String> domains; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainsResponseBody model) {
+            this.domains = model.domains;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>An array consisting of details of the domain name for which the forwarding rules are configured.</p>

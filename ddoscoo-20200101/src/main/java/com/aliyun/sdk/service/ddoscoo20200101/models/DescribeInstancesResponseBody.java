@@ -40,6 +40,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instances
      */
@@ -65,6 +69,15 @@ public class DescribeInstancesResponseBody extends TeaModel {
         private java.util.List<Instances> instances; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstancesResponseBody model) {
+            this.instances = model.instances;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The details about the instances.</p>
@@ -277,6 +290,25 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private Long isFirstOpenQps; 
             private String remark; 
             private Integer status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Instances model) {
+                this.createTime = model.createTime;
+                this.debtStatus = model.debtStatus;
+                this.edition = model.edition;
+                this.enabled = model.enabled;
+                this.expireTime = model.expireTime;
+                this.instanceId = model.instanceId;
+                this.ip = model.ip;
+                this.ipMode = model.ipMode;
+                this.ipVersion = model.ipVersion;
+                this.isFirstOpenBw = model.isFirstOpenBw;
+                this.isFirstOpenQps = model.isFirstOpenQps;
+                this.remark = model.remark;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The time when the instance was created. The value is a UNIX timestamp. Unit: milliseconds.</p>

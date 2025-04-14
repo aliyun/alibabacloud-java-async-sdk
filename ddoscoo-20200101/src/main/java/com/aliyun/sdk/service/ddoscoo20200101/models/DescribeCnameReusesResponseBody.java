@@ -36,6 +36,10 @@ public class DescribeCnameReusesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cnameReuses
      */
@@ -53,6 +57,14 @@ public class DescribeCnameReusesResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<CnameReuses> cnameReuses; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCnameReusesResponseBody model) {
+            this.cnameReuses = model.cnameReuses;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * CnameReuses.
@@ -131,6 +143,15 @@ public class DescribeCnameReusesResponseBody extends TeaModel {
             private String cname; 
             private String domain; 
             private Integer enable; 
+
+            private Builder() {
+            } 
+
+            private Builder(CnameReuses model) {
+                this.cname = model.cname;
+                this.domain = model.domain;
+                this.enable = model.enable;
+            } 
 
             /**
              * Cname.

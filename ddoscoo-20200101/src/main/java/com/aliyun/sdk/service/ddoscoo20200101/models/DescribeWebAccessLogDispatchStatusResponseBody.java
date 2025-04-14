@@ -40,6 +40,10 @@ public class DescribeWebAccessLogDispatchStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class DescribeWebAccessLogDispatchStatusResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<SlsConfigStatus> slsConfigStatus; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeWebAccessLogDispatchStatusResponseBody model) {
+            this.requestId = model.requestId;
+            this.slsConfigStatus = model.slsConfigStatus;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -145,6 +158,14 @@ public class DescribeWebAccessLogDispatchStatusResponseBody extends TeaModel {
         public static final class Builder {
             private String domain; 
             private Boolean enable; 
+
+            private Builder() {
+            } 
+
+            private Builder(SlsConfigStatus model) {
+                this.domain = model.domain;
+                this.enable = model.enable;
+            } 
 
             /**
              * <p>The domain name.</p>

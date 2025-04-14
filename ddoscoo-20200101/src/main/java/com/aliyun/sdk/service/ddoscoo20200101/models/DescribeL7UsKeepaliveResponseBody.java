@@ -36,6 +36,10 @@ public class DescribeL7UsKeepaliveResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeL7UsKeepaliveResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private RsKeepalive rsKeepalive; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeL7UsKeepaliveResponseBody model) {
+            this.requestId = model.requestId;
+            this.rsKeepalive = model.rsKeepalive;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -134,6 +146,15 @@ public class DescribeL7UsKeepaliveResponseBody extends TeaModel {
             private Boolean enabled; 
             private Long keepaliveRequests; 
             private Long keepaliveTimeout; 
+
+            private Builder() {
+            } 
+
+            private Builder(RsKeepalive model) {
+                this.enabled = model.enabled;
+                this.keepaliveRequests = model.keepaliveRequests;
+                this.keepaliveTimeout = model.keepaliveTimeout;
+            } 
 
             /**
              * <p>Indicates whether Back-to-origin Persistent Connections is turned on. Valid values:</p>

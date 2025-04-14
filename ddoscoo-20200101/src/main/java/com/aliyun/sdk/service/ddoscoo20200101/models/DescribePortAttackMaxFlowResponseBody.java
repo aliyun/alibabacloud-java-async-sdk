@@ -40,6 +40,10 @@ public class DescribePortAttackMaxFlowResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bps
      */
@@ -65,6 +69,15 @@ public class DescribePortAttackMaxFlowResponseBody extends TeaModel {
         private Long bps; 
         private Long pps; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePortAttackMaxFlowResponseBody model) {
+            this.bps = model.bps;
+            this.pps = model.pps;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The peak bandwidth of attack traffic. Unit: bit/s.</p>

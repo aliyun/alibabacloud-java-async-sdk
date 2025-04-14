@@ -45,7 +45,7 @@ public class DescribeCnameReusesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -97,6 +97,10 @@ public class DescribeCnameReusesRequest extends Request {
         }
 
         /**
+         * <p>The domain names of the websites. You can specify the domain names of up to 200 websites.</p>
+         * <blockquote>
+         * <p> A forwarding rule must be configured for a domain name. You can call the <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> operation to query all domain names.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

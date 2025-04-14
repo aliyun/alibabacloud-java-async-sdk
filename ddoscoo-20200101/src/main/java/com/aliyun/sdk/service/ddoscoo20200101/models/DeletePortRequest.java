@@ -62,7 +62,7 @@ public class DeletePortRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -166,7 +166,7 @@ public class DeletePortRequest extends Request {
         }
 
         /**
-         * <p>The type of the protocol. Valid values:</p>
+         * <p>The type of the forwarding protocol. Valid values:</p>
          * <ul>
          * <li><strong>tcp</strong></li>
          * <li><strong>udp</strong></li>

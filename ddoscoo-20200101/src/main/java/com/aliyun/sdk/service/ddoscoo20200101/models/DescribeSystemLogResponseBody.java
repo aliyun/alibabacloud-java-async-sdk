@@ -40,6 +40,10 @@ public class DescribeSystemLogResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class DescribeSystemLogResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<SystemLog> systemLog; 
         private Long total; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSystemLogResponseBody model) {
+            this.requestId = model.requestId;
+            this.systemLog = model.systemLog;
+            this.total = model.total;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -217,6 +230,20 @@ public class DescribeSystemLogResponseBody extends TeaModel {
             private Integer opAction; 
             private String opDesc; 
             private Integer status; 
+
+            private Builder() {
+            } 
+
+            private Builder(SystemLog model) {
+                this.entityObject = model.entityObject;
+                this.entityType = model.entityType;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.opAccount = model.opAccount;
+                this.opAction = model.opAction;
+                this.opDesc = model.opDesc;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The IP address of the instance.</p>

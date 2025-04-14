@@ -36,6 +36,10 @@ public class DescribeDestinationPortEventResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return portList
      */
@@ -53,6 +57,14 @@ public class DescribeDestinationPortEventResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<PortList> portList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDestinationPortEventResponseBody model) {
+            this.portList = model.portList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ports.</p>
@@ -122,6 +134,14 @@ public class DescribeDestinationPortEventResponseBody extends TeaModel {
         public static final class Builder {
             private String dstPort; 
             private Long inPkts; 
+
+            private Builder() {
+            } 
+
+            private Builder(PortList model) {
+                this.dstPort = model.dstPort;
+                this.inPkts = model.inPkts;
+            } 
 
             /**
              * <p>The destination port.</p>

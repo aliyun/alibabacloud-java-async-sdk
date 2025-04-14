@@ -88,6 +88,10 @@ public class DescribeDomainStatusCodeCountResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -209,6 +213,27 @@ public class DescribeDomainStatusCodeCountResponseBody extends TeaModel {
         private Long status503; 
         private Long status504; 
         private Long status5XX; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainStatusCodeCountResponseBody model) {
+            this.requestId = model.requestId;
+            this.status200 = model.status200;
+            this.status2XX = model.status2XX;
+            this.status3XX = model.status3XX;
+            this.status403 = model.status403;
+            this.status404 = model.status404;
+            this.status405 = model.status405;
+            this.status410 = model.status410;
+            this.status499 = model.status499;
+            this.status4XX = model.status4XX;
+            this.status501 = model.status501;
+            this.status502 = model.status502;
+            this.status503 = model.status503;
+            this.status504 = model.status504;
+            this.status5XX = model.status5XX;
+        } 
 
         /**
          * <p>The ID of the request.</p>

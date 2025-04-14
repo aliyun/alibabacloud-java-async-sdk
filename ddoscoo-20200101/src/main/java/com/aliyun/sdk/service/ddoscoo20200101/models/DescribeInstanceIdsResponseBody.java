@@ -36,6 +36,10 @@ public class DescribeInstanceIdsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceIds
      */
@@ -53,6 +57,14 @@ public class DescribeInstanceIdsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<InstanceIds> instanceIds; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceIdsResponseBody model) {
+            this.instanceIds = model.instanceIds;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID, type, description, and IP version of the instance.</p>
@@ -155,6 +167,17 @@ public class DescribeInstanceIdsResponseBody extends TeaModel {
             private String ipMode; 
             private String ipVersion; 
             private String remark; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceIds model) {
+                this.edition = model.edition;
+                this.instanceId = model.instanceId;
+                this.ipMode = model.ipMode;
+                this.ipVersion = model.ipVersion;
+                this.remark = model.remark;
+            } 
 
             /**
              * <p>The type of the instance. Valid values:</p>

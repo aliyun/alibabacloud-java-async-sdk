@@ -36,6 +36,10 @@ public class DescribeDDosEventSrcIpResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ips
      */
@@ -53,6 +57,14 @@ public class DescribeDDosEventSrcIpResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Ips> ips; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDDosEventSrcIpResponseBody model) {
+            this.ips = model.ips;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>An array that consists of information about the source IP address of the volumetric attack.</p>
@@ -134,6 +146,15 @@ public class DescribeDDosEventSrcIpResponseBody extends TeaModel {
             private String areaId; 
             private String isp; 
             private String srcIp; 
+
+            private Builder() {
+            } 
+
+            private Builder(Ips model) {
+                this.areaId = model.areaId;
+                this.isp = model.isp;
+                this.srcIp = model.srcIp;
+            } 
 
             /**
              * <p>The code or ID of the source region. For more information, see <a href="https://help.aliyun.com/document_detail/167926.html">Codes of administrative regions in China and codes of countries and areas</a>. For example, <strong>110000</strong> indicates Beijing, China, and <strong>us</strong> indicates the United States.</p>

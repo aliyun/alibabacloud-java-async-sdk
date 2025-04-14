@@ -36,6 +36,10 @@ public class DescribeCertsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return certs
      */
@@ -53,6 +57,14 @@ public class DescribeCertsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Certs> certs; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCertsResponseBody model) {
+            this.certs = model.certs;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The certificate information about the website.</p>
@@ -194,6 +206,20 @@ public class DescribeCertsResponseBody extends TeaModel {
             private String issuer; 
             private String name; 
             private String startDate; 
+
+            private Builder() {
+            } 
+
+            private Builder(Certs model) {
+                this.certIdentifier = model.certIdentifier;
+                this.common = model.common;
+                this.domainRelated = model.domainRelated;
+                this.endDate = model.endDate;
+                this.id = model.id;
+                this.issuer = model.issuer;
+                this.name = model.name;
+                this.startDate = model.startDate;
+            } 
 
             /**
              * <p>The global certificate ID, which is in the certificate ID-cn-hangzhou format. If the ID of the certificate is 123, CertIdentifier is 123-cn-hangzhou.</p>

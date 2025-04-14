@@ -40,6 +40,10 @@ public class DescribeSceneDefenseObjectsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return objects
      */
@@ -65,6 +69,15 @@ public class DescribeSceneDefenseObjectsResponseBody extends TeaModel {
         private java.util.List<Objects> objects; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSceneDefenseObjectsResponseBody model) {
+            this.objects = model.objects;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The information about the protected assets.</p>
@@ -161,6 +174,15 @@ public class DescribeSceneDefenseObjectsResponseBody extends TeaModel {
             private String domain; 
             private String policyId; 
             private String vip; 
+
+            private Builder() {
+            } 
+
+            private Builder(Objects model) {
+                this.domain = model.domain;
+                this.policyId = model.policyId;
+                this.vip = model.vip;
+            } 
 
             /**
              * <p>The domain name that is protected by the policy.</p>

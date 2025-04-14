@@ -36,6 +36,10 @@ public class DescribePortViewSourceCountriesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -54,6 +58,14 @@ public class DescribePortViewSourceCountriesResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<SourceCountrys> sourceCountrys; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribePortViewSourceCountriesResponseBody model) {
+            this.requestId = model.requestId;
+            this.sourceCountrys = model.sourceCountrys;
+        } 
+
         /**
          * <p>The ID of the request.</p>
          * 
@@ -66,7 +78,7 @@ public class DescribePortViewSourceCountriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>An array consisting of countries or areas from which the requests are sent.</p>
+         * <p>The details about the country or area from which the requests are sent.</p>
          */
         public Builder sourceCountrys(java.util.List<SourceCountrys> sourceCountrys) {
             this.sourceCountrys = sourceCountrys;
@@ -122,6 +134,14 @@ public class DescribePortViewSourceCountriesResponseBody extends TeaModel {
         public static final class Builder {
             private Long count; 
             private String countryId; 
+
+            private Builder() {
+            } 
+
+            private Builder(SourceCountrys model) {
+                this.count = model.count;
+                this.countryId = model.countryId;
+            } 
 
             /**
              * <p>The number of requests.</p>

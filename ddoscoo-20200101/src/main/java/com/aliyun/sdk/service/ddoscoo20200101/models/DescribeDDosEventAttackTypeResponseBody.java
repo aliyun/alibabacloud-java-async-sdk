@@ -36,6 +36,10 @@ public class DescribeDDosEventAttackTypeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return attackTypes
      */
@@ -53,6 +57,14 @@ public class DescribeDDosEventAttackTypeResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<AttackTypes> attackTypes; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDDosEventAttackTypeResponseBody model) {
+            this.attackTypes = model.attackTypes;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the attack types.</p>
@@ -122,6 +134,14 @@ public class DescribeDDosEventAttackTypeResponseBody extends TeaModel {
         public static final class Builder {
             private String attackType; 
             private Long inPkts; 
+
+            private Builder() {
+            } 
+
+            private Builder(AttackTypes model) {
+                this.attackType = model.attackType;
+                this.inPkts = model.inPkts;
+            } 
 
             /**
              * <p>The type of the attack Valid values:</p>

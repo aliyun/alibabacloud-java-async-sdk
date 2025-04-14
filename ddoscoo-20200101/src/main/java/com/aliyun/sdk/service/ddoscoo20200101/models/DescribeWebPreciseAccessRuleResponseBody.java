@@ -36,6 +36,10 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return preciseAccessConfigList
      */
@@ -53,6 +57,14 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<PreciseAccessConfigList> preciseAccessConfigList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeWebPreciseAccessRuleResponseBody model) {
+            this.preciseAccessConfigList = model.preciseAccessConfigList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The configuration of the accurate access control rule that is created for the website.</p>
@@ -158,6 +170,17 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
             private String field; 
             private String headerName; 
             private String matchMethod; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConditionList model) {
+                this.content = model.content;
+                this.contentList = model.contentList;
+                this.field = model.field;
+                this.headerName = model.headerName;
+                this.matchMethod = model.matchMethod;
+            } 
 
             /**
              * <p>The match content.</p>
@@ -301,6 +324,17 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
             private String name; 
             private String owner; 
 
+            private Builder() {
+            } 
+
+            private Builder(RuleList model) {
+                this.action = model.action;
+                this.conditionList = model.conditionList;
+                this.expires = model.expires;
+                this.name = model.name;
+                this.owner = model.owner;
+            } 
+
             /**
              * <p>The action triggered if the rule is matched. Valid values:</p>
              * <ul>
@@ -412,6 +446,14 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
         public static final class Builder {
             private String domain; 
             private java.util.List<RuleList> ruleList; 
+
+            private Builder() {
+            } 
+
+            private Builder(PreciseAccessConfigList model) {
+                this.domain = model.domain;
+                this.ruleList = model.ruleList;
+            } 
 
             /**
              * <p>The domain name of the website.</p>

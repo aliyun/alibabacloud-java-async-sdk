@@ -112,7 +112,7 @@ public class ModifyInstanceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -281,7 +281,14 @@ public class ModifyInstanceRequest extends Request {
         }
 
         /**
-         * AddressType.
+         * <p>Address type. Values:</p>
+         * <ul>
+         * <li><strong>Ipv4</strong>: IPv4.</li>
+         * <li><strong>Ipv6</strong>: IPv6.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Ipv4</p>
          */
         public Builder addressType(String addressType) {
             this.putQueryParameter("AddressType", addressType);
@@ -290,7 +297,10 @@ public class ModifyInstanceRequest extends Request {
         }
 
         /**
-         * Bandwidth.
+         * <p>Elastic protection bandwidth (Mainland China). Unit: Gbps.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder bandwidth(String bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -299,7 +309,10 @@ public class ModifyInstanceRequest extends Request {
         }
 
         /**
-         * BaseBandwidth.
+         * <p>Guaranteed protection bandwidth (Mainland China). Unit: Gbps.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder baseBandwidth(String baseBandwidth) {
             this.putQueryParameter("BaseBandwidth", baseBandwidth);
@@ -308,7 +321,10 @@ public class ModifyInstanceRequest extends Request {
         }
 
         /**
-         * DomainCount.
+         * <p>Number of protected domains.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder domainCount(String domainCount) {
             this.putQueryParameter("DomainCount", domainCount);
@@ -317,7 +333,14 @@ public class ModifyInstanceRequest extends Request {
         }
 
         /**
-         * EditionSale.
+         * <p>Protection package (Mainland China). Values:</p>
+         * <ul>
+         * <li><strong>coop</strong>: Indicates the DDoS High Defense (Mainland China) Professional Edition.</li>
+         * <li><strong>advance</strong>: Indicates the DDoS High Defense (Mainland China) Professional Edition.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>coop</p>
          */
         public Builder editionSale(String editionSale) {
             this.putQueryParameter("EditionSale", editionSale);
@@ -326,7 +349,14 @@ public class ModifyInstanceRequest extends Request {
         }
 
         /**
-         * FunctionVersion.
+         * <p>Function version, with values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Standard function.</li>
+         * <li><strong>1</strong>: Enhanced function.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder functionVersion(String functionVersion) {
             this.putQueryParameter("FunctionVersion", functionVersion);
@@ -335,6 +365,10 @@ public class ModifyInstanceRequest extends Request {
         }
 
         /**
+         * <p>The ID of the DDoS High Defense instance.</p>
+         * <blockquote>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> to query the ID information of all DDoS High Defense instances.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -347,6 +381,11 @@ public class ModifyInstanceRequest extends Request {
         }
 
         /**
+         * <p>Adjustment type, with values</p>
+         * <ul>
+         * <li>UPGRADE: Upgrade.</li>
+         * <li>DOWNGRADE: Downgrade.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -359,7 +398,10 @@ public class ModifyInstanceRequest extends Request {
         }
 
         /**
-         * NormalBandwidth.
+         * <p>Business bandwidth (outside Mainland China). Unit: Mbps.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder normalBandwidth(String normalBandwidth) {
             this.putQueryParameter("NormalBandwidth", normalBandwidth);
@@ -368,7 +410,10 @@ public class ModifyInstanceRequest extends Request {
         }
 
         /**
-         * NormalQps.
+         * <p>Business QPS. Unit: Mbps.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder normalQps(String normalQps) {
             this.putQueryParameter("NormalQps", normalQps);
@@ -377,7 +422,10 @@ public class ModifyInstanceRequest extends Request {
         }
 
         /**
-         * PortCount.
+         * <p>Number of protected ports.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder portCount(String portCount) {
             this.putQueryParameter("PortCount", portCount);
@@ -386,7 +434,16 @@ public class ModifyInstanceRequest extends Request {
         }
 
         /**
-         * ProductPlan.
+         * <p>Protection package (outside Mainland China). Values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Indicates the DDoS High Defense (outside Mainland China) Insurance Edition.</li>
+         * <li><strong>1</strong>: Indicates the DDoS High Defense (outside Mainland China) Worry-Free Edition.</li>
+         * <li><strong>2</strong>: Indicates the DDoS High Defense (outside Mainland China) Acceleration Line.</li>
+         * <li><strong>3</strong>: Indicates the DDoS High Defense (outside Mainland China) Secure Acceleration Line.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder productPlan(String productPlan) {
             this.putQueryParameter("ProductPlan", productPlan);
@@ -395,6 +452,13 @@ public class ModifyInstanceRequest extends Request {
         }
 
         /**
+         * <p>Product type.
+         * Values:</p>
+         * <ul>
+         * <li><strong>ddoscoo</strong>: Indicates that the DDoS High Defense (Mainland China) instance is being adjusted for a China site account.</li>
+         * <li><strong>ddoscoo_intl</strong>: Indicates that the DDoS High Defense (Mainland China) instance is being adjusted for an international site account.</li>
+         * <li><strong>ddosDip</strong>: Indicates that the DDoS High Defense (outside Mainland China) instance is being adjusted for either a China or international site account.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -407,7 +471,10 @@ public class ModifyInstanceRequest extends Request {
         }
 
         /**
-         * ServiceBandwidth.
+         * <p>Business bandwidth (Mainland China). Unit: Mbps.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder serviceBandwidth(String serviceBandwidth) {
             this.putQueryParameter("ServiceBandwidth", serviceBandwidth);
@@ -416,7 +483,13 @@ public class ModifyInstanceRequest extends Request {
         }
 
         /**
-         * ServicePartner.
+         * <p>Line resources of the instance (Mainland China). Values:</p>
+         * <ul>
+         * <li><strong>coop-line-001</strong>: Indicates the DDoS High Defense (Mainland China) 8-line BGP line.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>coop-line-001</p>
          */
         public Builder servicePartner(String servicePartner) {
             this.putQueryParameter("ServicePartner", servicePartner);

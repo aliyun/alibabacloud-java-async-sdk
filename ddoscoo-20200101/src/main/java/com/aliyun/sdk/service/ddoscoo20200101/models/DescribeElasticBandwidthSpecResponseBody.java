@@ -36,6 +36,10 @@ public class DescribeElasticBandwidthSpecResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return elasticBandwidthSpec
      */
@@ -53,6 +57,14 @@ public class DescribeElasticBandwidthSpecResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<String> elasticBandwidthSpec; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeElasticBandwidthSpecResponseBody model) {
+            this.elasticBandwidthSpec = model.elasticBandwidthSpec;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>An array that consists of the available burstable protection bandwidths. Unit: Gbit/s.</p>

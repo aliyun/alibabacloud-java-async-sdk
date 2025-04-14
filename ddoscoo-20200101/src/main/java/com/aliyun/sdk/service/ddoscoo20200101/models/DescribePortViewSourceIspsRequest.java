@@ -57,7 +57,7 @@ public class DescribePortViewSourceIspsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -143,7 +143,7 @@ public class DescribePortViewSourceIspsRequest extends Request {
         }
 
         /**
-         * <p>An array that consists of the IDs of instances to query.</p>
+         * <p>The IDs of the Anti-DDoS Proxy instances to query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,8 +156,8 @@ public class DescribePortViewSourceIspsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the instance belongs in Resource Management.</p>
-         * <p>If you do not configure this parameter, the instance belongs to the default resource group.</p>
+         * <p>The ID of the resource group to which the Anti-DDoS Proxy instance belongs in Resource Management.</p>
+         * <p>If you do not specify this parameter, the instance belongs to the default resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfm2pz25js****</p>
