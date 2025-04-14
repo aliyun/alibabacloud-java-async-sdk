@@ -252,6 +252,12 @@ public class SmartqQueryAbilityResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChartType")
         private String chartType;
 
+        @com.aliyun.core.annotation.NameInMap("ConclusionText")
+        private String conclusionText;
+
+        @com.aliyun.core.annotation.NameInMap("LogicSql")
+        private String logicSql;
+
         @com.aliyun.core.annotation.NameInMap("MetaType")
         private java.util.List<MetaType> metaType;
 
@@ -260,6 +266,8 @@ public class SmartqQueryAbilityResponseBody extends TeaModel {
 
         private Result(Builder builder) {
             this.chartType = builder.chartType;
+            this.conclusionText = builder.conclusionText;
+            this.logicSql = builder.logicSql;
             this.metaType = builder.metaType;
             this.values = builder.values;
         }
@@ -280,6 +288,20 @@ public class SmartqQueryAbilityResponseBody extends TeaModel {
         }
 
         /**
+         * @return conclusionText
+         */
+        public String getConclusionText() {
+            return this.conclusionText;
+        }
+
+        /**
+         * @return logicSql
+         */
+        public String getLogicSql() {
+            return this.logicSql;
+        }
+
+        /**
          * @return metaType
          */
         public java.util.List<MetaType> getMetaType() {
@@ -295,6 +317,8 @@ public class SmartqQueryAbilityResponseBody extends TeaModel {
 
         public static final class Builder {
             private String chartType; 
+            private String conclusionText; 
+            private String logicSql; 
             private java.util.List<MetaType> metaType; 
             private java.util.List<Values> values; 
 
@@ -303,6 +327,8 @@ public class SmartqQueryAbilityResponseBody extends TeaModel {
 
             private Builder(Result model) {
                 this.chartType = model.chartType;
+                this.conclusionText = model.conclusionText;
+                this.logicSql = model.logicSql;
                 this.metaType = model.metaType;
                 this.values = model.values;
             } 
@@ -312,6 +338,22 @@ public class SmartqQueryAbilityResponseBody extends TeaModel {
              */
             public Builder chartType(String chartType) {
                 this.chartType = chartType;
+                return this;
+            }
+
+            /**
+             * ConclusionText.
+             */
+            public Builder conclusionText(String conclusionText) {
+                this.conclusionText = conclusionText;
+                return this;
+            }
+
+            /**
+             * LogicSql.
+             */
+            public Builder logicSql(String logicSql) {
+                this.logicSql = logicSql;
                 return this;
             }
 

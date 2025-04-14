@@ -19,10 +19,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CreateTicketRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AccountName")
+    @Deprecated
     private String accountName;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AccountType")
+    @Deprecated
     private Integer accountType;
 
     @com.aliyun.core.annotation.Query

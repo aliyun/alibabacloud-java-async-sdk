@@ -28,10 +28,12 @@ public class AddUserRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AdminUser")
+    @Deprecated
     private Boolean adminUser;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AuthAdminUser")
+    @Deprecated
     private Boolean authAdminUser;
 
     @com.aliyun.core.annotation.Query

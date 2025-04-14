@@ -94,9 +94,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AuthorizeMenuResponse> authorizeMenu(AuthorizeMenuRequest request);
 
     /**
-     * @param request the request parameters of BatchAddFeishuUsers  BatchAddFeishuUsersRequest
+     * @deprecated OpenAPI BatchAddFeishuUsers is deprecated  * @param request  the request parameters of BatchAddFeishuUsers  BatchAddFeishuUsersRequest
      * @return BatchAddFeishuUsersResponse
      */
+    @Deprecated
     CompletableFuture<BatchAddFeishuUsersResponse> batchAddFeishuUsers(BatchAddFeishuUsersRequest request);
 
     /**
@@ -436,19 +437,17 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryDataRangeResponse> queryDataRange(QueryDataRangeRequest request);
 
     /**
-     * <b>description</b> :
-     * <h4>Prerequisites</h4>
-     * <p>You create the data service API through Quick BI\&quot;s data service. For more details, see <a href="https://help.aliyun.com/document_detail/144980.html">Data Service</a>.</p>
-     * <h4>Usage Restrictions</h4>
-     * <ul>
-     * <li>The data service feature is only available to professional edition customers. </li>
-     * <li>The timeout for data service API calls is 60s, and the QPS for a single API is 10 times/second.</li>
-     * <li>If row-level permissions are enabled on the dataset referenced by the data service API, the API call may be intercepted by the row-level permission policy.</li>
-     * </ul>
+     * @deprecated OpenAPI QueryDataService is deprecated, please use quickbi-public::2022-01-01::QueryData instead.  * @description #### Prerequisites
+     * You create the data service API through Quick BI\\"s data service. For more details, see [Data Service](https://help.aliyun.com/document_detail/144980.html).
+     * #### Usage Restrictions
+     * * The data service feature is only available to professional edition customers. 
+     * * The timeout for data service API calls is 60s, and the QPS for a single API is 10 times/second.
+     * * If row-level permissions are enabled on the dataset referenced by the data service API, the API call may be intercepted by the row-level permission policy.
      * 
      * @param request the request parameters of QueryDataService  QueryDataServiceRequest
      * @return QueryDataServiceResponse
      */
+    @Deprecated
     CompletableFuture<QueryDataServiceResponse> queryDataService(QueryDataServiceRequest request);
 
     /**
