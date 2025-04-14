@@ -46,7 +46,7 @@ public class DeleteInstanceIpWhitelistRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -114,7 +114,7 @@ public class DeleteInstanceIpWhitelistRequest extends Request {
         }
 
         /**
-         * ipWhitelists.
+         * <p>The IP address whitelist.</p>
          */
         public Builder ipWhitelists(java.util.List<String> ipWhitelists) {
             String ipWhitelistsShrink = shrink(ipWhitelists, "ipWhitelists", "simple");

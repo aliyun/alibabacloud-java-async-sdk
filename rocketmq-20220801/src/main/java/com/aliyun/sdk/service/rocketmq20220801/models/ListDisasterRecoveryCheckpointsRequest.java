@@ -62,7 +62,7 @@ public class ListDisasterRecoveryCheckpointsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -132,6 +132,7 @@ public class ListDisasterRecoveryCheckpointsRequest extends Request {
         } 
 
         /**
+         * <p>Backup Plan ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,6 +145,7 @@ public class ListDisasterRecoveryCheckpointsRequest extends Request {
         }
 
         /**
+         * <p>Backup Mapping ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,7 +158,10 @@ public class ListDisasterRecoveryCheckpointsRequest extends Request {
         }
 
         /**
-         * filter.
+         * <p>Filter Condition</p>
+         * 
+         * <strong>example:</strong>
+         * <p>topic_test</p>
          */
         public Builder filter(String filter) {
             this.putQueryParameter("filter", filter);
@@ -165,6 +170,7 @@ public class ListDisasterRecoveryCheckpointsRequest extends Request {
         }
 
         /**
+         * <p>Source Instance ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -177,7 +183,10 @@ public class ListDisasterRecoveryCheckpointsRequest extends Request {
         }
 
         /**
-         * pageNumber.
+         * <p>Current page number, starting from 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -186,7 +195,10 @@ public class ListDisasterRecoveryCheckpointsRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>Page size, the maximum number of results returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);

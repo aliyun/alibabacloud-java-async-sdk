@@ -60,6 +60,10 @@ public class GetConsumerStackResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -125,6 +129,20 @@ public class GetConsumerStackResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetConsumerStackResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.dynamicCode = model.dynamicCode;
+            this.dynamicMessage = model.dynamicMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code.</p>
@@ -261,6 +279,14 @@ public class GetConsumerStackResponseBody extends TeaModel {
             private String thread; 
             private java.util.List<String> tracks; 
 
+            private Builder() {
+            } 
+
+            private Builder(Stacks model) {
+                this.thread = model.thread;
+                this.tracks = model.tracks;
+            } 
+
             /**
              * <p>Thread id.</p>
              * 
@@ -354,6 +380,16 @@ public class GetConsumerStackResponseBody extends TeaModel {
             private String instanceId; 
             private String regionId; 
             private java.util.List<Stacks> stacks; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.consumerGroupId = model.consumerGroupId;
+                this.instanceId = model.instanceId;
+                this.regionId = model.regionId;
+                this.stacks = model.stacks;
+            } 
 
             /**
              * <p>The ID of the consumer group.</p>

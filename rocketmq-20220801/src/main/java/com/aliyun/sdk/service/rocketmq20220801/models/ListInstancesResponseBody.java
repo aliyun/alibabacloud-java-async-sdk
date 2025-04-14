@@ -60,6 +60,10 @@ public class ListInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -125,6 +129,20 @@ public class ListInstancesResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListInstancesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.dynamicCode = model.dynamicCode;
+            this.dynamicMessage = model.dynamicMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code returned if the call failed.</p>
@@ -249,6 +267,13 @@ public class ListInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean traceOn; 
 
+            private Builder() {
+            } 
+
+            private Builder(ProductInfo model) {
+                this.traceOn = model.traceOn;
+            } 
+
             /**
              * <p>Indicates whether the message trace feature is enabled. Valid values:</p>
              * <ul>
@@ -315,6 +340,14 @@ public class ListInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key of the resource.</p>
@@ -616,6 +649,33 @@ public class ListInstancesResponseBody extends TeaModel {
             private Long topicCount; 
             private String updateTime; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.commodityCode = model.commodityCode;
+                this.createTime = model.createTime;
+                this.expireTime = model.expireTime;
+                this.groupCount = model.groupCount;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.paymentType = model.paymentType;
+                this.productInfo = model.productInfo;
+                this.regionId = model.regionId;
+                this.releaseTime = model.releaseTime;
+                this.remark = model.remark;
+                this.resourceGroupId = model.resourceGroupId;
+                this.seriesCode = model.seriesCode;
+                this.serviceCode = model.serviceCode;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.subSeriesCode = model.subSeriesCode;
+                this.tags = model.tags;
+                this.topicCount = model.topicCount;
+                this.updateTime = model.updateTime;
+                this.userId = model.userId;
+            } 
 
             /**
              * <p>The commodity code of the instance. The commodity code of ApsaraMQ for RocketMQ 5.0 instances has a similar format to ons_rmqsub_public_cn.</p>
@@ -940,6 +1000,16 @@ public class ListInstancesResponseBody extends TeaModel {
             private Long pageNumber; 
             private Long pageSize; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.list = model.list;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The pagination information.</p>

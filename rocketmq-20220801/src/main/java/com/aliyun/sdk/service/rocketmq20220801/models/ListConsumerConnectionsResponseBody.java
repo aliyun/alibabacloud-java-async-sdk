@@ -60,6 +60,10 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -125,6 +129,20 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListConsumerConnectionsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.dynamicCode = model.dynamicCode;
+            this.dynamicMessage = model.dynamicMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The returned error code.</p>
@@ -309,6 +327,18 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
             private String messageModel; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(Connections model) {
+                this.clientId = model.clientId;
+                this.egressIp = model.egressIp;
+                this.hostname = model.hostname;
+                this.language = model.language;
+                this.messageModel = model.messageModel;
+                this.version = model.version;
+            } 
+
             /**
              * <p>The ID of the client.</p>
              * 
@@ -453,6 +483,16 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
             private String consumerGroupId; 
             private String instanceId; 
             private String regionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.connections = model.connections;
+                this.consumerGroupId = model.consumerGroupId;
+                this.instanceId = model.instanceId;
+                this.regionId = model.regionId;
+            } 
 
             /**
              * <p>The client connection list</p>

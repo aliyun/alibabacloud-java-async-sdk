@@ -60,7 +60,7 @@ public class UpdateInstanceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -244,6 +244,14 @@ public class UpdateInstanceRequest extends Request {
             private java.util.List<String> aclTypes; 
             private Boolean defaultVpcAuthFree; 
 
+            private Builder() {
+            } 
+
+            private Builder(AclInfo model) {
+                this.aclTypes = model.aclTypes;
+                this.defaultVpcAuthFree = model.defaultVpcAuthFree;
+            } 
+
             /**
              * <p>The authentication type of the instance.</p>
              */
@@ -308,6 +316,13 @@ public class UpdateInstanceRequest extends Request {
         public static final class Builder {
             private java.util.List<String> ipWhitelist; 
 
+            private Builder() {
+            } 
+
+            private Builder(InternetInfo model) {
+                this.ipWhitelist = model.ipWhitelist;
+            } 
+
             /**
              * <p>The whitelist that includes the IP addresses that are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.</p>
              * <ul>
@@ -358,6 +373,13 @@ public class UpdateInstanceRequest extends Request {
 
         public static final class Builder {
             private InternetInfo internetInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetworkInfo model) {
+                this.internetInfo = model.internetInfo;
+            } 
 
             /**
              * <p>The information about the Internet over which the instance is accessed. This parameter takes effect only if the Internet access feature is enabled for the instance.</p>
@@ -441,6 +463,16 @@ public class UpdateInstanceRequest extends Request {
             private Integer messageRetentionTime; 
             private Float sendReceiveRatio; 
             private Boolean traceOn; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProductInfo model) {
+                this.autoScaling = model.autoScaling;
+                this.messageRetentionTime = model.messageRetentionTime;
+                this.sendReceiveRatio = model.sendReceiveRatio;
+                this.traceOn = model.traceOn;
+            } 
 
             /**
              * <p>Specifies whether to enable the elastic transactions per second (TPS) feature for the instance.</p>

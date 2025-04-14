@@ -41,7 +41,7 @@ public class StopDisasterRecoveryItemRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -75,7 +75,11 @@ public class StopDisasterRecoveryItemRequest extends Request {
         } 
 
         /**
+         * <p>Backup plan ID</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1300000016</p>
          */
         public Builder planId(Long planId) {
             this.putPathParameter("planId", planId);
@@ -84,7 +88,11 @@ public class StopDisasterRecoveryItemRequest extends Request {
         }
 
         /**
+         * <p>Mapping task ID</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100070284</p>
          */
         public Builder itemId(Long itemId) {
             this.putPathParameter("itemId", itemId);

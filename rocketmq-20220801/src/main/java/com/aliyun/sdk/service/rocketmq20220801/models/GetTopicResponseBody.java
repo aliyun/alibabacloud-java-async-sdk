@@ -60,6 +60,10 @@ public class GetTopicResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -126,8 +130,22 @@ public class GetTopicResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetTopicResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.dynamicCode = model.dynamicCode;
+            this.dynamicMessage = model.dynamicMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * <p>The error code.</p>
+         * <p>Error code.</p>
          * 
          * <strong>example:</strong>
          * <p>Topic.NotFound</p>
@@ -138,7 +156,7 @@ public class GetTopicResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result data that is returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -146,7 +164,7 @@ public class GetTopicResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic error code.</p>
+         * <p>Dynamic error code.</p>
          * 
          * <strong>example:</strong>
          * <p>TopicName</p>
@@ -157,7 +175,7 @@ public class GetTopicResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic error message.</p>
+         * <p>Dynamic error message.</p>
          * 
          * <strong>example:</strong>
          * <p>topicName</p>
@@ -168,7 +186,7 @@ public class GetTopicResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>400</p>
@@ -179,7 +197,7 @@ public class GetTopicResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message.</p>
+         * <p>Error message.</p>
          * 
          * <strong>example:</strong>
          * <p>The topic cannot be found.</p>
@@ -190,7 +208,7 @@ public class GetTopicResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request. The system generates a unique ID for each request. You can troubleshoot issues based on the request ID.</p>
+         * <p>Request ID, each request&quot;s ID is unique and can be used for troubleshooting and problem localization.</p>
          * 
          * <strong>example:</strong>
          * <p>AF9A8B10-C426-530F-A0DD-96320B39****</p>
@@ -201,7 +219,7 @@ public class GetTopicResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call is successful.</p>
+         * <p>Indicates whether the execution was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -345,8 +363,23 @@ public class GetTopicResponseBody extends TeaModel {
             private String topicName; 
             private String updateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.createTime = model.createTime;
+                this.instanceId = model.instanceId;
+                this.maxSendTps = model.maxSendTps;
+                this.messageType = model.messageType;
+                this.regionId = model.regionId;
+                this.remark = model.remark;
+                this.status = model.status;
+                this.topicName = model.topicName;
+                this.updateTime = model.updateTime;
+            } 
+
             /**
-             * <p>The time when the topic was created.</p>
+             * <p>Creation time of the topic.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-08-01 20:05:50</p>
@@ -357,7 +390,7 @@ public class GetTopicResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance.</p>
+             * <p>The ID of the instance to which the topic belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>rmq-cn-7e22ody****</p>
@@ -368,7 +401,10 @@ public class GetTopicResponseBody extends TeaModel {
             }
 
             /**
-             * maxSendTps.
+             * <p>The maximum TPS for message sending.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder maxSendTps(Long maxSendTps) {
                 this.maxSendTps = maxSendTps;
@@ -376,13 +412,20 @@ public class GetTopicResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The message type of the topic.</p>
+             * <p>The type of messages in the topic.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li>TRANSACTION: transactional message</li>
-             * <li>FIFO: ordered message</li>
-             * <li>DELAY: scheduled or delayed message</li>
-             * <li>NORMAL: normal message</li>
+             * <li>TRANSACTION: transactional messages</li>
+             * <li>FIFO: ordered messages</li>
+             * <li>DELAY: scheduled or delayed messages</li>
+             * <li>NORMAL: normal messages</li>
+             * </ul>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>TRANSACTION: transactional messages</li>
+             * <li>FIFO: ordered messages</li>
+             * <li>DELAY: scheduled or delayed messages</li>
+             * <li>NORMAL: normal messages</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -394,7 +437,7 @@ public class GetTopicResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region in which the instance resides.</p>
+             * <p>The region ID to which the instance belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -405,7 +448,7 @@ public class GetTopicResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The remarks on the topic.</p>
+             * <p>Remark information of the topic.</p>
              * 
              * <strong>example:</strong>
              * <p>This is the remark for test.</p>
@@ -416,11 +459,11 @@ public class GetTopicResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the topic.</p>
+             * <p>The topic status.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li>RUNNING: The topic is running.</li>
-             * <li>CREATING: The topic is being created.</li>
+             * <li>RUNNING</li>
+             * <li>CREATING</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -432,7 +475,7 @@ public class GetTopicResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the topic.</p>
+             * <p>Topic name.</p>
              * 
              * <strong>example:</strong>
              * <p>topic_test</p>
@@ -443,7 +486,7 @@ public class GetTopicResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the topic was last updated.</p>
+             * <p>Last modification time of the topic.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-08-01 20:05:50</p>

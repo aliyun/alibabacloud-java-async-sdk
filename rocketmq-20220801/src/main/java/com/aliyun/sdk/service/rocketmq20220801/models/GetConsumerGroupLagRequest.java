@@ -46,7 +46,7 @@ public class GetConsumerGroupLagRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -115,7 +115,10 @@ public class GetConsumerGroupLagRequest extends Request {
         }
 
         /**
-         * topicName.
+         * <p>The topic name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>normal-topic-1</p>
          */
         public Builder topicName(String topicName) {
             this.putQueryParameter("topicName", topicName);

@@ -60,6 +60,10 @@ public class GetInstanceAccountResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -126,6 +130,20 @@ public class GetInstanceAccountResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetInstanceAccountResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.dynamicCode = model.dynamicCode;
+            this.dynamicMessage = model.dynamicMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
          * <p>The error code.</p>
          * 
@@ -138,7 +156,7 @@ public class GetInstanceAccountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -273,8 +291,25 @@ public class GetInstanceAccountResponseBody extends TeaModel {
             private String password; 
             private String username; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.accountStatus = model.accountStatus;
+                this.password = model.password;
+                this.username = model.username;
+            } 
+
             /**
-             * accountStatus.
+             * <p>The status of the account.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>DISABLE</li>
+             * <li>ENABLE</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ENABLE</p>
              */
             public Builder accountStatus(String accountStatus) {
                 this.accountStatus = accountStatus;

@@ -51,7 +51,7 @@ public class UpdateTopicRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -103,7 +103,7 @@ public class UpdateTopicRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the instance to which the topic belongs.</p>
+         * <p>The ID of the instance to which the topic to be updated belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,7 +116,7 @@ public class UpdateTopicRequest extends Request {
         }
 
         /**
-         * <p>The name of the topic.</p>
+         * <p>The name of the topic to be updated.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,7 +129,10 @@ public class UpdateTopicRequest extends Request {
         }
 
         /**
-         * maxSendTps.
+         * <p>Maximum send message tps</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder maxSendTps(Long maxSendTps) {
             this.putBodyParameter("maxSendTps", maxSendTps);
@@ -138,7 +141,7 @@ public class UpdateTopicRequest extends Request {
         }
 
         /**
-         * <p>The new remarks on the topic.</p>
+         * <p>Updated remarks for the topic.</p>
          * 
          * <strong>example:</strong>
          * <p>This is the remark for test.</p>

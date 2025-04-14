@@ -36,12 +36,17 @@ public class ListDisasterRecoveryItemsRequest extends Request {
     @com.aliyun.core.annotation.Validation(maximum = 10000, minimum = 10)
     private Integer pageSize;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("topicName")
+    private String topicName;
+
     private ListDisasterRecoveryItemsRequest(Builder builder) {
         super(builder);
         this.planId = builder.planId;
         this.filter = builder.filter;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.topicName = builder.topicName;
     }
 
     public static Builder builder() {
@@ -52,7 +57,7 @@ public class ListDisasterRecoveryItemsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -85,11 +90,19 @@ public class ListDisasterRecoveryItemsRequest extends Request {
         return this.pageSize;
     }
 
+    /**
+     * @return topicName
+     */
+    public String getTopicName() {
+        return this.topicName;
+    }
+
     public static final class Builder extends Request.Builder<ListDisasterRecoveryItemsRequest, Builder> {
         private Long planId; 
         private String filter; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String topicName; 
 
         private Builder() {
             super();
@@ -101,9 +114,11 @@ public class ListDisasterRecoveryItemsRequest extends Request {
             this.filter = request.filter;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.topicName = request.topicName;
         } 
 
         /**
+         * <p>Backup plan ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,7 +131,10 @@ public class ListDisasterRecoveryItemsRequest extends Request {
         }
 
         /**
-         * filter.
+         * <p>Filter condition, filter by topicName</p>
+         * 
+         * <strong>example:</strong>
+         * <p>topic_test</p>
          */
         public Builder filter(String filter) {
             this.putQueryParameter("filter", filter);
@@ -125,7 +143,10 @@ public class ListDisasterRecoveryItemsRequest extends Request {
         }
 
         /**
-         * pageNumber.
+         * <p>Page number, indicating which page of the results to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -134,11 +155,23 @@ public class ListDisasterRecoveryItemsRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>Page size, the maximum number of results displayed per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * topicName.
+         */
+        public Builder topicName(String topicName) {
+            this.putQueryParameter("topicName", topicName);
+            this.topicName = topicName;
             return this;
         }
 

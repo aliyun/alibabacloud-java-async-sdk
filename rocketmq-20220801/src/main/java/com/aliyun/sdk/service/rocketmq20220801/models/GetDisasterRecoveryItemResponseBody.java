@@ -64,6 +64,10 @@ public class GetDisasterRecoveryItemResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -138,8 +142,26 @@ public class GetDisasterRecoveryItemResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetDisasterRecoveryItemResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.data = model.data;
+            this.dynamicCode = model.dynamicCode;
+            this.dynamicMessage = model.dynamicMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * accessDeniedDetail.
+         * <p>The details about the access denial. This parameter is returned only if the access is denied because the Resource Access Management (RAM) user does not have the required permissions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -147,7 +169,10 @@ public class GetDisasterRecoveryItemResponseBody extends TeaModel {
         }
 
         /**
-         * code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -155,7 +180,7 @@ public class GetDisasterRecoveryItemResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -163,7 +188,10 @@ public class GetDisasterRecoveryItemResponseBody extends TeaModel {
         }
 
         /**
-         * dynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InstanceId</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -171,7 +199,10 @@ public class GetDisasterRecoveryItemResponseBody extends TeaModel {
         }
 
         /**
-         * dynamicMessage.
+         * <p>The dynamic error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instanceId</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -179,7 +210,10 @@ public class GetDisasterRecoveryItemResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -187,7 +221,10 @@ public class GetDisasterRecoveryItemResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -195,7 +232,10 @@ public class GetDisasterRecoveryItemResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AF9A8B10-C426-530F-A0DD-96320B39****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -203,7 +243,10 @@ public class GetDisasterRecoveryItemResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -308,8 +351,23 @@ public class GetDisasterRecoveryItemResponseBody extends TeaModel {
             private String regionId; 
             private String topicName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Topics model) {
+                this.consumerGroupId = model.consumerGroupId;
+                this.deliveryOrderType = model.deliveryOrderType;
+                this.instanceId = model.instanceId;
+                this.instanceType = model.instanceType;
+                this.regionId = model.regionId;
+                this.topicName = model.topicName;
+            } 
+
             /**
-             * consumerGroupId.
+             * <p>The consumer group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx_reserve_group</p>
              */
             public Builder consumerGroupId(String consumerGroupId) {
                 this.consumerGroupId = consumerGroupId;
@@ -317,7 +375,14 @@ public class GetDisasterRecoveryItemResponseBody extends TeaModel {
             }
 
             /**
-             * deliveryOrderType.
+             * <p>The order in which messages are delivered to the target instance. The parameter values ​​are as follows:</p>
+             * <ul>
+             * <li>Concurrently: concurrent delivery</li>
+             * <li>Orderly: sequential delivery</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Concurrently</p>
              */
             public Builder deliveryOrderType(String deliveryOrderType) {
                 this.deliveryOrderType = deliveryOrderType;
@@ -325,7 +390,10 @@ public class GetDisasterRecoveryItemResponseBody extends TeaModel {
             }
 
             /**
-             * instanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rmq-cn-wwo3xxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -333,7 +401,14 @@ public class GetDisasterRecoveryItemResponseBody extends TeaModel {
             }
 
             /**
-             * instanceType.
+             * <p>Instance type</p>
+             * <ul>
+             * <li>ALIYUN_ROCKETMQ: Alibaba Cloud instance</li>
+             * <li>EXTERNAL_ROCKETMQ: External instance, open-source instance, open-source cluster</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ALIYUN_ROCKETMQ</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -352,7 +427,10 @@ public class GetDisasterRecoveryItemResponseBody extends TeaModel {
             }
 
             /**
-             * topicName.
+             * <p>The topic name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>order_push_xxx</p>
              */
             public Builder topicName(String topicName) {
                 this.topicName = topicName;
@@ -470,8 +548,24 @@ public class GetDisasterRecoveryItemResponseBody extends TeaModel {
             private java.util.List<Topics> topics; 
             private String updateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.createTime = model.createTime;
+                this.extInfo = model.extInfo;
+                this.itemId = model.itemId;
+                this.itemStatus = model.itemStatus;
+                this.planId = model.planId;
+                this.topics = model.topics;
+                this.updateTime = model.updateTime;
+            } 
+
             /**
-             * createTime.
+             * <p>The time when the topic mapping task was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-06-24 02:57:31</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -479,7 +573,7 @@ public class GetDisasterRecoveryItemResponseBody extends TeaModel {
             }
 
             /**
-             * extInfo.
+             * <p>Additional Information</p>
              */
             public Builder extInfo(java.util.Map<String, String> extInfo) {
                 this.extInfo = extInfo;
@@ -487,7 +581,10 @@ public class GetDisasterRecoveryItemResponseBody extends TeaModel {
             }
 
             /**
-             * itemId.
+             * <p>The ID of the topic mapping</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100070284</p>
              */
             public Builder itemId(Long itemId) {
                 this.itemId = itemId;
@@ -495,7 +592,10 @@ public class GetDisasterRecoveryItemResponseBody extends TeaModel {
             }
 
             /**
-             * itemStatus.
+             * <p>The topic mapping task status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder itemStatus(String itemStatus) {
                 this.itemStatus = itemStatus;
@@ -503,7 +603,10 @@ public class GetDisasterRecoveryItemResponseBody extends TeaModel {
             }
 
             /**
-             * planId.
+             * <p>The ID of the global message backup plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1300000016</p>
              */
             public Builder planId(Long planId) {
                 this.planId = planId;
@@ -511,7 +614,7 @@ public class GetDisasterRecoveryItemResponseBody extends TeaModel {
             }
 
             /**
-             * topics.
+             * <p>Topics included in the backup mapping</p>
              */
             public Builder topics(java.util.List<Topics> topics) {
                 this.topics = topics;
@@ -519,7 +622,10 @@ public class GetDisasterRecoveryItemResponseBody extends TeaModel {
             }
 
             /**
-             * updateTime.
+             * <p>The time when the topic mapping task was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-09-26 02:13:10</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

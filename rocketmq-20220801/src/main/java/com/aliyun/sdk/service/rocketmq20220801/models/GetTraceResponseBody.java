@@ -60,6 +60,10 @@ public class GetTraceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -126,6 +130,20 @@ public class GetTraceResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetTraceResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.dynamicCode = model.dynamicCode;
+            this.dynamicMessage = model.dynamicMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
          * <p>The error code.</p>
          * 
@@ -138,7 +156,7 @@ public class GetTraceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -261,6 +279,14 @@ public class GetTraceResponseBody extends TeaModel {
             private String operateTime; 
             private String operateType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Operations model) {
+                this.operateTime = model.operateTime;
+                this.operateType = model.operateType;
+            } 
+
             /**
              * <p>Operation time.</p>
              * 
@@ -358,6 +384,16 @@ public class GetTraceResponseBody extends TeaModel {
             private String presetDelayTime; 
             private String recallResult; 
 
+            private Builder() {
+            } 
+
+            private Builder(BrokerInfo model) {
+                this.delayStatus = model.delayStatus;
+                this.operations = model.operations;
+                this.presetDelayTime = model.presetDelayTime;
+                this.recallResult = model.recallResult;
+            } 
+
             /**
              * <p>Delay status.</p>
              * 
@@ -389,7 +425,10 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * recallResult.
+             * <p>Withdraw scheduled message request result</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RECALL_OK</p>
              */
             public Builder recallResult(String recallResult) {
                 this.recallResult = recallResult;
@@ -458,6 +497,15 @@ public class GetTraceResponseBody extends TeaModel {
             private String messageId; 
             private String toDlqTime; 
             private String topicName; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeadLetterInfo model) {
+                this.messageId = model.messageId;
+                this.toDlqTime = model.toDlqTime;
+                this.topicName = model.topicName;
+            } 
 
             /**
              * <p>MessageId.</p>
@@ -566,6 +614,16 @@ public class GetTraceResponseBody extends TeaModel {
             private Long invisibleTime; 
             private String operateTime; 
             private String operateType; 
+
+            private Builder() {
+            } 
+
+            private Builder(RecordsOperations model) {
+                this.deadMessage = model.deadMessage;
+                this.invisibleTime = model.invisibleTime;
+                this.operateTime = model.operateTime;
+                this.operateType = model.operateType;
+            } 
 
             /**
              * <p>Whether it is a dead letter message.</p>
@@ -709,6 +767,18 @@ public class GetTraceResponseBody extends TeaModel {
             private java.util.List<RecordsOperations> operations; 
             private String popCk; 
             private String userName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Records model) {
+                this.clientHost = model.clientHost;
+                this.consumeStatus = model.consumeStatus;
+                this.fifoEnable = model.fifoEnable;
+                this.operations = model.operations;
+                this.popCk = model.popCk;
+                this.userName = model.userName;
+            } 
 
             /**
              * <p>Client host.</p>
@@ -859,6 +929,17 @@ public class GetTraceResponseBody extends TeaModel {
             private DeadLetterInfo deadLetterInfo; 
             private Boolean deadMessage; 
             private java.util.List<Records> records; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConsumerInfos model) {
+                this.consumeStatus = model.consumeStatus;
+                this.consumerGroupId = model.consumerGroupId;
+                this.deadLetterInfo = model.deadLetterInfo;
+                this.deadMessage = model.deadMessage;
+                this.records = model.records;
+            } 
 
             /**
              * <p>Consume status.</p>
@@ -1115,6 +1196,27 @@ public class GetTraceResponseBody extends TeaModel {
             private String topicName; 
             private String transactionId; 
             private java.util.Map<String, String> userProperties; 
+
+            private Builder() {
+            } 
+
+            private Builder(MessageInfo model) {
+                this.body = model.body;
+                this.bornHost = model.bornHost;
+                this.bornTime = model.bornTime;
+                this.instanceId = model.instanceId;
+                this.messageGroup = model.messageGroup;
+                this.messageId = model.messageId;
+                this.messageKeys = model.messageKeys;
+                this.messageTag = model.messageTag;
+                this.messageType = model.messageType;
+                this.regionId = model.regionId;
+                this.storeHost = model.storeHost;
+                this.storeTime = model.storeTime;
+                this.topicName = model.topicName;
+                this.transactionId = model.transactionId;
+                this.userProperties = model.userProperties;
+            } 
 
             /**
              * <p>Message body.</p>
@@ -1422,6 +1524,22 @@ public class GetTraceResponseBody extends TeaModel {
             private String recallTime; 
             private String userName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ProducerInfoRecords model) {
+                this.arriveTime = model.arriveTime;
+                this.clientHost = model.clientHost;
+                this.dlqOriginMessageId = model.dlqOriginMessageId;
+                this.dlqOriginTopic = model.dlqOriginTopic;
+                this.messageSource = model.messageSource;
+                this.produceDuration = model.produceDuration;
+                this.produceStatus = model.produceStatus;
+                this.produceTime = model.produceTime;
+                this.recallTime = model.recallTime;
+                this.userName = model.userName;
+            } 
+
             /**
              * <p>Arrive time.</p>
              * 
@@ -1511,7 +1629,10 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * recallTime.
+             * <p>The time when the scheduled message withdrawal request was initiated</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-22 12:17:08</p>
              */
             public Builder recallTime(String recallTime) {
                 this.recallTime = recallTime;
@@ -1568,8 +1689,15 @@ public class GetTraceResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<ProducerInfoRecords> records; 
 
+            private Builder() {
+            } 
+
+            private Builder(ProducerInfo model) {
+                this.records = model.records;
+            } 
+
             /**
-             * <p>Producer record list.</p>
+             * <p>The production records.</p>
              */
             public Builder records(java.util.List<ProducerInfoRecords> records) {
                 this.records = records;
@@ -1687,8 +1815,21 @@ public class GetTraceResponseBody extends TeaModel {
             private String regionId; 
             private String topicName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.brokerInfo = model.brokerInfo;
+                this.consumerInfos = model.consumerInfos;
+                this.instanceId = model.instanceId;
+                this.messageInfo = model.messageInfo;
+                this.producerInfo = model.producerInfo;
+                this.regionId = model.regionId;
+                this.topicName = model.topicName;
+            } 
+
             /**
-             * <p>Broker trace info.</p>
+             * <p>The broker trace.</p>
              */
             public Builder brokerInfo(BrokerInfo brokerInfo) {
                 this.brokerInfo = brokerInfo;
@@ -1723,7 +1864,7 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Producer trace info.</p>
+             * <p>The producer trace.</p>
              */
             public Builder producerInfo(ProducerInfo producerInfo) {
                 this.producerInfo = producerInfo;

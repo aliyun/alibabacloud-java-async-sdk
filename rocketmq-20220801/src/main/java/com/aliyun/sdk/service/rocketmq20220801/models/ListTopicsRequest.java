@@ -57,7 +57,7 @@ public class ListTopicsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -118,7 +118,7 @@ public class ListTopicsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the instance that contains the topics.</p>
+         * <p>Specifies which instance&quot;s topic list to retrieve.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,7 +131,7 @@ public class ListTopicsRequest extends Request {
         }
 
         /**
-         * <p>The condition that you want to use to filter topics in the instance. If you leave this parameter empty, all topics in the instance are queried.</p>
+         * <p>The filter condition for the query. If not provided, all topics under the instance will be queried.</p>
          * 
          * <strong>example:</strong>
          * <p>topic_test</p>
@@ -143,7 +143,7 @@ public class ListTopicsRequest extends Request {
         }
 
         /**
-         * <p>The message types of the topics.</p>
+         * <p>The message type of the topic.</p>
          */
         public Builder messageTypes(java.util.List<String> messageTypes) {
             String messageTypesShrink = shrink(messageTypes, "messageTypes", "simple");
@@ -153,7 +153,7 @@ public class ListTopicsRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>Page number, indicating which page of results to return.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -165,7 +165,7 @@ public class ListTopicsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>Page size, the maximum number of results to display per page.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>

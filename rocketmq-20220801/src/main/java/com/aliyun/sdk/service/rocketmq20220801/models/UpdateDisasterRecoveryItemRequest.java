@@ -46,7 +46,7 @@ public class UpdateDisasterRecoveryItemRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -89,6 +89,7 @@ public class UpdateDisasterRecoveryItemRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the global message backup plan.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +102,7 @@ public class UpdateDisasterRecoveryItemRequest extends Request {
         }
 
         /**
+         * <p>The ID of the topic mapping.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,7 +115,7 @@ public class UpdateDisasterRecoveryItemRequest extends Request {
         }
 
         /**
-         * topics.
+         * <p>The topics involved in the topic mapping.</p>
          */
         public Builder topics(java.util.List<Topics> topics) {
             this.putBodyParameter("topics", topics);
@@ -220,8 +222,23 @@ public class UpdateDisasterRecoveryItemRequest extends Request {
             private String regionId; 
             private String topicName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Topics model) {
+                this.consumerGroupId = model.consumerGroupId;
+                this.deliveryOrderType = model.deliveryOrderType;
+                this.instanceId = model.instanceId;
+                this.instanceType = model.instanceType;
+                this.regionId = model.regionId;
+                this.topicName = model.topicName;
+            } 
+
             /**
-             * consumerGroupId.
+             * <p>The ID of the consumer group. If you use the two-way backup mode, you must specify this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GID_xxx</p>
              */
             public Builder consumerGroupId(String consumerGroupId) {
                 this.consumerGroupId = consumerGroupId;
@@ -229,7 +246,15 @@ public class UpdateDisasterRecoveryItemRequest extends Request {
             }
 
             /**
-             * deliveryOrderType.
+             * <p>The method used to deliver messages to the destination instance.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Concurrently: concurrent delivery</li>
+             * <li>Orderly: ordered delivery</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Concurrently</p>
              */
             public Builder deliveryOrderType(String deliveryOrderType) {
                 this.deliveryOrderType = deliveryOrderType;
@@ -237,7 +262,10 @@ public class UpdateDisasterRecoveryItemRequest extends Request {
             }
 
             /**
-             * instanceId.
+             * <p>The instance ID. If you set instanceType to EXTERNAL_ROCKETMQ, the system automatically generates an ID for the instance. You can obtain the ID by querying the global message backup plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rmq-cn-em93y94xxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -245,7 +273,14 @@ public class UpdateDisasterRecoveryItemRequest extends Request {
             }
 
             /**
-             * instanceType.
+             * <p>The instance type. Valid values:</p>
+             * <ul>
+             * <li>ALIYUN_ROCKETMQ: ApsaraMQ for RocketMQ instance</li>
+             * <li>EXTERNAL_ROCKETMQ: open source RocketMQ cluster</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ALIYUN_ROCKETMQ</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -253,7 +288,10 @@ public class UpdateDisasterRecoveryItemRequest extends Request {
             }
 
             /**
-             * regionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -261,7 +299,10 @@ public class UpdateDisasterRecoveryItemRequest extends Request {
             }
 
             /**
-             * topicName.
+             * <p>The topic name. You must specify this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Topic_xxx</p>
              */
             public Builder topicName(String topicName) {
                 this.topicName = topicName;

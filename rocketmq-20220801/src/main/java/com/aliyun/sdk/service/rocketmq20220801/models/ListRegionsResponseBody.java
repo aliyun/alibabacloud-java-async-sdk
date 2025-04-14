@@ -60,6 +60,10 @@ public class ListRegionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -125,6 +129,20 @@ public class ListRegionsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListRegionsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.dynamicCode = model.dynamicCode;
+            this.dynamicMessage = model.dynamicMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code.</p>
@@ -261,6 +279,14 @@ public class ListRegionsResponseBody extends TeaModel {
             private String tagCode; 
             private Object tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagCode = model.tagCode;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
              * <p>The tag code.</p>
              * 
@@ -393,6 +419,19 @@ public class ListRegionsResponseBody extends TeaModel {
             private Boolean supportRocketmqV5; 
             private java.util.List<Tags> tags; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.createTime = model.createTime;
+                this.regionId = model.regionId;
+                this.regionName = model.regionName;
+                this.supportRocketmqV4 = model.supportRocketmqV4;
+                this.supportRocketmqV5 = model.supportRocketmqV5;
+                this.tags = model.tags;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The time when the ApsaraMQ for RocketMQ instance was created.</p>

@@ -56,7 +56,7 @@ public class CreateTopicRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -117,7 +117,7 @@ public class CreateTopicRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the instance to which the topic belongs.</p>
+         * <p>The ID of the instance to which the topic to be created belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,13 +130,13 @@ public class CreateTopicRequest extends Request {
         }
 
         /**
-         * <p>The name of the topic. The name is used to identify the topic and is globally unique in the instance.</p>
-         * <p>The following describes the naming conventions of a topic:</p>
+         * <p>The name of the topic to be created, used for identifying the topic, and it must be globally unique.</p>
+         * <p>Value specifications are as follows:</p>
          * <ul>
-         * <li>The name can contain letters, digits, underscores (_), hyphens (-), and percent signs (%).</li>
-         * <li>The name must be 1 to 60 characters in length.</li>
+         * <li>Character restrictions: Supports letters a~z or A~Z, numbers 0~9, and underscores (_), hyphens (-).</li>
+         * <li>Length restrictions: 1 to 60 characters.</li>
          * </ul>
-         * <p>For information about the characters reserved for the system, see <a href="https://help.aliyun.com/document_detail/440347.html">Limits on parameters</a>.</p>
+         * <p>For reserved character restrictions, please refer to <a href="https://help.aliyun.com/document_detail/440347.html">Parameter Restrictions</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -149,7 +149,10 @@ public class CreateTopicRequest extends Request {
         }
 
         /**
-         * maxSendTps.
+         * <p>The maximum TPS for message sending.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1500</p>
          */
         public Builder maxSendTps(Long maxSendTps) {
             this.putBodyParameter("maxSendTps", maxSendTps);
@@ -163,11 +166,11 @@ public class CreateTopicRequest extends Request {
          * <ul>
          * <li>TRANSACTION: transactional messages</li>
          * <li>FIFO: ordered messages</li>
-         * <li>DELAY: scheduled messages or delayed Message</li>
+         * <li>DELAY: scheduled or delayed messages</li>
          * <li>NORMAL: normal messages</li>
          * </ul>
          * <blockquote>
-         * <p>The type of messages in the topic must be the same as the type of messages that you want to send. For example, if you create a topic whose message type is ordered messages, the topic can be used to send and receive only ordered messages.</p>
+         * <p> The type of messages in the topic must be the same as the type of messages that you want to send. For example, if you create a topic whose message type is ordered messages, you can use the topic to send and receive only ordered messages.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

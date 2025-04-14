@@ -60,6 +60,10 @@ public class GetInstanceIpWhitelistResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -126,8 +130,25 @@ public class GetInstanceIpWhitelistResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetInstanceIpWhitelistResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.dynamicCode = model.dynamicCode;
+            this.dynamicMessage = model.dynamicMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance.NotFound</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -135,7 +156,7 @@ public class GetInstanceIpWhitelistResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -143,7 +164,10 @@ public class GetInstanceIpWhitelistResponseBody extends TeaModel {
         }
 
         /**
-         * dynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InstanceId</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -151,7 +175,10 @@ public class GetInstanceIpWhitelistResponseBody extends TeaModel {
         }
 
         /**
-         * dynamicMessage.
+         * <p>The dynamic error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instanceId</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -159,7 +186,10 @@ public class GetInstanceIpWhitelistResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -167,7 +197,10 @@ public class GetInstanceIpWhitelistResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -175,7 +208,10 @@ public class GetInstanceIpWhitelistResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0B962390-D84B-5D44-8C11-79DF40299D41</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -183,7 +219,10 @@ public class GetInstanceIpWhitelistResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -252,8 +291,20 @@ public class GetInstanceIpWhitelistResponseBody extends TeaModel {
             private java.util.List<String> ipWhitelists; 
             private String regionId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.instanceId = model.instanceId;
+                this.ipWhitelists = model.ipWhitelists;
+                this.regionId = model.regionId;
+            } 
+
             /**
-             * instanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rmq-cn-7e22ody****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -261,7 +312,7 @@ public class GetInstanceIpWhitelistResponseBody extends TeaModel {
             }
 
             /**
-             * ipWhitelists.
+             * <p>The IP address whitelists.</p>
              */
             public Builder ipWhitelists(java.util.List<String> ipWhitelists) {
                 this.ipWhitelists = ipWhitelists;
@@ -269,7 +320,10 @@ public class GetInstanceIpWhitelistResponseBody extends TeaModel {
             }
 
             /**
-             * regionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

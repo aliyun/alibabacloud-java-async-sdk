@@ -46,7 +46,7 @@ public class ListConsumerGroupSubscriptionsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -116,7 +116,10 @@ public class ListConsumerGroupSubscriptionsRequest extends Request {
         }
 
         /**
-         * topicName.
+         * <p>The topic name. If you do not specify this parameter, all subscriptions of the consumer group are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>topic_test</p>
          */
         public Builder topicName(String topicName) {
             this.putQueryParameter("topicName", topicName);

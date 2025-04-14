@@ -60,6 +60,10 @@ public class GetConsumerGroupLagResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -125,6 +129,20 @@ public class GetConsumerGroupLagResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetConsumerGroupLagResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.dynamicCode = model.dynamicCode;
+            this.dynamicMessage = model.dynamicMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>Error code</p>
@@ -285,6 +303,16 @@ public class GetConsumerGroupLagResponseBody extends TeaModel {
             private Long lastConsumeTimestamp; 
             private Long readyCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(TotalLag model) {
+                this.deliveryDuration = model.deliveryDuration;
+                this.inflightCount = model.inflightCount;
+                this.lastConsumeTimestamp = model.lastConsumeTimestamp;
+                this.readyCount = model.readyCount;
+            } 
+
             /**
              * <p>Delivery delay time, in seconds</p>
              * 
@@ -308,7 +336,10 @@ public class GetConsumerGroupLagResponseBody extends TeaModel {
             }
 
             /**
-             * lastConsumeTimestamp.
+             * <p>Last consumption time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1735629607846</p>
              */
             public Builder lastConsumeTimestamp(Long lastConsumeTimestamp) {
                 this.lastConsumeTimestamp = lastConsumeTimestamp;
@@ -412,6 +443,17 @@ public class GetConsumerGroupLagResponseBody extends TeaModel {
             private String regionId; 
             private java.util.Map<String, DataTopicLagMapValue> topicLagMap; 
             private TotalLag totalLag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.consumerGroupId = model.consumerGroupId;
+                this.instanceId = model.instanceId;
+                this.regionId = model.regionId;
+                this.topicLagMap = model.topicLagMap;
+                this.totalLag = model.totalLag;
+            } 
 
             /**
              * <p>Consumer Group ID</p>

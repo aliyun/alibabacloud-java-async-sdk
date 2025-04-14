@@ -63,7 +63,7 @@ public class CreateConsumerGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -133,7 +133,7 @@ public class CreateConsumerGroupRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the instance in which you want to create the consumer group.</p>
+         * <p>The ID of the request. The system generates a unique ID for each request. You can troubleshoot issues based on the request ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,13 +146,7 @@ public class CreateConsumerGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the consumer group. The ID is globally unique and is used to identify a consumer group.</p>
-         * <p>The following limits are imposed on the ID:</p>
-         * <ul>
-         * <li>Character limit: The ID can contain letters, digits, underscores (_), hyphens (-), and percent signs (%).</li>
-         * <li>Length limit: The ID must be 1 to 60 characters in length.</li>
-         * </ul>
-         * <p>For more information about strings that are reserved for the system, see <a href="https://help.aliyun.com/document_detail/440347.html">Limits on parameters</a>.</p>
+         * <p>The result data that is returned.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -165,7 +159,7 @@ public class CreateConsumerGroupRequest extends Request {
         }
 
         /**
-         * <p>The consumption retry policy that you want to configure for the consumer group. For more information, see <a href="https://help.aliyun.com/document_detail/440356.html">Consumption retry</a>.</p>
+         * <p>consume retry policy</p>
          * <p>This parameter is required.</p>
          */
         public Builder consumeRetryPolicy(ConsumeRetryPolicy consumeRetryPolicy) {
@@ -175,12 +169,7 @@ public class CreateConsumerGroupRequest extends Request {
         }
 
         /**
-         * <p>The message delivery order of the consumer group.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>Concurrently: concurrent delivery</li>
-         * <li>Orderly: ordered delivery</li>
-         * </ul>
+         * <p>The dynamic error message.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -193,7 +182,10 @@ public class CreateConsumerGroupRequest extends Request {
         }
 
         /**
-         * maxReceiveTps.
+         * <p>Maximum received message tps</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder maxReceiveTps(Long maxReceiveTps) {
             this.putBodyParameter("maxReceiveTps", maxReceiveTps);
@@ -202,7 +194,7 @@ public class CreateConsumerGroupRequest extends Request {
         }
 
         /**
-         * <p>The remarks on the consumer group.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>This is the remark for test.</p>
@@ -276,6 +268,15 @@ public class CreateConsumerGroupRequest extends Request {
             private String deadLetterTargetTopic; 
             private Integer maxRetryTimes; 
             private String retryPolicy; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConsumeRetryPolicy model) {
+                this.deadLetterTargetTopic = model.deadLetterTargetTopic;
+                this.maxRetryTimes = model.maxRetryTimes;
+                this.retryPolicy = model.retryPolicy;
+            } 
 
             /**
              * <p>The dead-letter topic.</p>

@@ -52,7 +52,7 @@ public class ListConsumerGroupsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -104,7 +104,7 @@ public class ListConsumerGroupsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the instance to which the consumer groups belong.</p>
+         * <p>Specifies which instance&quot;s consumer group list to retrieve.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,7 +117,7 @@ public class ListConsumerGroupsRequest extends Request {
         }
 
         /**
-         * <p>The condition that you want to use to filter consumer groups in the instance. If you leave this parameter empty, all consumer groups in the instance are queried.</p>
+         * <p>The filter condition for the query. If not provided, all consumer groups under the specified instance will be queried.</p>
          * 
          * <strong>example:</strong>
          * <p>CID-TEST</p>
@@ -129,7 +129,7 @@ public class ListConsumerGroupsRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>Page number, indicating which page of results to return.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -141,7 +141,8 @@ public class ListConsumerGroupsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>Page size, the maximum number of results to display per page.</p>
+         * <p>Value range: [10, 100].</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

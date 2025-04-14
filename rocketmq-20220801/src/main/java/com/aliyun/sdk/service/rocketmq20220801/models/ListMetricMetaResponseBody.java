@@ -60,6 +60,10 @@ public class ListMetricMetaResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -126,8 +130,25 @@ public class ListMetricMetaResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListMetricMetaResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.dynamicCode = model.dynamicCode;
+            this.dynamicMessage = model.dynamicMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * code.
+         * <p>Error code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Topic.NotFound</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -135,7 +156,7 @@ public class ListMetricMetaResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>Return result</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -143,7 +164,10 @@ public class ListMetricMetaResponseBody extends TeaModel {
         }
 
         /**
-         * dynamicCode.
+         * <p>Dynamic error code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -151,7 +175,10 @@ public class ListMetricMetaResponseBody extends TeaModel {
         }
 
         /**
-         * dynamicMessage.
+         * <p>The dynamic error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -159,7 +186,10 @@ public class ListMetricMetaResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>HTTP status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -167,7 +197,10 @@ public class ListMetricMetaResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>Error message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The topic already exists.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -175,7 +208,10 @@ public class ListMetricMetaResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8B459455-4A35-5796-BA9D-98EF1AB9A931</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -183,7 +219,10 @@ public class ListMetricMetaResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Whether the operation was successful</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -252,8 +291,20 @@ public class ListMetricMetaResponseBody extends TeaModel {
             private String description; 
             private String metricName; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.category = model.category;
+                this.description = model.description;
+                this.metricName = model.metricName;
+            } 
+
             /**
-             * category.
+             * <p>Monitoring item tag</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Bug</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -261,7 +312,10 @@ public class ListMetricMetaResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>Monitoring item description</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Using Serverless Devs to deploy the infrastructure of project:get-userinfo-v1-infrastructure-as-template-project</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -269,7 +323,10 @@ public class ListMetricMetaResponseBody extends TeaModel {
             }
 
             /**
-             * metricName.
+             * <p>Monitoring item name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SendMessageCountPerInstance</p>
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -351,8 +408,18 @@ public class ListMetricMetaResponseBody extends TeaModel {
             private Long pageSize; 
             private Long totalCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.list = model.list;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
+
             /**
-             * list.
+             * <p>Paged data</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -360,7 +427,10 @@ public class ListMetricMetaResponseBody extends TeaModel {
             }
 
             /**
-             * pageNumber.
+             * <p>Current page number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -368,7 +438,10 @@ public class ListMetricMetaResponseBody extends TeaModel {
             }
 
             /**
-             * pageSize.
+             * <p>Page size</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -376,7 +449,10 @@ public class ListMetricMetaResponseBody extends TeaModel {
             }
 
             /**
-             * totalCount.
+             * <p>Total record count</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

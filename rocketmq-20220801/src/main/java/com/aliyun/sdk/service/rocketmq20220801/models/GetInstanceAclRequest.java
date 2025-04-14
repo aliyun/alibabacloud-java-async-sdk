@@ -53,7 +53,7 @@ public class GetInstanceAclRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -105,6 +105,7 @@ public class GetInstanceAclRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,6 +118,7 @@ public class GetInstanceAclRequest extends Request {
         }
 
         /**
+         * <p>The username.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,6 +131,7 @@ public class GetInstanceAclRequest extends Request {
         }
 
         /**
+         * <p>The name of the resource on which you want to grant permissions.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,6 +144,12 @@ public class GetInstanceAclRequest extends Request {
         }
 
         /**
+         * <p>The type of the resource on which you want to grant permissions.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Group</li>
+         * <li>Topic</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

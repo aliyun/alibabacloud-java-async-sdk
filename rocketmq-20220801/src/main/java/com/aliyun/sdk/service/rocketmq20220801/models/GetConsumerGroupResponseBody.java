@@ -60,6 +60,10 @@ public class GetConsumerGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -126,6 +130,20 @@ public class GetConsumerGroupResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetConsumerGroupResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.dynamicCode = model.dynamicCode;
+            this.dynamicMessage = model.dynamicMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
          * <p>The error code.</p>
          * 
@@ -138,7 +156,7 @@ public class GetConsumerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result data that is returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -272,6 +290,15 @@ public class GetConsumerGroupResponseBody extends TeaModel {
             private String deadLetterTargetTopic; 
             private Integer maxRetryTimes; 
             private String retryPolicy; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConsumeRetryPolicy model) {
+                this.deadLetterTargetTopic = model.deadLetterTargetTopic;
+                this.maxRetryTimes = model.maxRetryTimes;
+                this.retryPolicy = model.retryPolicy;
+            } 
 
             /**
              * <p>The dead-letter topic.</p>
@@ -479,6 +506,22 @@ public class GetConsumerGroupResponseBody extends TeaModel {
             private String status; 
             private String updateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.consumeRetryPolicy = model.consumeRetryPolicy;
+                this.consumerGroupId = model.consumerGroupId;
+                this.createTime = model.createTime;
+                this.deliveryOrderType = model.deliveryOrderType;
+                this.instanceId = model.instanceId;
+                this.maxReceiveTps = model.maxReceiveTps;
+                this.regionId = model.regionId;
+                this.remark = model.remark;
+                this.status = model.status;
+                this.updateTime = model.updateTime;
+            } 
+
             /**
              * <p>The consumption retry policy that you want to configure for the consumer group. For more information, see <a href="https://help.aliyun.com/document_detail/440356.html">Consumption retry</a>.</p>
              */
@@ -552,7 +595,10 @@ public class GetConsumerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * maxReceiveTps.
+             * <p>Maximum received message tps</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder maxReceiveTps(Long maxReceiveTps) {
                 this.maxReceiveTps = maxReceiveTps;

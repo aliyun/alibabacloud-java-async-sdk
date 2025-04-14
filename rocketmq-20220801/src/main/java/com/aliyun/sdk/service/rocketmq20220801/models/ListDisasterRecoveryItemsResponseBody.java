@@ -64,6 +64,10 @@ public class ListDisasterRecoveryItemsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -138,8 +142,26 @@ public class ListDisasterRecoveryItemsResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListDisasterRecoveryItemsResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.data = model.data;
+            this.dynamicCode = model.dynamicCode;
+            this.dynamicMessage = model.dynamicMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * accessDeniedDetail.
+         * <p>Access denied details, provided only when access is denied due to lack of RAM permissions</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -147,7 +169,10 @@ public class ListDisasterRecoveryItemsResponseBody extends TeaModel {
         }
 
         /**
-         * code.
+         * <p>Error code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -155,7 +180,7 @@ public class ListDisasterRecoveryItemsResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>Return result</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -163,7 +188,10 @@ public class ListDisasterRecoveryItemsResponseBody extends TeaModel {
         }
 
         /**
-         * dynamicCode.
+         * <p>Dynamic error code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InstanceId</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -171,7 +199,10 @@ public class ListDisasterRecoveryItemsResponseBody extends TeaModel {
         }
 
         /**
-         * dynamicMessage.
+         * <p>Dynamic error message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instanceId</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -179,7 +210,10 @@ public class ListDisasterRecoveryItemsResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>HTTP status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -187,7 +221,10 @@ public class ListDisasterRecoveryItemsResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>Error message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -195,7 +232,10 @@ public class ListDisasterRecoveryItemsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C115601B-8736-5BBF-AC99-7FEAE12xxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -203,7 +243,10 @@ public class ListDisasterRecoveryItemsResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Whether the request was successful</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -308,8 +351,23 @@ public class ListDisasterRecoveryItemsResponseBody extends TeaModel {
             private String regionId; 
             private String topicName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Topics model) {
+                this.consumerGroupId = model.consumerGroupId;
+                this.deliveryOrderType = model.deliveryOrderType;
+                this.instanceId = model.instanceId;
+                this.instanceType = model.instanceType;
+                this.regionId = model.regionId;
+                this.topicName = model.topicName;
+            } 
+
             /**
-             * consumerGroupId.
+             * <p>Consumer group ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>group-test</p>
              */
             public Builder consumerGroupId(String consumerGroupId) {
                 this.consumerGroupId = consumerGroupId;
@@ -317,7 +375,15 @@ public class ListDisasterRecoveryItemsResponseBody extends TeaModel {
             }
 
             /**
-             * deliveryOrderType.
+             * <p>The order in which messages are delivered to the target instance.</p>
+             * <p>Parameter values are as follows:</p>
+             * <ul>
+             * <li>Concurrently: concurrent delivery</li>
+             * <li>Orderly: sequential delivery</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Concurrently</p>
              */
             public Builder deliveryOrderType(String deliveryOrderType) {
                 this.deliveryOrderType = deliveryOrderType;
@@ -325,7 +391,10 @@ public class ListDisasterRecoveryItemsResponseBody extends TeaModel {
             }
 
             /**
-             * instanceId.
+             * <p>Instance ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rmq-cn-kh43w0olz0c</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -333,7 +402,10 @@ public class ListDisasterRecoveryItemsResponseBody extends TeaModel {
             }
 
             /**
-             * instanceType.
+             * <p>Instance type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALIYUN_ROCKETMQ</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -341,7 +413,7 @@ public class ListDisasterRecoveryItemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>regionId</p>
+             * <p>Region ID</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -352,7 +424,10 @@ public class ListDisasterRecoveryItemsResponseBody extends TeaModel {
             }
 
             /**
-             * topicName.
+             * <p>The topic name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>topic-test</p>
              */
             public Builder topicName(String topicName) {
                 this.topicName = topicName;
@@ -470,8 +545,24 @@ public class ListDisasterRecoveryItemsResponseBody extends TeaModel {
             private java.util.List<Topics> topics; 
             private String updateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.createTime = model.createTime;
+                this.extInfo = model.extInfo;
+                this.itemId = model.itemId;
+                this.itemStatus = model.itemStatus;
+                this.planId = model.planId;
+                this.topics = model.topics;
+                this.updateTime = model.updateTime;
+            } 
+
             /**
-             * createTime.
+             * <p>Creation time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-09-20 03:38:28</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -479,7 +570,7 @@ public class ListDisasterRecoveryItemsResponseBody extends TeaModel {
             }
 
             /**
-             * extInfo.
+             * <p>Extended information</p>
              */
             public Builder extInfo(java.util.Map<String, String> extInfo) {
                 this.extInfo = extInfo;
@@ -487,7 +578,10 @@ public class ListDisasterRecoveryItemsResponseBody extends TeaModel {
             }
 
             /**
-             * itemId.
+             * <p>Backup plan ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100070284</p>
              */
             public Builder itemId(Long itemId) {
                 this.itemId = itemId;
@@ -495,7 +589,17 @@ public class ListDisasterRecoveryItemsResponseBody extends TeaModel {
             }
 
             /**
-             * itemStatus.
+             * <p>Backup mapping status:</p>
+             * <ul>
+             * <li>CREATING (Creating)</li>
+             * <li>CHANGING (Changing)</li>
+             * <li>RUNNING (Running)</li>
+             * <li>MANUAL_STOPPED (Manually Stopped)</li>
+             * <li>OVERDUE_STOPPED (Stopped Due to Overdue)</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder itemStatus(String itemStatus) {
                 this.itemStatus = itemStatus;
@@ -503,7 +607,10 @@ public class ListDisasterRecoveryItemsResponseBody extends TeaModel {
             }
 
             /**
-             * planId.
+             * <p>Mapping ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1300000016</p>
              */
             public Builder planId(Long planId) {
                 this.planId = planId;
@@ -511,7 +618,7 @@ public class ListDisasterRecoveryItemsResponseBody extends TeaModel {
             }
 
             /**
-             * topics.
+             * <p>Topics included in the backup mapping</p>
              */
             public Builder topics(java.util.List<Topics> topics) {
                 this.topics = topics;
@@ -519,7 +626,10 @@ public class ListDisasterRecoveryItemsResponseBody extends TeaModel {
             }
 
             /**
-             * updateTime.
+             * <p>Update time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-10-04 02:19:44</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -613,8 +723,19 @@ public class ListDisasterRecoveryItemsResponseBody extends TeaModel {
             private String scrollId; 
             private Long totalCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.list = model.list;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.scrollId = model.scrollId;
+                this.totalCount = model.totalCount;
+            } 
+
             /**
-             * list.
+             * <p>Paged data</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -622,7 +743,10 @@ public class ListDisasterRecoveryItemsResponseBody extends TeaModel {
             }
 
             /**
-             * pageNumber.
+             * <p>Current page number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -630,7 +754,10 @@ public class ListDisasterRecoveryItemsResponseBody extends TeaModel {
             }
 
             /**
-             * pageSize.
+             * <p>Page size</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -638,7 +765,11 @@ public class ListDisasterRecoveryItemsResponseBody extends TeaModel {
             }
 
             /**
-             * scrollId.
+             * <p>Request scroll ID.
+             * Automatically generated by the system, subsequent pagination requests need to include this return value to continue pagination.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>B13D0B07-F24B-4790-88D8-D47A38063D00</p>
              */
             public Builder scrollId(String scrollId) {
                 this.scrollId = scrollId;
@@ -646,7 +777,10 @@ public class ListDisasterRecoveryItemsResponseBody extends TeaModel {
             }
 
             /**
-             * totalCount.
+             * <p>Total number of records</p>
+             * 
+             * <strong>example:</strong>
+             * <p>49</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

@@ -60,6 +60,10 @@ public class ListTracesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -125,6 +129,20 @@ public class ListTracesResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTracesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.dynamicCode = model.dynamicCode;
+            this.dynamicMessage = model.dynamicMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code.</p>
@@ -321,6 +339,19 @@ public class ListTracesResponseBody extends TeaModel {
             private String regionId; 
             private String topicName; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.bornTime = model.bornTime;
+                this.instanceId = model.instanceId;
+                this.messageId = model.messageId;
+                this.messageKeys = model.messageKeys;
+                this.messageTag = model.messageTag;
+                this.regionId = model.regionId;
+                this.topicName = model.topicName;
+            } 
+
             /**
              * <p>Message born time.</p>
              * 
@@ -469,6 +500,16 @@ public class ListTracesResponseBody extends TeaModel {
             private Long pageNumber; 
             private Long pageSize; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.list = model.list;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>Trace list.</p>

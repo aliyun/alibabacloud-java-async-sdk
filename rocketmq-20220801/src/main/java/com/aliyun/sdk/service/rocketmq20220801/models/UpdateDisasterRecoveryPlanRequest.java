@@ -65,7 +65,7 @@ public class UpdateDisasterRecoveryPlanRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -144,7 +144,11 @@ public class UpdateDisasterRecoveryPlanRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the global message backup plan.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1300000016</p>
          */
         public Builder planId(Long planId) {
             this.putPathParameter("planId", planId);
@@ -153,7 +157,13 @@ public class UpdateDisasterRecoveryPlanRequest extends Request {
         }
 
         /**
-         * autoSyncCheckpoint.
+         * <p>Whether to enable automatic synchronization of consumption progress.</p>
+         * <blockquote>
+         * <p>This is effective only when consumption progress synchronization is enabled, i.e., the value of <code>syncCheckpointEnabled</code> is true.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoSyncCheckpoint(Boolean autoSyncCheckpoint) {
             this.putBodyParameter("autoSyncCheckpoint", autoSyncCheckpoint);
@@ -162,7 +172,7 @@ public class UpdateDisasterRecoveryPlanRequest extends Request {
         }
 
         /**
-         * instances.
+         * <p>The instances that are involved in the global message backup plan.</p>
          */
         public Builder instances(java.util.List<Instances> instances) {
             this.putBodyParameter("instances", instances);
@@ -171,7 +181,10 @@ public class UpdateDisasterRecoveryPlanRequest extends Request {
         }
 
         /**
-         * planDesc.
+         * <p>The description of the global message backup plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder planDesc(String planDesc) {
             this.putBodyParameter("planDesc", planDesc);
@@ -180,7 +193,10 @@ public class UpdateDisasterRecoveryPlanRequest extends Request {
         }
 
         /**
-         * planName.
+         * <p>The name of the global message backup plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder planName(String planName) {
             this.putBodyParameter("planName", planName);
@@ -189,7 +205,14 @@ public class UpdateDisasterRecoveryPlanRequest extends Request {
         }
 
         /**
-         * planType.
+         * <p>The type of the global message backup plan. Valid values:</p>
+         * <ul>
+         * <li>ACTIVE_PASSIVE: geo-disaster recovery</li>
+         * <li>ACTIVE_ACTIVE: active geo-redundancy</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ACTIVE_PASSIVE</p>
          */
         public Builder planType(String planType) {
             this.putBodyParameter("planType", planType);
@@ -198,7 +221,10 @@ public class UpdateDisasterRecoveryPlanRequest extends Request {
         }
 
         /**
-         * syncCheckpointEnabled.
+         * <p>Switch for synchronizing consumption progress</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder syncCheckpointEnabled(Boolean syncCheckpointEnabled) {
             this.putBodyParameter("syncCheckpointEnabled", syncCheckpointEnabled);
@@ -257,8 +283,19 @@ public class UpdateDisasterRecoveryPlanRequest extends Request {
             private String propertyKey; 
             private String propertyValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(MessageProperty model) {
+                this.propertyKey = model.propertyKey;
+                this.propertyValue = model.propertyValue;
+            } 
+
             /**
-             * propertyKey.
+             * <p>The attribute key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aaa</p>
              */
             public Builder propertyKey(String propertyKey) {
                 this.propertyKey = propertyKey;
@@ -266,7 +303,10 @@ public class UpdateDisasterRecoveryPlanRequest extends Request {
             }
 
             /**
-             * propertyValue.
+             * <p>The attribute value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bbb</p>
              */
             public Builder propertyValue(String propertyValue) {
                 this.propertyValue = propertyValue;
@@ -456,8 +496,34 @@ public class UpdateDisasterRecoveryPlanRequest extends Request {
             private String vSwitchId; 
             private String vpcId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Instances model) {
+                this.authType = model.authType;
+                this.endpointUrl = model.endpointUrl;
+                this.instanceId = model.instanceId;
+                this.instanceRole = model.instanceRole;
+                this.instanceType = model.instanceType;
+                this.messageProperty = model.messageProperty;
+                this.networkType = model.networkType;
+                this.password = model.password;
+                this.regionId = model.regionId;
+                this.securityGroupId = model.securityGroupId;
+                this.username = model.username;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+            } 
+
             /**
-             * authType.
+             * <p>The authentication type.</p>
+             * <ul>
+             * <li>NO_AUTH: no authentication</li>
+             * <li>ACL_AUTH: access control list (ACL)-based authentication</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>NO_AUTH</p>
              */
             public Builder authType(String authType) {
                 this.authType = authType;
@@ -465,7 +531,10 @@ public class UpdateDisasterRecoveryPlanRequest extends Request {
             }
 
             /**
-             * endpointUrl.
+             * <p>The instance endpoint. This parameter is required only if you set instanceType to EXTERNAL_ROCKETMQ.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder endpointUrl(String endpointUrl) {
                 this.endpointUrl = endpointUrl;
@@ -473,7 +542,10 @@ public class UpdateDisasterRecoveryPlanRequest extends Request {
             }
 
             /**
-             * instanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rmq-cn-83l3r0xxxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -481,7 +553,14 @@ public class UpdateDisasterRecoveryPlanRequest extends Request {
             }
 
             /**
-             * instanceRole.
+             * <p>The instance role. Valid values:</p>
+             * <ul>
+             * <li>ACTIVE: primary instance</li>
+             * <li>Passive: secondary instance</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ACTIVE</p>
              */
             public Builder instanceRole(String instanceRole) {
                 this.instanceRole = instanceRole;
@@ -489,7 +568,14 @@ public class UpdateDisasterRecoveryPlanRequest extends Request {
             }
 
             /**
-             * instanceType.
+             * <p>The instance type. Valid values:</p>
+             * <ul>
+             * <li>ALIYUN_ROCKETMQ: ApsaraMQ for RocketMQ instance</li>
+             * <li>EXTERNAL_ROCKETMQ: open source RocketMQ cluster</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ALIYUN_ROCKETMQ</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -497,7 +583,7 @@ public class UpdateDisasterRecoveryPlanRequest extends Request {
             }
 
             /**
-             * messageProperty.
+             * <p>The message attribute. When you synchronize a message to the destination cluster, the system automatically adds the attribute to the message for SQL-based filtering.</p>
              */
             public Builder messageProperty(MessageProperty messageProperty) {
                 this.messageProperty = messageProperty;
@@ -505,7 +591,14 @@ public class UpdateDisasterRecoveryPlanRequest extends Request {
             }
 
             /**
-             * networkType.
+             * <p>The network type. This parameter is required only if you set instanceType to EXTERNAL_ROCKETMQ. Valid values:</p>
+             * <ul>
+             * <li>TCP_INTERNET: Internet over TCP</li>
+             * <li>TCP_VPC: virtual private cloud (VPC) over TCP.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>TCP_INTERNET</p>
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -513,7 +606,10 @@ public class UpdateDisasterRecoveryPlanRequest extends Request {
             }
 
             /**
-             * password.
+             * <p>The password that is used for authentication. This parameter is required only if you set authType to ACL_AUTH.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder password(String password) {
                 this.password = password;
@@ -521,7 +617,10 @@ public class UpdateDisasterRecoveryPlanRequest extends Request {
             }
 
             /**
-             * regionId.
+             * <p>The region in which the instance resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -529,7 +628,10 @@ public class UpdateDisasterRecoveryPlanRequest extends Request {
             }
 
             /**
-             * securityGroupId.
+             * <p>The ID of the security group to which the instance belongs. This parameter is required only if you set instanceType to EXTERNAL_ROCKETMQ.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-bp17hpmgz9******</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -537,7 +639,10 @@ public class UpdateDisasterRecoveryPlanRequest extends Request {
             }
 
             /**
-             * username.
+             * <p>The username that is used for authentication. This parameter is required only if you set authType to ACL_AUTH.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder username(String username) {
                 this.username = username;
@@ -545,7 +650,10 @@ public class UpdateDisasterRecoveryPlanRequest extends Request {
             }
 
             /**
-             * vSwitchId.
+             * <p>The ID of the vSwitch with which the instance is associated. If you want to specify multiple vSwitches, separate the vSwitches with vertical bars (|).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-uf6gwtbn6etadpv******</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -553,7 +661,10 @@ public class UpdateDisasterRecoveryPlanRequest extends Request {
             }
 
             /**
-             * vpcId.
+             * <p>The ID of the VPC with which the instance is associated. This parameter is required only if you set instanceType to EXTERNAL_ROCKETMQ.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-wz9qt50xhtj9krb******</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

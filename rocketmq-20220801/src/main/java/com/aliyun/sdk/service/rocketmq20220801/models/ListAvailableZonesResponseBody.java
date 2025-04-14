@@ -60,6 +60,10 @@ public class ListAvailableZonesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -125,6 +129,20 @@ public class ListAvailableZonesResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAvailableZonesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.dynamicCode = model.dynamicCode;
+            this.dynamicMessage = model.dynamicMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code returned if the call failed.</p>
@@ -284,6 +302,16 @@ public class ListAvailableZonesResponseBody extends TeaModel {
             private String updateTime; 
             private String zoneId; 
             private String zoneName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.createTime = model.createTime;
+                this.updateTime = model.updateTime;
+                this.zoneId = model.zoneId;
+                this.zoneName = model.zoneName;
+            } 
 
             /**
              * <p>The time when the zone was created.</p>

@@ -60,6 +60,10 @@ public class GetMessageDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -125,6 +129,20 @@ public class GetMessageDetailResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMessageDetailResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.dynamicCode = model.dynamicCode;
+            this.dynamicMessage = model.dynamicMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code.</p>
@@ -428,6 +446,28 @@ public class GetMessageDetailResponseBody extends TeaModel {
             private java.util.Map<String, String> systemProperties; 
             private String topicName; 
             private java.util.Map<String, String> userProperties; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.body = model.body;
+                this.bodySize = model.bodySize;
+                this.bornHost = model.bornHost;
+                this.bornTime = model.bornTime;
+                this.instanceId = model.instanceId;
+                this.messageGroup = model.messageGroup;
+                this.messageId = model.messageId;
+                this.messageKeys = model.messageKeys;
+                this.messageTag = model.messageTag;
+                this.messageType = model.messageType;
+                this.regionId = model.regionId;
+                this.storeHost = model.storeHost;
+                this.storeTime = model.storeTime;
+                this.systemProperties = model.systemProperties;
+                this.topicName = model.topicName;
+                this.userProperties = model.userProperties;
+            } 
 
             /**
              * <p>The message body.</p>

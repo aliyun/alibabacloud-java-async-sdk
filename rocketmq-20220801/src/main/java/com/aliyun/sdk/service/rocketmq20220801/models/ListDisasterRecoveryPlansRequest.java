@@ -22,6 +22,10 @@ public class ListDisasterRecoveryPlansRequest extends Request {
     private String filter;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("instanceId")
+    private String instanceId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("pageNumber")
     @com.aliyun.core.annotation.Validation(maximum = 100000000, minimum = 1)
     private Integer pageNumber;
@@ -34,6 +38,7 @@ public class ListDisasterRecoveryPlansRequest extends Request {
     private ListDisasterRecoveryPlansRequest(Builder builder) {
         super(builder);
         this.filter = builder.filter;
+        this.instanceId = builder.instanceId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
     }
@@ -46,7 +51,7 @@ public class ListDisasterRecoveryPlansRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -56,6 +61,13 @@ public class ListDisasterRecoveryPlansRequest extends Request {
      */
     public String getFilter() {
         return this.filter;
+    }
+
+    /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     /**
@@ -74,6 +86,7 @@ public class ListDisasterRecoveryPlansRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListDisasterRecoveryPlansRequest, Builder> {
         private String filter; 
+        private String instanceId; 
         private Integer pageNumber; 
         private Integer pageSize; 
 
@@ -84,12 +97,16 @@ public class ListDisasterRecoveryPlansRequest extends Request {
         private Builder(ListDisasterRecoveryPlansRequest request) {
             super(request);
             this.filter = request.filter;
+            this.instanceId = request.instanceId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
         } 
 
         /**
-         * filter.
+         * <p>Filter conditions, filter by backup name and description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder filter(String filter) {
             this.putQueryParameter("filter", filter);
@@ -98,7 +115,19 @@ public class ListDisasterRecoveryPlansRequest extends Request {
         }
 
         /**
-         * pageNumber.
+         * instanceId.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("instanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * <p>Page number, the page of results to be queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -107,7 +136,10 @@ public class ListDisasterRecoveryPlansRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>Page size, the maximum number of results displayed per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);

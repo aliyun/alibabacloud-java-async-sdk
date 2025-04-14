@@ -33,9 +33,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <blockquote>
-     * <p>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</p>
-     * </blockquote>
+     * <p>The ID of the consumer group. The ID is globally unique and is used to identify a consumer group.
+     * The following limits are imposed on the ID:</p>
+     * <ul>
+     * <li>Character limit: The ID can contain letters, digits, underscores (_), hyphens (-), and percent signs (%).</li>
+     * <li>Length limit: The ID must be 1 to 60 characters in length.
+     * For more information about strings that are reserved for the system, see <a href="https://help.aliyun.com/document_detail/440347.html">Limits on parameters</a>.</li>
+     * </ul>
      * 
      * @param request the request parameters of CreateConsumerGroup  CreateConsumerGroupRequest
      * @return CreateConsumerGroupResponse
@@ -264,7 +268,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</p>
+     * <p>Notice: The OpenAPI provided by Alibaba Cloud is a management API used for managing and querying related resources of Alibaba Cloud services. It is recommended to integrate it only in the management chain. Do not rely on OpenAPI implementation in the core data chain for message sending and receiving, as this may lead to risks in the chain.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ListConsumerGroups  ListConsumerGroupsRequest
@@ -400,7 +404,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</p>
+     * <p>Notice: The OpenAPI provided by Alibaba Cloud is a management API used for managing and querying related resources of Alibaba Cloud services. It is recommended to integrate it only in the management chain. It is strictly prohibited to rely on OpenAPI implementation in the core data chain of message sending and receiving, otherwise it may lead to risks in the chain.</p>
      * </blockquote>
      * 
      * @param request the request parameters of UpdateConsumerGroup  UpdateConsumerGroupRequest

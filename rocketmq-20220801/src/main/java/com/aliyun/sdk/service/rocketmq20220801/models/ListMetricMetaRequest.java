@@ -46,7 +46,7 @@ public class ListMetricMetaRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -98,6 +98,7 @@ public class ListMetricMetaRequest extends Request {
         }
 
         /**
+         * <p>Page number, indicating which page of the results to return.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +111,7 @@ public class ListMetricMetaRequest extends Request {
         }
 
         /**
+         * <p>Page size, indicating the maximum number of results per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

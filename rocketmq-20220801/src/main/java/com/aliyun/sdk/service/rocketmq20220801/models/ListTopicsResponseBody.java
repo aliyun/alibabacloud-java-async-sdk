@@ -60,6 +60,10 @@ public class ListTopicsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -126,8 +130,22 @@ public class ListTopicsResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListTopicsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.dynamicCode = model.dynamicCode;
+            this.dynamicMessage = model.dynamicMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * <p>The error code.</p>
+         * <p>Error code.</p>
          * 
          * <strong>example:</strong>
          * <p>Topic.NotFound</p>
@@ -138,7 +156,7 @@ public class ListTopicsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result data that is returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -146,7 +164,7 @@ public class ListTopicsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic error code.</p>
+         * <p>Dynamic error code.</p>
          * 
          * <strong>example:</strong>
          * <p>TopicName</p>
@@ -157,7 +175,7 @@ public class ListTopicsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic error message.</p>
+         * <p>Dynamic error message.</p>
          * 
          * <strong>example:</strong>
          * <p>topicName</p>
@@ -168,10 +186,7 @@ public class ListTopicsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>400</p>
+         * httpStatusCode.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -179,7 +194,7 @@ public class ListTopicsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message.</p>
+         * <p>Error message.</p>
          * 
          * <strong>example:</strong>
          * <p>The topic cannot be found.</p>
@@ -190,7 +205,7 @@ public class ListTopicsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request. The system generates a unique ID for each request. You can troubleshoot issues based on the request ID.</p>
+         * <p>Request ID, each request has a unique ID that can be used for troubleshooting and problem localization.</p>
          * 
          * <strong>example:</strong>
          * <p>AF9A8B10-C426-530F-A0DD-96320B39****</p>
@@ -201,7 +216,7 @@ public class ListTopicsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call is successful.</p>
+         * <p>Indicates whether the execution was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -345,8 +360,23 @@ public class ListTopicsResponseBody extends TeaModel {
             private String topicName; 
             private String updateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.createTime = model.createTime;
+                this.instanceId = model.instanceId;
+                this.maxSendTps = model.maxSendTps;
+                this.messageType = model.messageType;
+                this.regionId = model.regionId;
+                this.remark = model.remark;
+                this.status = model.status;
+                this.topicName = model.topicName;
+                this.updateTime = model.updateTime;
+            } 
+
             /**
-             * <p>The time when the topic was created.</p>
+             * <p>Creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-08-01 20:05:50</p>
@@ -357,7 +387,7 @@ public class ListTopicsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance.</p>
+             * <p>Instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>rmq-cn-7e22ody****</p>
@@ -368,7 +398,10 @@ public class ListTopicsResponseBody extends TeaModel {
             }
 
             /**
-             * maxSendTps.
+             * <p>The maximum TPS for message sending.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder maxSendTps(Long maxSendTps) {
                 this.maxSendTps = maxSendTps;
@@ -376,44 +409,13 @@ public class ListTopicsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The message type of the topic.</p>
+             * <p>The type of messages in the topic.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li><p>TRANSACTION</p>
-             * <!-- -->
-             * 
-             * <p>:</p>
-             * <!-- -->
-             * 
-             * <p>transactional message</p>
-             * <!-- -->
-             * </li>
-             * <li><p>FIFO</p>
-             * <!-- -->
-             * 
-             * <p>:</p>
-             * <!-- -->
-             * 
-             * <p>ordered message</p>
-             * <!-- -->
-             * </li>
-             * <li><p>DELAY</p>
-             * <!-- -->
-             * 
-             * <p>:</p>
-             * <!-- -->
-             * 
-             * <p>scheduled or delayed message</p>
-             * <!-- -->
-             * </li>
-             * <li><p>NORMAL</p>
-             * <!-- -->
-             * 
-             * <p>:</p>
-             * <!-- -->
-             * 
-             * <p>normal message</p>
-             * <!-- --></li>
+             * <li>TRANSACTION: transactional messages</li>
+             * <li>FIFO: ordered messages</li>
+             * <li>DELAY: scheduled or delayed messages</li>
+             * <li>NORMAL: normal messages</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -425,7 +427,7 @@ public class ListTopicsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region in which the instance resides.</p>
+             * <p>The region ID to which the instance belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -436,7 +438,7 @@ public class ListTopicsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The remarks on the topic.</p>
+             * <p>Remark information of the topic.</p>
              * 
              * <strong>example:</strong>
              * <p>This is the remark for test.</p>
@@ -447,31 +449,11 @@ public class ListTopicsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the topic.</p>
+             * <p>The topic status.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li><p>RUNNING</p>
-             * <!-- -->
-             * 
-             * <p>: The topic is</p>
-             * <!-- -->
-             * 
-             * <p>running</p>
-             * <!-- -->
-             * 
-             * <p>.</p>
-             * </li>
-             * <li><p>CREATING</p>
-             * <!-- -->
-             * 
-             * <p>: The topic is</p>
-             * <!-- -->
-             * 
-             * <p>being created</p>
-             * <!-- -->
-             * 
-             * <p>.</p>
-             * </li>
+             * <li>RUNNING</li>
+             * <li>CREATING</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -483,7 +465,7 @@ public class ListTopicsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the topic.</p>
+             * <p>Topic name.</p>
              * 
              * <strong>example:</strong>
              * <p>topic_test</p>
@@ -494,7 +476,7 @@ public class ListTopicsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the topic was last updated.</p>
+             * <p>Last update time of the topic.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-08-01 20:05:50</p>
@@ -579,8 +561,18 @@ public class ListTopicsResponseBody extends TeaModel {
             private Long pageSize; 
             private Long totalCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.list = model.list;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
+
             /**
-             * <p>The paginated data.</p>
+             * <p>The topics.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -588,7 +580,7 @@ public class ListTopicsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page number of the returned page.</p>
+             * <p>Current page number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -599,7 +591,7 @@ public class ListTopicsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries returned per page.</p>
+             * <p>Page size.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -610,7 +602,7 @@ public class ListTopicsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of returned entries.</p>
+             * <p>Total number of results returned.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

@@ -64,6 +64,10 @@ public class DeleteDisasterRecoveryItemResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -138,8 +142,26 @@ public class DeleteDisasterRecoveryItemResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(DeleteDisasterRecoveryItemResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.data = model.data;
+            this.dynamicCode = model.dynamicCode;
+            this.dynamicMessage = model.dynamicMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * accessDeniedDetail.
+         * <p>Access denied details, only in the scenario where the user is denied access due to RAM not having permission</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -147,7 +169,10 @@ public class DeleteDisasterRecoveryItemResponseBody extends TeaModel {
         }
 
         /**
-         * code.
+         * <p>Error code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DisasterRecoveryItemStatus.Error</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -155,7 +180,10 @@ public class DeleteDisasterRecoveryItemResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The return data</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -163,7 +191,10 @@ public class DeleteDisasterRecoveryItemResponseBody extends TeaModel {
         }
 
         /**
-         * dynamicCode.
+         * <p>Dynamic error code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InstanceId</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -171,7 +202,10 @@ public class DeleteDisasterRecoveryItemResponseBody extends TeaModel {
         }
 
         /**
-         * dynamicMessage.
+         * <p>Dynamic error message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instanceId</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -179,7 +213,10 @@ public class DeleteDisasterRecoveryItemResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>HTTP status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -187,7 +224,10 @@ public class DeleteDisasterRecoveryItemResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>Error message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The current status of the disaster recovery item does not support this operation.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -195,7 +235,10 @@ public class DeleteDisasterRecoveryItemResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0B962390-D84B-5D44-8C11-79DFxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -203,7 +246,10 @@ public class DeleteDisasterRecoveryItemResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Whether the operation was successful</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

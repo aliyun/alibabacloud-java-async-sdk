@@ -60,6 +60,10 @@ public class GetConsumerGroupSubscriptionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -125,6 +129,20 @@ public class GetConsumerGroupSubscriptionResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetConsumerGroupSubscriptionResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.dynamicCode = model.dynamicCode;
+            this.dynamicMessage = model.dynamicMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code.</p>
@@ -309,6 +327,18 @@ public class GetConsumerGroupSubscriptionResponseBody extends TeaModel {
             private String messageModel; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConnectionDTO model) {
+                this.clientId = model.clientId;
+                this.egressIp = model.egressIp;
+                this.hostname = model.hostname;
+                this.language = model.language;
+                this.messageModel = model.messageModel;
+                this.version = model.version;
+            } 
+
             /**
              * <p>The client ID.</p>
              * 
@@ -478,6 +508,18 @@ public class GetConsumerGroupSubscriptionResponseBody extends TeaModel {
             private String subscriptionStatus; 
             private String topicName; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubscriptionDTO model) {
+                this.consumerGroupId = model.consumerGroupId;
+                this.filterExpression = model.filterExpression;
+                this.filterExpressionType = model.filterExpressionType;
+                this.messageModel = model.messageModel;
+                this.subscriptionStatus = model.subscriptionStatus;
+                this.topicName = model.topicName;
+            } 
+
             /**
              * <p>The consumer group ID.</p>
              * 
@@ -608,6 +650,14 @@ public class GetConsumerGroupSubscriptionResponseBody extends TeaModel {
         public static final class Builder {
             private ConnectionDTO connectionDTO; 
             private SubscriptionDTO subscriptionDTO; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.connectionDTO = model.connectionDTO;
+                this.subscriptionDTO = model.subscriptionDTO;
+            } 
 
             /**
              * <p>The connection details.</p>

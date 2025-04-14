@@ -64,6 +64,10 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -138,8 +142,26 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetDisasterRecoveryPlanResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.data = model.data;
+            this.dynamicCode = model.dynamicCode;
+            this.dynamicMessage = model.dynamicMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * accessDeniedDetail.
+         * <p>The details about the access denial. This parameter is returned only if the access is denied because the Resource Access Management (RAM) user does not have the required permissions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -147,7 +169,10 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
         }
 
         /**
-         * code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -155,7 +180,7 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -163,7 +188,10 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
         }
 
         /**
-         * dynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InstanceId</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -171,7 +199,10 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
         }
 
         /**
-         * dynamicMessage.
+         * <p>The dynamic error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instanceId</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -179,7 +210,10 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -187,7 +221,10 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -195,7 +232,10 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7358418D-83BD-507A-8079-611C63E0xxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -203,7 +243,10 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -260,8 +303,19 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
             private String propertyKey; 
             private String propertyValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(MessageProperty model) {
+                this.propertyKey = model.propertyKey;
+                this.propertyValue = model.propertyValue;
+            } 
+
             /**
-             * propertyKey.
+             * <p>Property key</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder propertyKey(String propertyKey) {
                 this.propertyKey = propertyKey;
@@ -269,7 +323,10 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
             }
 
             /**
-             * propertyValue.
+             * <p>Property value</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder propertyValue(String propertyValue) {
                 this.propertyValue = propertyValue;
@@ -459,8 +516,34 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
             private String vSwitchId; 
             private String vpcId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Instances model) {
+                this.authType = model.authType;
+                this.endpointUrl = model.endpointUrl;
+                this.instanceId = model.instanceId;
+                this.instanceRole = model.instanceRole;
+                this.instanceType = model.instanceType;
+                this.messageProperty = model.messageProperty;
+                this.networkType = model.networkType;
+                this.password = model.password;
+                this.regionId = model.regionId;
+                this.securityGroupId = model.securityGroupId;
+                this.username = model.username;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+            } 
+
             /**
-             * authType.
+             * <p>Authentication method. Not required for instanceType of ALIYUN_ROCKETMQ and version 4.0</p>
+             * <ul>
+             * <li>NO_AUTH: No authentication required</li>
+             * <li>ACL_AUTH: ACL authentication</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ACL_AUTH</p>
              */
             public Builder authType(String authType) {
                 this.authType = authType;
@@ -468,7 +551,10 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
             }
 
             /**
-             * endpointUrl.
+             * <p>Endpoint URL, not required for instanceType of ALIYUN_ROCKETMQ, but required for EXTERNAL_ROCKETMQ</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder endpointUrl(String endpointUrl) {
                 this.endpointUrl = endpointUrl;
@@ -476,7 +562,10 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
             }
 
             /**
-             * instanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rmq-cn-gpz3qtcdxxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -484,7 +573,14 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
             }
 
             /**
-             * instanceRole.
+             * <p>Instance role, either primary or secondary </p>
+             * <ul>
+             * <li>ACTIVE: Primary</li>
+             * <li>PASSIVE: Secondary</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ACTIVE</p>
              */
             public Builder instanceRole(String instanceRole) {
                 this.instanceRole = instanceRole;
@@ -492,7 +588,14 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
             }
 
             /**
-             * instanceType.
+             * <p>Instance type</p>
+             * <ul>
+             * <li>ALIYUN_ROCKETMQ: Alibaba Cloud instance</li>
+             * <li>EXTERNAL_ROCKETMQ: External instance, open-source instance, open-source cluster</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ALIYUN_ROCKETMQ</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -500,7 +603,7 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
             }
 
             /**
-             * messageProperty.
+             * <p>Message filtering properties. When messages are synchronized to the target cluster, this property will be automatically added for SQL filtering during message consumption.</p>
              */
             public Builder messageProperty(MessageProperty messageProperty) {
                 this.messageProperty = messageProperty;
@@ -508,7 +611,14 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
             }
 
             /**
-             * networkType.
+             * <p>Network type, not required for instanceType of ALIYUN_ROCKETMQ, but required for EXTERNAL_ROCKETMQ Parameter values are as follows:</p>
+             * <ul>
+             * <li>TCP_INTERNET: TCP public network</li>
+             * <li>TCP_VPC: TCP VPC (Virtual Private Cloud)</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>TCP_INTERNET</p>
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -516,7 +626,10 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
             }
 
             /**
-             * password.
+             * <p>Authentication password, required when authType is ACL_AUTH. Not required for instanceType of ALIYUN_ROCKETMQ</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder password(String password) {
                 this.password = password;
@@ -524,7 +637,10 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
             }
 
             /**
-             * regionId.
+             * <p>Region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -532,7 +648,10 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
             }
 
             /**
-             * securityGroupId.
+             * <p>Security group ID, required only when the instanceType is EXTERNAL_ROCKETMQ and networkType is TCP_VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-bp17hpmgz9******</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -540,7 +659,10 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
             }
 
             /**
-             * username.
+             * <p>Authentication username, required when authType is ACL_AUTH</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder username(String username) {
                 this.username = username;
@@ -548,7 +670,10 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
             }
 
             /**
-             * vSwitchId.
+             * <p>The ID of the switch associated with the instance, required only when the instanceType is EXTERNAL_ROCKETMQ and networkType is TCP_VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-uf6gwtbn6etadpv******</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -556,7 +681,10 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
             }
 
             /**
-             * <p>VPC ID</p>
+             * <p>The ID of the private network associated with the created instance. The instanceType instance type is only EXTERNAL_ROCKETMQ. It is required when the networkType is TCP_VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-wz9qt50xhtj9krb******</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -722,8 +850,28 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
             private Boolean syncCheckpointEnabled; 
             private String updateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.autoSyncCheckpoint = model.autoSyncCheckpoint;
+                this.createTime = model.createTime;
+                this.extInfo = model.extInfo;
+                this.instances = model.instances;
+                this.planDesc = model.planDesc;
+                this.planId = model.planId;
+                this.planName = model.planName;
+                this.planStatus = model.planStatus;
+                this.planType = model.planType;
+                this.syncCheckpointEnabled = model.syncCheckpointEnabled;
+                this.updateTime = model.updateTime;
+            } 
+
             /**
-             * autoSyncCheckpoint.
+             * <p>Whether to enable automatic synchronization of consumption progress.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder autoSyncCheckpoint(Boolean autoSyncCheckpoint) {
                 this.autoSyncCheckpoint = autoSyncCheckpoint;
@@ -731,7 +879,10 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
             }
 
             /**
-             * createTime.
+             * <p>The time when the backup plan was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-08-01 20:05:50</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -739,7 +890,7 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
             }
 
             /**
-             * extInfo.
+             * <p>Additional Information</p>
              */
             public Builder extInfo(java.util.Map<String, String> extInfo) {
                 this.extInfo = extInfo;
@@ -747,7 +898,7 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
             }
 
             /**
-             * instances.
+             * <p>Instances involved in the backup plan</p>
              */
             public Builder instances(java.util.List<Instances> instances) {
                 this.instances = instances;
@@ -755,7 +906,10 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
             }
 
             /**
-             * planDesc.
+             * <p>The describe of the global message backup plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxx</p>
              */
             public Builder planDesc(String planDesc) {
                 this.planDesc = planDesc;
@@ -763,7 +917,10 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
             }
 
             /**
-             * planId.
+             * <p>The ID of the global message backup plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1300000016</p>
              */
             public Builder planId(Long planId) {
                 this.planId = planId;
@@ -771,7 +928,10 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
             }
 
             /**
-             * planName.
+             * <p>The name of the global message backup plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder planName(String planName) {
                 this.planName = planName;
@@ -779,7 +939,10 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
             }
 
             /**
-             * planStatus.
+             * <p>The status of the global message backup plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder planStatus(String planStatus) {
                 this.planStatus = planStatus;
@@ -787,7 +950,15 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
             }
 
             /**
-             * planType.
+             * <p>The type of the global message backup plan.
+             * values are as follows:</p>
+             * <ul>
+             * <li>ACTIVE_PASSIVE: One-way backup</li>
+             * <li>ACTIVE_ACTIVE: Two-way backup</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ACTIVE_PASSIVE</p>
              */
             public Builder planType(String planType) {
                 this.planType = planType;
@@ -795,7 +966,10 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
             }
 
             /**
-             * syncCheckpointEnabled.
+             * <p>Switch for synchronizing consumption progress</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder syncCheckpointEnabled(Boolean syncCheckpointEnabled) {
                 this.syncCheckpointEnabled = syncCheckpointEnabled;
@@ -803,7 +977,10 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
             }
 
             /**
-             * updateTime.
+             * <p>The time when the backup plan was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-08-01 20:05:50</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

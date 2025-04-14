@@ -35,7 +35,7 @@ public class DeleteDisasterRecoveryPlanRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -60,7 +60,11 @@ public class DeleteDisasterRecoveryPlanRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the global message backup plan.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1300000016</p>
          */
         public Builder planId(Long planId) {
             this.putPathParameter("planId", planId);

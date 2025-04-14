@@ -35,7 +35,7 @@ public class GetDisasterRecoveryPlanRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -60,6 +60,7 @@ public class GetDisasterRecoveryPlanRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the global message backup plan.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

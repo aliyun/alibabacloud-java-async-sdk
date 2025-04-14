@@ -60,6 +60,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -125,6 +129,20 @@ public class ListTagResourcesResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTagResourcesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.dynamicCode = model.dynamicCode;
+            this.dynamicMessage = model.dynamicMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>Error code</p>
@@ -321,6 +339,19 @@ public class ListTagResourcesResponseBody extends TeaModel {
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(TagResources model) {
+                this.aliUid = model.aliUid;
+                this.category = model.category;
+                this.resourceId = model.resourceId;
+                this.resourceType = model.resourceType;
+                this.scope = model.scope;
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
              * <p>UID of the resource owner.</p>
              * 
@@ -460,6 +491,15 @@ public class ListTagResourcesResponseBody extends TeaModel {
             private String nextToken; 
             private String requestId; 
             private java.util.List<TagResources> tagResources; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.nextToken = model.nextToken;
+                this.requestId = model.requestId;
+                this.tagResources = model.tagResources;
+            } 
 
             /**
              * <p>The position from which the next query starts.</p>

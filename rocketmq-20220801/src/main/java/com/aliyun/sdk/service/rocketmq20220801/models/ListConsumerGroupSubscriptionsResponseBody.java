@@ -60,6 +60,10 @@ public class ListConsumerGroupSubscriptionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -125,6 +129,20 @@ public class ListConsumerGroupSubscriptionsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListConsumerGroupSubscriptionsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.dynamicCode = model.dynamicCode;
+            this.dynamicMessage = model.dynamicMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code.</p>
@@ -332,6 +350,20 @@ public class ListConsumerGroupSubscriptionsResponseBody extends TeaModel {
             private String subscriptionStatus; 
             private Boolean topicCreated; 
             private String topicName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.consistency = model.consistency;
+                this.consumerGroupId = model.consumerGroupId;
+                this.filterExpression = model.filterExpression;
+                this.filterExpressionType = model.filterExpressionType;
+                this.messageModel = model.messageModel;
+                this.subscriptionStatus = model.subscriptionStatus;
+                this.topicCreated = model.topicCreated;
+                this.topicName = model.topicName;
+            } 
 
             /**
              * <p>Indicates whether message consumption is consistent. Valid values:</p>

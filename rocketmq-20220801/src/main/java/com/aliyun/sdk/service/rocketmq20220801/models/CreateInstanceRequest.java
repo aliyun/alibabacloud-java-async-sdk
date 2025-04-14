@@ -114,7 +114,7 @@ public class CreateInstanceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -310,6 +310,8 @@ public class CreateInstanceRequest extends Request {
          * <ul>
          * <li>ons_rmqpost_public_intl: pay-as-you-go</li>
          * <li>ons_rmqsub_public_intl: subscription</li>
+         * <li>ons_rmqsrvlesspost_public_intl: serverless instance
+         * serverless instance requires this parameter</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -398,7 +400,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The information about the instance specifications.</p>
+         * <p>The information about instance specifications.</p>
          */
         public Builder productInfo(ProductInfo productInfo) {
             this.putBodyParameter("productInfo", productInfo);
@@ -419,7 +421,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The ID of the resource group to which the instance belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aekzy6pist7uuna</p>
@@ -495,7 +497,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * tags.
+         * <p>The tags that you want to add to the instance.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putBodyParameter("tags", tags);
@@ -593,6 +595,16 @@ public class CreateInstanceRequest extends Request {
             private String internetSpec; 
             private java.util.List<String> ipWhitelist; 
 
+            private Builder() {
+            } 
+
+            private Builder(InternetInfo model) {
+                this.flowOutBandwidth = model.flowOutBandwidth;
+                this.flowOutType = model.flowOutType;
+                this.internetSpec = model.internetSpec;
+                this.ipWhitelist = model.ipWhitelist;
+            } 
+
             /**
              * <p>The Internet bandwidth. Unit: MB/s.</p>
              * <p>This parameter is required only if you set flowOutType to payByBandwidth.</p>
@@ -607,12 +619,12 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * <p>The billing method of Internet usage.</p>
+             * <p>The metering method of Internet usage.</p>
              * <p>Valid values:</p>
              * <ul>
              * <li>payByBandwidth: pay-by-bandwidth. This value is valid only if you enable Internet access.</li>
              * <li>payByTraffic: pay-by-traffic. This value is valid only if you enable Internet access.</li>
-             * <li>uninvolved: No billing method is involved. This value is valid only if you disable Internet access.</li>
+             * <li>uninvolved: No metering method is involved. This value is valid only if you disable Internet access.</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -643,10 +655,10 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * <p>The whitelist that includes the IP addresses that are allowed to access the ApsaraMQ for RocketMQ broker over the Internet. This parameter can be configured only if you use the public endpoint to access the instance.</p>
+             * <p>The whitelist that includes the CIDR blocks that are allowed to access the ApsaraMQ for RocketMQ broker over the Internet. This parameter can be configured only if you use the public endpoint to access the instance.</p>
              * <ul>
              * <li>If you do not configure an IP address whitelist, all CIDR blocks are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.</li>
-             * <li>If you configure an IP address whitelist, only the IP addresses in the whitelist are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.</li>
+             * <li>If you configure an IP address whitelist, only the CIDR blocks in the whitelist are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.</li>
              * </ul>
              */
             public Builder ipWhitelist(java.util.List<String> ipWhitelist) {
@@ -692,6 +704,13 @@ public class CreateInstanceRequest extends Request {
 
         public static final class Builder {
             private String vSwitchId; 
+
+            private Builder() {
+            } 
+
+            private Builder(VSwitches model) {
+                this.vSwitchId = model.vSwitchId;
+            } 
 
             /**
              * <p>The ID of the vSwitch with which the instance is associated.</p>
@@ -780,6 +799,16 @@ public class CreateInstanceRequest extends Request {
             private String vSwitchId; 
             private java.util.List<VSwitches> vSwitches; 
             private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(VpcInfo model) {
+                this.securityGroupIds = model.securityGroupIds;
+                this.vSwitchId = model.vSwitchId;
+                this.vSwitches = model.vSwitches;
+                this.vpcId = model.vpcId;
+            } 
 
             /**
              * <p>The ID of the security group to which the instance belongs.</p>
@@ -890,6 +919,14 @@ public class CreateInstanceRequest extends Request {
         public static final class Builder {
             private InternetInfo internetInfo; 
             private VpcInfo vpcInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetworkInfo model) {
+                this.internetInfo = model.internetInfo;
+                this.vpcInfo = model.vpcInfo;
+            } 
 
             /**
              * <p>The Internet-related configurations.</p>
@@ -1009,6 +1046,18 @@ public class CreateInstanceRequest extends Request {
             private Boolean storageEncryption; 
             private String storageSecretKey; 
 
+            private Builder() {
+            } 
+
+            private Builder(ProductInfo model) {
+                this.autoScaling = model.autoScaling;
+                this.messageRetentionTime = model.messageRetentionTime;
+                this.msgProcessSpec = model.msgProcessSpec;
+                this.sendReceiveRatio = model.sendReceiveRatio;
+                this.storageEncryption = model.storageEncryption;
+                this.storageSecretKey = model.storageSecretKey;
+            } 
+
             /**
              * <p>Specifies whether to enable the elastic TPS feature for the instance.</p>
              * <p>Valid values:</p>
@@ -1068,7 +1117,7 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * <p>Indicates whether storage encryption is enabled.</p>
+             * <p>Specifies whether to enable the encryption at rest feature.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -1079,7 +1128,7 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * <p>The storage encryption key.</p>
+             * <p>The key for encryption at rest.</p>
              * 
              * <strong>example:</strong>
              * <p>xxx</p>
@@ -1140,8 +1189,19 @@ public class CreateInstanceRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * key.
+             * <p>The <code>key</code> of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aaa</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1149,7 +1209,10 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * value.
+             * <p>The <code>value</code> of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bbb</p>
              */
             public Builder value(String value) {
                 this.value = value;

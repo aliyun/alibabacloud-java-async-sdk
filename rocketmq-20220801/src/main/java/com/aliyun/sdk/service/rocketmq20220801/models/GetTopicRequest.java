@@ -41,7 +41,7 @@ public class GetTopicRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -75,7 +75,7 @@ public class GetTopicRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the instance to which the topic belongs.</p>
+         * <p>The ID of the instance to which the topic to be queried belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class GetTopicRequest extends Request {
         }
 
         /**
-         * <p>The name of the topic.</p>
+         * <p>The name of the topic to be queried.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

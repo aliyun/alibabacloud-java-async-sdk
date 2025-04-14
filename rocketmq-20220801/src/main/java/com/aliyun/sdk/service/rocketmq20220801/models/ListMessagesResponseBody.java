@@ -60,6 +60,10 @@ public class ListMessagesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -125,6 +129,20 @@ public class ListMessagesResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListMessagesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.dynamicCode = model.dynamicCode;
+            this.dynamicMessage = model.dynamicMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code.</p>
@@ -417,6 +435,27 @@ public class ListMessagesResponseBody extends TeaModel {
             private String topicName; 
             private java.util.Map<String, String> userProperties; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.body = model.body;
+                this.bodySize = model.bodySize;
+                this.bornHost = model.bornHost;
+                this.bornTime = model.bornTime;
+                this.instanceId = model.instanceId;
+                this.messageGroup = model.messageGroup;
+                this.messageId = model.messageId;
+                this.messageKeys = model.messageKeys;
+                this.messageTag = model.messageTag;
+                this.messageType = model.messageType;
+                this.regionId = model.regionId;
+                this.storeHost = model.storeHost;
+                this.storeTime = model.storeTime;
+                this.topicName = model.topicName;
+                this.userProperties = model.userProperties;
+            } 
+
             /**
              * <p>Message body.</p>
              * 
@@ -662,6 +701,17 @@ public class ListMessagesResponseBody extends TeaModel {
             private Long pageSize; 
             private String scrollId; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.list = model.list;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.scrollId = model.scrollId;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The pagination information.</p>

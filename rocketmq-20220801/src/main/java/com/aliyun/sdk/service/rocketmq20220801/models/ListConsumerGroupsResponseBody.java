@@ -60,6 +60,10 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -126,8 +130,22 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListConsumerGroupsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.dynamicCode = model.dynamicCode;
+            this.dynamicMessage = model.dynamicMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * <p>The error code.</p>
+         * <p>Error code.</p>
          * 
          * <strong>example:</strong>
          * <p>MissingInstanceId</p>
@@ -138,7 +156,7 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result data that is returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -146,10 +164,10 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic error code.</p>
+         * <p>Dynamic error code.</p>
          * 
          * <strong>example:</strong>
-         * <p>InstanceId</p>
+         * <p>xxx</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -160,7 +178,7 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
          * <p>The dynamic error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>instanceId</p>
+         * <p>xxx</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -168,7 +186,7 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>400</p>
@@ -179,7 +197,7 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message.</p>
+         * <p>Error message.</p>
          * 
          * <strong>example:</strong>
          * <p>Parameter InstanceId is mandatory for this action .</p>
@@ -190,7 +208,7 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request. The system generates a unique ID for each request. You can troubleshoot issues based on the request ID.</p>
+         * <p>Request ID, each request has a unique ID that can be used for troubleshooting and problem localization.</p>
          * 
          * <strong>example:</strong>
          * <p>5503A460-98ED-5543-92CF-4853DE28****</p>
@@ -201,7 +219,7 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call is successful.</p>
+         * <p>Indicates whether the execution was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -333,8 +351,22 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
             private String status; 
             private String updateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.consumerGroupId = model.consumerGroupId;
+                this.createTime = model.createTime;
+                this.instanceId = model.instanceId;
+                this.maxReceiveTps = model.maxReceiveTps;
+                this.regionId = model.regionId;
+                this.remark = model.remark;
+                this.status = model.status;
+                this.updateTime = model.updateTime;
+            } 
+
             /**
-             * <p>The ID of the consumer group.</p>
+             * <p>Consumer group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>GID-TEST</p>
@@ -345,7 +377,7 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the consumer group was created.</p>
+             * <p>Creation time of the consumer group.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-08-01 20:05:50</p>
@@ -356,7 +388,7 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance.</p>
+             * <p>Instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>rmq-cn-7e22ody****</p>
@@ -367,7 +399,10 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * maxReceiveTps.
+             * <p>The maximum TPS for message sending.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder maxReceiveTps(Long maxReceiveTps) {
                 this.maxReceiveTps = maxReceiveTps;
@@ -375,7 +410,7 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region in which the instance resides.</p>
+             * <p>The region ID to which the instance belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -386,7 +421,7 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The remarks on the consumer group.</p>
+             * <p>Remark information of the consumer group.</p>
              * 
              * <strong>example:</strong>
              * <p>This is the remark for test.</p>
@@ -397,32 +432,7 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the consumer group.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li><p>RUNNING</p>
-             * <!-- -->
-             * 
-             * <p>: The consumer group is</p>
-             * <!-- -->
-             * 
-             * <p>running</p>
-             * <!-- -->
-             * 
-             * <p>.</p>
-             * </li>
-             * <li><p>CREATING</p>
-             * <!-- -->
-             * 
-             * <p>: The consumer group is</p>
-             * <!-- -->
-             * 
-             * <p>being created</p>
-             * <!-- -->
-             * 
-             * <p>.</p>
-             * </li>
-             * </ul>
+             * <p>Status of the consumer group.</p>
              * 
              * <strong>example:</strong>
              * <p>RUNNING</p>
@@ -433,7 +443,7 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the consumer group was last updated.</p>
+             * <p>Last update time of the consumer group.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-08-01 20:05:50</p>
@@ -518,8 +528,18 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
             private Long pageSize; 
             private Long totalCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.list = model.list;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
+
             /**
-             * <p>The paginated data.</p>
+             * <p>The consumer groups.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -527,7 +547,7 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page number of the returned page.</p>
+             * <p>Current page number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -538,7 +558,7 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries returned per page.</p>
+             * <p>Page size.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -549,7 +569,7 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of returned entries.</p>
+             * <p>Total number of returned results.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

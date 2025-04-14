@@ -60,6 +60,10 @@ public class GetInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -125,6 +129,20 @@ public class GetInstanceResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetInstanceResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.dynamicCode = model.dynamicCode;
+            this.dynamicMessage = model.dynamicMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code returned if the call failed.</p>
@@ -249,6 +267,13 @@ public class GetInstanceResponseBody extends TeaModel {
         public static final class Builder {
             private String username; 
 
+            private Builder() {
+            } 
+
+            private Builder(AccountInfo model) {
+                this.username = model.username;
+            } 
+
             /**
              * <p>The username of the instance. If you access a ApsaraMQ for RocketMQ instance over the Internet, you must configure the username and password of the instance in the SDK code for authentication.</p>
              * 
@@ -323,6 +348,15 @@ public class GetInstanceResponseBody extends TeaModel {
             private String aclType; 
             private java.util.List<String> aclTypes; 
             private Boolean defaultVpcAuthFree; 
+
+            private Builder() {
+            } 
+
+            private Builder(AclInfo model) {
+                this.aclType = model.aclType;
+                this.aclTypes = model.aclTypes;
+                this.defaultVpcAuthFree = model.defaultVpcAuthFree;
+            } 
 
             /**
              * <p>The authentication type of the instance. This parameter is no longer in use. We recommend that you configure aclTypes.</p>
@@ -511,6 +545,21 @@ public class GetInstanceResponseBody extends TeaModel {
             private String msgProcessSpec; 
             private Float sendReceiveRatio; 
             private Boolean supportAutoScaling; 
+
+            private Builder() {
+            } 
+
+            private Builder(ExtConfig model) {
+                this.aclType = model.aclType;
+                this.autoScaling = model.autoScaling;
+                this.flowOutBandwidth = model.flowOutBandwidth;
+                this.flowOutType = model.flowOutType;
+                this.internetSpec = model.internetSpec;
+                this.messageRetentionTime = model.messageRetentionTime;
+                this.msgProcessSpec = model.msgProcessSpec;
+                this.sendReceiveRatio = model.sendReceiveRatio;
+                this.supportAutoScaling = model.supportAutoScaling;
+            } 
 
             /**
              * <p>The authentication type of the instance.</p>
@@ -719,6 +768,16 @@ public class GetInstanceResponseBody extends TeaModel {
             private Double totalCount; 
             private Double usedCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceQuotas model) {
+                this.freeCount = model.freeCount;
+                this.quotaName = model.quotaName;
+                this.totalCount = model.totalCount;
+                this.usedCount = model.usedCount;
+            } 
+
             /**
              * <p>The number of topics that are free of charge on the instance.</p>
              * 
@@ -829,6 +888,15 @@ public class GetInstanceResponseBody extends TeaModel {
             private String endpointType; 
             private String endpointUrl; 
             private java.util.List<String> ipWhitelist; 
+
+            private Builder() {
+            } 
+
+            private Builder(Endpoints model) {
+                this.endpointType = model.endpointType;
+                this.endpointUrl = model.endpointUrl;
+                this.ipWhitelist = model.ipWhitelist;
+            } 
 
             /**
              * <p>The type of the endpoint that is used to access the instance.</p>
@@ -948,6 +1016,16 @@ public class GetInstanceResponseBody extends TeaModel {
             private String internetSpec; 
             private java.util.List<String> ipWhitelist; 
 
+            private Builder() {
+            } 
+
+            private Builder(InternetInfo model) {
+                this.flowOutBandwidth = model.flowOutBandwidth;
+                this.flowOutType = model.flowOutType;
+                this.internetSpec = model.internetSpec;
+                this.ipWhitelist = model.ipWhitelist;
+            } 
+
             /**
              * <p>The Internet bandwidth. Unit: MB/s.</p>
              * 
@@ -1055,6 +1133,14 @@ public class GetInstanceResponseBody extends TeaModel {
             private String vSwitchId; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(VSwitches model) {
+                this.vSwitchId = model.vSwitchId;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
              * <p>The vSwitch ID.</p>
              * 
@@ -1152,6 +1238,16 @@ public class GetInstanceResponseBody extends TeaModel {
             private String vSwitchId; 
             private java.util.List<VSwitches> vSwitches; 
             private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(VpcInfo model) {
+                this.securityGroupIds = model.securityGroupIds;
+                this.vSwitchId = model.vSwitchId;
+                this.vSwitches = model.vSwitches;
+                this.vpcId = model.vpcId;
+            } 
 
             /**
              * <p>The security group ID.</p>
@@ -1256,6 +1352,15 @@ public class GetInstanceResponseBody extends TeaModel {
             private java.util.List<Endpoints> endpoints; 
             private InternetInfo internetInfo; 
             private VpcInfo vpcInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetworkInfo model) {
+                this.endpoints = model.endpoints;
+                this.internetInfo = model.internetInfo;
+                this.vpcInfo = model.vpcInfo;
+            } 
 
             /**
              * <p>The endpoints.</p>
@@ -1403,6 +1508,20 @@ public class GetInstanceResponseBody extends TeaModel {
             private String storageSecretKey; 
             private Boolean supportAutoScaling; 
             private Boolean traceOn; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProductInfo model) {
+                this.autoScaling = model.autoScaling;
+                this.messageRetentionTime = model.messageRetentionTime;
+                this.msgProcessSpec = model.msgProcessSpec;
+                this.sendReceiveRatio = model.sendReceiveRatio;
+                this.storageEncryption = model.storageEncryption;
+                this.storageSecretKey = model.storageSecretKey;
+                this.supportAutoScaling = model.supportAutoScaling;
+                this.traceOn = model.traceOn;
+            } 
 
             /**
              * <p>Specifies whether to enable the elastic TPS feature for the instance.</p>
@@ -1577,6 +1696,15 @@ public class GetInstanceResponseBody extends TeaModel {
             private String softwareVersion; 
             private String upgradeMethod; 
 
+            private Builder() {
+            } 
+
+            private Builder(Software model) {
+                this.maintainTime = model.maintainTime;
+                this.softwareVersion = model.softwareVersion;
+                this.upgradeMethod = model.upgradeMethod;
+            } 
+
             /**
              * <p>The period of upgrade time.</p>
              * 
@@ -1667,6 +1795,14 @@ public class GetInstanceResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key of the resource.</p>
@@ -2053,6 +2189,40 @@ public class GetInstanceResponseBody extends TeaModel {
             private Long topicCount; 
             private String updateTime; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.accountInfo = model.accountInfo;
+                this.aclInfo = model.aclInfo;
+                this.bid = model.bid;
+                this.commodityCode = model.commodityCode;
+                this.createTime = model.createTime;
+                this.expireTime = model.expireTime;
+                this.extConfig = model.extConfig;
+                this.groupCount = model.groupCount;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.instanceQuotas = model.instanceQuotas;
+                this.networkInfo = model.networkInfo;
+                this.paymentType = model.paymentType;
+                this.productInfo = model.productInfo;
+                this.regionId = model.regionId;
+                this.releaseTime = model.releaseTime;
+                this.remark = model.remark;
+                this.resourceGroupId = model.resourceGroupId;
+                this.seriesCode = model.seriesCode;
+                this.serviceCode = model.serviceCode;
+                this.software = model.software;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.subSeriesCode = model.subSeriesCode;
+                this.tags = model.tags;
+                this.topicCount = model.topicCount;
+                this.updateTime = model.updateTime;
+                this.userId = model.userId;
+            } 
 
             /**
              * <p>The account information.</p>

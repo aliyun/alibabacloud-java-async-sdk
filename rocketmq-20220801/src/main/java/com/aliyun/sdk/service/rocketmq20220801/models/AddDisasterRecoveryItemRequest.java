@@ -40,7 +40,7 @@ public class AddDisasterRecoveryItemRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -74,7 +74,11 @@ public class AddDisasterRecoveryItemRequest extends Request {
         } 
 
         /**
+         * <p>Backup plan ID</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1300000016</p>
          */
         public Builder planId(Long planId) {
             this.putPathParameter("planId", planId);
@@ -83,7 +87,7 @@ public class AddDisasterRecoveryItemRequest extends Request {
         }
 
         /**
-         * topics.
+         * <p>Topics included in the backup mapping. Required.</p>
          */
         public Builder topics(java.util.List<Topics> topics) {
             this.putBodyParameter("topics", topics);
@@ -190,8 +194,23 @@ public class AddDisasterRecoveryItemRequest extends Request {
             private String regionId; 
             private String topicName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Topics model) {
+                this.consumerGroupId = model.consumerGroupId;
+                this.deliveryOrderType = model.deliveryOrderType;
+                this.instanceId = model.instanceId;
+                this.instanceType = model.instanceType;
+                this.regionId = model.regionId;
+                this.topicName = model.topicName;
+            } 
+
             /**
-             * consumerGroupId.
+             * <p>Consumer group ID, required for ACTIVE_ACTIVE bidirectional backup</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GID_xxx</p>
              */
             public Builder consumerGroupId(String consumerGroupId) {
                 this.consumerGroupId = consumerGroupId;
@@ -199,7 +218,14 @@ public class AddDisasterRecoveryItemRequest extends Request {
             }
 
             /**
-             * deliveryOrderType.
+             * <p>The order in which messages are delivered to the target instance. The parameter values ​​are as follows:</p>
+             * <ul>
+             * <li>Concurrently: concurrent delivery</li>
+             * <li>Orderly: sequential delivery</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Concurrently</p>
              */
             public Builder deliveryOrderType(String deliveryOrderType) {
                 this.deliveryOrderType = deliveryOrderType;
@@ -207,7 +233,10 @@ public class AddDisasterRecoveryItemRequest extends Request {
             }
 
             /**
-             * instanceId.
+             * <p>Instance ID, an instance ID will be automatically generated when <code>instanceType</code> is <code>EXTERNAL_ROCKETMQ</code>, and it can be obtained by querying the backup plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rmq-cn-em93y94xxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -215,7 +244,14 @@ public class AddDisasterRecoveryItemRequest extends Request {
             }
 
             /**
-             * instanceType.
+             * <p>Instance type</p>
+             * <ul>
+             * <li>ALIYUN_ROCKETMQ: Alibaba Cloud instance</li>
+             * <li>EXTERNAL_ROCKETMQ: External instance, open-source instance, open-source cluster</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ALIYUN_ROCKETMQ</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -223,7 +259,7 @@ public class AddDisasterRecoveryItemRequest extends Request {
             }
 
             /**
-             * <p>regionId</p>
+             * <p>Region ID</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -234,7 +270,10 @@ public class AddDisasterRecoveryItemRequest extends Request {
             }
 
             /**
-             * topicName.
+             * <p>Disaster recovery topic name, required</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Topic_xxx</p>
              */
             public Builder topicName(String topicName) {
                 this.topicName = topicName;

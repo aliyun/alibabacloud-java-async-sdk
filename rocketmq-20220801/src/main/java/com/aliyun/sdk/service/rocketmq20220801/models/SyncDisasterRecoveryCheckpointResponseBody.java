@@ -60,6 +60,10 @@ public class SyncDisasterRecoveryCheckpointResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -126,8 +130,25 @@ public class SyncDisasterRecoveryCheckpointResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(SyncDisasterRecoveryCheckpointResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.dynamicCode = model.dynamicCode;
+            this.dynamicMessage = model.dynamicMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * code.
+         * <p>Error Code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Topic.NotFound</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -135,7 +156,10 @@ public class SyncDisasterRecoveryCheckpointResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>Result Data</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -143,7 +167,10 @@ public class SyncDisasterRecoveryCheckpointResponseBody extends TeaModel {
         }
 
         /**
-         * dynamicCode.
+         * <p>Dynamic Error Code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InstanceId</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -151,7 +178,10 @@ public class SyncDisasterRecoveryCheckpointResponseBody extends TeaModel {
         }
 
         /**
-         * dynamicMessage.
+         * <p>The dynamic error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instanceId</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -159,7 +189,10 @@ public class SyncDisasterRecoveryCheckpointResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>HTTP Status Code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -167,7 +200,10 @@ public class SyncDisasterRecoveryCheckpointResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>Error Message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Parameter instanceId is mandatory for this action .</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -175,7 +211,10 @@ public class SyncDisasterRecoveryCheckpointResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7358418D-83BD-507A-8079-611C63E05674</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -183,7 +222,10 @@ public class SyncDisasterRecoveryCheckpointResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Success or Not</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

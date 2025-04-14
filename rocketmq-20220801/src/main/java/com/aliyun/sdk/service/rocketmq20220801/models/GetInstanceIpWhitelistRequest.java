@@ -40,7 +40,7 @@ public class GetInstanceIpWhitelistRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -74,6 +74,7 @@ public class GetInstanceIpWhitelistRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,7 @@ public class GetInstanceIpWhitelistRequest extends Request {
         }
 
         /**
-         * ipWhitelists.
+         * <p>The  filter IP address whitelists.</p>
          */
         public Builder ipWhitelists(java.util.List<String> ipWhitelists) {
             String ipWhitelistsShrink = shrink(ipWhitelists, "ipWhitelists", "simple");

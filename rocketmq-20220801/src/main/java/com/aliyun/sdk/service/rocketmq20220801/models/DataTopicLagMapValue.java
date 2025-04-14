@@ -44,6 +44,10 @@ public class DataTopicLagMapValue extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return readyCount
      */
@@ -77,6 +81,16 @@ public class DataTopicLagMapValue extends TeaModel {
         private Long inflightCount; 
         private Long deliveryDuration; 
         private Long lastConsumeTimestamp; 
+
+        private Builder() {
+        } 
+
+        private Builder(DataTopicLagMapValue model) {
+            this.readyCount = model.readyCount;
+            this.inflightCount = model.inflightCount;
+            this.deliveryDuration = model.deliveryDuration;
+            this.lastConsumeTimestamp = model.lastConsumeTimestamp;
+        } 
 
         /**
          * <p>Ready message count</p>
@@ -112,7 +126,10 @@ public class DataTopicLagMapValue extends TeaModel {
         }
 
         /**
-         * lastConsumeTimestamp.
+         * <p>lastConsumeTimestamp</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1735629607846</p>
          */
         public Builder lastConsumeTimestamp(Long lastConsumeTimestamp) {
             this.lastConsumeTimestamp = lastConsumeTimestamp;

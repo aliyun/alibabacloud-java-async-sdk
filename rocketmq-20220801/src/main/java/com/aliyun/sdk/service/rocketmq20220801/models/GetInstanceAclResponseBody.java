@@ -60,6 +60,10 @@ public class GetInstanceAclResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -126,8 +130,25 @@ public class GetInstanceAclResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetInstanceAclResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.dynamicCode = model.dynamicCode;
+            this.dynamicMessage = model.dynamicMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MissingInstanceId</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -135,7 +156,7 @@ public class GetInstanceAclResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -143,7 +164,10 @@ public class GetInstanceAclResponseBody extends TeaModel {
         }
 
         /**
-         * dynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -151,7 +175,10 @@ public class GetInstanceAclResponseBody extends TeaModel {
         }
 
         /**
-         * dynamicMessage.
+         * <p>The dynamic error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -159,7 +186,10 @@ public class GetInstanceAclResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -167,7 +197,10 @@ public class GetInstanceAclResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The instance cannot be found.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -175,7 +208,7 @@ public class GetInstanceAclResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID</p>
          * 
          * <strong>example:</strong>
          * <p>AF9A8B10-C426-530F-A0DD-96320B39****</p>
@@ -186,7 +219,10 @@ public class GetInstanceAclResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -327,8 +363,31 @@ public class GetInstanceAclResponseBody extends TeaModel {
             private String resourceType; 
             private String username; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.aclType = model.aclType;
+                this.actions = model.actions;
+                this.decision = model.decision;
+                this.instanceId = model.instanceId;
+                this.ipWhitelists = model.ipWhitelists;
+                this.regionId = model.regionId;
+                this.resourceName = model.resourceName;
+                this.resourceType = model.resourceType;
+                this.username = model.username;
+            } 
+
             /**
-             * aclType.
+             * <p>The authentication type of the instance.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>apache_acl: open source access control list (ACL)</li>
+             * <li>default: the default account of the instance</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>apache_acl</p>
              */
             public Builder aclType(String aclType) {
                 this.aclType = aclType;
@@ -336,7 +395,7 @@ public class GetInstanceAclResponseBody extends TeaModel {
             }
 
             /**
-             * actions.
+             * <p>The type of operations that can be performed on the resource.</p>
              */
             public Builder actions(java.util.List<String> actions) {
                 this.actions = actions;
@@ -344,7 +403,10 @@ public class GetInstanceAclResponseBody extends TeaModel {
             }
 
             /**
-             * decision.
+             * <p>The decision result of the authorization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Allow</p>
              */
             public Builder decision(String decision) {
                 this.decision = decision;
@@ -352,7 +414,10 @@ public class GetInstanceAclResponseBody extends TeaModel {
             }
 
             /**
-             * instanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rmq-cn-7e22ody****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -360,7 +425,7 @@ public class GetInstanceAclResponseBody extends TeaModel {
             }
 
             /**
-             * ipWhitelists.
+             * <p>The IP address whitelists.</p>
              */
             public Builder ipWhitelists(java.util.List<String> ipWhitelists) {
                 this.ipWhitelists = ipWhitelists;
@@ -368,7 +433,10 @@ public class GetInstanceAclResponseBody extends TeaModel {
             }
 
             /**
-             * regionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -376,7 +444,10 @@ public class GetInstanceAclResponseBody extends TeaModel {
             }
 
             /**
-             * resourceName.
+             * <p>The name of the resource on which the permissions are granted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
@@ -384,7 +455,10 @@ public class GetInstanceAclResponseBody extends TeaModel {
             }
 
             /**
-             * resourceType.
+             * <p>The type of the resource on which the permissions are granted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Topic</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -392,7 +466,10 @@ public class GetInstanceAclResponseBody extends TeaModel {
             }
 
             /**
-             * username.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder username(String username) {
                 this.username = username;

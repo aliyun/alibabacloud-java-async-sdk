@@ -44,7 +44,7 @@ public class SyncDisasterRecoveryCheckpointRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -87,7 +87,10 @@ public class SyncDisasterRecoveryCheckpointRequest extends Request {
         } 
 
         /**
-         * planId.
+         * <p>Backup Plan ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13000000xx</p>
          */
         public Builder planId(Long planId) {
             this.putPathParameter("planId", planId);
@@ -96,7 +99,10 @@ public class SyncDisasterRecoveryCheckpointRequest extends Request {
         }
 
         /**
-         * itemId.
+         * <p>Mapping ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13000000xx</p>
          */
         public Builder itemId(Long itemId) {
             this.putPathParameter("itemId", itemId);
@@ -105,7 +111,10 @@ public class SyncDisasterRecoveryCheckpointRequest extends Request {
         }
 
         /**
-         * checkpointId.
+         * <p>Consumption Progress ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13000000xx</p>
          */
         public Builder checkpointId(Long checkpointId) {
             this.putPathParameter("checkpointId", checkpointId);
