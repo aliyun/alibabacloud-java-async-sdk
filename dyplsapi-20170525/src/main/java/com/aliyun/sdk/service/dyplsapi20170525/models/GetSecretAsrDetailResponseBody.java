@@ -44,6 +44,10 @@ public class GetSecretAsrDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class GetSecretAsrDetailResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSecretAsrDetailResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The response code.</p>
@@ -228,6 +242,19 @@ public class GetSecretAsrDetailResponseBody extends TeaModel {
             private Long silenceDuration; 
             private Integer speechRate; 
             private String text; 
+
+            private Builder() {
+            } 
+
+            private Builder(Sentences model) {
+                this.beginTime = model.beginTime;
+                this.channelId = model.channelId;
+                this.emotionValue = model.emotionValue;
+                this.endTime = model.endTime;
+                this.silenceDuration = model.silenceDuration;
+                this.speechRate = model.speechRate;
+                this.text = model.text;
+            } 
 
             /**
              * <p>The start time offset of the sentence. Unit: milliseconds.</p>
@@ -428,6 +455,20 @@ public class GetSecretAsrDetailResponseBody extends TeaModel {
             private String requestId; 
             private java.util.List<Sentences> sentences; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.bizDuration = model.bizDuration;
+                this.businessId = model.businessId;
+                this.businessKey = model.businessKey;
+                this.code = model.code;
+                this.msg = model.msg;
+                this.requestId = model.requestId;
+                this.sentences = model.sentences;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The total duration of the audio file that was recognized. Unit: milliseconds.</p>

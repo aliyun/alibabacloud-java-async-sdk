@@ -44,6 +44,10 @@ public class CreatePickUpWaybillResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -77,6 +81,16 @@ public class CreatePickUpWaybillResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreatePickUpWaybillResponseBody model) {
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned data.</p>
@@ -216,6 +230,18 @@ public class CreatePickUpWaybillResponseBody extends TeaModel {
             private String gotCode; 
             private String mailNo; 
             private String success; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.cpCode = model.cpCode;
+                this.errorCode = model.errorCode;
+                this.errorMsg = model.errorMsg;
+                this.gotCode = model.gotCode;
+                this.mailNo = model.mailNo;
+                this.success = model.success;
+            } 
 
             /**
              * <p>The code of the courier company.</p>

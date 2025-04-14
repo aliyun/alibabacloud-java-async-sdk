@@ -48,6 +48,10 @@ public class CreateSmsSignResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -89,6 +93,17 @@ public class CreateSmsSignResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateSmsSignResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.success = model.success;
+        } 
 
         /**
          * AccessDeniedDetail.
@@ -176,6 +191,13 @@ public class CreateSmsSignResponseBody extends TeaModel {
 
         public static final class Builder {
             private String calledNoSign; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.calledNoSign = model.calledNoSign;
+            } 
 
             /**
              * <p>短信接收者号码签名串(加到短信内容中供解析真实被叫号码)</p>

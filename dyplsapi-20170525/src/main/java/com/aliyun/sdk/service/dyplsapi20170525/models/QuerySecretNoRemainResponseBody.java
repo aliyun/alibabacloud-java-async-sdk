@@ -44,6 +44,10 @@ public class QuerySecretNoRemainResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class QuerySecretNoRemainResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private SecretRemainDTO secretRemainDTO; 
+
+        private Builder() {
+        } 
+
+        private Builder(QuerySecretNoRemainResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.secretRemainDTO = model.secretRemainDTO;
+        } 
 
         /**
          * <p>The response code.</p>
@@ -173,6 +187,14 @@ public class QuerySecretNoRemainResponseBody extends TeaModel {
             private Long amount; 
             private String city; 
 
+            private Builder() {
+            } 
+
+            private Builder(RemainDTO model) {
+                this.amount = model.amount;
+                this.city = model.city;
+            } 
+
             /**
              * <p>The quantity of remaining phone numbers available for online purchase for the city.</p>
              * 
@@ -233,6 +255,13 @@ public class QuerySecretNoRemainResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<RemainDTO> remainDTO; 
+
+            private Builder() {
+            } 
+
+            private Builder(RemainDTOList model) {
+                this.remainDTO = model.remainDTO;
+            } 
 
             /**
              * remainDTO.
@@ -304,6 +333,15 @@ public class QuerySecretNoRemainResponseBody extends TeaModel {
             private Long amount; 
             private String city; 
             private RemainDTOList remainDTOList; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecretRemainDTO model) {
+                this.amount = model.amount;
+                this.city = model.city;
+                this.remainDTOList = model.remainDTOList;
+            } 
 
             /**
              * <p>The quantity of remaining phone numbers available for online purchase.</p>

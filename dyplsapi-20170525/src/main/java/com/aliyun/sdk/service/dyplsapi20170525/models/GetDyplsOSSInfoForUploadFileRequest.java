@@ -12,23 +12,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link QuerySubsIdRequest} extends {@link RequestModel}
+ * {@link GetDyplsOSSInfoForUploadFileRequest} extends {@link RequestModel}
  *
- * <p>QuerySubsIdRequest</p>
+ * <p>GetDyplsOSSInfoForUploadFileRequest</p>
  */
-public class QuerySubsIdRequest extends Request {
+public class GetDyplsOSSInfoForUploadFileRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizType")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String bizType;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("PhoneNoX")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String phoneNoX;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("PoolKey")
-    private String poolKey;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
@@ -38,11 +34,10 @@ public class QuerySubsIdRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    private QuerySubsIdRequest(Builder builder) {
+    private GetDyplsOSSInfoForUploadFileRequest(Builder builder) {
         super(builder);
+        this.bizType = builder.bizType;
         this.ownerId = builder.ownerId;
-        this.phoneNoX = builder.phoneNoX;
-        this.poolKey = builder.poolKey;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
     }
@@ -51,7 +46,7 @@ public class QuerySubsIdRequest extends Request {
         return new Builder();
     }
 
-    public static QuerySubsIdRequest create() {
+    public static GetDyplsOSSInfoForUploadFileRequest create() {
         return builder().build();
     }
 
@@ -61,24 +56,17 @@ public class QuerySubsIdRequest extends Request {
     }
 
     /**
+     * @return bizType
+     */
+    public String getBizType() {
+        return this.bizType;
+    }
+
+    /**
      * @return ownerId
      */
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    /**
-     * @return phoneNoX
-     */
-    public String getPhoneNoX() {
-        return this.phoneNoX;
-    }
-
-    /**
-     * @return poolKey
-     */
-    public String getPoolKey() {
-        return this.poolKey;
     }
 
     /**
@@ -95,10 +83,9 @@ public class QuerySubsIdRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    public static final class Builder extends Request.Builder<QuerySubsIdRequest, Builder> {
+    public static final class Builder extends Request.Builder<GetDyplsOSSInfoForUploadFileRequest, Builder> {
+        private String bizType; 
         private Long ownerId; 
-        private String phoneNoX; 
-        private String poolKey; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
 
@@ -106,14 +93,25 @@ public class QuerySubsIdRequest extends Request {
             super();
         } 
 
-        private Builder(QuerySubsIdRequest request) {
+        private Builder(GetDyplsOSSInfoForUploadFileRequest request) {
             super(request);
+            this.bizType = request.bizType;
             this.ownerId = request.ownerId;
-            this.phoneNoX = request.phoneNoX;
-            this.poolKey = request.poolKey;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>phone_card</p>
+         */
+        public Builder bizType(String bizType) {
+            this.putQueryParameter("BizType", bizType);
+            this.bizType = bizType;
+            return this;
+        }
 
         /**
          * OwnerId.
@@ -121,32 +119,6 @@ public class QuerySubsIdRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * <p>The private number in the binding, that is, phone number X.</p>
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1390000****</p>
-         */
-        public Builder phoneNoX(String phoneNoX) {
-            this.putQueryParameter("PhoneNoX", phoneNoX);
-            this.phoneNoX = phoneNoX;
-            return this;
-        }
-
-        /**
-         * <p>The key of the phone number pool.</p>
-         * <p>Log on to the <a href="https://dyplsnext.console.aliyun.com/overview">Phone Number Protection console</a> and view the key of the phone number pool on the Number Pool Management page.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>FC123456</p>
-         */
-        public Builder poolKey(String poolKey) {
-            this.putQueryParameter("PoolKey", poolKey);
-            this.poolKey = poolKey;
             return this;
         }
 
@@ -169,8 +141,8 @@ public class QuerySubsIdRequest extends Request {
         }
 
         @Override
-        public QuerySubsIdRequest build() {
-            return new QuerySubsIdRequest(this);
+        public GetDyplsOSSInfoForUploadFileRequest build() {
+            return new GetDyplsOSSInfoForUploadFileRequest(this);
         } 
 
     } 

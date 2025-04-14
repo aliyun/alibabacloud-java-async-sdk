@@ -44,6 +44,10 @@ public class QuerySecretNoDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class QuerySecretNoDetailResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private SecretNoInfoDTO secretNoInfoDTO; 
+
+        private Builder() {
+        } 
+
+        private Builder(QuerySecretNoDetailResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.secretNoInfoDTO = model.secretNoInfoDTO;
+        } 
 
         /**
          * <p>The response code.</p>
@@ -220,6 +234,18 @@ public class QuerySecretNoDetailResponseBody extends TeaModel {
             private String purchaseTime; 
             private Long secretStatus; 
             private Long vendor; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecretNoInfoDTO model) {
+                this.certifyStatus = model.certifyStatus;
+                this.city = model.city;
+                this.province = model.province;
+                this.purchaseTime = model.purchaseTime;
+                this.secretStatus = model.secretStatus;
+                this.vendor = model.vendor;
+            } 
 
             /**
              * <p>The verification status of the phone number. Valid values:</p>

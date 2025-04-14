@@ -44,6 +44,10 @@ public class QuerySubsIdResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class QuerySubsIdResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String subsId; 
+
+        private Builder() {
+        } 
+
+        private Builder(QuerySubsIdResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.subsId = model.subsId;
+        } 
 
         /**
          * <p>The response code. The value OK indicates that the request was successful.</p>

@@ -144,6 +144,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateAxgGroupResponse> createAxgGroup(CreateAxgGroupRequest request);
 
     /**
+     * @param request the request parameters of CreatePhoneNoAReport  CreatePhoneNoAReportRequest
+     * @return CreatePhoneNoAReportResponse
+     */
+    CompletableFuture<CreatePhoneNoAReportResponse> createPhoneNoAReport(CreatePhoneNoAReportRequest request);
+
+    /**
      * <b>description</b> :
      * <h3><a href="#qps"></a>QPS limits</h3>
      * <p>You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
@@ -184,6 +190,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteSecretBlacklistResponse
      */
     CompletableFuture<DeleteSecretBlacklistResponse> deleteSecretBlacklist(DeleteSecretBlacklistRequest request);
+
+    /**
+     * @param request the request parameters of GetDyplsOSSInfoForUploadFile  GetDyplsOSSInfoForUploadFileRequest
+     * @return GetDyplsOSSInfoForUploadFileResponse
+     */
+    CompletableFuture<GetDyplsOSSInfoForUploadFileResponse> getDyplsOSSInfoForUploadFile(GetDyplsOSSInfoForUploadFileRequest request);
 
     /**
      * <b>description</b> :

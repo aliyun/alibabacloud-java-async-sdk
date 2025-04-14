@@ -44,6 +44,10 @@ public class QueryRecordFileDownloadUrlResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class QueryRecordFileDownloadUrlResponseBody extends TeaModel {
         private String downloadUrl; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryRecordFileDownloadUrlResponseBody model) {
+            this.code = model.code;
+            this.downloadUrl = model.downloadUrl;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The response code.</p>

@@ -48,6 +48,10 @@ public class GetXDefaultConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -89,6 +93,17 @@ public class GetXDefaultConfigResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetXDefaultConfigResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.success = model.success;
+        } 
 
         /**
          * AccessDeniedDetail.
@@ -249,6 +264,19 @@ public class GetXDefaultConfigResponseBody extends TeaModel {
             private String ruleType; 
             private String tempId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ReachJson model) {
+                this.callDir = model.callDir;
+                this.callStatus = model.callStatus;
+                this.receiveDir = model.receiveDir;
+                this.ruleId = model.ruleId;
+                this.ruleName = model.ruleName;
+                this.ruleType = model.ruleType;
+                this.tempId = model.tempId;
+            } 
+
             /**
              * <p>呼叫方向 1:员工B呼叫客户A 2:客户A呼叫员工B</p>
              * 
@@ -388,6 +416,15 @@ public class GetXDefaultConfigResponseBody extends TeaModel {
             private String sequenceCallNoPlayCode; 
             private String sequenceCalledNo; 
             private String sequenceCalledPlayCode; 
+
+            private Builder() {
+            } 
+
+            private Builder(SequenceCall model) {
+                this.sequenceCallNoPlayCode = model.sequenceCallNoPlayCode;
+                this.sequenceCalledNo = model.sequenceCalledNo;
+                this.sequenceCalledPlayCode = model.sequenceCalledPlayCode;
+            } 
 
             /**
              * <p>顺振提示音放音编号，格式如callNoPlayCode</p>
@@ -544,6 +581,20 @@ public class GetXDefaultConfigResponseBody extends TeaModel {
             private String sequenceStartTime; 
             private String smsAbility; 
             private String smsSignMode; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.callAbility = model.callAbility;
+                this.GNFlag = model.GNFlag;
+                this.reachJson = model.reachJson;
+                this.sequenceCall = model.sequenceCall;
+                this.sequenceEndTime = model.sequenceEndTime;
+                this.sequenceStartTime = model.sequenceStartTime;
+                this.smsAbility = model.smsAbility;
+                this.smsSignMode = model.smsSignMode;
+            } 
 
             /**
              * <p>开/关呼叫能力状态： ‘0’：禁用； ‘1’：开启；</p>

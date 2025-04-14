@@ -12,11 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CancelPickUpWaybillResponseBody} extends {@link TeaModel}
+ * {@link CreatePhoneNoAReportResponseBody} extends {@link TeaModel}
  *
- * <p>CancelPickUpWaybillResponseBody</p>
+ * <p>CreatePhoneNoAReportResponseBody</p>
  */
-public class CancelPickUpWaybillResponseBody extends TeaModel {
+public class CreatePhoneNoAReportResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
+    private String accessDeniedDetail;
+
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
@@ -29,23 +32,35 @@ public class CancelPickUpWaybillResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private CancelPickUpWaybillResponseBody(Builder builder) {
+    @com.aliyun.core.annotation.NameInMap("Success")
+    private Boolean success;
+
+    private CreatePhoneNoAReportResponseBody(Builder builder) {
+        this.accessDeniedDetail = builder.accessDeniedDetail;
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
         this.requestId = builder.requestId;
+        this.success = builder.success;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static CancelPickUpWaybillResponseBody create() {
+    public static CreatePhoneNoAReportResponseBody create() {
         return builder().build();
     }
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return accessDeniedDetail
+     */
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     /**
@@ -76,31 +91,46 @@ public class CancelPickUpWaybillResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return success
+     */
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public static final class Builder {
+        private String accessDeniedDetail; 
         private String code; 
         private Data data; 
         private String message; 
         private String requestId; 
+        private Boolean success; 
 
         private Builder() {
         } 
 
-        private Builder(CancelPickUpWaybillResponseBody model) {
+        private Builder(CreatePhoneNoAReportResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
             this.code = model.code;
             this.data = model.data;
             this.message = model.message;
             this.requestId = model.requestId;
+            this.success = model.success;
         } 
 
         /**
-         * <p>The response code.</p>
-         * <ul>
-         * <li>The value OK indicates that the request was successful.</li>
-         * <li>Other status codes indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/109196.html">Error codes</a>.</li>
-         * </ul>
+         * AccessDeniedDetail.
+         */
+        public Builder accessDeniedDetail(String accessDeniedDetail) {
+            this.accessDeniedDetail = accessDeniedDetail;
+            return this;
+        }
+
+        /**
+         * <p>请求状态码</p>
          * 
          * <strong>example:</strong>
-         * <p>OK</p>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -108,7 +138,7 @@ public class CancelPickUpWaybillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>A号码报备结果结构体</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -116,10 +146,10 @@ public class CancelPickUpWaybillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>失败错误提示</p>
          * 
          * <strong>example:</strong>
-         * <p>OK</p>
+         * <p>手机号码***已存在</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -127,46 +157,49 @@ public class CancelPickUpWaybillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>返回id</p>
          * 
          * <strong>example:</strong>
-         * <p>9FC30594-3841-43AD-9008-03393BCB5CD2</p>
+         * <p>1D73E648-0978-18A5-B089-3BB2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public CancelPickUpWaybillResponseBody build() {
-            return new CancelPickUpWaybillResponseBody(this);
+        /**
+         * <p>请求是否成功</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        public Builder success(Boolean success) {
+            this.success = success;
+            return this;
+        }
+
+        public CreatePhoneNoAReportResponseBody build() {
+            return new CreatePhoneNoAReportResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link CancelPickUpWaybillResponseBody} extends {@link TeaModel}
+     * {@link CreatePhoneNoAReportResponseBody} extends {@link TeaModel}
      *
-     * <p>CancelPickUpWaybillResponseBody</p>
+     * <p>CreatePhoneNoAReportResponseBody</p>
      */
     public static class Data extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("ErrorCode")
-        private String errorCode;
+        @com.aliyun.core.annotation.NameInMap("CreateResult")
+        private Boolean createResult;
 
-        @com.aliyun.core.annotation.NameInMap("ErrorMsg")
-        private String errorMsg;
-
-        @com.aliyun.core.annotation.NameInMap("Message")
-        private String message;
-
-        @com.aliyun.core.annotation.NameInMap("Success")
-        private Boolean success;
+        @com.aliyun.core.annotation.NameInMap("FailType")
+        private Long failType;
 
         private Data(Builder builder) {
-            this.errorCode = builder.errorCode;
-            this.errorMsg = builder.errorMsg;
-            this.message = builder.message;
-            this.success = builder.success;
+            this.createResult = builder.createResult;
+            this.failType = builder.failType;
         }
 
         public static Builder builder() {
@@ -178,90 +211,50 @@ public class CancelPickUpWaybillResponseBody extends TeaModel {
         }
 
         /**
-         * @return errorCode
+         * @return createResult
          */
-        public String getErrorCode() {
-            return this.errorCode;
+        public Boolean getCreateResult() {
+            return this.createResult;
         }
 
         /**
-         * @return errorMsg
+         * @return failType
          */
-        public String getErrorMsg() {
-            return this.errorMsg;
-        }
-
-        /**
-         * @return message
-         */
-        public String getMessage() {
-            return this.message;
-        }
-
-        /**
-         * @return success
-         */
-        public Boolean getSuccess() {
-            return this.success;
+        public Long getFailType() {
+            return this.failType;
         }
 
         public static final class Builder {
-            private String errorCode; 
-            private String errorMsg; 
-            private String message; 
-            private Boolean success; 
+            private Boolean createResult; 
+            private Long failType; 
 
             private Builder() {
             } 
 
             private Builder(Data model) {
-                this.errorCode = model.errorCode;
-                this.errorMsg = model.errorMsg;
-                this.message = model.message;
-                this.success = model.success;
+                this.createResult = model.createResult;
+                this.failType = model.failType;
             } 
 
             /**
-             * <p>The error code.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>none</p>
-             */
-            public Builder errorCode(String errorCode) {
-                this.errorCode = errorCode;
-                return this;
-            }
-
-            /**
-             * <p>The error message.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>none</p>
-             */
-            public Builder errorMsg(String errorMsg) {
-                this.errorMsg = errorMsg;
-                return this;
-            }
-
-            /**
-             * <p>The cancellation result.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>OK</p>
-             */
-            public Builder message(String message) {
-                this.message = message;
-                return this;
-            }
-
-            /**
-             * <p>Indicates whether the cancellation was successful.</p>
+             * <p>创建结果</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
              */
-            public Builder success(Boolean success) {
-                this.success = success;
+            public Builder createResult(Boolean createResult) {
+                this.createResult = createResult;
+                return this;
+            }
+
+            /**
+             * <p>创建类型枚举，1为成功，负数为创建失败</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder failType(Long failType) {
+                this.failType = failType;
                 return this;
             }
 

@@ -44,6 +44,10 @@ public class BindAxnExtensionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class BindAxnExtensionResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private SecretBindDTO secretBindDTO; 
+
+        private Builder() {
+        } 
+
+        private Builder(BindAxnExtensionResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.secretBindDTO = model.secretBindDTO;
+        } 
 
         /**
          * <p>The response code.</p>
@@ -184,6 +198,15 @@ public class BindAxnExtensionResponseBody extends TeaModel {
             private String extension; 
             private String secretNo; 
             private String subsId; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecretBindDTO model) {
+                this.extension = model.extension;
+                this.secretNo = model.secretNo;
+                this.subsId = model.subsId;
+            } 
 
             /**
              * <p>The extension of the phone number.</p>

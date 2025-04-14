@@ -44,6 +44,10 @@ public class UnbindSubscriptionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return chargeId
      */
@@ -77,6 +81,16 @@ public class UnbindSubscriptionResponseBody extends TeaModel {
         private String code; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UnbindSubscriptionResponseBody model) {
+            this.chargeId = model.chargeId;
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>A deprecated parameter.</p>

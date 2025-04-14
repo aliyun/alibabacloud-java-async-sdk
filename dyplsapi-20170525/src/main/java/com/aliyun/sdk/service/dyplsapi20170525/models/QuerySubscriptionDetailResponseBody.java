@@ -44,6 +44,10 @@ public class QuerySubscriptionDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class QuerySubscriptionDetailResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private SecretBindDetailDTO secretBindDetailDTO; 
+
+        private Builder() {
+        } 
+
+        private Builder(QuerySubscriptionDetailResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.secretBindDetailDTO = model.secretBindDetailDTO;
+        } 
 
         /**
          * <p>The response code.</p>
@@ -304,6 +318,25 @@ public class QuerySubscriptionDetailResponseBody extends TeaModel {
             private String phoneNoX; 
             private Long status; 
             private String subsId; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecretBindDetailDTO model) {
+                this.ASRModelId = model.ASRModelId;
+                this.ASRStatus = model.ASRStatus;
+                this.callRestrict = model.callRestrict;
+                this.expireDate = model.expireDate;
+                this.extension = model.extension;
+                this.gmtCreate = model.gmtCreate;
+                this.groupId = model.groupId;
+                this.needRecord = model.needRecord;
+                this.phoneNoA = model.phoneNoA;
+                this.phoneNoB = model.phoneNoB;
+                this.phoneNoX = model.phoneNoX;
+                this.status = model.status;
+                this.subsId = model.subsId;
+            } 
 
             /**
              * <p>The ID of the ASR model.</p>

@@ -48,6 +48,10 @@ public class ListXTelephonesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -89,6 +93,17 @@ public class ListXTelephonesResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListXTelephonesResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.success = model.success;
+        } 
 
         /**
          * AccessDeniedDetail.
@@ -285,6 +300,22 @@ public class ListXTelephonesResponseBody extends TeaModel {
             private String telephoneStatus; 
             private String unbindTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.authMsg = model.authMsg;
+                this.bindTime = model.bindTime;
+                this.buyTime = model.buyTime;
+                this.customerPoolKey = model.customerPoolKey;
+                this.customerPoolName = model.customerPoolName;
+                this.releaseTime = model.releaseTime;
+                this.smsStatus = model.smsStatus;
+                this.telephone = model.telephone;
+                this.telephoneStatus = model.telephoneStatus;
+                this.unbindTime = model.unbindTime;
+            } 
+
             /**
              * <p>绑定失败原因</p>
              * 
@@ -469,6 +500,16 @@ public class ListXTelephonesResponseBody extends TeaModel {
             private Long pageNo; 
             private Long pageSize; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.list = model.list;
+                this.pageNo = model.pageNo;
+                this.pageSize = model.pageSize;
+                this.total = model.total;
+            } 
 
             /**
              * <p>数据集合</p>

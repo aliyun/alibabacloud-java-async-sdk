@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UnBindAXBResponseBody} extends {@link TeaModel}
+ * {@link GetDyplsOSSInfoForUploadFileResponseBody} extends {@link TeaModel}
  *
- * <p>UnBindAXBResponseBody</p>
+ * <p>GetDyplsOSSInfoForUploadFileResponseBody</p>
  */
-public class UnBindAXBResponseBody extends TeaModel {
+public class GetDyplsOSSInfoForUploadFileResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
     private String accessDeniedDetail;
 
@@ -35,7 +35,7 @@ public class UnBindAXBResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private UnBindAXBResponseBody(Builder builder) {
+    private GetDyplsOSSInfoForUploadFileResponseBody(Builder builder) {
         this.accessDeniedDetail = builder.accessDeniedDetail;
         this.code = builder.code;
         this.data = builder.data;
@@ -48,7 +48,7 @@ public class UnBindAXBResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static UnBindAXBResponseBody create() {
+    public static GetDyplsOSSInfoForUploadFileResponseBody create() {
         return builder().build();
     }
 
@@ -109,7 +109,7 @@ public class UnBindAXBResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(UnBindAXBResponseBody model) {
+        private Builder(GetDyplsOSSInfoForUploadFileResponseBody model) {
             this.accessDeniedDetail = model.accessDeniedDetail;
             this.code = model.code;
             this.data = model.data;
@@ -166,32 +166,44 @@ public class UnBindAXBResponseBody extends TeaModel {
             return this;
         }
 
-        public UnBindAXBResponseBody build() {
-            return new UnBindAXBResponseBody(this);
+        public GetDyplsOSSInfoForUploadFileResponseBody build() {
+            return new GetDyplsOSSInfoForUploadFileResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link UnBindAXBResponseBody} extends {@link TeaModel}
+     * {@link GetDyplsOSSInfoForUploadFileResponseBody} extends {@link TeaModel}
      *
-     * <p>UnBindAXBResponseBody</p>
+     * <p>GetDyplsOSSInfoForUploadFileResponseBody</p>
      */
     public static class Data extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("Code")
-        private String code;
+        @com.aliyun.core.annotation.NameInMap("AccessKeyId")
+        private String accessKeyId;
 
-        @com.aliyun.core.annotation.NameInMap("Message")
-        private String message;
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
+        private String expireTime;
 
-        @com.aliyun.core.annotation.NameInMap("Success")
-        private Boolean success;
+        @com.aliyun.core.annotation.NameInMap("Host")
+        private String host;
+
+        @com.aliyun.core.annotation.NameInMap("Policy")
+        private String policy;
+
+        @com.aliyun.core.annotation.NameInMap("Signature")
+        private String signature;
+
+        @com.aliyun.core.annotation.NameInMap("StartPath")
+        private String startPath;
 
         private Data(Builder builder) {
-            this.code = builder.code;
-            this.message = builder.message;
-            this.success = builder.success;
+            this.accessKeyId = builder.accessKeyId;
+            this.expireTime = builder.expireTime;
+            this.host = builder.host;
+            this.policy = builder.policy;
+            this.signature = builder.signature;
+            this.startPath = builder.startPath;
         }
 
         public static Builder builder() {
@@ -203,70 +215,112 @@ public class UnBindAXBResponseBody extends TeaModel {
         }
 
         /**
-         * @return code
+         * @return accessKeyId
          */
-        public String getCode() {
-            return this.code;
+        public String getAccessKeyId() {
+            return this.accessKeyId;
         }
 
         /**
-         * @return message
+         * @return expireTime
          */
-        public String getMessage() {
-            return this.message;
+        public String getExpireTime() {
+            return this.expireTime;
         }
 
         /**
-         * @return success
+         * @return host
          */
-        public Boolean getSuccess() {
-            return this.success;
+        public String getHost() {
+            return this.host;
+        }
+
+        /**
+         * @return policy
+         */
+        public String getPolicy() {
+            return this.policy;
+        }
+
+        /**
+         * @return signature
+         */
+        public String getSignature() {
+            return this.signature;
+        }
+
+        /**
+         * @return startPath
+         */
+        public String getStartPath() {
+            return this.startPath;
         }
 
         public static final class Builder {
-            private String code; 
-            private String message; 
-            private Boolean success; 
+            private String accessKeyId; 
+            private String expireTime; 
+            private String host; 
+            private String policy; 
+            private String signature; 
+            private String startPath; 
 
             private Builder() {
             } 
 
             private Builder(Data model) {
-                this.code = model.code;
-                this.message = model.message;
-                this.success = model.success;
+                this.accessKeyId = model.accessKeyId;
+                this.expireTime = model.expireTime;
+                this.host = model.host;
+                this.policy = model.policy;
+                this.signature = model.signature;
+                this.startPath = model.startPath;
             } 
 
             /**
-             * <p>返回状态码 0000表示成功 其他表示失败</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0000</p>
+             * AccessKeyId.
              */
-            public Builder code(String code) {
-                this.code = code;
+            public Builder accessKeyId(String accessKeyId) {
+                this.accessKeyId = accessKeyId;
                 return this;
             }
 
             /**
-             * <p>返回信息</p>
-             * 
-             * <strong>example:</strong>
-             * <p>成功</p>
+             * ExpireTime.
              */
-            public Builder message(String message) {
-                this.message = message;
+            public Builder expireTime(String expireTime) {
+                this.expireTime = expireTime;
                 return this;
             }
 
             /**
-             * <p>返回是否成功 true  表示成功 false表示失败</p>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * Host.
              */
-            public Builder success(Boolean success) {
-                this.success = success;
+            public Builder host(String host) {
+                this.host = host;
+                return this;
+            }
+
+            /**
+             * Policy.
+             */
+            public Builder policy(String policy) {
+                this.policy = policy;
+                return this;
+            }
+
+            /**
+             * Signature.
+             */
+            public Builder signature(String signature) {
+                this.signature = signature;
+                return this;
+            }
+
+            /**
+             * StartPath.
+             */
+            public Builder startPath(String startPath) {
+                this.startPath = startPath;
                 return this;
             }
 

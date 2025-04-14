@@ -120,7 +120,7 @@ public class CreatePickUpWaybillRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -605,6 +605,17 @@ public class CreatePickUpWaybillRequest extends Request {
             private String provinceName; 
             private String townName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConsigneeAddress model) {
+                this.addressDetail = model.addressDetail;
+                this.areaName = model.areaName;
+                this.cityName = model.cityName;
+                this.provinceName = model.provinceName;
+                this.townName = model.townName;
+            } 
+
             /**
              * <p>The detailed address of the consignee.</p>
              * <p>This parameter is required.</p>
@@ -726,6 +737,15 @@ public class CreatePickUpWaybillRequest extends Request {
             private String name; 
             private String quantity; 
             private String weight; 
+
+            private Builder() {
+            } 
+
+            private Builder(GoodsInfos model) {
+                this.name = model.name;
+                this.quantity = model.quantity;
+                this.weight = model.weight;
+            } 
 
             /**
              * <p>The item name.</p>
@@ -850,6 +870,17 @@ public class CreatePickUpWaybillRequest extends Request {
             private String cityName; 
             private String provinceName; 
             private String townName; 
+
+            private Builder() {
+            } 
+
+            private Builder(SendAddress model) {
+                this.addressDetail = model.addressDetail;
+                this.areaName = model.areaName;
+                this.cityName = model.cityName;
+                this.provinceName = model.provinceName;
+                this.townName = model.townName;
+            } 
 
             /**
              * <p>The detailed address of the sender.</p>

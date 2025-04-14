@@ -44,6 +44,10 @@ public class CreateAxgGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class CreateAxgGroupResponseBody extends TeaModel {
         private Long groupId; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateAxgGroupResponseBody model) {
+            this.code = model.code;
+            this.groupId = model.groupId;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The response code.</p>

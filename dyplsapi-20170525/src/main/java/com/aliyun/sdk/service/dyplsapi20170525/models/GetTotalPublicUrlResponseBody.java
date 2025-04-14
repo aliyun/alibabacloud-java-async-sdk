@@ -44,6 +44,10 @@ public class GetTotalPublicUrlResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class GetTotalPublicUrlResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTotalPublicUrlResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The response code.</p>
@@ -172,6 +186,14 @@ public class GetTotalPublicUrlResponseBody extends TeaModel {
         public static final class Builder {
             private String phonePublicUrl; 
             private String ringPublicUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.phonePublicUrl = model.phonePublicUrl;
+                this.ringPublicUrl = model.ringPublicUrl;
+            } 
 
             /**
              * <p>The download URL of the recorded call.</p>

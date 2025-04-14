@@ -48,6 +48,10 @@ public class BindAXBCallResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -89,6 +93,17 @@ public class BindAXBCallResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(BindAXBCallResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.success = model.success;
+        } 
 
         /**
          * AccessDeniedDetail.
@@ -176,6 +191,13 @@ public class BindAXBCallResponseBody extends TeaModel {
 
         public static final class Builder {
             private String bindId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.bindId = model.bindId;
+            } 
 
             /**
              * <p>绑定关系ID</p>

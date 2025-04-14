@@ -44,6 +44,10 @@ public class BindBatchAxgResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class BindBatchAxgResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private SecretBindList secretBindList; 
+
+        private Builder() {
+        } 
+
+        private Builder(BindBatchAxgResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.secretBindList = model.secretBindList;
+        } 
 
         /**
          * Code.
@@ -220,6 +234,19 @@ public class BindBatchAxgResponseBody extends TeaModel {
             private String secretNo; 
             private String subsId; 
 
+            private Builder() {
+            } 
+
+            private Builder(SecretBind model) {
+                this.code = model.code;
+                this.extension = model.extension;
+                this.groupId = model.groupId;
+                this.message = model.message;
+                this.phoneNoA = model.phoneNoA;
+                this.secretNo = model.secretNo;
+                this.subsId = model.subsId;
+            } 
+
             /**
              * Code.
              */
@@ -314,6 +341,13 @@ public class BindBatchAxgResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SecretBind> secretBind; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecretBindList model) {
+                this.secretBind = model.secretBind;
+            } 
 
             /**
              * SecretBind.

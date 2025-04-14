@@ -48,6 +48,10 @@ public class QuerySoundRecordResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -89,6 +93,17 @@ public class QuerySoundRecordResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QuerySoundRecordResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.success = model.success;
+        } 
 
         /**
          * AccessDeniedDetail.
@@ -176,6 +191,13 @@ public class QuerySoundRecordResponseBody extends TeaModel {
 
         public static final class Builder {
             private String fileUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.fileUrl = model.fileUrl;
+            } 
 
             /**
              * <p>通话录音url路径，最大长度1000，有效期1小时</p>

@@ -44,6 +44,10 @@ public class QueryPhoneNoAByTrackNoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class QueryPhoneNoAByTrackNoResponseBody extends TeaModel {
         private String message; 
         private java.util.List<Module> module; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryPhoneNoAByTrackNoResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The response code.</p>
@@ -184,6 +198,15 @@ public class QueryPhoneNoAByTrackNoResponseBody extends TeaModel {
             private String extension; 
             private String phoneNoA; 
             private String phoneNoX; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.extension = model.extension;
+                this.phoneNoA = model.phoneNoA;
+                this.phoneNoX = model.phoneNoX;
+            } 
 
             /**
              * <p>The extension of phone number X.</p>

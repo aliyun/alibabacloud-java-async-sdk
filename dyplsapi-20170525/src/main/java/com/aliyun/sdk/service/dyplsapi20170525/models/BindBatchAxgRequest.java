@@ -55,7 +55,7 @@ public class BindBatchAxgRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -357,6 +357,26 @@ public class BindBatchAxgRequest extends Request {
             private String phoneNoB; 
             private String phoneNoX; 
             private String ringConfig; 
+
+            private Builder() {
+            } 
+
+            private Builder(AxgBindList model) {
+                this.ASRModelId = model.ASRModelId;
+                this.ASRStatus = model.ASRStatus;
+                this.callDisplayType = model.callDisplayType;
+                this.callRestrict = model.callRestrict;
+                this.expectCity = model.expectCity;
+                this.expiration = model.expiration;
+                this.groupId = model.groupId;
+                this.isRecordingEnabled = model.isRecordingEnabled;
+                this.outId = model.outId;
+                this.outOrderId = model.outOrderId;
+                this.phoneNoA = model.phoneNoA;
+                this.phoneNoB = model.phoneNoB;
+                this.phoneNoX = model.phoneNoX;
+                this.ringConfig = model.ringConfig;
+            } 
 
             /**
              * ASRModelId.

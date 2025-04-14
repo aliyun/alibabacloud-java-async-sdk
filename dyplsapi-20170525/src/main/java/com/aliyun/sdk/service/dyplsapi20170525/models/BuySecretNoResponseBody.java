@@ -44,6 +44,10 @@ public class BuySecretNoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class BuySecretNoResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private SecretBuyInfoDTO secretBuyInfoDTO; 
+
+        private Builder() {
+        } 
+
+        private Builder(BuySecretNoResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.secretBuyInfoDTO = model.secretBuyInfoDTO;
+        } 
 
         /**
          * <p>The response code.</p>
@@ -160,6 +174,13 @@ public class BuySecretNoResponseBody extends TeaModel {
 
         public static final class Builder {
             private String secretNo; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecretBuyInfoDTO model) {
+                this.secretNo = model.secretNo;
+            } 
 
             /**
              * <p>The private number, that is, phone number X.</p>

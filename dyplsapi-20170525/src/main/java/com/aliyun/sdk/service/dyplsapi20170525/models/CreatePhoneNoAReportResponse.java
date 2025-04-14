@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CancelPickUpWaybillResponse} extends {@link TeaModel}
+ * {@link CreatePhoneNoAReportResponse} extends {@link TeaModel}
  *
- * <p>CancelPickUpWaybillResponse</p>
+ * <p>CreatePhoneNoAReportResponse</p>
  */
-public class CancelPickUpWaybillResponse extends Response {
+public class CreatePhoneNoAReportResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class CancelPickUpWaybillResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private CancelPickUpWaybillResponseBody body;
+    private CreatePhoneNoAReportResponseBody body;
 
-    private CancelPickUpWaybillResponse(BuilderImpl builder) {
+    private CreatePhoneNoAReportResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static CancelPickUpWaybillResponse create() {
+    public static CreatePhoneNoAReportResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class CancelPickUpWaybillResponse extends Response {
     /**
      * @return body
      */
-    public CancelPickUpWaybillResponseBody getBody() {
+    public CreatePhoneNoAReportResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<CancelPickUpWaybillResponse, Builder> {
+    public interface Builder extends Response.Builder<CreatePhoneNoAReportResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(CancelPickUpWaybillResponseBody body);
+        Builder body(CreatePhoneNoAReportResponseBody body);
 
         @Override
-        CancelPickUpWaybillResponse build();
+        CreatePhoneNoAReportResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<CancelPickUpWaybillResponse, Builder>
+            extends Response.BuilderImpl<CreatePhoneNoAReportResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private CancelPickUpWaybillResponseBody body; 
+        private CreatePhoneNoAReportResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(CancelPickUpWaybillResponse response) {
+        private BuilderImpl(CreatePhoneNoAReportResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class CancelPickUpWaybillResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(CancelPickUpWaybillResponseBody body) {
+        public Builder body(CreatePhoneNoAReportResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public CancelPickUpWaybillResponse build() {
-            return new CancelPickUpWaybillResponse(this);
+        public CreatePhoneNoAReportResponse build() {
+            return new CreatePhoneNoAReportResponse(this);
         } 
 
     } 

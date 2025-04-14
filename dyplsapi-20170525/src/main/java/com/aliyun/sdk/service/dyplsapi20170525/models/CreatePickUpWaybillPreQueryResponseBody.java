@@ -44,6 +44,10 @@ public class CreatePickUpWaybillPreQueryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -77,6 +81,16 @@ public class CreatePickUpWaybillPreQueryResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreatePickUpWaybillPreQueryResponseBody model) {
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The result set.</p>
@@ -193,6 +207,16 @@ public class CreatePickUpWaybillPreQueryResponseBody extends TeaModel {
             private Boolean selectable; 
             private String startTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(TimeList model) {
+                this.endTime = model.endTime;
+                this.selectDisableTip = model.selectDisableTip;
+                this.selectable = model.selectable;
+                this.startTime = model.startTime;
+            } 
+
             /**
              * <p>The end of the time range.</p>
              * 
@@ -300,6 +324,15 @@ public class CreatePickUpWaybillPreQueryResponseBody extends TeaModel {
             private Boolean dateSelectable; 
             private java.util.List<TimeList> timeList; 
 
+            private Builder() {
+            } 
+
+            private Builder(AppointTimes model) {
+                this.date = model.date;
+                this.dateSelectable = model.dateSelectable;
+                this.timeList = model.timeList;
+            } 
+
             /**
              * <p>The date in the YYYY-MM-DD format.</p>
              * 
@@ -392,6 +425,15 @@ public class CreatePickUpWaybillPreQueryResponseBody extends TeaModel {
             private String name; 
             private String selectDisableTip; 
             private Boolean selectable; 
+
+            private Builder() {
+            } 
+
+            private Builder(RealTime model) {
+                this.name = model.name;
+                this.selectDisableTip = model.selectDisableTip;
+                this.selectable = model.selectable;
+            } 
 
             /**
              * <p>The name of the real-time order type.</p>
@@ -488,6 +530,15 @@ public class CreatePickUpWaybillPreQueryResponseBody extends TeaModel {
             private java.util.List<AppointTimes> appointTimes; 
             private String prePrice; 
             private RealTime realTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(CpTimeSelectList model) {
+                this.appointTimes = model.appointTimes;
+                this.prePrice = model.prePrice;
+                this.realTime = model.realTime;
+            } 
 
             /**
              * <p>The available time for the scheduled pickup. If the current courier company cannot accept the scheduled pickup, this field is left empty.</p>
@@ -614,6 +665,18 @@ public class CreatePickUpWaybillPreQueryResponseBody extends TeaModel {
             private String errorMsg; 
             private String message; 
             private Boolean success; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.code = model.code;
+                this.cpTimeSelectList = model.cpTimeSelectList;
+                this.errorCode = model.errorCode;
+                this.errorMsg = model.errorMsg;
+                this.message = model.message;
+                this.success = model.success;
+            } 
 
             /**
              * <p>The response code.</p>

@@ -67,7 +67,7 @@ public class CreatePickUpWaybillPreQueryRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -318,6 +318,17 @@ public class CreatePickUpWaybillPreQueryRequest extends Request {
             private String provinceName; 
             private String townName; 
 
+            private Builder() {
+            } 
+
+            private Builder(AddressInfo model) {
+                this.addressDetail = model.addressDetail;
+                this.areaName = model.areaName;
+                this.cityName = model.cityName;
+                this.provinceName = model.provinceName;
+                this.townName = model.townName;
+            } 
+
             /**
              * <p>The detailed address of the consignee.</p>
              * 
@@ -438,6 +449,15 @@ public class CreatePickUpWaybillPreQueryRequest extends Request {
             private String mobile; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConsigneeInfo model) {
+                this.addressInfo = model.addressInfo;
+                this.mobile = model.mobile;
+                this.name = model.name;
+            } 
+
             /**
              * <p>The address of the consignee.</p>
              */
@@ -556,6 +576,17 @@ public class CreatePickUpWaybillPreQueryRequest extends Request {
             private String cityName; 
             private String provinceName; 
             private String townName; 
+
+            private Builder() {
+            } 
+
+            private Builder(SenderInfoAddressInfo model) {
+                this.addressDetail = model.addressDetail;
+                this.areaName = model.areaName;
+                this.cityName = model.cityName;
+                this.provinceName = model.provinceName;
+                this.townName = model.townName;
+            } 
 
             /**
              * <p>The detailed address of the sender.</p>
@@ -676,6 +707,15 @@ public class CreatePickUpWaybillPreQueryRequest extends Request {
             private SenderInfoAddressInfo addressInfo; 
             private String mobile; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(SenderInfo model) {
+                this.addressInfo = model.addressInfo;
+                this.mobile = model.mobile;
+                this.name = model.name;
+            } 
 
             /**
              * <p>The address of the sender.</p>

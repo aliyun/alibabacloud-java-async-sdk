@@ -97,7 +97,7 @@ public class ConfigXRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -439,6 +439,15 @@ public class ConfigXRequest extends Request {
             private String sequenceCallNoPlayCode; 
             private String sequenceCalledNo; 
             private String sequenceCalledPlayCode; 
+
+            private Builder() {
+            } 
+
+            private Builder(SequenceCalls model) {
+                this.sequenceCallNoPlayCode = model.sequenceCallNoPlayCode;
+                this.sequenceCalledNo = model.sequenceCalledNo;
+                this.sequenceCalledPlayCode = model.sequenceCalledPlayCode;
+            } 
 
             /**
              * <p>顺振提示音放音编号，格式如callNoPlayCode</p>
