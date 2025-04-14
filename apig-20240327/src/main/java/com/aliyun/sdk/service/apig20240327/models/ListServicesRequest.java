@@ -41,6 +41,10 @@ public class ListServicesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("sourceType")
     private String sourceType;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("sourceTypes")
+    private String sourceTypes;
+
     private ListServicesRequest(Builder builder) {
         super(builder);
         this.gatewayId = builder.gatewayId;
@@ -49,6 +53,7 @@ public class ListServicesRequest extends Request {
         this.pageSize = builder.pageSize;
         this.resourceGroupId = builder.resourceGroupId;
         this.sourceType = builder.sourceType;
+        this.sourceTypes = builder.sourceTypes;
     }
 
     public static Builder builder() {
@@ -106,6 +111,13 @@ public class ListServicesRequest extends Request {
         return this.sourceType;
     }
 
+    /**
+     * @return sourceTypes
+     */
+    public String getSourceTypes() {
+        return this.sourceTypes;
+    }
+
     public static final class Builder extends Request.Builder<ListServicesRequest, Builder> {
         private String gatewayId; 
         private String name; 
@@ -113,6 +125,7 @@ public class ListServicesRequest extends Request {
         private Integer pageSize; 
         private String resourceGroupId; 
         private String sourceType; 
+        private String sourceTypes; 
 
         private Builder() {
             super();
@@ -126,6 +139,7 @@ public class ListServicesRequest extends Request {
             this.pageSize = request.pageSize;
             this.resourceGroupId = request.resourceGroupId;
             this.sourceType = request.sourceType;
+            this.sourceTypes = request.sourceTypes;
         } 
 
         /**
@@ -212,6 +226,15 @@ public class ListServicesRequest extends Request {
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("sourceType", sourceType);
             this.sourceType = sourceType;
+            return this;
+        }
+
+        /**
+         * sourceTypes.
+         */
+        public Builder sourceTypes(String sourceTypes) {
+            this.putQueryParameter("sourceTypes", sourceTypes);
+            this.sourceTypes = sourceTypes;
             return this;
         }
 
