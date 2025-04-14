@@ -326,6 +326,9 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("OwnerId")
+        private String ownerId;
+
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
@@ -349,6 +352,7 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
             this.instanceChargeType = builder.instanceChargeType;
             this.ipv6GatewayId = builder.ipv6GatewayId;
             this.name = builder.name;
+            this.ownerId = builder.ownerId;
             this.regionId = builder.regionId;
             this.resourceGroupId = builder.resourceGroupId;
             this.status = builder.status;
@@ -414,6 +418,13 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
         }
 
         /**
+         * @return ownerId
+         */
+        public String getOwnerId() {
+            return this.ownerId;
+        }
+
+        /**
          * @return regionId
          */
         public String getRegionId() {
@@ -456,6 +467,7 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
             private String instanceChargeType; 
             private String ipv6GatewayId; 
             private String name; 
+            private String ownerId; 
             private String regionId; 
             private String resourceGroupId; 
             private String status; 
@@ -473,6 +485,7 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
                 this.instanceChargeType = model.instanceChargeType;
                 this.ipv6GatewayId = model.ipv6GatewayId;
                 this.name = model.name;
+                this.ownerId = model.ownerId;
                 this.regionId = model.regionId;
                 this.resourceGroupId = model.resourceGroupId;
                 this.status = model.status;
@@ -560,6 +573,14 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * OwnerId.
+             */
+            public Builder ownerId(String ownerId) {
+                this.ownerId = ownerId;
                 return this;
             }
 
