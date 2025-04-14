@@ -12,11 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link SetSavingPlanUserDeductRuleRequest} extends {@link RequestModel}
+ * {@link AddCouponDeductTagRequest} extends {@link RequestModel}
  *
- * <p>SetSavingPlanUserDeductRuleRequest</p>
+ * <p>AddCouponDeductTagRequest</p>
  */
-public class SetSavingPlanUserDeductRuleRequest extends Request {
+public class AddCouponDeductTagRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CouponId")
+    private String couponId;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EcIdAccountIds")
     private java.util.List<EcIdAccountIds> ecIdAccountIds;
@@ -25,33 +29,36 @@ public class SetSavingPlanUserDeductRuleRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Nbid")
     private String nbid;
 
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("SpnInstanceCode")
-    private String spnInstanceCode;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List<Tags> tags;
 
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("UserDeductRules")
-    private java.util.List<UserDeductRules> userDeductRules;
-
-    private SetSavingPlanUserDeductRuleRequest(Builder builder) {
+    private AddCouponDeductTagRequest(Builder builder) {
         super(builder);
+        this.couponId = builder.couponId;
         this.ecIdAccountIds = builder.ecIdAccountIds;
         this.nbid = builder.nbid;
-        this.spnInstanceCode = builder.spnInstanceCode;
-        this.userDeductRules = builder.userDeductRules;
+        this.tags = builder.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static SetSavingPlanUserDeductRuleRequest create() {
+    public static AddCouponDeductTagRequest create() {
         return builder().build();
     }
 
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return couponId
+     */
+    public String getCouponId() {
+        return this.couponId;
     }
 
     /**
@@ -69,36 +76,38 @@ public class SetSavingPlanUserDeductRuleRequest extends Request {
     }
 
     /**
-     * @return spnInstanceCode
+     * @return tags
      */
-    public String getSpnInstanceCode() {
-        return this.spnInstanceCode;
+    public java.util.List<Tags> getTags() {
+        return this.tags;
     }
 
-    /**
-     * @return userDeductRules
-     */
-    public java.util.List<UserDeductRules> getUserDeductRules() {
-        return this.userDeductRules;
-    }
-
-    public static final class Builder extends Request.Builder<SetSavingPlanUserDeductRuleRequest, Builder> {
+    public static final class Builder extends Request.Builder<AddCouponDeductTagRequest, Builder> {
+        private String couponId; 
         private java.util.List<EcIdAccountIds> ecIdAccountIds; 
         private String nbid; 
-        private String spnInstanceCode; 
-        private java.util.List<UserDeductRules> userDeductRules; 
+        private java.util.List<Tags> tags; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(SetSavingPlanUserDeductRuleRequest request) {
+        private Builder(AddCouponDeductTagRequest request) {
             super(request);
+            this.couponId = request.couponId;
             this.ecIdAccountIds = request.ecIdAccountIds;
             this.nbid = request.nbid;
-            this.spnInstanceCode = request.spnInstanceCode;
-            this.userDeductRules = request.userDeductRules;
+            this.tags = request.tags;
         } 
+
+        /**
+         * CouponId.
+         */
+        public Builder couponId(String couponId) {
+            this.putQueryParameter("CouponId", couponId);
+            this.couponId = couponId;
+            return this;
+        }
 
         /**
          * EcIdAccountIds.
@@ -120,42 +129,34 @@ public class SetSavingPlanUserDeductRuleRequest extends Request {
         }
 
         /**
-         * SpnInstanceCode.
+         * Tags.
          */
-        public Builder spnInstanceCode(String spnInstanceCode) {
-            this.putBodyParameter("SpnInstanceCode", spnInstanceCode);
-            this.spnInstanceCode = spnInstanceCode;
-            return this;
-        }
-
-        /**
-         * UserDeductRules.
-         */
-        public Builder userDeductRules(java.util.List<UserDeductRules> userDeductRules) {
-            String userDeductRulesShrink = shrink(userDeductRules, "UserDeductRules", "json");
-            this.putBodyParameter("UserDeductRules", userDeductRulesShrink);
-            this.userDeductRules = userDeductRules;
+        public Builder tags(java.util.List<Tags> tags) {
+            String tagsShrink = shrink(tags, "Tags", "json");
+            this.putQueryParameter("Tags", tagsShrink);
+            this.tags = tags;
             return this;
         }
 
         @Override
-        public SetSavingPlanUserDeductRuleRequest build() {
-            return new SetSavingPlanUserDeductRuleRequest(this);
+        public AddCouponDeductTagRequest build() {
+            return new AddCouponDeductTagRequest(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link SetSavingPlanUserDeductRuleRequest} extends {@link TeaModel}
+     * {@link AddCouponDeductTagRequest} extends {@link TeaModel}
      *
-     * <p>SetSavingPlanUserDeductRuleRequest</p>
+     * <p>AddCouponDeductTagRequest</p>
      */
     public static class EcIdAccountIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountIds")
         private java.util.List<Long> accountIds;
 
         @com.aliyun.core.annotation.NameInMap("EcId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String ecId;
 
         private EcIdAccountIds(Builder builder) {
@@ -206,7 +207,7 @@ public class SetSavingPlanUserDeductRuleRequest extends Request {
             }
 
             /**
-             * EcId.
+             * <p>This parameter is required.</p>
              */
             public Builder ecId(String ecId) {
                 this.ecId = ecId;
@@ -222,95 +223,74 @@ public class SetSavingPlanUserDeductRuleRequest extends Request {
     }
     /**
      * 
-     * {@link SetSavingPlanUserDeductRuleRequest} extends {@link TeaModel}
+     * {@link AddCouponDeductTagRequest} extends {@link TeaModel}
      *
-     * <p>SetSavingPlanUserDeductRuleRequest</p>
+     * <p>AddCouponDeductTagRequest</p>
      */
-    public static class UserDeductRules extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("CommodityCode")
-        private String commodityCode;
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
 
-        @com.aliyun.core.annotation.NameInMap("ModuleCode")
-        private String moduleCode;
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
 
-        @com.aliyun.core.annotation.NameInMap("SkipDeduct")
-        private Boolean skipDeduct;
-
-        private UserDeductRules(Builder builder) {
-            this.commodityCode = builder.commodityCode;
-            this.moduleCode = builder.moduleCode;
-            this.skipDeduct = builder.skipDeduct;
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
         }
 
         public static Builder builder() {
             return new Builder();
         }
 
-        public static UserDeductRules create() {
+        public static Tags create() {
             return builder().build();
         }
 
         /**
-         * @return commodityCode
+         * @return key
          */
-        public String getCommodityCode() {
-            return this.commodityCode;
+        public String getKey() {
+            return this.key;
         }
 
         /**
-         * @return moduleCode
+         * @return value
          */
-        public String getModuleCode() {
-            return this.moduleCode;
-        }
-
-        /**
-         * @return skipDeduct
-         */
-        public Boolean getSkipDeduct() {
-            return this.skipDeduct;
+        public String getValue() {
+            return this.value;
         }
 
         public static final class Builder {
-            private String commodityCode; 
-            private String moduleCode; 
-            private Boolean skipDeduct; 
+            private String key; 
+            private String value; 
 
             private Builder() {
             } 
 
-            private Builder(UserDeductRules model) {
-                this.commodityCode = model.commodityCode;
-                this.moduleCode = model.moduleCode;
-                this.skipDeduct = model.skipDeduct;
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
             } 
 
             /**
-             * CommodityCode.
+             * Key.
              */
-            public Builder commodityCode(String commodityCode) {
-                this.commodityCode = commodityCode;
+            public Builder key(String key) {
+                this.key = key;
                 return this;
             }
 
             /**
-             * ModuleCode.
+             * Value.
              */
-            public Builder moduleCode(String moduleCode) {
-                this.moduleCode = moduleCode;
+            public Builder value(String value) {
+                this.value = value;
                 return this;
             }
 
-            /**
-             * SkipDeduct.
-             */
-            public Builder skipDeduct(Boolean skipDeduct) {
-                this.skipDeduct = skipDeduct;
-                return this;
-            }
-
-            public UserDeductRules build() {
-                return new UserDeductRules(this);
+            public Tags build() {
+                return new Tags(this);
             } 
 
         } 

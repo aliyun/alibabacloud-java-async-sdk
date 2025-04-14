@@ -12,23 +12,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CancelFundAccountLowAvailableAmountAlarmResponseBody} extends {@link TeaModel}
+ * {@link DeleteCouponDeductTagResponseBody} extends {@link TeaModel}
  *
- * <p>CancelFundAccountLowAvailableAmountAlarmResponseBody</p>
+ * <p>DeleteCouponDeductTagResponseBody</p>
  */
-public class CancelFundAccountLowAvailableAmountAlarmResponseBody extends TeaModel {
+public class DeleteCouponDeductTagResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
     private Boolean data;
-
-    @com.aliyun.core.annotation.NameInMap("Metadata")
-    private Object metadata;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private CancelFundAccountLowAvailableAmountAlarmResponseBody(Builder builder) {
+    private DeleteCouponDeductTagResponseBody(Builder builder) {
         this.data = builder.data;
-        this.metadata = builder.metadata;
         this.requestId = builder.requestId;
     }
 
@@ -36,7 +32,7 @@ public class CancelFundAccountLowAvailableAmountAlarmResponseBody extends TeaMod
         return new Builder();
     }
 
-    public static CancelFundAccountLowAvailableAmountAlarmResponseBody create() {
+    public static DeleteCouponDeductTagResponseBody create() {
         return builder().build();
     }
 
@@ -52,13 +48,6 @@ public class CancelFundAccountLowAvailableAmountAlarmResponseBody extends TeaMod
     }
 
     /**
-     * @return metadata
-     */
-    public Object getMetadata() {
-        return this.metadata;
-    }
-
-    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -67,15 +56,13 @@ public class CancelFundAccountLowAvailableAmountAlarmResponseBody extends TeaMod
 
     public static final class Builder {
         private Boolean data; 
-        private Object metadata; 
         private String requestId; 
 
         private Builder() {
         } 
 
-        private Builder(CancelFundAccountLowAvailableAmountAlarmResponseBody model) {
+        private Builder(DeleteCouponDeductTagResponseBody model) {
             this.data = model.data;
-            this.metadata = model.metadata;
             this.requestId = model.requestId;
         } 
 
@@ -88,14 +75,6 @@ public class CancelFundAccountLowAvailableAmountAlarmResponseBody extends TeaMod
         }
 
         /**
-         * Metadata.
-         */
-        public Builder metadata(Object metadata) {
-            this.metadata = metadata;
-            return this;
-        }
-
-        /**
          * RequestId.
          */
         public Builder requestId(String requestId) {
@@ -103,8 +82,8 @@ public class CancelFundAccountLowAvailableAmountAlarmResponseBody extends TeaMod
             return this;
         }
 
-        public CancelFundAccountLowAvailableAmountAlarmResponseBody build() {
-            return new CancelFundAccountLowAvailableAmountAlarmResponseBody(this);
+        public DeleteCouponDeductTagResponseBody build() {
+            return new DeleteCouponDeductTagResponseBody(this);
         } 
 
     } 

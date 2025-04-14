@@ -52,6 +52,10 @@ public class GetFundAccountTransactionDetailsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return currentPage
      */
@@ -101,6 +105,18 @@ public class GetFundAccountTransactionDetailsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetFundAccountTransactionDetailsResponseBody model) {
+            this.currentPage = model.currentPage;
+            this.data = model.data;
+            this.metadata = model.metadata;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * CurrentPage.
@@ -403,6 +419,31 @@ public class GetFundAccountTransactionDetailsResponseBody extends TeaModel {
             private Long transactionNumber; 
             private String transactionTime; 
             private String transactionType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.balance = model.balance;
+                this.billNumber = model.billNumber;
+                this.channelTransactionNumber = model.channelTransactionNumber;
+                this.currency = model.currency;
+                this.fundAccountEcid = model.fundAccountEcid;
+                this.fundAccountId = model.fundAccountId;
+                this.fundAccountName = model.fundAccountName;
+                this.fundAccountOwnerAccountId = model.fundAccountOwnerAccountId;
+                this.fundType = model.fundType;
+                this.nbid = model.nbid;
+                this.remark = model.remark;
+                this.site = model.site;
+                this.transactionAccount = model.transactionAccount;
+                this.transactionAmount = model.transactionAmount;
+                this.transactionChannel = model.transactionChannel;
+                this.transactionDirection = model.transactionDirection;
+                this.transactionNumber = model.transactionNumber;
+                this.transactionTime = model.transactionTime;
+                this.transactionType = model.transactionType;
+            } 
 
             /**
              * Balance.

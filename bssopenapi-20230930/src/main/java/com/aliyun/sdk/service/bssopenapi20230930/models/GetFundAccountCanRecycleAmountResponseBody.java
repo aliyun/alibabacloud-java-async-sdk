@@ -56,6 +56,10 @@ public class GetFundAccountCanRecycleAmountResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return availableAmount
      */
@@ -113,6 +117,19 @@ public class GetFundAccountCanRecycleAmountResponseBody extends TeaModel {
         private java.util.List<RecycleToFundAccountList> recycleToFundAccountList; 
         private String requestId; 
         private String transferAmount; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetFundAccountCanRecycleAmountResponseBody model) {
+            this.availableAmount = model.availableAmount;
+            this.currency = model.currency;
+            this.metadata = model.metadata;
+            this.recycleFromFundAccountId = model.recycleFromFundAccountId;
+            this.recycleToFundAccountList = model.recycleToFundAccountList;
+            this.requestId = model.requestId;
+            this.transferAmount = model.transferAmount;
+        } 
 
         /**
          * AvailableAmount.
@@ -255,6 +272,17 @@ public class GetFundAccountCanRecycleAmountResponseBody extends TeaModel {
             private String fundAccountOwnerAccountId; 
             private String maxRecyclableAmount; 
             private String originalTransferRemainAmount; 
+
+            private Builder() {
+            } 
+
+            private Builder(RecycleToFundAccountList model) {
+                this.fundAccountId = model.fundAccountId;
+                this.fundAccountName = model.fundAccountName;
+                this.fundAccountOwnerAccountId = model.fundAccountOwnerAccountId;
+                this.maxRecyclableAmount = model.maxRecyclableAmount;
+                this.originalTransferRemainAmount = model.originalTransferRemainAmount;
+            } 
 
             /**
              * FundAccountId.

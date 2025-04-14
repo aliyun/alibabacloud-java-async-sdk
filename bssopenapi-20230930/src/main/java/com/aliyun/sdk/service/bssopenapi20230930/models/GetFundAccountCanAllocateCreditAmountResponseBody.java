@@ -80,6 +80,10 @@ public class GetFundAccountCanAllocateCreditAmountResponseBody extends TeaModel 
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ecid
      */
@@ -185,6 +189,25 @@ public class GetFundAccountCanAllocateCreditAmountResponseBody extends TeaModel 
         private String nbid; 
         private String requestId; 
         private String site; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetFundAccountCanAllocateCreditAmountResponseBody model) {
+            this.ecid = model.ecid;
+            this.ecidAllocatedCreditAmount = model.ecidAllocatedCreditAmount;
+            this.ecidCreditAmount = model.ecidCreditAmount;
+            this.fundAccountEcid = model.fundAccountEcid;
+            this.fundAccountId = model.fundAccountId;
+            this.fundAccountName = model.fundAccountName;
+            this.fundAccountOwnerAccountId = model.fundAccountOwnerAccountId;
+            this.maxCanAllocateCreditAmount = model.maxCanAllocateCreditAmount;
+            this.metadata = model.metadata;
+            this.minCanAllocateCreditAmount = model.minCanAllocateCreditAmount;
+            this.nbid = model.nbid;
+            this.requestId = model.requestId;
+            this.site = model.site;
+        } 
 
         /**
          * Ecid.

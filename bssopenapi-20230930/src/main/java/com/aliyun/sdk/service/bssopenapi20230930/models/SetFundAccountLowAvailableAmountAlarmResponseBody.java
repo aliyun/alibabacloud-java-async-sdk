@@ -12,13 +12,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetFundAccountLowAvailableAmountAlarmResponseBody} extends {@link TeaModel}
+ * {@link SetFundAccountLowAvailableAmountAlarmResponseBody} extends {@link TeaModel}
  *
- * <p>GetFundAccountLowAvailableAmountAlarmResponseBody</p>
+ * <p>SetFundAccountLowAvailableAmountAlarmResponseBody</p>
  */
-public class GetFundAccountLowAvailableAmountAlarmResponseBody extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("AlarmEnabled")
-    private Boolean alarmEnabled;
+public class SetFundAccountLowAvailableAmountAlarmResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private Boolean data;
 
     @com.aliyun.core.annotation.NameInMap("Metadata")
     private Object metadata;
@@ -26,21 +26,17 @@ public class GetFundAccountLowAvailableAmountAlarmResponseBody extends TeaModel 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @com.aliyun.core.annotation.NameInMap("ThresholdAmount")
-    private String thresholdAmount;
-
-    private GetFundAccountLowAvailableAmountAlarmResponseBody(Builder builder) {
-        this.alarmEnabled = builder.alarmEnabled;
+    private SetFundAccountLowAvailableAmountAlarmResponseBody(Builder builder) {
+        this.data = builder.data;
         this.metadata = builder.metadata;
         this.requestId = builder.requestId;
-        this.thresholdAmount = builder.thresholdAmount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static GetFundAccountLowAvailableAmountAlarmResponseBody create() {
+    public static SetFundAccountLowAvailableAmountAlarmResponseBody create() {
         return builder().build();
     }
 
@@ -49,10 +45,10 @@ public class GetFundAccountLowAvailableAmountAlarmResponseBody extends TeaModel 
     }
 
     /**
-     * @return alarmEnabled
+     * @return data
      */
-    public Boolean getAlarmEnabled() {
-        return this.alarmEnabled;
+    public Boolean getData() {
+        return this.data;
     }
 
     /**
@@ -69,34 +65,25 @@ public class GetFundAccountLowAvailableAmountAlarmResponseBody extends TeaModel 
         return this.requestId;
     }
 
-    /**
-     * @return thresholdAmount
-     */
-    public String getThresholdAmount() {
-        return this.thresholdAmount;
-    }
-
     public static final class Builder {
-        private Boolean alarmEnabled; 
+        private Boolean data; 
         private Object metadata; 
         private String requestId; 
-        private String thresholdAmount; 
 
         private Builder() {
         } 
 
-        private Builder(GetFundAccountLowAvailableAmountAlarmResponseBody model) {
-            this.alarmEnabled = model.alarmEnabled;
+        private Builder(SetFundAccountLowAvailableAmountAlarmResponseBody model) {
+            this.data = model.data;
             this.metadata = model.metadata;
             this.requestId = model.requestId;
-            this.thresholdAmount = model.thresholdAmount;
         } 
 
         /**
-         * AlarmEnabled.
+         * Data.
          */
-        public Builder alarmEnabled(Boolean alarmEnabled) {
-            this.alarmEnabled = alarmEnabled;
+        public Builder data(Boolean data) {
+            this.data = data;
             return this;
         }
 
@@ -116,16 +103,8 @@ public class GetFundAccountLowAvailableAmountAlarmResponseBody extends TeaModel 
             return this;
         }
 
-        /**
-         * ThresholdAmount.
-         */
-        public Builder thresholdAmount(String thresholdAmount) {
-            this.thresholdAmount = thresholdAmount;
-            return this;
-        }
-
-        public GetFundAccountLowAvailableAmountAlarmResponseBody build() {
-            return new GetFundAccountLowAvailableAmountAlarmResponseBody(this);
+        public SetFundAccountLowAvailableAmountAlarmResponseBody build() {
+            return new SetFundAccountLowAvailableAmountAlarmResponseBody(this);
         } 
 
     } 

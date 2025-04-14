@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of AddCouponDeductTag  AddCouponDeductTagRequest
+     * @return AddCouponDeductTagResponse
+     */
+    CompletableFuture<AddCouponDeductTagResponse> addCouponDeductTag(AddCouponDeductTagRequest request);
+
+    /**
      * @param request the request parameters of CancelFundAccountLowAvailableAmountAlarm  CancelFundAccountLowAvailableAmountAlarmRequest
      * @return CancelFundAccountLowAvailableAmountAlarmResponse
      */
@@ -30,6 +36,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateFundAccountTransferResponse
      */
     CompletableFuture<CreateFundAccountTransferResponse> createFundAccountTransfer(CreateFundAccountTransferRequest request);
+
+    /**
+     * @param request the request parameters of DeleteCouponDeductTag  DeleteCouponDeductTagRequest
+     * @return DeleteCouponDeductTagResponse
+     */
+    CompletableFuture<DeleteCouponDeductTagResponse> deleteCouponDeductTag(DeleteCouponDeductTagRequest request);
+
+    /**
+     * @param request the request parameters of DescribeCoupon  DescribeCouponRequest
+     * @return DescribeCouponResponse
+     */
+    CompletableFuture<DescribeCouponResponse> describeCoupon(DescribeCouponRequest request);
+
+    /**
+     * @param request the request parameters of DescribeCouponItemList  DescribeCouponItemListRequest
+     * @return DescribeCouponItemListResponse
+     */
+    CompletableFuture<DescribeCouponItemListResponse> describeCouponItemList(DescribeCouponItemListRequest request);
 
     /**
      * @param request the request parameters of GetFundAccountAvailableAmount  GetFundAccountAvailableAmountRequest
@@ -74,6 +98,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetFundAccountTransactionDetailsResponse> getFundAccountTransactionDetails(GetFundAccountTransactionDetailsRequest request);
 
     /**
+     * @param request the request parameters of ListCouponDeductTag  ListCouponDeductTagRequest
+     * @return ListCouponDeductTagResponse
+     */
+    CompletableFuture<ListCouponDeductTagResponse> listCouponDeductTag(ListCouponDeductTagRequest request);
+
+    /**
      * @param request the request parameters of ListFundAccount  ListFundAccountRequest
      * @return ListFundAccountResponse
      */
@@ -90,6 +120,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SetFundAccountCreditAmountResponse
      */
     CompletableFuture<SetFundAccountCreditAmountResponse> setFundAccountCreditAmount(SetFundAccountCreditAmountRequest request);
+
+    /**
+     * @param request the request parameters of SetFundAccountLowAvailableAmountAlarm  SetFundAccountLowAvailableAmountAlarmRequest
+     * @return SetFundAccountLowAvailableAmountAlarmResponse
+     */
+    CompletableFuture<SetFundAccountLowAvailableAmountAlarmResponse> setFundAccountLowAvailableAmountAlarm(SetFundAccountLowAvailableAmountAlarmRequest request);
 
     /**
      * @param request the request parameters of SetSavingPlanUserDeductRule  SetSavingPlanUserDeductRuleRequest

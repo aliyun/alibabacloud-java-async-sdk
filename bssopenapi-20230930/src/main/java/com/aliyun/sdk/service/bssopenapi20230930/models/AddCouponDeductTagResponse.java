@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link SetSavingPlanUserDeductRuleResponse} extends {@link TeaModel}
+ * {@link AddCouponDeductTagResponse} extends {@link TeaModel}
  *
- * <p>SetSavingPlanUserDeductRuleResponse</p>
+ * <p>AddCouponDeductTagResponse</p>
  */
-public class SetSavingPlanUserDeductRuleResponse extends Response {
+public class AddCouponDeductTagResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class SetSavingPlanUserDeductRuleResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private SetSavingPlanUserDeductRuleResponseBody body;
+    private AddCouponDeductTagResponseBody body;
 
-    private SetSavingPlanUserDeductRuleResponse(BuilderImpl builder) {
+    private AddCouponDeductTagResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static SetSavingPlanUserDeductRuleResponse create() {
+    public static AddCouponDeductTagResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class SetSavingPlanUserDeductRuleResponse extends Response {
     /**
      * @return body
      */
-    public SetSavingPlanUserDeductRuleResponseBody getBody() {
+    public AddCouponDeductTagResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<SetSavingPlanUserDeductRuleResponse, Builder> {
+    public interface Builder extends Response.Builder<AddCouponDeductTagResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(SetSavingPlanUserDeductRuleResponseBody body);
+        Builder body(AddCouponDeductTagResponseBody body);
 
         @Override
-        SetSavingPlanUserDeductRuleResponse build();
+        AddCouponDeductTagResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<SetSavingPlanUserDeductRuleResponse, Builder>
+            extends Response.BuilderImpl<AddCouponDeductTagResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private SetSavingPlanUserDeductRuleResponseBody body; 
+        private AddCouponDeductTagResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(SetSavingPlanUserDeductRuleResponse response) {
+        private BuilderImpl(AddCouponDeductTagResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class SetSavingPlanUserDeductRuleResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(SetSavingPlanUserDeductRuleResponseBody body) {
+        public Builder body(AddCouponDeductTagResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public SetSavingPlanUserDeductRuleResponse build() {
-            return new SetSavingPlanUserDeductRuleResponse(this);
+        public AddCouponDeductTagResponse build() {
+            return new AddCouponDeductTagResponse(this);
         } 
 
     } 

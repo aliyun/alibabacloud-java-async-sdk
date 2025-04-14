@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link SetSavingPlanUserDeductRuleResponse} extends {@link TeaModel}
+ * {@link SetFundAccountLowAvailableAmountAlarmResponse} extends {@link TeaModel}
  *
- * <p>SetSavingPlanUserDeductRuleResponse</p>
+ * <p>SetFundAccountLowAvailableAmountAlarmResponse</p>
  */
-public class SetSavingPlanUserDeductRuleResponse extends Response {
+public class SetFundAccountLowAvailableAmountAlarmResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class SetSavingPlanUserDeductRuleResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private SetSavingPlanUserDeductRuleResponseBody body;
+    private SetFundAccountLowAvailableAmountAlarmResponseBody body;
 
-    private SetSavingPlanUserDeductRuleResponse(BuilderImpl builder) {
+    private SetFundAccountLowAvailableAmountAlarmResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static SetSavingPlanUserDeductRuleResponse create() {
+    public static SetFundAccountLowAvailableAmountAlarmResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class SetSavingPlanUserDeductRuleResponse extends Response {
     /**
      * @return body
      */
-    public SetSavingPlanUserDeductRuleResponseBody getBody() {
+    public SetFundAccountLowAvailableAmountAlarmResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<SetSavingPlanUserDeductRuleResponse, Builder> {
+    public interface Builder extends Response.Builder<SetFundAccountLowAvailableAmountAlarmResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(SetSavingPlanUserDeductRuleResponseBody body);
+        Builder body(SetFundAccountLowAvailableAmountAlarmResponseBody body);
 
         @Override
-        SetSavingPlanUserDeductRuleResponse build();
+        SetFundAccountLowAvailableAmountAlarmResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<SetSavingPlanUserDeductRuleResponse, Builder>
+            extends Response.BuilderImpl<SetFundAccountLowAvailableAmountAlarmResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private SetSavingPlanUserDeductRuleResponseBody body; 
+        private SetFundAccountLowAvailableAmountAlarmResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(SetSavingPlanUserDeductRuleResponse response) {
+        private BuilderImpl(SetFundAccountLowAvailableAmountAlarmResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class SetSavingPlanUserDeductRuleResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(SetSavingPlanUserDeductRuleResponseBody body) {
+        public Builder body(SetFundAccountLowAvailableAmountAlarmResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public SetSavingPlanUserDeductRuleResponse build() {
-            return new SetSavingPlanUserDeductRuleResponse(this);
+        public SetFundAccountLowAvailableAmountAlarmResponse build() {
+            return new SetFundAccountLowAvailableAmountAlarmResponse(this);
         } 
 
     } 

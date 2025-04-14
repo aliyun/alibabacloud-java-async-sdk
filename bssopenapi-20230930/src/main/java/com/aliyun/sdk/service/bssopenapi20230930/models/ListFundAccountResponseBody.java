@@ -40,6 +40,10 @@ public class ListFundAccountResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -65,6 +69,15 @@ public class ListFundAccountResponseBody extends TeaModel {
         private java.util.List<Data> data; 
         private Object metadata; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListFundAccountResponseBody model) {
+            this.data = model.data;
+            this.metadata = model.metadata;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Data.
@@ -247,6 +260,23 @@ public class ListFundAccountResponseBody extends TeaModel {
             private String nbid; 
             private java.util.List<String> permissions; 
             private String site; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.createDate = model.createDate;
+                this.fundAccountAdminAccountId = model.fundAccountAdminAccountId;
+                this.fundAccountAdminAccountName = model.fundAccountAdminAccountName;
+                this.fundAccountId = model.fundAccountId;
+                this.fundAccountName = model.fundAccountName;
+                this.fundAccountOwnerAccountId = model.fundAccountOwnerAccountId;
+                this.fundAccountStatus = model.fundAccountStatus;
+                this.fundAccountType = model.fundAccountType;
+                this.nbid = model.nbid;
+                this.permissions = model.permissions;
+                this.site = model.site;
+            } 
 
             /**
              * CreateDate.

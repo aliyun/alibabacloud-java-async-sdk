@@ -80,6 +80,10 @@ public class GetFundAccountCanTransferAmountResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return availableAmount
      */
@@ -185,6 +189,25 @@ public class GetFundAccountCanTransferAmountResponseBody extends TeaModel {
         private String requestId; 
         private String site; 
         private String transferAmount; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetFundAccountCanTransferAmountResponseBody model) {
+            this.availableAmount = model.availableAmount;
+            this.cashAmount = model.cashAmount;
+            this.currency = model.currency;
+            this.fundAccountEcid = model.fundAccountEcid;
+            this.fundAccountId = model.fundAccountId;
+            this.fundAccountName = model.fundAccountName;
+            this.fundAccountOwnerAccountId = model.fundAccountOwnerAccountId;
+            this.maxTransferableAmount = model.maxTransferableAmount;
+            this.metadata = model.metadata;
+            this.nbid = model.nbid;
+            this.requestId = model.requestId;
+            this.site = model.site;
+            this.transferAmount = model.transferAmount;
+        } 
 
         /**
          * AvailableAmount.

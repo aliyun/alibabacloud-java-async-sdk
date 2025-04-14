@@ -52,6 +52,10 @@ public class ListFundAccountPayRelationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return currentPage
      */
@@ -101,6 +105,18 @@ public class ListFundAccountPayRelationResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListFundAccountPayRelationResponseBody model) {
+            this.currentPage = model.currentPage;
+            this.data = model.data;
+            this.metadata = model.metadata;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * CurrentPage.
@@ -343,6 +359,26 @@ public class ListFundAccountPayRelationResponseBody extends TeaModel {
             private String relationType; 
             private String site; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.accountId = model.accountId;
+                this.accountName = model.accountName;
+                this.ecid = model.ecid;
+                this.effectiveTime = model.effectiveTime;
+                this.fundAccountId = model.fundAccountId;
+                this.fundAccountOwnerAccountId = model.fundAccountOwnerAccountId;
+                this.ineffectiveTime = model.ineffectiveTime;
+                this.nbid = model.nbid;
+                this.operatorName = model.operatorName;
+                this.operatorNo = model.operatorNo;
+                this.operatorType = model.operatorType;
+                this.relationType = model.relationType;
+                this.site = model.site;
+                this.status = model.status;
+            } 
 
             /**
              * AccountId.

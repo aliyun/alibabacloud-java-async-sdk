@@ -116,6 +116,10 @@ public class GetFundAccountAvailableAmountResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return availableAmount
      */
@@ -293,6 +297,34 @@ public class GetFundAccountAvailableAmountResponseBody extends TeaModel {
         private String quotaConsumedAmount; 
         private String requestId; 
         private String unclearedAmount; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetFundAccountAvailableAmountResponseBody model) {
+            this.availableAmount = model.availableAmount;
+            this.availableCreditAmount = model.availableCreditAmount;
+            this.bankAcceptanceAmount = model.bankAcceptanceAmount;
+            this.cashAmount = model.cashAmount;
+            this.creditAmount = model.creditAmount;
+            this.creditRefundAmount = model.creditRefundAmount;
+            this.creditUser = model.creditUser;
+            this.currency = model.currency;
+            this.currentMonthUnclearedAmount = model.currentMonthUnclearedAmount;
+            this.extendLedgerList = model.extendLedgerList;
+            this.fundAccountId = model.fundAccountId;
+            this.fundAccountOwnerAccountId = model.fundAccountOwnerAccountId;
+            this.fundAccountStatus = model.fundAccountStatus;
+            this.fundAccountType = model.fundAccountType;
+            this.historyMonthUnclearedAmount = model.historyMonthUnclearedAmount;
+            this.metadata = model.metadata;
+            this.negativeBillAmount = model.negativeBillAmount;
+            this.originalCashAmountList = model.originalCashAmountList;
+            this.quotaAmount = model.quotaAmount;
+            this.quotaConsumedAmount = model.quotaConsumedAmount;
+            this.requestId = model.requestId;
+            this.unclearedAmount = model.unclearedAmount;
+        } 
 
         /**
          * AvailableAmount.
@@ -532,6 +564,15 @@ public class GetFundAccountAvailableAmountResponseBody extends TeaModel {
             private String ledgerName; 
             private String originalAmount; 
 
+            private Builder() {
+            } 
+
+            private Builder(ExtendLedgerList model) {
+                this.currency = model.currency;
+                this.ledgerName = model.ledgerName;
+                this.originalAmount = model.originalAmount;
+            } 
+
             /**
              * Currency.
              */
@@ -606,6 +647,14 @@ public class GetFundAccountAvailableAmountResponseBody extends TeaModel {
         public static final class Builder {
             private String amount; 
             private String currency; 
+
+            private Builder() {
+            } 
+
+            private Builder(OriginalCashAmountList model) {
+                this.amount = model.amount;
+                this.currency = model.currency;
+            } 
 
             /**
              * Amount.

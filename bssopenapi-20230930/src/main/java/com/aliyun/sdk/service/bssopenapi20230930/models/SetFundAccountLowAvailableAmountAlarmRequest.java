@@ -12,25 +12,30 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetFundAccountCanAllocateCreditAmountRequest} extends {@link RequestModel}
+ * {@link SetFundAccountLowAvailableAmountAlarmRequest} extends {@link RequestModel}
  *
- * <p>GetFundAccountCanAllocateCreditAmountRequest</p>
+ * <p>SetFundAccountLowAvailableAmountAlarmRequest</p>
  */
-public class GetFundAccountCanAllocateCreditAmountRequest extends Request {
+public class SetFundAccountLowAvailableAmountAlarmRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("FundAccountId")
     private Long fundAccountId;
 
-    private GetFundAccountCanAllocateCreditAmountRequest(Builder builder) {
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ThresholdAmount")
+    private String thresholdAmount;
+
+    private SetFundAccountLowAvailableAmountAlarmRequest(Builder builder) {
         super(builder);
         this.fundAccountId = builder.fundAccountId;
+        this.thresholdAmount = builder.thresholdAmount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static GetFundAccountCanAllocateCreditAmountRequest create() {
+    public static SetFundAccountLowAvailableAmountAlarmRequest create() {
         return builder().build();
     }
 
@@ -46,16 +51,25 @@ public class GetFundAccountCanAllocateCreditAmountRequest extends Request {
         return this.fundAccountId;
     }
 
-    public static final class Builder extends Request.Builder<GetFundAccountCanAllocateCreditAmountRequest, Builder> {
+    /**
+     * @return thresholdAmount
+     */
+    public String getThresholdAmount() {
+        return this.thresholdAmount;
+    }
+
+    public static final class Builder extends Request.Builder<SetFundAccountLowAvailableAmountAlarmRequest, Builder> {
         private Long fundAccountId; 
+        private String thresholdAmount; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetFundAccountCanAllocateCreditAmountRequest request) {
+        private Builder(SetFundAccountLowAvailableAmountAlarmRequest request) {
             super(request);
             this.fundAccountId = request.fundAccountId;
+            this.thresholdAmount = request.thresholdAmount;
         } 
 
         /**
@@ -67,9 +81,18 @@ public class GetFundAccountCanAllocateCreditAmountRequest extends Request {
             return this;
         }
 
+        /**
+         * ThresholdAmount.
+         */
+        public Builder thresholdAmount(String thresholdAmount) {
+            this.putBodyParameter("ThresholdAmount", thresholdAmount);
+            this.thresholdAmount = thresholdAmount;
+            return this;
+        }
+
         @Override
-        public GetFundAccountCanAllocateCreditAmountRequest build() {
-            return new GetFundAccountCanAllocateCreditAmountRequest(this);
+        public SetFundAccountLowAvailableAmountAlarmRequest build() {
+            return new SetFundAccountLowAvailableAmountAlarmRequest(this);
         } 
 
     } 

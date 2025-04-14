@@ -72,6 +72,10 @@ public class GetFundAccountCanWithdrawAmountResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return canOriginalWithdrawAmount
      */
@@ -161,6 +165,23 @@ public class GetFundAccountCanWithdrawAmountResponseBody extends TeaModel {
         private String payAsYouGoReversedAmount; 
         private String requestId; 
         private String transferAmount; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetFundAccountCanWithdrawAmountResponseBody model) {
+            this.canOriginalWithdrawAmount = model.canOriginalWithdrawAmount;
+            this.canWithdrawAmount = model.canWithdrawAmount;
+            this.cannotOriginalWithdrawAmount = model.cannotOriginalWithdrawAmount;
+            this.cashAmount = model.cashAmount;
+            this.creditMemoAmount = model.creditMemoAmount;
+            this.currentMonthUnclearedAmount = model.currentMonthUnclearedAmount;
+            this.historyMonthUnclearedAmount = model.historyMonthUnclearedAmount;
+            this.metadata = model.metadata;
+            this.payAsYouGoReversedAmount = model.payAsYouGoReversedAmount;
+            this.requestId = model.requestId;
+            this.transferAmount = model.transferAmount;
+        } 
 
         /**
          * CanOriginalWithdrawAmount.

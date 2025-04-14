@@ -36,6 +36,10 @@ public class SetFundAccountCreditAmountResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return metadata
      */
@@ -53,6 +57,14 @@ public class SetFundAccountCreditAmountResponseBody extends TeaModel {
     public static final class Builder {
         private Object metadata; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(SetFundAccountCreditAmountResponseBody model) {
+            this.metadata = model.metadata;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Metadata.
