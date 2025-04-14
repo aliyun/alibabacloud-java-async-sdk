@@ -291,7 +291,7 @@ public class CreateDataQualityRuleRequest extends Request {
         }
 
         /**
-         * <p>The strength of the monitoring rule. Valid values:</p>
+         * <p>The strength of the rule. Valid values:</p>
          * <ul>
          * <li>Normal</li>
          * <li>High</li>

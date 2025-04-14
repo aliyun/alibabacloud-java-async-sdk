@@ -239,7 +239,7 @@ public class CreateDataSourceRequest extends Request {
         }
 
         /**
-         * <p>The type of the data source. More than 70 types of data sources are supported in DataWorks.</p>
+         * <p>The type of the data source. More than 70 types of data sources are supported in DataWorks. For more information, see <a href="https://help.aliyun.com/document_detail/2852465.html">Data source types</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

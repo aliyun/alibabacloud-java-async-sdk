@@ -26,6 +26,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AbolishDeploymentResponse> abolishDeployment(AbolishDeploymentRequest request);
 
     /**
+     * @param request the request parameters of AddEntityIntoMetaCollection  AddEntityIntoMetaCollectionRequest
+     * @return AddEntityIntoMetaCollectionResponse
+     */
+    CompletableFuture<AddEntityIntoMetaCollectionResponse> addEntityIntoMetaCollection(AddEntityIntoMetaCollectionRequest request);
+
+    /**
      * <b>description</b> :
      * <ol>
      * <li>You can use this API operation only in DataWorks Basic Edition or an advanced edition.</li>
@@ -181,6 +187,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateFunctionResponse
      */
     CompletableFuture<CreateFunctionResponse> createFunction(CreateFunctionRequest request);
+
+    /**
+     * @param request the request parameters of CreateLineageRelationship  CreateLineageRelationshipRequest
+     * @return CreateLineageRelationshipResponse
+     */
+    CompletableFuture<CreateLineageRelationshipResponse> createLineageRelationship(CreateLineageRelationshipRequest request);
+
+    /**
+     * @param request the request parameters of CreateMetaCollection  CreateMetaCollectionRequest
+     * @return CreateMetaCollectionResponse
+     */
+    CompletableFuture<CreateMetaCollectionResponse> createMetaCollection(CreateMetaCollectionRequest request);
 
     /**
      * <b>description</b> :
@@ -366,6 +384,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteFunctionResponse> deleteFunction(DeleteFunctionRequest request);
 
     /**
+     * @param request the request parameters of DeleteLineageRelationship  DeleteLineageRelationshipRequest
+     * @return DeleteLineageRelationshipResponse
+     */
+    CompletableFuture<DeleteLineageRelationshipResponse> deleteLineageRelationship(DeleteLineageRelationshipRequest request);
+
+    /**
+     * @param request the request parameters of DeleteMetaCollection  DeleteMetaCollectionRequest
+     * @return DeleteMetaCollectionResponse
+     */
+    CompletableFuture<DeleteMetaCollectionResponse> deleteMetaCollection(DeleteMetaCollectionRequest request);
+
+    /**
      * <b>description</b> :
      * <p>This API operation is available for all DataWorks editions.</p>
      * 
@@ -513,6 +543,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetAlertRuleResponse> getAlertRule(GetAlertRuleRequest request);
 
     /**
+     * @param request the request parameters of GetCatalog  GetCatalogRequest
+     * @return GetCatalogResponse
+     */
+    CompletableFuture<GetCatalogResponse> getCatalog(GetCatalogRequest request);
+
+    /**
      * <b>description</b> :
      * <ol>
      * <li>This API operation is available for all DataWorks editions.</li>
@@ -523,6 +559,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetCertificateResponse
      */
     CompletableFuture<GetCertificateResponse> getCertificate(GetCertificateRequest request);
+
+    /**
+     * @param request the request parameters of GetColumn  GetColumnRequest
+     * @return GetColumnResponse
+     */
+    CompletableFuture<GetColumnResponse> getColumn(GetColumnRequest request);
 
     /**
      * <b>description</b> :
@@ -597,6 +639,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetDataSourceResponse> getDataSource(GetDataSourceRequest request);
 
     /**
+     * @param request the request parameters of GetDatabase  GetDatabaseRequest
+     * @return GetDatabaseResponse
+     */
+    CompletableFuture<GetDatabaseResponse> getDatabase(GetDatabaseRequest request);
+
+    /**
      * @param request the request parameters of GetDeployment  GetDeploymentRequest
      * @return GetDeploymentResponse
      */
@@ -615,6 +663,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetJobStatusResponse> getJobStatus(GetJobStatusRequest request);
 
     /**
+     * @param request the request parameters of GetLineageRelationship  GetLineageRelationshipRequest
+     * @return GetLineageRelationshipResponse
+     */
+    CompletableFuture<GetLineageRelationshipResponse> getLineageRelationship(GetLineageRelationshipRequest request);
+
+    /**
+     * @param request the request parameters of GetMetaCollection  GetMetaCollectionRequest
+     * @return GetMetaCollectionResponse
+     */
+    CompletableFuture<GetMetaCollectionResponse> getMetaCollection(GetMetaCollectionRequest request);
+
+    /**
      * <b>description</b> :
      * <p>This API operation is available for all DataWorks editions.</p>
      * 
@@ -628,6 +688,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetNodeResponse
      */
     CompletableFuture<GetNodeResponse> getNode(GetNodeRequest request);
+
+    /**
+     * @param request the request parameters of GetPartition  GetPartitionRequest
+     * @return GetPartitionResponse
+     */
+    CompletableFuture<GetPartitionResponse> getPartition(GetPartitionRequest request);
 
     /**
      * <b>description</b> :
@@ -679,6 +745,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetRouteResponse
      */
     CompletableFuture<GetRouteResponse> getRoute(GetRouteRequest request);
+
+    /**
+     * @param request the request parameters of GetSchema  GetSchemaRequest
+     * @return GetSchemaResponse
+     */
+    CompletableFuture<GetSchemaResponse> getSchema(GetSchemaRequest request);
+
+    /**
+     * @param request the request parameters of GetTable  GetTableRequest
+     * @return GetTableResponse
+     */
+    CompletableFuture<GetTableResponse> getTable(GetTableRequest request);
 
     /**
      * @param request the request parameters of GetTask  GetTaskRequest
@@ -758,6 +836,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListAlertRulesResponse> listAlertRules(ListAlertRulesRequest request);
 
     /**
+     * @param request the request parameters of ListCatalogs  ListCatalogsRequest
+     * @return ListCatalogsResponse
+     */
+    CompletableFuture<ListCatalogsResponse> listCatalogs(ListCatalogsRequest request);
+
+    /**
      * <b>description</b> :
      * <ol>
      * <li>This API operation is available for all DataWorks editions.</li>
@@ -768,6 +852,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListCertificatesResponse
      */
     CompletableFuture<ListCertificatesResponse> listCertificates(ListCertificatesRequest request);
+
+    /**
+     * @param request the request parameters of ListColumns  ListColumnsRequest
+     * @return ListColumnsResponse
+     */
+    CompletableFuture<ListColumnsResponse> listColumns(ListColumnsRequest request);
+
+    /**
+     * @param request the request parameters of ListCrawlerTypes  ListCrawlerTypesRequest
+     * @return ListCrawlerTypesResponse
+     */
+    CompletableFuture<ListCrawlerTypesResponse> listCrawlerTypes(ListCrawlerTypesRequest request);
 
     /**
      * @param request the request parameters of ListDIAlarmRules  ListDIAlarmRulesRequest
@@ -902,6 +998,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListDataSourcesResponse> listDataSources(ListDataSourcesRequest request);
 
     /**
+     * @param request the request parameters of ListDatabases  ListDatabasesRequest
+     * @return ListDatabasesResponse
+     */
+    CompletableFuture<ListDatabasesResponse> listDatabases(ListDatabasesRequest request);
+
+    /**
      * @param request the request parameters of ListDeployments  ListDeploymentsRequest
      * @return ListDeploymentsResponse
      */
@@ -923,10 +1025,34 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListDownstreamTasksResponse> listDownstreamTasks(ListDownstreamTasksRequest request);
 
     /**
+     * @param request the request parameters of ListEntitiesInMetaCollection  ListEntitiesInMetaCollectionRequest
+     * @return ListEntitiesInMetaCollectionResponse
+     */
+    CompletableFuture<ListEntitiesInMetaCollectionResponse> listEntitiesInMetaCollection(ListEntitiesInMetaCollectionRequest request);
+
+    /**
      * @param request the request parameters of ListFunctions  ListFunctionsRequest
      * @return ListFunctionsResponse
      */
     CompletableFuture<ListFunctionsResponse> listFunctions(ListFunctionsRequest request);
+
+    /**
+     * @param request the request parameters of ListLineageRelationships  ListLineageRelationshipsRequest
+     * @return ListLineageRelationshipsResponse
+     */
+    CompletableFuture<ListLineageRelationshipsResponse> listLineageRelationships(ListLineageRelationshipsRequest request);
+
+    /**
+     * @param request the request parameters of ListLineages  ListLineagesRequest
+     * @return ListLineagesResponse
+     */
+    CompletableFuture<ListLineagesResponse> listLineages(ListLineagesRequest request);
+
+    /**
+     * @param request the request parameters of ListMetaCollections  ListMetaCollectionsRequest
+     * @return ListMetaCollectionsResponse
+     */
+    CompletableFuture<ListMetaCollectionsResponse> listMetaCollections(ListMetaCollectionsRequest request);
 
     /**
      * <b>description</b> :
@@ -948,6 +1074,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListNodesResponse
      */
     CompletableFuture<ListNodesResponse> listNodes(ListNodesRequest request);
+
+    /**
+     * @param request the request parameters of ListPartitions  ListPartitionsRequest
+     * @return ListPartitionsResponse
+     */
+    CompletableFuture<ListPartitionsResponse> listPartitions(ListPartitionsRequest request);
 
     /**
      * <b>description</b> :
@@ -993,6 +1125,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListRoutesResponse
      */
     CompletableFuture<ListRoutesResponse> listRoutes(ListRoutesRequest request);
+
+    /**
+     * @param request the request parameters of ListSchemas  ListSchemasRequest
+     * @return ListSchemasResponse
+     */
+    CompletableFuture<ListSchemasResponse> listSchemas(ListSchemasRequest request);
+
+    /**
+     * @param request the request parameters of ListTables  ListTablesRequest
+     * @return ListTablesResponse
+     */
+    CompletableFuture<ListTablesResponse> listTables(ListTablesRequest request);
 
     /**
      * <b>description</b> :
@@ -1091,6 +1235,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return MoveWorkflowDefinitionResponse
      */
     CompletableFuture<MoveWorkflowDefinitionResponse> moveWorkflowDefinition(MoveWorkflowDefinitionRequest request);
+
+    /**
+     * @param request the request parameters of RemoveEntityFromMetaCollection  RemoveEntityFromMetaCollectionRequest
+     * @return RemoveEntityFromMetaCollectionResponse
+     */
+    CompletableFuture<RemoveEntityFromMetaCollectionResponse> removeEntityFromMetaCollection(RemoveEntityFromMetaCollectionRequest request);
 
     /**
      * <b>description</b> :
@@ -1261,6 +1411,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateAlertRuleResponse> updateAlertRule(UpdateAlertRuleRequest request);
 
     /**
+     * @param request the request parameters of UpdateColumnBusinessMetadata  UpdateColumnBusinessMetadataRequest
+     * @return UpdateColumnBusinessMetadataResponse
+     */
+    CompletableFuture<UpdateColumnBusinessMetadataResponse> updateColumnBusinessMetadata(UpdateColumnBusinessMetadataRequest request);
+
+    /**
      * @param request the request parameters of UpdateDIAlarmRule  UpdateDIAlarmRuleRequest
      * @return UpdateDIAlarmRuleResponse
      */
@@ -1327,6 +1483,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateFunctionResponse> updateFunction(UpdateFunctionRequest request);
 
     /**
+     * @param request the request parameters of UpdateMetaCollection  UpdateMetaCollectionRequest
+     * @return UpdateMetaCollectionResponse
+     */
+    CompletableFuture<UpdateMetaCollectionResponse> updateMetaCollection(UpdateMetaCollectionRequest request);
+
+    /**
      * @param request the request parameters of UpdateNode  UpdateNodeRequest
      * @return UpdateNodeResponse
      */
@@ -1361,6 +1523,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateRouteResponse
      */
     CompletableFuture<UpdateRouteResponse> updateRoute(UpdateRouteRequest request);
+
+    /**
+     * @param request the request parameters of UpdateTableBusinessMetadata  UpdateTableBusinessMetadataRequest
+     * @return UpdateTableBusinessMetadataResponse
+     */
+    CompletableFuture<UpdateTableBusinessMetadataResponse> updateTableBusinessMetadata(UpdateTableBusinessMetadataRequest request);
 
     /**
      * @param request the request parameters of UpdateTask  UpdateTaskRequest

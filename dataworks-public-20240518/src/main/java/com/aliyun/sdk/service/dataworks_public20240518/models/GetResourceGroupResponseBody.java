@@ -80,7 +80,7 @@ public class GetResourceGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request. It is used to locate logs and troubleshoot problems.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</p>
@@ -99,7 +99,7 @@ public class GetResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether the request is successful.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -260,7 +260,7 @@ public class GetResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specification details.</p>
+             * <p>The number of compute units (CUs) in the resource group.</p>
              * 
              * <strong>example:</strong>
              * <p>2CU</p>
@@ -505,7 +505,7 @@ public class GetResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time, which is a 64-bit timestamp.</p>
+             * <p>The time when the resource group was created. The value is a 64-bit timestamp.</p>
              * 
              * <strong>example:</strong>
              * <p>1727055811000</p>
@@ -516,7 +516,7 @@ public class GetResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the user who created the resource group.</p>
+             * <p>The ID of the account that is used to create the resource group.</p>
              * 
              * <strong>example:</strong>
              * <p>11075500042XXXXX</p>
@@ -527,7 +527,7 @@ public class GetResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The default VPC ID bound to the common resource group.</p>
+             * <p>The ID of the virtual private cloud (VPC) with which the resource group is associated by default.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-m2et4f3oc8msfbccXXXXX</p>
@@ -538,7 +538,7 @@ public class GetResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The default switch ID bound to the common resource group.</p>
+             * <p>The ID of the vSwitch with which the resource group is associated by default.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-uf8usrhs7hjd9amsXXXXX</p>
@@ -549,7 +549,7 @@ public class GetResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unique identifier of the resource group.</p>
+             * <p>The ID of the resource group.</p>
              * 
              * <strong>example:</strong>
              * <p>Serverless_res_group_524257424564736_6831777003XXXXX</p>
@@ -571,7 +571,7 @@ public class GetResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the order instance of the resource group.</p>
+             * <p>The instance ID of the order that is used to create the resource group.</p>
              * 
              * <strong>example:</strong>
              * <p>c442b330-3b10-4584-959e-736e4edXXXXX</p>
