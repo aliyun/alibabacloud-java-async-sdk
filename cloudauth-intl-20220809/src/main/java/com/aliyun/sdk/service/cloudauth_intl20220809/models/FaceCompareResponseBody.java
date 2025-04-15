@@ -44,6 +44,10 @@ public class FaceCompareResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class FaceCompareResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Result result; 
+
+        private Builder() {
+        } 
+
+        private Builder(FaceCompareResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * Code.
@@ -174,6 +188,15 @@ public class FaceCompareResponseBody extends TeaModel {
             private Double faceComparisonScore; 
             private String passed; 
             private String transactionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.faceComparisonScore = model.faceComparisonScore;
+                this.passed = model.passed;
+                this.transactionId = model.transactionId;
+            } 
 
             /**
              * FaceComparisonScore.

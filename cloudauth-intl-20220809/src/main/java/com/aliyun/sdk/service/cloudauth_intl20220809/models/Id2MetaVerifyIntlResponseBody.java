@@ -44,6 +44,10 @@ public class Id2MetaVerifyIntlResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class Id2MetaVerifyIntlResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Result result; 
+
+        private Builder() {
+        } 
+
+        private Builder(Id2MetaVerifyIntlResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * Code.
@@ -147,6 +161,13 @@ public class Id2MetaVerifyIntlResponseBody extends TeaModel {
 
         public static final class Builder {
             private String bizCode; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.bizCode = model.bizCode;
+            } 
 
             /**
              * BizCode.

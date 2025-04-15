@@ -44,6 +44,10 @@ public class FaceLivenessResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class FaceLivenessResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Result result; 
+
+        private Builder() {
+        } 
+
+        private Builder(FaceLivenessResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * Code.
@@ -196,6 +210,17 @@ public class FaceLivenessResponseBody extends TeaModel {
             private Double faceQualityScore; 
             private String occlusionResult; 
 
+            private Builder() {
+            } 
+
+            private Builder(ExtFaceInfo model) {
+                this.faceAge = model.faceAge;
+                this.faceAttack = model.faceAttack;
+                this.faceGender = model.faceGender;
+                this.faceQualityScore = model.faceQualityScore;
+                this.occlusionResult = model.occlusionResult;
+            } 
+
             /**
              * FaceAge.
              */
@@ -310,6 +335,16 @@ public class FaceLivenessResponseBody extends TeaModel {
             private String passed; 
             private String subCode; 
             private String transactionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.extFaceInfo = model.extFaceInfo;
+                this.passed = model.passed;
+                this.subCode = model.subCode;
+                this.transactionId = model.transactionId;
+            } 
 
             /**
              * ExtFaceInfo.

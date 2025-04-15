@@ -44,6 +44,10 @@ public class EkycVerifyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class EkycVerifyResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Result result; 
+
+        private Builder() {
+        } 
+
+        private Builder(EkycVerifyResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * Code.
@@ -198,6 +212,17 @@ public class EkycVerifyResponseBody extends TeaModel {
             private String passed; 
             private String subCode; 
             private String transactionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.extFaceInfo = model.extFaceInfo;
+                this.extIdInfo = model.extIdInfo;
+                this.passed = model.passed;
+                this.subCode = model.subCode;
+                this.transactionId = model.transactionId;
+            } 
 
             /**
              * ExtFaceInfo.

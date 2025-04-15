@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link FaceLivenessResponse} extends {@link TeaModel}
+ * {@link CheckVerifyLogResponse} extends {@link TeaModel}
  *
- * <p>FaceLivenessResponse</p>
+ * <p>CheckVerifyLogResponse</p>
  */
-public class FaceLivenessResponse extends Response {
+public class CheckVerifyLogResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class FaceLivenessResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private FaceLivenessResponseBody body;
+    private CheckVerifyLogResponseBody body;
 
-    private FaceLivenessResponse(BuilderImpl builder) {
+    private CheckVerifyLogResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static FaceLivenessResponse create() {
+    public static CheckVerifyLogResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class FaceLivenessResponse extends Response {
     /**
      * @return body
      */
-    public FaceLivenessResponseBody getBody() {
+    public CheckVerifyLogResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<FaceLivenessResponse, Builder> {
+    public interface Builder extends Response.Builder<CheckVerifyLogResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(FaceLivenessResponseBody body);
+        Builder body(CheckVerifyLogResponseBody body);
 
         @Override
-        FaceLivenessResponse build();
+        CheckVerifyLogResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<FaceLivenessResponse, Builder>
+            extends Response.BuilderImpl<CheckVerifyLogResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private FaceLivenessResponseBody body; 
+        private CheckVerifyLogResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(FaceLivenessResponse response) {
+        private BuilderImpl(CheckVerifyLogResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class FaceLivenessResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(FaceLivenessResponseBody body) {
+        public Builder body(CheckVerifyLogResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public FaceLivenessResponse build() {
-            return new FaceLivenessResponse(this);
+        public CheckVerifyLogResponse build() {
+            return new CheckVerifyLogResponse(this);
         } 
 
     } 

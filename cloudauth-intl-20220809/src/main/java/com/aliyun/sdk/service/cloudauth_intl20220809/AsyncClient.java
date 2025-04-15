@@ -33,6 +33,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CheckResultResponse> checkResult(CheckResultRequest request);
 
     /**
+     * @param request the request parameters of CheckVerifyLog  CheckVerifyLogRequest
+     * @return CheckVerifyLogResponse
+     */
+    CompletableFuture<CheckVerifyLogResponse> checkVerifyLog(CheckVerifyLogRequest request);
+
+    /**
      * @param request the request parameters of DeleteVerifyResult  DeleteVerifyResultRequest
      * @return DeleteVerifyResultResponse
      */

@@ -44,6 +44,10 @@ public class FaceGuardRiskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class FaceGuardRiskResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Result result; 
+
+        private Builder() {
+        } 
+
+        private Builder(FaceGuardRiskResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * Code.
@@ -126,6 +140,9 @@ public class FaceGuardRiskResponseBody extends TeaModel {
      * <p>FaceGuardRiskResponseBody</p>
      */
     public static class Result extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("GuardRiskScore")
+        private Double guardRiskScore;
+
         @com.aliyun.core.annotation.NameInMap("RiskExtends")
         private String riskExtends;
 
@@ -136,6 +153,7 @@ public class FaceGuardRiskResponseBody extends TeaModel {
         private String transactionId;
 
         private Result(Builder builder) {
+            this.guardRiskScore = builder.guardRiskScore;
             this.riskExtends = builder.riskExtends;
             this.riskTags = builder.riskTags;
             this.transactionId = builder.transactionId;
@@ -147,6 +165,13 @@ public class FaceGuardRiskResponseBody extends TeaModel {
 
         public static Result create() {
             return builder().build();
+        }
+
+        /**
+         * @return guardRiskScore
+         */
+        public Double getGuardRiskScore() {
+            return this.guardRiskScore;
         }
 
         /**
@@ -171,9 +196,28 @@ public class FaceGuardRiskResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Double guardRiskScore; 
             private String riskExtends; 
             private String riskTags; 
             private String transactionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.guardRiskScore = model.guardRiskScore;
+                this.riskExtends = model.riskExtends;
+                this.riskTags = model.riskTags;
+                this.transactionId = model.transactionId;
+            } 
+
+            /**
+             * GuardRiskScore.
+             */
+            public Builder guardRiskScore(Double guardRiskScore) {
+                this.guardRiskScore = guardRiskScore;
+                return this;
+            }
 
             /**
              * RiskExtends.

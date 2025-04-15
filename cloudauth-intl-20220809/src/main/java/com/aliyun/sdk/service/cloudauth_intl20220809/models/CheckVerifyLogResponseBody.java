@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CheckResultResponseBody} extends {@link TeaModel}
+ * {@link CheckVerifyLogResponseBody} extends {@link TeaModel}
  *
- * <p>CheckResultResponseBody</p>
+ * <p>CheckVerifyLogResponseBody</p>
  */
-public class CheckResultResponseBody extends TeaModel {
+public class CheckVerifyLogResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
@@ -29,7 +29,7 @@ public class CheckResultResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
-    private CheckResultResponseBody(Builder builder) {
+    private CheckVerifyLogResponseBody(Builder builder) {
         this.code = builder.code;
         this.message = builder.message;
         this.requestId = builder.requestId;
@@ -40,7 +40,7 @@ public class CheckResultResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static CheckResultResponseBody create() {
+    public static CheckVerifyLogResponseBody create() {
         return builder().build();
     }
 
@@ -85,7 +85,7 @@ public class CheckResultResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(CheckResultResponseBody model) {
+        private Builder(CheckVerifyLogResponseBody model) {
             this.code = model.code;
             this.message = model.message;
             this.requestId = model.requestId;
@@ -127,36 +127,30 @@ public class CheckResultResponseBody extends TeaModel {
             return this;
         }
 
-        public CheckResultResponseBody build() {
-            return new CheckResultResponseBody(this);
+        public CheckVerifyLogResponseBody build() {
+            return new CheckVerifyLogResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link CheckResultResponseBody} extends {@link TeaModel}
+     * {@link CheckVerifyLogResponseBody} extends {@link TeaModel}
      *
-     * <p>CheckResultResponseBody</p>
+     * <p>CheckVerifyLogResponseBody</p>
      */
     public static class Result extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("EkycResult")
-        private String ekycResult;
-
-        @com.aliyun.core.annotation.NameInMap("ExtBasicInfo")
-        private String extBasicInfo;
-
-        @com.aliyun.core.annotation.NameInMap("ExtFaceInfo")
-        private String extFaceInfo;
-
-        @com.aliyun.core.annotation.NameInMap("ExtIdInfo")
-        private String extIdInfo;
-
         @com.aliyun.core.annotation.NameInMap("ExtInfo")
         private String extInfo;
 
-        @com.aliyun.core.annotation.NameInMap("ExtRiskInfo")
-        private String extRiskInfo;
+        @com.aliyun.core.annotation.NameInMap("InterruptPage")
+        private String interruptPage;
+
+        @com.aliyun.core.annotation.NameInMap("LogInfo")
+        private java.util.List<String> logInfo;
+
+        @com.aliyun.core.annotation.NameInMap("LogStatisticsInfo")
+        private String logStatisticsInfo;
 
         @com.aliyun.core.annotation.NameInMap("Passed")
         private String passed;
@@ -164,15 +158,21 @@ public class CheckResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SubCode")
         private String subCode;
 
+        @com.aliyun.core.annotation.NameInMap("VerifyErrorCode")
+        private String verifyErrorCode;
+
+        @com.aliyun.core.annotation.NameInMap("VerifyStatus")
+        private String verifyStatus;
+
         private Result(Builder builder) {
-            this.ekycResult = builder.ekycResult;
-            this.extBasicInfo = builder.extBasicInfo;
-            this.extFaceInfo = builder.extFaceInfo;
-            this.extIdInfo = builder.extIdInfo;
             this.extInfo = builder.extInfo;
-            this.extRiskInfo = builder.extRiskInfo;
+            this.interruptPage = builder.interruptPage;
+            this.logInfo = builder.logInfo;
+            this.logStatisticsInfo = builder.logStatisticsInfo;
             this.passed = builder.passed;
             this.subCode = builder.subCode;
+            this.verifyErrorCode = builder.verifyErrorCode;
+            this.verifyStatus = builder.verifyStatus;
         }
 
         public static Builder builder() {
@@ -184,34 +184,6 @@ public class CheckResultResponseBody extends TeaModel {
         }
 
         /**
-         * @return ekycResult
-         */
-        public String getEkycResult() {
-            return this.ekycResult;
-        }
-
-        /**
-         * @return extBasicInfo
-         */
-        public String getExtBasicInfo() {
-            return this.extBasicInfo;
-        }
-
-        /**
-         * @return extFaceInfo
-         */
-        public String getExtFaceInfo() {
-            return this.extFaceInfo;
-        }
-
-        /**
-         * @return extIdInfo
-         */
-        public String getExtIdInfo() {
-            return this.extIdInfo;
-        }
-
-        /**
          * @return extInfo
          */
         public String getExtInfo() {
@@ -219,10 +191,24 @@ public class CheckResultResponseBody extends TeaModel {
         }
 
         /**
-         * @return extRiskInfo
+         * @return interruptPage
          */
-        public String getExtRiskInfo() {
-            return this.extRiskInfo;
+        public String getInterruptPage() {
+            return this.interruptPage;
+        }
+
+        /**
+         * @return logInfo
+         */
+        public java.util.List<String> getLogInfo() {
+            return this.logInfo;
+        }
+
+        /**
+         * @return logStatisticsInfo
+         */
+        public String getLogStatisticsInfo() {
+            return this.logStatisticsInfo;
         }
 
         /**
@@ -239,61 +225,43 @@ public class CheckResultResponseBody extends TeaModel {
             return this.subCode;
         }
 
+        /**
+         * @return verifyErrorCode
+         */
+        public String getVerifyErrorCode() {
+            return this.verifyErrorCode;
+        }
+
+        /**
+         * @return verifyStatus
+         */
+        public String getVerifyStatus() {
+            return this.verifyStatus;
+        }
+
         public static final class Builder {
-            private String ekycResult; 
-            private String extBasicInfo; 
-            private String extFaceInfo; 
-            private String extIdInfo; 
             private String extInfo; 
-            private String extRiskInfo; 
+            private String interruptPage; 
+            private java.util.List<String> logInfo; 
+            private String logStatisticsInfo; 
             private String passed; 
             private String subCode; 
+            private String verifyErrorCode; 
+            private String verifyStatus; 
 
             private Builder() {
             } 
 
             private Builder(Result model) {
-                this.ekycResult = model.ekycResult;
-                this.extBasicInfo = model.extBasicInfo;
-                this.extFaceInfo = model.extFaceInfo;
-                this.extIdInfo = model.extIdInfo;
                 this.extInfo = model.extInfo;
-                this.extRiskInfo = model.extRiskInfo;
+                this.interruptPage = model.interruptPage;
+                this.logInfo = model.logInfo;
+                this.logStatisticsInfo = model.logStatisticsInfo;
                 this.passed = model.passed;
                 this.subCode = model.subCode;
+                this.verifyErrorCode = model.verifyErrorCode;
+                this.verifyStatus = model.verifyStatus;
             } 
-
-            /**
-             * EkycResult.
-             */
-            public Builder ekycResult(String ekycResult) {
-                this.ekycResult = ekycResult;
-                return this;
-            }
-
-            /**
-             * ExtBasicInfo.
-             */
-            public Builder extBasicInfo(String extBasicInfo) {
-                this.extBasicInfo = extBasicInfo;
-                return this;
-            }
-
-            /**
-             * ExtFaceInfo.
-             */
-            public Builder extFaceInfo(String extFaceInfo) {
-                this.extFaceInfo = extFaceInfo;
-                return this;
-            }
-
-            /**
-             * ExtIdInfo.
-             */
-            public Builder extIdInfo(String extIdInfo) {
-                this.extIdInfo = extIdInfo;
-                return this;
-            }
 
             /**
              * ExtInfo.
@@ -304,10 +272,26 @@ public class CheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * ExtRiskInfo.
+             * InterruptPage.
              */
-            public Builder extRiskInfo(String extRiskInfo) {
-                this.extRiskInfo = extRiskInfo;
+            public Builder interruptPage(String interruptPage) {
+                this.interruptPage = interruptPage;
+                return this;
+            }
+
+            /**
+             * LogInfo.
+             */
+            public Builder logInfo(java.util.List<String> logInfo) {
+                this.logInfo = logInfo;
+                return this;
+            }
+
+            /**
+             * LogStatisticsInfo.
+             */
+            public Builder logStatisticsInfo(String logStatisticsInfo) {
+                this.logStatisticsInfo = logStatisticsInfo;
                 return this;
             }
 
@@ -324,6 +308,22 @@ public class CheckResultResponseBody extends TeaModel {
              */
             public Builder subCode(String subCode) {
                 this.subCode = subCode;
+                return this;
+            }
+
+            /**
+             * VerifyErrorCode.
+             */
+            public Builder verifyErrorCode(String verifyErrorCode) {
+                this.verifyErrorCode = verifyErrorCode;
+                return this;
+            }
+
+            /**
+             * VerifyStatus.
+             */
+            public Builder verifyStatus(String verifyStatus) {
+                this.verifyStatus = verifyStatus;
                 return this;
             }
 

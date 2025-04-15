@@ -44,6 +44,10 @@ public class CardOcrResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class CardOcrResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Result result; 
+
+        private Builder() {
+        } 
+
+        private Builder(CardOcrResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * Code.
@@ -198,6 +212,17 @@ public class CardOcrResponseBody extends TeaModel {
             private String passed; 
             private String subCode; 
             private String transactionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.extCardInfo = model.extCardInfo;
+                this.extIdInfo = model.extIdInfo;
+                this.passed = model.passed;
+                this.subCode = model.subCode;
+                this.transactionId = model.transactionId;
+            } 
 
             /**
              * ExtCardInfo.

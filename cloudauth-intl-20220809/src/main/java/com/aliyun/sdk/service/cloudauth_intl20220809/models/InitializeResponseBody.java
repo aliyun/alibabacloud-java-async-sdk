@@ -44,6 +44,10 @@ public class InitializeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class InitializeResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Result result; 
+
+        private Builder() {
+        } 
+
+        private Builder(InitializeResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * Code.
@@ -174,6 +188,15 @@ public class InitializeResponseBody extends TeaModel {
             private String clientCfg; 
             private String transactionId; 
             private String transactionUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.clientCfg = model.clientCfg;
+                this.transactionId = model.transactionId;
+                this.transactionUrl = model.transactionUrl;
+            } 
 
             /**
              * ClientCfg.
