@@ -153,6 +153,7 @@ public class ListRepositoryRequest extends Request {
         }
 
         /**
+         * <p>The ID of the Container Registry instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -165,7 +166,10 @@ public class ListRepositoryRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -186,7 +190,10 @@ public class ListRepositoryRequest extends Request {
         }
 
         /**
-         * RepoName.
+         * <p>The name of the repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>repo-test</p>
          */
         public Builder repoName(String repoName) {
             this.putQueryParameter("RepoName", repoName);
@@ -195,7 +202,10 @@ public class ListRepositoryRequest extends Request {
         }
 
         /**
-         * RepoNamespaceName.
+         * <p>The name of the namespace to which the repository belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>repo-namespace-test</p>
          */
         public Builder repoNamespaceName(String repoNamespaceName) {
             this.putQueryParameter("RepoNamespaceName", repoNamespaceName);

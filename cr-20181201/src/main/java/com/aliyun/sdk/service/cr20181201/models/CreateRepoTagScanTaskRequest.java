@@ -40,6 +40,10 @@ public class CreateRepoTagScanTaskRequest extends Request {
     private String scanService;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScanType")
+    private String scanType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
     @com.aliyun.core.annotation.Validation(required = true)
     private String tag;
@@ -51,6 +55,7 @@ public class CreateRepoTagScanTaskRequest extends Request {
         this.instanceId = builder.instanceId;
         this.repoId = builder.repoId;
         this.scanService = builder.scanService;
+        this.scanType = builder.scanType;
         this.tag = builder.tag;
     }
 
@@ -103,6 +108,13 @@ public class CreateRepoTagScanTaskRequest extends Request {
     }
 
     /**
+     * @return scanType
+     */
+    public String getScanType() {
+        return this.scanType;
+    }
+
+    /**
      * @return tag
      */
     public String getTag() {
@@ -115,6 +127,7 @@ public class CreateRepoTagScanTaskRequest extends Request {
         private String instanceId; 
         private String repoId; 
         private String scanService; 
+        private String scanType; 
         private String tag; 
 
         private Builder() {
@@ -128,6 +141,7 @@ public class CreateRepoTagScanTaskRequest extends Request {
             this.instanceId = request.instanceId;
             this.repoId = request.repoId;
             this.scanService = request.scanService;
+            this.scanType = request.scanType;
             this.tag = request.tag;
         } 
 
@@ -191,6 +205,15 @@ public class CreateRepoTagScanTaskRequest extends Request {
         public Builder scanService(String scanService) {
             this.putQueryParameter("ScanService", scanService);
             this.scanService = scanService;
+            return this;
+        }
+
+        /**
+         * ScanType.
+         */
+        public Builder scanType(String scanType) {
+            this.putQueryParameter("ScanType", scanType);
+            this.scanType = scanType;
             return this;
         }
 

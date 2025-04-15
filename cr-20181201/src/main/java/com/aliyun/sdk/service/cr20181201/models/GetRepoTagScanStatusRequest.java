@@ -39,6 +39,10 @@ public class GetRepoTagScanStatusRequest extends Request {
     private String scanTaskId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScanType")
+    private String scanType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
     private String tag;
 
@@ -49,6 +53,7 @@ public class GetRepoTagScanStatusRequest extends Request {
         this.instanceId = builder.instanceId;
         this.repoId = builder.repoId;
         this.scanTaskId = builder.scanTaskId;
+        this.scanType = builder.scanType;
         this.tag = builder.tag;
     }
 
@@ -101,6 +106,13 @@ public class GetRepoTagScanStatusRequest extends Request {
     }
 
     /**
+     * @return scanType
+     */
+    public String getScanType() {
+        return this.scanType;
+    }
+
+    /**
      * @return tag
      */
     public String getTag() {
@@ -113,6 +125,7 @@ public class GetRepoTagScanStatusRequest extends Request {
         private String instanceId; 
         private String repoId; 
         private String scanTaskId; 
+        private String scanType; 
         private String tag; 
 
         private Builder() {
@@ -126,6 +139,7 @@ public class GetRepoTagScanStatusRequest extends Request {
             this.instanceId = request.instanceId;
             this.repoId = request.repoId;
             this.scanTaskId = request.scanTaskId;
+            this.scanType = request.scanType;
             this.tag = request.tag;
         } 
 
@@ -174,6 +188,15 @@ public class GetRepoTagScanStatusRequest extends Request {
         public Builder scanTaskId(String scanTaskId) {
             this.putQueryParameter("ScanTaskId", scanTaskId);
             this.scanTaskId = scanTaskId;
+            return this;
+        }
+
+        /**
+         * ScanType.
+         */
+        public Builder scanType(String scanType) {
+            this.putQueryParameter("ScanType", scanType);
+            this.scanType = scanType;
             return this;
         }
 
