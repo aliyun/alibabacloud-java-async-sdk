@@ -52,6 +52,10 @@ public class StartMicroOutboundResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class StartMicroOutboundResponseBody extends TeaModel {
         private String invokeCreateTime; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(StartMicroOutboundResponseBody model) {
+            this.code = model.code;
+            this.customerInfo = model.customerInfo;
+            this.invokeCmdId = model.invokeCmdId;
+            this.invokeCreateTime = model.invokeCreateTime;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.

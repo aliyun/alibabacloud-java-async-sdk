@@ -41,7 +41,7 @@ public class EditQualityRuleTagRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -142,6 +142,14 @@ public class EditQualityRuleTagRequest extends Request {
         public static final class Builder {
             private Long id; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(AnalysisTypes model) {
+                this.id = model.id;
+                this.name = model.name;
+            } 
 
             /**
              * Id.

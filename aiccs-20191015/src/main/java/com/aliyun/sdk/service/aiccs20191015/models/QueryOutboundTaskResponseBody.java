@@ -52,6 +52,10 @@ public class QueryOutboundTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class QueryOutboundTaskResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryOutboundTaskResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -440,6 +456,34 @@ public class QueryOutboundTaskResponseBody extends TeaModel {
             private Integer status; 
             private Integer type; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.buId = model.buId;
+                this.callerNum = model.callerNum;
+                this.creator = model.creator;
+                this.departmentId = model.departmentId;
+                this.description = model.description;
+                this.endDate = model.endDate;
+                this.endTime = model.endTime;
+                this.extAttrs = model.extAttrs;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.groupName = model.groupName;
+                this.id = model.id;
+                this.model = model.model;
+                this.modifier = model.modifier;
+                this.name = model.name;
+                this.retryInterval = model.retryInterval;
+                this.retryTime = model.retryTime;
+                this.skillGroup = model.skillGroup;
+                this.startDate = model.startDate;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.type = model.type;
+            } 
+
             /**
              * BuId.
              */
@@ -690,6 +734,16 @@ public class QueryOutboundTaskResponseBody extends TeaModel {
             private java.util.List<List> list; 
             private String pageSize; 
             private String totalResults; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.currentPage = model.currentPage;
+                this.list = model.list;
+                this.pageSize = model.pageSize;
+                this.totalResults = model.totalResults;
+            } 
 
             /**
              * CurrentPage.

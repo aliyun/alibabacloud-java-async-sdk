@@ -48,6 +48,10 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetHotlineCallActionResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -359,6 +374,29 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
             private Long subTouchId; 
             private Long taskId; 
             private Long touchId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.actionId = model.actionId;
+                this.buId = model.buId;
+                this.calloutId = model.calloutId;
+                this.calloutName = model.calloutName;
+                this.caseId = model.caseId;
+                this.channelId = model.channelId;
+                this.channelType = model.channelType;
+                this.depId = model.depId;
+                this.isTransfer = model.isTransfer;
+                this.memberId = model.memberId;
+                this.memberList = model.memberList;
+                this.memberName = model.memberName;
+                this.servicerId = model.servicerId;
+                this.servicerName = model.servicerName;
+                this.subTouchId = model.subTouchId;
+                this.taskId = model.taskId;
+                this.touchId = model.touchId;
+            } 
 
             /**
              * ActionId.

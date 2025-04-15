@@ -48,6 +48,10 @@ public class ListTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class ListTaskResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTaskResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -264,6 +279,21 @@ public class ListTaskResponseBody extends TeaModel {
             private String taskName; 
             private Integer totalCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(Record model) {
+                this.completeCount = model.completeCount;
+                this.fireTime = model.fireTime;
+                this.gmtCreate = model.gmtCreate;
+                this.id = model.id;
+                this.robotId = model.robotId;
+                this.robotName = model.robotName;
+                this.status = model.status;
+                this.taskName = model.taskName;
+                this.totalCount = model.totalCount;
+            } 
+
             /**
              * CompleteCount.
              */
@@ -410,6 +440,16 @@ public class ListTaskResponseBody extends TeaModel {
             private Long pageSize; 
             private java.util.List<Record> record; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.pageNo = model.pageNo;
+                this.pageSize = model.pageSize;
+                this.record = model.record;
+                this.total = model.total;
+            } 
 
             /**
              * PageNo.

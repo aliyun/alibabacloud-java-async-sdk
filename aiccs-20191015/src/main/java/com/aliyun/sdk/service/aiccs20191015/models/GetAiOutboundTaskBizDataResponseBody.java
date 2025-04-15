@@ -48,6 +48,10 @@ public class GetAiOutboundTaskBizDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetAiOutboundTaskBizDataResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAiOutboundTaskBizDataResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -203,6 +218,16 @@ public class GetAiOutboundTaskBizDataResponseBody extends TeaModel {
             private Long caseId; 
             private String phoneNum; 
             private Long taskId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.bizData = model.bizData;
+                this.caseId = model.caseId;
+                this.phoneNum = model.phoneNum;
+                this.taskId = model.taskId;
+            } 
 
             /**
              * BizData.

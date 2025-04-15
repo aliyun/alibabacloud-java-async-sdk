@@ -48,6 +48,10 @@ public class GetDepGroupTreeDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetDepGroupTreeDataResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDepGroupTreeDataResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -180,6 +195,14 @@ public class GetDepGroupTreeDataResponseBody extends TeaModel {
             private String name; 
             private Long skillGroupId; 
 
+            private Builder() {
+            } 
+
+            private Builder(GroupDTOS model) {
+                this.name = model.name;
+                this.skillGroupId = model.skillGroupId;
+            } 
+
             /**
              * Name.
              */
@@ -258,6 +281,15 @@ public class GetDepGroupTreeDataResponseBody extends TeaModel {
             private String depGroupId; 
             private String depGroupName; 
             private java.util.List<GroupDTOS> groupDTOS; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.depGroupId = model.depGroupId;
+                this.depGroupName = model.depGroupName;
+                this.groupDTOS = model.groupDTOS;
+            } 
 
             /**
              * DepGroupId.

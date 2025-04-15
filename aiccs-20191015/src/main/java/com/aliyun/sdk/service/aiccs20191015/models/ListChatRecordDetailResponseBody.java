@@ -52,6 +52,10 @@ public class ListChatRecordDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListChatRecordDetailResponseBody extends TeaModel {
         private String requestId; 
         private ResultData resultData; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListChatRecordDetailResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.resultData = model.resultData;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -236,6 +252,17 @@ public class ListChatRecordDetailResponseBody extends TeaModel {
             private String senderName; 
             private Long senderType; 
 
+            private Builder() {
+            } 
+
+            private Builder(MessageList model) {
+                this.content = model.content;
+                this.createTime = model.createTime;
+                this.msgType = model.msgType;
+                this.senderName = model.senderName;
+                this.senderType = model.senderType;
+            } 
+
             /**
              * Content.
              */
@@ -350,6 +377,16 @@ public class ListChatRecordDetailResponseBody extends TeaModel {
             private java.util.List<MessageList> messageList; 
             private String servicerName; 
             private Long startTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.endTime = model.endTime;
+                this.messageList = model.messageList;
+                this.servicerName = model.servicerName;
+                this.startTime = model.startTime;
+            } 
 
             /**
              * EndTime.
@@ -469,6 +506,17 @@ public class ListChatRecordDetailResponseBody extends TeaModel {
             private Long onePageSize; 
             private Long totalPage; 
             private Long totalResults; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResultData model) {
+                this.currentPage = model.currentPage;
+                this.data = model.data;
+                this.onePageSize = model.onePageSize;
+                this.totalPage = model.totalPage;
+                this.totalResults = model.totalResults;
+            } 
 
             /**
              * CurrentPage.

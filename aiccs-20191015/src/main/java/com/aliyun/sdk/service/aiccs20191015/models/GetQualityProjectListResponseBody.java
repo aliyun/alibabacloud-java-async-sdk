@@ -48,6 +48,10 @@ public class GetQualityProjectListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetQualityProjectListResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetQualityProjectListResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -300,6 +315,24 @@ public class GetQualityProjectListResponseBody extends TeaModel {
             private Integer status; 
             private Integer version; 
 
+            private Builder() {
+            } 
+
+            private Builder(QualityProjectList model) {
+                this.checkFreqType = model.checkFreqType;
+                this.createTime = model.createTime;
+                this.depList = model.depList;
+                this.groupList = model.groupList;
+                this.id = model.id;
+                this.modifyTime = model.modifyTime;
+                this.projectName = model.projectName;
+                this.qualityRuleIds = model.qualityRuleIds;
+                this.qualityType = model.qualityType;
+                this.servicerList = model.servicerList;
+                this.status = model.status;
+                this.version = model.version;
+            } 
+
             /**
              * CheckFreqType.
              */
@@ -470,6 +503,16 @@ public class GetQualityProjectListResponseBody extends TeaModel {
             private Integer pageSize; 
             private java.util.List<QualityProjectList> qualityProjectList; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.pageNo = model.pageNo;
+                this.pageSize = model.pageSize;
+                this.qualityProjectList = model.qualityProjectList;
+                this.total = model.total;
+            } 
 
             /**
              * PageNo.

@@ -48,6 +48,10 @@ public class QueryTouchListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class QueryTouchListResponseBody extends TeaModel {
         private String requestId; 
         private ResultData resultData; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryTouchListResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.resultData = model.resultData;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -263,6 +278,21 @@ public class QueryTouchListResponseBody extends TeaModel {
             private Integer onlineJoinRespInterval; 
             private Integer onlineSessionSource; 
             private String outCallRouteNumber; 
+
+            private Builder() {
+            } 
+
+            private Builder(ExtAttrs model) {
+                this.ani = model.ani;
+                this.dnis = model.dnis;
+                this.evaluationLevel = model.evaluationLevel;
+                this.evaluationScore = model.evaluationScore;
+                this.evaluationSolution = model.evaluationSolution;
+                this.evaluationStatus = model.evaluationStatus;
+                this.onlineJoinRespInterval = model.onlineJoinRespInterval;
+                this.onlineSessionSource = model.onlineSessionSource;
+                this.outCallRouteNumber = model.outCallRouteNumber;
+            } 
 
             /**
              * Ani.
@@ -699,6 +729,40 @@ public class QueryTouchListResponseBody extends TeaModel {
             private Integer touchType; 
             private Long userTouchId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.buId = model.buId;
+                this.channelId = model.channelId;
+                this.channelType = model.channelType;
+                this.closeTime = model.closeTime;
+                this.commonQueueName = model.commonQueueName;
+                this.depId = model.depId;
+                this.extAttrs = model.extAttrs;
+                this.extAttrsString = model.extAttrsString;
+                this.feedback = model.feedback;
+                this.firstTime = model.firstTime;
+                this.fromId = model.fromId;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.memberId = model.memberId;
+                this.memberName = model.memberName;
+                this.parentTouchId = model.parentTouchId;
+                this.queueId = model.queueId;
+                this.servicerId = model.servicerId;
+                this.servicerName = model.servicerName;
+                this.status = model.status;
+                this.switchUser = model.switchUser;
+                this.toId = model.toId;
+                this.touchContent = model.touchContent;
+                this.touchEndReason = model.touchEndReason;
+                this.touchId = model.touchId;
+                this.touchTime = model.touchTime;
+                this.touchType = model.touchType;
+                this.userTouchId = model.userTouchId;
+            } 
+
             /**
              * BuId.
              */
@@ -1045,6 +1109,20 @@ public class QueryTouchListResponseBody extends TeaModel {
             private Integer previousPage; 
             private Integer totalPage; 
             private Integer totalResults; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResultData model) {
+                this.currentPage = model.currentPage;
+                this.data = model.data;
+                this.empty = model.empty;
+                this.nextPage = model.nextPage;
+                this.onePageSize = model.onePageSize;
+                this.previousPage = model.previousPage;
+                this.totalPage = model.totalPage;
+                this.totalResults = model.totalResults;
+            } 
 
             /**
              * CurrentPage.

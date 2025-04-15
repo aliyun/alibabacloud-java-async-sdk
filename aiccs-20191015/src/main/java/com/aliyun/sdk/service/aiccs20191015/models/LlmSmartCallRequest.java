@@ -33,6 +33,7 @@ public class LlmSmartCallRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OutId")
+    @com.aliyun.core.annotation.Validation(maxLength = 32)
     private String outId;
 
     @com.aliyun.core.annotation.Query
@@ -61,7 +62,7 @@ public class LlmSmartCallRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }

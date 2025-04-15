@@ -48,6 +48,10 @@ public class ListRobotNodeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class ListRobotNodeResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListRobotNodeResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -215,6 +230,17 @@ public class ListRobotNodeResponseBody extends TeaModel {
             private String nodeIdentifier; 
             private String nodeName; 
             private String processName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.isOutput = model.isOutput;
+                this.modelName = model.modelName;
+                this.nodeIdentifier = model.nodeIdentifier;
+                this.nodeName = model.nodeName;
+                this.processName = model.processName;
+            } 
 
             /**
              * IsOutput.

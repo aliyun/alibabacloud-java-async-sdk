@@ -48,6 +48,10 @@ public class GetQualityProjectDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetQualityProjectDetailResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetQualityProjectDetailResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -299,6 +314,24 @@ public class GetQualityProjectDetailResponseBody extends TeaModel {
             private java.util.List<Long> servicerList; 
             private Integer status; 
             private Integer version; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.checkFreqType = model.checkFreqType;
+                this.createTime = model.createTime;
+                this.depList = model.depList;
+                this.groupList = model.groupList;
+                this.id = model.id;
+                this.modifyTime = model.modifyTime;
+                this.projectName = model.projectName;
+                this.qualityRuleIds = model.qualityRuleIds;
+                this.qualityType = model.qualityType;
+                this.servicerList = model.servicerList;
+                this.status = model.status;
+                this.version = model.version;
+            } 
 
             /**
              * CheckFreqType.

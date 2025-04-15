@@ -48,6 +48,10 @@ public class GetRtcTokenResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetRtcTokenResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetRtcTokenResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -191,6 +206,15 @@ public class GetRtcTokenResponseBody extends TeaModel {
             private String accountName; 
             private String rtcId; 
             private String token; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.accountName = model.accountName;
+                this.rtcId = model.rtcId;
+                this.token = model.token;
+            } 
 
             /**
              * AccountName.

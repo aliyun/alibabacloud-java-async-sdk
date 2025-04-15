@@ -48,6 +48,10 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAiOutboundTaskDetailResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -179,6 +194,14 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
         public static final class Builder {
             private Integer count; 
             private Integer interval; 
+
+            private Builder() {
+            } 
+
+            private Builder(RecallRule model) {
+                this.count = model.count;
+                this.interval = model.interval;
+            } 
 
             /**
              * Count.
@@ -390,6 +413,26 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
             private String statusDesc; 
             private Long taskId; 
             private Integer type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.concurrentRate = model.concurrentRate;
+                this.description = model.description;
+                this.executionTime = model.executionTime;
+                this.forecastCallRate = model.forecastCallRate;
+                this.handlerId = model.handlerId;
+                this.handlerName = model.handlerName;
+                this.name = model.name;
+                this.numRepeated = model.numRepeated;
+                this.outboundNums = model.outboundNums;
+                this.recallRule = model.recallRule;
+                this.status = model.status;
+                this.statusDesc = model.statusDesc;
+                this.taskId = model.taskId;
+                this.type = model.type;
+            } 
 
             /**
              * ConcurrentRate.

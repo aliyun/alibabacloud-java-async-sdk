@@ -48,6 +48,10 @@ public class ListSkillGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class ListSkillGroupResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSkillGroupResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -215,6 +230,17 @@ public class ListSkillGroupResponseBody extends TeaModel {
             private String displayName; 
             private String name; 
             private Long skillGroupId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.channelType = model.channelType;
+                this.description = model.description;
+                this.displayName = model.displayName;
+                this.name = model.name;
+                this.skillGroupId = model.skillGroupId;
+            } 
 
             /**
              * ChannelType.

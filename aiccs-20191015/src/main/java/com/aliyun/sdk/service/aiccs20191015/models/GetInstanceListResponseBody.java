@@ -64,6 +64,10 @@ public class GetInstanceListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -137,6 +141,21 @@ public class GetInstanceListResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetInstanceListResponseBody model) {
+            this.code = model.code;
+            this.commodityInstances = model.commodityInstances;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Code.
@@ -259,6 +278,14 @@ public class GetInstanceListResponseBody extends TeaModel {
         public static final class Builder {
             private String instanceId; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(CommodityInstances model) {
+                this.instanceId = model.instanceId;
+                this.name = model.name;
+            } 
 
             /**
              * InstanceId.

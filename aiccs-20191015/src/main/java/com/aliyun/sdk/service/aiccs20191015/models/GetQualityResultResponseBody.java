@@ -52,6 +52,10 @@ public class GetQualityResultResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return channelTypeName
      */
@@ -101,6 +105,18 @@ public class GetQualityResultResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetQualityResultResponseBody model) {
+            this.channelTypeName = model.channelTypeName;
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * ChannelTypeName.
@@ -368,6 +384,28 @@ public class GetQualityResultResponseBody extends TeaModel {
             private String touchId; 
             private String touchStartTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(QualityResultResponseList model) {
+                this.channelType = model.channelType;
+                this.channelTypeName = model.channelTypeName;
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+                this.hitDetail = model.hitDetail;
+                this.hitStatus = model.hitStatus;
+                this.instanceName = model.instanceName;
+                this.memberName = model.memberName;
+                this.projectId = model.projectId;
+                this.projectName = model.projectName;
+                this.ruleId = model.ruleId;
+                this.ruleName = model.ruleName;
+                this.servicerId = model.servicerId;
+                this.servicerName = model.servicerName;
+                this.touchId = model.touchId;
+                this.touchStartTime = model.touchStartTime;
+            } 
+
             /**
              * ChannelType.
              */
@@ -570,6 +608,16 @@ public class GetQualityResultResponseBody extends TeaModel {
             private Integer pageSize; 
             private java.util.List<QualityResultResponseList> qualityResultResponseList; 
             private Integer totalNum; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.pageNo = model.pageNo;
+                this.pageSize = model.pageSize;
+                this.qualityResultResponseList = model.qualityResultResponseList;
+                this.totalNum = model.totalNum;
+            } 
 
             /**
              * PageNo.

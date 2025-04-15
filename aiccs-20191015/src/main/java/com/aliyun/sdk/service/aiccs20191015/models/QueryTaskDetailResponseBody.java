@@ -52,6 +52,10 @@ public class QueryTaskDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class QueryTaskDetailResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryTaskDetailResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -404,6 +420,31 @@ public class QueryTaskDetailResponseBody extends TeaModel {
             private Integer skillGroup; 
             private Integer status; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.ani = model.ani;
+                this.buId = model.buId;
+                this.departmentId = model.departmentId;
+                this.dnis = model.dnis;
+                this.endReason = model.endReason;
+                this.extAttrs = model.extAttrs;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.memberId = model.memberId;
+                this.memberName = model.memberName;
+                this.outboundNum = model.outboundNum;
+                this.outboundTaskId = model.outboundTaskId;
+                this.priority = model.priority;
+                this.retryTime = model.retryTime;
+                this.servicerId = model.servicerId;
+                this.servicerName = model.servicerName;
+                this.skillGroup = model.skillGroup;
+                this.status = model.status;
+            } 
+
             /**
              * Ani.
              */
@@ -630,6 +671,16 @@ public class QueryTaskDetailResponseBody extends TeaModel {
             private java.util.List<List> list; 
             private String pageSize; 
             private String totalResults; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.currentPage = model.currentPage;
+                this.list = model.list;
+                this.pageSize = model.pageSize;
+                this.totalResults = model.totalResults;
+            } 
 
             /**
              * CurrentPage.

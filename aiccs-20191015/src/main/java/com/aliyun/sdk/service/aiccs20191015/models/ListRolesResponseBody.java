@@ -48,6 +48,10 @@ public class ListRolesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -89,6 +93,17 @@ public class ListRolesResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListRolesResponseBody model) {
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Data.
@@ -251,6 +266,20 @@ public class ListRolesResponseBody extends TeaModel {
             private String roleGroupName; 
             private Long roleId; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.buId = model.buId;
+                this.code = model.code;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.roleGroupId = model.roleGroupId;
+                this.roleGroupName = model.roleGroupName;
+                this.roleId = model.roleId;
+                this.title = model.title;
+            } 
 
             /**
              * BuId.

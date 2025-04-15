@@ -48,6 +48,10 @@ public class GetSeatInformationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetSeatInformationResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSeatInformationResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -203,6 +218,16 @@ public class GetSeatInformationResponseBody extends TeaModel {
             private Integer pageSize; 
             private String rowr; 
             private Integer totalNum; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.pageNum = model.pageNum;
+                this.pageSize = model.pageSize;
+                this.rowr = model.rowr;
+                this.totalNum = model.totalNum;
+            } 
 
             /**
              * PageNum.

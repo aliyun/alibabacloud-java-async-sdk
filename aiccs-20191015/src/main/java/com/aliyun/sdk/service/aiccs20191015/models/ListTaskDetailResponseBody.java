@@ -48,6 +48,10 @@ public class ListTaskDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class ListTaskDetailResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTaskDetailResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -312,6 +327,25 @@ public class ListTaskDetailResponseBody extends TeaModel {
             private String statusCodeDesc; 
             private String tags; 
 
+            private Builder() {
+            } 
+
+            private Builder(Record model) {
+                this.called = model.called;
+                this.caller = model.caller;
+                this.direction = model.direction;
+                this.duration = model.duration;
+                this.endTime = model.endTime;
+                this.id = model.id;
+                this.retryCurTimes = model.retryCurTimes;
+                this.retryTimes = model.retryTimes;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.statusCode = model.statusCode;
+                this.statusCodeDesc = model.statusCodeDesc;
+                this.tags = model.tags;
+            } 
+
             /**
              * Called.
              */
@@ -490,6 +524,16 @@ public class ListTaskDetailResponseBody extends TeaModel {
             private Long pageSize; 
             private java.util.List<Record> record; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.pageNo = model.pageNo;
+                this.pageSize = model.pageSize;
+                this.record = model.record;
+                this.total = model.total;
+            } 
 
             /**
              * PageNo.

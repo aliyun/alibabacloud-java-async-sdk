@@ -48,6 +48,10 @@ public class InsertAiOutboundPhoneNumsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class InsertAiOutboundPhoneNumsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(InsertAiOutboundPhoneNumsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -192,6 +207,15 @@ public class InsertAiOutboundPhoneNumsResponseBody extends TeaModel {
             private String msg; 
             private String phoneNum; 
 
+            private Builder() {
+            } 
+
+            private Builder(FailInfo model) {
+                this.bizData = model.bizData;
+                this.msg = model.msg;
+                this.phoneNum = model.phoneNum;
+            } 
+
             /**
              * BizData.
              */
@@ -278,6 +302,15 @@ public class InsertAiOutboundPhoneNumsResponseBody extends TeaModel {
             private java.util.List<FailInfo> failInfo; 
             private Integer successCount; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.failInfo = model.failInfo;
+                this.successCount = model.successCount;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * FailInfo.

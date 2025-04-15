@@ -52,6 +52,10 @@ public class GetRecordDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetRecordDataResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetRecordDataResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -199,6 +215,14 @@ public class GetRecordDataResponseBody extends TeaModel {
         public static final class Builder {
             private String acid; 
             private String ossLink; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.acid = model.acid;
+                this.ossLink = model.ossLink;
+            } 
 
             /**
              * Acid.

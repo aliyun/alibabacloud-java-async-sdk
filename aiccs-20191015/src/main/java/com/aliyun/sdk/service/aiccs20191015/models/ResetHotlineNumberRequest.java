@@ -92,7 +92,7 @@ public class ResetHotlineNumberRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -380,6 +380,14 @@ public class ResetHotlineNumberRequest extends Request {
         public static final class Builder {
             private Long departmentId; 
             private java.util.List<Long> groupIdList; 
+
+            private Builder() {
+            } 
+
+            private Builder(OutboundRangeList model) {
+                this.departmentId = model.departmentId;
+                this.groupIdList = model.groupIdList;
+            } 
 
             /**
              * DepartmentId.

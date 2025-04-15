@@ -52,6 +52,10 @@ public class GetOutbounNumListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetOutbounNumListResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetOutbounNumListResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -212,6 +228,15 @@ public class GetOutbounNumListResponseBody extends TeaModel {
             private Integer type; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Num model) {
+                this.description = model.description;
+                this.type = model.type;
+                this.value = model.value;
+            } 
+
             /**
              * Description.
              */
@@ -299,6 +324,15 @@ public class GetOutbounNumListResponseBody extends TeaModel {
             private Integer type; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(NumGroup model) {
+                this.description = model.description;
+                this.type = model.type;
+                this.value = model.value;
+            } 
+
             /**
              * Description.
              */
@@ -373,6 +407,14 @@ public class GetOutbounNumListResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Num> num; 
             private java.util.List<NumGroup> numGroup; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.num = model.num;
+                this.numGroup = model.numGroup;
+            } 
 
             /**
              * Num.

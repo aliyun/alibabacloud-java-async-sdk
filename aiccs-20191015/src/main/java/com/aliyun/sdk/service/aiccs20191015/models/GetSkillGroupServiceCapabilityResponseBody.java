@@ -48,6 +48,10 @@ public class GetSkillGroupServiceCapabilityResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetSkillGroupServiceCapabilityResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSkillGroupServiceCapabilityResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -203,6 +218,16 @@ public class GetSkillGroupServiceCapabilityResponseBody extends TeaModel {
             private Integer pageSize; 
             private String rows; 
             private Long totalNum; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.pageNum = model.pageNum;
+                this.pageSize = model.pageSize;
+                this.rows = model.rows;
+                this.totalNum = model.totalNum;
+            } 
 
             /**
              * PageNum.

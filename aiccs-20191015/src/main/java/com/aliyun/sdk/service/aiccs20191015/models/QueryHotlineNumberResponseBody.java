@@ -48,6 +48,10 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryHotlineNumberResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -180,6 +195,14 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
             private Long groupId; 
             private String groupName; 
 
+            private Builder() {
+            } 
+
+            private Builder(GroupDOList model) {
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+            } 
+
             /**
              * GroupId.
              */
@@ -258,6 +281,15 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
             private Long departmentId; 
             private String departmentName; 
             private java.util.List<GroupDOList> groupDOList; 
+
+            private Builder() {
+            } 
+
+            private Builder(CalloutRangeList model) {
+                this.departmentId = model.departmentId;
+                this.departmentName = model.departmentName;
+                this.groupDOList = model.groupDOList;
+            } 
 
             /**
              * DepartmentId.
@@ -442,6 +474,23 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
             private Boolean outboundEnabled; 
             private String sp; 
 
+            private Builder() {
+            } 
+
+            private Builder(HotlineNumList model) {
+                this.calloutAllDepartment = model.calloutAllDepartment;
+                this.calloutRangeList = model.calloutRangeList;
+                this.description = model.description;
+                this.evaluationStatus = model.evaluationStatus;
+                this.flowId = model.flowId;
+                this.flowName = model.flowName;
+                this.hotlineNumber = model.hotlineNumber;
+                this.inBoundEnabled = model.inBoundEnabled;
+                this.location = model.location;
+                this.outboundEnabled = model.outboundEnabled;
+                this.sp = model.sp;
+            } 
+
             /**
              * CalloutAllDepartment.
              */
@@ -604,6 +653,16 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
             private java.util.List<HotlineNumList> hotlineNumList; 
             private Long pageSize; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.currentPage = model.currentPage;
+                this.hotlineNumList = model.hotlineNumList;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * CurrentPage.

@@ -44,6 +44,10 @@ public class LlmSmartCallResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return callId
      */
@@ -77,6 +81,16 @@ public class LlmSmartCallResponseBody extends TeaModel {
         private String code; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(LlmSmartCallResponseBody model) {
+            this.callId = model.callId;
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * CallId.

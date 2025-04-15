@@ -52,6 +52,10 @@ public class ListHotlineRecordDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListHotlineRecordDetailResponseBody extends TeaModel {
         private String requestId; 
         private ResultData resultData; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListHotlineRecordDetailResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.resultData = model.resultData;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -224,6 +240,16 @@ public class ListHotlineRecordDetailResponseBody extends TeaModel {
             private String servicerName; 
             private Long startTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.endTime = model.endTime;
+                this.ossUrl = model.ossUrl;
+                this.servicerName = model.servicerName;
+                this.startTime = model.startTime;
+            } 
+
             /**
              * EndTime.
              */
@@ -342,6 +368,17 @@ public class ListHotlineRecordDetailResponseBody extends TeaModel {
             private Long onePageSize; 
             private Long totalPage; 
             private Long totalResults; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResultData model) {
+                this.currentPage = model.currentPage;
+                this.data = model.data;
+                this.onePageSize = model.onePageSize;
+                this.totalPage = model.totalPage;
+                this.totalResults = model.totalResults;
+            } 
 
             /**
              * CurrentPage.

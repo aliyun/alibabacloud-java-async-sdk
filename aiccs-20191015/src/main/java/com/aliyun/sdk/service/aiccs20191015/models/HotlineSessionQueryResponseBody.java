@@ -48,6 +48,10 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(HotlineSessionQueryResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -504,6 +519,41 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
             private String servicerName; 
             private String trunkCall; 
 
+            private Builder() {
+            } 
+
+            private Builder(CallDetailRecord model) {
+                this.acid = model.acid;
+                this.activeTransferId = model.activeTransferId;
+                this.callContinueTime = model.callContinueTime;
+                this.callResult = model.callResult;
+                this.callType = model.callType;
+                this.calledNumber = model.calledNumber;
+                this.callingNumber = model.callingNumber;
+                this.createTime = model.createTime;
+                this.evaluationLevel = model.evaluationLevel;
+                this.evaluationScore = model.evaluationScore;
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+                this.hangUpRole = model.hangUpRole;
+                this.hangUpTime = model.hangUpTime;
+                this.id = model.id;
+                this.inQueueTime = model.inQueueTime;
+                this.memberId = model.memberId;
+                this.memberName = model.memberName;
+                this.outQueueTime = model.outQueueTime;
+                this.passiveTransferId = model.passiveTransferId;
+                this.passiveTransferIdType = model.passiveTransferIdType;
+                this.pickUpTime = model.pickUpTime;
+                this.queueUpContinueTime = model.queueUpContinueTime;
+                this.ringContinueTime = model.ringContinueTime;
+                this.ringEndTime = model.ringEndTime;
+                this.ringStartTime = model.ringStartTime;
+                this.servicerId = model.servicerId;
+                this.servicerName = model.servicerName;
+                this.trunkCall = model.trunkCall;
+            } 
+
             /**
              * Acid.
              */
@@ -810,6 +860,16 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.callDetailRecord = model.callDetailRecord;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * CallDetailRecord.

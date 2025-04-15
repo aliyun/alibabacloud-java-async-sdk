@@ -52,6 +52,10 @@ public class DescribeRecordDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return acid
      */
@@ -101,6 +105,18 @@ public class DescribeRecordDataResponseBody extends TeaModel {
         private String message; 
         private String ossLink; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRecordDataResponseBody model) {
+            this.acid = model.acid;
+            this.agentId = model.agentId;
+            this.code = model.code;
+            this.message = model.message;
+            this.ossLink = model.ossLink;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Acid.

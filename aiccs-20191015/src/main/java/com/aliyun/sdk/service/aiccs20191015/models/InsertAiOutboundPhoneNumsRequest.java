@@ -52,7 +52,7 @@ public class InsertAiOutboundPhoneNumsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -196,6 +196,14 @@ public class InsertAiOutboundPhoneNumsRequest extends Request {
         public static final class Builder {
             private String bizData; 
             private String phoneNum; 
+
+            private Builder() {
+            } 
+
+            private Builder(Details model) {
+                this.bizData = model.bizData;
+                this.phoneNum = model.phoneNum;
+            } 
 
             /**
              * BizData.

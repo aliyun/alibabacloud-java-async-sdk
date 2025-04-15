@@ -48,6 +48,10 @@ public class GetCustomerInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetCustomerInfoResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetCustomerInfoResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -227,6 +242,18 @@ public class GetCustomerInfoResponseBody extends TeaModel {
             private String photo; 
             private String realName; 
             private Long userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.customizeFields = model.customizeFields;
+                this.nick = model.nick;
+                this.outerId = model.outerId;
+                this.photo = model.photo;
+                this.realName = model.realName;
+                this.userId = model.userId;
+            } 
 
             /**
              * CustomizeFields.

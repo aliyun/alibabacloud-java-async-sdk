@@ -704,6 +704,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<LlmSmartCallResponse> llmSmartCall(LlmSmartCallRequest request);
 
     /**
+     * @param request the request parameters of LlmSmartCallEncrypt  LlmSmartCallEncryptRequest
+     * @return LlmSmartCallEncryptResponse
+     */
+    CompletableFuture<LlmSmartCallEncryptResponse> llmSmartCallEncrypt(LlmSmartCallEncryptRequest request);
+
+    /**
      * @param request the request parameters of MakeCall  MakeCallRequest
      * @return MakeCallResponse
      */

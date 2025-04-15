@@ -48,6 +48,10 @@ public class GetQualityRuleDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetQualityRuleDetailResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetQualityRuleDetailResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -227,6 +242,18 @@ public class GetQualityRuleDetailResponseBody extends TeaModel {
             private String ruleCreateTime; 
             private Long ruleId; 
             private Integer ruleTag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.keyWords = model.keyWords;
+                this.matchType = model.matchType;
+                this.name = model.name;
+                this.ruleCreateTime = model.ruleCreateTime;
+                this.ruleId = model.ruleId;
+                this.ruleTag = model.ruleTag;
+            } 
 
             /**
              * KeyWords.

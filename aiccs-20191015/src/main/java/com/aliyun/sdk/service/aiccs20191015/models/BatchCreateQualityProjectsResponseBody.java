@@ -48,6 +48,10 @@ public class BatchCreateQualityProjectsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class BatchCreateQualityProjectsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(BatchCreateQualityProjectsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -191,6 +206,15 @@ public class BatchCreateQualityProjectsResponseBody extends TeaModel {
             private String instanceId; 
             private Long projectId; 
             private Integer version; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.instanceId = model.instanceId;
+                this.projectId = model.projectId;
+                this.version = model.version;
+            } 
 
             /**
              * InstanceId.

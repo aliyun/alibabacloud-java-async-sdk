@@ -52,6 +52,10 @@ public class QuerySkillGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return currentPage
      */
@@ -101,6 +105,18 @@ public class QuerySkillGroupsResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalPage; 
         private Integer totalResults; 
+
+        private Builder() {
+        } 
+
+        private Builder(QuerySkillGroupsResponseBody model) {
+            this.currentPage = model.currentPage;
+            this.data = model.data;
+            this.onePageSize = model.onePageSize;
+            this.requestId = model.requestId;
+            this.totalPage = model.totalPage;
+            this.totalResults = model.totalResults;
+        } 
 
         /**
          * CurrentPage.
@@ -235,6 +251,17 @@ public class QuerySkillGroupsResponseBody extends TeaModel {
             private String displayName; 
             private Long skillGroupId; 
             private String skillGroupName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.channelType = model.channelType;
+                this.description = model.description;
+                this.displayName = model.displayName;
+                this.skillGroupId = model.skillGroupId;
+                this.skillGroupName = model.skillGroupName;
+            } 
 
             /**
              * ChannelType.

@@ -52,6 +52,10 @@ public class GetHotlineAgentDetailReportResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetHotlineAgentDetailReportResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetHotlineAgentDetailReportResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -199,6 +215,14 @@ public class GetHotlineAgentDetailReportResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(Columns model) {
+                this.key = model.key;
+                this.title = model.title;
+            } 
 
             /**
              * Key.
@@ -302,6 +326,17 @@ public class GetHotlineAgentDetailReportResponseBody extends TeaModel {
             private Integer pageSize; 
             private java.util.List<java.util.Map<String, ?>> rows; 
             private Integer total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.columns = model.columns;
+                this.page = model.page;
+                this.pageSize = model.pageSize;
+                this.rows = model.rows;
+                this.total = model.total;
+            } 
 
             /**
              * Columns.

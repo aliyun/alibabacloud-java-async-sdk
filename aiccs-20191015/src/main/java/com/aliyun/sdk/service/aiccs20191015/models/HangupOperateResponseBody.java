@@ -44,6 +44,10 @@ public class HangupOperateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class HangupOperateResponseBody extends TeaModel {
         private String mesage; 
         private String requestId; 
         private Boolean result; 
+
+        private Builder() {
+        } 
+
+        private Builder(HangupOperateResponseBody model) {
+            this.code = model.code;
+            this.mesage = model.mesage;
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * Code.

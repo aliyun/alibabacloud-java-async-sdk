@@ -48,6 +48,10 @@ public class ListHotlineRecordResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class ListHotlineRecordResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListHotlineRecordResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -215,6 +230,17 @@ public class ListHotlineRecordResponseBody extends TeaModel {
             private Long endTime; 
             private Long startTime; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.callId = model.callId;
+                this.connectionId = model.connectionId;
+                this.endTime = model.endTime;
+                this.startTime = model.startTime;
+                this.url = model.url;
+            } 
 
             /**
              * CallId.

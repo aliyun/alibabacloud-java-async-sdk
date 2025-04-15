@@ -48,6 +48,10 @@ public class GetAgentResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetAgentResponseBody extends TeaModel {
         private Long httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAgentResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -215,6 +230,17 @@ public class GetAgentResponseBody extends TeaModel {
             private String displayName; 
             private String name; 
             private Long skillGroupId; 
+
+            private Builder() {
+            } 
+
+            private Builder(GroupList model) {
+                this.channelType = model.channelType;
+                this.description = model.description;
+                this.displayName = model.displayName;
+                this.name = model.name;
+                this.skillGroupId = model.skillGroupId;
+            } 
 
             /**
              * ChannelType.
@@ -354,6 +380,18 @@ public class GetAgentResponseBody extends TeaModel {
             private java.util.List<GroupList> groupList; 
             private Integer status; 
             private Long tenantId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.accountName = model.accountName;
+                this.agentId = model.agentId;
+                this.displayName = model.displayName;
+                this.groupList = model.groupList;
+                this.status = model.status;
+                this.tenantId = model.tenantId;
+            } 
 
             /**
              * AccountName.

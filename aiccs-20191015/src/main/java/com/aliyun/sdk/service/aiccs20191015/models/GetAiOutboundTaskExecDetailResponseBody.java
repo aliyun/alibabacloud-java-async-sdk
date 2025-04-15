@@ -48,6 +48,10 @@ public class GetAiOutboundTaskExecDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetAiOutboundTaskExecDetailResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAiOutboundTaskExecDetailResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -264,6 +279,21 @@ public class GetAiOutboundTaskExecDetailResponseBody extends TeaModel {
             private Integer status; 
             private Integer statusDesc; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.batchVersion = model.batchVersion;
+                this.bizData = model.bizData;
+                this.callCount = model.callCount;
+                this.caseId = model.caseId;
+                this.createTime = model.createTime;
+                this.lastCallResult = model.lastCallResult;
+                this.phoneNum = model.phoneNum;
+                this.status = model.status;
+                this.statusDesc = model.statusDesc;
+            } 
+
             /**
              * BatchVersion.
              */
@@ -422,6 +452,17 @@ public class GetAiOutboundTaskExecDetailResponseBody extends TeaModel {
             private java.util.List<List> list; 
             private Integer pageSize; 
             private Integer totalResults; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.currentPage = model.currentPage;
+                this.hasNextPage = model.hasNextPage;
+                this.list = model.list;
+                this.pageSize = model.pageSize;
+                this.totalResults = model.totalResults;
+            } 
 
             /**
              * CurrentPage.

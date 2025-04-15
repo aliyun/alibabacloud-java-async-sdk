@@ -48,6 +48,10 @@ public class GetAgentByIdResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetAgentByIdResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAgentByIdResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -239,6 +254,19 @@ public class GetAgentByIdResponseBody extends TeaModel {
             private String realName; 
             private Integer servicerType; 
             private String showName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.agentId = model.agentId;
+                this.createUserName = model.createUserName;
+                this.foreignKey = model.foreignKey;
+                this.foreignNick = model.foreignNick;
+                this.realName = model.realName;
+                this.servicerType = model.servicerType;
+                this.showName = model.showName;
+            } 
 
             /**
              * AgentId.

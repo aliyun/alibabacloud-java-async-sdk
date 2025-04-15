@@ -48,6 +48,10 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAiOutboundTaskProgressResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -263,6 +278,21 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
             private Float callOutServicerPickupRate; 
             private Integer callOutUserPickupCount; 
             private Float callOutUserPickupRate; 
+
+            private Builder() {
+            } 
+
+            private Builder(CalloutProgress model) {
+                this.callLossCount = model.callLossCount;
+                this.callLossRate = model.callLossRate;
+                this.callOutConnectCount = model.callOutConnectCount;
+                this.callOutConnectRate = model.callOutConnectRate;
+                this.callOutCount = model.callOutCount;
+                this.callOutServicerPickupCount = model.callOutServicerPickupCount;
+                this.callOutServicerPickupRate = model.callOutServicerPickupRate;
+                this.callOutUserPickupCount = model.callOutUserPickupCount;
+                this.callOutUserPickupRate = model.callOutUserPickupRate;
+            } 
 
             /**
              * CallLossCount.
@@ -519,6 +549,25 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
             private Integer waitingCallCount; 
             private Integer waitingRecallCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(TaskProgress model) {
+                this.callingCount = model.callingCount;
+                this.connectCount = model.connectCount;
+                this.connectRate = model.connectRate;
+                this.finishCount = model.finishCount;
+                this.finishRate = model.finishRate;
+                this.servicerPickupCount = model.servicerPickupCount;
+                this.servicerPickupRate = model.servicerPickupRate;
+                this.terminateCount = model.terminateCount;
+                this.totalCount = model.totalCount;
+                this.userPickupCount = model.userPickupCount;
+                this.userPickupRate = model.userPickupRate;
+                this.waitingCallCount = model.waitingCallCount;
+                this.waitingRecallCount = model.waitingRecallCount;
+            } 
+
             /**
              * CallingCount.
              */
@@ -697,6 +746,16 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
             private Long taskId; 
             private TaskProgress taskProgress; 
             private Integer type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.calloutProgress = model.calloutProgress;
+                this.taskId = model.taskId;
+                this.taskProgress = model.taskProgress;
+                this.type = model.type;
+            } 
 
             /**
              * CalloutProgress.

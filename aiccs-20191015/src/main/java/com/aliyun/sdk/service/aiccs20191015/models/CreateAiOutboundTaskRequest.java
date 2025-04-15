@@ -93,7 +93,7 @@ public class CreateAiOutboundTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -378,6 +378,14 @@ public class CreateAiOutboundTaskRequest extends Request {
         public static final class Builder {
             private Integer count; 
             private Integer interval; 
+
+            private Builder() {
+            } 
+
+            private Builder(RecallRule model) {
+                this.count = model.count;
+                this.interval = model.interval;
+            } 
 
             /**
              * Count.
