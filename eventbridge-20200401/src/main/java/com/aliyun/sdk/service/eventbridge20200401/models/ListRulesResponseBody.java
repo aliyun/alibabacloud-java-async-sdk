@@ -48,6 +48,10 @@ public class ListRulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class ListRulesResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListRulesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code. The value Success indicates that the request is successful.</p>
@@ -227,6 +242,17 @@ public class ListRulesResponseBody extends TeaModel {
             private String id; 
             private String pushSelector; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Targets model) {
+                this.endpoint = model.endpoint;
+                this.errorsTolerance = model.errorsTolerance;
+                this.id = model.id;
+                this.pushSelector = model.pushSelector;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The endpoint of the event target.</p>
@@ -415,6 +441,21 @@ public class ListRulesResponseBody extends TeaModel {
             private String status; 
             private java.util.List<Targets> targets; 
 
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.createdTimestamp = model.createdTimestamp;
+                this.description = model.description;
+                this.detailMap = model.detailMap;
+                this.eventBusName = model.eventBusName;
+                this.filterPattern = model.filterPattern;
+                this.ruleARN = model.ruleARN;
+                this.ruleName = model.ruleName;
+                this.status = model.status;
+                this.targets = model.targets;
+            } 
+
             /**
              * <p>The creation timestamp.</p>
              * 
@@ -571,6 +612,15 @@ public class ListRulesResponseBody extends TeaModel {
             private String nextToken; 
             private java.util.List<Rules> rules; 
             private Integer total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.nextToken = model.nextToken;
+                this.rules = model.rules;
+                this.total = model.total;
+            } 
 
             /**
              * <p>If excess return values exist, this parameter is returned.</p>

@@ -48,6 +48,10 @@ public class QueryTracedEventsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class QueryTracedEventsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryTracedEventsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The response code. Valid values:</p>
@@ -232,6 +247,17 @@ public class QueryTracedEventsResponseBody extends TeaModel {
             private String eventSource; 
             private String eventType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Events model) {
+                this.eventBusName = model.eventBusName;
+                this.eventId = model.eventId;
+                this.eventReceivedTime = model.eventReceivedTime;
+                this.eventSource = model.eventSource;
+                this.eventType = model.eventType;
+            } 
+
             /**
              * <p>The name of the event bus.</p>
              * 
@@ -349,6 +375,15 @@ public class QueryTracedEventsResponseBody extends TeaModel {
             private java.util.List<Events> events; 
             private String nextToken; 
             private Integer total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.events = model.events;
+                this.nextToken = model.nextToken;
+                this.total = model.total;
+            } 
 
             /**
              * <p>The events.</p>

@@ -48,6 +48,10 @@ public class QueryEventTracesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class QueryEventTracesResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryEventTracesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The response code. Valid values:</p>
@@ -313,6 +328,24 @@ public class QueryEventTracesResponseBody extends TeaModel {
             private Long receivedTime; 
             private String ruleMatchingTime; 
             private String ruleName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.action = model.action;
+                this.actionTime = model.actionTime;
+                this.endpoint = model.endpoint;
+                this.eventBusName = model.eventBusName;
+                this.eventId = model.eventId;
+                this.eventSource = model.eventSource;
+                this.notifyLatency = model.notifyLatency;
+                this.notifyStatus = model.notifyStatus;
+                this.notifyTime = model.notifyTime;
+                this.receivedTime = model.receivedTime;
+                this.ruleMatchingTime = model.ruleMatchingTime;
+                this.ruleName = model.ruleName;
+            } 
 
             /**
              * <p>The type of the event trace. Valid values: PutEvent, FilterEvent, and PushEvent. The value PutEvent indicates that the event was delivered. The value FilterEvent indicates that the event was filtered. The value PushEvent indicates that the event was pushed.</p>

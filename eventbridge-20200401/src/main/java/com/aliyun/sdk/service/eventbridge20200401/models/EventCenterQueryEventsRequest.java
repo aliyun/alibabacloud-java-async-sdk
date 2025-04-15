@@ -51,7 +51,7 @@ public class EventCenterQueryEventsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -200,6 +200,14 @@ public class EventCenterQueryEventsRequest extends Request {
             private String column; 
             private String op; 
 
+            private Builder() {
+            } 
+
+            private Builder(Calculations model) {
+                this.column = model.column;
+                this.op = model.op;
+            } 
+
             /**
              * <p>The column name.</p>
              * 
@@ -284,6 +292,15 @@ public class EventCenterQueryEventsRequest extends Request {
             private String column; 
             private String op; 
             private java.util.List<String> values; 
+
+            private Builder() {
+            } 
+
+            private Builder(NestedFilters model) {
+                this.column = model.column;
+                this.op = model.op;
+                this.values = model.values;
+            } 
 
             /**
              * <p>The column name.</p>
@@ -402,6 +419,17 @@ public class EventCenterQueryEventsRequest extends Request {
             private String op; 
             private java.util.List<String> values; 
 
+            private Builder() {
+            } 
+
+            private Builder(Filters model) {
+                this.column = model.column;
+                this.nestedFilterCombination = model.nestedFilterCombination;
+                this.nestedFilters = model.nestedFilters;
+                this.op = model.op;
+                this.values = model.values;
+            } 
+
             /**
              * <p>The column name.</p>
              * 
@@ -510,6 +538,15 @@ public class EventCenterQueryEventsRequest extends Request {
             private String column; 
             private Boolean desc; 
             private String op; 
+
+            private Builder() {
+            } 
+
+            private Builder(Orders model) {
+                this.column = model.column;
+                this.desc = model.desc;
+                this.op = model.op;
+            } 
 
             /**
              * <p>The column name.</p>
@@ -703,6 +740,23 @@ public class EventCenterQueryEventsRequest extends Request {
             private Long startTime; 
             private Long timeRange; 
 
+            private Builder() {
+            } 
+
+            private Builder(Parameters model) {
+                this.breakdowns = model.breakdowns;
+                this.calculations = model.calculations;
+                this.endTime = model.endTime;
+                this.filterCombination = model.filterCombination;
+                this.filters = model.filters;
+                this.granularity = model.granularity;
+                this.limit = model.limit;
+                this.offset = model.offset;
+                this.orders = model.orders;
+                this.startTime = model.startTime;
+                this.timeRange = model.timeRange;
+            } 
+
             /**
              * <p>Specifies whether to further split the data set based on the column name.</p>
              */
@@ -877,6 +931,15 @@ public class EventCenterQueryEventsRequest extends Request {
             private Parameters parameters; 
             private String queryType; 
             private String schemaId; 
+
+            private Builder() {
+            } 
+
+            private Builder(EventCenterQueryEventsRequestBody model) {
+                this.parameters = model.parameters;
+                this.queryType = model.queryType;
+                this.schemaId = model.schemaId;
+            } 
 
             /**
              * <p>The query parameters.</p>

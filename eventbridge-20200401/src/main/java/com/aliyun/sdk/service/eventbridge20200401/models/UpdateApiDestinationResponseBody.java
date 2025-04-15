@@ -44,6 +44,10 @@ public class UpdateApiDestinationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return apiDestinationName
      */
@@ -77,6 +81,16 @@ public class UpdateApiDestinationResponseBody extends TeaModel {
         private String code; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateApiDestinationResponseBody model) {
+            this.apiDestinationName = model.apiDestinationName;
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>api-destination-name</p>

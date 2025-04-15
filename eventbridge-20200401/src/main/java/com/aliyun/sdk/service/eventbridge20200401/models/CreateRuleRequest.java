@@ -62,7 +62,7 @@ public class CreateRuleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -241,6 +241,13 @@ public class CreateRuleRequest extends Request {
         public static final class Builder {
             private Long concurrency; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConcurrentConfig model) {
+                this.concurrency = model.concurrency;
+            } 
+
             /**
              * Concurrency.
              */
@@ -287,6 +294,13 @@ public class CreateRuleRequest extends Request {
 
         public static final class Builder {
             private String arn; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeadLetterQueue model) {
+                this.arn = model.arn;
+            } 
 
             /**
              * <p>The Alibaba Cloud Resource Name (ARN) of the dead-letter queue. Events that are not processed or whose maximum retries are exceeded are written to the dead-letter queue. The ARN feature is supported by the following queue types: MNS and Message Queue for Apache RocketMQ.</p>
@@ -373,6 +387,16 @@ public class CreateRuleRequest extends Request {
             private String resourceKey; 
             private String template; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(ParamList model) {
+                this.form = model.form;
+                this.resourceKey = model.resourceKey;
+                this.template = model.template;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The format that is used by the event target parameter. For more information, see <a href="https://www.alibabacloud.com/help/en/eventbridge/latest/limits">Limits.</a></p>
@@ -542,6 +566,20 @@ public class CreateRuleRequest extends Request {
             private java.util.List<ParamList> paramList; 
             private String pushRetryStrategy; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(EventTargets model) {
+                this.concurrentConfig = model.concurrentConfig;
+                this.deadLetterQueue = model.deadLetterQueue;
+                this.endpoint = model.endpoint;
+                this.errorsTolerance = model.errorsTolerance;
+                this.id = model.id;
+                this.paramList = model.paramList;
+                this.pushRetryStrategy = model.pushRetryStrategy;
+                this.type = model.type;
+            } 
 
             /**
              * ConcurrentConfig.

@@ -48,6 +48,10 @@ public class ListTargetsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class ListTargetsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTargetsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The returned response code. Valid values:</p>
@@ -188,6 +203,13 @@ public class ListTargetsResponseBody extends TeaModel {
         public static final class Builder {
             private Long concurrency; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConcurrentConfig model) {
+                this.concurrency = model.concurrency;
+            } 
+
             /**
              * Concurrency.
              */
@@ -270,6 +292,16 @@ public class ListTargetsResponseBody extends TeaModel {
             private String resourceKey; 
             private String template; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(ParamList model) {
+                this.form = model.form;
+                this.resourceKey = model.resourceKey;
+                this.template = model.template;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The format that is used by the event target parameter.</p>
@@ -438,6 +470,20 @@ public class ListTargetsResponseBody extends TeaModel {
             private String ruleName; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Targets model) {
+                this.concurrentConfig = model.concurrentConfig;
+                this.endpoint = model.endpoint;
+                this.errorsTolerance = model.errorsTolerance;
+                this.eventBusName = model.eventBusName;
+                this.id = model.id;
+                this.paramList = model.paramList;
+                this.ruleName = model.ruleName;
+                this.type = model.type;
+            } 
+
             /**
              * ConcurrentConfig.
              */
@@ -586,6 +632,15 @@ public class ListTargetsResponseBody extends TeaModel {
             private String nextToken; 
             private java.util.List<Targets> targets; 
             private Integer total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.nextToken = model.nextToken;
+                this.targets = model.targets;
+                this.total = model.total;
+            } 
 
             /**
              * <p>If excess return values exist, this parameter is returned.</p>

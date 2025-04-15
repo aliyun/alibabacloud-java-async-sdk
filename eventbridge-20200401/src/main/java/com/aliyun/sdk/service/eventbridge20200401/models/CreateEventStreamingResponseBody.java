@@ -48,6 +48,10 @@ public class CreateEventStreamingResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class CreateEventStreamingResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateEventStreamingResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The response code. Valid values:</p>
@@ -183,6 +198,13 @@ public class CreateEventStreamingResponseBody extends TeaModel {
 
         public static final class Builder {
             private String eventStreamingARN; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.eventStreamingARN = model.eventStreamingARN;
+            } 
 
             /**
              * <p>The ARN of the event stream.</p>

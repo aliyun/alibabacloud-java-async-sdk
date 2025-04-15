@@ -48,6 +48,10 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAliyunOfficialEventSourcesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The response code. The value Success indicates that the request is successful. Other values indicate that the request failed. For a list of error codes, see Error codes.</p>
@@ -215,6 +230,16 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
             private String groupName; 
             private String name; 
             private String shortName; 
+
+            private Builder() {
+            } 
+
+            private Builder(EventTypes model) {
+                this.eventSourceName = model.eventSourceName;
+                this.groupName = model.groupName;
+                this.name = model.name;
+                this.shortName = model.shortName;
+            } 
 
             /**
              * <p>The name of the event source.</p>
@@ -395,6 +420,21 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
             private String status; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(EventSourceList model) {
+                this.arn = model.arn;
+                this.ctime = model.ctime;
+                this.description = model.description;
+                this.eventBusName = model.eventBusName;
+                this.eventTypes = model.eventTypes;
+                this.fullName = model.fullName;
+                this.name = model.name;
+                this.status = model.status;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The Alibaba Cloud Resource Name (ARN) of the event bus.</p>
              * 
@@ -526,6 +566,13 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<EventSourceList> eventSourceList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.eventSourceList = model.eventSourceList;
+            } 
 
             /**
              * <p>The event sources.</p>

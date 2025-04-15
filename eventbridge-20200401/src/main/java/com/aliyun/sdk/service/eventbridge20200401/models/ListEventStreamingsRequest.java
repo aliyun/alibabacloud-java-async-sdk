@@ -41,6 +41,10 @@ public class ListEventStreamingsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SourceArn")
     private String sourceArn;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List<Tags> tags;
+
     private ListEventStreamingsRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -49,6 +53,7 @@ public class ListEventStreamingsRequest extends Request {
         this.nextToken = builder.nextToken;
         this.sinkArn = builder.sinkArn;
         this.sourceArn = builder.sourceArn;
+        this.tags = builder.tags;
     }
 
     public static Builder builder() {
@@ -59,7 +64,7 @@ public class ListEventStreamingsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -106,6 +111,13 @@ public class ListEventStreamingsRequest extends Request {
         return this.sourceArn;
     }
 
+    /**
+     * @return tags
+     */
+    public java.util.List<Tags> getTags() {
+        return this.tags;
+    }
+
     public static final class Builder extends Request.Builder<ListEventStreamingsRequest, Builder> {
         private String regionId; 
         private Integer limit; 
@@ -113,6 +125,7 @@ public class ListEventStreamingsRequest extends Request {
         private String nextToken; 
         private String sinkArn; 
         private String sourceArn; 
+        private java.util.List<Tags> tags; 
 
         private Builder() {
             super();
@@ -126,6 +139,7 @@ public class ListEventStreamingsRequest extends Request {
             this.nextToken = request.nextToken;
             this.sinkArn = request.sinkArn;
             this.sourceArn = request.sourceArn;
+            this.tags = request.tags;
         } 
 
         /**
@@ -194,6 +208,15 @@ public class ListEventStreamingsRequest extends Request {
             return this;
         }
 
+        /**
+         * Tags.
+         */
+        public Builder tags(java.util.List<Tags> tags) {
+            this.putBodyParameter("Tags", tags);
+            this.tags = tags;
+            return this;
+        }
+
         @Override
         public ListEventStreamingsRequest build() {
             return new ListEventStreamingsRequest(this);
@@ -201,4 +224,79 @@ public class ListEventStreamingsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListEventStreamingsRequest} extends {@link TeaModel}
+     *
+     * <p>ListEventStreamingsRequest</p>
+     */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
 }

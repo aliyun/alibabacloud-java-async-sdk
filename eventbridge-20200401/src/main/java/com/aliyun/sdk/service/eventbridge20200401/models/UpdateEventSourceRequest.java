@@ -96,7 +96,7 @@ public class UpdateEventSourceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -448,6 +448,17 @@ public class UpdateEventSourceRequest extends Request {
             private String securityConfig; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(SourceHttpEventParameters model) {
+                this.ip = model.ip;
+                this.method = model.method;
+                this.referer = model.referer;
+                this.securityConfig = model.securityConfig;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The CIDR block that is used for security settings. This parameter is required only if SecurityConfig is set to ip. You can enter a CIDR block or an IP address.</p>
              */
@@ -662,6 +673,22 @@ public class UpdateEventSourceRequest extends Request {
             private String vSwitchIds; 
             private String vpcId; 
 
+            private Builder() {
+            } 
+
+            private Builder(SourceKafkaParameters model) {
+                this.consumerGroup = model.consumerGroup;
+                this.instanceId = model.instanceId;
+                this.maximumTasks = model.maximumTasks;
+                this.network = model.network;
+                this.offsetReset = model.offsetReset;
+                this.regionId = model.regionId;
+                this.securityGroupId = model.securityGroupId;
+                this.topic = model.topic;
+                this.vSwitchIds = model.vSwitchIds;
+                this.vpcId = model.vpcId;
+            } 
+
             /**
              * <p>The ID of the consumer group that subscribes to the topic.</p>
              * 
@@ -835,6 +862,15 @@ public class UpdateEventSourceRequest extends Request {
             private String queueName; 
             private String regionId; 
 
+            private Builder() {
+            } 
+
+            private Builder(SourceMNSParameters model) {
+                this.isBase64Decode = model.isBase64Decode;
+                this.queueName = model.queueName;
+                this.regionId = model.regionId;
+            } 
+
             /**
              * <p>Indicates whether Base64 decoding is enabled. By default, Base64 decoding is enabled.</p>
              * 
@@ -942,6 +978,16 @@ public class UpdateEventSourceRequest extends Request {
             private String queueName; 
             private String regionId; 
             private String virtualHostName; 
+
+            private Builder() {
+            } 
+
+            private Builder(SourceRabbitMQParameters model) {
+                this.instanceId = model.instanceId;
+                this.queueName = model.queueName;
+                this.regionId = model.regionId;
+                this.virtualHostName = model.virtualHostName;
+            } 
 
             /**
              * <p>The ID of the Message Queue for RabbitMQ instance. For more information, see <a href="https://help.aliyun.com/document_detail/163289.html">Limits</a>.</p>
@@ -1206,6 +1252,28 @@ public class UpdateEventSourceRequest extends Request {
             private Long timestamp; 
             private String topic; 
 
+            private Builder() {
+            } 
+
+            private Builder(SourceRocketMQParameters model) {
+                this.authType = model.authType;
+                this.groupID = model.groupID;
+                this.instanceEndpoint = model.instanceEndpoint;
+                this.instanceId = model.instanceId;
+                this.instanceNetwork = model.instanceNetwork;
+                this.instancePassword = model.instancePassword;
+                this.instanceSecurityGroupId = model.instanceSecurityGroupId;
+                this.instanceType = model.instanceType;
+                this.instanceUsername = model.instanceUsername;
+                this.instanceVSwitchIds = model.instanceVSwitchIds;
+                this.instanceVpcId = model.instanceVpcId;
+                this.offset = model.offset;
+                this.regionId = model.regionId;
+                this.tag = model.tag;
+                this.timestamp = model.timestamp;
+                this.topic = model.topic;
+            } 
+
             /**
              * <p>The authentication type. You can set this parameter to ACL or leave this parameter empty.</p>
              * 
@@ -1467,6 +1535,16 @@ public class UpdateEventSourceRequest extends Request {
             private String project; 
             private String roleName; 
 
+            private Builder() {
+            } 
+
+            private Builder(SourceSLSParameters model) {
+                this.consumePosition = model.consumePosition;
+                this.logStore = model.logStore;
+                this.project = model.project;
+                this.roleName = model.roleName;
+            } 
+
             /**
              * <p>The starting consumer offset. The value begin indicates the earliest offset, and the value end indicates the latest offset. You can also specify a time in seconds to start consumption.</p>
              * 
@@ -1573,6 +1651,15 @@ public class UpdateEventSourceRequest extends Request {
             private String schedule; 
             private String timeZone; 
             private String userData; 
+
+            private Builder() {
+            } 
+
+            private Builder(SourceScheduledEventParameters model) {
+                this.schedule = model.schedule;
+                this.timeZone = model.timeZone;
+                this.userData = model.userData;
+            } 
 
             /**
              * <p>The cron expression.</p>

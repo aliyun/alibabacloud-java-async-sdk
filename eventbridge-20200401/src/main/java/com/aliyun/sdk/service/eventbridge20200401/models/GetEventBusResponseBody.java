@@ -48,6 +48,10 @@ public class GetEventBusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetEventBusResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetEventBusResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The response code. The value Success indicates that the request was successful. Other values indicate that the request failed. For more information about error codes, see Error codes.</p>
@@ -215,6 +230,16 @@ public class GetEventBusResponseBody extends TeaModel {
             private String description; 
             private String eventBusARN; 
             private String eventBusName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.createTimestamp = model.createTimestamp;
+                this.description = model.description;
+                this.eventBusARN = model.eventBusARN;
+                this.eventBusName = model.eventBusName;
+            } 
 
             /**
              * <p>The timestamp that indicates when the event bus was created.</p>

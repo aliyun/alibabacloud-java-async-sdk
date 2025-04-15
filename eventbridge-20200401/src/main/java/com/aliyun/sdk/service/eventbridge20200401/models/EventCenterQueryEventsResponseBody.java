@@ -48,6 +48,10 @@ public class EventCenterQueryEventsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class EventCenterQueryEventsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(EventCenterQueryEventsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -168,6 +183,13 @@ public class EventCenterQueryEventsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.Map<String, ?> rowData; 
 
+            private Builder() {
+            } 
+
+            private Builder(Table model) {
+                this.rowData = model.rowData;
+            } 
+
             /**
              * RowData.
              */
@@ -226,6 +248,14 @@ public class EventCenterQueryEventsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.Map<String, ?> rowData; 
             private String time; 
+
+            private Builder() {
+            } 
+
+            private Builder(TimeSeries model) {
+                this.rowData = model.rowData;
+                this.time = model.time;
+            } 
 
             /**
              * RowData.
@@ -329,6 +359,17 @@ public class EventCenterQueryEventsResponseBody extends TeaModel {
             private java.util.List<Table> table; 
             private java.util.List<TimeSeries> timeSeries; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.maxResults = model.maxResults;
+                this.nextToken = model.nextToken;
+                this.table = model.table;
+                this.timeSeries = model.timeSeries;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * MaxResults.

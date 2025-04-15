@@ -53,7 +53,7 @@ public class CreateApiDestinationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -205,6 +205,14 @@ public class CreateApiDestinationRequest extends Request {
         public static final class Builder {
             private String endpoint; 
             private String method; 
+
+            private Builder() {
+            } 
+
+            private Builder(HttpApiParameters model) {
+                this.endpoint = model.endpoint;
+                this.method = model.method;
+            } 
 
             /**
              * <p>The endpoint of the API destination. The endpoint can be up to 127 characters in length.</p>

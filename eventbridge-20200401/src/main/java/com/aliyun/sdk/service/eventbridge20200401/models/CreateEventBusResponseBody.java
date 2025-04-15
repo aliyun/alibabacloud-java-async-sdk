@@ -48,6 +48,10 @@ public class CreateEventBusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class CreateEventBusResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateEventBusResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The returned response code. The value Success indicates that the request is successful. Other values indicate that the request failed. For more information about error codes, see Error codes.</p>
@@ -179,6 +194,13 @@ public class CreateEventBusResponseBody extends TeaModel {
 
         public static final class Builder {
             private String eventBusARN; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.eventBusARN = model.eventBusARN;
+            } 
 
             /**
              * <p>The Alibaba Cloud Resource Name (ARN) of the event bus.</p>

@@ -48,6 +48,10 @@ public class DeleteTargetsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class DeleteTargetsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteTargetsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The response code. The code 200 indicates that the request was successful. Other codes indicate that the request failed. For information about error codes, see Error codes.</p>
@@ -204,6 +219,15 @@ public class DeleteTargetsResponseBody extends TeaModel {
             private String errorCode; 
             private String errorMessage; 
 
+            private Builder() {
+            } 
+
+            private Builder(ErrorEntries model) {
+                this.entryId = model.entryId;
+                this.errorCode = model.errorCode;
+                this.errorMessage = model.errorMessage;
+            } 
+
             /**
              * <p>The ID of the event body that failed to be processed.</p>
              * 
@@ -287,6 +311,14 @@ public class DeleteTargetsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<ErrorEntries> errorEntries; 
             private Integer errorEntriesCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.errorEntries = model.errorEntries;
+                this.errorEntriesCount = model.errorEntriesCount;
+            } 
 
             /**
              * <p>The information about the event body that failed to be processed.</p>

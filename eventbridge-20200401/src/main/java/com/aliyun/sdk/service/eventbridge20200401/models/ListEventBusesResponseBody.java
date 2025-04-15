@@ -48,6 +48,10 @@ public class ListEventBusesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class ListEventBusesResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListEventBusesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The response code. Valid values:</p>
@@ -220,6 +235,16 @@ public class ListEventBusesResponseBody extends TeaModel {
             private String eventBusARN; 
             private String eventBusName; 
 
+            private Builder() {
+            } 
+
+            private Builder(EventBuses model) {
+                this.createTimestamp = model.createTimestamp;
+                this.description = model.description;
+                this.eventBusARN = model.eventBusARN;
+                this.eventBusName = model.eventBusName;
+            } 
+
             /**
              * <p>The timestamp that indicates when the event bus was created.</p>
              * 
@@ -326,6 +351,15 @@ public class ListEventBusesResponseBody extends TeaModel {
             private java.util.List<EventBuses> eventBuses; 
             private String nextToken; 
             private Integer total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.eventBuses = model.eventBuses;
+                this.nextToken = model.nextToken;
+                this.total = model.total;
+            } 
 
             /**
              * <p>The event buses.</p>

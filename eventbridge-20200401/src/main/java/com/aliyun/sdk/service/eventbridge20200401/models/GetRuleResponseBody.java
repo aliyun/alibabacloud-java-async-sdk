@@ -48,6 +48,10 @@ public class GetRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetRuleResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetRuleResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The response code. The value Success indicates that the request is successful. Other values indicate that the request failed. For a list of error codes, see Error codes.</p>
@@ -180,6 +195,13 @@ public class GetRuleResponseBody extends TeaModel {
         public static final class Builder {
             private Long concurrency; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConcurrentConfig model) {
+                this.concurrency = model.concurrency;
+            } 
+
             /**
              * Concurrency.
              */
@@ -226,6 +248,13 @@ public class GetRuleResponseBody extends TeaModel {
 
         public static final class Builder {
             private String arn; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeadLetterQueue model) {
+                this.arn = model.arn;
+            } 
 
             /**
              * <p>The Alibaba Cloud Resource Name (ARN) of the dead-letter queue.</p>
@@ -312,6 +341,16 @@ public class GetRuleResponseBody extends TeaModel {
             private String resourceKey; 
             private String template; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(ParamList model) {
+                this.form = model.form;
+                this.resourceKey = model.resourceKey;
+                this.template = model.template;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The format that is used by the event target parameter. For more information, see <a href="https://help.aliyun.com/document_detail/163289.html">Limits</a>.</p>
@@ -503,6 +542,22 @@ public class GetRuleResponseBody extends TeaModel {
             private String pushRetryStrategy; 
             private String pushSelector; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Targets model) {
+                this.concurrentConfig = model.concurrentConfig;
+                this.deadLetterQueue = model.deadLetterQueue;
+                this.detailMap = model.detailMap;
+                this.endpoint = model.endpoint;
+                this.errorsTolerance = model.errorsTolerance;
+                this.id = model.id;
+                this.paramList = model.paramList;
+                this.pushRetryStrategy = model.pushRetryStrategy;
+                this.pushSelector = model.pushSelector;
+                this.type = model.type;
+            } 
 
             /**
              * ConcurrentConfig.
@@ -724,6 +779,20 @@ public class GetRuleResponseBody extends TeaModel {
             private String ruleName; 
             private String status; 
             private java.util.List<Targets> targets; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.createdTimestamp = model.createdTimestamp;
+                this.description = model.description;
+                this.eventBusName = model.eventBusName;
+                this.filterPattern = model.filterPattern;
+                this.ruleARN = model.ruleARN;
+                this.ruleName = model.ruleName;
+                this.status = model.status;
+                this.targets = model.targets;
+            } 
 
             /**
              * <p>The timestamp that indicates when the event rule was created.</p>

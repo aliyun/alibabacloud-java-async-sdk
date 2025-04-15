@@ -48,6 +48,10 @@ public class GetConnectionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetConnectionResponseBody extends TeaModel {
         private Integer httpCode; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetConnectionResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpCode = model.httpCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned response code. The value Success indicates that the request is successful.</p>
@@ -192,6 +207,14 @@ public class GetConnectionResponseBody extends TeaModel {
             private String apiKeyName; 
             private String apiKeyValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(ApiKeyAuthParameters model) {
+                this.apiKeyName = model.apiKeyName;
+                this.apiKeyValue = model.apiKeyValue;
+            } 
+
             /**
              * <p>The key of the API key.</p>
              * 
@@ -265,6 +288,14 @@ public class GetConnectionResponseBody extends TeaModel {
             private String password; 
             private String username; 
 
+            private Builder() {
+            } 
+
+            private Builder(BasicAuthParameters model) {
+                this.password = model.password;
+                this.username = model.username;
+            } 
+
             /**
              * <p>The password of basic authentication.</p>
              * 
@@ -337,6 +368,14 @@ public class GetConnectionResponseBody extends TeaModel {
         public static final class Builder {
             private String clientID; 
             private String clientSecret; 
+
+            private Builder() {
+            } 
+
+            private Builder(ClientParameters model) {
+                this.clientID = model.clientID;
+                this.clientSecret = model.clientSecret;
+            } 
 
             /**
              * <p>The client ID.</p>
@@ -422,6 +461,15 @@ public class GetConnectionResponseBody extends TeaModel {
             private String isValueSecret; 
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(BodyParameters model) {
+                this.isValueSecret = model.isValueSecret;
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>Indicates whether authentication is enabled.</p>
@@ -519,6 +567,15 @@ public class GetConnectionResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(HeaderParameters model) {
+                this.isValueSecret = model.isValueSecret;
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>Indicates whether authentication is enabled.</p>
              * 
@@ -615,6 +672,15 @@ public class GetConnectionResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(QueryStringParameters model) {
+                this.isValueSecret = model.isValueSecret;
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>Indicates whether authentication is enabled.</p>
              * 
@@ -710,6 +776,15 @@ public class GetConnectionResponseBody extends TeaModel {
             private java.util.List<BodyParameters> bodyParameters; 
             private java.util.List<HeaderParameters> headerParameters; 
             private java.util.List<QueryStringParameters> queryStringParameters; 
+
+            private Builder() {
+            } 
+
+            private Builder(OAuthHttpParameters model) {
+                this.bodyParameters = model.bodyParameters;
+                this.headerParameters = model.headerParameters;
+                this.queryStringParameters = model.queryStringParameters;
+            } 
 
             /**
              * <p>The information about the request body.</p>
@@ -809,6 +884,16 @@ public class GetConnectionResponseBody extends TeaModel {
             private ClientParameters clientParameters; 
             private String httpMethod; 
             private OAuthHttpParameters oAuthHttpParameters; 
+
+            private Builder() {
+            } 
+
+            private Builder(OAuthParameters model) {
+                this.authorizationEndpoint = model.authorizationEndpoint;
+                this.clientParameters = model.clientParameters;
+                this.httpMethod = model.httpMethod;
+                this.oAuthHttpParameters = model.oAuthHttpParameters;
+            } 
 
             /**
              * <p>The endpoint that is used to obtain the OAuth token.</p>
@@ -928,6 +1013,16 @@ public class GetConnectionResponseBody extends TeaModel {
             private BasicAuthParameters basicAuthParameters; 
             private OAuthParameters oAuthParameters; 
 
+            private Builder() {
+            } 
+
+            private Builder(AuthParameters model) {
+                this.apiKeyAuthParameters = model.apiKeyAuthParameters;
+                this.authorizationType = model.authorizationType;
+                this.basicAuthParameters = model.basicAuthParameters;
+                this.oAuthParameters = model.oAuthParameters;
+            } 
+
             /**
              * <p>The information about API key authentication.</p>
              */
@@ -1042,6 +1137,16 @@ public class GetConnectionResponseBody extends TeaModel {
             private String securityGroupId; 
             private String vpcId; 
             private String vswitcheId; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetworkParameters model) {
+                this.networkType = model.networkType;
+                this.securityGroupId = model.securityGroupId;
+                this.vpcId = model.vpcId;
+                this.vswitcheId = model.vswitcheId;
+            } 
 
             /**
              * <ul>
@@ -1189,6 +1294,18 @@ public class GetConnectionResponseBody extends TeaModel {
             private Long id; 
             private NetworkParameters networkParameters; 
 
+            private Builder() {
+            } 
+
+            private Builder(Connections model) {
+                this.authParameters = model.authParameters;
+                this.connectionName = model.connectionName;
+                this.description = model.description;
+                this.gmtCreate = model.gmtCreate;
+                this.id = model.id;
+                this.networkParameters = model.networkParameters;
+            } 
+
             /**
              * <p>The authentication methods.</p>
              */
@@ -1287,6 +1404,13 @@ public class GetConnectionResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Connections> connections; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.connections = model.connections;
+            } 
 
             /**
              * <p>The queried connections.</p>

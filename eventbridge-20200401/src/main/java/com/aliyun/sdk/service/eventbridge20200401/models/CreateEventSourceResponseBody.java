@@ -48,6 +48,10 @@ public class CreateEventSourceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class CreateEventSourceResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateEventSourceResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The returned response code. Valid values:</p>
@@ -183,6 +198,13 @@ public class CreateEventSourceResponseBody extends TeaModel {
 
         public static final class Builder {
             private String eventSourceARN; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.eventSourceARN = model.eventSourceARN;
+            } 
 
             /**
              * <p>The Alibaba Cloud Resource Name (ARN) of the resource.</p>

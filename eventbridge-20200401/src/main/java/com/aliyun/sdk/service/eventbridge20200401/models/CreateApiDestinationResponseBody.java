@@ -44,6 +44,10 @@ public class CreateApiDestinationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class CreateApiDestinationResponseBody extends TeaModel {
         private Date date; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateApiDestinationResponseBody model) {
+            this.code = model.code;
+            this.date = model.date;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned response code. The value Success indicates that the request is successful.</p>
@@ -156,6 +170,13 @@ public class CreateApiDestinationResponseBody extends TeaModel {
 
         public static final class Builder {
             private String apiDestinationName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Date model) {
+                this.apiDestinationName = model.apiDestinationName;
+            } 
 
             /**
              * <p>The name of the API destination.</p>

@@ -52,7 +52,7 @@ public class CreateConnectionRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -202,6 +202,14 @@ public class CreateConnectionRequest extends Request {
             private String apiKeyName; 
             private String apiKeyValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(ApiKeyAuthParameters model) {
+                this.apiKeyName = model.apiKeyName;
+                this.apiKeyValue = model.apiKeyValue;
+            } 
+
             /**
              * <p>The key of the API key.</p>
              * 
@@ -277,6 +285,14 @@ public class CreateConnectionRequest extends Request {
             private String password; 
             private String username; 
 
+            private Builder() {
+            } 
+
+            private Builder(BasicAuthParameters model) {
+                this.password = model.password;
+                this.username = model.username;
+            } 
+
             /**
              * <p>The password for basic authentication.</p>
              * 
@@ -351,6 +367,14 @@ public class CreateConnectionRequest extends Request {
         public static final class Builder {
             private String clientID; 
             private String clientSecret; 
+
+            private Builder() {
+            } 
+
+            private Builder(ClientParameters model) {
+                this.clientID = model.clientID;
+                this.clientSecret = model.clientSecret;
+            } 
 
             /**
              * <p>The client ID.</p>
@@ -436,6 +460,15 @@ public class CreateConnectionRequest extends Request {
             private String isValueSecret; 
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(BodyParameters model) {
+                this.isValueSecret = model.isValueSecret;
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>Specifies whether to enable authentication.</p>
@@ -533,6 +566,15 @@ public class CreateConnectionRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(HeaderParameters model) {
+                this.isValueSecret = model.isValueSecret;
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>Specifies whether to enable authentication.</p>
              * 
@@ -629,6 +671,15 @@ public class CreateConnectionRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(QueryStringParameters model) {
+                this.isValueSecret = model.isValueSecret;
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>Specifies whether to enable authentication.</p>
              * 
@@ -724,6 +775,15 @@ public class CreateConnectionRequest extends Request {
             private java.util.List<BodyParameters> bodyParameters; 
             private java.util.List<HeaderParameters> headerParameters; 
             private java.util.List<QueryStringParameters> queryStringParameters; 
+
+            private Builder() {
+            } 
+
+            private Builder(OAuthHttpParameters model) {
+                this.bodyParameters = model.bodyParameters;
+                this.headerParameters = model.headerParameters;
+                this.queryStringParameters = model.queryStringParameters;
+            } 
 
             /**
              * <p>The parameters that are configured for the request body.</p>
@@ -824,6 +884,16 @@ public class CreateConnectionRequest extends Request {
             private ClientParameters clientParameters; 
             private String httpMethod; 
             private OAuthHttpParameters oAuthHttpParameters; 
+
+            private Builder() {
+            } 
+
+            private Builder(OAuthParameters model) {
+                this.authorizationEndpoint = model.authorizationEndpoint;
+                this.clientParameters = model.clientParameters;
+                this.httpMethod = model.httpMethod;
+                this.oAuthHttpParameters = model.oAuthHttpParameters;
+            } 
 
             /**
              * <p>The endpoint of the authorized client. The endpoint can be up to 127 characters in length.</p>
@@ -946,6 +1016,16 @@ public class CreateConnectionRequest extends Request {
             private BasicAuthParameters basicAuthParameters; 
             private OAuthParameters oAuthParameters; 
 
+            private Builder() {
+            } 
+
+            private Builder(AuthParameters model) {
+                this.apiKeyAuthParameters = model.apiKeyAuthParameters;
+                this.authorizationType = model.authorizationType;
+                this.basicAuthParameters = model.basicAuthParameters;
+                this.oAuthParameters = model.oAuthParameters;
+            } 
+
             /**
              * <p>The parameters that are configured for API key authentication.</p>
              */
@@ -1061,6 +1141,16 @@ public class CreateConnectionRequest extends Request {
             private String securityGroupId; 
             private String vpcId; 
             private String vswitcheId; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetworkParameters model) {
+                this.networkType = model.networkType;
+                this.securityGroupId = model.securityGroupId;
+                this.vpcId = model.vpcId;
+                this.vswitcheId = model.vswitcheId;
+            } 
 
             /**
              * <ul>

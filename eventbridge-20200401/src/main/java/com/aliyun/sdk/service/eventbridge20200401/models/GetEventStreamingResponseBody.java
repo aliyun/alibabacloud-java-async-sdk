@@ -48,6 +48,10 @@ public class GetEventStreamingResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetEventStreamingResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetEventStreamingResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The response code. The value Success indicates that the request is successful. Other values indicate that the request failed. For a list of error codes, see Error codes.</p>
@@ -216,6 +231,16 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private java.util.Map<String, ?> extensions; 
             private Double TPS; 
 
+            private Builder() {
+            } 
+
+            private Builder(DetailedStatus model) {
+                this.delayTime = model.delayTime;
+                this.diffOffset = model.diffOffset;
+                this.extensions = model.extensions;
+                this.TPS = model.TPS;
+            } 
+
             /**
              * DelayTime.
              */
@@ -299,6 +324,14 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private Integer countBasedWindow; 
             private Integer timeBasedWindow; 
 
+            private Builder() {
+            } 
+
+            private Builder(BatchWindow model) {
+                this.countBasedWindow = model.countBasedWindow;
+                this.timeBasedWindow = model.timeBasedWindow;
+            } 
+
             /**
              * <p>The maximum number of events that are allowed in the batch window. If this threshold is reached, data in the window is pushed downstream. When multiple batch windows exist, data is pushed if triggering conditions are met in one of the windows.</p>
              * 
@@ -338,8 +371,24 @@ public class GetEventStreamingResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Arn")
         private String arn;
 
+        @com.aliyun.core.annotation.NameInMap("Network")
+        private String network;
+
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
+        private String securityGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("VSwitchIds")
+        private String vSwitchIds;
+
+        @com.aliyun.core.annotation.NameInMap("VpcId")
+        private String vpcId;
+
         private DeadLetterQueue(Builder builder) {
             this.arn = builder.arn;
+            this.network = builder.network;
+            this.securityGroupId = builder.securityGroupId;
+            this.vSwitchIds = builder.vSwitchIds;
+            this.vpcId = builder.vpcId;
         }
 
         public static Builder builder() {
@@ -357,8 +406,51 @@ public class GetEventStreamingResponseBody extends TeaModel {
             return this.arn;
         }
 
+        /**
+         * @return network
+         */
+        public String getNetwork() {
+            return this.network;
+        }
+
+        /**
+         * @return securityGroupId
+         */
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        /**
+         * @return vSwitchIds
+         */
+        public String getVSwitchIds() {
+            return this.vSwitchIds;
+        }
+
+        /**
+         * @return vpcId
+         */
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
         public static final class Builder {
             private String arn; 
+            private String network; 
+            private String securityGroupId; 
+            private String vSwitchIds; 
+            private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeadLetterQueue model) {
+                this.arn = model.arn;
+                this.network = model.network;
+                this.securityGroupId = model.securityGroupId;
+                this.vSwitchIds = model.vSwitchIds;
+                this.vpcId = model.vpcId;
+            } 
 
             /**
              * <p>The Alibaba Cloud Resource Name (ARN) of the dead-letter queue.</p>
@@ -368,6 +460,38 @@ public class GetEventStreamingResponseBody extends TeaModel {
              */
             public Builder arn(String arn) {
                 this.arn = arn;
+                return this;
+            }
+
+            /**
+             * Network.
+             */
+            public Builder network(String network) {
+                this.network = network;
+                return this;
+            }
+
+            /**
+             * SecurityGroupId.
+             */
+            public Builder securityGroupId(String securityGroupId) {
+                this.securityGroupId = securityGroupId;
+                return this;
+            }
+
+            /**
+             * VSwitchIds.
+             */
+            public Builder vSwitchIds(String vSwitchIds) {
+                this.vSwitchIds = vSwitchIds;
+                return this;
+            }
+
+            /**
+             * VpcId.
+             */
+            public Builder vpcId(String vpcId) {
+                this.vpcId = vpcId;
                 return this;
             }
 
@@ -433,6 +557,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private Float maximumEventAgeInSeconds; 
             private Float maximumRetryAttempts; 
             private String pushRetryStrategy; 
+
+            private Builder() {
+            } 
+
+            private Builder(RetryStrategy model) {
+                this.maximumEventAgeInSeconds = model.maximumEventAgeInSeconds;
+                this.maximumRetryAttempts = model.maximumRetryAttempts;
+                this.pushRetryStrategy = model.pushRetryStrategy;
+            } 
 
             /**
              * <p>The maximum period of time during which retries are performed.</p>
@@ -554,6 +687,17 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private Integer maximumTasks; 
             private RetryStrategy retryStrategy; 
 
+            private Builder() {
+            } 
+
+            private Builder(RunOptions model) {
+                this.batchWindow = model.batchWindow;
+                this.deadLetterQueue = model.deadLetterQueue;
+                this.errorsTolerance = model.errorsTolerance;
+                this.maximumTasks = model.maximumTasks;
+                this.retryStrategy = model.retryStrategy;
+            } 
+
             /**
              * <p>The batch window.</p>
              */
@@ -663,6 +807,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String template; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConsumeTimestamp model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
             /**
              * Form.
              */
@@ -750,6 +903,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String template; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Group model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
             /**
              * Form.
              */
@@ -836,6 +998,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String form; 
             private String template; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Topic model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
 
             /**
              * Form.
@@ -1008,6 +1179,22 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String vSwitchId; 
             private String vpcId; 
 
+            private Builder() {
+            } 
+
+            private Builder(SinkApacheRocketMQCheckpointParameters model) {
+                this.consumeTimestamp = model.consumeTimestamp;
+                this.group = model.group;
+                this.instanceEndpoint = model.instanceEndpoint;
+                this.instancePassword = model.instancePassword;
+                this.instanceUsername = model.instanceUsername;
+                this.networkType = model.networkType;
+                this.securityGroupId = model.securityGroupId;
+                this.topic = model.topic;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+            } 
+
             /**
              * ConsumeTimestamp.
              */
@@ -1139,6 +1326,14 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private java.util.Map<String, ?> config; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConnectorParameters model) {
+                this.config = model.config;
+                this.name = model.name;
+            } 
+
             /**
              * Config.
              */
@@ -1218,6 +1413,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private ConnectorParameters connectorParameters; 
             private java.util.Map<String, ?> workerParameters; 
 
+            private Builder() {
+            } 
+
+            private Builder(SinkCustomizedKafkaConnectorParameters model) {
+                this.connectorPackageUrl = model.connectorPackageUrl;
+                this.connectorParameters = model.connectorParameters;
+                this.workerParameters = model.workerParameters;
+            } 
+
             /**
              * ConnectorPackageUrl.
              */
@@ -1280,6 +1484,13 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
         public static final class Builder {
             private String instanceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(SinkCustomizedKafkaParameters model) {
+                this.instanceId = model.instanceId;
+            } 
 
             /**
              * InstanceId.
@@ -1351,6 +1562,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String form; 
             private String template; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(DashVectorSchemaParameters model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
 
             /**
              * Form.
@@ -1439,6 +1659,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String template; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Partition model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
             /**
              * Form.
              */
@@ -1526,6 +1755,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String template; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(PrimaryKeyId model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
             /**
              * Form.
              */
@@ -1612,6 +1850,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String form; 
             private String template; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Vector model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
 
             /**
              * Form.
@@ -1772,6 +2019,21 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private PrimaryKeyId primaryKeyId; 
             private Vector vector; 
 
+            private Builder() {
+            } 
+
+            private Builder(SinkDashVectorParameters model) {
+                this.apiKey = model.apiKey;
+                this.collection = model.collection;
+                this.dashVectorSchemaParameters = model.dashVectorSchemaParameters;
+                this.instanceId = model.instanceId;
+                this.network = model.network;
+                this.operation = model.operation;
+                this.partition = model.partition;
+                this.primaryKeyId = model.primaryKeyId;
+                this.vector = model.vector;
+            } 
+
             /**
              * ApiKey.
              */
@@ -1907,6 +2169,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String template; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(SinkDataHubParametersBody model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
             /**
              * Form.
              */
@@ -1993,6 +2264,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String form; 
             private String template; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Project model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
 
             /**
              * Form.
@@ -2081,6 +2361,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String template; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(RoleName model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
             /**
              * Form.
              */
@@ -2167,6 +2456,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String form; 
             private String template; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(SinkDataHubParametersTopic model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
 
             /**
              * Form.
@@ -2255,6 +2553,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String template; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(TopicSchema model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
             /**
              * Form.
              */
@@ -2341,6 +2648,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String form; 
             private String template; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(TopicType model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
 
             /**
              * Form.
@@ -2465,6 +2781,18 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private TopicSchema topicSchema; 
             private TopicType topicType; 
 
+            private Builder() {
+            } 
+
+            private Builder(SinkDataHubParameters model) {
+                this.body = model.body;
+                this.project = model.project;
+                this.roleName = model.roleName;
+                this.topic = model.topic;
+                this.topicSchema = model.topicSchema;
+                this.topicType = model.topicType;
+            } 
+
             /**
              * Body.
              */
@@ -2576,6 +2904,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String template; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(SinkFcParametersBody model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The method that is used to transform the event.</p>
              * 
@@ -2674,6 +3011,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String template; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Concurrency model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The method that is used to transform the event. Default value: CONSTANT.</p>
              * 
@@ -2769,6 +3115,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String form; 
             private String template; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataFormat model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The method that is used to transform the event. Default value: CONSTANT.</p>
@@ -2866,6 +3221,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String template; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(FunctionName model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The method that is used to transform the event. Default value: CONSTANT.</p>
              * 
@@ -2958,6 +3322,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String form; 
             private String template; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(InvocationType model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The method that is used to transform the event. Default value: CONSTANT.</p>
@@ -3052,6 +3425,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String template; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Qualifier model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The method that is used to transform the event. Default value: CONSTANT.</p>
              * 
@@ -3144,6 +3526,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String form; 
             private String template; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(ServiceName model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The method that is used to transform the event. Default value: CONSTANT.</p>
@@ -3286,6 +3677,19 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private Qualifier qualifier; 
             private ServiceName serviceName; 
 
+            private Builder() {
+            } 
+
+            private Builder(SinkFcParameters model) {
+                this.body = model.body;
+                this.concurrency = model.concurrency;
+                this.dataFormat = model.dataFormat;
+                this.functionName = model.functionName;
+                this.invocationType = model.invocationType;
+                this.qualifier = model.qualifier;
+                this.serviceName = model.serviceName;
+            } 
+
             /**
              * <p>The message body that is sent to the function.</p>
              */
@@ -3405,6 +3809,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String template; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(ExecutionName model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The method that is used to transform events. Default value: CONSTANT.</p>
              * 
@@ -3500,6 +3913,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String form; 
             private String template; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(FlowName model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The method that is used to transform events. Default value: CONSTANT.</p>
@@ -3597,6 +4019,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String template; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Input model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The method that is used to transform events. Default value: CONSTANT.</p>
              * 
@@ -3692,6 +4123,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String form; 
             private String template; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(SinkFnfParametersRoleName model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The method that is used to transform events. Default value: CONSTANT.</p>
@@ -3801,6 +4241,16 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private Input input; 
             private SinkFnfParametersRoleName roleName; 
 
+            private Builder() {
+            } 
+
+            private Builder(SinkFnfParameters model) {
+                this.executionName = model.executionName;
+                this.flowName = model.flowName;
+                this.input = model.input;
+                this.roleName = model.roleName;
+            } 
+
             /**
              * <p>The execution name.</p>
              */
@@ -3896,6 +4346,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String template; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Acks model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The method that is used to transform the event. Default value: CONSTANT.</p>
              * 
@@ -3928,6 +4387,108 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
             public Acks build() {
                 return new Acks(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetEventStreamingResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetEventStreamingResponseBody</p>
+     */
+    public static class Headers extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Headers(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Headers create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Headers model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The method that is used to transform the event. Default value: CONSTANT.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONSTANT</p>
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * <p>The template style.</p>
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * <p>The acknowledgment information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Headers build() {
+                return new Headers(this);
             } 
 
         } 
@@ -3988,6 +4549,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String form; 
             private String template; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceId model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The method that is used to transform the event. Default value: CONSTANT.</p>
@@ -4082,6 +4652,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String template; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Key model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The method that is used to transform the event. Default value: CONSTANT.</p>
              * 
@@ -4174,6 +4753,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String form; 
             private String template; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(SinkKafkaParametersTopic model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The method that is used to transform the event. Default value: CONSTANT.</p>
@@ -4268,6 +4856,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String template; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Value model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The method that is used to transform the event.</p>
              * 
@@ -4320,6 +4917,9 @@ public class GetEventStreamingResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Acks")
         private Acks acks;
 
+        @com.aliyun.core.annotation.NameInMap("Headers")
+        private Headers headers;
+
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private InstanceId instanceId;
 
@@ -4334,6 +4934,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
         private SinkKafkaParameters(Builder builder) {
             this.acks = builder.acks;
+            this.headers = builder.headers;
             this.instanceId = builder.instanceId;
             this.key = builder.key;
             this.topic = builder.topic;
@@ -4353,6 +4954,13 @@ public class GetEventStreamingResponseBody extends TeaModel {
          */
         public Acks getAcks() {
             return this.acks;
+        }
+
+        /**
+         * @return headers
+         */
+        public Headers getHeaders() {
+            return this.headers;
         }
 
         /**
@@ -4385,16 +4993,37 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
         public static final class Builder {
             private Acks acks; 
+            private Headers headers; 
             private InstanceId instanceId; 
             private Key key; 
             private SinkKafkaParametersTopic topic; 
             private Value value; 
+
+            private Builder() {
+            } 
+
+            private Builder(SinkKafkaParameters model) {
+                this.acks = model.acks;
+                this.headers = model.headers;
+                this.instanceId = model.instanceId;
+                this.key = model.key;
+                this.topic = model.topic;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The acknowledgment information.</p>
              */
             public Builder acks(Acks acks) {
                 this.acks = acks;
+                return this;
+            }
+
+            /**
+             * Headers.
+             */
+            public Builder headers(Headers headers) {
+                this.headers = headers;
                 return this;
             }
 
@@ -4492,6 +5121,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String form; 
             private String template; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(SinkMNSParametersBody model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The method that is used to transform the event.</p>
@@ -4591,6 +5229,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String template; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(IsBase64Encode model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The method that is used to transform the event. Default value: CONSTANT.</p>
              * 
@@ -4683,6 +5330,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String form; 
             private String template; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(QueueName model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The method that is used to transform the event. Default value: CONSTANT.</p>
@@ -4777,6 +5433,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private IsBase64Encode isBase64Encode; 
             private QueueName queueName; 
 
+            private Builder() {
+            } 
+
+            private Builder(SinkMNSParameters model) {
+                this.body = model.body;
+                this.isBase64Encode = model.isBase64Encode;
+                this.queueName = model.queueName;
+            } 
+
             /**
              * <p>The message content.</p>
              */
@@ -4863,6 +5528,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String form; 
             private String template; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(SinkOpenSourceRabbitMQParametersBody model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The method that is used to transform the event. Default value: CONSTANT.</p>
@@ -4957,6 +5631,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String template; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(MessageId model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The method that is used to transform the event. Default value: CONSTANT.</p>
              * 
@@ -4989,99 +5672,6 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
             public MessageId build() {
                 return new MessageId(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link GetEventStreamingResponseBody} extends {@link TeaModel}
-     *
-     * <p>GetEventStreamingResponseBody</p>
-     */
-    public static class NetworkType extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("Form")
-        private String form;
-
-        @com.aliyun.core.annotation.NameInMap("Template")
-        private String template;
-
-        @com.aliyun.core.annotation.NameInMap("Value")
-        private String value;
-
-        private NetworkType(Builder builder) {
-            this.form = builder.form;
-            this.template = builder.template;
-            this.value = builder.value;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static NetworkType create() {
-            return builder().build();
-        }
-
-        /**
-         * @return form
-         */
-        public String getForm() {
-            return this.form;
-        }
-
-        /**
-         * @return template
-         */
-        public String getTemplate() {
-            return this.template;
-        }
-
-        /**
-         * @return value
-         */
-        public String getValue() {
-            return this.value;
-        }
-
-        public static final class Builder {
-            private String form; 
-            private String template; 
-            private String value; 
-
-            /**
-             * <p>The method that is used to transform the event. Default value: CONSTANT.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>CONSTANT</p>
-             */
-            public Builder form(String form) {
-                this.form = form;
-                return this;
-            }
-
-            /**
-             * <p>The template style.</p>
-             */
-            public Builder template(String template) {
-                this.template = template;
-                return this;
-            }
-
-            /**
-             * <p>The name of the MNS queue.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>MyQueue</p>
-             */
-            public Builder value(String value) {
-                this.value = value;
-                return this;
-            }
-
-            public NetworkType build() {
-                return new NetworkType(this);
             } 
 
         } 
@@ -5142,6 +5732,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String form; 
             private String template; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Properties model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The method that is used to transform the event. Default value: CONSTANT.</p>
@@ -5236,6 +5835,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String template; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(RoutingKey model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The method that is used to transform the event. Default value: CONSTANT.</p>
              * 
@@ -5279,286 +5887,10 @@ public class GetEventStreamingResponseBody extends TeaModel {
      *
      * <p>GetEventStreamingResponseBody</p>
      */
-    public static class SecurityGroupId extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("Form")
-        private String form;
-
-        @com.aliyun.core.annotation.NameInMap("Template")
-        private String template;
-
-        @com.aliyun.core.annotation.NameInMap("Value")
-        private String value;
-
-        private SecurityGroupId(Builder builder) {
-            this.form = builder.form;
-            this.template = builder.template;
-            this.value = builder.value;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static SecurityGroupId create() {
-            return builder().build();
-        }
-
-        /**
-         * @return form
-         */
-        public String getForm() {
-            return this.form;
-        }
-
-        /**
-         * @return template
-         */
-        public String getTemplate() {
-            return this.template;
-        }
-
-        /**
-         * @return value
-         */
-        public String getValue() {
-            return this.value;
-        }
-
-        public static final class Builder {
-            private String form; 
-            private String template; 
-            private String value; 
-
-            /**
-             * <p>The method that is used to transform the event. Default value: CONSTANT.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>CONSTANT</p>
-             */
-            public Builder form(String form) {
-                this.form = form;
-                return this;
-            }
-
-            /**
-             * <p>The template style.</p>
-             */
-            public Builder template(String template) {
-                this.template = template;
-                return this;
-            }
-
-            /**
-             * <p>The name of the MNS queue.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>MyQueue</p>
-             */
-            public Builder value(String value) {
-                this.value = value;
-                return this;
-            }
-
-            public SecurityGroupId build() {
-                return new SecurityGroupId(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link GetEventStreamingResponseBody} extends {@link TeaModel}
-     *
-     * <p>GetEventStreamingResponseBody</p>
-     */
-    public static class VSwitchIds extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("Form")
-        private String form;
-
-        @com.aliyun.core.annotation.NameInMap("Template")
-        private String template;
-
-        @com.aliyun.core.annotation.NameInMap("Value")
-        private String value;
-
-        private VSwitchIds(Builder builder) {
-            this.form = builder.form;
-            this.template = builder.template;
-            this.value = builder.value;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static VSwitchIds create() {
-            return builder().build();
-        }
-
-        /**
-         * @return form
-         */
-        public String getForm() {
-            return this.form;
-        }
-
-        /**
-         * @return template
-         */
-        public String getTemplate() {
-            return this.template;
-        }
-
-        /**
-         * @return value
-         */
-        public String getValue() {
-            return this.value;
-        }
-
-        public static final class Builder {
-            private String form; 
-            private String template; 
-            private String value; 
-
-            /**
-             * <p>The method that is used to transform the event. Default value: CONSTANT.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>CONSTANT</p>
-             */
-            public Builder form(String form) {
-                this.form = form;
-                return this;
-            }
-
-            /**
-             * <p>The template style.</p>
-             */
-            public Builder template(String template) {
-                this.template = template;
-                return this;
-            }
-
-            /**
-             * <p>The name of the MNS queue.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>MyQueue</p>
-             */
-            public Builder value(String value) {
-                this.value = value;
-                return this;
-            }
-
-            public VSwitchIds build() {
-                return new VSwitchIds(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link GetEventStreamingResponseBody} extends {@link TeaModel}
-     *
-     * <p>GetEventStreamingResponseBody</p>
-     */
-    public static class VpcId extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("Form")
-        private String form;
-
-        @com.aliyun.core.annotation.NameInMap("Template")
-        private String template;
-
-        @com.aliyun.core.annotation.NameInMap("Value")
-        private String value;
-
-        private VpcId(Builder builder) {
-            this.form = builder.form;
-            this.template = builder.template;
-            this.value = builder.value;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static VpcId create() {
-            return builder().build();
-        }
-
-        /**
-         * @return form
-         */
-        public String getForm() {
-            return this.form;
-        }
-
-        /**
-         * @return template
-         */
-        public String getTemplate() {
-            return this.template;
-        }
-
-        /**
-         * @return value
-         */
-        public String getValue() {
-            return this.value;
-        }
-
-        public static final class Builder {
-            private String form; 
-            private String template; 
-            private String value; 
-
-            /**
-             * <p>The method that is used to transform the event. Default value: CONSTANT.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>CONSTANT</p>
-             */
-            public Builder form(String form) {
-                this.form = form;
-                return this;
-            }
-
-            /**
-             * <p>The template style.</p>
-             */
-            public Builder template(String template) {
-                this.template = template;
-                return this;
-            }
-
-            /**
-             * <p>The name of the MNS queue.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>MyQueue</p>
-             */
-            public Builder value(String value) {
-                this.value = value;
-                return this;
-            }
-
-            public VpcId build() {
-                return new VpcId(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link GetEventStreamingResponseBody} extends {@link TeaModel}
-     *
-     * <p>GetEventStreamingResponseBody</p>
-     */
     public static class SinkOpenSourceRabbitMQParameters extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AuthType")
+        private String authType;
+
         @com.aliyun.core.annotation.NameInMap("Body")
         private SinkOpenSourceRabbitMQParametersBody body;
 
@@ -5572,7 +5904,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         private MessageId messageId;
 
         @com.aliyun.core.annotation.NameInMap("NetworkType")
-        private NetworkType networkType;
+        private String networkType;
 
         @com.aliyun.core.annotation.NameInMap("Password")
         private String password;
@@ -5587,7 +5919,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         private RoutingKey routingKey;
 
         @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
-        private SecurityGroupId securityGroupId;
+        private String securityGroupId;
 
         @com.aliyun.core.annotation.NameInMap("TargetType")
         private String targetType;
@@ -5596,15 +5928,16 @@ public class GetEventStreamingResponseBody extends TeaModel {
         private String username;
 
         @com.aliyun.core.annotation.NameInMap("VSwitchIds")
-        private VSwitchIds vSwitchIds;
+        private String vSwitchIds;
 
         @com.aliyun.core.annotation.NameInMap("VirtualHostName")
         private String virtualHostName;
 
         @com.aliyun.core.annotation.NameInMap("VpcId")
-        private VpcId vpcId;
+        private String vpcId;
 
         private SinkOpenSourceRabbitMQParameters(Builder builder) {
+            this.authType = builder.authType;
             this.body = builder.body;
             this.endpoint = builder.endpoint;
             this.exchange = builder.exchange;
@@ -5628,6 +5961,13 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
         public static SinkOpenSourceRabbitMQParameters create() {
             return builder().build();
+        }
+
+        /**
+         * @return authType
+         */
+        public String getAuthType() {
+            return this.authType;
         }
 
         /**
@@ -5661,7 +6001,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         /**
          * @return networkType
          */
-        public NetworkType getNetworkType() {
+        public String getNetworkType() {
             return this.networkType;
         }
 
@@ -5696,7 +6036,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         /**
          * @return securityGroupId
          */
-        public SecurityGroupId getSecurityGroupId() {
+        public String getSecurityGroupId() {
             return this.securityGroupId;
         }
 
@@ -5717,7 +6057,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         /**
          * @return vSwitchIds
          */
-        public VSwitchIds getVSwitchIds() {
+        public String getVSwitchIds() {
             return this.vSwitchIds;
         }
 
@@ -5731,26 +6071,57 @@ public class GetEventStreamingResponseBody extends TeaModel {
         /**
          * @return vpcId
          */
-        public VpcId getVpcId() {
+        public String getVpcId() {
             return this.vpcId;
         }
 
         public static final class Builder {
+            private String authType; 
             private SinkOpenSourceRabbitMQParametersBody body; 
             private String endpoint; 
             private String exchange; 
             private MessageId messageId; 
-            private NetworkType networkType; 
+            private String networkType; 
             private String password; 
             private Properties properties; 
             private String queueName; 
             private RoutingKey routingKey; 
-            private SecurityGroupId securityGroupId; 
+            private String securityGroupId; 
             private String targetType; 
             private String username; 
-            private VSwitchIds vSwitchIds; 
+            private String vSwitchIds; 
             private String virtualHostName; 
-            private VpcId vpcId; 
+            private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(SinkOpenSourceRabbitMQParameters model) {
+                this.authType = model.authType;
+                this.body = model.body;
+                this.endpoint = model.endpoint;
+                this.exchange = model.exchange;
+                this.messageId = model.messageId;
+                this.networkType = model.networkType;
+                this.password = model.password;
+                this.properties = model.properties;
+                this.queueName = model.queueName;
+                this.routingKey = model.routingKey;
+                this.securityGroupId = model.securityGroupId;
+                this.targetType = model.targetType;
+                this.username = model.username;
+                this.vSwitchIds = model.vSwitchIds;
+                this.virtualHostName = model.virtualHostName;
+                this.vpcId = model.vpcId;
+            } 
+
+            /**
+             * AuthType.
+             */
+            public Builder authType(String authType) {
+                this.authType = authType;
+                return this;
+            }
 
             /**
              * <p>The message content.</p>
@@ -5787,7 +6158,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             /**
              * NetworkType.
              */
-            public Builder networkType(NetworkType networkType) {
+            public Builder networkType(String networkType) {
                 this.networkType = networkType;
                 return this;
             }
@@ -5827,7 +6198,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             /**
              * SecurityGroupId.
              */
-            public Builder securityGroupId(SecurityGroupId securityGroupId) {
+            public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
                 return this;
             }
@@ -5851,7 +6222,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             /**
              * VSwitchIds.
              */
-            public Builder vSwitchIds(VSwitchIds vSwitchIds) {
+            public Builder vSwitchIds(String vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
                 return this;
             }
@@ -5867,7 +6238,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             /**
              * VpcId.
              */
-            public Builder vpcId(VpcId vpcId) {
+            public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
                 return this;
             }
@@ -5934,6 +6305,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String form; 
             private String template; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(SinkRabbitMQParametersBody model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The method that is used to transform the event.</p>
@@ -6033,6 +6413,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String template; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Exchange model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The method that is used to transform the event. Default value: CONSTANT.</p>
              * 
@@ -6126,6 +6515,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String template; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(SinkRabbitMQParametersInstanceId model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The method that is used to transform the event. Default value: CONSTANT.</p>
              * 
@@ -6218,6 +6616,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String form; 
             private String template; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(SinkRabbitMQParametersMessageId model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The method that is used to transform the event.</p>
@@ -6317,6 +6724,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String template; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(SinkRabbitMQParametersProperties model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The method that is used to transform the event.</p>
              * 
@@ -6415,6 +6831,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String template; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(SinkRabbitMQParametersQueueName model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The method that is used to transform the event. Default value: CONSTANT.</p>
              * 
@@ -6507,6 +6932,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String form; 
             private String template; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(SinkRabbitMQParametersRoutingKey model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The method that is used to transform the event. Default value: CONSTANT.</p>
@@ -6601,6 +7035,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String template; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(TargetType model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The method that is used to transform the event. Default value: CONSTANT.</p>
              * 
@@ -6693,6 +7136,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String form; 
             private String template; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(VirtualHostName model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The method that is used to transform the event. Default value: CONSTANT.</p>
@@ -6859,6 +7311,21 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private TargetType targetType; 
             private VirtualHostName virtualHostName; 
 
+            private Builder() {
+            } 
+
+            private Builder(SinkRabbitMQParameters model) {
+                this.body = model.body;
+                this.exchange = model.exchange;
+                this.instanceId = model.instanceId;
+                this.messageId = model.messageId;
+                this.properties = model.properties;
+                this.queueName = model.queueName;
+                this.routingKey = model.routingKey;
+                this.targetType = model.targetType;
+                this.virtualHostName = model.virtualHostName;
+            } 
+
             /**
              * <p>The message content.</p>
              */
@@ -6994,6 +7461,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String template; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(SinkRocketMQCheckpointParametersConsumeTimestamp model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The method that is used to transform the event. Default value: CONSTANT.</p>
              * 
@@ -7087,6 +7563,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String template; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(SinkRocketMQCheckpointParametersGroup model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The method that is used to transform the event. Default value: CONSTANT.</p>
              * 
@@ -7179,6 +7664,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String form; 
             private String template; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(SinkRocketMQCheckpointParametersTopic model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The method that is used to transform the event. Default value: CONSTANT.</p>
@@ -7297,6 +7791,17 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String instanceType; 
             private SinkRocketMQCheckpointParametersTopic topic; 
 
+            private Builder() {
+            } 
+
+            private Builder(SinkRocketMQCheckpointParameters model) {
+                this.consumeTimestamp = model.consumeTimestamp;
+                this.group = model.group;
+                this.instanceId = model.instanceId;
+                this.instanceType = model.instanceType;
+                this.topic = model.topic;
+            } 
+
             /**
              * ConsumeTimestamp.
              */
@@ -7400,6 +7905,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String template; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(SinkRocketMQParametersBody model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The method that is used to transform the event.</p>
              * 
@@ -7497,6 +8011,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String form; 
             private String template; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeliveryOrderType model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The method that is used to transform the event.</p>
@@ -7596,6 +8119,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String template; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceEndpoint model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The method that is used to transform the event.</p>
              * 
@@ -7694,6 +8226,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String template; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(SinkRocketMQParametersInstanceId model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The method that is used to transform the event. Default value: CONSTANT.</p>
              * 
@@ -7786,6 +8327,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String form; 
             private String template; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstancePassword model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The method that is used to transform the event. Default value: CONSTANT.</p>
@@ -7880,6 +8430,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String template; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceType model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The method that is used to transform the event. Default value: CONSTANT.</p>
              * 
@@ -7973,6 +8532,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String template; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceUsername model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The method that is used to transform the event. Default value: CONSTANT.</p>
              * 
@@ -8065,6 +8633,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String form; 
             private String template; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Keys model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The method that is used to transform the event.</p>
@@ -8164,6 +8741,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String template; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Network model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The method that is used to transform the event.</p>
              * 
@@ -8262,6 +8848,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String template; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(SinkRocketMQParametersProperties model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The method that is used to transform the event.</p>
              * 
@@ -8310,7 +8905,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
      *
      * <p>GetEventStreamingResponseBody</p>
      */
-    public static class SinkRocketMQParametersSecurityGroupId extends TeaModel {
+    public static class SecurityGroupId extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
@@ -8320,7 +8915,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
-        private SinkRocketMQParametersSecurityGroupId(Builder builder) {
+        private SecurityGroupId(Builder builder) {
             this.form = builder.form;
             this.template = builder.template;
             this.value = builder.value;
@@ -8330,7 +8925,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static SinkRocketMQParametersSecurityGroupId create() {
+        public static SecurityGroupId create() {
             return builder().build();
         }
 
@@ -8359,6 +8954,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String form; 
             private String template; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecurityGroupId model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The method that is used to transform the event.</p>
@@ -8395,8 +8999,8 @@ public class GetEventStreamingResponseBody extends TeaModel {
                 return this;
             }
 
-            public SinkRocketMQParametersSecurityGroupId build() {
-                return new SinkRocketMQParametersSecurityGroupId(this);
+            public SecurityGroupId build() {
+                return new SecurityGroupId(this);
             } 
 
         } 
@@ -8457,6 +9061,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String form; 
             private String template; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(ShardingKey model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The method that is used to transform the event.</p>
@@ -8556,6 +9169,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String template; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The method that is used to transform the event.</p>
              * 
@@ -8654,6 +9276,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String template; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(SinkRocketMQParametersTopic model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The method that is used to transform the event. Default value: CONSTANT.</p>
              * 
@@ -8697,7 +9328,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
      *
      * <p>GetEventStreamingResponseBody</p>
      */
-    public static class SinkRocketMQParametersVSwitchIds extends TeaModel {
+    public static class VSwitchIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
@@ -8707,7 +9338,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
-        private SinkRocketMQParametersVSwitchIds(Builder builder) {
+        private VSwitchIds(Builder builder) {
             this.form = builder.form;
             this.template = builder.template;
             this.value = builder.value;
@@ -8717,7 +9348,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static SinkRocketMQParametersVSwitchIds create() {
+        public static VSwitchIds create() {
             return builder().build();
         }
 
@@ -8746,6 +9377,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String form; 
             private String template; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(VSwitchIds model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The method that is used to transform the event. Default value: CONSTANT.</p>
@@ -8777,8 +9417,8 @@ public class GetEventStreamingResponseBody extends TeaModel {
                 return this;
             }
 
-            public SinkRocketMQParametersVSwitchIds build() {
-                return new SinkRocketMQParametersVSwitchIds(this);
+            public VSwitchIds build() {
+                return new VSwitchIds(this);
             } 
 
         } 
@@ -8790,7 +9430,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
      *
      * <p>GetEventStreamingResponseBody</p>
      */
-    public static class SinkRocketMQParametersVpcId extends TeaModel {
+    public static class VpcId extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
@@ -8800,7 +9440,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
-        private SinkRocketMQParametersVpcId(Builder builder) {
+        private VpcId(Builder builder) {
             this.form = builder.form;
             this.template = builder.template;
             this.value = builder.value;
@@ -8810,7 +9450,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static SinkRocketMQParametersVpcId create() {
+        public static VpcId create() {
             return builder().build();
         }
 
@@ -8839,6 +9479,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String form; 
             private String template; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(VpcId model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The method that is used to transform the event. Default value: CONSTANT.</p>
@@ -8870,8 +9519,8 @@ public class GetEventStreamingResponseBody extends TeaModel {
                 return this;
             }
 
-            public SinkRocketMQParametersVpcId build() {
-                return new SinkRocketMQParametersVpcId(this);
+            public VpcId build() {
+                return new VpcId(this);
             } 
 
         } 
@@ -8915,7 +9564,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         private SinkRocketMQParametersProperties properties;
 
         @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
-        private SinkRocketMQParametersSecurityGroupId securityGroupId;
+        private SecurityGroupId securityGroupId;
 
         @com.aliyun.core.annotation.NameInMap("ShardingKey")
         private ShardingKey shardingKey;
@@ -8927,10 +9576,10 @@ public class GetEventStreamingResponseBody extends TeaModel {
         private SinkRocketMQParametersTopic topic;
 
         @com.aliyun.core.annotation.NameInMap("VSwitchIds")
-        private SinkRocketMQParametersVSwitchIds vSwitchIds;
+        private VSwitchIds vSwitchIds;
 
         @com.aliyun.core.annotation.NameInMap("VpcId")
-        private SinkRocketMQParametersVpcId vpcId;
+        private VpcId vpcId;
 
         private SinkRocketMQParameters(Builder builder) {
             this.body = builder.body;
@@ -9032,7 +9681,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         /**
          * @return securityGroupId
          */
-        public SinkRocketMQParametersSecurityGroupId getSecurityGroupId() {
+        public SecurityGroupId getSecurityGroupId() {
             return this.securityGroupId;
         }
 
@@ -9060,14 +9709,14 @@ public class GetEventStreamingResponseBody extends TeaModel {
         /**
          * @return vSwitchIds
          */
-        public SinkRocketMQParametersVSwitchIds getVSwitchIds() {
+        public VSwitchIds getVSwitchIds() {
             return this.vSwitchIds;
         }
 
         /**
          * @return vpcId
          */
-        public SinkRocketMQParametersVpcId getVpcId() {
+        public VpcId getVpcId() {
             return this.vpcId;
         }
 
@@ -9082,12 +9731,34 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private Keys keys; 
             private Network network; 
             private SinkRocketMQParametersProperties properties; 
-            private SinkRocketMQParametersSecurityGroupId securityGroupId; 
+            private SecurityGroupId securityGroupId; 
             private ShardingKey shardingKey; 
             private Tags tags; 
             private SinkRocketMQParametersTopic topic; 
-            private SinkRocketMQParametersVSwitchIds vSwitchIds; 
-            private SinkRocketMQParametersVpcId vpcId; 
+            private VSwitchIds vSwitchIds; 
+            private VpcId vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(SinkRocketMQParameters model) {
+                this.body = model.body;
+                this.deliveryOrderType = model.deliveryOrderType;
+                this.instanceEndpoint = model.instanceEndpoint;
+                this.instanceId = model.instanceId;
+                this.instancePassword = model.instancePassword;
+                this.instanceType = model.instanceType;
+                this.instanceUsername = model.instanceUsername;
+                this.keys = model.keys;
+                this.network = model.network;
+                this.properties = model.properties;
+                this.securityGroupId = model.securityGroupId;
+                this.shardingKey = model.shardingKey;
+                this.tags = model.tags;
+                this.topic = model.topic;
+                this.vSwitchIds = model.vSwitchIds;
+                this.vpcId = model.vpcId;
+            } 
 
             /**
              * <p>The message content.</p>
@@ -9172,7 +9843,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             /**
              * SecurityGroupId.
              */
-            public Builder securityGroupId(SinkRocketMQParametersSecurityGroupId securityGroupId) {
+            public Builder securityGroupId(SecurityGroupId securityGroupId) {
                 this.securityGroupId = securityGroupId;
                 return this;
             }
@@ -9204,7 +9875,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             /**
              * VSwitchIds.
              */
-            public Builder vSwitchIds(SinkRocketMQParametersVSwitchIds vSwitchIds) {
+            public Builder vSwitchIds(VSwitchIds vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
                 return this;
             }
@@ -9212,7 +9883,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             /**
              * VpcId.
              */
-            public Builder vpcId(SinkRocketMQParametersVpcId vpcId) {
+            public Builder vpcId(VpcId vpcId) {
                 this.vpcId = vpcId;
                 return this;
             }
@@ -9279,6 +9950,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String form; 
             private String template; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(SinkSLSParametersBody model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The method that is used to transform the event.</p>
@@ -9378,6 +10058,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String template; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(ContentSchema model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The method that is used to transform the event.</p>
              * 
@@ -9475,6 +10164,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String form; 
             private String template; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(ContentType model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The method that is used to transform the event.</p>
@@ -9574,6 +10272,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String template; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(LogStore model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The method that is used to transform the event. Default value: CONSTANT.</p>
              * 
@@ -9666,6 +10373,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String form; 
             private String template; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(SinkSLSParametersProject model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The method that is used to transform the event. Default value: CONSTANT.</p>
@@ -9760,6 +10476,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String template; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(SinkSLSParametersRoleName model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The method that is used to transform the event. Default value: CONSTANT.</p>
              * 
@@ -9852,6 +10577,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String form; 
             private String template; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(SinkSLSParametersTopic model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The method that is used to transform the event. Default value: CONSTANT.</p>
@@ -9993,6 +10727,19 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private SinkSLSParametersProject project; 
             private SinkSLSParametersRoleName roleName; 
             private SinkSLSParametersTopic topic; 
+
+            private Builder() {
+            } 
+
+            private Builder(SinkSLSParameters model) {
+                this.body = model.body;
+                this.contentSchema = model.contentSchema;
+                this.contentType = model.contentType;
+                this.logStore = model.logStore;
+                this.project = model.project;
+                this.roleName = model.roleName;
+                this.topic = model.topic;
+            } 
 
             /**
              * <p>The message content.</p>
@@ -10244,6 +10991,26 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private SinkRocketMQCheckpointParameters sinkRocketMQCheckpointParameters; 
             private SinkRocketMQParameters sinkRocketMQParameters; 
             private SinkSLSParameters sinkSLSParameters; 
+
+            private Builder() {
+            } 
+
+            private Builder(Sink model) {
+                this.sinkApacheRocketMQCheckpointParameters = model.sinkApacheRocketMQCheckpointParameters;
+                this.sinkCustomizedKafkaConnectorParameters = model.sinkCustomizedKafkaConnectorParameters;
+                this.sinkCustomizedKafkaParameters = model.sinkCustomizedKafkaParameters;
+                this.sinkDashVectorParameters = model.sinkDashVectorParameters;
+                this.sinkDataHubParameters = model.sinkDataHubParameters;
+                this.sinkFcParameters = model.sinkFcParameters;
+                this.sinkFnfParameters = model.sinkFnfParameters;
+                this.sinkKafkaParameters = model.sinkKafkaParameters;
+                this.sinkMNSParameters = model.sinkMNSParameters;
+                this.sinkOpenSourceRabbitMQParameters = model.sinkOpenSourceRabbitMQParameters;
+                this.sinkRabbitMQParameters = model.sinkRabbitMQParameters;
+                this.sinkRocketMQCheckpointParameters = model.sinkRocketMQCheckpointParameters;
+                this.sinkRocketMQParameters = model.sinkRocketMQParameters;
+                this.sinkSLSParameters = model.sinkSLSParameters;
+            } 
 
             /**
              * SinkApacheRocketMQCheckpointParameters.
@@ -10504,6 +11271,22 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String vSwitchId; 
             private String vpcId; 
 
+            private Builder() {
+            } 
+
+            private Builder(SourceApacheRocketMQCheckpointParameters model) {
+                this.instanceEndpoint = model.instanceEndpoint;
+                this.instanceId = model.instanceId;
+                this.instancePassword = model.instancePassword;
+                this.instanceUsername = model.instanceUsername;
+                this.networkType = model.networkType;
+                this.regionId = model.regionId;
+                this.securityGroupId = model.securityGroupId;
+                this.topics = model.topics;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+            } 
+
             /**
              * InstanceEndpoint.
              */
@@ -10635,6 +11418,14 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private java.util.Map<String, ?> config; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(SourceCustomizedKafkaConnectorParametersConnectorParameters model) {
+                this.config = model.config;
+                this.name = model.name;
+            } 
+
             /**
              * Config.
              */
@@ -10714,6 +11505,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private SourceCustomizedKafkaConnectorParametersConnectorParameters connectorParameters; 
             private java.util.Map<String, ?> workerParameters; 
 
+            private Builder() {
+            } 
+
+            private Builder(SourceCustomizedKafkaConnectorParameters model) {
+                this.connectorPackageUrl = model.connectorPackageUrl;
+                this.connectorParameters = model.connectorParameters;
+                this.workerParameters = model.workerParameters;
+            } 
+
             /**
              * ConnectorPackageUrl.
              */
@@ -10776,6 +11576,13 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
         public static final class Builder {
             private String instanceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(SourceCustomizedKafkaParameters model) {
+                this.instanceId = model.instanceId;
+            } 
 
             /**
              * <p>The target service type is Message Queue for Apache RocketMQ.</p>
@@ -10895,6 +11702,19 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String taskId; 
             private String topic; 
             private String username; 
+
+            private Builder() {
+            } 
+
+            private Builder(SourceDTSParameters model) {
+                this.brokerUrl = model.brokerUrl;
+                this.initCheckPoint = model.initCheckPoint;
+                this.password = model.password;
+                this.sid = model.sid;
+                this.taskId = model.taskId;
+                this.topic = model.topic;
+                this.username = model.username;
+            } 
 
             /**
              * <p>The URL and port number of the data subscription channel.</p>
@@ -11020,6 +11840,14 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public static final class Builder {
             private String eventBusName; 
             private String eventRuleName; 
+
+            private Builder() {
+            } 
+
+            private Builder(SourceEventBusParameters model) {
+                this.eventBusName = model.eventBusName;
+                this.eventRuleName = model.eventRuleName;
+            } 
 
             /**
              * EventBusName.
@@ -11183,6 +12011,22 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String vSwitchIds; 
             private String valueDataType; 
             private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(SourceKafkaParameters model) {
+                this.consumerGroup = model.consumerGroup;
+                this.instanceId = model.instanceId;
+                this.network = model.network;
+                this.offsetReset = model.offsetReset;
+                this.regionId = model.regionId;
+                this.securityGroupId = model.securityGroupId;
+                this.topic = model.topic;
+                this.vSwitchIds = model.vSwitchIds;
+                this.valueDataType = model.valueDataType;
+                this.vpcId = model.vpcId;
+            } 
 
             /**
              * <p>The ID of the consumer group that subscribes to the topic.</p>
@@ -11357,6 +12201,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String queueName; 
             private String regionId; 
 
+            private Builder() {
+            } 
+
+            private Builder(SourceMNSParameters model) {
+                this.isBase64Decode = model.isBase64Decode;
+                this.queueName = model.queueName;
+                this.regionId = model.regionId;
+            } 
+
             /**
              * <p>Indicates whether Base64 encoding is enabled.</p>
              * 
@@ -11464,6 +12317,16 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String instanceId; 
             private String regionId; 
             private String topic; 
+
+            private Builder() {
+            } 
+
+            private Builder(SourceMQTTParameters model) {
+                this.bodyDataType = model.bodyDataType;
+                this.instanceId = model.instanceId;
+                this.regionId = model.regionId;
+                this.topic = model.topic;
+            } 
 
             /**
              * BodyDataType.
@@ -11605,6 +12468,18 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String prefix; 
             private String roleName; 
 
+            private Builder() {
+            } 
+
+            private Builder(SourceOSSParameters model) {
+                this.bucketName = model.bucketName;
+                this.delimiter = model.delimiter;
+                this.loadFormat = model.loadFormat;
+                this.loadMode = model.loadMode;
+                this.prefix = model.prefix;
+                this.roleName = model.roleName;
+            } 
+
             /**
              * BucketName.
              */
@@ -11667,6 +12542,9 @@ public class GetEventStreamingResponseBody extends TeaModel {
      * <p>GetEventStreamingResponseBody</p>
      */
     public static class SourceOpenSourceRabbitMQParameters extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AuthType")
+        private String authType;
+
         @com.aliyun.core.annotation.NameInMap("BodyDataType")
         private String bodyDataType;
 
@@ -11698,6 +12576,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         private String vpcId;
 
         private SourceOpenSourceRabbitMQParameters(Builder builder) {
+            this.authType = builder.authType;
             this.bodyDataType = builder.bodyDataType;
             this.endpoint = builder.endpoint;
             this.networkType = builder.networkType;
@@ -11716,6 +12595,13 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
         public static SourceOpenSourceRabbitMQParameters create() {
             return builder().build();
+        }
+
+        /**
+         * @return authType
+         */
+        public String getAuthType() {
+            return this.authType;
         }
 
         /**
@@ -11789,6 +12675,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String authType; 
             private String bodyDataType; 
             private String endpoint; 
             private String networkType; 
@@ -11799,6 +12686,31 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String vSwitchIds; 
             private String virtualHostName; 
             private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(SourceOpenSourceRabbitMQParameters model) {
+                this.authType = model.authType;
+                this.bodyDataType = model.bodyDataType;
+                this.endpoint = model.endpoint;
+                this.networkType = model.networkType;
+                this.password = model.password;
+                this.queueName = model.queueName;
+                this.securityGroupId = model.securityGroupId;
+                this.username = model.username;
+                this.vSwitchIds = model.vSwitchIds;
+                this.virtualHostName = model.virtualHostName;
+                this.vpcId = model.vpcId;
+            } 
+
+            /**
+             * AuthType.
+             */
+            public Builder authType(String authType) {
+                this.authType = authType;
+                return this;
+            }
 
             /**
              * BodyDataType.
@@ -11997,6 +12909,18 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String regionId; 
             private String roleName; 
 
+            private Builder() {
+            } 
+
+            private Builder(SourcePrometheusParameters model) {
+                this.clusterId = model.clusterId;
+                this.dataType = model.dataType;
+                this.externalLabels = model.externalLabels;
+                this.labels = model.labels;
+                this.regionId = model.regionId;
+                this.roleName = model.roleName;
+            } 
+
             /**
              * ClusterId.
              */
@@ -12123,6 +13047,16 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String regionId; 
             private String virtualHostName; 
 
+            private Builder() {
+            } 
+
+            private Builder(SourceRabbitMQParameters model) {
+                this.instanceId = model.instanceId;
+                this.queueName = model.queueName;
+                this.regionId = model.regionId;
+                this.virtualHostName = model.virtualHostName;
+            } 
+
             /**
              * <p>The ID of the Message Queue for RabbitMQ instance.</p>
              * 
@@ -12241,6 +13175,16 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String instanceType; 
             private String regionId; 
             private java.util.List<String> topics; 
+
+            private Builder() {
+            } 
+
+            private Builder(SourceRocketMQCheckpointParameters model) {
+                this.instanceId = model.instanceId;
+                this.instanceType = model.instanceType;
+                this.regionId = model.regionId;
+                this.topics = model.topics;
+            } 
 
             /**
              * <p>The ID of the Message Queue for RabbitMQ instance.</p>
@@ -12583,6 +13527,35 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String vSwitchIds; 
             private String vpcId; 
 
+            private Builder() {
+            } 
+
+            private Builder(SourceRocketMQParameters model) {
+                this.authType = model.authType;
+                this.bodyDataType = model.bodyDataType;
+                this.filterSql = model.filterSql;
+                this.filterType = model.filterType;
+                this.groupID = model.groupID;
+                this.instanceEndpoint = model.instanceEndpoint;
+                this.instanceId = model.instanceId;
+                this.instanceNetwork = model.instanceNetwork;
+                this.instancePassword = model.instancePassword;
+                this.instanceSecurityGroupId = model.instanceSecurityGroupId;
+                this.instanceType = model.instanceType;
+                this.instanceUsername = model.instanceUsername;
+                this.instanceVSwitchIds = model.instanceVSwitchIds;
+                this.instanceVpcId = model.instanceVpcId;
+                this.network = model.network;
+                this.offset = model.offset;
+                this.regionId = model.regionId;
+                this.securityGroupId = model.securityGroupId;
+                this.tag = model.tag;
+                this.timestamp = model.timestamp;
+                this.topic = model.topic;
+                this.vSwitchIds = model.vSwitchIds;
+                this.vpcId = model.vpcId;
+            } 
+
             /**
              * AuthType.
              */
@@ -12887,6 +13860,17 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String project; 
             private String roleName; 
 
+            private Builder() {
+            } 
+
+            private Builder(SourceSLSParameters model) {
+                this.consumePosition = model.consumePosition;
+                this.consumerGroup = model.consumerGroup;
+                this.logStore = model.logStore;
+                this.project = model.project;
+                this.roleName = model.roleName;
+            } 
+
             /**
              * <p>The starting consumer offset. The value begin indicates the earliest offset, and the value end indicates the latest offset. You can also specify a time in seconds to start consumption.</p>
              * 
@@ -13146,6 +14130,27 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private SourceRocketMQParameters sourceRocketMQParameters; 
             private SourceSLSParameters sourceSLSParameters; 
 
+            private Builder() {
+            } 
+
+            private Builder(Source model) {
+                this.sourceApacheRocketMQCheckpointParameters = model.sourceApacheRocketMQCheckpointParameters;
+                this.sourceCustomizedKafkaConnectorParameters = model.sourceCustomizedKafkaConnectorParameters;
+                this.sourceCustomizedKafkaParameters = model.sourceCustomizedKafkaParameters;
+                this.sourceDTSParameters = model.sourceDTSParameters;
+                this.sourceEventBusParameters = model.sourceEventBusParameters;
+                this.sourceKafkaParameters = model.sourceKafkaParameters;
+                this.sourceMNSParameters = model.sourceMNSParameters;
+                this.sourceMQTTParameters = model.sourceMQTTParameters;
+                this.sourceOSSParameters = model.sourceOSSParameters;
+                this.sourceOpenSourceRabbitMQParameters = model.sourceOpenSourceRabbitMQParameters;
+                this.sourcePrometheusParameters = model.sourcePrometheusParameters;
+                this.sourceRabbitMQParameters = model.sourceRabbitMQParameters;
+                this.sourceRocketMQCheckpointParameters = model.sourceRocketMQCheckpointParameters;
+                this.sourceRocketMQParameters = model.sourceRocketMQParameters;
+                this.sourceSLSParameters = model.sourceSLSParameters;
+            } 
+
             /**
              * SourceApacheRocketMQCheckpointParameters.
              */
@@ -13305,6 +14310,13 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public static final class Builder {
             private String arn; 
 
+            private Builder() {
+            } 
+
+            private Builder(Transforms model) {
+                this.arn = model.arn;
+            } 
+
             /**
              * <p>The Alibaba Cloud Resource Name (ARN) of the cloud service, such as the ARN of a Function Compute function.</p>
              * 
@@ -13450,6 +14462,21 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private Source source; 
             private String status; 
             private java.util.List<Transforms> transforms; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.description = model.description;
+                this.detailedStatus = model.detailedStatus;
+                this.eventStreamingName = model.eventStreamingName;
+                this.filterPattern = model.filterPattern;
+                this.runOptions = model.runOptions;
+                this.sink = model.sink;
+                this.source = model.source;
+                this.status = model.status;
+                this.transforms = model.transforms;
+            } 
 
             /**
              * <p>The description of the event stream that is returned.</p>

@@ -48,6 +48,10 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListUserDefinedEventSourcesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The returned response code. Valid values:</p>
@@ -255,6 +270,19 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             private String securityConfig; 
             private String type; 
             private java.util.List<String> vpcWebHookUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(SourceHttpEventParameters model) {
+                this.ip = model.ip;
+                this.method = model.method;
+                this.publicWebHookUrl = model.publicWebHookUrl;
+                this.referer = model.referer;
+                this.securityConfig = model.securityConfig;
+                this.type = model.type;
+                this.vpcWebHookUrl = model.vpcWebHookUrl;
+            } 
 
             /**
              * <p>The CIDR block that is used for security settings. This parameter is required only if SecurityConfig is set to ip. You can enter a CIDR block or an IP address.</p>
@@ -486,6 +514,22 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             private String vSwitchIds; 
             private String vpcId; 
 
+            private Builder() {
+            } 
+
+            private Builder(SourceKafkaParameters model) {
+                this.consumerGroup = model.consumerGroup;
+                this.instanceId = model.instanceId;
+                this.maximumTasks = model.maximumTasks;
+                this.network = model.network;
+                this.offsetReset = model.offsetReset;
+                this.regionId = model.regionId;
+                this.securityGroupId = model.securityGroupId;
+                this.topic = model.topic;
+                this.vSwitchIds = model.vSwitchIds;
+                this.vpcId = model.vpcId;
+            } 
+
             /**
              * <p>The ID of the consumer group that subscribes to the topic on the Message Queue for Apache Kafka instance.</p>
              * 
@@ -659,6 +703,15 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             private String queueName; 
             private String regionId; 
 
+            private Builder() {
+            } 
+
+            private Builder(SourceMNSParameters model) {
+                this.isBase64Decode = model.isBase64Decode;
+                this.queueName = model.queueName;
+                this.regionId = model.regionId;
+            } 
+
             /**
              * <p>Indicates whether Base64 decoding is enabled. By default, Base64 decoding is enabled.</p>
              * 
@@ -766,6 +819,16 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             private String queueName; 
             private String regionId; 
             private String virtualHostName; 
+
+            private Builder() {
+            } 
+
+            private Builder(SourceRabbitMQParameters model) {
+                this.instanceId = model.instanceId;
+                this.queueName = model.queueName;
+                this.regionId = model.regionId;
+                this.virtualHostName = model.virtualHostName;
+            } 
 
             /**
              * <p>The ID of the Message Queue for RabbitMQ instance. For more information, see <a href="https://help.aliyun.com/document_detail/163289.html">Limits</a>.</p>
@@ -1030,6 +1093,28 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             private Float timestamp; 
             private String topic; 
 
+            private Builder() {
+            } 
+
+            private Builder(SourceRocketMQParameters model) {
+                this.authType = model.authType;
+                this.groupId = model.groupId;
+                this.instanceEndpoint = model.instanceEndpoint;
+                this.instanceId = model.instanceId;
+                this.instanceNetwork = model.instanceNetwork;
+                this.instancePassword = model.instancePassword;
+                this.instanceSecurityGroupId = model.instanceSecurityGroupId;
+                this.instanceType = model.instanceType;
+                this.instanceUsername = model.instanceUsername;
+                this.instanceVSwitchIds = model.instanceVSwitchIds;
+                this.instanceVpcId = model.instanceVpcId;
+                this.offset = model.offset;
+                this.regionId = model.regionId;
+                this.tag = model.tag;
+                this.timestamp = model.timestamp;
+                this.topic = model.topic;
+            } 
+
             /**
              * <p>The authentication type. This parameter can be set to ACL or left empty.</p>
              * 
@@ -1287,6 +1372,16 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             private String project; 
             private String roleName; 
 
+            private Builder() {
+            } 
+
+            private Builder(SourceSLSParameters model) {
+                this.consumePosition = model.consumePosition;
+                this.logStore = model.logStore;
+                this.project = model.project;
+                this.roleName = model.roleName;
+            } 
+
             /**
              * <p>The consumer offset. The value begin indicates the earliest offset, and the value end indicates the latest offset. You can also specify a time in seconds to start consumption.</p>
              * 
@@ -1393,6 +1488,15 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             private String schedule; 
             private String timeZone; 
             private String userData; 
+
+            private Builder() {
+            } 
+
+            private Builder(SourceScheduledEventParameters model) {
+                this.schedule = model.schedule;
+                this.timeZone = model.timeZone;
+                this.userData = model.userData;
+            } 
 
             /**
              * <p>The cron expression.</p>
@@ -1622,6 +1726,26 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             private String status; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(EventSourceList model) {
+                this.arn = model.arn;
+                this.ctime = model.ctime;
+                this.eventBusName = model.eventBusName;
+                this.externalSourceType = model.externalSourceType;
+                this.name = model.name;
+                this.sourceHttpEventParameters = model.sourceHttpEventParameters;
+                this.sourceKafkaParameters = model.sourceKafkaParameters;
+                this.sourceMNSParameters = model.sourceMNSParameters;
+                this.sourceRabbitMQParameters = model.sourceRabbitMQParameters;
+                this.sourceRocketMQParameters = model.sourceRocketMQParameters;
+                this.sourceSLSParameters = model.sourceSLSParameters;
+                this.sourceScheduledEventParameters = model.sourceScheduledEventParameters;
+                this.status = model.status;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The Alibaba Cloud Resource Name (ARN) of the queried event source.</p>
              * 
@@ -1817,6 +1941,15 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             private java.util.List<EventSourceList> eventSourceList; 
             private String nextToken; 
             private Integer total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.eventSourceList = model.eventSourceList;
+                this.nextToken = model.nextToken;
+                this.total = model.total;
+            } 
 
             /**
              * <p>The event sources.</p>

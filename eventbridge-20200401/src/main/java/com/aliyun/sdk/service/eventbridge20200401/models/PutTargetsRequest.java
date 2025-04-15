@@ -47,7 +47,7 @@ public class PutTargetsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -165,6 +165,13 @@ public class PutTargetsRequest extends Request {
         public static final class Builder {
             private Long concurrency; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConcurrentConfig model) {
+                this.concurrency = model.concurrency;
+            } 
+
             /**
              * Concurrency.
              */
@@ -211,6 +218,13 @@ public class PutTargetsRequest extends Request {
 
         public static final class Builder {
             private String arn; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeadLetterQueue model) {
+                this.arn = model.arn;
+            } 
 
             /**
              * <p>The Alibaba Cloud Resource Name (ARN) of the dead-letter queue. Events that are not processed or whose maximum retries have been exceeded are written to the dead-letter queue.</p>
@@ -297,6 +311,16 @@ public class PutTargetsRequest extends Request {
             private String resourceKey; 
             private String template; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(ParamList model) {
+                this.form = model.form;
+                this.resourceKey = model.resourceKey;
+                this.template = model.template;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The method that is used to deliver events to the event target. For more information,see <a href="https://www.alibabacloud.com/help/en/eventbridge/latest/event-target-parameters">Event target parameters.</a></p>
@@ -466,6 +490,20 @@ public class PutTargetsRequest extends Request {
             private java.util.List<ParamList> paramList; 
             private String pushRetryStrategy; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Targets model) {
+                this.concurrentConfig = model.concurrentConfig;
+                this.deadLetterQueue = model.deadLetterQueue;
+                this.endpoint = model.endpoint;
+                this.errorsTolerance = model.errorsTolerance;
+                this.id = model.id;
+                this.paramList = model.paramList;
+                this.pushRetryStrategy = model.pushRetryStrategy;
+                this.type = model.type;
+            } 
 
             /**
              * ConcurrentConfig.

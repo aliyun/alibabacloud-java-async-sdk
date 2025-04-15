@@ -44,6 +44,10 @@ public class CreateConnectionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class CreateConnectionResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateConnectionResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned response code. The value Success indicates that the request is successful.</p>
@@ -156,6 +170,13 @@ public class CreateConnectionResponseBody extends TeaModel {
 
         public static final class Builder {
             private String connectionName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.connectionName = model.connectionName;
+            } 
 
             /**
              * <p>The connection name.</p>
