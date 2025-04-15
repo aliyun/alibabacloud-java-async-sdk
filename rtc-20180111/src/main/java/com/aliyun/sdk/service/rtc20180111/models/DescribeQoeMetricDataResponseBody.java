@@ -40,6 +40,10 @@ public class DescribeQoeMetricDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return audioData
      */
@@ -65,6 +69,15 @@ public class DescribeQoeMetricDataResponseBody extends TeaModel {
         private java.util.List<AudioData> audioData; 
         private String requestId; 
         private java.util.List<VideoData> videoData; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeQoeMetricDataResponseBody model) {
+            this.audioData = model.audioData;
+            this.requestId = model.requestId;
+            this.videoData = model.videoData;
+        } 
 
         /**
          * AudioData.
@@ -139,6 +152,14 @@ public class DescribeQoeMetricDataResponseBody extends TeaModel {
         public static final class Builder {
             private String x; 
             private String y; 
+
+            private Builder() {
+            } 
+
+            private Builder(Nodes model) {
+                this.x = model.x;
+                this.y = model.y;
+            } 
 
             /**
              * X.
@@ -219,6 +240,15 @@ public class DescribeQoeMetricDataResponseBody extends TeaModel {
             private String type; 
             private String userId; 
 
+            private Builder() {
+            } 
+
+            private Builder(AudioData model) {
+                this.nodes = model.nodes;
+                this.type = model.type;
+                this.userId = model.userId;
+            } 
+
             /**
              * Nodes.
              */
@@ -293,6 +323,14 @@ public class DescribeQoeMetricDataResponseBody extends TeaModel {
         public static final class Builder {
             private String x; 
             private String y; 
+
+            private Builder() {
+            } 
+
+            private Builder(VideoDataNodes model) {
+                this.x = model.x;
+                this.y = model.y;
+            } 
 
             /**
              * X.
@@ -372,6 +410,15 @@ public class DescribeQoeMetricDataResponseBody extends TeaModel {
             private java.util.List<VideoDataNodes> nodes; 
             private String type; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(VideoData model) {
+                this.nodes = model.nodes;
+                this.type = model.type;
+                this.userId = model.userId;
+            } 
 
             /**
              * Nodes.

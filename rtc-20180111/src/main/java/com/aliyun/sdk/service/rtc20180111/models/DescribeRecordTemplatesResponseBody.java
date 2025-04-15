@@ -44,6 +44,10 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -77,6 +81,16 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
         private java.util.List<Templates> templates; 
         private Long totalNum; 
         private Long totalPage; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRecordTemplatesResponseBody model) {
+            this.requestId = model.requestId;
+            this.templates = model.templates;
+            this.totalNum = model.totalNum;
+            this.totalPage = model.totalPage;
+        } 
 
         /**
          * RequestId.
@@ -219,6 +233,19 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
             private Float x; 
             private Float y; 
             private Integer zOrder; 
+
+            private Builder() {
+            } 
+
+            private Builder(Backgrounds model) {
+                this.display = model.display;
+                this.height = model.height;
+                this.url = model.url;
+                this.width = model.width;
+                this.x = model.x;
+                this.y = model.y;
+                this.zOrder = model.zOrder;
+            } 
 
             /**
              * Display.
@@ -374,6 +401,18 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
             private Float x; 
             private Float y; 
             private Integer zOrder; 
+
+            private Builder() {
+            } 
+
+            private Builder(ClockWidgets model) {
+                this.fontColor = model.fontColor;
+                this.fontSize = model.fontSize;
+                this.fontType = model.fontType;
+                this.x = model.x;
+                this.y = model.y;
+                this.zOrder = model.zOrder;
+            } 
 
             /**
              * FontColor.
@@ -545,6 +584,20 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
             private Float x; 
             private Float y; 
             private Integer zOrder; 
+
+            private Builder() {
+            } 
+
+            private Builder(Watermarks model) {
+                this.alpha = model.alpha;
+                this.display = model.display;
+                this.height = model.height;
+                this.url = model.url;
+                this.width = model.width;
+                this.x = model.x;
+                this.y = model.y;
+                this.zOrder = model.zOrder;
+            } 
 
             /**
              * Alpha.
@@ -852,6 +905,30 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
             private String taskProfile; 
             private String templateId; 
             private java.util.List<Watermarks> watermarks; 
+
+            private Builder() {
+            } 
+
+            private Builder(Templates model) {
+                this.backgroundColor = model.backgroundColor;
+                this.backgrounds = model.backgrounds;
+                this.clockWidgets = model.clockWidgets;
+                this.createTime = model.createTime;
+                this.delayStopTime = model.delayStopTime;
+                this.enableM3u8DateTime = model.enableM3u8DateTime;
+                this.fileSplitInterval = model.fileSplitInterval;
+                this.formats = model.formats;
+                this.httpCallbackUrl = model.httpCallbackUrl;
+                this.layoutIds = model.layoutIds;
+                this.mediaEncode = model.mediaEncode;
+                this.mnsQueue = model.mnsQueue;
+                this.name = model.name;
+                this.ossBucket = model.ossBucket;
+                this.ossFilePrefix = model.ossFilePrefix;
+                this.taskProfile = model.taskProfile;
+                this.templateId = model.templateId;
+                this.watermarks = model.watermarks;
+            } 
 
             /**
              * BackgroundColor.

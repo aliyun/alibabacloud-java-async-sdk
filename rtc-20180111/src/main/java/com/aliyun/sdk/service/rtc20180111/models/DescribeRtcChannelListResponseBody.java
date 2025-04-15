@@ -48,6 +48,10 @@ public class DescribeRtcChannelListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return channelList
      */
@@ -89,6 +93,17 @@ public class DescribeRtcChannelListResponseBody extends TeaModel {
         private Long pageSize; 
         private String requestId; 
         private Long totalCnt; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRtcChannelListResponseBody model) {
+            this.channelList = model.channelList;
+            this.pageNo = model.pageNo;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCnt = model.totalCnt;
+        } 
 
         /**
          * ChannelList.
@@ -167,6 +182,13 @@ public class DescribeRtcChannelListResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> callArea; 
+
+            private Builder() {
+            } 
+
+            private Builder(CallArea model) {
+                this.callArea = model.callArea;
+            } 
 
             /**
              * CallArea.
@@ -263,6 +285,17 @@ public class DescribeRtcChannelListResponseBody extends TeaModel {
             private String startTime; 
             private Long totalUserCnt; 
 
+            private Builder() {
+            } 
+
+            private Builder(ChannelListChannelList model) {
+                this.callArea = model.callArea;
+                this.channelId = model.channelId;
+                this.endTime = model.endTime;
+                this.startTime = model.startTime;
+                this.totalUserCnt = model.totalUserCnt;
+            } 
+
             /**
              * CallArea.
              */
@@ -341,6 +374,13 @@ public class DescribeRtcChannelListResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ChannelListChannelList> channelList; 
+
+            private Builder() {
+            } 
+
+            private Builder(ChannelList model) {
+                this.channelList = model.channelList;
+            } 
 
             /**
              * ChannelList.

@@ -36,6 +36,10 @@ public class DescribeQualityOsSdkVersionDistributionStatDataResponseBody extends
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return qualityOsSdkVersionStatDataList
      */
@@ -53,6 +57,14 @@ public class DescribeQualityOsSdkVersionDistributionStatDataResponseBody extends
     public static final class Builder {
         private java.util.List<QualityOsSdkVersionStatDataList> qualityOsSdkVersionStatDataList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeQualityOsSdkVersionDistributionStatDataResponseBody model) {
+            this.qualityOsSdkVersionStatDataList = model.qualityOsSdkVersionStatDataList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * QualityOsSdkVersionStatDataList.
@@ -239,6 +251,24 @@ public class DescribeQualityOsSdkVersionDistributionStatDataResponseBody extends
             private Long videoFirstPicDuration; 
             private String videoHighQualityTransmissionRate; 
             private String videoStuckRate; 
+
+            private Builder() {
+            } 
+
+            private Builder(QualityOsSdkVersionStatDataList model) {
+                this.audioDelay = model.audioDelay;
+                this.audioHighQualityTransmissionRate = model.audioHighQualityTransmissionRate;
+                this.audioStuckRate = model.audioStuckRate;
+                this.callDurationRatio = model.callDurationRatio;
+                this.joinChannelSucFiveSecRate = model.joinChannelSucFiveSecRate;
+                this.joinChannelSucRate = model.joinChannelSucRate;
+                this.name = model.name;
+                this.os = model.os;
+                this.videoDelay = model.videoDelay;
+                this.videoFirstPicDuration = model.videoFirstPicDuration;
+                this.videoHighQualityTransmissionRate = model.videoHighQualityTransmissionRate;
+                this.videoStuckRate = model.videoStuckRate;
+            } 
 
             /**
              * AudioDelay.

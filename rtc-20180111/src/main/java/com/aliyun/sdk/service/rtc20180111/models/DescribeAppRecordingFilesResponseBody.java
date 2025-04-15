@@ -49,6 +49,10 @@ public class DescribeAppRecordingFilesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -90,6 +94,17 @@ public class DescribeAppRecordingFilesResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCnt; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAppRecordingFilesResponseBody model) {
+            this.items = model.items;
+            this.pageNo = model.pageNo;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCnt = model.totalCnt;
+        } 
 
         /**
          * Items.
@@ -279,6 +294,22 @@ public class DescribeAppRecordingFilesResponseBody extends TeaModel {
             private Long startTs; 
             private String taskId; 
             private Integer vendor; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.bucket = model.bucket;
+                this.channelId = model.channelId;
+                this.fileCreateTs = model.fileCreateTs;
+                this.fileDuration = model.fileDuration;
+                this.filePath = model.filePath;
+                this.fileSize = model.fileSize;
+                this.region = model.region;
+                this.startTs = model.startTs;
+                this.taskId = model.taskId;
+                this.vendor = model.vendor;
+            } 
 
             /**
              * Bucket.

@@ -36,6 +36,10 @@ public class CreateAppStreamingOutTemplateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class CreateAppStreamingOutTemplateResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String templateId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateAppStreamingOutTemplateResponseBody model) {
+            this.requestId = model.requestId;
+            this.templateId = model.templateId;
+        } 
 
         /**
          * <p>Id of the request</p>

@@ -36,6 +36,10 @@ public class DescribeFaultDiagnosisFactorDistributionStatResponseBody extends Te
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeFaultDiagnosisFactorDistributionStatResponseBody extends Te
     public static final class Builder {
         private String requestId; 
         private java.util.List<StatList> statList; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeFaultDiagnosisFactorDistributionStatResponseBody model) {
+            this.requestId = model.requestId;
+            this.statList = model.statList;
+        } 
 
         /**
          * RequestId.
@@ -131,6 +143,15 @@ public class DescribeFaultDiagnosisFactorDistributionStatResponseBody extends Te
             private String factorId; 
             private Integer userCount; 
             private Float userRatio; 
+
+            private Builder() {
+            } 
+
+            private Builder(StatList model) {
+                this.factorId = model.factorId;
+                this.userCount = model.userCount;
+                this.userRatio = model.userRatio;
+            } 
 
             /**
              * FactorId.

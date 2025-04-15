@@ -36,6 +36,10 @@ public class DescribeRtcChannelMetricResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return channelMetricInfo
      */
@@ -53,6 +57,14 @@ public class DescribeRtcChannelMetricResponseBody extends TeaModel {
     public static final class Builder {
         private ChannelMetricInfo channelMetricInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRtcChannelMetricResponseBody model) {
+            this.channelMetricInfo = model.channelMetricInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * ChannelMetricInfo.
@@ -167,6 +179,18 @@ public class DescribeRtcChannelMetricResponseBody extends TeaModel {
             private String startTime; 
             private Integer subUserCount; 
             private Integer userCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(ChannelMetric model) {
+                this.channelId = model.channelId;
+                this.endTime = model.endTime;
+                this.pubUserCount = model.pubUserCount;
+                this.startTime = model.startTime;
+                this.subUserCount = model.subUserCount;
+                this.userCount = model.userCount;
+            } 
 
             /**
              * ChannelId.
@@ -303,6 +327,17 @@ public class DescribeRtcChannelMetricResponseBody extends TeaModel {
             private Integer video360; 
             private Integer video720; 
 
+            private Builder() {
+            } 
+
+            private Builder(PubDuration model) {
+                this.audio = model.audio;
+                this.content = model.content;
+                this.video1080 = model.video1080;
+                this.video360 = model.video360;
+                this.video720 = model.video720;
+            } 
+
             /**
              * Audio.
              */
@@ -430,6 +465,17 @@ public class DescribeRtcChannelMetricResponseBody extends TeaModel {
             private Integer video360; 
             private Integer video720; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubDuration model) {
+                this.audio = model.audio;
+                this.content = model.content;
+                this.video1080 = model.video1080;
+                this.video360 = model.video360;
+                this.video720 = model.video720;
+            } 
+
             /**
              * Audio.
              */
@@ -521,6 +567,14 @@ public class DescribeRtcChannelMetricResponseBody extends TeaModel {
             private PubDuration pubDuration; 
             private SubDuration subDuration; 
 
+            private Builder() {
+            } 
+
+            private Builder(Duration model) {
+                this.pubDuration = model.pubDuration;
+                this.subDuration = model.subDuration;
+            } 
+
             /**
              * PubDuration.
              */
@@ -587,6 +641,14 @@ public class DescribeRtcChannelMetricResponseBody extends TeaModel {
         public static final class Builder {
             private ChannelMetric channelMetric; 
             private Duration duration; 
+
+            private Builder() {
+            } 
+
+            private Builder(ChannelMetricInfo model) {
+                this.channelMetric = model.channelMetric;
+                this.duration = model.duration;
+            } 
 
             /**
              * ChannelMetric.

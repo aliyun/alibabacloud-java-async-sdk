@@ -36,6 +36,10 @@ public class DescribeRtcUserCntDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeRtcUserCntDataResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private UserCntDataPerInterval userCntDataPerInterval; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRtcUserCntDataResponseBody model) {
+            this.requestId = model.requestId;
+            this.userCntDataPerInterval = model.userCntDataPerInterval;
+        } 
 
         /**
          * RequestId.
@@ -120,6 +132,14 @@ public class DescribeRtcUserCntDataResponseBody extends TeaModel {
             private Long activeUserCnt; 
             private String timeStamp; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserCntModule model) {
+                this.activeUserCnt = model.activeUserCnt;
+                this.timeStamp = model.timeStamp;
+            } 
+
             /**
              * ActiveUserCnt.
              */
@@ -174,6 +194,13 @@ public class DescribeRtcUserCntDataResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<UserCntModule> userCntModule; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserCntDataPerInterval model) {
+                this.userCntModule = model.userCntModule;
+            } 
 
             /**
              * UserCntModule.

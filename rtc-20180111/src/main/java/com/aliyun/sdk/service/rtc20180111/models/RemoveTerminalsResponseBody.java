@@ -36,6 +36,10 @@ public class RemoveTerminalsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class RemoveTerminalsResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Terminals terminals; 
+
+        private Builder() {
+        } 
+
+        private Builder(RemoveTerminalsResponseBody model) {
+            this.requestId = model.requestId;
+            this.terminals = model.terminals;
+        } 
 
         /**
          * RequestId.
@@ -132,6 +144,15 @@ public class RemoveTerminalsResponseBody extends TeaModel {
             private String id; 
             private String message; 
 
+            private Builder() {
+            } 
+
+            private Builder(Terminal model) {
+                this.code = model.code;
+                this.id = model.id;
+                this.message = model.message;
+            } 
+
             /**
              * Code.
              */
@@ -194,6 +215,13 @@ public class RemoveTerminalsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Terminal> terminal; 
+
+            private Builder() {
+            } 
+
+            private Builder(Terminals model) {
+                this.terminal = model.terminal;
+            } 
 
             /**
              * Terminal.

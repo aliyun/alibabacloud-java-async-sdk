@@ -36,6 +36,10 @@ public class AddRecordTemplateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class AddRecordTemplateResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String templateId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AddRecordTemplateResponseBody model) {
+            this.requestId = model.requestId;
+            this.templateId = model.templateId;
+        } 
 
         /**
          * RequestId.

@@ -36,6 +36,10 @@ public class CreateAutoLiveStreamRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class CreateAutoLiveStreamRuleResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Long ruleId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateAutoLiveStreamRuleResponseBody model) {
+            this.requestId = model.requestId;
+            this.ruleId = model.ruleId;
+        } 
 
         /**
          * RequestId.

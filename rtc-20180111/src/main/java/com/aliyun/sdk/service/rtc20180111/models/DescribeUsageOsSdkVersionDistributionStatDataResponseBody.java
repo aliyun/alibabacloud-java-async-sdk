@@ -36,6 +36,10 @@ public class DescribeUsageOsSdkVersionDistributionStatDataResponseBody extends T
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeUsageOsSdkVersionDistributionStatDataResponseBody extends T
     public static final class Builder {
         private String requestId; 
         private java.util.List<UsageOsSdkVersionStatList> usageOsSdkVersionStatList; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeUsageOsSdkVersionDistributionStatDataResponseBody model) {
+            this.requestId = model.requestId;
+            this.usageOsSdkVersionStatList = model.usageOsSdkVersionStatList;
+        } 
 
         /**
          * RequestId.
@@ -167,6 +179,18 @@ public class DescribeUsageOsSdkVersionDistributionStatDataResponseBody extends T
             private String os; 
             private Long totalCallDuration; 
             private Long videoCallDuration; 
+
+            private Builder() {
+            } 
+
+            private Builder(UsageOsSdkVersionStatList model) {
+                this.audioCallDuration = model.audioCallDuration;
+                this.callDurationRatio = model.callDurationRatio;
+                this.name = model.name;
+                this.os = model.os;
+                this.totalCallDuration = model.totalCallDuration;
+                this.videoCallDuration = model.videoCallDuration;
+            } 
 
             /**
              * AudioCallDuration.

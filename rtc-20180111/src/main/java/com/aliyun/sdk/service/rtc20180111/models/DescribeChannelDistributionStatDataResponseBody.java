@@ -36,6 +36,10 @@ public class DescribeChannelDistributionStatDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeChannelDistributionStatDataResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<StatList> statList; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeChannelDistributionStatDataResponseBody model) {
+            this.requestId = model.requestId;
+            this.statList = model.statList;
+        } 
 
         /**
          * RequestId.
@@ -131,6 +143,15 @@ public class DescribeChannelDistributionStatDataResponseBody extends TeaModel {
             private Integer callUserCount; 
             private String callUserRatio; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(StatList model) {
+                this.callUserCount = model.callUserCount;
+                this.callUserRatio = model.callUserRatio;
+                this.name = model.name;
+            } 
 
             /**
              * CallUserCount.

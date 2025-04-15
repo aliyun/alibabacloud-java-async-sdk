@@ -40,6 +40,10 @@ public class DescribeChannelUserMetricsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return metricDatas
      */
@@ -65,6 +69,15 @@ public class DescribeChannelUserMetricsResponseBody extends TeaModel {
         private java.util.List<MetricDatas> metricDatas; 
         private OverallData overallData; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeChannelUserMetricsResponseBody model) {
+            this.metricDatas = model.metricDatas;
+            this.overallData = model.overallData;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * MetricDatas.
@@ -152,6 +165,15 @@ public class DescribeChannelUserMetricsResponseBody extends TeaModel {
             private String x; 
             private String y; 
 
+            private Builder() {
+            } 
+
+            private Builder(Nodes model) {
+                this.ext = model.ext;
+                this.x = model.x;
+                this.y = model.y;
+            } 
+
             /**
              * Ext.
              */
@@ -226,6 +248,14 @@ public class DescribeChannelUserMetricsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Nodes> nodes; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(MetricDatas model) {
+                this.nodes = model.nodes;
+                this.type = model.type;
+            } 
 
             /**
              * Nodes.
@@ -329,6 +359,17 @@ public class DescribeChannelUserMetricsResponseBody extends TeaModel {
             private Long totalPubUserNum; 
             private Long totalSubUserNum; 
             private Long totalUserNum; 
+
+            private Builder() {
+            } 
+
+            private Builder(OverallData model) {
+                this.totalBadExpNum = model.totalBadExpNum;
+                this.totalJoinFailNum = model.totalJoinFailNum;
+                this.totalPubUserNum = model.totalPubUserNum;
+                this.totalSubUserNum = model.totalSubUserNum;
+                this.totalUserNum = model.totalUserNum;
+            } 
 
             /**
              * TotalBadExpNum.

@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>alibabacloud-rtc20180111</artifactId>
-  <version>5.0.3</version>
+  <version>5.0.4</version>
   <packaging>jar</packaging>
   <name>alibabacloud-rtc20180111</name>
   <description>Alibaba Cloud rtc (20180111) Async SDK for Java
@@ -76,7 +76,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-gpg-plugin</artifactId>
-        <version>1.6</version>
+        <version>3.1.0</version>
         <executions>
           <execution>
             <id>sign-artifacts</id>

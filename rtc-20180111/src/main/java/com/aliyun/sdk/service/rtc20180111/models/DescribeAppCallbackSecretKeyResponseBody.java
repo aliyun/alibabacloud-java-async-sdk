@@ -36,6 +36,10 @@ public class DescribeAppCallbackSecretKeyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return callbackSecretKey
      */
@@ -53,6 +57,14 @@ public class DescribeAppCallbackSecretKeyResponseBody extends TeaModel {
     public static final class Builder {
         private String callbackSecretKey; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAppCallbackSecretKeyResponseBody model) {
+            this.callbackSecretKey = model.callbackSecretKey;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * CallbackSecretKey.

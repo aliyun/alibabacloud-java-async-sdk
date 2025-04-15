@@ -36,6 +36,10 @@ public class DescribeEndPointEventListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nodes
      */
@@ -53,6 +57,14 @@ public class DescribeEndPointEventListResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Nodes> nodes; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeEndPointEventListResponseBody model) {
+            this.nodes = model.nodes;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Nodes.
@@ -144,6 +156,16 @@ public class DescribeEndPointEventListResponseBody extends TeaModel {
             private Long ts; 
             private String tsInMs; 
 
+            private Builder() {
+            } 
+
+            private Builder(EventList model) {
+                this.eventName = model.eventName;
+                this.eventType = model.eventType;
+                this.ts = model.ts;
+                this.tsInMs = model.tsInMs;
+            } 
+
             /**
              * EventName.
              */
@@ -227,6 +249,14 @@ public class DescribeEndPointEventListResponseBody extends TeaModel {
             private java.util.List<EventList> eventList; 
             private Long ts; 
 
+            private Builder() {
+            } 
+
+            private Builder(EventDataItems model) {
+                this.eventList = model.eventList;
+                this.ts = model.ts;
+            } 
+
             /**
              * EventList.
              */
@@ -293,6 +323,14 @@ public class DescribeEndPointEventListResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<EventDataItems> eventDataItems; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Nodes model) {
+                this.eventDataItems = model.eventDataItems;
+                this.userId = model.userId;
+            } 
 
             /**
              * EventDataItems.

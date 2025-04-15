@@ -45,7 +45,7 @@ public class DeleteAppLayoutRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -157,6 +157,13 @@ public class DeleteAppLayoutRequest extends Request {
 
         public static final class Builder {
             private String layoutId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Layout model) {
+                this.layoutId = model.layoutId;
+            } 
 
             /**
              * <p>This parameter is required.</p>

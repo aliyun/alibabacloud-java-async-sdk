@@ -36,6 +36,10 @@ public class RemoveUsersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class RemoveUsersResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<Users> users; 
+
+        private Builder() {
+        } 
+
+        private Builder(RemoveUsersResponseBody model) {
+            this.requestId = model.requestId;
+            this.users = model.users;
+        } 
 
         /**
          * RequestId.
@@ -131,6 +143,15 @@ public class RemoveUsersResponseBody extends TeaModel {
             private Integer code; 
             private String message; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Users model) {
+                this.code = model.code;
+                this.message = model.message;
+                this.userId = model.userId;
+            } 
 
             /**
              * Code.

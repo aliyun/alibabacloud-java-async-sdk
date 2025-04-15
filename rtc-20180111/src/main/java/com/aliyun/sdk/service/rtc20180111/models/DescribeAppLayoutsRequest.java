@@ -50,7 +50,7 @@ public class DescribeAppLayoutsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -191,6 +191,14 @@ public class DescribeAppLayoutsRequest extends Request {
         public static final class Builder {
             private String layoutId; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(Condition model) {
+                this.layoutId = model.layoutId;
+                this.name = model.name;
+            } 
 
             /**
              * LayoutId.

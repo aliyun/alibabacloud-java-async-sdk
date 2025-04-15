@@ -48,6 +48,10 @@ public class DescribeChannelParticipantsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -89,6 +93,17 @@ public class DescribeChannelParticipantsResponseBody extends TeaModel {
         private Integer totalNum; 
         private Integer totalPage; 
         private UserList userList; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeChannelParticipantsResponseBody model) {
+            this.requestId = model.requestId;
+            this.timestamp = model.timestamp;
+            this.totalNum = model.totalNum;
+            this.totalPage = model.totalPage;
+            this.userList = model.userList;
+        } 
 
         /**
          * RequestId.
@@ -167,6 +182,13 @@ public class DescribeChannelParticipantsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> user; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserList model) {
+                this.user = model.user;
+            } 
 
             /**
              * User.

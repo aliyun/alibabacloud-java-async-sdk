@@ -48,6 +48,10 @@ public class DescribeChannelsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNo
      */
@@ -89,6 +93,17 @@ public class DescribeChannelsResponseBody extends TeaModel {
         private java.util.List<String> records; 
         private String requestId; 
         private Integer totalCnt; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeChannelsResponseBody model) {
+            this.pageNo = model.pageNo;
+            this.pageSize = model.pageSize;
+            this.records = model.records;
+            this.requestId = model.requestId;
+            this.totalCnt = model.totalCnt;
+        } 
 
         /**
          * PageNo.

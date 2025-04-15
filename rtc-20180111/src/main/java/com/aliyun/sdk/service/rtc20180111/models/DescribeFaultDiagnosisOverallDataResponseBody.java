@@ -40,6 +40,10 @@ public class DescribeFaultDiagnosisOverallDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return metricData
      */
@@ -65,6 +69,15 @@ public class DescribeFaultDiagnosisOverallDataResponseBody extends TeaModel {
         private MetricData metricData; 
         private OverallData overallData; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeFaultDiagnosisOverallDataResponseBody model) {
+            this.metricData = model.metricData;
+            this.overallData = model.overallData;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * MetricData.
@@ -152,6 +165,15 @@ public class DescribeFaultDiagnosisOverallDataResponseBody extends TeaModel {
             private String x; 
             private String y; 
 
+            private Builder() {
+            } 
+
+            private Builder(Nodes model) {
+                this.ext = model.ext;
+                this.x = model.x;
+                this.y = model.y;
+            } 
+
             /**
              * Ext.
              */
@@ -214,6 +236,13 @@ public class DescribeFaultDiagnosisOverallDataResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Nodes> nodes; 
+
+            private Builder() {
+            } 
+
+            private Builder(MetricData model) {
+                this.nodes = model.nodes;
+            } 
 
             /**
              * Nodes.
@@ -285,6 +314,15 @@ public class DescribeFaultDiagnosisOverallDataResponseBody extends TeaModel {
             private Integer faultUserCount; 
             private Float faultUserRatio; 
             private Integer totalUserCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(OverallData model) {
+                this.faultUserCount = model.faultUserCount;
+                this.faultUserRatio = model.faultUserRatio;
+                this.totalUserCount = model.totalUserCount;
+            } 
 
             /**
              * FaultUserCount.

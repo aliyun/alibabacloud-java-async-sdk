@@ -44,6 +44,10 @@ public class StartCloudNoteRequest extends Request {
     private MeetingAssistance meetingAssistance;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RealtimeSubtitle")
+    private RealtimeSubtitle realtimeSubtitle;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ServiceInspection")
     private ServiceInspection serviceInspection;
 
@@ -69,6 +73,10 @@ public class StartCloudNoteRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("TextPolish")
     private TextPolish textPolish;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Transcription")
+    private Transcription transcription;
+
     private StartCloudNoteRequest(Builder builder) {
         super(builder);
         this.appId = builder.appId;
@@ -77,12 +85,14 @@ public class StartCloudNoteRequest extends Request {
         this.customPrompt = builder.customPrompt;
         this.languageHints = builder.languageHints;
         this.meetingAssistance = builder.meetingAssistance;
+        this.realtimeSubtitle = builder.realtimeSubtitle;
         this.serviceInspection = builder.serviceInspection;
         this.sourceLanguage = builder.sourceLanguage;
         this.storageConfig = builder.storageConfig;
         this.summarization = builder.summarization;
         this.taskId = builder.taskId;
         this.textPolish = builder.textPolish;
+        this.transcription = builder.transcription;
     }
 
     public static Builder builder() {
@@ -93,7 +103,7 @@ public class StartCloudNoteRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -141,6 +151,13 @@ public class StartCloudNoteRequest extends Request {
     }
 
     /**
+     * @return realtimeSubtitle
+     */
+    public RealtimeSubtitle getRealtimeSubtitle() {
+        return this.realtimeSubtitle;
+    }
+
+    /**
      * @return serviceInspection
      */
     public ServiceInspection getServiceInspection() {
@@ -182,6 +199,13 @@ public class StartCloudNoteRequest extends Request {
         return this.textPolish;
     }
 
+    /**
+     * @return transcription
+     */
+    public Transcription getTranscription() {
+        return this.transcription;
+    }
+
     public static final class Builder extends Request.Builder<StartCloudNoteRequest, Builder> {
         private String appId; 
         private AutoChapters autoChapters; 
@@ -189,12 +213,14 @@ public class StartCloudNoteRequest extends Request {
         private CustomPrompt customPrompt; 
         private java.util.List<String> languageHints; 
         private MeetingAssistance meetingAssistance; 
+        private RealtimeSubtitle realtimeSubtitle; 
         private ServiceInspection serviceInspection; 
         private String sourceLanguage; 
         private StorageConfig storageConfig; 
         private Summarization summarization; 
         private String taskId; 
         private TextPolish textPolish; 
+        private Transcription transcription; 
 
         private Builder() {
             super();
@@ -208,12 +234,14 @@ public class StartCloudNoteRequest extends Request {
             this.customPrompt = request.customPrompt;
             this.languageHints = request.languageHints;
             this.meetingAssistance = request.meetingAssistance;
+            this.realtimeSubtitle = request.realtimeSubtitle;
             this.serviceInspection = request.serviceInspection;
             this.sourceLanguage = request.sourceLanguage;
             this.storageConfig = request.storageConfig;
             this.summarization = request.summarization;
             this.taskId = request.taskId;
             this.textPolish = request.textPolish;
+            this.transcription = request.transcription;
         } 
 
         /**
@@ -280,6 +308,16 @@ public class StartCloudNoteRequest extends Request {
         }
 
         /**
+         * RealtimeSubtitle.
+         */
+        public Builder realtimeSubtitle(RealtimeSubtitle realtimeSubtitle) {
+            String realtimeSubtitleShrink = shrink(realtimeSubtitle, "RealtimeSubtitle", "json");
+            this.putQueryParameter("RealtimeSubtitle", realtimeSubtitleShrink);
+            this.realtimeSubtitle = realtimeSubtitle;
+            return this;
+        }
+
+        /**
          * ServiceInspection.
          */
         public Builder serviceInspection(ServiceInspection serviceInspection) {
@@ -339,6 +377,16 @@ public class StartCloudNoteRequest extends Request {
             return this;
         }
 
+        /**
+         * Transcription.
+         */
+        public Builder transcription(Transcription transcription) {
+            String transcriptionShrink = shrink(transcription, "Transcription", "json");
+            this.putQueryParameter("Transcription", transcriptionShrink);
+            this.transcription = transcription;
+            return this;
+        }
+
         @Override
         public StartCloudNoteRequest build() {
             return new StartCloudNoteRequest(this);
@@ -377,6 +425,13 @@ public class StartCloudNoteRequest extends Request {
 
         public static final class Builder {
             private Boolean enabled; 
+
+            private Builder() {
+            } 
+
+            private Builder(AutoChapters model) {
+                this.enabled = model.enabled;
+            } 
 
             /**
              * Enabled.
@@ -462,6 +517,16 @@ public class StartCloudNoteRequest extends Request {
             private String name; 
             private String prompt; 
             private String transType; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomPromptContents model) {
+                this.model = model.model;
+                this.name = model.name;
+                this.prompt = model.prompt;
+                this.transType = model.transType;
+            } 
 
             /**
              * Model.
@@ -553,6 +618,14 @@ public class StartCloudNoteRequest extends Request {
             private java.util.List<CustomPromptContents> customPromptContents; 
             private Boolean enabled; 
 
+            private Builder() {
+            } 
+
+            private Builder(CustomPrompt model) {
+                this.customPromptContents = model.customPromptContents;
+                this.enabled = model.enabled;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              */
@@ -621,6 +694,14 @@ public class StartCloudNoteRequest extends Request {
             private Boolean enabled; 
             private java.util.List<String> meetingAssistanceType; 
 
+            private Builder() {
+            } 
+
+            private Builder(MeetingAssistance model) {
+                this.enabled = model.enabled;
+                this.meetingAssistanceType = model.meetingAssistanceType;
+            } 
+
             /**
              * Enabled.
              */
@@ -639,6 +720,135 @@ public class StartCloudNoteRequest extends Request {
 
             public MeetingAssistance build() {
                 return new MeetingAssistance(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link StartCloudNoteRequest} extends {@link TeaModel}
+     *
+     * <p>StartCloudNoteRequest</p>
+     */
+    public static class Translation extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TranslateLevel")
+        private Integer translateLevel;
+
+        private Translation(Builder builder) {
+            this.translateLevel = builder.translateLevel;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Translation create() {
+            return builder().build();
+        }
+
+        /**
+         * @return translateLevel
+         */
+        public Integer getTranslateLevel() {
+            return this.translateLevel;
+        }
+
+        public static final class Builder {
+            private Integer translateLevel; 
+
+            private Builder() {
+            } 
+
+            private Builder(Translation model) {
+                this.translateLevel = model.translateLevel;
+            } 
+
+            /**
+             * TranslateLevel.
+             */
+            public Builder translateLevel(Integer translateLevel) {
+                this.translateLevel = translateLevel;
+                return this;
+            }
+
+            public Translation build() {
+                return new Translation(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link StartCloudNoteRequest} extends {@link TeaModel}
+     *
+     * <p>StartCloudNoteRequest</p>
+     */
+    public static class RealtimeSubtitle extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Enabled")
+        private Boolean enabled;
+
+        @com.aliyun.core.annotation.NameInMap("Translation")
+        private Translation translation;
+
+        private RealtimeSubtitle(Builder builder) {
+            this.enabled = builder.enabled;
+            this.translation = builder.translation;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RealtimeSubtitle create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enabled
+         */
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        /**
+         * @return translation
+         */
+        public Translation getTranslation() {
+            return this.translation;
+        }
+
+        public static final class Builder {
+            private Boolean enabled; 
+            private Translation translation; 
+
+            private Builder() {
+            } 
+
+            private Builder(RealtimeSubtitle model) {
+                this.enabled = model.enabled;
+                this.translation = model.translation;
+            } 
+
+            /**
+             * Enabled.
+             */
+            public Builder enabled(Boolean enabled) {
+                this.enabled = enabled;
+                return this;
+            }
+
+            /**
+             * Translation.
+             */
+            public Builder translation(Translation translation) {
+                this.translation = translation;
+                return this;
+            }
+
+            public RealtimeSubtitle build() {
+                return new RealtimeSubtitle(this);
             } 
 
         } 
@@ -689,6 +899,14 @@ public class StartCloudNoteRequest extends Request {
         public static final class Builder {
             private String content; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(InspectionContents model) {
+                this.content = model.content;
+                this.title = model.title;
+            } 
 
             /**
              * <p>This parameter is required.</p>
@@ -789,6 +1007,16 @@ public class StartCloudNoteRequest extends Request {
             private java.util.List<InspectionContents> inspectionContents; 
             private String inspectionIntroduction; 
             private String sceneIntroduction; 
+
+            private Builder() {
+            } 
+
+            private Builder(ServiceInspection model) {
+                this.enabled = model.enabled;
+                this.inspectionContents = model.inspectionContents;
+                this.inspectionIntroduction = model.inspectionIntroduction;
+                this.sceneIntroduction = model.sceneIntroduction;
+            } 
 
             /**
              * Enabled.
@@ -920,6 +1148,17 @@ public class StartCloudNoteRequest extends Request {
             private String secretKey; 
             private Integer vendor; 
 
+            private Builder() {
+            } 
+
+            private Builder(StorageConfig model) {
+                this.accessKey = model.accessKey;
+                this.bucket = model.bucket;
+                this.region = model.region;
+                this.secretKey = model.secretKey;
+                this.vendor = model.vendor;
+            } 
+
             /**
              * <p>accessKey。</p>
              * <p>This parameter is required.</p>
@@ -1029,6 +1268,14 @@ public class StartCloudNoteRequest extends Request {
             private Boolean enabled; 
             private java.util.List<String> type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Summarization model) {
+                this.enabled = model.enabled;
+                this.type = model.type;
+            } 
+
             /**
              * Enabled.
              */
@@ -1084,6 +1331,13 @@ public class StartCloudNoteRequest extends Request {
         public static final class Builder {
             private Boolean enabled; 
 
+            private Builder() {
+            } 
+
+            private Builder(TextPolish model) {
+                this.enabled = model.enabled;
+            } 
+
             /**
              * Enabled.
              */
@@ -1094,6 +1348,102 @@ public class StartCloudNoteRequest extends Request {
 
             public TextPolish build() {
                 return new TextPolish(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link StartCloudNoteRequest} extends {@link TeaModel}
+     *
+     * <p>StartCloudNoteRequest</p>
+     */
+    public static class Transcription extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DiarizationEnabled")
+        private Boolean diarizationEnabled;
+
+        @com.aliyun.core.annotation.NameInMap("SpeakerCount")
+        private Integer speakerCount;
+
+        @com.aliyun.core.annotation.NameInMap("TranscriptionLevel")
+        private Integer transcriptionLevel;
+
+        private Transcription(Builder builder) {
+            this.diarizationEnabled = builder.diarizationEnabled;
+            this.speakerCount = builder.speakerCount;
+            this.transcriptionLevel = builder.transcriptionLevel;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Transcription create() {
+            return builder().build();
+        }
+
+        /**
+         * @return diarizationEnabled
+         */
+        public Boolean getDiarizationEnabled() {
+            return this.diarizationEnabled;
+        }
+
+        /**
+         * @return speakerCount
+         */
+        public Integer getSpeakerCount() {
+            return this.speakerCount;
+        }
+
+        /**
+         * @return transcriptionLevel
+         */
+        public Integer getTranscriptionLevel() {
+            return this.transcriptionLevel;
+        }
+
+        public static final class Builder {
+            private Boolean diarizationEnabled; 
+            private Integer speakerCount; 
+            private Integer transcriptionLevel; 
+
+            private Builder() {
+            } 
+
+            private Builder(Transcription model) {
+                this.diarizationEnabled = model.diarizationEnabled;
+                this.speakerCount = model.speakerCount;
+                this.transcriptionLevel = model.transcriptionLevel;
+            } 
+
+            /**
+             * DiarizationEnabled.
+             */
+            public Builder diarizationEnabled(Boolean diarizationEnabled) {
+                this.diarizationEnabled = diarizationEnabled;
+                return this;
+            }
+
+            /**
+             * SpeakerCount.
+             */
+            public Builder speakerCount(Integer speakerCount) {
+                this.speakerCount = speakerCount;
+                return this;
+            }
+
+            /**
+             * TranscriptionLevel.
+             */
+            public Builder transcriptionLevel(Integer transcriptionLevel) {
+                this.transcriptionLevel = transcriptionLevel;
+                return this;
+            }
+
+            public Transcription build() {
+                return new Transcription(this);
             } 
 
         } 

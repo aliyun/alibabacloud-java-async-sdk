@@ -60,6 +60,10 @@ public class StartCloudRecordRequest extends Request {
     private Boolean reservePaneForNoCameraUser;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShowDefaultBackgroundOnMute")
+    private Boolean showDefaultBackgroundOnMute;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StorageConfig")
     @com.aliyun.core.annotation.Validation(required = true)
     private StorageConfig storageConfig;
@@ -90,6 +94,7 @@ public class StartCloudRecordRequest extends Request {
         this.panes = builder.panes;
         this.regionColor = builder.regionColor;
         this.reservePaneForNoCameraUser = builder.reservePaneForNoCameraUser;
+        this.showDefaultBackgroundOnMute = builder.showDefaultBackgroundOnMute;
         this.storageConfig = builder.storageConfig;
         this.taskId = builder.taskId;
         this.templateId = builder.templateId;
@@ -104,7 +109,7 @@ public class StartCloudRecordRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -180,6 +185,13 @@ public class StartCloudRecordRequest extends Request {
     }
 
     /**
+     * @return showDefaultBackgroundOnMute
+     */
+    public Boolean getShowDefaultBackgroundOnMute() {
+        return this.showDefaultBackgroundOnMute;
+    }
+
+    /**
      * @return storageConfig
      */
     public StorageConfig getStorageConfig() {
@@ -218,6 +230,7 @@ public class StartCloudRecordRequest extends Request {
         private java.util.List<Panes> panes; 
         private RegionColor regionColor; 
         private Boolean reservePaneForNoCameraUser; 
+        private Boolean showDefaultBackgroundOnMute; 
         private StorageConfig storageConfig; 
         private String taskId; 
         private String templateId; 
@@ -239,6 +252,7 @@ public class StartCloudRecordRequest extends Request {
             this.panes = request.panes;
             this.regionColor = request.regionColor;
             this.reservePaneForNoCameraUser = request.reservePaneForNoCameraUser;
+            this.showDefaultBackgroundOnMute = request.showDefaultBackgroundOnMute;
             this.storageConfig = request.storageConfig;
             this.taskId = request.taskId;
             this.templateId = request.templateId;
@@ -341,6 +355,15 @@ public class StartCloudRecordRequest extends Request {
         public Builder reservePaneForNoCameraUser(Boolean reservePaneForNoCameraUser) {
             this.putQueryParameter("ReservePaneForNoCameraUser", reservePaneForNoCameraUser);
             this.reservePaneForNoCameraUser = reservePaneForNoCameraUser;
+            return this;
+        }
+
+        /**
+         * ShowDefaultBackgroundOnMute.
+         */
+        public Builder showDefaultBackgroundOnMute(Boolean showDefaultBackgroundOnMute) {
+            this.putQueryParameter("ShowDefaultBackgroundOnMute", showDefaultBackgroundOnMute);
+            this.showDefaultBackgroundOnMute = showDefaultBackgroundOnMute;
             return this;
         }
 
@@ -518,6 +541,20 @@ public class StartCloudRecordRequest extends Request {
             private Double x; 
             private Double y; 
 
+            private Builder() {
+            } 
+
+            private Builder(Backgrounds model) {
+                this.alpha = model.alpha;
+                this.backgroundCropMode = model.backgroundCropMode;
+                this.height = model.height;
+                this.layer = model.layer;
+                this.url = model.url;
+                this.width = model.width;
+                this.x = model.x;
+                this.y = model.y;
+            } 
+
             /**
              * Alpha.
              */
@@ -663,6 +700,15 @@ public class StartCloudRecordRequest extends Request {
             private Integer g; 
             private Integer r; 
 
+            private Builder() {
+            } 
+
+            private Builder(BoxColor model) {
+                this.b = model.b;
+                this.g = model.g;
+                this.r = model.r;
+            } 
+
             /**
              * B.
              */
@@ -752,6 +798,15 @@ public class StartCloudRecordRequest extends Request {
             private Integer b; 
             private Integer g; 
             private Integer r; 
+
+            private Builder() {
+            } 
+
+            private Builder(FontColor model) {
+                this.b = model.b;
+                this.g = model.g;
+                this.r = model.r;
+            } 
 
             /**
              * B.
@@ -956,6 +1011,24 @@ public class StartCloudRecordRequest extends Request {
             private Double x; 
             private Double y; 
             private Integer zone; 
+
+            private Builder() {
+            } 
+
+            private Builder(ClockWidgets model) {
+                this.alpha = model.alpha;
+                this.boxAlpha = model.boxAlpha;
+                this.boxBorderw = model.boxBorderw;
+                this.boxColor = model.boxColor;
+                this.font = model.font;
+                this.fontColor = model.fontColor;
+                this.fontSize = model.fontSize;
+                this.hasBox = model.hasBox;
+                this.layer = model.layer;
+                this.x = model.x;
+                this.y = model.y;
+                this.zone = model.zone;
+            } 
 
             /**
              * Alpha.
@@ -1189,6 +1262,20 @@ public class StartCloudRecordRequest extends Request {
             private Double x; 
             private Double y; 
 
+            private Builder() {
+            } 
+
+            private Builder(Images model) {
+                this.alpha = model.alpha;
+                this.height = model.height;
+                this.imageCropMode = model.imageCropMode;
+                this.layer = model.layer;
+                this.url = model.url;
+                this.width = model.width;
+                this.x = model.x;
+                this.y = model.y;
+            } 
+
             /**
              * Alpha.
              */
@@ -1321,6 +1408,14 @@ public class StartCloudRecordRequest extends Request {
             private java.util.List<String> ids; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(LayoutSpecifiedUsers model) {
+                this.ids = model.ids;
+                this.type = model.type;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              */
@@ -1350,10 +1445,257 @@ public class StartCloudRecordRequest extends Request {
      *
      * <p>StartCloudRecordRequest</p>
      */
+    public static class PanesBackgrounds extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Alpha")
+        @com.aliyun.core.annotation.Validation(maximum = 1)
+        private Double alpha;
+
+        @com.aliyun.core.annotation.NameInMap("Display")
+        private String display;
+
+        @com.aliyun.core.annotation.NameInMap("Height")
+        @com.aliyun.core.annotation.Validation(required = true, maximum = 1)
+        private Double height;
+
+        @com.aliyun.core.annotation.NameInMap("Layer")
+        @com.aliyun.core.annotation.Validation(maximum = 100)
+        private Integer layer;
+
+        @com.aliyun.core.annotation.NameInMap("PaneBackgroundCropMode")
+        private Integer paneBackgroundCropMode;
+
+        @com.aliyun.core.annotation.NameInMap("Url")
+        @com.aliyun.core.annotation.Validation(required = true, maxLength = 1024, minLength = 1)
+        private String url;
+
+        @com.aliyun.core.annotation.NameInMap("Width")
+        @com.aliyun.core.annotation.Validation(required = true, maximum = 1)
+        private Double width;
+
+        @com.aliyun.core.annotation.NameInMap("X")
+        @com.aliyun.core.annotation.Validation(required = true, maximum = 1)
+        private Double x;
+
+        @com.aliyun.core.annotation.NameInMap("Y")
+        @com.aliyun.core.annotation.Validation(required = true, maximum = 1)
+        private Double y;
+
+        private PanesBackgrounds(Builder builder) {
+            this.alpha = builder.alpha;
+            this.display = builder.display;
+            this.height = builder.height;
+            this.layer = builder.layer;
+            this.paneBackgroundCropMode = builder.paneBackgroundCropMode;
+            this.url = builder.url;
+            this.width = builder.width;
+            this.x = builder.x;
+            this.y = builder.y;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PanesBackgrounds create() {
+            return builder().build();
+        }
+
+        /**
+         * @return alpha
+         */
+        public Double getAlpha() {
+            return this.alpha;
+        }
+
+        /**
+         * @return display
+         */
+        public String getDisplay() {
+            return this.display;
+        }
+
+        /**
+         * @return height
+         */
+        public Double getHeight() {
+            return this.height;
+        }
+
+        /**
+         * @return layer
+         */
+        public Integer getLayer() {
+            return this.layer;
+        }
+
+        /**
+         * @return paneBackgroundCropMode
+         */
+        public Integer getPaneBackgroundCropMode() {
+            return this.paneBackgroundCropMode;
+        }
+
+        /**
+         * @return url
+         */
+        public String getUrl() {
+            return this.url;
+        }
+
+        /**
+         * @return width
+         */
+        public Double getWidth() {
+            return this.width;
+        }
+
+        /**
+         * @return x
+         */
+        public Double getX() {
+            return this.x;
+        }
+
+        /**
+         * @return y
+         */
+        public Double getY() {
+            return this.y;
+        }
+
+        public static final class Builder {
+            private Double alpha; 
+            private String display; 
+            private Double height; 
+            private Integer layer; 
+            private Integer paneBackgroundCropMode; 
+            private String url; 
+            private Double width; 
+            private Double x; 
+            private Double y; 
+
+            private Builder() {
+            } 
+
+            private Builder(PanesBackgrounds model) {
+                this.alpha = model.alpha;
+                this.display = model.display;
+                this.height = model.height;
+                this.layer = model.layer;
+                this.paneBackgroundCropMode = model.paneBackgroundCropMode;
+                this.url = model.url;
+                this.width = model.width;
+                this.x = model.x;
+                this.y = model.y;
+            } 
+
+            /**
+             * Alpha.
+             */
+            public Builder alpha(Double alpha) {
+                this.alpha = alpha;
+                return this;
+            }
+
+            /**
+             * Display.
+             */
+            public Builder display(String display) {
+                this.display = display;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.2</p>
+             */
+            public Builder height(Double height) {
+                this.height = height;
+                return this;
+            }
+
+            /**
+             * Layer.
+             */
+            public Builder layer(Integer layer) {
+                this.layer = layer;
+                return this;
+            }
+
+            /**
+             * PaneBackgroundCropMode.
+             */
+            public Builder paneBackgroundCropMode(Integer paneBackgroundCropMode) {
+                this.paneBackgroundCropMode = paneBackgroundCropMode;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://aliyun.com/123xx.jpg">https://aliyun.com/123xx.jpg</a></p>
+             */
+            public Builder url(String url) {
+                this.url = url;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.2</p>
+             */
+            public Builder width(Double width) {
+                this.width = width;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.2</p>
+             */
+            public Builder x(Double x) {
+                this.x = x;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.2</p>
+             */
+            public Builder y(Double y) {
+                this.y = y;
+                return this;
+            }
+
+            public PanesBackgrounds build() {
+                return new PanesBackgrounds(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link StartCloudRecordRequest} extends {@link TeaModel}
+     *
+     * <p>StartCloudRecordRequest</p>
+     */
     public static class PanesImages extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Alpha")
         @com.aliyun.core.annotation.Validation(maximum = 1)
         private Double alpha;
+
+        @com.aliyun.core.annotation.NameInMap("Display")
+        private String display;
 
         @com.aliyun.core.annotation.NameInMap("Height")
         @com.aliyun.core.annotation.Validation(required = true, maximum = 1)
@@ -1384,6 +1726,7 @@ public class StartCloudRecordRequest extends Request {
 
         private PanesImages(Builder builder) {
             this.alpha = builder.alpha;
+            this.display = builder.display;
             this.height = builder.height;
             this.layer = builder.layer;
             this.paneImageCropMode = builder.paneImageCropMode;
@@ -1406,6 +1749,13 @@ public class StartCloudRecordRequest extends Request {
          */
         public Double getAlpha() {
             return this.alpha;
+        }
+
+        /**
+         * @return display
+         */
+        public String getDisplay() {
+            return this.display;
         }
 
         /**
@@ -1459,6 +1809,7 @@ public class StartCloudRecordRequest extends Request {
 
         public static final class Builder {
             private Double alpha; 
+            private String display; 
             private Double height; 
             private Integer layer; 
             private Integer paneImageCropMode; 
@@ -1467,11 +1818,34 @@ public class StartCloudRecordRequest extends Request {
             private Double x; 
             private Double y; 
 
+            private Builder() {
+            } 
+
+            private Builder(PanesImages model) {
+                this.alpha = model.alpha;
+                this.display = model.display;
+                this.height = model.height;
+                this.layer = model.layer;
+                this.paneImageCropMode = model.paneImageCropMode;
+                this.url = model.url;
+                this.width = model.width;
+                this.x = model.x;
+                this.y = model.y;
+            } 
+
             /**
              * Alpha.
              */
             public Builder alpha(Double alpha) {
                 this.alpha = alpha;
+                return this;
+            }
+
+            /**
+             * Display.
+             */
+            public Builder display(String display) {
+                this.display = display;
                 return this;
             }
 
@@ -1612,6 +1986,15 @@ public class StartCloudRecordRequest extends Request {
             private Integer g; 
             private Integer r; 
 
+            private Builder() {
+            } 
+
+            private Builder(TextsBoxColor model) {
+                this.b = model.b;
+                this.g = model.g;
+                this.r = model.r;
+            } 
+
             /**
              * B.
              */
@@ -1702,6 +2085,15 @@ public class StartCloudRecordRequest extends Request {
             private Integer g; 
             private Integer r; 
 
+            private Builder() {
+            } 
+
+            private Builder(TextsFontColor model) {
+                this.b = model.b;
+                this.g = model.g;
+                this.r = model.r;
+            } 
+
             /**
              * B.
              */
@@ -1755,6 +2147,9 @@ public class StartCloudRecordRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("BoxColor")
         private TextsBoxColor boxColor;
 
+        @com.aliyun.core.annotation.NameInMap("Display")
+        private String display;
+
         @com.aliyun.core.annotation.NameInMap("Font")
         @com.aliyun.core.annotation.Validation(maximum = 9)
         private Integer font;
@@ -1790,6 +2185,7 @@ public class StartCloudRecordRequest extends Request {
             this.boxAlpha = builder.boxAlpha;
             this.boxBorderw = builder.boxBorderw;
             this.boxColor = builder.boxColor;
+            this.display = builder.display;
             this.font = builder.font;
             this.fontColor = builder.fontColor;
             this.fontSize = builder.fontSize;
@@ -1834,6 +2230,13 @@ public class StartCloudRecordRequest extends Request {
          */
         public TextsBoxColor getBoxColor() {
             return this.boxColor;
+        }
+
+        /**
+         * @return display
+         */
+        public String getDisplay() {
+            return this.display;
         }
 
         /**
@@ -1897,6 +2300,7 @@ public class StartCloudRecordRequest extends Request {
             private Double boxAlpha; 
             private Integer boxBorderw; 
             private TextsBoxColor boxColor; 
+            private String display; 
             private Integer font; 
             private TextsFontColor fontColor; 
             private Integer fontSize; 
@@ -1905,6 +2309,25 @@ public class StartCloudRecordRequest extends Request {
             private String texture; 
             private Double x; 
             private Double y; 
+
+            private Builder() {
+            } 
+
+            private Builder(PanesTexts model) {
+                this.alpha = model.alpha;
+                this.boxAlpha = model.boxAlpha;
+                this.boxBorderw = model.boxBorderw;
+                this.boxColor = model.boxColor;
+                this.display = model.display;
+                this.font = model.font;
+                this.fontColor = model.fontColor;
+                this.fontSize = model.fontSize;
+                this.hasBox = model.hasBox;
+                this.layer = model.layer;
+                this.texture = model.texture;
+                this.x = model.x;
+                this.y = model.y;
+            } 
 
             /**
              * Alpha.
@@ -1935,6 +2358,14 @@ public class StartCloudRecordRequest extends Request {
              */
             public Builder boxColor(TextsBoxColor boxColor) {
                 this.boxColor = boxColor;
+                return this;
+            }
+
+            /**
+             * Display.
+             */
+            public Builder display(String display) {
+                this.display = display;
                 return this;
             }
 
@@ -2050,6 +2481,13 @@ public class StartCloudRecordRequest extends Request {
         public static final class Builder {
             private String whiteboardId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Whiteboard model) {
+                this.whiteboardId = model.whiteboardId;
+            } 
+
             /**
              * WhiteboardId.
              */
@@ -2072,6 +2510,9 @@ public class StartCloudRecordRequest extends Request {
      * <p>StartCloudRecordRequest</p>
      */
     public static class Panes extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Backgrounds")
+        private java.util.List<PanesBackgrounds> backgrounds;
+
         @com.aliyun.core.annotation.NameInMap("Images")
         private java.util.List<PanesImages> images;
 
@@ -2101,6 +2542,7 @@ public class StartCloudRecordRequest extends Request {
         private Whiteboard whiteboard;
 
         private Panes(Builder builder) {
+            this.backgrounds = builder.backgrounds;
             this.images = builder.images;
             this.paneCropMode = builder.paneCropMode;
             this.paneId = builder.paneId;
@@ -2118,6 +2560,13 @@ public class StartCloudRecordRequest extends Request {
 
         public static Panes create() {
             return builder().build();
+        }
+
+        /**
+         * @return backgrounds
+         */
+        public java.util.List<PanesBackgrounds> getBackgrounds() {
+            return this.backgrounds;
         }
 
         /**
@@ -2184,6 +2633,7 @@ public class StartCloudRecordRequest extends Request {
         }
 
         public static final class Builder {
+            private java.util.List<PanesBackgrounds> backgrounds; 
             private java.util.List<PanesImages> images; 
             private Integer paneCropMode; 
             private Integer paneId; 
@@ -2193,6 +2643,30 @@ public class StartCloudRecordRequest extends Request {
             private java.util.List<PanesTexts> texts; 
             private String videoOrder; 
             private Whiteboard whiteboard; 
+
+            private Builder() {
+            } 
+
+            private Builder(Panes model) {
+                this.backgrounds = model.backgrounds;
+                this.images = model.images;
+                this.paneCropMode = model.paneCropMode;
+                this.paneId = model.paneId;
+                this.reservePaneForOfflineUser = model.reservePaneForOfflineUser;
+                this.source = model.source;
+                this.sourceType = model.sourceType;
+                this.texts = model.texts;
+                this.videoOrder = model.videoOrder;
+                this.whiteboard = model.whiteboard;
+            } 
+
+            /**
+             * Backgrounds.
+             */
+            public Builder backgrounds(java.util.List<PanesBackgrounds> backgrounds) {
+                this.backgrounds = backgrounds;
+                return this;
+            }
 
             /**
              * Images.
@@ -2339,6 +2813,15 @@ public class StartCloudRecordRequest extends Request {
             private Integer g; 
             private Integer r; 
 
+            private Builder() {
+            } 
+
+            private Builder(RegionColor model) {
+                this.b = model.b;
+                this.g = model.g;
+                this.r = model.r;
+            } 
+
             /**
              * B.
              */
@@ -2466,6 +2949,18 @@ public class StartCloudRecordRequest extends Request {
             private Integer region; 
             private String secretKey; 
             private Integer vendor; 
+
+            private Builder() {
+            } 
+
+            private Builder(StorageConfig model) {
+                this.accessKey = model.accessKey;
+                this.bucket = model.bucket;
+                this.endpoint = model.endpoint;
+                this.region = model.region;
+                this.secretKey = model.secretKey;
+                this.vendor = model.vendor;
+            } 
 
             /**
              * <p>accessKey</p>
@@ -2601,6 +3096,15 @@ public class StartCloudRecordRequest extends Request {
             private Integer g; 
             private Integer r; 
 
+            private Builder() {
+            } 
+
+            private Builder(StartCloudRecordRequestTextsBoxColor model) {
+                this.b = model.b;
+                this.g = model.g;
+                this.r = model.r;
+            } 
+
             /**
              * B.
              */
@@ -2690,6 +3194,15 @@ public class StartCloudRecordRequest extends Request {
             private Integer b; 
             private Integer g; 
             private Integer r; 
+
+            private Builder() {
+            } 
+
+            private Builder(StartCloudRecordRequestTextsFontColor model) {
+                this.b = model.b;
+                this.g = model.g;
+                this.r = model.r;
+            } 
 
             /**
              * B.
@@ -2894,6 +3407,24 @@ public class StartCloudRecordRequest extends Request {
             private String texture; 
             private Double x; 
             private Double y; 
+
+            private Builder() {
+            } 
+
+            private Builder(Texts model) {
+                this.alpha = model.alpha;
+                this.boxAlpha = model.boxAlpha;
+                this.boxBorderw = model.boxBorderw;
+                this.boxColor = model.boxColor;
+                this.font = model.font;
+                this.fontColor = model.fontColor;
+                this.fontSize = model.fontSize;
+                this.hasBox = model.hasBox;
+                this.layer = model.layer;
+                this.texture = model.texture;
+                this.x = model.x;
+                this.y = model.y;
+            } 
 
             /**
              * Alpha.

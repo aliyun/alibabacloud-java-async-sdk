@@ -47,7 +47,7 @@ public class RemoveUsersRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -161,6 +161,13 @@ public class RemoveUsersRequest extends Request {
 
         public static final class Builder {
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Users model) {
+                this.userId = model.userId;
+            } 
 
             /**
              * <p>This parameter is required.</p>

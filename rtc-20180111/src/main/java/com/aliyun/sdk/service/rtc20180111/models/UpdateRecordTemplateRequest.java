@@ -140,7 +140,7 @@ public class UpdateRecordTemplateRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -653,6 +653,19 @@ public class UpdateRecordTemplateRequest extends Request {
             private Float y; 
             private Integer zOrder; 
 
+            private Builder() {
+            } 
+
+            private Builder(Backgrounds model) {
+                this.display = model.display;
+                this.height = model.height;
+                this.url = model.url;
+                this.width = model.width;
+                this.x = model.x;
+                this.y = model.y;
+                this.zOrder = model.zOrder;
+            } 
+
             /**
              * Display.
              */
@@ -807,6 +820,18 @@ public class UpdateRecordTemplateRequest extends Request {
             private Float x; 
             private Float y; 
             private Integer zOrder; 
+
+            private Builder() {
+            } 
+
+            private Builder(ClockWidgets model) {
+                this.fontColor = model.fontColor;
+                this.fontSize = model.fontSize;
+                this.fontType = model.fontType;
+                this.x = model.x;
+                this.y = model.y;
+                this.zOrder = model.zOrder;
+            } 
 
             /**
              * FontColor.
@@ -978,6 +1003,20 @@ public class UpdateRecordTemplateRequest extends Request {
             private Float x; 
             private Float y; 
             private Integer zOrder; 
+
+            private Builder() {
+            } 
+
+            private Builder(Watermarks model) {
+                this.alpha = model.alpha;
+                this.display = model.display;
+                this.height = model.height;
+                this.url = model.url;
+                this.width = model.width;
+                this.x = model.x;
+                this.y = model.y;
+                this.zOrder = model.zOrder;
+            } 
 
             /**
              * Alpha.

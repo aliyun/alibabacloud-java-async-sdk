@@ -36,6 +36,10 @@ public class DescribeChannelTopPubUserListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeChannelTopPubUserListResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<TopPubUserDetailList> topPubUserDetailList; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeChannelTopPubUserListResponseBody model) {
+            this.requestId = model.requestId;
+            this.topPubUserDetailList = model.topPubUserDetailList;
+        } 
 
         /**
          * RequestId.
@@ -119,6 +131,14 @@ public class DescribeChannelTopPubUserListResponseBody extends TeaModel {
         public static final class Builder {
             private Long joinTs; 
             private Long leaveTs; 
+
+            private Builder() {
+            } 
+
+            private Builder(OnlinePeriods model) {
+                this.joinTs = model.joinTs;
+                this.leaveTs = model.leaveTs;
+            } 
 
             /**
              * JoinTs.
@@ -246,6 +266,19 @@ public class DescribeChannelTopPubUserListResponseBody extends TeaModel {
             private Long onlineDuration; 
             private java.util.List<OnlinePeriods> onlinePeriods; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TopPubUserDetailList model) {
+                this.createdTs = model.createdTs;
+                this.destroyedTs = model.destroyedTs;
+                this.duration = model.duration;
+                this.location = model.location;
+                this.onlineDuration = model.onlineDuration;
+                this.onlinePeriods = model.onlinePeriods;
+                this.userId = model.userId;
+            } 
 
             /**
              * CreatedTs.

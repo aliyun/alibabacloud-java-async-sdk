@@ -57,7 +57,7 @@ public class CreateMPULayoutRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -278,6 +278,19 @@ public class CreateMPULayoutRequest extends Request {
             private Float x; 
             private Float y; 
             private Integer zOrder; 
+
+            private Builder() {
+            } 
+
+            private Builder(Panes model) {
+                this.height = model.height;
+                this.majorPane = model.majorPane;
+                this.paneId = model.paneId;
+                this.width = model.width;
+                this.x = model.x;
+                this.y = model.y;
+                this.zOrder = model.zOrder;
+            } 
 
             /**
              * Height.

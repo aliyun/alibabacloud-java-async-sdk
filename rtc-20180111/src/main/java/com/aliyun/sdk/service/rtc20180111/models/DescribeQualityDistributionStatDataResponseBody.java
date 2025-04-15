@@ -36,6 +36,10 @@ public class DescribeQualityDistributionStatDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return qualityStatDataList
      */
@@ -53,6 +57,14 @@ public class DescribeQualityDistributionStatDataResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<QualityStatDataList> qualityStatDataList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeQualityDistributionStatDataResponseBody model) {
+            this.qualityStatDataList = model.qualityStatDataList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * QualityStatDataList.
@@ -227,6 +239,23 @@ public class DescribeQualityDistributionStatDataResponseBody extends TeaModel {
             private Long videoFirstPicDuration; 
             private String videoHighQualityTransmissionRate; 
             private String videoStuckRate; 
+
+            private Builder() {
+            } 
+
+            private Builder(QualityStatDataList model) {
+                this.audioDelay = model.audioDelay;
+                this.audioHighQualityTransmissionRate = model.audioHighQualityTransmissionRate;
+                this.audioStuckRate = model.audioStuckRate;
+                this.callDurationRatio = model.callDurationRatio;
+                this.joinChannelSucFiveSecRate = model.joinChannelSucFiveSecRate;
+                this.joinChannelSucRate = model.joinChannelSucRate;
+                this.name = model.name;
+                this.videoDelay = model.videoDelay;
+                this.videoFirstPicDuration = model.videoFirstPicDuration;
+                this.videoHighQualityTransmissionRate = model.videoHighQualityTransmissionRate;
+                this.videoStuckRate = model.videoStuckRate;
+            } 
 
             /**
              * AudioDelay.

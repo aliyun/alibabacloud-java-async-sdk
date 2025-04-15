@@ -36,6 +36,10 @@ public class DescribeAllCallbackResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return callbacks
      */
@@ -53,6 +57,14 @@ public class DescribeAllCallbackResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Callbacks> callbacks; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAllCallbackResponseBody model) {
+            this.callbacks = model.callbacks;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Callbacks.
@@ -134,6 +146,15 @@ public class DescribeAllCallbackResponseBody extends TeaModel {
             private Integer event; 
             private String eventName; 
             private Integer type; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubEvent model) {
+                this.event = model.event;
+                this.eventName = model.eventName;
+                this.type = model.type;
+            } 
 
             /**
              * Event.
@@ -221,6 +242,15 @@ public class DescribeAllCallbackResponseBody extends TeaModel {
             private String category; 
             private String name; 
             private java.util.List<SubEvent> subEvent; 
+
+            private Builder() {
+            } 
+
+            private Builder(Callbacks model) {
+                this.category = model.category;
+                this.name = model.name;
+                this.subEvent = model.subEvent;
+            } 
 
             /**
              * Category.

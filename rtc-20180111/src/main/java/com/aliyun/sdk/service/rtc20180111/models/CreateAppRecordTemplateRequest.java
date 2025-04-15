@@ -46,7 +46,7 @@ public class CreateAppRecordTemplateRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -235,6 +235,19 @@ public class CreateAppRecordTemplateRequest extends Request {
             private java.util.List<String> layoutIds; 
             private Integer mediaEncode; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(RecordTemplate model) {
+                this.delayStopTime = model.delayStopTime;
+                this.filePrefix = model.filePrefix;
+                this.fileSplitInterval = model.fileSplitInterval;
+                this.formats = model.formats;
+                this.layoutIds = model.layoutIds;
+                this.mediaEncode = model.mediaEncode;
+                this.name = model.name;
+            } 
 
             /**
              * DelayStopTime.

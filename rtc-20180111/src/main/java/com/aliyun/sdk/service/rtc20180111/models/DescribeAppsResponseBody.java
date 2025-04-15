@@ -44,6 +44,10 @@ public class DescribeAppsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return appList
      */
@@ -77,6 +81,16 @@ public class DescribeAppsResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalNum; 
         private Integer totalPage; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAppsResponseBody model) {
+            this.appList = model.appList;
+            this.requestId = model.requestId;
+            this.totalNum = model.totalNum;
+            this.totalPage = model.totalPage;
+        } 
 
         /**
          * AppList.
@@ -147,6 +161,13 @@ public class DescribeAppsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> serviceArea; 
+
+            private Builder() {
+            } 
+
+            private Builder(ServiceAreas model) {
+                this.serviceArea = model.serviceArea;
+            } 
 
             /**
              * ServiceArea.
@@ -279,6 +300,20 @@ public class DescribeAppsResponseBody extends TeaModel {
             private Integer status; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(App model) {
+                this.appId = model.appId;
+                this.appName = model.appName;
+                this.appType = model.appType;
+                this.billType = model.billType;
+                this.createTime = model.createTime;
+                this.serviceAreas = model.serviceAreas;
+                this.status = model.status;
+                this.version = model.version;
+            } 
+
             /**
              * AppId.
              */
@@ -381,6 +416,13 @@ public class DescribeAppsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<App> app; 
+
+            private Builder() {
+            } 
+
+            private Builder(AppList model) {
+                this.app = model.app;
+            } 
 
             /**
              * App.

@@ -36,6 +36,10 @@ public class DescribeUsageOverallDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeUsageOverallDataResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<UsageOverallData> usageOverallData; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeUsageOverallDataResponseBody model) {
+            this.requestId = model.requestId;
+            this.usageOverallData = model.usageOverallData;
+        } 
 
         /**
          * RequestId.
@@ -120,6 +132,14 @@ public class DescribeUsageOverallDataResponseBody extends TeaModel {
             private String x; 
             private String y; 
 
+            private Builder() {
+            } 
+
+            private Builder(Nodes model) {
+                this.x = model.x;
+                this.y = model.y;
+            } 
+
             /**
              * X.
              */
@@ -186,6 +206,14 @@ public class DescribeUsageOverallDataResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Nodes> nodes; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(UsageOverallData model) {
+                this.nodes = model.nodes;
+                this.type = model.type;
+            } 
 
             /**
              * Nodes.

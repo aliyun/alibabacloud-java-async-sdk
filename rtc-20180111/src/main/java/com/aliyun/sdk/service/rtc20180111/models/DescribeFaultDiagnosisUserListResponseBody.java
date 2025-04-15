@@ -48,6 +48,10 @@ public class DescribeFaultDiagnosisUserListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNo
      */
@@ -89,6 +93,17 @@ public class DescribeFaultDiagnosisUserListResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCnt; 
         private java.util.List<UserList> userList; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeFaultDiagnosisUserListResponseBody model) {
+            this.pageNo = model.pageNo;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCnt = model.totalCnt;
+            this.userList = model.userList;
+        } 
 
         /**
          * PageNo.
@@ -167,6 +182,13 @@ public class DescribeFaultDiagnosisUserListResponseBody extends TeaModel {
 
         public static final class Builder {
             private String faultType; 
+
+            private Builder() {
+            } 
+
+            private Builder(FaultList model) {
+                this.faultType = model.faultType;
+            } 
 
             /**
              * FaultType.
@@ -274,6 +296,18 @@ public class DescribeFaultDiagnosisUserListResponseBody extends TeaModel {
             private Long destroyedTs; 
             private java.util.List<FaultList> faultList; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserList model) {
+                this.channelCreatedTs = model.channelCreatedTs;
+                this.channelId = model.channelId;
+                this.createdTs = model.createdTs;
+                this.destroyedTs = model.destroyedTs;
+                this.faultList = model.faultList;
+                this.userId = model.userId;
+            } 
 
             /**
              * ChannelCreatedTs.

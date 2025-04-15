@@ -36,6 +36,10 @@ public class DescribeRtcDurationDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return durationDataPerInterval
      */
@@ -53,6 +57,14 @@ public class DescribeRtcDurationDataResponseBody extends TeaModel {
     public static final class Builder {
         private DurationDataPerInterval durationDataPerInterval; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRtcDurationDataResponseBody model) {
+            this.durationDataPerInterval = model.durationDataPerInterval;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * DurationDataPerInterval.
@@ -180,6 +192,19 @@ public class DescribeRtcDurationDataResponseBody extends TeaModel {
             private Long v360Duration; 
             private Long v720Duration; 
 
+            private Builder() {
+            } 
+
+            private Builder(DurationModule model) {
+                this.audioDuration = model.audioDuration;
+                this.contentDuration = model.contentDuration;
+                this.timeStamp = model.timeStamp;
+                this.totalDuration = model.totalDuration;
+                this.v1080Duration = model.v1080Duration;
+                this.v360Duration = model.v360Duration;
+                this.v720Duration = model.v720Duration;
+            } 
+
             /**
              * AudioDuration.
              */
@@ -274,6 +299,13 @@ public class DescribeRtcDurationDataResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DurationModule> durationModule; 
+
+            private Builder() {
+            } 
+
+            private Builder(DurationDataPerInterval model) {
+                this.durationModule = model.durationModule;
+            } 
 
             /**
              * DurationModule.

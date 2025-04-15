@@ -40,6 +40,10 @@ public class DescribeCallResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return callInfo
      */
@@ -65,6 +69,15 @@ public class DescribeCallResponseBody extends TeaModel {
         private CallInfo callInfo; 
         private String requestId; 
         private java.util.List<UserDetailList> userDetailList; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCallResponseBody model) {
+            this.callInfo = model.callInfo;
+            this.requestId = model.requestId;
+            this.userDetailList = model.userDetailList;
+        } 
 
         /**
          * CallInfo.
@@ -187,6 +200,18 @@ public class DescribeCallResponseBody extends TeaModel {
             private Long createdTs; 
             private Long destroyedTs; 
             private Long duration; 
+
+            private Builder() {
+            } 
+
+            private Builder(CallInfo model) {
+                this.appId = model.appId;
+                this.callStatus = model.callStatus;
+                this.channelId = model.channelId;
+                this.createdTs = model.createdTs;
+                this.destroyedTs = model.destroyedTs;
+                this.duration = model.duration;
+            } 
 
             /**
              * <p>App ID。</p>
@@ -386,6 +411,22 @@ public class DescribeCallResponseBody extends TeaModel {
             private Long subVideo720; 
             private Long subVideoScreenShare; 
 
+            private Builder() {
+            } 
+
+            private Builder(DurMetricStatData model) {
+                this.pubAudio = model.pubAudio;
+                this.pubVideo1080 = model.pubVideo1080;
+                this.pubVideo360 = model.pubVideo360;
+                this.pubVideo720 = model.pubVideo720;
+                this.pubVideoScreenShare = model.pubVideoScreenShare;
+                this.subAudio = model.subAudio;
+                this.subVideo1080 = model.subVideo1080;
+                this.subVideo360 = model.subVideo360;
+                this.subVideo720 = model.subVideo720;
+                this.subVideoScreenShare = model.subVideoScreenShare;
+            } 
+
             /**
              * PubAudio.
              */
@@ -516,6 +557,14 @@ public class DescribeCallResponseBody extends TeaModel {
         public static final class Builder {
             private Long joinTs; 
             private Long leaveTs; 
+
+            private Builder() {
+            } 
+
+            private Builder(OnlinePeriods model) {
+                this.joinTs = model.joinTs;
+                this.leaveTs = model.leaveTs;
+            } 
 
             /**
              * JoinTs.
@@ -751,6 +800,28 @@ public class DescribeCallResponseBody extends TeaModel {
             private String sdkVersion; 
             private java.util.List<String> sdkVersionList; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserDetailList model) {
+                this.callExp = model.callExp;
+                this.createdTs = model.createdTs;
+                this.destroyedTs = model.destroyedTs;
+                this.durMetricStatData = model.durMetricStatData;
+                this.duration = model.duration;
+                this.location = model.location;
+                this.network = model.network;
+                this.networkList = model.networkList;
+                this.onlineDuration = model.onlineDuration;
+                this.onlinePeriods = model.onlinePeriods;
+                this.os = model.os;
+                this.osList = model.osList;
+                this.roles = model.roles;
+                this.sdkVersion = model.sdkVersion;
+                this.sdkVersionList = model.sdkVersionList;
+                this.userId = model.userId;
+            } 
 
             /**
              * CallExp.

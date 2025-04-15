@@ -46,7 +46,7 @@ public class ModifyCallbackMetaRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -183,6 +183,15 @@ public class ModifyCallbackMetaRequest extends Request {
             private String category; 
             private String conf; 
             private java.util.List<Integer> subEvent; 
+
+            private Builder() {
+            } 
+
+            private Builder(Callback model) {
+                this.category = model.category;
+                this.conf = model.conf;
+                this.subEvent = model.subEvent;
+            } 
 
             /**
              * <p>This parameter is required.</p>

@@ -46,7 +46,7 @@ public class CreateAppLayoutRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -224,6 +224,18 @@ public class CreateAppLayoutRequest extends Request {
             private Double y; 
             private Integer zOrder; 
 
+            private Builder() {
+            } 
+
+            private Builder(Panes model) {
+                this.height = model.height;
+                this.paneId = model.paneId;
+                this.width = model.width;
+                this.x = model.x;
+                this.y = model.y;
+                this.zOrder = model.zOrder;
+            } 
+
             /**
              * Height.
              */
@@ -324,6 +336,14 @@ public class CreateAppLayoutRequest extends Request {
         public static final class Builder {
             private String name; 
             private java.util.List<Panes> panes; 
+
+            private Builder() {
+            } 
+
+            private Builder(Layout model) {
+                this.name = model.name;
+                this.panes = model.panes;
+            } 
 
             /**
              * <p>This parameter is required.</p>

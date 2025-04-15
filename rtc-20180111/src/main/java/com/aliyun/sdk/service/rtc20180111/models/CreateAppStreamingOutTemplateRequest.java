@@ -41,7 +41,7 @@ public class CreateAppStreamingOutTemplateRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -161,6 +161,15 @@ public class CreateAppStreamingOutTemplateRequest extends Request {
             private java.util.List<String> layoutIds; 
             private Integer mediaEncode; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(StreamingOutTemplate model) {
+                this.layoutIds = model.layoutIds;
+                this.mediaEncode = model.mediaEncode;
+                this.name = model.name;
+            } 
 
             /**
              * <p>This parameter is required.</p>

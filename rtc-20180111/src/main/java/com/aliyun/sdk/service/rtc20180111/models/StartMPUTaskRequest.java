@@ -183,7 +183,7 @@ public class StartMPUTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -858,6 +858,19 @@ public class StartMPUTaskRequest extends Request {
             private Float y; 
             private Integer zOrder; 
 
+            private Builder() {
+            } 
+
+            private Builder(Backgrounds model) {
+                this.display = model.display;
+                this.height = model.height;
+                this.url = model.url;
+                this.width = model.width;
+                this.x = model.x;
+                this.y = model.y;
+                this.zOrder = model.zOrder;
+            } 
+
             /**
              * Display.
              */
@@ -1085,6 +1098,24 @@ public class StartMPUTaskRequest extends Request {
             private Float y; 
             private Integer zOrder; 
 
+            private Builder() {
+            } 
+
+            private Builder(ClockWidgets model) {
+                this.alpha = model.alpha;
+                this.borderColor = model.borderColor;
+                this.borderWidth = model.borderWidth;
+                this.box = model.box;
+                this.boxBorderWidth = model.boxBorderWidth;
+                this.boxColor = model.boxColor;
+                this.fontColor = model.fontColor;
+                this.fontSize = model.fontSize;
+                this.fontType = model.fontType;
+                this.x = model.x;
+                this.y = model.y;
+                this.zOrder = model.zOrder;
+            } 
+
             /**
              * Alpha.
              */
@@ -1220,6 +1251,13 @@ public class StartMPUTaskRequest extends Request {
         public static final class Builder {
             private Boolean enablePortraitSegmentation; 
 
+            private Builder() {
+            } 
+
+            private Builder(EnhancedParam model) {
+                this.enablePortraitSegmentation = model.enablePortraitSegmentation;
+            } 
+
             /**
              * EnablePortraitSegmentation.
              */
@@ -1338,6 +1376,19 @@ public class StartMPUTaskRequest extends Request {
             private Float x; 
             private Float y; 
             private Integer zOrder; 
+
+            private Builder() {
+            } 
+
+            private Builder(Images model) {
+                this.display = model.display;
+                this.height = model.height;
+                this.url = model.url;
+                this.width = model.width;
+                this.x = model.x;
+                this.y = model.y;
+                this.zOrder = model.zOrder;
+            } 
 
             /**
              * Display.
@@ -1578,6 +1629,25 @@ public class StartMPUTaskRequest extends Request {
             private Float y; 
             private Integer zOrder; 
 
+            private Builder() {
+            } 
+
+            private Builder(Texts model) {
+                this.alpha = model.alpha;
+                this.borderColor = model.borderColor;
+                this.borderWidth = model.borderWidth;
+                this.box = model.box;
+                this.boxBorderWidth = model.boxBorderWidth;
+                this.boxColor = model.boxColor;
+                this.fontColor = model.fontColor;
+                this.fontSize = model.fontSize;
+                this.fontType = model.fontType;
+                this.text = model.text;
+                this.x = model.x;
+                this.y = model.y;
+                this.zOrder = model.zOrder;
+            } 
+
             /**
              * Alpha.
              */
@@ -1781,6 +1851,18 @@ public class StartMPUTaskRequest extends Request {
             private java.util.List<Texts> texts; 
             private String userId; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserPanes model) {
+                this.images = model.images;
+                this.paneId = model.paneId;
+                this.segmentType = model.segmentType;
+                this.sourceType = model.sourceType;
+                this.texts = model.texts;
+                this.userId = model.userId;
+            } 
+
             /**
              * Images.
              */
@@ -1951,6 +2033,20 @@ public class StartMPUTaskRequest extends Request {
             private Float x; 
             private Float y; 
             private Integer zOrder; 
+
+            private Builder() {
+            } 
+
+            private Builder(Watermarks model) {
+                this.alpha = model.alpha;
+                this.display = model.display;
+                this.height = model.height;
+                this.url = model.url;
+                this.width = model.width;
+                this.x = model.x;
+                this.y = model.y;
+                this.zOrder = model.zOrder;
+            } 
 
             /**
              * Alpha.

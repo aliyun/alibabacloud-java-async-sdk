@@ -36,6 +36,10 @@ public class ModifyAppLayoutResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return layoutId
      */
@@ -53,6 +57,14 @@ public class ModifyAppLayoutResponseBody extends TeaModel {
     public static final class Builder {
         private String layoutId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyAppLayoutResponseBody model) {
+            this.layoutId = model.layoutId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * LayoutId.

@@ -68,6 +68,10 @@ public class DescribeChannelUsersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return channelProfile
      */
@@ -149,6 +153,22 @@ public class DescribeChannelUsersResponseBody extends TeaModel {
         private String requestId; 
         private Integer timestamp; 
         private java.util.List<String> userList; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeChannelUsersResponseBody model) {
+            this.channelProfile = model.channelProfile;
+            this.commTotalNum = model.commTotalNum;
+            this.interactiveUserList = model.interactiveUserList;
+            this.interactiveUserNum = model.interactiveUserNum;
+            this.isChannelExist = model.isChannelExist;
+            this.liveUserList = model.liveUserList;
+            this.liveUserNum = model.liveUserNum;
+            this.requestId = model.requestId;
+            this.timestamp = model.timestamp;
+            this.userList = model.userList;
+        } 
 
         /**
          * ChannelProfile.

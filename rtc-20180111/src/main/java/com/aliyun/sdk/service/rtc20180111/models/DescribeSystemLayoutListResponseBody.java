@@ -44,6 +44,10 @@ public class DescribeSystemLayoutListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return layouts
      */
@@ -77,6 +81,16 @@ public class DescribeSystemLayoutListResponseBody extends TeaModel {
         private String requestId; 
         private Long totalNum; 
         private Long totalPage; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSystemLayoutListResponseBody model) {
+            this.layouts = model.layouts;
+            this.requestId = model.requestId;
+            this.totalNum = model.totalNum;
+            this.totalPage = model.totalPage;
+        } 
 
         /**
          * Layouts.
@@ -220,6 +234,19 @@ public class DescribeSystemLayoutListResponseBody extends TeaModel {
             private Float y; 
             private Integer zOrder; 
 
+            private Builder() {
+            } 
+
+            private Builder(Panes model) {
+                this.height = model.height;
+                this.majorPane = model.majorPane;
+                this.paneId = model.paneId;
+                this.width = model.width;
+                this.x = model.x;
+                this.y = model.y;
+                this.zOrder = model.zOrder;
+            } 
+
             /**
              * Height.
              */
@@ -318,6 +345,13 @@ public class DescribeSystemLayoutListResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Panes> panes; 
 
+            private Builder() {
+            } 
+
+            private Builder(LayoutPanes model) {
+                this.panes = model.panes;
+            } 
+
             /**
              * Panes.
              */
@@ -401,6 +435,16 @@ public class DescribeSystemLayoutListResponseBody extends TeaModel {
             private String name; 
             private LayoutPanes panes; 
 
+            private Builder() {
+            } 
+
+            private Builder(Layout model) {
+                this.audioMixCount = model.audioMixCount;
+                this.layoutId = model.layoutId;
+                this.name = model.name;
+                this.panes = model.panes;
+            } 
+
             /**
              * <p>AudioMixCount。</p>
              * 
@@ -474,6 +518,13 @@ public class DescribeSystemLayoutListResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Layout> layout; 
+
+            private Builder() {
+            } 
+
+            private Builder(Layouts model) {
+                this.layout = model.layout;
+            } 
 
             /**
              * Layout.

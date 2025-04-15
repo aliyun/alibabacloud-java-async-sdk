@@ -36,6 +36,10 @@ public class DescribeCallbacksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return callbacks
      */
@@ -53,6 +57,14 @@ public class DescribeCallbacksResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Callbacks> callbacks; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCallbacksResponseBody model) {
+            this.callbacks = model.callbacks;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Callbacks.
@@ -182,6 +194,19 @@ public class DescribeCallbacksResponseBody extends TeaModel {
             private String msg; 
             private Integer status; 
             private java.util.List<Integer> subEvent; 
+
+            private Builder() {
+            } 
+
+            private Builder(Callbacks model) {
+                this.category = model.category;
+                this.checkStatus = model.checkStatus;
+                this.code = model.code;
+                this.conf = model.conf;
+                this.msg = model.msg;
+                this.status = model.status;
+                this.subEvent = model.subEvent;
+            } 
 
             /**
              * Category.

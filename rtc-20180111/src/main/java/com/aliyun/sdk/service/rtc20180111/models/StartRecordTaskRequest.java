@@ -133,7 +133,7 @@ public class StartRecordTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -631,6 +631,19 @@ public class StartRecordTaskRequest extends Request {
             private Float y; 
             private Integer zOrder; 
 
+            private Builder() {
+            } 
+
+            private Builder(Images model) {
+                this.display = model.display;
+                this.height = model.height;
+                this.url = model.url;
+                this.width = model.width;
+                this.x = model.x;
+                this.y = model.y;
+                this.zOrder = model.zOrder;
+            } 
+
             /**
              * Display.
              */
@@ -798,6 +811,19 @@ public class StartRecordTaskRequest extends Request {
             private Float y; 
             private Integer zOrder; 
 
+            private Builder() {
+            } 
+
+            private Builder(Texts model) {
+                this.fontColor = model.fontColor;
+                this.fontSize = model.fontSize;
+                this.fontType = model.fontType;
+                this.text = model.text;
+                this.x = model.x;
+                this.y = model.y;
+                this.zOrder = model.zOrder;
+            } 
+
             /**
              * FontColor.
              */
@@ -940,6 +966,17 @@ public class StartRecordTaskRequest extends Request {
             private String sourceType; 
             private java.util.List<Texts> texts; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserPanes model) {
+                this.images = model.images;
+                this.paneId = model.paneId;
+                this.sourceType = model.sourceType;
+                this.texts = model.texts;
+                this.userId = model.userId;
+            } 
 
             /**
              * Images.

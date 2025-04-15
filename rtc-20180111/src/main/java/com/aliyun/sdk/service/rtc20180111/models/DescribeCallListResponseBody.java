@@ -48,6 +48,10 @@ public class DescribeCallListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return callList
      */
@@ -89,6 +93,17 @@ public class DescribeCallListResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCnt; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCallListResponseBody model) {
+            this.callList = model.callList;
+            this.pageNo = model.pageNo;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCnt = model.totalCnt;
+        } 
 
         /**
          * CallList.
@@ -251,6 +266,20 @@ public class DescribeCallListResponseBody extends TeaModel {
             private Long destroyedTs; 
             private Long duration; 
             private Integer userCnt; 
+
+            private Builder() {
+            } 
+
+            private Builder(CallList model) {
+                this.appId = model.appId;
+                this.badExpUserCnt = model.badExpUserCnt;
+                this.callStatus = model.callStatus;
+                this.channelId = model.channelId;
+                this.createdTs = model.createdTs;
+                this.destroyedTs = model.destroyedTs;
+                this.duration = model.duration;
+                this.userCnt = model.userCnt;
+            } 
 
             /**
              * <p>App ID。</p>

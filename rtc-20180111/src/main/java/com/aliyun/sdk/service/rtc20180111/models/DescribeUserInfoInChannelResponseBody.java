@@ -48,6 +48,10 @@ public class DescribeUserInfoInChannelResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return isChannelExist
      */
@@ -89,6 +93,17 @@ public class DescribeUserInfoInChannelResponseBody extends TeaModel {
         private java.util.List<Property> property; 
         private String requestId; 
         private Integer timestamp; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeUserInfoInChannelResponseBody model) {
+            this.isChannelExist = model.isChannelExist;
+            this.isInChannel = model.isInChannel;
+            this.property = model.property;
+            this.requestId = model.requestId;
+            this.timestamp = model.timestamp;
+        } 
 
         /**
          * IsChannelExist.
@@ -191,6 +206,15 @@ public class DescribeUserInfoInChannelResponseBody extends TeaModel {
             private Integer join; 
             private Integer role; 
             private String session; 
+
+            private Builder() {
+            } 
+
+            private Builder(Property model) {
+                this.join = model.join;
+                this.role = model.role;
+                this.session = model.session;
+            } 
 
             /**
              * Join.

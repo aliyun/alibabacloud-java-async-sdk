@@ -44,6 +44,10 @@ public class DescribeChannelOverallDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return callInfo
      */
@@ -77,6 +81,16 @@ public class DescribeChannelOverallDataResponseBody extends TeaModel {
         private java.util.List<MetricDatas> metricDatas; 
         private OverallData overallData; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeChannelOverallDataResponseBody model) {
+            this.callInfo = model.callInfo;
+            this.metricDatas = model.metricDatas;
+            this.overallData = model.overallData;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * CallInfo.
@@ -208,6 +222,18 @@ public class DescribeChannelOverallDataResponseBody extends TeaModel {
             private Long destroyedTs; 
             private Long duration; 
 
+            private Builder() {
+            } 
+
+            private Builder(CallInfo model) {
+                this.appId = model.appId;
+                this.callStatus = model.callStatus;
+                this.channelId = model.channelId;
+                this.createdTs = model.createdTs;
+                this.destroyedTs = model.destroyedTs;
+                this.duration = model.duration;
+            } 
+
             /**
              * AppId.
              */
@@ -319,6 +345,15 @@ public class DescribeChannelOverallDataResponseBody extends TeaModel {
             private String x; 
             private String y; 
 
+            private Builder() {
+            } 
+
+            private Builder(Nodes model) {
+                this.ext = model.ext;
+                this.x = model.x;
+                this.y = model.y;
+            } 
+
             /**
              * Ext.
              */
@@ -393,6 +428,14 @@ public class DescribeChannelOverallDataResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Nodes> nodes; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(MetricDatas model) {
+                this.nodes = model.nodes;
+                this.type = model.type;
+            } 
 
             /**
              * Nodes.
@@ -496,6 +539,17 @@ public class DescribeChannelOverallDataResponseBody extends TeaModel {
             private Float totalAudioStuckRate; 
             private Float totalVideoStuckRate; 
             private Float totalVideoVagueRate; 
+
+            private Builder() {
+            } 
+
+            private Builder(OverallData model) {
+                this.connAvgTime = model.connAvgTime;
+                this.fiveSecJoinRate = model.fiveSecJoinRate;
+                this.totalAudioStuckRate = model.totalAudioStuckRate;
+                this.totalVideoStuckRate = model.totalVideoStuckRate;
+                this.totalVideoVagueRate = model.totalVideoVagueRate;
+            } 
 
             /**
              * ConnAvgTime.

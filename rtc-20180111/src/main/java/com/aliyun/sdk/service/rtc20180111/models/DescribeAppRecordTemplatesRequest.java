@@ -55,7 +55,7 @@ public class DescribeAppRecordTemplatesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -214,6 +214,14 @@ public class DescribeAppRecordTemplatesRequest extends Request {
         public static final class Builder {
             private String name; 
             private String templateId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Condition model) {
+                this.name = model.name;
+                this.templateId = model.templateId;
+            } 
 
             /**
              * Name.

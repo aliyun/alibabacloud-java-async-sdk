@@ -36,6 +36,10 @@ public class CreateEventSubscribeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class CreateEventSubscribeResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String subscribeId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateEventSubscribeResponseBody model) {
+            this.requestId = model.requestId;
+            this.subscribeId = model.subscribeId;
+        } 
 
         /**
          * RequestId.

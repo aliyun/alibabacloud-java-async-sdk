@@ -40,6 +40,10 @@ public class DescribeChannelAllUsersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return channelExist
      */
@@ -65,6 +69,15 @@ public class DescribeChannelAllUsersResponseBody extends TeaModel {
         private Boolean channelExist; 
         private String requestId; 
         private java.util.List<Users> users; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeChannelAllUsersResponseBody model) {
+            this.channelExist = model.channelExist;
+            this.requestId = model.requestId;
+            this.users = model.users;
+        } 
 
         /**
          * ChannelExist.
@@ -127,6 +140,13 @@ public class DescribeChannelAllUsersResponseBody extends TeaModel {
 
         public static final class Builder {
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Users model) {
+                this.userId = model.userId;
+            } 
 
             /**
              * UserId.

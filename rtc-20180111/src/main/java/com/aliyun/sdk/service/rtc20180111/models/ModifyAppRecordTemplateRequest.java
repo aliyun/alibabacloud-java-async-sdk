@@ -46,7 +46,7 @@ public class ModifyAppRecordTemplateRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -249,6 +249,20 @@ public class ModifyAppRecordTemplateRequest extends Request {
             private Integer mediaEncode; 
             private String name; 
             private String templateId; 
+
+            private Builder() {
+            } 
+
+            private Builder(RecordTemplate model) {
+                this.delayStopTime = model.delayStopTime;
+                this.filePrefix = model.filePrefix;
+                this.fileSplitInterval = model.fileSplitInterval;
+                this.formats = model.formats;
+                this.layoutIds = model.layoutIds;
+                this.mediaEncode = model.mediaEncode;
+                this.name = model.name;
+                this.templateId = model.templateId;
+            } 
 
             /**
              * DelayStopTime.

@@ -36,6 +36,10 @@ public class DescribeChannelAreaDistributionStatDataResponseBody extends TeaMode
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return areaStatList
      */
@@ -53,6 +57,14 @@ public class DescribeChannelAreaDistributionStatDataResponseBody extends TeaMode
     public static final class Builder {
         private java.util.List<AreaStatList> areaStatList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeChannelAreaDistributionStatDataResponseBody model) {
+            this.areaStatList = model.areaStatList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * AreaStatList.
@@ -155,6 +167,17 @@ public class DescribeChannelAreaDistributionStatDataResponseBody extends TeaMode
             private String highQualityTransmissionRate; 
             private Integer pubUserCount; 
             private Integer subUserCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(AreaStatList model) {
+                this.areaName = model.areaName;
+                this.callUserCount = model.callUserCount;
+                this.highQualityTransmissionRate = model.highQualityTransmissionRate;
+                this.pubUserCount = model.pubUserCount;
+                this.subUserCount = model.subUserCount;
+            } 
 
             /**
              * AreaName.

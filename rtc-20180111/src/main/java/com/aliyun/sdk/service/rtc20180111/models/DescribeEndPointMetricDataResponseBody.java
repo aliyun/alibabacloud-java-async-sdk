@@ -40,6 +40,10 @@ public class DescribeEndPointMetricDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pubMetrics
      */
@@ -65,6 +69,15 @@ public class DescribeEndPointMetricDataResponseBody extends TeaModel {
         private java.util.List<PubMetrics> pubMetrics; 
         private String requestId; 
         private java.util.List<SubMetrics> subMetrics; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeEndPointMetricDataResponseBody model) {
+            this.pubMetrics = model.pubMetrics;
+            this.requestId = model.requestId;
+            this.subMetrics = model.subMetrics;
+        } 
 
         /**
          * PubMetrics.
@@ -151,6 +164,15 @@ public class DescribeEndPointMetricDataResponseBody extends TeaModel {
             private java.util.Map<String, ?> ext; 
             private String x; 
             private String y; 
+
+            private Builder() {
+            } 
+
+            private Builder(Nodes model) {
+                this.ext = model.ext;
+                this.x = model.x;
+                this.y = model.y;
+            } 
 
             /**
              * Ext.
@@ -239,6 +261,15 @@ public class DescribeEndPointMetricDataResponseBody extends TeaModel {
             private String type; 
             private String userId; 
 
+            private Builder() {
+            } 
+
+            private Builder(PubMetrics model) {
+                this.nodes = model.nodes;
+                this.type = model.type;
+                this.userId = model.userId;
+            } 
+
             /**
              * Nodes.
              */
@@ -326,6 +357,15 @@ public class DescribeEndPointMetricDataResponseBody extends TeaModel {
             private String x; 
             private String y; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubMetricsNodes model) {
+                this.ext = model.ext;
+                this.x = model.x;
+                this.y = model.y;
+            } 
+
             /**
              * Ext.
              */
@@ -412,6 +452,15 @@ public class DescribeEndPointMetricDataResponseBody extends TeaModel {
             private java.util.List<SubMetricsNodes> nodes; 
             private String type; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubMetrics model) {
+                this.nodes = model.nodes;
+                this.type = model.type;
+                this.userId = model.userId;
+            } 
 
             /**
              * Nodes.

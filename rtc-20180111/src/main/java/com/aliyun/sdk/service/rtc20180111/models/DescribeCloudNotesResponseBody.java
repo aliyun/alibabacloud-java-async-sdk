@@ -49,6 +49,10 @@ public class DescribeCloudNotesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -90,6 +94,17 @@ public class DescribeCloudNotesResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCnt; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCloudNotesResponseBody model) {
+            this.items = model.items;
+            this.pageNo = model.pageNo;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCnt = model.totalCnt;
+        } 
 
         /**
          * Items.
@@ -315,6 +330,25 @@ public class DescribeCloudNotesResponseBody extends TeaModel {
             private String textPolishFilePath; 
             private String transcriptionFilePath; 
             private Integer vendor; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.autoChaptersFilePath = model.autoChaptersFilePath;
+                this.bucket = model.bucket;
+                this.channelId = model.channelId;
+                this.customPromptFilePath = model.customPromptFilePath;
+                this.meetingAssistanceFilePath = model.meetingAssistanceFilePath;
+                this.region = model.region;
+                this.serviceInspectionFilePath = model.serviceInspectionFilePath;
+                this.startTs = model.startTs;
+                this.summarizationFilePath = model.summarizationFilePath;
+                this.taskId = model.taskId;
+                this.textPolishFilePath = model.textPolishFilePath;
+                this.transcriptionFilePath = model.transcriptionFilePath;
+                this.vendor = model.vendor;
+            } 
 
             /**
              * AutoChaptersFilePath.

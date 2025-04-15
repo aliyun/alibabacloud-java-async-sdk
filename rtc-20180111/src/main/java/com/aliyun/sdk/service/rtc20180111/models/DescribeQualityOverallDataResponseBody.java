@@ -36,6 +36,10 @@ public class DescribeQualityOverallDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return qualityOverallData
      */
@@ -53,6 +57,14 @@ public class DescribeQualityOverallDataResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<QualityOverallData> qualityOverallData; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeQualityOverallDataResponseBody model) {
+            this.qualityOverallData = model.qualityOverallData;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * QualityOverallData.
@@ -119,6 +131,14 @@ public class DescribeQualityOverallDataResponseBody extends TeaModel {
         public static final class Builder {
             private String x; 
             private String y; 
+
+            private Builder() {
+            } 
+
+            private Builder(Nodes model) {
+                this.x = model.x;
+                this.y = model.y;
+            } 
 
             /**
              * X.
@@ -198,6 +218,15 @@ public class DescribeQualityOverallDataResponseBody extends TeaModel {
             private String average; 
             private java.util.List<Nodes> nodes; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(QualityOverallData model) {
+                this.average = model.average;
+                this.nodes = model.nodes;
+                this.type = model.type;
+            } 
 
             /**
              * Average.

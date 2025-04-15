@@ -36,6 +36,10 @@ public class DescribeStreamingOutStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeStreamingOutStatusResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Integer status; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeStreamingOutStatusResponseBody model) {
+            this.requestId = model.requestId;
+            this.status = model.status;
+        } 
 
         /**
          * <p>Id of the request</p>

@@ -44,6 +44,10 @@ public class DescribeAppStreamingOutTemplatesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -77,6 +81,16 @@ public class DescribeAppStreamingOutTemplatesResponseBody extends TeaModel {
         private java.util.List<Templates> templates; 
         private Long totalNum; 
         private Long totalPage; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAppStreamingOutTemplatesResponseBody model) {
+            this.requestId = model.requestId;
+            this.templates = model.templates;
+            this.totalNum = model.totalNum;
+            this.totalPage = model.totalPage;
+        } 
 
         /**
          * <p>Id of the request</p>
@@ -198,6 +212,17 @@ public class DescribeAppStreamingOutTemplatesResponseBody extends TeaModel {
             private Integer mediaEncode; 
             private String name; 
             private String templateId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Templates model) {
+                this.createTime = model.createTime;
+                this.layoutIds = model.layoutIds;
+                this.mediaEncode = model.mediaEncode;
+                this.name = model.name;
+                this.templateId = model.templateId;
+            } 
 
             /**
              * CreateTime.

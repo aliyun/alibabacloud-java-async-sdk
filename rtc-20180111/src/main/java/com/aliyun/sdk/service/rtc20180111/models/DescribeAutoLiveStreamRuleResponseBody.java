@@ -36,6 +36,10 @@ public class DescribeAutoLiveStreamRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeAutoLiveStreamRuleResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<Rules> rules; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAutoLiveStreamRuleResponseBody model) {
+            this.requestId = model.requestId;
+            this.rules = model.rules;
+        } 
 
         /**
          * RequestId.
@@ -203,6 +215,21 @@ public class DescribeAutoLiveStreamRuleResponseBody extends TeaModel {
             private Long ruleId; 
             private String ruleName; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.callBack = model.callBack;
+                this.channelIdPrefixes = model.channelIdPrefixes;
+                this.channelIds = model.channelIds;
+                this.createTime = model.createTime;
+                this.mediaEncode = model.mediaEncode;
+                this.playDomain = model.playDomain;
+                this.ruleId = model.ruleId;
+                this.ruleName = model.ruleName;
+                this.status = model.status;
+            } 
 
             /**
              * CallBack.

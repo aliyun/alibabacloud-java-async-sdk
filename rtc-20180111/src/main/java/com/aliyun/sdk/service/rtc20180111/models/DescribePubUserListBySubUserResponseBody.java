@@ -44,6 +44,10 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return callStatus
      */
@@ -77,6 +81,16 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
         private java.util.List<PubUserDetailList> pubUserDetailList; 
         private String requestId; 
         private SubUserDetail subUserDetail; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePubUserListBySubUserResponseBody model) {
+            this.callStatus = model.callStatus;
+            this.pubUserDetailList = model.pubUserDetailList;
+            this.requestId = model.requestId;
+            this.subUserDetail = model.subUserDetail;
+        } 
 
         /**
          * CallStatus.
@@ -159,6 +173,14 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
         public static final class Builder {
             private Long joinTs; 
             private Long leaveTs; 
+
+            private Builder() {
+            } 
+
+            private Builder(OnlinePeriods model) {
+                this.joinTs = model.joinTs;
+                this.leaveTs = model.leaveTs;
+            } 
 
             /**
              * JoinTs.
@@ -407,6 +429,29 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
             private String userId; 
             private String userIdAlias; 
 
+            private Builder() {
+            } 
+
+            private Builder(PubUserDetailList model) {
+                this.callIdList = model.callIdList;
+                this.clientType = model.clientType;
+                this.createdTs = model.createdTs;
+                this.destroyedTs = model.destroyedTs;
+                this.duration = model.duration;
+                this.location = model.location;
+                this.network = model.network;
+                this.networkList = model.networkList;
+                this.onlineDuration = model.onlineDuration;
+                this.onlinePeriods = model.onlinePeriods;
+                this.os = model.os;
+                this.osList = model.osList;
+                this.roles = model.roles;
+                this.sdkVersion = model.sdkVersion;
+                this.sdkVersionList = model.sdkVersionList;
+                this.userId = model.userId;
+                this.userIdAlias = model.userIdAlias;
+            } 
+
             /**
              * CallIdList.
              */
@@ -593,6 +638,14 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
         public static final class Builder {
             private Long joinTs; 
             private Long leaveTs; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubUserDetailOnlinePeriods model) {
+                this.joinTs = model.joinTs;
+                this.leaveTs = model.leaveTs;
+            } 
 
             /**
              * JoinTs.
@@ -828,6 +881,28 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
             private java.util.List<String> sdkVersionList; 
             private String userId; 
             private String userIdAlias; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubUserDetail model) {
+                this.clientType = model.clientType;
+                this.createdTs = model.createdTs;
+                this.destroyedTs = model.destroyedTs;
+                this.duration = model.duration;
+                this.location = model.location;
+                this.network = model.network;
+                this.networkList = model.networkList;
+                this.onlineDuration = model.onlineDuration;
+                this.onlinePeriods = model.onlinePeriods;
+                this.os = model.os;
+                this.osList = model.osList;
+                this.roles = model.roles;
+                this.sdkVersion = model.sdkVersion;
+                this.sdkVersionList = model.sdkVersionList;
+                this.userId = model.userId;
+                this.userIdAlias = model.userIdAlias;
+            } 
 
             /**
              * ClientType.

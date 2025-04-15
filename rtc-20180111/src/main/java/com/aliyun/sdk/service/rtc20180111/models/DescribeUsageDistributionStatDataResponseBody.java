@@ -36,6 +36,10 @@ public class DescribeUsageDistributionStatDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeUsageDistributionStatDataResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<UsageStatList> usageStatList; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeUsageDistributionStatDataResponseBody model) {
+            this.requestId = model.requestId;
+            this.usageStatList = model.usageStatList;
+        } 
 
         /**
          * RequestId.
@@ -155,6 +167,17 @@ public class DescribeUsageDistributionStatDataResponseBody extends TeaModel {
             private String name; 
             private Long totalCallDuration; 
             private Long videoCallDuration; 
+
+            private Builder() {
+            } 
+
+            private Builder(UsageStatList model) {
+                this.audioCallDuration = model.audioCallDuration;
+                this.callDurationRatio = model.callDurationRatio;
+                this.name = model.name;
+                this.totalCallDuration = model.totalCallDuration;
+                this.videoCallDuration = model.videoCallDuration;
+            } 
 
             /**
              * AudioCallDuration.

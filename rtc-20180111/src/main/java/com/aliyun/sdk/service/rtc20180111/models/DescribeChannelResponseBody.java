@@ -40,6 +40,10 @@ public class DescribeChannelResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return channel
      */
@@ -65,6 +69,15 @@ public class DescribeChannelResponseBody extends TeaModel {
         private Channel channel; 
         private Boolean channelExist; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeChannelResponseBody model) {
+            this.channel = model.channel;
+            this.channelExist = model.channelExist;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>channel</p>
@@ -139,6 +152,14 @@ public class DescribeChannelResponseBody extends TeaModel {
         public static final class Builder {
             private String channelId; 
             private Long startTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Channel model) {
+                this.channelId = model.channelId;
+                this.startTime = model.startTime;
+            } 
 
             /**
              * ChannelId.

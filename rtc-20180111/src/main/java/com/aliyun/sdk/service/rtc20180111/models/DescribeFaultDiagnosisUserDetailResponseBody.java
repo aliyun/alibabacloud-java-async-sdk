@@ -52,6 +52,10 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return callInfo
      */
@@ -101,6 +105,18 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
         private java.util.List<String> networkOperators; 
         private String requestId; 
         private UserDetail userDetail; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeFaultDiagnosisUserDetailResponseBody model) {
+            this.callInfo = model.callInfo;
+            this.factorList = model.factorList;
+            this.faultMetricData = model.faultMetricData;
+            this.networkOperators = model.networkOperators;
+            this.requestId = model.requestId;
+            this.userDetail = model.userDetail;
+        } 
 
         /**
          * CallInfo.
@@ -248,6 +264,18 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
             private Long destroyedTs; 
             private Long duration; 
 
+            private Builder() {
+            } 
+
+            private Builder(CallInfo model) {
+                this.appId = model.appId;
+                this.callStatus = model.callStatus;
+                this.channelId = model.channelId;
+                this.createdTs = model.createdTs;
+                this.destroyedTs = model.destroyedTs;
+                this.duration = model.duration;
+            } 
+
             /**
              * <p>App ID。</p>
              * 
@@ -362,6 +390,15 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
             private String eventType; 
             private Long ts; 
 
+            private Builder() {
+            } 
+
+            private Builder(EventList model) {
+                this.eventName = model.eventName;
+                this.eventType = model.eventType;
+                this.ts = model.ts;
+            } 
+
             /**
              * EventName.
              */
@@ -436,6 +473,14 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<EventList> eventList; 
             private Long ts; 
+
+            private Builder() {
+            } 
+
+            private Builder(EventDataItems model) {
+                this.eventList = model.eventList;
+                this.ts = model.ts;
+            } 
 
             /**
              * EventList.
@@ -515,6 +560,15 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
             private java.util.List<EventDataItems> eventDataItems; 
             private String role; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(RelatedEventDatas model) {
+                this.eventDataItems = model.eventDataItems;
+                this.role = model.role;
+                this.userId = model.userId;
+            } 
 
             /**
              * EventDataItems.
@@ -602,6 +656,15 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
             private java.util.Map<String, ?> ext; 
             private String x; 
             private String y; 
+
+            private Builder() {
+            } 
+
+            private Builder(Nodes model) {
+                this.ext = model.ext;
+                this.x = model.x;
+                this.y = model.y;
+            } 
 
             /**
              * Ext.
@@ -701,6 +764,16 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
             private String role; 
             private String type; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(RelatedMetricDatas model) {
+                this.nodes = model.nodes;
+                this.role = model.role;
+                this.type = model.type;
+                this.userId = model.userId;
+            } 
 
             /**
              * Nodes.
@@ -809,6 +882,16 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
             private java.util.List<RelatedEventDatas> relatedEventDatas; 
             private java.util.List<RelatedMetricDatas> relatedMetricDatas; 
 
+            private Builder() {
+            } 
+
+            private Builder(FactorList model) {
+                this.factorId = model.factorId;
+                this.faultSource = model.faultSource;
+                this.relatedEventDatas = model.relatedEventDatas;
+                this.relatedMetricDatas = model.relatedMetricDatas;
+            } 
+
             /**
              * FactorId.
              */
@@ -892,6 +975,14 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
             private String x; 
             private String y; 
 
+            private Builder() {
+            } 
+
+            private Builder(FaultMetricDataNodes model) {
+                this.x = model.x;
+                this.y = model.y;
+            } 
+
             /**
              * X.
              */
@@ -946,6 +1037,13 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<FaultMetricDataNodes> nodes; 
+
+            private Builder() {
+            } 
+
+            private Builder(FaultMetricData model) {
+                this.nodes = model.nodes;
+            } 
 
             /**
              * Nodes.
@@ -1005,6 +1103,14 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
         public static final class Builder {
             private Long joinTs; 
             private Long leaveTs; 
+
+            private Builder() {
+            } 
+
+            private Builder(OnlinePeriods model) {
+                this.joinTs = model.joinTs;
+                this.leaveTs = model.leaveTs;
+            } 
 
             /**
              * JoinTs.
@@ -1168,6 +1274,22 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
             private String os; 
             private String sdkVersion; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserDetail model) {
+                this.createdTs = model.createdTs;
+                this.destroyedTs = model.destroyedTs;
+                this.duration = model.duration;
+                this.location = model.location;
+                this.network = model.network;
+                this.onlineDuration = model.onlineDuration;
+                this.onlinePeriods = model.onlinePeriods;
+                this.os = model.os;
+                this.sdkVersion = model.sdkVersion;
+                this.userId = model.userId;
+            } 
 
             /**
              * CreatedTs.

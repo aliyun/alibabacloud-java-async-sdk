@@ -36,6 +36,10 @@ public class DescribeRtcPeakChannelCntDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return peakChannelCntDataPerInterval
      */
@@ -53,6 +57,14 @@ public class DescribeRtcPeakChannelCntDataResponseBody extends TeaModel {
     public static final class Builder {
         private PeakChannelCntDataPerInterval peakChannelCntDataPerInterval; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRtcPeakChannelCntDataResponseBody model) {
+            this.peakChannelCntDataPerInterval = model.peakChannelCntDataPerInterval;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * PeakChannelCntDataPerInterval.
@@ -132,6 +144,15 @@ public class DescribeRtcPeakChannelCntDataResponseBody extends TeaModel {
             private String activeChannelPeakTime; 
             private String timeStamp; 
 
+            private Builder() {
+            } 
+
+            private Builder(PeakChannelCntModule model) {
+                this.activeChannelPeak = model.activeChannelPeak;
+                this.activeChannelPeakTime = model.activeChannelPeakTime;
+                this.timeStamp = model.timeStamp;
+            } 
+
             /**
              * ActiveChannelPeak.
              */
@@ -194,6 +215,13 @@ public class DescribeRtcPeakChannelCntDataResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<PeakChannelCntModule> peakChannelCntModule; 
+
+            private Builder() {
+            } 
+
+            private Builder(PeakChannelCntDataPerInterval model) {
+                this.peakChannelCntModule = model.peakChannelCntModule;
+            } 
 
             /**
              * PeakChannelCntModule.
