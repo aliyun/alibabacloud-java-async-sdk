@@ -1135,7 +1135,7 @@ public class CreateApsSlsADBJobRequest extends Request {
              * <p>The format of the timestamp.</p>
              * 
              * <strong>example:</strong>
-             * <p> APSyyyyMMdd</p>
+             * <p>yyyyMMdd</p>
              */
             public Builder format(String format) {
                 this.format = format;
