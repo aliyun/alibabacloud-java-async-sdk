@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>alibabacloud-ens20171110</artifactId>
-  <version>6.0.4</version>
+  <version>6.0.5</version>
   <packaging>jar</packaging>
   <name>alibabacloud-ens20171110</name>
   <description>Alibaba Cloud Ens (20171110) Async SDK for Java

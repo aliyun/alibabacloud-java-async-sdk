@@ -281,15 +281,25 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
      * <p>DescribeNatGatewaysResponseBody</p>
      */
     public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
         @com.aliyun.core.annotation.NameInMap("TagKey")
+        @Deprecated
         private String tagKey;
 
         @com.aliyun.core.annotation.NameInMap("TagValue")
+        @Deprecated
         private String tagValue;
 
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
         private Tags(Builder builder) {
+            this.key = builder.key;
             this.tagKey = builder.tagKey;
             this.tagValue = builder.tagValue;
+            this.value = builder.value;
         }
 
         public static Builder builder() {
@@ -298,6 +308,13 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
 
         public static Tags create() {
             return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
         }
 
         /**
@@ -314,17 +331,36 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             return this.tagValue;
         }
 
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
         public static final class Builder {
+            private String key; 
             private String tagKey; 
             private String tagValue; 
+            private String value; 
 
             private Builder() {
             } 
 
             private Builder(Tags model) {
+                this.key = model.key;
                 this.tagKey = model.tagKey;
                 this.tagValue = model.tagValue;
+                this.value = model.value;
             } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
 
             /**
              * TagKey.
@@ -339,6 +375,14 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
                 return this;
             }
 
