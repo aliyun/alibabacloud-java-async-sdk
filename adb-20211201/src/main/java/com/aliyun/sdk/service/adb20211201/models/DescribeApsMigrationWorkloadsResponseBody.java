@@ -106,9 +106,7 @@ public class DescribeApsMigrationWorkloadsResponseBody extends TeaModel {
         } 
 
         /**
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>The queried migration workloads.</p>
          */
         public Builder migrationWorkloads(java.util.List<MigrationWorkloads> migrationWorkloads) {
             this.migrationWorkloads = migrationWorkloads;

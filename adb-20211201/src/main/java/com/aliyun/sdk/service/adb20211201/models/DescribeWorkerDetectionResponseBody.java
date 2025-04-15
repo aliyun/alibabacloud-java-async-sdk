@@ -346,6 +346,9 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
 
             /**
              * <p>The detection result items of operator metric aggregation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Peak memory</p>
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -558,6 +561,9 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
 
             /**
              * <p>The property information about the operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GROUP BY field: id</p>
              */
             public Builder operatorInfo(String operatorInfo) {
                 this.operatorInfo = operatorInfo;
@@ -1396,6 +1402,9 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
 
             /**
              * <p>The name of the detection metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Peak memory detection</p>
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -1635,6 +1644,9 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
 
             /**
              * <p>The information about the detection result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>There are a total of 10 tables with an excessive number of primary keys.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -1643,6 +1655,9 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
 
             /**
              * <p>The name of the detection item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Metric detection</p>
              */
             public Builder name(String name) {
                 this.name = name;

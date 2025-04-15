@@ -163,7 +163,7 @@ public class ExecuteSparkWarehouseBatchSQLRequest extends Request {
          * <p>The name of the client.</p>
          * 
          * <strong>example:</strong>
-         * <p>Dataworks。</p>
+         * <p>DataWorks</p>
          */
         public Builder agency(String agency) {
             this.putBodyParameter("Agency", agency);
@@ -172,6 +172,7 @@ public class ExecuteSparkWarehouseBatchSQLRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -208,6 +209,7 @@ public class ExecuteSparkWarehouseBatchSQLRequest extends Request {
         }
 
         /**
+         * <p>The SQL statements that you want to execute in batches. Separate multiple SQL statements with semicolons (;). The execution engine executes the SQL statements in sequence in the same session.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -222,6 +224,7 @@ public class ExecuteSparkWarehouseBatchSQLRequest extends Request {
         }
 
         /**
+         * <p>The name of the resource group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -234,7 +237,12 @@ public class ExecuteSparkWarehouseBatchSQLRequest extends Request {
         }
 
         /**
-         * RuntimeConfig.
+         * <p>The additional runtime parameter. Specify the parameter in the JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *  &quot;OSSURL&quot;: &quot;oss://testBucketname/&quot;
+         * }</p>
          */
         public Builder runtimeConfig(String runtimeConfig) {
             this.putBodyParameter("RuntimeConfig", runtimeConfig);
@@ -243,7 +251,10 @@ public class ExecuteSparkWarehouseBatchSQLRequest extends Request {
         }
 
         /**
-         * Schema.
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adb_demo</p>
          */
         public Builder schema(String schema) {
             this.putBodyParameter("Schema", schema);

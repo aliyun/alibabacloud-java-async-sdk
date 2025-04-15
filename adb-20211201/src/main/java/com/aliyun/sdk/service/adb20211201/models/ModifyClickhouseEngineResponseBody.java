@@ -54,7 +54,10 @@ public class ModifyClickhouseEngineResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D761DA51-12F8-5457-AAA9-F52B9F436D2D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

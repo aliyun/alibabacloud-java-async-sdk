@@ -88,7 +88,10 @@ public class CancelSparkWarehouseBatchSQLRequest extends Request {
         } 
 
         /**
-         * Agency.
+         * <p>The name of the client, which can be up to 16 characters in length. Specify a descriptive name that makes it easy to identify.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DMS</p>
          */
         public Builder agency(String agency) {
             this.putBodyParameter("Agency", agency);
@@ -97,7 +100,10 @@ public class CancelSparkWarehouseBatchSQLRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amv-uf6485635f***</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putBodyParameter("DBClusterId", DBClusterId);
@@ -106,6 +112,7 @@ public class CancelSparkWarehouseBatchSQLRequest extends Request {
         }
 
         /**
+         * <p>The query ID of the Spark SQL statement.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

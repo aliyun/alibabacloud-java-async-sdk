@@ -206,6 +206,9 @@ public class DescribeControllerDetectionResponseBody extends TeaModel {
 
             /**
              * <p>The information about the detection result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>A CPU increase is detected on the access node.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -214,6 +217,9 @@ public class DescribeControllerDetectionResponseBody extends TeaModel {
 
             /**
              * <p>The name of the detection item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CPU increase detection</p>
              */
             public Builder name(String name) {
                 this.name = name;

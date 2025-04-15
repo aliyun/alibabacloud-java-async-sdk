@@ -78,7 +78,10 @@ public class ExecuteSparkWarehouseBatchSQLResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CBE843D8-964D-5EA3-9D31-822125611B6E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -78,7 +78,10 @@ public class CancelSparkWarehouseBatchSQLResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>771C5FAA-530F-52F7-B84D-EBAD45***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

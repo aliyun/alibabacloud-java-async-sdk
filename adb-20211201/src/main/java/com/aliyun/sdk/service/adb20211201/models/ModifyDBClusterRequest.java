@@ -31,14 +31,6 @@ public class ModifyDBClusterRequest extends Request {
     private Boolean enableDefaultResourcePool;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
-    private String ownerAccount;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("OwnerId")
-    private Long ownerId;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProductForm")
     private String productForm;
 
@@ -55,10 +47,6 @@ public class ModifyDBClusterRequest extends Request {
     private String reservedNodeSize;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
-    private String resourceOwnerAccount;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StorageResource")
     private String storageResource;
 
@@ -67,13 +55,10 @@ public class ModifyDBClusterRequest extends Request {
         this.computeResource = builder.computeResource;
         this.DBClusterId = builder.DBClusterId;
         this.enableDefaultResourcePool = builder.enableDefaultResourcePool;
-        this.ownerAccount = builder.ownerAccount;
-        this.ownerId = builder.ownerId;
         this.productForm = builder.productForm;
         this.regionId = builder.regionId;
         this.reservedNodeCount = builder.reservedNodeCount;
         this.reservedNodeSize = builder.reservedNodeSize;
-        this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.storageResource = builder.storageResource;
     }
 
@@ -112,20 +97,6 @@ public class ModifyDBClusterRequest extends Request {
     }
 
     /**
-     * @return ownerAccount
-     */
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return productForm
      */
     public String getProductForm() {
@@ -154,13 +125,6 @@ public class ModifyDBClusterRequest extends Request {
     }
 
     /**
-     * @return resourceOwnerAccount
-     */
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    /**
      * @return storageResource
      */
     public String getStorageResource() {
@@ -171,13 +135,10 @@ public class ModifyDBClusterRequest extends Request {
         private String computeResource; 
         private String DBClusterId; 
         private Boolean enableDefaultResourcePool; 
-        private String ownerAccount; 
-        private Long ownerId; 
         private String productForm; 
         private String regionId; 
         private Integer reservedNodeCount; 
         private String reservedNodeSize; 
-        private String resourceOwnerAccount; 
         private String storageResource; 
 
         private Builder() {
@@ -189,13 +150,10 @@ public class ModifyDBClusterRequest extends Request {
             this.computeResource = request.computeResource;
             this.DBClusterId = request.DBClusterId;
             this.enableDefaultResourcePool = request.enableDefaultResourcePool;
-            this.ownerAccount = request.ownerAccount;
-            this.ownerId = request.ownerId;
             this.productForm = request.productForm;
             this.regionId = request.regionId;
             this.reservedNodeCount = request.reservedNodeCount;
             this.reservedNodeSize = request.reservedNodeSize;
-            this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.storageResource = request.storageResource;
         } 
 
@@ -247,24 +205,6 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * OwnerAccount.
-         */
-        public Builder ownerAccount(String ownerAccount) {
-            this.putQueryParameter("OwnerAccount", ownerAccount);
-            this.ownerAccount = ownerAccount;
-            return this;
-        }
-
-        /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
          * ProductForm.
          */
         public Builder productForm(String productForm) {
@@ -303,15 +243,6 @@ public class ModifyDBClusterRequest extends Request {
         public Builder reservedNodeSize(String reservedNodeSize) {
             this.putQueryParameter("ReservedNodeSize", reservedNodeSize);
             this.reservedNodeSize = reservedNodeSize;
-            return this;
-        }
-
-        /**
-         * ResourceOwnerAccount.
-         */
-        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
-            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
-            this.resourceOwnerAccount = resourceOwnerAccount;
             return this;
         }
 

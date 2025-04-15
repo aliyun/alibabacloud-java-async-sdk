@@ -54,7 +54,10 @@ public class BatchApplyAdviceByIdListResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86F92D26-B774-5FA1-8E53-82CBEEEBB012</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

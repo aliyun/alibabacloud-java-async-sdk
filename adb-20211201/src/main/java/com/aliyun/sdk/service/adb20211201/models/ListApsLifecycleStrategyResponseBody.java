@@ -596,9 +596,7 @@ public class ListApsLifecycleStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * <ul>
-             * <li></li>
-             * </ul>
+             * <p>The operation tables.</p>
              */
             public Builder operationTables(java.util.List<OperationTables> operationTables) {
                 this.operationTables = operationTables;

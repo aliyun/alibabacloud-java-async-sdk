@@ -561,6 +561,9 @@ public class DescribeExecutorDetectionResponseBody extends TeaModel {
 
             /**
              * <p>The property information about the operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GROUP BY field: uid</p>
              */
             public Builder operatorInfo(String operatorInfo) {
                 this.operatorInfo = operatorInfo;
@@ -873,6 +876,9 @@ public class DescribeExecutorDetectionResponseBody extends TeaModel {
 
             /**
              * <p>The information about the detection result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Large amounts of memory resources are used by the Aggregation operator.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -881,6 +887,9 @@ public class DescribeExecutorDetectionResponseBody extends TeaModel {
 
             /**
              * <p>The name of the detection item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Metric detection</p>
              */
             public Builder name(String name) {
                 this.name = name;

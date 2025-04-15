@@ -102,7 +102,10 @@ public class ModifyClickhouseEngineRequest extends Request {
         } 
 
         /**
-         * CacheSize.
+         * <p>The disk cache size of the wide table engine. Unit: GB. Default value: 100. Valid values: 100 to 1000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder cacheSize(Integer cacheSize) {
             this.putQueryParameter("CacheSize", cacheSize);
@@ -111,6 +114,7 @@ public class ModifyClickhouseEngineRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -123,7 +127,16 @@ public class ModifyClickhouseEngineRequest extends Request {
         }
 
         /**
-         * Enabled.
+         * <p>Specifies whether to enable the wide table engine feature. Valid values:</p>
+         * <ul>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enabled(Boolean enabled) {
             this.putQueryParameter("Enabled", enabled);

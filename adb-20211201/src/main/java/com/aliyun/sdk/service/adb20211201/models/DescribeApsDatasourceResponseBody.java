@@ -67,9 +67,7 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
         } 
 
         /**
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>The queried APS data source.</p>
          */
         public Builder apsDatasource(ApsDatasource apsDatasource) {
             this.apsDatasource = apsDatasource;
@@ -523,9 +521,7 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
             } 
 
             /**
-             * <ul>
-             * <li></li>
-             * </ul>
+             * <p>The parameter is no longer supported.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -538,9 +534,7 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
             }
 
             /**
-             * <ul>
-             * <li></li>
-             * </ul>
+             * <p>The parameter is no longer supported.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -553,9 +547,7 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
             }
 
             /**
-             * <ul>
-             * <li></li>
-             * </ul>
+             * <p>The parameter is no longer supported.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -568,9 +560,7 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
             }
 
             /**
-             * <ul>
-             * <li></li>
-             * </ul>
+             * <p>The parameter is no longer supported.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -583,9 +573,7 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
             }
 
             /**
-             * <ul>
-             * <li></li>
-             * </ul>
+             * <p>The parameter is no longer supported.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -598,9 +586,7 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
             }
 
             /**
-             * <ul>
-             * <li></li>
-             * </ul>
+             * <p>The parameter is no longer supported.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -613,9 +599,7 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
             }
 
             /**
-             * <ul>
-             * <li></li>
-             * </ul>
+             * <p>The parameter is no longer supported.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -628,9 +612,7 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
             }
 
             /**
-             * <ul>
-             * <li></li>
-             * </ul>
+             * <p>The parameter is no longer supported.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -741,9 +723,7 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
             } 
 
             /**
-             * <ul>
-             * <li></li>
-             * </ul>
+             * <p>The parameter is no longer supported.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -756,9 +736,7 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
             }
 
             /**
-             * <ul>
-             * <li></li>
-             * </ul>
+             * <p>The parameter is no longer supported.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -771,9 +749,7 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
             }
 
             /**
-             * <ul>
-             * <li></li>
-             * </ul>
+             * <p>The parameter is no longer supported.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -786,9 +762,7 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
             }
 
             /**
-             * <ul>
-             * <li></li>
-             * </ul>
+             * <p>The parameter is no longer supported.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -801,9 +775,7 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
             }
 
             /**
-             * <ul>
-             * <li></li>
-             * </ul>
+             * <p>The parameter is no longer supported.</p>
              * 
              * <strong>example:</strong>
              * <ul>

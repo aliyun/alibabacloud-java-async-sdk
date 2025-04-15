@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DeleteProcessInstanceResponse} extends {@link TeaModel}
+ * {@link DescribeInclinedTablesResponse} extends {@link TeaModel}
  *
- * <p>DeleteProcessInstanceResponse</p>
+ * <p>DescribeInclinedTablesResponse</p>
  */
-public class DeleteProcessInstanceResponse extends Response {
+public class DescribeInclinedTablesResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class DeleteProcessInstanceResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private DeleteProcessInstanceResponseBody body;
+    private DescribeInclinedTablesResponseBody body;
 
-    private DeleteProcessInstanceResponse(BuilderImpl builder) {
+    private DescribeInclinedTablesResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DeleteProcessInstanceResponse create() {
+    public static DescribeInclinedTablesResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class DeleteProcessInstanceResponse extends Response {
     /**
      * @return body
      */
-    public DeleteProcessInstanceResponseBody getBody() {
+    public DescribeInclinedTablesResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DeleteProcessInstanceResponse, Builder> {
+    public interface Builder extends Response.Builder<DescribeInclinedTablesResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DeleteProcessInstanceResponseBody body);
+        Builder body(DescribeInclinedTablesResponseBody body);
 
         @Override
-        DeleteProcessInstanceResponse build();
+        DescribeInclinedTablesResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DeleteProcessInstanceResponse, Builder>
+            extends Response.BuilderImpl<DescribeInclinedTablesResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private DeleteProcessInstanceResponseBody body; 
+        private DescribeInclinedTablesResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DeleteProcessInstanceResponse response) {
+        private BuilderImpl(DescribeInclinedTablesResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class DeleteProcessInstanceResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DeleteProcessInstanceResponseBody body) {
+        public Builder body(DescribeInclinedTablesResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DeleteProcessInstanceResponse build() {
-            return new DeleteProcessInstanceResponse(this);
+        public DescribeInclinedTablesResponse build() {
+            return new DescribeInclinedTablesResponse(this);
         } 
 
     } 

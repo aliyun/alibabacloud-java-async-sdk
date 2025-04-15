@@ -67,7 +67,7 @@ public class DescribeEssdCacheConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class DescribeEssdCacheConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C7EDB8E4-9769-4233-88C7-DCA4C9******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,15 @@ public class DescribeEssdCacheConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * EnableEssdCache.
+             * <p>Specifies whether to enable the disk cache feature.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableEssdCache(Boolean enableEssdCache) {
                 this.enableEssdCache = enableEssdCache;
@@ -149,7 +160,10 @@ public class DescribeEssdCacheConfigResponseBody extends TeaModel {
             }
 
             /**
-             * EssdCacheSize.
+             * <p>The disk cache size. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder essdCacheSize(Integer essdCacheSize) {
                 this.essdCacheSize = essdCacheSize;

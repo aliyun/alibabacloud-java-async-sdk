@@ -55,6 +55,10 @@ public class GetViewObjectsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SchemaName")
     private String schemaName;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShowMvBaseTable")
+    private Boolean showMvBaseTable;
+
     private GetViewObjectsRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
@@ -66,6 +70,7 @@ public class GetViewObjectsRequest extends Request {
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
         this.schemaName = builder.schemaName;
+        this.showMvBaseTable = builder.showMvBaseTable;
     }
 
     public static Builder builder() {
@@ -144,6 +149,13 @@ public class GetViewObjectsRequest extends Request {
         return this.schemaName;
     }
 
+    /**
+     * @return showMvBaseTable
+     */
+    public Boolean getShowMvBaseTable() {
+        return this.showMvBaseTable;
+    }
+
     public static final class Builder extends Request.Builder<GetViewObjectsRequest, Builder> {
         private String DBClusterId; 
         private String filterOwner; 
@@ -154,6 +166,7 @@ public class GetViewObjectsRequest extends Request {
         private Long pageSize; 
         private String regionId; 
         private String schemaName; 
+        private Boolean showMvBaseTable; 
 
         private Builder() {
             super();
@@ -170,6 +183,7 @@ public class GetViewObjectsRequest extends Request {
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
             this.schemaName = request.schemaName;
+            this.showMvBaseTable = request.showMvBaseTable;
         } 
 
         /**
@@ -296,6 +310,15 @@ public class GetViewObjectsRequest extends Request {
         public Builder schemaName(String schemaName) {
             this.putQueryParameter("SchemaName", schemaName);
             this.schemaName = schemaName;
+            return this;
+        }
+
+        /**
+         * ShowMvBaseTable.
+         */
+        public Builder showMvBaseTable(Boolean showMvBaseTable) {
+            this.putQueryParameter("ShowMvBaseTable", showMvBaseTable);
+            this.showMvBaseTable = showMvBaseTable;
             return this;
         }
 

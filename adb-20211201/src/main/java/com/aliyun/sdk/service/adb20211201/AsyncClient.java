@@ -309,18 +309,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
      * <ul>
-     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
-     * </ul>
-     * 
-     * @param request the request parameters of DeleteProcessInstance  DeleteProcessInstanceRequest
-     * @return DeleteProcessInstanceResponse
-     */
-    CompletableFuture<DeleteProcessInstanceResponse> deleteProcessInstance(DeleteProcessInstanceRequest request);
-
-    /**
-     * <b>description</b> :
-     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
-     * <ul>
      * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
      * <p> If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.</p>
      * </blockquote>
@@ -805,6 +793,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeInclinedNodesResponse> describeInclinedNodes(DescribeInclinedNodesRequest request);
 
     /**
+     * @param request the request parameters of DescribeInclinedTables  DescribeInclinedTablesRequest
+     * @return DescribeInclinedTablesResponse
+     */
+    CompletableFuture<DescribeInclinedTablesResponse> describeInclinedTables(DescribeInclinedTablesRequest request);
+
+    /**
      * <b>description</b> :
      * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
@@ -870,6 +864,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeRegionsResponse
      */
     CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeResourceGroupSpec  DescribeResourceGroupSpecRequest
+     * @return DescribeResourceGroupSpecResponse
+     */
+    CompletableFuture<DescribeResourceGroupSpecResponse> describeResourceGroupSpec(DescribeResourceGroupSpecRequest request);
 
     /**
      * <b>description</b> :

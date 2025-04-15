@@ -321,7 +321,16 @@ public class DescribePerformanceViewAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * EnableAutoMc.
+             * <p>Indicates whether the multi-cluster feature is enabled. Valid values:</p>
+             * <ul>
+             * <li><p>true</p>
+             * </li>
+             * <li><p>false</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableAutoMc(Boolean enableAutoMc) {
                 this.enableAutoMc = enableAutoMc;
@@ -329,7 +338,10 @@ public class DescribePerformanceViewAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Engine.
+             * <p>The database engine of the cluster. Valid values:</p>
+             * <ul>
+             * <li>AnalyticDB</li>
+             * </ul>
              */
             public Builder engine(java.util.List<String> engine) {
                 this.engine = engine;
@@ -337,7 +349,14 @@ public class DescribePerformanceViewAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * GroupType.
+             * <p>The type of the resource group. Valid values:</p>
+             * <ul>
+             * <li><strong>Interactive</strong></li>
+             * <li><strong>Job</strong></li>
+             * </ul>
+             * <blockquote>
+             * <p> For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/428610.html">Resource group overview</a>.</p>
+             * </blockquote>
              */
             public Builder groupType(java.util.List<String> groupType) {
                 this.groupType = groupType;

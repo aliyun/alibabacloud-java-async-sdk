@@ -23,6 +23,9 @@ public class TableSummaryModel extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
+    @com.aliyun.core.annotation.NameInMap("MvDetailModel")
+    private OpenStructMvDetailModel mvDetailModel;
+
     @com.aliyun.core.annotation.NameInMap("Owner")
     private String owner;
 
@@ -47,6 +50,7 @@ public class TableSummaryModel extends TeaModel {
     private TableSummaryModel(Builder builder) {
         this.createTime = builder.createTime;
         this.description = builder.description;
+        this.mvDetailModel = builder.mvDetailModel;
         this.owner = builder.owner;
         this.SQL = builder.SQL;
         this.schemaName = builder.schemaName;
@@ -80,6 +84,13 @@ public class TableSummaryModel extends TeaModel {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return mvDetailModel
+     */
+    public OpenStructMvDetailModel getMvDetailModel() {
+        return this.mvDetailModel;
     }
 
     /**
@@ -134,6 +145,7 @@ public class TableSummaryModel extends TeaModel {
     public static final class Builder {
         private String createTime; 
         private String description; 
+        private OpenStructMvDetailModel mvDetailModel; 
         private String owner; 
         private String SQL; 
         private String schemaName; 
@@ -148,6 +160,7 @@ public class TableSummaryModel extends TeaModel {
         private Builder(TableSummaryModel model) {
             this.createTime = model.createTime;
             this.description = model.description;
+            this.mvDetailModel = model.mvDetailModel;
             this.owner = model.owner;
             this.SQL = model.SQL;
             this.schemaName = model.schemaName;
@@ -170,6 +183,14 @@ public class TableSummaryModel extends TeaModel {
          */
         public Builder description(String description) {
             this.description = description;
+            return this;
+        }
+
+        /**
+         * MvDetailModel.
+         */
+        public Builder mvDetailModel(OpenStructMvDetailModel mvDetailModel) {
+            this.mvDetailModel = mvDetailModel;
             return this;
         }
 

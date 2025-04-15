@@ -355,6 +355,9 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
 
             /**
              * <p>The detection result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Multiple oversized non-partitioned tables are detected.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -363,6 +366,9 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
 
             /**
              * <p>The name of the detection item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Improper partition field diagnostics</p>
              */
             public Builder name(String name) {
                 this.name = name;

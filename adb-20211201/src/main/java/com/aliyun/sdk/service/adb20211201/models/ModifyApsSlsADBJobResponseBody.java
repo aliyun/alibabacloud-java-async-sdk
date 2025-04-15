@@ -131,6 +131,11 @@ public class ModifyApsSlsADBJobResponseBody extends TeaModel {
 
         /**
          * <p>The returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder data(java.util.Map<String, ?> data) {
             this.data = data;

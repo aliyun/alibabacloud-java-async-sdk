@@ -103,6 +103,7 @@ public class ListSparkWarehouseBatchSQLRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,6 +140,7 @@ public class ListSparkWarehouseBatchSQLRequest extends Request {
         }
 
         /**
+         * <p>The name of the interactive resource group for which the Spark engine is enabled.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

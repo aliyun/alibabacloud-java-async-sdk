@@ -280,6 +280,9 @@ public class DescribeOversizeNonPartitionTableInfosResponseBody extends TeaModel
 
             /**
              * <p>The information about the detection result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Multiple oversized non-partitioned tables are detected.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -288,6 +291,9 @@ public class DescribeOversizeNonPartitionTableInfosResponseBody extends TeaModel
 
             /**
              * <p>The name of the detection item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Oversized non-partitioned tables</p>
              */
             public Builder name(String name) {
                 this.name = name;

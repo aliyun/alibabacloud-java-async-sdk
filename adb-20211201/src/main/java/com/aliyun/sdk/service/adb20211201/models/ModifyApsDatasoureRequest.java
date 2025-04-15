@@ -238,9 +238,7 @@ public class ModifyApsDatasoureRequest extends Request {
         }
 
         /**
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>The information about the Kafka instance.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -268,7 +266,7 @@ public class ModifyApsDatasoureRequest extends Request {
         }
 
         /**
-         * <p>The retired data source.</p>
+         * <p>The parameter is no longer supported.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -283,7 +281,7 @@ public class ModifyApsDatasoureRequest extends Request {
         }
 
         /**
-         * <p>The retired data source.</p>
+         * <p>The parameter is no longer supported.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -599,9 +597,7 @@ public class ModifyApsDatasoureRequest extends Request {
             } 
 
             /**
-             * <ul>
-             * <li></li>
-             * </ul>
+             * <p>The parameter is no longer supported.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -614,9 +610,7 @@ public class ModifyApsDatasoureRequest extends Request {
             }
 
             /**
-             * <ul>
-             * <li></li>
-             * </ul>
+             * <p>The parameter is no longer supported.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -629,9 +623,7 @@ public class ModifyApsDatasoureRequest extends Request {
             }
 
             /**
-             * <ul>
-             * <li></li>
-             * </ul>
+             * <p>The parameter is no longer supported.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -644,9 +636,7 @@ public class ModifyApsDatasoureRequest extends Request {
             }
 
             /**
-             * <ul>
-             * <li></li>
-             * </ul>
+             * <p>The parameter is no longer supported.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -744,9 +734,7 @@ public class ModifyApsDatasoureRequest extends Request {
             } 
 
             /**
-             * <ul>
-             * <li></li>
-             * </ul>
+             * <p>The parameter is no longer supported.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -759,9 +747,7 @@ public class ModifyApsDatasoureRequest extends Request {
             }
 
             /**
-             * <ul>
-             * <li></li>
-             * </ul>
+             * <p>The parameter is no longer supported.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -774,9 +760,7 @@ public class ModifyApsDatasoureRequest extends Request {
             }
 
             /**
-             * <ul>
-             * <li></li>
-             * </ul>
+             * <p>The parameter is no longer supported.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -789,9 +773,7 @@ public class ModifyApsDatasoureRequest extends Request {
             }
 
             /**
-             * <ul>
-             * <li></li>
-             * </ul>
+             * <p>The parameter is no longer supported.</p>
              * 
              * <strong>example:</strong>
              * <ul>
