@@ -249,11 +249,17 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PilotStartTime")
         private String pilotStartTime;
 
+        @com.aliyun.core.annotation.NameInMap("PilotVersion")
+        private String pilotVersion;
+
         @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
         @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
+
+        @com.aliyun.core.annotation.NameInMap("VersionLifeCycle")
+        private String versionLifeCycle;
 
         private Data(Builder builder) {
             this.clusterId = builder.clusterId;
@@ -262,8 +268,10 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
             this.namespaceInfos = builder.namespaceInfos;
             this.namespaces = builder.namespaces;
             this.pilotStartTime = builder.pilotStartTime;
+            this.pilotVersion = builder.pilotVersion;
             this.region = builder.region;
             this.updateTime = builder.updateTime;
+            this.versionLifeCycle = builder.versionLifeCycle;
         }
 
         public static Builder builder() {
@@ -317,6 +325,13 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
         }
 
         /**
+         * @return pilotVersion
+         */
+        public String getPilotVersion() {
+            return this.pilotVersion;
+        }
+
+        /**
          * @return region
          */
         public String getRegion() {
@@ -330,6 +345,13 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
             return this.updateTime;
         }
 
+        /**
+         * @return versionLifeCycle
+         */
+        public String getVersionLifeCycle() {
+            return this.versionLifeCycle;
+        }
+
         public static final class Builder {
             private String clusterId; 
             private String clusterName; 
@@ -337,8 +359,10 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
             private String namespaceInfos; 
             private java.util.List<Namespaces> namespaces; 
             private String pilotStartTime; 
+            private String pilotVersion; 
             private String region; 
             private String updateTime; 
+            private String versionLifeCycle; 
 
             private Builder() {
             } 
@@ -350,8 +374,10 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
                 this.namespaceInfos = model.namespaceInfos;
                 this.namespaces = model.namespaces;
                 this.pilotStartTime = model.pilotStartTime;
+                this.pilotVersion = model.pilotVersion;
                 this.region = model.region;
                 this.updateTime = model.updateTime;
+                this.versionLifeCycle = model.versionLifeCycle;
             } 
 
             /**
@@ -418,6 +444,14 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
             }
 
             /**
+             * PilotVersion.
+             */
+            public Builder pilotVersion(String pilotVersion) {
+                this.pilotVersion = pilotVersion;
+                return this;
+            }
+
+            /**
              * <p>The ID of the region in which the instance resides. The region is supported by MSE.</p>
              * 
              * <strong>example:</strong>
@@ -436,6 +470,14 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
+                return this;
+            }
+
+            /**
+             * VersionLifeCycle.
+             */
+            public Builder versionLifeCycle(String versionLifeCycle) {
+                this.versionLifeCycle = versionLifeCycle;
                 return this;
             }
 

@@ -161,8 +161,14 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PilotStartTime")
         private String pilotStartTime;
 
+        @com.aliyun.core.annotation.NameInMap("PilotVersion")
+        private String pilotVersion;
+
         @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
+
+        @com.aliyun.core.annotation.NameInMap("VersionLifeCycle")
+        private String versionLifeCycle;
 
         private Result(Builder builder) {
             this.clusterId = builder.clusterId;
@@ -170,7 +176,9 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
             this.k8sVersion = builder.k8sVersion;
             this.namespaceInfos = builder.namespaceInfos;
             this.pilotStartTime = builder.pilotStartTime;
+            this.pilotVersion = builder.pilotVersion;
             this.region = builder.region;
+            this.versionLifeCycle = builder.versionLifeCycle;
         }
 
         public static Builder builder() {
@@ -217,10 +225,24 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
         }
 
         /**
+         * @return pilotVersion
+         */
+        public String getPilotVersion() {
+            return this.pilotVersion;
+        }
+
+        /**
          * @return region
          */
         public String getRegion() {
             return this.region;
+        }
+
+        /**
+         * @return versionLifeCycle
+         */
+        public String getVersionLifeCycle() {
+            return this.versionLifeCycle;
         }
 
         public static final class Builder {
@@ -229,7 +251,9 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
             private String k8sVersion; 
             private String namespaceInfos; 
             private String pilotStartTime; 
+            private String pilotVersion; 
             private String region; 
+            private String versionLifeCycle; 
 
             private Builder() {
             } 
@@ -240,7 +264,9 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
                 this.k8sVersion = model.k8sVersion;
                 this.namespaceInfos = model.namespaceInfos;
                 this.pilotStartTime = model.pilotStartTime;
+                this.pilotVersion = model.pilotVersion;
                 this.region = model.region;
+                this.versionLifeCycle = model.versionLifeCycle;
             } 
 
             /**
@@ -299,6 +325,14 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
             }
 
             /**
+             * PilotVersion.
+             */
+            public Builder pilotVersion(String pilotVersion) {
+                this.pilotVersion = pilotVersion;
+                return this;
+            }
+
+            /**
              * <p>The region where the cluster resides.</p>
              * 
              * <strong>example:</strong>
@@ -306,6 +340,14 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
              */
             public Builder region(String region) {
                 this.region = region;
+                return this;
+            }
+
+            /**
+             * VersionLifeCycle.
+             */
+            public Builder versionLifeCycle(String versionLifeCycle) {
+                this.versionLifeCycle = versionLifeCycle;
                 return this;
             }
 
