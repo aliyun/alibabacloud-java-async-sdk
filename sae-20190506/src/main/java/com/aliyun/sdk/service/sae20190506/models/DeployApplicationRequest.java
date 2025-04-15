@@ -175,6 +175,10 @@ public class DeployApplicationRequest extends Request {
     private String nasId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewSaeVersion")
+    private String newSaeVersion;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OidcRoleName")
     private String oidcRoleName;
 
@@ -340,6 +344,7 @@ public class DeployApplicationRequest extends Request {
         this.mountHost = builder.mountHost;
         this.nasConfigs = builder.nasConfigs;
         this.nasId = builder.nasId;
+        this.newSaeVersion = builder.newSaeVersion;
         this.oidcRoleName = builder.oidcRoleName;
         this.ossAkId = builder.ossAkId;
         this.ossAkSecret = builder.ossAkSecret;
@@ -660,6 +665,13 @@ public class DeployApplicationRequest extends Request {
     }
 
     /**
+     * @return newSaeVersion
+     */
+    public String getNewSaeVersion() {
+        return this.newSaeVersion;
+    }
+
+    /**
      * @return oidcRoleName
      */
     public String getOidcRoleName() {
@@ -916,6 +928,7 @@ public class DeployApplicationRequest extends Request {
         private String mountHost; 
         private String nasConfigs; 
         private String nasId; 
+        private String newSaeVersion; 
         private String oidcRoleName; 
         private String ossAkId; 
         private String ossAkSecret; 
@@ -993,6 +1006,7 @@ public class DeployApplicationRequest extends Request {
             this.mountHost = request.mountHost;
             this.nasConfigs = request.nasConfigs;
             this.nasId = request.nasId;
+            this.newSaeVersion = request.newSaeVersion;
             this.oidcRoleName = request.oidcRoleName;
             this.ossAkId = request.ossAkId;
             this.ossAkSecret = request.ossAkSecret;
@@ -1584,6 +1598,15 @@ public class DeployApplicationRequest extends Request {
         public Builder nasId(String nasId) {
             this.putQueryParameter("NasId", nasId);
             this.nasId = nasId;
+            return this;
+        }
+
+        /**
+         * NewSaeVersion.
+         */
+        public Builder newSaeVersion(String newSaeVersion) {
+            this.putQueryParameter("NewSaeVersion", newSaeVersion);
+            this.newSaeVersion = newSaeVersion;
             return this;
         }
 
