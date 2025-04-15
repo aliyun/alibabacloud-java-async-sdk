@@ -1,3 +1,6 @@
+2025-04-15 Version: 2.0.10
+- Generated java-async 2022-12-15 for eflo-controller.
+
 2025-04-10 Version: 2.0.9
 - Generated java-async 2022-12-15 for eflo-controller.
 

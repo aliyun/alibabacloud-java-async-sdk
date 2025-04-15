@@ -38,6 +38,10 @@ public class ListFreeNodesRequest extends Request {
     private String nextToken;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OperatingStates")
+    private java.util.List<String> operatingStates;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
@@ -52,6 +56,7 @@ public class ListFreeNodesRequest extends Request {
         this.machineType = builder.machineType;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
+        this.operatingStates = builder.operatingStates;
         this.resourceGroupId = builder.resourceGroupId;
         this.tags = builder.tags;
     }
@@ -105,6 +110,13 @@ public class ListFreeNodesRequest extends Request {
     }
 
     /**
+     * @return operatingStates
+     */
+    public java.util.List<String> getOperatingStates() {
+        return this.operatingStates;
+    }
+
+    /**
      * @return resourceGroupId
      */
     public String getResourceGroupId() {
@@ -124,6 +136,7 @@ public class ListFreeNodesRequest extends Request {
         private String machineType; 
         private Long maxResults; 
         private String nextToken; 
+        private java.util.List<String> operatingStates; 
         private String resourceGroupId; 
         private java.util.List<Tags> tags; 
 
@@ -138,6 +151,7 @@ public class ListFreeNodesRequest extends Request {
             this.machineType = request.machineType;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
+            this.operatingStates = request.operatingStates;
             this.resourceGroupId = request.resourceGroupId;
             this.tags = request.tags;
         } 
@@ -196,6 +210,15 @@ public class ListFreeNodesRequest extends Request {
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
             this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * OperatingStates.
+         */
+        public Builder operatingStates(java.util.List<String> operatingStates) {
+            this.putBodyParameter("OperatingStates", operatingStates);
+            this.operatingStates = operatingStates;
             return this;
         }
 
