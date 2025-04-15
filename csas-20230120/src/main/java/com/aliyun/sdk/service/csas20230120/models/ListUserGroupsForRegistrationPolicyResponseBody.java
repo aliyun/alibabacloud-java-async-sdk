@@ -36,6 +36,10 @@ public class ListUserGroupsForRegistrationPolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return policies
      */
@@ -53,6 +57,14 @@ public class ListUserGroupsForRegistrationPolicyResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Policies> policies; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListUserGroupsForRegistrationPolicyResponseBody model) {
+            this.policies = model.policies;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Policies.
@@ -143,6 +155,16 @@ public class ListUserGroupsForRegistrationPolicyResponseBody extends TeaModel {
             private String relation; 
             private String userGroupType; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Attributes model) {
+                this.idpId = model.idpId;
+                this.relation = model.relation;
+                this.userGroupType = model.userGroupType;
+                this.value = model.value;
+            } 
 
             /**
              * IdpId.
@@ -263,6 +285,17 @@ public class ListUserGroupsForRegistrationPolicyResponseBody extends TeaModel {
             private String name; 
             private String userGroupId; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserGroups model) {
+                this.attributes = model.attributes;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.name = model.name;
+                this.userGroupId = model.userGroupId;
+            } 
+
             /**
              * Attributes.
              */
@@ -353,6 +386,14 @@ public class ListUserGroupsForRegistrationPolicyResponseBody extends TeaModel {
         public static final class Builder {
             private String policyId; 
             private java.util.List<UserGroups> userGroups; 
+
+            private Builder() {
+            } 
+
+            private Builder(Policies model) {
+                this.policyId = model.policyId;
+                this.userGroups = model.userGroups;
+            } 
 
             /**
              * PolicyId.

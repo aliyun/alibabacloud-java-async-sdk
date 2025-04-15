@@ -59,7 +59,7 @@ public class UpdateBootAndAntiUninstallPolicyRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -258,6 +258,16 @@ public class UpdateBootAndAntiUninstallPolicyRequest extends Request {
             private String minorButtonText; 
             private String title; 
 
+            private Builder() {
+            } 
+
+            private Builder(BlockTextEn model) {
+                this.content = model.content;
+                this.mainButtonText = model.mainButtonText;
+                this.minorButtonText = model.minorButtonText;
+                this.title = model.title;
+            } 
+
             /**
              * Content.
              */
@@ -365,6 +375,16 @@ public class UpdateBootAndAntiUninstallPolicyRequest extends Request {
             private String minorButtonText; 
             private String title; 
 
+            private Builder() {
+            } 
+
+            private Builder(BlockTextZh model) {
+                this.content = model.content;
+                this.mainButtonText = model.mainButtonText;
+                this.minorButtonText = model.minorButtonText;
+                this.title = model.title;
+            } 
+
             /**
              * Content.
              */
@@ -447,6 +467,14 @@ public class UpdateBootAndAntiUninstallPolicyRequest extends Request {
         public static final class Builder {
             private BlockTextEn blockTextEn; 
             private BlockTextZh blockTextZh; 
+
+            private Builder() {
+            } 
+
+            private Builder(BlockContent model) {
+                this.blockTextEn = model.blockTextEn;
+                this.blockTextZh = model.blockTextZh;
+            } 
 
             /**
              * BlockTextEn.

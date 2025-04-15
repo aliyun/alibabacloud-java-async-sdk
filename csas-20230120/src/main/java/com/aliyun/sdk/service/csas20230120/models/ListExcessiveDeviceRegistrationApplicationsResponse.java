@@ -37,7 +37,7 @@ public class ListExcessiveDeviceRegistrationApplicationsResponse extends Respons
         return new BuilderImpl().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new BuilderImpl(this);
     }

@@ -20,8 +20,20 @@ public class DisposalContent extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AlertContent")
     private String alertContent;
 
+    @com.aliyun.core.annotation.NameInMap("AlertContentEn")
+    private String alertContentEn;
+
     @com.aliyun.core.annotation.NameInMap("AlertTitle")
     private String alertTitle;
+
+    @com.aliyun.core.annotation.NameInMap("AlertTitleEn")
+    private String alertTitleEn;
+
+    @com.aliyun.core.annotation.NameInMap("NoticeContent")
+    private String noticeContent;
+
+    @com.aliyun.core.annotation.NameInMap("NoticeContentEn")
+    private String noticeContentEn;
 
     @com.aliyun.core.annotation.NameInMap("NotifyActions")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -32,7 +44,11 @@ public class DisposalContent extends TeaModel {
 
     private DisposalContent(Builder builder) {
         this.alertContent = builder.alertContent;
+        this.alertContentEn = builder.alertContentEn;
         this.alertTitle = builder.alertTitle;
+        this.alertTitleEn = builder.alertTitleEn;
+        this.noticeContent = builder.noticeContent;
+        this.noticeContentEn = builder.noticeContentEn;
         this.notifyActions = builder.notifyActions;
         this.prohibitActions = builder.prohibitActions;
     }
@@ -45,6 +61,10 @@ public class DisposalContent extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return alertContent
      */
@@ -53,10 +73,38 @@ public class DisposalContent extends TeaModel {
     }
 
     /**
+     * @return alertContentEn
+     */
+    public String getAlertContentEn() {
+        return this.alertContentEn;
+    }
+
+    /**
      * @return alertTitle
      */
     public String getAlertTitle() {
         return this.alertTitle;
+    }
+
+    /**
+     * @return alertTitleEn
+     */
+    public String getAlertTitleEn() {
+        return this.alertTitleEn;
+    }
+
+    /**
+     * @return noticeContent
+     */
+    public String getNoticeContent() {
+        return this.noticeContent;
+    }
+
+    /**
+     * @return noticeContentEn
+     */
+    public String getNoticeContentEn() {
+        return this.noticeContentEn;
     }
 
     /**
@@ -75,9 +123,27 @@ public class DisposalContent extends TeaModel {
 
     public static final class Builder {
         private String alertContent; 
+        private String alertContentEn; 
         private String alertTitle; 
+        private String alertTitleEn; 
+        private String noticeContent; 
+        private String noticeContentEn; 
         private java.util.List<String> notifyActions; 
         private java.util.List<String> prohibitActions; 
+
+        private Builder() {
+        } 
+
+        private Builder(DisposalContent model) {
+            this.alertContent = model.alertContent;
+            this.alertContentEn = model.alertContentEn;
+            this.alertTitle = model.alertTitle;
+            this.alertTitleEn = model.alertTitleEn;
+            this.noticeContent = model.noticeContent;
+            this.noticeContentEn = model.noticeContentEn;
+            this.notifyActions = model.notifyActions;
+            this.prohibitActions = model.prohibitActions;
+        } 
 
         /**
          * AlertContent.
@@ -88,10 +154,42 @@ public class DisposalContent extends TeaModel {
         }
 
         /**
+         * AlertContentEn.
+         */
+        public Builder alertContentEn(String alertContentEn) {
+            this.alertContentEn = alertContentEn;
+            return this;
+        }
+
+        /**
          * AlertTitle.
          */
         public Builder alertTitle(String alertTitle) {
             this.alertTitle = alertTitle;
+            return this;
+        }
+
+        /**
+         * AlertTitleEn.
+         */
+        public Builder alertTitleEn(String alertTitleEn) {
+            this.alertTitleEn = alertTitleEn;
+            return this;
+        }
+
+        /**
+         * NoticeContent.
+         */
+        public Builder noticeContent(String noticeContent) {
+            this.noticeContent = noticeContent;
+            return this;
+        }
+
+        /**
+         * NoticeContentEn.
+         */
+        public Builder noticeContentEn(String noticeContentEn) {
+            this.noticeContentEn = noticeContentEn;
             return this;
         }
 

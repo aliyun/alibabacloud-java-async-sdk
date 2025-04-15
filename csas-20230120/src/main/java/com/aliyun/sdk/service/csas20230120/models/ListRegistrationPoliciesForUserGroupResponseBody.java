@@ -36,6 +36,10 @@ public class ListRegistrationPoliciesForUserGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class ListRegistrationPoliciesForUserGroupResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<UserGroups> userGroups; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListRegistrationPoliciesForUserGroupResponseBody model) {
+            this.requestId = model.requestId;
+            this.userGroups = model.userGroups;
+        } 
 
         /**
          * RequestId.
@@ -131,6 +143,15 @@ public class ListRegistrationPoliciesForUserGroupResponseBody extends TeaModel {
             private String all; 
             private String mobile; 
             private String pc; 
+
+            private Builder() {
+            } 
+
+            private Builder(LimitCount model) {
+                this.all = model.all;
+                this.mobile = model.mobile;
+                this.pc = model.pc;
+            } 
 
             /**
              * All.
@@ -218,6 +239,15 @@ public class ListRegistrationPoliciesForUserGroupResponseBody extends TeaModel {
             private String deviceBelong; 
             private LimitCount limitCount; 
             private String limitType; 
+
+            private Builder() {
+            } 
+
+            private Builder(LimitDetail model) {
+                this.deviceBelong = model.deviceBelong;
+                this.limitCount = model.limitCount;
+                this.limitType = model.limitType;
+            } 
 
             /**
              * DeviceBelong.
@@ -378,6 +408,21 @@ public class ListRegistrationPoliciesForUserGroupResponseBody extends TeaModel {
             private String status; 
             private java.util.List<String> whitelist; 
 
+            private Builder() {
+            } 
+
+            private Builder(Policies model) {
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.limitDetail = model.limitDetail;
+                this.matchMode = model.matchMode;
+                this.name = model.name;
+                this.policyId = model.policyId;
+                this.priority = model.priority;
+                this.status = model.status;
+                this.whitelist = model.whitelist;
+            } 
+
             /**
              * CreateTime.
              */
@@ -500,6 +545,14 @@ public class ListRegistrationPoliciesForUserGroupResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Policies> policies; 
             private String userGroupId; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserGroups model) {
+                this.policies = model.policies;
+                this.userGroupId = model.userGroupId;
+            } 
 
             /**
              * Policies.

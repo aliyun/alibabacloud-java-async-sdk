@@ -36,6 +36,10 @@ public class PAL7ConfigReplaceRule extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return from
      */
@@ -53,6 +57,14 @@ public class PAL7ConfigReplaceRule extends TeaModel {
     public static final class Builder {
         private String from; 
         private String to; 
+
+        private Builder() {
+        } 
+
+        private Builder(PAL7ConfigReplaceRule model) {
+            this.from = model.from;
+            this.to = model.to;
+        } 
 
         /**
          * From.

@@ -36,6 +36,10 @@ public class GetActiveIdpConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetActiveIdpConfigResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetActiveIdpConfigResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Data.
@@ -143,6 +155,16 @@ public class GetActiveIdpConfigResponseBody extends TeaModel {
             private String id; 
             private String name; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.description = model.description;
+                this.id = model.id;
+                this.name = model.name;
+                this.type = model.type;
+            } 
 
             /**
              * Description.

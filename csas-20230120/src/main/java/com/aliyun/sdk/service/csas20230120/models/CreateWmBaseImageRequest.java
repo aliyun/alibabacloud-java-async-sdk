@@ -19,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CreateWmBaseImageRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Height")
-    @com.aliyun.core.annotation.Validation(required = true, maximum = 5000, minimum = 100)
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 10000, minimum = 100)
     private Integer height;
 
     @com.aliyun.core.annotation.Body
@@ -34,7 +34,7 @@ public class CreateWmBaseImageRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Width")
-    @com.aliyun.core.annotation.Validation(required = true, maximum = 5000, minimum = 100)
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 10000, minimum = 100)
     private Integer width;
 
     @com.aliyun.core.annotation.Body
@@ -75,7 +75,7 @@ public class CreateWmBaseImageRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }

@@ -36,6 +36,10 @@ public class CreateDynamicRouteResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dynamicRouteId
      */
@@ -53,6 +57,14 @@ public class CreateDynamicRouteResponseBody extends TeaModel {
     public static final class Builder {
         private String dynamicRouteId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateDynamicRouteResponseBody model) {
+            this.dynamicRouteId = model.dynamicRouteId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * DynamicRouteId.

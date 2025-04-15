@@ -36,6 +36,10 @@ public class ListApprovalSchemasForApprovalProcessesResponseBody extends TeaMode
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return processes
      */
@@ -53,6 +57,14 @@ public class ListApprovalSchemasForApprovalProcessesResponseBody extends TeaMode
     public static final class Builder {
         private java.util.List<Processes> processes; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListApprovalSchemasForApprovalProcessesResponseBody model) {
+            this.processes = model.processes;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Processes.
@@ -192,6 +204,20 @@ public class ListApprovalSchemasForApprovalProcessesResponseBody extends TeaMode
             private String schemaName; 
             private Long schemaVersion; 
 
+            private Builder() {
+            } 
+
+            private Builder(Schemas model) {
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.isDefault = model.isDefault;
+                this.policyType = model.policyType;
+                this.schemaContent = model.schemaContent;
+                this.schemaId = model.schemaId;
+                this.schemaName = model.schemaName;
+                this.schemaVersion = model.schemaVersion;
+            } 
+
             /**
              * CreateTime.
              */
@@ -306,6 +332,14 @@ public class ListApprovalSchemasForApprovalProcessesResponseBody extends TeaMode
         public static final class Builder {
             private String processId; 
             private java.util.List<Schemas> schemas; 
+
+            private Builder() {
+            } 
+
+            private Builder(Processes model) {
+                this.processId = model.processId;
+                this.schemas = model.schemas;
+            } 
 
             /**
              * ProcessId.

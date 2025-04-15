@@ -36,6 +36,10 @@ public class ListIdpDepartmentsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class ListIdpDepartmentsResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListIdpDepartmentsResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Data.
@@ -132,6 +144,15 @@ public class ListIdpDepartmentsResponseBody extends TeaModel {
             private String idpConfigId; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataList model) {
+                this.id = model.id;
+                this.idpConfigId = model.idpConfigId;
+                this.name = model.name;
+            } 
+
             /**
              * Id.
              */
@@ -206,6 +227,14 @@ public class ListIdpDepartmentsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<DataList> dataList; 
             private Long totalNum; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.dataList = model.dataList;
+                this.totalNum = model.totalNum;
+            } 
 
             /**
              * DataList.

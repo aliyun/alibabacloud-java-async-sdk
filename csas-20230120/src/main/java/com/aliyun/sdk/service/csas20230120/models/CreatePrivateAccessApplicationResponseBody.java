@@ -36,6 +36,10 @@ public class CreatePrivateAccessApplicationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return applicationId
      */
@@ -53,6 +57,14 @@ public class CreatePrivateAccessApplicationResponseBody extends TeaModel {
     public static final class Builder {
         private String applicationId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreatePrivateAccessApplicationResponseBody model) {
+            this.applicationId = model.applicationId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * ApplicationId.

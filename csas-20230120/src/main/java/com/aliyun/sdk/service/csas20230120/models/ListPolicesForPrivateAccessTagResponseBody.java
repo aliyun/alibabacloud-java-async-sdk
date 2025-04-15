@@ -36,6 +36,10 @@ public class ListPolicesForPrivateAccessTagResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class ListPolicesForPrivateAccessTagResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<Tags> tags; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListPolicesForPrivateAccessTagResponseBody model) {
+            this.requestId = model.requestId;
+            this.tags = model.tags;
+        } 
 
         /**
          * RequestId.
@@ -143,6 +155,16 @@ public class ListPolicesForPrivateAccessTagResponseBody extends TeaModel {
             private String relation; 
             private String userGroupType; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomUserAttributes model) {
+                this.idpId = model.idpId;
+                this.relation = model.relation;
+                this.userGroupType = model.userGroupType;
+                this.value = model.value;
+            } 
 
             /**
              * <p>用户组的身份源ID。当自定义用户组类型为<strong>department</strong>时，存在该值。</p>
@@ -351,6 +373,22 @@ public class ListPolicesForPrivateAccessTagResponseBody extends TeaModel {
             private String status; 
             private String userGroupType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Polices model) {
+                this.applicationType = model.applicationType;
+                this.createTime = model.createTime;
+                this.customUserAttributes = model.customUserAttributes;
+                this.description = model.description;
+                this.name = model.name;
+                this.policyAction = model.policyAction;
+                this.policyId = model.policyId;
+                this.priority = model.priority;
+                this.status = model.status;
+                this.userGroupType = model.userGroupType;
+            } 
+
             /**
              * ApplicationType.
              */
@@ -493,6 +531,14 @@ public class ListPolicesForPrivateAccessTagResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Polices> polices; 
             private String tagId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.polices = model.polices;
+                this.tagId = model.tagId;
+            } 
 
             /**
              * Polices.

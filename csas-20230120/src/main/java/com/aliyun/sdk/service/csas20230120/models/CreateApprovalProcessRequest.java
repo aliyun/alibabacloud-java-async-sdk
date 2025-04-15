@@ -51,7 +51,7 @@ public class CreateApprovalProcessRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -252,6 +252,19 @@ public class CreateApprovalProcessRequest extends Request {
             private String domainWhitelistSchemaId; 
             private String peripheralBlockSchemaId; 
             private String softwareBlockSchemaId; 
+
+            private Builder() {
+            } 
+
+            private Builder(MatchSchemas model) {
+                this.appUninstallSchemaId = model.appUninstallSchemaId;
+                this.deviceRegistrationSchemaId = model.deviceRegistrationSchemaId;
+                this.dlpSendSchemaId = model.dlpSendSchemaId;
+                this.domainBlacklistSchemaId = model.domainBlacklistSchemaId;
+                this.domainWhitelistSchemaId = model.domainWhitelistSchemaId;
+                this.peripheralBlockSchemaId = model.peripheralBlockSchemaId;
+                this.softwareBlockSchemaId = model.softwareBlockSchemaId;
+            } 
 
             /**
              * AppUninstallSchemaId.

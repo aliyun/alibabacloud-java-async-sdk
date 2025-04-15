@@ -73,7 +73,7 @@ public class CreateWmExtractTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -341,6 +341,18 @@ public class CreateWmExtractTaskRequest extends Request {
             private String embedTimePosition; 
             private String method; 
             private String timeFormat; 
+
+            private Builder() {
+            } 
+
+            private Builder(CsvControl model) {
+                this.embedBitsNumberInEachTime = model.embedBitsNumberInEachTime;
+                this.embedColumn = model.embedColumn;
+                this.embedPrecision = model.embedPrecision;
+                this.embedTimePosition = model.embedTimePosition;
+                this.method = model.method;
+                this.timeFormat = model.timeFormat;
+            } 
 
             /**
              * EmbedBitsNumberInEachTime.

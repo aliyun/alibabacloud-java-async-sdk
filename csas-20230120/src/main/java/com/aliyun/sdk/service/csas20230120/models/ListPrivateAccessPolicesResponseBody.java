@@ -40,6 +40,10 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return polices
      */
@@ -66,8 +70,17 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalNum; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListPrivateAccessPolicesResponseBody model) {
+            this.polices = model.polices;
+            this.requestId = model.requestId;
+            this.totalNum = model.totalNum;
+        } 
+
         /**
-         * Polices.
+         * <p>The private access policies.</p>
          */
         public Builder polices(java.util.List<Polices> polices) {
             this.polices = polices;
@@ -75,7 +88,10 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>748CFDC7-1EB6-5B8B-9405-DA76ED5BB60D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -83,7 +99,10 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalNum.
+         * <p>The total number of private access policies.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalNum(Integer totalNum) {
             this.totalNum = totalNum;
@@ -164,8 +183,21 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
             private String userGroupType; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(CustomUserAttributes model) {
+                this.idpId = model.idpId;
+                this.relation = model.relation;
+                this.userGroupType = model.userGroupType;
+                this.value = model.value;
+            } 
+
             /**
-             * IdpId.
+             * <p>The ID of the identity provider (IdP) for the user group. If the value of UserGroupType is <strong>department</strong>, this parameter is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder idpId(Integer idpId) {
                 this.idpId = idpId;
@@ -173,7 +205,14 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
             }
 
             /**
-             * Relation.
+             * <p>The logical operator for the user group. Valid values:</p>
+             * <ul>
+             * <li><strong>Equal</strong></li>
+             * <li><strong>Unequal</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Equal</p>
              */
             public Builder relation(String relation) {
                 this.relation = relation;
@@ -181,7 +220,16 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
             }
 
             /**
-             * UserGroupType.
+             * <p>The type of the user group, which is the key of the attribute. Valid values:</p>
+             * <ul>
+             * <li><strong>username</strong></li>
+             * <li><strong>department</strong></li>
+             * <li><strong>email</strong></li>
+             * <li><strong>telephone</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>department</p>
              */
             public Builder userGroupType(String userGroupType) {
                 this.userGroupType = userGroupType;
@@ -189,7 +237,16 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the attribute.</p>
+             * <ul>
+             * <li>If the value of UserGroupType is <strong>username</strong>, the value of this parameter is a username. The value must be 1 to 128 characters in length and can contain letters, digits, hyphens (-), underscores (_), and periods (.).</li>
+             * <li>If the value of UserGroupType is <strong>department</strong>, the value of this parameter is a department. Examples: OU=Department 1, OU=SASE DingTalk.</li>
+             * <li>If the value of UserGroupType is <strong>email</strong>, the value of this parameter is an email address. Example: <a href="mailto:username@example.com">username@example.com</a>.</li>
+             * <li>If the value of UserGroupType is <strong>telephone</strong>, the value of this parameter is a mobile phone number. Example: 13900001234.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>OU=Department 1, OU=SASE DingTalk</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -415,8 +472,30 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
             private java.util.List<String> userGroupIds; 
             private String userGroupMode; 
 
+            private Builder() {
+            } 
+
+            private Builder(Polices model) {
+                this.applicationIds = model.applicationIds;
+                this.applicationType = model.applicationType;
+                this.createTime = model.createTime;
+                this.customUserAttributes = model.customUserAttributes;
+                this.description = model.description;
+                this.deviceAttributeAction = model.deviceAttributeAction;
+                this.deviceAttributeId = model.deviceAttributeId;
+                this.name = model.name;
+                this.policyAction = model.policyAction;
+                this.policyId = model.policyId;
+                this.priority = model.priority;
+                this.status = model.status;
+                this.tagIds = model.tagIds;
+                this.triggerTemplateId = model.triggerTemplateId;
+                this.userGroupIds = model.userGroupIds;
+                this.userGroupMode = model.userGroupMode;
+            } 
+
             /**
-             * ApplicationIds.
+             * <p>The IDs of the applications that are specified in the private access policy. If the value of ApplicationType is <strong>Application</strong>, this parameter is returned.</p>
              */
             public Builder applicationIds(java.util.List<String> applicationIds) {
                 this.applicationIds = applicationIds;
@@ -424,7 +503,14 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
             }
 
             /**
-             * ApplicationType.
+             * <p>The application type of the private access policy. Valid values:</p>
+             * <ul>
+             * <li><strong>Application</strong></li>
+             * <li><strong>Tag</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Application</p>
              */
             public Builder applicationType(String applicationType) {
                 this.applicationType = applicationType;
@@ -432,7 +518,10 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time of the private access policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-07-10 15:50:23</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -440,7 +529,7 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
             }
 
             /**
-             * CustomUserAttributes.
+             * <p>The attributes of the custom user group. The attributes of the custom user group are evaluated by using a logical OR. If an attribute is matched, the policy takes effect.</p>
              */
             public Builder customUserAttributes(java.util.List<CustomUserAttributes> customUserAttributes) {
                 this.customUserAttributes = customUserAttributes;
@@ -448,7 +537,10 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the private access policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a private access policy</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -456,7 +548,14 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceAttributeAction.
+             * <p>The action that is performed when the security baseline is not met. Valid values:</p>
+             * <ul>
+             * <li><strong>Block</strong></li>
+             * <li><strong>Observe</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Block</p>
              */
             public Builder deviceAttributeAction(String deviceAttributeAction) {
                 this.deviceAttributeAction = deviceAttributeAction;
@@ -464,7 +563,10 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceAttributeId.
+             * <p>The ID of the security baseline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dag-d3f64e8bdd4a****</p>
              */
             public Builder deviceAttributeId(String deviceAttributeId) {
                 this.deviceAttributeId = deviceAttributeId;
@@ -472,7 +574,10 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the private access policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>private_access_policy_name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -480,7 +585,14 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyAction.
+             * <p>The action in the private access policy. Valid values:</p>
+             * <ul>
+             * <li><strong>Block</strong></li>
+             * <li><strong>Allow</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Allow</p>
              */
             public Builder policyAction(String policyAction) {
                 this.policyAction = policyAction;
@@ -488,7 +600,10 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyId.
+             * <p>The ID of the private access policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pa-policy-63b2f1844b86****</p>
              */
             public Builder policyId(String policyId) {
                 this.policyId = policyId;
@@ -496,7 +611,10 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * <p>The priority of the private access policy. The value 1 indicates the highest priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -504,7 +622,14 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the private access policy. Valid values:</p>
+             * <ul>
+             * <li><strong>Enabled</strong></li>
+             * <li><strong>Disabled</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -512,7 +637,7 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
             }
 
             /**
-             * TagIds.
+             * <p>The IDs of the tags that are specified in the private access policy. If the value of ApplicationType is <strong>Tag</strong>, this parameter is returned.</p>
              */
             public Builder tagIds(java.util.List<String> tagIds) {
                 this.tagIds = tagIds;
@@ -520,7 +645,10 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
             }
 
             /**
-             * TriggerTemplateId.
+             * <p>The ID of the trigger template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dag-d3f64e8bdd4a****</p>
              */
             public Builder triggerTemplateId(String triggerTemplateId) {
                 this.triggerTemplateId = triggerTemplateId;
@@ -528,7 +656,7 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
             }
 
             /**
-             * UserGroupIds.
+             * <p>The IDs of user groups in the private access policy. If the value of UserGroupMode is <strong>Normal</strong>, this parameter is returned.</p>
              */
             public Builder userGroupIds(java.util.List<String> userGroupIds) {
                 this.userGroupIds = userGroupIds;
@@ -536,7 +664,14 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
             }
 
             /**
-             * UserGroupMode.
+             * <p>The type of the user group in the private access policy. Valid values:</p>
+             * <ul>
+             * <li><strong>Normal</strong>: regular user group.</li>
+             * <li><strong>Custom</strong>: custom user group.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder userGroupMode(String userGroupMode) {
                 this.userGroupMode = userGroupMode;

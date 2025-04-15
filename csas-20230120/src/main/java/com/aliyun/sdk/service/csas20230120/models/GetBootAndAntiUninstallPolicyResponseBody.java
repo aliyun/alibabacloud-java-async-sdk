@@ -36,6 +36,10 @@ public class GetBootAndAntiUninstallPolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetBootAndAntiUninstallPolicyResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Strategy strategy; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetBootAndAntiUninstallPolicyResponseBody model) {
+            this.requestId = model.requestId;
+            this.strategy = model.strategy;
+        } 
 
         /**
          * RequestId.
@@ -143,6 +155,16 @@ public class GetBootAndAntiUninstallPolicyResponseBody extends TeaModel {
             private String mainButtonText; 
             private String minorButtonText; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(BlockTextEn model) {
+                this.content = model.content;
+                this.mainButtonText = model.mainButtonText;
+                this.minorButtonText = model.minorButtonText;
+                this.title = model.title;
+            } 
 
             /**
              * Content.
@@ -251,6 +273,16 @@ public class GetBootAndAntiUninstallPolicyResponseBody extends TeaModel {
             private String minorButtonText; 
             private String title; 
 
+            private Builder() {
+            } 
+
+            private Builder(BlockTextZh model) {
+                this.content = model.content;
+                this.mainButtonText = model.mainButtonText;
+                this.minorButtonText = model.minorButtonText;
+                this.title = model.title;
+            } 
+
             /**
              * Content.
              */
@@ -333,6 +365,14 @@ public class GetBootAndAntiUninstallPolicyResponseBody extends TeaModel {
         public static final class Builder {
             private BlockTextEn blockTextEn; 
             private BlockTextZh blockTextZh; 
+
+            private Builder() {
+            } 
+
+            private Builder(BlockContent model) {
+                this.blockTextEn = model.blockTextEn;
+                this.blockTextZh = model.blockTextZh;
+            } 
 
             /**
              * BlockTextEn.
@@ -496,6 +536,22 @@ public class GetBootAndAntiUninstallPolicyResponseBody extends TeaModel {
             private String updateTime; 
             private java.util.List<String> userGroupIds; 
             private java.util.List<String> whitelistUsers; 
+
+            private Builder() {
+            } 
+
+            private Builder(Strategy model) {
+                this.allowReport = model.allowReport;
+                this.blockContent = model.blockContent;
+                this.createTime = model.createTime;
+                this.isAntiUninstall = model.isAntiUninstall;
+                this.isBoot = model.isBoot;
+                this.policyId = model.policyId;
+                this.reportProcessId = model.reportProcessId;
+                this.updateTime = model.updateTime;
+                this.userGroupIds = model.userGroupIds;
+                this.whitelistUsers = model.whitelistUsers;
+            } 
 
             /**
              * AllowReport.

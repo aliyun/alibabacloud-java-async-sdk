@@ -36,6 +36,10 @@ public class UpdateExcessiveDeviceRegistrationApplicationsStatusResponseBody ext
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return applications
      */
@@ -53,6 +57,14 @@ public class UpdateExcessiveDeviceRegistrationApplicationsStatusResponseBody ext
     public static final class Builder {
         private java.util.List<Applications> applications; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateExcessiveDeviceRegistrationApplicationsStatusResponseBody model) {
+            this.applications = model.applications;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Applications.
@@ -239,6 +251,24 @@ public class UpdateExcessiveDeviceRegistrationApplicationsStatusResponseBody ext
             private String saseUserId; 
             private String status; 
             private String username; 
+
+            private Builder() {
+            } 
+
+            private Builder(Applications model) {
+                this.applicationId = model.applicationId;
+                this.createTime = model.createTime;
+                this.department = model.department;
+                this.description = model.description;
+                this.deviceTag = model.deviceTag;
+                this.deviceType = model.deviceType;
+                this.hostname = model.hostname;
+                this.isUsed = model.isUsed;
+                this.mac = model.mac;
+                this.saseUserId = model.saseUserId;
+                this.status = model.status;
+                this.username = model.username;
+            } 
 
             /**
              * ApplicationId.

@@ -40,6 +40,10 @@ public class ListPrivateAccessApplicationsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return applications
      */
@@ -65,6 +69,15 @@ public class ListPrivateAccessApplicationsResponseBody extends TeaModel {
         private java.util.List<Applications> applications; 
         private String requestId; 
         private Integer totalNum; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListPrivateAccessApplicationsResponseBody model) {
+            this.applications = model.applications;
+            this.requestId = model.requestId;
+            this.totalNum = model.totalNum;
+        } 
 
         /**
          * Applications.
@@ -139,6 +152,14 @@ public class ListPrivateAccessApplicationsResponseBody extends TeaModel {
         public static final class Builder {
             private Integer begin; 
             private Integer end; 
+
+            private Builder() {
+            } 
+
+            private Builder(PortRanges model) {
+                this.begin = model.begin;
+                this.end = model.end;
+            } 
 
             /**
              * Begin.
@@ -350,6 +371,26 @@ public class ListPrivateAccessApplicationsResponseBody extends TeaModel {
             private String protocol; 
             private String status; 
             private java.util.List<String> tagIds; 
+
+            private Builder() {
+            } 
+
+            private Builder(Applications model) {
+                this.addresses = model.addresses;
+                this.applicationId = model.applicationId;
+                this.browserAccessStatus = model.browserAccessStatus;
+                this.connectorIds = model.connectorIds;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.l7ProxyDomainAutomatic = model.l7ProxyDomainAutomatic;
+                this.l7ProxyDomainCustom = model.l7ProxyDomainCustom;
+                this.name = model.name;
+                this.policyIds = model.policyIds;
+                this.portRanges = model.portRanges;
+                this.protocol = model.protocol;
+                this.status = model.status;
+                this.tagIds = model.tagIds;
+            } 
 
             /**
              * Addresses.

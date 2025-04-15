@@ -40,6 +40,10 @@ public class ListDynamicRoutesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dynamicRoutes
      */
@@ -65,6 +69,15 @@ public class ListDynamicRoutesResponseBody extends TeaModel {
         private java.util.List<DynamicRoutes> dynamicRoutes; 
         private String requestId; 
         private Integer totalNum; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDynamicRoutesResponseBody model) {
+            this.dynamicRoutes = model.dynamicRoutes;
+            this.requestId = model.requestId;
+            this.totalNum = model.totalNum;
+        } 
 
         /**
          * DynamicRoutes.
@@ -259,6 +272,24 @@ public class ListDynamicRoutesResponseBody extends TeaModel {
             private java.util.List<String> regionIds; 
             private String status; 
             private java.util.List<String> tagIds; 
+
+            private Builder() {
+            } 
+
+            private Builder(DynamicRoutes model) {
+                this.applicationIds = model.applicationIds;
+                this.applicationType = model.applicationType;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.dynamicRouteId = model.dynamicRouteId;
+                this.dynamicRouteType = model.dynamicRouteType;
+                this.name = model.name;
+                this.nextHop = model.nextHop;
+                this.priority = model.priority;
+                this.regionIds = model.regionIds;
+                this.status = model.status;
+                this.tagIds = model.tagIds;
+            } 
 
             /**
              * ApplicationIds.

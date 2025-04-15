@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ListRegistrationPoliciesForUserGroupResponse} extends {@link TeaModel}
+ * {@link ListDynamicDisposalProcessesResponse} extends {@link TeaModel}
  *
- * <p>ListRegistrationPoliciesForUserGroupResponse</p>
+ * <p>ListDynamicDisposalProcessesResponse</p>
  */
-public class ListRegistrationPoliciesForUserGroupResponse extends Response {
+public class ListDynamicDisposalProcessesResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class ListRegistrationPoliciesForUserGroupResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private ListRegistrationPoliciesForUserGroupResponseBody body;
+    private ListDynamicDisposalProcessesResponseBody body;
 
-    private ListRegistrationPoliciesForUserGroupResponse(BuilderImpl builder) {
+    private ListDynamicDisposalProcessesResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static ListRegistrationPoliciesForUserGroupResponse create() {
+    public static ListDynamicDisposalProcessesResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class ListRegistrationPoliciesForUserGroupResponse extends Response {
     /**
      * @return body
      */
-    public ListRegistrationPoliciesForUserGroupResponseBody getBody() {
+    public ListDynamicDisposalProcessesResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<ListRegistrationPoliciesForUserGroupResponse, Builder> {
+    public interface Builder extends Response.Builder<ListDynamicDisposalProcessesResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(ListRegistrationPoliciesForUserGroupResponseBody body);
+        Builder body(ListDynamicDisposalProcessesResponseBody body);
 
         @Override
-        ListRegistrationPoliciesForUserGroupResponse build();
+        ListDynamicDisposalProcessesResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<ListRegistrationPoliciesForUserGroupResponse, Builder>
+            extends Response.BuilderImpl<ListDynamicDisposalProcessesResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private ListRegistrationPoliciesForUserGroupResponseBody body; 
+        private ListDynamicDisposalProcessesResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(ListRegistrationPoliciesForUserGroupResponse response) {
+        private BuilderImpl(ListDynamicDisposalProcessesResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class ListRegistrationPoliciesForUserGroupResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(ListRegistrationPoliciesForUserGroupResponseBody body) {
+        public Builder body(ListDynamicDisposalProcessesResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public ListRegistrationPoliciesForUserGroupResponse build() {
-            return new ListRegistrationPoliciesForUserGroupResponse(this);
+        public ListDynamicDisposalProcessesResponse build() {
+            return new ListDynamicDisposalProcessesResponse(this);
         } 
 
     } 

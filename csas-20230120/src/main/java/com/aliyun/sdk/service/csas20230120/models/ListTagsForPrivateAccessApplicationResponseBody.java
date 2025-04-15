@@ -36,6 +36,10 @@ public class ListTagsForPrivateAccessApplicationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return applications
      */
@@ -53,6 +57,14 @@ public class ListTagsForPrivateAccessApplicationResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Applications> applications; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTagsForPrivateAccessApplicationResponseBody model) {
+            this.applications = model.applications;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Applications.
@@ -156,6 +168,17 @@ public class ListTagsForPrivateAccessApplicationResponseBody extends TeaModel {
             private String tagId; 
             private String tagType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.name = model.name;
+                this.tagId = model.tagId;
+                this.tagType = model.tagType;
+            } 
+
             /**
              * CreateTime.
              */
@@ -246,6 +269,14 @@ public class ListTagsForPrivateAccessApplicationResponseBody extends TeaModel {
         public static final class Builder {
             private String applicationId; 
             private java.util.List<Tags> tags; 
+
+            private Builder() {
+            } 
+
+            private Builder(Applications model) {
+                this.applicationId = model.applicationId;
+                this.tags = model.tags;
+            } 
 
             /**
              * ApplicationId.

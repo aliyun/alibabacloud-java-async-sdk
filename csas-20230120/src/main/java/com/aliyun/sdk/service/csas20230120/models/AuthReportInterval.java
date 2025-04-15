@@ -36,6 +36,10 @@ public class AuthReportInterval extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return timeUnit
      */
@@ -53,6 +57,14 @@ public class AuthReportInterval extends TeaModel {
     public static final class Builder {
         private String timeUnit; 
         private Long value; 
+
+        private Builder() {
+        } 
+
+        private Builder(AuthReportInterval model) {
+            this.timeUnit = model.timeUnit;
+            this.value = model.value;
+        } 
 
         /**
          * TimeUnit.

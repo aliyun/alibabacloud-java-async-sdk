@@ -40,6 +40,10 @@ public class ListDynamicRouteRegionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return regions
      */
@@ -65,6 +69,15 @@ public class ListDynamicRouteRegionsResponseBody extends TeaModel {
         private java.util.List<String> regions; 
         private String requestId; 
         private Integer totalNum; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDynamicRouteRegionsResponseBody model) {
+            this.regions = model.regions;
+            this.requestId = model.requestId;
+            this.totalNum = model.totalNum;
+        } 
 
         /**
          * Regions.

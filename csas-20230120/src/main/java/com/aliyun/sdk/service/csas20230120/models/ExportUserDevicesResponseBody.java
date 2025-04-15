@@ -36,6 +36,10 @@ public class ExportUserDevicesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class ExportUserDevicesResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String signedUrl; 
+
+        private Builder() {
+        } 
+
+        private Builder(ExportUserDevicesResponseBody model) {
+            this.requestId = model.requestId;
+            this.signedUrl = model.signedUrl;
+        } 
 
         /**
          * RequestId.

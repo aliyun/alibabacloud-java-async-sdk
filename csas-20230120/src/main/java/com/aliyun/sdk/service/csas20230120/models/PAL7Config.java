@@ -64,6 +64,10 @@ public class PAL7Config extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bypassConfig
      */
@@ -137,6 +141,21 @@ public class PAL7Config extends TeaModel {
         private RequestQueryRewriteConfig requestQueryRewriteConfig; 
         private ResponseHeaderRewriteConfig responseHeaderRewriteConfig; 
         private ResponseRewriteConfig responseRewriteConfig; 
+
+        private Builder() {
+        } 
+
+        private Builder(PAL7Config model) {
+            this.bypassConfig = model.bypassConfig;
+            this.certId = model.certId;
+            this.dnsConfig = model.dnsConfig;
+            this.jsHookConfig = model.jsHookConfig;
+            this.proxyDomainTypes = model.proxyDomainTypes;
+            this.requestHeaderRewriteConfig = model.requestHeaderRewriteConfig;
+            this.requestQueryRewriteConfig = model.requestQueryRewriteConfig;
+            this.responseHeaderRewriteConfig = model.responseHeaderRewriteConfig;
+            this.responseRewriteConfig = model.responseRewriteConfig;
+        } 
 
         /**
          * BypassConfig.
@@ -260,6 +279,14 @@ public class PAL7Config extends TeaModel {
             private java.util.List<String> froms; 
             private java.util.List<String> paths; 
 
+            private Builder() {
+            } 
+
+            private Builder(UrlBypassRules model) {
+                this.froms = model.froms;
+                this.paths = model.paths;
+            } 
+
             /**
              * Froms.
              */
@@ -339,6 +366,15 @@ public class PAL7Config extends TeaModel {
             private String mode; 
             private java.util.List<UrlBypassRules> urlBypassRules; 
 
+            private Builder() {
+            } 
+
+            private Builder(BypassConfig model) {
+                this.appBypassFroms = model.appBypassFroms;
+                this.mode = model.mode;
+                this.urlBypassRules = model.urlBypassRules;
+            } 
+
             /**
              * AppBypassFroms.
              */
@@ -402,6 +438,13 @@ public class PAL7Config extends TeaModel {
         public static final class Builder {
             private java.util.List<String> dnsServers; 
 
+            private Builder() {
+            } 
+
+            private Builder(DnsConfig model) {
+                this.dnsServers = model.dnsServers;
+            } 
+
             /**
              * DnsServers.
              */
@@ -461,6 +504,14 @@ public class PAL7Config extends TeaModel {
             private String mode; 
             private java.util.List<PAL7ConfigReplaceRule> replaceRules; 
 
+            private Builder() {
+            } 
+
+            private Builder(JsHookConfig model) {
+                this.mode = model.mode;
+                this.replaceRules = model.replaceRules;
+            } 
+
             /**
              * Mode.
              */
@@ -516,6 +567,13 @@ public class PAL7Config extends TeaModel {
         public static final class Builder {
             private java.util.List<PAL7ConfigRewriteOp> ops; 
 
+            private Builder() {
+            } 
+
+            private Builder(RequestHeaderRewriteConfig model) {
+                this.ops = model.ops;
+            } 
+
             /**
              * Ops.
              */
@@ -563,6 +621,13 @@ public class PAL7Config extends TeaModel {
         public static final class Builder {
             private java.util.List<PAL7ConfigRewriteOp> ops; 
 
+            private Builder() {
+            } 
+
+            private Builder(RequestQueryRewriteConfig model) {
+                this.ops = model.ops;
+            } 
+
             /**
              * Ops.
              */
@@ -609,6 +674,13 @@ public class PAL7Config extends TeaModel {
 
         public static final class Builder {
             private java.util.List<PAL7ConfigRewriteOp> ops; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResponseHeaderRewriteConfig model) {
+                this.ops = model.ops;
+            } 
 
             /**
              * Ops.
@@ -668,6 +740,14 @@ public class PAL7Config extends TeaModel {
         public static final class Builder {
             private String mode; 
             private java.util.List<PAL7ConfigReplaceRule> replaceRules; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResponseRewriteConfig model) {
+                this.mode = model.mode;
+                this.replaceRules = model.replaceRules;
+            } 
 
             /**
              * Mode.

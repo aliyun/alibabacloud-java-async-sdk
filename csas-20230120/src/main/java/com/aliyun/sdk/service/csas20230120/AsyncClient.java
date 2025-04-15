@@ -332,6 +332,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListConnectorsResponse> listConnectors(ListConnectorsRequest request);
 
     /**
+     * @param request the request parameters of ListDynamicDisposalProcesses  ListDynamicDisposalProcessesRequest
+     * @return ListDynamicDisposalProcessesResponse
+     */
+    CompletableFuture<ListDynamicDisposalProcessesResponse> listDynamicDisposalProcesses(ListDynamicDisposalProcessesRequest request);
+
+    /**
      * @param request the request parameters of ListDynamicRouteRegions  ListDynamicRouteRegionsRequest
      * @return ListDynamicRouteRegionsResponse
      */
@@ -506,9 +512,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<LookupWmInfoMappingResponse> lookupWmInfoMapping(LookupWmInfoMappingRequest request);
 
     /**
-     * @param request the request parameters of RevokeUserSession  RevokeUserSessionRequest
+     * @deprecated OpenAPI RevokeUserSession is deprecated  * @param request  the request parameters of RevokeUserSession  RevokeUserSessionRequest
      * @return RevokeUserSessionResponse
      */
+    @Deprecated
     CompletableFuture<RevokeUserSessionResponse> revokeUserSession(RevokeUserSessionRequest request);
 
     /**

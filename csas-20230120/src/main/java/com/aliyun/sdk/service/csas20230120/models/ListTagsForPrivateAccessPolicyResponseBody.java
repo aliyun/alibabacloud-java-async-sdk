@@ -36,6 +36,10 @@ public class ListTagsForPrivateAccessPolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return polices
      */
@@ -53,6 +57,14 @@ public class ListTagsForPrivateAccessPolicyResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Polices> polices; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTagsForPrivateAccessPolicyResponseBody model) {
+            this.polices = model.polices;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Polices.
@@ -156,6 +168,17 @@ public class ListTagsForPrivateAccessPolicyResponseBody extends TeaModel {
             private String tagId; 
             private String tagType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.name = model.name;
+                this.tagId = model.tagId;
+                this.tagType = model.tagType;
+            } 
+
             /**
              * <p>内网访问标签创建时间。</p>
              * 
@@ -249,6 +272,14 @@ public class ListTagsForPrivateAccessPolicyResponseBody extends TeaModel {
         public static final class Builder {
             private String policyId; 
             private java.util.List<Tags> tags; 
+
+            private Builder() {
+            } 
+
+            private Builder(Polices model) {
+                this.policyId = model.policyId;
+                this.tags = model.tags;
+            } 
 
             /**
              * PolicyId.

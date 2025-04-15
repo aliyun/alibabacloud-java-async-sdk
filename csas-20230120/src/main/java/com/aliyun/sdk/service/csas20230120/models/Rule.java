@@ -60,6 +60,10 @@ public class Rule extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return combinator
      */
@@ -125,6 +129,20 @@ public class Rule extends TeaModel {
         private String ruleType; 
         private java.util.List<Rule> rules; 
         private java.util.List<String> values; 
+
+        private Builder() {
+        } 
+
+        private Builder(Rule model) {
+            this.combinator = model.combinator;
+            this.id = model.id;
+            this.name = model.name;
+            this.operator = model.operator;
+            this.ruleSubType = model.ruleSubType;
+            this.ruleType = model.ruleType;
+            this.rules = model.rules;
+            this.values = model.values;
+        } 
 
         /**
          * Combinator.

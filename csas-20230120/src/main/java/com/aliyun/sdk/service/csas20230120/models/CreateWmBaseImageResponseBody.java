@@ -36,6 +36,10 @@ public class CreateWmBaseImageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class CreateWmBaseImageResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateWmBaseImageResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Data.
@@ -131,6 +143,15 @@ public class CreateWmBaseImageResponseBody extends TeaModel {
             private String imageId; 
             private String imageUrl; 
             private Long imageUrlExp; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.imageId = model.imageId;
+                this.imageUrl = model.imageUrl;
+                this.imageUrlExp = model.imageUrlExp;
+            } 
 
             /**
              * ImageId.

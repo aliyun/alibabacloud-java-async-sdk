@@ -40,6 +40,10 @@ public class ListUserApplicationsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return applications
      */
@@ -65,6 +69,15 @@ public class ListUserApplicationsResponseBody extends TeaModel {
         private java.util.List<Applications> applications; 
         private String requestId; 
         private Integer totalNum; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListUserApplicationsResponseBody model) {
+            this.applications = model.applications;
+            this.requestId = model.requestId;
+            this.totalNum = model.totalNum;
+        } 
 
         /**
          * Applications.
@@ -142,6 +155,14 @@ public class ListUserApplicationsResponseBody extends TeaModel {
         public static final class Builder {
             private String begin; 
             private String end; 
+
+            private Builder() {
+            } 
+
+            private Builder(PortRanges model) {
+                this.begin = model.begin;
+                this.end = model.end;
+            } 
 
             /**
              * Begin.
@@ -257,6 +278,18 @@ public class ListUserApplicationsResponseBody extends TeaModel {
             private String name; 
             private java.util.List<PortRanges> portRanges; 
             private String protocol; 
+
+            private Builder() {
+            } 
+
+            private Builder(Applications model) {
+                this.action = model.action;
+                this.addresses = model.addresses;
+                this.applicationId = model.applicationId;
+                this.name = model.name;
+                this.portRanges = model.portRanges;
+                this.protocol = model.protocol;
+            } 
 
             /**
              * Action.

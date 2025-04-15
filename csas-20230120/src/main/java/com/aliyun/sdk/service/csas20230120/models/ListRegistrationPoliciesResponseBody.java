@@ -40,6 +40,10 @@ public class ListRegistrationPoliciesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return policies
      */
@@ -65,6 +69,15 @@ public class ListRegistrationPoliciesResponseBody extends TeaModel {
         private java.util.List<Policies> policies; 
         private String requestId; 
         private String totalNum; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListRegistrationPoliciesResponseBody model) {
+            this.policies = model.policies;
+            this.requestId = model.requestId;
+            this.totalNum = model.totalNum;
+        } 
 
         /**
          * Policies.
@@ -152,6 +165,15 @@ public class ListRegistrationPoliciesResponseBody extends TeaModel {
             private Integer mobile; 
             private Integer pc; 
 
+            private Builder() {
+            } 
+
+            private Builder(LimitCount model) {
+                this.all = model.all;
+                this.mobile = model.mobile;
+                this.pc = model.pc;
+            } 
+
             /**
              * All.
              */
@@ -238,6 +260,15 @@ public class ListRegistrationPoliciesResponseBody extends TeaModel {
             private String deviceBelong; 
             private LimitCount limitCount; 
             private String limitType; 
+
+            private Builder() {
+            } 
+
+            private Builder(LimitDetail model) {
+                this.deviceBelong = model.deviceBelong;
+                this.limitCount = model.limitCount;
+                this.limitType = model.limitType;
+            } 
 
             /**
              * DeviceBelong.
@@ -409,6 +440,22 @@ public class ListRegistrationPoliciesResponseBody extends TeaModel {
             private String status; 
             private java.util.List<String> userGroupIds; 
             private java.util.List<String> whitelist; 
+
+            private Builder() {
+            } 
+
+            private Builder(Policies model) {
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.limitDetail = model.limitDetail;
+                this.matchMode = model.matchMode;
+                this.name = model.name;
+                this.policyId = model.policyId;
+                this.priority = model.priority;
+                this.status = model.status;
+                this.userGroupIds = model.userGroupIds;
+                this.whitelist = model.whitelist;
+            } 
 
             /**
              * CreateTime.

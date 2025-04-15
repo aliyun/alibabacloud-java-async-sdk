@@ -40,6 +40,10 @@ public class ListUserPrivateAccessPoliciesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return polices
      */
@@ -65,6 +69,15 @@ public class ListUserPrivateAccessPoliciesResponseBody extends TeaModel {
         private java.util.List<Polices> polices; 
         private String requestId; 
         private Integer totalNum; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListUserPrivateAccessPoliciesResponseBody model) {
+            this.polices = model.polices;
+            this.requestId = model.requestId;
+            this.totalNum = model.totalNum;
+        } 
 
         /**
          * Polices.
@@ -166,6 +179,16 @@ public class ListUserPrivateAccessPoliciesResponseBody extends TeaModel {
             private String relation; 
             private String userGroupType; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomUserAttributes model) {
+                this.idpId = model.idpId;
+                this.relation = model.relation;
+                this.userGroupType = model.userGroupType;
+                this.value = model.value;
+            } 
 
             /**
              * IdpId.
@@ -321,6 +344,20 @@ public class ListUserPrivateAccessPoliciesResponseBody extends TeaModel {
             private String policyId; 
             private Long priority; 
             private String userGroupMode; 
+
+            private Builder() {
+            } 
+
+            private Builder(Polices model) {
+                this.customUserAttributes = model.customUserAttributes;
+                this.deviceAttributeName = model.deviceAttributeName;
+                this.matchedUserGroup = model.matchedUserGroup;
+                this.name = model.name;
+                this.policyAction = model.policyAction;
+                this.policyId = model.policyId;
+                this.priority = model.priority;
+                this.userGroupMode = model.userGroupMode;
+            } 
 
             /**
              * CustomUserAttributes.

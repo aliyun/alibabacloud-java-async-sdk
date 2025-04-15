@@ -36,6 +36,10 @@ public class ListPopTrafficStatisticsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class ListPopTrafficStatisticsResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<TrafficData> trafficData; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListPopTrafficStatisticsResponseBody model) {
+            this.requestId = model.requestId;
+            this.trafficData = model.trafficData;
+        } 
 
         /**
          * <p>Id of the request</p>
@@ -123,6 +135,14 @@ public class ListPopTrafficStatisticsResponseBody extends TeaModel {
             private Double average; 
             private String dateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(Datapoints model) {
+                this.average = model.average;
+                this.dateTime = model.dateTime;
+            } 
+
             /**
              * Average.
              */
@@ -189,6 +209,14 @@ public class ListPopTrafficStatisticsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Datapoints> datapoints; 
             private String metricName; 
+
+            private Builder() {
+            } 
+
+            private Builder(TrafficData model) {
+                this.datapoints = model.datapoints;
+                this.metricName = model.metricName;
+            } 
 
             /**
              * Datapoints.

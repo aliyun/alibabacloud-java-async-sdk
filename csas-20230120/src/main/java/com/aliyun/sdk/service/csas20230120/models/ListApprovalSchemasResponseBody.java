@@ -40,6 +40,10 @@ public class ListApprovalSchemasResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class ListApprovalSchemasResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Schemas> schemas; 
         private String totalNum; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListApprovalSchemasResponseBody model) {
+            this.requestId = model.requestId;
+            this.schemas = model.schemas;
+            this.totalNum = model.totalNum;
+        } 
 
         /**
          * RequestId.
@@ -211,6 +224,20 @@ public class ListApprovalSchemasResponseBody extends TeaModel {
             private String schemaId; 
             private String schemaName; 
             private Long schemaVersion; 
+
+            private Builder() {
+            } 
+
+            private Builder(Schemas model) {
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.isDefault = model.isDefault;
+                this.policyType = model.policyType;
+                this.schemaContent = model.schemaContent;
+                this.schemaId = model.schemaId;
+                this.schemaName = model.schemaName;
+                this.schemaVersion = model.schemaVersion;
+            } 
 
             /**
              * CreateTime.

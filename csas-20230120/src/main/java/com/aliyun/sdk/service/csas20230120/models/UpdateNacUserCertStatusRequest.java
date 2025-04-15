@@ -39,7 +39,7 @@ public class UpdateNacUserCertStatusRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -140,6 +140,14 @@ public class UpdateNacUserCertStatusRequest extends Request {
         public static final class Builder {
             private String devTag; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(IdList model) {
+                this.devTag = model.devTag;
+                this.userId = model.userId;
+            } 
 
             /**
              * DevTag.

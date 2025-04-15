@@ -36,6 +36,10 @@ public class GetApprovalResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return approval
      */
@@ -53,6 +57,14 @@ public class GetApprovalResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Approval> approval; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetApprovalResponseBody model) {
+            this.approval = model.approval;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Approval.
@@ -119,6 +131,14 @@ public class GetApprovalResponseBody extends TeaModel {
         public static final class Builder {
             private String saseUserId; 
             private String username; 
+
+            private Builder() {
+            } 
+
+            private Builder(Operators model) {
+                this.saseUserId = model.saseUserId;
+                this.username = model.username;
+            } 
 
             /**
              * SaseUserId.
@@ -234,6 +254,18 @@ public class GetApprovalResponseBody extends TeaModel {
             private java.util.List<Operators> operators; 
             private String status; 
             private Long timestamp; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApprovalProgresses model) {
+                this.action = model.action;
+                this.comment = model.comment;
+                this.executor = model.executor;
+                this.operators = model.operators;
+                this.status = model.status;
+                this.timestamp = model.timestamp;
+            } 
 
             /**
              * Action.
@@ -513,6 +545,29 @@ public class GetApprovalResponseBody extends TeaModel {
             private String schemaId; 
             private String schemaName; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Approval model) {
+                this.approvalDetail = model.approvalDetail;
+                this.approvalId = model.approvalId;
+                this.approvalProgresses = model.approvalProgresses;
+                this.createTime = model.createTime;
+                this.creatorDepartment = model.creatorDepartment;
+                this.creatorDevTag = model.creatorDevTag;
+                this.creatorUserId = model.creatorUserId;
+                this.creatorUsername = model.creatorUsername;
+                this.endTimestamp = model.endTimestamp;
+                this.policyType = model.policyType;
+                this.processId = model.processId;
+                this.processName = model.processName;
+                this.reason = model.reason;
+                this.schemaContent = model.schemaContent;
+                this.schemaId = model.schemaId;
+                this.schemaName = model.schemaName;
+                this.status = model.status;
+            } 
 
             /**
              * ApprovalDetail.

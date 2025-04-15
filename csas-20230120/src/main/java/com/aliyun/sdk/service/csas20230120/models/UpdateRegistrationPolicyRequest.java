@@ -90,7 +90,7 @@ public class UpdateRegistrationPolicyRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -389,6 +389,15 @@ public class UpdateRegistrationPolicyRequest extends Request {
             private Integer mobile; 
             private Integer pc; 
 
+            private Builder() {
+            } 
+
+            private Builder(CompanyLimitCount model) {
+                this.all = model.all;
+                this.mobile = model.mobile;
+                this.pc = model.pc;
+            } 
+
             /**
              * All.
              */
@@ -475,6 +484,15 @@ public class UpdateRegistrationPolicyRequest extends Request {
             private Integer all; 
             private Integer mobile; 
             private Integer pc; 
+
+            private Builder() {
+            } 
+
+            private Builder(PersonalLimitCount model) {
+                this.all = model.all;
+                this.mobile = model.mobile;
+                this.pc = model.pc;
+            } 
 
             /**
              * All.

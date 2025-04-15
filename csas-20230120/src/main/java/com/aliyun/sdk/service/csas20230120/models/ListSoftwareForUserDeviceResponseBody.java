@@ -40,6 +40,10 @@ public class ListSoftwareForUserDeviceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class ListSoftwareForUserDeviceResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Software> software; 
         private Long totalNum; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSoftwareForUserDeviceResponseBody model) {
+            this.requestId = model.requestId;
+            this.software = model.software;
+            this.totalNum = model.totalNum;
+        } 
 
         /**
          * RequestId.
@@ -163,6 +176,16 @@ public class ListSoftwareForUserDeviceResponseBody extends TeaModel {
             private String installTime; 
             private String name; 
             private java.util.List<String> versions; 
+
+            private Builder() {
+            } 
+
+            private Builder(Software model) {
+                this.inc = model.inc;
+                this.installTime = model.installTime;
+                this.name = model.name;
+                this.versions = model.versions;
+            } 
 
             /**
              * Inc.

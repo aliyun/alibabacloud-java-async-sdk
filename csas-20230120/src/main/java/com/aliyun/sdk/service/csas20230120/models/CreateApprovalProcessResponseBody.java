@@ -36,6 +36,10 @@ public class CreateApprovalProcessResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return process
      */
@@ -53,6 +57,14 @@ public class CreateApprovalProcessResponseBody extends TeaModel {
     public static final class Builder {
         private Process process; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateApprovalProcessResponseBody model) {
+            this.process = model.process;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Process.
@@ -119,6 +131,14 @@ public class CreateApprovalProcessResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> policyIds; 
             private String schemaId; 
+
+            private Builder() {
+            } 
+
+            private Builder(AppUninstallPolicies model) {
+                this.policyIds = model.policyIds;
+                this.schemaId = model.schemaId;
+            } 
 
             /**
              * PolicyIds.
@@ -187,6 +207,14 @@ public class CreateApprovalProcessResponseBody extends TeaModel {
             private java.util.List<String> policyIds; 
             private String schemaId; 
 
+            private Builder() {
+            } 
+
+            private Builder(DeviceRegistrationPolicies model) {
+                this.policyIds = model.policyIds;
+                this.schemaId = model.schemaId;
+            } 
+
             /**
              * PolicyIds.
              */
@@ -253,6 +281,14 @@ public class CreateApprovalProcessResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> policyIds; 
             private String schemaId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DlpSendPolicies model) {
+                this.policyIds = model.policyIds;
+                this.schemaId = model.schemaId;
+            } 
 
             /**
              * PolicyIds.
@@ -321,6 +357,14 @@ public class CreateApprovalProcessResponseBody extends TeaModel {
             private java.util.List<String> policyIds; 
             private String schemaId; 
 
+            private Builder() {
+            } 
+
+            private Builder(DomainBlacklistPolicies model) {
+                this.policyIds = model.policyIds;
+                this.schemaId = model.schemaId;
+            } 
+
             /**
              * PolicyIds.
              */
@@ -387,6 +431,14 @@ public class CreateApprovalProcessResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> policyIds; 
             private String schemaId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DomainWhitelistPolicies model) {
+                this.policyIds = model.policyIds;
+                this.schemaId = model.schemaId;
+            } 
 
             /**
              * PolicyIds.
@@ -455,6 +507,14 @@ public class CreateApprovalProcessResponseBody extends TeaModel {
             private java.util.List<String> policyIds; 
             private String schemaId; 
 
+            private Builder() {
+            } 
+
+            private Builder(PeripheralBlockPolicies model) {
+                this.policyIds = model.policyIds;
+                this.schemaId = model.schemaId;
+            } 
+
             /**
              * PolicyIds.
              */
@@ -522,6 +582,14 @@ public class CreateApprovalProcessResponseBody extends TeaModel {
             private String saseUserId; 
             private String username; 
 
+            private Builder() {
+            } 
+
+            private Builder(ProcessNodes model) {
+                this.saseUserId = model.saseUserId;
+                this.username = model.username;
+            } 
+
             /**
              * SaseUserId.
              */
@@ -588,6 +656,14 @@ public class CreateApprovalProcessResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> policyIds; 
             private String schemaId; 
+
+            private Builder() {
+            } 
+
+            private Builder(SoftwareBlockPolicies model) {
+                this.policyIds = model.policyIds;
+                this.schemaId = model.schemaId;
+            } 
 
             /**
              * PolicyIds.
@@ -775,6 +851,24 @@ public class CreateApprovalProcessResponseBody extends TeaModel {
             private String processName; 
             private java.util.List<java.util.List<ProcessNodes>> processNodes; 
             private SoftwareBlockPolicies softwareBlockPolicies; 
+
+            private Builder() {
+            } 
+
+            private Builder(Process model) {
+                this.appUninstallPolicies = model.appUninstallPolicies;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.deviceRegistrationPolicies = model.deviceRegistrationPolicies;
+                this.dlpSendPolicies = model.dlpSendPolicies;
+                this.domainBlacklistPolicies = model.domainBlacklistPolicies;
+                this.domainWhitelistPolicies = model.domainWhitelistPolicies;
+                this.peripheralBlockPolicies = model.peripheralBlockPolicies;
+                this.processId = model.processId;
+                this.processName = model.processName;
+                this.processNodes = model.processNodes;
+                this.softwareBlockPolicies = model.softwareBlockPolicies;
+            } 
 
             /**
              * AppUninstallPolicies.

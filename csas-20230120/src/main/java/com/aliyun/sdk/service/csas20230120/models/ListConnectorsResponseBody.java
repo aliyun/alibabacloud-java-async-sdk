@@ -40,6 +40,10 @@ public class ListConnectorsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return connectors
      */
@@ -65,6 +69,15 @@ public class ListConnectorsResponseBody extends TeaModel {
         private java.util.List<Connectors> connectors; 
         private String requestId; 
         private Integer totalNum; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListConnectorsResponseBody model) {
+            this.connectors = model.connectors;
+            this.requestId = model.requestId;
+            this.totalNum = model.totalNum;
+        } 
 
         /**
          * Connectors.
@@ -139,6 +152,14 @@ public class ListConnectorsResponseBody extends TeaModel {
         public static final class Builder {
             private String applicationId; 
             private String applicationName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Applications model) {
+                this.applicationId = model.applicationId;
+                this.applicationName = model.applicationName;
+            } 
 
             /**
              * ApplicationId.
@@ -231,6 +252,16 @@ public class ListConnectorsResponseBody extends TeaModel {
             private String hostname; 
             private String publicIp; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConnectorClients model) {
+                this.connectionStatus = model.connectionStatus;
+                this.devTag = model.devTag;
+                this.hostname = model.hostname;
+                this.publicIp = model.publicIp;
+            } 
+
             /**
              * ConnectionStatus.
              */
@@ -313,6 +344,14 @@ public class ListConnectorsResponseBody extends TeaModel {
         public static final class Builder {
             private String end; 
             private String start; 
+
+            private Builder() {
+            } 
+
+            private Builder(UpgradeTime model) {
+                this.end = model.end;
+                this.start = model.start;
+            } 
 
             /**
              * End.
@@ -464,6 +503,21 @@ public class ListConnectorsResponseBody extends TeaModel {
             private String status; 
             private String switchStatus; 
             private UpgradeTime upgradeTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Connectors model) {
+                this.applications = model.applications;
+                this.connectorClients = model.connectorClients;
+                this.connectorId = model.connectorId;
+                this.createTime = model.createTime;
+                this.name = model.name;
+                this.regionId = model.regionId;
+                this.status = model.status;
+                this.switchStatus = model.switchStatus;
+                this.upgradeTime = model.upgradeTime;
+            } 
 
             /**
              * Applications.

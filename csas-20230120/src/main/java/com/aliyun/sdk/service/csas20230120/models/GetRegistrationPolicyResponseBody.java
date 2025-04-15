@@ -72,6 +72,10 @@ public class GetRegistrationPolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createTime
      */
@@ -161,6 +165,23 @@ public class GetRegistrationPolicyResponseBody extends TeaModel {
         private String status; 
         private java.util.List<String> userGroupIds; 
         private java.util.List<String> whitelist; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetRegistrationPolicyResponseBody model) {
+            this.createTime = model.createTime;
+            this.description = model.description;
+            this.limitDetail = model.limitDetail;
+            this.matchMode = model.matchMode;
+            this.name = model.name;
+            this.policyId = model.policyId;
+            this.priority = model.priority;
+            this.requestId = model.requestId;
+            this.status = model.status;
+            this.userGroupIds = model.userGroupIds;
+            this.whitelist = model.whitelist;
+        } 
 
         /**
          * CreateTime.
@@ -312,6 +333,15 @@ public class GetRegistrationPolicyResponseBody extends TeaModel {
             private Integer mobile; 
             private Integer pc; 
 
+            private Builder() {
+            } 
+
+            private Builder(LimitCount model) {
+                this.all = model.all;
+                this.mobile = model.mobile;
+                this.pc = model.pc;
+            } 
+
             /**
              * All.
              */
@@ -398,6 +428,15 @@ public class GetRegistrationPolicyResponseBody extends TeaModel {
             private String deviceBelong; 
             private LimitCount limitCount; 
             private String limitType; 
+
+            private Builder() {
+            } 
+
+            private Builder(LimitDetail model) {
+                this.deviceBelong = model.deviceBelong;
+                this.limitCount = model.limitCount;
+                this.limitType = model.limitType;
+            } 
 
             /**
              * DeviceBelong.

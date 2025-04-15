@@ -36,6 +36,10 @@ public class CreateRegistrationPolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return policy
      */
@@ -53,6 +57,14 @@ public class CreateRegistrationPolicyResponseBody extends TeaModel {
     public static final class Builder {
         private Policy policy; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateRegistrationPolicyResponseBody model) {
+            this.policy = model.policy;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Policy.
@@ -131,6 +143,15 @@ public class CreateRegistrationPolicyResponseBody extends TeaModel {
             private Integer all; 
             private Integer mobile; 
             private Integer pc; 
+
+            private Builder() {
+            } 
+
+            private Builder(LimitCount model) {
+                this.all = model.all;
+                this.mobile = model.mobile;
+                this.pc = model.pc;
+            } 
 
             /**
              * All.
@@ -218,6 +239,15 @@ public class CreateRegistrationPolicyResponseBody extends TeaModel {
             private String deviceBelong; 
             private LimitCount limitCount; 
             private String limitType; 
+
+            private Builder() {
+            } 
+
+            private Builder(LimitDetail model) {
+                this.deviceBelong = model.deviceBelong;
+                this.limitCount = model.limitCount;
+                this.limitType = model.limitType;
+            } 
 
             /**
              * DeviceBelong.
@@ -389,6 +419,22 @@ public class CreateRegistrationPolicyResponseBody extends TeaModel {
             private String status; 
             private java.util.List<String> userGroupIds; 
             private java.util.List<String> whitelist; 
+
+            private Builder() {
+            } 
+
+            private Builder(Policy model) {
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.limitDetail = model.limitDetail;
+                this.matchMode = model.matchMode;
+                this.name = model.name;
+                this.policyId = model.policyId;
+                this.priority = model.priority;
+                this.status = model.status;
+                this.userGroupIds = model.userGroupIds;
+                this.whitelist = model.whitelist;
+            } 
 
             /**
              * CreateTime.

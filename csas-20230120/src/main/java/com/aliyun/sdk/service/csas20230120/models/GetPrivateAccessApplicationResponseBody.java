@@ -36,6 +36,10 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return application
      */
@@ -53,6 +57,14 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
     public static final class Builder {
         private Application application; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetPrivateAccessApplicationResponseBody model) {
+            this.application = model.application;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Application.
@@ -119,6 +131,14 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
         public static final class Builder {
             private Integer begin; 
             private Integer end; 
+
+            private Builder() {
+            } 
+
+            private Builder(PortRanges model) {
+                this.begin = model.begin;
+                this.end = model.end;
+            } 
 
             /**
              * Begin.
@@ -342,6 +362,27 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
             private String protocol; 
             private String status; 
             private java.util.List<String> tagIds; 
+
+            private Builder() {
+            } 
+
+            private Builder(Application model) {
+                this.addresses = model.addresses;
+                this.applicationId = model.applicationId;
+                this.browserAccessStatus = model.browserAccessStatus;
+                this.connectorIds = model.connectorIds;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.l7Config = model.l7Config;
+                this.l7ProxyDomainAutomatic = model.l7ProxyDomainAutomatic;
+                this.l7ProxyDomainCustom = model.l7ProxyDomainCustom;
+                this.name = model.name;
+                this.policyIds = model.policyIds;
+                this.portRanges = model.portRanges;
+                this.protocol = model.protocol;
+                this.status = model.status;
+                this.tagIds = model.tagIds;
+            } 
 
             /**
              * Addresses.

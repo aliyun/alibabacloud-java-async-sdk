@@ -36,6 +36,10 @@ public class ListApplicationsForPrivateAccessPolicyResponseBody extends TeaModel
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return polices
      */
@@ -53,6 +57,14 @@ public class ListApplicationsForPrivateAccessPolicyResponseBody extends TeaModel
     public static final class Builder {
         private java.util.List<Polices> polices; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListApplicationsForPrivateAccessPolicyResponseBody model) {
+            this.polices = model.polices;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Polices.
@@ -119,6 +131,14 @@ public class ListApplicationsForPrivateAccessPolicyResponseBody extends TeaModel
         public static final class Builder {
             private Integer begin; 
             private Integer end; 
+
+            private Builder() {
+            } 
+
+            private Builder(PortRanges model) {
+                this.begin = model.begin;
+                this.end = model.end;
+            } 
 
             /**
              * Begin.
@@ -259,6 +279,20 @@ public class ListApplicationsForPrivateAccessPolicyResponseBody extends TeaModel
             private String protocol; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(Applications model) {
+                this.addresses = model.addresses;
+                this.applicationId = model.applicationId;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.name = model.name;
+                this.portRanges = model.portRanges;
+                this.protocol = model.protocol;
+                this.status = model.status;
+            } 
+
             /**
              * Addresses.
              */
@@ -373,6 +407,14 @@ public class ListApplicationsForPrivateAccessPolicyResponseBody extends TeaModel
         public static final class Builder {
             private java.util.List<Applications> applications; 
             private String policyId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Polices model) {
+                this.applications = model.applications;
+                this.policyId = model.policyId;
+            } 
 
             /**
              * Applications.

@@ -32,6 +32,10 @@ public class AttachPolicy2ApprovalProcessResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -41,6 +45,13 @@ public class AttachPolicy2ApprovalProcessResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AttachPolicy2ApprovalProcessResponseBody model) {
+            this.requestId = model.requestId;
+        } 
 
         /**
          * RequestId.

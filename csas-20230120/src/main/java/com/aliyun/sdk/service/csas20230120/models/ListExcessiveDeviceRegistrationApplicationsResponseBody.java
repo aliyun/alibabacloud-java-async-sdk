@@ -40,6 +40,10 @@ public class ListExcessiveDeviceRegistrationApplicationsResponseBody extends Tea
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return applications
      */
@@ -65,6 +69,15 @@ public class ListExcessiveDeviceRegistrationApplicationsResponseBody extends Tea
         private java.util.List<Applications> applications; 
         private String requestId; 
         private Long totalNum; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListExcessiveDeviceRegistrationApplicationsResponseBody model) {
+            this.applications = model.applications;
+            this.requestId = model.requestId;
+            this.totalNum = model.totalNum;
+        } 
 
         /**
          * Applications.
@@ -259,6 +272,24 @@ public class ListExcessiveDeviceRegistrationApplicationsResponseBody extends Tea
             private String saseUserId; 
             private String status; 
             private String username; 
+
+            private Builder() {
+            } 
+
+            private Builder(Applications model) {
+                this.applicationId = model.applicationId;
+                this.createTime = model.createTime;
+                this.department = model.department;
+                this.description = model.description;
+                this.deviceTag = model.deviceTag;
+                this.deviceType = model.deviceType;
+                this.hostname = model.hostname;
+                this.isUsed = model.isUsed;
+                this.mac = model.mac;
+                this.saseUserId = model.saseUserId;
+                this.status = model.status;
+                this.username = model.username;
+            } 
 
             /**
              * ApplicationId.

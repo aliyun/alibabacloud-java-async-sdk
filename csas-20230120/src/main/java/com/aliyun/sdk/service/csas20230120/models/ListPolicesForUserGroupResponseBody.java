@@ -36,6 +36,10 @@ public class ListPolicesForUserGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class ListPolicesForUserGroupResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<UserGroups> userGroups; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListPolicesForUserGroupResponseBody model) {
+            this.requestId = model.requestId;
+            this.userGroups = model.userGroups;
+        } 
 
         /**
          * RequestId.
@@ -132,6 +144,15 @@ public class ListPolicesForUserGroupResponseBody extends TeaModel {
             private String policyId; 
             private String policyType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Polices model) {
+                this.name = model.name;
+                this.policyId = model.policyId;
+                this.policyType = model.policyType;
+            } 
+
             /**
              * Name.
              */
@@ -206,6 +227,14 @@ public class ListPolicesForUserGroupResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Polices> polices; 
             private String userGroupId; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserGroups model) {
+                this.polices = model.polices;
+                this.userGroupId = model.userGroupId;
+            } 
 
             /**
              * Polices.

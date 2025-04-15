@@ -36,6 +36,10 @@ public class ListApprovalProcessesForApprovalSchemasResponseBody extends TeaMode
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class ListApprovalProcessesForApprovalSchemasResponseBody extends TeaMode
     public static final class Builder {
         private String requestId; 
         private java.util.List<Schemas> schemas; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListApprovalProcessesForApprovalSchemasResponseBody model) {
+            this.requestId = model.requestId;
+            this.schemas = model.schemas;
+        } 
 
         /**
          * RequestId.
@@ -144,6 +156,16 @@ public class ListApprovalProcessesForApprovalSchemasResponseBody extends TeaMode
             private String processId; 
             private String processName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Processes model) {
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.processId = model.processId;
+                this.processName = model.processName;
+            } 
+
             /**
              * CreateTime.
              */
@@ -226,6 +248,14 @@ public class ListApprovalProcessesForApprovalSchemasResponseBody extends TeaMode
         public static final class Builder {
             private java.util.List<Processes> processes; 
             private String schemaId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Schemas model) {
+                this.processes = model.processes;
+                this.schemaId = model.schemaId;
+            } 
 
             /**
              * Processes.

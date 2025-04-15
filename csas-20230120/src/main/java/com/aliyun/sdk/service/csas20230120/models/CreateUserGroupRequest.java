@@ -46,7 +46,7 @@ public class CreateUserGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -195,6 +195,16 @@ public class CreateUserGroupRequest extends Request {
             private String relation; 
             private String userGroupType; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Attributes model) {
+                this.idpId = model.idpId;
+                this.relation = model.relation;
+                this.userGroupType = model.userGroupType;
+                this.value = model.value;
+            } 
 
             /**
              * IdpId.

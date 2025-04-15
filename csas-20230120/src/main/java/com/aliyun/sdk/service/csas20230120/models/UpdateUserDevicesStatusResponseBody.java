@@ -36,6 +36,10 @@ public class UpdateUserDevicesStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return devices
      */
@@ -53,6 +57,14 @@ public class UpdateUserDevicesStatusResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Devices> devices; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateUserDevicesStatusResponseBody model) {
+            this.devices = model.devices;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Devices.
@@ -119,6 +131,14 @@ public class UpdateUserDevicesStatusResponseBody extends TeaModel {
         public static final class Builder {
             private String mac; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetInterfaceInfo model) {
+                this.mac = model.mac;
+                this.name = model.name;
+            } 
 
             /**
              * Mac.
@@ -474,6 +494,38 @@ public class UpdateUserDevicesStatusResponseBody extends TeaModel {
             private String srcIP; 
             private String updateTime; 
             private String username; 
+
+            private Builder() {
+            } 
+
+            private Builder(Devices model) {
+                this.appStatus = model.appStatus;
+                this.appVersion = model.appVersion;
+                this.CPU = model.CPU;
+                this.createTime = model.createTime;
+                this.department = model.department;
+                this.deviceBelong = model.deviceBelong;
+                this.deviceModel = model.deviceModel;
+                this.deviceStatus = model.deviceStatus;
+                this.deviceTag = model.deviceTag;
+                this.deviceType = model.deviceType;
+                this.deviceVersion = model.deviceVersion;
+                this.disk = model.disk;
+                this.dlpStatus = model.dlpStatus;
+                this.hostname = model.hostname;
+                this.iaStatus = model.iaStatus;
+                this.innerIP = model.innerIP;
+                this.mac = model.mac;
+                this.memory = model.memory;
+                this.nacStatus = model.nacStatus;
+                this.netInterfaceInfo = model.netInterfaceInfo;
+                this.paStatus = model.paStatus;
+                this.saseUserId = model.saseUserId;
+                this.sharingStatus = model.sharingStatus;
+                this.srcIP = model.srcIP;
+                this.updateTime = model.updateTime;
+                this.username = model.username;
+            } 
 
             /**
              * AppStatus.

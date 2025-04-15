@@ -37,6 +37,10 @@ public class RecoveryContent extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return authReportInterval
      */
@@ -54,6 +58,14 @@ public class RecoveryContent extends TeaModel {
     public static final class Builder {
         private AuthReportInterval authReportInterval; 
         private java.util.List<String> recoveryActions; 
+
+        private Builder() {
+        } 
+
+        private Builder(RecoveryContent model) {
+            this.authReportInterval = model.authReportInterval;
+            this.recoveryActions = model.recoveryActions;
+        } 
 
         /**
          * AuthReportInterval.

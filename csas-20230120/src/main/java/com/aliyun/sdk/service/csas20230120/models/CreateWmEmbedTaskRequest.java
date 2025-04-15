@@ -94,7 +94,7 @@ public class CreateWmEmbedTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -448,6 +448,19 @@ public class CreateWmEmbedTaskRequest extends Request {
             private String method; 
             private String timeFormat; 
 
+            private Builder() {
+            } 
+
+            private Builder(CsvControl model) {
+                this.embedBitsNumberInEachTime = model.embedBitsNumberInEachTime;
+                this.embedColumn = model.embedColumn;
+                this.embedDensity = model.embedDensity;
+                this.embedPrecision = model.embedPrecision;
+                this.embedTimePosition = model.embedTimePosition;
+                this.method = model.method;
+                this.timeFormat = model.timeFormat;
+            } 
+
             /**
              * EmbedBitsNumberInEachTime.
              */
@@ -543,6 +556,13 @@ public class CreateWmEmbedTaskRequest extends Request {
 
         public static final class Builder {
             private Long opacity; 
+
+            private Builder() {
+            } 
+
+            private Builder(BgInvisibleControl model) {
+                this.opacity = model.opacity;
+            } 
 
             /**
              * Opacity.
@@ -705,6 +725,22 @@ public class CreateWmEmbedTaskRequest extends Request {
             private Long verticalNumber; 
             private String visibleText; 
 
+            private Builder() {
+            } 
+
+            private Builder(BgVisibleControl model) {
+                this.angle = model.angle;
+                this.fontColor = model.fontColor;
+                this.fontSize = model.fontSize;
+                this.horizontalNumber = model.horizontalNumber;
+                this.mode = model.mode;
+                this.opacity = model.opacity;
+                this.posX = model.posX;
+                this.posY = model.posY;
+                this.verticalNumber = model.verticalNumber;
+                this.visibleText = model.visibleText;
+            } 
+
             /**
              * Angle.
              */
@@ -860,6 +896,16 @@ public class CreateWmEmbedTaskRequest extends Request {
             private BgInvisibleControl bgInvisibleControl; 
             private BgVisibleControl bgVisibleControl; 
 
+            private Builder() {
+            } 
+
+            private Builder(BackgroundControl model) {
+                this.bgAddInvisible = model.bgAddInvisible;
+                this.bgAddVisible = model.bgAddVisible;
+                this.bgInvisibleControl = model.bgInvisibleControl;
+                this.bgVisibleControl = model.bgVisibleControl;
+            } 
+
             /**
              * BgAddInvisible.
              */
@@ -954,6 +1000,15 @@ public class CreateWmEmbedTaskRequest extends Request {
             private BackgroundControl backgroundControl; 
             private Boolean invisibleAntiAllCopy; 
             private Boolean invisibleAntiTextCopy; 
+
+            private Builder() {
+            } 
+
+            private Builder(DocumentControl model) {
+                this.backgroundControl = model.backgroundControl;
+                this.invisibleAntiAllCopy = model.invisibleAntiAllCopy;
+                this.invisibleAntiTextCopy = model.invisibleAntiTextCopy;
+            } 
 
             /**
              * BackgroundControl.

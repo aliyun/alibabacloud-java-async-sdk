@@ -36,6 +36,10 @@ public class GetIdpConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetIdpConfigResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetIdpConfigResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Data.
@@ -311,6 +323,30 @@ public class GetIdpConfigResponseBody extends TeaModel {
             private String verifyAesKey; 
             private String verifyToken; 
             private String verifyUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.accessKey = model.accessKey;
+                this.accessKeySecret = model.accessKeySecret;
+                this.description = model.description;
+                this.getGroupUrl = model.getGroupUrl;
+                this.id = model.id;
+                this.idpMetadata = model.idpMetadata;
+                this.mfaConfigType = model.mfaConfigType;
+                this.mobileLoginType = model.mobileLoginType;
+                this.mobileMfaConfigType = model.mobileMfaConfigType;
+                this.multiIdpInfo = model.multiIdpInfo;
+                this.name = model.name;
+                this.pcLoginType = model.pcLoginType;
+                this.status = model.status;
+                this.type = model.type;
+                this.updateTime = model.updateTime;
+                this.verifyAesKey = model.verifyAesKey;
+                this.verifyToken = model.verifyToken;
+                this.verifyUrl = model.verifyUrl;
+            } 
 
             /**
              * <p>AccessKey ID</p>

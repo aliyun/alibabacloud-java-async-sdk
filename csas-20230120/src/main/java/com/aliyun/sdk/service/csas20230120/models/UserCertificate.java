@@ -64,6 +64,10 @@ public class UserCertificate extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return certId
      */
@@ -137,6 +141,21 @@ public class UserCertificate extends TeaModel {
         private Long gmtModifiedUnix; 
         private String name; 
         private String privateKey; 
+
+        private Builder() {
+        } 
+
+        private Builder(UserCertificate model) {
+            this.certId = model.certId;
+            this.certificate = model.certificate;
+            this.description = model.description;
+            this.dnsNames = model.dnsNames;
+            this.expTimeUnix = model.expTimeUnix;
+            this.gmtCreateUnix = model.gmtCreateUnix;
+            this.gmtModifiedUnix = model.gmtModifiedUnix;
+            this.name = model.name;
+            this.privateKey = model.privateKey;
+        } 
 
         /**
          * CertId.

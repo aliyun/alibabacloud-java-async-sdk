@@ -36,6 +36,10 @@ public class GetDynamicRouteResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dynamicRoute
      */
@@ -53,6 +57,14 @@ public class GetDynamicRouteResponseBody extends TeaModel {
     public static final class Builder {
         private DynamicRoute dynamicRoute; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDynamicRouteResponseBody model) {
+            this.dynamicRoute = model.dynamicRoute;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * DynamicRoute.
@@ -239,6 +251,24 @@ public class GetDynamicRouteResponseBody extends TeaModel {
             private java.util.List<String> regionIds; 
             private String status; 
             private java.util.List<String> tagIds; 
+
+            private Builder() {
+            } 
+
+            private Builder(DynamicRoute model) {
+                this.applicationIds = model.applicationIds;
+                this.applicationType = model.applicationType;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.dynamicRouteId = model.dynamicRouteId;
+                this.dynamicRouteType = model.dynamicRouteType;
+                this.name = model.name;
+                this.nextHop = model.nextHop;
+                this.priority = model.priority;
+                this.regionIds = model.regionIds;
+                this.status = model.status;
+                this.tagIds = model.tagIds;
+            } 
 
             /**
              * ApplicationIds.

@@ -36,6 +36,10 @@ public class ListPrivateAccessTagsForDynamicRouteResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dynamicRoutes
      */
@@ -53,6 +57,14 @@ public class ListPrivateAccessTagsForDynamicRouteResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<DynamicRoutes> dynamicRoutes; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListPrivateAccessTagsForDynamicRouteResponseBody model) {
+            this.dynamicRoutes = model.dynamicRoutes;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * DynamicRoutes.
@@ -156,6 +168,17 @@ public class ListPrivateAccessTagsForDynamicRouteResponseBody extends TeaModel {
             private String tagId; 
             private String tagType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.name = model.name;
+                this.tagId = model.tagId;
+                this.tagType = model.tagType;
+            } 
+
             /**
              * CreateTime.
              */
@@ -246,6 +269,14 @@ public class ListPrivateAccessTagsForDynamicRouteResponseBody extends TeaModel {
         public static final class Builder {
             private String dynamicRouteId; 
             private java.util.List<Tags> tags; 
+
+            private Builder() {
+            } 
+
+            private Builder(DynamicRoutes model) {
+                this.dynamicRouteId = model.dynamicRouteId;
+                this.tags = model.tags;
+            } 
 
             /**
              * DynamicRouteId.

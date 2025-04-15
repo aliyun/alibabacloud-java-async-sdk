@@ -36,6 +36,10 @@ public class GetWmExtractTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetWmExtractTaskResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetWmExtractTaskResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Data.
@@ -191,6 +203,20 @@ public class GetWmExtractTaskResponseBody extends TeaModel {
             private Long wmInfoSize; 
             private Long wmInfoUint; 
             private String wmType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.createTime = model.createTime;
+                this.filename = model.filename;
+                this.status = model.status;
+                this.taskId = model.taskId;
+                this.wmInfoBytesB64 = model.wmInfoBytesB64;
+                this.wmInfoSize = model.wmInfoSize;
+                this.wmInfoUint = model.wmInfoUint;
+                this.wmType = model.wmType;
+            } 
 
             /**
              * CreateTime.

@@ -36,6 +36,10 @@ public class CreatePrivateAccessPolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return policyId
      */
@@ -53,6 +57,14 @@ public class CreatePrivateAccessPolicyResponseBody extends TeaModel {
     public static final class Builder {
         private String policyId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreatePrivateAccessPolicyResponseBody model) {
+            this.policyId = model.policyId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * PolicyId.

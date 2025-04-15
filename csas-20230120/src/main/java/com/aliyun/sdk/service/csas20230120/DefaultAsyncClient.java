@@ -976,6 +976,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListDynamicDisposalProcesses  ListDynamicDisposalProcessesRequest
+     * @return ListDynamicDisposalProcessesResponse
+     */
+    @Override
+    public CompletableFuture<ListDynamicDisposalProcessesResponse> listDynamicDisposalProcesses(ListDynamicDisposalProcessesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListDynamicDisposalProcesses").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListDynamicDisposalProcessesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListDynamicDisposalProcessesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListDynamicRouteRegions  ListDynamicRouteRegionsRequest
      * @return ListDynamicRouteRegionsResponse
      */
@@ -1498,9 +1516,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of RevokeUserSession  RevokeUserSessionRequest
+     * @deprecated OpenAPI RevokeUserSession is deprecated  * @param request  the request parameters of RevokeUserSession  RevokeUserSessionRequest
      * @return RevokeUserSessionResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<RevokeUserSessionResponse> revokeUserSession(RevokeUserSessionRequest request) {
         try {

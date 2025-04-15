@@ -36,6 +36,10 @@ public class ListPolicesForPrivateAccessApplicationResponseBody extends TeaModel
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return applications
      */
@@ -53,6 +57,14 @@ public class ListPolicesForPrivateAccessApplicationResponseBody extends TeaModel
     public static final class Builder {
         private java.util.List<Applications> applications; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListPolicesForPrivateAccessApplicationResponseBody model) {
+            this.applications = model.applications;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Applications.
@@ -143,6 +155,16 @@ public class ListPolicesForPrivateAccessApplicationResponseBody extends TeaModel
             private String relation; 
             private String userGroupType; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomUserAttributes model) {
+                this.idpId = model.idpId;
+                this.relation = model.relation;
+                this.userGroupType = model.userGroupType;
+                this.value = model.value;
+            } 
 
             /**
              * IdpId.
@@ -323,6 +345,22 @@ public class ListPolicesForPrivateAccessApplicationResponseBody extends TeaModel
             private String status; 
             private String userGroupType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Policies model) {
+                this.applicationType = model.applicationType;
+                this.createTime = model.createTime;
+                this.customUserAttributes = model.customUserAttributes;
+                this.description = model.description;
+                this.name = model.name;
+                this.policyAction = model.policyAction;
+                this.policyId = model.policyId;
+                this.priority = model.priority;
+                this.status = model.status;
+                this.userGroupType = model.userGroupType;
+            } 
+
             /**
              * ApplicationType.
              */
@@ -453,6 +491,14 @@ public class ListPolicesForPrivateAccessApplicationResponseBody extends TeaModel
         public static final class Builder {
             private String applicationId; 
             private java.util.List<Policies> policies; 
+
+            private Builder() {
+            } 
+
+            private Builder(Applications model) {
+                this.applicationId = model.applicationId;
+                this.policies = model.policies;
+            } 
 
             /**
              * ApplicationId.

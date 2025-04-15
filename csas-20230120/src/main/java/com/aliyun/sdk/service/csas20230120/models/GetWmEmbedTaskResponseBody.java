@@ -36,6 +36,10 @@ public class GetWmEmbedTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetWmEmbedTaskResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetWmEmbedTaskResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Data.
@@ -179,6 +191,19 @@ public class GetWmEmbedTaskResponseBody extends TeaModel {
             private Long outFileSize; 
             private String taskId; 
             private String taskStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.fileUrl = model.fileUrl;
+                this.fileUrlExp = model.fileUrlExp;
+                this.filename = model.filename;
+                this.outFileHashMd5 = model.outFileHashMd5;
+                this.outFileSize = model.outFileSize;
+                this.taskId = model.taskId;
+                this.taskStatus = model.taskStatus;
+            } 
 
             /**
              * FileUrl.

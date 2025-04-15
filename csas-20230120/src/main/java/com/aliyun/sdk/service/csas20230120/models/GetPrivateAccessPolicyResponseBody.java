@@ -36,6 +36,10 @@ public class GetPrivateAccessPolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return policy
      */
@@ -53,6 +57,14 @@ public class GetPrivateAccessPolicyResponseBody extends TeaModel {
     public static final class Builder {
         private Policy policy; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetPrivateAccessPolicyResponseBody model) {
+            this.policy = model.policy;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Policy.
@@ -143,6 +155,16 @@ public class GetPrivateAccessPolicyResponseBody extends TeaModel {
             private String relation; 
             private String userGroupType; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomUserAttributes model) {
+                this.idpId = model.idpId;
+                this.relation = model.relation;
+                this.userGroupType = model.userGroupType;
+                this.value = model.value;
+            } 
 
             /**
              * IdpId.
@@ -394,6 +416,28 @@ public class GetPrivateAccessPolicyResponseBody extends TeaModel {
             private String triggerTemplateId; 
             private java.util.List<String> userGroupIds; 
             private String userGroupMode; 
+
+            private Builder() {
+            } 
+
+            private Builder(Policy model) {
+                this.applicationIds = model.applicationIds;
+                this.applicationType = model.applicationType;
+                this.createTime = model.createTime;
+                this.customUserAttributes = model.customUserAttributes;
+                this.description = model.description;
+                this.deviceAttributeAction = model.deviceAttributeAction;
+                this.deviceAttributeId = model.deviceAttributeId;
+                this.name = model.name;
+                this.policyAction = model.policyAction;
+                this.policyId = model.policyId;
+                this.priority = model.priority;
+                this.status = model.status;
+                this.tagIds = model.tagIds;
+                this.triggerTemplateId = model.triggerTemplateId;
+                this.userGroupIds = model.userGroupIds;
+                this.userGroupMode = model.userGroupMode;
+            } 
 
             /**
              * ApplicationIds.

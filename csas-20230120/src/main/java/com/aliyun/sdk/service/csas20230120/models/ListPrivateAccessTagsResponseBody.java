@@ -40,6 +40,10 @@ public class ListPrivateAccessTagsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class ListPrivateAccessTagsResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Tags> tags; 
         private Integer totalNum; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListPrivateAccessTagsResponseBody model) {
+            this.requestId = model.requestId;
+            this.tags = model.tags;
+            this.totalNum = model.totalNum;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -205,6 +218,19 @@ public class ListPrivateAccessTagsResponseBody extends TeaModel {
             private java.util.List<String> policyIds; 
             private String tagId; 
             private String tagType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.applicationIds = model.applicationIds;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.name = model.name;
+                this.policyIds = model.policyIds;
+                this.tagId = model.tagId;
+                this.tagType = model.tagType;
+            } 
 
             /**
              * <p>The IDs of the internal access applications.</p>

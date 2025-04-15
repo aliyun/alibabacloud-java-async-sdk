@@ -85,7 +85,7 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -354,6 +354,14 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
         public static final class Builder {
             private Integer begin; 
             private Integer end; 
+
+            private Builder() {
+            } 
+
+            private Builder(PortRanges model) {
+                this.begin = model.begin;
+                this.end = model.end;
+            } 
 
             /**
              * Begin.

@@ -48,6 +48,10 @@ public class PAL7ConfigRewriteOp extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return key
      */
@@ -89,6 +93,17 @@ public class PAL7ConfigRewriteOp extends TeaModel {
         private String op; 
         private String value; 
         private String valueVariable; 
+
+        private Builder() {
+        } 
+
+        private Builder(PAL7ConfigRewriteOp model) {
+            this.key = model.key;
+            this.oldValue = model.oldValue;
+            this.op = model.op;
+            this.value = model.value;
+            this.valueVariable = model.valueVariable;
+        } 
 
         /**
          * Key.

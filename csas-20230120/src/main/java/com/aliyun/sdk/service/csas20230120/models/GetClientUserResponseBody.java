@@ -36,6 +36,10 @@ public class GetClientUserResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetClientUserResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetClientUserResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Data.
@@ -119,6 +131,14 @@ public class GetClientUserResponseBody extends TeaModel {
         public static final class Builder {
             private String id; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(Department model) {
+                this.id = model.id;
+                this.name = model.name;
+            } 
 
             /**
              * Id.
@@ -282,6 +302,22 @@ public class GetClientUserResponseBody extends TeaModel {
             private String status; 
             private String userId; 
             private String username; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.department = model.department;
+                this.departmentId = model.departmentId;
+                this.description = model.description;
+                this.email = model.email;
+                this.id = model.id;
+                this.idpConfigId = model.idpConfigId;
+                this.mobileNumber = model.mobileNumber;
+                this.status = model.status;
+                this.userId = model.userId;
+                this.username = model.username;
+            } 
 
             /**
              * Department.

@@ -40,6 +40,10 @@ public class ListUninstallApplicationsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return applications
      */
@@ -65,6 +69,15 @@ public class ListUninstallApplicationsResponseBody extends TeaModel {
         private java.util.List<Applications> applications; 
         private String requestId; 
         private Long totalNum; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListUninstallApplicationsResponseBody model) {
+            this.applications = model.applications;
+            this.requestId = model.requestId;
+            this.totalNum = model.totalNum;
+        } 
 
         /**
          * Applications.
@@ -271,6 +284,25 @@ public class ListUninstallApplicationsResponseBody extends TeaModel {
             private String saseUserId; 
             private String status; 
             private String username; 
+
+            private Builder() {
+            } 
+
+            private Builder(Applications model) {
+                this.applicationId = model.applicationId;
+                this.createTime = model.createTime;
+                this.department = model.department;
+                this.devTag = model.devTag;
+                this.devType = model.devType;
+                this.hostname = model.hostname;
+                this.idpName = model.idpName;
+                this.isUninstall = model.isUninstall;
+                this.mac = model.mac;
+                this.reason = model.reason;
+                this.saseUserId = model.saseUserId;
+                this.status = model.status;
+                this.username = model.username;
+            } 
 
             /**
              * ApplicationId.

@@ -48,6 +48,10 @@ public class ListNacUserCertResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class ListNacUserCertResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Long totalNum; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListNacUserCertResponseBody model) {
+            this.code = model.code;
+            this.dataList = model.dataList;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.totalNum = model.totalNum;
+        } 
 
         /**
          * Code.
@@ -275,6 +290,22 @@ public class ListNacUserCertResponseBody extends TeaModel {
             private String status; 
             private String userId; 
             private String username; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataList model) {
+                this.aliuid = model.aliuid;
+                this.department = model.department;
+                this.devTag = model.devTag;
+                this.deviceType = model.deviceType;
+                this.expiredTime = model.expiredTime;
+                this.hostname = model.hostname;
+                this.mac = model.mac;
+                this.status = model.status;
+                this.userId = model.userId;
+                this.username = model.username;
+            } 
 
             /**
              * Aliuid.
