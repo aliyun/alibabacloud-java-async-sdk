@@ -39,6 +39,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CheckVerifyLogResponse> checkVerifyLog(CheckVerifyLogRequest request);
 
     /**
+     * @param request the request parameters of DeepfakeDetectIntl  DeepfakeDetectIntlRequest
+     * @return DeepfakeDetectIntlResponse
+     */
+    CompletableFuture<DeepfakeDetectIntlResponse> deepfakeDetectIntl(DeepfakeDetectIntlRequest request);
+
+    /**
      * @param request the request parameters of DeleteVerifyResult  DeleteVerifyResultRequest
      * @return DeleteVerifyResultResponse
      */
