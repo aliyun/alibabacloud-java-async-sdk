@@ -12,11 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link AnalyzeConversationRequest} extends {@link RequestModel}
+ * {@link AnalyzeAudioSyncRequest} extends {@link RequestModel}
  *
- * <p>AnalyzeConversationRequest</p>
+ * <p>AnalyzeAudioSyncRequest</p>
  */
-public class AnalyzeConversationRequest extends Request {
+public class AnalyzeAudioSyncRequest extends Request {
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("regionId")
+    private String regionId;
+
     @com.aliyun.core.annotation.Path
     @com.aliyun.core.annotation.NameInMap("workspaceId")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -27,10 +31,6 @@ public class AnalyzeConversationRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @com.aliyun.core.annotation.Host
-    @com.aliyun.core.annotation.NameInMap("regionId")
-    private String regionId;
-
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("categoryTags")
     private java.util.List<CategoryTags> categoryTags;
@@ -38,14 +38,6 @@ public class AnalyzeConversationRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("customPrompt")
     private String customPrompt;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("dialogue")
-    private Dialogue dialogue;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("examples")
-    private java.util.List<Examples> examples;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("fields")
@@ -61,20 +53,11 @@ public class AnalyzeConversationRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("resultTypes")
-    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<String> resultTypes;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("sceneName")
-    private String sceneName;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("serviceInspection")
     private ServiceInspection serviceInspection;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("sourceCallerUid")
-    private String sourceCallerUid;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("stream")
@@ -82,45 +65,53 @@ public class AnalyzeConversationRequest extends Request {
     private Boolean stream;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("timeConstraintList")
-    private java.util.List<String> timeConstraintList;
+    @com.aliyun.core.annotation.NameInMap("templateIds")
+    private java.util.List<String> templateIds;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("userProfiles")
-    private java.util.List<UserProfiles> userProfiles;
+    @com.aliyun.core.annotation.NameInMap("transcription")
+    private Transcription transcription;
 
-    private AnalyzeConversationRequest(Builder builder) {
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("variables")
+    private java.util.List<Variables> variables;
+
+    private AnalyzeAudioSyncRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.workspaceId = builder.workspaceId;
         this.appId = builder.appId;
-        this.regionId = builder.regionId;
         this.categoryTags = builder.categoryTags;
         this.customPrompt = builder.customPrompt;
-        this.dialogue = builder.dialogue;
-        this.examples = builder.examples;
         this.fields = builder.fields;
         this.modelCode = builder.modelCode;
         this.responseFormatType = builder.responseFormatType;
         this.resultTypes = builder.resultTypes;
-        this.sceneName = builder.sceneName;
         this.serviceInspection = builder.serviceInspection;
-        this.sourceCallerUid = builder.sourceCallerUid;
         this.stream = builder.stream;
-        this.timeConstraintList = builder.timeConstraintList;
-        this.userProfiles = builder.userProfiles;
+        this.templateIds = builder.templateIds;
+        this.transcription = builder.transcription;
+        this.variables = builder.variables;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static AnalyzeConversationRequest create() {
+    public static AnalyzeAudioSyncRequest create() {
         return builder().build();
     }
 
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -138,13 +129,6 @@ public class AnalyzeConversationRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return categoryTags
      */
     public java.util.List<CategoryTags> getCategoryTags() {
@@ -156,20 +140,6 @@ public class AnalyzeConversationRequest extends Request {
      */
     public String getCustomPrompt() {
         return this.customPrompt;
-    }
-
-    /**
-     * @return dialogue
-     */
-    public Dialogue getDialogue() {
-        return this.dialogue;
-    }
-
-    /**
-     * @return examples
-     */
-    public java.util.List<Examples> getExamples() {
-        return this.examples;
     }
 
     /**
@@ -201,24 +171,10 @@ public class AnalyzeConversationRequest extends Request {
     }
 
     /**
-     * @return sceneName
-     */
-    public String getSceneName() {
-        return this.sceneName;
-    }
-
-    /**
      * @return serviceInspection
      */
     public ServiceInspection getServiceInspection() {
         return this.serviceInspection;
-    }
-
-    /**
-     * @return sourceCallerUid
-     */
-    public String getSourceCallerUid() {
-        return this.sourceCallerUid;
     }
 
     /**
@@ -229,68 +185,78 @@ public class AnalyzeConversationRequest extends Request {
     }
 
     /**
-     * @return timeConstraintList
+     * @return templateIds
      */
-    public java.util.List<String> getTimeConstraintList() {
-        return this.timeConstraintList;
+    public java.util.List<String> getTemplateIds() {
+        return this.templateIds;
     }
 
     /**
-     * @return userProfiles
+     * @return transcription
      */
-    public java.util.List<UserProfiles> getUserProfiles() {
-        return this.userProfiles;
+    public Transcription getTranscription() {
+        return this.transcription;
     }
 
-    public static final class Builder extends Request.Builder<AnalyzeConversationRequest, Builder> {
+    /**
+     * @return variables
+     */
+    public java.util.List<Variables> getVariables() {
+        return this.variables;
+    }
+
+    public static final class Builder extends Request.Builder<AnalyzeAudioSyncRequest, Builder> {
+        private String regionId; 
         private String workspaceId; 
         private String appId; 
-        private String regionId; 
         private java.util.List<CategoryTags> categoryTags; 
         private String customPrompt; 
-        private Dialogue dialogue; 
-        private java.util.List<Examples> examples; 
         private java.util.List<Fields> fields; 
         private String modelCode; 
         private String responseFormatType; 
         private java.util.List<String> resultTypes; 
-        private String sceneName; 
         private ServiceInspection serviceInspection; 
-        private String sourceCallerUid; 
         private Boolean stream; 
-        private java.util.List<String> timeConstraintList; 
-        private java.util.List<UserProfiles> userProfiles; 
+        private java.util.List<String> templateIds; 
+        private Transcription transcription; 
+        private java.util.List<Variables> variables; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(AnalyzeConversationRequest request) {
+        private Builder(AnalyzeAudioSyncRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.workspaceId = request.workspaceId;
             this.appId = request.appId;
-            this.regionId = request.regionId;
             this.categoryTags = request.categoryTags;
             this.customPrompt = request.customPrompt;
-            this.dialogue = request.dialogue;
-            this.examples = request.examples;
             this.fields = request.fields;
             this.modelCode = request.modelCode;
             this.responseFormatType = request.responseFormatType;
             this.resultTypes = request.resultTypes;
-            this.sceneName = request.sceneName;
             this.serviceInspection = request.serviceInspection;
-            this.sourceCallerUid = request.sourceCallerUid;
             this.stream = request.stream;
-            this.timeConstraintList = request.timeConstraintList;
-            this.userProfiles = request.userProfiles;
+            this.templateIds = request.templateIds;
+            this.transcription = request.transcription;
+            this.variables = request.variables;
         } 
+
+        /**
+         * regionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("regionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>llm-368******3ifum</p>
+         * <p>llm-ik******RVYCKzt</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -311,15 +277,6 @@ public class AnalyzeConversationRequest extends Request {
         }
 
         /**
-         * regionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("regionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
          * categoryTags.
          */
         public Builder categoryTags(java.util.List<CategoryTags> categoryTags) {
@@ -334,24 +291,6 @@ public class AnalyzeConversationRequest extends Request {
         public Builder customPrompt(String customPrompt) {
             this.putBodyParameter("customPrompt", customPrompt);
             this.customPrompt = customPrompt;
-            return this;
-        }
-
-        /**
-         * dialogue.
-         */
-        public Builder dialogue(Dialogue dialogue) {
-            this.putBodyParameter("dialogue", dialogue);
-            this.dialogue = dialogue;
-            return this;
-        }
-
-        /**
-         * examples.
-         */
-        public Builder examples(java.util.List<Examples> examples) {
-            this.putBodyParameter("examples", examples);
-            this.examples = examples;
             return this;
         }
 
@@ -383,20 +322,11 @@ public class AnalyzeConversationRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
+         * resultTypes.
          */
         public Builder resultTypes(java.util.List<String> resultTypes) {
             this.putBodyParameter("resultTypes", resultTypes);
             this.resultTypes = resultTypes;
-            return this;
-        }
-
-        /**
-         * sceneName.
-         */
-        public Builder sceneName(String sceneName) {
-            this.putBodyParameter("sceneName", sceneName);
-            this.sceneName = sceneName;
             return this;
         }
 
@@ -406,15 +336,6 @@ public class AnalyzeConversationRequest extends Request {
         public Builder serviceInspection(ServiceInspection serviceInspection) {
             this.putBodyParameter("serviceInspection", serviceInspection);
             this.serviceInspection = serviceInspection;
-            return this;
-        }
-
-        /**
-         * sourceCallerUid.
-         */
-        public Builder sourceCallerUid(String sourceCallerUid) {
-            this.putBodyParameter("sourceCallerUid", sourceCallerUid);
-            this.sourceCallerUid = sourceCallerUid;
             return this;
         }
 
@@ -431,35 +352,44 @@ public class AnalyzeConversationRequest extends Request {
         }
 
         /**
-         * timeConstraintList.
+         * templateIds.
          */
-        public Builder timeConstraintList(java.util.List<String> timeConstraintList) {
-            this.putBodyParameter("timeConstraintList", timeConstraintList);
-            this.timeConstraintList = timeConstraintList;
+        public Builder templateIds(java.util.List<String> templateIds) {
+            this.putBodyParameter("templateIds", templateIds);
+            this.templateIds = templateIds;
             return this;
         }
 
         /**
-         * userProfiles.
+         * transcription.
          */
-        public Builder userProfiles(java.util.List<UserProfiles> userProfiles) {
-            this.putBodyParameter("userProfiles", userProfiles);
-            this.userProfiles = userProfiles;
+        public Builder transcription(Transcription transcription) {
+            this.putBodyParameter("transcription", transcription);
+            this.transcription = transcription;
+            return this;
+        }
+
+        /**
+         * variables.
+         */
+        public Builder variables(java.util.List<Variables> variables) {
+            this.putBodyParameter("variables", variables);
+            this.variables = variables;
             return this;
         }
 
         @Override
-        public AnalyzeConversationRequest build() {
-            return new AnalyzeConversationRequest(this);
+        public AnalyzeAudioSyncRequest build() {
+            return new AnalyzeAudioSyncRequest(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link AnalyzeConversationRequest} extends {@link TeaModel}
+     * {@link AnalyzeAudioSyncRequest} extends {@link TeaModel}
      *
-     * <p>AnalyzeConversationRequest</p>
+     * <p>AnalyzeAudioSyncRequest</p>
      */
     public static class CategoryTags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tagDesc")
@@ -532,348 +462,15 @@ public class AnalyzeConversationRequest extends Request {
     }
     /**
      * 
-     * {@link AnalyzeConversationRequest} extends {@link TeaModel}
+     * {@link AnalyzeAudioSyncRequest} extends {@link TeaModel}
      *
-     * <p>AnalyzeConversationRequest</p>
-     */
-    public static class Sentences extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("role")
-        @com.aliyun.core.annotation.Validation(required = true)
-        private String role;
-
-        @com.aliyun.core.annotation.NameInMap("text")
-        @com.aliyun.core.annotation.Validation(required = true)
-        private String text;
-
-        private Sentences(Builder builder) {
-            this.role = builder.role;
-            this.text = builder.text;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Sentences create() {
-            return builder().build();
-        }
-
-        /**
-         * @return role
-         */
-        public String getRole() {
-            return this.role;
-        }
-
-        /**
-         * @return text
-         */
-        public String getText() {
-            return this.text;
-        }
-
-        public static final class Builder {
-            private String role; 
-            private String text; 
-
-            private Builder() {
-            } 
-
-            private Builder(Sentences model) {
-                this.role = model.role;
-                this.text = model.text;
-            } 
-
-            /**
-             * <p>This parameter is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>user</p>
-             */
-            public Builder role(String role) {
-                this.role = role;
-                return this;
-            }
-
-            /**
-             * <p>This parameter is required.</p>
-             */
-            public Builder text(String text) {
-                this.text = text;
-                return this;
-            }
-
-            public Sentences build() {
-                return new Sentences(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link AnalyzeConversationRequest} extends {@link TeaModel}
-     *
-     * <p>AnalyzeConversationRequest</p>
-     */
-    public static class Dialogue extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("sentences")
-        @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List<Sentences> sentences;
-
-        @com.aliyun.core.annotation.NameInMap("sessionId")
-        private String sessionId;
-
-        private Dialogue(Builder builder) {
-            this.sentences = builder.sentences;
-            this.sessionId = builder.sessionId;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Dialogue create() {
-            return builder().build();
-        }
-
-        /**
-         * @return sentences
-         */
-        public java.util.List<Sentences> getSentences() {
-            return this.sentences;
-        }
-
-        /**
-         * @return sessionId
-         */
-        public String getSessionId() {
-            return this.sessionId;
-        }
-
-        public static final class Builder {
-            private java.util.List<Sentences> sentences; 
-            private String sessionId; 
-
-            private Builder() {
-            } 
-
-            private Builder(Dialogue model) {
-                this.sentences = model.sentences;
-                this.sessionId = model.sessionId;
-            } 
-
-            /**
-             * <p>This parameter is required.</p>
-             */
-            public Builder sentences(java.util.List<Sentences> sentences) {
-                this.sentences = sentences;
-                return this;
-            }
-
-            /**
-             * sessionId.
-             */
-            public Builder sessionId(String sessionId) {
-                this.sessionId = sessionId;
-                return this;
-            }
-
-            public Dialogue build() {
-                return new Dialogue(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link AnalyzeConversationRequest} extends {@link TeaModel}
-     *
-     * <p>AnalyzeConversationRequest</p>
-     */
-    public static class ExamplesSentences extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("chatId")
-        private String chatId;
-
-        @com.aliyun.core.annotation.NameInMap("role")
-        @com.aliyun.core.annotation.Validation(required = true)
-        private String role;
-
-        @com.aliyun.core.annotation.NameInMap("text")
-        @com.aliyun.core.annotation.Validation(required = true)
-        private String text;
-
-        private ExamplesSentences(Builder builder) {
-            this.chatId = builder.chatId;
-            this.role = builder.role;
-            this.text = builder.text;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static ExamplesSentences create() {
-            return builder().build();
-        }
-
-        /**
-         * @return chatId
-         */
-        public String getChatId() {
-            return this.chatId;
-        }
-
-        /**
-         * @return role
-         */
-        public String getRole() {
-            return this.role;
-        }
-
-        /**
-         * @return text
-         */
-        public String getText() {
-            return this.text;
-        }
-
-        public static final class Builder {
-            private String chatId; 
-            private String role; 
-            private String text; 
-
-            private Builder() {
-            } 
-
-            private Builder(ExamplesSentences model) {
-                this.chatId = model.chatId;
-                this.role = model.role;
-                this.text = model.text;
-            } 
-
-            /**
-             * chatId.
-             */
-            public Builder chatId(String chatId) {
-                this.chatId = chatId;
-                return this;
-            }
-
-            /**
-             * <p>This parameter is required.</p>
-             */
-            public Builder role(String role) {
-                this.role = role;
-                return this;
-            }
-
-            /**
-             * <p>This parameter is required.</p>
-             */
-            public Builder text(String text) {
-                this.text = text;
-                return this;
-            }
-
-            public ExamplesSentences build() {
-                return new ExamplesSentences(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link AnalyzeConversationRequest} extends {@link TeaModel}
-     *
-     * <p>AnalyzeConversationRequest</p>
-     */
-    public static class Examples extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("output")
-        @com.aliyun.core.annotation.Validation(required = true)
-        private String output;
-
-        @com.aliyun.core.annotation.NameInMap("sentences")
-        @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List<ExamplesSentences> sentences;
-
-        private Examples(Builder builder) {
-            this.output = builder.output;
-            this.sentences = builder.sentences;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Examples create() {
-            return builder().build();
-        }
-
-        /**
-         * @return output
-         */
-        public String getOutput() {
-            return this.output;
-        }
-
-        /**
-         * @return sentences
-         */
-        public java.util.List<ExamplesSentences> getSentences() {
-            return this.sentences;
-        }
-
-        public static final class Builder {
-            private String output; 
-            private java.util.List<ExamplesSentences> sentences; 
-
-            private Builder() {
-            } 
-
-            private Builder(Examples model) {
-                this.output = model.output;
-                this.sentences = model.sentences;
-            } 
-
-            /**
-             * <p>This parameter is required.</p>
-             */
-            public Builder output(String output) {
-                this.output = output;
-                return this;
-            }
-
-            /**
-             * <p>This parameter is required.</p>
-             */
-            public Builder sentences(java.util.List<ExamplesSentences> sentences) {
-                this.sentences = sentences;
-                return this;
-            }
-
-            public Examples build() {
-                return new Examples(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link AnalyzeConversationRequest} extends {@link TeaModel}
-     *
-     * <p>AnalyzeConversationRequest</p>
+     * <p>AnalyzeAudioSyncRequest</p>
      */
     public static class EnumValues extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("desc")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String desc;
 
         @com.aliyun.core.annotation.NameInMap("enumValue")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String enumValue;
 
         private EnumValues(Builder builder) {
@@ -916,7 +513,7 @@ public class AnalyzeConversationRequest extends Request {
             } 
 
             /**
-             * <p>This parameter is required.</p>
+             * desc.
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -924,7 +521,7 @@ public class AnalyzeConversationRequest extends Request {
             }
 
             /**
-             * <p>This parameter is required.</p>
+             * enumValue.
              */
             public Builder enumValue(String enumValue) {
                 this.enumValue = enumValue;
@@ -940,23 +537,21 @@ public class AnalyzeConversationRequest extends Request {
     }
     /**
      * 
-     * {@link AnalyzeConversationRequest} extends {@link TeaModel}
+     * {@link AnalyzeAudioSyncRequest} extends {@link TeaModel}
      *
-     * <p>AnalyzeConversationRequest</p>
+     * <p>AnalyzeAudioSyncRequest</p>
      */
     public static class Fields extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("code")
         private String code;
 
         @com.aliyun.core.annotation.NameInMap("desc")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String desc;
 
         @com.aliyun.core.annotation.NameInMap("enumValues")
         private java.util.List<EnumValues> enumValues;
 
         @com.aliyun.core.annotation.NameInMap("name")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String name;
 
         private Fields(Builder builder) {
@@ -1027,7 +622,7 @@ public class AnalyzeConversationRequest extends Request {
             }
 
             /**
-             * <p>This parameter is required.</p>
+             * desc.
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -1043,7 +638,7 @@ public class AnalyzeConversationRequest extends Request {
             }
 
             /**
-             * <p>This parameter is required.</p>
+             * name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1059,17 +654,15 @@ public class AnalyzeConversationRequest extends Request {
     }
     /**
      * 
-     * {@link AnalyzeConversationRequest} extends {@link TeaModel}
+     * {@link AnalyzeAudioSyncRequest} extends {@link TeaModel}
      *
-     * <p>AnalyzeConversationRequest</p>
+     * <p>AnalyzeAudioSyncRequest</p>
      */
     public static class InspectionContents extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("content")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String content;
 
         @com.aliyun.core.annotation.NameInMap("title")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String title;
 
         private InspectionContents(Builder builder) {
@@ -1112,7 +705,7 @@ public class AnalyzeConversationRequest extends Request {
             } 
 
             /**
-             * <p>This parameter is required.</p>
+             * content.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -1120,7 +713,7 @@ public class AnalyzeConversationRequest extends Request {
             }
 
             /**
-             * <p>This parameter is required.</p>
+             * title.
              */
             public Builder title(String title) {
                 this.title = title;
@@ -1136,21 +729,18 @@ public class AnalyzeConversationRequest extends Request {
     }
     /**
      * 
-     * {@link AnalyzeConversationRequest} extends {@link TeaModel}
+     * {@link AnalyzeAudioSyncRequest} extends {@link TeaModel}
      *
-     * <p>AnalyzeConversationRequest</p>
+     * <p>AnalyzeAudioSyncRequest</p>
      */
     public static class ServiceInspection extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("inspectionContents")
-        @com.aliyun.core.annotation.Validation(required = true)
         private java.util.List<InspectionContents> inspectionContents;
 
         @com.aliyun.core.annotation.NameInMap("inspectionIntroduction")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String inspectionIntroduction;
 
         @com.aliyun.core.annotation.NameInMap("sceneIntroduction")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String sceneIntroduction;
 
         private ServiceInspection(Builder builder) {
@@ -1203,7 +793,7 @@ public class AnalyzeConversationRequest extends Request {
             } 
 
             /**
-             * <p>This parameter is required.</p>
+             * inspectionContents.
              */
             public Builder inspectionContents(java.util.List<InspectionContents> inspectionContents) {
                 this.inspectionContents = inspectionContents;
@@ -1211,7 +801,7 @@ public class AnalyzeConversationRequest extends Request {
             }
 
             /**
-             * <p>This parameter is required.</p>
+             * inspectionIntroduction.
              */
             public Builder inspectionIntroduction(String inspectionIntroduction) {
                 this.inspectionIntroduction = inspectionIntroduction;
@@ -1219,7 +809,7 @@ public class AnalyzeConversationRequest extends Request {
             }
 
             /**
-             * <p>This parameter is required.</p>
+             * sceneIntroduction.
              */
             public Builder sceneIntroduction(String sceneIntroduction) {
                 this.sceneIntroduction = sceneIntroduction;
@@ -1235,74 +825,304 @@ public class AnalyzeConversationRequest extends Request {
     }
     /**
      * 
-     * {@link AnalyzeConversationRequest} extends {@link TeaModel}
+     * {@link AnalyzeAudioSyncRequest} extends {@link TeaModel}
      *
-     * <p>AnalyzeConversationRequest</p>
+     * <p>AnalyzeAudioSyncRequest</p>
      */
-    public static class UserProfiles extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("name")
-        private String name;
+    public static class Transcription extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("asrModelCode")
+        private String asrModelCode;
 
-        @com.aliyun.core.annotation.NameInMap("value")
-        private String value;
+        @com.aliyun.core.annotation.NameInMap("autoSplit")
+        private Integer autoSplit;
 
-        private UserProfiles(Builder builder) {
-            this.name = builder.name;
-            this.value = builder.value;
+        @com.aliyun.core.annotation.NameInMap("clientChannel")
+        private Integer clientChannel;
+
+        @com.aliyun.core.annotation.NameInMap("fileName")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String fileName;
+
+        @com.aliyun.core.annotation.NameInMap("level")
+        private String level;
+
+        @com.aliyun.core.annotation.NameInMap("serviceChannel")
+        private Integer serviceChannel;
+
+        @com.aliyun.core.annotation.NameInMap("serviceChannelKeywords")
+        private java.util.List<String> serviceChannelKeywords;
+
+        @com.aliyun.core.annotation.NameInMap("vocabularyId")
+        private String vocabularyId;
+
+        @com.aliyun.core.annotation.NameInMap("voiceFileUrl")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String voiceFileUrl;
+
+        private Transcription(Builder builder) {
+            this.asrModelCode = builder.asrModelCode;
+            this.autoSplit = builder.autoSplit;
+            this.clientChannel = builder.clientChannel;
+            this.fileName = builder.fileName;
+            this.level = builder.level;
+            this.serviceChannel = builder.serviceChannel;
+            this.serviceChannelKeywords = builder.serviceChannelKeywords;
+            this.vocabularyId = builder.vocabularyId;
+            this.voiceFileUrl = builder.voiceFileUrl;
         }
 
         public static Builder builder() {
             return new Builder();
         }
 
-        public static UserProfiles create() {
+        public static Transcription create() {
             return builder().build();
         }
 
         /**
-         * @return name
+         * @return asrModelCode
          */
-        public String getName() {
-            return this.name;
+        public String getAsrModelCode() {
+            return this.asrModelCode;
         }
 
         /**
-         * @return value
+         * @return autoSplit
          */
-        public String getValue() {
-            return this.value;
+        public Integer getAutoSplit() {
+            return this.autoSplit;
+        }
+
+        /**
+         * @return clientChannel
+         */
+        public Integer getClientChannel() {
+            return this.clientChannel;
+        }
+
+        /**
+         * @return fileName
+         */
+        public String getFileName() {
+            return this.fileName;
+        }
+
+        /**
+         * @return level
+         */
+        public String getLevel() {
+            return this.level;
+        }
+
+        /**
+         * @return serviceChannel
+         */
+        public Integer getServiceChannel() {
+            return this.serviceChannel;
+        }
+
+        /**
+         * @return serviceChannelKeywords
+         */
+        public java.util.List<String> getServiceChannelKeywords() {
+            return this.serviceChannelKeywords;
+        }
+
+        /**
+         * @return vocabularyId
+         */
+        public String getVocabularyId() {
+            return this.vocabularyId;
+        }
+
+        /**
+         * @return voiceFileUrl
+         */
+        public String getVoiceFileUrl() {
+            return this.voiceFileUrl;
         }
 
         public static final class Builder {
-            private String name; 
-            private String value; 
+            private String asrModelCode; 
+            private Integer autoSplit; 
+            private Integer clientChannel; 
+            private String fileName; 
+            private String level; 
+            private Integer serviceChannel; 
+            private java.util.List<String> serviceChannelKeywords; 
+            private String vocabularyId; 
+            private String voiceFileUrl; 
 
             private Builder() {
             } 
 
-            private Builder(UserProfiles model) {
-                this.name = model.name;
-                this.value = model.value;
+            private Builder(Transcription model) {
+                this.asrModelCode = model.asrModelCode;
+                this.autoSplit = model.autoSplit;
+                this.clientChannel = model.clientChannel;
+                this.fileName = model.fileName;
+                this.level = model.level;
+                this.serviceChannel = model.serviceChannel;
+                this.serviceChannelKeywords = model.serviceChannelKeywords;
+                this.vocabularyId = model.vocabularyId;
+                this.voiceFileUrl = model.voiceFileUrl;
             } 
 
             /**
-             * <p>This parameter is required.</p>
+             * asrModelCode.
              */
-            public Builder name(String name) {
-                this.name = name;
+            public Builder asrModelCode(String asrModelCode) {
+                this.asrModelCode = asrModelCode;
                 return this;
             }
 
             /**
-             * value.
+             * autoSplit.
              */
-            public Builder value(String value) {
-                this.value = value;
+            public Builder autoSplit(Integer autoSplit) {
+                this.autoSplit = autoSplit;
                 return this;
             }
 
-            public UserProfiles build() {
-                return new UserProfiles(this);
+            /**
+             * clientChannel.
+             */
+            public Builder clientChannel(Integer clientChannel) {
+                this.clientChannel = clientChannel;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sss.mp3</p>
+             */
+            public Builder fileName(String fileName) {
+                this.fileName = fileName;
+                return this;
+            }
+
+            /**
+             * level.
+             */
+            public Builder level(String level) {
+                this.level = level;
+                return this;
+            }
+
+            /**
+             * serviceChannel.
+             */
+            public Builder serviceChannel(Integer serviceChannel) {
+                this.serviceChannel = serviceChannel;
+                return this;
+            }
+
+            /**
+             * serviceChannelKeywords.
+             */
+            public Builder serviceChannelKeywords(java.util.List<String> serviceChannelKeywords) {
+                this.serviceChannelKeywords = serviceChannelKeywords;
+                return this;
+            }
+
+            /**
+             * vocabularyId.
+             */
+            public Builder vocabularyId(String vocabularyId) {
+                this.vocabularyId = vocabularyId;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://1111.com/sss.mp3">http://1111.com/sss.mp3</a></p>
+             */
+            public Builder voiceFileUrl(String voiceFileUrl) {
+                this.voiceFileUrl = voiceFileUrl;
+                return this;
+            }
+
+            public Transcription build() {
+                return new Transcription(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link AnalyzeAudioSyncRequest} extends {@link TeaModel}
+     *
+     * <p>AnalyzeAudioSyncRequest</p>
+     */
+    public static class Variables extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("variableCode")
+        private String variableCode;
+
+        @com.aliyun.core.annotation.NameInMap("variableValue")
+        private String variableValue;
+
+        private Variables(Builder builder) {
+            this.variableCode = builder.variableCode;
+            this.variableValue = builder.variableValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Variables create() {
+            return builder().build();
+        }
+
+        /**
+         * @return variableCode
+         */
+        public String getVariableCode() {
+            return this.variableCode;
+        }
+
+        /**
+         * @return variableValue
+         */
+        public String getVariableValue() {
+            return this.variableValue;
+        }
+
+        public static final class Builder {
+            private String variableCode; 
+            private String variableValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Variables model) {
+                this.variableCode = model.variableCode;
+                this.variableValue = model.variableValue;
+            } 
+
+            /**
+             * variableCode.
+             */
+            public Builder variableCode(String variableCode) {
+                this.variableCode = variableCode;
+                return this;
+            }
+
+            /**
+             * variableValue.
+             */
+            public Builder variableValue(String variableValue) {
+                this.variableValue = variableValue;
+                return this;
+            }
+
+            public Variables build() {
+                return new Variables(this);
             } 
 
         } 

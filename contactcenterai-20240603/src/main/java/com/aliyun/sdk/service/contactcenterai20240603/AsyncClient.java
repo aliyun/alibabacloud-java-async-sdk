@@ -20,6 +20,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of AnalyzeAudioSync  AnalyzeAudioSyncRequest
+     * @return AnalyzeAudioSyncResponse
+     */
+    CompletableFuture<AnalyzeAudioSyncResponse> analyzeAudioSync(AnalyzeAudioSyncRequest request);
+
+    ResponseIterable<AnalyzeAudioSyncResponseBody> analyzeAudioSyncWithResponseIterable(AnalyzeAudioSyncRequest request);
+
+    /**
      * @param request the request parameters of AnalyzeConversation  AnalyzeConversationRequest
      * @return AnalyzeConversationResponse
      */

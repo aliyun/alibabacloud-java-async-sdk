@@ -44,6 +44,10 @@ public class RunCompletionMessageRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Stream")
     private Boolean stream;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("responseFormatType")
+    private String responseFormatType;
+
     private RunCompletionMessageRequest(Builder builder) {
         super(builder);
         this.workspaceId = builder.workspaceId;
@@ -52,6 +56,7 @@ public class RunCompletionMessageRequest extends Request {
         this.messages = builder.messages;
         this.modelCode = builder.modelCode;
         this.stream = builder.stream;
+        this.responseFormatType = builder.responseFormatType;
     }
 
     public static Builder builder() {
@@ -109,6 +114,13 @@ public class RunCompletionMessageRequest extends Request {
         return this.stream;
     }
 
+    /**
+     * @return responseFormatType
+     */
+    public String getResponseFormatType() {
+        return this.responseFormatType;
+    }
+
     public static final class Builder extends Request.Builder<RunCompletionMessageRequest, Builder> {
         private String workspaceId; 
         private String appId; 
@@ -116,6 +128,7 @@ public class RunCompletionMessageRequest extends Request {
         private java.util.List<Messages> messages; 
         private String modelCode; 
         private Boolean stream; 
+        private String responseFormatType; 
 
         private Builder() {
             super();
@@ -129,6 +142,7 @@ public class RunCompletionMessageRequest extends Request {
             this.messages = request.messages;
             this.modelCode = request.modelCode;
             this.stream = request.stream;
+            this.responseFormatType = request.responseFormatType;
         } 
 
         /**
@@ -188,6 +202,15 @@ public class RunCompletionMessageRequest extends Request {
         public Builder stream(Boolean stream) {
             this.putBodyParameter("Stream", stream);
             this.stream = stream;
+            return this;
+        }
+
+        /**
+         * responseFormatType.
+         */
+        public Builder responseFormatType(String responseFormatType) {
+            this.putBodyParameter("responseFormatType", responseFormatType);
+            this.responseFormatType = responseFormatType;
             return this;
         }
 

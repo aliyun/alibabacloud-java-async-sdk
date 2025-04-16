@@ -34,6 +34,10 @@ public class AnalyzeImageRequest extends Request {
     private java.util.List<String> imageUrls;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("responseFormatType")
+    private String responseFormatType;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("resultTypes")
     private java.util.List<String> resultTypes;
 
@@ -48,6 +52,7 @@ public class AnalyzeImageRequest extends Request {
         this.workspaceId = builder.workspaceId;
         this.appId = builder.appId;
         this.imageUrls = builder.imageUrls;
+        this.responseFormatType = builder.responseFormatType;
         this.resultTypes = builder.resultTypes;
         this.stream = builder.stream;
     }
@@ -94,6 +99,13 @@ public class AnalyzeImageRequest extends Request {
     }
 
     /**
+     * @return responseFormatType
+     */
+    public String getResponseFormatType() {
+        return this.responseFormatType;
+    }
+
+    /**
      * @return resultTypes
      */
     public java.util.List<String> getResultTypes() {
@@ -112,6 +124,7 @@ public class AnalyzeImageRequest extends Request {
         private String workspaceId; 
         private String appId; 
         private java.util.List<String> imageUrls; 
+        private String responseFormatType; 
         private java.util.List<String> resultTypes; 
         private Boolean stream; 
 
@@ -125,6 +138,7 @@ public class AnalyzeImageRequest extends Request {
             this.workspaceId = request.workspaceId;
             this.appId = request.appId;
             this.imageUrls = request.imageUrls;
+            this.responseFormatType = request.responseFormatType;
             this.resultTypes = request.resultTypes;
             this.stream = request.stream;
         } 
@@ -162,6 +176,15 @@ public class AnalyzeImageRequest extends Request {
         public Builder imageUrls(java.util.List<String> imageUrls) {
             this.putBodyParameter("imageUrls", imageUrls);
             this.imageUrls = imageUrls;
+            return this;
+        }
+
+        /**
+         * responseFormatType.
+         */
+        public Builder responseFormatType(String responseFormatType) {
+            this.putBodyParameter("responseFormatType", responseFormatType);
+            this.responseFormatType = responseFormatType;
             return this;
         }
 

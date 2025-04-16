@@ -41,6 +41,34 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of AnalyzeAudioSync  AnalyzeAudioSyncRequest
+     * @return AnalyzeAudioSyncResponse
+     */
+    @Override
+    public CompletableFuture<AnalyzeAudioSyncResponse> analyzeAudioSync(AnalyzeAudioSyncRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("AnalyzeAudioSync").setMethod(HttpMethod.POST).setPathRegex("/{workspaceId}/ccai/app/{appId}/analyzeAudioSync").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AnalyzeAudioSyncResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AnalyzeAudioSyncResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public ResponseIterable<AnalyzeAudioSyncResponseBody> analyzeAudioSyncWithResponseIterable(AnalyzeAudioSyncRequest request) {
+        this.handler.validateRequestModel(request);
+        TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("AnalyzeAudioSync").setMethod(HttpMethod.POST).setPathRegex("/{workspaceId}/ccai/app/{appId}/analyzeAudioSync").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+        AnalyzeAudioSyncResponseBodyIterator iterator = AnalyzeAudioSyncResponseBodyIterator.create();
+        ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
+        this.handler.execute(params);
+        return new ResponseIterable<>(iterator);
+    }
+
+    /**
      * @param request the request parameters of AnalyzeConversation  AnalyzeConversationRequest
      * @return AnalyzeConversationResponse
      */

@@ -58,6 +58,10 @@ public class RunCompletionRequest extends Request {
     private java.util.List<Long> templateIds;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("responseFormatType")
+    private String responseFormatType;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("variables")
     private java.util.List<Variables> variables;
 
@@ -72,6 +76,7 @@ public class RunCompletionRequest extends Request {
         this.serviceInspection = builder.serviceInspection;
         this.stream = builder.stream;
         this.templateIds = builder.templateIds;
+        this.responseFormatType = builder.responseFormatType;
         this.variables = builder.variables;
     }
 
@@ -152,6 +157,13 @@ public class RunCompletionRequest extends Request {
     }
 
     /**
+     * @return responseFormatType
+     */
+    public String getResponseFormatType() {
+        return this.responseFormatType;
+    }
+
+    /**
      * @return variables
      */
     public java.util.List<Variables> getVariables() {
@@ -168,6 +180,7 @@ public class RunCompletionRequest extends Request {
         private ServiceInspection serviceInspection; 
         private Boolean stream; 
         private java.util.List<Long> templateIds; 
+        private String responseFormatType; 
         private java.util.List<Variables> variables; 
 
         private Builder() {
@@ -185,6 +198,7 @@ public class RunCompletionRequest extends Request {
             this.serviceInspection = request.serviceInspection;
             this.stream = request.stream;
             this.templateIds = request.templateIds;
+            this.responseFormatType = request.responseFormatType;
             this.variables = request.variables;
         } 
 
@@ -272,6 +286,15 @@ public class RunCompletionRequest extends Request {
         public Builder templateIds(java.util.List<Long> templateIds) {
             this.putBodyParameter("TemplateIds", templateIds);
             this.templateIds = templateIds;
+            return this;
+        }
+
+        /**
+         * responseFormatType.
+         */
+        public Builder responseFormatType(String responseFormatType) {
+            this.putBodyParameter("responseFormatType", responseFormatType);
+            this.responseFormatType = responseFormatType;
             return this;
         }
 

@@ -55,6 +55,10 @@ public class CreateTaskRequest extends Request {
     private String modelCode;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("responseFormatType")
+    private String responseFormatType;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("resultTypes")
     private java.util.List<String> resultTypes;
 
@@ -90,6 +94,7 @@ public class CreateTaskRequest extends Request {
         this.examples = builder.examples;
         this.fields = builder.fields;
         this.modelCode = builder.modelCode;
+        this.responseFormatType = builder.responseFormatType;
         this.resultTypes = builder.resultTypes;
         this.serviceInspection = builder.serviceInspection;
         this.taskType = builder.taskType;
@@ -175,6 +180,13 @@ public class CreateTaskRequest extends Request {
     }
 
     /**
+     * @return responseFormatType
+     */
+    public String getResponseFormatType() {
+        return this.responseFormatType;
+    }
+
+    /**
      * @return resultTypes
      */
     public java.util.List<String> getResultTypes() {
@@ -226,6 +238,7 @@ public class CreateTaskRequest extends Request {
         private Examples examples; 
         private java.util.List<Fields> fields; 
         private String modelCode; 
+        private String responseFormatType; 
         private java.util.List<String> resultTypes; 
         private ServiceInspection serviceInspection; 
         private String taskType; 
@@ -248,6 +261,7 @@ public class CreateTaskRequest extends Request {
             this.examples = request.examples;
             this.fields = request.fields;
             this.modelCode = request.modelCode;
+            this.responseFormatType = request.responseFormatType;
             this.resultTypes = request.resultTypes;
             this.serviceInspection = request.serviceInspection;
             this.taskType = request.taskType;
@@ -337,6 +351,15 @@ public class CreateTaskRequest extends Request {
         public Builder modelCode(String modelCode) {
             this.putBodyParameter("modelCode", modelCode);
             this.modelCode = modelCode;
+            return this;
+        }
+
+        /**
+         * responseFormatType.
+         */
+        public Builder responseFormatType(String responseFormatType) {
+            this.putBodyParameter("responseFormatType", responseFormatType);
+            this.responseFormatType = responseFormatType;
             return this;
         }
 
