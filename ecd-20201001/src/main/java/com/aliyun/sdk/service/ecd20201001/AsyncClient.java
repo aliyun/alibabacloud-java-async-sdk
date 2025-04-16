@@ -20,6 +20,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of CalMcpTool  CalMcpToolRequest
+     * @return CalMcpToolResponse
+     */
+    CompletableFuture<CalMcpToolResponse> calMcpTool(CalMcpToolRequest request);
+
+    /**
+     * @param request the request parameters of CreateMcpSession  CreateMcpSessionRequest
+     * @return CreateMcpSessionResponse
+     */
+    CompletableFuture<CreateMcpSessionResponse> createMcpSession(CreateMcpSessionRequest request);
+
+    /**
      * @param request the request parameters of DescribeDesktops  DescribeDesktopsRequest
      * @return DescribeDesktopsResponse
      */
@@ -38,10 +50,28 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetConnectionTicketResponse> getConnectionTicket(GetConnectionTicketRequest request);
 
     /**
+     * @param request the request parameters of GetMcpResource  GetMcpResourceRequest
+     * @return GetMcpResourceResponse
+     */
+    CompletableFuture<GetMcpResourceResponse> getMcpResource(GetMcpResourceRequest request);
+
+    /**
+     * @param request the request parameters of ListMcpTools  ListMcpToolsRequest
+     * @return ListMcpToolsResponse
+     */
+    CompletableFuture<ListMcpToolsResponse> listMcpTools(ListMcpToolsRequest request);
+
+    /**
      * @param request the request parameters of RebootDesktops  RebootDesktopsRequest
      * @return RebootDesktopsResponse
      */
     CompletableFuture<RebootDesktopsResponse> rebootDesktops(RebootDesktopsRequest request);
+
+    /**
+     * @param request the request parameters of ReleaseMcpSession  ReleaseMcpSessionRequest
+     * @return ReleaseMcpSessionResponse
+     */
+    CompletableFuture<ReleaseMcpSessionResponse> releaseMcpSession(ReleaseMcpSessionRequest request);
 
     /**
      * @param request the request parameters of StartDesktops  StartDesktopsRequest
