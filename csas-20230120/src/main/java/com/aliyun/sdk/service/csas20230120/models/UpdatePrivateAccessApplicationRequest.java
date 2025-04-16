@@ -43,6 +43,11 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
     private String l7ProxyDomainCustom;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("L7ProxyDomainPrivate")
+    @Deprecated
+    private String l7ProxyDomainPrivate;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ModifyType")
     private String modifyType;
 
@@ -70,6 +75,7 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
         this.l7Config = builder.l7Config;
         this.l7ProxyDomainAutomaticPrefix = builder.l7ProxyDomainAutomaticPrefix;
         this.l7ProxyDomainCustom = builder.l7ProxyDomainCustom;
+        this.l7ProxyDomainPrivate = builder.l7ProxyDomainPrivate;
         this.modifyType = builder.modifyType;
         this.portRanges = builder.portRanges;
         this.protocol = builder.protocol;
@@ -133,6 +139,13 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
     }
 
     /**
+     * @return l7ProxyDomainPrivate
+     */
+    public String getL7ProxyDomainPrivate() {
+        return this.l7ProxyDomainPrivate;
+    }
+
+    /**
      * @return modifyType
      */
     public String getModifyType() {
@@ -174,6 +187,7 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
         private PAL7Config l7Config; 
         private String l7ProxyDomainAutomaticPrefix; 
         private String l7ProxyDomainCustom; 
+        private String l7ProxyDomainPrivate; 
         private String modifyType; 
         private java.util.List<PortRanges> portRanges; 
         private String protocol; 
@@ -192,6 +206,7 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
             this.l7Config = request.l7Config;
             this.l7ProxyDomainAutomaticPrefix = request.l7ProxyDomainAutomaticPrefix;
             this.l7ProxyDomainCustom = request.l7ProxyDomainCustom;
+            this.l7ProxyDomainPrivate = request.l7ProxyDomainPrivate;
             this.modifyType = request.modifyType;
             this.portRanges = request.portRanges;
             this.protocol = request.protocol;
@@ -254,6 +269,15 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
         public Builder l7ProxyDomainCustom(String l7ProxyDomainCustom) {
             this.putBodyParameter("L7ProxyDomainCustom", l7ProxyDomainCustom);
             this.l7ProxyDomainCustom = l7ProxyDomainCustom;
+            return this;
+        }
+
+        /**
+         * L7ProxyDomainPrivate.
+         */
+        public Builder l7ProxyDomainPrivate(String l7ProxyDomainPrivate) {
+            this.putBodyParameter("L7ProxyDomainPrivate", l7ProxyDomainPrivate);
+            this.l7ProxyDomainPrivate = l7ProxyDomainPrivate;
             return this;
         }
 
