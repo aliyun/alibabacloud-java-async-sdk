@@ -20,6 +20,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of CancelAsyncTask  CancelAsyncTaskRequest
+     * @return CancelAsyncTaskResponse
+     */
+    CompletableFuture<CancelAsyncTaskResponse> cancelAsyncTask(CancelAsyncTaskRequest request);
+
+    /**
+     * @param request the request parameters of ExportAnalysisTagDetailByTaskId  ExportAnalysisTagDetailByTaskIdRequest
+     * @return ExportAnalysisTagDetailByTaskIdResponse
+     */
+    CompletableFuture<ExportAnalysisTagDetailByTaskIdResponse> exportAnalysisTagDetailByTaskId(ExportAnalysisTagDetailByTaskIdRequest request);
+
+    /**
      * @param request the request parameters of GenerateBroadcastNews  GenerateBroadcastNewsRequest
      * @return GenerateBroadcastNewsResponse
      */
@@ -30,6 +42,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GenerateOutputFormatResponse
      */
     CompletableFuture<GenerateOutputFormatResponse> generateOutputFormat(GenerateOutputFormatRequest request);
+
+    /**
+     * @param request the request parameters of GetEnterpriseVocAnalysisTask  GetEnterpriseVocAnalysisTaskRequest
+     * @return GetEnterpriseVocAnalysisTaskResponse
+     */
+    CompletableFuture<GetEnterpriseVocAnalysisTaskResponse> getEnterpriseVocAnalysisTask(GetEnterpriseVocAnalysisTaskRequest request);
 
     /**
      * @param request the request parameters of GetTagMiningAnalysisTask  GetTagMiningAnalysisTaskRequest
@@ -54,6 +72,16 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListHotTopicSummariesResponse
      */
     CompletableFuture<ListHotTopicSummariesResponse> listHotTopicSummaries(ListHotTopicSummariesRequest request);
+
+    /**
+     * @param request the request parameters of RunEnterpriseVocAnalysis  RunEnterpriseVocAnalysisRequest
+     * @return RunEnterpriseVocAnalysisResponse
+     */
+    CompletableFuture<RunEnterpriseVocAnalysisResponse> runEnterpriseVocAnalysis(RunEnterpriseVocAnalysisRequest request);
+
+<ReturnT> CompletableFuture<ReturnT> runEnterpriseVocAnalysisWithAsyncResponseHandler(RunEnterpriseVocAnalysisRequest request, AsyncResponseHandler<RunEnterpriseVocAnalysisResponse, ReturnT> responseHandler);
+
+    ResponseIterable<RunEnterpriseVocAnalysisResponseBody> runEnterpriseVocAnalysisWithResponseIterable(RunEnterpriseVocAnalysisRequest request);
 
     /**
      * @param request the request parameters of RunHotTopicChat  RunHotTopicChatRequest
@@ -174,6 +202,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 <ReturnT> CompletableFuture<ReturnT> runVideoAnalysisWithAsyncResponseHandler(RunVideoAnalysisRequest request, AsyncResponseHandler<RunVideoAnalysisResponse, ReturnT> responseHandler);
 
     ResponseIterable<RunVideoAnalysisResponseBody> runVideoAnalysisWithResponseIterable(RunVideoAnalysisRequest request);
+
+    /**
+     * @param request the request parameters of SubmitEnterpriseVocAnalysisTask  SubmitEnterpriseVocAnalysisTaskRequest
+     * @return SubmitEnterpriseVocAnalysisTaskResponse
+     */
+    CompletableFuture<SubmitEnterpriseVocAnalysisTaskResponse> submitEnterpriseVocAnalysisTask(SubmitEnterpriseVocAnalysisTaskRequest request);
 
     /**
      * @param request the request parameters of SubmitTagMiningAnalysisTask  SubmitTagMiningAnalysisTaskRequest

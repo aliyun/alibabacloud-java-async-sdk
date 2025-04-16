@@ -41,6 +41,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CancelAsyncTask  CancelAsyncTaskRequest
+     * @return CancelAsyncTaskResponse
+     */
+    @Override
+    public CompletableFuture<CancelAsyncTaskResponse> cancelAsyncTask(CancelAsyncTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CancelAsyncTask").setMethod(HttpMethod.POST).setPathRegex("/{workspaceId}/quanmiao/lightapp/cancelAsyncTask").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CancelAsyncTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CancelAsyncTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ExportAnalysisTagDetailByTaskId  ExportAnalysisTagDetailByTaskIdRequest
+     * @return ExportAnalysisTagDetailByTaskIdResponse
+     */
+    @Override
+    public CompletableFuture<ExportAnalysisTagDetailByTaskIdResponse> exportAnalysisTagDetailByTaskId(ExportAnalysisTagDetailByTaskIdRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ExportAnalysisTagDetailByTaskId").setMethod(HttpMethod.POST).setPathRegex("/{workspaceId}/quanmiao/lightapp/exportAnalysisTagDetailByTaskId").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ExportAnalysisTagDetailByTaskIdResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ExportAnalysisTagDetailByTaskIdResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GenerateBroadcastNews  GenerateBroadcastNewsRequest
      * @return GenerateBroadcastNewsResponse
      */
@@ -71,6 +107,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GenerateOutputFormatResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetEnterpriseVocAnalysisTask  GetEnterpriseVocAnalysisTaskRequest
+     * @return GetEnterpriseVocAnalysisTaskResponse
+     */
+    @Override
+    public CompletableFuture<GetEnterpriseVocAnalysisTaskResponse> getEnterpriseVocAnalysisTask(GetEnterpriseVocAnalysisTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetEnterpriseVocAnalysisTask").setMethod(HttpMethod.GET).setPathRegex("/{workspaceId}/quanmiao/lightapp/getEnterpriseVocAnalysisTask").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetEnterpriseVocAnalysisTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetEnterpriseVocAnalysisTaskResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -146,6 +200,49 @@ public final class DefaultAsyncClient implements AsyncClient {
             future.completeExceptionally(e);
             return future;
         }
+    }
+
+    /**
+     * @param request the request parameters of RunEnterpriseVocAnalysis  RunEnterpriseVocAnalysisRequest
+     * @return RunEnterpriseVocAnalysisResponse
+     */
+    @Override
+    public CompletableFuture<RunEnterpriseVocAnalysisResponse> runEnterpriseVocAnalysis(RunEnterpriseVocAnalysisRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RunEnterpriseVocAnalysis").setMethod(HttpMethod.POST).setPathRegex("/{workspaceId}/quanmiao/lightapp/runEnterpriseVocAnalysis").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RunEnterpriseVocAnalysisResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RunEnterpriseVocAnalysisResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public <ReturnT> CompletableFuture<ReturnT> runEnterpriseVocAnalysisWithAsyncResponseHandler(RunEnterpriseVocAnalysisRequest request, AsyncResponseHandler<RunEnterpriseVocAnalysisResponse, ReturnT> responseHandler) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RunEnterpriseVocAnalysis").setMethod(HttpMethod.POST).setPathRegex("/{workspaceId}/quanmiao/lightapp/runEnterpriseVocAnalysis").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withResponseHandler(responseHandler).withOutput(RunEnterpriseVocAnalysisResponse.create());
+            return this.handler.execute(params)
+                    .thenCompose((output) -> CompletableFuture.completedFuture(responseHandler.transform((RunEnterpriseVocAnalysisResponse)output)));
+        } catch (Exception e) {
+            CompletableFuture<ReturnT> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public ResponseIterable<RunEnterpriseVocAnalysisResponseBody> runEnterpriseVocAnalysisWithResponseIterable(RunEnterpriseVocAnalysisRequest request) {
+        this.handler.validateRequestModel(request);
+        TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("RunEnterpriseVocAnalysis").setMethod(HttpMethod.POST).setPathRegex("/{workspaceId}/quanmiao/lightapp/runEnterpriseVocAnalysis").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+        RunEnterpriseVocAnalysisResponseBodyIterator iterator = RunEnterpriseVocAnalysisResponseBodyIterator.create();
+        ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
+        this.handler.execute(params);
+        return new ResponseIterable<>(iterator);
     }
 
     /**
@@ -662,6 +759,24 @@ public final class DefaultAsyncClient implements AsyncClient {
         ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
         this.handler.execute(params);
         return new ResponseIterable<>(iterator);
+    }
+
+    /**
+     * @param request the request parameters of SubmitEnterpriseVocAnalysisTask  SubmitEnterpriseVocAnalysisTaskRequest
+     * @return SubmitEnterpriseVocAnalysisTaskResponse
+     */
+    @Override
+    public CompletableFuture<SubmitEnterpriseVocAnalysisTaskResponse> submitEnterpriseVocAnalysisTask(SubmitEnterpriseVocAnalysisTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("SubmitEnterpriseVocAnalysisTask").setMethod(HttpMethod.POST).setPathRegex("/{workspaceId}/quanmiao/lightapp/submitEnterpriseVocAnalysisTask").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SubmitEnterpriseVocAnalysisTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SubmitEnterpriseVocAnalysisTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
     }
 
     /**
