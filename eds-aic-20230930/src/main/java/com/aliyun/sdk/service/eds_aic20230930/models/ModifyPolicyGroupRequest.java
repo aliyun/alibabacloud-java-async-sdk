@@ -344,6 +344,81 @@ public class ModifyPolicyGroupRequest extends Request {
      *
      * <p>ModifyPolicyGroupRequest</p>
      */
+    public static class Rules extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("RuleType")
+        private String ruleType;
+
+        @com.aliyun.core.annotation.NameInMap("Target")
+        private String target;
+
+        private Rules(Builder builder) {
+            this.ruleType = builder.ruleType;
+            this.target = builder.target;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Rules create() {
+            return builder().build();
+        }
+
+        /**
+         * @return ruleType
+         */
+        public String getRuleType() {
+            return this.ruleType;
+        }
+
+        /**
+         * @return target
+         */
+        public String getTarget() {
+            return this.target;
+        }
+
+        public static final class Builder {
+            private String ruleType; 
+            private String target; 
+
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.ruleType = model.ruleType;
+                this.target = model.target;
+            } 
+
+            /**
+             * RuleType.
+             */
+            public Builder ruleType(String ruleType) {
+                this.ruleType = ruleType;
+                return this;
+            }
+
+            /**
+             * Target.
+             */
+            public Builder target(String target) {
+                this.target = target;
+                return this;
+            }
+
+            public Rules build() {
+                return new Rules(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ModifyPolicyGroupRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyPolicyGroupRequest</p>
+     */
     public static class NetRedirectPolicy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomProxy")
         private String customProxy;
@@ -366,6 +441,9 @@ public class ModifyPolicyGroupRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("ProxyUserName")
         private String proxyUserName;
 
+        @com.aliyun.core.annotation.NameInMap("Rules")
+        private java.util.List<Rules> rules;
+
         private NetRedirectPolicy(Builder builder) {
             this.customProxy = builder.customProxy;
             this.hostAddr = builder.hostAddr;
@@ -374,6 +452,7 @@ public class ModifyPolicyGroupRequest extends Request {
             this.proxyPassword = builder.proxyPassword;
             this.proxyType = builder.proxyType;
             this.proxyUserName = builder.proxyUserName;
+            this.rules = builder.rules;
         }
 
         public static Builder builder() {
@@ -433,6 +512,13 @@ public class ModifyPolicyGroupRequest extends Request {
             return this.proxyUserName;
         }
 
+        /**
+         * @return rules
+         */
+        public java.util.List<Rules> getRules() {
+            return this.rules;
+        }
+
         public static final class Builder {
             private String customProxy; 
             private String hostAddr; 
@@ -441,6 +527,7 @@ public class ModifyPolicyGroupRequest extends Request {
             private String proxyPassword; 
             private String proxyType; 
             private String proxyUserName; 
+            private java.util.List<Rules> rules; 
 
             private Builder() {
             } 
@@ -453,6 +540,7 @@ public class ModifyPolicyGroupRequest extends Request {
                 this.proxyPassword = model.proxyPassword;
                 this.proxyType = model.proxyType;
                 this.proxyUserName = model.proxyUserName;
+                this.rules = model.rules;
             } 
 
             /**
@@ -543,6 +631,14 @@ public class ModifyPolicyGroupRequest extends Request {
              */
             public Builder proxyUserName(String proxyUserName) {
                 this.proxyUserName = proxyUserName;
+                return this;
+            }
+
+            /**
+             * Rules.
+             */
+            public Builder rules(java.util.List<Rules> rules) {
+                this.rules = rules;
                 return this;
             }
 

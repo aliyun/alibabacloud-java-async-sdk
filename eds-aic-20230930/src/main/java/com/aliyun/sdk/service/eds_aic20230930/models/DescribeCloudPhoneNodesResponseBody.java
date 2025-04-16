@@ -106,7 +106,10 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
         } 
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -114,7 +117,14 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+         * </ul>
+         * <hr>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kU+SQXzm0H9mu/FiSc****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -122,7 +132,7 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
         }
 
         /**
-         * NodeModel.
+         * <p>The matrixes.</p>
          */
         public Builder nodeModel(java.util.List<NodeModel> nodeModel) {
             this.nodeModel = nodeModel;
@@ -130,7 +140,10 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F07A1DA1-E1EB-5CCA-8EED-12F85D32****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +151,10 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of cloud phone instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>31</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -412,7 +428,10 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
             } 
 
             /**
-             * ChargeType.
+             * <p>The billing method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PrePaid</p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -420,7 +439,10 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Cpu.
+             * <p>The number of CPU cores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder cpu(String cpu) {
                 this.cpu = cpu;
@@ -428,7 +450,10 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-11-13 02:03:14</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -436,7 +461,10 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtExpired.
+             * <p>The expiration time of the subscription matrix.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-03-09 02:00:34</p>
              */
             public Builder gmtExpired(String gmtExpired) {
                 this.gmtExpired = gmtExpired;
@@ -444,7 +472,10 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The last modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-02-13 02:03:14</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -460,7 +491,10 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Memory.
+             * <p>The memory size. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder memory(Integer memory) {
                 this.memory = memory;
@@ -468,7 +502,10 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkId.
+             * <p>The network ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou+dir-5mwr9azebliva****</p>
              */
             public Builder networkId(String networkId) {
                 this.networkId = networkId;
@@ -476,7 +513,10 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * <p>The matrix ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cpn-ehs0yoedq8ntm****</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -484,7 +524,10 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
             }
 
             /**
-             * NodeName.
+             * <p>The matrix name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>node_name</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -492,7 +535,10 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
             }
 
             /**
-             * PhoneCount.
+             * <p>The number of cloud phone instances per matrix.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>25</p>
              */
             public Builder phoneCount(Integer phoneCount) {
                 this.phoneCount = phoneCount;
@@ -500,7 +546,10 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -508,7 +557,10 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
             }
 
             /**
-             * ResolutionHeight.
+             * <p>The height of the resolution. Unit: pixel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1280</p>
              */
             public Builder resolutionHeight(Integer resolutionHeight) {
                 this.resolutionHeight = resolutionHeight;
@@ -516,7 +568,10 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
             }
 
             /**
-             * ResolutionWidth.
+             * <p>The width of the resolution. Unit: pixel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>720</p>
              */
             public Builder resolutionWidth(Integer resolutionWidth) {
                 this.resolutionWidth = resolutionWidth;
@@ -524,7 +579,10 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
             }
 
             /**
-             * ServerType.
+             * <p>The matrix specification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cpm.gn6.gx1</p>
              */
             public Builder serverType(String serverType) {
                 this.serverType = serverType;
@@ -532,7 +590,10 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
             }
 
             /**
-             * ShareDataVolume.
+             * <p>The size of the shared storage. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder shareDataVolume(Integer shareDataVolume) {
                 this.shareDataVolume = shareDataVolume;
@@ -540,7 +601,10 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The matrix status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -548,7 +612,10 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-2zeekryyc1q3sm72l****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;

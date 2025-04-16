@@ -80,7 +80,7 @@ public class CreateCloudPhoneNodeResponseBody extends TeaModel {
         } 
 
         /**
-         * NodeInfos.
+         * <p>The cloud phone matrixes.</p>
          */
         public Builder nodeInfos(java.util.List<NodeInfos> nodeInfos) {
             this.nodeInfos = nodeInfos;
@@ -88,7 +88,10 @@ public class CreateCloudPhoneNodeResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>223684716098****</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -96,7 +99,10 @@ public class CreateCloudPhoneNodeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>69BCBBE4-FCF2-59B8-AD9D-531EB422****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -162,7 +168,7 @@ public class CreateCloudPhoneNodeResponseBody extends TeaModel {
             } 
 
             /**
-             * InstanceIds.
+             * <p>The IDs of the cloud phone instances.</p>
              */
             public Builder instanceIds(java.util.List<String> instanceIds) {
                 this.instanceIds = instanceIds;
@@ -170,7 +176,10 @@ public class CreateCloudPhoneNodeResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * <p>The ID of the cloud phone matrix.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cpn-e5kxgjyt8s1mb****</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;

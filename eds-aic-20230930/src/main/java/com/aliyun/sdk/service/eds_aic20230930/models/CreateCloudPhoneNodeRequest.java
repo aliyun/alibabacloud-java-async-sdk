@@ -314,7 +314,15 @@ public class CreateCloudPhoneNodeRequest extends Request {
         } 
 
         /**
-         * AutoPay.
+         * <p>Specifies whether to enable the auto-payment feature.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>False (default): You must manually complete the payment in the Alibaba Cloud Expenses and Costs console.</li>
+         * <li>true: enables the auto-payment feature.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -323,7 +331,15 @@ public class CreateCloudPhoneNodeRequest extends Request {
         }
 
         /**
-         * AutoRenew.
+         * <p>Specifies whether to enable the auto-renewal feature.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true: enables the auto-renewal feature. In this case, the system automatically renews instances upon expiration.</li>
+         * <li>false (default): disables the auto-renewal feature. In this case, you need to manually renew instances upon expiration.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -332,6 +348,7 @@ public class CreateCloudPhoneNodeRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -344,7 +361,10 @@ public class CreateCloudPhoneNodeRequest extends Request {
         }
 
         /**
-         * ChargeType.
+         * <p>The billing method. Only the subscription billing method is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -353,7 +373,10 @@ public class CreateCloudPhoneNodeRequest extends Request {
         }
 
         /**
-         * Count.
+         * <p>The number of cloud phone matrixes you want to purchase.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder count(String count) {
             this.putQueryParameter("Count", count);
@@ -372,7 +395,10 @@ public class CreateCloudPhoneNodeRequest extends Request {
         }
 
         /**
-         * ImageId.
+         * <p>The image ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>imgc-075cllfeuazh0****</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -381,7 +407,15 @@ public class CreateCloudPhoneNodeRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * <p>The instance specification.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>ac.max: By default, this specification allows up to 25 instances. You can adjust this number by using PhoneCount (Value range: 4 to 40).</li>
+         * <li>ac.plus: By default, this specification allows up to 40 instances. You can adjust this number by using PhoneCount (Value range: 4 to 40).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ac.max</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -390,7 +424,10 @@ public class CreateCloudPhoneNodeRequest extends Request {
         }
 
         /**
-         * NetworkId.
+         * <p>The office network ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-5mwr9azebliva****</p>
          */
         public Builder networkId(String networkId) {
             this.putQueryParameter("NetworkId", networkId);
@@ -399,7 +436,10 @@ public class CreateCloudPhoneNodeRequest extends Request {
         }
 
         /**
-         * NodeName.
+         * <p>The name of the cloud phone matrix.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>node_name</p>
          */
         public Builder nodeName(String nodeName) {
             this.putQueryParameter("NodeName", nodeName);
@@ -408,7 +448,14 @@ public class CreateCloudPhoneNodeRequest extends Request {
         }
 
         /**
-         * Period.
+         * <p>The subscription duration. The unit is specified by <code>PeriodUnit</code>. Valid values:</p>
+         * <ul>
+         * <li>When <code>PeriodUnit</code> is set to <strong>year</strong>: 1.</li>
+         * <li>When <code>PeriodUnit</code> is set to <strong>month</strong>: 1, 2, 3, and 6.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -417,7 +464,15 @@ public class CreateCloudPhoneNodeRequest extends Request {
         }
 
         /**
-         * PeriodUnit.
+         * <p>The unit of the subscription duration.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Month (default)</li>
+         * <li>Year</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -426,7 +481,10 @@ public class CreateCloudPhoneNodeRequest extends Request {
         }
 
         /**
-         * PhoneCount.
+         * <p>The number of instances per cloud phone matrix.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25</p>
          */
         public Builder phoneCount(Integer phoneCount) {
             this.putQueryParameter("PhoneCount", phoneCount);
@@ -435,7 +493,10 @@ public class CreateCloudPhoneNodeRequest extends Request {
         }
 
         /**
-         * ResolutionHeight.
+         * <p>The resolution height. Unit: pixel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1280</p>
          */
         public Builder resolutionHeight(Integer resolutionHeight) {
             this.putQueryParameter("ResolutionHeight", resolutionHeight);
@@ -444,7 +505,10 @@ public class CreateCloudPhoneNodeRequest extends Request {
         }
 
         /**
-         * ResolutionWidth.
+         * <p>The resolution width. Unit: pixel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>720</p>
          */
         public Builder resolutionWidth(Integer resolutionWidth) {
             this.putQueryParameter("ResolutionWidth", resolutionWidth);
@@ -453,7 +517,10 @@ public class CreateCloudPhoneNodeRequest extends Request {
         }
 
         /**
-         * ServerShareDataVolume.
+         * <p>The shared storage size Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder serverShareDataVolume(Integer serverShareDataVolume) {
             this.putQueryParameter("ServerShareDataVolume", serverShareDataVolume);
@@ -462,6 +529,11 @@ public class CreateCloudPhoneNodeRequest extends Request {
         }
 
         /**
+         * <p>The matrix specification.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>cpm.gn6.gx1</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -474,7 +546,7 @@ public class CreateCloudPhoneNodeRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The resource tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -483,7 +555,10 @@ public class CreateCloudPhoneNodeRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * <p>The vSwitch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-2zeekryyc1q3sm72l****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -647,7 +722,10 @@ public class CreateCloudPhoneNodeRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>keyname</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -655,7 +733,10 @@ public class CreateCloudPhoneNodeRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>valuename</p>
              */
             public Builder value(String value) {
                 this.value = value;

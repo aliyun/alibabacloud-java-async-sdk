@@ -157,7 +157,10 @@ public class DescribeCloudPhoneNodesRequest extends Request {
         } 
 
         /**
-         * BizRegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder bizRegionId(String bizRegionId) {
             this.putQueryParameter("BizRegionId", bizRegionId);
@@ -166,7 +169,10 @@ public class DescribeCloudPhoneNodesRequest extends Request {
         }
 
         /**
-         * ChargeType.
+         * <p>The billing method. Only the subscription billing method is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -175,7 +181,10 @@ public class DescribeCloudPhoneNodesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(String maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -184,7 +193,10 @@ public class DescribeCloudPhoneNodesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. If a query doesn&quot;t return all results, the response includes a NextToken value for pagination. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uONHqPtDLM2U8s****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -193,7 +205,7 @@ public class DescribeCloudPhoneNodesRequest extends Request {
         }
 
         /**
-         * NodeIds.
+         * <p>The matrix IDs.</p>
          */
         public Builder nodeIds(java.util.List<String> nodeIds) {
             this.putQueryParameter("NodeIds", nodeIds);
@@ -202,7 +214,10 @@ public class DescribeCloudPhoneNodesRequest extends Request {
         }
 
         /**
-         * NodeName.
+         * <p>The matrix name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>node_name</p>
          */
         public Builder nodeName(String nodeName) {
             this.putQueryParameter("NodeName", nodeName);
@@ -211,7 +226,14 @@ public class DescribeCloudPhoneNodesRequest extends Request {
         }
 
         /**
-         * ServerType.
+         * <p>The matrix specification.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>cpm.gn6.gx1</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cpm.gn6.gx1</p>
          */
         public Builder serverType(String serverType) {
             this.putQueryParameter("ServerType", serverType);
@@ -220,7 +242,19 @@ public class DescribeCloudPhoneNodesRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The matrix status.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>FAILED: The matrix failed to be created.</li>
+         * <li>RUNNING: The matrix is available.</li>
+         * <li>DELETING: The matrix is being deleted.</li>
+         * <li>NODE_READY: The matrix is ready, and cloud phone instances are being created.</li>
+         * <li>DELETED: The matrix is deleted.</li>
+         * <li>CREATING: The matrix is being created.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CREATING</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
