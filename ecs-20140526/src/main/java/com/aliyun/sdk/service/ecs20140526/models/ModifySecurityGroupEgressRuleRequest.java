@@ -82,6 +82,10 @@ public class ModifySecurityGroupEgressRuleRequest extends Request {
     private String portRange;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PortRangeListId")
+    private String portRangeListId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Priority")
     private String priority;
 
@@ -133,6 +137,7 @@ public class ModifySecurityGroupEgressRuleRequest extends Request {
         this.ownerId = builder.ownerId;
         this.policy = builder.policy;
         this.portRange = builder.portRange;
+        this.portRangeListId = builder.portRangeListId;
         this.priority = builder.priority;
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -151,7 +156,7 @@ public class ModifySecurityGroupEgressRuleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -269,6 +274,13 @@ public class ModifySecurityGroupEgressRuleRequest extends Request {
     }
 
     /**
+     * @return portRangeListId
+     */
+    public String getPortRangeListId() {
+        return this.portRangeListId;
+    }
+
+    /**
      * @return priority
      */
     public String getPriority() {
@@ -341,6 +353,7 @@ public class ModifySecurityGroupEgressRuleRequest extends Request {
         private Long ownerId; 
         private String policy; 
         private String portRange; 
+        private String portRangeListId; 
         private String priority; 
         private String regionId; 
         private String resourceOwnerAccount; 
@@ -372,6 +385,7 @@ public class ModifySecurityGroupEgressRuleRequest extends Request {
             this.ownerId = request.ownerId;
             this.policy = request.policy;
             this.portRange = request.portRange;
+            this.portRangeListId = request.portRangeListId;
             this.priority = request.priority;
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
@@ -598,6 +612,15 @@ public class ModifySecurityGroupEgressRuleRequest extends Request {
         public Builder portRange(String portRange) {
             this.putQueryParameter("PortRange", portRange);
             this.portRange = portRange;
+            return this;
+        }
+
+        /**
+         * PortRangeListId.
+         */
+        public Builder portRangeListId(String portRangeListId) {
+            this.putQueryParameter("PortRangeListId", portRangeListId);
+            this.portRangeListId = portRangeListId;
             return this;
         }
 

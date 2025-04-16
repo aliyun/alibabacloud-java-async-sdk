@@ -40,6 +40,10 @@ public class CreateSavingsPlanResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return orderId
      */
@@ -65,6 +69,15 @@ public class CreateSavingsPlanResponseBody extends TeaModel {
         private String orderId; 
         private String requestId; 
         private String savingsPlanId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateSavingsPlanResponseBody model) {
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+            this.savingsPlanId = model.savingsPlanId;
+        } 
 
         /**
          * OrderId.

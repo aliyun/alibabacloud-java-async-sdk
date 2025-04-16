@@ -52,6 +52,10 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instances
      */
@@ -101,6 +105,18 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
         private Long pageSize; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeManagedInstancesResponseBody model) {
+            this.instances = model.instances;
+            this.nextToken = model.nextToken;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The queried managed instances.</p>
@@ -214,6 +230,14 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private String tagKey; 
             private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
 
             /**
              * <p>The key of tag N of the managed instance. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
@@ -458,6 +482,28 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
             private String registrationTime; 
             private String resourceGroupId; 
             private java.util.List<Tags> tags; 
+
+            private Builder() {
+            } 
+
+            private Builder(Instances model) {
+                this.activationId = model.activationId;
+                this.agentVersion = model.agentVersion;
+                this.connected = model.connected;
+                this.hostname = model.hostname;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.internetIp = model.internetIp;
+                this.intranetIp = model.intranetIp;
+                this.invocationCount = model.invocationCount;
+                this.lastInvokedTime = model.lastInvokedTime;
+                this.machineId = model.machineId;
+                this.osType = model.osType;
+                this.osVersion = model.osVersion;
+                this.registrationTime = model.registrationTime;
+                this.resourceGroupId = model.resourceGroupId;
+                this.tags = model.tags;
+            } 
 
             /**
              * <p>The ID of the activation code.</p>

@@ -60,6 +60,10 @@ public class DescribePrefixListAttributesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return addressFamily
      */
@@ -125,6 +129,20 @@ public class DescribePrefixListAttributesResponseBody extends TeaModel {
         private String prefixListId; 
         private String prefixListName; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePrefixListAttributesResponseBody model) {
+            this.addressFamily = model.addressFamily;
+            this.creationTime = model.creationTime;
+            this.description = model.description;
+            this.entries = model.entries;
+            this.maxEntries = model.maxEntries;
+            this.prefixListId = model.prefixListId;
+            this.prefixListName = model.prefixListName;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The IP address family of the prefix list. Valid values:</p>
@@ -265,6 +283,14 @@ public class DescribePrefixListAttributesResponseBody extends TeaModel {
             private String cidr; 
             private String description; 
 
+            private Builder() {
+            } 
+
+            private Builder(Entry model) {
+                this.cidr = model.cidr;
+                this.description = model.description;
+            } 
+
             /**
              * <p>The CIDR block in entry N.</p>
              * 
@@ -325,6 +351,13 @@ public class DescribePrefixListAttributesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Entry> entry; 
+
+            private Builder() {
+            } 
+
+            private Builder(Entries model) {
+                this.entry = model.entry;
+            } 
 
             /**
              * Entry.

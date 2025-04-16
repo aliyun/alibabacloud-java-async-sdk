@@ -90,7 +90,7 @@ public class ModifyCapacityReservationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -411,6 +411,14 @@ public class ModifyCapacityReservationRequest extends Request {
         public static final class Builder {
             private String id; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(PrivatePoolOptions model) {
+                this.id = model.id;
+                this.name = model.name;
+            } 
 
             /**
              * <p>The capacity reservation ID.</p>

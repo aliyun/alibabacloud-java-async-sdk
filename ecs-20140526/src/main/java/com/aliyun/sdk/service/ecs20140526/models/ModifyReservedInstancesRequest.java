@@ -66,7 +66,7 @@ public class ModifyReservedInstancesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -302,6 +302,17 @@ public class ModifyReservedInstancesRequest extends Request {
             private String reservedInstanceName; 
             private String scope; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Configuration model) {
+                this.instanceAmount = model.instanceAmount;
+                this.instanceType = model.instanceType;
+                this.reservedInstanceName = model.reservedInstanceName;
+                this.scope = model.scope;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>The number of pay-as-you-go instances of the specified instance type that the new reserved instance can match. The value of this parameter must be greater than or equal to 1.</p>

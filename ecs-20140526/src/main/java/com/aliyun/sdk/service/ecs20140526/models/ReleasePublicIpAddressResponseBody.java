@@ -36,6 +36,10 @@ public class ReleasePublicIpAddressResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return remainTimes
      */
@@ -53,6 +57,14 @@ public class ReleasePublicIpAddressResponseBody extends TeaModel {
     public static final class Builder {
         private String remainTimes; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ReleasePublicIpAddressResponseBody model) {
+            this.remainTimes = model.remainTimes;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <blockquote>

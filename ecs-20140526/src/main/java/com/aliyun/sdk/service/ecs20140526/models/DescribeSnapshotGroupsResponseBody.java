@@ -40,6 +40,10 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextToken
      */
@@ -65,6 +69,15 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private SnapshotGroups snapshotGroups; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSnapshotGroupsResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.snapshotGroups = model.snapshotGroups;
+        } 
 
         /**
          * <p>The token used to start the next query.</p>
@@ -149,6 +162,14 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The tag key of the snapshot. The default values of Key and Value contain snapshot source information.</p>
              * 
@@ -209,6 +230,13 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
@@ -340,6 +368,20 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             private String sourceDiskId; 
             private String sourceDiskType; 
             private Tags tags; 
+
+            private Builder() {
+            } 
+
+            private Builder(Snapshot model) {
+                this.available = model.available;
+                this.instantAccess = model.instantAccess;
+                this.instantAccessRetentionDays = model.instantAccessRetentionDays;
+                this.progress = model.progress;
+                this.snapshotId = model.snapshotId;
+                this.sourceDiskId = model.sourceDiskId;
+                this.sourceDiskType = model.sourceDiskType;
+                this.tags = model.tags;
+            } 
 
             /**
              * <p>Indicates whether the snapshot can be shared and be used to create or roll back a disk. Valid values:</p>
@@ -483,6 +525,13 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Snapshot> snapshot; 
 
+            private Builder() {
+            } 
+
+            private Builder(Snapshots model) {
+                this.snapshot = model.snapshot;
+            } 
+
             /**
              * Snapshot.
              */
@@ -541,6 +590,14 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(TagsTag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key of the snapshot-consistent group.</p>
@@ -602,6 +659,13 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<TagsTag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(SnapshotGroupTags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
@@ -758,6 +822,22 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             private String status; 
             private SnapshotGroupTags tags; 
 
+            private Builder() {
+            } 
+
+            private Builder(SnapshotGroup model) {
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.instanceId = model.instanceId;
+                this.name = model.name;
+                this.progressStatus = model.progressStatus;
+                this.resourceGroupId = model.resourceGroupId;
+                this.snapshotGroupId = model.snapshotGroupId;
+                this.snapshots = model.snapshots;
+                this.status = model.status;
+                this.tags = model.tags;
+            } 
+
             /**
              * <p>The time when the snapshot-consistent group was created.</p>
              * 
@@ -907,6 +987,13 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SnapshotGroup> snapshotGroup; 
+
+            private Builder() {
+            } 
+
+            private Builder(SnapshotGroups model) {
+                this.snapshotGroup = model.snapshotGroup;
+            } 
 
             /**
              * SnapshotGroup.

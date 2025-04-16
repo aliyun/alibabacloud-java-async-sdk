@@ -48,6 +48,10 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
         private String requestId; 
         private Integer totalCount; 
         private VirtualBorderRouterForPhysicalConnectionSet virtualBorderRouterForPhysicalConnectionSet; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.virtualBorderRouterForPhysicalConnectionSet = model.virtualBorderRouterForPhysicalConnectionSet;
+        } 
 
         /**
          * PageNumber.
@@ -252,6 +267,20 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
             private Long vbrOwnerUid; 
             private Integer vlanId; 
 
+            private Builder() {
+            } 
+
+            private Builder(VirtualBorderRouterForPhysicalConnectionType model) {
+                this.activationTime = model.activationTime;
+                this.circuitCode = model.circuitCode;
+                this.creationTime = model.creationTime;
+                this.recoveryTime = model.recoveryTime;
+                this.terminationTime = model.terminationTime;
+                this.vbrId = model.vbrId;
+                this.vbrOwnerUid = model.vbrOwnerUid;
+                this.vlanId = model.vlanId;
+            } 
+
             /**
              * ActivationTime.
              */
@@ -354,6 +383,13 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
 
         public static final class Builder {
             private java.util.List<VirtualBorderRouterForPhysicalConnectionType> virtualBorderRouterForPhysicalConnectionType; 
+
+            private Builder() {
+            } 
+
+            private Builder(VirtualBorderRouterForPhysicalConnectionSet model) {
+                this.virtualBorderRouterForPhysicalConnectionType = model.virtualBorderRouterForPhysicalConnectionType;
+            } 
 
             /**
              * VirtualBorderRouterForPhysicalConnectionType.

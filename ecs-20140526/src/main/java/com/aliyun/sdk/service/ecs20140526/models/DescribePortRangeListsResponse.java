@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DescribeDemandsResponse} extends {@link TeaModel}
+ * {@link DescribePortRangeListsResponse} extends {@link TeaModel}
  *
- * <p>DescribeDemandsResponse</p>
+ * <p>DescribePortRangeListsResponse</p>
  */
-public class DescribeDemandsResponse extends Response {
+public class DescribePortRangeListsResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,20 +24,20 @@ public class DescribeDemandsResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private DescribeDemandsResponseBody body;
+    private DescribePortRangeListsResponseBody body;
 
-    private DescribeDemandsResponse(BuilderImpl builder) {
+    private DescribePortRangeListsResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DescribeDemandsResponse create() {
+    public static DescribePortRangeListsResponse create() {
         return new BuilderImpl().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new BuilderImpl(this);
     }
@@ -59,35 +59,35 @@ public class DescribeDemandsResponse extends Response {
     /**
      * @return body
      */
-    public DescribeDemandsResponseBody getBody() {
+    public DescribePortRangeListsResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DescribeDemandsResponse, Builder> {
+    public interface Builder extends Response.Builder<DescribePortRangeListsResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DescribeDemandsResponseBody body);
+        Builder body(DescribePortRangeListsResponseBody body);
 
         @Override
-        DescribeDemandsResponse build();
+        DescribePortRangeListsResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DescribeDemandsResponse, Builder>
+            extends Response.BuilderImpl<DescribePortRangeListsResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private DescribeDemandsResponseBody body; 
+        private DescribePortRangeListsResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DescribeDemandsResponse response) {
+        private BuilderImpl(DescribePortRangeListsResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class DescribeDemandsResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DescribeDemandsResponseBody body) {
+        public Builder body(DescribePortRangeListsResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DescribeDemandsResponse build() {
-            return new DescribeDemandsResponse(this);
+        public DescribePortRangeListsResponse build() {
+            return new DescribePortRangeListsResponse(this);
         } 
 
     } 

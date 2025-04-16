@@ -36,6 +36,10 @@ public class DeleteSnapshotGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return operationProgressSet
      */
@@ -53,6 +57,14 @@ public class DeleteSnapshotGroupResponseBody extends TeaModel {
     public static final class Builder {
         private OperationProgressSet operationProgressSet; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteSnapshotGroupResponseBody model) {
+            this.operationProgressSet = model.operationProgressSet;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Details about the delete operation.</p>
@@ -123,6 +135,14 @@ public class DeleteSnapshotGroupResponseBody extends TeaModel {
             private String name; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(RelatedItem model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The name of the resource.</p>
              * 
@@ -183,6 +203,13 @@ public class DeleteSnapshotGroupResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<RelatedItem> relatedItem; 
+
+            private Builder() {
+            } 
+
+            private Builder(RelatedItemSet model) {
+                this.relatedItem = model.relatedItem;
+            } 
 
             /**
              * RelatedItem.
@@ -267,6 +294,16 @@ public class DeleteSnapshotGroupResponseBody extends TeaModel {
             private String operationStatus; 
             private RelatedItemSet relatedItemSet; 
 
+            private Builder() {
+            } 
+
+            private Builder(OperationProgress model) {
+                this.errorCode = model.errorCode;
+                this.errorMsg = model.errorMsg;
+                this.operationStatus = model.operationStatus;
+                this.relatedItemSet = model.relatedItemSet;
+            } 
+
             /**
              * <p>The error code. This parameter is empty when the operation is successful.</p>
              * <p>For information about error codes and error messages, visit the <a href="https://error-center.aliyun.com/status/product/Ecs">API error center</a>.</p>
@@ -348,6 +385,13 @@ public class DeleteSnapshotGroupResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<OperationProgress> operationProgress; 
+
+            private Builder() {
+            } 
+
+            private Builder(OperationProgressSet model) {
+                this.operationProgress = model.operationProgress;
+            } 
 
             /**
              * OperationProgress.

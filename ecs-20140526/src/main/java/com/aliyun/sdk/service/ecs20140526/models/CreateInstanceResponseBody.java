@@ -44,6 +44,10 @@ public class CreateInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceId
      */
@@ -77,6 +81,16 @@ public class CreateInstanceResponseBody extends TeaModel {
         private String orderId; 
         private String requestId; 
         private Float tradePrice; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateInstanceResponseBody model) {
+            this.instanceId = model.instanceId;
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+            this.tradePrice = model.tradePrice;
+        } 
 
         /**
          * <p>The instance ID.</p>

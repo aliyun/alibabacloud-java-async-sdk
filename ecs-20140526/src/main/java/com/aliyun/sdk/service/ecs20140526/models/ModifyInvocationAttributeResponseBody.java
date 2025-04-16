@@ -36,6 +36,10 @@ public class ModifyInvocationAttributeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return commandId
      */
@@ -53,6 +57,14 @@ public class ModifyInvocationAttributeResponseBody extends TeaModel {
     public static final class Builder {
         private String commandId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyInvocationAttributeResponseBody model) {
+            this.commandId = model.commandId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The command ID.</p>

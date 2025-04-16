@@ -36,6 +36,10 @@ public class DescribeInstanceTypeFamiliesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceTypeFamilies
      */
@@ -53,6 +57,14 @@ public class DescribeInstanceTypeFamiliesResponseBody extends TeaModel {
     public static final class Builder {
         private InstanceTypeFamilies instanceTypeFamilies; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceTypeFamiliesResponseBody model) {
+            this.instanceTypeFamilies = model.instanceTypeFamilies;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The instance families.</p>
@@ -123,6 +135,14 @@ public class DescribeInstanceTypeFamiliesResponseBody extends TeaModel {
             private String generation; 
             private String instanceTypeFamilyId; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceTypeFamily model) {
+                this.generation = model.generation;
+                this.instanceTypeFamilyId = model.instanceTypeFamilyId;
+            } 
+
             /**
              * <p>The series of the instance family.</p>
              * 
@@ -183,6 +203,13 @@ public class DescribeInstanceTypeFamiliesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<InstanceTypeFamily> instanceTypeFamily; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceTypeFamilies model) {
+                this.instanceTypeFamily = model.instanceTypeFamily;
+            } 
 
             /**
              * InstanceTypeFamily.

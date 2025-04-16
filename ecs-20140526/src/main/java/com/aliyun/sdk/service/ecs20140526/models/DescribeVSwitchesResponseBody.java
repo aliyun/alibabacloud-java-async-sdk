@@ -48,6 +48,10 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
         private VSwitches vSwitches; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVSwitchesResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.vSwitches = model.vSwitches;
+        } 
 
         /**
          * PageNumber.
@@ -288,6 +303,23 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             private String vpcId; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(VSwitch model) {
+                this.availableIpAddressCount = model.availableIpAddressCount;
+                this.cidrBlock = model.cidrBlock;
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.isDefault = model.isDefault;
+                this.resourceGroupId = model.resourceGroupId;
+                this.status = model.status;
+                this.vSwitchId = model.vSwitchId;
+                this.vSwitchName = model.vSwitchName;
+                this.vpcId = model.vpcId;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
              * AvailableIpAddressCount.
              */
@@ -414,6 +446,13 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<VSwitch> vSwitch; 
+
+            private Builder() {
+            } 
+
+            private Builder(VSwitches model) {
+                this.vSwitch = model.vSwitch;
+            } 
 
             /**
              * VSwitch.

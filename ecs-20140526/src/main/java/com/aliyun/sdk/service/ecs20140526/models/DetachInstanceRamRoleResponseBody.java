@@ -48,6 +48,10 @@ public class DetachInstanceRamRoleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return detachInstanceRamRoleResults
      */
@@ -89,6 +93,17 @@ public class DetachInstanceRamRoleResponseBody extends TeaModel {
         private String ramRoleName; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DetachInstanceRamRoleResponseBody model) {
+            this.detachInstanceRamRoleResults = model.detachInstanceRamRoleResults;
+            this.failCount = model.failCount;
+            this.ramRoleName = model.ramRoleName;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The results of the instance RAM role detachment, which include the names of the instance RAM roles and the IDs of the ECS instances from which you attempted to detach the instance RAM roles.</p>
@@ -192,6 +207,14 @@ public class DetachInstanceRamRoleResponseBody extends TeaModel {
             private String instanceId; 
             private String ramRoleName; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceRamRoleSet model) {
+                this.instanceId = model.instanceId;
+                this.ramRoleName = model.ramRoleName;
+            } 
+
             /**
              * <p>The ID of the ECS instance.</p>
              * 
@@ -252,6 +275,13 @@ public class DetachInstanceRamRoleResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<InstanceRamRoleSet> instanceRamRoleSet; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceRamRoleSets model) {
+                this.instanceRamRoleSet = model.instanceRamRoleSet;
+            } 
 
             /**
              * InstanceRamRoleSet.
@@ -348,6 +378,17 @@ public class DetachInstanceRamRoleResponseBody extends TeaModel {
             private String message; 
             private Boolean success; 
 
+            private Builder() {
+            } 
+
+            private Builder(DetachInstanceRamRoleResult model) {
+                this.code = model.code;
+                this.instanceId = model.instanceId;
+                this.instanceRamRoleSets = model.instanceRamRoleSets;
+                this.message = model.message;
+                this.success = model.success;
+            } 
+
             /**
              * <p>Indicates whether the instance RAM role was detached. If 200 is returned, the instance RAM role was detached. If any other value is returned, the instance RAM role failed to be detached. For more information, see the &quot;Error codes&quot; section.</p>
              * 
@@ -438,6 +479,13 @@ public class DetachInstanceRamRoleResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DetachInstanceRamRoleResult> detachInstanceRamRoleResult; 
+
+            private Builder() {
+            } 
+
+            private Builder(DetachInstanceRamRoleResults model) {
+                this.detachInstanceRamRoleResult = model.detachInstanceRamRoleResult;
+            } 
 
             /**
              * DetachInstanceRamRoleResult.

@@ -36,6 +36,10 @@ public class DeleteLaunchTemplateVersionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return launchTemplateVersions
      */
@@ -53,6 +57,14 @@ public class DeleteLaunchTemplateVersionResponseBody extends TeaModel {
     public static final class Builder {
         private LaunchTemplateVersions launchTemplateVersions; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteLaunchTemplateVersionResponseBody model) {
+            this.launchTemplateVersions = model.launchTemplateVersions;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The deleted launch template versions.</p>
@@ -123,6 +135,14 @@ public class DeleteLaunchTemplateVersionResponseBody extends TeaModel {
             private String launchTemplateId; 
             private Long launchTemplateVersionNumber; 
 
+            private Builder() {
+            } 
+
+            private Builder(LaunchTemplateVersion model) {
+                this.launchTemplateId = model.launchTemplateId;
+                this.launchTemplateVersionNumber = model.launchTemplateVersionNumber;
+            } 
+
             /**
              * <p>The ID of the launch template.</p>
              * 
@@ -183,6 +203,13 @@ public class DeleteLaunchTemplateVersionResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<LaunchTemplateVersion> launchTemplateVersion; 
+
+            private Builder() {
+            } 
+
+            private Builder(LaunchTemplateVersions model) {
+                this.launchTemplateVersion = model.launchTemplateVersion;
+            } 
 
             /**
              * LaunchTemplateVersion.

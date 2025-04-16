@@ -36,6 +36,10 @@ public class DescribeInstanceVncUrlResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeInstanceVncUrlResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String vncUrl; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceVncUrlResponseBody model) {
+            this.requestId = model.requestId;
+            this.vncUrl = model.vncUrl;
+        } 
 
         /**
          * <p>The ID of the request.</p>

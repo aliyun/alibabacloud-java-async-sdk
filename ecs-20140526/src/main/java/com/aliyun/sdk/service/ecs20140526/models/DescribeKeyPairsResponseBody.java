@@ -48,6 +48,10 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return keyPairs
      */
@@ -89,6 +93,17 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeKeyPairsResponseBody model) {
+            this.keyPairs = model.keyPairs;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The information of the key pairs.</p>
@@ -192,6 +207,14 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
              * <p>The tag key of the key pair.</p>
              * 
@@ -252,6 +275,13 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
@@ -360,6 +390,18 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
             private String resourceGroupId; 
             private Tags tags; 
 
+            private Builder() {
+            } 
+
+            private Builder(KeyPair model) {
+                this.creationTime = model.creationTime;
+                this.keyPairFingerPrint = model.keyPairFingerPrint;
+                this.keyPairName = model.keyPairName;
+                this.publicKey = model.publicKey;
+                this.resourceGroupId = model.resourceGroupId;
+                this.tags = model.tags;
+            } 
+
             /**
              * <p>The time when the key pair was created.</p>
              * 
@@ -461,6 +503,13 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<KeyPair> keyPair; 
+
+            private Builder() {
+            } 
+
+            private Builder(KeyPairs model) {
+                this.keyPair = model.keyPair;
+            } 
 
             /**
              * KeyPair.

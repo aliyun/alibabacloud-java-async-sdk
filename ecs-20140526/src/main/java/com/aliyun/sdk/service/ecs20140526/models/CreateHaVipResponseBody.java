@@ -36,6 +36,10 @@ public class CreateHaVipResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return haVipId
      */
@@ -53,6 +57,14 @@ public class CreateHaVipResponseBody extends TeaModel {
     public static final class Builder {
         private String haVipId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateHaVipResponseBody model) {
+            this.haVipId = model.haVipId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * HaVipId.

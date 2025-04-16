@@ -48,6 +48,10 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return elasticityAssuranceSet
      */
@@ -89,6 +93,17 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeElasticityAssurancesResponseBody model) {
+            this.elasticityAssuranceSet = model.elasticityAssuranceSet;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>Details about the elasticity assurances.</p>
@@ -204,6 +219,15 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             private String serviceName; 
             private Integer usedAmount; 
 
+            private Builder() {
+            } 
+
+            private Builder(ElasticityAssuranceUsage model) {
+                this.accountId = model.accountId;
+                this.serviceName = model.serviceName;
+                this.usedAmount = model.usedAmount;
+            } 
+
             /**
              * <blockquote>
              * <p> This parameter is not publicly available.</p>
@@ -281,6 +305,13 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ElasticityAssuranceUsage> elasticityAssuranceUsage; 
+
+            private Builder() {
+            } 
+
+            private Builder(ElasticityAssuranceUsages model) {
+                this.elasticityAssuranceUsage = model.elasticityAssuranceUsage;
+            } 
 
             /**
              * ElasticityAssuranceUsage.
@@ -389,6 +420,18 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             private Integer usedAmount; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(AllocatedResource model) {
+                this.availableAmount = model.availableAmount;
+                this.elasticityAssuranceUsages = model.elasticityAssuranceUsages;
+                this.instanceType = model.instanceType;
+                this.totalAmount = model.totalAmount;
+                this.usedAmount = model.usedAmount;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
              * <blockquote>
              * <p> This parameter is not publicly available.</p>
@@ -495,6 +538,13 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<AllocatedResource> allocatedResource; 
 
+            private Builder() {
+            } 
+
+            private Builder(AllocatedResources model) {
+                this.allocatedResource = model.allocatedResource;
+            } 
+
             /**
              * AllocatedResource.
              */
@@ -577,6 +627,16 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             private String recurrenceType; 
             private String recurrenceValue; 
             private Integer startHour; 
+
+            private Builder() {
+            } 
+
+            private Builder(RecurrenceRule model) {
+                this.endHour = model.endHour;
+                this.recurrenceType = model.recurrenceType;
+                this.recurrenceValue = model.recurrenceValue;
+                this.startHour = model.startHour;
+            } 
 
             /**
              * <p>The time when the time-segmented assurance ends.</p>
@@ -671,6 +731,13 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<RecurrenceRule> recurrenceRule; 
 
+            private Builder() {
+            } 
+
+            private Builder(RecurrenceRules model) {
+                this.recurrenceRule = model.recurrenceRule;
+            } 
+
             /**
              * RecurrenceRule.
              */
@@ -729,6 +796,14 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         public static final class Builder {
             private String tagKey; 
             private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
 
             /**
              * <p>The key of the tag.</p>
@@ -790,6 +865,13 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
@@ -1054,6 +1136,31 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             private String totalAssuranceTimes; 
             private Integer usedAssuranceTimes; 
 
+            private Builder() {
+            } 
+
+            private Builder(ElasticityAssuranceItem model) {
+                this.allocatedResources = model.allocatedResources;
+                this.description = model.description;
+                this.elasticityAssuranceOwnerId = model.elasticityAssuranceOwnerId;
+                this.endTime = model.endTime;
+                this.instanceChargeType = model.instanceChargeType;
+                this.latestStartTime = model.latestStartTime;
+                this.packageType = model.packageType;
+                this.privatePoolOptionsId = model.privatePoolOptionsId;
+                this.privatePoolOptionsMatchCriteria = model.privatePoolOptionsMatchCriteria;
+                this.privatePoolOptionsName = model.privatePoolOptionsName;
+                this.recurrenceRules = model.recurrenceRules;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.startTime = model.startTime;
+                this.startTimeType = model.startTimeType;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.totalAssuranceTimes = model.totalAssuranceTimes;
+                this.usedAssuranceTimes = model.usedAssuranceTimes;
+            } 
+
             /**
              * <p>Details of the allocated resources.</p>
              */
@@ -1316,6 +1423,13 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ElasticityAssuranceItem> elasticityAssuranceItem; 
+
+            private Builder() {
+            } 
+
+            private Builder(ElasticityAssuranceSet model) {
+                this.elasticityAssuranceItem = model.elasticityAssuranceItem;
+            } 
 
             /**
              * ElasticityAssuranceItem.

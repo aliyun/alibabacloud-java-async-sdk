@@ -40,6 +40,10 @@ public class DescribeSnapshotsUsageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class DescribeSnapshotsUsageResponseBody extends TeaModel {
         private String requestId; 
         private Integer snapshotCount; 
         private Long snapshotSize; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSnapshotsUsageResponseBody model) {
+            this.requestId = model.requestId;
+            this.snapshotCount = model.snapshotCount;
+            this.snapshotSize = model.snapshotSize;
+        } 
 
         /**
          * <p>The request ID.</p>

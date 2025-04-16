@@ -41,6 +41,9 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("EnableJumboFrame")
     private Boolean enableJumboFrame;
 
+    @com.aliyun.core.annotation.NameInMap("EnableNetworkEncryption")
+    private Boolean enableNetworkEncryption;
+
     @com.aliyun.core.annotation.NameInMap("ExpiredTime")
     private String expiredTime;
 
@@ -125,6 +128,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         this.description = builder.description;
         this.eipAddress = builder.eipAddress;
         this.enableJumboFrame = builder.enableJumboFrame;
+        this.enableNetworkEncryption = builder.enableNetworkEncryption;
         this.expiredTime = builder.expiredTime;
         this.hostName = builder.hostName;
         this.imageId = builder.imageId;
@@ -158,6 +162,10 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
 
     public static DescribeInstanceAttributeResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -214,6 +222,13 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
      */
     public Boolean getEnableJumboFrame() {
         return this.enableJumboFrame;
+    }
+
+    /**
+     * @return enableNetworkEncryption
+     */
+    public Boolean getEnableNetworkEncryption() {
+        return this.enableNetworkEncryption;
     }
 
     /**
@@ -400,6 +415,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         private String description; 
         private EipAddress eipAddress; 
         private Boolean enableJumboFrame; 
+        private Boolean enableNetworkEncryption; 
         private String expiredTime; 
         private String hostName; 
         private String imageId; 
@@ -425,6 +441,46 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         private String vlanId; 
         private VpcAttributes vpcAttributes; 
         private String zoneId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceAttributeResponseBody model) {
+            this.clusterId = model.clusterId;
+            this.cpu = model.cpu;
+            this.creationTime = model.creationTime;
+            this.creditSpecification = model.creditSpecification;
+            this.dedicatedHostAttribute = model.dedicatedHostAttribute;
+            this.description = model.description;
+            this.eipAddress = model.eipAddress;
+            this.enableJumboFrame = model.enableJumboFrame;
+            this.enableNetworkEncryption = model.enableNetworkEncryption;
+            this.expiredTime = model.expiredTime;
+            this.hostName = model.hostName;
+            this.imageId = model.imageId;
+            this.innerIpAddress = model.innerIpAddress;
+            this.instanceChargeType = model.instanceChargeType;
+            this.instanceId = model.instanceId;
+            this.instanceName = model.instanceName;
+            this.instanceNetworkType = model.instanceNetworkType;
+            this.instanceType = model.instanceType;
+            this.internetChargeType = model.internetChargeType;
+            this.internetMaxBandwidthIn = model.internetMaxBandwidthIn;
+            this.internetMaxBandwidthOut = model.internetMaxBandwidthOut;
+            this.ioOptimized = model.ioOptimized;
+            this.memory = model.memory;
+            this.operationLocks = model.operationLocks;
+            this.publicIpAddress = model.publicIpAddress;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+            this.securityGroupIds = model.securityGroupIds;
+            this.serialNumber = model.serialNumber;
+            this.status = model.status;
+            this.stoppedMode = model.stoppedMode;
+            this.vlanId = model.vlanId;
+            this.vpcAttributes = model.vpcAttributes;
+            this.zoneId = model.zoneId;
+        } 
 
         /**
          * <p>The ID of the cluster to which the instance belongs.</p>
@@ -517,6 +573,14 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
          */
         public Builder enableJumboFrame(Boolean enableJumboFrame) {
             this.enableJumboFrame = enableJumboFrame;
+            return this;
+        }
+
+        /**
+         * EnableNetworkEncryption.
+         */
+        public Builder enableNetworkEncryption(Boolean enableNetworkEncryption) {
+            this.enableNetworkEncryption = enableNetworkEncryption;
             return this;
         }
 
@@ -871,6 +935,14 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             private String dedicatedHostId; 
             private String dedicatedHostName; 
 
+            private Builder() {
+            } 
+
+            private Builder(DedicatedHostAttribute model) {
+                this.dedicatedHostId = model.dedicatedHostId;
+                this.dedicatedHostName = model.dedicatedHostName;
+            } 
+
             /**
              * <p>The ID of the dedicated host.</p>
              * 
@@ -968,6 +1040,16 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             private String internetChargeType; 
             private String ipAddress; 
 
+            private Builder() {
+            } 
+
+            private Builder(EipAddress model) {
+                this.allocationId = model.allocationId;
+                this.bandwidth = model.bandwidth;
+                this.internetChargeType = model.internetChargeType;
+                this.ipAddress = model.ipAddress;
+            } 
+
             /**
              * <p>The ID of the EIP.</p>
              * 
@@ -1058,6 +1140,13 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> ipAddress; 
 
+            private Builder() {
+            } 
+
+            private Builder(InnerIpAddress model) {
+                this.ipAddress = model.ipAddress;
+            } 
+
             /**
              * <p>The ID of the elastic IP address (EIP).</p>
              * 
@@ -1107,6 +1196,13 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
 
         public static final class Builder {
             private String lockReason; 
+
+            private Builder() {
+            } 
+
+            private Builder(LockReason model) {
+                this.lockReason = model.lockReason;
+            } 
 
             /**
              * <p>The reason why the instance was locked. Valid values:</p>
@@ -1165,6 +1261,13 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<LockReason> lockReason; 
 
+            private Builder() {
+            } 
+
+            private Builder(OperationLocks model) {
+                this.lockReason = model.lockReason;
+            } 
+
             /**
              * <p>The reason why the instance was locked. Valid values:</p>
              * <ul>
@@ -1222,6 +1325,13 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> ipAddress; 
 
+            private Builder() {
+            } 
+
+            private Builder(PublicIpAddress model) {
+                this.ipAddress = model.ipAddress;
+            } 
+
             /**
              * <p>The ID of the elastic IP address (EIP).</p>
              * 
@@ -1272,6 +1382,13 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> securityGroupId; 
 
+            private Builder() {
+            } 
+
+            private Builder(SecurityGroupIds model) {
+                this.securityGroupId = model.securityGroupId;
+            } 
+
             /**
              * SecurityGroupId.
              */
@@ -1318,6 +1435,13 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> ipAddress; 
+
+            private Builder() {
+            } 
+
+            private Builder(PrivateIpAddress model) {
+                this.ipAddress = model.ipAddress;
+            } 
 
             /**
              * <p>The ID of the elastic IP address (EIP).</p>
@@ -1404,6 +1528,16 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             private PrivateIpAddress privateIpAddress; 
             private String vSwitchId; 
             private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(VpcAttributes model) {
+                this.natIpAddress = model.natIpAddress;
+                this.privateIpAddress = model.privateIpAddress;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+            } 
 
             /**
              * <p>The NAT IP address of the instance. It is used by ECS instances in different VPCs for communication.</p>

@@ -206,7 +206,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -599,8 +599,8 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         /**
          * <p>The type of supplemental instances. When the sum of the <code>PayAsYouGoTargetCapacity</code> and <code>SpotTargetCapacity</code> values is smaller than the <code>TotalTargetCapacity</code> value, the auto provisioning group creates instances of the specified type to meet the total target capacity. Valid values:</p>
          * <ul>
-         * <li>PayAsYouGo: pay-as-you-go instances</li>
-         * <li>Spot: preemptible instances.</li>
+         * <li>PayAsYouGo: pay-as-you-go</li>
+         * <li>Spot: preemptible instance</li>
          * </ul>
          * <p>Default value: Spot.</p>
          * 
@@ -770,7 +770,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * PrePaidOptions.
+         * <p>The capacity details of the subscription instance.</p>
          */
         public Builder prePaidOptions(PrePaidOptions prePaidOptions) {
             this.putQueryParameter("PrePaidOptions", prePaidOptions);
@@ -1052,6 +1052,15 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             private String roleType; 
             private String rolearn; 
 
+            private Builder() {
+            } 
+
+            private Builder(Arn model) {
+                this.assumeRoleFor = model.assumeRoleFor;
+                this.roleType = model.roleType;
+                this.rolearn = model.rolearn;
+            } 
+
             /**
              * <blockquote>
              * <p> This parameter is in invitational preview and is not publicly available.</p>
@@ -1105,6 +1114,9 @@ public class CreateAutoProvisioningGroupRequest extends Request {
      * <p>CreateAutoProvisioningGroupRequest</p>
      */
     public static class DataDisk extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AutoSnapshotPolicyId")
+        private String autoSnapshotPolicyId;
+
         @com.aliyun.core.annotation.NameInMap("BurstingEnabled")
         private Boolean burstingEnabled;
 
@@ -1145,6 +1157,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         private String snapshotId;
 
         private DataDisk(Builder builder) {
+            this.autoSnapshotPolicyId = builder.autoSnapshotPolicyId;
             this.burstingEnabled = builder.burstingEnabled;
             this.category = builder.category;
             this.deleteWithInstance = builder.deleteWithInstance;
@@ -1166,6 +1179,13 @@ public class CreateAutoProvisioningGroupRequest extends Request {
 
         public static DataDisk create() {
             return builder().build();
+        }
+
+        /**
+         * @return autoSnapshotPolicyId
+         */
+        public String getAutoSnapshotPolicyId() {
+            return this.autoSnapshotPolicyId;
         }
 
         /**
@@ -1260,6 +1280,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         }
 
         public static final class Builder {
+            private String autoSnapshotPolicyId; 
             private Boolean burstingEnabled; 
             private String category; 
             private Boolean deleteWithInstance; 
@@ -1274,11 +1295,39 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             private Integer size; 
             private String snapshotId; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataDisk model) {
+                this.autoSnapshotPolicyId = model.autoSnapshotPolicyId;
+                this.burstingEnabled = model.burstingEnabled;
+                this.category = model.category;
+                this.deleteWithInstance = model.deleteWithInstance;
+                this.description = model.description;
+                this.device = model.device;
+                this.diskName = model.diskName;
+                this.encryptAlgorithm = model.encryptAlgorithm;
+                this.encrypted = model.encrypted;
+                this.kmsKeyId = model.kmsKeyId;
+                this.performanceLevel = model.performanceLevel;
+                this.provisionedIops = model.provisionedIops;
+                this.size = model.size;
+                this.snapshotId = model.snapshotId;
+            } 
+
             /**
-             * <p>Specifies whether to enable the performance burst feature for data disk N. Valid values:</p>
+             * AutoSnapshotPolicyId.
+             */
+            public Builder autoSnapshotPolicyId(String autoSnapshotPolicyId) {
+                this.autoSnapshotPolicyId = autoSnapshotPolicyId;
+                return this;
+            }
+
+            /**
+             * <p>Specifies whether to enable the performance burst feature for the system disk. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li>true: force attaches the disk to the instance.</li>
+             * <li>false: disables the performance burst feature for the system disk.</li>
              * </ul>
              * <blockquote>
              * <p> This parameter is available only if you set LaunchConfiguration.DataDisk.N.Category to cloud_auto. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
@@ -1295,9 +1344,9 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             /**
              * <p>The category of data disk N. Valid values of N: 1 to 16. Valid values:</p>
              * <ul>
-             * <li>cloud_efficiency: ultra disk.</li>
+             * <li>cloud_efficiency: utra disk.</li>
              * <li>cloud_ssd: standard SSD.</li>
-             * <li>cloud_essd: ESSD.</li>
+             * <li>cloud_essd: enterprise SSD (ESSD).</li>
              * <li>cloud: basic disk.</li>
              * </ul>
              * <p>For I/O optimized instances, the default value is cloud_efficiency. For non-I/O optimized instances, the default value is cloud.</p>
@@ -1314,8 +1363,8 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             /**
              * <p>Specifies whether to release data disk N when the instance to which the data disk is attached is released. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li>true: releases data disk N when the associated instance is released.</li>
+             * <li>false: does not release data disk N when the associated instance is released.</li>
              * </ul>
              * <p>Default value: true.</p>
              * <p>When both LaunchTemplateId and LaunchConfiguration.* parameters are specified, LaunchTemplateId takes precedence.</p>
@@ -1351,7 +1400,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * <p>The name of data disk N. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, periods (.), colons (:), underscores (_), and hyphens (-).</p>
+             * <p>The name of data disk N. The name must be 2 to 128 characters in length The name must start with a letter but cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, periods (.), colons (:), underscores (_), and hyphens (-).</p>
              * <p>This parameter is left empty by default.</p>
              * <p>When both LaunchTemplateId and LaunchConfiguration.* parameters are specified, LaunchTemplateId takes precedence.</p>
              * 
@@ -1379,8 +1428,8 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             /**
              * <p>Specifies whether to encrypt data disk N. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li>true: encrypts system disk N.</li>
+             * <li>false: does not encrypt system disk N.</li>
              * </ul>
              * <p>Default value: false.</p>
              * <p>When both LaunchTemplateId and LaunchConfiguration.* parameters are specified, LaunchTemplateId takes precedence.</p>
@@ -1407,12 +1456,12 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             /**
              * <p>The performance level of the Enterprise SSD (ESSD) to use as data disk N. The value of N in this parameter must be the same as the value of N in <code>LaunchConfiguration.DataDisk.N.Category</code>. Valid values:</p>
              * <ul>
-             * <li>PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</li>
-             * <li>PL1 (default): A single ESSD can deliver up to 50,000 random read/write IOPS.</li>
-             * <li>PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</li>
-             * <li>PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</li>
+             * <li>PL0: A single ESSD can deliver up to 10000 random read/write IOPS.</li>
+             * <li>PL1 (default): A single ESSD can deliver up to 50000 random read/write IOPS.</li>
+             * <li>PL2: A single ESSD can deliver up to 100000 random read/write IOPS.</li>
+             * <li>PL3: A single ESSD can deliver up to 1000000 random read/write IOPS.</li>
              * </ul>
-             * <p>For more information about ESSD performance levels, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</p>
+             * <p>For information about ESSD performance levels, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</p>
              * <p>When both LaunchTemplateId and LaunchConfiguration.* parameters are specified, LaunchTemplateId takes precedence.</p>
              * 
              * <strong>example:</strong>
@@ -1496,6 +1545,9 @@ public class CreateAutoProvisioningGroupRequest extends Request {
      * <p>CreateAutoProvisioningGroupRequest</p>
      */
     public static class SystemDisk extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AutoSnapshotPolicyId")
+        private String autoSnapshotPolicyId;
+
         @com.aliyun.core.annotation.NameInMap("BurstingEnabled")
         private Boolean burstingEnabled;
 
@@ -1512,6 +1564,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         private Long provisionedIops;
 
         private SystemDisk(Builder builder) {
+            this.autoSnapshotPolicyId = builder.autoSnapshotPolicyId;
             this.burstingEnabled = builder.burstingEnabled;
             this.encryptAlgorithm = builder.encryptAlgorithm;
             this.encrypted = builder.encrypted;
@@ -1525,6 +1578,13 @@ public class CreateAutoProvisioningGroupRequest extends Request {
 
         public static SystemDisk create() {
             return builder().build();
+        }
+
+        /**
+         * @return autoSnapshotPolicyId
+         */
+        public String getAutoSnapshotPolicyId() {
+            return this.autoSnapshotPolicyId;
         }
 
         /**
@@ -1563,17 +1623,38 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         }
 
         public static final class Builder {
+            private String autoSnapshotPolicyId; 
             private Boolean burstingEnabled; 
             private String encryptAlgorithm; 
             private String encrypted; 
             private String KMSKeyId; 
             private Long provisionedIops; 
 
+            private Builder() {
+            } 
+
+            private Builder(SystemDisk model) {
+                this.autoSnapshotPolicyId = model.autoSnapshotPolicyId;
+                this.burstingEnabled = model.burstingEnabled;
+                this.encryptAlgorithm = model.encryptAlgorithm;
+                this.encrypted = model.encrypted;
+                this.KMSKeyId = model.KMSKeyId;
+                this.provisionedIops = model.provisionedIops;
+            } 
+
+            /**
+             * AutoSnapshotPolicyId.
+             */
+            public Builder autoSnapshotPolicyId(String autoSnapshotPolicyId) {
+                this.autoSnapshotPolicyId = autoSnapshotPolicyId;
+                return this;
+            }
+
             /**
              * <p>Specifies whether to enable the performance burst feature for the system disk. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li>true: force attaches the disk to the instance.</li>
+             * <li>false: disables the performance burst feature for the system disk.</li>
              * </ul>
              * <blockquote>
              * <p> This parameter is available only if you set <code>LaunchConfiguration.SystemDisk.Category</code> to <code>cloud_auto</code>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
@@ -1610,8 +1691,8 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             /**
              * <p>Specifies whether to encrypt the system disk. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li>true: encrypts system disk N.</li>
+             * <li>false: does not encrypt system disk N.</li>
              * </ul>
              * <p>Default value: false.</p>
              * <p>When both LaunchTemplateId and LaunchConfiguration.* parameters are specified, LaunchTemplateId takes precedence.</p>
@@ -1637,7 +1718,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * <p>The provisioned read/write IOPS of the ESSD AutoPL disk to use as the system disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}.</p>
+             * <p>The provisioned read/write IOPS of the ESSD AutoPL disk to use as data disk N. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}.</p>
              * <p>Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.</p>
              * <blockquote>
              * <p> This parameter is available only if you set LaunchConfiguration.SystemDisk.Category to cloud_auto. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
@@ -1702,6 +1783,14 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(LaunchConfigurationTag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The key of the tag. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain <code>http://</code> or <code>https://</code>. If both the LaunchTemplateId and LaunchConfiguration.* parameters are specified, the LaunchTemplateId parameter takes precedence.</p>
              * 
@@ -1726,6 +1815,60 @@ public class CreateAutoProvisioningGroupRequest extends Request {
 
             public LaunchConfigurationTag build() {
                 return new LaunchConfigurationTag(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateAutoProvisioningGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAutoProvisioningGroupRequest</p>
+     */
+    public static class ImageOptions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("LoginAsNonRoot")
+        private Boolean loginAsNonRoot;
+
+        private ImageOptions(Builder builder) {
+            this.loginAsNonRoot = builder.loginAsNonRoot;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ImageOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return loginAsNonRoot
+         */
+        public Boolean getLoginAsNonRoot() {
+            return this.loginAsNonRoot;
+        }
+
+        public static final class Builder {
+            private Boolean loginAsNonRoot; 
+
+            private Builder() {
+            } 
+
+            private Builder(ImageOptions model) {
+                this.loginAsNonRoot = model.loginAsNonRoot;
+            } 
+
+            /**
+             * LoginAsNonRoot.
+             */
+            public Builder loginAsNonRoot(Boolean loginAsNonRoot) {
+                this.loginAsNonRoot = loginAsNonRoot;
+                return this;
+            }
+
+            public ImageOptions build() {
+                return new ImageOptions(this);
             } 
 
         } 
@@ -1837,11 +1980,20 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("AutoRenewPeriod")
         private Integer autoRenewPeriod;
 
+        @com.aliyun.core.annotation.NameInMap("ImageOptions")
+        private ImageOptions imageOptions;
+
         @com.aliyun.core.annotation.NameInMap("Period")
         private Integer period;
 
         @com.aliyun.core.annotation.NameInMap("PeriodUnit")
         private String periodUnit;
+
+        @com.aliyun.core.annotation.NameInMap("SpotDuration")
+        private Integer spotDuration;
+
+        @com.aliyun.core.annotation.NameInMap("SpotInterruptionBehavior")
+        private String spotInterruptionBehavior;
 
         private LaunchConfiguration(Builder builder) {
             this.arn = builder.arn;
@@ -1877,8 +2029,11 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             this.userData = builder.userData;
             this.autoRenew = builder.autoRenew;
             this.autoRenewPeriod = builder.autoRenewPeriod;
+            this.imageOptions = builder.imageOptions;
             this.period = builder.period;
             this.periodUnit = builder.periodUnit;
+            this.spotDuration = builder.spotDuration;
+            this.spotInterruptionBehavior = builder.spotInterruptionBehavior;
         }
 
         public static Builder builder() {
@@ -2121,6 +2276,13 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         }
 
         /**
+         * @return imageOptions
+         */
+        public ImageOptions getImageOptions() {
+            return this.imageOptions;
+        }
+
+        /**
          * @return period
          */
         public Integer getPeriod() {
@@ -2132,6 +2294,20 @@ public class CreateAutoProvisioningGroupRequest extends Request {
          */
         public String getPeriodUnit() {
             return this.periodUnit;
+        }
+
+        /**
+         * @return spotDuration
+         */
+        public Integer getSpotDuration() {
+            return this.spotDuration;
+        }
+
+        /**
+         * @return spotInterruptionBehavior
+         */
+        public String getSpotInterruptionBehavior() {
+            return this.spotInterruptionBehavior;
         }
 
         public static final class Builder {
@@ -2168,8 +2344,55 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             private String userData; 
             private Boolean autoRenew; 
             private Integer autoRenewPeriod; 
+            private ImageOptions imageOptions; 
             private Integer period; 
             private String periodUnit; 
+            private Integer spotDuration; 
+            private String spotInterruptionBehavior; 
+
+            private Builder() {
+            } 
+
+            private Builder(LaunchConfiguration model) {
+                this.arn = model.arn;
+                this.autoReleaseTime = model.autoReleaseTime;
+                this.creditSpecification = model.creditSpecification;
+                this.dataDisk = model.dataDisk;
+                this.deploymentSetId = model.deploymentSetId;
+                this.hostName = model.hostName;
+                this.hostNames = model.hostNames;
+                this.imageFamily = model.imageFamily;
+                this.imageId = model.imageId;
+                this.instanceDescription = model.instanceDescription;
+                this.instanceName = model.instanceName;
+                this.internetChargeType = model.internetChargeType;
+                this.internetMaxBandwidthIn = model.internetMaxBandwidthIn;
+                this.internetMaxBandwidthOut = model.internetMaxBandwidthOut;
+                this.ioOptimized = model.ioOptimized;
+                this.keyPairName = model.keyPairName;
+                this.password = model.password;
+                this.passwordInherit = model.passwordInherit;
+                this.ramRoleName = model.ramRoleName;
+                this.resourceGroupId = model.resourceGroupId;
+                this.securityEnhancementStrategy = model.securityEnhancementStrategy;
+                this.securityGroupId = model.securityGroupId;
+                this.securityGroupIds = model.securityGroupIds;
+                this.systemDisk = model.systemDisk;
+                this.systemDiskCategory = model.systemDiskCategory;
+                this.systemDiskDescription = model.systemDiskDescription;
+                this.systemDiskName = model.systemDiskName;
+                this.systemDiskPerformanceLevel = model.systemDiskPerformanceLevel;
+                this.systemDiskSize = model.systemDiskSize;
+                this.tag = model.tag;
+                this.userData = model.userData;
+                this.autoRenew = model.autoRenew;
+                this.autoRenewPeriod = model.autoRenewPeriod;
+                this.imageOptions = model.imageOptions;
+                this.period = model.period;
+                this.periodUnit = model.periodUnit;
+                this.spotDuration = model.spotDuration;
+                this.spotInterruptionBehavior = model.spotInterruptionBehavior;
+            } 
 
             /**
              * <blockquote>
@@ -2588,7 +2811,14 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * AutoRenew.
+             * <p>Specifies whether to enable auto-renewal for the reserved instance. This parameter is required only when the instance uses the subscription billing method. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false (default)</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder autoRenew(Boolean autoRenew) {
                 this.autoRenew = autoRenew;
@@ -2596,7 +2826,12 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * AutoRenewPeriod.
+             * <p>The auto-renewal period of the instance. Valid values:</p>
+             * <p>Valid values when PeriodUnit is set to Month: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</p>
+             * <p>Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder autoRenewPeriod(Integer autoRenewPeriod) {
                 this.autoRenewPeriod = autoRenewPeriod;
@@ -2604,7 +2839,19 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * Period.
+             * ImageOptions.
+             */
+            public Builder imageOptions(ImageOptions imageOptions) {
+                this.imageOptions = imageOptions;
+                return this;
+            }
+
+            /**
+             * <p>The subscription period of the instance. The unit is specified by <code>PeriodUnit</code>. This parameter takes effect and is required only if the subscription billing method is selected. Valid values:</p>
+             * <p>Valid values if PeriodUnit is set to Month: 1, 2, 3, 6, and 12.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder period(Integer period) {
                 this.period = period;
@@ -2612,10 +2859,30 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * PeriodUnit.
+             * <p>The unit of the subscription period. Default value: Month. Valid values:</p>
+             * <p>Month</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Month</p>
              */
             public Builder periodUnit(String periodUnit) {
                 this.periodUnit = periodUnit;
+                return this;
+            }
+
+            /**
+             * SpotDuration.
+             */
+            public Builder spotDuration(Integer spotDuration) {
+                this.spotDuration = spotDuration;
+                return this;
+            }
+
+            /**
+             * SpotInterruptionBehavior.
+             */
+            public Builder spotInterruptionBehavior(String spotInterruptionBehavior) {
+                this.spotInterruptionBehavior = spotInterruptionBehavior;
                 return this;
             }
 
@@ -2657,6 +2924,13 @@ public class CreateAutoProvisioningGroupRequest extends Request {
 
         public static final class Builder {
             private String diskCategory; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataDiskConfig model) {
+                this.diskCategory = model.diskCategory;
+            } 
 
             /**
              * <p>The category of data disk N. You can use this parameter to specify multiple disk categories, and the disk categories are prioritized in the order in which they are specified. If a specified disk category is unavailable, the system uses the next available disk category. Valid values:</p>
@@ -2858,6 +3132,25 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             private String vSwitchId; 
             private Double weightedCapacity; 
 
+            private Builder() {
+            } 
+
+            private Builder(LaunchTemplateConfig model) {
+                this.architectures = model.architectures;
+                this.burstablePerformance = model.burstablePerformance;
+                this.cores = model.cores;
+                this.excludedInstanceTypes = model.excludedInstanceTypes;
+                this.imageId = model.imageId;
+                this.instanceFamilyLevel = model.instanceFamilyLevel;
+                this.instanceType = model.instanceType;
+                this.maxPrice = model.maxPrice;
+                this.maxQuantity = model.maxQuantity;
+                this.memories = model.memories;
+                this.priority = model.priority;
+                this.vSwitchId = model.vSwitchId;
+                this.weightedCapacity = model.weightedCapacity;
+            } 
+
             /**
              * <p>The architectures of the instance types.</p>
              */
@@ -2869,7 +3162,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             /**
              * <p>Specifies whether to include burstable instance types. Valid values:</p>
              * <ul>
-             * <li>Exclude: does not include burstable instance types.</li>
+             * <li>Exclude: excludes burstable instance types.</li>
              * <li>Include: includes burstable instance types.</li>
              * <li>Required: includes only burstable instance types.</li>
              * </ul>
@@ -2884,7 +3177,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * <p>The number of vCPU cores of the instance type.</p>
+             * <p>The numbers of vCPUs of instance types.</p>
              */
             public Builder cores(java.util.List<Integer> cores) {
                 this.cores = cores;
@@ -2900,10 +3193,10 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * <p>The ID of the image to be used to create the instance. You can call the <a href="https://help.aliyun.com/document_detail/25534.html">DescribeImages</a> operation to query available image resources. When both LaunchTemplateId and LaunchConfiguration.* parameters are specified, LaunchTemplateId takes precedence.</p>
+             * <p>The ID of the image. You can use this parameter to specify the image that is used by the current resource pool. If you do not specify this parameter, the image that is configured in <code>LaunchConfiguration.ImageId</code> or the launch template is used by default. You can call the <a href="https://help.aliyun.com/document_detail/25534.html">DescribeImages</a> operation to query the available images. Note: This parameter is supported only when <code>AutoProvisioningGroupType</code> is set to instant.</p>
              * 
              * <strong>example:</strong>
-             * <p>m-bp1g7004ksh0oeuc****</p>
+             * <p>aliyun_3_x64_20G_alibase_20210425.vhd</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -2911,11 +3204,11 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * <p>The instance family level of the instance type in extended configuration N. This parameter is used to filter instance types. Valid values:</p>
+             * <p>The instance family level of the instance type in extended configuration N. This parameter is used to filter instance types. Valid values of Nextended configuration N， Valid values:</p>
              * <ul>
-             * <li>EntryLevel: entry level (shared instance types). Instance types of this level are the most cost-effective but may not provide stable computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low. For more information, see <a href="https://help.aliyun.com/document_detail/108489.html">Shared instance families</a>.</li>
-             * <li>EnterpriseLevel: enterprise level. Instance types of this level provide stable performance and dedicated resources and are suitable for scenarios that require high stability. For more information, see the <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a> topic.</li>
-             * <li>CreditEntryLevel: credit entry level (burstable instance types). CPU credits are used to ensure computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low but may fluctuate in specific cases. For more information, see <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable instances</a>.</li>
+             * <li>EntryLevel: entry level (shared instance types). Instance types of this level are the most cost-effective but may not ensure stable computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low. For more information, see <a href="https://help.aliyun.com/document_detail/108489.html">Shared instance families</a>.</li>
+             * <li>EnterpriseLevel: enterprise level. Instance types of this level provide stable performance and dedicated resources and are suitable for business scenarios that require high stability. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</li>
+             * <li>CreditEntryLevel: credit entry level. This value is valid only for burstable instances. CPU credits are used to ensure computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low but may fluctuate in specific cases. For information about burstable instances, see <a href="https://help.aliyun.com/document_detail/59977.html">Overview</a>.</li>
              * </ul>
              * <p>Valid values of N: 1 to 10.</p>
              * 
@@ -2928,7 +3221,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * <p>The instance type in extended configuration N. Valid values of N: 1 to 20. For more information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</p>
+             * <p>The instance type in extended configuration N. Valid values of N: 1 to 20. For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>ecs.g5.large</p>
@@ -2941,7 +3234,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             /**
              * <p>The maximum price of preemptible instances in extended configuration N.</p>
              * <blockquote>
-             * <p> If you specify one or more other <code>LaunchTemplateConfig.N.*</code> parameters, you must also specify <code>LaunchTemplateConfig.N.MaxPrice</code>.</p>
+             * <p> If you specify one or more <code>LaunchTemplateConfig.N.*</code> parameters, you must also specify <code>LaunchTemplateConfig.N.MaxPrice</code>.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -2966,7 +3259,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * <p>The memory sizes of the instance type.</p>
+             * <p>The memory sizes of instance types.</p>
              */
             public Builder memories(java.util.List<Float> memories) {
                 this.memories = memories;
@@ -2987,7 +3280,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             /**
              * <p>The ID of the vSwitch in extended configuration N. The zone of the ECS instances created from the extended configuration is determined by the vSwitch.</p>
              * <blockquote>
-             * <p> If you specify one or more other <code>LaunchTemplateConfig.N.*</code> parameters, you must also specify <code>LaunchTemplateConfig.N.VSwitchId</code>.</p>
+             * <p> If you specify one or more <code>LaunchTemplateConfig.N.*</code> parameters, you must also specify <code>LaunchTemplateConfig.N.VSwitchId</code>.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -3065,8 +3358,16 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             private java.util.List<String> instanceTypes; 
             private Integer minTargetCapacity; 
 
+            private Builder() {
+            } 
+
+            private Builder(SpecifyCapacityDistribution model) {
+                this.instanceTypes = model.instanceTypes;
+                this.minTargetCapacity = model.minTargetCapacity;
+            } 
+
             /**
-             * InstanceTypes.
+             * <p>Details about the instance types. Duplicate instance types are not allowed and the instance types are within the LaunchTemplateConfig.InstanceType range.</p>
              */
             public Builder instanceTypes(java.util.List<String> instanceTypes) {
                 this.instanceTypes = instanceTypes;
@@ -3074,15 +3375,13 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * <p>The minimum target capacity of the auto provisioning group. The value must be a positive integer. When you specify this parameter, take note of the following items:</p>
-             * <ul>
-             * <li>This parameter takes effect only when <code>AutoProvisioningGroupType</code> is set to instant. </li>
-             * <li>If the number of instances that can be created in the current region is smaller than the value of this parameter, the operation cannot be called and no instances are created. </li>
-             * <li>If the number of instances that can be created in the current region is greater than the value of this parameter, instances can be created based on the specified parameters.</li>
-             * </ul>
+             * <p>The minimum number of instances to be delivered within the <code>InstanceTypes</code> range.</p>
+             * <blockquote>
+             * <p> <code>sum(MinTargetCapacity)&lt;= TotalTargetCapacity</code> indicates that the sum of MinTargetCapacity values of all instance types cannot exceed the TotalTargetCapacity value. If any instance type set cannot meet the MinTargetCapacity requirement due to insufficient inventory or other reasons, the entire request fails.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
-             * <p>20</p>
+             * <p>5</p>
              */
             public Builder minTargetCapacity(Integer minTargetCapacity) {
                 this.minTargetCapacity = minTargetCapacity;
@@ -3128,8 +3427,15 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         public static final class Builder {
             private java.util.List<SpecifyCapacityDistribution> specifyCapacityDistribution; 
 
+            private Builder() {
+            } 
+
+            private Builder(PrePaidOptions model) {
+                this.specifyCapacityDistribution = model.specifyCapacityDistribution;
+            } 
+
             /**
-             * SpecifyCapacityDistribution.
+             * <p>The minimum capacity set for different instance types. This parameter is valid only when <code>AutoProvisioningGroupType</code> is set to request.</p>
              */
             public Builder specifyCapacityDistribution(java.util.List<SpecifyCapacityDistribution> specifyCapacityDistribution) {
                 this.specifyCapacityDistribution = specifyCapacityDistribution;
@@ -3186,6 +3492,14 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         public static final class Builder {
             private java.util.List<String> privatePoolIds; 
             private String strategy; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourcePoolOptions model) {
+                this.privatePoolIds = model.privatePoolIds;
+                this.strategy = model.strategy;
+            } 
 
             /**
              * <p>The IDs of private pools. The ID of a private pool is the same as the ID of the elasticity assurance or capacity reservation that is associated with the private pool. You can specify the IDs of only targeted private pools for this parameter.</p>
@@ -3250,6 +3564,13 @@ public class CreateAutoProvisioningGroupRequest extends Request {
 
         public static final class Builder {
             private String diskCategory; 
+
+            private Builder() {
+            } 
+
+            private Builder(SystemDiskConfig model) {
+                this.diskCategory = model.diskCategory;
+            } 
 
             /**
              * <p>The category of the system disk. You can specify multiple disk categories, and the disk categories are prioritized in the order in which they are specified. If a specified disk category is unavailable, the system uses the next available disk category. Valid values:</p>
@@ -3318,6 +3639,14 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of tag N to add to the auto provisioning group.</p>

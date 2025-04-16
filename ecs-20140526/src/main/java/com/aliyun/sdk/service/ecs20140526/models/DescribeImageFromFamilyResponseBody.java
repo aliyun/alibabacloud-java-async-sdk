@@ -36,6 +36,10 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return image
      */
@@ -53,6 +57,14 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
     public static final class Builder {
         private Image image; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeImageFromFamilyResponseBody model) {
+            this.image = model.image;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The image information.</p>
@@ -183,6 +195,19 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
             private String snapshotId; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(DiskDeviceMapping model) {
+                this.device = model.device;
+                this.format = model.format;
+                this.importOSSBucket = model.importOSSBucket;
+                this.importOSSObject = model.importOSSObject;
+                this.size = model.size;
+                this.snapshotId = model.snapshotId;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The device name of the disk. Example: /dev/xvdb.</p>
              * <blockquote>
@@ -302,6 +327,13 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<DiskDeviceMapping> diskDeviceMapping; 
 
+            private Builder() {
+            } 
+
+            private Builder(DiskDeviceMappings model) {
+                this.diskDeviceMapping = model.diskDeviceMapping;
+            } 
+
             /**
              * DiskDeviceMapping.
              */
@@ -360,6 +392,14 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
         public static final class Builder {
             private String tagKey; 
             private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
 
             /**
              * <p>The tag key of the custom image.</p>
@@ -421,6 +461,13 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
@@ -732,6 +779,35 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
             private String status; 
             private Tags tags; 
             private String usage; 
+
+            private Builder() {
+            } 
+
+            private Builder(Image model) {
+                this.architecture = model.architecture;
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.diskDeviceMappings = model.diskDeviceMappings;
+                this.imageFamily = model.imageFamily;
+                this.imageId = model.imageId;
+                this.imageName = model.imageName;
+                this.imageOwnerAlias = model.imageOwnerAlias;
+                this.imageVersion = model.imageVersion;
+                this.isCopied = model.isCopied;
+                this.isSelfShared = model.isSelfShared;
+                this.isSubscribed = model.isSubscribed;
+                this.isSupportCloudinit = model.isSupportCloudinit;
+                this.isSupportIoOptimized = model.isSupportIoOptimized;
+                this.OSName = model.OSName;
+                this.OSType = model.OSType;
+                this.platform = model.platform;
+                this.productCode = model.productCode;
+                this.progress = model.progress;
+                this.size = model.size;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.usage = model.usage;
+            } 
 
             /**
              * <p>The architecture of the image. Valid values:</p>

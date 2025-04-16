@@ -52,6 +52,10 @@ public class DescribeActivationsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return activationList
      */
@@ -101,6 +105,18 @@ public class DescribeActivationsResponseBody extends TeaModel {
         private Long pageSize; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeActivationsResponseBody model) {
+            this.activationList = model.activationList;
+            this.nextToken = model.nextToken;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The activation codes and their usage information.</p>
@@ -214,6 +230,14 @@ public class DescribeActivationsResponseBody extends TeaModel {
         public static final class Builder {
             private String tagKey; 
             private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
 
             /**
              * <p>The tag key of the activation code.</p>
@@ -407,6 +431,24 @@ public class DescribeActivationsResponseBody extends TeaModel {
             private String resourceGroupId; 
             private java.util.List<Tags> tags; 
             private Long timeToLiveInHours; 
+
+            private Builder() {
+            } 
+
+            private Builder(ActivationList model) {
+                this.activationId = model.activationId;
+                this.creationTime = model.creationTime;
+                this.deregisteredCount = model.deregisteredCount;
+                this.description = model.description;
+                this.disabled = model.disabled;
+                this.instanceCount = model.instanceCount;
+                this.instanceName = model.instanceName;
+                this.ipAddressRange = model.ipAddressRange;
+                this.registeredCount = model.registeredCount;
+                this.resourceGroupId = model.resourceGroupId;
+                this.tags = model.tags;
+                this.timeToLiveInHours = model.timeToLiveInHours;
+            } 
 
             /**
              * <p>The ID of the activation code.</p>

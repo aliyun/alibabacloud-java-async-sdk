@@ -36,6 +36,10 @@ public class CreateCapacityReservationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return privatePoolOptionsId
      */
@@ -53,6 +57,14 @@ public class CreateCapacityReservationResponseBody extends TeaModel {
     public static final class Builder {
         private String privatePoolOptionsId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateCapacityReservationResponseBody model) {
+            this.privatePoolOptionsId = model.privatePoolOptionsId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The capacity reservation ID.</p>

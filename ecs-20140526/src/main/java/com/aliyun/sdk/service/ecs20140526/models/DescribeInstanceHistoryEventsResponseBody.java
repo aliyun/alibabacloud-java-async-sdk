@@ -52,6 +52,10 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceSystemEventSet
      */
@@ -102,6 +106,18 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceHistoryEventsResponseBody model) {
+            this.instanceSystemEventSet = model.instanceSystemEventSet;
+            this.nextToken = model.nextToken;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
          * <p>Details about the instance system events.</p>
          */
@@ -111,7 +127,10 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f1c9fa9de5752***</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -120,6 +139,14 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
 
         /**
          * <p>The page number.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>If MaxResults and NextToken are used to query results by page, ignore this parameter.</p>
+         * </li>
+         * <li><p>This parameter will be removed in the future. We recommend that you use the NextToken and MaxResults parameters for a paged query.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -131,6 +158,14 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
 
         /**
          * <p>The number of entries per page.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>If MaxResults and NextToken are used to query results by page, ignore this parameter.</p>
+         * </li>
+         * <li><p>This parameter will be removed in the future. We recommend that you use the NextToken and MaxResults parameters for a paged query.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -152,7 +187,10 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of instances returned.</p>
+         * <p>The total number of instances.</p>
+         * <blockquote>
+         * <p> If you specify the MaxResults and NextToken request parameters to perform a paged query, the value of the TotalCount response parameter is invalid.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -211,6 +249,14 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         public static final class Builder {
             private Integer code; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(EventCycleStatus model) {
+                this.code = model.code;
+                this.name = model.name;
+            } 
 
             /**
              * <p>The state code of the system event.</p>
@@ -284,6 +330,14 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         public static final class Builder {
             private Integer code; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(EventType model) {
+                this.code = model.code;
+                this.name = model.name;
+            } 
 
             /**
              * <p>The code of the system event type.</p>
@@ -394,6 +448,17 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             private String deviceType; 
             private String releaseTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(InactiveDisk model) {
+                this.creationTime = model.creationTime;
+                this.deviceCategory = model.deviceCategory;
+                this.deviceSize = model.deviceSize;
+                this.deviceType = model.deviceType;
+                this.releaseTime = model.releaseTime;
+            } 
+
             /**
              * <p>The time when the disk was created. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
              * 
@@ -502,6 +567,13 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<InactiveDisk> inactiveDisk; 
 
+            private Builder() {
+            } 
+
+            private Builder(InactiveDisks model) {
+                this.inactiveDisk = model.inactiveDisk;
+            } 
+
             /**
              * InactiveDisk.
              */
@@ -548,6 +620,13 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> migrationOption; 
+
+            private Builder() {
+            } 
+
+            private Builder(MigrationOptions model) {
+                this.migrationOption = model.migrationOption;
+            } 
 
             /**
              * MigrationOption.
@@ -751,6 +830,26 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             private String punishUrl; 
             private String rack; 
             private String responseResult; 
+
+            private Builder() {
+            } 
+
+            private Builder(ExtendedAttribute model) {
+                this.canAccept = model.canAccept;
+                this.code = model.code;
+                this.device = model.device;
+                this.diskId = model.diskId;
+                this.hostId = model.hostId;
+                this.hostType = model.hostType;
+                this.inactiveDisks = model.inactiveDisks;
+                this.migrationOptions = model.migrationOptions;
+                this.onlineRepairPolicy = model.onlineRepairPolicy;
+                this.punishDomain = model.punishDomain;
+                this.punishType = model.punishType;
+                this.punishUrl = model.punishUrl;
+                this.rack = model.rack;
+                this.responseResult = model.responseResult;
+            } 
 
             /**
              * <p>Indicates whether the event can be handled.</p>
@@ -1079,6 +1178,24 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             private String reasonCode; 
             private String resourceType; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceSystemEventType model) {
+                this.eventCycleStatus = model.eventCycleStatus;
+                this.eventFinishTime = model.eventFinishTime;
+                this.eventId = model.eventId;
+                this.eventPublishTime = model.eventPublishTime;
+                this.eventType = model.eventType;
+                this.extendedAttribute = model.extendedAttribute;
+                this.impactLevel = model.impactLevel;
+                this.instanceId = model.instanceId;
+                this.notBefore = model.notBefore;
+                this.reason = model.reason;
+                this.reasonCode = model.reasonCode;
+                this.resourceType = model.resourceType;
+            } 
+
             /**
              * <p>The lifecycle status of the system event.</p>
              */
@@ -1245,6 +1362,13 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<InstanceSystemEventType> instanceSystemEventType; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceSystemEventSet model) {
+                this.instanceSystemEventType = model.instanceSystemEventType;
+            } 
 
             /**
              * InstanceSystemEventType.

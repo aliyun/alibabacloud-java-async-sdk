@@ -40,6 +40,10 @@ public class RenewElasticityAssurancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return orderId
      */
@@ -65,6 +69,15 @@ public class RenewElasticityAssurancesResponseBody extends TeaModel {
         private String orderId; 
         private PrivatePoolOptionsIdSet privatePoolOptionsIdSet; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(RenewElasticityAssurancesResponseBody model) {
+            this.orderId = model.orderId;
+            this.privatePoolOptionsIdSet = model.privatePoolOptionsIdSet;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the renewal order.</p>
@@ -133,6 +146,13 @@ public class RenewElasticityAssurancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> privatePoolOptionsId; 
+
+            private Builder() {
+            } 
+
+            private Builder(PrivatePoolOptionsIdSet model) {
+                this.privatePoolOptionsId = model.privatePoolOptionsId;
+            } 
 
             /**
              * PrivatePoolOptionsId.

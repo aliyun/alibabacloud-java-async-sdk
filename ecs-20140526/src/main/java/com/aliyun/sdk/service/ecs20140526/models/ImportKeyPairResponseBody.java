@@ -40,6 +40,10 @@ public class ImportKeyPairResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return keyPairFingerPrint
      */
@@ -65,6 +69,15 @@ public class ImportKeyPairResponseBody extends TeaModel {
         private String keyPairFingerPrint; 
         private String keyPairName; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ImportKeyPairResponseBody model) {
+            this.keyPairFingerPrint = model.keyPairFingerPrint;
+            this.keyPairName = model.keyPairName;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The fingerprint of the key pair. The MD5 message-digest algorithm is used based on the public key fingerprint format defined in RFC 4716.</p>

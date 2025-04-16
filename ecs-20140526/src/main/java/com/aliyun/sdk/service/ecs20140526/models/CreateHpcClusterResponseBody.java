@@ -36,6 +36,10 @@ public class CreateHpcClusterResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return hpcClusterId
      */
@@ -53,6 +57,14 @@ public class CreateHpcClusterResponseBody extends TeaModel {
     public static final class Builder {
         private String hpcClusterId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateHpcClusterResponseBody model) {
+            this.hpcClusterId = model.hpcClusterId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of cluster.</p>

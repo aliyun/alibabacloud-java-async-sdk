@@ -52,6 +52,10 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return invocations
      */
@@ -101,6 +105,18 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
         private Long pageSize; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSendFileResultsResponseBody model) {
+            this.invocations = model.invocations;
+            this.nextToken = model.nextToken;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The file sending records.</p>
@@ -287,6 +303,20 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             private String startTime; 
             private String updateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(InvokeInstance model) {
+                this.creationTime = model.creationTime;
+                this.errorCode = model.errorCode;
+                this.errorInfo = model.errorInfo;
+                this.finishTime = model.finishTime;
+                this.instanceId = model.instanceId;
+                this.invocationStatus = model.invocationStatus;
+                this.startTime = model.startTime;
+                this.updateTime = model.updateTime;
+            } 
+
             /**
              * <p>The creation time of the file sending task.</p>
              * 
@@ -465,6 +495,13 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<InvokeInstance> invokeInstance; 
 
+            private Builder() {
+            } 
+
+            private Builder(InvokeInstances model) {
+                this.invokeInstance = model.invokeInstance;
+            } 
+
             /**
              * InvokeInstance.
              */
@@ -523,6 +560,14 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
         public static final class Builder {
             private String tagKey; 
             private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
 
             /**
              * <p>The tag key of the file sending task.</p>
@@ -584,6 +629,13 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
@@ -799,6 +851,27 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             private Tags tags; 
             private String targetDir; 
             private Integer vmCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Invocation model) {
+                this.content = model.content;
+                this.contentType = model.contentType;
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.fileGroup = model.fileGroup;
+                this.fileMode = model.fileMode;
+                this.fileOwner = model.fileOwner;
+                this.invocationStatus = model.invocationStatus;
+                this.invokeId = model.invokeId;
+                this.invokeInstances = model.invokeInstances;
+                this.name = model.name;
+                this.overwrite = model.overwrite;
+                this.tags = model.tags;
+                this.targetDir = model.targetDir;
+                this.vmCount = model.vmCount;
+            } 
 
             /**
              * <p>The content of the file.</p>
@@ -1020,6 +1093,13 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Invocation> invocation; 
+
+            private Builder() {
+            } 
+
+            private Builder(Invocations model) {
+                this.invocation = model.invocation;
+            } 
 
             /**
              * Invocation.

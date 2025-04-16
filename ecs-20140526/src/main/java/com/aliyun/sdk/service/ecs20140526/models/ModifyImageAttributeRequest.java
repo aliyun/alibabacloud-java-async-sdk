@@ -101,7 +101,7 @@ public class ModifyImageAttributeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -463,6 +463,14 @@ public class ModifyImageAttributeRequest extends Request {
         public static final class Builder {
             private String imdsSupport; 
             private String nvmeSupport; 
+
+            private Builder() {
+            } 
+
+            private Builder(Features model) {
+                this.imdsSupport = model.imdsSupport;
+                this.nvmeSupport = model.nvmeSupport;
+            } 
 
             /**
              * <p>The image metadata access mode. Valid values:</p>

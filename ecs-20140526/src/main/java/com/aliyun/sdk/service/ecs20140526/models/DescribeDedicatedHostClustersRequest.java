@@ -106,7 +106,7 @@ public class DescribeDedicatedHostClustersRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -336,8 +336,8 @@ public class DescribeDedicatedHostClustersRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
-         * <p>Maximum value: 100.</p>
+         * <p>The number of entries to return on each page.</p>
+         * <p>Valid values: 1 to 100.</p>
          * <p>Default value: 10.</p>
          * 
          * <strong>example:</strong>
@@ -480,6 +480,14 @@ public class DescribeDedicatedHostClustersRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 64 characters in length, and can neither contain <code>http://</code> or <code>https://</code> nor <code>acs:</code> or <code>aliyun</code>.</p>

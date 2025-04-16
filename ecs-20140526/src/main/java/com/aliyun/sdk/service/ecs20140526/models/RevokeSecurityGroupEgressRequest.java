@@ -171,7 +171,7 @@ public class RevokeSecurityGroupEgressRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -571,7 +571,7 @@ public class RevokeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * <p>An array of security group rules. You can specify 1 to 100 security group rules.</p>
+         * <p>The content of security group rules. You can specify up to 100 security group rules.</p>
          */
         public Builder permissions(java.util.List<Permissions> permissions) {
             this.putQueryParameter("Permissions", permissions);
@@ -742,6 +742,9 @@ public class RevokeSecurityGroupEgressRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("PortRange")
         private String portRange;
 
+        @com.aliyun.core.annotation.NameInMap("PortRangeListId")
+        private String portRangeListId;
+
         @com.aliyun.core.annotation.NameInMap("Priority")
         private String priority;
 
@@ -764,6 +767,7 @@ public class RevokeSecurityGroupEgressRequest extends Request {
             this.nicType = builder.nicType;
             this.policy = builder.policy;
             this.portRange = builder.portRange;
+            this.portRangeListId = builder.portRangeListId;
             this.priority = builder.priority;
             this.sourceCidrIp = builder.sourceCidrIp;
             this.sourcePortRange = builder.sourcePortRange;
@@ -862,6 +866,13 @@ public class RevokeSecurityGroupEgressRequest extends Request {
         }
 
         /**
+         * @return portRangeListId
+         */
+        public String getPortRangeListId() {
+            return this.portRangeListId;
+        }
+
+        /**
          * @return priority
          */
         public String getPriority() {
@@ -895,9 +906,32 @@ public class RevokeSecurityGroupEgressRequest extends Request {
             private String nicType; 
             private String policy; 
             private String portRange; 
+            private String portRangeListId; 
             private String priority; 
             private String sourceCidrIp; 
             private String sourcePortRange; 
+
+            private Builder() {
+            } 
+
+            private Builder(Permissions model) {
+                this.description = model.description;
+                this.destCidrIp = model.destCidrIp;
+                this.destGroupId = model.destGroupId;
+                this.destGroupOwnerAccount = model.destGroupOwnerAccount;
+                this.destGroupOwnerId = model.destGroupOwnerId;
+                this.destPrefixListId = model.destPrefixListId;
+                this.ipProtocol = model.ipProtocol;
+                this.ipv6DestCidrIp = model.ipv6DestCidrIp;
+                this.ipv6SourceCidrIp = model.ipv6SourceCidrIp;
+                this.nicType = model.nicType;
+                this.policy = model.policy;
+                this.portRange = model.portRange;
+                this.portRangeListId = model.portRangeListId;
+                this.priority = model.priority;
+                this.sourceCidrIp = model.sourceCidrIp;
+                this.sourcePortRange = model.sourcePortRange;
+            } 
 
             /**
              * <p>The description of the security group rule. The description must be 1 to 512 characters in length.</p>
@@ -922,15 +956,15 @@ public class RevokeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * <p>The ID of the destination security group from which you want to remove access control configurations.</p>
+             * <p>The ID of the destination security group of the security group rule.</p>
              * <ul>
              * <li>You must specify at least one of the following parameters: <code>DestGroupId</code>, <code>DestCidrIp</code>, <code>Ipv6DestCidrIp</code>, and <code>DestPrefixListId</code>.</li>
              * <li>If you specify <code>DestGroupId</code> but do not specify <code>DestCidrIp</code>, you must set <code>NicType</code> to intranet.</li>
              * <li>If you specify both <code>DestGroupId</code> and <code>DestCidrIp</code>, <code>DestCidrIp</code> takes precedence.</li>
              * </ul>
-             * <p>When you call this operation, take note of the following items:</p>
+             * <p>Take note of the following items:</p>
              * <ul>
-             * <li>Advanced security groups do not support security group rules that reference security groups as authorization objects.</li>
+             * <li>Advanced security groups do not support security group rules that reference security groups as authorization objects (sources or destinations of traffic).</li>
              * <li>Each basic security group can contain up to 20 security group rules that reference security groups as authorization objects.</li>
              * </ul>
              * 
@@ -945,8 +979,8 @@ public class RevokeSecurityGroupEgressRequest extends Request {
             /**
              * <p>The Alibaba Cloud account that manages the destination security group specified in the security group rule.</p>
              * <ul>
-             * <li>If both <code>DestGroupOwnerAccount</code> and <code>DestGroupOwnerId</code> are empty, access control configurations are removed from another security group managed by your Alibaba Cloud account.</li>
-             * <li>If you specify <code>DestCidrIp</code>, <code>DestGroupOwnerAccount</code> is ignored.</li>
+             * <li>If you leave <code>DestGroupOwnerAccount</code> and <code>DestGroupOwnerId</code> empty, access control configurations are removed from another security group managed by your Alibaba Cloud account.</li>
+             * <li>If you specify <code>DestCidrIp</code>, <code>DestGroupOwnerAccount</code> is invalid.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -960,7 +994,7 @@ public class RevokeSecurityGroupEgressRequest extends Request {
             /**
              * <p>The ID of the Alibaba Cloud account that manages the destination security group specified in the security group rule.</p>
              * <ul>
-             * <li>If both <code>DestGroupOwnerId</code> and <code>DestGroupOwnerAccount</code> are empty, access control configurations are removed from another security group managed by your Alibaba Cloud account.</li>
+             * <li>If you leave <code>DestGroupOwnerId</code> and <code>DestGroupOwnerAccount</code> empty, access control configurations are removed from another security group managed by your Alibaba Cloud account.</li>
              * <li>If you specify <code>DestCidrIp</code>, <code>DestGroupOwnerId</code> is invalid.</li>
              * </ul>
              * 
@@ -974,7 +1008,7 @@ public class RevokeSecurityGroupEgressRequest extends Request {
 
             /**
              * <p>The ID of the destination prefix list of the security group rule. You can call the <a href="https://help.aliyun.com/document_detail/205046.html">DescribePrefixLists</a> operation to query the IDs of available prefix lists.</p>
-             * <p>When you specify this parameter, take note of the following items:</p>
+             * <p>Take note of the following items:</p>
              * <ul>
              * <li>If a security group resides in the classic network, you cannot specify prefix lists in the rules of the security group. For information about the limits on security groups and prefix lists, see the <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a> section of the &quot;Limits and quotas&quot; topic.</li>
              * <li>If you specify <code>DestCidrIp</code>, <code>Ipv6DestCidrIp</code>, or <code>DestGroupId</code>, this parameter is ignored.</li>
@@ -1022,7 +1056,7 @@ public class RevokeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * <p>The source IPv6 CIDR block or IPv6 address.</p>
+             * <p>The source IPv6 CIDR block of the security group rule. IPv6 CIDR blocks and IPv6 addresses are supported.</p>
              * <p>This parameter is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</p>
              * <blockquote>
              * <p> This parameter is valid only for ECS instances that reside in VPCs and support IPv6 CIDR blocks. You cannot specify both this parameter and <code>DestCidrIp</code> in the same request.</p>
@@ -1043,7 +1077,7 @@ public class RevokeSecurityGroupEgressRequest extends Request {
              * <li>intranet: internal NIC.</li>
              * </ul>
              * <p>If the security group resides in a VPC, this parameter is set to intranet by default and cannot be modified.</p>
-             * <p>If you specify only <code>SourceGroupId</code> when you remove access control configurations between security groups, you must set this parameter to intranet.</p>
+             * <p>If you specify <code>DestGroupId</code> to delete outbound security group rules that reference the specified security group as an authorization object, you must set this parameter to intranet.</p>
              * <p>Default value: internet.</p>
              * 
              * <strong>example:</strong>
@@ -1071,12 +1105,12 @@ public class RevokeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * <p>The range of destination port numbers for the protocols specified in the security group rule. Valid values:</p>
+             * <p>The destination port range of the security group rule. Valid values:</p>
              * <ul>
-             * <li>If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Specify a port number range in the format of &lt;Start port number&gt;/&lt;End port number&gt;. Example: 1/200.</li>
-             * <li>If you set IpProtocol to ICMP, the port number range is -1/-1.</li>
-             * <li>If you set IpProtocol to GRE, the port number range is -1/-1.</li>
-             * <li>If you set IpProtocol to ALL, the port number range is -1/-1, which indicates all port numbers.</li>
+             * <li>If you set IpProtocol to TCP or UDP, the valid values of this parameter are 1 to 65535. Specify a port range in the format of &lt;Start port number&gt;/&lt;End port number&gt;. Example: 1/200.</li>
+             * <li>If you set IpProtocol to ICMP, the port range is -1/-1.</li>
+             * <li>If you set IpProtocol to GRE, the port range is -1/-1.</li>
+             * <li>If you set IpProtocol to ALL, the port range is -1/-1.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1084,6 +1118,14 @@ public class RevokeSecurityGroupEgressRequest extends Request {
              */
             public Builder portRange(String portRange) {
                 this.portRange = portRange;
+                return this;
+            }
+
+            /**
+             * PortRangeListId.
+             */
+            public Builder portRangeListId(String portRangeListId) {
+                this.portRangeListId = portRangeListId;
                 return this;
             }
 
@@ -1100,7 +1142,7 @@ public class RevokeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * <p>The source IPv4 CIDR block. IPv4 CIDR blocks and IPv4 addresses are supported.</p>
+             * <p>The source IPv4 CIDR block of the security group rule. IPv4 CIDR blocks and IPv4 addresses are supported.</p>
              * <p>This parameter is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</p>
              * 
              * <strong>example:</strong>
@@ -1112,14 +1154,14 @@ public class RevokeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * <p>The range of source port numbers for the protocols specified in the security group rule. Valid values:</p>
+             * <p>The source port range of the security group rule. Valid values:</p>
              * <ul>
-             * <li>If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Specify a port number range in the format of &lt;Start port number&gt;/&lt;End port number&gt;. Example: 1/200.</li>
-             * <li>If you set IpProtocol to ICMP, the port number range is -1/-1.</li>
-             * <li>If you set IpProtocol to GRE, the port number range is -1/-1.</li>
-             * <li>If you set IpProtocol to ALL, the port number range is -1/-1, which indicates all port numbers.</li>
+             * <li>If you set IpProtocol to TCP or UDP, the valid values of this parameter are 1 to 65535. Specify a port range in the format of &lt;Start port number&gt;/&lt;End port number&gt;. Example: 1/200.</li>
+             * <li>If you set IpProtocol to ICMP, the port range is -1/-1.</li>
+             * <li>If you set IpProtocol to GRE, the port range is -1/-1.</li>
+             * <li>If you set IpProtocol to ALL, the port range is -1/-1.</li>
              * </ul>
-             * <p>This property is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</p>
+             * <p>This parameter is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>22/22</p>

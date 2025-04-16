@@ -44,6 +44,10 @@ public class ImportImageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return imageId
      */
@@ -77,6 +81,16 @@ public class ImportImageResponseBody extends TeaModel {
         private String regionId; 
         private String requestId; 
         private String taskId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ImportImageResponseBody model) {
+            this.imageId = model.imageId;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+            this.taskId = model.taskId;
+        } 
 
         /**
          * <p>The image ID.</p>

@@ -116,7 +116,7 @@ public class DescribeElasticityAssurancesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -329,7 +329,7 @@ public class DescribeElasticityAssurancesRequest extends Request {
 
         /**
          * <p>The maximum number of entries per page.</p>
-         * <p>Maximum value: 100.</p>
+         * <p>Valid values: 1 to 100.</p>
          * <p>Default value: 10.</p>
          * 
          * <strong>example:</strong>
@@ -378,7 +378,7 @@ public class DescribeElasticityAssurancesRequest extends Request {
          * <li>TimeDivisionElasticityAssurance: the time-segmented elasticity assurance. RecurrenceRules is specified for a time-segmented assurance.</li>
          * </ul>
          * <blockquote>
-         * <p> The time-segmented assurance of the elasticity assurance is available only in specific regions and to specific users. To use this feature, <a href="https://smartservice.console.aliyun.com/service/create-ticket-intl">submit a ticket</a>.</p>
+         * <p> Time-segmented elasticity assurances are available only in specific regions and to specific users. To use time-segmented elasticity assurances, <a href="https://smartservice.console.aliyun.com/service/create-ticket-intl">submit a ticket</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -531,6 +531,13 @@ public class DescribeElasticityAssurancesRequest extends Request {
         public static final class Builder {
             private String ids; 
 
+            private Builder() {
+            } 
+
+            private Builder(PrivatePoolOptions model) {
+                this.ids = model.ids;
+            } 
+
             /**
              * <p>The IDs of the elasticity assurances. The value can be a JSON array that consists of up to 100 elasticity assurance IDs. Separate the IDs with commas (,).</p>
              * 
@@ -592,6 +599,14 @@ public class DescribeElasticityAssurancesRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of tag N. Valid values of N: 1 to 20.</p>

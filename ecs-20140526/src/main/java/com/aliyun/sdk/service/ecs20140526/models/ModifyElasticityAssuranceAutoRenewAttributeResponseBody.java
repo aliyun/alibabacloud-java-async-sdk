@@ -32,6 +32,10 @@ public class ModifyElasticityAssuranceAutoRenewAttributeResponseBody extends Tea
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -41,6 +45,13 @@ public class ModifyElasticityAssuranceAutoRenewAttributeResponseBody extends Tea
 
     public static final class Builder {
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyElasticityAssuranceAutoRenewAttributeResponseBody model) {
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The request ID.</p>

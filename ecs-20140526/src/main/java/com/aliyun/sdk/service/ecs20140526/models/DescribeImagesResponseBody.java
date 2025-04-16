@@ -52,6 +52,10 @@ public class DescribeImagesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return images
      */
@@ -101,6 +105,18 @@ public class DescribeImagesResponseBody extends TeaModel {
         private String regionId; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeImagesResponseBody model) {
+            this.images = model.images;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The information of the images.</p>
@@ -239,6 +255,16 @@ public class DescribeImagesResponseBody extends TeaModel {
             private String riskLevel; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Item model) {
+                this.name = model.name;
+                this.riskCode = model.riskCode;
+                this.riskLevel = model.riskLevel;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The name of the check item.</p>
              * 
@@ -327,6 +353,13 @@ public class DescribeImagesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Item> item; 
 
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.item = model.item;
+            } 
+
             /**
              * Item.
              */
@@ -385,6 +418,14 @@ public class DescribeImagesResponseBody extends TeaModel {
         public static final class Builder {
             private Items items; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(DetectionOptions model) {
+                this.items = model.items;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The check items.</p>
@@ -556,6 +597,22 @@ public class DescribeImagesResponseBody extends TeaModel {
             private String snapshotId; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(DiskDeviceMapping model) {
+                this.device = model.device;
+                this.encrypted = model.encrypted;
+                this.format = model.format;
+                this.importOSSBucket = model.importOSSBucket;
+                this.importOSSObject = model.importOSSObject;
+                this.progress = model.progress;
+                this.remainTime = model.remainTime;
+                this.size = model.size;
+                this.snapshotId = model.snapshotId;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The device name of the disk. Example: /dev/xvdb.</p>
              * 
@@ -707,6 +764,13 @@ public class DescribeImagesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<DiskDeviceMapping> diskDeviceMapping; 
 
+            private Builder() {
+            } 
+
+            private Builder(DiskDeviceMappings model) {
+                this.diskDeviceMapping = model.diskDeviceMapping;
+            } 
+
             /**
              * DiskDeviceMapping.
              */
@@ -814,6 +878,18 @@ public class DescribeImagesResponseBody extends TeaModel {
             private String memoryOnlineUpgrade; 
             private String nvmeSupport; 
 
+            private Builder() {
+            } 
+
+            private Builder(Features model) {
+                this.cpuOnlineDowngrade = model.cpuOnlineDowngrade;
+                this.cpuOnlineUpgrade = model.cpuOnlineUpgrade;
+                this.imdsSupport = model.imdsSupport;
+                this.memoryOnlineDowngrade = model.memoryOnlineDowngrade;
+                this.memoryOnlineUpgrade = model.memoryOnlineUpgrade;
+                this.nvmeSupport = model.nvmeSupport;
+            } 
+
             /**
              * CpuOnlineDowngrade.
              */
@@ -836,6 +912,7 @@ public class DescribeImagesResponseBody extends TeaModel {
              * <li>v1: You cannot set the image metadata access mode to security hardening when you create instances from the image.</li>
              * <li>v2: You can set the image metadata access mode to security hardening when you create instances from the image.</li>
              * </ul>
+             * <p><a href="https://help.aliyun.com/document_detail/108460.html">Overview of instance metadata</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>v2</p>
@@ -927,6 +1004,14 @@ public class DescribeImagesResponseBody extends TeaModel {
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
              * <p>The tag key of the image.</p>
              * 
@@ -987,6 +1072,13 @@ public class DescribeImagesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
@@ -1407,6 +1499,44 @@ public class DescribeImagesResponseBody extends TeaModel {
             private Tags tags; 
             private String usage; 
 
+            private Builder() {
+            } 
+
+            private Builder(Image model) {
+                this.architecture = model.architecture;
+                this.bootMode = model.bootMode;
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.detectionOptions = model.detectionOptions;
+                this.diskDeviceMappings = model.diskDeviceMappings;
+                this.features = model.features;
+                this.imageFamily = model.imageFamily;
+                this.imageId = model.imageId;
+                this.imageName = model.imageName;
+                this.imageOwnerAlias = model.imageOwnerAlias;
+                this.imageOwnerId = model.imageOwnerId;
+                this.imageVersion = model.imageVersion;
+                this.isCopied = model.isCopied;
+                this.isPublic = model.isPublic;
+                this.isSelfShared = model.isSelfShared;
+                this.isSubscribed = model.isSubscribed;
+                this.isSupportCloudinit = model.isSupportCloudinit;
+                this.isSupportIoOptimized = model.isSupportIoOptimized;
+                this.loginAsNonRootSupported = model.loginAsNonRootSupported;
+                this.OSName = model.OSName;
+                this.OSNameEn = model.OSNameEn;
+                this.OSType = model.OSType;
+                this.platform = model.platform;
+                this.productCode = model.productCode;
+                this.progress = model.progress;
+                this.resourceGroupId = model.resourceGroupId;
+                this.size = model.size;
+                this.status = model.status;
+                this.supplierName = model.supplierName;
+                this.tags = model.tags;
+                this.usage = model.usage;
+            } 
+
             /**
              * <p>The architecture of the image. Valid values:</p>
              * <ul>
@@ -1479,7 +1609,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The attributes of the image.</p>
+             * <p>The feature attributes of the image.</p>
              */
             public Builder features(Features features) {
                 this.features = features;
@@ -1827,6 +1957,13 @@ public class DescribeImagesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Image> image; 
+
+            private Builder() {
+            } 
+
+            private Builder(Images model) {
+                this.image = model.image;
+            } 
 
             /**
              * Image.

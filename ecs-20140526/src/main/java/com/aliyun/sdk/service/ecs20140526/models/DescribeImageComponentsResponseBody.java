@@ -48,6 +48,10 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return imageComponent
      */
@@ -89,6 +93,17 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeImageComponentsResponseBody model) {
+            this.imageComponent = model.imageComponent;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The information about the image components.</p>
@@ -204,6 +219,15 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
             private String name; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Parameter model) {
+                this.defaultValue = model.defaultValue;
+                this.name = model.name;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The default value of the parameter.</p>
              * 
@@ -282,6 +306,13 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Parameter> parameter; 
 
+            private Builder() {
+            } 
+
+            private Builder(Parameters model) {
+                this.parameter = model.parameter;
+            } 
+
             /**
              * Parameter.
              */
@@ -340,6 +371,14 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
         public static final class Builder {
             private String tagKey; 
             private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
 
             /**
              * <p>The key of the tag.</p>
@@ -401,6 +440,13 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
@@ -581,6 +627,24 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
             private String systemType; 
             private Tags tags; 
 
+            private Builder() {
+            } 
+
+            private Builder(ImageComponentSet model) {
+                this.componentType = model.componentType;
+                this.componentVersion = model.componentVersion;
+                this.content = model.content;
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.imageComponentId = model.imageComponentId;
+                this.name = model.name;
+                this.owner = model.owner;
+                this.parameters = model.parameters;
+                this.resourceGroupId = model.resourceGroupId;
+                this.systemType = model.systemType;
+                this.tags = model.tags;
+            } 
+
             /**
              * <p>The type of the image component.</p>
              * 
@@ -749,6 +813,13 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ImageComponentSet> imageComponentSet; 
+
+            private Builder() {
+            } 
+
+            private Builder(ImageComponent model) {
+                this.imageComponentSet = model.imageComponentSet;
+            } 
 
             /**
              * ImageComponentSet.

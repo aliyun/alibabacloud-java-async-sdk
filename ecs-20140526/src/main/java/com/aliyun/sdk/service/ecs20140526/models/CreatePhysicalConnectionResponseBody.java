@@ -36,6 +36,10 @@ public class CreatePhysicalConnectionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return physicalConnectionId
      */
@@ -53,6 +57,14 @@ public class CreatePhysicalConnectionResponseBody extends TeaModel {
     public static final class Builder {
         private String physicalConnectionId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreatePhysicalConnectionResponseBody model) {
+            this.physicalConnectionId = model.physicalConnectionId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * PhysicalConnectionId.

@@ -36,6 +36,10 @@ public class DescribeSecurityGroupReferencesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeSecurityGroupReferencesResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private SecurityGroupReferences securityGroupReferences; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSecurityGroupReferencesResponseBody model) {
+            this.requestId = model.requestId;
+            this.securityGroupReferences = model.securityGroupReferences;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -123,6 +135,14 @@ public class DescribeSecurityGroupReferencesResponseBody extends TeaModel {
             private String aliUid; 
             private String securityGroupId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ReferencingSecurityGroup model) {
+                this.aliUid = model.aliUid;
+                this.securityGroupId = model.securityGroupId;
+            } 
+
             /**
              * <p>The ID of the Alibaba Cloud account to which the security group whose rules reference the specified security group belongs.</p>
              * 
@@ -184,6 +204,13 @@ public class DescribeSecurityGroupReferencesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<ReferencingSecurityGroup> referencingSecurityGroup; 
 
+            private Builder() {
+            } 
+
+            private Builder(ReferencingSecurityGroups model) {
+                this.referencingSecurityGroup = model.referencingSecurityGroup;
+            } 
+
             /**
              * ReferencingSecurityGroup.
              */
@@ -243,6 +270,14 @@ public class DescribeSecurityGroupReferencesResponseBody extends TeaModel {
             private ReferencingSecurityGroups referencingSecurityGroups; 
             private String securityGroupId; 
 
+            private Builder() {
+            } 
+
+            private Builder(SecurityGroupReference model) {
+                this.referencingSecurityGroups = model.referencingSecurityGroups;
+                this.securityGroupId = model.securityGroupId;
+            } 
+
             /**
              * <p>Details about the security groups whose rules reference the specified security group.</p>
              */
@@ -300,6 +335,13 @@ public class DescribeSecurityGroupReferencesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SecurityGroupReference> securityGroupReference; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecurityGroupReferences model) {
+                this.securityGroupReference = model.securityGroupReference;
+            } 
 
             /**
              * SecurityGroupReference.

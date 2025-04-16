@@ -44,6 +44,10 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return agentUpgradeConfig
      */
@@ -77,6 +81,16 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
         private OssDeliveryConfigs ossDeliveryConfigs; 
         private String requestId; 
         private SlsDeliveryConfigs slsDeliveryConfigs; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCloudAssistantSettingsResponseBody model) {
+            this.agentUpgradeConfig = model.agentUpgradeConfig;
+            this.ossDeliveryConfigs = model.ossDeliveryConfigs;
+            this.requestId = model.requestId;
+            this.slsDeliveryConfigs = model.slsDeliveryConfigs;
+        } 
 
         /**
          * <p>The configurations for upgrading Cloud Assistant Agent.</p>
@@ -151,6 +165,13 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> allowedUpgradeWindow; 
 
+            private Builder() {
+            } 
+
+            private Builder(AllowedUpgradeWindows model) {
+                this.allowedUpgradeWindow = model.allowedUpgradeWindow;
+            } 
+
             /**
              * AllowedUpgradeWindow.
              */
@@ -221,6 +242,15 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
             private AllowedUpgradeWindows allowedUpgradeWindows; 
             private Boolean enabled; 
             private String timeZone; 
+
+            private Builder() {
+            } 
+
+            private Builder(AgentUpgradeConfig model) {
+                this.allowedUpgradeWindows = model.allowedUpgradeWindows;
+                this.enabled = model.enabled;
+                this.timeZone = model.timeZone;
+            } 
 
             /**
              * <p>The time windows during which Cloud Assistant Agent can be upgraded.</p>
@@ -363,6 +393,19 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
             private String encryptionType; 
             private String prefix; 
 
+            private Builder() {
+            } 
+
+            private Builder(OssDeliveryConfig model) {
+                this.bucketName = model.bucketName;
+                this.deliveryType = model.deliveryType;
+                this.enabled = model.enabled;
+                this.encryptionAlgorithm = model.encryptionAlgorithm;
+                this.encryptionKeyId = model.encryptionKeyId;
+                this.encryptionType = model.encryptionType;
+                this.prefix = model.prefix;
+            } 
+
             /**
              * <p>The name of the OSS bucket.</p>
              * 
@@ -492,6 +535,13 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<OssDeliveryConfig> ossDeliveryConfig; 
 
+            private Builder() {
+            } 
+
+            private Builder(OssDeliveryConfigs model) {
+                this.ossDeliveryConfig = model.ossDeliveryConfig;
+            } 
+
             /**
              * OssDeliveryConfig.
              */
@@ -574,6 +624,16 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
             private Boolean enabled; 
             private String logstoreName; 
             private String projectName; 
+
+            private Builder() {
+            } 
+
+            private Builder(SlsDeliveryConfig model) {
+                this.deliveryType = model.deliveryType;
+                this.enabled = model.enabled;
+                this.logstoreName = model.logstoreName;
+                this.projectName = model.projectName;
+            } 
 
             /**
              * <p>The type of items to be delivered. Valid values:</p>
@@ -661,6 +721,13 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SlsDeliveryConfig> slsDeliveryConfig; 
+
+            private Builder() {
+            } 
+
+            private Builder(SlsDeliveryConfigs model) {
+                this.slsDeliveryConfig = model.slsDeliveryConfig;
+            } 
 
             /**
              * SlsDeliveryConfig.

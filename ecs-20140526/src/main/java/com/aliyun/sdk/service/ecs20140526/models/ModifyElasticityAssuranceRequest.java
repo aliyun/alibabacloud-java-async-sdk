@@ -80,7 +80,7 @@ public class ModifyElasticityAssuranceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -343,6 +343,14 @@ public class ModifyElasticityAssuranceRequest extends Request {
             private String id; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(PrivatePoolOptions model) {
+                this.id = model.id;
+                this.name = model.name;
+            } 
+
             /**
              * <p>The ID of the elasticity assurance.</p>
              * <p>This parameter is required.</p>
@@ -442,6 +450,16 @@ public class ModifyElasticityAssuranceRequest extends Request {
             private String recurrenceType; 
             private String recurrenceValue; 
             private Integer startHour; 
+
+            private Builder() {
+            } 
+
+            private Builder(RecurrenceRules model) {
+                this.endHour = model.endHour;
+                this.recurrenceType = model.recurrenceType;
+                this.recurrenceValue = model.recurrenceValue;
+                this.startHour = model.startHour;
+            } 
 
             /**
              * <p>The end time of the assurance period for the capacity reservation. Specify an on-the-hour point in time.</p>

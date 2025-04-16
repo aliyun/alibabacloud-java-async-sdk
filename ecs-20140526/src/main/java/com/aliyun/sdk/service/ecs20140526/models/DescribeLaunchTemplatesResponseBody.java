@@ -48,6 +48,10 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return launchTemplateSets
      */
@@ -89,6 +93,17 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeLaunchTemplatesResponseBody model) {
+            this.launchTemplateSets = model.launchTemplateSets;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The queried launch templates.</p>
@@ -192,6 +207,14 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
              * <p>The tag value of the launch template.</p>
              * 
@@ -252,6 +275,13 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
@@ -396,6 +426,21 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
             private String resourceGroupId; 
             private Tags tags; 
 
+            private Builder() {
+            } 
+
+            private Builder(LaunchTemplateSet model) {
+                this.createTime = model.createTime;
+                this.createdBy = model.createdBy;
+                this.defaultVersionNumber = model.defaultVersionNumber;
+                this.latestVersionNumber = model.latestVersionNumber;
+                this.launchTemplateId = model.launchTemplateId;
+                this.launchTemplateName = model.launchTemplateName;
+                this.modifiedTime = model.modifiedTime;
+                this.resourceGroupId = model.resourceGroupId;
+                this.tags = model.tags;
+            } 
+
             /**
              * <p>The time when the launch template was created.</p>
              * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
@@ -535,6 +580,13 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<LaunchTemplateSet> launchTemplateSet; 
+
+            private Builder() {
+            } 
+
+            private Builder(LaunchTemplateSets model) {
+                this.launchTemplateSet = model.launchTemplateSet;
+            } 
 
             /**
              * LaunchTemplateSet.

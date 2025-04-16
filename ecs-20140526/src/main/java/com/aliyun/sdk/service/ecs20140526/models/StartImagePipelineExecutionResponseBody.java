@@ -36,6 +36,10 @@ public class StartImagePipelineExecutionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return executionId
      */
@@ -53,6 +57,14 @@ public class StartImagePipelineExecutionResponseBody extends TeaModel {
     public static final class Builder {
         private String executionId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(StartImagePipelineExecutionResponseBody model) {
+            this.executionId = model.executionId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the image creation task.</p>

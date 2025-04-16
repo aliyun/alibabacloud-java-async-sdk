@@ -64,6 +64,10 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return description
      */
@@ -137,6 +141,21 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
         private String securityGroupId; 
         private String securityGroupName; 
         private String vpcId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSecurityGroupAttributeResponseBody model) {
+            this.description = model.description;
+            this.innerAccessPolicy = model.innerAccessPolicy;
+            this.nextToken = model.nextToken;
+            this.permissions = model.permissions;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+            this.securityGroupId = model.securityGroupId;
+            this.securityGroupName = model.securityGroupName;
+            this.vpcId = model.vpcId;
+        } 
 
         /**
          * <p>The description of the security group.</p>
@@ -296,6 +315,12 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PortRange")
         private String portRange;
 
+        @com.aliyun.core.annotation.NameInMap("PortRangeListId")
+        private String portRangeListId;
+
+        @com.aliyun.core.annotation.NameInMap("PortRangeListName")
+        private String portRangeListName;
+
         @com.aliyun.core.annotation.NameInMap("Priority")
         private String priority;
 
@@ -339,6 +364,8 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
             this.nicType = builder.nicType;
             this.policy = builder.policy;
             this.portRange = builder.portRange;
+            this.portRangeListId = builder.portRangeListId;
+            this.portRangeListName = builder.portRangeListName;
             this.priority = builder.priority;
             this.securityGroupRuleId = builder.securityGroupRuleId;
             this.sourceCidrIp = builder.sourceCidrIp;
@@ -464,6 +491,20 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return portRangeListId
+         */
+        public String getPortRangeListId() {
+            return this.portRangeListId;
+        }
+
+        /**
+         * @return portRangeListName
+         */
+        public String getPortRangeListName() {
+            return this.portRangeListName;
+        }
+
+        /**
          * @return priority
          */
         public String getPriority() {
@@ -542,6 +583,8 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
             private String nicType; 
             private String policy; 
             private String portRange; 
+            private String portRangeListId; 
+            private String portRangeListName; 
             private String priority; 
             private String securityGroupRuleId; 
             private String sourceCidrIp; 
@@ -551,6 +594,38 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
             private String sourcePortRange; 
             private String sourcePrefixListId; 
             private String sourcePrefixListName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Permission model) {
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.destCidrIp = model.destCidrIp;
+                this.destGroupId = model.destGroupId;
+                this.destGroupName = model.destGroupName;
+                this.destGroupOwnerAccount = model.destGroupOwnerAccount;
+                this.destPrefixListId = model.destPrefixListId;
+                this.destPrefixListName = model.destPrefixListName;
+                this.direction = model.direction;
+                this.ipProtocol = model.ipProtocol;
+                this.ipv6DestCidrIp = model.ipv6DestCidrIp;
+                this.ipv6SourceCidrIp = model.ipv6SourceCidrIp;
+                this.nicType = model.nicType;
+                this.policy = model.policy;
+                this.portRange = model.portRange;
+                this.portRangeListId = model.portRangeListId;
+                this.portRangeListName = model.portRangeListName;
+                this.priority = model.priority;
+                this.securityGroupRuleId = model.securityGroupRuleId;
+                this.sourceCidrIp = model.sourceCidrIp;
+                this.sourceGroupId = model.sourceGroupId;
+                this.sourceGroupName = model.sourceGroupName;
+                this.sourceGroupOwnerAccount = model.sourceGroupOwnerAccount;
+                this.sourcePortRange = model.sourcePortRange;
+                this.sourcePrefixListId = model.sourcePrefixListId;
+                this.sourcePrefixListName = model.sourcePrefixListName;
+            } 
 
             /**
              * <p>The time when the security group rule was created. The time is displayed in UTC.</p>
@@ -718,6 +793,22 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
             }
 
             /**
+             * PortRangeListId.
+             */
+            public Builder portRangeListId(String portRangeListId) {
+                this.portRangeListId = portRangeListId;
+                return this;
+            }
+
+            /**
+             * PortRangeListName.
+             */
+            public Builder portRangeListName(String portRangeListName) {
+                this.portRangeListName = portRangeListName;
+                return this;
+            }
+
+            /**
              * <p>The priority of the rule.</p>
              * 
              * <strong>example:</strong>
@@ -854,6 +945,13 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Permission> permission; 
+
+            private Builder() {
+            } 
+
+            private Builder(Permissions model) {
+                this.permission = model.permission;
+            } 
 
             /**
              * Permission.

@@ -40,6 +40,10 @@ public class ModifyDedicatedHostsChargeTypeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return feeOfInstances
      */
@@ -65,6 +69,15 @@ public class ModifyDedicatedHostsChargeTypeResponseBody extends TeaModel {
         private FeeOfInstances feeOfInstances; 
         private String orderId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyDedicatedHostsChargeTypeResponseBody model) {
+            this.feeOfInstances = model.feeOfInstances;
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Details about the charges for the order.</p>
@@ -158,6 +171,15 @@ public class ModifyDedicatedHostsChargeTypeResponseBody extends TeaModel {
             private String fee; 
             private String instanceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(FeeOfInstance model) {
+                this.currency = model.currency;
+                this.fee = model.fee;
+                this.instanceId = model.instanceId;
+            } 
+
             /**
              * <p>The unit of currency for the bill.</p>
              * <p>Alibaba Cloud China site (aliyun.com): CNY</p>
@@ -231,6 +253,13 @@ public class ModifyDedicatedHostsChargeTypeResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<FeeOfInstance> feeOfInstance; 
+
+            private Builder() {
+            } 
+
+            private Builder(FeeOfInstances model) {
+                this.feeOfInstance = model.feeOfInstance;
+            } 
 
             /**
              * FeeOfInstance.

@@ -80,6 +80,10 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return attributes
      */
@@ -185,6 +189,25 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
         private String severity; 
         private String startTime; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDiagnosticReportAttributesResponseBody model) {
+            this.attributes = model.attributes;
+            this.creationTime = model.creationTime;
+            this.endTime = model.endTime;
+            this.finishedTime = model.finishedTime;
+            this.metricResults = model.metricResults;
+            this.metricSetId = model.metricSetId;
+            this.reportId = model.reportId;
+            this.requestId = model.requestId;
+            this.resourceId = model.resourceId;
+            this.resourceType = model.resourceType;
+            this.severity = model.severity;
+            this.startTime = model.startTime;
+            this.status = model.status;
+        } 
 
         /**
          * <p>The extended attributes of the diagnostic report.</p>
@@ -414,6 +437,16 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
             private String occurrenceTime; 
             private String severity; 
 
+            private Builder() {
+            } 
+
+            private Builder(Issue model) {
+                this.additional = model.additional;
+                this.issueId = model.issueId;
+                this.occurrenceTime = model.occurrenceTime;
+                this.severity = model.severity;
+            } 
+
             /**
              * <p>The additional data about the diagnosed issue. The value is a JSON string.</p>
              * 
@@ -511,6 +544,13 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Issue> issue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Issues model) {
+                this.issue = model.issue;
+            } 
+
             /**
              * Issue.
              */
@@ -605,6 +645,17 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
             private String metricId; 
             private String severity; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(MetricResult model) {
+                this.issues = model.issues;
+                this.metricCategory = model.metricCategory;
+                this.metricId = model.metricId;
+                this.severity = model.severity;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The diagnosed issues.</p>
@@ -709,6 +760,13 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<MetricResult> metricResult; 
+
+            private Builder() {
+            } 
+
+            private Builder(MetricResults model) {
+                this.metricResult = model.metricResult;
+            } 
 
             /**
              * MetricResult.

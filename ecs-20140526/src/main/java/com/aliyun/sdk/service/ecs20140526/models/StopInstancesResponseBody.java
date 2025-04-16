@@ -36,6 +36,10 @@ public class StopInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceResponses
      */
@@ -53,6 +57,14 @@ public class StopInstancesResponseBody extends TeaModel {
     public static final class Builder {
         private InstanceResponses instanceResponses; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(StopInstancesResponseBody model) {
+            this.instanceResponses = model.instanceResponses;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The instance-specific responses, which contain the status of each instance before and after the operation was called and the results of the operation.</p>
@@ -159,6 +171,17 @@ public class StopInstancesResponseBody extends TeaModel {
             private String message; 
             private String previousStatus; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceResponse model) {
+                this.code = model.code;
+                this.currentStatus = model.currentStatus;
+                this.instanceId = model.instanceId;
+                this.message = model.message;
+                this.previousStatus = model.previousStatus;
+            } 
+
             /**
              * <p>The error code returned for the instance. A return value of 200 indicates that the operation was successful. For more information, see the &quot;Error codes&quot; section of this topic.</p>
              * 
@@ -252,6 +275,13 @@ public class StopInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<InstanceResponse> instanceResponse; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceResponses model) {
+                this.instanceResponse = model.instanceResponse;
+            } 
 
             /**
              * InstanceResponse.

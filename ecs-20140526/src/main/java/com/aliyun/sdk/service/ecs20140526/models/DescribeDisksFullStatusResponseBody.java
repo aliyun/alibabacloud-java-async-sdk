@@ -48,6 +48,10 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return diskFullStatusSet
      */
@@ -89,6 +93,17 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDisksFullStatusResponseBody model) {
+            this.diskFullStatusSet = model.diskFullStatusSet;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The collection of full status information of the EBS devices.</p>
@@ -191,6 +206,14 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
         public static final class Builder {
             private Integer code; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(EventType model) {
+                this.code = model.code;
+                this.name = model.name;
+            } 
 
             /**
              * <p>The code of the event type.</p>
@@ -307,6 +330,17 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             private EventType eventType; 
             private String impactLevel; 
 
+            private Builder() {
+            } 
+
+            private Builder(DiskEventType model) {
+                this.eventEndTime = model.eventEndTime;
+                this.eventId = model.eventId;
+                this.eventTime = model.eventTime;
+                this.eventType = model.eventType;
+                this.impactLevel = model.impactLevel;
+            } 
+
             /**
              * <p>The time when the event ended.</p>
              * 
@@ -398,6 +432,13 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<DiskEventType> diskEventType; 
 
+            private Builder() {
+            } 
+
+            private Builder(DiskEventSet model) {
+                this.diskEventType = model.diskEventType;
+            } 
+
             /**
              * DiskEventType.
              */
@@ -456,6 +497,14 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
         public static final class Builder {
             private Integer code; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(HealthStatus model) {
+                this.code = model.code;
+                this.name = model.name;
+            } 
 
             /**
              * <p>The code of the health status of the EBS device.</p>
@@ -529,6 +578,14 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
         public static final class Builder {
             private Integer code; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(Status model) {
+                this.code = model.code;
+                this.name = model.name;
+            } 
 
             /**
              * <p>The code of the lifecycle status of the EBS device.</p>
@@ -651,6 +708,18 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             private String instanceId; 
             private Status status; 
 
+            private Builder() {
+            } 
+
+            private Builder(DiskFullStatusType model) {
+                this.device = model.device;
+                this.diskEventSet = model.diskEventSet;
+                this.diskId = model.diskId;
+                this.healthStatus = model.healthStatus;
+                this.instanceId = model.instanceId;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The name of the EBS device that is attached to an instance. Example: /dev/xvdb.</p>
              * <p>This parameter has a value only when the value of <code>Status</code> is <code>In_use</code>.</p>
@@ -750,6 +819,13 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DiskFullStatusType> diskFullStatusType; 
+
+            private Builder() {
+            } 
+
+            private Builder(DiskFullStatusSet model) {
+                this.diskFullStatusType = model.diskFullStatusType;
+            } 
 
             /**
              * DiskFullStatusType.

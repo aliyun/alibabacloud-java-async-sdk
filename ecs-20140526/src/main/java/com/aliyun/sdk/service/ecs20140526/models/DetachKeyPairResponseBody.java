@@ -48,6 +48,10 @@ public class DetachKeyPairResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return failCount
      */
@@ -89,6 +93,17 @@ public class DetachKeyPairResponseBody extends TeaModel {
         private String requestId; 
         private Results results; 
         private String totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DetachKeyPairResponseBody model) {
+            this.failCount = model.failCount;
+            this.keyPairName = model.keyPairName;
+            this.requestId = model.requestId;
+            this.results = model.results;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The number of instances from which the SSH key pair failed to be unbound.</p>
@@ -216,6 +231,16 @@ public class DetachKeyPairResponseBody extends TeaModel {
             private String message; 
             private String success; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.code = model.code;
+                this.instanceId = model.instanceId;
+                this.message = model.message;
+                this.success = model.success;
+            } 
+
             /**
              * <p>The operation status code that is returned. 200 indicates that the operation is successful.</p>
              * 
@@ -298,6 +323,13 @@ public class DetachKeyPairResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Result> result; 
+
+            private Builder() {
+            } 
+
+            private Builder(Results model) {
+                this.result = model.result;
+            } 
 
             /**
              * Result.

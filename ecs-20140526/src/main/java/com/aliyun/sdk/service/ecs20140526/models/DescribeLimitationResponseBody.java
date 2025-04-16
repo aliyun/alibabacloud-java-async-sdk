@@ -40,6 +40,10 @@ public class DescribeLimitationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return limitation
      */
@@ -65,6 +69,15 @@ public class DescribeLimitationResponseBody extends TeaModel {
         private String limitation; 
         private String requestId; 
         private String value; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeLimitationResponseBody model) {
+            this.limitation = model.limitation;
+            this.requestId = model.requestId;
+            this.value = model.value;
+        } 
 
         /**
          * Limitation.

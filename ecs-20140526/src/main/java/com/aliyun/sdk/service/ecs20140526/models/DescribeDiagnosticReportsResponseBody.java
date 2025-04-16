@@ -40,6 +40,10 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextToken
      */
@@ -65,6 +69,15 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
         private String nextToken; 
         private Reports reports; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDiagnosticReportsResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.reports = model.reports;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
@@ -170,6 +183,16 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
             private String metricId; 
             private String severity; 
 
+            private Builder() {
+            } 
+
+            private Builder(Issue model) {
+                this.issueId = model.issueId;
+                this.metricCategory = model.metricCategory;
+                this.metricId = model.metricId;
+                this.severity = model.severity;
+            } 
+
             /**
              * <p>The ID of the diagnosed issue, which is the unique identifier of the issue.</p>
              * 
@@ -257,6 +280,13 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Issue> issue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Issues model) {
+                this.issue = model.issue;
+            } 
 
             /**
              * Issue.
@@ -425,6 +455,23 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
             private String startTime; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(Report model) {
+                this.creationTime = model.creationTime;
+                this.endTime = model.endTime;
+                this.finishedTime = model.finishedTime;
+                this.issues = model.issues;
+                this.metricSetId = model.metricSetId;
+                this.reportId = model.reportId;
+                this.resourceId = model.resourceId;
+                this.resourceType = model.resourceType;
+                this.severity = model.severity;
+                this.startTime = model.startTime;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The time when the diagnostic report was created.</p>
              * 
@@ -588,6 +635,13 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Report> report; 
+
+            private Builder() {
+            } 
+
+            private Builder(Reports model) {
+                this.report = model.report;
+            } 
 
             /**
              * Report.

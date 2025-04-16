@@ -121,7 +121,7 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -578,6 +578,15 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
             private Integer tcpEstablishedTimeout; 
             private Integer udpTimeout; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConnectionTrackingConfiguration model) {
+                this.tcpClosedAndTimeWaitTimeout = model.tcpClosedAndTimeWaitTimeout;
+                this.tcpEstablishedTimeout = model.tcpEstablishedTimeout;
+                this.udpTimeout = model.udpTimeout;
+            } 
+
             /**
              * <p>The timeout period for TCP connections in the TIME_WAIT or CLOSE_WAIT state. Unit: seconds. Valid values: integers from 3 to 15.</p>
              * <p>Default value: 3.</p>
@@ -670,6 +679,14 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
         public static final class Builder {
             private Boolean enableRss; 
             private Boolean enableSriov; 
+
+            private Builder() {
+            } 
+
+            private Builder(EnhancedNetwork model) {
+                this.enableRss = model.enableRss;
+                this.enableSriov = model.enableSriov;
+            } 
 
             /**
              * <blockquote>
@@ -781,6 +798,17 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
             private Integer queuePairNumber; 
             private Integer rxQueueSize; 
             private Integer txQueueSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetworkInterfaceTrafficConfig model) {
+                this.networkInterfaceTrafficMode = model.networkInterfaceTrafficMode;
+                this.queueNumber = model.queueNumber;
+                this.queuePairNumber = model.queuePairNumber;
+                this.rxQueueSize = model.rxQueueSize;
+                this.txQueueSize = model.txQueueSize;
+            } 
 
             /**
              * <p>The communication mode of the ENI. Valid values:</p>

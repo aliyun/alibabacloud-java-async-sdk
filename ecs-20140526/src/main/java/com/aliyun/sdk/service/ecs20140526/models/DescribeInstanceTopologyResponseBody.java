@@ -36,6 +36,10 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Topologys topologys; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceTopologyResponseBody model) {
+            this.requestId = model.requestId;
+            this.topologys = model.topologys;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -123,6 +135,14 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             private String hostId; 
             private String instanceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Topology model) {
+                this.hostId = model.hostId;
+                this.instanceId = model.instanceId;
+            } 
+
             /**
              * <p>The ID of the host where the ECS instance resides. This parameter is encrypted and cannot match the ID of the ECS instance. However, if the values of this parameter for different ECS instances are the same, the ECS instances reside on the same host.</p>
              * 
@@ -183,6 +203,13 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Topology> topology; 
+
+            private Builder() {
+            } 
+
+            private Builder(Topologys model) {
+                this.topology = model.topology;
+            } 
 
             /**
              * Topology.

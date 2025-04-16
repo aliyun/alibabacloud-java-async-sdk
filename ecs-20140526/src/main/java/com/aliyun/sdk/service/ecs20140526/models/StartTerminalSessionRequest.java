@@ -26,6 +26,10 @@ public class StartTerminalSessionRequest extends Request {
     private String commandLine;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConnectionType")
+    private String connectionType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<String> instanceId;
@@ -67,6 +71,7 @@ public class StartTerminalSessionRequest extends Request {
         super(builder);
         this.sourceRegionId = builder.sourceRegionId;
         this.commandLine = builder.commandLine;
+        this.connectionType = builder.connectionType;
         this.instanceId = builder.instanceId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -86,7 +91,7 @@ public class StartTerminalSessionRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -103,6 +108,13 @@ public class StartTerminalSessionRequest extends Request {
      */
     public String getCommandLine() {
         return this.commandLine;
+    }
+
+    /**
+     * @return connectionType
+     */
+    public String getConnectionType() {
+        return this.connectionType;
     }
 
     /**
@@ -171,6 +183,7 @@ public class StartTerminalSessionRequest extends Request {
     public static final class Builder extends Request.Builder<StartTerminalSessionRequest, Builder> {
         private String sourceRegionId; 
         private String commandLine; 
+        private String connectionType; 
         private java.util.List<String> instanceId; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -189,6 +202,7 @@ public class StartTerminalSessionRequest extends Request {
             super(request);
             this.sourceRegionId = request.sourceRegionId;
             this.commandLine = request.commandLine;
+            this.connectionType = request.connectionType;
             this.instanceId = request.instanceId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -221,6 +235,15 @@ public class StartTerminalSessionRequest extends Request {
         public Builder commandLine(String commandLine) {
             this.putQueryParameter("CommandLine", commandLine);
             this.commandLine = commandLine;
+            return this;
+        }
+
+        /**
+         * ConnectionType.
+         */
+        public Builder connectionType(String connectionType) {
+            this.putQueryParameter("ConnectionType", connectionType);
+            this.connectionType = connectionType;
             return this;
         }
 

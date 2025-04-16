@@ -40,6 +40,10 @@ public class PurchaseStorageCapacityUnitResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return orderId
      */
@@ -65,6 +69,15 @@ public class PurchaseStorageCapacityUnitResponseBody extends TeaModel {
         private String orderId; 
         private String requestId; 
         private StorageCapacityUnitIds storageCapacityUnitIds; 
+
+        private Builder() {
+        } 
+
+        private Builder(PurchaseStorageCapacityUnitResponseBody model) {
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+            this.storageCapacityUnitIds = model.storageCapacityUnitIds;
+        } 
 
         /**
          * <p>The order ID.</p>
@@ -133,6 +146,13 @@ public class PurchaseStorageCapacityUnitResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> storageCapacityUnitId; 
+
+            private Builder() {
+            } 
+
+            private Builder(StorageCapacityUnitIds model) {
+                this.storageCapacityUnitId = model.storageCapacityUnitId;
+            } 
 
             /**
              * StorageCapacityUnitId.

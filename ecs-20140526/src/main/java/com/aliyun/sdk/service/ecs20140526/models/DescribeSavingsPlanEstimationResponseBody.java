@@ -68,6 +68,10 @@ public class DescribeSavingsPlanEstimationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return committedAmount
      */
@@ -149,6 +153,22 @@ public class DescribeSavingsPlanEstimationResponseBody extends TeaModel {
         private String planType; 
         private String requestId; 
         private String resourceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSavingsPlanEstimationResponseBody model) {
+            this.committedAmount = model.committedAmount;
+            this.currency = model.currency;
+            this.instanceTypeFamily = model.instanceTypeFamily;
+            this.instanceTypeFamilyGroup = model.instanceTypeFamilyGroup;
+            this.offeringType = model.offeringType;
+            this.period = model.period;
+            this.periodUnit = model.periodUnit;
+            this.planType = model.planType;
+            this.requestId = model.requestId;
+            this.resourceId = model.resourceId;
+        } 
 
         /**
          * CommittedAmount.

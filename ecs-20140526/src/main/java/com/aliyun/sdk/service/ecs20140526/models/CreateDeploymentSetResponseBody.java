@@ -36,6 +36,10 @@ public class CreateDeploymentSetResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return deploymentSetId
      */
@@ -53,6 +57,14 @@ public class CreateDeploymentSetResponseBody extends TeaModel {
     public static final class Builder {
         private String deploymentSetId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateDeploymentSetResponseBody model) {
+            this.deploymentSetId = model.deploymentSetId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the deployment set.</p>

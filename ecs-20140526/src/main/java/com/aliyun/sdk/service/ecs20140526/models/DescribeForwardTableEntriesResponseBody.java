@@ -48,6 +48,10 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return forwardTableEntries
      */
@@ -89,6 +93,17 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeForwardTableEntriesResponseBody model) {
+            this.forwardTableEntries = model.forwardTableEntries;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * ForwardTableEntries.
@@ -252,6 +267,20 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
             private String ipProtocol; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(ForwardTableEntry model) {
+                this.externalIp = model.externalIp;
+                this.externalPort = model.externalPort;
+                this.forwardEntryId = model.forwardEntryId;
+                this.forwardTableId = model.forwardTableId;
+                this.internalIp = model.internalIp;
+                this.internalPort = model.internalPort;
+                this.ipProtocol = model.ipProtocol;
+                this.status = model.status;
+            } 
+
             /**
              * ExternalIp.
              */
@@ -354,6 +383,13 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ForwardTableEntry> forwardTableEntry; 
+
+            private Builder() {
+            } 
+
+            private Builder(ForwardTableEntries model) {
+                this.forwardTableEntry = model.forwardTableEntry;
+            } 
 
             /**
              * ForwardTableEntry.

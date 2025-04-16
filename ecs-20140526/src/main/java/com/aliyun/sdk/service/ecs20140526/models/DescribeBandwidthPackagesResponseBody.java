@@ -48,6 +48,10 @@ public class DescribeBandwidthPackagesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bandwidthPackages
      */
@@ -89,6 +93,17 @@ public class DescribeBandwidthPackagesResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeBandwidthPackagesResponseBody model) {
+            this.bandwidthPackages = model.bandwidthPackages;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * BandwidthPackages.
@@ -180,6 +195,14 @@ public class DescribeBandwidthPackagesResponseBody extends TeaModel {
             private String allocationId; 
             private String ipAddress; 
 
+            private Builder() {
+            } 
+
+            private Builder(PublicIpAddresse model) {
+                this.allocationId = model.allocationId;
+                this.ipAddress = model.ipAddress;
+            } 
+
             /**
              * AllocationId.
              */
@@ -234,6 +257,13 @@ public class DescribeBandwidthPackagesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<PublicIpAddresse> publicIpAddresse; 
+
+            private Builder() {
+            } 
+
+            private Builder(PublicIpAddresses model) {
+                this.publicIpAddresse = model.publicIpAddresse;
+            } 
 
             /**
              * PublicIpAddresse.
@@ -450,6 +480,27 @@ public class DescribeBandwidthPackagesResponseBody extends TeaModel {
             private String status; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(BandwidthPackage model) {
+                this.bandwidth = model.bandwidth;
+                this.bandwidthPackageId = model.bandwidthPackageId;
+                this.businessStatus = model.businessStatus;
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.ISP = model.ISP;
+                this.instanceChargeType = model.instanceChargeType;
+                this.internetChargeType = model.internetChargeType;
+                this.ipCount = model.ipCount;
+                this.name = model.name;
+                this.natGatewayId = model.natGatewayId;
+                this.publicIpAddresses = model.publicIpAddresses;
+                this.regionId = model.regionId;
+                this.status = model.status;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
              * Bandwidth.
              */
@@ -608,6 +659,13 @@ public class DescribeBandwidthPackagesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<BandwidthPackage> bandwidthPackage; 
+
+            private Builder() {
+            } 
+
+            private Builder(BandwidthPackages model) {
+                this.bandwidthPackage = model.bandwidthPackage;
+            } 
 
             /**
              * BandwidthPackage.

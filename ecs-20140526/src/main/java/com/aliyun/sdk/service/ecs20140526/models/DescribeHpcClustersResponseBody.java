@@ -48,6 +48,10 @@ public class DescribeHpcClustersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return hpcClusters
      */
@@ -89,6 +93,17 @@ public class DescribeHpcClustersResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeHpcClustersResponseBody model) {
+            this.hpcClusters = model.hpcClusters;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The name of the HPC cluster.</p>
@@ -204,8 +219,20 @@ public class DescribeHpcClustersResponseBody extends TeaModel {
             private String hpcClusterId; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(HpcCluster model) {
+                this.description = model.description;
+                this.hpcClusterId = model.hpcClusterId;
+                this.name = model.name;
+            } 
+
             /**
-             * Description.
+             * <p>The description of the HPC cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testDescription</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -224,7 +251,10 @@ public class DescribeHpcClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the HPC cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testName</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -269,6 +299,13 @@ public class DescribeHpcClustersResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<HpcCluster> hpcCluster; 
+
+            private Builder() {
+            } 
+
+            private Builder(HpcClusters model) {
+                this.hpcCluster = model.hpcCluster;
+            } 
 
             /**
              * HpcCluster.

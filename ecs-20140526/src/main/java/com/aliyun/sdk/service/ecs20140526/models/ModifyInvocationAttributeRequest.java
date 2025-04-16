@@ -96,7 +96,7 @@ public class ModifyInvocationAttributeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -415,7 +415,7 @@ public class ModifyInvocationAttributeRequest extends Request {
          * <p>This parameter is empty by default, which indicates not to modify the key-value pairs of the custom parameters.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;name&quot;:&quot;Jack&quot;, &quot;accessKey&quot;:&quot;LTAIdyvdIqaRY****&quot;}</p>
+         * <p>{&quot;name&quot;:&quot;Jack&quot;, &quot;accessKey&quot;:&quot;LTAI*************&quot;}</p>
          */
         public Builder parameters(java.util.Map<String, ?> parameters) {
             String parametersShrink = shrink(parameters, "Parameters", "json");

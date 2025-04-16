@@ -40,6 +40,10 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return autoProvisioningGroupId
      */
@@ -65,6 +69,15 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
         private String autoProvisioningGroupId; 
         private LaunchResults launchResults; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateAutoProvisioningGroupResponseBody model) {
+            this.autoProvisioningGroupId = model.autoProvisioningGroupId;
+            this.launchResults = model.launchResults;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the auto provisioning group.</p>
@@ -133,6 +146,13 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> instanceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceIds model) {
+                this.instanceId = model.instanceId;
+            } 
 
             /**
              * InstanceId.
@@ -253,6 +273,19 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
             private String spotStrategy; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(LaunchResult model) {
+                this.amount = model.amount;
+                this.errorCode = model.errorCode;
+                this.errorMsg = model.errorMsg;
+                this.instanceIds = model.instanceIds;
+                this.instanceType = model.instanceType;
+                this.spotStrategy = model.spotStrategy;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
              * <p>The number of created instances.</p>
              * 
@@ -370,6 +403,13 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<LaunchResult> launchResult; 
+
+            private Builder() {
+            } 
+
+            private Builder(LaunchResults model) {
+                this.launchResult = model.launchResult;
+            } 
 
             /**
              * LaunchResult.

@@ -48,6 +48,10 @@ public class DescribeStorageSetDetailsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return disks
      */
@@ -89,6 +93,17 @@ public class DescribeStorageSetDetailsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeStorageSetDetailsResponseBody model) {
+            this.disks = model.disks;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>Details about the disks or Shared Block Storage devices in the storage set.</p>
@@ -264,6 +279,20 @@ public class DescribeStorageSetDetailsResponseBody extends TeaModel {
             private Integer storageSetPartitionNumber; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Disk model) {
+                this.category = model.category;
+                this.creationTime = model.creationTime;
+                this.diskId = model.diskId;
+                this.diskName = model.diskName;
+                this.regionId = model.regionId;
+                this.storageSetId = model.storageSetId;
+                this.storageSetPartitionNumber = model.storageSetPartitionNumber;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
              * <p>The category of the disk or Shared Block Storage device.</p>
              * 
@@ -390,6 +419,13 @@ public class DescribeStorageSetDetailsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Disk> disk; 
+
+            private Builder() {
+            } 
+
+            private Builder(Disks model) {
+                this.disk = model.disk;
+            } 
 
             /**
              * Disk.

@@ -40,6 +40,10 @@ public class DescribeEniMonitorDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return monitorData
      */
@@ -65,6 +69,15 @@ public class DescribeEniMonitorDataResponseBody extends TeaModel {
         private MonitorData monitorData; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeEniMonitorDataResponseBody model) {
+            this.monitorData = model.monitorData;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The monitoring data of the secondary ENI.</p>
@@ -218,6 +231,20 @@ public class DescribeEniMonitorDataResponseBody extends TeaModel {
             private String packetTx; 
             private String timeStamp; 
 
+            private Builder() {
+            } 
+
+            private Builder(EniMonitorData model) {
+                this.dropPacketRx = model.dropPacketRx;
+                this.dropPacketTx = model.dropPacketTx;
+                this.eniId = model.eniId;
+                this.intranetRx = model.intranetRx;
+                this.intranetTx = model.intranetTx;
+                this.packetRx = model.packetRx;
+                this.packetTx = model.packetTx;
+                this.timeStamp = model.timeStamp;
+            } 
+
             /**
              * <p>The number of received packets that were dropped by the secondary ENI over the internal network.</p>
              * 
@@ -344,6 +371,13 @@ public class DescribeEniMonitorDataResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<EniMonitorData> eniMonitorData; 
+
+            private Builder() {
+            } 
+
+            private Builder(MonitorData model) {
+                this.eniMonitorData = model.eniMonitorData;
+            } 
 
             /**
              * EniMonitorData.

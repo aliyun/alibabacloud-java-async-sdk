@@ -52,6 +52,10 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return networkInterfaceSets
      */
@@ -101,6 +105,18 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeNetworkInterfacesResponseBody model) {
+            this.networkInterfaceSets = model.networkInterfaceSets;
+            this.nextToken = model.nextToken;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>Details of the ENIs.</p>
@@ -224,6 +240,14 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             private String allocationId; 
             private String publicIpAddress; 
 
+            private Builder() {
+            } 
+
+            private Builder(AssociatedPublicIp model) {
+                this.allocationId = model.allocationId;
+                this.publicIpAddress = model.publicIpAddress;
+            } 
+
             /**
              * <blockquote>
              * <p> This parameter is in invitational preview and is not publicly available.</p>
@@ -323,6 +347,16 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             private Integer networkCardIndex; 
             private String trunkNetworkInterfaceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Attachment model) {
+                this.deviceIndex = model.deviceIndex;
+                this.instanceId = model.instanceId;
+                this.networkCardIndex = model.networkCardIndex;
+                this.trunkNetworkInterfaceId = model.trunkNetworkInterfaceId;
+            } 
+
             /**
              * <blockquote>
              * <p> This parameter is in invitational preview and is not publicly available.</p>
@@ -416,6 +450,13 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         public static final class Builder {
             private String ipv4Prefix; 
 
+            private Builder() {
+            } 
+
+            private Builder(Ipv4PrefixSet model) {
+                this.ipv4Prefix = model.ipv4Prefix;
+            } 
+
             /**
              * <p>The IPv4 prefix of the ENI.</p>
              * 
@@ -466,6 +507,13 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Ipv4PrefixSet> ipv4PrefixSet; 
 
+            private Builder() {
+            } 
+
+            private Builder(Ipv4PrefixSets model) {
+                this.ipv4PrefixSet = model.ipv4PrefixSet;
+            } 
+
             /**
              * Ipv4PrefixSet.
              */
@@ -512,6 +560,13 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String ipv6Prefix; 
+
+            private Builder() {
+            } 
+
+            private Builder(Ipv6PrefixSet model) {
+                this.ipv6Prefix = model.ipv6Prefix;
+            } 
 
             /**
              * <p>The IPv6 prefix of the ENI.</p>
@@ -563,6 +618,13 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Ipv6PrefixSet> ipv6PrefixSet; 
 
+            private Builder() {
+            } 
+
+            private Builder(Ipv6PrefixSets model) {
+                this.ipv6PrefixSet = model.ipv6PrefixSet;
+            } 
+
             /**
              * Ipv6PrefixSet.
              */
@@ -609,6 +671,13 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String ipv6Address; 
+
+            private Builder() {
+            } 
+
+            private Builder(Ipv6Set model) {
+                this.ipv6Address = model.ipv6Address;
+            } 
 
             /**
              * <p>The IPv6 address of the ENI.</p>
@@ -659,6 +728,13 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Ipv6Set> ipv6Set; 
+
+            private Builder() {
+            } 
+
+            private Builder(Ipv6Sets model) {
+                this.ipv6Set = model.ipv6Set;
+            } 
 
             /**
              * Ipv6Set.
@@ -718,6 +794,14 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         public static final class Builder {
             private String allocationId; 
             private String publicIpAddress; 
+
+            private Builder() {
+            } 
+
+            private Builder(PrivateIpSetAssociatedPublicIp model) {
+                this.allocationId = model.allocationId;
+                this.publicIpAddress = model.publicIpAddress;
+            } 
 
             /**
              * <blockquote>
@@ -818,6 +902,16 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             private String privateDnsName; 
             private String privateIpAddress; 
 
+            private Builder() {
+            } 
+
+            private Builder(PrivateIpSet model) {
+                this.associatedPublicIp = model.associatedPublicIp;
+                this.primary = model.primary;
+                this.privateDnsName = model.privateDnsName;
+                this.privateIpAddress = model.privateIpAddress;
+            } 
+
             /**
              * <p>The elastic IP address (EIP) that is associated with the private IP address.</p>
              */
@@ -905,6 +999,13 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<PrivateIpSet> privateIpSet; 
 
+            private Builder() {
+            } 
+
+            private Builder(PrivateIpSets model) {
+                this.privateIpSet = model.privateIpSet;
+            } 
+
             /**
              * PrivateIpSet.
              */
@@ -951,6 +1052,13 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> securityGroupId; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecurityGroupIds model) {
+                this.securityGroupId = model.securityGroupId;
+            } 
 
             /**
              * SecurityGroupId.
@@ -1010,6 +1118,14 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         public static final class Builder {
             private String tagKey; 
             private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -1071,6 +1187,13 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
@@ -1455,6 +1578,41 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             private String vpcId; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(NetworkInterfaceSet model) {
+                this.associatedPublicIp = model.associatedPublicIp;
+                this.attachment = model.attachment;
+                this.creationTime = model.creationTime;
+                this.deleteOnRelease = model.deleteOnRelease;
+                this.description = model.description;
+                this.instanceId = model.instanceId;
+                this.ipv4PrefixSets = model.ipv4PrefixSets;
+                this.ipv6PrefixSets = model.ipv6PrefixSets;
+                this.ipv6Sets = model.ipv6Sets;
+                this.macAddress = model.macAddress;
+                this.networkInterfaceId = model.networkInterfaceId;
+                this.networkInterfaceName = model.networkInterfaceName;
+                this.networkInterfaceTrafficMode = model.networkInterfaceTrafficMode;
+                this.ownerId = model.ownerId;
+                this.privateIpAddress = model.privateIpAddress;
+                this.privateIpSets = model.privateIpSets;
+                this.queueNumber = model.queueNumber;
+                this.queuePairNumber = model.queuePairNumber;
+                this.resourceGroupId = model.resourceGroupId;
+                this.securityGroupIds = model.securityGroupIds;
+                this.serviceID = model.serviceID;
+                this.serviceManaged = model.serviceManaged;
+                this.sourceDestCheck = model.sourceDestCheck;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.type = model.type;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
              * <p>The EIPs that are associated with the secondary private IP addresses of the ENI.</p>
              */
@@ -1814,6 +1972,13 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<NetworkInterfaceSet> networkInterfaceSet; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetworkInterfaceSets model) {
+                this.networkInterfaceSet = model.networkInterfaceSet;
+            } 
 
             /**
              * NetworkInterfaceSet.

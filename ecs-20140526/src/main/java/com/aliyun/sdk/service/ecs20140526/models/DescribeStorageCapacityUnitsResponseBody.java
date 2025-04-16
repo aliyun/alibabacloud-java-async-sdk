@@ -48,6 +48,10 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
         private String requestId; 
         private StorageCapacityUnits storageCapacityUnits; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeStorageCapacityUnitsResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.storageCapacityUnits = model.storageCapacityUnits;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number of the returned page.</p>
@@ -192,6 +207,14 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
              * <p>The key of tag N.</p>
              * 
@@ -252,6 +275,13 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
@@ -420,6 +450,23 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
             private String storageCapacityUnitId; 
             private Tags tags; 
 
+            private Builder() {
+            } 
+
+            private Builder(StorageCapacityUnit model) {
+                this.allocationStatus = model.allocationStatus;
+                this.capacity = model.capacity;
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.expiredTime = model.expiredTime;
+                this.name = model.name;
+                this.regionId = model.regionId;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.storageCapacityUnitId = model.storageCapacityUnitId;
+                this.tags = model.tags;
+            } 
+
             /**
              * <p>Indicates the allocation state of the SCU when the AllocationType parameter is set to Shared. Valid values:</p>
              * <ul>
@@ -586,6 +633,13 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<StorageCapacityUnit> storageCapacityUnit; 
+
+            private Builder() {
+            } 
+
+            private Builder(StorageCapacityUnits model) {
+                this.storageCapacityUnit = model.storageCapacityUnit;
+            } 
 
             /**
              * StorageCapacityUnit.

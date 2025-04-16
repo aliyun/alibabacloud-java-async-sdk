@@ -48,6 +48,10 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return eipAddresses
      */
@@ -89,6 +93,17 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeEipAddressesResponseBody model) {
+            this.eipAddresses = model.eipAddresses;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * EipAddresses.
@@ -168,6 +183,13 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         public static final class Builder {
             private String lockReason; 
 
+            private Builder() {
+            } 
+
+            private Builder(LockReason model) {
+                this.lockReason = model.lockReason;
+            } 
+
             /**
              * LockReason.
              */
@@ -214,6 +236,13 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<LockReason> lockReason; 
+
+            private Builder() {
+            } 
+
+            private Builder(OperationLocks model) {
+                this.lockReason = model.lockReason;
+            } 
 
             /**
              * LockReason.
@@ -406,6 +435,25 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             private String regionId; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(EipAddress model) {
+                this.allocationId = model.allocationId;
+                this.allocationTime = model.allocationTime;
+                this.bandwidth = model.bandwidth;
+                this.chargeType = model.chargeType;
+                this.eipBandwidth = model.eipBandwidth;
+                this.expiredTime = model.expiredTime;
+                this.instanceId = model.instanceId;
+                this.instanceType = model.instanceType;
+                this.internetChargeType = model.internetChargeType;
+                this.ipAddress = model.ipAddress;
+                this.operationLocks = model.operationLocks;
+                this.regionId = model.regionId;
+                this.status = model.status;
+            } 
+
             /**
              * AllocationId.
              */
@@ -548,6 +596,13 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<EipAddress> eipAddress; 
+
+            private Builder() {
+            } 
+
+            private Builder(EipAddresses model) {
+                this.eipAddress = model.eipAddress;
+            } 
 
             /**
              * EipAddress.

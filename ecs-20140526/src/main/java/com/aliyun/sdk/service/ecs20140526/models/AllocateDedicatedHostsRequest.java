@@ -161,7 +161,7 @@ public class AllocateDedicatedHostsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -805,6 +805,14 @@ public class AllocateDedicatedHostsRequest extends Request {
             private Integer slbUdpTimeout; 
             private Integer udpTimeout; 
 
+            private Builder() {
+            } 
+
+            private Builder(NetworkAttributes model) {
+                this.slbUdpTimeout = model.slbUdpTimeout;
+                this.udpTimeout = model.udpTimeout;
+            } 
+
             /**
              * <p>The timeout period for a UDP session between a Server Load Balancer (SLB) instance and the dedicated host. Unit: seconds. Valid values: 15 to 310.</p>
              * 
@@ -877,6 +885,14 @@ public class AllocateDedicatedHostsRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of tag N to add to the dedicated host. Valid values of N: 1 to 20.</p>

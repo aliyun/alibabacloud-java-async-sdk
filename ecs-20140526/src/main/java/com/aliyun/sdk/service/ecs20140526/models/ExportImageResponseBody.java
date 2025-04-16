@@ -40,6 +40,10 @@ public class ExportImageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return regionId
      */
@@ -65,6 +69,15 @@ public class ExportImageResponseBody extends TeaModel {
         private String regionId; 
         private String requestId; 
         private String taskId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ExportImageResponseBody model) {
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+            this.taskId = model.taskId;
+        } 
 
         /**
          * <p>The region ID.</p>

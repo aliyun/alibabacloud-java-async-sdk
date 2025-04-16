@@ -48,6 +48,10 @@ public class DescribeResourceByTagsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribeResourceByTagsResponseBody extends TeaModel {
         private String requestId; 
         private Resources resources; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeResourceByTagsResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.resources = model.resources;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number.</p>
@@ -204,6 +219,15 @@ public class DescribeResourceByTagsResponseBody extends TeaModel {
             private String resourceId; 
             private String resourceType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Resource model) {
+                this.regionId = model.regionId;
+                this.resourceId = model.resourceId;
+                this.resourceType = model.resourceType;
+            } 
+
             /**
              * <p>The region ID.</p>
              * 
@@ -275,6 +299,13 @@ public class DescribeResourceByTagsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Resource> resource; 
+
+            private Builder() {
+            } 
+
+            private Builder(Resources model) {
+                this.resource = model.resource;
+            } 
 
             /**
              * Resource.

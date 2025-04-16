@@ -172,7 +172,7 @@ public class CreateDiskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -922,6 +922,15 @@ public class CreateDiskRequest extends Request {
             private String roleType; 
             private String rolearn; 
 
+            private Builder() {
+            } 
+
+            private Builder(Arn model) {
+                this.assumeRoleFor = model.assumeRoleFor;
+                this.roleType = model.roleType;
+                this.rolearn = model.rolearn;
+            } 
+
             /**
              * <blockquote>
              * <p> This parameter is not publicly available.</p>
@@ -1011,6 +1020,14 @@ public class CreateDiskRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of tag N to add to the disk. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>

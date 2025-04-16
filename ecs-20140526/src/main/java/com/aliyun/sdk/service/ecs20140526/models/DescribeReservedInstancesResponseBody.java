@@ -48,6 +48,10 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
         private String requestId; 
         private ReservedInstances reservedInstances; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeReservedInstancesResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.reservedInstances = model.reservedInstances;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number.</p>
@@ -180,6 +195,13 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private String lockReason; 
 
+            private Builder() {
+            } 
+
+            private Builder(OperationLock model) {
+                this.lockReason = model.lockReason;
+            } 
+
             /**
              * <p>The reason why the instance is locked.</p>
              * 
@@ -229,6 +251,13 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<OperationLock> operationLock; 
+
+            private Builder() {
+            } 
+
+            private Builder(OperationLocks model) {
+                this.operationLock = model.operationLock;
+            } 
 
             /**
              * OperationLock.
@@ -288,6 +317,14 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private String tagKey; 
             private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -349,6 +386,13 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
@@ -601,6 +645,30 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             private Tags tags; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ReservedInstance model) {
+                this.allocationStatus = model.allocationStatus;
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.expiredTime = model.expiredTime;
+                this.instanceAmount = model.instanceAmount;
+                this.instanceType = model.instanceType;
+                this.offeringType = model.offeringType;
+                this.operationLocks = model.operationLocks;
+                this.platform = model.platform;
+                this.regionId = model.regionId;
+                this.reservedInstanceId = model.reservedInstanceId;
+                this.reservedInstanceName = model.reservedInstanceName;
+                this.resourceGroupId = model.resourceGroupId;
+                this.scope = model.scope;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
              * <p>Indicates the sharing status of the reserved instance when the AllocationType parameter is set to Shared. Valid values:</p>
              * <ul>
@@ -839,6 +907,13 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ReservedInstance> reservedInstance; 
+
+            private Builder() {
+            } 
+
+            private Builder(ReservedInstances model) {
+                this.reservedInstance = model.reservedInstance;
+            } 
 
             /**
              * ReservedInstance.

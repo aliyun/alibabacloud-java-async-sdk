@@ -44,6 +44,10 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return currency
      */
@@ -77,6 +81,16 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
         private Integer nextOffset; 
         private String requestId; 
         private SpotPrices spotPrices; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSpotPriceHistoryResponseBody model) {
+            this.currency = model.currency;
+            this.nextOffset = model.nextOffset;
+            this.requestId = model.requestId;
+            this.spotPrices = model.spotPrices;
+        } 
 
         /**
          * <p>The instance type of the preemptible instance.</p>
@@ -229,6 +243,19 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
             private String timestamp; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(SpotPriceType model) {
+                this.instanceType = model.instanceType;
+                this.ioOptimized = model.ioOptimized;
+                this.networkType = model.networkType;
+                this.originPrice = model.originPrice;
+                this.spotPrice = model.spotPrice;
+                this.timestamp = model.timestamp;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
              * <p>The instance type of the preemptible instance.</p>
              * 
@@ -346,6 +373,13 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SpotPriceType> spotPriceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(SpotPrices model) {
+                this.spotPriceType = model.spotPriceType;
+            } 
 
             /**
              * SpotPriceType.

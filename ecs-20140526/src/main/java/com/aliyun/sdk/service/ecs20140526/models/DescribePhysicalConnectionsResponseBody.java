@@ -48,6 +48,10 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
         private PhysicalConnectionSet physicalConnectionSet; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePhysicalConnectionsResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.physicalConnectionSet = model.physicalConnectionSet;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * PageNumber.
@@ -372,6 +387,30 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
             private String status; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(PhysicalConnectionType model) {
+                this.accessPointId = model.accessPointId;
+                this.adLocation = model.adLocation;
+                this.bandwidth = model.bandwidth;
+                this.businessStatus = model.businessStatus;
+                this.circuitCode = model.circuitCode;
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.enabledTime = model.enabledTime;
+                this.lineOperator = model.lineOperator;
+                this.name = model.name;
+                this.peerLocation = model.peerLocation;
+                this.physicalConnectionId = model.physicalConnectionId;
+                this.portNumber = model.portNumber;
+                this.portType = model.portType;
+                this.redundantPhysicalConnectionId = model.redundantPhysicalConnectionId;
+                this.spec = model.spec;
+                this.status = model.status;
+                this.type = model.type;
+            } 
+
             /**
              * AccessPointId.
              */
@@ -554,6 +593,13 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<PhysicalConnectionType> physicalConnectionType; 
+
+            private Builder() {
+            } 
+
+            private Builder(PhysicalConnectionSet model) {
+                this.physicalConnectionType = model.physicalConnectionType;
+            } 
 
             /**
              * PhysicalConnectionType.

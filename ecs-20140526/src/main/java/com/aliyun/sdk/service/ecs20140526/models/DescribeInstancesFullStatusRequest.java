@@ -110,7 +110,7 @@ public class DescribeInstancesFullStatusRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -516,6 +516,14 @@ public class DescribeInstancesFullStatusRequest extends Request {
             private String end; 
             private String start; 
 
+            private Builder() {
+            } 
+
+            private Builder(EventPublishTime model) {
+                this.end = model.end;
+                this.start = model.start;
+            } 
+
             /**
              * <p>The end of the time range during which system events are published. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
              * 
@@ -588,6 +596,14 @@ public class DescribeInstancesFullStatusRequest extends Request {
         public static final class Builder {
             private String end; 
             private String start; 
+
+            private Builder() {
+            } 
+
+            private Builder(NotBefore model) {
+                this.end = model.end;
+                this.start = model.start;
+            } 
 
             /**
              * <p>The end of the time range during which O&amp;M tasks related to scheduled system events are executed. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>

@@ -36,6 +36,10 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return monitorData
      */
@@ -53,6 +57,14 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
     public static final class Builder {
         private MonitorData monitorData; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceMonitorDataResponseBody model) {
+            this.monitorData = model.monitorData;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The monitoring data of the instance.</p>
@@ -303,6 +315,29 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
             private Integer intranetTX; 
             private String timeStamp; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceMonitorData model) {
+                this.BPSRead = model.BPSRead;
+                this.BPSWrite = model.BPSWrite;
+                this.CPU = model.CPU;
+                this.CPUAdvanceCreditBalance = model.CPUAdvanceCreditBalance;
+                this.CPUCreditBalance = model.CPUCreditBalance;
+                this.CPUCreditUsage = model.CPUCreditUsage;
+                this.CPUNotpaidSurplusCreditUsage = model.CPUNotpaidSurplusCreditUsage;
+                this.IOPSRead = model.IOPSRead;
+                this.IOPSWrite = model.IOPSWrite;
+                this.instanceId = model.instanceId;
+                this.internetBandwidth = model.internetBandwidth;
+                this.internetRX = model.internetRX;
+                this.internetTX = model.internetTX;
+                this.intranetBandwidth = model.intranetBandwidth;
+                this.intranetRX = model.intranetRX;
+                this.intranetTX = model.intranetTX;
+                this.timeStamp = model.timeStamp;
+            } 
+
             /**
              * <p>The read bandwidth of the cloud disks (system disk and data disks). Unit: Byte/s.</p>
              * 
@@ -528,6 +563,13 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<InstanceMonitorData> instanceMonitorData; 
+
+            private Builder() {
+            } 
+
+            private Builder(MonitorData model) {
+                this.instanceMonitorData = model.instanceMonitorData;
+            } 
 
             /**
              * InstanceMonitorData.

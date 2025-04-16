@@ -80,6 +80,10 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return creationTime
      */
@@ -186,6 +190,25 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
         private String taskStatus; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeTaskAttributeResponseBody model) {
+            this.creationTime = model.creationTime;
+            this.failedCount = model.failedCount;
+            this.finishedTime = model.finishedTime;
+            this.operationProgressSet = model.operationProgressSet;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+            this.successCount = model.successCount;
+            this.supportCancel = model.supportCancel;
+            this.taskAction = model.taskAction;
+            this.taskId = model.taskId;
+            this.taskProcess = model.taskProcess;
+            this.taskStatus = model.taskStatus;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
          * <p>The time when the task was created.</p>
          * 
@@ -209,7 +232,7 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the task was complete.</p>
+         * <p>The time when the task was completed.</p>
          * 
          * <strong>example:</strong>
          * <p>2015-11-23T02:19Z</p>
@@ -220,7 +243,7 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>An array consisting of OperationProgress data of each subtask.</p>
+         * <p>The return data of the task.</p>
          */
         public Builder operationProgressSet(OperationProgressSet operationProgressSet) {
             this.operationProgressSet = operationProgressSet;
@@ -239,7 +262,7 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -261,10 +284,10 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the task can be canceled (<a href="https://www.alibabacloud.com/help/en/elastic-compute-service/latest/canceltask">CancelTask</a>). Valid values: </p>
+         * <p>Indicates whether the task can be canceled by calling the <a href="https://help.aliyun.com/document_detail/25624.html">CancelTask</a> operation. Valid values:</p>
          * <ul>
-         * <li>true: The task can be canceled.</li>
-         * <li>false: The task cannot be canceled.</li>
+         * <li>true</li>
+         * <li>false</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -276,7 +299,7 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The operation name of the task.</p>
+         * <p>The name of the operation that generated the task.</p>
          * 
          * <strong>example:</strong>
          * <p>ExportImage</p>
@@ -380,6 +403,14 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
             private String name; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(RelatedItem model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The name of the related item.</p>
              * 
@@ -440,6 +471,13 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<RelatedItem> relatedItem; 
+
+            private Builder() {
+            } 
+
+            private Builder(RelatedItemSet model) {
+                this.relatedItem = model.relatedItem;
+            } 
 
             /**
              * RelatedItem.
@@ -524,6 +562,16 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
             private String operationStatus; 
             private RelatedItemSet relatedItemSet; 
 
+            private Builder() {
+            } 
+
+            private Builder(OperationProgress model) {
+                this.errorCode = model.errorCode;
+                this.errorMsg = model.errorMsg;
+                this.operationStatus = model.operationStatus;
+                this.relatedItemSet = model.relatedItemSet;
+            } 
+
             /**
              * <p>The error code.</p>
              * 
@@ -558,7 +606,7 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>An array consisting of RelatedItem data.</p>
+             * <p>The type of resource information.</p>
              */
             public Builder relatedItemSet(RelatedItemSet relatedItemSet) {
                 this.relatedItemSet = relatedItemSet;
@@ -603,6 +651,13 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<OperationProgress> operationProgress; 
+
+            private Builder() {
+            } 
+
+            private Builder(OperationProgressSet model) {
+                this.operationProgress = model.operationProgress;
+            } 
 
             /**
              * OperationProgress.

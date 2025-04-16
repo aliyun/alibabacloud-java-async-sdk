@@ -71,7 +71,7 @@ public class ModifyInstanceAttachmentAttributesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -289,6 +289,14 @@ public class ModifyInstanceAttachmentAttributesRequest extends Request {
         public static final class Builder {
             private String id; 
             private String matchCriteria; 
+
+            private Builder() {
+            } 
+
+            private Builder(PrivatePoolOptions model) {
+                this.id = model.id;
+                this.matchCriteria = model.matchCriteria;
+            } 
 
             /**
              * <p>The ID of the private pool. Set the value to the ID of the elasticity assurance or capacity reservation that generates the private pool.</p>

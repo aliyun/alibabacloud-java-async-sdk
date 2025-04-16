@@ -44,6 +44,10 @@ public class StartTerminalSessionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -77,6 +81,16 @@ public class StartTerminalSessionResponseBody extends TeaModel {
         private String securityToken; 
         private String sessionId; 
         private String webSocketUrl; 
+
+        private Builder() {
+        } 
+
+        private Builder(StartTerminalSessionResponseBody model) {
+            this.requestId = model.requestId;
+            this.securityToken = model.securityToken;
+            this.sessionId = model.sessionId;
+            this.webSocketUrl = model.webSocketUrl;
+        } 
 
         /**
          * <p>The request ID.</p>

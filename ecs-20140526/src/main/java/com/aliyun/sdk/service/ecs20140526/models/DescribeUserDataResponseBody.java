@@ -44,6 +44,10 @@ public class DescribeUserDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceId
      */
@@ -77,6 +81,16 @@ public class DescribeUserDataResponseBody extends TeaModel {
         private String regionId; 
         private String requestId; 
         private String userData; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeUserDataResponseBody model) {
+            this.instanceId = model.instanceId;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+            this.userData = model.userData;
+        } 
 
         /**
          * <p>The instance ID.</p>

@@ -48,6 +48,10 @@ public class DescribeTagsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribeTagsResponseBody extends TeaModel {
         private String requestId; 
         private Tags tags; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTagsResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.tags = model.tags;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number.</p>
@@ -312,6 +327,24 @@ public class DescribeTagsResponseBody extends TeaModel {
             private Integer snapshotPolicy; 
             private Integer volume; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResourceTypeCount model) {
+                this.ddh = model.ddh;
+                this.disk = model.disk;
+                this.eni = model.eni;
+                this.image = model.image;
+                this.instance = model.instance;
+                this.keyPair = model.keyPair;
+                this.launchTemplate = model.launchTemplate;
+                this.reservedInstance = model.reservedInstance;
+                this.securitygroup = model.securitygroup;
+                this.snapshot = model.snapshot;
+                this.snapshotPolicy = model.snapshotPolicy;
+                this.volume = model.volume;
+            } 
+
             /**
              * <p>The number of dedicated hosts to which the tag is added.</p>
              * 
@@ -507,6 +540,15 @@ public class DescribeTagsResponseBody extends TeaModel {
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.resourceTypeCount = model.resourceTypeCount;
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
              * <p>The number of resource types.</p>
              */
@@ -575,6 +617,13 @@ public class DescribeTagsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.

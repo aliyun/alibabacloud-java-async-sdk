@@ -86,7 +86,7 @@ public class CreateRouteEntryRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -349,6 +349,14 @@ public class CreateRouteEntryRequest extends Request {
         public static final class Builder {
             private String nextHopId; 
             private String nextHopType; 
+
+            private Builder() {
+            } 
+
+            private Builder(NextHopList model) {
+                this.nextHopId = model.nextHopId;
+                this.nextHopType = model.nextHopType;
+            } 
 
             /**
              * NextHopId.

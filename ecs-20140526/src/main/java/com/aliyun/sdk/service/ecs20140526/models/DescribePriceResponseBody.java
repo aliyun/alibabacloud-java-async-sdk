@@ -36,6 +36,10 @@ public class DescribePriceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return priceInfo
      */
@@ -53,6 +57,14 @@ public class DescribePriceResponseBody extends TeaModel {
     public static final class Builder {
         private PriceInfo priceInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePriceResponseBody model) {
+            this.priceInfo = model.priceInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the prices and promotion rules.</p>
@@ -123,6 +135,14 @@ public class DescribePriceResponseBody extends TeaModel {
             private String description; 
             private Long ruleId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Rule model) {
+                this.description = model.description;
+                this.ruleId = model.ruleId;
+            } 
+
             /**
              * <p>The description of the pricing rule.</p>
              * 
@@ -183,6 +203,13 @@ public class DescribePriceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Rule> rule; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubRules model) {
+                this.rule = model.rule;
+            } 
 
             /**
              * Rule.
@@ -278,6 +305,17 @@ public class DescribePriceResponseBody extends TeaModel {
             private String resource; 
             private SubRules subRules; 
             private Float tradePrice; 
+
+            private Builder() {
+            } 
+
+            private Builder(DetailInfo model) {
+                this.discountPrice = model.discountPrice;
+                this.originalPrice = model.originalPrice;
+                this.resource = model.resource;
+                this.subRules = model.subRules;
+                this.tradePrice = model.tradePrice;
+            } 
 
             /**
              * <p>The discount.</p>
@@ -376,6 +414,13 @@ public class DescribePriceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DetailInfo> detailInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(DetailInfos model) {
+                this.detailInfo = model.detailInfo;
+            } 
 
             /**
              * DetailInfo.
@@ -483,6 +528,18 @@ public class DescribePriceResponseBody extends TeaModel {
             private Float originalPrice; 
             private Float reservedInstanceHourPrice; 
             private Float tradePrice; 
+
+            private Builder() {
+            } 
+
+            private Builder(Price model) {
+                this.currency = model.currency;
+                this.detailInfos = model.detailInfos;
+                this.discountPrice = model.discountPrice;
+                this.originalPrice = model.originalPrice;
+                this.reservedInstanceHourPrice = model.reservedInstanceHourPrice;
+                this.tradePrice = model.tradePrice;
+            } 
 
             /**
              * <p>The currency unit.</p>
@@ -627,6 +684,16 @@ public class DescribePriceResponseBody extends TeaModel {
             private Float originalPrice; 
             private Float tradePrice; 
 
+            private Builder() {
+            } 
+
+            private Builder(MarketplaceImagePrice model) {
+                this.currency = model.currency;
+                this.discountPrice = model.discountPrice;
+                this.originalPrice = model.originalPrice;
+                this.tradePrice = model.tradePrice;
+            } 
+
             /**
              * <p>The currency unit.</p>
              * <p>China site (aliyun.com): CNY</p>
@@ -712,6 +779,13 @@ public class DescribePriceResponseBody extends TeaModel {
         public static final class Builder {
             private MarketplaceImagePrice marketplaceImagePrice; 
 
+            private Builder() {
+            } 
+
+            private Builder(RelatedPrice model) {
+                this.marketplaceImagePrice = model.marketplaceImagePrice;
+            } 
+
             /**
              * <p>The Alibaba Cloud Marketplace image price.</p>
              */
@@ -770,6 +844,14 @@ public class DescribePriceResponseBody extends TeaModel {
         public static final class Builder {
             private String description; 
             private Long ruleId; 
+
+            private Builder() {
+            } 
+
+            private Builder(RulesRule model) {
+                this.description = model.description;
+                this.ruleId = model.ruleId;
+            } 
 
             /**
              * <p>The description of the promotion rule.</p>
@@ -831,6 +913,13 @@ public class DescribePriceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<RulesRule> rule; 
+
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.rule = model.rule;
+            } 
 
             /**
              * Rule.
@@ -902,6 +991,15 @@ public class DescribePriceResponseBody extends TeaModel {
             private Price price; 
             private RelatedPrice relatedPrice; 
             private Rules rules; 
+
+            private Builder() {
+            } 
+
+            private Builder(PriceInfo model) {
+                this.price = model.price;
+                this.relatedPrice = model.relatedPrice;
+                this.rules = model.rules;
+            } 
 
             /**
              * <p>The price.</p>

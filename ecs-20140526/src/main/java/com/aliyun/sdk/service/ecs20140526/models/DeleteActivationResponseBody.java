@@ -36,6 +36,10 @@ public class DeleteActivationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return activation
      */
@@ -53,6 +57,14 @@ public class DeleteActivationResponseBody extends TeaModel {
     public static final class Builder {
         private Activation activation; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteActivationResponseBody model) {
+            this.activation = model.activation;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Details about the activation code and its usage information.</p>
@@ -206,6 +218,21 @@ public class DeleteActivationResponseBody extends TeaModel {
             private String ipAddressRange; 
             private Integer registeredCount; 
             private Long timeToLiveInHours; 
+
+            private Builder() {
+            } 
+
+            private Builder(Activation model) {
+                this.activationId = model.activationId;
+                this.creationTime = model.creationTime;
+                this.deregisteredCount = model.deregisteredCount;
+                this.description = model.description;
+                this.instanceCount = model.instanceCount;
+                this.instanceName = model.instanceName;
+                this.ipAddressRange = model.ipAddressRange;
+                this.registeredCount = model.registeredCount;
+                this.timeToLiveInHours = model.timeToLiveInHours;
+            } 
 
             /**
              * <p>The ID of the activation code.</p>

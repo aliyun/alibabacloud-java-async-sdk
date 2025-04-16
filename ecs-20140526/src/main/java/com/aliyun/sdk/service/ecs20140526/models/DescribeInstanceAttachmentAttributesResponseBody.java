@@ -48,6 +48,10 @@ public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instances
      */
@@ -89,6 +93,17 @@ public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceAttachmentAttributesResponseBody model) {
+            this.instances = model.instances;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The information about the association between private pools and instances.</p>
@@ -204,6 +219,15 @@ public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
             private String privatePoolOptionsId; 
             private String privatePoolOptionsMatchCriteria; 
 
+            private Builder() {
+            } 
+
+            private Builder(Instance model) {
+                this.instanceId = model.instanceId;
+                this.privatePoolOptionsId = model.privatePoolOptionsId;
+                this.privatePoolOptionsMatchCriteria = model.privatePoolOptionsMatchCriteria;
+            } 
+
             /**
              * <p>The ID of the instance.</p>
              * 
@@ -280,6 +304,13 @@ public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Instance> instance; 
+
+            private Builder() {
+            } 
+
+            private Builder(Instances model) {
+                this.instance = model.instance;
+            } 
 
             /**
              * Instance.

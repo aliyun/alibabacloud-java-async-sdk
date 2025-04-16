@@ -40,6 +40,10 @@ public class CreateElasticityAssuranceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return orderId
      */
@@ -65,6 +69,15 @@ public class CreateElasticityAssuranceResponseBody extends TeaModel {
         private String orderId; 
         private String privatePoolOptionsId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateElasticityAssuranceResponseBody model) {
+            this.orderId = model.orderId;
+            this.privatePoolOptionsId = model.privatePoolOptionsId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The order ID.</p>

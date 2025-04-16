@@ -40,6 +40,10 @@ public class CreateLaunchTemplateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return launchTemplateId
      */
@@ -65,6 +69,15 @@ public class CreateLaunchTemplateResponseBody extends TeaModel {
         private String launchTemplateId; 
         private Long launchTemplateVersionNumber; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateLaunchTemplateResponseBody model) {
+            this.launchTemplateId = model.launchTemplateId;
+            this.launchTemplateVersionNumber = model.launchTemplateVersionNumber;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the launch template.</p>

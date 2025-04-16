@@ -36,6 +36,10 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return invocation
      */
@@ -53,6 +57,14 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
     public static final class Builder {
         private Invocation invocation; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInvocationResultsResponseBody model) {
+            this.invocation = model.invocation;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Details about the execution results.</p>
@@ -123,6 +135,14 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
              * <p>The tag key of the command task.</p>
              * 
@@ -183,6 +203,13 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
@@ -458,6 +485,32 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             private Tags tags; 
             private String terminationMode; 
             private String username; 
+
+            private Builder() {
+            } 
+
+            private Builder(InvocationResult model) {
+                this.commandId = model.commandId;
+                this.containerId = model.containerId;
+                this.containerName = model.containerName;
+                this.dropped = model.dropped;
+                this.errorCode = model.errorCode;
+                this.errorInfo = model.errorInfo;
+                this.exitCode = model.exitCode;
+                this.finishedTime = model.finishedTime;
+                this.instanceId = model.instanceId;
+                this.invocationStatus = model.invocationStatus;
+                this.invokeId = model.invokeId;
+                this.invokeRecordStatus = model.invokeRecordStatus;
+                this.launcher = model.launcher;
+                this.output = model.output;
+                this.repeats = model.repeats;
+                this.startTime = model.startTime;
+                this.stopTime = model.stopTime;
+                this.tags = model.tags;
+                this.terminationMode = model.terminationMode;
+                this.username = model.username;
+            } 
 
             /**
              * <p>The command ID.</p>
@@ -839,6 +892,13 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<InvocationResult> invocationResult; 
 
+            private Builder() {
+            } 
+
+            private Builder(InvocationResults model) {
+                this.invocationResult = model.invocationResult;
+            } 
+
             /**
              * InvocationResult.
              */
@@ -933,6 +993,17 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             private Long pageNumber; 
             private Long pageSize; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Invocation model) {
+                this.invocationResults = model.invocationResults;
+                this.nextToken = model.nextToken;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The execution results.</p>

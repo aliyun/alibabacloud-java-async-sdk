@@ -36,6 +36,10 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dedicatedHostTypes
      */
@@ -53,6 +57,14 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
     public static final class Builder {
         private DedicatedHostTypes dedicatedHostTypes; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDedicatedHostTypesResponseBody model) {
+            this.dedicatedHostTypes = model.dedicatedHostTypes;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Details about the dedicated host types.</p>
@@ -111,6 +123,13 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> supportedInstanceTypeFamily; 
 
+            private Builder() {
+            } 
+
+            private Builder(SupportedInstanceTypeFamilies model) {
+                this.supportedInstanceTypeFamily = model.supportedInstanceTypeFamily;
+            } 
+
             /**
              * SupportedInstanceTypeFamily.
              */
@@ -157,6 +176,13 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> supportedInstanceTypesList; 
+
+            private Builder() {
+            } 
+
+            private Builder(SupportedInstanceTypesList model) {
+                this.supportedInstanceTypesList = model.supportedInstanceTypesList;
+            } 
 
             /**
              * SupportedInstanceTypesList.
@@ -373,6 +399,27 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
             private Integer totalVcpus; 
             private Integer totalVgpus; 
 
+            private Builder() {
+            } 
+
+            private Builder(DedicatedHostType model) {
+                this.cores = model.cores;
+                this.cpuOverCommitRatioRange = model.cpuOverCommitRatioRange;
+                this.dedicatedHostType = model.dedicatedHostType;
+                this.GPUSpec = model.GPUSpec;
+                this.localStorageAmount = model.localStorageAmount;
+                this.localStorageCapacity = model.localStorageCapacity;
+                this.localStorageCategory = model.localStorageCategory;
+                this.memorySize = model.memorySize;
+                this.physicalGpus = model.physicalGpus;
+                this.sockets = model.sockets;
+                this.supportCpuOverCommitRatio = model.supportCpuOverCommitRatio;
+                this.supportedInstanceTypeFamilies = model.supportedInstanceTypeFamilies;
+                this.supportedInstanceTypesList = model.supportedInstanceTypesList;
+                this.totalVcpus = model.totalVcpus;
+                this.totalVgpus = model.totalVgpus;
+            } 
+
             /**
              * <p>The number of cores per physical CPU.</p>
              * 
@@ -570,6 +617,13 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DedicatedHostType> dedicatedHostType; 
+
+            private Builder() {
+            } 
+
+            private Builder(DedicatedHostTypes model) {
+                this.dedicatedHostType = model.dedicatedHostType;
+            } 
 
             /**
              * <p>The dedicated host type.</p>

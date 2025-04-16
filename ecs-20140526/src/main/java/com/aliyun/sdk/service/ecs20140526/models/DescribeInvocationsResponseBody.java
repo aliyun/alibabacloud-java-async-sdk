@@ -52,6 +52,10 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return invocations
      */
@@ -101,6 +105,18 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         private Long pageSize; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInvocationsResponseBody model) {
+            this.invocations = model.invocations;
+            this.nextToken = model.nextToken;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>Details about the command executions.</p>
@@ -370,6 +386,27 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             private String stopTime; 
             private Boolean timed; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(InvokeInstance model) {
+                this.creationTime = model.creationTime;
+                this.dropped = model.dropped;
+                this.errorCode = model.errorCode;
+                this.errorInfo = model.errorInfo;
+                this.exitCode = model.exitCode;
+                this.finishTime = model.finishTime;
+                this.instanceId = model.instanceId;
+                this.instanceInvokeStatus = model.instanceInvokeStatus;
+                this.invocationStatus = model.invocationStatus;
+                this.output = model.output;
+                this.repeats = model.repeats;
+                this.startTime = model.startTime;
+                this.stopTime = model.stopTime;
+                this.timed = model.timed;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The time when the command task was created.</p>
@@ -668,6 +705,13 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<InvokeInstance> invokeInstance; 
 
+            private Builder() {
+            } 
+
+            private Builder(InvokeInstances model) {
+                this.invokeInstance = model.invokeInstance;
+            } 
+
             /**
              * InvokeInstance.
              */
@@ -726,6 +770,14 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         public static final class Builder {
             private String tagKey; 
             private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
 
             /**
              * <p>The tag key of the command task.</p>
@@ -787,6 +839,13 @@ public class DescribeInvocationsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
@@ -1086,6 +1145,34 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             private Long timeout; 
             private String username; 
             private String workingDir; 
+
+            private Builder() {
+            } 
+
+            private Builder(Invocation model) {
+                this.commandContent = model.commandContent;
+                this.commandDescription = model.commandDescription;
+                this.commandId = model.commandId;
+                this.commandName = model.commandName;
+                this.commandType = model.commandType;
+                this.containerId = model.containerId;
+                this.containerName = model.containerName;
+                this.creationTime = model.creationTime;
+                this.frequency = model.frequency;
+                this.invocationStatus = model.invocationStatus;
+                this.invokeId = model.invokeId;
+                this.invokeInstances = model.invokeInstances;
+                this.invokeStatus = model.invokeStatus;
+                this.launcher = model.launcher;
+                this.parameters = model.parameters;
+                this.repeatMode = model.repeatMode;
+                this.tags = model.tags;
+                this.terminationMode = model.terminationMode;
+                this.timed = model.timed;
+                this.timeout = model.timeout;
+                this.username = model.username;
+                this.workingDir = model.workingDir;
+            } 
 
             /**
              * <p>The command content.</p>
@@ -1413,6 +1500,13 @@ public class DescribeInvocationsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Invocation> invocation; 
+
+            private Builder() {
+            } 
+
+            private Builder(Invocations model) {
+                this.invocation = model.invocation;
+            } 
 
             /**
              * Invocation.

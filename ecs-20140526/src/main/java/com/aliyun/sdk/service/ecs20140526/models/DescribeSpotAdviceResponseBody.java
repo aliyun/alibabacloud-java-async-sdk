@@ -40,6 +40,10 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return availableSpotZones
      */
@@ -65,6 +69,15 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
         private AvailableSpotZones availableSpotZones; 
         private String regionId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSpotAdviceResponseBody model) {
+            this.availableSpotZones = model.availableSpotZones;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Details about preemptible instances in the zones of the specified region.</p>
@@ -173,6 +186,16 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
             private String interruptRateDesc; 
             private Float interruptionRate; 
 
+            private Builder() {
+            } 
+
+            private Builder(AvailableSpotResource model) {
+                this.averageSpotDiscount = model.averageSpotDiscount;
+                this.instanceType = model.instanceType;
+                this.interruptRateDesc = model.interruptRateDesc;
+                this.interruptionRate = model.interruptionRate;
+            } 
+
             /**
              * <p>The percentage of the average preemptible instance price relative to the pay-as-you-go instance price in the previous 30 days. Unit: %. Valid values: 1 to 100.</p>
              * <p>You can calculate the average preemptible instance price based on the return value. For example, if the pay-as-you-go instance price is 1 and the return value of this parameter is 20, the average preemptible instance price in the previous 30 days is 0.2.</p>
@@ -263,6 +286,13 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<AvailableSpotResource> availableSpotResource; 
 
+            private Builder() {
+            } 
+
+            private Builder(AvailableSpotResources model) {
+                this.availableSpotResource = model.availableSpotResource;
+            } 
+
             /**
              * AvailableSpotResource.
              */
@@ -322,6 +352,14 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
             private AvailableSpotResources availableSpotResources; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(AvailableSpotZone model) {
+                this.availableSpotResources = model.availableSpotResources;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
              * <p>Details about preemptible instances in the previous 30 days, including the release rate of preemptible instances and percentages of average preemptible instance prices relative to pay-as-you-go instance prices.</p>
              */
@@ -379,6 +417,13 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<AvailableSpotZone> availableSpotZone; 
+
+            private Builder() {
+            } 
+
+            private Builder(AvailableSpotZones model) {
+                this.availableSpotZone = model.availableSpotZone;
+            } 
 
             /**
              * AvailableSpotZone.

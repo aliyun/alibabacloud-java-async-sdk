@@ -48,6 +48,10 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessPointSet
      */
@@ -89,6 +93,17 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAccessPointsResponseBody model) {
+            this.accessPointSet = model.accessPointSet;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * AccessPointSet.
@@ -252,6 +267,20 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
             private String status; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(AccessPointType model) {
+                this.accessPointId = model.accessPointId;
+                this.attachedRegionNo = model.attachedRegionNo;
+                this.description = model.description;
+                this.hostOperator = model.hostOperator;
+                this.location = model.location;
+                this.name = model.name;
+                this.status = model.status;
+                this.type = model.type;
+            } 
+
             /**
              * AccessPointId.
              */
@@ -354,6 +383,13 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<AccessPointType> accessPointType; 
+
+            private Builder() {
+            } 
+
+            private Builder(AccessPointSet model) {
+                this.accessPointType = model.accessPointType;
+            } 
 
             /**
              * AccessPointType.

@@ -42,6 +42,10 @@ public class ModifyInstanceAttributeRequest extends Request {
     private Boolean enableJumboFrame;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableNetworkEncryption")
+    private Boolean enableNetworkEncryption;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HostName")
     private String hostName;
 
@@ -106,6 +110,7 @@ public class ModifyInstanceAttributeRequest extends Request {
         this.deletionProtection = builder.deletionProtection;
         this.description = builder.description;
         this.enableJumboFrame = builder.enableJumboFrame;
+        this.enableNetworkEncryption = builder.enableNetworkEncryption;
         this.hostName = builder.hostName;
         this.instanceId = builder.instanceId;
         this.instanceName = builder.instanceName;
@@ -130,7 +135,7 @@ public class ModifyInstanceAttributeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -175,6 +180,13 @@ public class ModifyInstanceAttributeRequest extends Request {
      */
     public Boolean getEnableJumboFrame() {
         return this.enableJumboFrame;
+    }
+
+    /**
+     * @return enableNetworkEncryption
+     */
+    public Boolean getEnableNetworkEncryption() {
+        return this.enableNetworkEncryption;
     }
 
     /**
@@ -282,6 +294,7 @@ public class ModifyInstanceAttributeRequest extends Request {
         private Boolean deletionProtection; 
         private String description; 
         private Boolean enableJumboFrame; 
+        private Boolean enableNetworkEncryption; 
         private String hostName; 
         private String instanceId; 
         private String instanceName; 
@@ -309,6 +322,7 @@ public class ModifyInstanceAttributeRequest extends Request {
             this.deletionProtection = request.deletionProtection;
             this.description = request.description;
             this.enableJumboFrame = request.enableJumboFrame;
+            this.enableNetworkEncryption = request.enableNetworkEncryption;
             this.hostName = request.hostName;
             this.instanceId = request.instanceId;
             this.instanceName = request.instanceName;
@@ -406,6 +420,15 @@ public class ModifyInstanceAttributeRequest extends Request {
         public Builder enableJumboFrame(Boolean enableJumboFrame) {
             this.putQueryParameter("EnableJumboFrame", enableJumboFrame);
             this.enableJumboFrame = enableJumboFrame;
+            return this;
+        }
+
+        /**
+         * EnableNetworkEncryption.
+         */
+        public Builder enableNetworkEncryption(Boolean enableNetworkEncryption) {
+            this.putQueryParameter("EnableNetworkEncryption", enableNetworkEncryption);
+            this.enableNetworkEncryption = enableNetworkEncryption;
             return this;
         }
 
@@ -666,6 +689,15 @@ public class ModifyInstanceAttributeRequest extends Request {
             private Integer threadsPerCore; 
             private String topologyType; 
 
+            private Builder() {
+            } 
+
+            private Builder(CpuOptions model) {
+                this.core = model.core;
+                this.threadsPerCore = model.threadsPerCore;
+                this.topologyType = model.topologyType;
+            } 
+
             /**
              * <p>The number of CPU cores. This parameter cannot be specified but only uses its default value.</p>
              * 
@@ -802,6 +834,17 @@ public class ModifyInstanceAttributeRequest extends Request {
             private Boolean enableIpDnsPtrRecord; 
             private String hostnameType; 
 
+            private Builder() {
+            } 
+
+            private Builder(PrivateDnsNameOptions model) {
+                this.enableInstanceIdDnsAAAARecord = model.enableInstanceIdDnsAAAARecord;
+                this.enableInstanceIdDnsARecord = model.enableInstanceIdDnsARecord;
+                this.enableIpDnsARecord = model.enableIpDnsARecord;
+                this.enableIpDnsPtrRecord = model.enableIpDnsPtrRecord;
+                this.hostnameType = model.hostnameType;
+            } 
+
             /**
              * <p>Specifies whether DNS Resolution from the Instance ID-based Hostname to the Instance Primary Private IPv6 Address (AAAA Record) is enabled. Valid values:</p>
              * <ul>
@@ -933,6 +976,14 @@ public class ModifyInstanceAttributeRequest extends Request {
         public static final class Builder {
             private String password; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(RemoteConnectionOptions model) {
+                this.password = model.password;
+                this.type = model.type;
+            } 
 
             /**
              * <blockquote>

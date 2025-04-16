@@ -162,7 +162,7 @@ public class DescribeSnapshotsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -802,6 +802,14 @@ public class DescribeSnapshotsRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Filter model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The key of filter 1 that is used to query resources. Set the value to <code>CreationStartTime</code>. You can specify a time by configuring both <code>Filter.1.Key</code> and <code>Filter.1.Value</code> to query resources that were created after the time.</p>
              * 
@@ -874,6 +882,14 @@ public class DescribeSnapshotsRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of tag N of the snapshot. Valid values of N: 1 to 20</p>

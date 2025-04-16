@@ -40,6 +40,10 @@ public class ModifyDiskSpecResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return orderId
      */
@@ -65,6 +69,15 @@ public class ModifyDiskSpecResponseBody extends TeaModel {
         private String orderId; 
         private String requestId; 
         private String taskId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyDiskSpecResponseBody model) {
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+            this.taskId = model.taskId;
+        } 
 
         /**
          * <p>The order ID.</p>

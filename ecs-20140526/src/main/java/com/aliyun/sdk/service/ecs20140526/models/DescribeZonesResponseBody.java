@@ -36,6 +36,10 @@ public class DescribeZonesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -54,6 +58,14 @@ public class DescribeZonesResponseBody extends TeaModel {
         private String requestId; 
         private Zones zones; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeZonesResponseBody model) {
+            this.requestId = model.requestId;
+            this.zones = model.zones;
+        } 
+
         /**
          * <p>The ID of the request.</p>
          * 
@@ -66,7 +78,7 @@ public class DescribeZonesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Details of the zones and their supported resources.</p>
+         * <p>Details about the zones and their supported resources.</p>
          */
         public Builder zones(Zones zones) {
             this.zones = zones;
@@ -110,6 +122,13 @@ public class DescribeZonesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> dedicatedHostType; 
+
+            private Builder() {
+            } 
+
+            private Builder(AvailableDedicatedHostTypes model) {
+                this.dedicatedHostType = model.dedicatedHostType;
+            } 
 
             /**
              * DedicatedHostType.
@@ -158,6 +177,13 @@ public class DescribeZonesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> diskCategories; 
 
+            private Builder() {
+            } 
+
+            private Builder(AvailableDiskCategories model) {
+                this.diskCategories = model.diskCategories;
+            } 
+
             /**
              * DiskCategories.
              */
@@ -204,6 +230,13 @@ public class DescribeZonesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> instanceTypes; 
+
+            private Builder() {
+            } 
+
+            private Builder(AvailableInstanceTypes model) {
+                this.instanceTypes = model.instanceTypes;
+            } 
 
             /**
              * InstanceTypes.
@@ -252,6 +285,13 @@ public class DescribeZonesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> resourceTypes; 
 
+            private Builder() {
+            } 
+
+            private Builder(AvailableResourceCreation model) {
+                this.resourceTypes = model.resourceTypes;
+            } 
+
             /**
              * ResourceTypes.
              */
@@ -298,6 +338,13 @@ public class DescribeZonesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> supportedDataDiskCategory; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataDiskCategories model) {
+                this.supportedDataDiskCategory = model.supportedDataDiskCategory;
+            } 
 
             /**
              * supportedDataDiskCategory.
@@ -346,6 +393,13 @@ public class DescribeZonesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> supportedInstanceGeneration; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceGenerations model) {
+                this.supportedInstanceGeneration = model.supportedInstanceGeneration;
+            } 
+
             /**
              * supportedInstanceGeneration.
              */
@@ -392,6 +446,13 @@ public class DescribeZonesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> supportedInstanceTypeFamily; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceTypeFamilies model) {
+                this.supportedInstanceTypeFamily = model.supportedInstanceTypeFamily;
+            } 
 
             /**
              * supportedInstanceTypeFamily.
@@ -440,6 +501,13 @@ public class DescribeZonesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> supportedInstanceType; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceTypes model) {
+                this.supportedInstanceType = model.supportedInstanceType;
+            } 
+
             /**
              * supportedInstanceType.
              */
@@ -487,6 +555,13 @@ public class DescribeZonesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> supportedNetworkCategory; 
 
+            private Builder() {
+            } 
+
+            private Builder(NetworkTypes model) {
+                this.supportedNetworkCategory = model.supportedNetworkCategory;
+            } 
+
             /**
              * supportedNetworkCategory.
              */
@@ -533,6 +608,13 @@ public class DescribeZonesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> supportedSystemDiskCategory; 
+
+            private Builder() {
+            } 
+
+            private Builder(SystemDiskCategories model) {
+                this.supportedSystemDiskCategory = model.supportedSystemDiskCategory;
+            } 
 
             /**
              * supportedSystemDiskCategory.
@@ -653,6 +735,19 @@ public class DescribeZonesResponseBody extends TeaModel {
             private NetworkTypes networkTypes; 
             private SystemDiskCategories systemDiskCategories; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResourcesInfo model) {
+                this.dataDiskCategories = model.dataDiskCategories;
+                this.instanceGenerations = model.instanceGenerations;
+                this.instanceTypeFamilies = model.instanceTypeFamilies;
+                this.instanceTypes = model.instanceTypes;
+                this.ioOptimized = model.ioOptimized;
+                this.networkTypes = model.networkTypes;
+                this.systemDiskCategories = model.systemDiskCategories;
+            } 
+
             /**
              * <p>The categories of data disks that can be created.</p>
              */
@@ -697,7 +792,7 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The supported network types</p>
+             * <p>The supported network types.</p>
              */
             public Builder networkTypes(NetworkTypes networkTypes) {
                 this.networkTypes = networkTypes;
@@ -705,7 +800,7 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The supported categories of system disks that can be created.</p>
+             * <p>The categories of system disks that can be created.</p>
              */
             public Builder systemDiskCategories(SystemDiskCategories systemDiskCategories) {
                 this.systemDiskCategories = systemDiskCategories;
@@ -750,6 +845,13 @@ public class DescribeZonesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ResourcesInfo> resourcesInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(AvailableResources model) {
+                this.resourcesInfo = model.resourcesInfo;
+            } 
 
             /**
              * ResourcesInfo.
@@ -798,6 +900,13 @@ public class DescribeZonesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> volumeCategories; 
 
+            private Builder() {
+            } 
+
+            private Builder(AvailableVolumeCategories model) {
+                this.volumeCategories = model.volumeCategories;
+            } 
+
             /**
              * VolumeCategories.
              */
@@ -844,6 +953,13 @@ public class DescribeZonesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> dedicatedHostGeneration; 
+
+            private Builder() {
+            } 
+
+            private Builder(DedicatedHostGenerations model) {
+                this.dedicatedHostGeneration = model.dedicatedHostGeneration;
+            } 
 
             /**
              * DedicatedHostGeneration.
@@ -1000,6 +1116,22 @@ public class DescribeZonesResponseBody extends TeaModel {
             private String zoneId; 
             private String zoneType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Zone model) {
+                this.availableDedicatedHostTypes = model.availableDedicatedHostTypes;
+                this.availableDiskCategories = model.availableDiskCategories;
+                this.availableInstanceTypes = model.availableInstanceTypes;
+                this.availableResourceCreation = model.availableResourceCreation;
+                this.availableResources = model.availableResources;
+                this.availableVolumeCategories = model.availableVolumeCategories;
+                this.dedicatedHostGenerations = model.dedicatedHostGenerations;
+                this.localName = model.localName;
+                this.zoneId = model.zoneId;
+                this.zoneType = model.zoneType;
+            } 
+
             /**
              * <p>The supported dedicated host types.</p>
              */
@@ -1009,7 +1141,7 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The supported disk categories. Valid values:</p>
+             * <p>The categories of cloud disks that can be created. Valid values:</p>
              * <ul>
              * <li>cloud: basic disk</li>
              * <li>cloud_ssd: standard SSD</li>
@@ -1037,7 +1169,7 @@ public class DescribeZonesResponseBody extends TeaModel {
              * <li>IoOptimized: I/O optimized instance</li>
              * <li>Instance: instance</li>
              * <li>DedicatedHost: dedicated host</li>
-             * <li>disk: disk</li>
+             * <li>disk: cloud disk</li>
              * </ul>
              */
             public Builder availableResourceCreation(AvailableResourceCreation availableResourceCreation) {
@@ -1144,6 +1276,13 @@ public class DescribeZonesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Zone> zone; 
+
+            private Builder() {
+            } 
+
+            private Builder(Zones model) {
+                this.zone = model.zone;
+            } 
 
             /**
              * Zone.

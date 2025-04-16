@@ -48,6 +48,10 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
         private String requestId; 
         private RouteTables routeTables; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRouteTablesResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.routeTables = model.routeTables;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * PageNumber.
@@ -204,6 +219,16 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
             private String nextHopType; 
             private Integer weight; 
 
+            private Builder() {
+            } 
+
+            private Builder(NextHop model) {
+                this.enabled = model.enabled;
+                this.nextHopId = model.nextHopId;
+                this.nextHopType = model.nextHopType;
+                this.weight = model.weight;
+            } 
+
             /**
              * Enabled.
              */
@@ -274,6 +299,13 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<NextHop> nextHop; 
+
+            private Builder() {
+            } 
+
+            private Builder(NextHops model) {
+                this.nextHop = model.nextHop;
+            } 
 
             /**
              * NextHop.
@@ -394,6 +426,19 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
             private String status; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(RouteEntry model) {
+                this.destinationCidrBlock = model.destinationCidrBlock;
+                this.instanceId = model.instanceId;
+                this.nextHopType = model.nextHopType;
+                this.nextHops = model.nextHops;
+                this.routeTableId = model.routeTableId;
+                this.status = model.status;
+                this.type = model.type;
+            } 
+
             /**
              * DestinationCidrBlock.
              */
@@ -488,6 +533,13 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<RouteEntry> routeEntry; 
+
+            private Builder() {
+            } 
+
+            private Builder(RouteEntrys model) {
+                this.routeEntry = model.routeEntry;
+            } 
 
             /**
              * RouteEntry.
@@ -596,6 +648,18 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
             private String routeTableType; 
             private String vRouterId; 
 
+            private Builder() {
+            } 
+
+            private Builder(RouteTable model) {
+                this.creationTime = model.creationTime;
+                this.resourceGroupId = model.resourceGroupId;
+                this.routeEntrys = model.routeEntrys;
+                this.routeTableId = model.routeTableId;
+                this.routeTableType = model.routeTableType;
+                this.vRouterId = model.vRouterId;
+            } 
+
             /**
              * CreationTime.
              */
@@ -682,6 +746,13 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<RouteTable> routeTable; 
+
+            private Builder() {
+            } 
+
+            private Builder(RouteTables model) {
+                this.routeTable = model.routeTable;
+            } 
 
             /**
              * RouteTable.

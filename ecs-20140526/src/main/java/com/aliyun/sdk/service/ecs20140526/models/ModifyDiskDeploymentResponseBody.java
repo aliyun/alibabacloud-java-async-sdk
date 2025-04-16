@@ -36,6 +36,10 @@ public class ModifyDiskDeploymentResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class ModifyDiskDeploymentResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String taskId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyDiskDeploymentResponseBody model) {
+            this.requestId = model.requestId;
+            this.taskId = model.taskId;
+        } 
 
         /**
          * <p>The ID of the request.</p>

@@ -36,6 +36,10 @@ public class DescribeDedicatedHostAutoRenewResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dedicatedHostRenewAttributes
      */
@@ -53,6 +57,14 @@ public class DescribeDedicatedHostAutoRenewResponseBody extends TeaModel {
     public static final class Builder {
         private DedicatedHostRenewAttributes dedicatedHostRenewAttributes; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDedicatedHostAutoRenewResponseBody model) {
+            this.dedicatedHostRenewAttributes = model.dedicatedHostRenewAttributes;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The array that consists of dedicated host auto-renewal attributes.</p>
@@ -170,6 +182,18 @@ public class DescribeDedicatedHostAutoRenewResponseBody extends TeaModel {
             private Integer duration; 
             private String periodUnit; 
             private String renewalStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(DedicatedHostRenewAttribute model) {
+                this.autoRenewEnabled = model.autoRenewEnabled;
+                this.autoRenewWithEcs = model.autoRenewWithEcs;
+                this.dedicatedHostId = model.dedicatedHostId;
+                this.duration = model.duration;
+                this.periodUnit = model.periodUnit;
+                this.renewalStatus = model.renewalStatus;
+            } 
 
             /**
              * <p>Indicates whether auto-renewal is enabled. Valid values:</p>
@@ -292,6 +316,13 @@ public class DescribeDedicatedHostAutoRenewResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DedicatedHostRenewAttribute> dedicatedHostRenewAttribute; 
+
+            private Builder() {
+            } 
+
+            private Builder(DedicatedHostRenewAttributes model) {
+                this.dedicatedHostRenewAttribute = model.dedicatedHostRenewAttribute;
+            } 
 
             /**
              * DedicatedHostRenewAttribute.

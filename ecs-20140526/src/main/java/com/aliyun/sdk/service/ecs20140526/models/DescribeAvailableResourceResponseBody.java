@@ -36,6 +36,10 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return availableZones
      */
@@ -53,6 +57,14 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     public static final class Builder {
         private AvailableZones availableZones; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAvailableResourceResponseBody model) {
+            this.availableZones = model.availableZones;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Details about the zones in which resources are available.</p>
@@ -170,6 +182,18 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             private String statusCategory; 
             private String unit; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(SupportedResource model) {
+                this.max = model.max;
+                this.min = model.min;
+                this.status = model.status;
+                this.statusCategory = model.statusCategory;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The maximum disk capacity.</p>
@@ -289,6 +313,13 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<SupportedResource> supportedResource; 
 
+            private Builder() {
+            } 
+
+            private Builder(SupportedResources model) {
+                this.supportedResource = model.supportedResource;
+            } 
+
             /**
              * SupportedResource.
              */
@@ -347,6 +378,14 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         public static final class Builder {
             private SupportedResources supportedResources; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(AvailableResource model) {
+                this.supportedResources = model.supportedResources;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The information about the resources.</p>
@@ -414,6 +453,13 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<AvailableResource> availableResource; 
+
+            private Builder() {
+            } 
+
+            private Builder(AvailableResources model) {
+                this.availableResource = model.availableResource;
+            } 
 
             /**
              * AvailableResource.
@@ -509,6 +555,17 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             private String status; 
             private String statusCategory; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(AvailableZone model) {
+                this.availableResources = model.availableResources;
+                this.regionId = model.regionId;
+                this.status = model.status;
+                this.statusCategory = model.statusCategory;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>The resources that are available in the zone.</p>
@@ -610,6 +667,13 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<AvailableZone> availableZone; 
+
+            private Builder() {
+            } 
+
+            private Builder(AvailableZones model) {
+                this.availableZone = model.availableZone;
+            } 
 
             /**
              * AvailableZone.

@@ -48,6 +48,10 @@ public class DescribeSnapshotPackageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribeSnapshotPackageResponseBody extends TeaModel {
         private String requestId; 
         private SnapshotPackages snapshotPackages; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSnapshotPackageResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.snapshotPackages = model.snapshotPackages;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number.</p>
@@ -216,6 +231,16 @@ public class DescribeSnapshotPackageResponseBody extends TeaModel {
             private Long initCapacity; 
             private String startTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(SnapshotPackage model) {
+                this.displayName = model.displayName;
+                this.endTime = model.endTime;
+                this.initCapacity = model.initCapacity;
+                this.startTime = model.startTime;
+            } 
+
             /**
              * <p>The name of the OSS storage plan.</p>
              * 
@@ -298,6 +323,13 @@ public class DescribeSnapshotPackageResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SnapshotPackage> snapshotPackage; 
+
+            private Builder() {
+            } 
+
+            private Builder(SnapshotPackages model) {
+                this.snapshotPackage = model.snapshotPackage;
+            } 
 
             /**
              * SnapshotPackage.

@@ -48,6 +48,10 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
         private String requestId; 
         private StorageSets storageSets; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeStorageSetsResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.storageSets = model.storageSets;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number of the returned page.</p>
@@ -252,6 +267,19 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
             private Integer storageSetPartitionNumber; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(StorageSet model) {
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.regionId = model.regionId;
+                this.storageSetId = model.storageSetId;
+                this.storageSetName = model.storageSetName;
+                this.storageSetPartitionNumber = model.storageSetPartitionNumber;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
              * <p>The time when the storage set was created.</p>
              * 
@@ -367,6 +395,13 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<StorageSet> storageSet; 
+
+            private Builder() {
+            } 
+
+            private Builder(StorageSets model) {
+                this.storageSet = model.storageSet;
+            } 
 
             /**
              * StorageSet.

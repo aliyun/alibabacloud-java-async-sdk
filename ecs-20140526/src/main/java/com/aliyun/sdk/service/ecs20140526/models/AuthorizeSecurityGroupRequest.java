@@ -166,7 +166,7 @@ public class AuthorizeSecurityGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -509,7 +509,7 @@ public class AuthorizeSecurityGroupRequest extends Request {
         }
 
         /**
-         * <p>The security group rules. You can create 1 to 100 security group rules in a request.</p>
+         * <p>An array of security group rules. You can specify 1 to 100 security group rules in a request.</p>
          */
         public Builder permissions(java.util.List<Permissions> permissions) {
             this.putQueryParameter("Permissions", permissions);
@@ -707,6 +707,9 @@ public class AuthorizeSecurityGroupRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("PortRange")
         private String portRange;
 
+        @com.aliyun.core.annotation.NameInMap("PortRangeListId")
+        private String portRangeListId;
+
         @com.aliyun.core.annotation.NameInMap("Priority")
         private String priority;
 
@@ -737,6 +740,7 @@ public class AuthorizeSecurityGroupRequest extends Request {
             this.nicType = builder.nicType;
             this.policy = builder.policy;
             this.portRange = builder.portRange;
+            this.portRangeListId = builder.portRangeListId;
             this.priority = builder.priority;
             this.sourceCidrIp = builder.sourceCidrIp;
             this.sourceGroupId = builder.sourceGroupId;
@@ -811,6 +815,13 @@ public class AuthorizeSecurityGroupRequest extends Request {
         }
 
         /**
+         * @return portRangeListId
+         */
+        public String getPortRangeListId() {
+            return this.portRangeListId;
+        }
+
+        /**
          * @return priority
          */
         public String getPriority() {
@@ -868,6 +879,7 @@ public class AuthorizeSecurityGroupRequest extends Request {
             private String nicType; 
             private String policy; 
             private String portRange; 
+            private String portRangeListId; 
             private String priority; 
             private String sourceCidrIp; 
             private String sourceGroupId; 
@@ -875,6 +887,28 @@ public class AuthorizeSecurityGroupRequest extends Request {
             private Long sourceGroupOwnerId; 
             private String sourcePortRange; 
             private String sourcePrefixListId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Permissions model) {
+                this.description = model.description;
+                this.destCidrIp = model.destCidrIp;
+                this.ipProtocol = model.ipProtocol;
+                this.ipv6DestCidrIp = model.ipv6DestCidrIp;
+                this.ipv6SourceCidrIp = model.ipv6SourceCidrIp;
+                this.nicType = model.nicType;
+                this.policy = model.policy;
+                this.portRange = model.portRange;
+                this.portRangeListId = model.portRangeListId;
+                this.priority = model.priority;
+                this.sourceCidrIp = model.sourceCidrIp;
+                this.sourceGroupId = model.sourceGroupId;
+                this.sourceGroupOwnerAccount = model.sourceGroupOwnerAccount;
+                this.sourceGroupOwnerId = model.sourceGroupOwnerId;
+                this.sourcePortRange = model.sourcePortRange;
+                this.sourcePrefixListId = model.sourcePrefixListId;
+            } 
 
             /**
              * <p>The description of the security group rule. The description must be 1 to 512 characters in length.</p>
@@ -923,7 +957,7 @@ public class AuthorizeSecurityGroupRequest extends Request {
              * <p>The destination IPv6 CIDR block. IPv6 CIDR blocks and IPv6 addresses are supported.</p>
              * <p>This parameter is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</p>
              * <blockquote>
-             * <p> This parameter is valid only for ECS instances that reside in VPCs and support IPv6 CIDR blocks. You cannot specify both this parameter and <code>DestCidrIp</code> in the same request.</p>
+             * <p> This parameter is valid only for ECS instances that reside in VPCs and support IPv6 CIDR blocks. You cannot specify this parameter and <code>DestCidrIp</code> in the same request.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1001,6 +1035,14 @@ public class AuthorizeSecurityGroupRequest extends Request {
             }
 
             /**
+             * PortRangeListId.
+             */
+            public Builder portRangeListId(String portRangeListId) {
+                this.portRangeListId = portRangeListId;
+                return this;
+            }
+
+            /**
              * <p>The priority of the security group rule. A smaller value specifies a higher priority. Valid values: 1 to 100.</p>
              * <p>Default value: 1.</p>
              * 
@@ -1024,7 +1066,7 @@ public class AuthorizeSecurityGroupRequest extends Request {
             }
 
             /**
-             * <p>The ID of the source security group that is specified in the security group rule.</p>
+             * <p>The ID of the source security group of the security group rule.</p>
              * <ul>
              * <li>You must specify at least one of the following parameters: <code>SourceGroupId</code>, <code>SourceCidrIp</code>, <code>Ipv6SourceCidrIp</code>, and <code>SourcePrefixListId</code>.</li>
              * <li>If you specify <code>SourceGroupId</code> but do not specify <code>SourceCidrIp</code> or <code>Ipv6SourceCidrIp</code>, you must set <code>NicType</code> to <code>intranet</code>.</li>
@@ -1091,7 +1133,7 @@ public class AuthorizeSecurityGroupRequest extends Request {
              * <p>The ID of the source prefix list of the security group rule. You can call the <a href="https://help.aliyun.com/document_detail/205046.html">DescribePrefixLists</a> operation to query the IDs of available prefix lists.</p>
              * <p>When you specify this parameter, take note of the following items:</p>
              * <ul>
-             * <li>If a security group resides in the classic network, you cannot specify prefix lists in the rules of the security group. For information about the limits on security groups and prefix lists, see the <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a> section of the &quot;Limits and quotas&quot; topic.</li>
+             * <li>If a security group resides in the classic network, you cannot specify prefix lists in the rules of the security group. For information about the limits on security groups and prefix lists, see the <a href="~~25412#SecurityGroupQuota1~~">Security groups</a> section of the &quot;Limits and quotas&quot; topic.</li>
              * <li>If you specify <code>SourceCidrIp</code>, <code>Ipv6SourceCidrIp</code>, or <code>SourceGroupId</code>, this parameter is ignored.</li>
              * </ul>
              * 

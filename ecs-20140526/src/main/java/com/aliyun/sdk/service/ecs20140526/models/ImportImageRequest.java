@@ -135,7 +135,7 @@ public class ImportImageRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -736,6 +736,18 @@ public class ImportImageRequest extends Request {
             private String OSSBucket; 
             private String OSSObject; 
 
+            private Builder() {
+            } 
+
+            private Builder(DiskDeviceMapping model) {
+                this.device = model.device;
+                this.diskImSize = model.diskImSize;
+                this.diskImageSize = model.diskImageSize;
+                this.format = model.format;
+                this.OSSBucket = model.OSSBucket;
+                this.OSSObject = model.OSSObject;
+            } 
+
             /**
              * <p>The device name of disk N in the custom image.</p>
              * <blockquote>
@@ -880,6 +892,14 @@ public class ImportImageRequest extends Request {
             private String imdsSupport; 
             private String nvmeSupport; 
 
+            private Builder() {
+            } 
+
+            private Builder(Features model) {
+                this.imdsSupport = model.imdsSupport;
+                this.nvmeSupport = model.nvmeSupport;
+            } 
+
             /**
              * <p>The metadata access mode version of the image. Valid values:</p>
              * <ul>
@@ -961,6 +981,14 @@ public class ImportImageRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of tag N of the image. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>

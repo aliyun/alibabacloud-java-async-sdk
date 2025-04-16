@@ -48,6 +48,10 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return autoProvisioningGroupHistories
      */
@@ -89,6 +93,17 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAutoProvisioningGroupHistoryResponseBody model) {
+            this.autoProvisioningGroupHistories = model.autoProvisioningGroupHistories;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>An array consisting of AutoProvisioningGroupHistory data.</p>
@@ -192,6 +207,14 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
             private String detail; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(ActivityDetail model) {
+                this.detail = model.detail;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The execution details of instance creation performed by the single scheduling task.</p>
              * 
@@ -258,6 +281,13 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ActivityDetail> activityDetail; 
+
+            private Builder() {
+            } 
+
+            private Builder(ActivityDetails model) {
+                this.activityDetail = model.activityDetail;
+            } 
 
             /**
              * ActivityDetail.
@@ -354,6 +384,17 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
             private String status; 
             private String taskId; 
 
+            private Builder() {
+            } 
+
+            private Builder(AutoProvisioningGroupHistory model) {
+                this.activityDetails = model.activityDetails;
+                this.lastEventTime = model.lastEventTime;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.taskId = model.taskId;
+            } 
+
             /**
              * <p>An array consisting of ActivityDetail data.</p>
              */
@@ -449,6 +490,13 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<AutoProvisioningGroupHistory> autoProvisioningGroupHistory; 
+
+            private Builder() {
+            } 
+
+            private Builder(AutoProvisioningGroupHistories model) {
+                this.autoProvisioningGroupHistory = model.autoProvisioningGroupHistory;
+            } 
 
             /**
              * AutoProvisioningGroupHistory.

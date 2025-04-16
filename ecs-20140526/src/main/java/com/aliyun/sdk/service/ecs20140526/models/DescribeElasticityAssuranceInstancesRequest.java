@@ -76,7 +76,7 @@ public class DescribeElasticityAssuranceInstancesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -304,6 +304,13 @@ public class DescribeElasticityAssuranceInstancesRequest extends Request {
 
         public static final class Builder {
             private String id; 
+
+            private Builder() {
+            } 
+
+            private Builder(PrivatePoolOptions model) {
+                this.id = model.id;
+            } 
 
             /**
              * <p>The ID of the elasticity assurance.</p>

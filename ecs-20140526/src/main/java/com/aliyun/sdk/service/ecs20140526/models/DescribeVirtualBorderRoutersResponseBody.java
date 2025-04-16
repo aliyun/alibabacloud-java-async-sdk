@@ -48,6 +48,10 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
         private VirtualBorderRouterSet virtualBorderRouterSet; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVirtualBorderRoutersResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.virtualBorderRouterSet = model.virtualBorderRouterSet;
+        } 
 
         /**
          * PageNumber.
@@ -396,6 +411,32 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             private Integer vlanId; 
             private String vlanInterfaceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(VirtualBorderRouterType model) {
+                this.accessPointId = model.accessPointId;
+                this.activationTime = model.activationTime;
+                this.circuitCode = model.circuitCode;
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.localGatewayIp = model.localGatewayIp;
+                this.name = model.name;
+                this.peerGatewayIp = model.peerGatewayIp;
+                this.peeringSubnetMask = model.peeringSubnetMask;
+                this.physicalConnectionBusinessStatus = model.physicalConnectionBusinessStatus;
+                this.physicalConnectionId = model.physicalConnectionId;
+                this.physicalConnectionOwnerUid = model.physicalConnectionOwnerUid;
+                this.physicalConnectionStatus = model.physicalConnectionStatus;
+                this.recoveryTime = model.recoveryTime;
+                this.routeTableId = model.routeTableId;
+                this.status = model.status;
+                this.terminationTime = model.terminationTime;
+                this.vbrId = model.vbrId;
+                this.vlanId = model.vlanId;
+                this.vlanInterfaceId = model.vlanInterfaceId;
+            } 
+
             /**
              * AccessPointId.
              */
@@ -594,6 +635,13 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<VirtualBorderRouterType> virtualBorderRouterType; 
+
+            private Builder() {
+            } 
+
+            private Builder(VirtualBorderRouterSet model) {
+                this.virtualBorderRouterType = model.virtualBorderRouterType;
+            } 
 
             /**
              * VirtualBorderRouterType.

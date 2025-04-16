@@ -40,6 +40,10 @@ public class RunCommandResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return commandId
      */
@@ -65,6 +69,15 @@ public class RunCommandResponseBody extends TeaModel {
         private String commandId; 
         private String invokeId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(RunCommandResponseBody model) {
+            this.commandId = model.commandId;
+            this.invokeId = model.invokeId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The command ID.</p>

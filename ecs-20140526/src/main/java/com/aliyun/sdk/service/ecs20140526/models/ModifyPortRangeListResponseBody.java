@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DeleteDemandResponseBody} extends {@link TeaModel}
+ * {@link ModifyPortRangeListResponseBody} extends {@link TeaModel}
  *
- * <p>DeleteDemandResponseBody</p>
+ * <p>ModifyPortRangeListResponseBody</p>
  */
-public class DeleteDemandResponseBody extends TeaModel {
+public class ModifyPortRangeListResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private DeleteDemandResponseBody(Builder builder) {
+    private ModifyPortRangeListResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -28,8 +28,12 @@ public class DeleteDemandResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static DeleteDemandResponseBody create() {
+    public static ModifyPortRangeListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -42,19 +46,23 @@ public class DeleteDemandResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ModifyPortRangeListResponseBody model) {
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>The request ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public DeleteDemandResponseBody build() {
-            return new DeleteDemandResponseBody(this);
+        public ModifyPortRangeListResponseBody build() {
+            return new ModifyPortRangeListResponseBody(this);
         } 
 
     } 

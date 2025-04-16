@@ -40,6 +40,10 @@ public class DescribePrefixListAssociationsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextToken
      */
@@ -65,6 +69,15 @@ public class DescribePrefixListAssociationsResponseBody extends TeaModel {
         private String nextToken; 
         private PrefixListAssociations prefixListAssociations; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePrefixListAssociationsResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.prefixListAssociations = model.prefixListAssociations;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The query token that is returned in this call. If the return value is empty, no more data is returned.</p>
@@ -146,6 +159,14 @@ public class DescribePrefixListAssociationsResponseBody extends TeaModel {
             private String resourceId; 
             private String resourceType; 
 
+            private Builder() {
+            } 
+
+            private Builder(PrefixListAssociation model) {
+                this.resourceId = model.resourceId;
+                this.resourceType = model.resourceType;
+            } 
+
             /**
              * <p>The ID of the resource.</p>
              * 
@@ -206,6 +227,13 @@ public class DescribePrefixListAssociationsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<PrefixListAssociation> prefixListAssociation; 
+
+            private Builder() {
+            } 
+
+            private Builder(PrefixListAssociations model) {
+                this.prefixListAssociation = model.prefixListAssociation;
+            } 
 
             /**
              * PrefixListAssociation.

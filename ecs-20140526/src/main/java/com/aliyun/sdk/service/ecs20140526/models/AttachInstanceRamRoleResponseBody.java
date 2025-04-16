@@ -48,6 +48,10 @@ public class AttachInstanceRamRoleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return attachInstanceRamRoleResults
      */
@@ -89,6 +93,17 @@ public class AttachInstanceRamRoleResponseBody extends TeaModel {
         private String ramRoleName; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(AttachInstanceRamRoleResponseBody model) {
+            this.attachInstanceRamRoleResults = model.attachInstanceRamRoleResults;
+            this.failCount = model.failCount;
+            this.ramRoleName = model.ramRoleName;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>Details about the results of attaching the instance RAM role.</p>
@@ -216,6 +231,16 @@ public class AttachInstanceRamRoleResponseBody extends TeaModel {
             private String message; 
             private Boolean success; 
 
+            private Builder() {
+            } 
+
+            private Builder(AttachInstanceRamRoleResult model) {
+                this.code = model.code;
+                this.instanceId = model.instanceId;
+                this.message = model.message;
+                this.success = model.success;
+            } 
+
             /**
              * <p>Indicates whether the instance RAM role was attached. If the instance RAM role was attached, 200 is returned. If the instance RAM role failed to be attached, any other value is returned. For more information, see the &quot;Error codes&quot; section.</p>
              * 
@@ -298,6 +323,13 @@ public class AttachInstanceRamRoleResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<AttachInstanceRamRoleResult> attachInstanceRamRoleResult; 
+
+            private Builder() {
+            } 
+
+            private Builder(AttachInstanceRamRoleResults model) {
+                this.attachInstanceRamRoleResult = model.attachInstanceRamRoleResult;
+            } 
 
             /**
              * AttachInstanceRamRoleResult.

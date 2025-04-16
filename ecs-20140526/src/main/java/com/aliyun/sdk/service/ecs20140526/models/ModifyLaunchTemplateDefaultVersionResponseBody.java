@@ -36,6 +36,10 @@ public class ModifyLaunchTemplateDefaultVersionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return launchTemplateId
      */
@@ -53,6 +57,14 @@ public class ModifyLaunchTemplateDefaultVersionResponseBody extends TeaModel {
     public static final class Builder {
         private String launchTemplateId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyLaunchTemplateDefaultVersionResponseBody model) {
+            this.launchTemplateId = model.launchTemplateId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the launch template. For more information, see <a href="https://help.aliyun.com/document_detail/73759.html">DescribeLaunchTemplates</a>.</p>

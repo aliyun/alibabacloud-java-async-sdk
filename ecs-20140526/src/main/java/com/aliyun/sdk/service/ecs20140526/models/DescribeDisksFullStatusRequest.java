@@ -110,7 +110,7 @@ public class DescribeDisksFullStatusRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -515,6 +515,14 @@ public class DescribeDisksFullStatusRequest extends Request {
             private String end; 
             private String start; 
 
+            private Builder() {
+            } 
+
+            private Builder(EventTime model) {
+                this.end = model.end;
+                this.start = model.start;
+            } 
+
             /**
              * <p>The end of the time range to query occurred events.</p>
              * <p>Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC.</p>
@@ -589,6 +597,14 @@ public class DescribeDisksFullStatusRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of tag N to add to the EBS device. A key-value pair consists of a key specified by the Tag.N.Key parameter and a value specified by the <code>Tag.N.Value</code> parameter. The two parameters are associated with each other. Valid values of N: 1 to 20.</p>

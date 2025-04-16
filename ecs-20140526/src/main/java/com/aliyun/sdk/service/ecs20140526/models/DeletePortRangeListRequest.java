@@ -12,19 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DeleteDemandRequest} extends {@link RequestModel}
+ * {@link DeletePortRangeListRequest} extends {@link RequestModel}
  *
- * <p>DeleteDemandRequest</p>
+ * <p>DeletePortRangeListRequest</p>
  */
-public class DeleteDemandRequest extends Request {
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ClientToken")
-    private String clientToken;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("DemandId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String demandId;
+public class DeletePortRangeListRequest extends Request {
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
@@ -35,8 +30,9 @@ public class DeleteDemandRequest extends Request {
     private Long ownerId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("Reason")
-    private String reason;
+    @com.aliyun.core.annotation.NameInMap("PortRangeListId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String portRangeListId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -51,13 +47,12 @@ public class DeleteDemandRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    private DeleteDemandRequest(Builder builder) {
+    private DeletePortRangeListRequest(Builder builder) {
         super(builder);
-        this.clientToken = builder.clientToken;
-        this.demandId = builder.demandId;
+        this.sourceRegionId = builder.sourceRegionId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
-        this.reason = builder.reason;
+        this.portRangeListId = builder.portRangeListId;
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
@@ -67,27 +62,20 @@ public class DeleteDemandRequest extends Request {
         return new Builder();
     }
 
-    public static DeleteDemandRequest create() {
+    public static DeletePortRangeListRequest create() {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
 
     /**
-     * @return clientToken
+     * @return sourceRegionId
      */
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
-    /**
-     * @return demandId
-     */
-    public String getDemandId() {
-        return this.demandId;
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -105,10 +93,10 @@ public class DeleteDemandRequest extends Request {
     }
 
     /**
-     * @return reason
+     * @return portRangeListId
      */
-    public String getReason() {
-        return this.reason;
+    public String getPortRangeListId() {
+        return this.portRangeListId;
     }
 
     /**
@@ -132,12 +120,11 @@ public class DeleteDemandRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    public static final class Builder extends Request.Builder<DeleteDemandRequest, Builder> {
-        private String clientToken; 
-        private String demandId; 
+    public static final class Builder extends Request.Builder<DeletePortRangeListRequest, Builder> {
+        private String sourceRegionId; 
         private String ownerAccount; 
         private Long ownerId; 
-        private String reason; 
+        private String portRangeListId; 
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
@@ -146,40 +133,23 @@ public class DeleteDemandRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteDemandRequest request) {
+        private Builder(DeletePortRangeListRequest request) {
             super(request);
-            this.clientToken = request.clientToken;
-            this.demandId = request.demandId;
+            this.sourceRegionId = request.sourceRegionId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
-            this.reason = request.reason;
+            this.portRangeListId = request.portRangeListId;
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * <p>The client token that is used to ensure the idempotency of the request. You can use the client to generate a value, but you must make sure that the value is unique among all requests. The <code>token</code> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
+         * SourceRegionId.
          */
-        public Builder clientToken(String clientToken) {
-            this.putQueryParameter("ClientToken", clientToken);
-            this.clientToken = clientToken;
-            return this;
-        }
-
-        /**
-         * <p>The ID of the demand.</p>
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ed-bp11n21kq00sl71p****</p>
-         */
-        public Builder demandId(String demandId) {
-            this.putQueryParameter("DemandId", demandId);
-            this.demandId = demandId;
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 
@@ -202,19 +172,18 @@ public class DeleteDemandRequest extends Request {
         }
 
         /**
-         * <p>The reason why you want to delete the demand.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>test-reason</p>
+         * <p>prl-2ze9743****</p>
          */
-        public Builder reason(String reason) {
-            this.putQueryParameter("Reason", reason);
-            this.reason = reason;
+        public Builder portRangeListId(String portRangeListId) {
+            this.putQueryParameter("PortRangeListId", portRangeListId);
+            this.portRangeListId = portRangeListId;
             return this;
         }
 
         /**
-         * <p>The region ID of the demand. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -245,8 +214,8 @@ public class DeleteDemandRequest extends Request {
         }
 
         @Override
-        public DeleteDemandRequest build() {
-            return new DeleteDemandRequest(this);
+        public DeletePortRangeListRequest build() {
+            return new DeletePortRangeListRequest(this);
         } 
 
     } 

@@ -48,6 +48,10 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return launchTemplateVersionSets
      */
@@ -89,6 +93,17 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeLaunchTemplateVersionsResponseBody model) {
+            this.launchTemplateVersionSets = model.launchTemplateVersionSets;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>Details about the launch template versions.</p>
@@ -312,6 +327,24 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             private Integer size; 
             private String snapshotId; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataDisk model) {
+                this.autoSnapshotPolicyId = model.autoSnapshotPolicyId;
+                this.burstingEnabled = model.burstingEnabled;
+                this.category = model.category;
+                this.deleteWithInstance = model.deleteWithInstance;
+                this.description = model.description;
+                this.device = model.device;
+                this.diskName = model.diskName;
+                this.encrypted = model.encrypted;
+                this.performanceLevel = model.performanceLevel;
+                this.provisionedIops = model.provisionedIops;
+                this.size = model.size;
+                this.snapshotId = model.snapshotId;
+            } 
+
             /**
              * <p>The ID of the automatic snapshot policy.</p>
              * 
@@ -504,6 +537,13 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<DataDisk> dataDisk; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataDisks model) {
+                this.dataDisk = model.dataDisk;
+            } 
+
             /**
              * DataDisk.
              */
@@ -550,6 +590,13 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> securityGroupId; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecurityGroupIds model) {
+                this.securityGroupId = model.securityGroupId;
+            } 
 
             /**
              * SecurityGroupId.
@@ -693,6 +740,21 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             private String securityGroupId; 
             private SecurityGroupIds securityGroupIds; 
             private String vSwitchId; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetworkInterface model) {
+                this.deleteOnRelease = model.deleteOnRelease;
+                this.description = model.description;
+                this.instanceType = model.instanceType;
+                this.networkInterfaceName = model.networkInterfaceName;
+                this.networkInterfaceTrafficMode = model.networkInterfaceTrafficMode;
+                this.primaryIpAddress = model.primaryIpAddress;
+                this.securityGroupId = model.securityGroupId;
+                this.securityGroupIds = model.securityGroupIds;
+                this.vSwitchId = model.vSwitchId;
+            } 
 
             /**
              * <p>Indicates whether to retain the ENI when the associated instance is released. Valid values:</p>
@@ -843,6 +905,13 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<NetworkInterface> networkInterface; 
 
+            private Builder() {
+            } 
+
+            private Builder(NetworkInterfaces model) {
+                this.networkInterface = model.networkInterface;
+            } 
+
             /**
              * NetworkInterface.
              */
@@ -889,6 +958,13 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> securityGroupId; 
+
+            private Builder() {
+            } 
+
+            private Builder(LaunchTemplateDataSecurityGroupIds model) {
+                this.securityGroupId = model.securityGroupId;
+            } 
 
             /**
              * <p>The ID of the security group to which to assign the secondary ENI. The security group and the ENI must belong to the same VPC.</p>
@@ -955,6 +1031,14 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceTag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The key of the tag to add to the instance.</p>
              * 
@@ -1015,6 +1099,13 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<InstanceTag> instanceTag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.instanceTag = model.instanceTag;
+            } 
 
             /**
              * InstanceTag.
@@ -1698,6 +1789,66 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             private String vSwitchId; 
             private String vpcId; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(LaunchTemplateData model) {
+                this.autoReleaseTime = model.autoReleaseTime;
+                this.autoRenew = model.autoRenew;
+                this.autoRenewPeriod = model.autoRenewPeriod;
+                this.creditSpecification = model.creditSpecification;
+                this.dataDisks = model.dataDisks;
+                this.deletionProtection = model.deletionProtection;
+                this.deploymentSetId = model.deploymentSetId;
+                this.description = model.description;
+                this.enableVmOsConfig = model.enableVmOsConfig;
+                this.hostName = model.hostName;
+                this.httpEndpoint = model.httpEndpoint;
+                this.httpPutResponseHopLimit = model.httpPutResponseHopLimit;
+                this.httpTokens = model.httpTokens;
+                this.imageId = model.imageId;
+                this.imageOwnerAlias = model.imageOwnerAlias;
+                this.instanceChargeType = model.instanceChargeType;
+                this.instanceName = model.instanceName;
+                this.instanceType = model.instanceType;
+                this.internetChargeType = model.internetChargeType;
+                this.internetMaxBandwidthIn = model.internetMaxBandwidthIn;
+                this.internetMaxBandwidthOut = model.internetMaxBandwidthOut;
+                this.ioOptimized = model.ioOptimized;
+                this.ipv6AddressCount = model.ipv6AddressCount;
+                this.keyPairName = model.keyPairName;
+                this.networkInterfaces = model.networkInterfaces;
+                this.networkType = model.networkType;
+                this.passwordInherit = model.passwordInherit;
+                this.period = model.period;
+                this.periodUnit = model.periodUnit;
+                this.privateIpAddress = model.privateIpAddress;
+                this.ramRoleName = model.ramRoleName;
+                this.resourceGroupId = model.resourceGroupId;
+                this.securityEnhancementStrategy = model.securityEnhancementStrategy;
+                this.securityGroupId = model.securityGroupId;
+                this.securityGroupIds = model.securityGroupIds;
+                this.spotDuration = model.spotDuration;
+                this.spotPriceLimit = model.spotPriceLimit;
+                this.spotStrategy = model.spotStrategy;
+                this.systemDisk_autoSnapshotPolicyId = model.systemDisk_autoSnapshotPolicyId;
+                this.systemDisk_burstingEnabled = model.systemDisk_burstingEnabled;
+                this.systemDisk_category = model.systemDisk_category;
+                this.systemDisk_deleteWithInstance = model.systemDisk_deleteWithInstance;
+                this.systemDisk_description = model.systemDisk_description;
+                this.systemDisk_diskName = model.systemDisk_diskName;
+                this.systemDisk_encrypted = model.systemDisk_encrypted;
+                this.systemDisk_iops = model.systemDisk_iops;
+                this.systemDisk_performanceLevel = model.systemDisk_performanceLevel;
+                this.systemDisk_provisionedIops = model.systemDisk_provisionedIops;
+                this.systemDisk_size = model.systemDisk_size;
+                this.tags = model.tags;
+                this.userData = model.userData;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>The automatic release time of the instance.</p>
@@ -2454,6 +2605,21 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             private String versionDescription; 
             private Long versionNumber; 
 
+            private Builder() {
+            } 
+
+            private Builder(LaunchTemplateVersionSet model) {
+                this.createTime = model.createTime;
+                this.createdBy = model.createdBy;
+                this.defaultVersion = model.defaultVersion;
+                this.launchTemplateData = model.launchTemplateData;
+                this.launchTemplateId = model.launchTemplateId;
+                this.launchTemplateName = model.launchTemplateName;
+                this.modifiedTime = model.modifiedTime;
+                this.versionDescription = model.versionDescription;
+                this.versionNumber = model.versionNumber;
+            } 
+
             /**
              * <p>The time when the launch template version was created.</p>
              * 
@@ -2588,6 +2754,13 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<LaunchTemplateVersionSet> launchTemplateVersionSet; 
+
+            private Builder() {
+            } 
+
+            private Builder(LaunchTemplateVersionSets model) {
+                this.launchTemplateVersionSet = model.launchTemplateVersionSet;
+            } 
 
             /**
              * LaunchTemplateVersionSet.

@@ -52,6 +52,10 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceCloudAssistantStatusSet
      */
@@ -101,6 +105,18 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
         private Long pageSize; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCloudAssistantStatusResponseBody model) {
+            this.instanceCloudAssistantStatusSet = model.instanceCloudAssistantStatusSet;
+            this.nextToken = model.nextToken;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>Details about the installation status of Cloud Assistant on the instances.</p>
@@ -299,6 +315,21 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
             private String OSType; 
             private Boolean supportSessionManager; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceCloudAssistantStatus model) {
+                this.activeTaskCount = model.activeTaskCount;
+                this.cloudAssistantStatus = model.cloudAssistantStatus;
+                this.cloudAssistantVersion = model.cloudAssistantVersion;
+                this.instanceId = model.instanceId;
+                this.invocationCount = model.invocationCount;
+                this.lastHeartbeatTime = model.lastHeartbeatTime;
+                this.lastInvokedTime = model.lastInvokedTime;
+                this.OSType = model.OSType;
+                this.supportSessionManager = model.supportSessionManager;
+            } 
+
             /**
              * <p>The number of tasks that Cloud Assistant was running on the instance.</p>
              * 
@@ -450,6 +481,13 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<InstanceCloudAssistantStatus> instanceCloudAssistantStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceCloudAssistantStatusSet model) {
+                this.instanceCloudAssistantStatus = model.instanceCloudAssistantStatus;
+            } 
 
             /**
              * InstanceCloudAssistantStatus.

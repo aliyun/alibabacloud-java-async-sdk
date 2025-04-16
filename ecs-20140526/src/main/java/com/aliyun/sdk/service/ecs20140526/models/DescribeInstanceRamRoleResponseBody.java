@@ -44,6 +44,10 @@ public class DescribeInstanceRamRoleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceRamRoleSets
      */
@@ -77,6 +81,16 @@ public class DescribeInstanceRamRoleResponseBody extends TeaModel {
         private String regionId; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceRamRoleResponseBody model) {
+            this.instanceRamRoleSets = model.instanceRamRoleSets;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The IDs of the ECS instances and the names of the corresponding instance RAM roles.</p>
@@ -169,6 +183,14 @@ public class DescribeInstanceRamRoleResponseBody extends TeaModel {
             private String instanceId; 
             private String ramRoleName; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceRamRoleSet model) {
+                this.instanceId = model.instanceId;
+                this.ramRoleName = model.ramRoleName;
+            } 
+
             /**
              * <p>The ID of the instance</p>
              * 
@@ -229,6 +251,13 @@ public class DescribeInstanceRamRoleResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<InstanceRamRoleSet> instanceRamRoleSet; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceRamRoleSets model) {
+                this.instanceRamRoleSet = model.instanceRamRoleSet;
+            } 
 
             /**
              * InstanceRamRoleSet.

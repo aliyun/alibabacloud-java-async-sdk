@@ -48,6 +48,10 @@ public class DescribeClassicLinkInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return links
      */
@@ -89,6 +93,17 @@ public class DescribeClassicLinkInstancesResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeClassicLinkInstancesResponseBody model) {
+            this.links = model.links;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The details of the ClassicLink connections between the instances reside in the classic network and VPCs.</p>
@@ -192,6 +207,14 @@ public class DescribeClassicLinkInstancesResponseBody extends TeaModel {
             private String instanceId; 
             private String vpcId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Link model) {
+                this.instanceId = model.instanceId;
+                this.vpcId = model.vpcId;
+            } 
+
             /**
              * <p>The instance ID.</p>
              * 
@@ -252,6 +275,13 @@ public class DescribeClassicLinkInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Link> link; 
+
+            private Builder() {
+            } 
+
+            private Builder(Links model) {
+                this.link = model.link;
+            } 
 
             /**
              * Link.

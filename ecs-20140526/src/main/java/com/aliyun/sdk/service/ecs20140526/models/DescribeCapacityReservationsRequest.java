@@ -111,7 +111,7 @@ public class DescribeCapacityReservationsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -318,8 +318,8 @@ public class DescribeCapacityReservationsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
-         * <p>Valid values: 1 to 100.</p>
+         * <p>The maximum number of entries per page.</p>
+         * <p>Maximum value: 100</p>
          * <p>Default value: 10.</p>
          * 
          * <strong>example:</strong>
@@ -506,6 +506,13 @@ public class DescribeCapacityReservationsRequest extends Request {
         public static final class Builder {
             private String ids; 
 
+            private Builder() {
+            } 
+
+            private Builder(PrivatePoolOptions model) {
+                this.ids = model.ids;
+            } 
+
             /**
              * <p>The IDs of capacity reservations. The value can be a JSON array that consists of up to 100 capacity reservation IDs. Separate the IDs with commas (,).</p>
              * 
@@ -567,6 +574,14 @@ public class DescribeCapacityReservationsRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of tag N of the capacity reservation. Valid values of N: 1 to 20.</p>

@@ -48,6 +48,10 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return imagePipeline
      */
@@ -89,6 +93,17 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeImagePipelinesResponseBody model) {
+            this.imagePipeline = model.imagePipeline;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>Details about the image templates.</p>
@@ -180,6 +195,13 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> addAccount; 
 
+            private Builder() {
+            } 
+
+            private Builder(AddAccounts model) {
+                this.addAccount = model.addAccount;
+            } 
+
             /**
              * AddAccount.
              */
@@ -238,6 +260,14 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         public static final class Builder {
             private String imageNameSuffix; 
             private Boolean retainCloudAssistant; 
+
+            private Builder() {
+            } 
+
+            private Builder(AdvancedOptions model) {
+                this.imageNameSuffix = model.imageNameSuffix;
+                this.retainCloudAssistant = model.retainCloudAssistant;
+            } 
 
             /**
              * <p>Indicates whether to disable the feature that automatically adds a suffix to the name of the image created based on the image template. Valid value:</p>
@@ -310,6 +340,13 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         public static final class Builder {
             private String nvmeSupport; 
 
+            private Builder() {
+            } 
+
+            private Builder(ImageFeatures model) {
+                this.nvmeSupport = model.nvmeSupport;
+            } 
+
             /**
              * <p>Indicates whether the image supports the NVMe protocol. Valid values:</p>
              * <ul>
@@ -377,6 +414,14 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(ImageTag model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
              * <p>The tag key of the image.</p>
              * 
@@ -437,6 +482,13 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ImageTag> imageTag; 
+
+            private Builder() {
+            } 
+
+            private Builder(ImageTags model) {
+                this.imageTag = model.imageTag;
+            } 
 
             /**
              * ImageTag.
@@ -532,6 +584,17 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             private ImageFeatures imageFeatures; 
             private String imageName; 
             private ImageTags imageTags; 
+
+            private Builder() {
+            } 
+
+            private Builder(ImageOptions model) {
+                this.description = model.description;
+                this.imageFamily = model.imageFamily;
+                this.imageFeatures = model.imageFeatures;
+                this.imageName = model.imageName;
+                this.imageTags = model.imageTags;
+            } 
 
             /**
              * <p>The description of the image.</p>
@@ -657,6 +720,16 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             private String OSSBucket; 
             private String OSSObject; 
 
+            private Builder() {
+            } 
+
+            private Builder(DiskDeviceMapping model) {
+                this.diskImageSize = model.diskImageSize;
+                this.format = model.format;
+                this.OSSBucket = model.OSSBucket;
+                this.OSSObject = model.OSSObject;
+            } 
+
             /**
              * <p>The size of disk N in the custom image after the image is imported.</p>
              * <p>You can use this parameter to specify the sizes of the system disk and data disks in the custom image. When you specify the size of the system disk, make sure that the specified size is greater than or equal to the size of the source image file. Unit: GiB. Valid values:</p>
@@ -751,6 +824,13 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<DiskDeviceMapping> diskDeviceMapping; 
 
+            private Builder() {
+            } 
+
+            private Builder(DiskDeviceMappings model) {
+                this.diskDeviceMapping = model.diskDeviceMapping;
+            } 
+
             /**
              * DiskDeviceMapping.
              */
@@ -797,6 +877,13 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String nvmeSupport; 
+
+            private Builder() {
+            } 
+
+            private Builder(Features model) {
+                this.nvmeSupport = model.nvmeSupport;
+            } 
 
             /**
              * <p>Indicates whether the image supports the NVMe protocol. Valid values:</p>
@@ -935,6 +1022,20 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             private String OSType; 
             private String platform; 
             private Boolean retainImportedImage; 
+
+            private Builder() {
+            } 
+
+            private Builder(ImportImageOptions model) {
+                this.architecture = model.architecture;
+                this.bootMode = model.bootMode;
+                this.diskDeviceMappings = model.diskDeviceMappings;
+                this.features = model.features;
+                this.licenseType = model.licenseType;
+                this.OSType = model.OSType;
+                this.platform = model.platform;
+                this.retainImportedImage = model.retainImportedImage;
+            } 
 
             /**
              * <p>The operating system architecture. Valid values:</p>
@@ -1121,6 +1222,14 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
              * <p>The key of the tag.</p>
              * 
@@ -1182,6 +1291,13 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Tag> tag; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
+
             /**
              * Tag.
              */
@@ -1228,6 +1344,13 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> toRegionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ToRegionIds model) {
+                this.toRegionId = model.toRegionId;
+            } 
 
             /**
              * ToRegionId.
@@ -1555,6 +1678,36 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             private ToRegionIds toRegionIds; 
             private String vSwitchId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ImagePipelineSet model) {
+                this.addAccounts = model.addAccounts;
+                this.advancedOptions = model.advancedOptions;
+                this.baseImage = model.baseImage;
+                this.baseImageType = model.baseImageType;
+                this.buildContent = model.buildContent;
+                this.creationTime = model.creationTime;
+                this.deleteInstanceOnFailure = model.deleteInstanceOnFailure;
+                this.description = model.description;
+                this.imageFamily = model.imageFamily;
+                this.imageName = model.imageName;
+                this.imageOptions = model.imageOptions;
+                this.imagePipelineId = model.imagePipelineId;
+                this.importImageOptions = model.importImageOptions;
+                this.instanceType = model.instanceType;
+                this.internetMaxBandwidthOut = model.internetMaxBandwidthOut;
+                this.name = model.name;
+                this.nvmeSupport = model.nvmeSupport;
+                this.repairMode = model.repairMode;
+                this.resourceGroupId = model.resourceGroupId;
+                this.systemDiskSize = model.systemDiskSize;
+                this.tags = model.tags;
+                this.testContent = model.testContent;
+                this.toRegionIds = model.toRegionIds;
+                this.vSwitchId = model.vSwitchId;
+            } 
+
             /**
              * <p>The IDs of Alibaba Cloud accounts to which to share the image that will be created based on the image template.</p>
              */
@@ -1860,6 +2013,13 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ImagePipelineSet> imagePipelineSet; 
+
+            private Builder() {
+            } 
+
+            private Builder(ImagePipeline model) {
+                this.imagePipelineSet = model.imagePipelineSet;
+            } 
 
             /**
              * ImagePipelineSet.

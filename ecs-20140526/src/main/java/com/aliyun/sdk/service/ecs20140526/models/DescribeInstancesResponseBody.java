@@ -52,6 +52,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instances
      */
@@ -101,6 +105,18 @@ public class DescribeInstancesResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstancesResponseBody model) {
+            this.instances = model.instances;
+            this.nextToken = model.nextToken;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>Details about the queried instances.</p>
@@ -206,6 +222,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean enableHighDensityMode; 
 
+            private Builder() {
+            } 
+
+            private Builder(AdditionalInfo model) {
+                this.enableHighDensityMode = model.enableHighDensityMode;
+            } 
+
             /**
              * <blockquote>
              * <p> This parameter is in invitational preview and is not publicly available.</p>
@@ -236,6 +259,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CoreCount")
         private Integer coreCount;
 
+        @com.aliyun.core.annotation.NameInMap("EnableVISST")
+        private Boolean enableVISST;
+
+        @com.aliyun.core.annotation.NameInMap("EnableVRDT")
+        private Boolean enableVRDT;
+
         @com.aliyun.core.annotation.NameInMap("Numa")
         private String numa;
 
@@ -245,11 +274,17 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TopologyType")
         private String topologyType;
 
+        @com.aliyun.core.annotation.NameInMap("TurboMode")
+        private String turboMode;
+
         private CpuOptions(Builder builder) {
             this.coreCount = builder.coreCount;
+            this.enableVISST = builder.enableVISST;
+            this.enableVRDT = builder.enableVRDT;
             this.numa = builder.numa;
             this.threadsPerCore = builder.threadsPerCore;
             this.topologyType = builder.topologyType;
+            this.turboMode = builder.turboMode;
         }
 
         public static Builder builder() {
@@ -265,6 +300,20 @@ public class DescribeInstancesResponseBody extends TeaModel {
          */
         public Integer getCoreCount() {
             return this.coreCount;
+        }
+
+        /**
+         * @return enableVISST
+         */
+        public Boolean getEnableVISST() {
+            return this.enableVISST;
+        }
+
+        /**
+         * @return enableVRDT
+         */
+        public Boolean getEnableVRDT() {
+            return this.enableVRDT;
         }
 
         /**
@@ -288,11 +337,34 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.topologyType;
         }
 
+        /**
+         * @return turboMode
+         */
+        public String getTurboMode() {
+            return this.turboMode;
+        }
+
         public static final class Builder {
             private Integer coreCount; 
+            private Boolean enableVISST; 
+            private Boolean enableVRDT; 
             private String numa; 
             private Integer threadsPerCore; 
             private String topologyType; 
+            private String turboMode; 
+
+            private Builder() {
+            } 
+
+            private Builder(CpuOptions model) {
+                this.coreCount = model.coreCount;
+                this.enableVISST = model.enableVISST;
+                this.enableVRDT = model.enableVRDT;
+                this.numa = model.numa;
+                this.threadsPerCore = model.threadsPerCore;
+                this.topologyType = model.topologyType;
+                this.turboMode = model.turboMode;
+            } 
 
             /**
              * <p>The number of physical CPU cores.</p>
@@ -302,6 +374,22 @@ public class DescribeInstancesResponseBody extends TeaModel {
              */
             public Builder coreCount(Integer coreCount) {
                 this.coreCount = coreCount;
+                return this;
+            }
+
+            /**
+             * EnableVISST.
+             */
+            public Builder enableVISST(Boolean enableVISST) {
+                this.enableVISST = enableVISST;
+                return this;
+            }
+
+            /**
+             * EnableVRDT.
+             */
+            public Builder enableVRDT(Boolean enableVRDT) {
+                this.enableVRDT = enableVRDT;
                 return this;
             }
 
@@ -341,6 +429,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
              */
             public Builder topologyType(String topologyType) {
                 this.topologyType = topologyType;
+                return this;
+            }
+
+            /**
+             * TurboMode.
+             */
+            public Builder turboMode(String turboMode) {
+                this.turboMode = turboMode;
                 return this;
             }
 
@@ -406,6 +502,15 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String dedicatedHostClusterId; 
             private String dedicatedHostId; 
             private String dedicatedHostName; 
+
+            private Builder() {
+            } 
+
+            private Builder(DedicatedHostAttribute model) {
+                this.dedicatedHostClusterId = model.dedicatedHostClusterId;
+                this.dedicatedHostId = model.dedicatedHostId;
+                this.dedicatedHostName = model.dedicatedHostName;
+            } 
 
             /**
              * <p>The ID of the dedicated host cluster.</p>
@@ -491,6 +596,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String affinity; 
             private String tenancy; 
 
+            private Builder() {
+            } 
+
+            private Builder(DedicatedInstanceAttribute model) {
+                this.affinity = model.affinity;
+                this.tenancy = model.tenancy;
+            } 
+
             /**
              * <p>Indicates whether the instance on the dedicated host is associated with the dedicated host. Valid values:</p>
              * <ul>
@@ -571,6 +684,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private String capacityReservationId; 
             private String capacityReservationPreference; 
+
+            private Builder() {
+            } 
+
+            private Builder(EcsCapacityReservationAttr model) {
+                this.capacityReservationId = model.capacityReservationId;
+                this.capacityReservationPreference = model.capacityReservationPreference;
+            } 
 
             /**
              * <p>The ID of the capacity reservation.</p>
@@ -681,6 +802,17 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String ipAddress; 
             private Boolean isSupportUnassociate; 
 
+            private Builder() {
+            } 
+
+            private Builder(EipAddress model) {
+                this.allocationId = model.allocationId;
+                this.bandwidth = model.bandwidth;
+                this.internetChargeType = model.internetChargeType;
+                this.ipAddress = model.ipAddress;
+                this.isSupportUnassociate = model.isSupportUnassociate;
+            } 
+
             /**
              * <p>The ID of the EIP.</p>
              * 
@@ -779,6 +911,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean configured; 
 
+            private Builder() {
+            } 
+
+            private Builder(HibernationOptions model) {
+                this.configured = model.configured;
+            } 
+
             /**
              * <blockquote>
              * <p> This parameter is in invitational preview and is not publicly available.</p>
@@ -842,6 +981,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean currentOSNVMeSupported; 
             private Boolean loginAsNonRoot; 
+
+            private Builder() {
+            } 
+
+            private Builder(ImageOptions model) {
+                this.currentOSNVMeSupported = model.currentOSNVMeSupported;
+                this.loginAsNonRoot = model.loginAsNonRoot;
+            } 
 
             /**
              * <p>Indicates whether the operating system supports access to disks over the NVMe protocol. Valid values:</p>
@@ -914,6 +1061,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> ipAddress; 
+
+            private Builder() {
+            } 
+
+            private Builder(InnerIpAddress model) {
+                this.ipAddress = model.ipAddress;
+            } 
 
             /**
              * <p>The EIP.</p>
@@ -988,6 +1142,15 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String httpEndpoint; 
             private Integer httpPutResponseHopLimit; 
             private String httpTokens; 
+
+            private Builder() {
+            } 
+
+            private Builder(MetadataOptions model) {
+                this.httpEndpoint = model.httpEndpoint;
+                this.httpPutResponseHopLimit = model.httpPutResponseHopLimit;
+                this.httpTokens = model.httpTokens;
+            } 
 
             /**
              * <p>Indicates whether the access channel is enabled for instance metadata. Valid values:</p>
@@ -1071,6 +1234,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private String ipv4Prefix; 
 
+            private Builder() {
+            } 
+
+            private Builder(Ipv4PrefixSet model) {
+                this.ipv4Prefix = model.ipv4Prefix;
+            } 
+
             /**
              * <p>The IPv4 prefix of the ENI.</p>
              */
@@ -1118,6 +1288,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Ipv4PrefixSet> ipv4PrefixSet; 
 
+            private Builder() {
+            } 
+
+            private Builder(Ipv4PrefixSets model) {
+                this.ipv4PrefixSet = model.ipv4PrefixSet;
+            } 
+
             /**
              * Ipv4PrefixSet.
              */
@@ -1164,6 +1341,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String ipv6Prefix; 
+
+            private Builder() {
+            } 
+
+            private Builder(Ipv6PrefixSet model) {
+                this.ipv6Prefix = model.ipv6Prefix;
+            } 
 
             /**
              * <p>The IPv6 prefix of the ENI.</p>
@@ -1215,6 +1399,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Ipv6PrefixSet> ipv6PrefixSet; 
 
+            private Builder() {
+            } 
+
+            private Builder(Ipv6PrefixSets model) {
+                this.ipv6PrefixSet = model.ipv6PrefixSet;
+            } 
+
             /**
              * Ipv6PrefixSet.
              */
@@ -1261,6 +1452,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String ipv6Address; 
+
+            private Builder() {
+            } 
+
+            private Builder(Ipv6Set model) {
+                this.ipv6Address = model.ipv6Address;
+            } 
 
             /**
              * <p>The IPv6 address of the ENI.</p>
@@ -1311,6 +1509,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Ipv6Set> ipv6Set; 
+
+            private Builder() {
+            } 
+
+            private Builder(Ipv6Sets model) {
+                this.ipv6Set = model.ipv6Set;
+            } 
 
             /**
              * Ipv6Set.
@@ -1382,6 +1587,15 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private Boolean primary; 
             private String privateDnsName; 
             private String privateIpAddress; 
+
+            private Builder() {
+            } 
+
+            private Builder(PrivateIpSet model) {
+                this.primary = model.primary;
+                this.privateDnsName = model.privateDnsName;
+                this.privateIpAddress = model.privateIpAddress;
+            } 
 
             /**
              * <p>Indicates whether the IP address is the primary private IP address. Valid values:</p>
@@ -1461,6 +1675,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<PrivateIpSet> privateIpSet; 
+
+            private Builder() {
+            } 
+
+            private Builder(PrivateIpSets model) {
+                this.privateIpSet = model.privateIpSet;
+            } 
 
             /**
              * PrivateIpSet.
@@ -1593,6 +1814,20 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private PrivateIpSets privateIpSets; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(NetworkInterface model) {
+                this.ipv4PrefixSets = model.ipv4PrefixSets;
+                this.ipv6PrefixSets = model.ipv6PrefixSets;
+                this.ipv6Sets = model.ipv6Sets;
+                this.macAddress = model.macAddress;
+                this.networkInterfaceId = model.networkInterfaceId;
+                this.primaryIpAddress = model.primaryIpAddress;
+                this.privateIpSets = model.privateIpSets;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The IPv4 prefixes of the ENI. This parameter has a value only when <code>AdditionalAttributes.N</code> is set to <code>NETWORK_PRIMARY_ENI_IP</code>.</p>
              */
@@ -1712,6 +1947,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<NetworkInterface> networkInterface; 
 
+            private Builder() {
+            } 
+
+            private Builder(NetworkInterfaces model) {
+                this.networkInterface = model.networkInterface;
+            } 
+
             /**
              * NetworkInterface.
              */
@@ -1770,6 +2012,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private String lockMsg; 
             private String lockReason; 
+
+            private Builder() {
+            } 
+
+            private Builder(LockReason model) {
+                this.lockMsg = model.lockMsg;
+                this.lockReason = model.lockReason;
+            } 
 
             /**
              * <p>The message returned when the instance was locked.</p>
@@ -1838,6 +2088,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<LockReason> lockReason; 
+
+            private Builder() {
+            } 
+
+            private Builder(OperationLocks model) {
+                this.lockReason = model.lockReason;
+            } 
 
             /**
              * <p>The reason why the instance was locked. Valid values:</p>
@@ -1943,6 +2200,17 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private Boolean enableIpDnsARecord; 
             private Boolean enableIpDnsPtrRecord; 
             private String hostnameType; 
+
+            private Builder() {
+            } 
+
+            private Builder(PrivateDnsNameOptions model) {
+                this.enableInstanceIdDnsAAAARecord = model.enableInstanceIdDnsAAAARecord;
+                this.enableInstanceIdDnsARecord = model.enableInstanceIdDnsARecord;
+                this.enableIpDnsARecord = model.enableIpDnsARecord;
+                this.enableIpDnsPtrRecord = model.enableIpDnsPtrRecord;
+                this.hostnameType = model.hostnameType;
+            } 
 
             /**
              * <p>Indicates whether DNS Resolution from the Instance ID-based Hostname to the Instance Primary Private IPv6 Address (AAAA Record) is enabled. Valid values:</p>
@@ -2064,6 +2332,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> ipAddress; 
 
+            private Builder() {
+            } 
+
+            private Builder(PublicIpAddress model) {
+                this.ipAddress = model.ipAddress;
+            } 
+
             /**
              * <p>The EIP.</p>
              * 
@@ -2114,6 +2389,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> ipAddress; 
 
+            private Builder() {
+            } 
+
+            private Builder(RdmaIpAddress model) {
+                this.ipAddress = model.ipAddress;
+            } 
+
             /**
              * <p>The EIP.</p>
              * 
@@ -2163,6 +2445,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> securityGroupId; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecurityGroupIds model) {
+                this.securityGroupId = model.securityGroupId;
+            } 
 
             /**
              * SecurityGroupId.
@@ -2222,6 +2511,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private String tagKey; 
             private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
 
             /**
              * <p>The tag key of the instance.</p>
@@ -2284,6 +2581,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Tag> tag; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
+
             /**
              * Tag.
              */
@@ -2330,6 +2634,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> ipAddress; 
+
+            private Builder() {
+            } 
+
+            private Builder(PrivateIpAddress model) {
+                this.ipAddress = model.ipAddress;
+            } 
 
             /**
              * <p>The EIP.</p>
@@ -2416,6 +2727,16 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private PrivateIpAddress privateIpAddress; 
             private String vSwitchId; 
             private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(VpcAttributes model) {
+                this.natIpAddress = model.natIpAddress;
+                this.privateIpAddress = model.privateIpAddress;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+            } 
 
             /**
              * <p>The NAT IP address of the instance. The NAT IP address is used by ECS instances in different VPCs for communication.</p>
@@ -2519,6 +2840,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("EipAddress")
         private EipAddress eipAddress;
+
+        @com.aliyun.core.annotation.NameInMap("EnableNVS")
+        private Boolean enableNVS;
 
         @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
@@ -2687,6 +3011,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             this.deviceAvailable = builder.deviceAvailable;
             this.ecsCapacityReservationAttr = builder.ecsCapacityReservationAttr;
             this.eipAddress = builder.eipAddress;
+            this.enableNVS = builder.enableNVS;
             this.expiredTime = builder.expiredTime;
             this.GPUAmount = builder.GPUAmount;
             this.GPUSpec = builder.GPUSpec;
@@ -2857,6 +3182,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
          */
         public EipAddress getEipAddress() {
             return this.eipAddress;
+        }
+
+        /**
+         * @return enableNVS
+         */
+        public Boolean getEnableNVS() {
+            return this.enableNVS;
         }
 
         /**
@@ -3226,6 +3558,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private Boolean deviceAvailable; 
             private EcsCapacityReservationAttr ecsCapacityReservationAttr; 
             private EipAddress eipAddress; 
+            private Boolean enableNVS; 
             private String expiredTime; 
             private Integer GPUAmount; 
             private String GPUSpec; 
@@ -3276,6 +3609,79 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String vlanId; 
             private VpcAttributes vpcAttributes; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Instance model) {
+                this.additionalInfo = model.additionalInfo;
+                this.autoReleaseTime = model.autoReleaseTime;
+                this.clusterId = model.clusterId;
+                this.cpu = model.cpu;
+                this.cpuOptions = model.cpuOptions;
+                this.creationTime = model.creationTime;
+                this.creditSpecification = model.creditSpecification;
+                this.dedicatedHostAttribute = model.dedicatedHostAttribute;
+                this.dedicatedInstanceAttribute = model.dedicatedInstanceAttribute;
+                this.deletionProtection = model.deletionProtection;
+                this.deploymentSetGroupNo = model.deploymentSetGroupNo;
+                this.deploymentSetId = model.deploymentSetId;
+                this.description = model.description;
+                this.deviceAvailable = model.deviceAvailable;
+                this.ecsCapacityReservationAttr = model.ecsCapacityReservationAttr;
+                this.eipAddress = model.eipAddress;
+                this.enableNVS = model.enableNVS;
+                this.expiredTime = model.expiredTime;
+                this.GPUAmount = model.GPUAmount;
+                this.GPUSpec = model.GPUSpec;
+                this.hibernationOptions = model.hibernationOptions;
+                this.hostName = model.hostName;
+                this.hpcClusterId = model.hpcClusterId;
+                this.ISP = model.ISP;
+                this.imageId = model.imageId;
+                this.imageOptions = model.imageOptions;
+                this.innerIpAddress = model.innerIpAddress;
+                this.instanceChargeType = model.instanceChargeType;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.instanceNetworkType = model.instanceNetworkType;
+                this.instanceType = model.instanceType;
+                this.instanceTypeFamily = model.instanceTypeFamily;
+                this.internetChargeType = model.internetChargeType;
+                this.internetMaxBandwidthIn = model.internetMaxBandwidthIn;
+                this.internetMaxBandwidthOut = model.internetMaxBandwidthOut;
+                this.ioOptimized = model.ioOptimized;
+                this.keyPairName = model.keyPairName;
+                this.localStorageAmount = model.localStorageAmount;
+                this.localStorageCapacity = model.localStorageCapacity;
+                this.memory = model.memory;
+                this.metadataOptions = model.metadataOptions;
+                this.networkInterfaces = model.networkInterfaces;
+                this.OSName = model.OSName;
+                this.OSNameEn = model.OSNameEn;
+                this.OSType = model.OSType;
+                this.operationLocks = model.operationLocks;
+                this.privateDnsNameOptions = model.privateDnsNameOptions;
+                this.publicIpAddress = model.publicIpAddress;
+                this.rdmaIpAddress = model.rdmaIpAddress;
+                this.recyclable = model.recyclable;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.saleCycle = model.saleCycle;
+                this.securityGroupIds = model.securityGroupIds;
+                this.serialNumber = model.serialNumber;
+                this.spotDuration = model.spotDuration;
+                this.spotInterruptionBehavior = model.spotInterruptionBehavior;
+                this.spotPriceLimit = model.spotPriceLimit;
+                this.spotStrategy = model.spotStrategy;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.stoppedMode = model.stoppedMode;
+                this.tags = model.tags;
+                this.vlanId = model.vlanId;
+                this.vpcAttributes = model.vpcAttributes;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <blockquote>
@@ -3452,6 +3858,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
              */
             public Builder eipAddress(EipAddress eipAddress) {
                 this.eipAddress = eipAddress;
+                return this;
+            }
+
+            /**
+             * EnableNVS.
+             */
+            public Builder enableNVS(Boolean enableNVS) {
+                this.enableNVS = enableNVS;
                 return this;
             }
 
@@ -4062,6 +4476,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Instance> instance; 
+
+            private Builder() {
+            } 
+
+            private Builder(Instances model) {
+                this.instance = model.instance;
+            } 
 
             /**
              * Instance.

@@ -40,6 +40,10 @@ public class CreateDiskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return diskId
      */
@@ -65,6 +69,15 @@ public class CreateDiskResponseBody extends TeaModel {
         private String diskId; 
         private String orderId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateDiskResponseBody model) {
+            this.diskId = model.diskId;
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The disk ID.</p>

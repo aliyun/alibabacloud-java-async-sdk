@@ -36,6 +36,10 @@ public class ReplaceSystemDiskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return diskId
      */
@@ -53,6 +57,14 @@ public class ReplaceSystemDiskResponseBody extends TeaModel {
     public static final class Builder {
         private String diskId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ReplaceSystemDiskResponseBody model) {
+            this.diskId = model.diskId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the new system disk.</p>

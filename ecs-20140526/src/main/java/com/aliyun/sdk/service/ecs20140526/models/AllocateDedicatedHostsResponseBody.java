@@ -40,6 +40,10 @@ public class AllocateDedicatedHostsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dedicatedHostIdSets
      */
@@ -66,8 +70,17 @@ public class AllocateDedicatedHostsResponseBody extends TeaModel {
         private String orderId; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(AllocateDedicatedHostsResponseBody model) {
+            this.dedicatedHostIdSets = model.dedicatedHostIdSets;
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>The IDs of the dedicated hosts.</p>
+         * <p>A list of dedicated host IDs.</p>
          */
         public Builder dedicatedHostIdSets(DedicatedHostIdSets dedicatedHostIdSets) {
             this.dedicatedHostIdSets = dedicatedHostIdSets;
@@ -75,7 +88,13 @@ public class AllocateDedicatedHostsResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * <p>The ID of the order.</p>
+         * <blockquote>
+         * <p> This parameter has a return value only when the dedicated host is a subscription one (request parameter <strong>ChargeType set to PrePaid</strong>).</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>23841229****</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -130,6 +149,13 @@ public class AllocateDedicatedHostsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> dedicatedHostId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DedicatedHostIdSets model) {
+                this.dedicatedHostId = model.dedicatedHostId;
+            } 
 
             /**
              * DedicatedHostId.

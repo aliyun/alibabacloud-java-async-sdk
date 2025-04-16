@@ -36,6 +36,10 @@ public class DescribeElasticityAssuranceAutoRenewAttributeResponseBody extends T
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return elasticityAssuranceRenewAttributes
      */
@@ -53,6 +57,14 @@ public class DescribeElasticityAssuranceAutoRenewAttributeResponseBody extends T
     public static final class Builder {
         private ElasticityAssuranceRenewAttributes elasticityAssuranceRenewAttributes; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeElasticityAssuranceAutoRenewAttributeResponseBody model) {
+            this.elasticityAssuranceRenewAttributes = model.elasticityAssuranceRenewAttributes;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The auto-renewal attribute of the elasticity assurances.</p>
@@ -147,6 +159,16 @@ public class DescribeElasticityAssuranceAutoRenewAttributeResponseBody extends T
             private String privatePoolOptionsId; 
             private String renewalStatus; 
 
+            private Builder() {
+            } 
+
+            private Builder(ElasticityAssuranceRenewAttribute model) {
+                this.period = model.period;
+                this.periodUnit = model.periodUnit;
+                this.privatePoolOptionsId = model.privatePoolOptionsId;
+                this.renewalStatus = model.renewalStatus;
+            } 
+
             /**
              * <p>The auto-renewal period. Valid values: Valid values: 1, 2, 3, 6, 12, 24, and 36.</p>
              * 
@@ -238,6 +260,13 @@ public class DescribeElasticityAssuranceAutoRenewAttributeResponseBody extends T
 
         public static final class Builder {
             private java.util.List<ElasticityAssuranceRenewAttribute> elasticityAssuranceRenewAttribute; 
+
+            private Builder() {
+            } 
+
+            private Builder(ElasticityAssuranceRenewAttributes model) {
+                this.elasticityAssuranceRenewAttribute = model.elasticityAssuranceRenewAttribute;
+            } 
 
             /**
              * ElasticityAssuranceRenewAttribute.

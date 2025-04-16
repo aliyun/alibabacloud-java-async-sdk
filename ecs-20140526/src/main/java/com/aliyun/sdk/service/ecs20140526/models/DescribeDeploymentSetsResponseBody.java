@@ -52,6 +52,10 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return deploymentSets
      */
@@ -101,6 +105,18 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
         private String regionId; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDeploymentSetsResponseBody model) {
+            this.deploymentSets = model.deploymentSets;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>Details about the deployment sets.</p>
@@ -227,6 +243,15 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
             private Integer usedAmount; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Capacity model) {
+                this.availableAmount = model.availableAmount;
+                this.usedAmount = model.usedAmount;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
              * <p>The number of ECS instances that can be added to the deployment set within the zone.</p>
              * 
@@ -299,6 +324,13 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Capacity> capacity; 
 
+            private Builder() {
+            } 
+
+            private Builder(Capacities model) {
+                this.capacity = model.capacity;
+            } 
+
             /**
              * Capacity.
              */
@@ -345,6 +377,13 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> instanceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceIds model) {
+                this.instanceId = model.instanceId;
+            } 
 
             /**
              * InstanceId.
@@ -525,6 +564,24 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
             private InstanceIds instanceIds; 
             private String strategy; 
 
+            private Builder() {
+            } 
+
+            private Builder(DeploymentSet model) {
+                this.capacities = model.capacities;
+                this.creationTime = model.creationTime;
+                this.deploymentSetDescription = model.deploymentSetDescription;
+                this.deploymentSetId = model.deploymentSetId;
+                this.deploymentSetName = model.deploymentSetName;
+                this.deploymentStrategy = model.deploymentStrategy;
+                this.domain = model.domain;
+                this.granularity = model.granularity;
+                this.groupCount = model.groupCount;
+                this.instanceAmount = model.instanceAmount;
+                this.instanceIds = model.instanceIds;
+                this.strategy = model.strategy;
+            } 
+
             /**
              * <p>Details of the capacities of the deployment set. This parameter is valid only when the deployment set contains ECS instances. The value contains information about the capacities of the deployment set in different zones.</p>
              */
@@ -692,6 +749,13 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DeploymentSet> deploymentSet; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeploymentSets model) {
+                this.deploymentSet = model.deploymentSet;
+            } 
 
             /**
              * DeploymentSet.

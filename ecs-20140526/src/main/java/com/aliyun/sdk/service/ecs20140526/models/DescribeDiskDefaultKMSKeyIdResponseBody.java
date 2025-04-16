@@ -36,6 +36,10 @@ public class DescribeDiskDefaultKMSKeyIdResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return KMSKeyId
      */
@@ -53,6 +57,14 @@ public class DescribeDiskDefaultKMSKeyIdResponseBody extends TeaModel {
     public static final class Builder {
         private String KMSKeyId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDiskDefaultKMSKeyIdResponseBody model) {
+            this.KMSKeyId = model.KMSKeyId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the KMS key.</p>

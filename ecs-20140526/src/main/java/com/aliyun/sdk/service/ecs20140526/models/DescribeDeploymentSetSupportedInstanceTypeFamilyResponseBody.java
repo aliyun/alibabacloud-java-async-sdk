@@ -36,6 +36,10 @@ public class DescribeDeploymentSetSupportedInstanceTypeFamilyResponseBody extend
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceTypeFamilies
      */
@@ -53,6 +57,14 @@ public class DescribeDeploymentSetSupportedInstanceTypeFamilyResponseBody extend
     public static final class Builder {
         private String instanceTypeFamilies; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDeploymentSetSupportedInstanceTypeFamilyResponseBody model) {
+            this.instanceTypeFamilies = model.instanceTypeFamilies;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The instance families that support the deployment strategy.</p>

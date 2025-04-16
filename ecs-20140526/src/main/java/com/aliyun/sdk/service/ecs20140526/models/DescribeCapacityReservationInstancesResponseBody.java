@@ -48,6 +48,10 @@ public class DescribeCapacityReservationInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return capacityReservationItem
      */
@@ -90,6 +94,17 @@ public class DescribeCapacityReservationInstancesResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeCapacityReservationInstancesResponseBody model) {
+            this.capacityReservationItem = model.capacityReservationItem;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
          * <p>Details about the instances that match the capacity reservation.</p>
          */
@@ -121,7 +136,7 @@ public class DescribeCapacityReservationInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -180,6 +195,13 @@ public class DescribeCapacityReservationInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private String instanceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceIdSet model) {
+                this.instanceId = model.instanceId;
+            } 
+
             /**
              * <p>The ID of the instance.</p>
              * 
@@ -229,6 +251,13 @@ public class DescribeCapacityReservationInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<InstanceIdSet> instanceIdSet; 
+
+            private Builder() {
+            } 
+
+            private Builder(CapacityReservationItem model) {
+                this.instanceIdSet = model.instanceIdSet;
+            } 
 
             /**
              * InstanceIdSet.

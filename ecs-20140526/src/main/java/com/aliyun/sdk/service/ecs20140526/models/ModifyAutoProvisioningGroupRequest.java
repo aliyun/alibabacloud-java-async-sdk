@@ -105,7 +105,7 @@ public class ModifyAutoProvisioningGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -523,6 +523,17 @@ public class ModifyAutoProvisioningGroupRequest extends Request {
             private Integer priority; 
             private String vSwitchId; 
             private Double weightedCapacity; 
+
+            private Builder() {
+            } 
+
+            private Builder(LaunchTemplateConfig model) {
+                this.instanceType = model.instanceType;
+                this.maxPrice = model.maxPrice;
+                this.priority = model.priority;
+                this.vSwitchId = model.vSwitchId;
+                this.weightedCapacity = model.weightedCapacity;
+            } 
 
             /**
              * <p>The instance type in extended configuration N. Valid values of N: 1 to 20. For more information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</p>

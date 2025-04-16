@@ -36,6 +36,10 @@ public class DescribeSnapshotMonitorDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return monitorData
      */
@@ -53,6 +57,14 @@ public class DescribeSnapshotMonitorDataResponseBody extends TeaModel {
     public static final class Builder {
         private MonitorData monitorData; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSnapshotMonitorDataResponseBody model) {
+            this.monitorData = model.monitorData;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The monitoring data of snapshot sizes.</p>
@@ -123,6 +135,14 @@ public class DescribeSnapshotMonitorDataResponseBody extends TeaModel {
             private Long size; 
             private String timeStamp; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataPoint model) {
+                this.size = model.size;
+                this.timeStamp = model.timeStamp;
+            } 
+
             /**
              * <p>The total size of snapshots. Unit: bytes.</p>
              * 
@@ -183,6 +203,13 @@ public class DescribeSnapshotMonitorDataResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DataPoint> dataPoint; 
+
+            private Builder() {
+            } 
+
+            private Builder(MonitorData model) {
+                this.dataPoint = model.dataPoint;
+            } 
 
             /**
              * DataPoint.

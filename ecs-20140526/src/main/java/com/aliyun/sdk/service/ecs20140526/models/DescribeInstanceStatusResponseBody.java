@@ -48,6 +48,10 @@ public class DescribeInstanceStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceStatuses
      */
@@ -89,6 +93,17 @@ public class DescribeInstanceStatusResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceStatusResponseBody model) {
+            this.instanceStatuses = model.instanceStatuses;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The IDs and status of the ECS instances.</p>
@@ -192,6 +207,14 @@ public class DescribeInstanceStatusResponseBody extends TeaModel {
             private String instanceId; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceStatus model) {
+                this.instanceId = model.instanceId;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The ID of the instance.</p>
              * 
@@ -259,6 +282,13 @@ public class DescribeInstanceStatusResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<InstanceStatus> instanceStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceStatuses model) {
+                this.instanceStatus = model.instanceStatus;
+            } 
 
             /**
              * InstanceStatus.

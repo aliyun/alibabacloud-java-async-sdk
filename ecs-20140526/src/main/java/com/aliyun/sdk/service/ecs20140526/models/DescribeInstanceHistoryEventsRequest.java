@@ -145,7 +145,7 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -529,7 +529,15 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries to return on each page. Valid values: 10 to 100.</p>
+         * <p>Default values:</p>
+         * <ul>
+         * <li>If you set a value greater than 0 and less than 10, the default value is 10.</li>
+         * <li>If you set this parameter to a value that is greater than 100, the default value is 100.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -538,7 +546,10 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f1c9fa9de5752***</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -565,8 +576,9 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from page 1.</p>
-         * <p>Default value: 1.</p>
+         * <blockquote>
+         * <p> This parameter is deprecated. We recommend that you specify MaxResults or NextToken for a paged query.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -578,8 +590,9 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Valid values: 1 to 100.</p>
-         * <p>Default value: 10.</p>
+         * <blockquote>
+         * <p> This parameter is deprecated. We recommend that you specify MaxResults or NextToken for a paged query.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -732,6 +745,14 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
             private String end; 
             private String start; 
 
+            private Builder() {
+            } 
+
+            private Builder(EventPublishTime model) {
+                this.end = model.end;
+                this.start = model.start;
+            } 
+
             /**
              * <p>The end of the time range in which to query published system events. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
              * 
@@ -805,6 +826,14 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
             private String end; 
             private String start; 
 
+            private Builder() {
+            } 
+
+            private Builder(NotBefore model) {
+                this.end = model.end;
+                this.start = model.start;
+            } 
+
             /**
              * <p>The latest scheduled end time for the system event. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
              * 
@@ -877,6 +906,14 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of tag N of the resource.</p>

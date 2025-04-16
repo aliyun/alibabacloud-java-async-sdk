@@ -61,7 +61,7 @@ public class DescribeDiagnosticMetricSetsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -183,6 +183,10 @@ public class DescribeDiagnosticMetricSetsRequest extends Request {
 
         /**
          * <p>The resource type supported by the diagnostic metric set.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>instance</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>instance</p>

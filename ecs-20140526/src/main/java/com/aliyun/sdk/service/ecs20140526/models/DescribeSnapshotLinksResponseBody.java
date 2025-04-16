@@ -48,6 +48,10 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
         private String requestId; 
         private SnapshotLinks snapshotLinks; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSnapshotLinksResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.snapshotLinks = model.snapshotLinks;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number.</p>
@@ -312,6 +327,24 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
             private Integer totalCount; 
             private Long totalSize; 
 
+            private Builder() {
+            } 
+
+            private Builder(SnapshotLink model) {
+                this.category = model.category;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.instantAccess = model.instantAccess;
+                this.regionId = model.regionId;
+                this.snapshotLinkId = model.snapshotLinkId;
+                this.sourceDiskId = model.sourceDiskId;
+                this.sourceDiskName = model.sourceDiskName;
+                this.sourceDiskSize = model.sourceDiskSize;
+                this.sourceDiskType = model.sourceDiskType;
+                this.totalCount = model.totalCount;
+                this.totalSize = model.totalSize;
+            } 
+
             /**
              * <p>The type of the snapshot chain. Valid values:</p>
              * <ul>
@@ -498,6 +531,13 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SnapshotLink> snapshotLink; 
+
+            private Builder() {
+            } 
+
+            private Builder(SnapshotLinks model) {
+                this.snapshotLink = model.snapshotLink;
+            } 
 
             /**
              * SnapshotLink.

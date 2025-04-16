@@ -40,6 +40,10 @@ public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return metricSets
      */
@@ -65,6 +69,15 @@ public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
         private java.util.List<MetricSets> metricSets; 
         private String nextToken; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDiagnosticMetricSetsResponseBody model) {
+            this.metricSets = model.metricSets;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The diagnostic metric sets.</p>
@@ -193,6 +206,18 @@ public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
             private String metricSetName; 
             private String resourceType; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(MetricSets model) {
+                this.description = model.description;
+                this.metricIds = model.metricIds;
+                this.metricSetId = model.metricSetId;
+                this.metricSetName = model.metricSetName;
+                this.resourceType = model.resourceType;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The description of the diagnostic metric set.</p>

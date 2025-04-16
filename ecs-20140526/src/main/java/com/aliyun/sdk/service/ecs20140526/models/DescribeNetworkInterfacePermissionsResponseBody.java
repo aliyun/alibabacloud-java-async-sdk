@@ -48,6 +48,10 @@ public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return networkInterfacePermissions
      */
@@ -89,6 +93,17 @@ public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeNetworkInterfacePermissionsResponseBody model) {
+            this.networkInterfacePermissions = model.networkInterfacePermissions;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>Details about the ENI permissions.</p>
@@ -240,6 +255,18 @@ public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
             private String permissionState; 
             private String serviceName; 
 
+            private Builder() {
+            } 
+
+            private Builder(NetworkInterfacePermission model) {
+                this.accountId = model.accountId;
+                this.networkInterfaceId = model.networkInterfaceId;
+                this.networkInterfacePermissionId = model.networkInterfacePermissionId;
+                this.permission = model.permission;
+                this.permissionState = model.permissionState;
+                this.serviceName = model.serviceName;
+            } 
+
             /**
              * <p>The ID of the Alibaba Cloud partner (a certified ISV) or individual user.</p>
              * 
@@ -350,6 +377,13 @@ public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<NetworkInterfacePermission> networkInterfacePermission; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetworkInterfacePermissions model) {
+                this.networkInterfacePermission = model.networkInterfacePermission;
+            } 
 
             /**
              * NetworkInterfacePermission.

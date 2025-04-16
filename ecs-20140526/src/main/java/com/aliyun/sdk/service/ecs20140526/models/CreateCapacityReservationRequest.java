@@ -118,7 +118,7 @@ public class CreateCapacityReservationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -543,6 +543,14 @@ public class CreateCapacityReservationRequest extends Request {
             private String matchCriteria; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(PrivatePoolOptions model) {
+                this.matchCriteria = model.matchCriteria;
+                this.name = model.name;
+            } 
+
             /**
              * <p>The type of the private pool to generate after the capacity reservation takes effect. Valid values:</p>
              * <ul>
@@ -620,6 +628,14 @@ public class CreateCapacityReservationRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of tag N to add to the capacity reservation. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>

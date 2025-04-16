@@ -36,6 +36,10 @@ public class ModifyManagedInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instance
      */
@@ -53,6 +57,14 @@ public class ModifyManagedInstanceResponseBody extends TeaModel {
     public static final class Builder {
         private Instance instance; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyManagedInstanceResponseBody model) {
+            this.instance = model.instance;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The name of the managed instance.</p>
@@ -122,6 +134,14 @@ public class ModifyManagedInstanceResponseBody extends TeaModel {
         public static final class Builder {
             private String instanceId; 
             private String instanceName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Instance model) {
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+            } 
 
             /**
              * <p>The managed instance ID.</p>

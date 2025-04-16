@@ -81,7 +81,7 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -355,6 +355,15 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
             private Boolean enabled; 
             private String timeZone; 
 
+            private Builder() {
+            } 
+
+            private Builder(AgentUpgradeConfig model) {
+                this.allowedUpgradeWindow = model.allowedUpgradeWindow;
+                this.enabled = model.enabled;
+                this.timeZone = model.timeZone;
+            } 
+
             /**
              * <p>The time windows during which Cloud Assistant Agent can be upgraded. The time windows can be accurate to minutes. The Coordinated Universal Time (UTC) time zone is used by default.</p>
              * <p>Make sure that the upgrade windows specified by this parameter are not shorter than 1 hour.</p>
@@ -491,6 +500,18 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
             private String encryptionKeyId; 
             private String encryptionType; 
             private String prefix; 
+
+            private Builder() {
+            } 
+
+            private Builder(OssDeliveryConfig model) {
+                this.bucketName = model.bucketName;
+                this.enabled = model.enabled;
+                this.encryptionAlgorithm = model.encryptionAlgorithm;
+                this.encryptionKeyId = model.encryptionKeyId;
+                this.encryptionType = model.encryptionType;
+                this.prefix = model.prefix;
+            } 
 
             /**
              * <p>The name of the OSS bucket.</p>
@@ -634,6 +655,15 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
             private Boolean enabled; 
             private String logstoreName; 
             private String projectName; 
+
+            private Builder() {
+            } 
+
+            private Builder(SlsDeliveryConfig model) {
+                this.enabled = model.enabled;
+                this.logstoreName = model.logstoreName;
+                this.projectName = model.projectName;
+            } 
 
             /**
              * <p>Specifies whether to deliver records to Simple Log Service. Default value: false.</p>

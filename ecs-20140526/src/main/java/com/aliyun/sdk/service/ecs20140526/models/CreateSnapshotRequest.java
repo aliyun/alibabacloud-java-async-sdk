@@ -110,7 +110,7 @@ public class CreateSnapshotRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -298,8 +298,7 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * <p>The retention period of the snapshot. Valid values: 1 to 65536. Unit: days. The snapshot is automatically released when its retention period expires.</p>
-         * <p>This parameter is empty by default, which indicates that the snapshot is not automatically released.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among requests. The <strong>ClientToken</strong> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -311,7 +310,8 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * <p>The cloud disk ID.</p>
+         * <p>The description of the snapshot. The description must be 2 to 256 characters in length and cannot start with <code>http:// </code>or <code>https://</code>.</p>
+         * <p>By default, this parameter is left empty.</p>
          * 
          * <strong>example:</strong>
          * <p>testDescription</p>
@@ -323,7 +323,7 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * <p>Creates a snapshot for a disk.</p>
+         * <p>The ID of the cloud disk.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -455,7 +455,9 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * <p>The value of tag N that you want to add to the snapshot. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with acs: or contain <a href="http://https://%E3%80%82">http:// or https://.</a></p>
+         * <blockquote>
+         * <p>This parameter is unavailable for public use.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -525,6 +527,14 @@ public class CreateSnapshotRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of tag N to add to the snapshot. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</p>

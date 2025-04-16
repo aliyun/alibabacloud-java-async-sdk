@@ -40,6 +40,10 @@ public class CreateActivationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return activationCode
      */
@@ -65,6 +69,15 @@ public class CreateActivationResponseBody extends TeaModel {
         private String activationCode; 
         private String activationId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateActivationResponseBody model) {
+            this.activationCode = model.activationCode;
+            this.activationId = model.activationId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The value of the activation code. The value is returned only once after the CreateActivation operation is called and cannot be queried afterward. Properly save the return value.</p>

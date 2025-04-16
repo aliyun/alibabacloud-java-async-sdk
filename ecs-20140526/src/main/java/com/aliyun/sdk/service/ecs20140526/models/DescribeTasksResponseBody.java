@@ -52,6 +52,10 @@ public class DescribeTasksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -101,6 +105,18 @@ public class DescribeTasksResponseBody extends TeaModel {
         private String requestId; 
         private TaskSet taskSet; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTasksResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+            this.taskSet = model.taskSet;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number.</p>
@@ -275,6 +291,19 @@ public class DescribeTasksResponseBody extends TeaModel {
             private String taskId; 
             private String taskStatus; 
 
+            private Builder() {
+            } 
+
+            private Builder(Task model) {
+                this.creationTime = model.creationTime;
+                this.finishedTime = model.finishedTime;
+                this.resourceId = model.resourceId;
+                this.supportCancel = model.supportCancel;
+                this.taskAction = model.taskAction;
+                this.taskId = model.taskId;
+                this.taskStatus = model.taskStatus;
+            } 
+
             /**
              * <p>The time when the task was created.</p>
              * 
@@ -390,6 +419,13 @@ public class DescribeTasksResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Task> task; 
+
+            private Builder() {
+            } 
+
+            private Builder(TaskSet model) {
+                this.task = model.task;
+            } 
 
             /**
              * Task.

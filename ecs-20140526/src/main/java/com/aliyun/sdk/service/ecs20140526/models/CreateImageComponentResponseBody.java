@@ -36,6 +36,10 @@ public class CreateImageComponentResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return imageComponentId
      */
@@ -53,6 +57,14 @@ public class CreateImageComponentResponseBody extends TeaModel {
     public static final class Builder {
         private String imageComponentId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateImageComponentResponseBody model) {
+            this.imageComponentId = model.imageComponentId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the image component.</p>

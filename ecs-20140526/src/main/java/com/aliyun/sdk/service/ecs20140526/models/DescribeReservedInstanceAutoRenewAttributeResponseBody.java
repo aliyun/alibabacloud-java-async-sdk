@@ -36,6 +36,10 @@ public class DescribeReservedInstanceAutoRenewAttributeResponseBody extends TeaM
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeReservedInstanceAutoRenewAttributeResponseBody extends TeaM
     public static final class Builder {
         private String requestId; 
         private ReservedInstanceRenewAttributes reservedInstanceRenewAttributes; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeReservedInstanceAutoRenewAttributeResponseBody model) {
+            this.requestId = model.requestId;
+            this.reservedInstanceRenewAttributes = model.reservedInstanceRenewAttributes;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -147,6 +159,16 @@ public class DescribeReservedInstanceAutoRenewAttributeResponseBody extends TeaM
             private String renewalStatus; 
             private String reservedInstanceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ReservedInstanceRenewAttribute model) {
+                this.duration = model.duration;
+                this.periodUnit = model.periodUnit;
+                this.renewalStatus = model.renewalStatus;
+                this.reservedInstanceId = model.reservedInstanceId;
+            } 
+
             /**
              * <p>The auto-renewal duration.</p>
              * 
@@ -234,6 +256,13 @@ public class DescribeReservedInstanceAutoRenewAttributeResponseBody extends TeaM
 
         public static final class Builder {
             private java.util.List<ReservedInstanceRenewAttribute> reservedInstanceRenewAttribute; 
+
+            private Builder() {
+            } 
+
+            private Builder(ReservedInstanceRenewAttributes model) {
+                this.reservedInstanceRenewAttribute = model.reservedInstanceRenewAttribute;
+            } 
 
             /**
              * ReservedInstanceRenewAttribute.

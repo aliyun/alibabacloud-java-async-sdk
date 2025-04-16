@@ -171,7 +171,7 @@ public class RevokeSecurityGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -730,6 +730,9 @@ public class RevokeSecurityGroupRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("PortRange")
         private String portRange;
 
+        @com.aliyun.core.annotation.NameInMap("PortRangeListId")
+        private String portRangeListId;
+
         @com.aliyun.core.annotation.NameInMap("Priority")
         private String priority;
 
@@ -760,6 +763,7 @@ public class RevokeSecurityGroupRequest extends Request {
             this.nicType = builder.nicType;
             this.policy = builder.policy;
             this.portRange = builder.portRange;
+            this.portRangeListId = builder.portRangeListId;
             this.priority = builder.priority;
             this.sourceCidrIp = builder.sourceCidrIp;
             this.sourceGroupId = builder.sourceGroupId;
@@ -834,6 +838,13 @@ public class RevokeSecurityGroupRequest extends Request {
         }
 
         /**
+         * @return portRangeListId
+         */
+        public String getPortRangeListId() {
+            return this.portRangeListId;
+        }
+
+        /**
          * @return priority
          */
         public String getPriority() {
@@ -891,6 +902,7 @@ public class RevokeSecurityGroupRequest extends Request {
             private String nicType; 
             private String policy; 
             private String portRange; 
+            private String portRangeListId; 
             private String priority; 
             private String sourceCidrIp; 
             private String sourceGroupId; 
@@ -898,6 +910,28 @@ public class RevokeSecurityGroupRequest extends Request {
             private Long sourceGroupOwnerId; 
             private String sourcePortRange; 
             private String sourcePrefixListId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Permissions model) {
+                this.description = model.description;
+                this.destCidrIp = model.destCidrIp;
+                this.ipProtocol = model.ipProtocol;
+                this.ipv6DestCidrIp = model.ipv6DestCidrIp;
+                this.ipv6SourceCidrIp = model.ipv6SourceCidrIp;
+                this.nicType = model.nicType;
+                this.policy = model.policy;
+                this.portRange = model.portRange;
+                this.portRangeListId = model.portRangeListId;
+                this.priority = model.priority;
+                this.sourceCidrIp = model.sourceCidrIp;
+                this.sourceGroupId = model.sourceGroupId;
+                this.sourceGroupOwnerAccount = model.sourceGroupOwnerAccount;
+                this.sourceGroupOwnerId = model.sourceGroupOwnerId;
+                this.sourcePortRange = model.sourcePortRange;
+                this.sourcePrefixListId = model.sourcePrefixListId;
+            } 
 
             /**
              * <p>The description of the security group rule. The description must be 1 to 512 characters in length.</p>
@@ -945,7 +979,7 @@ public class RevokeSecurityGroupRequest extends Request {
              * <p>The destination IPv6 CIDR block. IPv6 CIDR blocks and IPv6 addresses are supported.</p>
              * <p>This parameter is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</p>
              * <blockquote>
-             * <p> This parameter is valid only for ECS instances that reside in VPCs and support IPv6 CIDR blocks. You cannot specify this parameter and <code>DestCidrIp</code> in the same request.</p>
+             * <p> This parameter is valid only for ECS instances that reside in virtual private clouds (VPCs) and support IPv6 CIDR blocks. You cannot specify this parameter and <code>DestCidrIp</code> in the same request.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1018,6 +1052,14 @@ public class RevokeSecurityGroupRequest extends Request {
              */
             public Builder portRange(String portRange) {
                 this.portRange = portRange;
+                return this;
+            }
+
+            /**
+             * PortRangeListId.
+             */
+            public Builder portRangeListId(String portRangeListId) {
+                this.portRangeListId = portRangeListId;
                 return this;
             }
 
@@ -1098,12 +1140,12 @@ public class RevokeSecurityGroupRequest extends Request {
             /**
              * <p>The range of source port numbers for the protocols specified in the security group rule. Valid values:</p>
              * <ul>
-             * <li>If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Specify a port number range in the format of &lt;Start port number&gt;/&lt;End port number&gt;. Example: 1/200.</li>
+             * <li>If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Specify a port range in the format of &lt;Start port number&gt;/&lt;End port number&gt;. Example: 1/200.</li>
              * <li>If you set IpProtocol to ICMP, the port number range is -1/-1.</li>
              * <li>If you set IpProtocol to GRE, the port number range is -1/-1.</li>
              * <li>If you set IpProtocol to ALL, the port number range is -1/-1, which indicates all port numbers.</li>
              * </ul>
-             * <p>This parameter is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</p>
+             * <p>This property is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>80/80</p>
@@ -1117,7 +1159,7 @@ public class RevokeSecurityGroupRequest extends Request {
              * <p>The ID of the source prefix list of the security group rule. You can call the <a href="https://help.aliyun.com/document_detail/205046.html">DescribePrefixLists</a> operation to query the IDs of available prefix lists.</p>
              * <p>When you specify this parameter, take note of the following items:</p>
              * <ul>
-             * <li>If a security group resides in the classic network, you cannot specify prefix lists in the rules of the security group. For information about the limits on security groups and prefix lists, see the <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a> section of the &quot;Limits and quotas&quot; topic.</li>
+             * <li>If a security group resides in the classic network, you cannot specify prefix lists in the rules of the security group. For information about the limits on security groups and prefix lists, see the &quot;Security group limits&quot; section of the <a href="~~25412#SecurityGroupQuota1~~">Limits</a> topic.</li>
              * <li>If you specify <code>SourceCidrIp</code>, <code>Ipv6SourceCidrIp</code>, or <code>SourceGroupId</code>, this parameter is ignored.</li>
              * </ul>
              * 

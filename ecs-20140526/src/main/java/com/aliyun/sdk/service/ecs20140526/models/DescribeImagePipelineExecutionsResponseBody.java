@@ -48,6 +48,10 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return imagePipelineExecution
      */
@@ -89,6 +93,17 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeImagePipelineExecutionsResponseBody model) {
+            this.imagePipelineExecution = model.imagePipelineExecution;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>Details of the image creation tasks.</p>
@@ -192,6 +207,14 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
              * <p>The tag key of the image creation task.</p>
              * 
@@ -252,6 +275,13 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
@@ -395,6 +425,21 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
             private String resourceGroupId; 
             private String status; 
             private Tags tags; 
+
+            private Builder() {
+            } 
+
+            private Builder(ImagePipelineExecutionSet model) {
+                this.creationTime = model.creationTime;
+                this.executionId = model.executionId;
+                this.imageId = model.imageId;
+                this.imagePipelineId = model.imagePipelineId;
+                this.message = model.message;
+                this.modifiedTime = model.modifiedTime;
+                this.resourceGroupId = model.resourceGroupId;
+                this.status = model.status;
+                this.tags = model.tags;
+            } 
 
             /**
              * <p>The time when the image creation task was created.</p>
@@ -544,6 +589,13 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ImagePipelineExecutionSet> imagePipelineExecutionSet; 
+
+            private Builder() {
+            } 
+
+            private Builder(ImagePipelineExecution model) {
+                this.imagePipelineExecutionSet = model.imagePipelineExecutionSet;
+            } 
 
             /**
              * ImagePipelineExecutionSet.

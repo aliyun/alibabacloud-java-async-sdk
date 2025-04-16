@@ -48,6 +48,10 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return natGateways
      */
@@ -89,6 +93,17 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeNatGatewaysResponseBody model) {
+            this.natGateways = model.natGateways;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * NatGateways.
@@ -168,6 +183,13 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> bandwidthPackageId; 
 
+            private Builder() {
+            } 
+
+            private Builder(BandwidthPackageIds model) {
+                this.bandwidthPackageId = model.bandwidthPackageId;
+            } 
+
             /**
              * BandwidthPackageId.
              */
@@ -214,6 +236,13 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> forwardTableId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ForwardTableIds model) {
+                this.forwardTableId = model.forwardTableId;
+            } 
 
             /**
              * ForwardTableId.
@@ -394,6 +423,24 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             private String status; 
             private String vpcId; 
 
+            private Builder() {
+            } 
+
+            private Builder(NatGateway model) {
+                this.bandwidthPackageIds = model.bandwidthPackageIds;
+                this.businessStatus = model.businessStatus;
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.forwardTableIds = model.forwardTableIds;
+                this.instanceChargeType = model.instanceChargeType;
+                this.name = model.name;
+                this.natGatewayId = model.natGatewayId;
+                this.regionId = model.regionId;
+                this.spec = model.spec;
+                this.status = model.status;
+                this.vpcId = model.vpcId;
+            } 
+
             /**
              * BandwidthPackageIds.
              */
@@ -528,6 +575,13 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<NatGateway> natGateway; 
+
+            private Builder() {
+            } 
+
+            private Builder(NatGateways model) {
+                this.natGateway = model.natGateway;
+            } 
 
             /**
              * NatGateway.

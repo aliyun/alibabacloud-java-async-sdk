@@ -52,6 +52,10 @@ public class ListPluginStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instancePluginStatusSet
      */
@@ -101,6 +105,18 @@ public class ListPluginStatusResponseBody extends TeaModel {
         private Long pageSize; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListPluginStatusResponseBody model) {
+            this.instancePluginStatusSet = model.instancePluginStatusSet;
+            this.nextToken = model.nextToken;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The states of Cloud Assistant plug-ins on the instances.</p>
@@ -251,6 +267,17 @@ public class ListPluginStatusResponseBody extends TeaModel {
             private String pluginStatus; 
             private String pluginVersion; 
 
+            private Builder() {
+            } 
+
+            private Builder(PluginStatus model) {
+                this.firstHeartbeatTime = model.firstHeartbeatTime;
+                this.lastHeartbeatTime = model.lastHeartbeatTime;
+                this.pluginName = model.pluginName;
+                this.pluginStatus = model.pluginStatus;
+                this.pluginVersion = model.pluginVersion;
+            } 
+
             /**
              * <p>The first time when Cloud Assistant reported the state of the plug-in.</p>
              * 
@@ -354,6 +381,13 @@ public class ListPluginStatusResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<PluginStatus> pluginStatus; 
 
+            private Builder() {
+            } 
+
+            private Builder(PluginStatusSet model) {
+                this.pluginStatus = model.pluginStatus;
+            } 
+
             /**
              * <p>The state of the Cloud Assistant plug-in. Valid values:</p>
              * <ul>
@@ -425,6 +459,14 @@ public class ListPluginStatusResponseBody extends TeaModel {
             private String instanceId; 
             private PluginStatusSet pluginStatusSet; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstancePluginStatus model) {
+                this.instanceId = model.instanceId;
+                this.pluginStatusSet = model.pluginStatusSet;
+            } 
+
             /**
              * <p>The ID of the instance.</p>
              * 
@@ -482,6 +524,13 @@ public class ListPluginStatusResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<InstancePluginStatus> instancePluginStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstancePluginStatusSet model) {
+                this.instancePluginStatus = model.instancePluginStatus;
+            } 
 
             /**
              * InstancePluginStatus.

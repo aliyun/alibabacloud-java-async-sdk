@@ -36,6 +36,10 @@ public class DescribeBandwidthLimitationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bandwidths
      */
@@ -53,6 +57,14 @@ public class DescribeBandwidthLimitationResponseBody extends TeaModel {
     public static final class Builder {
         private Bandwidths bandwidths; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeBandwidthLimitationResponseBody model) {
+            this.bandwidths = model.bandwidths;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Details about the maximum public bandwidth.</p>
@@ -147,6 +159,16 @@ public class DescribeBandwidthLimitationResponseBody extends TeaModel {
             private Integer min; 
             private String unit; 
 
+            private Builder() {
+            } 
+
+            private Builder(Bandwidth model) {
+                this.internetChargeType = model.internetChargeType;
+                this.max = model.max;
+                this.min = model.min;
+                this.unit = model.unit;
+            } 
+
             /**
              * <p>The billing method for network usage. Valid values:</p>
              * <ul>
@@ -233,6 +255,13 @@ public class DescribeBandwidthLimitationResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Bandwidth> bandwidth; 
+
+            private Builder() {
+            } 
+
+            private Builder(Bandwidths model) {
+                this.bandwidth = model.bandwidth;
+            } 
 
             /**
              * Bandwidth.

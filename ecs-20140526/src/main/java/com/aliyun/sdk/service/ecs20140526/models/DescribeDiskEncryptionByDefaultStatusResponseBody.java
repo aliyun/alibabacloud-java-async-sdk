@@ -36,6 +36,10 @@ public class DescribeDiskEncryptionByDefaultStatusResponseBody extends TeaModel 
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return encrypted
      */
@@ -53,6 +57,14 @@ public class DescribeDiskEncryptionByDefaultStatusResponseBody extends TeaModel 
     public static final class Builder {
         private Boolean encrypted; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDiskEncryptionByDefaultStatusResponseBody model) {
+            this.encrypted = model.encrypted;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Indicates whether account-level default encryption of EBS resources is enabled in the region. Valid values:</p>

@@ -60,6 +60,10 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accounts
      */
@@ -125,6 +129,20 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
         private String requestId; 
         private ShareGroups shareGroups; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeImageSharePermissionResponseBody model) {
+            this.accounts = model.accounts;
+            this.imageId = model.imageId;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+            this.shareGroups = model.shareGroups;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The Alibaba Cloud accounts.</p>
@@ -258,6 +276,14 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
             private String aliyunId; 
             private String sharedTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(Account model) {
+                this.aliyunId = model.aliyunId;
+                this.sharedTime = model.sharedTime;
+            } 
+
             /**
              * <p>The ID of the Alibaba Cloud account.</p>
              * 
@@ -319,6 +345,13 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Account> account; 
 
+            private Builder() {
+            } 
+
+            private Builder(Accounts model) {
+                this.account = model.account;
+            } 
+
             /**
              * Account.
              */
@@ -365,6 +398,13 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
 
         public static final class Builder {
             private String group; 
+
+            private Builder() {
+            } 
+
+            private Builder(ShareGroup model) {
+                this.group = model.group;
+            } 
 
             /**
              * <p>The shared group.</p>
@@ -415,6 +455,13 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ShareGroup> shareGroup; 
+
+            private Builder() {
+            } 
+
+            private Builder(ShareGroups model) {
+                this.shareGroup = model.shareGroup;
+            } 
 
             /**
              * ShareGroup.

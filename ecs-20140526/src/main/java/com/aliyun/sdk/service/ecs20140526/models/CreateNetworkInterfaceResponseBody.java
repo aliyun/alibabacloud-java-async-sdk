@@ -116,6 +116,10 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return description
      */
@@ -293,6 +297,34 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         private String vSwitchId; 
         private String vpcId; 
         private String zoneId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateNetworkInterfaceResponseBody model) {
+            this.description = model.description;
+            this.ipv4PrefixSets = model.ipv4PrefixSets;
+            this.ipv6PrefixSets = model.ipv6PrefixSets;
+            this.ipv6Sets = model.ipv6Sets;
+            this.macAddress = model.macAddress;
+            this.networkInterfaceId = model.networkInterfaceId;
+            this.networkInterfaceName = model.networkInterfaceName;
+            this.ownerId = model.ownerId;
+            this.privateIpAddress = model.privateIpAddress;
+            this.privateIpSets = model.privateIpSets;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+            this.securityGroupIds = model.securityGroupIds;
+            this.serviceID = model.serviceID;
+            this.serviceManaged = model.serviceManaged;
+            this.sourceDestCheck = model.sourceDestCheck;
+            this.status = model.status;
+            this.tags = model.tags;
+            this.type = model.type;
+            this.vSwitchId = model.vSwitchId;
+            this.vpcId = model.vpcId;
+            this.zoneId = model.zoneId;
+        } 
 
         /**
          * <p>The description of the ENI.</p>
@@ -558,6 +590,13 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         public static final class Builder {
             private String ipv4Prefix; 
 
+            private Builder() {
+            } 
+
+            private Builder(Ipv4PrefixSet model) {
+                this.ipv4Prefix = model.ipv4Prefix;
+            } 
+
             /**
              * <p>The IPv4 prefix assigned to the ENI.</p>
              * 
@@ -608,6 +647,13 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Ipv4PrefixSet> ipv4PrefixSet; 
 
+            private Builder() {
+            } 
+
+            private Builder(Ipv4PrefixSets model) {
+                this.ipv4PrefixSet = model.ipv4PrefixSet;
+            } 
+
             /**
              * Ipv4PrefixSet.
              */
@@ -654,6 +700,13 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
 
         public static final class Builder {
             private String ipv6Prefix; 
+
+            private Builder() {
+            } 
+
+            private Builder(Ipv6PrefixSet model) {
+                this.ipv6Prefix = model.ipv6Prefix;
+            } 
 
             /**
              * <p>The IPv6 prefix assigned to the ENI.</p>
@@ -705,6 +758,13 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Ipv6PrefixSet> ipv6PrefixSet; 
 
+            private Builder() {
+            } 
+
+            private Builder(Ipv6PrefixSets model) {
+                this.ipv6PrefixSet = model.ipv6PrefixSet;
+            } 
+
             /**
              * Ipv6PrefixSet.
              */
@@ -751,6 +811,13 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
 
         public static final class Builder {
             private String ipv6Address; 
+
+            private Builder() {
+            } 
+
+            private Builder(Ipv6Set model) {
+                this.ipv6Address = model.ipv6Address;
+            } 
 
             /**
              * <p>The IPv6 address assigned to the ENI.</p>
@@ -801,6 +868,13 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Ipv6Set> ipv6Set; 
+
+            private Builder() {
+            } 
+
+            private Builder(Ipv6Sets model) {
+                this.ipv6Set = model.ipv6Set;
+            } 
 
             /**
              * Ipv6Set.
@@ -860,6 +934,14 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean primary; 
             private String privateIpAddress; 
+
+            private Builder() {
+            } 
+
+            private Builder(PrivateIpSet model) {
+                this.primary = model.primary;
+                this.privateIpAddress = model.privateIpAddress;
+            } 
 
             /**
              * <p>Indicates whether the private IP address is the primary private IP address.</p>
@@ -922,6 +1004,13 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<PrivateIpSet> privateIpSet; 
 
+            private Builder() {
+            } 
+
+            private Builder(PrivateIpSets model) {
+                this.privateIpSet = model.privateIpSet;
+            } 
+
             /**
              * PrivateIpSet.
              */
@@ -968,6 +1057,13 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> securityGroupId; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecurityGroupIds model) {
+                this.securityGroupId = model.securityGroupId;
+            } 
 
             /**
              * SecurityGroupId.
@@ -1027,6 +1123,14 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         public static final class Builder {
             private String tagKey; 
             private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -1088,6 +1192,13 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.

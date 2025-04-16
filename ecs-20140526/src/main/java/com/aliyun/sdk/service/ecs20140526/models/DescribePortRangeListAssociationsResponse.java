@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ModifyDemandResponse} extends {@link TeaModel}
+ * {@link DescribePortRangeListAssociationsResponse} extends {@link TeaModel}
  *
- * <p>ModifyDemandResponse</p>
+ * <p>DescribePortRangeListAssociationsResponse</p>
  */
-public class ModifyDemandResponse extends Response {
+public class DescribePortRangeListAssociationsResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,20 +24,20 @@ public class ModifyDemandResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private ModifyDemandResponseBody body;
+    private DescribePortRangeListAssociationsResponseBody body;
 
-    private ModifyDemandResponse(BuilderImpl builder) {
+    private DescribePortRangeListAssociationsResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static ModifyDemandResponse create() {
+    public static DescribePortRangeListAssociationsResponse create() {
         return new BuilderImpl().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new BuilderImpl(this);
     }
@@ -59,35 +59,35 @@ public class ModifyDemandResponse extends Response {
     /**
      * @return body
      */
-    public ModifyDemandResponseBody getBody() {
+    public DescribePortRangeListAssociationsResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<ModifyDemandResponse, Builder> {
+    public interface Builder extends Response.Builder<DescribePortRangeListAssociationsResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(ModifyDemandResponseBody body);
+        Builder body(DescribePortRangeListAssociationsResponseBody body);
 
         @Override
-        ModifyDemandResponse build();
+        DescribePortRangeListAssociationsResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<ModifyDemandResponse, Builder>
+            extends Response.BuilderImpl<DescribePortRangeListAssociationsResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private ModifyDemandResponseBody body; 
+        private DescribePortRangeListAssociationsResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(ModifyDemandResponse response) {
+        private BuilderImpl(DescribePortRangeListAssociationsResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class ModifyDemandResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(ModifyDemandResponseBody body) {
+        public Builder body(DescribePortRangeListAssociationsResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public ModifyDemandResponse build() {
-            return new ModifyDemandResponse(this);
+        public DescribePortRangeListAssociationsResponse build() {
+            return new DescribePortRangeListAssociationsResponse(this);
         } 
 
     } 

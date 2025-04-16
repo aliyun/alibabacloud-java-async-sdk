@@ -72,7 +72,7 @@ public class DescribeAutoProvisioningGroupInstancesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -191,7 +191,7 @@ public class DescribeAutoProvisioningGroupInstancesRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The page number.</p>
          * <p>Pages start from page 1.</p>
          * <p>Default value: 1.</p>
          * 
@@ -205,8 +205,8 @@ public class DescribeAutoProvisioningGroupInstancesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
-         * <p>Maximum value: 100.</p>
+         * <p>The number of entries per page.</p>
+         * <p>Valid values: 1 to 100.</p>
          * <p>Default value: 10.</p>
          * 
          * <strong>example:</strong>

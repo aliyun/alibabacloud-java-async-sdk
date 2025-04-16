@@ -166,7 +166,7 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -557,7 +557,7 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * <p>An array of security group rules. You can specify 1 to 100 security group rules.</p>
+         * <p>The security group rules. You can specify 1 to 100 security group rules.</p>
          */
         public Builder permissions(java.util.List<Permissions> permissions) {
             this.putQueryParameter("Permissions", permissions);
@@ -719,6 +719,9 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("PortRange")
         private String portRange;
 
+        @com.aliyun.core.annotation.NameInMap("PortRangeListId")
+        private String portRangeListId;
+
         @com.aliyun.core.annotation.NameInMap("Priority")
         private String priority;
 
@@ -741,6 +744,7 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
             this.nicType = builder.nicType;
             this.policy = builder.policy;
             this.portRange = builder.portRange;
+            this.portRangeListId = builder.portRangeListId;
             this.priority = builder.priority;
             this.sourceCidrIp = builder.sourceCidrIp;
             this.sourcePortRange = builder.sourcePortRange;
@@ -839,6 +843,13 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         }
 
         /**
+         * @return portRangeListId
+         */
+        public String getPortRangeListId() {
+            return this.portRangeListId;
+        }
+
+        /**
          * @return priority
          */
         public String getPriority() {
@@ -872,9 +883,32 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
             private String nicType; 
             private String policy; 
             private String portRange; 
+            private String portRangeListId; 
             private String priority; 
             private String sourceCidrIp; 
             private String sourcePortRange; 
+
+            private Builder() {
+            } 
+
+            private Builder(Permissions model) {
+                this.description = model.description;
+                this.destCidrIp = model.destCidrIp;
+                this.destGroupId = model.destGroupId;
+                this.destGroupOwnerAccount = model.destGroupOwnerAccount;
+                this.destGroupOwnerId = model.destGroupOwnerId;
+                this.destPrefixListId = model.destPrefixListId;
+                this.ipProtocol = model.ipProtocol;
+                this.ipv6DestCidrIp = model.ipv6DestCidrIp;
+                this.ipv6SourceCidrIp = model.ipv6SourceCidrIp;
+                this.nicType = model.nicType;
+                this.policy = model.policy;
+                this.portRange = model.portRange;
+                this.portRangeListId = model.portRangeListId;
+                this.priority = model.priority;
+                this.sourceCidrIp = model.sourceCidrIp;
+                this.sourcePortRange = model.sourcePortRange;
+            } 
 
             /**
              * <p>The description of the security group rule. The description must be 1 to 512 characters in length.</p>
@@ -961,7 +995,7 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * <p>The protocol. The values of this parameter are case-insensitive. Valid values:</p>
+             * <p>The protocol. The values of this parameter are case-insensitive. Specifies whether to check that the CPU tag set of the source host is the subset of the CPU tag set of the destination host. Valid values:</p>
              * <ul>
              * <li>TCP.</li>
              * <li>UDP.</li>
@@ -1009,7 +1043,7 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * <p>The network interface controller (NIC) type of the security group rule if the security group resides in the classic network. Valid values:</p>
+             * <p>The network interface controller (NIC) type of the security group rule if the security group resides in the classic network. Specifies whether to check that the CPU tag set of the source host is the subset of the CPU tag set of the destination host. Valid values:</p>
              * <ul>
              * <li><p>internet: public NIC.</p>
              * </li>
@@ -1031,7 +1065,7 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * <p>The action of the security group rule. Valid values:</p>
+             * <p>The action of the security group rule. Specifies whether to check that the CPU tag set of the source host is the subset of the CPU tag set of the destination host. Valid values:</p>
              * <ul>
              * <li>accept: allows outbound access.</li>
              * <li>drop: denies outbound access and returns no responses. In this case, the request times out or the connection cannot be established.</li>
@@ -1047,7 +1081,7 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * <p>The range of destination port numbers for the protocols specified in the security group rule. Valid values:</p>
+             * <p>The range of destination port numbers for the protocols specified in the security group rule. Specifies whether to check that the CPU tag set of the source host is the subset of the CPU tag set of the destination host. Valid values:</p>
              * <ul>
              * <li>If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Specify a port number range in the format of &lt;Start port number&gt;/&lt;End port number&gt;. Example: 1/200.</li>
              * <li>If you set IpProtocol to ICMP, the port number range is -1/-1.</li>
@@ -1064,6 +1098,14 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
             }
 
             /**
+             * PortRangeListId.
+             */
+            public Builder portRangeListId(String portRangeListId) {
+                this.portRangeListId = portRangeListId;
+                return this;
+            }
+
+            /**
              * <p>The priority of the security group rule. A smaller value specifies a higher priority. Valid values: 1 to 100.</p>
              * <p>Default value: 1.</p>
              * 
@@ -1076,7 +1118,7 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * <p>The source IPv4 CIDR block. IPv4 CIDR blocks and IPv4 addresses are supported.</p>
+             * <p>The source IPv4 CIDR blocks and IPv4 addresses are supported.</p>
              * <p>This parameter is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</p>
              * 
              * <strong>example:</strong>
@@ -1088,14 +1130,14 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * <p>The range of source port numbers for the protocols specified in the security group rule. Valid values:</p>
+             * <p>The range of source port numbers for the protocols specified in the security group rule. Specifies whether to check that the CPU tag set of the source host is the subset of the CPU tag set of the destination host. Valid values:</p>
              * <ul>
              * <li>If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Specify a port number range in the format of &lt;Start port number&gt;/&lt;End port number&gt;. Example: 1/200.</li>
              * <li>If you set IpProtocol to ICMP, the port number range is -1/-1.</li>
              * <li>If you set IpProtocol to GRE, the port number range is -1/-1.</li>
              * <li>If you set IpProtocol to ALL, the port number range is -1/-1.</li>
              * </ul>
-             * <p>This parameter is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</p>
+             * <p>This property is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>80/80</p>

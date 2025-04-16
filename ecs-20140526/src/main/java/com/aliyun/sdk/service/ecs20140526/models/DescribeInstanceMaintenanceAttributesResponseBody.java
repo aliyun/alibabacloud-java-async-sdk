@@ -48,6 +48,10 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maintenanceAttributes
      */
@@ -89,6 +93,17 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceMaintenanceAttributesResponseBody model) {
+            this.maintenanceAttributes = model.maintenanceAttributes;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The maintenance attributes.</p>
@@ -180,6 +195,13 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
         public static final class Builder {
             private java.util.List<String> supportedValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(SupportedValues model) {
+                this.supportedValue = model.supportedValue;
+            } 
+
             /**
              * SupportedValue.
              */
@@ -250,6 +272,15 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
             private String defaultValue; 
             private SupportedValues supportedValues; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(ActionOnMaintenance model) {
+                this.defaultValue = model.defaultValue;
+                this.supportedValues = model.supportedValues;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The default maintenance action.</p>
@@ -337,6 +368,14 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
             private String endTime; 
             private String startTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(MaintenanceWindow model) {
+                this.endTime = model.endTime;
+                this.startTime = model.startTime;
+            } 
+
             /**
              * <p>The end time of the maintenance window.</p>
              * 
@@ -397,6 +436,13 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
 
         public static final class Builder {
             private java.util.List<MaintenanceWindow> maintenanceWindow; 
+
+            private Builder() {
+            } 
+
+            private Builder(MaintenanceWindows model) {
+                this.maintenanceWindow = model.maintenanceWindow;
+            } 
 
             /**
              * MaintenanceWindow.
@@ -481,6 +527,16 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
             private MaintenanceWindows maintenanceWindows; 
             private Boolean notifyOnMaintenance; 
 
+            private Builder() {
+            } 
+
+            private Builder(MaintenanceAttribute model) {
+                this.actionOnMaintenance = model.actionOnMaintenance;
+                this.instanceId = model.instanceId;
+                this.maintenanceWindows = model.maintenanceWindows;
+                this.notifyOnMaintenance = model.notifyOnMaintenance;
+            } 
+
             /**
              * <p>The attributes of the maintenance action of the instance.</p>
              */
@@ -557,6 +613,13 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
 
         public static final class Builder {
             private java.util.List<MaintenanceAttribute> maintenanceAttribute; 
+
+            private Builder() {
+            } 
+
+            private Builder(MaintenanceAttributes model) {
+                this.maintenanceAttribute = model.maintenanceAttribute;
+            } 
 
             /**
              * MaintenanceAttribute.

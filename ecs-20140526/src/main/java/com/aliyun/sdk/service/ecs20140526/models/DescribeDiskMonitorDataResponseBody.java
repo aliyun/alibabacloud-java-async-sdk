@@ -40,6 +40,10 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return monitorData
      */
@@ -65,6 +69,15 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
         private MonitorData monitorData; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDiskMonitorDataResponseBody model) {
+            this.monitorData = model.monitorData;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The monitoring data of the disk.</p>
@@ -242,6 +255,22 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             private Integer latencyWrite; 
             private String timeStamp; 
 
+            private Builder() {
+            } 
+
+            private Builder(DiskMonitorData model) {
+                this.BPSRead = model.BPSRead;
+                this.BPSTotal = model.BPSTotal;
+                this.BPSWrite = model.BPSWrite;
+                this.diskId = model.diskId;
+                this.IOPSRead = model.IOPSRead;
+                this.IOPSTotal = model.IOPSTotal;
+                this.IOPSWrite = model.IOPSWrite;
+                this.latencyRead = model.latencyRead;
+                this.latencyWrite = model.latencyWrite;
+                this.timeStamp = model.timeStamp;
+            } 
+
             /**
              * <p>The read bandwidth of the disk. Unit: byte/s.</p>
              * 
@@ -390,6 +419,13 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DiskMonitorData> diskMonitorData; 
+
+            private Builder() {
+            } 
+
+            private Builder(MonitorData model) {
+                this.diskMonitorData = model.diskMonitorData;
+            } 
 
             /**
              * DiskMonitorData.

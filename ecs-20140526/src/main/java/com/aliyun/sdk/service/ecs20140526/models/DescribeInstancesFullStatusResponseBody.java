@@ -48,6 +48,10 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceFullStatusSet
      */
@@ -89,6 +93,17 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstancesFullStatusResponseBody model) {
+            this.instanceFullStatusSet = model.instanceFullStatusSet;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The queried instances.</p>
@@ -195,6 +210,14 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             private Integer code; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(HealthStatus model) {
+                this.code = model.code;
+                this.name = model.name;
+            } 
+
             /**
              * <p>The code of the health state.</p>
              * 
@@ -268,6 +291,14 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             private Integer code; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(EventCycleStatus model) {
+                this.code = model.code;
+                this.name = model.name;
+            } 
+
             /**
              * <p>The code of the system event state.</p>
              * 
@@ -340,6 +371,14 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
         public static final class Builder {
             private Integer code; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(EventType model) {
+                this.code = model.code;
+                this.name = model.name;
+            } 
 
             /**
              * <p>The code of the system event type.</p>
@@ -450,6 +489,17 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             private String deviceType; 
             private String releaseTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(InactiveDisk model) {
+                this.creationTime = model.creationTime;
+                this.deviceCategory = model.deviceCategory;
+                this.deviceSize = model.deviceSize;
+                this.deviceType = model.deviceType;
+                this.releaseTime = model.releaseTime;
+            } 
+
             /**
              * <p>The time when the disk was created. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
              * 
@@ -558,6 +608,13 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<InactiveDisk> inactiveDisk; 
 
+            private Builder() {
+            } 
+
+            private Builder(InactiveDisks model) {
+                this.inactiveDisk = model.inactiveDisk;
+            } 
+
             /**
              * InactiveDisk.
              */
@@ -628,6 +685,15 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             private String device; 
             private String diskId; 
             private InactiveDisks inactiveDisks; 
+
+            private Builder() {
+            } 
+
+            private Builder(ExtendedAttribute model) {
+                this.device = model.device;
+                this.diskId = model.diskId;
+                this.inactiveDisks = model.inactiveDisks;
+            } 
 
             /**
              * <p>The device name of the local disk.</p>
@@ -782,6 +848,20 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             private String notBefore; 
             private String reason; 
 
+            private Builder() {
+            } 
+
+            private Builder(ScheduledSystemEventType model) {
+                this.eventCycleStatus = model.eventCycleStatus;
+                this.eventId = model.eventId;
+                this.eventPublishTime = model.eventPublishTime;
+                this.eventType = model.eventType;
+                this.extendedAttribute = model.extendedAttribute;
+                this.impactLevel = model.impactLevel;
+                this.notBefore = model.notBefore;
+                this.reason = model.reason;
+            } 
+
             /**
              * <p>The state of the system event.</p>
              */
@@ -919,6 +999,13 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<ScheduledSystemEventType> scheduledSystemEventType; 
 
+            private Builder() {
+            } 
+
+            private Builder(ScheduledSystemEventSet model) {
+                this.scheduledSystemEventType = model.scheduledSystemEventType;
+            } 
+
             /**
              * ScheduledSystemEventType.
              */
@@ -977,6 +1064,14 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
         public static final class Builder {
             private Integer code; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(Status model) {
+                this.code = model.code;
+                this.name = model.name;
+            } 
 
             /**
              * <p>The code of the instance lifecycle state.</p>
@@ -1075,6 +1170,16 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             private ScheduledSystemEventSet scheduledSystemEventSet; 
             private Status status; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceFullStatusType model) {
+                this.healthStatus = model.healthStatus;
+                this.instanceId = model.instanceId;
+                this.scheduledSystemEventSet = model.scheduledSystemEventSet;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The health state of the instance.</p>
              */
@@ -1148,6 +1253,13 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<InstanceFullStatusType> instanceFullStatusType; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceFullStatusSet model) {
+                this.instanceFullStatusType = model.instanceFullStatusType;
+            } 
 
             /**
              * InstanceFullStatusType.

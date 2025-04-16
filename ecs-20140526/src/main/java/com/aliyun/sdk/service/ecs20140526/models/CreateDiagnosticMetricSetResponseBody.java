@@ -36,6 +36,10 @@ public class CreateDiagnosticMetricSetResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return metricSetId
      */
@@ -53,6 +57,14 @@ public class CreateDiagnosticMetricSetResponseBody extends TeaModel {
     public static final class Builder {
         private String metricSetId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateDiagnosticMetricSetResponseBody model) {
+            this.metricSetId = model.metricSetId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the diagnostic metric set, which is the unique identifier of the set.</p>

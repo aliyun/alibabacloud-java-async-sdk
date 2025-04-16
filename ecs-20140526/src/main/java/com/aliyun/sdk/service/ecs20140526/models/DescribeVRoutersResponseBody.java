@@ -48,6 +48,10 @@ public class DescribeVRoutersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribeVRoutersResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
         private VRouters vRouters; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVRoutersResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.vRouters = model.vRouters;
+        } 
 
         /**
          * PageNumber.
@@ -167,6 +182,13 @@ public class DescribeVRoutersResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> routeTableId; 
+
+            private Builder() {
+            } 
+
+            private Builder(RouteTableIds model) {
+                this.routeTableId = model.routeTableId;
+            } 
 
             /**
              * RouteTableId.
@@ -287,6 +309,19 @@ public class DescribeVRoutersResponseBody extends TeaModel {
             private String vRouterName; 
             private String vpcId; 
 
+            private Builder() {
+            } 
+
+            private Builder(VRouter model) {
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.regionId = model.regionId;
+                this.routeTableIds = model.routeTableIds;
+                this.vRouterId = model.vRouterId;
+                this.vRouterName = model.vRouterName;
+                this.vpcId = model.vpcId;
+            } 
+
             /**
              * CreationTime.
              */
@@ -381,6 +416,13 @@ public class DescribeVRoutersResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<VRouter> vRouter; 
+
+            private Builder() {
+            } 
+
+            private Builder(VRouters model) {
+                this.vRouter = model.vRouter;
+            } 
 
             /**
              * VRouter.

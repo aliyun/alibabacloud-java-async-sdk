@@ -36,6 +36,10 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return priceInfo
      */
@@ -53,6 +57,14 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
     public static final class Builder {
         private PriceInfo priceInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRenewalPriceResponseBody model) {
+            this.priceInfo = model.priceInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Details about the prices and promotion rules.</p>
@@ -123,6 +135,14 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             private String description; 
             private Long ruleId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Rule model) {
+                this.description = model.description;
+                this.ruleId = model.ruleId;
+            } 
+
             /**
              * <p>The description of the pricing rule.</p>
              * 
@@ -183,6 +203,13 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Rule> rule; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubRules model) {
+                this.rule = model.rule;
+            } 
 
             /**
              * Rule.
@@ -279,6 +306,17 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             private SubRules subRules; 
             private Float tradePrice; 
 
+            private Builder() {
+            } 
+
+            private Builder(DetailInfo model) {
+                this.discountPrice = model.discountPrice;
+                this.originalPrice = model.originalPrice;
+                this.resource = model.resource;
+                this.subRules = model.subRules;
+                this.tradePrice = model.tradePrice;
+            } 
+
             /**
              * <p>The discount.</p>
              * 
@@ -369,6 +407,13 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DetailInfo> detailInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(DetailInfos model) {
+                this.detailInfo = model.detailInfo;
+            } 
 
             /**
              * DetailInfo.
@@ -464,6 +509,17 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             private Float discountPrice; 
             private Float originalPrice; 
             private Float tradePrice; 
+
+            private Builder() {
+            } 
+
+            private Builder(Price model) {
+                this.currency = model.currency;
+                this.detailInfos = model.detailInfos;
+                this.discountPrice = model.discountPrice;
+                this.originalPrice = model.originalPrice;
+                this.tradePrice = model.tradePrice;
+            } 
 
             /**
              * <p>The currency unit.</p>
@@ -570,6 +626,14 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             private String description; 
             private Long ruleId; 
 
+            private Builder() {
+            } 
+
+            private Builder(RulesRule model) {
+                this.description = model.description;
+                this.ruleId = model.ruleId;
+            } 
+
             /**
              * <p>The description of the promotion rule.</p>
              * 
@@ -631,6 +695,13 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<RulesRule> rule; 
 
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.rule = model.rule;
+            } 
+
             /**
              * Rule.
              */
@@ -689,6 +760,14 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
         public static final class Builder {
             private Price price; 
             private Rules rules; 
+
+            private Builder() {
+            } 
+
+            private Builder(PriceInfo model) {
+                this.price = model.price;
+                this.rules = model.rules;
+            } 
 
             /**
              * <p>The price.</p>

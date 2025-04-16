@@ -44,6 +44,10 @@ public class AssignIpv6AddressesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ipv6PrefixSets
      */
@@ -77,6 +81,16 @@ public class AssignIpv6AddressesResponseBody extends TeaModel {
         private Ipv6Sets ipv6Sets; 
         private String networkInterfaceId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AssignIpv6AddressesResponseBody model) {
+            this.ipv6PrefixSets = model.ipv6PrefixSets;
+            this.ipv6Sets = model.ipv6Sets;
+            this.networkInterfaceId = model.networkInterfaceId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The IPv6 prefixes of the ENI.</p>
@@ -154,6 +168,13 @@ public class AssignIpv6AddressesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> ipv6Prefix; 
 
+            private Builder() {
+            } 
+
+            private Builder(Ipv6PrefixSets model) {
+                this.ipv6Prefix = model.ipv6Prefix;
+            } 
+
             /**
              * Ipv6Prefix.
              */
@@ -200,6 +221,13 @@ public class AssignIpv6AddressesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> ipv6Address; 
+
+            private Builder() {
+            } 
+
+            private Builder(Ipv6Sets model) {
+                this.ipv6Address = model.ipv6Address;
+            } 
 
             /**
              * Ipv6Address.

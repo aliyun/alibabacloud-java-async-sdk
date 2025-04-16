@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DeleteDemandResponse} extends {@link TeaModel}
+ * {@link ModifyPortRangeListResponse} extends {@link TeaModel}
  *
- * <p>DeleteDemandResponse</p>
+ * <p>ModifyPortRangeListResponse</p>
  */
-public class DeleteDemandResponse extends Response {
+public class ModifyPortRangeListResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,20 +24,20 @@ public class DeleteDemandResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private DeleteDemandResponseBody body;
+    private ModifyPortRangeListResponseBody body;
 
-    private DeleteDemandResponse(BuilderImpl builder) {
+    private ModifyPortRangeListResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DeleteDemandResponse create() {
+    public static ModifyPortRangeListResponse create() {
         return new BuilderImpl().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new BuilderImpl(this);
     }
@@ -59,35 +59,35 @@ public class DeleteDemandResponse extends Response {
     /**
      * @return body
      */
-    public DeleteDemandResponseBody getBody() {
+    public ModifyPortRangeListResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DeleteDemandResponse, Builder> {
+    public interface Builder extends Response.Builder<ModifyPortRangeListResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DeleteDemandResponseBody body);
+        Builder body(ModifyPortRangeListResponseBody body);
 
         @Override
-        DeleteDemandResponse build();
+        ModifyPortRangeListResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DeleteDemandResponse, Builder>
+            extends Response.BuilderImpl<ModifyPortRangeListResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private DeleteDemandResponseBody body; 
+        private ModifyPortRangeListResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DeleteDemandResponse response) {
+        private BuilderImpl(ModifyPortRangeListResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class DeleteDemandResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DeleteDemandResponseBody body) {
+        public Builder body(ModifyPortRangeListResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DeleteDemandResponse build() {
-            return new DeleteDemandResponse(this);
+        public ModifyPortRangeListResponse build() {
+            return new ModifyPortRangeListResponse(this);
         } 
 
     } 

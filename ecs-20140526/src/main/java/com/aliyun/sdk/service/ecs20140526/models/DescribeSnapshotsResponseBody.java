@@ -52,6 +52,10 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextToken
      */
@@ -101,6 +105,18 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         private String requestId; 
         private Snapshots snapshots; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSnapshotsResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.snapshots = model.snapshots;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
@@ -219,6 +235,14 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
              * <p>The tag key of the snapshot.</p>
              * 
@@ -279,6 +303,13 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
@@ -662,6 +693,41 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             private String status; 
             private Tags tags; 
             private String usage; 
+
+            private Builder() {
+            } 
+
+            private Builder(Snapshot model) {
+                this.available = model.available;
+                this.category = model.category;
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.encrypted = model.encrypted;
+                this.instantAccess = model.instantAccess;
+                this.instantAccessRetentionDays = model.instantAccessRetentionDays;
+                this.KMSKeyId = model.KMSKeyId;
+                this.lastModifiedTime = model.lastModifiedTime;
+                this.productCode = model.productCode;
+                this.progress = model.progress;
+                this.regionId = model.regionId;
+                this.remainTime = model.remainTime;
+                this.resourceGroupId = model.resourceGroupId;
+                this.retentionDays = model.retentionDays;
+                this.snapshotId = model.snapshotId;
+                this.snapshotLinkId = model.snapshotLinkId;
+                this.snapshotName = model.snapshotName;
+                this.snapshotSN = model.snapshotSN;
+                this.snapshotType = model.snapshotType;
+                this.sourceDiskId = model.sourceDiskId;
+                this.sourceDiskSize = model.sourceDiskSize;
+                this.sourceDiskType = model.sourceDiskType;
+                this.sourceRegionId = model.sourceRegionId;
+                this.sourceSnapshotId = model.sourceSnapshotId;
+                this.sourceStorageType = model.sourceStorageType;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.usage = model.usage;
+            } 
 
             /**
              * <p>Indicates whether the snapshot can be shared and be used to create or roll back a cloud disk. Valid values:</p>
@@ -1064,6 +1130,13 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Snapshot> snapshot; 
+
+            private Builder() {
+            } 
+
+            private Builder(Snapshots model) {
+                this.snapshot = model.snapshot;
+            } 
 
             /**
              * Snapshot.

@@ -36,6 +36,10 @@ public class ModifyReservedInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class ModifyReservedInstancesResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private ReservedInstanceIdSets reservedInstanceIdSets; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyReservedInstancesResponseBody model) {
+            this.requestId = model.requestId;
+            this.reservedInstanceIdSets = model.reservedInstanceIdSets;
+        } 
 
         /**
          * <p>Details about the reserved instance.</p>
@@ -110,6 +122,13 @@ public class ModifyReservedInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> reservedInstanceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ReservedInstanceIdSets model) {
+                this.reservedInstanceId = model.reservedInstanceId;
+            } 
 
             /**
              * ReservedInstanceId.

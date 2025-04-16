@@ -80,7 +80,7 @@ public class ModifyElasticityAssuranceAutoRenewAttributeRequest extends Request 
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -341,6 +341,13 @@ public class ModifyElasticityAssuranceAutoRenewAttributeRequest extends Request 
 
         public static final class Builder {
             private java.util.List<String> id; 
+
+            private Builder() {
+            } 
+
+            private Builder(PrivatePoolOptions model) {
+                this.id = model.id;
+            } 
 
             /**
              * <p>The IDs of elasticity assurances.</p>

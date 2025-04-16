@@ -52,6 +52,10 @@ public class DescribeCommandsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return commands
      */
@@ -101,6 +105,18 @@ public class DescribeCommandsResponseBody extends TeaModel {
         private Long pageSize; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCommandsResponseBody model) {
+            this.commands = model.commands;
+            this.nextToken = model.nextToken;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The queried commands.</p>
@@ -202,6 +218,13 @@ public class DescribeCommandsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> possibleValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(PossibleValues model) {
+                this.possibleValue = model.possibleValue;
+            } 
 
             /**
              * PossibleValue.
@@ -310,6 +333,18 @@ public class DescribeCommandsResponseBody extends TeaModel {
             private PossibleValues possibleValues; 
             private Boolean required; 
 
+            private Builder() {
+            } 
+
+            private Builder(ParameterDefinition model) {
+                this.defaultValue = model.defaultValue;
+                this.description = model.description;
+                this.parameterName = model.parameterName;
+                this.patternRegex = model.patternRegex;
+                this.possibleValues = model.possibleValues;
+                this.required = model.required;
+            } 
+
             /**
              * <p>The default value of the custom parameter.</p>
              * 
@@ -344,7 +379,10 @@ public class DescribeCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * PatternRegex.
+             * <p>The regular expression of the custom parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>^[a-zA-Z0-9_-]{4,32}$</p>
              */
             public Builder patternRegex(String patternRegex) {
                 this.patternRegex = patternRegex;
@@ -414,6 +452,13 @@ public class DescribeCommandsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<ParameterDefinition> parameterDefinition; 
 
+            private Builder() {
+            } 
+
+            private Builder(ParameterDefinitions model) {
+                this.parameterDefinition = model.parameterDefinition;
+            } 
+
             /**
              * ParameterDefinition.
              */
@@ -460,6 +505,13 @@ public class DescribeCommandsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> parameterName; 
+
+            private Builder() {
+            } 
+
+            private Builder(ParameterNames model) {
+                this.parameterName = model.parameterName;
+            } 
 
             /**
              * <p>The name of the custom parameter.</p>
@@ -523,6 +575,14 @@ public class DescribeCommandsResponseBody extends TeaModel {
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
              * <p>The tag key of the command.</p>
              * 
@@ -583,6 +643,13 @@ public class DescribeCommandsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
@@ -847,6 +914,31 @@ public class DescribeCommandsResponseBody extends TeaModel {
             private Integer version; 
             private String workingDir; 
 
+            private Builder() {
+            } 
+
+            private Builder(Command model) {
+                this.category = model.category;
+                this.commandContent = model.commandContent;
+                this.commandId = model.commandId;
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.enableParameter = model.enableParameter;
+                this.invokeTimes = model.invokeTimes;
+                this.latest = model.latest;
+                this.launcher = model.launcher;
+                this.name = model.name;
+                this.parameterDefinitions = model.parameterDefinitions;
+                this.parameterNames = model.parameterNames;
+                this.provider = model.provider;
+                this.resourceGroupId = model.resourceGroupId;
+                this.tags = model.tags;
+                this.timeout = model.timeout;
+                this.type = model.type;
+                this.version = model.version;
+                this.workingDir = model.workingDir;
+            } 
+
             /**
              * <p>The category of the common command.</p>
              * 
@@ -962,7 +1054,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The custom parameters.</p>
+             * <p>The custom parameters of the command.</p>
              */
             public Builder parameterDefinitions(ParameterDefinitions parameterDefinitions) {
                 this.parameterDefinitions = parameterDefinitions;
@@ -1089,6 +1181,13 @@ public class DescribeCommandsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Command> command; 
+
+            private Builder() {
+            } 
+
+            private Builder(Commands model) {
+                this.command = model.command;
+            } 
 
             /**
              * Command.

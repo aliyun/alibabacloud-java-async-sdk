@@ -40,6 +40,10 @@ public class DescribeTerminalSessionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextToken
      */
@@ -65,6 +69,15 @@ public class DescribeTerminalSessionsResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Sessions sessions; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTerminalSessionsResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.sessions = model.sessions;
+        } 
 
         /**
          * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
@@ -182,6 +195,17 @@ public class DescribeTerminalSessionsResponseBody extends TeaModel {
             private String startTime; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(Connection model) {
+                this.closedReason = model.closedReason;
+                this.endTime = model.endTime;
+                this.instanceId = model.instanceId;
+                this.startTime = model.startTime;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The reason why the connection was closed. This parameter is returned only when the <code>Status</code> value is <code>Disconnected</code>, <code>Terminated</code>, or <code>Failed</code>. Valid values:</p>
              * <ul>
@@ -293,6 +317,13 @@ public class DescribeTerminalSessionsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Connection> connection; 
+
+            private Builder() {
+            } 
+
+            private Builder(Connections model) {
+                this.connection = model.connection;
+            } 
 
             /**
              * Connection.
@@ -436,6 +467,21 @@ public class DescribeTerminalSessionsResponseBody extends TeaModel {
             private String sessionId; 
             private String targetServer; 
             private String username; 
+
+            private Builder() {
+            } 
+
+            private Builder(Session model) {
+                this.clientIP = model.clientIP;
+                this.connections = model.connections;
+                this.creationTime = model.creationTime;
+                this.identityType = model.identityType;
+                this.portNumber = model.portNumber;
+                this.principalId = model.principalId;
+                this.sessionId = model.sessionId;
+                this.targetServer = model.targetServer;
+                this.username = model.username;
+            } 
 
             /**
              * <p>The IP address of the client used to establish connections.</p>
@@ -581,6 +627,13 @@ public class DescribeTerminalSessionsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Session> session; 
+
+            private Builder() {
+            } 
+
+            private Builder(Sessions model) {
+                this.session = model.session;
+            } 
 
             /**
              * Session.

@@ -36,6 +36,10 @@ public class CreateDedicatedHostClusterResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dedicatedHostClusterId
      */
@@ -53,6 +57,14 @@ public class CreateDedicatedHostClusterResponseBody extends TeaModel {
     public static final class Builder {
         private String dedicatedHostClusterId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateDedicatedHostClusterResponseBody model) {
+            this.dedicatedHostClusterId = model.dedicatedHostClusterId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the host group.</p>

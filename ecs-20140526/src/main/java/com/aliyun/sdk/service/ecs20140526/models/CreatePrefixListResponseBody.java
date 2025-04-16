@@ -36,6 +36,10 @@ public class CreatePrefixListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return prefixListId
      */
@@ -53,6 +57,14 @@ public class CreatePrefixListResponseBody extends TeaModel {
     public static final class Builder {
         private String prefixListId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreatePrefixListResponseBody model) {
+            this.prefixListId = model.prefixListId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the prefix list.</p>

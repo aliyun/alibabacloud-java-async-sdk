@@ -44,6 +44,10 @@ public class GetInstanceConsoleOutputResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return consoleOutput
      */
@@ -77,6 +81,16 @@ public class GetInstanceConsoleOutputResponseBody extends TeaModel {
         private String instanceId; 
         private String lastUpdateTime; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetInstanceConsoleOutputResponseBody model) {
+            this.consoleOutput = model.consoleOutput;
+            this.instanceId = model.instanceId;
+            this.lastUpdateTime = model.lastUpdateTime;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The Base64-encoded command output of the instance.</p>

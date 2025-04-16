@@ -135,7 +135,7 @@ public class CreateImageRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -701,6 +701,16 @@ public class CreateImageRequest extends Request {
             private Integer size; 
             private String snapshotId; 
 
+            private Builder() {
+            } 
+
+            private Builder(DiskDeviceMapping model) {
+                this.device = model.device;
+                this.diskType = model.diskType;
+                this.size = model.size;
+                this.snapshotId = model.snapshotId;
+            } 
+
             /**
              * <p>The device name of disk N in the custom image. Valid values:</p>
              * <ul>
@@ -802,6 +812,13 @@ public class CreateImageRequest extends Request {
         public static final class Builder {
             private String imdsSupport; 
 
+            private Builder() {
+            } 
+
+            private Builder(Features model) {
+                this.imdsSupport = model.imdsSupport;
+            } 
+
             /**
              * <p>The image metadata access mode. Valid values:</p>
              * <ul>
@@ -868,6 +885,14 @@ public class CreateImageRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of tag N of the custom image. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>

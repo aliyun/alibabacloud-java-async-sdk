@@ -302,7 +302,7 @@ public class CreateLaunchTemplateRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -1702,6 +1702,23 @@ public class CreateLaunchTemplateRequest extends Request {
             private Long provisionedIops; 
             private Integer size; 
 
+            private Builder() {
+            } 
+
+            private Builder(SystemDisk model) {
+                this.autoSnapshotPolicyId = model.autoSnapshotPolicyId;
+                this.burstingEnabled = model.burstingEnabled;
+                this.category = model.category;
+                this.deleteWithInstance = model.deleteWithInstance;
+                this.description = model.description;
+                this.diskName = model.diskName;
+                this.encrypted = model.encrypted;
+                this.iops = model.iops;
+                this.performanceLevel = model.performanceLevel;
+                this.provisionedIops = model.provisionedIops;
+                this.size = model.size;
+            } 
+
             /**
              * <p>The ID of the automatic snapshot policy to apply to the system disk.</p>
              * 
@@ -2038,6 +2055,24 @@ public class CreateLaunchTemplateRequest extends Request {
             private Integer size; 
             private String snapshotId; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataDisk model) {
+                this.autoSnapshotPolicyId = model.autoSnapshotPolicyId;
+                this.burstingEnabled = model.burstingEnabled;
+                this.category = model.category;
+                this.deleteWithInstance = model.deleteWithInstance;
+                this.description = model.description;
+                this.device = model.device;
+                this.diskName = model.diskName;
+                this.encrypted = model.encrypted;
+                this.performanceLevel = model.performanceLevel;
+                this.provisionedIops = model.provisionedIops;
+                this.size = model.size;
+                this.snapshotId = model.snapshotId;
+            } 
+
             /**
              * <p>The ID of the automatic snapshot policy to apply to data disk N.</p>
              * 
@@ -2365,6 +2400,21 @@ public class CreateLaunchTemplateRequest extends Request {
             private java.util.List<String> securityGroupIds; 
             private String vSwitchId; 
 
+            private Builder() {
+            } 
+
+            private Builder(NetworkInterface model) {
+                this.deleteOnRelease = model.deleteOnRelease;
+                this.description = model.description;
+                this.instanceType = model.instanceType;
+                this.networkInterfaceName = model.networkInterfaceName;
+                this.networkInterfaceTrafficMode = model.networkInterfaceTrafficMode;
+                this.primaryIpAddress = model.primaryIpAddress;
+                this.securityGroupId = model.securityGroupId;
+                this.securityGroupIds = model.securityGroupIds;
+                this.vSwitchId = model.vSwitchId;
+            } 
+
             /**
              * <p>Specifies whether to release ENI N when the instance is released. Valid values:</p>
              * <ul>
@@ -2575,6 +2625,14 @@ public class CreateLaunchTemplateRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The key of tag N to add to the instance, disks, and primary ENI that are created from the launch template. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</p>
              * 
@@ -2647,6 +2705,14 @@ public class CreateLaunchTemplateRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(TemplateTag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of tag N to add to the launch template. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>

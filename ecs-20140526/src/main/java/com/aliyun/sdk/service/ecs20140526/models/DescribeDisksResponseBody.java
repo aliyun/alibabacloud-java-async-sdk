@@ -52,6 +52,10 @@ public class DescribeDisksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return disks
      */
@@ -101,6 +105,18 @@ public class DescribeDisksResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDisksResponseBody model) {
+            this.disks = model.disks;
+            this.nextToken = model.nextToken;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>Details about the disks.</p>
@@ -231,6 +247,15 @@ public class DescribeDisksResponseBody extends TeaModel {
             private String device; 
             private String instanceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Attachment model) {
+                this.attachedTime = model.attachedTime;
+                this.device = model.device;
+                this.instanceId = model.instanceId;
+            } 
+
             /**
              * <p>The time when the disk was attached. The time is displayed in UTC.</p>
              * 
@@ -303,6 +328,13 @@ public class DescribeDisksResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Attachment> attachment; 
 
+            private Builder() {
+            } 
+
+            private Builder(Attachments model) {
+                this.attachment = model.attachment;
+            } 
+
             /**
              * Attachment.
              */
@@ -373,6 +405,15 @@ public class DescribeDisksResponseBody extends TeaModel {
             private String attachedTime; 
             private String device; 
             private String instanceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(MountInstance model) {
+                this.attachedTime = model.attachedTime;
+                this.device = model.device;
+                this.instanceId = model.instanceId;
+            } 
 
             /**
              * <p>The time when the disk was attached. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
@@ -446,6 +487,13 @@ public class DescribeDisksResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<MountInstance> mountInstance; 
 
+            private Builder() {
+            } 
+
+            private Builder(MountInstances model) {
+                this.mountInstance = model.mountInstance;
+            } 
+
             /**
              * MountInstance.
              */
@@ -492,6 +540,13 @@ public class DescribeDisksResponseBody extends TeaModel {
 
         public static final class Builder {
             private String lockReason; 
+
+            private Builder() {
+            } 
+
+            private Builder(OperationLock model) {
+                this.lockReason = model.lockReason;
+            } 
 
             /**
              * <p>The reason why the disk was locked.</p>
@@ -543,6 +598,13 @@ public class DescribeDisksResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<OperationLock> operationLock; 
 
+            private Builder() {
+            } 
+
+            private Builder(OperationLocks model) {
+                this.operationLock = model.operationLock;
+            } 
+
             /**
              * OperationLock.
              */
@@ -589,6 +651,13 @@ public class DescribeDisksResponseBody extends TeaModel {
 
         public static final class Builder {
             private String zoneIds; 
+
+            private Builder() {
+            } 
+
+            private Builder(Placement model) {
+                this.zoneIds = model.zoneIds;
+            } 
 
             /**
              * <p>The IDs of the zones in which data is stored.</p>
@@ -653,6 +722,14 @@ public class DescribeDisksResponseBody extends TeaModel {
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
              * <p>The tag key of the disk.</p>
              * 
@@ -713,6 +790,13 @@ public class DescribeDisksResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
@@ -1337,6 +1421,61 @@ public class DescribeDisksResponseBody extends TeaModel {
             private String type; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Disk model) {
+                this.attachedTime = model.attachedTime;
+                this.attachments = model.attachments;
+                this.autoSnapshotPolicyId = model.autoSnapshotPolicyId;
+                this.bdfId = model.bdfId;
+                this.burstingEnabled = model.burstingEnabled;
+                this.category = model.category;
+                this.creationTime = model.creationTime;
+                this.deleteAutoSnapshot = model.deleteAutoSnapshot;
+                this.deleteWithInstance = model.deleteWithInstance;
+                this.description = model.description;
+                this.detachedTime = model.detachedTime;
+                this.device = model.device;
+                this.diskChargeType = model.diskChargeType;
+                this.diskId = model.diskId;
+                this.diskName = model.diskName;
+                this.enableAutoSnapshot = model.enableAutoSnapshot;
+                this.enableAutomatedSnapshotPolicy = model.enableAutomatedSnapshotPolicy;
+                this.encrypted = model.encrypted;
+                this.expiredTime = model.expiredTime;
+                this.IOPS = model.IOPS;
+                this.IOPSRead = model.IOPSRead;
+                this.IOPSWrite = model.IOPSWrite;
+                this.imageId = model.imageId;
+                this.instanceId = model.instanceId;
+                this.KMSKeyId = model.KMSKeyId;
+                this.mountInstanceNum = model.mountInstanceNum;
+                this.mountInstances = model.mountInstances;
+                this.multiAttach = model.multiAttach;
+                this.operationLocks = model.operationLocks;
+                this.performanceLevel = model.performanceLevel;
+                this.placement = model.placement;
+                this.portable = model.portable;
+                this.productCode = model.productCode;
+                this.provisionedIops = model.provisionedIops;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.serialNumber = model.serialNumber;
+                this.size = model.size;
+                this.sourceSnapshotId = model.sourceSnapshotId;
+                this.status = model.status;
+                this.storageClusterId = model.storageClusterId;
+                this.storageSetId = model.storageSetId;
+                this.storageSetPartitionNumber = model.storageSetPartitionNumber;
+                this.tags = model.tags;
+                this.throughput = model.throughput;
+                this.throughputRead = model.throughputRead;
+                this.throughputWrite = model.throughputWrite;
+                this.type = model.type;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
              * <p>The time when the disk was last attached. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mmZ format. The time is displayed in UTC.</p>
              * 
@@ -1539,7 +1678,10 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the automatic snapshot policy feature is enabled for the disk.</p>
+             * <p>Indicates whether the automatic snapshot policy feature is enabled for the cloud disk.</p>
+             * <blockquote>
+             * <p> This parameter is deprecated. By default, the automatic snapshot policy feature is enabled for cloud disks. You need to only apply an automatic snapshot policy to a cloud disk before you can use the automatic snapshot policy.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -1966,6 +2108,13 @@ public class DescribeDisksResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Disk> disk; 
+
+            private Builder() {
+            } 
+
+            private Builder(Disks model) {
+                this.disk = model.disk;
+            } 
 
             /**
              * Disk.

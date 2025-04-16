@@ -40,6 +40,10 @@ public class DescribePrefixListsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextToken
      */
@@ -65,6 +69,15 @@ public class DescribePrefixListsResponseBody extends TeaModel {
         private String nextToken; 
         private PrefixLists prefixLists; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePrefixListsResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.prefixLists = model.prefixLists;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The query token that is returned in this call. If the return value is empty, no more data is returned.</p>
@@ -206,6 +219,19 @@ public class DescribePrefixListsResponseBody extends TeaModel {
             private String prefixListId; 
             private String prefixListName; 
 
+            private Builder() {
+            } 
+
+            private Builder(PrefixList model) {
+                this.addressFamily = model.addressFamily;
+                this.associationCount = model.associationCount;
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.maxEntries = model.maxEntries;
+                this.prefixListId = model.prefixListId;
+                this.prefixListName = model.prefixListName;
+            } 
+
             /**
              * <p>The IP address family of the prefix list. Valid values:</p>
              * <ul>
@@ -325,6 +351,13 @@ public class DescribePrefixListsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<PrefixList> prefixList; 
+
+            private Builder() {
+            } 
+
+            private Builder(PrefixLists model) {
+                this.prefixList = model.prefixList;
+            } 
 
             /**
              * PrefixList.

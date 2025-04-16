@@ -36,6 +36,10 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRecommendInstanceTypeResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of the recommended instance types.</p>
@@ -171,6 +183,18 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             private Integer memory; 
             private String supportIoOptimized; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceType model) {
+                this.cores = model.cores;
+                this.generation = model.generation;
+                this.instanceType = model.instanceType;
+                this.instanceTypeFamily = model.instanceTypeFamily;
+                this.memory = model.memory;
+                this.supportIoOptimized = model.supportIoOptimized;
+            } 
+
             /**
              * <p>The number of vCPUs of the instance type.</p>
              * 
@@ -276,6 +300,13 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> networkType; 
 
+            private Builder() {
+            } 
+
+            private Builder(NetworkTypes model) {
+                this.networkType = model.networkType;
+            } 
+
             /**
              * NetworkType.
              */
@@ -335,6 +366,14 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             private NetworkTypes networkTypes; 
             private String zoneNo; 
 
+            private Builder() {
+            } 
+
+            private Builder(Zone model) {
+                this.networkTypes = model.networkTypes;
+                this.zoneNo = model.zoneNo;
+            } 
+
             /**
              * <p>The details of network types of instance types.</p>
              */
@@ -392,6 +431,13 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Zone> zone; 
+
+            private Builder() {
+            } 
+
+            private Builder(Zones model) {
+                this.zone = model.zone;
+            } 
 
             /**
              * zone.
@@ -548,6 +594,22 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             private String zoneId; 
             private Zones zones; 
 
+            private Builder() {
+            } 
+
+            private Builder(RecommendInstanceType model) {
+                this.commodityCode = model.commodityCode;
+                this.instanceChargeType = model.instanceChargeType;
+                this.instanceType = model.instanceType;
+                this.networkType = model.networkType;
+                this.priority = model.priority;
+                this.regionId = model.regionId;
+                this.scene = model.scene;
+                this.spotStrategy = model.spotStrategy;
+                this.zoneId = model.zoneId;
+                this.zones = model.zones;
+            } 
+
             /**
              * <p>The commodity code of the instance type.</p>
              * 
@@ -690,6 +752,13 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<RecommendInstanceType> recommendInstanceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.recommendInstanceType = model.recommendInstanceType;
+            } 
 
             /**
              * RecommendInstanceType.

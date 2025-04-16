@@ -207,7 +207,7 @@ public class DescribeDisksRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -723,13 +723,13 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the automatic snapshot policy feature for the cloud disk.</p>
+         * <p>Specifies whether the automatic snapshot policy feature is enabled for the cloud disk. Valid values:</p>
          * <ul>
          * <li>true</li>
          * <li>false</li>
          * </ul>
          * <blockquote>
-         * <p>By default, the automatic snapshot policy feature is enabled for cloud disks that are already created. Additionally, only the automatic snapshot policy needs to be applied to a cloud disk before you can use the automatic snapshot policy.</p>
+         * <p> This parameter is deprecated. By default, the automatic snapshot policy feature is enabled for cloud disks. You need to only apply an automatic snapshot policy to a cloud disk before you can use the automatic snapshot policy.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1097,6 +1097,14 @@ public class DescribeDisksRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Filter model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The key of filter 1 used to query resources. Set the value to <code>CreationStartTime</code>. You can specify a time by setting both <code>Filter.1.Key</code> and <code>Filter.1.Value</code> to query resources that were created after the specified time.</p>
              * 
@@ -1169,6 +1177,14 @@ public class DescribeDisksRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of tag N of the disk. Valid values of N: 1 to 20.</p>

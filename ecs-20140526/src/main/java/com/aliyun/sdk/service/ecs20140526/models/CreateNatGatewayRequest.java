@@ -82,7 +82,7 @@ public class CreateNatGatewayRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -339,6 +339,15 @@ public class CreateNatGatewayRequest extends Request {
             private Integer bandwidth; 
             private Integer ipCount; 
             private String zone; 
+
+            private Builder() {
+            } 
+
+            private Builder(BandwidthPackage model) {
+                this.bandwidth = model.bandwidth;
+                this.ipCount = model.ipCount;
+                this.zone = model.zone;
+            } 
 
             /**
              * Bandwidth.

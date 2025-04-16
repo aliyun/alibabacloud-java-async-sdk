@@ -36,6 +36,10 @@ public class CreateImagePipelineResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return imagePipelineId
      */
@@ -53,6 +57,14 @@ public class CreateImagePipelineResponseBody extends TeaModel {
     public static final class Builder {
         private String imagePipelineId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateImagePipelineResponseBody model) {
+            this.imagePipelineId = model.imagePipelineId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the image template.</p>

@@ -36,6 +36,10 @@ public class DescribeAccountAttributesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accountAttributeItems
      */
@@ -53,6 +57,14 @@ public class DescribeAccountAttributesResponseBody extends TeaModel {
     public static final class Builder {
         private AccountAttributeItems accountAttributeItems; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAccountAttributesResponseBody model) {
+            this.accountAttributeItems = model.accountAttributeItems;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Details about account privileges in the specified region.</p>
@@ -182,6 +194,19 @@ public class DescribeAccountAttributesResponseBody extends TeaModel {
             private String instanceType; 
             private String value; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ValueItem model) {
+                this.count = model.count;
+                this.diskCategory = model.diskCategory;
+                this.expiredTime = model.expiredTime;
+                this.instanceChargeType = model.instanceChargeType;
+                this.instanceType = model.instanceType;
+                this.value = model.value;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>The number of privilege attributes in the account.</p>
@@ -331,6 +356,13 @@ public class DescribeAccountAttributesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<ValueItem> valueItem; 
 
+            private Builder() {
+            } 
+
+            private Builder(AttributeValues model) {
+                this.valueItem = model.valueItem;
+            } 
+
             /**
              * ValueItem.
              */
@@ -389,6 +421,14 @@ public class DescribeAccountAttributesResponseBody extends TeaModel {
         public static final class Builder {
             private String attributeName; 
             private AttributeValues attributeValues; 
+
+            private Builder() {
+            } 
+
+            private Builder(AccountAttributeItem model) {
+                this.attributeName = model.attributeName;
+                this.attributeValues = model.attributeValues;
+            } 
 
             /**
              * <p>The type of the resource quota in the specified region. Valid values:</p>
@@ -464,6 +504,13 @@ public class DescribeAccountAttributesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<AccountAttributeItem> accountAttributeItem; 
+
+            private Builder() {
+            } 
+
+            private Builder(AccountAttributeItems model) {
+                this.accountAttributeItem = model.accountAttributeItem;
+            } 
 
             /**
              * AccountAttributeItem.

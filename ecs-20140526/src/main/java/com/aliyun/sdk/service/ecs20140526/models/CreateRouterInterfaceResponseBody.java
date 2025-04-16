@@ -40,6 +40,10 @@ public class CreateRouterInterfaceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return orderId
      */
@@ -65,6 +69,15 @@ public class CreateRouterInterfaceResponseBody extends TeaModel {
         private Long orderId; 
         private String requestId; 
         private String routerInterfaceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateRouterInterfaceResponseBody model) {
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+            this.routerInterfaceId = model.routerInterfaceId;
+        } 
 
         /**
          * OrderId.

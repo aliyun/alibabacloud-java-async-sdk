@@ -146,7 +146,7 @@ public class InvokeCommandRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -538,17 +538,17 @@ public class InvokeCommandRequest extends Request {
         }
 
         /**
-         * <p>The key-value pairs of custom parameters to be passed in when the custom parameter feature is enabled. Number of custom parameters: 0 to 10.</p>
+         * <p>The key-value pairs of custom parameters to pass in when the custom parameter feature is enabled. You can specify up to 10 custom parameters.</p>
          * <ul>
-         * <li>Keys in a Map collection can be up to 64 characters in length, and cannot be empty strings.</li>
-         * <li>Values in a Map collection can be empty strings.</li>
-         * <li>The size of the Base64-encoded custom parameters and original command content cannot exceed 18 KB.</li>
-         * <li>The custom parameter names specified in the value of Parameters must be included in the custom parameters specified when you created the command. You can use empty strings to represent the parameters that are not passed in.</li>
+         * <li>Each key in a Map collection cannot be an empty string, and can be up to 64 characters in length.</li>
+         * <li>Each value in a Map collection can be an empty string.</li>
+         * <li>The size of the command after Base64 encoding, including the custom parameters and the original command content, cannot exceed 18 KB.</li>
+         * <li>The custom parameter names that are specified by Parameters must be included in the custom parameter names that you specified when you created the command. You can use empty strings to represent the custom parameters that are not specified.</li>
          * </ul>
          * <p>If you want to disable the custom parameter feature, you can leave this parameter empty.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;name&quot;:&quot;Jack&quot;, &quot;accessKey&quot;:&quot;LTAIdyv******aRY&quot;}</p>
+         * <p>{&quot;name&quot;:&quot;Jack&quot;, &quot;accessKey&quot;:&quot;LTAI************&quot;}</p>
          */
         public Builder parameters(java.util.Map<String, ?> parameters) {
             String parametersShrink = shrink(parameters, "Parameters", "json");
@@ -783,6 +783,14 @@ public class InvokeCommandRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResourceTag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The key of tag N of the instance.</p>
              * <p>Take note of the following items:</p>
@@ -868,6 +876,14 @@ public class InvokeCommandRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of tag N to add to the command task. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>

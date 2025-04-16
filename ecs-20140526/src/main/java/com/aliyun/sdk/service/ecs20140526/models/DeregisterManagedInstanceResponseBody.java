@@ -36,6 +36,10 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instance
      */
@@ -53,6 +57,14 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
     public static final class Builder {
         private Instance instance; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeregisterManagedInstanceResponseBody model) {
+            this.instance = model.instance;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Details of the managed instances.</p>
@@ -266,6 +278,26 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
             private String osVersion; 
             private String registrationTime; 
             private String resourceGroupId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Instance model) {
+                this.activationId = model.activationId;
+                this.agentVersion = model.agentVersion;
+                this.hostname = model.hostname;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.internetIp = model.internetIp;
+                this.intranetIp = model.intranetIp;
+                this.invocationCount = model.invocationCount;
+                this.lastInvokedTime = model.lastInvokedTime;
+                this.machineId = model.machineId;
+                this.osType = model.osType;
+                this.osVersion = model.osVersion;
+                this.registrationTime = model.registrationTime;
+                this.resourceGroupId = model.resourceGroupId;
+            } 
 
             /**
              * <p>The activation code ID.</p>

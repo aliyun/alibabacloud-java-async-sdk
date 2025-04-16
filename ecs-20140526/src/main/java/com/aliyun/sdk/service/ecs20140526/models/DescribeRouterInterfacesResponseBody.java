@@ -48,6 +48,10 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
         private String requestId; 
         private RouterInterfaceSet routerInterfaceSet; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRouterInterfacesResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.routerInterfaceSet = model.routerInterfaceSet;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * PageNumber.
@@ -456,6 +471,37 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             private String spec; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(RouterInterfaceType model) {
+                this.accessPointId = model.accessPointId;
+                this.businessStatus = model.businessStatus;
+                this.chargeType = model.chargeType;
+                this.connectedTime = model.connectedTime;
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.endTime = model.endTime;
+                this.healthCheckSourceIp = model.healthCheckSourceIp;
+                this.healthCheckTargetIp = model.healthCheckTargetIp;
+                this.name = model.name;
+                this.oppositeAccessPointId = model.oppositeAccessPointId;
+                this.oppositeInterfaceBusinessStatus = model.oppositeInterfaceBusinessStatus;
+                this.oppositeInterfaceId = model.oppositeInterfaceId;
+                this.oppositeInterfaceOwnerId = model.oppositeInterfaceOwnerId;
+                this.oppositeInterfaceSpec = model.oppositeInterfaceSpec;
+                this.oppositeInterfaceStatus = model.oppositeInterfaceStatus;
+                this.oppositeRegionId = model.oppositeRegionId;
+                this.oppositeRouterId = model.oppositeRouterId;
+                this.oppositeRouterType = model.oppositeRouterType;
+                this.role = model.role;
+                this.routerId = model.routerId;
+                this.routerInterfaceId = model.routerInterfaceId;
+                this.routerType = model.routerType;
+                this.spec = model.spec;
+                this.status = model.status;
+            } 
+
             /**
              * AccessPointId.
              */
@@ -694,6 +740,13 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<RouterInterfaceType> routerInterfaceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(RouterInterfaceSet model) {
+                this.routerInterfaceType = model.routerInterfaceType;
+            } 
 
             /**
              * RouterInterfaceType.

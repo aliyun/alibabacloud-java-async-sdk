@@ -36,6 +36,10 @@ public class CreateSimulatedSystemEventsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return eventIdSet
      */
@@ -53,6 +57,14 @@ public class CreateSimulatedSystemEventsResponseBody extends TeaModel {
     public static final class Builder {
         private EventIdSet eventIdSet; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateSimulatedSystemEventsResponseBody model) {
+            this.eventIdSet = model.eventIdSet;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The IDs of the simulated events.</p>
@@ -110,6 +122,13 @@ public class CreateSimulatedSystemEventsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> eventId; 
+
+            private Builder() {
+            } 
+
+            private Builder(EventIdSet model) {
+                this.eventId = model.eventId;
+            } 
 
             /**
              * EventId.

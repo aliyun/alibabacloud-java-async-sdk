@@ -61,7 +61,7 @@ public class DescribeTaskAttributeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -140,7 +140,10 @@ public class DescribeTaskAttributeRequest extends Request {
         }
 
         /**
-         * OwnerId.
+         * <p>RAM用户的虚拟账号ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>155780923770</p>
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
@@ -162,7 +165,10 @@ public class DescribeTaskAttributeRequest extends Request {
         }
 
         /**
-         * ResourceOwnerAccount.
+         * <p>资源主账号的账号名称。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECSforCloud</p>
          */
         public Builder resourceOwnerAccount(String resourceOwnerAccount) {
             this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
@@ -171,7 +177,10 @@ public class DescribeTaskAttributeRequest extends Request {
         }
 
         /**
-         * ResourceOwnerId.
+         * <p>资源主账号的ID，亦即UID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>155780923770</p>
          */
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);

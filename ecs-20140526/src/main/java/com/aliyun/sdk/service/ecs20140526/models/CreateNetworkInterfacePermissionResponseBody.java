@@ -36,6 +36,10 @@ public class CreateNetworkInterfacePermissionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return networkInterfacePermission
      */
@@ -53,6 +57,14 @@ public class CreateNetworkInterfacePermissionResponseBody extends TeaModel {
     public static final class Builder {
         private NetworkInterfacePermission networkInterfacePermission; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateNetworkInterfacePermissionResponseBody model) {
+            this.networkInterfacePermission = model.networkInterfacePermission;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Details about permissions on the ENI.</p>
@@ -170,6 +182,18 @@ public class CreateNetworkInterfacePermissionResponseBody extends TeaModel {
             private String permission; 
             private String permissionState; 
             private String serviceName; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetworkInterfacePermission model) {
+                this.accountId = model.accountId;
+                this.networkInterfaceId = model.networkInterfaceId;
+                this.networkInterfacePermissionId = model.networkInterfacePermissionId;
+                this.permission = model.permission;
+                this.permissionState = model.permissionState;
+                this.serviceName = model.serviceName;
+            } 
 
             /**
              * <p>The ID of the Alibaba Cloud partner (a certified ISV).</p>

@@ -48,6 +48,10 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return autoProvisioningGroups
      */
@@ -89,6 +93,17 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAutoProvisioningGroupsResponseBody model) {
+            this.autoProvisioningGroups = model.autoProvisioningGroups;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>Details about the auto provisioning groups.</p>
@@ -228,6 +243,17 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             private String vSwitchId; 
             private Float weightedCapacity; 
 
+            private Builder() {
+            } 
+
+            private Builder(LaunchTemplateConfig model) {
+                this.instanceType = model.instanceType;
+                this.maxPrice = model.maxPrice;
+                this.priority = model.priority;
+                this.vSwitchId = model.vSwitchId;
+                this.weightedCapacity = model.weightedCapacity;
+            } 
+
             /**
              * <p>The instance type that is specified in the extended configuration.</p>
              * 
@@ -322,6 +348,13 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<LaunchTemplateConfig> launchTemplateConfig; 
 
+            private Builder() {
+            } 
+
+            private Builder(LaunchTemplateConfigs model) {
+                this.launchTemplateConfig = model.launchTemplateConfig;
+            } 
+
             /**
              * LaunchTemplateConfig.
              */
@@ -368,6 +401,13 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String allocationStrategy; 
+
+            private Builder() {
+            } 
+
+            private Builder(PayAsYouGoOptions model) {
+                this.allocationStrategy = model.allocationStrategy;
+            } 
 
             /**
              * <p>The policy for creating pay-as-you-go instances. Valid values:</p>
@@ -449,6 +489,15 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             private String allocationStrategy; 
             private String instanceInterruptionBehavior; 
             private Integer instancePoolsToUseCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(SpotOptions model) {
+                this.allocationStrategy = model.allocationStrategy;
+                this.instanceInterruptionBehavior = model.instanceInterruptionBehavior;
+                this.instancePoolsToUseCount = model.instancePoolsToUseCount;
+            } 
 
             /**
              * <p>The policy for creating preemptible instances. Valid values:</p>
@@ -545,6 +594,14 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
              * <p>The key of tag N that is added to the auto provisioning group.</p>
              * <p>Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</p>
@@ -607,6 +664,13 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
@@ -690,6 +754,16 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             private Float payAsYouGoTargetCapacity; 
             private Float spotTargetCapacity; 
             private Float totalTargetCapacity; 
+
+            private Builder() {
+            } 
+
+            private Builder(TargetCapacitySpecification model) {
+                this.defaultTargetCapacityType = model.defaultTargetCapacityType;
+                this.payAsYouGoTargetCapacity = model.payAsYouGoTargetCapacity;
+                this.spotTargetCapacity = model.spotTargetCapacity;
+                this.totalTargetCapacity = model.totalTargetCapacity;
+            } 
 
             /**
              * <p>The type of supplemental instances. When the sum of the <code>PayAsYouGoTargetCapacity</code> and <code>SpotTargetCapacity</code> values is less than the <code>TotalTargetCapacity</code> value, the auto provisioning group creates instances of the specified billing method to meet the target capacity. Valid values:</p>
@@ -1023,6 +1097,33 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             private String validFrom; 
             private String validUntil; 
 
+            private Builder() {
+            } 
+
+            private Builder(AutoProvisioningGroup model) {
+                this.autoProvisioningGroupId = model.autoProvisioningGroupId;
+                this.autoProvisioningGroupName = model.autoProvisioningGroupName;
+                this.autoProvisioningGroupType = model.autoProvisioningGroupType;
+                this.creationTime = model.creationTime;
+                this.excessCapacityTerminationPolicy = model.excessCapacityTerminationPolicy;
+                this.launchTemplateConfigs = model.launchTemplateConfigs;
+                this.launchTemplateId = model.launchTemplateId;
+                this.launchTemplateVersion = model.launchTemplateVersion;
+                this.maxSpotPrice = model.maxSpotPrice;
+                this.payAsYouGoOptions = model.payAsYouGoOptions;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.spotOptions = model.spotOptions;
+                this.state = model.state;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.targetCapacitySpecification = model.targetCapacitySpecification;
+                this.terminateInstances = model.terminateInstances;
+                this.terminateInstancesWithExpiration = model.terminateInstancesWithExpiration;
+                this.validFrom = model.validFrom;
+                this.validUntil = model.validUntil;
+            } 
+
             /**
              * <p>The ID of the auto provisioning group.</p>
              * 
@@ -1310,6 +1411,13 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<AutoProvisioningGroup> autoProvisioningGroup; 
+
+            private Builder() {
+            } 
+
+            private Builder(AutoProvisioningGroups model) {
+                this.autoProvisioningGroup = model.autoProvisioningGroup;
+            } 
 
             /**
              * AutoProvisioningGroup.

@@ -36,6 +36,10 @@ public class AllocatePublicIpAddressResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ipAddress
      */
@@ -53,6 +57,14 @@ public class AllocatePublicIpAddressResponseBody extends TeaModel {
     public static final class Builder {
         private String ipAddress; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AllocatePublicIpAddressResponseBody model) {
+            this.ipAddress = model.ipAddress;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The public IP address.</p>

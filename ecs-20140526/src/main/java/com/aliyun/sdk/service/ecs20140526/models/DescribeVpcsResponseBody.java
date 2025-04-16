@@ -48,6 +48,10 @@ public class DescribeVpcsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribeVpcsResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
         private Vpcs vpcs; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVpcsResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.vpcs = model.vpcs;
+        } 
 
         /**
          * PageNumber.
@@ -168,6 +183,13 @@ public class DescribeVpcsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> userCidr; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserCidrs model) {
+                this.userCidr = model.userCidr;
+            } 
+
             /**
              * UserCidr.
              */
@@ -214,6 +236,13 @@ public class DescribeVpcsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> vSwitchId; 
+
+            private Builder() {
+            } 
+
+            private Builder(VSwitchIds model) {
+                this.vSwitchId = model.vSwitchId;
+            } 
 
             /**
              * VSwitchId.
@@ -382,6 +411,23 @@ public class DescribeVpcsResponseBody extends TeaModel {
             private String vpcId; 
             private String vpcName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Vpc model) {
+                this.cidrBlock = model.cidrBlock;
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.isDefault = model.isDefault;
+                this.regionId = model.regionId;
+                this.status = model.status;
+                this.userCidrs = model.userCidrs;
+                this.vRouterId = model.vRouterId;
+                this.vSwitchIds = model.vSwitchIds;
+                this.vpcId = model.vpcId;
+                this.vpcName = model.vpcName;
+            } 
+
             /**
              * CidrBlock.
              */
@@ -508,6 +554,13 @@ public class DescribeVpcsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Vpc> vpc; 
+
+            private Builder() {
+            } 
+
+            private Builder(Vpcs model) {
+                this.vpc = model.vpc;
+            } 
 
             /**
              * Vpc.

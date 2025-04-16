@@ -200,7 +200,7 @@ public class DescribePriceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -1066,6 +1066,16 @@ public class DescribePriceRequest extends Request {
             private Long size; 
             private Long provisionedIops; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataDisk model) {
+                this.category = model.category;
+                this.performanceLevel = model.performanceLevel;
+                this.size = model.size;
+                this.provisionedIops = model.provisionedIops;
+            } 
+
             /**
              * <p>The category of data disk N. Valid values:</p>
              * <ul>
@@ -1190,6 +1200,13 @@ public class DescribePriceRequest extends Request {
         public static final class Builder {
             private String dedicatedHostId; 
 
+            private Builder() {
+            } 
+
+            private Builder(SchedulerOptions model) {
+                this.dedicatedHostId = model.dedicatedHostId;
+            } 
+
             /**
              * <p>This parameter takes effect only when ResourceType is set to instance.</p>
              * <p>The ID of the dedicated host. You can call the <a href="https://help.aliyun.com/document_detail/134242.html">DescribeDedicatedHosts</a> operation to query the dedicated host list.</p>
@@ -1264,6 +1281,15 @@ public class DescribePriceRequest extends Request {
             private String category; 
             private String performanceLevel; 
             private Integer size; 
+
+            private Builder() {
+            } 
+
+            private Builder(SystemDisk model) {
+                this.category = model.category;
+                this.performanceLevel = model.performanceLevel;
+                this.size = model.size;
+            } 
 
             /**
              * <p>The category of the system disk. Valid values:</p>
@@ -1408,6 +1434,16 @@ public class DescribePriceRequest extends Request {
             private String recurrenceType; 
             private String recurrenceValue; 
             private Integer startHour; 
+
+            private Builder() {
+            } 
+
+            private Builder(RecurrenceRules model) {
+                this.endHour = model.endHour;
+                this.recurrenceType = model.recurrenceType;
+                this.recurrenceValue = model.recurrenceValue;
+                this.startHour = model.startHour;
+            } 
 
             /**
              * <p>The time when the time-segmented assurance ends. The value must be on the hour.</p>

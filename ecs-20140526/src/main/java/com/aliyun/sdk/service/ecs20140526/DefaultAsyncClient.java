@@ -298,7 +298,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <h2><a href="#"></a>Usage notes</h2>
      * <ul>
-     * <li>The ENI to which you want to assign secondary private IP addresses must be in the Available (Available) or InUse (InUse) state.</li>
+     * <li>The ENI to which you want to assign IP prefixes must be in the Available (Available) or InUse (InUse) state.</li>
      * <li>When you assign private IP addresses to a primary ENI, the Elastic Compute Service (ECS) instance to which the ENI is attached must be in the Running (Running) or Stopped (Stopped) state.</li>
      * <li>When an ENI is in the Available state, you can assign up to 49 secondary private IP addresses to the ENI. When an ENI is attached to an instance, the number of secondary private IP addresses that can be assigned to the ENI varies based on the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</li>
      * <li>After the operation is called, you can obtain the assigned secondary private IP addresses from the response.</li>
@@ -518,16 +518,13 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Limits</h3>
+     * <h3><a href="#"></a>Precautions</h3>
      * <ul>
-     * <li><strong>Quantity limit</strong>: The total number of inbound security group rules in each security group cannot exceed 200. For more information, see the <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a> section of the &quot;Limits&quot; topic.</li>
-     * <li><strong>Rule types</strong>: For inbound security group rules, you can set Policy to accept or drop to specify whether to allow or deny access.</li>
+     * <li><strong>Quantity limit</strong>: The maximum number of inbound and outbound rules in all security groups associated with an elastic network interface (ENI) cannot exceed 1,000. For more information, see the <a href="~~25412#SecurityGroupQuota1~~">Security groups</a> section of the &quot;Limits and quotas on ECS&quot; topic.</li>
      * <li><strong>Rule priorities</strong>: For inbound security group rules, the valid values of Priority range from 1 to 100. A smaller value indicates a higher priority. When multiple security group rules have the same priority, drop rules take precedence.</li>
      * </ul>
      * <h3><a href="#"></a>Considerations</h3>
-     * <ul>
-     * <li>If the security group rule that you call the AuthorizeSecurityGroup operation to create exists in the security group, the call is successful but no security group rule is created.</li>
-     * </ul>
+     * <p>If the security group rule that you call the AuthorizeSecurityGroup operation to create exists in the security group, the call is successful but no security group rule is created.</p>
      * <h3><a href="#"></a>Parameters that define a security group rule</h3>
      * <p>Define an inbound security group rule by configuring the following parameters together:</p>
      * <ul>
@@ -540,28 +537,30 @@ public final class DefaultAsyncClient implements AsyncClient {
      * </li>
      * </ul>
      * <h3><a href="#"></a>Sample requests</h3>
-     * <p>Sample requests to create inbound security group rules that control access to different sources in a security group in the China (Hangzhou) region:---to different sources or from different sources?</p>
+     * <p>Sample requests to create inbound security group rules that control access from different sources in a security group in the China (Hangzhou) region:</p>
      * <ul>
-     * <li>Sample request to create an inbound security group rule that controls access to a specific CIDR block: to or from?
-     * &quot;RegionId&quot;:&quot;cn-hangzhou&quot;, // The region ID.
-     * &quot;SecurityGroupId&quot;:&quot;sg-bp67acfmxazb4p****&quot;,   // The ID of the security group.&quot;Permissions&quot;:[
+     * <li>Sample request to create an inbound security group rule that controls access from a specific CIDR block:
+     * &quot;RegionId&quot;:&quot;cn-hangzhou&quot;, // Specify the region.
+     * &quot;SecurityGroupId&quot;:&quot;sg-bp67acfmxazb4p****&quot;, // Specify the security group.
+     * &quot;Permissions&quot;:[
      *      {
-     *        &quot;SourceCidrIp&quot;:&quot;10.0.0.0/8&quot;, // The source IPv4 CIDR block.       &quot;PortRange&quot;:&quot;22/22&quot; // The port range.
-     *        &quot;IpProtocol&quot;:&quot;TCP&quot;, //The protocol.
-     *        &quot;IpProtocol&quot;:&quot;TCP&quot;, //The action.
+     *        &quot;SourceCidrIp&quot;:&quot;10.0.0.0/8&quot;, // Specify the source IPv4 CIDR block.
+     *        &quot;PortRange&quot;:&quot;22/22&quot;, // Specify the port range.
+     *        &quot;IpProtocol&quot;:&quot;TCP&quot;, // Specify the protocol.
+     *        &quot;Policy&quot;:&quot;Accept&quot; // Specify the action.
      *      }
      * ]</li>
-     * <li>Sample request to create an inbound security group rule that controls access to a security group and an inbound security group rule that controls access to a prefix list:----to or from?
+     * <li>Sample request to create an inbound security group rule that controls access from a security group and an inbound security group rule that controls access from a prefix list:
      * &quot;RegionId&quot;:&quot;cn-hangzhou&quot;,
      * &quot;SecurityGroupId&quot;:&quot;sg-bp67acfmxazb4p****&quot;,
      * &quot;Permissions&quot;:[
      *      {
-     *        &quot;SourceGroupId&quot;:&quot;sg-bp17vs63txqxbd****&quot;, // The source security group.
+     *        &quot;SourceGroupId&quot;:&quot;sg-bp17vs63txqxbd****&quot;, // Specify the source security group.
      *        &quot;PortRange&quot;:&quot;22/22&quot;,
      *        &quot;IpProtocol&quot;:&quot;TCP&quot;,
      *        &quot;Policy&quot;:&quot;Drop&quot;
      *      },{
-     *        &quot;SourcePrefixListId&quot;:&quot;pl-x1j1k5ykzqlixdcy****&quot;, //The ID of the source prefix list.
+     *        &quot;SourcePrefixListId&quot;:&quot;pl-x1j1k5ykzqlixdcy****&quot;, // Specify the source prefix list.
      *        &quot;PortRange&quot;:&quot;22/22&quot;,
      *        &quot;IpProtocol&quot;:&quot;TCP&quot;,
      *        &quot;Policy&quot;:&quot;Drop&quot;
@@ -588,16 +587,13 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Limits</h3>
+     * <h3><a href="#"></a>Precautions</h3>
      * <ul>
-     * <li><strong>Quantity limit</strong>: The total number of outbound security group rules in each security group cannot exceed 200. For more information, see the <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a> section of the &quot;Limits&quot; topic.</li>
-     * <li><strong>Rule types</strong>: For outbound security group rules, you can set Policy to accept or drop to specify whether to allow or deny access.</li>
+     * <li><strong>Quantity limit</strong>: The maximum number of inbound and outbound rules in all security groups associated with an elastic network interface (ENI) cannot exceed 1,000. For more information, see the <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a> section of the &quot;Limits&quot; topic.</li>
      * <li><strong>Rule priorities</strong>: For outbound security group rules, the valid values of Priority range from 1 to 100. A smaller value indicates a higher priority. When multiple security group rules have the same priority, drop rules take precedence.</li>
      * </ul>
      * <h3><a href="#"></a>Considerations</h3>
-     * <ul>
-     * <li>If the security group rule that you call the AuthorizeSecurityGroupEgress operation to create exists in the security group, the call is successful but no security group rule is created.</li>
-     * </ul>
+     * <p>If the security group rule that you call the AuthorizeSecurityGroupEgress operation to create exists in the security group, the call is successful but no security group rule is created.</p>
      * <h3><a href="#"></a>Parameters that define a security group rule</h3>
      * <p>Define an outbound security group rule by configuring the following parameters together:</p>
      * <ul>
@@ -613,13 +609,13 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <p>Sample requests to create outbound security group rules that control access to different destinations in a security group in the China (Hangzhou) region:</p>
      * <ul>
      * <li>Sample request to create an outbound security group rule that controls access to a specified CIDR block:
-     * &quot;RegionId&quot;:&quot;cn-hangzhou&quot;, //The region ID.
-     * &quot;SecurityGroupId&quot;:&quot;sg-bp17vs63txqxbds9***&quot;, //The ID of the source security group.
+     * &quot;RegionId&quot;:&quot;cn-hangzhou&quot;, // The region ID.
+     * &quot;SecurityGroupId&quot;:&quot;sg-bp17vs63txqxbds9***&quot;, // The ID of the source security group.
      * &quot;Permissions&quot;:[
      *      {
-     *        &quot;DestCidrIp&quot;:&quot;10.0.0.0/8&quot;, //The destination IPv4 CIDR block.
-     *        &quot;PortRange&quot;:&quot;-1/-1&quot;, //The range of destination port numbers.
-     *        &quot;IpProtocol&quot;:&quot;ICMP&quot;, //The protocol.       &quot;Policy&quot;:&quot;Accept&quot; //The action.
+     *        &quot;DestCidrIp&quot;:&quot;10.0.0.0/8&quot;, // The destination IPv4 CIDR block.
+     *        &quot;PortRange&quot;:&quot;-1/-1&quot;, // The range of destination port numbers.
+     *        &quot;IpProtocol&quot;:&quot;ICMP&quot;, //T he protocol.       &quot;Policy&quot;:&quot;Accept&quot; // Specify the action.
      *      }
      * ]</li>
      * <li>Sample request to create an outbound security group rule that controls access to a security group and an outbound security group rule that controls access to a prefix list:
@@ -627,12 +623,12 @@ public final class DefaultAsyncClient implements AsyncClient {
      * &quot;SecurityGroupId&quot;:&quot;sg-bp17vs63txqxbds9***&quot;,
      * &quot;Permissions&quot;:[
      *      {
-     *        &quot;DestGroupId&quot;:&quot;sg-bp67acfmxazb4pi***&quot;, //The ID of the destination security group.
+     *        &quot;DestGroupId&quot;:&quot;sg-bp67acfmxazb4pi***&quot;, // The ID of the destination security group.
      *        &quot;PortRange&quot;:&quot;22/22&quot;,
      *        &quot;IpProtocol&quot;:&quot;TCP&quot;,
      *        &quot;Policy&quot;:&quot;Drop&quot;
      *      },{
-     *        &quot;DestPrefixListId&quot;:&quot;pl-x1j1k5ykzqlixdcy****&quot;, //The ID of the destination prefix list.
+     *       &quot;DestPrefixListId&quot;:&quot;pl-x1j1k5ykzqlixdcy****&quot;, // The destination prefix list.
      *        &quot;PortRange&quot;:&quot;22/22&quot;,
      *        &quot;IpProtocol&quot;:&quot;TCP&quot;,
      *        &quot;Policy&quot;:&quot;Drop&quot;
@@ -858,8 +854,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
-     * <p>Take note of the following items:</p>
+     * <p>When you call this operation, take note of the following item:</p>
      * <ul>
      * <li>New snapshots (snapshot copies) cannot be used to roll back the disks for which source snapshots (copied snapshots) were created.</li>
      * <li>Local snapshots cannot be copied.</li>
@@ -1062,29 +1057,6 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateDedicatedHostClusterResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-     * @deprecated OpenAPI CreateDemand is deprecated, please use Ecs::2014-05-26::CreateCapacityReservation instead.  * @description You can call this operation to file a demand for an ECS instance type. Alibaba Cloud provides the requested resources based on your demand.
-     * You can file demands only for I/O optimized instance types and instances of the virtual private cloud (VPC) type.
-     * > This operation is in internal preview and has not been officially released. We recommend that you do not call this operation.
-     * 
-     * @param request the request parameters of CreateDemand  CreateDemandRequest
-     * @return CreateDemandResponse
-     */
-    @Deprecated
-    @Override
-    public CompletableFuture<CreateDemandResponse> createDemand(CreateDemandRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateDemand").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateDemandResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<CreateDemandResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1567,6 +1539,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreatePortRangeList  CreatePortRangeListRequest
+     * @return CreatePortRangeListResponse
+     */
+    @Override
+    public CompletableFuture<CreatePortRangeListResponse> createPortRangeList(CreatePortRangeListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreatePortRangeList").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreatePortRangeListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreatePortRangeListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>  A prefix list is a collection of network prefixes (CIDR blocks) and can be referenced to configure network rules for other resources. For more information, see <a href="https://help.aliyun.com/document_detail/206223.html">Overview</a>.</p>
      * <ul>
@@ -1818,7 +1808,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI CreateVSwitch is deprecated  * @param request  the request parameters of CreateVSwitch  CreateVSwitchRequest
+     * @deprecated OpenAPI CreateVSwitch is deprecated, please use Vpc::2016-04-28::CreateVSwitch instead.  * @param request  the request parameters of CreateVSwitch  CreateVSwitchRequest
      * @return CreateVSwitchResponse
      */
     @Deprecated
@@ -2001,27 +1991,6 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteDedicatedHostClusterResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-     * @deprecated OpenAPI DeleteDemand is deprecated, please use Ecs::2014-05-26::ReleaseCapacityReservation instead.  * @description >  This operation is in invitational preview and is not publicly available.
-     * 
-     * @param request the request parameters of DeleteDemand  DeleteDemandRequest
-     * @return DeleteDemandResponse
-     */
-    @Deprecated
-    @Override
-    public CompletableFuture<DeleteDemandResponse> deleteDemand(DeleteDemandRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteDemand").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteDemandResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DeleteDemandResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2214,7 +2183,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>If an image build task based on an image template is in the BUILDING, DISTRIBUTING, RELEASING, or CANCELLING state, you cannot delete the image template. You can delete the image template only when the image build task is in the SUCCESS, FAILED, or CANCELLED state. You can call the DescribeImagePipelineExecutions operation to query the details of an image build task.</p>
+     * <p>If an ongoing image building task is associated with an image template, you cannot delete the image template. You can delete the image template only if the image building task reaches the SUCCESS, FAILED, TEST_FAILED, PARTITION_SUCCESS, or CANCELLED state. You can call the DescribeImagePipelineExecutions operation to query the details of an image building task.</p>
      * 
      * @param request the request parameters of DeleteImagePipeline  DeleteImagePipelineRequest
      * @return DeleteImagePipelineResponse
@@ -2267,17 +2236,20 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <blockquote>
+     * <p>Warning: After you release an instance, the physical resources used by the instance are recycled. Relevant data is erased and cannot be restored.</p>
+     * </blockquote>
      * <ul>
-     * <li><strong>Warning</strong> After you release an instance, the physical resources used by the instance are recycled. Relevant data is erased and cannot be restored.</li>
      * <li>After you release an instance, manual snapshots of the cloud disks attached to the instance are retained and continue to be billed. You can call the <a href="https://help.aliyun.com/document_detail/2679824.html">DeleteSnapshot</a> operation to delete the snapshots.</li>
      * <li>After you release an instance, whether the cloud disks attached to the instance and the automatic snapshots of the disks are released is determined by the disk attributes. Before you release an instance, you can call the <a href="https://help.aliyun.com/document_detail/2679767.html">DescribeDisks</a> and <a href="https://help.aliyun.com/document_detail/2679770.html">ModifyDiskAttribute</a> operations to query and modify disk attributes.<ul>
      * <li>If <code>DeleteWithInstance</code> is set to false for a cloud disk attached to the instance, the cloud disk is changed to a pay-as-you-go disk and retained after the instance is released. If DeleteWithInstance is set to true for the cloud disk, the disk is released together with the instance.</li>
      * <li>If <code>DeleteAutoSnapshot</code> is set to false for a cloud disk attached to the instance, the automatic snapshots of the disk are retained when the instance is released. If DeleteAutoSnapshot is set to true for the cloud disk, the automatic snapshots of the disk are released together with the instance.</li>
      * </ul>
      * </li>
-     * <li>Elastic IP addresses (EIPs) are not released together with instances. You can call the <a href="https://help.aliyun.com/document_detail/448702.html">ReleaseEipAddress</a> operation to release EIPs.
-     * **
-     * <strong>Note</strong> When you release an instance that is locked for security reasons, the cloud disks attached to the instance are released together with the instance even if DeleteWithInstance is set to false for the disks.</li>
+     * <li>Elastic IP addresses (EIPs) are not released together with instances. You can call the <a href="https://help.aliyun.com/document_detail/448702.html">ReleaseEipAddress</a> operation to release EIPs.<blockquote>
+     * <p>When you release an instance that is locked for security reasons, the cloud disks attached to the instance are released together with the instance even if DeleteWithInstance is set to false for the disks.</p>
+     * </blockquote>
+     * </li>
      * </ul>
      * 
      * @param request the request parameters of DeleteInstances  DeleteInstancesRequest
@@ -2463,6 +2435,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeletePhysicalConnectionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeletePortRangeList  DeletePortRangeListRequest
+     * @return DeletePortRangeListResponse
+     */
+    @Override
+    public CompletableFuture<DeletePortRangeListResponse> deletePortRangeList(DeletePortRangeListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeletePortRangeList").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeletePortRangeListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeletePortRangeListResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2835,20 +2825,38 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
      * <p>The value of <code>DestinationResource</code> determines whether you need to specify additional parameters. When you select a value in the following chain for DestinationResource, the more to the right the selected value is ordered, the more parameters you must specify.</p>
      * <ul>
      * <li>Sequence: <code>Zone &gt; IoOptimized &gt; InstanceType = Network = ddh &gt; SystemDisk &gt; DataDisk</code></li>
      * <li>Examples:<ul>
      * <li>If you set <code>DestinationResource</code> to <code>DataDisk</code>, take note of the following items:<ul>
-     * <li>If you set <code>ResourceType</code> to <code>disk</code> to query the categories of data disks that are not attached to ECS instances, you do not need to specify <code>InstanceType</code>.</li>
-     * <li>If you set <code>ResourceType</code> to <code>instance</code> to query the categories of data disks that are purchased together with ECS instances, you must specify <code>InstanceType</code> and <code>SystemDiskCategory</code> due to instance type-specific limits on system disks and data disks.</li>
+     * <li>If you set <code>ResourceType</code> to <code>disk</code> to query the categories of data disks regardless of whether the disks are attached to ECS instances, you can leave <code>InstanceType</code> empty.</li>
+     * <li>If you set <code>ResourceType</code> to <code>instance</code> to query the categories of data disks that are attached to ECS instances, you must specify <code>InstanceType</code> and <code>DataDiskCategory</code> due to instance type-specific limits on data disks.</li>
      * </ul>
      * </li>
      * <li>If you set <code>DestinationResource</code> to <code>SystemDisk</code> and <code>ResourceType</code> to <code>instance</code>, you must specify <code>InstanceType</code> due to instance type-specific limits on system disks.</li>
      * <li>If you set <code>DestinationResource</code> to <code>InstanceType</code>, we recommend that you specify <code>IoOptimized</code> and <code>InstanceType</code>.</li>
-     * <li>If you want to query the available ecs.g5.large resources in all zones of the China (Hangzhou) region, set <code>RegionId to cn-hangzhou, DestinationResource to InstanceType, IoOptimized to optimized, and InstanceType to ecs.g5.large</code>.</li>
-     * <li>If you want to query the zones where ecs.g5.large resources are available in the China (Hangzhou) region, set <code>RegionId to cn-hangzhou, DestinationResource to Zone, IoOptimized to optimized, and InstanceType to ecs.g5.large</code>.</li>
+     * <li>To query the ecs.g5.large instance type in all zones of the China (Hangzhou) region, set <code>RegionId to cn-hangzhou, DestinationResource to InstanceType, IoOptimized to optimized, and InstanceType to ecs.g5.large</code>.</li>
+     * <li>To query the zones in which the ecs.g5.large instance type is available in the China (Hangzhou) region, set <code>RegionId to cn-hangzhou, DestinationResource to Zone, IoOptimized to optimized, and InstanceType to ecs.g5.large</code>.
+     * <strong>To query the zones in which the ecs.g5.large instance type is available in the China (Hangzhou) region, specify parameters as follows:</strong>
+     * &quot;RegionId&quot;: &quot;cn-hangzhou&quot;,
+     * &quot;DestinationResource&quot;: &quot;Zone&quot;,
+     * &quot;InstanceType&quot;: &quot;ecs.g5.large&quot;
+     * <strong>To query the ecs.g5.large instance type in all zones of the China (Hangzhou) region, specify parameters as follows:</strong>
+     * &quot;RegionId&quot;: &quot;cn-hangzhou&quot;,
+     * &quot;DestinationResource&quot;: &quot;InstanceType&quot;&quot;InstanceType&quot;: &quot;ecs.g5.large&quot;
+     * <strong>To query data disks of the ultra disk category in Hangzhou Zone B regardless of whether the disks are attached to ECS instances, specify parameters as follows:</strong>
+     * &quot;RegionId&quot;: &quot;cn-hangzhou&quot;,
+     * &quot;ZoneId&quot;: &quot;cn-hangzhou-b&quot;,
+     * &quot;ResourceType&quot;: &quot;disk&quot;,
+     * &quot;DestinationResource&quot;: &quot;DataDisk&quot;
+     * <strong>To query data disks purchased together with ecs.g7.large instances that reside in Hangzhou Zone B and use Enterprise SSDs (ESSDs) as system disks, specify parameters as follows:</strong>
+     * &quot;RegionId&quot;: &quot;cn-hangzhou&quot;,
+     * &quot;ZoneId&quot;: &quot;cn-hangzhou-b&quot;,
+     * &quot;ResourceType&quot;: &quot;instance&quot;,
+     * &quot;InstanceType&quot;: &quot;ecs.g7.large&quot;,
+     * &quot;DestinationResource&quot;: &quot;SystemDisk&quot;,
+     * &quot;SystemDiskCategory&quot;: &quot;cloud_essd&quot;</li>
      * </ul>
      * </li>
      * </ul>
@@ -3135,29 +3143,6 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeDedicatedHostsResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-     * @deprecated OpenAPI DescribeDemands is deprecated, please use Ecs::2014-05-26::DescribeCapacityReservations instead.  * @description You can call this operation to query the details of resources that you filed with Alibaba Cloud, including the types, delivery status, and consumption details of the resources.
-     * By default, the demands for I/O optimized instances of the Virtual Private Cloud (VPC) type are queried.
-     * For information about how to create (CreateDemand), modify (ModifyDemand), and delete (DeleteDemand) demands for ECS resources, contact your account manager.
-     * 
-     * @param request the request parameters of DescribeDemands  DescribeDemandsRequest
-     * @return DescribeDemandsResponse
-     */
-    @Deprecated
-    @Override
-    public CompletableFuture<DescribeDemandsResponse> describeDemands(DescribeDemandsRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDemands").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDemandsResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DescribeDemandsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -3986,13 +3971,14 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
-     * <p>Take note of the following items:</p>
+     * <p>  <strong>Paged query</strong>: You can set MaxResults to specify the maximum number of entries to return in a single call. If the number of entries to return exceeds the specified MaxResults value, the response includes a NextToken value. You can set NextToken to the return value and specify MaxResults in your next request to DescribeInstanceTypes to retrieve the next page of results.</p>
      * <ul>
-     * <li>MaxResults specifies the maximum number of entries per page. The maximum value of this parameter is changed from 1600 to 100. As of November 15, 2023, only 100 can be used as the maximum value of MaxResults. If you called the DescribeInstanceTypes operation in 2022, you can use 1600 as the maximum value before November 15, 2023. If you do not specify NextToken when you call the DescribeInstanceTypes operation, only the first page of results that contains up to 100 entries is returned. If you want to retrieve more results, specify NextToken to perform paged queries, or specify filter conditions to filter results.</li>
-     * <li>We recommend that you specify MaxResults and NextToken to perform paged queries. The first time you call the DescribeInstanceTypes operation, set MaxResults to limit the maximum number of entries that can be returned in a single call. If the number of entries to return exceeds the specified MaxResults value, the response includes a NextToken value. You can set NextToken to the return value and specify MaxResults in your next request to DescribeInstanceTypes to retrieve the next page of results.</li>
+     * <li>When you call this operation, if you do not set NextToken to paginate the results, only the first page of results is returned by default and includes a maximum of 100 entries. To retrieve further pages of results, set NextToken or pass filter conditions in your requests to DescribeInstanceTypes.<blockquote>
+     * <p> MaxResults specifies the maximum number of entries per page. The maximum value of this parameter is changed from 1600 to 100 for all users as of November 15, 2023. If you called the DescribeInstanceTypes operation in 2022, you can use 1600 as the maximum value before November 15, 2023.</p>
+     * </blockquote>
+     * </li>
      * <li>The DescribeInstanceTypes operation is used to query only the specifications and performance information of instance types. To query instance types that are available in a specific region, call the <a href="https://help.aliyun.com/document_detail/66186.html">DescribeAvailableResource</a> operation.</li>
-     * <li>To use special instance types such as instance types that are unavailable for purchase, <a href="https://workorder-intl.console.aliyun.com/#/ticket/createIndex">submit a ticket</a>.</li>
+     * <li>To use special instance types such as instance types that are unavailable for purchase, <a href="https://smartservice.console.aliyun.com/service/create-ticket-intl">submit a ticket</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeInstanceTypes  DescribeInstanceTypesRequest
@@ -4392,6 +4378,60 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribePhysicalConnectionsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribePortRangeListAssociations  DescribePortRangeListAssociationsRequest
+     * @return DescribePortRangeListAssociationsResponse
+     */
+    @Override
+    public CompletableFuture<DescribePortRangeListAssociationsResponse> describePortRangeListAssociations(DescribePortRangeListAssociationsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribePortRangeListAssociations").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribePortRangeListAssociationsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribePortRangeListAssociationsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribePortRangeListEntries  DescribePortRangeListEntriesRequest
+     * @return DescribePortRangeListEntriesResponse
+     */
+    @Override
+    public CompletableFuture<DescribePortRangeListEntriesResponse> describePortRangeListEntries(DescribePortRangeListEntriesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribePortRangeListEntries").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribePortRangeListEntriesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribePortRangeListEntriesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribePortRangeLists  DescribePortRangeListsRequest
+     * @return DescribePortRangeListsResponse
+     */
+    @Override
+    public CompletableFuture<DescribePortRangeListsResponse> describePortRangeLists(DescribePortRangeListsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribePortRangeLists").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribePortRangeListsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribePortRangeListsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -5308,6 +5348,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
      * <p>When you call this operation, only a list of zones and some resource information of each zone are returned. If you want to query instance types and disk categories that are available for purchase in a specific zone, we recommend that you call the <a href="https://help.aliyun.com/document_detail/66186.html">DescribeAvailableResource</a> operation.</p>
      * 
      * @param request the request parameters of DescribeZones  DescribeZonesRequest
@@ -6317,28 +6358,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI ModifyDemand is deprecated, please use Ecs::2014-05-26::ModifyCapacityReservation instead.  * @description You can call this operation to modify the demand information of instance types. Alibaba Cloud provides the requested resources based on your demand. You can file demands only for I/O optimized instance types and instances of the virtual private cloud (VPC) type. Parameters except `DemandName` and `DemandDescription` can be modified only for demands that are in the Rejected state.
-     * > This operation is in invitational preview and is not publicly available.
-     * 
-     * @param request the request parameters of ModifyDemand  ModifyDemandRequest
-     * @return ModifyDemandResponse
-     */
-    @Deprecated
-    @Override
-    public CompletableFuture<ModifyDemandResponse> modifyDemand(ModifyDemandRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyDemand").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyDemandResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<ModifyDemandResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
      * @param request the request parameters of ModifyDeploymentSetAttribute  ModifyDeploymentSetAttributeRequest
      * @return ModifyDeploymentSetAttributeResponse
      */
@@ -6397,14 +6416,14 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h1><a href="#"></a>Usage notes</h1>
-     * <p>After you change the billing method, the payment (if any) is automatically completed. Maintain sufficient balance in your account. Otherwise, your order becomes invalid and must be canceled. If your account balance is insufficient, you can set AutoPay to false to generate an unpaid order. Then, log on to the <strong>Expenses and Costs console</strong>, go to the <a href="https://usercenter2-intl.aliyun.com/order/list">Orders page</a>, and pay for the order.
+     * <p>For information about how to change the billing method of cloud disks, see <a href="https://help.aliyun.com/document_detail/145018.html">Change the billing methods of a disk</a>.
      * Take note of the following items:</p>
      * <ul>
      * <li>Only pay-as-you-go disks can be attached to pay-as-you-go instances, and the billing methods of the disks cannot be changed.</li>
-     * <li>The instance cannot be in the Stopped state due to expiration.</li>
+     * <li>The instance to which data disks are attached cannot be in the Stopped state due to expiration.</li>
      * <li>The price difference is refunded to the payment account that you used. Vouchers that have been redeemed are nonrefundable.</li>
-     * <li>You cannot change the billing method again within 5 minutes of a successful change.</li>
+     * <li>You cannot change the billing method again within 5 minutes of a successful change.
+     * After you change the billing method, the payment (if any) is automatically completed. Maintain sufficient balance in your account. Otherwise, your order becomes invalid and must be canceled. If your account balance is insufficient, you can set AutoPay to false to generate an unpaid order. Then, log on to the <strong>Expenses and Costs console</strong>, go to the <a href="https://usercenter2-intl.aliyun.com/order/list">Orders page</a>, and pay for the order.</li>
      * </ul>
      * 
      * @param request the request parameters of ModifyDiskChargeType  ModifyDiskChargeTypeRequest
@@ -6675,19 +6694,19 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, read <a href="https://help.aliyun.com/document_detail/25463.html">Share custom images</a>.
+     * <p>Before you call this operation, read <a href="https://help.aliyun.com/document_detail/25463.html">Share a custom image</a>.
      * When you call this operation, take note of the following sharing rules:</p>
      * <ul>
-     * <li>You can share only your custom images that were created in your Alibaba Cloud to other accounts.</li>
+     * <li>You can share only the custom images that are created in your Alibaba Cloud to other Alibaba Cloud accounts.</li>
      * <li>You can share a custom image to up to 10 Alibaba Cloud accounts at a time. You can specify up to 10 Alibaba Cloud account IDs by using the AddAccount.N or RemoveAccount.N parameter. If you specify more than 10 account IDs, the system processes only the previous 10 account IDs. The excess account IDs are ignored.</li>
-     * <li>You can share a custom image with up to 50 Alibaba Cloud accounts.</li>
+     * <li>You can share a custom image to up to 50 Alibaba Cloud accounts.</li>
      * <li>If an Elastic Compute Service (ECS) instance was created (<a href="https://help.aliyun.com/document_detail/63440.html">RunInstances</a>) from a shared image, you cannot re-initialize the instance (<a href="https://help.aliyun.com/document_detail/25519.html">ReInitDisk</a>) after the image owner unshares or deletes the image (<a href="https://help.aliyun.com/document_detail/25537.html">DeleteImage</a>).
      * When you publish or unpublish a community image, take note of the following items:</li>
      * <li>Alibaba Cloud provides only the platform on which community images can be published and managed. The owner of a community image is responsible for the quality and updates of the image. Make sure that you acknowledge and agree to the Community Image Agreement. Otherwise, you cannot publish community images. For more information, see <a href="https://help.aliyun.com/document_detail/208370.html">Publish a community image</a>.</li>
      * <li>You cannot publish encrypted images as community images.</li>
      * <li>Community images are publicly available. A community image is available to all Alibaba Cloud accounts in the region where the image resides.</li>
      * <li>You cannot share, export, or copy community images.</li>
-     * <li>After you unpublish a community image, the image is no longer available to other Alibaba Cloud accounts. If an image is shared with other Alibaba Cloud accounts before it is unpublished, the image remains available to the accounts.</li>
+     * <li>After you unpublish a community image, the image is no longer available to other Alibaba Cloud accounts. If an image is shared to other Alibaba Cloud accounts before it is unpublished, the image remains available to the accounts.</li>
      * </ul>
      * 
      * @param request the request parameters of ModifyImageSharePermission  ModifyImageSharePermissionRequest
@@ -7010,40 +7029,32 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
-     * <p>The instance that you want to manage must be in the <strong>Stopped</strong> (<code>Stopped</code>) state.</p>
+     * <p>The ECS instance that you want to manage must be in the <strong>Stopped</strong> (<code>Stopped</code>) state.</p>
      * <ul>
-     * <li>When you call this operation to change the private IP address or vSwitch of an instance, take note of the following items:<ul>
+     * <li>When you call this operation to change the private IP address or vSwitch of an ECS instance, take note of the following items:<ul>
      * <li>If the instance is a new instance, you must restart the instance before you call this operation.</li>
      * <li>After the private IP address or vSwitch of the instance is changed, you must restart the instance before you can recall this operation.</li>
      * </ul>
      * </li>
-     * <li>When you call this operation to change the VPC of an instance, take note of the following items:<ul>
-     * <li><strong>Instance:</strong><ul>
+     * <li>When you call this operation to change the VPC of an ECS instance, take note of the following items:<ul>
+     * <li><strong>ECS instance:</strong><ul>
+     * <li>The instance cannot be in the Locked, To Be Released, Expired, To Be Recycled, Expired and Being Recycled, or Overdue and Being Recycled state. For more information, see <a href="https://help.aliyun.com/document_detail/25380.html">Overview of instances</a>.</li>
      * <li>The instance cannot be associated with Server Load Balancer (SLB) instances.</li>
-     * <li>The instance cannot be in the Locked, To Be Released, Expired, Expired and Being Recycled, or Overdue and Being Recycled state. For more information, see <a href="https://help.aliyun.com/document_detail/25380.html">Instance lifecycle</a>.</li>
      * <li>The instance cannot be used in other Alibaba Cloud services. For example, the instance cannot be in the process of being migrated or having its VPC changed, or the databases deployed on the instance cannot be managed by Data Transmission Service (DTS).</li>
      * </ul>
      * </li>
      * <li><strong>Network:</strong><ul>
-     * <li>The cut-through mode or the multi-elastic IP address (EIP)-to-elastic network interface (ENI) mode cannot be enabled for the instance.</li>
-     * <li>The instance cannot be associated with a high-availability virtual IP address (HAVIP).</li>
-     * <li>The vSwitch of the instance cannot be associated with a custom route table.</li>
-     * <li>Global Accelerator (GA) cannot be activated for the instance.</li>
-     * <li>The instance cannot have secondary ENIs.</li>
-     * <li>The instance cannot be assigned an IPv6 address.</li>
-     * <li>The primary ENI of the instance cannot be associated with multiple IP addresses.</li>
-     * <li>The new vSwitch that you specify must belong to the new VPC.</li>
+     * <li>The cut-through mode or the multi-elastic IP address (EIP)-to-elastic network interface (ENI) mode cannot be enabled for the ECS instance.</li>
+     * <li>The ECS instance cannot be associated with a high-availability virtual IP address (HAVIP).</li>
+     * <li>The vSwitch of the ECS instance cannot be associated with a custom route table.</li>
+     * <li>Global Accelerator (GA) cannot be activated for the ECS instance.</li>
+     * <li>Secondary ENIs cannot be attached to the ECS instance.</li>
+     * <li>The ECS instance cannot be assigned an IPv6 address.</li>
+     * <li>The primary ENI of the ECS instance cannot be associated with multiple IP addresses.</li>
+     * <li>The vSwitch must belong to the new VPC.</li>
      * <li>The original and new vSwitches must reside in the same zone.</li>
-     * <li>If you assign a private IP address to the primary ENI of the instance, the private IP address must be an idle IP address within the CIDR block of the new vSwitch. If you do not assign a private IP address to the primary ENI of the instance, a private IP address is randomly assigned to the ENI. Make sure that sufficient IP addresses are available in the CIDR block of the new vSwitch.</li>
-     * <li>The Alibaba Cloud account that owns the new VPC cannot share the VPC with other accounts.</li>
-     * </ul>
-     * </li>
-     * <li><strong>Security group (SecurityGroupId.N):</strong><ul>
-     * <li>All security groups must be of the same type.</li>
-     * <li>The valid values of N vary based on the maximum number of security groups to which an instance can belong. For more information, see the &quot;Security group limits&quot; section in <a href="https://help.aliyun.com/document_detail/25412.html">Limits</a>.</li>
-     * <li>The security groups that you specify must belong to the new VPC.</li>
-     * <li>You can switch the instance to security groups of a different type. To ensure network connectivity, we recommend that you understand the differences in rule configurations of the two security group types before you switch an instance to security groups of a different type. For more information, see <a href="https://help.aliyun.com/document_detail/25387.html">Overview</a>.</li>
+     * <li>If you assign a private IP address to the primary ENI of the ECS instance, the private IP address must be an idle IP address within the CIDR block of the new vSwitch. If you do not assign a private IP address to the primary ENI of the ECS instance, a private IP address is randomly assigned to the ENI. Make sure that sufficient IP addresses are available in the CIDR block of the new vSwitch.</li>
+     * <li>If you use a VPC that is shared by another Alibaba Cloud account with your account and want to change the security groups of the ECS instance, specify the security groups that you created in the VPC, instead of the security group created by the VPC owner, as the new security groups.</li>
      * </ul>
      * </li>
      * </ul>
@@ -7184,6 +7195,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ModifyPhysicalConnectionAttributeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModifyPortRangeList  ModifyPortRangeListRequest
+     * @return ModifyPortRangeListResponse
+     */
+    @Override
+    public CompletableFuture<ModifyPortRangeListResponse> modifyPortRangeList(ModifyPortRangeListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyPortRangeList").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyPortRangeListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyPortRangeListResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -7749,8 +7778,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
-     * <p>Before you call this operation, make sure that you are familiar with the billing and pricing of SCUs. For more information, see <a href="https://help.aliyun.com/document_detail/137897.html">Storage capacity units</a>.</p>
+     * <p>*Before you call this operation, make sure that you understand the <a href="https://help.aliyun.com/document_detail/137897.html">billing methods</a> and <a href="https://www.alibabacloud.com/zh/pricing-calculator#/commodity/vm_intl">pricing</a> of SCUs.</p>
      * 
      * @param request the request parameters of PurchaseStorageCapacityUnit  PurchaseStorageCapacityUnitRequest
      * @return PurchaseStorageCapacityUnitResponse
@@ -7896,7 +7924,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>If a dedicated host is in the UnderAssessment state, we recommend that you call this operation to migrate ECS instances away from the dedicated host to prevent permanent failures. You can call the <a href="https://help.aliyun.com/document_detail/134242.html">DescribeDedicatedHosts</a> operation to query the status of a dedicated host.</p>
+     * <p>If a dedicated host is in the <code>UnderAssessment</code> state, we recommend that you call this operation to migrate ECS instances away from the dedicated host to prevent permanent failures. You can call the <a href="https://help.aliyun.com/document_detail/134242.html">DescribeDedicatedHosts</a> operation to query the status of a dedicated host.</p>
      * 
      * @param request the request parameters of RedeployDedicatedHost  RedeployDedicatedHostRequest
      * @return RedeployDedicatedHostResponse
@@ -8154,11 +8182,11 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  Before you call this operation, make sure that you are familiar with the billing methods and pricing of ECS. For more information, see the <a href="https://www.alibabacloud.com/product/ecs#pricing">Elastic Compute Service</a> product page.</p>
+     * <p><em>Before you call this operation, make sure that you are familiar with the billing methods and <a href="https://www.alibabacloud.com/product/ecs#pricing">pricing</a> of ECS</em>*.</p>
      * <ul>
-     * <li>You can call this operation to renew a subscription instance for a specific period of time or to a synchronized expiration date.</li>
-     * <li>You cannot call this operation to renew a subscription instance for a specific period of time and to a synchronized expiration date at the same time. The parameter pair (<code>Period</code> and <code>PeriodUnit</code>) that is related to the renewal period and <code>ExpectedRenewDay</code> are mutually exclusive.</li>
-     * <li>Your account must have sufficient credits.</li>
+     * <li>Make sure that your account balance or credit balance is sufficient.</li>
+     * <li>Only subscription instances are supported. If you call this operation for a pay-as-you-go instance, an error is returned.</li>
+     * <li>You must specify the renewal period-related parameter pair (<code>Period</code> and <code>PeriodUnit</code>) or <code>ExpectedRenewDay</code>, but not both.</li>
      * </ul>
      * 
      * @param request the request parameters of RenewInstance  RenewInstanceRequest

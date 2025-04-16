@@ -40,6 +40,10 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceTypes
      */
@@ -65,6 +69,15 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         private InstanceTypes instanceTypes; 
         private String nextToken; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceTypesResponseBody model) {
+            this.instanceTypes = model.instanceTypes;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Details about the instance types.</p>
@@ -108,6 +121,135 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
      *
      * <p>DescribeInstanceTypesResponseBody</p>
      */
+    public static class Attribute extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Attribute(Builder builder) {
+            this.name = builder.name;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Attribute create() {
+            return builder().build();
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String name; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Attribute model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Attribute build() {
+                return new Attribute(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeInstanceTypesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceTypesResponseBody</p>
+     */
+    public static class Attributes extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Attribute")
+        private java.util.List<Attribute> attribute;
+
+        private Attributes(Builder builder) {
+            this.attribute = builder.attribute;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Attributes create() {
+            return builder().build();
+        }
+
+        /**
+         * @return attribute
+         */
+        public java.util.List<Attribute> getAttribute() {
+            return this.attribute;
+        }
+
+        public static final class Builder {
+            private java.util.List<Attribute> attribute; 
+
+            private Builder() {
+            } 
+
+            private Builder(Attributes model) {
+                this.attribute = model.attribute;
+            } 
+
+            /**
+             * Attribute.
+             */
+            public Builder attribute(java.util.List<Attribute> attribute) {
+                this.attribute = attribute;
+                return this;
+            }
+
+            public Attributes build() {
+                return new Attributes(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeInstanceTypesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceTypesResponseBody</p>
+     */
     public static class SupportedTopologyTypes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SupportedTopologyType")
         private java.util.List<String> supportedTopologyType;
@@ -133,6 +275,13 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> supportedTopologyType; 
+
+            private Builder() {
+            } 
+
+            private Builder(SupportedTopologyTypes model) {
+                this.supportedTopologyType = model.supportedTopologyType;
+            } 
 
             /**
              * SupportedTopologyType.
@@ -229,8 +378,19 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             private SupportedTopologyTypes supportedTopologyTypes; 
             private Integer threadsPerCore; 
 
+            private Builder() {
+            } 
+
+            private Builder(CpuOptions model) {
+                this.core = model.core;
+                this.coreFactor = model.coreFactor;
+                this.hyperThreadingAdjustable = model.hyperThreadingAdjustable;
+                this.supportedTopologyTypes = model.supportedTopologyTypes;
+                this.threadsPerCore = model.threadsPerCore;
+            } 
+
             /**
-             * <p>CPU core.</p>
+             * <p>The number of CPU cores.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -241,7 +401,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>CPU core factor.</p>
+             * <p>The CPU option step size.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -252,7 +412,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether Hyper-Threading is adjustable.</p>
+             * <p>Indicates whether HT can be enabled or disabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -271,9 +431,9 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>CPU threads per core.</p>
+             * <p>The number of threads per CPU core.</p>
              * <blockquote>
-             * <p><code>CpuOptions.ThreadsPerCore=1</code> indicates the shutdown of CPU Hyper-Threading.</p>
+             * <p> <code>If the value of CpuOptions.ThreadPerCore is 1, Hyper-Threading (HT) is disabled.</code></p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -346,6 +506,15 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             private Boolean rssSupport; 
             private Boolean sriovSupport; 
             private Integer vfQueueNumberPerEni; 
+
+            private Builder() {
+            } 
+
+            private Builder(EnhancedNetwork model) {
+                this.rssSupport = model.rssSupport;
+                this.sriovSupport = model.sriovSupport;
+                this.vfQueueNumberPerEni = model.vfQueueNumberPerEni;
+            } 
 
             /**
              * <blockquote>
@@ -425,6 +594,13 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         public static final class Builder {
             private Integer networkCardIndex; 
 
+            private Builder() {
+            } 
+
+            private Builder(NetworkCardInfo model) {
+                this.networkCardIndex = model.networkCardIndex;
+            } 
+
             /**
              * <p>The index of the network card.</p>
              * 
@@ -475,6 +651,13 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<NetworkCardInfo> networkCardInfo; 
 
+            private Builder() {
+            } 
+
+            private Builder(NetworkCards model) {
+                this.networkCardInfo = model.networkCardInfo;
+            } 
+
             /**
              * NetworkCardInfo.
              */
@@ -522,6 +705,13 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> supportedBootMode; 
 
+            private Builder() {
+            } 
+
+            private Builder(SupportedBootModes model) {
+                this.supportedBootMode = model.supportedBootMode;
+            } 
+
             /**
              * SupportedBootMode.
              */
@@ -544,6 +734,9 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
      * <p>DescribeInstanceTypesResponseBody</p>
      */
     public static class InstanceType extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Attributes")
+        private Attributes attributes;
+
         @com.aliyun.core.annotation.NameInMap("BaselineCredit")
         private Integer baselineCredit;
 
@@ -671,6 +864,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         private Integer totalEniQueueQuantity;
 
         private InstanceType(Builder builder) {
+            this.attributes = builder.attributes;
             this.baselineCredit = builder.baselineCredit;
             this.cpuArchitecture = builder.cpuArchitecture;
             this.cpuCoreCount = builder.cpuCoreCount;
@@ -721,6 +915,13 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
 
         public static InstanceType create() {
             return builder().build();
+        }
+
+        /**
+         * @return attributes
+         */
+        public Attributes getAttributes() {
+            return this.attributes;
         }
 
         /**
@@ -1018,6 +1219,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Attributes attributes; 
             private Integer baselineCredit; 
             private String cpuArchitecture; 
             private Integer cpuCoreCount; 
@@ -1060,6 +1262,63 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             private Integer secondaryEniQueueNumber; 
             private SupportedBootModes supportedBootModes; 
             private Integer totalEniQueueQuantity; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceType model) {
+                this.attributes = model.attributes;
+                this.baselineCredit = model.baselineCredit;
+                this.cpuArchitecture = model.cpuArchitecture;
+                this.cpuCoreCount = model.cpuCoreCount;
+                this.cpuOptions = model.cpuOptions;
+                this.cpuSpeedFrequency = model.cpuSpeedFrequency;
+                this.cpuTurboFrequency = model.cpuTurboFrequency;
+                this.diskQuantity = model.diskQuantity;
+                this.enhancedNetwork = model.enhancedNetwork;
+                this.eniIpv6AddressQuantity = model.eniIpv6AddressQuantity;
+                this.eniPrivateIpAddressQuantity = model.eniPrivateIpAddressQuantity;
+                this.eniQuantity = model.eniQuantity;
+                this.eniTotalQuantity = model.eniTotalQuantity;
+                this.eniTrunkSupported = model.eniTrunkSupported;
+                this.eriQuantity = model.eriQuantity;
+                this.GPUAmount = model.GPUAmount;
+                this.GPUMemorySize = model.GPUMemorySize;
+                this.GPUSpec = model.GPUSpec;
+                this.initialCredit = model.initialCredit;
+                this.instanceBandwidthRx = model.instanceBandwidthRx;
+                this.instanceBandwidthTx = model.instanceBandwidthTx;
+                this.instanceCategory = model.instanceCategory;
+                this.instanceFamilyLevel = model.instanceFamilyLevel;
+                this.instancePpsRx = model.instancePpsRx;
+                this.instancePpsTx = model.instancePpsTx;
+                this.instanceTypeFamily = model.instanceTypeFamily;
+                this.instanceTypeId = model.instanceTypeId;
+                this.jumboFrameSupport = model.jumboFrameSupport;
+                this.localStorageAmount = model.localStorageAmount;
+                this.localStorageCapacity = model.localStorageCapacity;
+                this.localStorageCategory = model.localStorageCategory;
+                this.maximumQueueNumberPerEni = model.maximumQueueNumberPerEni;
+                this.memorySize = model.memorySize;
+                this.networkCardQuantity = model.networkCardQuantity;
+                this.networkCards = model.networkCards;
+                this.networkEncryptionSupport = model.networkEncryptionSupport;
+                this.nvmeSupport = model.nvmeSupport;
+                this.physicalProcessorModel = model.physicalProcessorModel;
+                this.primaryEniQueueNumber = model.primaryEniQueueNumber;
+                this.queuePairNumber = model.queuePairNumber;
+                this.secondaryEniQueueNumber = model.secondaryEniQueueNumber;
+                this.supportedBootModes = model.supportedBootModes;
+                this.totalEniQueueQuantity = model.totalEniQueueQuantity;
+            } 
+
+            /**
+             * Attributes.
+             */
+            public Builder attributes(Attributes attributes) {
+                this.attributes = attributes;
+                return this;
+            }
 
             /**
              * <p>The baseline vCPU computing performance (overall baseline performance of all vCPUs) per t5 or t6 burstable instance.</p>
@@ -1521,7 +1780,11 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of QPs per ERI.</p>
+             * <p>The maximum number of QPs per instance, which varies based on the instance type.</p>
+             * <ul>
+             * <li>For enterprise-level CPU-based instance types, the value of <code>QueuePairNumber</code> is the maximum number of QPs per instance.</li>
+             * <li>For GPU-accelerated instance types, the maximum number of QPs per instance is calculated by using the following formula: Value of <code>QueuePairNumber</code> × Value of NetworkCardQuantity.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>22</p>
@@ -1599,6 +1862,13 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<InstanceType> instanceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceTypes model) {
+                this.instanceType = model.instanceType;
+            } 
 
             /**
              * InstanceType.

@@ -179,7 +179,7 @@ public class CreateImagePipelineRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -577,7 +577,10 @@ public class CreateImagePipelineRequest extends Request {
         }
 
         /**
-         * <p>The image family. The image family name must be 2 to 128 characters in length. The name must start with a letter and cannot start with acs: or aliyun. The name cannot contain http:// or https:// and can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+         * <p>The family of the image created based on the image template.</p>
+         * <blockquote>
+         * <p> This parameter is no longer used. We recommend that you use ImageOptions.ImageFamily.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -589,8 +592,10 @@ public class CreateImagePipelineRequest extends Request {
         }
 
         /**
-         * <p>The prefix of the image name. The prefix must be 2 to 64 characters in length. The prefix must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The prefix can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
-         * <p>The system generates the final complete image name that consists of the specified prefix and the ID of the build task (<code>ExecutionId</code>) in the format of <code>{ImageName}_{ExecutionId}</code>.</p>
+         * <p>The name prefix of the image created based on the image template.</p>
+         * <blockquote>
+         * <p> This parameter is no longer used. We recommend that you use ImageOptions.ImageName.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>testImageName</p>
@@ -602,7 +607,7 @@ public class CreateImagePipelineRequest extends Request {
         }
 
         /**
-         * <p>目标镜像属性。</p>
+         * <p>The attributes of the image created based on the image template.</p>
          */
         public Builder imageOptions(ImageOptions imageOptions) {
             this.putQueryParameter("ImageOptions", imageOptions);
@@ -661,12 +666,10 @@ public class CreateImagePipelineRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the image created based on the image template supports the NVMe protocol. Valid values:</p>
-         * <ul>
-         * <li>supported: The image supports the NVMe protocol. Instances created from the image also support the NVMe protocol.</li>
-         * <li>unsupported: The image does not support the NVMe protocol. Instances created from the image do not support the NVMe protocol.</li>
-         * <li>auto: The system automatically detects whether the image supports the NVMe protocol. The system automatically detects whether the NVMe driver is installed on your image before the new image is built. If you install or uninstall the NVMe driver during the image building process, the detection result may be incorrect. We recommend that you set the value to supported or unsupported based on the image building content.</li>
-         * </ul>
+         * <p>Specifies whether the image created based on the image template supports the NVMe protocol.</p>
+         * <blockquote>
+         * <p> This parameter is no longer used. We recommend that you use ImageOptions.ImageFeatures.NvmeSupport.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>auto</p>
@@ -885,10 +888,18 @@ public class CreateImagePipelineRequest extends Request {
             private String imageNameSuffix; 
             private Boolean retainCloudAssistant; 
 
+            private Builder() {
+            } 
+
+            private Builder(AdvancedOptions model) {
+                this.imageNameSuffix = model.imageNameSuffix;
+                this.retainCloudAssistant = model.retainCloudAssistant;
+            } 
+
             /**
-             * <p>是否禁用目标镜像名称自动增加后缀。可能值：</p>
+             * <p>Specifies whether to disable the feature that automatically adds a suffix to the name of the image created based on the image template. Valid value:</p>
              * <ul>
-             * <li>disable：禁用。</li>
+             * <li>disable</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -902,8 +913,8 @@ public class CreateImagePipelineRequest extends Request {
             /**
              * <p>Specifies whether to retain Cloud Assistant Agent that is installed during the image building process. During the image building process, the system automatically installs Cloud Assistant Agent on the intermediate instance to run commands. You can choose whether to retain Cloud Assistant Agent that is installed during the image building process in the new image. Valid values:</p>
              * <ul>
-             * <li>true: retains Cloud Assistant Agent that is installed during the image building process in the new image.</li>
-             * <li>false: does not retain Cloud Assistant Agent that is installed during the image building process in the new image.</li>
+             * <li>true</li>
+             * <li>false</li>
              * </ul>
              * <p>Default value: false.</p>
              * <blockquote>
@@ -957,12 +968,19 @@ public class CreateImagePipelineRequest extends Request {
         public static final class Builder {
             private String nvmeSupport; 
 
+            private Builder() {
+            } 
+
+            private Builder(ImageFeatures model) {
+                this.nvmeSupport = model.nvmeSupport;
+            } 
+
             /**
-             * <p>构建的目标镜像是否支持 NVMe。可能值：</p>
+             * <p>Specifies whether the image created based on the image template supports the NVMe protocol. Valid values:</p>
              * <ul>
-             * <li>supported：支持。表示以该镜像创建的实例支持 NVMe 协议。</li>
-             * <li>unsupported：不支持。表示以该镜像创建的实例不支持 NVMe 协议。</li>
-             * <li>auto：自动检测。由系统自动检测您的镜像是否安装NVMe驱动，该行为发生在构建阶段前，若您在构建时安装或者卸载了NVMe驱动，可能会出现结果偏差，建议您根据构建内容设置为supported或unsupported。</li>
+             * <li>supported: The image supports the NVMe protocol. Instances created from the image also support the NVMe protocol.</li>
+             * <li>unsupported: The image does not support the NVMe protocol. Instances created from the image do not support the NVMe protocol.</li>
+             * <li>auto: The system automatically detects whether the image supports the NVMe protocol. The system automatically detects whether the NVMe driver is installed on your image before the new image is built. If you install or uninstall the NVMe driver during the image building process, the detection result may be incorrect. We recommend that you set the value to supported or unsupported based on the image building content.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1024,8 +1042,16 @@ public class CreateImagePipelineRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(ImageTags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * <p>标签键。N 的取值范围：1~20。一旦传入该值，则不允许为空字符串。最多支持 128 个字符，不能以<code>aliyun</code>和<code>acs:</code>开头，不能包含<code>http://</code>或者<code>https://</code>。</p>
+             * <p>The key of tag N to add to the image. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>TestKey</p>
@@ -1036,7 +1062,7 @@ public class CreateImagePipelineRequest extends Request {
             }
 
             /**
-             * <p>资源的标签值。N 的取值范围：1~20。一旦传入该值，可以为空字符串。最多支持 128 个字符，不能以<code>acs:</code>开头，不能包含<code>http://</code>或者<code>https://</code>。</p>
+             * <p>The value of tag N to add to the image. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>TestValue</p>
@@ -1133,8 +1159,19 @@ public class CreateImagePipelineRequest extends Request {
             private String imageName; 
             private java.util.List<ImageTags> imageTags; 
 
+            private Builder() {
+            } 
+
+            private Builder(ImageOptions model) {
+                this.description = model.description;
+                this.imageFamily = model.imageFamily;
+                this.imageFeatures = model.imageFeatures;
+                this.imageName = model.imageName;
+                this.imageTags = model.imageTags;
+            } 
+
             /**
-             * <p>描述信息。长度为2~256个英文或中文字符，不能以<code>http://</code>和<code>https://</code>开头。</p>
+             * <p>The description of the image. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>This is description.</p>
@@ -1145,7 +1182,7 @@ public class CreateImagePipelineRequest extends Request {
             }
 
             /**
-             * <p>目标镜像族系。长度为 2~128 个英文或中文字符。必须以大小写字母或中文开头，不能以 aliyun 和 acs:开头，不能包含 http://或者 https://。可以包含数字、半角冒号（:）、下划线（_）或者短划线（-）。</p>
+             * <p>The image family. The image family name must be 2 to 128 characters in length. The name must start with a letter and cannot start with acs: or aliyun. The name cannot contain http:// or https:// and can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
              * 
              * <strong>example:</strong>
              * <p>family</p>
@@ -1156,7 +1193,7 @@ public class CreateImagePipelineRequest extends Request {
             }
 
             /**
-             * <p>目标镜像特性相关属性。</p>
+             * <p>The feature attributes of the image.</p>
              */
             public Builder imageFeatures(ImageFeatures imageFeatures) {
                 this.imageFeatures = imageFeatures;
@@ -1164,8 +1201,8 @@ public class CreateImagePipelineRequest extends Request {
             }
 
             /**
-             * <p>目标镜像名称前缀。长度为2~64个字符，必须以大小写字母或中文开头，不能以<code>http://</code>和<code>https://</code>开头。可以包含中文、英文、数字、半角冒号（:）、下划线（_）、半角句号（.）或者短划线（-）。</p>
-             * <p>最终完整的镜像名称由系统自动拼接名称前缀与构建任务ID（<code>ExecutionId</code>），格式为<code>{ImageName}_{ExecutionId}</code>。</p>
+             * <p>The prefix of the image name. The prefix must be 2 to 64 characters in length. The prefix must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The prefix can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
+             * <p>The system generates the final image name that consists of the specified prefix and the ID of the build task (<code>ExecutionId</code>) in the format of <code>{ImageName}_{ExecutionId}</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>testImageName</p>
@@ -1176,7 +1213,7 @@ public class CreateImagePipelineRequest extends Request {
             }
 
             /**
-             * <p>目标镜像标签。</p>
+             * <p>The tags to add to the image.</p>
              */
             public Builder imageTags(java.util.List<ImageTags> imageTags) {
                 this.imageTags = imageTags;
@@ -1257,6 +1294,16 @@ public class CreateImagePipelineRequest extends Request {
             private String format; 
             private String OSSBucket; 
             private String OSSObject; 
+
+            private Builder() {
+            } 
+
+            private Builder(DiskDeviceMappings model) {
+                this.diskImageSize = model.diskImageSize;
+                this.format = model.format;
+                this.OSSBucket = model.OSSBucket;
+                this.OSSObject = model.OSSObject;
+            } 
 
             /**
              * <p>The size of disk N in the custom image after the source image is imported.</p>
@@ -1353,8 +1400,15 @@ public class CreateImagePipelineRequest extends Request {
         public static final class Builder {
             private String nvmeSupport; 
 
+            private Builder() {
+            } 
+
+            private Builder(Features model) {
+                this.nvmeSupport = model.nvmeSupport;
+            } 
+
             /**
-             * <p>Specifies whether the imported original image supports the Non-Volatile Memory Express (NVMe) protocol. Valid values:</p>
+             * <p>Specifies whether the imported source image supports the Non-Volatile Memory Express (NVMe) protocol. Valid values:</p>
              * <ul>
              * <li>supported: The image supports the NVMe protocol. Instances created from the image also support the NVMe protocol.</li>
              * <li>unsupported: The image does not support the NVMe protocol. Instances created from the image do not support the NVMe protocol.</li>
@@ -1492,6 +1546,20 @@ public class CreateImagePipelineRequest extends Request {
             private String platform; 
             private Boolean retainImportedImage; 
 
+            private Builder() {
+            } 
+
+            private Builder(ImportImageOptions model) {
+                this.architecture = model.architecture;
+                this.bootMode = model.bootMode;
+                this.diskDeviceMappings = model.diskDeviceMappings;
+                this.features = model.features;
+                this.licenseType = model.licenseType;
+                this.OSType = model.OSType;
+                this.platform = model.platform;
+                this.retainImportedImage = model.retainImportedImage;
+            } 
+
             /**
              * <p>The system architecture of the system disk. If you specify a data disk snapshot to create the system disk of the image, use Architecture to specify the system architecture of the system disk. Valid values:</p>
              * <ul>
@@ -1509,7 +1577,7 @@ public class CreateImagePipelineRequest extends Request {
             }
 
             /**
-             * <p>The new boot mode of the image. Valid values:</p>
+             * <p>The boot mode of the image. Valid values:</p>
              * <ul>
              * <li>BIOS: BIOS mode</li>
              * <li>UEFI: Unified Extensible Firmware Interface (UEFI) mode</li>
@@ -1567,8 +1635,8 @@ public class CreateImagePipelineRequest extends Request {
             /**
              * <p>The operating system type. Valid values:</p>
              * <ul>
-             * <li>windows: Windows operating systems</li>
-             * <li>linux: Linux operating systems</li>
+             * <li>windows</li>
+             * <li>linux</li>
              * </ul>
              * <p>Default value: linux.</p>
              * 
@@ -1684,6 +1752,14 @@ public class CreateImagePipelineRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of tag N. Valid values of N: 1 to 20. You cannot specify empty strings as tag keys. The tag key must be 1 to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>acs:</code> or <code>aliyun</code>.</p>

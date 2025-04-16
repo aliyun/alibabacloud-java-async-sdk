@@ -87,7 +87,7 @@ public class ModifyDiskChargeTypeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -244,6 +244,9 @@ public class ModifyDiskChargeTypeRequest extends Request {
          * <li>PrePaid (default): changes the billing method from pay-as-you-go to subscription.</li>
          * <li>PostPaid: changes the billing method from subscription to pay-as-you-go.</li>
          * </ul>
+         * <blockquote>
+         * <p> When you change the billing method of a pay-as-you-go disk to subscription, the billing cycle of the disk is automatically synchronized with that of the associated ECS instance.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>PostPaid</p>

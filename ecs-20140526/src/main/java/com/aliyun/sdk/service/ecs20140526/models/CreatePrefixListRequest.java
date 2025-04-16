@@ -93,7 +93,7 @@ public class CreatePrefixListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -401,6 +401,14 @@ public class CreatePrefixListRequest extends Request {
         public static final class Builder {
             private String cidr; 
             private String description; 
+
+            private Builder() {
+            } 
+
+            private Builder(Entry model) {
+                this.cidr = model.cidr;
+                this.description = model.description;
+            } 
 
             /**
              * <p>The CIDR block in entry N. Valid values of N: 0 to 200. Take note of the following items:</p>

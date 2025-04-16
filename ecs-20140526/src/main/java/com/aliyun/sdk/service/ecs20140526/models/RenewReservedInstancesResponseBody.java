@@ -40,6 +40,10 @@ public class RenewReservedInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return orderId
      */
@@ -65,6 +69,15 @@ public class RenewReservedInstancesResponseBody extends TeaModel {
         private String orderId; 
         private String requestId; 
         private ReservedInstanceIdSets reservedInstanceIdSets; 
+
+        private Builder() {
+        } 
+
+        private Builder(RenewReservedInstancesResponseBody model) {
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+            this.reservedInstanceIdSets = model.reservedInstanceIdSets;
+        } 
 
         /**
          * <p>The order ID.</p>
@@ -133,6 +146,13 @@ public class RenewReservedInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> reservedInstanceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ReservedInstanceIdSets model) {
+                this.reservedInstanceId = model.reservedInstanceId;
+            } 
 
             /**
              * ReservedInstanceId.

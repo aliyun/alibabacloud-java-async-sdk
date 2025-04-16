@@ -34,6 +34,10 @@ public class DeleteInstancesRequest extends Request {
     private Boolean force;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ForceStop")
+    private Boolean forceStop;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<String> instanceId;
@@ -69,6 +73,7 @@ public class DeleteInstancesRequest extends Request {
         this.clientToken = builder.clientToken;
         this.dryRun = builder.dryRun;
         this.force = builder.force;
+        this.forceStop = builder.forceStop;
         this.instanceId = builder.instanceId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -86,7 +91,7 @@ public class DeleteInstancesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -117,6 +122,13 @@ public class DeleteInstancesRequest extends Request {
      */
     public Boolean getForce() {
         return this.force;
+    }
+
+    /**
+     * @return forceStop
+     */
+    public Boolean getForceStop() {
+        return this.forceStop;
     }
 
     /**
@@ -173,6 +185,7 @@ public class DeleteInstancesRequest extends Request {
         private String clientToken; 
         private Boolean dryRun; 
         private Boolean force; 
+        private Boolean forceStop; 
         private java.util.List<String> instanceId; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -191,6 +204,7 @@ public class DeleteInstancesRequest extends Request {
             this.clientToken = request.clientToken;
             this.dryRun = request.dryRun;
             this.force = request.force;
+            this.forceStop = request.forceStop;
             this.instanceId = request.instanceId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -258,6 +272,26 @@ public class DeleteInstancesRequest extends Request {
         }
 
         /**
+         * <p>释放<strong>运行中</strong>（<code>Running</code>）的实例时的是否采取强制关机策略。仅当<code>Force=true</code>时生效。取值范围：</p>
+         * <ul>
+         * <li>true：强制关机并释放实例。相当于典型的断电操作，实例会直接进入资源释放流程。<blockquote>
+         * <p>Warning: 强制释放相当于断电，实例内存以及存储中的临时数据都会被擦除，无法恢复。</p>
+         * </blockquote>
+         * </li>
+         * <li>false：在实例释放前，系统将优先执行标准关机流程，该模式会导致实例释放动作持续几分钟。用户在操作系统关机时，配置一些业务排水动作，从而减少业务系统的噪声。</li>
+         * </ul>
+         * <p>默认值：true。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        public Builder forceStop(Boolean forceStop) {
+            this.putQueryParameter("ForceStop", forceStop);
+            this.forceStop = forceStop;
+            return this;
+        }
+
+        /**
          * <p>The IDs of ECS instances. You can specify 1 to 100 ECS instances.</p>
          * <p>This parameter is required.</p>
          * 
@@ -320,7 +354,7 @@ public class DeleteInstancesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to release the expired subscription instance. Valid values:</p>
+         * <p>Specifies whether to release the expired subscription ECS instance. Valid values:</p>
          * <ul>
          * <li>true</li>
          * <li>false</li>

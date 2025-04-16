@@ -80,7 +80,7 @@ public class ModifyInstanceMaintenanceAttributesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -348,6 +348,14 @@ public class ModifyInstanceMaintenanceAttributesRequest extends Request {
         public static final class Builder {
             private String endTime; 
             private String startTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(MaintenanceWindow model) {
+                this.endTime = model.endTime;
+                this.startTime = model.startTime;
+            } 
 
             /**
              * <p>The end time of the maintenance window. The time must be on the hour. You must configure both StartTime and EndTime. The value of EndTime must be 1 to 23 hours later than the value of StartTime. Specify the time in the <code>HH:mm:ss</code> format. The time must be in UTC+8. Set the value of N to 1.</p>

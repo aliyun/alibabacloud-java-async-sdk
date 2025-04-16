@@ -86,7 +86,7 @@ public class DescribeSnapshotLinksRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -253,7 +253,7 @@ public class DescribeSnapshotLinksRequest extends Request {
 
         /**
          * <p>The page number. Pages start from page 1.</p>
-         * <p>Default value: 1</p>
+         * <p>Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -265,8 +265,8 @@ public class DescribeSnapshotLinksRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Valid values: 1 to 100.</p>
-         * <p>Default value: 10</p>
+         * <p>The number of entries to return on each page. Valid values: 1 to 100.</p>
+         * <p>Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>

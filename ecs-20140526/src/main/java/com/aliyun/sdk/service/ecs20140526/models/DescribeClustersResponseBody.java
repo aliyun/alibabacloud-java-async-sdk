@@ -36,6 +36,10 @@ public class DescribeClustersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clusters
      */
@@ -53,6 +57,14 @@ public class DescribeClustersResponseBody extends TeaModel {
     public static final class Builder {
         private Clusters clusters; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeClustersResponseBody model) {
+            this.clusters = model.clusters;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Clusters.
@@ -108,6 +120,13 @@ public class DescribeClustersResponseBody extends TeaModel {
         public static final class Builder {
             private String clusterId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Cluster model) {
+                this.clusterId = model.clusterId;
+            } 
+
             /**
              * ClusterId.
              */
@@ -154,6 +173,13 @@ public class DescribeClustersResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Cluster> cluster; 
+
+            private Builder() {
+            } 
+
+            private Builder(Clusters model) {
+                this.cluster = model.cluster;
+            } 
 
             /**
              * Cluster.

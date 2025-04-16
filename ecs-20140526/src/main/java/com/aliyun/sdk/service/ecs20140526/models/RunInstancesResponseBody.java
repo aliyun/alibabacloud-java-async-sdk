@@ -44,6 +44,10 @@ public class RunInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceIdSets
      */
@@ -77,6 +81,16 @@ public class RunInstancesResponseBody extends TeaModel {
         private String orderId; 
         private String requestId; 
         private Float tradePrice; 
+
+        private Builder() {
+        } 
+
+        private Builder(RunInstancesResponseBody model) {
+            this.instanceIdSets = model.instanceIdSets;
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+            this.tradePrice = model.tradePrice;
+        } 
 
         /**
          * <p>The IDs of the instances (<code>InstanceIdSet</code>).</p>
@@ -156,6 +170,13 @@ public class RunInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> instanceIdSet; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceIdSets model) {
+                this.instanceIdSet = model.instanceIdSet;
+            } 
 
             /**
              * InstanceIdSet.

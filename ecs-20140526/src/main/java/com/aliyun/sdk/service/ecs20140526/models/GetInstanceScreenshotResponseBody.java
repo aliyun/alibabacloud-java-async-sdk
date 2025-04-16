@@ -40,6 +40,10 @@ public class GetInstanceScreenshotResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceId
      */
@@ -65,6 +69,15 @@ public class GetInstanceScreenshotResponseBody extends TeaModel {
         private String instanceId; 
         private String requestId; 
         private String screenshot; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetInstanceScreenshotResponseBody model) {
+            this.instanceId = model.instanceId;
+            this.requestId = model.requestId;
+            this.screenshot = model.screenshot;
+        } 
 
         /**
          * <p>The instance ID.</p>

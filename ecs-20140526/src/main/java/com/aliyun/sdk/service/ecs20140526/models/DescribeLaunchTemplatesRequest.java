@@ -90,7 +90,7 @@ public class DescribeLaunchTemplatesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -405,6 +405,14 @@ public class DescribeLaunchTemplatesRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(TemplateTag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of tag N of the launch template. Valid values of N: 1 to 20.</p>

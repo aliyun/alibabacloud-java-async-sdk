@@ -86,7 +86,7 @@ public class ModifyPrefixListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -365,6 +365,14 @@ public class ModifyPrefixListRequest extends Request {
             private String cidr; 
             private String description; 
 
+            private Builder() {
+            } 
+
+            private Builder(AddEntry model) {
+                this.cidr = model.cidr;
+                this.description = model.description;
+            } 
+
             /**
              * <p>The CIDR block in entry N to be added to the prefix list. Valid values of N: 0 to 200.</p>
              * <p>Take note of the following items when you add the entries:</p>
@@ -433,6 +441,13 @@ public class ModifyPrefixListRequest extends Request {
 
         public static final class Builder {
             private String cidr; 
+
+            private Builder() {
+            } 
+
+            private Builder(RemoveEntry model) {
+                this.cidr = model.cidr;
+            } 
 
             /**
              * <p>The CIDR block in entry N to be deleted from the prefix list. Valid values of N: 0 to 200.</p>

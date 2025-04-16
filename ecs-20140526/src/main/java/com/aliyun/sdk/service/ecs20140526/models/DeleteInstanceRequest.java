@@ -30,6 +30,10 @@ public class DeleteInstanceRequest extends Request {
     private Boolean force;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ForceStop")
+    private Boolean forceStop;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
@@ -59,6 +63,7 @@ public class DeleteInstanceRequest extends Request {
         this.sourceRegionId = builder.sourceRegionId;
         this.dryRun = builder.dryRun;
         this.force = builder.force;
+        this.forceStop = builder.forceStop;
         this.instanceId = builder.instanceId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -75,7 +80,7 @@ public class DeleteInstanceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -99,6 +104,13 @@ public class DeleteInstanceRequest extends Request {
      */
     public Boolean getForce() {
         return this.force;
+    }
+
+    /**
+     * @return forceStop
+     */
+    public Boolean getForceStop() {
+        return this.forceStop;
     }
 
     /**
@@ -147,6 +159,7 @@ public class DeleteInstanceRequest extends Request {
         private String sourceRegionId; 
         private Boolean dryRun; 
         private Boolean force; 
+        private Boolean forceStop; 
         private String instanceId; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -163,6 +176,7 @@ public class DeleteInstanceRequest extends Request {
             this.sourceRegionId = request.sourceRegionId;
             this.dryRun = request.dryRun;
             this.force = request.force;
+            this.forceStop = request.forceStop;
             this.instanceId = request.instanceId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -197,14 +211,15 @@ public class DeleteInstanceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to forcefully release the instance in the <strong>Running</strong> (<code>Running</code>) state. Valid values:</p>
+         * <p>Specifies whether to forcefully release the ECS instance in the <strong>Running</strong> (<code>Running</code>) state. Valid values:</p>
          * <ul>
-         * <li>true: forcefully releases the instance in the <strong>Running</strong> (<code>Running</code>) state.</li>
-         * <li>false: normally releases the instance. This value take effects only if the instance is in the <strong>Stopped</strong> (<code>Stopped</code>) state.</li>
+         * <li>true: forcefully releases the ECS instance in the <strong>Running</strong> (<code>Running</code>) state.</li>
+         * <li>false: normally releases the ECS instance. This value is valid only if the instance is in the <strong>Stopped</strong> (<code>Stopped</code>) state.</li>
          * </ul>
          * <p>Default value: false.</p>
-         * <p>**</p>
-         * <p><strong>Warning</strong> When the Force parameter is set to true, this operation is equivalent to a power-off operation. Temporary data in the memory and storage of the instance is erased and cannot be restored.</p>
+         * <blockquote>
+         * <p>Warning: When the Force parameter is set to true, this operation is equivalent to a power-off operation. Temporary data in the memory and storage of the instance is erased and cannot be restored.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -212,6 +227,15 @@ public class DeleteInstanceRequest extends Request {
         public Builder force(Boolean force) {
             this.putQueryParameter("Force", force);
             this.force = force;
+            return this;
+        }
+
+        /**
+         * ForceStop.
+         */
+        public Builder forceStop(Boolean forceStop) {
+            this.putQueryParameter("ForceStop", forceStop);
+            this.forceStop = forceStop;
             return this;
         }
 

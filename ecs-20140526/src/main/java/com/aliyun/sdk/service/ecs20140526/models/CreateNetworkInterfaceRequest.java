@@ -213,7 +213,7 @@ public class CreateNetworkInterfaceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -1098,6 +1098,15 @@ public class CreateNetworkInterfaceRequest extends Request {
             private Integer tcpEstablishedTimeout; 
             private Integer udpTimeout; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConnectionTrackingConfiguration model) {
+                this.tcpClosedAndTimeWaitTimeout = model.tcpClosedAndTimeWaitTimeout;
+                this.tcpEstablishedTimeout = model.tcpEstablishedTimeout;
+                this.udpTimeout = model.udpTimeout;
+            } 
+
             /**
              * <p>The timeout period for TCP connections in the TIME_WAIT or CLOSE_WAIT state. Unit: seconds. Valid values: integers from 3 to 15.</p>
              * <p>Default value: 3.</p>
@@ -1190,6 +1199,14 @@ public class CreateNetworkInterfaceRequest extends Request {
         public static final class Builder {
             private Boolean enableRss; 
             private Boolean enableSriov; 
+
+            private Builder() {
+            } 
+
+            private Builder(EnhancedNetwork model) {
+                this.enableRss = model.enableRss;
+                this.enableSriov = model.enableSriov;
+            } 
 
             /**
              * <blockquote>
@@ -1303,6 +1320,17 @@ public class CreateNetworkInterfaceRequest extends Request {
             private Integer queuePairNumber; 
             private Integer rxQueueSize; 
             private Integer txQueueSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetworkInterfaceTrafficConfig model) {
+                this.networkInterfaceTrafficMode = model.networkInterfaceTrafficMode;
+                this.queueNumber = model.queueNumber;
+                this.queuePairNumber = model.queuePairNumber;
+                this.rxQueueSize = model.rxQueueSize;
+                this.txQueueSize = model.txQueueSize;
+            } 
 
             /**
              * <p>The communication mode of the ENI.</p>
@@ -1427,6 +1455,14 @@ public class CreateNetworkInterfaceRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of tag N to add to the ENI. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain <code>http://</code> or <code>https://</code>.</p>

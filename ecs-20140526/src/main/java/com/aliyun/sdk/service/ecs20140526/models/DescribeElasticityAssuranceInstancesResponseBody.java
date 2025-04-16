@@ -48,6 +48,10 @@ public class DescribeElasticityAssuranceInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return elasticityAssuranceItem
      */
@@ -89,6 +93,17 @@ public class DescribeElasticityAssuranceInstancesResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeElasticityAssuranceInstancesResponseBody model) {
+            this.elasticityAssuranceItem = model.elasticityAssuranceItem;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>Details about the instances that match and use the elasticity assurance.</p>
@@ -180,6 +195,13 @@ public class DescribeElasticityAssuranceInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private String instanceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceIdSet model) {
+                this.instanceId = model.instanceId;
+            } 
+
             /**
              * <p>The instance ID</p>
              * 
@@ -229,6 +251,13 @@ public class DescribeElasticityAssuranceInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<InstanceIdSet> instanceIdSet; 
+
+            private Builder() {
+            } 
+
+            private Builder(ElasticityAssuranceItem model) {
+                this.instanceIdSet = model.instanceIdSet;
+            } 
 
             /**
              * InstanceIdSet.

@@ -136,7 +136,7 @@ public class ReplaceSystemDiskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -650,17 +650,24 @@ public class ReplaceSystemDiskRequest extends Request {
         public static final class Builder {
             private Integer size; 
 
+            private Builder() {
+            } 
+
+            private Builder(SystemDisk model) {
+                this.size = model.size;
+            } 
+
             /**
-             * <p>The capacity of the new system disk. Unit: GiB. Valid values for different disk categories:</p>
+             * <p>The capacity of the new system disk. Unit: GiB. Valid values:</p>
              * <ul>
              * <li><p>Basic disk: Max{20, Size of the image specified by ImageId} to 500.</p>
              * </li>
              * <li><p>Enterprise SSD (ESSD):</p>
              * <ul>
-             * <li>PL0: Max{1, Size of the image specified by ImageId} to 2048.</li>
-             * <li>PL1: Max{20, Size of the image specified by ImageId} to 2048.</li>
-             * <li>PL2: Max{461, Size of the image specified by ImageId} to 2048.</li>
-             * <li>PL3: Max{1261, Size of the image specified by ImageId} to 2048.</li>
+             * <li>PL0 ESSD: Max{1, Size of the image specified by ImageId} to 2048.</li>
+             * <li>PL1 ESSD: Max{20, Size of the image specified by ImageId} to 2048.</li>
+             * <li>PL2 ESSD: Max{461, Size of the image specified by ImageId} to 2048.</li>
+             * <li>PL3 ESSD: Max{1261, Size of the image specified by ImageId} to 2048.</li>
              * </ul>
              * </li>
              * <li><p>ESSD AutoPL disk: Max{1, Size of the image specified by ImageId} to 2048.</p>
@@ -668,7 +675,7 @@ public class ReplaceSystemDiskRequest extends Request {
              * <li><p>Other disk categories: Max{20, Size of the image specified by ImageId} to 2048.</p>
              * </li>
              * </ul>
-             * <p>Default value: 40 or the size of the image specified by ImageId, whichever is greater.</p>
+             * <p>Default value: Max{40, Size of the image specified by ImageId}.</p>
              * <blockquote>
              * <p> If the capacity of the new system disk exceeds <code>Max{20, Capacity of the original system disk}</code>, you are charged for the excess capacity.</p>
              * </blockquote>
@@ -743,6 +750,15 @@ public class ReplaceSystemDiskRequest extends Request {
             private Long assumeRoleFor; 
             private String roleType; 
             private String rolearn; 
+
+            private Builder() {
+            } 
+
+            private Builder(Arn model) {
+                this.assumeRoleFor = model.assumeRoleFor;
+                this.roleType = model.roleType;
+                this.rolearn = model.rolearn;
+            } 
 
             /**
              * <blockquote>

@@ -48,6 +48,10 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceRenewAttributes
      */
@@ -89,6 +93,17 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceAutoRenewAttributeResponseBody model) {
+            this.instanceRenewAttributes = model.instanceRenewAttributes;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The renewal attributes of instances.</p>
@@ -228,6 +243,17 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
             private String periodUnit; 
             private String renewalStatus; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceRenewAttribute model) {
+                this.autoRenewEnabled = model.autoRenewEnabled;
+                this.duration = model.duration;
+                this.instanceId = model.instanceId;
+                this.periodUnit = model.periodUnit;
+                this.renewalStatus = model.renewalStatus;
+            } 
+
             /**
              * <p>Indicates whether auto-renewal is enabled.</p>
              * 
@@ -326,6 +352,13 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<InstanceRenewAttribute> instanceRenewAttribute; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceRenewAttributes model) {
+                this.instanceRenewAttribute = model.instanceRenewAttribute;
+            } 
 
             /**
              * InstanceRenewAttribute.

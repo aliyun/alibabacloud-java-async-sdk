@@ -122,7 +122,7 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -433,11 +433,6 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
          * <blockquote>
          * <p> This parameter is not publicly available.</p>
          * </blockquote>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>Online</li>
-         * <li>Offline</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -590,6 +585,13 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
         public static final class Builder {
             private String category; 
 
+            private Builder() {
+            } 
+
+            private Builder(SystemDisk model) {
+                this.category = model.category;
+            } 
+
             /**
              * <p>The new category of the system disk. Valid values:</p>
              * <ul>
@@ -670,6 +672,15 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
             private String category; 
             private String diskId; 
             private String performanceLevel; 
+
+            private Builder() {
+            } 
+
+            private Builder(Disk model) {
+                this.category = model.category;
+                this.diskId = model.diskId;
+                this.performanceLevel = model.performanceLevel;
+            } 
 
             /**
              * <blockquote>

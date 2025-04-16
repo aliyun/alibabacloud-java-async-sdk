@@ -66,7 +66,7 @@ public class ResetDisksRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -270,6 +270,14 @@ public class ResetDisksRequest extends Request {
         public static final class Builder {
             private String diskId; 
             private String snapshotId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Disk model) {
+                this.diskId = model.diskId;
+                this.snapshotId = model.snapshotId;
+            } 
 
             /**
              * <p>The ID of the disk that you want to roll back. You can specify up to 10 disk IDs.</p>

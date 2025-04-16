@@ -56,6 +56,10 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextToken
      */
@@ -113,6 +117,19 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         private String requestId; 
         private SecurityGroups securityGroups; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSecurityGroupsResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+            this.securityGroups = model.securityGroups;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>A pagination token. If the return value of this parameter is empty when MaxResults and NextToken are used for a paged query, no next page exists.</p>
@@ -244,6 +261,14 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
              * <p>The key of the tag.</p>
              * 
@@ -304,6 +329,13 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
@@ -508,6 +540,26 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             private Tags tags; 
             private String vpcId; 
 
+            private Builder() {
+            } 
+
+            private Builder(SecurityGroup model) {
+                this.availableInstanceAmount = model.availableInstanceAmount;
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.ecsCount = model.ecsCount;
+                this.groupToGroupRuleCount = model.groupToGroupRuleCount;
+                this.resourceGroupId = model.resourceGroupId;
+                this.ruleCount = model.ruleCount;
+                this.securityGroupId = model.securityGroupId;
+                this.securityGroupName = model.securityGroupName;
+                this.securityGroupType = model.securityGroupType;
+                this.serviceID = model.serviceID;
+                this.serviceManaged = model.serviceManaged;
+                this.tags = model.tags;
+                this.vpcId = model.vpcId;
+            } 
+
             /**
              * <p>The number of private IP addresses that can be added to the security group. For more information, see the &quot;Security group capacity&quot; section in <a href="~~605897#section-kj9-e46-6v5~~">Basic security groups and advanced security groups</a>.</p>
              * <p>If you set IsQueryEcsCount to True, the return value of AvailableInstanceAmount is valid.</p>
@@ -709,6 +761,13 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SecurityGroup> securityGroup; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecurityGroups model) {
+                this.securityGroup = model.securityGroup;
+            } 
 
             /**
              * SecurityGroup.

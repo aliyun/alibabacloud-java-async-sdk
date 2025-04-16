@@ -48,6 +48,10 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return autoSnapshotPolicies
      */
@@ -89,6 +93,17 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAutoSnapshotPolicyExResponseBody model) {
+            this.autoSnapshotPolicies = model.autoSnapshotPolicies;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>Details about the automatic snapshot policies.</p>
@@ -192,6 +207,14 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
             private Boolean encrypted; 
             private String KMSKeyId; 
 
+            private Builder() {
+            } 
+
+            private Builder(CopyEncryptionConfiguration model) {
+                this.encrypted = model.encrypted;
+                this.KMSKeyId = model.KMSKeyId;
+            } 
+
             /**
              * <p>Whether to enable encryption for cross-region snapshot replication. Valid values:</p>
              * <ul>
@@ -270,6 +293,14 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
              * <p>The tag key of the automatic snapshot policy.</p>
              * 
@@ -330,6 +361,13 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
@@ -570,6 +608,29 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
             private String type; 
             private Integer volumeNums; 
 
+            private Builder() {
+            } 
+
+            private Builder(AutoSnapshotPolicy model) {
+                this.autoSnapshotPolicyId = model.autoSnapshotPolicyId;
+                this.autoSnapshotPolicyName = model.autoSnapshotPolicyName;
+                this.copiedSnapshotsRetentionDays = model.copiedSnapshotsRetentionDays;
+                this.copyEncryptionConfiguration = model.copyEncryptionConfiguration;
+                this.creationTime = model.creationTime;
+                this.diskNums = model.diskNums;
+                this.enableCrossRegionCopy = model.enableCrossRegionCopy;
+                this.regionId = model.regionId;
+                this.repeatWeekdays = model.repeatWeekdays;
+                this.resourceGroupId = model.resourceGroupId;
+                this.retentionDays = model.retentionDays;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.targetCopyRegions = model.targetCopyRegions;
+                this.timePoints = model.timePoints;
+                this.type = model.type;
+                this.volumeNums = model.volumeNums;
+            } 
+
             /**
              * <p>The ID of the automatic snapshot policy.</p>
              * 
@@ -809,6 +870,13 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<AutoSnapshotPolicy> autoSnapshotPolicy; 
+
+            private Builder() {
+            } 
+
+            private Builder(AutoSnapshotPolicies model) {
+                this.autoSnapshotPolicy = model.autoSnapshotPolicy;
+            } 
 
             /**
              * AutoSnapshotPolicy.

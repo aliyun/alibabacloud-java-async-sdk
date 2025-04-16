@@ -36,6 +36,10 @@ public class ExportSnapshotResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class ExportSnapshotResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String taskId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ExportSnapshotResponseBody model) {
+            this.requestId = model.requestId;
+            this.taskId = model.taskId;
+        } 
 
         /**
          * RequestId.

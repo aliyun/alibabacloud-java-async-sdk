@@ -48,6 +48,10 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instances
      */
@@ -90,8 +94,19 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeAutoProvisioningGroupInstancesResponseBody model) {
+            this.instances = model.instances;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * <p>An array consisting of Instance data.</p>
+         * <p>The information about the instances in the auto provisioning group.</p>
          */
         public Builder instances(Instances instances) {
             this.instances = instances;
@@ -99,7 +114,7 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -110,7 +125,7 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -121,7 +136,7 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>B48A12CD-1295-4A38-A8F0-0E92C937****</p>
@@ -312,8 +327,26 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
             private String status; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Instance model) {
+                this.CPU = model.CPU;
+                this.creationTime = model.creationTime;
+                this.instanceId = model.instanceId;
+                this.instanceType = model.instanceType;
+                this.ioOptimized = model.ioOptimized;
+                this.isSpot = model.isSpot;
+                this.memory = model.memory;
+                this.networkType = model.networkType;
+                this.osType = model.osType;
+                this.regionId = model.regionId;
+                this.status = model.status;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
-             * <p>The number of vCPUs.</p>
+             * <p>The number of vCPU cores of the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -335,7 +368,7 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
             }
 
             /**
-             * <p>The ID of the instance.</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>i-bp67acfmxazb4p****</p>
@@ -346,7 +379,7 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
             }
 
             /**
-             * <p>The instance type of the ECS instance.</p>
+             * <p>The ECS instance type.</p>
              * 
              * <strong>example:</strong>
              * <p>ecs.g5.large</p>
@@ -357,7 +390,7 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
             }
 
             /**
-             * <p>Indicates whether the instance is I/O optimized.</p>
+             * <p>Indicates whether the instance is an I/O optimized instance.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -379,7 +412,7 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
             }
 
             /**
-             * <p>The memory size of the instance. Unit: MiB.</p>
+             * <p>The memory capacity of the instance. Unit: MiB.</p>
              * 
              * <strong>example:</strong>
              * <p>1024</p>
@@ -392,8 +425,8 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
             /**
              * <p>The network type of the instance. Valid values:</p>
              * <ul>
-             * <li>vpc</li>
-             * <li>classic</li>
+             * <li>vpc: Virtual Private Cloud (VPC)</li>
+             * <li>classic: classic network</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -420,7 +453,7 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
             }
 
             /**
-             * <p>The region ID of the instance.</p>
+             * <p>The region ID of the container group.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -442,7 +475,7 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
             }
 
             /**
-             * <p>The zone ID of the instance.</p>
+             * <p>The ID of the zone to which the instance belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou-g</p>
@@ -490,6 +523,13 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
 
         public static final class Builder {
             private java.util.List<Instance> instance; 
+
+            private Builder() {
+            } 
+
+            private Builder(Instances model) {
+                this.instance = model.instance;
+            } 
 
             /**
              * Instance.

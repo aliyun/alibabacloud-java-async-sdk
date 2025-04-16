@@ -343,7 +343,7 @@ public class CreateInstanceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -1807,6 +1807,13 @@ public class CreateInstanceRequest extends Request {
         public static final class Builder {
             private Boolean configured; 
 
+            private Builder() {
+            } 
+
+            private Builder(HibernationOptions model) {
+                this.configured = model.configured;
+            } 
+
             /**
              * <blockquote>
              * <p> This parameter is in invitational preview and is not publicly available.</p>
@@ -1870,6 +1877,14 @@ public class CreateInstanceRequest extends Request {
         public static final class Builder {
             private String id; 
             private String matchCriteria; 
+
+            private Builder() {
+            } 
+
+            private Builder(PrivatePoolOptions model) {
+                this.id = model.id;
+                this.matchCriteria = model.matchCriteria;
+            } 
 
             /**
              * <p>The ID of the private pool. The ID of a private pool is the same as that of the elasticity assurance or capacity reservation for which the private pool is generated.</p>
@@ -2003,6 +2018,18 @@ public class CreateInstanceRequest extends Request {
             private String performanceLevel; 
             private Integer size; 
             private String storageClusterId; 
+
+            private Builder() {
+            } 
+
+            private Builder(SystemDisk model) {
+                this.category = model.category;
+                this.description = model.description;
+                this.diskName = model.diskName;
+                this.performanceLevel = model.performanceLevel;
+                this.size = model.size;
+                this.storageClusterId = model.storageClusterId;
+            } 
 
             /**
              * <p>The category of the system disk. Valid values:</p>
@@ -2154,6 +2181,15 @@ public class CreateInstanceRequest extends Request {
             private Long assumeRoleFor; 
             private String roleType; 
             private String rolearn; 
+
+            private Builder() {
+            } 
+
+            private Builder(Arn model) {
+                this.assumeRoleFor = model.assumeRoleFor;
+                this.roleType = model.roleType;
+                this.rolearn = model.rolearn;
+            } 
 
             /**
              * <blockquote>
@@ -2365,6 +2401,24 @@ public class CreateInstanceRequest extends Request {
             private Integer size; 
             private String snapshotId; 
             private String storageClusterId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataDisk model) {
+                this.category = model.category;
+                this.deleteWithInstance = model.deleteWithInstance;
+                this.description = model.description;
+                this.device = model.device;
+                this.diskName = model.diskName;
+                this.encryptAlgorithm = model.encryptAlgorithm;
+                this.encrypted = model.encrypted;
+                this.KMSKeyId = model.KMSKeyId;
+                this.performanceLevel = model.performanceLevel;
+                this.size = model.size;
+                this.snapshotId = model.snapshotId;
+                this.storageClusterId = model.storageClusterId;
+            } 
 
             /**
              * <p>The category of data disk N. Valid values:</p>
@@ -2614,6 +2668,14 @@ public class CreateInstanceRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of tag N to add to the instance, disks, and primary ENI. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>

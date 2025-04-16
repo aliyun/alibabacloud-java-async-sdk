@@ -36,6 +36,10 @@ public class DisableActivationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return activation
      */
@@ -53,6 +57,14 @@ public class DisableActivationResponseBody extends TeaModel {
     public static final class Builder {
         private Activation activation; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DisableActivationResponseBody model) {
+            this.activation = model.activation;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The time when the activation code was created.</p>
@@ -218,6 +230,22 @@ public class DisableActivationResponseBody extends TeaModel {
             private String ipAddressRange; 
             private Integer registeredCount; 
             private Long timeToLiveInHours; 
+
+            private Builder() {
+            } 
+
+            private Builder(Activation model) {
+                this.activationId = model.activationId;
+                this.creationTime = model.creationTime;
+                this.deregisteredCount = model.deregisteredCount;
+                this.description = model.description;
+                this.disabled = model.disabled;
+                this.instanceCount = model.instanceCount;
+                this.instanceName = model.instanceName;
+                this.ipAddressRange = model.ipAddressRange;
+                this.registeredCount = model.registeredCount;
+                this.timeToLiveInHours = model.timeToLiveInHours;
+            } 
 
             /**
              * <p>The ID of the activation code.</p>

@@ -81,7 +81,7 @@ public class DescribeInstanceModificationPriceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -329,6 +329,13 @@ public class DescribeInstanceModificationPriceRequest extends Request {
         public static final class Builder {
             private String category; 
 
+            private Builder() {
+            } 
+
+            private Builder(SystemDisk model) {
+                this.category = model.category;
+            } 
+
             /**
              * <p>The category of the system disk. You must specify this parameter only when you upgrade a non-I/O optimized instance of a retired instance type to an I/O optimized instance of an available instance type. For more information about instance types, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> and <a href="https://help.aliyun.com/document_detail/55263.html">Retired instance types</a>.</p>
              * <p>Valid values:</p>
@@ -408,6 +415,15 @@ public class DescribeInstanceModificationPriceRequest extends Request {
             private String category; 
             private String performanceLevel; 
             private Integer size; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataDisk model) {
+                this.category = model.category;
+                this.performanceLevel = model.performanceLevel;
+                this.size = model.size;
+            } 
 
             /**
              * <p>The category of data disk N. You can specify this parameter if you want to query the pricing information about newly attached subscription data disks. Valid values of N: 1 to 16. Valid values:</p>

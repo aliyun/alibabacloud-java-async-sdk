@@ -36,6 +36,10 @@ public class RenewDedicatedHostsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return orderId
      */
@@ -54,8 +58,19 @@ public class RenewDedicatedHostsResponseBody extends TeaModel {
         private String orderId; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(RenewDedicatedHostsResponseBody model) {
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * OrderId.
+         * <p>The ID of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23841229****</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;

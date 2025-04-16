@@ -40,6 +40,10 @@ public class DeleteLaunchTemplateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return launchTemplateId
      */
@@ -65,6 +69,15 @@ public class DeleteLaunchTemplateResponseBody extends TeaModel {
         private String launchTemplateId; 
         private LaunchTemplateVersionNumbers launchTemplateVersionNumbers; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteLaunchTemplateResponseBody model) {
+            this.launchTemplateId = model.launchTemplateId;
+            this.launchTemplateVersionNumbers = model.launchTemplateVersionNumbers;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the launch template. For more information, see <a href="https://help.aliyun.com/document_detail/73759.html">DescribeLaunchTemplates</a>.</p>
@@ -134,6 +147,13 @@ public class DeleteLaunchTemplateResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Long> versionNumbers; 
+
+            private Builder() {
+            } 
+
+            private Builder(LaunchTemplateVersionNumbers model) {
+                this.versionNumbers = model.versionNumbers;
+            } 
 
             /**
              * versionNumbers.

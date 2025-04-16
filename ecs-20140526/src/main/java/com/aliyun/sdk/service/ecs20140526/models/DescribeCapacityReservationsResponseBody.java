@@ -48,6 +48,10 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return capacityReservationSet
      */
@@ -89,6 +93,17 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCapacityReservationsResponseBody model) {
+            this.capacityReservationSet = model.capacityReservationSet;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>Details of the capacity reservations.</p>
@@ -204,6 +219,15 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             private String serviceName; 
             private Integer usedAmount; 
 
+            private Builder() {
+            } 
+
+            private Builder(CapacityReservationUsage model) {
+                this.accountId = model.accountId;
+                this.serviceName = model.serviceName;
+                this.usedAmount = model.usedAmount;
+            } 
+
             /**
              * <p>The ID of the Alibaba Cloud account.</p>
              * 
@@ -275,6 +299,13 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<CapacityReservationUsage> capacityReservationUsage; 
+
+            private Builder() {
+            } 
+
+            private Builder(CapacityReservationUsages model) {
+                this.capacityReservationUsage = model.capacityReservationUsage;
+            } 
 
             /**
              * CapacityReservationUsage.
@@ -383,6 +414,18 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             private Integer usedAmount; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(AllocatedResource model) {
+                this.availableAmount = model.availableAmount;
+                this.capacityReservationUsages = model.capacityReservationUsages;
+                this.instanceType = model.instanceType;
+                this.totalAmount = model.totalAmount;
+                this.usedAmount = model.usedAmount;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
              * <p>The number of available instances.</p>
              * 
@@ -485,6 +528,13 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<AllocatedResource> allocatedResource; 
 
+            private Builder() {
+            } 
+
+            private Builder(AllocatedResources model) {
+                this.allocatedResource = model.allocatedResource;
+            } 
+
             /**
              * AllocatedResource.
              */
@@ -543,6 +593,14 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
         public static final class Builder {
             private String tagKey; 
             private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -604,6 +662,13 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
@@ -867,6 +932,31 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             private String status; 
             private Tags tags; 
             private String timeSlot; 
+
+            private Builder() {
+            } 
+
+            private Builder(CapacityReservationItem model) {
+                this.allocatedResources = model.allocatedResources;
+                this.capacityReservationOwnerId = model.capacityReservationOwnerId;
+                this.description = model.description;
+                this.endTime = model.endTime;
+                this.endTimeType = model.endTimeType;
+                this.instanceChargeType = model.instanceChargeType;
+                this.platform = model.platform;
+                this.privatePoolOptionsId = model.privatePoolOptionsId;
+                this.privatePoolOptionsMatchCriteria = model.privatePoolOptionsMatchCriteria;
+                this.privatePoolOptionsName = model.privatePoolOptionsName;
+                this.regionId = model.regionId;
+                this.reservedInstanceId = model.reservedInstanceId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.savingPlanId = model.savingPlanId;
+                this.startTime = model.startTime;
+                this.startTimeType = model.startTimeType;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.timeSlot = model.timeSlot;
+            } 
 
             /**
              * <p>Details of the allocated resources.</p>
@@ -1138,6 +1228,13 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<CapacityReservationItem> capacityReservationItem; 
+
+            private Builder() {
+            } 
+
+            private Builder(CapacityReservationSet model) {
+                this.capacityReservationItem = model.capacityReservationItem;
+            } 
 
             /**
              * CapacityReservationItem.

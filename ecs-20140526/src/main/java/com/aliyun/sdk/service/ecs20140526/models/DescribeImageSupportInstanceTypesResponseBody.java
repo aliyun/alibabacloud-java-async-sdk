@@ -44,6 +44,10 @@ public class DescribeImageSupportInstanceTypesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return imageId
      */
@@ -77,6 +81,16 @@ public class DescribeImageSupportInstanceTypesResponseBody extends TeaModel {
         private InstanceTypes instanceTypes; 
         private String regionId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeImageSupportInstanceTypesResponseBody model) {
+            this.imageId = model.imageId;
+            this.instanceTypes = model.instanceTypes;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The key of filter N. Only the image ID can be used to filter instance types. Valid values:</p>
@@ -233,6 +247,16 @@ public class DescribeImageSupportInstanceTypesResponseBody extends TeaModel {
             private String instanceTypeId; 
             private Float memorySize; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceType model) {
+                this.cpuCoreCount = model.cpuCoreCount;
+                this.instanceTypeFamily = model.instanceTypeFamily;
+                this.instanceTypeId = model.instanceTypeId;
+                this.memorySize = model.memorySize;
+            } 
+
             /**
              * <p>The number of vCPUs of the instance type.</p>
              * 
@@ -315,6 +339,13 @@ public class DescribeImageSupportInstanceTypesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<InstanceType> instanceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceTypes model) {
+                this.instanceType = model.instanceType;
+            } 
 
             /**
              * InstanceType.
