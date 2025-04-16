@@ -22,6 +22,10 @@ public class CreateSmsSignRequest extends Request {
     private String applySceneContent;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthorizationLetterId")
+    private String authorizationLetterId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MoreData")
     private java.util.List<String> moreData;
 
@@ -68,6 +72,7 @@ public class CreateSmsSignRequest extends Request {
     private CreateSmsSignRequest(Builder builder) {
         super(builder);
         this.applySceneContent = builder.applySceneContent;
+        this.authorizationLetterId = builder.authorizationLetterId;
         this.moreData = builder.moreData;
         this.ownerId = builder.ownerId;
         this.qualificationId = builder.qualificationId;
@@ -98,6 +103,13 @@ public class CreateSmsSignRequest extends Request {
      */
     public String getApplySceneContent() {
         return this.applySceneContent;
+    }
+
+    /**
+     * @return authorizationLetterId
+     */
+    public String getAuthorizationLetterId() {
+        return this.authorizationLetterId;
     }
 
     /**
@@ -172,6 +184,7 @@ public class CreateSmsSignRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateSmsSignRequest, Builder> {
         private String applySceneContent; 
+        private String authorizationLetterId; 
         private java.util.List<String> moreData; 
         private Long ownerId; 
         private Long qualificationId; 
@@ -190,6 +203,7 @@ public class CreateSmsSignRequest extends Request {
         private Builder(CreateSmsSignRequest request) {
             super(request);
             this.applySceneContent = request.applySceneContent;
+            this.authorizationLetterId = request.authorizationLetterId;
             this.moreData = request.moreData;
             this.ownerId = request.ownerId;
             this.qualificationId = request.qualificationId;
@@ -221,6 +235,15 @@ public class CreateSmsSignRequest extends Request {
         public Builder applySceneContent(String applySceneContent) {
             this.putQueryParameter("ApplySceneContent", applySceneContent);
             this.applySceneContent = applySceneContent;
+            return this;
+        }
+
+        /**
+         * AuthorizationLetterId.
+         */
+        public Builder authorizationLetterId(String authorizationLetterId) {
+            this.putQueryParameter("AuthorizationLetterId", authorizationLetterId);
+            this.authorizationLetterId = authorizationLetterId;
             return this;
         }
 

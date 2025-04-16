@@ -330,6 +330,9 @@ public class QuerySmsSignListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuditStatus")
         private String auditStatus;
 
+        @com.aliyun.core.annotation.NameInMap("AuthorizationLetterId")
+        private String authorizationLetterId;
+
         @com.aliyun.core.annotation.NameInMap("BusinessType")
         private String businessType;
 
@@ -345,13 +348,18 @@ public class QuerySmsSignListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SignName")
         private String signName;
 
+        @com.aliyun.core.annotation.NameInMap("authorizationLetterAuditPass")
+        private Boolean authorizationLetterAuditPass;
+
         private SmsSignList(Builder builder) {
             this.auditStatus = builder.auditStatus;
+            this.authorizationLetterId = builder.authorizationLetterId;
             this.businessType = builder.businessType;
             this.createDate = builder.createDate;
             this.orderId = builder.orderId;
             this.reason = builder.reason;
             this.signName = builder.signName;
+            this.authorizationLetterAuditPass = builder.authorizationLetterAuditPass;
         }
 
         public static Builder builder() {
@@ -367,6 +375,13 @@ public class QuerySmsSignListResponseBody extends TeaModel {
          */
         public String getAuditStatus() {
             return this.auditStatus;
+        }
+
+        /**
+         * @return authorizationLetterId
+         */
+        public String getAuthorizationLetterId() {
+            return this.authorizationLetterId;
         }
 
         /**
@@ -404,24 +419,35 @@ public class QuerySmsSignListResponseBody extends TeaModel {
             return this.signName;
         }
 
+        /**
+         * @return authorizationLetterAuditPass
+         */
+        public Boolean getAuthorizationLetterAuditPass() {
+            return this.authorizationLetterAuditPass;
+        }
+
         public static final class Builder {
             private String auditStatus; 
+            private String authorizationLetterId; 
             private String businessType; 
             private String createDate; 
             private String orderId; 
             private Reason reason; 
             private String signName; 
+            private Boolean authorizationLetterAuditPass; 
 
             private Builder() {
             } 
 
             private Builder(SmsSignList model) {
                 this.auditStatus = model.auditStatus;
+                this.authorizationLetterId = model.authorizationLetterId;
                 this.businessType = model.businessType;
                 this.createDate = model.createDate;
                 this.orderId = model.orderId;
                 this.reason = model.reason;
                 this.signName = model.signName;
+                this.authorizationLetterAuditPass = model.authorizationLetterAuditPass;
             } 
 
             /**
@@ -438,6 +464,14 @@ public class QuerySmsSignListResponseBody extends TeaModel {
              */
             public Builder auditStatus(String auditStatus) {
                 this.auditStatus = auditStatus;
+                return this;
+            }
+
+            /**
+             * AuthorizationLetterId.
+             */
+            public Builder authorizationLetterId(String authorizationLetterId) {
+                this.authorizationLetterId = authorizationLetterId;
                 return this;
             }
 
@@ -498,6 +532,14 @@ public class QuerySmsSignListResponseBody extends TeaModel {
              */
             public Builder signName(String signName) {
                 this.signName = signName;
+                return this;
+            }
+
+            /**
+             * authorizationLetterAuditPass.
+             */
+            public Builder authorizationLetterAuditPass(Boolean authorizationLetterAuditPass) {
+                this.authorizationLetterAuditPass = authorizationLetterAuditPass;
                 return this;
             }
 

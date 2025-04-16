@@ -23,6 +23,12 @@ public class GetSmsSignResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AuditInfo")
     private AuditInfo auditInfo;
 
+    @com.aliyun.core.annotation.NameInMap("AuthorizationLetterAuditPass")
+    private Boolean authorizationLetterAuditPass;
+
+    @com.aliyun.core.annotation.NameInMap("AuthorizationLetterId")
+    private String authorizationLetterId;
+
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
@@ -71,6 +77,8 @@ public class GetSmsSignResponseBody extends TeaModel {
     private GetSmsSignResponseBody(Builder builder) {
         this.applyScene = builder.applyScene;
         this.auditInfo = builder.auditInfo;
+        this.authorizationLetterAuditPass = builder.authorizationLetterAuditPass;
+        this.authorizationLetterId = builder.authorizationLetterId;
         this.code = builder.code;
         this.createDate = builder.createDate;
         this.fileUrlList = builder.fileUrlList;
@@ -112,6 +120,20 @@ public class GetSmsSignResponseBody extends TeaModel {
      */
     public AuditInfo getAuditInfo() {
         return this.auditInfo;
+    }
+
+    /**
+     * @return authorizationLetterAuditPass
+     */
+    public Boolean getAuthorizationLetterAuditPass() {
+        return this.authorizationLetterAuditPass;
+    }
+
+    /**
+     * @return authorizationLetterId
+     */
+    public String getAuthorizationLetterId() {
+        return this.authorizationLetterId;
     }
 
     /**
@@ -222,6 +244,8 @@ public class GetSmsSignResponseBody extends TeaModel {
     public static final class Builder {
         private String applyScene; 
         private AuditInfo auditInfo; 
+        private Boolean authorizationLetterAuditPass; 
+        private String authorizationLetterId; 
         private String code; 
         private String createDate; 
         private java.util.List<String> fileUrlList; 
@@ -244,6 +268,8 @@ public class GetSmsSignResponseBody extends TeaModel {
         private Builder(GetSmsSignResponseBody model) {
             this.applyScene = model.applyScene;
             this.auditInfo = model.auditInfo;
+            this.authorizationLetterAuditPass = model.authorizationLetterAuditPass;
+            this.authorizationLetterId = model.authorizationLetterId;
             this.code = model.code;
             this.createDate = model.createDate;
             this.fileUrlList = model.fileUrlList;
@@ -277,6 +303,22 @@ public class GetSmsSignResponseBody extends TeaModel {
          */
         public Builder auditInfo(AuditInfo auditInfo) {
             this.auditInfo = auditInfo;
+            return this;
+        }
+
+        /**
+         * AuthorizationLetterAuditPass.
+         */
+        public Builder authorizationLetterAuditPass(Boolean authorizationLetterAuditPass) {
+            this.authorizationLetterAuditPass = authorizationLetterAuditPass;
+            return this;
+        }
+
+        /**
+         * AuthorizationLetterId.
+         */
+        public Builder authorizationLetterId(String authorizationLetterId) {
+            this.authorizationLetterId = authorizationLetterId;
             return this;
         }
 
