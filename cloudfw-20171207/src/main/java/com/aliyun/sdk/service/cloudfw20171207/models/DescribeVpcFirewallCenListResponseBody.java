@@ -40,6 +40,10 @@ public class DescribeVpcFirewallCenListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class DescribeVpcFirewallCenListResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
         private java.util.List<VpcFirewalls> vpcFirewalls; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVpcFirewallCenListResponseBody model) {
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.vpcFirewalls = model.vpcFirewalls;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -102,6 +115,60 @@ public class DescribeVpcFirewallCenListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVpcFirewallCenListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVpcFirewallCenListResponseBody</p>
+     */
+    public static class AclConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("StrictMode")
+        private Integer strictMode;
+
+        private AclConfig(Builder builder) {
+            this.strictMode = builder.strictMode;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AclConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return strictMode
+         */
+        public Integer getStrictMode() {
+            return this.strictMode;
+        }
+
+        public static final class Builder {
+            private Integer strictMode; 
+
+            private Builder() {
+            } 
+
+            private Builder(AclConfig model) {
+                this.strictMode = model.strictMode;
+            } 
+
+            /**
+             * StrictMode.
+             */
+            public Builder strictMode(Integer strictMode) {
+                this.strictMode = strictMode;
+                return this;
+            }
+
+            public AclConfig build() {
+                return new AclConfig(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link DescribeVpcFirewallCenListResponseBody} extends {@link TeaModel}
@@ -169,6 +236,16 @@ public class DescribeVpcFirewallCenListResponseBody extends TeaModel {
             private Integer enableAllPatch; 
             private Integer ruleClass; 
             private Integer runMode; 
+
+            private Builder() {
+            } 
+
+            private Builder(IpsConfig model) {
+                this.basicRules = model.basicRules;
+                this.enableAllPatch = model.enableAllPatch;
+                this.ruleClass = model.ruleClass;
+                this.runMode = model.runMode;
+            } 
 
             /**
              * <p>Indicates whether basic protection is enabled. Valid values:</p>
@@ -282,6 +359,14 @@ public class DescribeVpcFirewallCenListResponseBody extends TeaModel {
             private String destinationCidr; 
             private String nextHopInstanceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(RouteEntryList model) {
+                this.destinationCidr = model.destinationCidr;
+                this.nextHopInstanceId = model.nextHopInstanceId;
+            } 
+
             /**
              * <p>The destination CIDR block of the VPC.</p>
              * 
@@ -354,6 +439,14 @@ public class DescribeVpcFirewallCenListResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<RouteEntryList> routeEntryList; 
             private String routeTableId; 
+
+            private Builder() {
+            } 
+
+            private Builder(VpcCidrTableList model) {
+                this.routeEntryList = model.routeEntryList;
+                this.routeTableId = model.routeTableId;
+            } 
 
             /**
              * <p>An array that consists of the route entries for the VPC.</p>
@@ -569,6 +662,26 @@ public class DescribeVpcFirewallCenListResponseBody extends TeaModel {
             private String vpcId; 
             private String vpcName; 
 
+            private Builder() {
+            } 
+
+            private Builder(LocalVpc model) {
+                this.authorizationStatus = model.authorizationStatus;
+                this.defendCidrList = model.defendCidrList;
+                this.manualVSwitchId = model.manualVSwitchId;
+                this.networkInstanceId = model.networkInstanceId;
+                this.networkInstanceName = model.networkInstanceName;
+                this.networkInstanceType = model.networkInstanceType;
+                this.ownerId = model.ownerId;
+                this.regionNo = model.regionNo;
+                this.routeMode = model.routeMode;
+                this.supportManualMode = model.supportManualMode;
+                this.transitRouterType = model.transitRouterType;
+                this.vpcCidrTableList = model.vpcCidrTableList;
+                this.vpcId = model.vpcId;
+                this.vpcName = model.vpcName;
+            } 
+
             /**
              * <p>Indicates whether the VPC is granted the required permissions. The value is fixed as <strong>authorized</strong>, which indicates that the VPC is granted the required permissions.</p>
              * 
@@ -748,6 +861,9 @@ public class DescribeVpcFirewallCenListResponseBody extends TeaModel {
      * <p>DescribeVpcFirewallCenListResponseBody</p>
      */
     public static class VpcFirewalls extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AclConfig")
+        private AclConfig aclConfig;
+
         @com.aliyun.core.annotation.NameInMap("CenId")
         private String cenId;
 
@@ -785,6 +901,7 @@ public class DescribeVpcFirewallCenListResponseBody extends TeaModel {
         private String vpcFirewallName;
 
         private VpcFirewalls(Builder builder) {
+            this.aclConfig = builder.aclConfig;
             this.cenId = builder.cenId;
             this.cenName = builder.cenName;
             this.connectType = builder.connectType;
@@ -805,6 +922,13 @@ public class DescribeVpcFirewallCenListResponseBody extends TeaModel {
 
         public static VpcFirewalls create() {
             return builder().build();
+        }
+
+        /**
+         * @return aclConfig
+         */
+        public AclConfig getAclConfig() {
+            return this.aclConfig;
         }
 
         /**
@@ -892,6 +1016,7 @@ public class DescribeVpcFirewallCenListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private AclConfig aclConfig; 
             private String cenId; 
             private String cenName; 
             private String connectType; 
@@ -904,6 +1029,33 @@ public class DescribeVpcFirewallCenListResponseBody extends TeaModel {
             private String resultCode; 
             private String vpcFirewallId; 
             private String vpcFirewallName; 
+
+            private Builder() {
+            } 
+
+            private Builder(VpcFirewalls model) {
+                this.aclConfig = model.aclConfig;
+                this.cenId = model.cenId;
+                this.cenName = model.cenName;
+                this.connectType = model.connectType;
+                this.firewallSwitchStatus = model.firewallSwitchStatus;
+                this.ipsConfig = model.ipsConfig;
+                this.localVpc = model.localVpc;
+                this.memberUid = model.memberUid;
+                this.precheckStatus = model.precheckStatus;
+                this.regionStatus = model.regionStatus;
+                this.resultCode = model.resultCode;
+                this.vpcFirewallId = model.vpcFirewallId;
+                this.vpcFirewallName = model.vpcFirewallName;
+            } 
+
+            /**
+             * AclConfig.
+             */
+            public Builder aclConfig(AclConfig aclConfig) {
+                this.aclConfig = aclConfig;
+                return this;
+            }
 
             /**
              * <p>The ID of the CEN instance.</p>

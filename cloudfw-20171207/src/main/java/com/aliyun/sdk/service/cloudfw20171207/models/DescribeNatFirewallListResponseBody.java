@@ -40,6 +40,10 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return natFirewallList
      */
@@ -65,6 +69,15 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
         private java.util.List<NatFirewallList> natFirewallList; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeNatFirewallListResponseBody model) {
+            this.natFirewallList = model.natFirewallList;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The NAT firewalls.</p>
@@ -169,6 +182,16 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
             private String nextHopId; 
             private String nextHopType; 
             private String routeTableId; 
+
+            private Builder() {
+            } 
+
+            private Builder(NatRouteEntryList model) {
+                this.destinationCidr = model.destinationCidr;
+                this.nextHopId = model.nextHopId;
+                this.nextHopType = model.nextHopType;
+                this.routeTableId = model.routeTableId;
+            } 
 
             /**
              * <p>The destination CIDR block of the default route.</p>
@@ -396,6 +419,25 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
             private Integer strictMode; 
             private String vpcId; 
             private String vpcName; 
+
+            private Builder() {
+            } 
+
+            private Builder(NatFirewallList model) {
+                this.aliUid = model.aliUid;
+                this.errorDetail = model.errorDetail;
+                this.memberUid = model.memberUid;
+                this.natGatewayId = model.natGatewayId;
+                this.natGatewayName = model.natGatewayName;
+                this.natRouteEntryList = model.natRouteEntryList;
+                this.proxyId = model.proxyId;
+                this.proxyName = model.proxyName;
+                this.proxyStatus = model.proxyStatus;
+                this.regionId = model.regionId;
+                this.strictMode = model.strictMode;
+                this.vpcId = model.vpcId;
+                this.vpcName = model.vpcName;
+            } 
 
             /**
              * <p>The UID of the Alibaba Cloud account.</p>

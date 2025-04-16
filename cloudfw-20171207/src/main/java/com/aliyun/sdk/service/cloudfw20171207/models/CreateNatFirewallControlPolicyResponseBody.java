@@ -36,6 +36,10 @@ public class CreateNatFirewallControlPolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return aclUuid
      */
@@ -53,6 +57,14 @@ public class CreateNatFirewallControlPolicyResponseBody extends TeaModel {
     public static final class Builder {
         private String aclUuid; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateNatFirewallControlPolicyResponseBody model) {
+            this.aclUuid = model.aclUuid;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The unique ID of the access control policy.</p>

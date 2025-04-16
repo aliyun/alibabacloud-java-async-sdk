@@ -40,6 +40,10 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
         private java.util.List<TrafficList> trafficList; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePostpayTrafficDetailResponseBody model) {
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.trafficList = model.trafficList;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -241,6 +254,22 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
             private Long totalBytes; 
             private String trafficDay; 
             private String trafficType; 
+
+            private Builder() {
+            } 
+
+            private Builder(TrafficList model) {
+                this.inBytes = model.inBytes;
+                this.instanceId = model.instanceId;
+                this.instanceType = model.instanceType;
+                this.outBytes = model.outBytes;
+                this.protectionDuration = model.protectionDuration;
+                this.regionNo = model.regionNo;
+                this.resourceId = model.resourceId;
+                this.totalBytes = model.totalBytes;
+                this.trafficDay = model.trafficDay;
+                this.trafficType = model.trafficType;
+            } 
 
             /**
              * <p>The inbound network throughput, which indicates the total number of bytes that are received Unit: bytes.</p>

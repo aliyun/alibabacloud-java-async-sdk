@@ -36,6 +36,10 @@ public class DescribeAssetStatisticResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeAssetStatisticResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private ResourceSpecStatistic resourceSpecStatistic; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAssetStatisticResponseBody model) {
+            this.requestId = model.requestId;
+            this.resourceSpecStatistic = model.resourceSpecStatistic;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -146,6 +158,16 @@ public class DescribeAssetStatisticResponseBody extends TeaModel {
             private Integer ipNumUsed; 
             private Long sensitiveDataIpNumSpec; 
             private Long sensitiveDataIpNumUsed; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceSpecStatistic model) {
+                this.ipNumSpec = model.ipNumSpec;
+                this.ipNumUsed = model.ipNumUsed;
+                this.sensitiveDataIpNumSpec = model.sensitiveDataIpNumSpec;
+                this.sensitiveDataIpNumUsed = model.sensitiveDataIpNumUsed;
+            } 
 
             /**
              * <p>The number of public IP addresses that can be protected.</p>

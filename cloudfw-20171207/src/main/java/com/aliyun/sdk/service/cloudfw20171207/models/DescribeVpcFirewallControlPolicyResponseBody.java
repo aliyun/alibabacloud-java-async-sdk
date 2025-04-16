@@ -40,6 +40,10 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return policys
      */
@@ -65,6 +69,15 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         private java.util.List<Policys> policys; 
         private String requestId; 
         private String totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVpcFirewallControlPolicyResponseBody model) {
+            this.policys = model.policys;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The details of the access control policies.</p>
@@ -529,6 +542,46 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             private String sourceType; 
             private Long spreadCnt; 
             private Long startTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Policys model) {
+                this.aclAction = model.aclAction;
+                this.aclUuid = model.aclUuid;
+                this.applicationId = model.applicationId;
+                this.applicationName = model.applicationName;
+                this.applicationNameList = model.applicationNameList;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.destPort = model.destPort;
+                this.destPortGroup = model.destPortGroup;
+                this.destPortGroupPorts = model.destPortGroupPorts;
+                this.destPortType = model.destPortType;
+                this.destination = model.destination;
+                this.destinationGroupCidrs = model.destinationGroupCidrs;
+                this.destinationGroupType = model.destinationGroupType;
+                this.destinationType = model.destinationType;
+                this.domainResolveType = model.domainResolveType;
+                this.endTime = model.endTime;
+                this.hitLastTime = model.hitLastTime;
+                this.hitTimes = model.hitTimes;
+                this.memberUid = model.memberUid;
+                this.modifyTime = model.modifyTime;
+                this.order = model.order;
+                this.proto = model.proto;
+                this.release = model.release;
+                this.repeatDays = model.repeatDays;
+                this.repeatEndTime = model.repeatEndTime;
+                this.repeatStartTime = model.repeatStartTime;
+                this.repeatType = model.repeatType;
+                this.source = model.source;
+                this.sourceGroupCidrs = model.sourceGroupCidrs;
+                this.sourceGroupType = model.sourceGroupType;
+                this.sourceType = model.sourceType;
+                this.spreadCnt = model.spreadCnt;
+                this.startTime = model.startTime;
+            } 
 
             /**
              * <p>The action that Cloud Firewall performs on the traffic. Valid values:</p>

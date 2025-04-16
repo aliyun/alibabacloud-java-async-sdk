@@ -40,6 +40,10 @@ public class DescribeAssetRiskListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return assetList
      */
@@ -65,6 +69,15 @@ public class DescribeAssetRiskListResponseBody extends TeaModel {
         private java.util.List<AssetList> assetList; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAssetRiskListResponseBody model) {
+            this.assetList = model.assetList;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The details of the assets.</p>
@@ -169,6 +182,16 @@ public class DescribeAssetRiskListResponseBody extends TeaModel {
             private Long ipVersion; 
             private String reason; 
             private String riskLevel; 
+
+            private Builder() {
+            } 
+
+            private Builder(AssetList model) {
+                this.ip = model.ip;
+                this.ipVersion = model.ipVersion;
+                this.reason = model.reason;
+                this.riskLevel = model.riskLevel;
+            } 
 
             /**
              * <p>The IP address of the server.</p>

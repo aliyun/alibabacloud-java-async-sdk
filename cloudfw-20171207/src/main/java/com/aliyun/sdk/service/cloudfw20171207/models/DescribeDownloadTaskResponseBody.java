@@ -40,6 +40,10 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Tasks> tasks; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDownloadTaskResponseBody model) {
+            this.requestId = model.requestId;
+            this.tasks = model.tasks;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -217,6 +230,20 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
             private String taskId; 
             private String taskName; 
             private String taskType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tasks model) {
+                this.createTime = model.createTime;
+                this.expireTime = model.expireTime;
+                this.fileSize = model.fileSize;
+                this.fileURL = model.fileURL;
+                this.status = model.status;
+                this.taskId = model.taskId;
+                this.taskName = model.taskName;
+                this.taskType = model.taskType;
+            } 
 
             /**
              * <p>The time when the task was created. The value is a UNIX timestamp. Unit: seconds.</p>

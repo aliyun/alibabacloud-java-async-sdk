@@ -40,6 +40,10 @@ public class DescribeAssetListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return assets
      */
@@ -65,6 +69,15 @@ public class DescribeAssetListResponseBody extends TeaModel {
         private java.util.List<Assets> assets; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAssetListResponseBody model) {
+            this.assets = model.assets;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The assets that are protected by Cloud Firewall.</p>
@@ -397,6 +410,35 @@ public class DescribeAssetListResponseBody extends TeaModel {
             private Long sgStatusTime; 
             private String syncStatus; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Assets model) {
+                this.aliUid = model.aliUid;
+                this.bindInstanceId = model.bindInstanceId;
+                this.bindInstanceName = model.bindInstanceName;
+                this.createTimeStamp = model.createTimeStamp;
+                this.internetAddress = model.internetAddress;
+                this.intranetAddress = model.intranetAddress;
+                this.ipVersion = model.ipVersion;
+                this.last7DayOutTrafficBytes = model.last7DayOutTrafficBytes;
+                this.memberUid = model.memberUid;
+                this.name = model.name;
+                this.newResourceTag = model.newResourceTag;
+                this.note = model.note;
+                this.protectStatus = model.protectStatus;
+                this.regionID = model.regionID;
+                this.regionStatus = model.regionStatus;
+                this.resourceInstanceId = model.resourceInstanceId;
+                this.resourceType = model.resourceType;
+                this.riskLevel = model.riskLevel;
+                this.sensitiveDataStatus = model.sensitiveDataStatus;
+                this.sgStatus = model.sgStatus;
+                this.sgStatusTime = model.sgStatusTime;
+                this.syncStatus = model.syncStatus;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The UID of the Alibaba Cloud account.</p>

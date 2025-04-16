@@ -78,7 +78,7 @@ public class AddAddressBookRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -358,6 +358,14 @@ public class AddAddressBookRequest extends Request {
         public static final class Builder {
             private String tagKey; 
             private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(TagList model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
 
             /**
              * <p>The key of the ECS tag.</p>

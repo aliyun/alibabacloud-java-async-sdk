@@ -36,6 +36,10 @@ public class PutEnableFwSwitchResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return abnormalResourceStatusList
      */
@@ -53,6 +57,14 @@ public class PutEnableFwSwitchResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<AbnormalResourceStatusList> abnormalResourceStatusList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(PutEnableFwSwitchResponseBody model) {
+            this.abnormalResourceStatusList = model.abnormalResourceStatusList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The status information of the asset when it is not synchronized to Cloud Firewall.</p>
@@ -134,6 +146,15 @@ public class PutEnableFwSwitchResponseBody extends TeaModel {
             private String msg; 
             private String resource; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(AbnormalResourceStatusList model) {
+                this.msg = model.msg;
+                this.resource = model.resource;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The message displayed when the asset is not synchronized to Cloud Firewall. Valid values:</p>

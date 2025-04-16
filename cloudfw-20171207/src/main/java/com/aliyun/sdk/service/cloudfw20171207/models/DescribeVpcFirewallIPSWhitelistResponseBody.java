@@ -36,6 +36,10 @@ public class DescribeVpcFirewallIPSWhitelistResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeVpcFirewallIPSWhitelistResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<Whitelists> whitelists; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVpcFirewallIPSWhitelistResponseBody model) {
+            this.requestId = model.requestId;
+            this.whitelists = model.whitelists;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -158,6 +170,17 @@ public class DescribeVpcFirewallIPSWhitelistResponseBody extends TeaModel {
             private String vpcFirewallId; 
             private java.util.List<String> whiteListValue; 
             private Long whiteType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Whitelists model) {
+                this.listType = model.listType;
+                this.listValue = model.listValue;
+                this.vpcFirewallId = model.vpcFirewallId;
+                this.whiteListValue = model.whiteListValue;
+                this.whiteType = model.whiteType;
+            } 
 
             /**
              * <p>The type of the list. Valid values:</p>

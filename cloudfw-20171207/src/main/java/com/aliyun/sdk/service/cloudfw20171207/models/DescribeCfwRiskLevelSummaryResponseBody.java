@@ -36,6 +36,10 @@ public class DescribeCfwRiskLevelSummaryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeCfwRiskLevelSummaryResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<RiskList> riskList; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCfwRiskLevelSummaryResponseBody model) {
+            this.requestId = model.requestId;
+            this.riskList = model.riskList;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -134,6 +146,15 @@ public class DescribeCfwRiskLevelSummaryResponseBody extends TeaModel {
             private String level; 
             private String num; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(RiskList model) {
+                this.level = model.level;
+                this.num = model.num;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The risk levels. Valid values:</p>

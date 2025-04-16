@@ -36,6 +36,10 @@ public class DescribeTrFirewallsV2RouteListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return firewallRouteDetailList
      */
@@ -53,6 +57,14 @@ public class DescribeTrFirewallsV2RouteListResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<FirewallRouteDetailList> firewallRouteDetailList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTrFirewallsV2RouteListResponseBody model) {
+            this.firewallRouteDetailList = model.firewallRouteDetailList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The route tables of Cloud Firewall.</p>
@@ -146,6 +158,16 @@ public class DescribeTrFirewallsV2RouteListResponseBody extends TeaModel {
             private String trFirewallRouteNexthop; 
             private String trFirewallRoutePolicyId; 
             private String trFirewallRouteTableId; 
+
+            private Builder() {
+            } 
+
+            private Builder(FirewallRouteDetailList model) {
+                this.trFirewallRouteDestination = model.trFirewallRouteDestination;
+                this.trFirewallRouteNexthop = model.trFirewallRouteNexthop;
+                this.trFirewallRoutePolicyId = model.trFirewallRoutePolicyId;
+                this.trFirewallRouteTableId = model.trFirewallRouteTableId;
+            } 
 
             /**
              * <p>The destination address of the route.</p>

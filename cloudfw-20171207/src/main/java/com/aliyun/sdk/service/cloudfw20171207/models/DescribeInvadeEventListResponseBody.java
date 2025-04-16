@@ -52,6 +52,10 @@ public class DescribeInvadeEventListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return eventList
      */
@@ -101,6 +105,18 @@ public class DescribeInvadeEventListResponseBody extends TeaModel {
         private Integer middleLevelPercent; 
         private PageInfo pageInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInvadeEventListResponseBody model) {
+            this.eventList = model.eventList;
+            this.highLevelPercent = model.highLevelPercent;
+            this.lowLevelPercent = model.lowLevelPercent;
+            this.middleLevelPercent = model.middleLevelPercent;
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>An array that consists of breach awareness events.</p>
@@ -379,6 +395,28 @@ public class DescribeInvadeEventListResponseBody extends TeaModel {
             private String publicIP; 
             private String publicIpType; 
             private Integer riskLevel; 
+
+            private Builder() {
+            } 
+
+            private Builder(EventList model) {
+                this.assetsInstanceId = model.assetsInstanceId;
+                this.assetsInstanceName = model.assetsInstanceName;
+                this.assetsType = model.assetsType;
+                this.eventKey = model.eventKey;
+                this.eventName = model.eventName;
+                this.eventSrc = model.eventSrc;
+                this.eventUuid = model.eventUuid;
+                this.firstTime = model.firstTime;
+                this.isIgnore = model.isIgnore;
+                this.lastTime = model.lastTime;
+                this.memberUid = model.memberUid;
+                this.privateIP = model.privateIP;
+                this.processStatus = model.processStatus;
+                this.publicIP = model.publicIP;
+                this.publicIpType = model.publicIpType;
+                this.riskLevel = model.riskLevel;
+            } 
 
             /**
              * <p>The ID of the affected asset.</p>
@@ -661,6 +699,15 @@ public class DescribeInvadeEventListResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The page number of the returned page.</p>

@@ -89,7 +89,7 @@ public class CreateSecurityProxyRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -434,6 +434,16 @@ public class CreateSecurityProxyRequest extends Request {
             private String nextHopId; 
             private String nextHopType; 
             private String routeTableId; 
+
+            private Builder() {
+            } 
+
+            private Builder(NatRouteEntryList model) {
+                this.destinationCidr = model.destinationCidr;
+                this.nextHopId = model.nextHopId;
+                this.nextHopType = model.nextHopType;
+                this.routeTableId = model.routeTableId;
+            } 
 
             /**
              * <p>The destination CIDR block of the default route.</p>

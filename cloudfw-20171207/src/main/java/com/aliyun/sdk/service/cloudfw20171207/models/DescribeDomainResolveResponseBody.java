@@ -36,6 +36,10 @@ public class DescribeDomainResolveResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeDomainResolveResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private ResolveResult resolveResult; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainResolveResponseBody model) {
+            this.requestId = model.requestId;
+            this.resolveResult = model.resolveResult;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -122,6 +134,14 @@ public class DescribeDomainResolveResponseBody extends TeaModel {
         public static final class Builder {
             private String ipAddrs; 
             private Long updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResolveResult model) {
+                this.ipAddrs = model.ipAddrs;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The IP address to which the domain name is resolved. Multiple IP addresses are separated by commas (,).</p>

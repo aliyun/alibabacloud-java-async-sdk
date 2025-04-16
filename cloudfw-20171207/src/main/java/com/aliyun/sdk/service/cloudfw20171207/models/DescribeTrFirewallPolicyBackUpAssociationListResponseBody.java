@@ -36,6 +36,10 @@ public class DescribeTrFirewallPolicyBackUpAssociationListResponseBody extends T
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return policyAssociationBackupConfigs
      */
@@ -53,6 +57,14 @@ public class DescribeTrFirewallPolicyBackUpAssociationListResponseBody extends T
     public static final class Builder {
         private java.util.List<PolicyAssociationBackupConfigs> policyAssociationBackupConfigs; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTrFirewallPolicyBackUpAssociationListResponseBody model) {
+            this.policyAssociationBackupConfigs = model.policyAssociationBackupConfigs;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The route tables.</p>
@@ -158,6 +170,17 @@ public class DescribeTrFirewallPolicyBackUpAssociationListResponseBody extends T
             private String candidateType; 
             private String currentRouteTableId; 
             private String originalRouteTableId; 
+
+            private Builder() {
+            } 
+
+            private Builder(PolicyAssociationBackupConfigs model) {
+                this.candidateId = model.candidateId;
+                this.candidateName = model.candidateName;
+                this.candidateType = model.candidateType;
+                this.currentRouteTableId = model.currentRouteTableId;
+                this.originalRouteTableId = model.originalRouteTableId;
+            } 
 
             /**
              * <p>The ID of the traffic redirection instance.</p>

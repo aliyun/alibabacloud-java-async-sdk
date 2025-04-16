@@ -40,6 +40,10 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataList
      */
@@ -65,6 +69,15 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
         private java.util.List<DataList> dataList; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRiskEventGroupResponseBody model) {
+            this.dataList = model.dataList;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>An array that consists of the details of the intrusion events.</p>
@@ -169,6 +182,16 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
             private String cityName; 
             private String countryId; 
             private String countryName; 
+
+            private Builder() {
+            } 
+
+            private Builder(IPLocationInfo model) {
+                this.cityId = model.cityId;
+                this.cityName = model.cityName;
+                this.countryId = model.countryId;
+                this.countryName = model.countryName;
+            } 
 
             /**
              * <p>The ID of the city to which the IP address belongs.</p>
@@ -288,6 +311,16 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
             private String resourceInstanceId; 
             private String resourceInstanceName; 
             private String resourcePrivateIP; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourcePrivateIPList model) {
+                this.regionNo = model.regionNo;
+                this.resourceInstanceId = model.resourceInstanceId;
+                this.resourceInstanceName = model.resourceInstanceName;
+                this.resourcePrivateIP = model.resourcePrivateIP;
+            } 
 
             /**
              * <p>The ID of the region to which the private IP address belongs.</p>
@@ -419,6 +452,17 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
             private String networkInstanceId; 
             private String networkInstanceName; 
             private String regionNo; 
+
+            private Builder() {
+            } 
+
+            private Builder(VpcDstInfo model) {
+                this.ecsInstanceId = model.ecsInstanceId;
+                this.ecsInstanceName = model.ecsInstanceName;
+                this.networkInstanceId = model.networkInstanceId;
+                this.networkInstanceName = model.networkInstanceName;
+                this.regionNo = model.regionNo;
+            } 
 
             /**
              * <p>The ID of the ECS instance.</p>
@@ -561,6 +605,17 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
             private String networkInstanceId; 
             private String networkInstanceName; 
             private String regionNo; 
+
+            private Builder() {
+            } 
+
+            private Builder(VpcSrcInfo model) {
+                this.ecsInstanceId = model.ecsInstanceId;
+                this.ecsInstanceName = model.ecsInstanceName;
+                this.networkInstanceId = model.networkInstanceId;
+                this.networkInstanceName = model.networkInstanceName;
+                this.regionNo = model.regionNo;
+            } 
 
             /**
              * <p>The ID of the ECS instance.</p>
@@ -919,6 +974,35 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
             private VpcDstInfo vpcDstInfo; 
             private VpcSrcInfo vpcSrcInfo; 
             private Integer vulLevel; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataList model) {
+                this.attackApp = model.attackApp;
+                this.attackType = model.attackType;
+                this.description = model.description;
+                this.direction = model.direction;
+                this.dstIP = model.dstIP;
+                this.eventCount = model.eventCount;
+                this.eventId = model.eventId;
+                this.eventName = model.eventName;
+                this.firstEventTime = model.firstEventTime;
+                this.IPLocationInfo = model.IPLocationInfo;
+                this.lastEventTime = model.lastEventTime;
+                this.resourcePrivateIPList = model.resourcePrivateIPList;
+                this.resourceType = model.resourceType;
+                this.ruleId = model.ruleId;
+                this.ruleResult = model.ruleResult;
+                this.ruleSource = model.ruleSource;
+                this.srcIP = model.srcIP;
+                this.srcIPTag = model.srcIPTag;
+                this.srcPrivateIPList = model.srcPrivateIPList;
+                this.tag = model.tag;
+                this.vpcDstInfo = model.vpcDstInfo;
+                this.vpcSrcInfo = model.vpcSrcInfo;
+                this.vulLevel = model.vulLevel;
+            } 
 
             /**
              * <p>The name of the attacked application.</p>

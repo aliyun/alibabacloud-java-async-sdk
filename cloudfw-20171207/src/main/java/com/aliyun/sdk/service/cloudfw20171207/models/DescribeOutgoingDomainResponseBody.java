@@ -40,6 +40,10 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domainList
      */
@@ -65,6 +69,15 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
         private java.util.List<DomainList> domainList; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeOutgoingDomainResponseBody model) {
+            this.domainList = model.domainList;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The domain names in outbound connections.</p>
@@ -181,6 +194,17 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
             private String tagDescribe; 
             private String tagId; 
             private String tagName; 
+
+            private Builder() {
+            } 
+
+            private Builder(TagList model) {
+                this.classId = model.classId;
+                this.riskLevel = model.riskLevel;
+                this.tagDescribe = model.tagDescribe;
+                this.tagId = model.tagId;
+                this.tagName = model.tagName;
+            } 
 
             /**
              * <p>The type of the tag. Valid values:</p>
@@ -597,6 +621,39 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
             private Long sessionCount; 
             private java.util.List<TagList> tagList; 
             private String totalBytes; 
+
+            private Builder() {
+            } 
+
+            private Builder(DomainList model) {
+                this.aclCoverage = model.aclCoverage;
+                this.aclRecommendDetail = model.aclRecommendDetail;
+                this.aclStatus = model.aclStatus;
+                this.addressGroupName = model.addressGroupName;
+                this.addressGroupUUID = model.addressGroupUUID;
+                this.applicationNameList = model.applicationNameList;
+                this.assetCount = model.assetCount;
+                this.business = model.business;
+                this.categoryClassId = model.categoryClassId;
+                this.categoryId = model.categoryId;
+                this.categoryName = model.categoryName;
+                this.domain = model.domain;
+                this.groupName = model.groupName;
+                this.hasAcl = model.hasAcl;
+                this.hasAclRecommend = model.hasAclRecommend;
+                this.inBytes = model.inBytes;
+                this.isMarkNormal = model.isMarkNormal;
+                this.organization = model.organization;
+                this.outBytes = model.outBytes;
+                this.privateAssetCount = model.privateAssetCount;
+                this.ruleId = model.ruleId;
+                this.ruleName = model.ruleName;
+                this.securityReason = model.securityReason;
+                this.securitySuggest = model.securitySuggest;
+                this.sessionCount = model.sessionCount;
+                this.tagList = model.tagList;
+                this.totalBytes = model.totalBytes;
+            } 
 
             /**
              * <p>Indicates whether an access control policy is configured. Valid values:</p>

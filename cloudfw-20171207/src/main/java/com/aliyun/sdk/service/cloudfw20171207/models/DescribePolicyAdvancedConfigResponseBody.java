@@ -36,6 +36,10 @@ public class DescribePolicyAdvancedConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return internetSwitch
      */
@@ -53,6 +57,14 @@ public class DescribePolicyAdvancedConfigResponseBody extends TeaModel {
     public static final class Builder {
         private String internetSwitch; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePolicyAdvancedConfigResponseBody model) {
+            this.internetSwitch = model.internetSwitch;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Indicates whether the strict mode is enabled for the access control policy. Valid values:</p>

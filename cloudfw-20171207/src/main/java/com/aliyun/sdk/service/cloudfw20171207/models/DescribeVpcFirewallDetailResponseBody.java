@@ -64,6 +64,10 @@ public class DescribeVpcFirewallDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bandwidth
      */
@@ -137,6 +141,21 @@ public class DescribeVpcFirewallDetailResponseBody extends TeaModel {
         private String requestId; 
         private String vpcFirewallId; 
         private String vpcFirewallName; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVpcFirewallDetailResponseBody model) {
+            this.bandwidth = model.bandwidth;
+            this.connectType = model.connectType;
+            this.firewallSwitchStatus = model.firewallSwitchStatus;
+            this.localVpc = model.localVpc;
+            this.memberUid = model.memberUid;
+            this.peerVpc = model.peerVpc;
+            this.requestId = model.requestId;
+            this.vpcFirewallId = model.vpcFirewallId;
+            this.vpcFirewallName = model.vpcFirewallName;
+        } 
 
         /**
          * <p>The bandwidth of the Express Connect circuit. Unit: Mbit/s.</p>
@@ -287,6 +306,14 @@ public class DescribeVpcFirewallDetailResponseBody extends TeaModel {
             private String destinationCidr; 
             private String nextHopInstanceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(RouteEntryList model) {
+                this.destinationCidr = model.destinationCidr;
+                this.nextHopInstanceId = model.nextHopInstanceId;
+            } 
+
             /**
              * <p>The destination CIDR block of the local VPC.</p>
              * 
@@ -359,6 +386,14 @@ public class DescribeVpcFirewallDetailResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<RouteEntryList> routeEntryList; 
             private String routeTableId; 
+
+            private Builder() {
+            } 
+
+            private Builder(VpcCidrTableList model) {
+                this.routeEntryList = model.routeEntryList;
+                this.routeTableId = model.routeTableId;
+            } 
 
             /**
              * <p>The route entries of the local VPC.</p>
@@ -490,6 +525,19 @@ public class DescribeVpcFirewallDetailResponseBody extends TeaModel {
             private String vpcId; 
             private String vpcName; 
 
+            private Builder() {
+            } 
+
+            private Builder(LocalVpc model) {
+                this.eniId = model.eniId;
+                this.eniPrivateIpAddress = model.eniPrivateIpAddress;
+                this.regionNo = model.regionNo;
+                this.routerInterfaceId = model.routerInterfaceId;
+                this.vpcCidrTableList = model.vpcCidrTableList;
+                this.vpcId = model.vpcId;
+                this.vpcName = model.vpcName;
+            } 
+
             /**
              * <p>The ID of the ENI for the local VPC.</p>
              * 
@@ -615,6 +663,14 @@ public class DescribeVpcFirewallDetailResponseBody extends TeaModel {
             private String destinationCidr; 
             private String nextHopInstanceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(VpcCidrTableListRouteEntryList model) {
+                this.destinationCidr = model.destinationCidr;
+                this.nextHopInstanceId = model.nextHopInstanceId;
+            } 
+
             /**
              * <p>The destination CIDR block of the peer VPC.</p>
              * 
@@ -687,6 +743,14 @@ public class DescribeVpcFirewallDetailResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<VpcCidrTableListRouteEntryList> routeEntryList; 
             private String routeTableId; 
+
+            private Builder() {
+            } 
+
+            private Builder(PeerVpcVpcCidrTableList model) {
+                this.routeEntryList = model.routeEntryList;
+                this.routeTableId = model.routeTableId;
+            } 
 
             /**
              * <p>The route entries of the peer VPC.</p>
@@ -817,6 +881,19 @@ public class DescribeVpcFirewallDetailResponseBody extends TeaModel {
             private java.util.List<PeerVpcVpcCidrTableList> vpcCidrTableList; 
             private String vpcId; 
             private String vpcName; 
+
+            private Builder() {
+            } 
+
+            private Builder(PeerVpc model) {
+                this.eniId = model.eniId;
+                this.eniPrivateIpAddress = model.eniPrivateIpAddress;
+                this.regionNo = model.regionNo;
+                this.routerInterfaceId = model.routerInterfaceId;
+                this.vpcCidrTableList = model.vpcCidrTableList;
+                this.vpcId = model.vpcId;
+                this.vpcName = model.vpcName;
+            } 
 
             /**
              * <p>The ID of the ENI for the peer VPC.</p>

@@ -36,6 +36,10 @@ public class DescribeVpcListLiteResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeVpcListLiteResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<VpcList> vpcList; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVpcListLiteResponseBody model) {
+            this.requestId = model.requestId;
+            this.vpcList = model.vpcList;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -134,6 +146,15 @@ public class DescribeVpcListLiteResponseBody extends TeaModel {
             private String regionNo; 
             private String vpcId; 
             private String vpcName; 
+
+            private Builder() {
+            } 
+
+            private Builder(VpcList model) {
+                this.regionNo = model.regionNo;
+                this.vpcId = model.vpcId;
+                this.vpcName = model.vpcName;
+            } 
 
             /**
              * <p>The region ID of the VPC.</p>

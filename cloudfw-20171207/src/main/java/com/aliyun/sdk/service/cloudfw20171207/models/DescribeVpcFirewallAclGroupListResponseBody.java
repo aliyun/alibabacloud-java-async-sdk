@@ -40,6 +40,10 @@ public class DescribeVpcFirewallAclGroupListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return aclGroupList
      */
@@ -65,6 +69,15 @@ public class DescribeVpcFirewallAclGroupListResponseBody extends TeaModel {
         private java.util.List<AclGroupList> aclGroupList; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVpcFirewallAclGroupListResponseBody model) {
+            this.aclGroupList = model.aclGroupList;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The information about the policy groups.</p>
@@ -108,7 +121,64 @@ public class DescribeVpcFirewallAclGroupListResponseBody extends TeaModel {
      *
      * <p>DescribeVpcFirewallAclGroupListResponseBody</p>
      */
+    public static class AclConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("StrictMode")
+        private Integer strictMode;
+
+        private AclConfig(Builder builder) {
+            this.strictMode = builder.strictMode;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AclConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return strictMode
+         */
+        public Integer getStrictMode() {
+            return this.strictMode;
+        }
+
+        public static final class Builder {
+            private Integer strictMode; 
+
+            private Builder() {
+            } 
+
+            private Builder(AclConfig model) {
+                this.strictMode = model.strictMode;
+            } 
+
+            /**
+             * StrictMode.
+             */
+            public Builder strictMode(Integer strictMode) {
+                this.strictMode = strictMode;
+                return this;
+            }
+
+            public AclConfig build() {
+                return new AclConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeVpcFirewallAclGroupListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVpcFirewallAclGroupListResponseBody</p>
+     */
     public static class AclGroupList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AclConfig")
+        private AclConfig aclConfig;
+
         @com.aliyun.core.annotation.NameInMap("AclGroupId")
         private String aclGroupId;
 
@@ -125,6 +195,7 @@ public class DescribeVpcFirewallAclGroupListResponseBody extends TeaModel {
         private String memberUid;
 
         private AclGroupList(Builder builder) {
+            this.aclConfig = builder.aclConfig;
             this.aclGroupId = builder.aclGroupId;
             this.aclGroupName = builder.aclGroupName;
             this.aclRuleCount = builder.aclRuleCount;
@@ -138,6 +209,13 @@ public class DescribeVpcFirewallAclGroupListResponseBody extends TeaModel {
 
         public static AclGroupList create() {
             return builder().build();
+        }
+
+        /**
+         * @return aclConfig
+         */
+        public AclConfig getAclConfig() {
+            return this.aclConfig;
         }
 
         /**
@@ -176,11 +254,32 @@ public class DescribeVpcFirewallAclGroupListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private AclConfig aclConfig; 
             private String aclGroupId; 
             private String aclGroupName; 
             private Integer aclRuleCount; 
             private Boolean isDefault; 
             private String memberUid; 
+
+            private Builder() {
+            } 
+
+            private Builder(AclGroupList model) {
+                this.aclConfig = model.aclConfig;
+                this.aclGroupId = model.aclGroupId;
+                this.aclGroupName = model.aclGroupName;
+                this.aclRuleCount = model.aclRuleCount;
+                this.isDefault = model.isDefault;
+                this.memberUid = model.memberUid;
+            } 
+
+            /**
+             * AclConfig.
+             */
+            public Builder aclConfig(AclConfig aclConfig) {
+                this.aclConfig = aclConfig;
+                return this;
+            }
 
             /**
              * <p>The ID of the policy group.</p>

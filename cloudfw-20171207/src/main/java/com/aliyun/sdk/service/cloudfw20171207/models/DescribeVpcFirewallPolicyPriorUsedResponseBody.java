@@ -40,6 +40,10 @@ public class DescribeVpcFirewallPolicyPriorUsedResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return end
      */
@@ -65,6 +69,15 @@ public class DescribeVpcFirewallPolicyPriorUsedResponseBody extends TeaModel {
         private Integer end; 
         private String requestId; 
         private Integer start; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVpcFirewallPolicyPriorUsedResponseBody model) {
+            this.end = model.end;
+            this.requestId = model.requestId;
+            this.start = model.start;
+        } 
 
         /**
          * <p>The lowest priority for the access control policies.</p>

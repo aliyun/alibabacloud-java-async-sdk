@@ -44,6 +44,10 @@ public class CreateDownloadTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -77,6 +81,16 @@ public class CreateDownloadTaskResponseBody extends TeaModel {
         private String status; 
         private Long taskId; 
         private String taskName; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateDownloadTaskResponseBody model) {
+            this.requestId = model.requestId;
+            this.status = model.status;
+            this.taskId = model.taskId;
+            this.taskName = model.taskName;
+        } 
 
         /**
          * <p>The ID of the request.</p>

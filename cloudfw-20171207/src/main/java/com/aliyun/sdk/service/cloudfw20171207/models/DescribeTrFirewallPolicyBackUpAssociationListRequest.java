@@ -49,7 +49,7 @@ public class DescribeTrFirewallPolicyBackUpAssociationListRequest extends Reques
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -200,6 +200,14 @@ public class DescribeTrFirewallPolicyBackUpAssociationListRequest extends Reques
         public static final class Builder {
             private String candidateId; 
             private String candidateType; 
+
+            private Builder() {
+            } 
+
+            private Builder(CandidateList model) {
+                this.candidateId = model.candidateId;
+                this.candidateType = model.candidateType;
+            } 
 
             /**
              * <p>The ID of the traffic redirection instance.</p>

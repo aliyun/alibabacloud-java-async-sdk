@@ -36,6 +36,10 @@ public class CreateVpcFirewallCenConfigureRequest extends Request {
     private String firewallVpcCidrBlock;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FirewallVpcStandbyZoneId")
+    private String firewallVpcStandbyZoneId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FirewallVpcZoneId")
     private String firewallVpcZoneId;
 
@@ -72,6 +76,7 @@ public class CreateVpcFirewallCenConfigureRequest extends Request {
         this.firewallSwitch = builder.firewallSwitch;
         this.firewallVSwitchCidrBlock = builder.firewallVSwitchCidrBlock;
         this.firewallVpcCidrBlock = builder.firewallVpcCidrBlock;
+        this.firewallVpcStandbyZoneId = builder.firewallVpcStandbyZoneId;
         this.firewallVpcZoneId = builder.firewallVpcZoneId;
         this.lang = builder.lang;
         this.memberUid = builder.memberUid;
@@ -89,7 +94,7 @@ public class CreateVpcFirewallCenConfigureRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -120,6 +125,13 @@ public class CreateVpcFirewallCenConfigureRequest extends Request {
      */
     public String getFirewallVpcCidrBlock() {
         return this.firewallVpcCidrBlock;
+    }
+
+    /**
+     * @return firewallVpcStandbyZoneId
+     */
+    public String getFirewallVpcStandbyZoneId() {
+        return this.firewallVpcStandbyZoneId;
     }
 
     /**
@@ -176,6 +188,7 @@ public class CreateVpcFirewallCenConfigureRequest extends Request {
         private String firewallSwitch; 
         private String firewallVSwitchCidrBlock; 
         private String firewallVpcCidrBlock; 
+        private String firewallVpcStandbyZoneId; 
         private String firewallVpcZoneId; 
         private String lang; 
         private String memberUid; 
@@ -194,6 +207,7 @@ public class CreateVpcFirewallCenConfigureRequest extends Request {
             this.firewallSwitch = request.firewallSwitch;
             this.firewallVSwitchCidrBlock = request.firewallVSwitchCidrBlock;
             this.firewallVpcCidrBlock = request.firewallVpcCidrBlock;
+            this.firewallVpcStandbyZoneId = request.firewallVpcStandbyZoneId;
             this.firewallVpcZoneId = request.firewallVpcZoneId;
             this.lang = request.lang;
             this.memberUid = request.memberUid;
@@ -259,6 +273,22 @@ public class CreateVpcFirewallCenConfigureRequest extends Request {
         public Builder firewallVpcCidrBlock(String firewallVpcCidrBlock) {
             this.putQueryParameter("FirewallVpcCidrBlock", firewallVpcCidrBlock);
             this.firewallVpcCidrBlock = firewallVpcCidrBlock;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the backup availability zone to which the firewall belongs. The firewall will automatically switch to the backup availability zone to continue running only if the primary availability zone service is unavailable.
+         * If this parameter is not filled, the backup availability zone for the firewall will be automatically assigned.</p>
+         * <blockquote>
+         * <p>This parameter is only effective when creating a VPC firewall for the first time in this CEN region.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-b</p>
+         */
+        public Builder firewallVpcStandbyZoneId(String firewallVpcStandbyZoneId) {
+            this.putQueryParameter("FirewallVpcStandbyZoneId", firewallVpcStandbyZoneId);
+            this.firewallVpcStandbyZoneId = firewallVpcStandbyZoneId;
             return this;
         }
 

@@ -44,6 +44,10 @@ public class ReleasePostInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return httpStatusCode
      */
@@ -77,6 +81,16 @@ public class ReleasePostInstanceResponseBody extends TeaModel {
         private Boolean releaseStatus; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ReleasePostInstanceResponseBody model) {
+            this.httpStatusCode = model.httpStatusCode;
+            this.releaseStatus = model.releaseStatus;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code.</p>

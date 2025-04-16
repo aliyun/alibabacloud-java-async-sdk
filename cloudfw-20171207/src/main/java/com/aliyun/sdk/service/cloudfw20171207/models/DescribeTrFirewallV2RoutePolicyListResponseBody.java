@@ -40,6 +40,10 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
         private String requestId; 
         private String totalCount; 
         private java.util.List<TrFirewallRoutePolicies> trFirewallRoutePolicies; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTrFirewallV2RoutePolicyListResponseBody model) {
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.trFirewallRoutePolicies = model.trFirewallRoutePolicies;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -146,6 +159,14 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
             private String candidateId; 
             private String candidateType; 
 
+            private Builder() {
+            } 
+
+            private Builder(DestCandidateList model) {
+                this.candidateId = model.candidateId;
+                this.candidateType = model.candidateType;
+            } 
+
             /**
              * <p>The ID of the secondary traffic redirection instance.</p>
              * 
@@ -218,6 +239,14 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
         public static final class Builder {
             private String candidateId; 
             private String candidateType; 
+
+            private Builder() {
+            } 
+
+            private Builder(SrcCandidateList model) {
+                this.candidateId = model.candidateId;
+                this.candidateType = model.candidateType;
+            } 
 
             /**
              * <p>The ID of the primary traffic redirection instance.</p>
@@ -351,6 +380,19 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
             private String policyType; 
             private java.util.List<SrcCandidateList> srcCandidateList; 
             private String trFirewallRoutePolicyId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TrFirewallRoutePolicies model) {
+                this.destCandidateList = model.destCandidateList;
+                this.policyDescription = model.policyDescription;
+                this.policyName = model.policyName;
+                this.policyStatus = model.policyStatus;
+                this.policyType = model.policyType;
+                this.srcCandidateList = model.srcCandidateList;
+                this.trFirewallRoutePolicyId = model.trFirewallRoutePolicyId;
+            } 
 
             /**
              * <p>The secondary traffic redirection instances.</p>

@@ -40,6 +40,10 @@ public class DescribeUserIPSWhitelistResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ipv6Whitelists
      */
@@ -65,6 +69,15 @@ public class DescribeUserIPSWhitelistResponseBody extends TeaModel {
         private java.util.List<Ipv6Whitelists> ipv6Whitelists; 
         private String requestId; 
         private java.util.List<Whitelists> whitelists; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeUserIPSWhitelistResponseBody model) {
+            this.ipv6Whitelists = model.ipv6Whitelists;
+            this.requestId = model.requestId;
+            this.whitelists = model.whitelists;
+        } 
 
         /**
          * Ipv6Whitelists.
@@ -175,6 +188,17 @@ public class DescribeUserIPSWhitelistResponseBody extends TeaModel {
             private String listValue; 
             private java.util.List<String> whiteListValue; 
             private Long whiteType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Ipv6Whitelists model) {
+                this.direction = model.direction;
+                this.listType = model.listType;
+                this.listValue = model.listValue;
+                this.whiteListValue = model.whiteListValue;
+                this.whiteType = model.whiteType;
+            } 
 
             /**
              * Direction.
@@ -302,6 +326,17 @@ public class DescribeUserIPSWhitelistResponseBody extends TeaModel {
             private String listValue; 
             private java.util.List<String> whiteListValue; 
             private Long whiteType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Whitelists model) {
+                this.direction = model.direction;
+                this.listType = model.listType;
+                this.listValue = model.listValue;
+                this.whiteListValue = model.whiteListValue;
+                this.whiteType = model.whiteType;
+            } 
 
             /**
              * Direction.

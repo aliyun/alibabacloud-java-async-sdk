@@ -62,8 +62,14 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("TrAttachmentMasterCidr")
     private String trAttachmentMasterCidr;
 
+    @com.aliyun.core.annotation.NameInMap("TrAttachmentMasterZone")
+    private String trAttachmentMasterZone;
+
     @com.aliyun.core.annotation.NameInMap("TrAttachmentSlaveCidr")
     private String trAttachmentSlaveCidr;
+
+    @com.aliyun.core.annotation.NameInMap("TrAttachmentSlaveZone")
+    private String trAttachmentSlaveZone;
 
     @com.aliyun.core.annotation.NameInMap("TransitRouterId")
     private String transitRouterId;
@@ -84,7 +90,9 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
         this.requestId = builder.requestId;
         this.routeMode = builder.routeMode;
         this.trAttachmentMasterCidr = builder.trAttachmentMasterCidr;
+        this.trAttachmentMasterZone = builder.trAttachmentMasterZone;
         this.trAttachmentSlaveCidr = builder.trAttachmentSlaveCidr;
+        this.trAttachmentSlaveZone = builder.trAttachmentSlaveZone;
         this.transitRouterId = builder.transitRouterId;
     }
 
@@ -94,6 +102,10 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
 
     public static DescribeTrFirewallsV2DetailResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -202,10 +214,24 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
     }
 
     /**
+     * @return trAttachmentMasterZone
+     */
+    public String getTrAttachmentMasterZone() {
+        return this.trAttachmentMasterZone;
+    }
+
+    /**
      * @return trAttachmentSlaveCidr
      */
     public String getTrAttachmentSlaveCidr() {
         return this.trAttachmentSlaveCidr;
+    }
+
+    /**
+     * @return trAttachmentSlaveZone
+     */
+    public String getTrAttachmentSlaveZone() {
+        return this.trAttachmentSlaveZone;
     }
 
     /**
@@ -231,8 +257,35 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
         private String requestId; 
         private String routeMode; 
         private String trAttachmentMasterCidr; 
+        private String trAttachmentMasterZone; 
         private String trAttachmentSlaveCidr; 
+        private String trAttachmentSlaveZone; 
         private String transitRouterId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTrFirewallsV2DetailResponseBody model) {
+            this.cenId = model.cenId;
+            this.firewallDescription = model.firewallDescription;
+            this.firewallEniId = model.firewallEniId;
+            this.firewallEniVpcId = model.firewallEniVpcId;
+            this.firewallEniVswitchId = model.firewallEniVswitchId;
+            this.firewallId = model.firewallId;
+            this.firewallName = model.firewallName;
+            this.firewallStatus = model.firewallStatus;
+            this.firewallSubnetCidr = model.firewallSubnetCidr;
+            this.firewallSwitchStatus = model.firewallSwitchStatus;
+            this.firewallVpcCidr = model.firewallVpcCidr;
+            this.regionNo = model.regionNo;
+            this.requestId = model.requestId;
+            this.routeMode = model.routeMode;
+            this.trAttachmentMasterCidr = model.trAttachmentMasterCidr;
+            this.trAttachmentMasterZone = model.trAttachmentMasterZone;
+            this.trAttachmentSlaveCidr = model.trAttachmentSlaveCidr;
+            this.trAttachmentSlaveZone = model.trAttachmentSlaveZone;
+            this.transitRouterId = model.transitRouterId;
+        } 
 
         /**
          * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
@@ -421,6 +474,14 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
         }
 
         /**
+         * TrAttachmentMasterZone.
+         */
+        public Builder trAttachmentMasterZone(String trAttachmentMasterZone) {
+            this.trAttachmentMasterZone = trAttachmentMasterZone;
+            return this;
+        }
+
+        /**
          * <p>The secondary subnet CIDR block that the VPC uses to connect to the transit router in automatic mode.</p>
          * 
          * <strong>example:</strong>
@@ -428,6 +489,14 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
          */
         public Builder trAttachmentSlaveCidr(String trAttachmentSlaveCidr) {
             this.trAttachmentSlaveCidr = trAttachmentSlaveCidr;
+            return this;
+        }
+
+        /**
+         * TrAttachmentSlaveZone.
+         */
+        public Builder trAttachmentSlaveZone(String trAttachmentSlaveZone) {
+            this.trAttachmentSlaveZone = trAttachmentSlaveZone;
             return this;
         }
 

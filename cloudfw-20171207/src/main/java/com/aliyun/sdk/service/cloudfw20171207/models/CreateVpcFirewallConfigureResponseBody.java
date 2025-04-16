@@ -36,6 +36,10 @@ public class CreateVpcFirewallConfigureResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class CreateVpcFirewallConfigureResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String vpcFirewallId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateVpcFirewallConfigureResponseBody model) {
+            this.requestId = model.requestId;
+            this.vpcFirewallId = model.vpcFirewallId;
+        } 
 
         /**
          * <p>The request ID.</p>

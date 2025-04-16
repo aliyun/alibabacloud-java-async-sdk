@@ -19,13 +19,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ModifyDefaultIPSConfigRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BasicRules")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String basicRules;
+    private Integer basicRules;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CtiRules")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String ctiRules;
+    private Integer ctiRules;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Lang")
@@ -37,16 +35,16 @@ public class ModifyDefaultIPSConfigRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PatchRules")
-    private String patchRules;
+    private Integer patchRules;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RuleClass")
-    private String ruleClass;
+    private Integer ruleClass;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RunMode")
     @com.aliyun.core.annotation.Validation(required = true)
-    private String runMode;
+    private Integer runMode;
 
     private ModifyDefaultIPSConfigRequest(Builder builder) {
         super(builder);
@@ -67,7 +65,7 @@ public class ModifyDefaultIPSConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -75,14 +73,14 @@ public class ModifyDefaultIPSConfigRequest extends Request {
     /**
      * @return basicRules
      */
-    public String getBasicRules() {
+    public Integer getBasicRules() {
         return this.basicRules;
     }
 
     /**
      * @return ctiRules
      */
-    public String getCtiRules() {
+    public Integer getCtiRules() {
         return this.ctiRules;
     }
 
@@ -103,32 +101,32 @@ public class ModifyDefaultIPSConfigRequest extends Request {
     /**
      * @return patchRules
      */
-    public String getPatchRules() {
+    public Integer getPatchRules() {
         return this.patchRules;
     }
 
     /**
      * @return ruleClass
      */
-    public String getRuleClass() {
+    public Integer getRuleClass() {
         return this.ruleClass;
     }
 
     /**
      * @return runMode
      */
-    public String getRunMode() {
+    public Integer getRunMode() {
         return this.runMode;
     }
 
     public static final class Builder extends Request.Builder<ModifyDefaultIPSConfigRequest, Builder> {
-        private String basicRules; 
-        private String ctiRules; 
+        private Integer basicRules; 
+        private Integer ctiRules; 
         private String lang; 
         private Long maxSdl; 
-        private String patchRules; 
-        private String ruleClass; 
-        private String runMode; 
+        private Integer patchRules; 
+        private Integer ruleClass; 
+        private Integer runMode; 
 
         private Builder() {
             super();
@@ -151,12 +149,11 @@ public class ModifyDefaultIPSConfigRequest extends Request {
          * <li><strong>1</strong>: yes</li>
          * <li><strong>0</strong>: no</li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
          */
-        public Builder basicRules(String basicRules) {
+        public Builder basicRules(Integer basicRules) {
             this.putQueryParameter("BasicRules", basicRules);
             this.basicRules = basicRules;
             return this;
@@ -168,12 +165,11 @@ public class ModifyDefaultIPSConfigRequest extends Request {
          * <li><strong>1</strong>: yes</li>
          * <li><strong>0</strong>: no</li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
          */
-        public Builder ctiRules(String ctiRules) {
+        public Builder ctiRules(Integer ctiRules) {
             this.putQueryParameter("CtiRules", ctiRules);
             this.ctiRules = ctiRules;
             return this;
@@ -196,7 +192,10 @@ public class ModifyDefaultIPSConfigRequest extends Request {
         }
 
         /**
-         * MaxSdl.
+         * <p>The maximum amount of traffic that can be processed by the sensitive data leak detection feature each day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxSdl(Long maxSdl) {
             this.putQueryParameter("MaxSdl", maxSdl);
@@ -214,7 +213,7 @@ public class ModifyDefaultIPSConfigRequest extends Request {
          * <strong>example:</strong>
          * <p>1</p>
          */
-        public Builder patchRules(String patchRules) {
+        public Builder patchRules(Integer patchRules) {
             this.putQueryParameter("PatchRules", patchRules);
             this.patchRules = patchRules;
             return this;
@@ -231,7 +230,7 @@ public class ModifyDefaultIPSConfigRequest extends Request {
          * <strong>example:</strong>
          * <p>1</p>
          */
-        public Builder ruleClass(String ruleClass) {
+        public Builder ruleClass(Integer ruleClass) {
             this.putQueryParameter("RuleClass", ruleClass);
             this.ruleClass = ruleClass;
             return this;
@@ -248,7 +247,7 @@ public class ModifyDefaultIPSConfigRequest extends Request {
          * <strong>example:</strong>
          * <p>0</p>
          */
-        public Builder runMode(String runMode) {
+        public Builder runMode(Integer runMode) {
             this.putQueryParameter("RunMode", runMode);
             this.runMode = runMode;
             return this;

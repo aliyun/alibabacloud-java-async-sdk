@@ -35,7 +35,7 @@ public class AddInstanceMembersRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -120,6 +120,14 @@ public class AddInstanceMembersRequest extends Request {
         public static final class Builder {
             private String memberDesc; 
             private Long memberUid; 
+
+            private Builder() {
+            } 
+
+            private Builder(Members model) {
+                this.memberDesc = model.memberDesc;
+                this.memberUid = model.memberUid;
+            } 
 
             /**
              * <p>The remarks of the member. The value must be 1 to 256 characters in length.</p>

@@ -40,6 +40,10 @@ public class DescribeDownloadTaskTypeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class DescribeDownloadTaskTypeResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<TaskTypeArray> taskTypeArray; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDownloadTaskTypeResponseBody model) {
+            this.requestId = model.requestId;
+            this.taskTypeArray = model.taskTypeArray;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -145,6 +158,14 @@ public class DescribeDownloadTaskTypeResponseBody extends TeaModel {
         public static final class Builder {
             private String taskName; 
             private String taskType; 
+
+            private Builder() {
+            } 
+
+            private Builder(TaskTypeArray model) {
+                this.taskName = model.taskName;
+                this.taskType = model.taskType;
+            } 
 
             /**
              * <p>The name of the task type.</p>

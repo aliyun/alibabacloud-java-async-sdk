@@ -40,6 +40,10 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataList
      */
@@ -65,6 +69,15 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
         private java.util.List<DataList> dataList; 
         private PageInfo pageInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInternetOpenIpResponseBody model) {
+            this.dataList = model.dataList;
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -322,6 +335,29 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             private String trafficPercent1Day; 
             private String trafficPercent30Day; 
             private String trafficPercent7Day; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataList model) {
+                this.aclRecommendDetail = model.aclRecommendDetail;
+                this.assetsInstanceId = model.assetsInstanceId;
+                this.assetsName = model.assetsName;
+                this.assetsType = model.assetsType;
+                this.detailNum = model.detailNum;
+                this.hasAclRecommend = model.hasAclRecommend;
+                this.portList = model.portList;
+                this.publicIp = model.publicIp;
+                this.regionNo = model.regionNo;
+                this.riskLevel = model.riskLevel;
+                this.riskReason = model.riskReason;
+                this.serviceNameList = model.serviceNameList;
+                this.srcIpCnt = model.srcIpCnt;
+                this.totalReplyBytes = model.totalReplyBytes;
+                this.trafficPercent1Day = model.trafficPercent1Day;
+                this.trafficPercent30Day = model.trafficPercent30Day;
+                this.trafficPercent7Day = model.trafficPercent7Day;
+            } 
 
             /**
              * <p>The reason why recommended intelligent policies are unavailable. Valid values:</p>
@@ -582,6 +618,15 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The page number.</p>

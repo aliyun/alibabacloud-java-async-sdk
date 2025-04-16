@@ -23,9 +23,6 @@ public class DescribeDefaultIPSConfigResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CtiRules")
     private Integer ctiRules;
 
-    @com.aliyun.core.annotation.NameInMap("FreeTrailStatus")
-    private String freeTrailStatus;
-
     @com.aliyun.core.annotation.NameInMap("MaxSdl")
     private Long maxSdl;
 
@@ -44,7 +41,6 @@ public class DescribeDefaultIPSConfigResponseBody extends TeaModel {
     private DescribeDefaultIPSConfigResponseBody(Builder builder) {
         this.basicRules = builder.basicRules;
         this.ctiRules = builder.ctiRules;
-        this.freeTrailStatus = builder.freeTrailStatus;
         this.maxSdl = builder.maxSdl;
         this.patchRules = builder.patchRules;
         this.requestId = builder.requestId;
@@ -60,6 +56,10 @@ public class DescribeDefaultIPSConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return basicRules
      */
@@ -72,13 +72,6 @@ public class DescribeDefaultIPSConfigResponseBody extends TeaModel {
      */
     public Integer getCtiRules() {
         return this.ctiRules;
-    }
-
-    /**
-     * @return freeTrailStatus
-     */
-    public String getFreeTrailStatus() {
-        return this.freeTrailStatus;
     }
 
     /**
@@ -119,12 +112,24 @@ public class DescribeDefaultIPSConfigResponseBody extends TeaModel {
     public static final class Builder {
         private Integer basicRules; 
         private Integer ctiRules; 
-        private String freeTrailStatus; 
         private Long maxSdl; 
         private Integer patchRules; 
         private String requestId; 
         private Integer ruleClass; 
         private Integer runMode; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDefaultIPSConfigResponseBody model) {
+            this.basicRules = model.basicRules;
+            this.ctiRules = model.ctiRules;
+            this.maxSdl = model.maxSdl;
+            this.patchRules = model.patchRules;
+            this.requestId = model.requestId;
+            this.ruleClass = model.ruleClass;
+            this.runMode = model.runMode;
+        } 
 
         /**
          * <p>Indicates whether basic protection is enabled. Valid values:</p>
@@ -157,15 +162,10 @@ public class DescribeDefaultIPSConfigResponseBody extends TeaModel {
         }
 
         /**
-         * FreeTrailStatus.
-         */
-        public Builder freeTrailStatus(String freeTrailStatus) {
-            this.freeTrailStatus = freeTrailStatus;
-            return this;
-        }
-
-        /**
-         * MaxSdl.
+         * <p>The maximum amount of traffic that can be processed by the sensitive data leak detection feature each day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxSdl(Long maxSdl) {
             this.maxSdl = maxSdl;

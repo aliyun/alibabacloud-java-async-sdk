@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyPolicyAdvancedConfigRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Eips")
+    private java.util.List<String> eips;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InternetSwitch")
     @com.aliyun.core.annotation.Validation(required = true)
     private String internetSwitch;
@@ -33,6 +37,7 @@ public class ModifyPolicyAdvancedConfigRequest extends Request {
 
     private ModifyPolicyAdvancedConfigRequest(Builder builder) {
         super(builder);
+        this.eips = builder.eips;
         this.internetSwitch = builder.internetSwitch;
         this.lang = builder.lang;
         this.sourceIp = builder.sourceIp;
@@ -46,9 +51,16 @@ public class ModifyPolicyAdvancedConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return eips
+     */
+    public java.util.List<String> getEips() {
+        return this.eips;
     }
 
     /**
@@ -73,6 +85,7 @@ public class ModifyPolicyAdvancedConfigRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyPolicyAdvancedConfigRequest, Builder> {
+        private java.util.List<String> eips; 
         private String internetSwitch; 
         private String lang; 
         private String sourceIp; 
@@ -83,10 +96,20 @@ public class ModifyPolicyAdvancedConfigRequest extends Request {
 
         private Builder(ModifyPolicyAdvancedConfigRequest request) {
             super(request);
+            this.eips = request.eips;
             this.internetSwitch = request.internetSwitch;
             this.lang = request.lang;
             this.sourceIp = request.sourceIp;
         } 
+
+        /**
+         * Eips.
+         */
+        public Builder eips(java.util.List<String> eips) {
+            this.putQueryParameter("Eips", eips);
+            this.eips = eips;
+            return this;
+        }
 
         /**
          * <p>Specifies whether to enable the strict mode for the access control policy. Valid values:</p>

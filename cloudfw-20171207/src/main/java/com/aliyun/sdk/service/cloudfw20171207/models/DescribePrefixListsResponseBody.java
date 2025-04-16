@@ -36,6 +36,10 @@ public class DescribePrefixListsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return prefixList
      */
@@ -53,6 +57,14 @@ public class DescribePrefixListsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<PrefixList> prefixList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePrefixListsResponseBody model) {
+            this.prefixList = model.prefixList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Details about the prefix lists.</p>
@@ -182,6 +194,19 @@ public class DescribePrefixListsResponseBody extends TeaModel {
             private Integer maxEntries; 
             private String prefixListId; 
             private String prefixListName; 
+
+            private Builder() {
+            } 
+
+            private Builder(PrefixList model) {
+                this.addressFamily = model.addressFamily;
+                this.associationCount = model.associationCount;
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.maxEntries = model.maxEntries;
+                this.prefixListId = model.prefixListId;
+                this.prefixListName = model.prefixListName;
+            } 
 
             /**
              * <p>The IP address family of the prefix list. Valid values:</p>

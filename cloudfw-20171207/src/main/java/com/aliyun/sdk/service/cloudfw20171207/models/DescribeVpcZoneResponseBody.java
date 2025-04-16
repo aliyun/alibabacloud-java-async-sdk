@@ -36,6 +36,10 @@ public class DescribeVpcZoneResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeVpcZoneResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<ZoneList> zoneList; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVpcZoneResponseBody model) {
+            this.requestId = model.requestId;
+            this.zoneList = model.zoneList;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -134,6 +146,15 @@ public class DescribeVpcZoneResponseBody extends TeaModel {
             private String localName; 
             private String zoneId; 
             private String zoneType; 
+
+            private Builder() {
+            } 
+
+            private Builder(ZoneList model) {
+                this.localName = model.localName;
+                this.zoneId = model.zoneId;
+                this.zoneType = model.zoneType;
+            } 
 
             /**
              * <p>The name of the zone.</p>

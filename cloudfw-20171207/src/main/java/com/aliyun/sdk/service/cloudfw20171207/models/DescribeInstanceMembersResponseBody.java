@@ -40,6 +40,10 @@ public class DescribeInstanceMembersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return members
      */
@@ -65,6 +69,15 @@ public class DescribeInstanceMembersResponseBody extends TeaModel {
         private java.util.List<Members> members; 
         private PageInfo pageInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceMembersResponseBody model) {
+            this.members = model.members;
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the member.</p>
@@ -190,6 +203,18 @@ public class DescribeInstanceMembersResponseBody extends TeaModel {
             private String memberStatus; 
             private Long memberUid; 
             private Integer modifyTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Members model) {
+                this.createTime = model.createTime;
+                this.memberDesc = model.memberDesc;
+                this.memberDisplayName = model.memberDisplayName;
+                this.memberStatus = model.memberStatus;
+                this.memberUid = model.memberUid;
+                this.modifyTime = model.modifyTime;
+            } 
 
             /**
              * <p>The time when the member was added to Cloud Firewall. The value is a timestamp. Unit: seconds.</p>
@@ -323,6 +348,15 @@ public class DescribeInstanceMembersResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The page number.</p>

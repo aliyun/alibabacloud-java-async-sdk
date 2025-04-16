@@ -56,6 +56,10 @@ public class DescribeACLProtectTrendResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return inProtectCnt
      */
@@ -113,6 +117,19 @@ public class DescribeACLProtectTrendResponseBody extends TeaModel {
         private String requestId; 
         private Long totalProtectCnt; 
         private java.util.List<TrendList> trendList; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeACLProtectTrendResponseBody model) {
+            this.inProtectCnt = model.inProtectCnt;
+            this.interVPCProtectCnt = model.interVPCProtectCnt;
+            this.interval = model.interval;
+            this.outProtectCnt = model.outProtectCnt;
+            this.requestId = model.requestId;
+            this.totalProtectCnt = model.totalProtectCnt;
+            this.trendList = model.trendList;
+        } 
 
         /**
          * <p>The number of internal requests that are blocked by the ACL feature.</p>
@@ -237,6 +254,14 @@ public class DescribeACLProtectTrendResponseBody extends TeaModel {
         public static final class Builder {
             private Integer protectCnt; 
             private Long time; 
+
+            private Builder() {
+            } 
+
+            private Builder(TrendList model) {
+                this.protectCnt = model.protectCnt;
+                this.time = model.time;
+            } 
 
             /**
              * <p>The number of requests that are blocked by ACL on the current day.</p>

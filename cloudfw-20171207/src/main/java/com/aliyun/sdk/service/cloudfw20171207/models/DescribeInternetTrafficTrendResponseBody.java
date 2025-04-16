@@ -96,6 +96,10 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return avgInBps
      */
@@ -233,6 +237,29 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
         private Long totalInBytes; 
         private Long totalOutBytes; 
         private Long totalSession; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInternetTrafficTrendResponseBody model) {
+            this.avgInBps = model.avgInBps;
+            this.avgOutBps = model.avgOutBps;
+            this.avgSession = model.avgSession;
+            this.avgTotalBps = model.avgTotalBps;
+            this.dataList = model.dataList;
+            this.maxBandwidthTime = model.maxBandwidthTime;
+            this.maxDayExceedBytes = model.maxDayExceedBytes;
+            this.maxInBps = model.maxInBps;
+            this.maxOutBps = model.maxOutBps;
+            this.maxSession = model.maxSession;
+            this.maxTotalBps = model.maxTotalBps;
+            this.requestId = model.requestId;
+            this.totalBytes = model.totalBytes;
+            this.totalExceedBytes = model.totalExceedBytes;
+            this.totalInBytes = model.totalInBytes;
+            this.totalOutBytes = model.totalOutBytes;
+            this.totalSession = model.totalSession;
+        } 
 
         /**
          * <p>The average inbound network throughput, which indicates the average number of bits that are sent inbound per second. Unit: bit/s.</p>
@@ -563,6 +590,22 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
             private Long sessionCount; 
             private Integer time; 
             private Long totalBps; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataList model) {
+                this.inBps = model.inBps;
+                this.inBytes = model.inBytes;
+                this.inPps = model.inPps;
+                this.newConn = model.newConn;
+                this.outBps = model.outBps;
+                this.outBytes = model.outBytes;
+                this.outPps = model.outPps;
+                this.sessionCount = model.sessionCount;
+                this.time = model.time;
+                this.totalBps = model.totalBps;
+            } 
 
             /**
              * <p>The inbound network throughput, which indicates the number of bits that are sent inbound per second. Unit: bit/s.</p>

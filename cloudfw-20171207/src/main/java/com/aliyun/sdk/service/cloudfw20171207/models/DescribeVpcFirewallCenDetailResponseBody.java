@@ -56,6 +56,10 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return connectType
      */
@@ -114,6 +118,19 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
         private String vpcFirewallId; 
         private String vpcFirewallName; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeVpcFirewallCenDetailResponseBody model) {
+            this.connectType = model.connectType;
+            this.firewallSwitchStatus = model.firewallSwitchStatus;
+            this.firewallVpc = model.firewallVpc;
+            this.localVpc = model.localVpc;
+            this.requestId = model.requestId;
+            this.vpcFirewallId = model.vpcFirewallId;
+            this.vpcFirewallName = model.vpcFirewallName;
+        } 
+
         /**
          * <p>The connection type of the VPC firewall. The value is fixed as <strong>cen</strong>, which indicates CEN instances.</p>
          * 
@@ -142,7 +159,7 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The VPC that is automatically created for the firewall.</p>
+         * <p>The firewall VPC.</p>
          */
         public Builder firewallVpc(FirewallVpc firewallVpc) {
             this.firewallVpc = firewallVpc;
@@ -206,6 +223,9 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllowConfiguration")
         private Integer allowConfiguration;
 
+        @com.aliyun.core.annotation.NameInMap("StandbyZoneId")
+        private String standbyZoneId;
+
         @com.aliyun.core.annotation.NameInMap("VpcCidr")
         private String vpcCidr;
 
@@ -218,15 +238,20 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VswitchId")
         private String vswitchId;
 
+        @com.aliyun.core.annotation.NameInMap("VswitchZoneId")
+        private String vswitchZoneId;
+
         @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private FirewallVpc(Builder builder) {
             this.allowConfiguration = builder.allowConfiguration;
+            this.standbyZoneId = builder.standbyZoneId;
             this.vpcCidr = builder.vpcCidr;
             this.vpcId = builder.vpcId;
             this.vswitchCidr = builder.vswitchCidr;
             this.vswitchId = builder.vswitchId;
+            this.vswitchZoneId = builder.vswitchZoneId;
             this.zoneId = builder.zoneId;
         }
 
@@ -243,6 +268,13 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
          */
         public Integer getAllowConfiguration() {
             return this.allowConfiguration;
+        }
+
+        /**
+         * @return standbyZoneId
+         */
+        public String getStandbyZoneId() {
+            return this.standbyZoneId;
         }
 
         /**
@@ -274,6 +306,13 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return vswitchZoneId
+         */
+        public String getVswitchZoneId() {
+            return this.vswitchZoneId;
+        }
+
+        /**
          * @return zoneId
          */
         public String getZoneId() {
@@ -282,11 +321,27 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer allowConfiguration; 
+            private String standbyZoneId; 
             private String vpcCidr; 
             private String vpcId; 
             private String vswitchCidr; 
             private String vswitchId; 
+            private String vswitchZoneId; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(FirewallVpc model) {
+                this.allowConfiguration = model.allowConfiguration;
+                this.standbyZoneId = model.standbyZoneId;
+                this.vpcCidr = model.vpcCidr;
+                this.vpcId = model.vpcId;
+                this.vswitchCidr = model.vswitchCidr;
+                this.vswitchId = model.vswitchId;
+                this.vswitchZoneId = model.vswitchZoneId;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>Indicates whether you can specify a CIDR block when you create a VPC firewall for a Basic Edition transit router of a CEN instance. Valid values:</p>
@@ -300,6 +355,17 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
              */
             public Builder allowConfiguration(Integer allowConfiguration) {
                 this.allowConfiguration = allowConfiguration;
+                return this;
+            }
+
+            /**
+             * <p>Firewall backup availability zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-k</p>
+             */
+            public Builder standbyZoneId(String standbyZoneId) {
+                this.standbyZoneId = standbyZoneId;
                 return this;
             }
 
@@ -344,6 +410,17 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;
+                return this;
+            }
+
+            /**
+             * <p>The availability zone ID of the virtual switch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-i</p>
+             */
+            public Builder vswitchZoneId(String vswitchZoneId) {
+                this.vswitchZoneId = vswitchZoneId;
                 return this;
             }
 
@@ -420,6 +497,15 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
             private String eniId; 
             private String eniPrivateIpAddress; 
             private String eniVSwitchId; 
+
+            private Builder() {
+            } 
+
+            private Builder(EniList model) {
+                this.eniId = model.eniId;
+                this.eniPrivateIpAddress = model.eniPrivateIpAddress;
+                this.eniVSwitchId = model.eniVSwitchId;
+            } 
 
             /**
              * <p>The ID of the ENI that belongs to the VPC.</p>
@@ -505,6 +591,14 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
             private String destinationCidr; 
             private String nextHopInstanceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(RouteEntryList model) {
+                this.destinationCidr = model.destinationCidr;
+                this.nextHopInstanceId = model.nextHopInstanceId;
+            } 
+
             /**
              * <p>The destination CIDR block of the VPC.</p>
              * 
@@ -577,6 +671,14 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<RouteEntryList> routeEntryList; 
             private String routeTableId; 
+
+            private Builder() {
+            } 
+
+            private Builder(VpcCidrTableList model) {
+                this.routeEntryList = model.routeEntryList;
+                this.routeTableId = model.routeTableId;
+            } 
 
             /**
              * <p>The route entries for the VPC.</p>
@@ -827,6 +929,29 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
             private java.util.List<VpcCidrTableList> vpcCidrTableList; 
             private String vpcId; 
             private String vpcName; 
+
+            private Builder() {
+            } 
+
+            private Builder(LocalVpc model) {
+                this.attachmentId = model.attachmentId;
+                this.attachmentName = model.attachmentName;
+                this.defendCidrList = model.defendCidrList;
+                this.eniList = model.eniList;
+                this.manualVSwitchId = model.manualVSwitchId;
+                this.networkInstanceId = model.networkInstanceId;
+                this.networkInstanceName = model.networkInstanceName;
+                this.networkInstanceType = model.networkInstanceType;
+                this.ownerId = model.ownerId;
+                this.regionNo = model.regionNo;
+                this.routeMode = model.routeMode;
+                this.supportManualMode = model.supportManualMode;
+                this.transitRouterId = model.transitRouterId;
+                this.transitRouterType = model.transitRouterType;
+                this.vpcCidrTableList = model.vpcCidrTableList;
+                this.vpcId = model.vpcId;
+                this.vpcName = model.vpcName;
+            } 
 
             /**
              * <p>The ID of the connection between two network instances.</p>

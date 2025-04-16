@@ -48,6 +48,10 @@ public class DescribeAddressBookResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return acls
      */
@@ -89,6 +93,17 @@ public class DescribeAddressBookResponseBody extends TeaModel {
         private String pageSize; 
         private String requestId; 
         private String totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAddressBookResponseBody model) {
+            this.acls = model.acls;
+            this.pageNo = model.pageNo;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The information about the address book.</p>
@@ -192,8 +207,19 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             private String address; 
             private String note; 
 
+            private Builder() {
+            } 
+
+            private Builder(Addresses model) {
+                this.address = model.address;
+                this.note = model.note;
+            } 
+
             /**
-             * Address.
+             * <p>Address information in the address book.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.0.1/32</p>
              */
             public Builder address(String address) {
                 this.address = address;
@@ -201,7 +227,10 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             }
 
             /**
-             * Note.
+             * <p>Single address description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>description</p>
              */
             public Builder note(String note) {
                 this.note = note;
@@ -258,6 +287,14 @@ public class DescribeAddressBookResponseBody extends TeaModel {
         public static final class Builder {
             private String tagKey; 
             private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(TagList model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
 
             /**
              * <p>The key of the ECS tag.</p>
@@ -440,6 +477,23 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             private java.util.List<TagList> tagList; 
             private String tagRelation; 
 
+            private Builder() {
+            } 
+
+            private Builder(Acls model) {
+                this.addressList = model.addressList;
+                this.addressListCount = model.addressListCount;
+                this.addresses = model.addresses;
+                this.autoAddTagEcs = model.autoAddTagEcs;
+                this.description = model.description;
+                this.groupName = model.groupName;
+                this.groupType = model.groupType;
+                this.groupUuid = model.groupUuid;
+                this.referenceCount = model.referenceCount;
+                this.tagList = model.tagList;
+                this.tagRelation = model.tagRelation;
+            } 
+
             /**
              * <p>The addresses in the address book.</p>
              */
@@ -460,7 +514,7 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             }
 
             /**
-             * Addresses.
+             * <p>A list of addresses in the address book, each with a single address description.</p>
              */
             public Builder addresses(java.util.List<Addresses> addresses) {
                 this.addresses = addresses;

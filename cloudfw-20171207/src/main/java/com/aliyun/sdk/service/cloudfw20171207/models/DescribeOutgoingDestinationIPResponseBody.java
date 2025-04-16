@@ -40,6 +40,10 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dstIPList
      */
@@ -65,6 +69,15 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
         private java.util.List<DstIPList> dstIPList; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeOutgoingDestinationIPResponseBody model) {
+            this.dstIPList = model.dstIPList;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The IP addresses in outbound connections.</p>
@@ -146,6 +159,14 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             private String addressGroupName; 
             private String addressGroupUUID; 
 
+            private Builder() {
+            } 
+
+            private Builder(AddressGroupList model) {
+                this.addressGroupName = model.addressGroupName;
+                this.addressGroupUUID = model.addressGroupUUID;
+            } 
+
             /**
              * <p>The name of the address book.</p>
              * 
@@ -218,6 +239,14 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
         public static final class Builder {
             private String applicationName; 
             private Integer port; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApplicationPortList model) {
+                this.applicationName = model.applicationName;
+                this.port = model.port;
+            } 
 
             /**
              * <p>The application type used in the access control policy. Valid values:</p>
@@ -347,6 +376,17 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             private String tagDescribe; 
             private String tagId; 
             private String tagName; 
+
+            private Builder() {
+            } 
+
+            private Builder(TagList model) {
+                this.classId = model.classId;
+                this.riskLevel = model.riskLevel;
+                this.tagDescribe = model.tagDescribe;
+                this.tagId = model.tagId;
+                this.tagName = model.tagName;
+            } 
 
             /**
              * <p>The type of the tag. Valid values:</p>
@@ -739,6 +779,37 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             private Long sessionCount; 
             private java.util.List<TagList> tagList; 
             private String totalBytes; 
+
+            private Builder() {
+            } 
+
+            private Builder(DstIPList model) {
+                this.aclCoverage = model.aclCoverage;
+                this.aclRecommendDetail = model.aclRecommendDetail;
+                this.aclStatus = model.aclStatus;
+                this.addressGroupList = model.addressGroupList;
+                this.applicationPortList = model.applicationPortList;
+                this.assetCount = model.assetCount;
+                this.categoryClassId = model.categoryClassId;
+                this.categoryId = model.categoryId;
+                this.categoryName = model.categoryName;
+                this.dstIP = model.dstIP;
+                this.groupName = model.groupName;
+                this.hasAcl = model.hasAcl;
+                this.hasAclRecommend = model.hasAclRecommend;
+                this.inBytes = model.inBytes;
+                this.isMarkNormal = model.isMarkNormal;
+                this.locationName = model.locationName;
+                this.outBytes = model.outBytes;
+                this.privateAssetCount = model.privateAssetCount;
+                this.ruleId = model.ruleId;
+                this.ruleName = model.ruleName;
+                this.securityReason = model.securityReason;
+                this.securitySuggest = model.securitySuggest;
+                this.sessionCount = model.sessionCount;
+                this.tagList = model.tagList;
+                this.totalBytes = model.totalBytes;
+            } 
 
             /**
              * <p>Indicates whether an access control policy is configured. Valid values:</p>

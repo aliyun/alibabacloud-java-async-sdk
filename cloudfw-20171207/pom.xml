@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>alibabacloud-cloudfw20171207</artifactId>
-  <version>5.0.2</version>
+  <version>6.0.0</version>
   <packaging>jar</packaging>
   <name>alibabacloud-cloudfw20171207</name>
   <description>Alibaba Cloud Cloudfw (20171207) Async SDK for Java
@@ -76,7 +76,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-gpg-plugin</artifactId>
-        <version>1.6</version>
+        <version>3.1.0</version>
         <executions>
           <execution>
             <id>sign-artifacts</id>

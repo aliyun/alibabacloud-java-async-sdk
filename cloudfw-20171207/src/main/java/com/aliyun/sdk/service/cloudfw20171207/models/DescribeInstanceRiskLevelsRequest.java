@@ -39,7 +39,7 @@ public class DescribeInstanceRiskLevelsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -171,6 +171,16 @@ public class DescribeInstanceRiskLevelsRequest extends Request {
             private java.util.List<String> internetIp; 
             private String intranetIp; 
             private String uuid; 
+
+            private Builder() {
+            } 
+
+            private Builder(Instances model) {
+                this.instanceId = model.instanceId;
+                this.internetIp = model.internetIp;
+                this.intranetIp = model.intranetIp;
+                this.uuid = model.uuid;
+            } 
 
             /**
              * <p>The instance ID of your Cloud Firewall.</p>

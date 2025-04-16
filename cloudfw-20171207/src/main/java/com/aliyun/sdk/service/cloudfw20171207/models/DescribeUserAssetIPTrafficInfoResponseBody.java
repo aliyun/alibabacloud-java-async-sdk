@@ -64,6 +64,10 @@ public class DescribeUserAssetIPTrafficInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return endTime
      */
@@ -137,6 +141,21 @@ public class DescribeUserAssetIPTrafficInfoResponseBody extends TeaModel {
         private String requestId; 
         private Long sessionCount; 
         private Long startTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeUserAssetIPTrafficInfoResponseBody model) {
+            this.endTime = model.endTime;
+            this.inBps = model.inBps;
+            this.inPps = model.inPps;
+            this.newConn = model.newConn;
+            this.outBps = model.outBps;
+            this.outPps = model.outPps;
+            this.requestId = model.requestId;
+            this.sessionCount = model.sessionCount;
+            this.startTime = model.startTime;
+        } 
 
         /**
          * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>

@@ -92,6 +92,10 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return aliUid
      */
@@ -222,6 +226,28 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
         private Long vpcBandwidth; 
         private Long vpcNumber; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeUserBuyVersionResponseBody model) {
+            this.aliUid = model.aliUid;
+            this.expire = model.expire;
+            this.instanceId = model.instanceId;
+            this.instanceStatus = model.instanceStatus;
+            this.internetBandwidth = model.internetBandwidth;
+            this.ipNumber = model.ipNumber;
+            this.logStatus = model.logStatus;
+            this.logStorage = model.logStorage;
+            this.maxOverflow = model.maxOverflow;
+            this.natBandwidth = model.natBandwidth;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+            this.userStatus = model.userStatus;
+            this.version = model.version;
+            this.vpcBandwidth = model.vpcBandwidth;
+            this.vpcNumber = model.vpcNumber;
+        } 
+
         /**
          * <p>The ID of the Alibaba Cloud account that is used to purchase Cloud Firewall.</p>
          * 
@@ -283,7 +309,10 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
         }
 
         /**
-         * InternetBandwidth.
+         * <p>The peak Internet traffic that can be protected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3000</p>
          */
         public Builder internetBandwidth(Long internetBandwidth) {
             this.internetBandwidth = internetBandwidth;
@@ -352,7 +381,10 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
         }
 
         /**
-         * NatBandwidth.
+         * <p>The peak traffic of NAT private network that can be protected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3000</p>
          */
         public Builder natBandwidth(Long natBandwidth) {
             this.natBandwidth = natBandwidth;
@@ -417,7 +449,10 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
         }
 
         /**
-         * VpcBandwidth.
+         * <p>The peak cross-VPC traffic that can be protected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3000</p>
          */
         public Builder vpcBandwidth(Long vpcBandwidth) {
             this.vpcBandwidth = vpcBandwidth;

@@ -36,6 +36,10 @@ public class CreateTrFirewallV2RoutePolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class CreateTrFirewallV2RoutePolicyResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String trFirewallRoutePolicyId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateTrFirewallV2RoutePolicyResponseBody model) {
+            this.requestId = model.requestId;
+            this.trFirewallRoutePolicyId = model.trFirewallRoutePolicyId;
+        } 
 
         /**
          * <p>The ID of the request.</p>

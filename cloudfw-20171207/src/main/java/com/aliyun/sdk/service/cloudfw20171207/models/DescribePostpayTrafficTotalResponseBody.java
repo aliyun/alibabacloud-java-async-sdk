@@ -76,6 +76,10 @@ public class DescribePostpayTrafficTotalResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -174,6 +178,24 @@ public class DescribePostpayTrafficTotalResponseBody extends TeaModel {
         private Long totalVpcAssets; 
         private Long totalVpcTraffic; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribePostpayTrafficTotalResponseBody model) {
+            this.requestId = model.requestId;
+            this.totalAssets = model.totalAssets;
+            this.totalBillTraffic = model.totalBillTraffic;
+            this.totalInternetAssets = model.totalInternetAssets;
+            this.totalInternetTraffic = model.totalInternetTraffic;
+            this.totalNatAssets = model.totalNatAssets;
+            this.totalNatTraffic = model.totalNatTraffic;
+            this.totalSdlBillTraffic = model.totalSdlBillTraffic;
+            this.totalSdlFreeTraffic = model.totalSdlFreeTraffic;
+            this.totalTraffic = model.totalTraffic;
+            this.totalVpcAssets = model.totalVpcAssets;
+            this.totalVpcTraffic = model.totalVpcTraffic;
+        } 
+
         /**
          * <p>The ID of the request.</p>
          * 
@@ -252,7 +274,10 @@ public class DescribePostpayTrafficTotalResponseBody extends TeaModel {
         }
 
         /**
-         * TotalSdlBillTraffic.
+         * <p>Data Leak Detection Total Fee Flow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22879916142</p>
          */
         public Builder totalSdlBillTraffic(Long totalSdlBillTraffic) {
             this.totalSdlBillTraffic = totalSdlBillTraffic;
@@ -260,7 +285,10 @@ public class DescribePostpayTrafficTotalResponseBody extends TeaModel {
         }
 
         /**
-         * TotalSdlFreeTraffic.
+         * <p>Data Leak Detection Total free usage traffic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder totalSdlFreeTraffic(Long totalSdlFreeTraffic) {
             this.totalSdlFreeTraffic = totalSdlFreeTraffic;

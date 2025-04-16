@@ -36,6 +36,10 @@ public class AddAddressBookResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return groupUuid
      */
@@ -53,6 +57,14 @@ public class AddAddressBookResponseBody extends TeaModel {
     public static final class Builder {
         private String groupUuid; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AddAddressBookResponseBody model) {
+            this.groupUuid = model.groupUuid;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The UUID of the returned address book.</p>

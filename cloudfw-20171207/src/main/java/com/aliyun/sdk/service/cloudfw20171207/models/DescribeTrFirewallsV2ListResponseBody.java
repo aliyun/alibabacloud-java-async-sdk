@@ -40,6 +40,10 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
         private String requestId; 
         private String totalCount; 
         private java.util.List<VpcTrFirewalls> vpcTrFirewalls; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTrFirewallsV2ListResponseBody model) {
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.vpcTrFirewalls = model.vpcTrFirewalls;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -102,6 +115,60 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTrFirewallsV2ListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTrFirewallsV2ListResponseBody</p>
+     */
+    public static class AclConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("StrictMode")
+        private Integer strictMode;
+
+        private AclConfig(Builder builder) {
+            this.strictMode = builder.strictMode;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AclConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return strictMode
+         */
+        public Integer getStrictMode() {
+            return this.strictMode;
+        }
+
+        public static final class Builder {
+            private Integer strictMode; 
+
+            private Builder() {
+            } 
+
+            private Builder(AclConfig model) {
+                this.strictMode = model.strictMode;
+            } 
+
+            /**
+             * StrictMode.
+             */
+            public Builder strictMode(Integer strictMode) {
+                this.strictMode = strictMode;
+                return this;
+            }
+
+            public AclConfig build() {
+                return new AclConfig(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link DescribeTrFirewallsV2ListResponseBody} extends {@link TeaModel}
@@ -169,6 +236,16 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
             private Integer enableAllPatch; 
             private Integer ruleClass; 
             private Integer runMode; 
+
+            private Builder() {
+            } 
+
+            private Builder(IpsConfig model) {
+                this.basicRules = model.basicRules;
+                this.enableAllPatch = model.enableAllPatch;
+                this.ruleClass = model.ruleClass;
+                this.runMode = model.runMode;
+            } 
 
             /**
              * <p>Indicates whether basic protection is enabled. Valid values:</p>
@@ -330,6 +407,18 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
             private java.util.List<String> vpcList; 
             private java.util.List<String> vpnList; 
 
+            private Builder() {
+            } 
+
+            private Builder(ProtectedResource model) {
+                this.count = model.count;
+                this.ecrList = model.ecrList;
+                this.peerTrList = model.peerTrList;
+                this.vbrList = model.vbrList;
+                this.vpcList = model.vpcList;
+                this.vpnList = model.vpnList;
+            } 
+
             /**
              * <p>The number of protected resources.</p>
              * 
@@ -480,6 +569,18 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
             private java.util.List<String> vpcList; 
             private java.util.List<String> vpnList; 
 
+            private Builder() {
+            } 
+
+            private Builder(UnprotectedResource model) {
+                this.count = model.count;
+                this.ecrList = model.ecrList;
+                this.peerTrList = model.peerTrList;
+                this.vbrList = model.vbrList;
+                this.vpcList = model.vpcList;
+                this.vpnList = model.vpnList;
+            } 
+
             /**
              * <p>The number of unprotected resources.</p>
              * 
@@ -545,6 +646,9 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
      * <p>DescribeTrFirewallsV2ListResponseBody</p>
      */
     public static class VpcTrFirewalls extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AclConfig")
+        private AclConfig aclConfig;
+
         @com.aliyun.core.annotation.NameInMap("CenId")
         private String cenId;
 
@@ -594,6 +698,7 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
         private String vpcFirewallName;
 
         private VpcTrFirewalls(Builder builder) {
+            this.aclConfig = builder.aclConfig;
             this.cenId = builder.cenId;
             this.cenName = builder.cenName;
             this.cloudFirewallVpcOrderType = builder.cloudFirewallVpcOrderType;
@@ -618,6 +723,13 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
 
         public static VpcTrFirewalls create() {
             return builder().build();
+        }
+
+        /**
+         * @return aclConfig
+         */
+        public AclConfig getAclConfig() {
+            return this.aclConfig;
         }
 
         /**
@@ -733,6 +845,7 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private AclConfig aclConfig; 
             private String cenId; 
             private String cenName; 
             private String cloudFirewallVpcOrderType; 
@@ -749,6 +862,37 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
             private String transitRouterId; 
             private UnprotectedResource unprotectedResource; 
             private String vpcFirewallName; 
+
+            private Builder() {
+            } 
+
+            private Builder(VpcTrFirewalls model) {
+                this.aclConfig = model.aclConfig;
+                this.cenId = model.cenId;
+                this.cenName = model.cenName;
+                this.cloudFirewallVpcOrderType = model.cloudFirewallVpcOrderType;
+                this.firewallId = model.firewallId;
+                this.firewallSwitchStatus = model.firewallSwitchStatus;
+                this.ipsConfig = model.ipsConfig;
+                this.ownerId = model.ownerId;
+                this.precheckStatus = model.precheckStatus;
+                this.protectedResource = model.protectedResource;
+                this.regionNo = model.regionNo;
+                this.regionStatus = model.regionStatus;
+                this.resultCode = model.resultCode;
+                this.routeMode = model.routeMode;
+                this.transitRouterId = model.transitRouterId;
+                this.unprotectedResource = model.unprotectedResource;
+                this.vpcFirewallName = model.vpcFirewallName;
+            } 
+
+            /**
+             * AclConfig.
+             */
+            public Builder aclConfig(AclConfig aclConfig) {
+                this.aclConfig = aclConfig;
+                return this;
+            }
 
             /**
              * <p>The ID of the CEN instance.</p>

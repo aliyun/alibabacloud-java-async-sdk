@@ -26,6 +26,10 @@ public class DescribeVpcFirewallAclGroupListRequest extends Request {
     private String firewallConfigureStatus;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FirewallId")
+    private String firewallId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
@@ -37,6 +41,7 @@ public class DescribeVpcFirewallAclGroupListRequest extends Request {
         super(builder);
         this.currentPage = builder.currentPage;
         this.firewallConfigureStatus = builder.firewallConfigureStatus;
+        this.firewallId = builder.firewallId;
         this.lang = builder.lang;
         this.pageSize = builder.pageSize;
     }
@@ -49,7 +54,7 @@ public class DescribeVpcFirewallAclGroupListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -69,6 +74,13 @@ public class DescribeVpcFirewallAclGroupListRequest extends Request {
     }
 
     /**
+     * @return firewallId
+     */
+    public String getFirewallId() {
+        return this.firewallId;
+    }
+
+    /**
      * @return lang
      */
     public String getLang() {
@@ -85,6 +97,7 @@ public class DescribeVpcFirewallAclGroupListRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeVpcFirewallAclGroupListRequest, Builder> {
         private String currentPage; 
         private String firewallConfigureStatus; 
+        private String firewallId; 
         private String lang; 
         private String pageSize; 
 
@@ -96,6 +109,7 @@ public class DescribeVpcFirewallAclGroupListRequest extends Request {
             super(request);
             this.currentPage = request.currentPage;
             this.firewallConfigureStatus = request.firewallConfigureStatus;
+            this.firewallId = request.firewallId;
             this.lang = request.lang;
             this.pageSize = request.pageSize;
         } 
@@ -126,6 +140,15 @@ public class DescribeVpcFirewallAclGroupListRequest extends Request {
         public Builder firewallConfigureStatus(String firewallConfigureStatus) {
             this.putQueryParameter("FirewallConfigureStatus", firewallConfigureStatus);
             this.firewallConfigureStatus = firewallConfigureStatus;
+            return this;
+        }
+
+        /**
+         * FirewallId.
+         */
+        public Builder firewallId(String firewallId) {
+            this.putQueryParameter("FirewallId", firewallId);
+            this.firewallId = firewallId;
             return this;
         }
 

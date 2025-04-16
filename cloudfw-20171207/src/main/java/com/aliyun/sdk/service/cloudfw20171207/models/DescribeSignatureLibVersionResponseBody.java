@@ -40,6 +40,10 @@ public class DescribeSignatureLibVersionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class DescribeSignatureLibVersionResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
         private java.util.List<Version> version; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSignatureLibVersionResponseBody model) {
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.version = model.version;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -112,11 +125,15 @@ public class DescribeSignatureLibVersionResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
+        private Long updateTime;
+
         @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private Version(Builder builder) {
             this.type = builder.type;
+            this.updateTime = builder.updateTime;
             this.version = builder.version;
         }
 
@@ -136,6 +153,13 @@ public class DescribeSignatureLibVersionResponseBody extends TeaModel {
         }
 
         /**
+         * @return updateTime
+         */
+        public Long getUpdateTime() {
+            return this.updateTime;
+        }
+
+        /**
          * @return version
          */
         public String getVersion() {
@@ -144,7 +168,17 @@ public class DescribeSignatureLibVersionResponseBody extends TeaModel {
 
         public static final class Builder {
             private String type; 
+            private Long updateTime; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(Version model) {
+                this.type = model.type;
+                this.updateTime = model.updateTime;
+                this.version = model.version;
+            } 
 
             /**
              * <p>The type.</p>
@@ -176,6 +210,14 @@ public class DescribeSignatureLibVersionResponseBody extends TeaModel {
              */
             public Builder type(String type) {
                 this.type = type;
+                return this;
+            }
+
+            /**
+             * UpdateTime.
+             */
+            public Builder updateTime(Long updateTime) {
+                this.updateTime = updateTime;
                 return this;
             }
 

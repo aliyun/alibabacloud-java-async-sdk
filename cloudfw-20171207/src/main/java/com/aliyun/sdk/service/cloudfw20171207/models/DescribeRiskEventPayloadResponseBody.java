@@ -88,6 +88,10 @@ public class DescribeRiskEventPayloadResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dstIP
      */
@@ -209,6 +213,27 @@ public class DescribeRiskEventPayloadResponseBody extends TeaModel {
         private Integer srcPort; 
         private String srcVpcId; 
         private String xForwardFor; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRiskEventPayloadResponseBody model) {
+            this.dstIP = model.dstIP;
+            this.dstPort = model.dstPort;
+            this.dstVpcId = model.dstVpcId;
+            this.hitContentType = model.hitContentType;
+            this.hitTo = model.hitTo;
+            this.parsedContent = model.parsedContent;
+            this.payload = model.payload;
+            this.payloadLen = model.payloadLen;
+            this.proto = model.proto;
+            this.realIp = model.realIp;
+            this.requestId = model.requestId;
+            this.srcIP = model.srcIP;
+            this.srcPort = model.srcPort;
+            this.srcVpcId = model.srcVpcId;
+            this.xForwardFor = model.xForwardFor;
+        } 
 
         /**
          * <p>The destination IP address of the intrusion event.</p>

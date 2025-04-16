@@ -40,6 +40,10 @@ public class DescribeNatAclPageStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return detail
      */
@@ -65,6 +69,15 @@ public class DescribeNatAclPageStatusResponseBody extends TeaModel {
         private String detail; 
         private Boolean natAclPageEnable; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeNatAclPageStatusResponseBody model) {
+            this.detail = model.detail;
+            this.natAclPageEnable = model.natAclPageEnable;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Extra error information.</p>

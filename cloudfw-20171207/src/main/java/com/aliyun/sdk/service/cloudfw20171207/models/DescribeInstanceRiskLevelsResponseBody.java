@@ -36,6 +36,10 @@ public class DescribeInstanceRiskLevelsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceRisks
      */
@@ -53,6 +57,14 @@ public class DescribeInstanceRiskLevelsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<InstanceRisks> instanceRisks; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceRiskLevelsResponseBody model) {
+            this.instanceRisks = model.instanceRisks;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the instances.</p>
@@ -134,6 +146,15 @@ public class DescribeInstanceRiskLevelsResponseBody extends TeaModel {
             private String ip; 
             private String level; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Details model) {
+                this.ip = model.ip;
+                this.level = model.level;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The IP addresses of servers.</p>
@@ -233,6 +254,15 @@ public class DescribeInstanceRiskLevelsResponseBody extends TeaModel {
             private java.util.List<Details> details; 
             private String instanceId; 
             private String level; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceRisks model) {
+                this.details = model.details;
+                this.instanceId = model.instanceId;
+                this.level = model.level;
+            } 
 
             /**
              * <p>The risk levels of the Elastic Compute Service (ECS) instance.</p>
