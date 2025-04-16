@@ -40,6 +40,10 @@ public class GetNodeMetricsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return metricType
      */
@@ -65,6 +69,15 @@ public class GetNodeMetricsResponseBody extends TeaModel {
         private String metricType; 
         private java.util.List<NodeMetric> nodesMetrics; 
         private String resourceGroupID; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetNodeMetricsResponseBody model) {
+            this.metricType = model.metricType;
+            this.nodesMetrics = model.nodesMetrics;
+            this.resourceGroupID = model.resourceGroupID;
+        } 
 
         /**
          * MetricType.

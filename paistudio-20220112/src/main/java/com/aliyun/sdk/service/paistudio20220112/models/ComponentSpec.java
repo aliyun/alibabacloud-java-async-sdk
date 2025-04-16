@@ -67,6 +67,10 @@ public class ComponentSpec extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return codeDir
      */
@@ -140,6 +144,21 @@ public class ComponentSpec extends TeaModel {
         private java.util.List<MetricDefinition> metricDefinitions; 
         private java.util.List<Channel> outputChannels; 
         private java.util.List<ConditionExpression> resourceRequirements; 
+
+        private Builder() {
+        } 
+
+        private Builder(ComponentSpec model) {
+            this.codeDir = model.codeDir;
+            this.command = model.command;
+            this.hyperParameters = model.hyperParameters;
+            this.image = model.image;
+            this.inputChannels = model.inputChannels;
+            this.jobType = model.jobType;
+            this.metricDefinitions = model.metricDefinitions;
+            this.outputChannels = model.outputChannels;
+            this.resourceRequirements = model.resourceRequirements;
+        } 
 
         /**
          * CodeDir.

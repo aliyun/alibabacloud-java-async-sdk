@@ -44,6 +44,10 @@ public class QuotaUser extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return resources
      */
@@ -77,6 +81,16 @@ public class QuotaUser extends TeaModel {
         private String userId; 
         private String username; 
         private Integer workloadCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(QuotaUser model) {
+            this.resources = model.resources;
+            this.userId = model.userId;
+            this.username = model.username;
+            this.workloadCount = model.workloadCount;
+        } 
 
         /**
          * Resources.
@@ -159,6 +173,14 @@ public class QuotaUser extends TeaModel {
         public static final class Builder {
             private ResourceAmount submitted; 
             private ResourceAmount used; 
+
+            private Builder() {
+            } 
+
+            private Builder(Resources model) {
+                this.submitted = model.submitted;
+                this.used = model.used;
+            } 
 
             /**
              * Submitted.

@@ -40,6 +40,10 @@ public class ListAlgorithmsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return algorithms
      */
@@ -65,6 +69,15 @@ public class ListAlgorithmsResponseBody extends TeaModel {
         private java.util.List<Algorithms> algorithms; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAlgorithmsResponseBody model) {
+            this.algorithms = model.algorithms;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Algorithms.
@@ -223,6 +236,21 @@ public class ListAlgorithmsResponseBody extends TeaModel {
             private String gmtModifiedTime; 
             private String userId; 
             private String workspaceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Algorithms model) {
+                this.algorithmDescription = model.algorithmDescription;
+                this.algorithmId = model.algorithmId;
+                this.algorithmName = model.algorithmName;
+                this.algorithmProvider = model.algorithmProvider;
+                this.displayName = model.displayName;
+                this.gmtCreateTime = model.gmtCreateTime;
+                this.gmtModifiedTime = model.gmtModifiedTime;
+                this.userId = model.userId;
+                this.workspaceId = model.workspaceId;
+            } 
 
             /**
              * AlgorithmDescription.

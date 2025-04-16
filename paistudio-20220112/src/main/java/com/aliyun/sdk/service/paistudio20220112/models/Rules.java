@@ -32,6 +32,10 @@ public class Rules extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return scheduling
      */
@@ -41,6 +45,13 @@ public class Rules extends TeaModel {
 
     public static final class Builder {
         private SchedulingRule scheduling; 
+
+        private Builder() {
+        } 
+
+        private Builder(Rules model) {
+            this.scheduling = model.scheduling;
+        } 
 
         /**
          * Scheduling.

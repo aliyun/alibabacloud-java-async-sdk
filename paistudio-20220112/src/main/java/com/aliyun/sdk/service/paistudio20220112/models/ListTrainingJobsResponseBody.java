@@ -40,6 +40,10 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         private String requestId; 
         private Long totalCount; 
         private java.util.List<TrainingJobs> trainingJobs; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTrainingJobsResponseBody model) {
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.trainingJobs = model.trainingJobs;
+        } 
 
         /**
          * RequestId.
@@ -175,6 +188,17 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             private String GPUType; 
             private String memory; 
             private String sharedMemory; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceSpec model) {
+                this.CPU = model.CPU;
+                this.GPU = model.GPU;
+                this.GPUType = model.GPUType;
+                this.memory = model.memory;
+                this.sharedMemory = model.sharedMemory;
+            } 
 
             /**
              * CPU.
@@ -315,6 +339,18 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             private String resourceId; 
             private String resourceName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ComputeResource model) {
+                this.ecsCount = model.ecsCount;
+                this.ecsSpec = model.ecsSpec;
+                this.instanceCount = model.instanceCount;
+                this.instanceSpec = model.instanceSpec;
+                this.resourceId = model.resourceId;
+                this.resourceName = model.resourceName;
+            } 
+
             /**
              * EcsCount.
              */
@@ -414,6 +450,14 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             private String experimentId; 
             private String experimentName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ExperimentConfig model) {
+                this.experimentId = model.experimentId;
+                this.experimentName = model.experimentName;
+            } 
+
             /**
              * ExperimentId.
              */
@@ -480,6 +524,14 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         public static final class Builder {
             private String name; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(HyperParameters model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
 
             /**
              * Name.
@@ -572,6 +624,16 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             private String name; 
             private String versionName; 
 
+            private Builder() {
+            } 
+
+            private Builder(InputChannels model) {
+                this.datasetId = model.datasetId;
+                this.inputUri = model.inputUri;
+                this.name = model.name;
+                this.versionName = model.versionName;
+            } 
+
             /**
              * DatasetId.
              */
@@ -654,6 +716,14 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Labels model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * Key.
@@ -746,6 +816,16 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             private String outputUri; 
             private String versionName; 
 
+            private Builder() {
+            } 
+
+            private Builder(OutputChannels model) {
+                this.datasetId = model.datasetId;
+                this.name = model.name;
+                this.outputUri = model.outputUri;
+                this.versionName = model.versionName;
+            } 
+
             /**
              * DatasetId.
              */
@@ -816,6 +896,13 @@ public class ListTrainingJobsResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long maxRunningTimeInSeconds; 
+
+            private Builder() {
+            } 
+
+            private Builder(Scheduler model) {
+                this.maxRunningTimeInSeconds = model.maxRunningTimeInSeconds;
+            } 
 
             /**
              * MaxRunningTimeInSeconds.
@@ -911,6 +998,17 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             private String reasonMessage; 
             private String startTime; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(StatusTransitions model) {
+                this.endTime = model.endTime;
+                this.reasonCode = model.reasonCode;
+                this.reasonMessage = model.reasonMessage;
+                this.startTime = model.startTime;
+                this.status = model.status;
+            } 
 
             /**
              * EndTime.
@@ -1038,6 +1136,17 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             private String securityGroupId; 
             private String switchId; 
             private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserVpc model) {
+                this.defaultRoute = model.defaultRoute;
+                this.extendedCIDRs = model.extendedCIDRs;
+                this.securityGroupId = model.securityGroupId;
+                this.switchId = model.switchId;
+                this.vpcId = model.vpcId;
+            } 
 
             /**
              * DefaultRoute.
@@ -1432,6 +1541,39 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             private String userId; 
             private UserVpc userVpc; 
             private String workspaceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TrainingJobs model) {
+                this.algorithmName = model.algorithmName;
+                this.algorithmProvider = model.algorithmProvider;
+                this.algorithmVersion = model.algorithmVersion;
+                this.computeResource = model.computeResource;
+                this.dlcJobId = model.dlcJobId;
+                this.environments = model.environments;
+                this.experimentConfig = model.experimentConfig;
+                this.gmtCreateTime = model.gmtCreateTime;
+                this.gmtModifiedTime = model.gmtModifiedTime;
+                this.hyperParameters = model.hyperParameters;
+                this.inputChannels = model.inputChannels;
+                this.isTempAlgo = model.isTempAlgo;
+                this.labels = model.labels;
+                this.outputChannels = model.outputChannels;
+                this.pythonRequirements = model.pythonRequirements;
+                this.reasonCode = model.reasonCode;
+                this.reasonMessage = model.reasonMessage;
+                this.roleArn = model.roleArn;
+                this.scheduler = model.scheduler;
+                this.status = model.status;
+                this.statusTransitions = model.statusTransitions;
+                this.trainingJobDescription = model.trainingJobDescription;
+                this.trainingJobId = model.trainingJobId;
+                this.trainingJobName = model.trainingJobName;
+                this.userId = model.userId;
+                this.userVpc = model.userVpc;
+                this.workspaceId = model.workspaceId;
+            } 
 
             /**
              * AlgorithmName.

@@ -40,6 +40,10 @@ public class GetSpotPriceHistoryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class GetSpotPriceHistoryResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<SpotPriceItem> spotPriceHistory; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSpotPriceHistoryResponseBody model) {
+            this.requestId = model.requestId;
+            this.spotPriceHistory = model.spotPriceHistory;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * RequestId.

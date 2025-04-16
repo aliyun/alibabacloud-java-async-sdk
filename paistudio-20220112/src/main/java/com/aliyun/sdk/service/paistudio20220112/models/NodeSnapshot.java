@@ -64,6 +64,10 @@ public class NodeSnapshot extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ancestorQuotaWorkloadNum
      */
@@ -137,6 +141,21 @@ public class NodeSnapshot extends TeaModel {
         private Integer selfQuotaWorkloadNum; 
         private Integer workloadNum; 
         private java.util.List<Workloads> workloads; 
+
+        private Builder() {
+        } 
+
+        private Builder(NodeSnapshot model) {
+            this.ancestorQuotaWorkloadNum = model.ancestorQuotaWorkloadNum;
+            this.descendantQuotaWorkloadNum = model.descendantQuotaWorkloadNum;
+            this.nodeName = model.nodeName;
+            this.requestCPU = model.requestCPU;
+            this.requestGPU = model.requestGPU;
+            this.requestMemory = model.requestMemory;
+            this.selfQuotaWorkloadNum = model.selfQuotaWorkloadNum;
+            this.workloadNum = model.workloadNum;
+            this.workloads = model.workloads;
+        } 
 
         /**
          * AncestorQuotaWorkloadNum.
@@ -271,6 +290,15 @@ public class NodeSnapshot extends TeaModel {
             private String name; 
             private String workloadId; 
             private String workloadType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Workloads model) {
+                this.name = model.name;
+                this.workloadId = model.workloadId;
+                this.workloadType = model.workloadType;
+            } 
 
             /**
              * Name.

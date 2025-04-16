@@ -32,6 +32,10 @@ public class ListTrainingJobOutputModelsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return outputModels
      */
@@ -41,6 +45,13 @@ public class ListTrainingJobOutputModelsResponseBody extends TeaModel {
 
     public static final class Builder {
         private java.util.List<OutputModels> outputModels; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTrainingJobOutputModelsResponseBody model) {
+            this.outputModels = model.outputModels;
+        } 
 
         /**
          * OutputModels.
@@ -99,6 +110,14 @@ public class ListTrainingJobOutputModelsResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Labels model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * Key.
@@ -262,6 +281,22 @@ public class ListTrainingJobOutputModelsResponseBody extends TeaModel {
             private String sourceType; 
             private java.util.Map<String, ?> trainingSpec; 
             private String uri; 
+
+            private Builder() {
+            } 
+
+            private Builder(OutputModels model) {
+                this.compressionSpec = model.compressionSpec;
+                this.evaluationSpec = model.evaluationSpec;
+                this.inferenceSpec = model.inferenceSpec;
+                this.labels = model.labels;
+                this.metrics = model.metrics;
+                this.outputChannelName = model.outputChannelName;
+                this.sourceId = model.sourceId;
+                this.sourceType = model.sourceType;
+                this.trainingSpec = model.trainingSpec;
+                this.uri = model.uri;
+            } 
 
             /**
              * CompressionSpec.

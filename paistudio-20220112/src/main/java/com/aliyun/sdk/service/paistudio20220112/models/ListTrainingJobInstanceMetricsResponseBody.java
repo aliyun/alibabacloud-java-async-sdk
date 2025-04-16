@@ -36,6 +36,10 @@ public class ListTrainingJobInstanceMetricsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceMetrics
      */
@@ -53,6 +57,14 @@ public class ListTrainingJobInstanceMetricsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<InstanceMetrics> instanceMetrics; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTrainingJobInstanceMetricsResponseBody model) {
+            this.instanceMetrics = model.instanceMetrics;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * InstanceMetrics.
@@ -119,6 +131,14 @@ public class ListTrainingJobInstanceMetricsResponseBody extends TeaModel {
         public static final class Builder {
             private String time; 
             private Double value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Metrics model) {
+                this.time = model.time;
+                this.value = model.value;
+            } 
 
             /**
              * Time.
@@ -198,6 +218,15 @@ public class ListTrainingJobInstanceMetricsResponseBody extends TeaModel {
             private String instanceId; 
             private java.util.List<Metrics> metrics; 
             private String nodeName; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceMetrics model) {
+                this.instanceId = model.instanceId;
+                this.metrics = model.metrics;
+                this.nodeName = model.nodeName;
+            } 
 
             /**
              * InstanceId.

@@ -116,6 +116,10 @@ public class NodeViewMetric extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return CPUUsageRate
      */
@@ -293,6 +297,34 @@ public class NodeViewMetric extends TeaModel {
         private Long totalTasks; 
         private java.util.List<String> userIDs; 
         private String userNumber; 
+
+        private Builder() {
+        } 
+
+        private Builder(NodeViewMetric model) {
+            this.CPUUsageRate = model.CPUUsageRate;
+            this.createdTime = model.createdTime;
+            this.diskReadRate = model.diskReadRate;
+            this.diskWriteRate = model.diskWriteRate;
+            this.GPUType = model.GPUType;
+            this.machineGroupID = model.machineGroupID;
+            this.memoryUsageRate = model.memoryUsageRate;
+            this.networkInputRate = model.networkInputRate;
+            this.networkOutputRate = model.networkOutputRate;
+            this.nodeID = model.nodeID;
+            this.nodeStatus = model.nodeStatus;
+            this.nodeType = model.nodeType;
+            this.requestCPU = model.requestCPU;
+            this.requestGPU = model.requestGPU;
+            this.requestMemory = model.requestMemory;
+            this.taskIdMap = model.taskIdMap;
+            this.totalCPU = model.totalCPU;
+            this.totalGPU = model.totalGPU;
+            this.totalMemory = model.totalMemory;
+            this.totalTasks = model.totalTasks;
+            this.userIDs = model.userIDs;
+            this.userNumber = model.userNumber;
+        } 
 
         /**
          * CPUUsageRate.

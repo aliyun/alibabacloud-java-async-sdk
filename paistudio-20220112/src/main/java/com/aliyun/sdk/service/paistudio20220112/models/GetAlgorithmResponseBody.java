@@ -72,6 +72,10 @@ public class GetAlgorithmResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return algorithmDescription
      */
@@ -161,6 +165,23 @@ public class GetAlgorithmResponseBody extends TeaModel {
         private String tenantId; 
         private String userId; 
         private String workspaceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAlgorithmResponseBody model) {
+            this.algorithmDescription = model.algorithmDescription;
+            this.algorithmId = model.algorithmId;
+            this.algorithmName = model.algorithmName;
+            this.algorithmProvider = model.algorithmProvider;
+            this.displayName = model.displayName;
+            this.gmtCreateTime = model.gmtCreateTime;
+            this.gmtModifiedTime = model.gmtModifiedTime;
+            this.requestId = model.requestId;
+            this.tenantId = model.tenantId;
+            this.userId = model.userId;
+            this.workspaceId = model.workspaceId;
+        } 
 
         /**
          * AlgorithmDescription.

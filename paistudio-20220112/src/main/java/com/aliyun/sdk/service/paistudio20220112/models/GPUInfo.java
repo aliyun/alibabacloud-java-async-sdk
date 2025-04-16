@@ -36,6 +36,10 @@ public class GPUInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return count
      */
@@ -53,6 +57,14 @@ public class GPUInfo extends TeaModel {
     public static final class Builder {
         private Long count; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(GPUInfo model) {
+            this.count = model.count;
+            this.type = model.type;
+        } 
 
         /**
          * count.

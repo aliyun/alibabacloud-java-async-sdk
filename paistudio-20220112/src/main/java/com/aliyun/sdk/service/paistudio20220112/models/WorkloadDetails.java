@@ -44,6 +44,10 @@ public class WorkloadDetails extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DLC
      */
@@ -77,6 +81,16 @@ public class WorkloadDetails extends TeaModel {
         private QuotaJob DSW; 
         private QuotaJob EAS; 
         private QuotaJob summary; 
+
+        private Builder() {
+        } 
+
+        private Builder(WorkloadDetails model) {
+            this.DLC = model.DLC;
+            this.DSW = model.DSW;
+            this.EAS = model.EAS;
+            this.summary = model.summary;
+        } 
 
         /**
          * DLC.

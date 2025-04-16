@@ -34,6 +34,10 @@ public class ListNodesRequest extends Request {
     private String GPUType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MachineGroupIds")
+    private String machineGroupIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NodeNames")
     private String nodeNames;
 
@@ -66,6 +70,10 @@ public class ListNodesRequest extends Request {
     private String quotaId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReasonCodes")
+    private String reasonCodes;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceGroupIds")
     private String resourceGroupIds;
 
@@ -83,6 +91,7 @@ public class ListNodesRequest extends Request {
         this.filterByQuotaId = builder.filterByQuotaId;
         this.filterByResourceGroupIds = builder.filterByResourceGroupIds;
         this.GPUType = builder.GPUType;
+        this.machineGroupIds = builder.machineGroupIds;
         this.nodeNames = builder.nodeNames;
         this.nodeStatuses = builder.nodeStatuses;
         this.nodeTypes = builder.nodeTypes;
@@ -91,6 +100,7 @@ public class ListNodesRequest extends Request {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.quotaId = builder.quotaId;
+        this.reasonCodes = builder.reasonCodes;
         this.resourceGroupIds = builder.resourceGroupIds;
         this.sortBy = builder.sortBy;
         this.verbose = builder.verbose;
@@ -104,7 +114,7 @@ public class ListNodesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -135,6 +145,13 @@ public class ListNodesRequest extends Request {
      */
     public String getGPUType() {
         return this.GPUType;
+    }
+
+    /**
+     * @return machineGroupIds
+     */
+    public String getMachineGroupIds() {
+        return this.machineGroupIds;
     }
 
     /**
@@ -194,6 +211,13 @@ public class ListNodesRequest extends Request {
     }
 
     /**
+     * @return reasonCodes
+     */
+    public String getReasonCodes() {
+        return this.reasonCodes;
+    }
+
+    /**
      * @return resourceGroupIds
      */
     public String getResourceGroupIds() {
@@ -219,6 +243,7 @@ public class ListNodesRequest extends Request {
         private String filterByQuotaId; 
         private String filterByResourceGroupIds; 
         private String GPUType; 
+        private String machineGroupIds; 
         private String nodeNames; 
         private String nodeStatuses; 
         private String nodeTypes; 
@@ -227,6 +252,7 @@ public class ListNodesRequest extends Request {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String quotaId; 
+        private String reasonCodes; 
         private String resourceGroupIds; 
         private String sortBy; 
         private Boolean verbose; 
@@ -241,6 +267,7 @@ public class ListNodesRequest extends Request {
             this.filterByQuotaId = request.filterByQuotaId;
             this.filterByResourceGroupIds = request.filterByResourceGroupIds;
             this.GPUType = request.GPUType;
+            this.machineGroupIds = request.machineGroupIds;
             this.nodeNames = request.nodeNames;
             this.nodeStatuses = request.nodeStatuses;
             this.nodeTypes = request.nodeTypes;
@@ -249,6 +276,7 @@ public class ListNodesRequest extends Request {
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.quotaId = request.quotaId;
+            this.reasonCodes = request.reasonCodes;
             this.resourceGroupIds = request.resourceGroupIds;
             this.sortBy = request.sortBy;
             this.verbose = request.verbose;
@@ -287,6 +315,15 @@ public class ListNodesRequest extends Request {
         public Builder GPUType(String GPUType) {
             this.putQueryParameter("GPUType", GPUType);
             this.GPUType = GPUType;
+            return this;
+        }
+
+        /**
+         * MachineGroupIds.
+         */
+        public Builder machineGroupIds(String machineGroupIds) {
+            this.putQueryParameter("MachineGroupIds", machineGroupIds);
+            this.machineGroupIds = machineGroupIds;
             return this;
         }
 
@@ -359,6 +396,15 @@ public class ListNodesRequest extends Request {
         public Builder quotaId(String quotaId) {
             this.putQueryParameter("QuotaId", quotaId);
             this.quotaId = quotaId;
+            return this;
+        }
+
+        /**
+         * ReasonCodes.
+         */
+        public Builder reasonCodes(String reasonCodes) {
+            this.putQueryParameter("ReasonCodes", reasonCodes);
+            this.reasonCodes = reasonCodes;
             return this;
         }
 

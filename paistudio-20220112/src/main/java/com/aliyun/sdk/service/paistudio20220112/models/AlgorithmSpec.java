@@ -87,6 +87,10 @@ public class AlgorithmSpec extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return codeDir
      */
@@ -200,6 +204,26 @@ public class AlgorithmSpec extends TeaModel {
         private java.util.List<ConditionExpression> resourceRequirements; 
         private java.util.List<String> supportedInstanceTypes; 
         private Boolean supportsDistributedTraining; 
+
+        private Builder() {
+        } 
+
+        private Builder(AlgorithmSpec model) {
+            this.codeDir = model.codeDir;
+            this.command = model.command;
+            this.computeResource = model.computeResource;
+            this.customization = model.customization;
+            this.hyperParameters = model.hyperParameters;
+            this.image = model.image;
+            this.inputChannels = model.inputChannels;
+            this.jobType = model.jobType;
+            this.metricDefinitions = model.metricDefinitions;
+            this.outputChannels = model.outputChannels;
+            this.progressDefinitions = model.progressDefinitions;
+            this.resourceRequirements = model.resourceRequirements;
+            this.supportedInstanceTypes = model.supportedInstanceTypes;
+            this.supportsDistributedTraining = model.supportsDistributedTraining;
+        } 
 
         /**
          * CodeDir.
@@ -365,6 +389,14 @@ public class AlgorithmSpec extends TeaModel {
             private String value; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(Policy model) {
+                this.value = model.value;
+                this.version = model.version;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              */
@@ -421,6 +453,13 @@ public class AlgorithmSpec extends TeaModel {
         public static final class Builder {
             private Policy policy; 
 
+            private Builder() {
+            } 
+
+            private Builder(ComputeResource model) {
+                this.policy = model.policy;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              */
@@ -467,6 +506,13 @@ public class AlgorithmSpec extends TeaModel {
 
         public static final class Builder {
             private Boolean codeDir; 
+
+            private Builder() {
+            } 
+
+            private Builder(Customization model) {
+                this.codeDir = model.codeDir;
+            } 
 
             /**
              * CodeDir.
@@ -526,6 +572,14 @@ public class AlgorithmSpec extends TeaModel {
         public static final class Builder {
             private String description; 
             private String regex; 
+
+            private Builder() {
+            } 
+
+            private Builder(OverallProgress model) {
+                this.description = model.description;
+                this.regex = model.regex;
+            } 
 
             /**
              * Description.
@@ -594,6 +648,14 @@ public class AlgorithmSpec extends TeaModel {
             private String description; 
             private String regex; 
 
+            private Builder() {
+            } 
+
+            private Builder(RemainingTime model) {
+                this.description = model.description;
+                this.regex = model.regex;
+            } 
+
             /**
              * Description.
              */
@@ -660,6 +722,14 @@ public class AlgorithmSpec extends TeaModel {
         public static final class Builder {
             private OverallProgress overallProgress; 
             private RemainingTime remainingTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProgressDefinitions model) {
+                this.overallProgress = model.overallProgress;
+                this.remainingTime = model.remainingTime;
+            } 
 
             /**
              * OverallProgress.

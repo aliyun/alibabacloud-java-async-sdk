@@ -58,6 +58,10 @@ public class HyperParameterDefinition extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return defaultValue
      */
@@ -115,6 +119,19 @@ public class HyperParameterDefinition extends TeaModel {
         private HyperParameterRange range; 
         private Boolean required; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(HyperParameterDefinition model) {
+            this.defaultValue = model.defaultValue;
+            this.description = model.description;
+            this.displayName = model.displayName;
+            this.name = model.name;
+            this.range = model.range;
+            this.required = model.required;
+            this.type = model.type;
+        } 
 
         /**
          * DefaultValue.

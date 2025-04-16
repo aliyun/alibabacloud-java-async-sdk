@@ -148,6 +148,10 @@ public class Node extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return acceleratorType
      */
@@ -389,6 +393,42 @@ public class Node extends TeaModel {
         private String resourceGroupName; 
         private java.util.List<UserInfo> users; 
         private Long workloadNum; 
+
+        private Builder() {
+        } 
+
+        private Builder(Node model) {
+            this.acceleratorType = model.acceleratorType;
+            this.boundQuotas = model.boundQuotas;
+            this.CPU = model.CPU;
+            this.creatorId = model.creatorId;
+            this.GPU = model.GPU;
+            this.GPUMemory = model.GPUMemory;
+            this.GPUType = model.GPUType;
+            this.gmtCreateTime = model.gmtCreateTime;
+            this.gmtExpiredTime = model.gmtExpiredTime;
+            this.gmtModifiedTime = model.gmtModifiedTime;
+            this.isBound = model.isBound;
+            this.limitCPU = model.limitCPU;
+            this.limitGPU = model.limitGPU;
+            this.limitMemory = model.limitMemory;
+            this.machineGroupId = model.machineGroupId;
+            this.memory = model.memory;
+            this.nodeName = model.nodeName;
+            this.nodeStatus = model.nodeStatus;
+            this.nodeType = model.nodeType;
+            this.orderStatus = model.orderStatus;
+            this.podNum = model.podNum;
+            this.reasonCode = model.reasonCode;
+            this.reasonMessage = model.reasonMessage;
+            this.requestCPU = model.requestCPU;
+            this.requestGPU = model.requestGPU;
+            this.requestMemory = model.requestMemory;
+            this.resourceGroupId = model.resourceGroupId;
+            this.resourceGroupName = model.resourceGroupName;
+            this.users = model.users;
+            this.workloadNum = model.workloadNum;
+        } 
 
         /**
          * AcceleratorType.

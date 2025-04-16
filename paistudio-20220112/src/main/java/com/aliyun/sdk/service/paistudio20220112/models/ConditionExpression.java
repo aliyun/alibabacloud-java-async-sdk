@@ -43,6 +43,10 @@ public class ConditionExpression extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return key
      */
@@ -68,6 +72,15 @@ public class ConditionExpression extends TeaModel {
         private String key; 
         private String operator; 
         private java.util.List<String> values; 
+
+        private Builder() {
+        } 
+
+        private Builder(ConditionExpression model) {
+            this.key = model.key;
+            this.operator = model.operator;
+            this.values = model.values;
+        } 
 
         /**
          * <p>This parameter is required.</p>

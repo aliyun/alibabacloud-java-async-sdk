@@ -36,6 +36,10 @@ public class DeleteMachineGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return machineGroupID
      */
@@ -53,6 +57,14 @@ public class DeleteMachineGroupResponseBody extends TeaModel {
     public static final class Builder {
         private String machineGroupID; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteMachineGroupResponseBody model) {
+            this.machineGroupID = model.machineGroupID;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * MachineGroupID.

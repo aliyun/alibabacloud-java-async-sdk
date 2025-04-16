@@ -36,6 +36,10 @@ public class Location extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return locationType
      */
@@ -53,6 +57,14 @@ public class Location extends TeaModel {
     public static final class Builder {
         private String locationType; 
         private java.util.Map<String, ?> locationValue; 
+
+        private Builder() {
+        } 
+
+        private Builder(Location model) {
+            this.locationType = model.locationType;
+            this.locationValue = model.locationValue;
+        } 
 
         /**
          * LocationType.

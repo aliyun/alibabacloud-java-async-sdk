@@ -36,6 +36,10 @@ public class DeleteResourceGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DeleteResourceGroupResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String resourceGroupID; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteResourceGroupResponseBody model) {
+            this.requestId = model.requestId;
+            this.resourceGroupID = model.resourceGroupID;
+        } 
 
         /**
          * RequestId.

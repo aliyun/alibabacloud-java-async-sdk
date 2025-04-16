@@ -56,6 +56,10 @@ public class WorkspaceSpec extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -113,6 +117,19 @@ public class WorkspaceSpec extends TeaModel {
         private String reason; 
         private ResourceAmount spec; 
         private String specName; 
+
+        private Builder() {
+        } 
+
+        private Builder(WorkspaceSpec model) {
+            this.code = model.code;
+            this.codeType = model.codeType;
+            this.isGuaranteedValid = model.isGuaranteedValid;
+            this.isOverSoldValid = model.isOverSoldValid;
+            this.reason = model.reason;
+            this.spec = model.spec;
+            this.specName = model.specName;
+        } 
 
         /**
          * Code.

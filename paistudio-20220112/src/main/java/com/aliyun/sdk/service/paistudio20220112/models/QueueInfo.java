@@ -112,6 +112,10 @@ public class QueueInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -281,6 +285,33 @@ public class QueueInfo extends TeaModel {
         private String workloadStatus; 
         private String workloadType; 
         private String workspaceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueueInfo model) {
+            this.code = model.code;
+            this.codeType = model.codeType;
+            this.gmtCreatedTime = model.gmtCreatedTime;
+            this.gmtDequeuedTime = model.gmtDequeuedTime;
+            this.gmtEnqueuedTime = model.gmtEnqueuedTime;
+            this.gmtPositionModifiedTime = model.gmtPositionModifiedTime;
+            this.name = model.name;
+            this.position = model.position;
+            this.priority = model.priority;
+            this.queueStrategy = model.queueStrategy;
+            this.quotaId = model.quotaId;
+            this.reason = model.reason;
+            this.resource = model.resource;
+            this.status = model.status;
+            this.userId = model.userId;
+            this.userName = model.userName;
+            this.workloadId = model.workloadId;
+            this.workloadName = model.workloadName;
+            this.workloadStatus = model.workloadStatus;
+            this.workloadType = model.workloadType;
+            this.workspaceId = model.workspaceId;
+        } 
 
         /**
          * Code.

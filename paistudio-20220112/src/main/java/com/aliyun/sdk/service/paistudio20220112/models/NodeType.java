@@ -56,6 +56,10 @@ public class NodeType extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return acceleratorType
      */
@@ -113,6 +117,19 @@ public class NodeType extends TeaModel {
         private String GPUType; 
         private String memory; 
         private String nodeType; 
+
+        private Builder() {
+        } 
+
+        private Builder(NodeType model) {
+            this.acceleratorType = model.acceleratorType;
+            this.CPU = model.CPU;
+            this.GPU = model.GPU;
+            this.GPUMemory = model.GPUMemory;
+            this.GPUType = model.GPUType;
+            this.memory = model.memory;
+            this.nodeType = model.nodeType;
+        } 
 
         /**
          * AcceleratorType.

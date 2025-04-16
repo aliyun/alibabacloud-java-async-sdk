@@ -36,6 +36,10 @@ public class GetTrainingJobErrorInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorInfo
      */
@@ -53,6 +57,14 @@ public class GetTrainingJobErrorInfoResponseBody extends TeaModel {
     public static final class Builder {
         private ErrorInfo errorInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTrainingJobErrorInfoResponseBody model) {
+            this.errorInfo = model.errorInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * ErrorInfo.
@@ -131,6 +143,15 @@ public class GetTrainingJobErrorInfoResponseBody extends TeaModel {
             private String additionalInfo; 
             private String code; 
             private String message; 
+
+            private Builder() {
+            } 
+
+            private Builder(ErrorInfo model) {
+                this.additionalInfo = model.additionalInfo;
+                this.code = model.code;
+                this.message = model.message;
+            } 
 
             /**
              * AdditionalInfo.

@@ -42,6 +42,10 @@ public class MetricDefinition extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return description
      */
@@ -67,6 +71,15 @@ public class MetricDefinition extends TeaModel {
         private String description; 
         private String name; 
         private String regex; 
+
+        private Builder() {
+        } 
+
+        private Builder(MetricDefinition model) {
+            this.description = model.description;
+            this.name = model.name;
+            this.regex = model.regex;
+        } 
 
         /**
          * Description.

@@ -36,6 +36,10 @@ public class SubQuotaPreemptionConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return preemptedPriorityUpperBound
      */
@@ -53,6 +57,14 @@ public class SubQuotaPreemptionConfig extends TeaModel {
     public static final class Builder {
         private Long preemptedPriorityUpperBound; 
         private java.util.List<String> preemptedProducts; 
+
+        private Builder() {
+        } 
+
+        private Builder(SubQuotaPreemptionConfig model) {
+            this.preemptedPriorityUpperBound = model.preemptedPriorityUpperBound;
+            this.preemptedProducts = model.preemptedProducts;
+        } 
 
         /**
          * PreemptedPriorityUpperBound.

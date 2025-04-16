@@ -68,6 +68,10 @@ public class QuotaConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ACS
      */
@@ -149,6 +153,22 @@ public class QuotaConfig extends TeaModel {
         private java.util.List<String> supportGPUDrivers; 
         private Boolean supportRDMA; 
         private UserVpc userVpc; 
+
+        private Builder() {
+        } 
+
+        private Builder(QuotaConfig model) {
+            this.ACS = model.ACS;
+            this.clusterId = model.clusterId;
+            this.defaultGPUDriver = model.defaultGPUDriver;
+            this.enablePreemptSubquotaWorkloads = model.enablePreemptSubquotaWorkloads;
+            this.enableSubQuotaPreemption = model.enableSubQuotaPreemption;
+            this.resourceSpecs = model.resourceSpecs;
+            this.subQuotaPreemptionConfig = model.subQuotaPreemptionConfig;
+            this.supportGPUDrivers = model.supportGPUDrivers;
+            this.supportRDMA = model.supportRDMA;
+            this.userVpc = model.userVpc;
+        } 
 
         /**
          * ACS.

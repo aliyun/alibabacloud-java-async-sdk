@@ -44,6 +44,10 @@ public class GetResourceGroupRequestResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestCPU
      */
@@ -77,6 +81,16 @@ public class GetResourceGroupRequestResponseBody extends TeaModel {
         private Integer requestGPU; 
         private java.util.List<GPUInfo> requestGPUInfos; 
         private Integer requestMemory; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetResourceGroupRequestResponseBody model) {
+            this.requestCPU = model.requestCPU;
+            this.requestGPU = model.requestGPU;
+            this.requestGPUInfos = model.requestGPUInfos;
+            this.requestMemory = model.requestMemory;
+        } 
 
         /**
          * requestCPU.

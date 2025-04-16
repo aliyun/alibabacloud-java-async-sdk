@@ -56,6 +56,10 @@ public class QuotaTopo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return depth
      */
@@ -113,6 +117,19 @@ public class QuotaTopo extends TeaModel {
         private String quotaName; 
         private String resourceType; 
         private WorkloadDetails workloadDetails; 
+
+        private Builder() {
+        } 
+
+        private Builder(QuotaTopo model) {
+            this.depth = model.depth;
+            this.parentQuotaId = model.parentQuotaId;
+            this.quotaDetails = model.quotaDetails;
+            this.quotaId = model.quotaId;
+            this.quotaName = model.quotaName;
+            this.resourceType = model.resourceType;
+            this.workloadDetails = model.workloadDetails;
+        } 
 
         /**
          * Depth.

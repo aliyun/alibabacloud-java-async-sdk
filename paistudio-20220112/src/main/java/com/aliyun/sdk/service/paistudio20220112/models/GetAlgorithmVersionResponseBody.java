@@ -64,6 +64,10 @@ public class GetAlgorithmVersionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return algorithmId
      */
@@ -137,6 +141,21 @@ public class GetAlgorithmVersionResponseBody extends TeaModel {
         private String gmtModifiedTime; 
         private String tenantId; 
         private String userId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAlgorithmVersionResponseBody model) {
+            this.algorithmId = model.algorithmId;
+            this.algorithmName = model.algorithmName;
+            this.algorithmProvider = model.algorithmProvider;
+            this.algorithmSpec = model.algorithmSpec;
+            this.algorithmVersion = model.algorithmVersion;
+            this.gmtCreateTime = model.gmtCreateTime;
+            this.gmtModifiedTime = model.gmtModifiedTime;
+            this.tenantId = model.tenantId;
+            this.userId = model.userId;
+        } 
 
         /**
          * AlgorithmId.

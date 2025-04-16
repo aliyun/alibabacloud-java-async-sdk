@@ -36,6 +36,10 @@ public class CreateInstanceWebTerminalResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class CreateInstanceWebTerminalResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String webTerminalId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateInstanceWebTerminalResponseBody model) {
+            this.requestId = model.requestId;
+            this.webTerminalId = model.webTerminalId;
+        } 
 
         /**
          * RequestId.

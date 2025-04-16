@@ -36,6 +36,10 @@ public class UserInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return userId
      */
@@ -53,6 +57,14 @@ public class UserInfo extends TeaModel {
     public static final class Builder {
         private String userId; 
         private String userName; 
+
+        private Builder() {
+        } 
+
+        private Builder(UserInfo model) {
+            this.userId = model.userId;
+            this.userName = model.userName;
+        } 
 
         /**
          * UserId.

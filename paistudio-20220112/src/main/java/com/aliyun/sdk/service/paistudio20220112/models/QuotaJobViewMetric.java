@@ -96,6 +96,10 @@ public class QuotaJobViewMetric extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return CPUUsageRate
      */
@@ -233,6 +237,29 @@ public class QuotaJobViewMetric extends TeaModel {
         private Integer totalGPU; 
         private Long totalMemory; 
         private String userId; 
+
+        private Builder() {
+        } 
+
+        private Builder(QuotaJobViewMetric model) {
+            this.CPUUsageRate = model.CPUUsageRate;
+            this.diskReadRate = model.diskReadRate;
+            this.diskWriteRate = model.diskWriteRate;
+            this.GPUUsageRate = model.GPUUsageRate;
+            this.jobId = model.jobId;
+            this.jobType = model.jobType;
+            this.memoryUsageRate = model.memoryUsageRate;
+            this.networkInputRate = model.networkInputRate;
+            this.networkOutputRate = model.networkOutputRate;
+            this.nodeNames = model.nodeNames;
+            this.requestCPU = model.requestCPU;
+            this.requestGPU = model.requestGPU;
+            this.requestMemory = model.requestMemory;
+            this.totalCPU = model.totalCPU;
+            this.totalGPU = model.totalGPU;
+            this.totalMemory = model.totalMemory;
+            this.userId = model.userId;
+        } 
 
         /**
          * CPUUsageRate.

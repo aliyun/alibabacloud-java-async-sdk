@@ -44,6 +44,10 @@ public class ResourceAmount extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return CPU
      */
@@ -77,6 +81,16 @@ public class ResourceAmount extends TeaModel {
         private String GPU; 
         private String GPUType; 
         private String memory; 
+
+        private Builder() {
+        } 
+
+        private Builder(ResourceAmount model) {
+            this.CPU = model.CPU;
+            this.GPU = model.GPU;
+            this.GPUType = model.GPUType;
+            this.memory = model.memory;
+        } 
 
         /**
          * CPU.

@@ -36,6 +36,10 @@ public class ACS extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ACSQuotaId
      */
@@ -53,6 +57,14 @@ public class ACS extends TeaModel {
     public static final class Builder {
         private String ACSQuotaId; 
         private java.util.List<String> associatedProducts; 
+
+        private Builder() {
+        } 
+
+        private Builder(ACS model) {
+            this.ACSQuotaId = model.ACSQuotaId;
+            this.associatedProducts = model.associatedProducts;
+        } 
 
         /**
          * ACSQuotaId.

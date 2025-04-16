@@ -36,6 +36,10 @@ public class CreateQuotaResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return quotaId
      */
@@ -53,6 +57,14 @@ public class CreateQuotaResponseBody extends TeaModel {
     public static final class Builder {
         private String quotaId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateQuotaResponseBody model) {
+            this.quotaId = model.quotaId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Quota Id</p>

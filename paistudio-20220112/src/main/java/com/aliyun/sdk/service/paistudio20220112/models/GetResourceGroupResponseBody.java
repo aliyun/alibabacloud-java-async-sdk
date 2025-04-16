@@ -84,6 +84,10 @@ public class GetResourceGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clusterID
      */
@@ -197,6 +201,26 @@ public class GetResourceGroupResponseBody extends TeaModel {
         private java.util.List<Tags> tags; 
         private UserVpc userVpc; 
         private String workspaceID; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetResourceGroupResponseBody model) {
+            this.clusterID = model.clusterID;
+            this.computingResourceProvider = model.computingResourceProvider;
+            this.creatorID = model.creatorID;
+            this.description = model.description;
+            this.gmtCreatedTime = model.gmtCreatedTime;
+            this.gmtModifiedTime = model.gmtModifiedTime;
+            this.name = model.name;
+            this.requestId = model.requestId;
+            this.resourceType = model.resourceType;
+            this.status = model.status;
+            this.supportRDMA = model.supportRDMA;
+            this.tags = model.tags;
+            this.userVpc = model.userVpc;
+            this.workspaceID = model.workspaceID;
+        } 
 
         /**
          * ClusterID.
@@ -359,6 +383,14 @@ public class GetResourceGroupResponseBody extends TeaModel {
         public static final class Builder {
             private String tagKey; 
             private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
 
             /**
              * TagKey.

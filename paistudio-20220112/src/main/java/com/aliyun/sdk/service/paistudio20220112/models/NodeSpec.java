@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>NodeSpec</p>
  */
 public class NodeSpec extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("BindingPolicy")
+    private BindingPolicy bindingPolicy;
+
     @com.aliyun.core.annotation.NameInMap("Count")
     private Long count;
 
@@ -24,6 +27,7 @@ public class NodeSpec extends TeaModel {
     private String type;
 
     private NodeSpec(Builder builder) {
+        this.bindingPolicy = builder.bindingPolicy;
         this.count = builder.count;
         this.type = builder.type;
     }
@@ -34,6 +38,17 @@ public class NodeSpec extends TeaModel {
 
     public static NodeSpec create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return bindingPolicy
+     */
+    public BindingPolicy getBindingPolicy() {
+        return this.bindingPolicy;
     }
 
     /**
@@ -51,8 +66,26 @@ public class NodeSpec extends TeaModel {
     }
 
     public static final class Builder {
+        private BindingPolicy bindingPolicy; 
         private Long count; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(NodeSpec model) {
+            this.bindingPolicy = model.bindingPolicy;
+            this.count = model.count;
+            this.type = model.type;
+        } 
+
+        /**
+         * BindingPolicy.
+         */
+        public Builder bindingPolicy(BindingPolicy bindingPolicy) {
+            this.bindingPolicy = bindingPolicy;
+            return this;
+        }
 
         /**
          * Count.

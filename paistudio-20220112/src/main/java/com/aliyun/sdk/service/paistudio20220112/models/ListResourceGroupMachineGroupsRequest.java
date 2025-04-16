@@ -30,6 +30,10 @@ public class ListResourceGroupMachineGroupsRequest extends Request {
     private String ecsSpec;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MachineGroupIDs")
+    private String machineGroupIDs;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
@@ -74,6 +78,7 @@ public class ListResourceGroupMachineGroupsRequest extends Request {
         this.resourceGroupID = builder.resourceGroupID;
         this.creatorID = builder.creatorID;
         this.ecsSpec = builder.ecsSpec;
+        this.machineGroupIDs = builder.machineGroupIDs;
         this.name = builder.name;
         this.order = builder.order;
         this.orderInstanceId = builder.orderInstanceId;
@@ -94,7 +99,7 @@ public class ListResourceGroupMachineGroupsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -118,6 +123,13 @@ public class ListResourceGroupMachineGroupsRequest extends Request {
      */
     public String getEcsSpec() {
         return this.ecsSpec;
+    }
+
+    /**
+     * @return machineGroupIDs
+     */
+    public String getMachineGroupIDs() {
+        return this.machineGroupIDs;
     }
 
     /**
@@ -194,6 +206,7 @@ public class ListResourceGroupMachineGroupsRequest extends Request {
         private String resourceGroupID; 
         private String creatorID; 
         private String ecsSpec; 
+        private String machineGroupIDs; 
         private String name; 
         private String order; 
         private String orderInstanceId; 
@@ -214,6 +227,7 @@ public class ListResourceGroupMachineGroupsRequest extends Request {
             this.resourceGroupID = request.resourceGroupID;
             this.creatorID = request.creatorID;
             this.ecsSpec = request.ecsSpec;
+            this.machineGroupIDs = request.machineGroupIDs;
             this.name = request.name;
             this.order = request.order;
             this.orderInstanceId = request.orderInstanceId;
@@ -250,6 +264,15 @@ public class ListResourceGroupMachineGroupsRequest extends Request {
         public Builder ecsSpec(String ecsSpec) {
             this.putQueryParameter("EcsSpec", ecsSpec);
             this.ecsSpec = ecsSpec;
+            return this;
+        }
+
+        /**
+         * MachineGroupIDs.
+         */
+        public Builder machineGroupIDs(String machineGroupIDs) {
+            this.putQueryParameter("MachineGroupIDs", machineGroupIDs);
+            this.machineGroupIDs = machineGroupIDs;
             return this;
         }
 

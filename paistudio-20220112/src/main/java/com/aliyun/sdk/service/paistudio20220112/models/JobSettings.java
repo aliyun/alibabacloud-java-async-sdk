@@ -92,6 +92,10 @@ public class JobSettings extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return advancedSettings
      */
@@ -221,6 +225,28 @@ public class JobSettings extends TeaModel {
         private String pipelineId; 
         private String sanityCheckArgs; 
         private java.util.Map<String, String> tags; 
+
+        private Builder() {
+        } 
+
+        private Builder(JobSettings model) {
+            this.advancedSettings = model.advancedSettings;
+            this.businessUserId = model.businessUserId;
+            this.caller = model.caller;
+            this.driver = model.driver;
+            this.enableErrorMonitoringInAIMaster = model.enableErrorMonitoringInAIMaster;
+            this.enableOssAppend = model.enableOssAppend;
+            this.enableRDMA = model.enableRDMA;
+            this.enableSanityCheck = model.enableSanityCheck;
+            this.enableTideResource = model.enableTideResource;
+            this.errorMonitoringArgs = model.errorMonitoringArgs;
+            this.jobReservedMinutes = model.jobReservedMinutes;
+            this.jobReservedPolicy = model.jobReservedPolicy;
+            this.oversoldType = model.oversoldType;
+            this.pipelineId = model.pipelineId;
+            this.sanityCheckArgs = model.sanityCheckArgs;
+            this.tags = model.tags;
+        } 
 
         /**
          * AdvancedSettings.

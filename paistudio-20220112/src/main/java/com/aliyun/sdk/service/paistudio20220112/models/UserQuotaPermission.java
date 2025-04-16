@@ -36,6 +36,10 @@ public class UserQuotaPermission extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return permissions
      */
@@ -53,6 +57,14 @@ public class UserQuotaPermission extends TeaModel {
     public static final class Builder {
         private java.util.List<String> permissions; 
         private String quotaId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UserQuotaPermission model) {
+            this.permissions = model.permissions;
+            this.quotaId = model.quotaId;
+        } 
 
         /**
          * Permissions.

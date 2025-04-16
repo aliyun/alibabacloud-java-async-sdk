@@ -36,6 +36,10 @@ public class TimeRangeFilter extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return endTime
      */
@@ -53,6 +57,14 @@ public class TimeRangeFilter extends TeaModel {
     public static final class Builder {
         private String endTime; 
         private String startTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(TimeRangeFilter model) {
+            this.endTime = model.endTime;
+            this.startTime = model.startTime;
+        } 
 
         /**
          * EndTime.

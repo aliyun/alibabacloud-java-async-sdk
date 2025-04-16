@@ -40,6 +40,10 @@ public class ResourceGroupMetric extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return gpuType
      */
@@ -65,6 +69,15 @@ public class ResourceGroupMetric extends TeaModel {
         private String gpuType; 
         private java.util.List<Metric> metrics; 
         private String resourceGroupID; 
+
+        private Builder() {
+        } 
+
+        private Builder(ResourceGroupMetric model) {
+            this.gpuType = model.gpuType;
+            this.metrics = model.metrics;
+            this.resourceGroupID = model.resourceGroupID;
+        } 
 
         /**
          * GpuType.

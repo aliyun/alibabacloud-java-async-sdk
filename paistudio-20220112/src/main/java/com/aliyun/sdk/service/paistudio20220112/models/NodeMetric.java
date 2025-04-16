@@ -40,6 +40,10 @@ public class NodeMetric extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return GPUType
      */
@@ -65,6 +69,15 @@ public class NodeMetric extends TeaModel {
         private String GPUType; 
         private java.util.List<Metric> metrics; 
         private String nodeID; 
+
+        private Builder() {
+        } 
+
+        private Builder(NodeMetric model) {
+            this.GPUType = model.GPUType;
+            this.metrics = model.metrics;
+            this.nodeID = model.nodeID;
+        } 
 
         /**
          * GPUType.

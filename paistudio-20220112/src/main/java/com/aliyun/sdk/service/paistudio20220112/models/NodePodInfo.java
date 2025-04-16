@@ -56,6 +56,10 @@ public class NodePodInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return phase
      */
@@ -113,6 +117,19 @@ public class NodePodInfo extends TeaModel {
         private ResourceAmount resourceSpec; 
         private String workloadId; 
         private String workloadType; 
+
+        private Builder() {
+        } 
+
+        private Builder(NodePodInfo model) {
+            this.phase = model.phase;
+            this.podIP = model.podIP;
+            this.podName = model.podName;
+            this.podNamespace = model.podNamespace;
+            this.resourceSpec = model.resourceSpec;
+            this.workloadId = model.workloadId;
+            this.workloadType = model.workloadType;
+        } 
 
         /**
          * Phase.

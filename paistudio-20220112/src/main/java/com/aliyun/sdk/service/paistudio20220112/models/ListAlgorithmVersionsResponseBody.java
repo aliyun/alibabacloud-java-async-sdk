@@ -40,6 +40,10 @@ public class ListAlgorithmVersionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return algorithmVersions
      */
@@ -65,6 +69,15 @@ public class ListAlgorithmVersionsResponseBody extends TeaModel {
         private java.util.List<AlgorithmVersions> algorithmVersions; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAlgorithmVersionsResponseBody model) {
+            this.algorithmVersions = model.algorithmVersions;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * AlgorithmVersions.
@@ -211,6 +224,20 @@ public class ListAlgorithmVersionsResponseBody extends TeaModel {
             private String gmtModifiedTime; 
             private String tenantId; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(AlgorithmVersions model) {
+                this.algorithmId = model.algorithmId;
+                this.algorithmName = model.algorithmName;
+                this.algorithmProvider = model.algorithmProvider;
+                this.algorithmVersion = model.algorithmVersion;
+                this.gmtCreateTime = model.gmtCreateTime;
+                this.gmtModifiedTime = model.gmtModifiedTime;
+                this.tenantId = model.tenantId;
+                this.userId = model.userId;
+            } 
 
             /**
              * AlgorithmId.

@@ -100,6 +100,10 @@ public class GetMachineGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return count
      */
@@ -245,6 +249,30 @@ public class GetMachineGroupResponseBody extends TeaModel {
         private String requestId; 
         private String status; 
         private java.util.List<String> supportedDrivers; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMachineGroupResponseBody model) {
+            this.count = model.count;
+            this.defaultDriver = model.defaultDriver;
+            this.duration = model.duration;
+            this.ecsType = model.ecsType;
+            this.gmtCreated = model.gmtCreated;
+            this.gmtExpired = model.gmtExpired;
+            this.gmtModified = model.gmtModified;
+            this.gmtStarted = model.gmtStarted;
+            this.machineGroupID = model.machineGroupID;
+            this.orderID = model.orderID;
+            this.orderInstanceId = model.orderInstanceId;
+            this.PAIResourceID = model.PAIResourceID;
+            this.payType = model.payType;
+            this.pricingCycle = model.pricingCycle;
+            this.regionID = model.regionID;
+            this.requestId = model.requestId;
+            this.status = model.status;
+            this.supportedDrivers = model.supportedDrivers;
+        } 
 
         /**
          * Count.

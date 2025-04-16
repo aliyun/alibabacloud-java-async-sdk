@@ -36,6 +36,10 @@ public class GetTokenResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetTokenResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String token; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTokenResponseBody model) {
+            this.requestId = model.requestId;
+            this.token = model.token;
+        } 
 
         /**
          * RequestId.

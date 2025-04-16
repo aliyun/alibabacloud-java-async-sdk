@@ -52,6 +52,10 @@ public class TaskInstanceEvent extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return gmtEndTime
      */
@@ -101,6 +105,18 @@ public class TaskInstanceEvent extends TeaModel {
         private String podName; 
         private String status; 
         private String workloadType; 
+
+        private Builder() {
+        } 
+
+        private Builder(TaskInstanceEvent model) {
+            this.gmtEndTime = model.gmtEndTime;
+            this.gmtStartTime = model.gmtStartTime;
+            this.message = model.message;
+            this.podName = model.podName;
+            this.status = model.status;
+            this.workloadType = model.workloadType;
+        } 
 
         /**
          * GmtEndTime.

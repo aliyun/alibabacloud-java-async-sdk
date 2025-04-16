@@ -32,6 +32,10 @@ public class Features extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return quota
      */
@@ -41,6 +45,13 @@ public class Features extends TeaModel {
 
     public static final class Builder {
         private Quota quota; 
+
+        private Builder() {
+        } 
+
+        private Builder(Features model) {
+            this.quota = model.quota;
+        } 
 
         /**
          * Quota.
@@ -87,6 +98,13 @@ public class Features extends TeaModel {
 
         public static final class Builder {
             private Boolean isEnabled; 
+
+            private Builder() {
+            } 
+
+            private Builder(Quota model) {
+                this.isEnabled = model.isEnabled;
+            } 
 
             /**
              * IsEnabled.

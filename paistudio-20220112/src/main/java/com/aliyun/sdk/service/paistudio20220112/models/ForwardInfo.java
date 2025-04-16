@@ -36,6 +36,10 @@ public class ForwardInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return eipAllocationId
      */
@@ -53,6 +57,14 @@ public class ForwardInfo extends TeaModel {
     public static final class Builder {
         private String eipAllocationId; 
         private String natGatewayId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ForwardInfo model) {
+            this.eipAllocationId = model.eipAllocationId;
+            this.natGatewayId = model.natGatewayId;
+        } 
 
         /**
          * EipAllocationId.

@@ -32,6 +32,10 @@ public class AllocateStrategySpec extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nodeSpecs
      */
@@ -41,6 +45,13 @@ public class AllocateStrategySpec extends TeaModel {
 
     public static final class Builder {
         private java.util.List<NodeSpec> nodeSpecs; 
+
+        private Builder() {
+        } 
+
+        private Builder(AllocateStrategySpec model) {
+            this.nodeSpecs = model.nodeSpecs;
+        } 
 
         /**
          * NodeSpecs.

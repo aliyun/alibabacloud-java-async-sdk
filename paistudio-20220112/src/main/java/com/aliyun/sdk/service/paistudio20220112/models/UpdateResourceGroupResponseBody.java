@@ -36,6 +36,10 @@ public class UpdateResourceGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return resourceGroupID
      */
@@ -53,6 +57,14 @@ public class UpdateResourceGroupResponseBody extends TeaModel {
     public static final class Builder {
         private String resourceGroupID; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateResourceGroupResponseBody model) {
+            this.resourceGroupID = model.resourceGroupID;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * ResourceGroupID.

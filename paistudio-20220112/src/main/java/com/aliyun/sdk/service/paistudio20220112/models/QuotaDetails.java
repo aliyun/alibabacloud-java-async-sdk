@@ -60,6 +60,10 @@ public class QuotaDetails extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return actualMinQuota
      */
@@ -125,6 +129,20 @@ public class QuotaDetails extends TeaModel {
         private ResourceAmount requestedQuota; 
         private ResourceAmount selfAllocatedQuota; 
         private ResourceAmount usedQuota; 
+
+        private Builder() {
+        } 
+
+        private Builder(QuotaDetails model) {
+            this.actualMinQuota = model.actualMinQuota;
+            this.allocatedQuota = model.allocatedQuota;
+            this.ancestorsAllocatedQuota = model.ancestorsAllocatedQuota;
+            this.descendantsAllocatedQuota = model.descendantsAllocatedQuota;
+            this.desiredMinQuota = model.desiredMinQuota;
+            this.requestedQuota = model.requestedQuota;
+            this.selfAllocatedQuota = model.selfAllocatedQuota;
+            this.usedQuota = model.usedQuota;
+        } 
 
         /**
          * ActualMinQuota.

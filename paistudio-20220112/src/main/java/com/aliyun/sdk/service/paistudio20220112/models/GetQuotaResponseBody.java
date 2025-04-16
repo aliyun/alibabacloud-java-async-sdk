@@ -116,6 +116,10 @@ public class GetQuotaResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return allocateStrategy
      */
@@ -293,6 +297,34 @@ public class GetQuotaResponseBody extends TeaModel {
         private String status; 
         private java.util.List<QuotaIdName> subQuotas; 
         private java.util.List<WorkspaceIdName> workspaces; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetQuotaResponseBody model) {
+            this.allocateStrategy = model.allocateStrategy;
+            this.creatorId = model.creatorId;
+            this.description = model.description;
+            this.gmtCreatedTime = model.gmtCreatedTime;
+            this.gmtModifiedTime = model.gmtModifiedTime;
+            this.labels = model.labels;
+            this.latestOperationId = model.latestOperationId;
+            this.min = model.min;
+            this.parentQuotaId = model.parentQuotaId;
+            this.queueStrategy = model.queueStrategy;
+            this.quotaConfig = model.quotaConfig;
+            this.quotaDetails = model.quotaDetails;
+            this.quotaId = model.quotaId;
+            this.quotaName = model.quotaName;
+            this.reasonCode = model.reasonCode;
+            this.reasonMessage = model.reasonMessage;
+            this.requestId = model.requestId;
+            this.resourceGroupIds = model.resourceGroupIds;
+            this.resourceType = model.resourceType;
+            this.status = model.status;
+            this.subQuotas = model.subQuotas;
+            this.workspaces = model.workspaces;
+        } 
 
         /**
          * AllocateStrategy.

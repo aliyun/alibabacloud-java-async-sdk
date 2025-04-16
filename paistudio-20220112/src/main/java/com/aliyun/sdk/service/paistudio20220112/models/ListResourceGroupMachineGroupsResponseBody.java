@@ -40,6 +40,10 @@ public class ListResourceGroupMachineGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return machineGroups
      */
@@ -65,6 +69,15 @@ public class ListResourceGroupMachineGroupsResponseBody extends TeaModel {
         private java.util.List<MachineGroup> machineGroups; 
         private String requestId; 
         private String totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListResourceGroupMachineGroupsResponseBody model) {
+            this.machineGroups = model.machineGroups;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * MachineGroups.

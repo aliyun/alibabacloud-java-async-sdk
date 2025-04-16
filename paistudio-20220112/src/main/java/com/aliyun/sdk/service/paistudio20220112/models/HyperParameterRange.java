@@ -60,6 +60,10 @@ public class HyperParameterRange extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return _enum
      */
@@ -125,6 +129,20 @@ public class HyperParameterRange extends TeaModel {
         private Long minLength; 
         private String minimum; 
         private String pattern; 
+
+        private Builder() {
+        } 
+
+        private Builder(HyperParameterRange model) {
+            this._enum = model._enum;
+            this.exclusiveMaximum = model.exclusiveMaximum;
+            this.exclusiveMinimum = model.exclusiveMinimum;
+            this.maxLength = model.maxLength;
+            this.maximum = model.maximum;
+            this.minLength = model.minLength;
+            this.minimum = model.minimum;
+            this.pattern = model.pattern;
+        } 
 
         /**
          * Enum.

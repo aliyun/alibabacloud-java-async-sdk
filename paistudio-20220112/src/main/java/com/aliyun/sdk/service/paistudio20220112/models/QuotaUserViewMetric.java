@@ -116,6 +116,10 @@ public class QuotaUserViewMetric extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return CPUNodeNumber
      */
@@ -293,6 +297,34 @@ public class QuotaUserViewMetric extends TeaModel {
         private Integer totalGPU; 
         private Long totalMemory; 
         private String userId; 
+
+        private Builder() {
+        } 
+
+        private Builder(QuotaUserViewMetric model) {
+            this.CPUNodeNumber = model.CPUNodeNumber;
+            this.CPUUsageRate = model.CPUUsageRate;
+            this.cpuJobNames = model.cpuJobNames;
+            this.cpuNodeNames = model.cpuNodeNames;
+            this.diskReadRate = model.diskReadRate;
+            this.diskWriteRate = model.diskWriteRate;
+            this.GPUNodeNumber = model.GPUNodeNumber;
+            this.GPUUsageRate = model.GPUUsageRate;
+            this.gpuJobNames = model.gpuJobNames;
+            this.gpuNodeNames = model.gpuNodeNames;
+            this.jobType = model.jobType;
+            this.memoryUsageRate = model.memoryUsageRate;
+            this.networkInputRate = model.networkInputRate;
+            this.networkOutputRate = model.networkOutputRate;
+            this.nodeNames = model.nodeNames;
+            this.requestCPU = model.requestCPU;
+            this.requestGPU = model.requestGPU;
+            this.requestMemory = model.requestMemory;
+            this.totalCPU = model.totalCPU;
+            this.totalGPU = model.totalGPU;
+            this.totalMemory = model.totalMemory;
+            this.userId = model.userId;
+        } 
 
         /**
          * CPUNodeNumber.

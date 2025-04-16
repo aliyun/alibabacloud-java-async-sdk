@@ -40,6 +40,10 @@ public class QuotaJob extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return queuing
      */
@@ -65,6 +69,15 @@ public class QuotaJob extends TeaModel {
         private Long queuing; 
         private Long running; 
         private Long total; 
+
+        private Builder() {
+        } 
+
+        private Builder(QuotaJob model) {
+            this.queuing = model.queuing;
+            this.running = model.running;
+            this.total = model.total;
+        } 
 
         /**
          * Queuing.

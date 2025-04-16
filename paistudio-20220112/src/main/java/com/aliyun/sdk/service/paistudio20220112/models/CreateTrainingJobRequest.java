@@ -136,7 +136,7 @@ public class CreateTrainingJobRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -622,6 +622,17 @@ public class CreateTrainingJobRequest extends Request {
             private String memory; 
             private String sharedMemory; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceSpec model) {
+                this.CPU = model.CPU;
+                this.GPU = model.GPU;
+                this.GPUType = model.GPUType;
+                this.memory = model.memory;
+                this.sharedMemory = model.sharedMemory;
+            } 
+
             /**
              * CPU.
              */
@@ -712,6 +723,14 @@ public class CreateTrainingJobRequest extends Request {
         public static final class Builder {
             private Float spotDiscountLimit; 
             private String spotStrategy; 
+
+            private Builder() {
+            } 
+
+            private Builder(SpotSpec model) {
+                this.spotDiscountLimit = model.spotDiscountLimit;
+                this.spotStrategy = model.spotStrategy;
+            } 
 
             /**
              * SpotDiscountLimit.
@@ -840,6 +859,19 @@ public class CreateTrainingJobRequest extends Request {
             private SpotSpec spotSpec; 
             private Boolean useSpotInstance; 
 
+            private Builder() {
+            } 
+
+            private Builder(ComputeResource model) {
+                this.ecsCount = model.ecsCount;
+                this.ecsSpec = model.ecsSpec;
+                this.instanceCount = model.instanceCount;
+                this.instanceSpec = model.instanceSpec;
+                this.resourceId = model.resourceId;
+                this.spotSpec = model.spotSpec;
+                this.useSpotInstance = model.useSpotInstance;
+            } 
+
             /**
              * EcsCount.
              */
@@ -935,6 +967,13 @@ public class CreateTrainingJobRequest extends Request {
         public static final class Builder {
             private String experimentId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ExperimentConfig model) {
+                this.experimentId = model.experimentId;
+            } 
+
             /**
              * ExperimentId.
              */
@@ -993,6 +1032,14 @@ public class CreateTrainingJobRequest extends Request {
         public static final class Builder {
             private String name; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(HyperParameters model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
 
             /**
              * Name.
@@ -1097,6 +1144,17 @@ public class CreateTrainingJobRequest extends Request {
             private String options; 
             private String versionName; 
 
+            private Builder() {
+            } 
+
+            private Builder(InputChannels model) {
+                this.datasetId = model.datasetId;
+                this.inputUri = model.inputUri;
+                this.name = model.name;
+                this.options = model.options;
+                this.versionName = model.versionName;
+            } 
+
             /**
              * DatasetId.
              */
@@ -1187,6 +1245,14 @@ public class CreateTrainingJobRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Labels model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * Key.
@@ -1279,6 +1345,16 @@ public class CreateTrainingJobRequest extends Request {
             private String outputUri; 
             private String versionName; 
 
+            private Builder() {
+            } 
+
+            private Builder(OutputChannels model) {
+                this.datasetId = model.datasetId;
+                this.name = model.name;
+                this.outputUri = model.outputUri;
+                this.versionName = model.versionName;
+            } 
+
             /**
              * DatasetId.
              */
@@ -1361,6 +1437,14 @@ public class CreateTrainingJobRequest extends Request {
         public static final class Builder {
             private Long maxRunningTimeInMinutes; 
             private Long maxRunningTimeInSeconds; 
+
+            private Builder() {
+            } 
+
+            private Builder(Scheduler model) {
+                this.maxRunningTimeInMinutes = model.maxRunningTimeInMinutes;
+                this.maxRunningTimeInSeconds = model.maxRunningTimeInSeconds;
+            } 
 
             /**
              * MaxRunningTimeInMinutes.
@@ -1464,6 +1548,17 @@ public class CreateTrainingJobRequest extends Request {
             private String securityGroupId; 
             private String switchId; 
             private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserVpc model) {
+                this.defaultRoute = model.defaultRoute;
+                this.extendedCIDRs = model.extendedCIDRs;
+                this.securityGroupId = model.securityGroupId;
+                this.switchId = model.switchId;
+                this.vpcId = model.vpcId;
+            } 
 
             /**
              * DefaultRoute.

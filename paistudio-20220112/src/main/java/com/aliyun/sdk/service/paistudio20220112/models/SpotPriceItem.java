@@ -44,6 +44,10 @@ public class SpotPriceItem extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceType
      */
@@ -77,6 +81,16 @@ public class SpotPriceItem extends TeaModel {
         private Float spotDiscount; 
         private String timestamp; 
         private String zoneId; 
+
+        private Builder() {
+        } 
+
+        private Builder(SpotPriceItem model) {
+            this.instanceType = model.instanceType;
+            this.spotDiscount = model.spotDiscount;
+            this.timestamp = model.timestamp;
+            this.zoneId = model.zoneId;
+        } 
 
         /**
          * InstanceType.

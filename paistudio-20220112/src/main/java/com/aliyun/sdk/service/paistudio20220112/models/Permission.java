@@ -36,6 +36,10 @@ public class Permission extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return isEnabled
      */
@@ -53,6 +57,14 @@ public class Permission extends TeaModel {
     public static final class Builder {
         private Boolean isEnabled; 
         private String resourceType; 
+
+        private Builder() {
+        } 
+
+        private Builder(Permission model) {
+            this.isEnabled = model.isEnabled;
+            this.resourceType = model.resourceType;
+        } 
 
         /**
          * IsEnabled.

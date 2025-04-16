@@ -36,6 +36,10 @@ public class QuotaMetric extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return GPUType
      */
@@ -53,6 +57,14 @@ public class QuotaMetric extends TeaModel {
     public static final class Builder {
         private String GPUType; 
         private java.util.List<Metric> metrics; 
+
+        private Builder() {
+        } 
+
+        private Builder(QuotaMetric model) {
+            this.GPUType = model.GPUType;
+            this.metrics = model.metrics;
+        } 
 
         /**
          * GPUType.

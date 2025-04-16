@@ -176,6 +176,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return algorithmId
      */
@@ -473,6 +477,49 @@ public class GetTrainingJobResponseBody extends TeaModel {
         private String userId; 
         private UserVpc userVpc; 
         private String workspaceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTrainingJobResponseBody model) {
+            this.algorithmId = model.algorithmId;
+            this.algorithmName = model.algorithmName;
+            this.algorithmProvider = model.algorithmProvider;
+            this.algorithmSpec = model.algorithmSpec;
+            this.algorithmVersion = model.algorithmVersion;
+            this.computeResource = model.computeResource;
+            this.duration = model.duration;
+            this.environments = model.environments;
+            this.experimentConfig = model.experimentConfig;
+            this.gmtCreateTime = model.gmtCreateTime;
+            this.gmtModifiedTime = model.gmtModifiedTime;
+            this.hyperParameters = model.hyperParameters;
+            this.inputChannels = model.inputChannels;
+            this.instances = model.instances;
+            this.isTempAlgo = model.isTempAlgo;
+            this.labels = model.labels;
+            this.latestMetrics = model.latestMetrics;
+            this.latestProgress = model.latestProgress;
+            this.outputChannels = model.outputChannels;
+            this.outputModel = model.outputModel;
+            this.priority = model.priority;
+            this.pythonRequirements = model.pythonRequirements;
+            this.reasonCode = model.reasonCode;
+            this.reasonMessage = model.reasonMessage;
+            this.requestId = model.requestId;
+            this.roleArn = model.roleArn;
+            this.scheduler = model.scheduler;
+            this.settings = model.settings;
+            this.status = model.status;
+            this.statusTransitions = model.statusTransitions;
+            this.trainingJobDescription = model.trainingJobDescription;
+            this.trainingJobId = model.trainingJobId;
+            this.trainingJobName = model.trainingJobName;
+            this.trainingJobUrl = model.trainingJobUrl;
+            this.userId = model.userId;
+            this.userVpc = model.userVpc;
+            this.workspaceId = model.workspaceId;
+        } 
 
         /**
          * AlgorithmId.
@@ -856,6 +903,17 @@ public class GetTrainingJobResponseBody extends TeaModel {
             private String memory; 
             private String sharedMemory; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceSpec model) {
+                this.CPU = model.CPU;
+                this.GPU = model.GPU;
+                this.GPUType = model.GPUType;
+                this.memory = model.memory;
+                this.sharedMemory = model.sharedMemory;
+            } 
+
             /**
              * CPU.
              */
@@ -946,6 +1004,14 @@ public class GetTrainingJobResponseBody extends TeaModel {
         public static final class Builder {
             private Float spotDiscountLimit; 
             private String spotStrategy; 
+
+            private Builder() {
+            } 
+
+            private Builder(SpotSpec model) {
+                this.spotDiscountLimit = model.spotDiscountLimit;
+                this.spotStrategy = model.spotStrategy;
+            } 
 
             /**
              * SpotDiscountLimit.
@@ -1086,6 +1152,20 @@ public class GetTrainingJobResponseBody extends TeaModel {
             private SpotSpec spotSpec; 
             private Boolean useSpotInstance; 
 
+            private Builder() {
+            } 
+
+            private Builder(ComputeResource model) {
+                this.ecsCount = model.ecsCount;
+                this.ecsSpec = model.ecsSpec;
+                this.instanceCount = model.instanceCount;
+                this.instanceSpec = model.instanceSpec;
+                this.resourceId = model.resourceId;
+                this.resourceName = model.resourceName;
+                this.spotSpec = model.spotSpec;
+                this.useSpotInstance = model.useSpotInstance;
+            } 
+
             /**
              * EcsCount.
              */
@@ -1201,6 +1281,14 @@ public class GetTrainingJobResponseBody extends TeaModel {
             private String experimentId; 
             private String experimentName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ExperimentConfig model) {
+                this.experimentId = model.experimentId;
+                this.experimentName = model.experimentName;
+            } 
+
             /**
              * ExperimentId.
              */
@@ -1267,6 +1355,14 @@ public class GetTrainingJobResponseBody extends TeaModel {
         public static final class Builder {
             private String name; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(HyperParameters model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
 
             /**
              * Name.
@@ -1371,6 +1467,17 @@ public class GetTrainingJobResponseBody extends TeaModel {
             private String options; 
             private String versionName; 
 
+            private Builder() {
+            } 
+
+            private Builder(InputChannels model) {
+                this.datasetId = model.datasetId;
+                this.inputUri = model.inputUri;
+                this.name = model.name;
+                this.options = model.options;
+                this.versionName = model.versionName;
+            } 
+
             /**
              * DatasetId.
              */
@@ -1474,6 +1581,15 @@ public class GetTrainingJobResponseBody extends TeaModel {
             private String role; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(Instances model) {
+                this.name = model.name;
+                this.role = model.role;
+                this.status = model.status;
+            } 
+
             /**
              * Name.
              */
@@ -1548,6 +1664,14 @@ public class GetTrainingJobResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Labels model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * Key.
@@ -1628,6 +1752,15 @@ public class GetTrainingJobResponseBody extends TeaModel {
             private String timestamp; 
             private Double value; 
 
+            private Builder() {
+            } 
+
+            private Builder(LatestMetrics model) {
+                this.name = model.name;
+                this.timestamp = model.timestamp;
+                this.value = model.value;
+            } 
+
             /**
              * Name.
              */
@@ -1703,6 +1836,14 @@ public class GetTrainingJobResponseBody extends TeaModel {
             private String timestamp; 
             private Float value; 
 
+            private Builder() {
+            } 
+
+            private Builder(OverallProgress model) {
+                this.timestamp = model.timestamp;
+                this.value = model.value;
+            } 
+
             /**
              * Timestamp.
              */
@@ -1770,6 +1911,14 @@ public class GetTrainingJobResponseBody extends TeaModel {
             private String timestamp; 
             private Long value; 
 
+            private Builder() {
+            } 
+
+            private Builder(RemainingTime model) {
+                this.timestamp = model.timestamp;
+                this.value = model.value;
+            } 
+
             /**
              * Timestamp.
              */
@@ -1836,6 +1985,14 @@ public class GetTrainingJobResponseBody extends TeaModel {
         public static final class Builder {
             private OverallProgress overallProgress; 
             private RemainingTime remainingTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(LatestProgress model) {
+                this.overallProgress = model.overallProgress;
+                this.remainingTime = model.remainingTime;
+            } 
 
             /**
              * OverallProgress.
@@ -1928,6 +2085,16 @@ public class GetTrainingJobResponseBody extends TeaModel {
             private String outputUri; 
             private String versionName; 
 
+            private Builder() {
+            } 
+
+            private Builder(OutputChannels model) {
+                this.datasetId = model.datasetId;
+                this.name = model.name;
+                this.outputUri = model.outputUri;
+                this.versionName = model.versionName;
+            } 
+
             /**
              * DatasetId.
              */
@@ -2011,6 +2178,14 @@ public class GetTrainingJobResponseBody extends TeaModel {
             private String outputChannelName; 
             private String uri; 
 
+            private Builder() {
+            } 
+
+            private Builder(OutputModel model) {
+                this.outputChannelName = model.outputChannelName;
+                this.uri = model.uri;
+            } 
+
             /**
              * OutputChannelName.
              */
@@ -2077,6 +2252,14 @@ public class GetTrainingJobResponseBody extends TeaModel {
         public static final class Builder {
             private String maxRunningTimeInMinutes; 
             private String maxRunningTimeInSeconds; 
+
+            private Builder() {
+            } 
+
+            private Builder(Scheduler model) {
+                this.maxRunningTimeInMinutes = model.maxRunningTimeInMinutes;
+                this.maxRunningTimeInSeconds = model.maxRunningTimeInSeconds;
+            } 
 
             /**
              * MaxRunningTimeInMinutes.
@@ -2180,6 +2363,17 @@ public class GetTrainingJobResponseBody extends TeaModel {
             private String reasonMessage; 
             private String startTime; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(StatusTransitions model) {
+                this.endTime = model.endTime;
+                this.reasonCode = model.reasonCode;
+                this.reasonMessage = model.reasonMessage;
+                this.startTime = model.startTime;
+                this.status = model.status;
+            } 
 
             /**
              * EndTime.
@@ -2295,6 +2489,16 @@ public class GetTrainingJobResponseBody extends TeaModel {
             private String securityGroupId; 
             private String switchId; 
             private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserVpc model) {
+                this.extendedCIDRs = model.extendedCIDRs;
+                this.securityGroupId = model.securityGroupId;
+                this.switchId = model.switchId;
+                this.vpcId = model.vpcId;
+            } 
 
             /**
              * ExtendedCIDRs.

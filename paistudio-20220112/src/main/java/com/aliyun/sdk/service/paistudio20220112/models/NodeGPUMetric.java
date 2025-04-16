@@ -64,6 +64,10 @@ public class NodeGPUMetric extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return acceleratorType
      */
@@ -137,6 +141,21 @@ public class NodeGPUMetric extends TeaModel {
         private String nodeType; 
         private Float totalMemory; 
         private Float usedMemory; 
+
+        private Builder() {
+        } 
+
+        private Builder(NodeGPUMetric model) {
+            this.acceleratorType = model.acceleratorType;
+            this.GPUCount = model.GPUCount;
+            this.GPUMetrics = model.GPUMetrics;
+            this.GPUType = model.GPUType;
+            this.memoryUtil = model.memoryUtil;
+            this.nodeId = model.nodeId;
+            this.nodeType = model.nodeType;
+            this.totalMemory = model.totalMemory;
+            this.usedMemory = model.usedMemory;
+        } 
 
         /**
          * AcceleratorType.

@@ -56,6 +56,10 @@ public class TaskInstance extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return gmtCreatedTime
      */
@@ -113,6 +117,19 @@ public class TaskInstance extends TeaModel {
         private String taskInstanceId; 
         private String tenantId; 
         private String userId; 
+
+        private Builder() {
+        } 
+
+        private Builder(TaskInstance model) {
+            this.gmtCreatedTime = model.gmtCreatedTime;
+            this.gmtEndTime = model.gmtEndTime;
+            this.status = model.status;
+            this.taskId = model.taskId;
+            this.taskInstanceId = model.taskInstanceId;
+            this.tenantId = model.tenantId;
+            this.userId = model.userId;
+        } 
 
         /**
          * GmtCreatedTime.

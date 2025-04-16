@@ -40,6 +40,10 @@ public class NodeTypeStatistic extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return canBeBoundCount
      */
@@ -65,6 +69,15 @@ public class NodeTypeStatistic extends TeaModel {
         private Integer canBeBoundCount; 
         private String nodeType; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(NodeTypeStatistic model) {
+            this.canBeBoundCount = model.canBeBoundCount;
+            this.nodeType = model.nodeType;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * CanBeBoundCount.

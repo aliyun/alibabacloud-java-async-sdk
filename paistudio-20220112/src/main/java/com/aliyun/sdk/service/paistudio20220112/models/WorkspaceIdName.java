@@ -32,6 +32,10 @@ public class WorkspaceIdName extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return workspaceId
      */
@@ -41,6 +45,13 @@ public class WorkspaceIdName extends TeaModel {
 
     public static final class Builder {
         private String workspaceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(WorkspaceIdName model) {
+            this.workspaceId = model.workspaceId;
+        } 
 
         /**
          * WorkspaceId.

@@ -36,6 +36,10 @@ public class UnschedulableNodeDetail extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nodes
      */
@@ -53,6 +57,14 @@ public class UnschedulableNodeDetail extends TeaModel {
     public static final class Builder {
         private java.util.List<String> nodes; 
         private String reason; 
+
+        private Builder() {
+        } 
+
+        private Builder(UnschedulableNodeDetail model) {
+            this.nodes = model.nodes;
+            this.reason = model.reason;
+        } 
 
         /**
          * Nodes.

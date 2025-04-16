@@ -36,6 +36,10 @@ public class QuotaIdName extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return quotaId
      */
@@ -53,6 +57,14 @@ public class QuotaIdName extends TeaModel {
     public static final class Builder {
         private String quotaId; 
         private String quotaName; 
+
+        private Builder() {
+        } 
+
+        private Builder(QuotaIdName model) {
+            this.quotaId = model.quotaId;
+            this.quotaName = model.quotaName;
+        } 
 
         /**
          * QuotaId.

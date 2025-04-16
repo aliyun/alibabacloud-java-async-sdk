@@ -80,6 +80,10 @@ public class Task extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return actions
      */
@@ -185,6 +189,25 @@ public class Task extends TeaModel {
         private String taskName; 
         private String userId; 
         private String userName; 
+
+        private Builder() {
+        } 
+
+        private Builder(Task model) {
+            this.actions = model.actions;
+            this.description = model.description;
+            this.gmtActivatedTime = model.gmtActivatedTime;
+            this.gmtCreatedTime = model.gmtCreatedTime;
+            this.gmtModifiedTime = model.gmtModifiedTime;
+            this.gmtStoppedTime = model.gmtStoppedTime;
+            this.quotaId = model.quotaId;
+            this.rules = model.rules;
+            this.status = model.status;
+            this.taskId = model.taskId;
+            this.taskName = model.taskName;
+            this.userId = model.userId;
+            this.userName = model.userName;
+        } 
 
         /**
          * Actions.

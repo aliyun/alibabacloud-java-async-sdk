@@ -56,6 +56,10 @@ public class UserVpc extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return defaultForwardInfo
      */
@@ -113,6 +117,19 @@ public class UserVpc extends TeaModel {
         private String securityGroupId; 
         private String switchId; 
         private String vpcId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UserVpc model) {
+            this.defaultForwardInfo = model.defaultForwardInfo;
+            this.defaultRoute = model.defaultRoute;
+            this.extendedCIDRs = model.extendedCIDRs;
+            this.roleArn = model.roleArn;
+            this.securityGroupId = model.securityGroupId;
+            this.switchId = model.switchId;
+            this.vpcId = model.vpcId;
+        } 
 
         /**
          * DefaultForwardInfo.

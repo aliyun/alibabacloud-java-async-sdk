@@ -44,6 +44,10 @@ public class GetUserViewMetricsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return resourceGroupId
      */
@@ -77,6 +81,16 @@ public class GetUserViewMetricsResponseBody extends TeaModel {
         private UserViewMetric summary; 
         private Integer total; 
         private java.util.List<UserViewMetric> userMetrics; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetUserViewMetricsResponseBody model) {
+            this.resourceGroupId = model.resourceGroupId;
+            this.summary = model.summary;
+            this.total = model.total;
+            this.userMetrics = model.userMetrics;
+        } 
 
         /**
          * ResourceGroupId.

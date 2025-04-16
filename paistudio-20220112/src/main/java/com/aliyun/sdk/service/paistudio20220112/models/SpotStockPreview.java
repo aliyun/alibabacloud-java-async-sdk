@@ -40,6 +40,10 @@ public class SpotStockPreview extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceType
      */
@@ -65,6 +69,15 @@ public class SpotStockPreview extends TeaModel {
         private String instanceType; 
         private Float spotDiscount; 
         private String stockStatus; 
+
+        private Builder() {
+        } 
+
+        private Builder(SpotStockPreview model) {
+            this.instanceType = model.instanceType;
+            this.spotDiscount = model.spotDiscount;
+            this.stockStatus = model.stockStatus;
+        } 
 
         /**
          * InstanceType.

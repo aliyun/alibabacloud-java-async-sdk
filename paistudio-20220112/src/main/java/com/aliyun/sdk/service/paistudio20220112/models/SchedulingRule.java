@@ -44,6 +44,10 @@ public class SchedulingRule extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cronTab
      */
@@ -77,6 +81,16 @@ public class SchedulingRule extends TeaModel {
         private String endAt; 
         private Boolean executeOnce; 
         private String startAt; 
+
+        private Builder() {
+        } 
+
+        private Builder(SchedulingRule model) {
+            this.cronTab = model.cronTab;
+            this.endAt = model.endAt;
+            this.executeOnce = model.executeOnce;
+            this.startAt = model.startAt;
+        } 
 
         /**
          * CronTab.

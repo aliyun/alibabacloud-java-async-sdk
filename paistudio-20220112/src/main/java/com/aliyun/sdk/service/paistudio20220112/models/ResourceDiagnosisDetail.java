@@ -48,6 +48,10 @@ public class ResourceDiagnosisDetail extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return exceedResources
      */
@@ -89,6 +93,17 @@ public class ResourceDiagnosisDetail extends TeaModel {
         private String status; 
         private ResourceAmount used; 
         private java.util.List<String> workloadIds; 
+
+        private Builder() {
+        } 
+
+        private Builder(ResourceDiagnosisDetail model) {
+            this.exceedResources = model.exceedResources;
+            this.limit = model.limit;
+            this.status = model.status;
+            this.used = model.used;
+            this.workloadIds = model.workloadIds;
+        } 
 
         /**
          * ExceedResources.

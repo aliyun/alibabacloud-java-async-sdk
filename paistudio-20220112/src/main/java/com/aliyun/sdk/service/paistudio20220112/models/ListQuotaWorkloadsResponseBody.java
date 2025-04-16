@@ -40,6 +40,10 @@ public class ListQuotaWorkloadsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class ListQuotaWorkloadsResponseBody extends TeaModel {
         private String requestId; 
         private Long totalCount; 
         private java.util.List<QueueInfo> workloads; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListQuotaWorkloadsResponseBody model) {
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.workloads = model.workloads;
+        } 
 
         /**
          * <p>Id of the request</p>

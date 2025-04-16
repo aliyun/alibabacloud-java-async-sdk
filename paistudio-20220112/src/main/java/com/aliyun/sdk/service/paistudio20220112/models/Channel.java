@@ -49,6 +49,10 @@ public class Channel extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return description
      */
@@ -90,6 +94,17 @@ public class Channel extends TeaModel {
         private java.util.Map<String, ?> properties; 
         private Boolean required; 
         private java.util.List<String> supportedChannelTypes; 
+
+        private Builder() {
+        } 
+
+        private Builder(Channel model) {
+            this.description = model.description;
+            this.name = model.name;
+            this.properties = model.properties;
+            this.required = model.required;
+            this.supportedChannelTypes = model.supportedChannelTypes;
+        } 
 
         /**
          * Description.

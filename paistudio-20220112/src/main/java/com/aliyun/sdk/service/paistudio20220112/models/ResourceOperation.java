@@ -84,6 +84,10 @@ public class ResourceOperation extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return creatorId
      */
@@ -197,6 +201,26 @@ public class ResourceOperation extends TeaModel {
         private String reasonCode; 
         private String reasonMessage; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(ResourceOperation model) {
+            this.creatorId = model.creatorId;
+            this.gmtCreatedTime = model.gmtCreatedTime;
+            this.gmtEndTime = model.gmtEndTime;
+            this.gmtModifiedTime = model.gmtModifiedTime;
+            this.gmtStartTime = model.gmtStartTime;
+            this.objectId = model.objectId;
+            this.objectType = model.objectType;
+            this.operationDescription = model.operationDescription;
+            this.operationId = model.operationId;
+            this.operationSpecJson = model.operationSpecJson;
+            this.operationType = model.operationType;
+            this.reasonCode = model.reasonCode;
+            this.reasonMessage = model.reasonMessage;
+            this.status = model.status;
+        } 
 
         /**
          * CreatorId.

@@ -40,6 +40,10 @@ public class WorkspaceSpecs extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return product
      */
@@ -65,6 +69,15 @@ public class WorkspaceSpecs extends TeaModel {
         private String product; 
         private java.util.List<WorkspaceSpec> specs; 
         private String workspaceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(WorkspaceSpecs model) {
+            this.product = model.product;
+            this.specs = model.specs;
+            this.workspaceId = model.workspaceId;
+        } 
 
         /**
          * Product.

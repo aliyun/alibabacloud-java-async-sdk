@@ -44,6 +44,10 @@ public class GPUMetric extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return index
      */
@@ -77,6 +81,16 @@ public class GPUMetric extends TeaModel {
         private String model; 
         private Long status; 
         private Float usageRate; 
+
+        private Builder() {
+        } 
+
+        private Builder(GPUMetric model) {
+            this.index = model.index;
+            this.model = model.model;
+            this.status = model.status;
+            this.usageRate = model.usageRate;
+        } 
 
         /**
          * Index.

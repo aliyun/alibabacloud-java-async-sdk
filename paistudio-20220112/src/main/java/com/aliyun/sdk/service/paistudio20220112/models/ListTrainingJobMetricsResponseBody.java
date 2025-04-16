@@ -40,6 +40,10 @@ public class ListTrainingJobMetricsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return metrics
      */
@@ -65,6 +69,15 @@ public class ListTrainingJobMetricsResponseBody extends TeaModel {
         private java.util.List<Metrics> metrics; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTrainingJobMetricsResponseBody model) {
+            this.metrics = model.metrics;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Metrics.
@@ -151,6 +164,15 @@ public class ListTrainingJobMetricsResponseBody extends TeaModel {
             private String name; 
             private String timestamp; 
             private Double value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Metrics model) {
+                this.name = model.name;
+                this.timestamp = model.timestamp;
+                this.value = model.value;
+            } 
 
             /**
              * Name.

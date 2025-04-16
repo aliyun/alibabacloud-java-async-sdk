@@ -112,6 +112,10 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cpu
      */
@@ -281,6 +285,33 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
         private String status; 
         private java.util.List<String> supportedDrivers; 
         private java.util.List<Tags> tags; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetResourceGroupMachineGroupResponseBody model) {
+            this.cpu = model.cpu;
+            this.defaultDriver = model.defaultDriver;
+            this.ecsCount = model.ecsCount;
+            this.ecsSpec = model.ecsSpec;
+            this.gmtCreatedTime = model.gmtCreatedTime;
+            this.gmtExpiredTime = model.gmtExpiredTime;
+            this.gmtModifiedTime = model.gmtModifiedTime;
+            this.gmtStartedTime = model.gmtStartedTime;
+            this.gpu = model.gpu;
+            this.gpuType = model.gpuType;
+            this.machineGroupID = model.machineGroupID;
+            this.memory = model.memory;
+            this.name = model.name;
+            this.paymentDuration = model.paymentDuration;
+            this.paymentDurationUnit = model.paymentDurationUnit;
+            this.paymentType = model.paymentType;
+            this.requestId = model.requestId;
+            this.resourceGroupID = model.resourceGroupID;
+            this.status = model.status;
+            this.supportedDrivers = model.supportedDrivers;
+            this.tags = model.tags;
+        } 
 
         /**
          * Cpu.
@@ -499,6 +530,14 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
         public static final class Builder {
             private String tagKey; 
             private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
 
             /**
              * TagKey.

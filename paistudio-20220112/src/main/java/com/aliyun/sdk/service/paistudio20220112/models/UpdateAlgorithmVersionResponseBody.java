@@ -36,6 +36,10 @@ public class UpdateAlgorithmVersionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return algorithmId
      */
@@ -53,6 +57,14 @@ public class UpdateAlgorithmVersionResponseBody extends TeaModel {
     public static final class Builder {
         private String algorithmId; 
         private String algorithmVersion; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateAlgorithmVersionResponseBody model) {
+            this.algorithmId = model.algorithmId;
+            this.algorithmVersion = model.algorithmVersion;
+        } 
 
         /**
          * AlgorithmId.

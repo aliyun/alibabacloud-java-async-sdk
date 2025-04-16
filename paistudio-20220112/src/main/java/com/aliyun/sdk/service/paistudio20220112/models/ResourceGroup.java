@@ -60,6 +60,10 @@ public class ResourceGroup extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return creatorID
      */
@@ -125,6 +129,20 @@ public class ResourceGroup extends TeaModel {
         private String resourceGroupID; 
         private UserVpc userVpc; 
         private String workspaceID; 
+
+        private Builder() {
+        } 
+
+        private Builder(ResourceGroup model) {
+            this.creatorID = model.creatorID;
+            this.gmtCreatedTime = model.gmtCreatedTime;
+            this.gmtModifiedTime = model.gmtModifiedTime;
+            this.name = model.name;
+            this.nodeCount = model.nodeCount;
+            this.resourceGroupID = model.resourceGroupID;
+            this.userVpc = model.userVpc;
+            this.workspaceID = model.workspaceID;
+        } 
 
         /**
          * CreatorID.

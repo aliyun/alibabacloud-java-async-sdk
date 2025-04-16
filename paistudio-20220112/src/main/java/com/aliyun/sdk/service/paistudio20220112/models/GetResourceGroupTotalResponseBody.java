@@ -44,6 +44,10 @@ public class GetResourceGroupTotalResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return totalCPU
      */
@@ -77,6 +81,16 @@ public class GetResourceGroupTotalResponseBody extends TeaModel {
         private Integer totalGPU; 
         private java.util.List<GPUInfo> totalGPUInfos; 
         private Integer totalMemory; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetResourceGroupTotalResponseBody model) {
+            this.totalCPU = model.totalCPU;
+            this.totalGPU = model.totalGPU;
+            this.totalGPUInfos = model.totalGPUInfos;
+            this.totalMemory = model.totalMemory;
+        } 
 
         /**
          * totalCPU.

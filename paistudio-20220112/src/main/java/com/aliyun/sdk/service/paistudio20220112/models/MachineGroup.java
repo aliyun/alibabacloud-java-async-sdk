@@ -100,6 +100,10 @@ public class MachineGroup extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return creatorID
      */
@@ -245,6 +249,30 @@ public class MachineGroup extends TeaModel {
         private String resourceGroupID; 
         private String status; 
         private java.util.List<String> supportedDrivers; 
+
+        private Builder() {
+        } 
+
+        private Builder(MachineGroup model) {
+            this.creatorID = model.creatorID;
+            this.defaultDriver = model.defaultDriver;
+            this.ecsCount = model.ecsCount;
+            this.ecsSpec = model.ecsSpec;
+            this.gmtCreatedTime = model.gmtCreatedTime;
+            this.gmtExpiredTime = model.gmtExpiredTime;
+            this.gmtModifiedTime = model.gmtModifiedTime;
+            this.gmtStartedTime = model.gmtStartedTime;
+            this.machineGroupID = model.machineGroupID;
+            this.orderInstanceId = model.orderInstanceId;
+            this.paymentDuration = model.paymentDuration;
+            this.paymentDurationUnit = model.paymentDurationUnit;
+            this.paymentType = model.paymentType;
+            this.reasonCode = model.reasonCode;
+            this.reasonMessage = model.reasonMessage;
+            this.resourceGroupID = model.resourceGroupID;
+            this.status = model.status;
+            this.supportedDrivers = model.supportedDrivers;
+        } 
 
         /**
          * CreatorID.
