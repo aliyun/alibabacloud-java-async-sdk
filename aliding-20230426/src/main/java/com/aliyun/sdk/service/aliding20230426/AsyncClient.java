@@ -32,10 +32,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddDriveSpaceResponse> addDriveSpace(AddDriveSpaceRequest request);
 
     /**
+     * @param request the request parameters of AddFolder  AddFolderRequest
+     * @return AddFolderResponse
+     */
+    CompletableFuture<AddFolderResponse> addFolder(AddFolderRequest request);
+
+    /**
      * @param request the request parameters of AddMeetingRooms  AddMeetingRoomsRequest
      * @return AddMeetingRoomsResponse
      */
     CompletableFuture<AddMeetingRoomsResponse> addMeetingRooms(AddMeetingRoomsRequest request);
+
+    /**
+     * @param request the request parameters of AddPermission  AddPermissionRequest
+     * @return AddPermissionResponse
+     */
+    CompletableFuture<AddPermissionResponse> addPermission(AddPermissionRequest request);
 
     /**
      * @param request the request parameters of AddRecordPermission  AddRecordPermissionRequest
@@ -316,6 +328,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteColumnsResponse> deleteColumns(DeleteColumnsRequest request);
 
     /**
+     * @param request the request parameters of DeleteDentry  DeleteDentryRequest
+     * @return DeleteDentryResponse
+     */
+    CompletableFuture<DeleteDentryResponse> deleteDentry(DeleteDentryRequest request);
+
+    /**
      * @param request the request parameters of DeleteDriveSpace  DeleteDriveSpaceRequest
      * @return DeleteDriveSpaceResponse
      */
@@ -358,6 +376,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteMeetingRoomGroupResponse> deleteMeetingRoomGroup(DeleteMeetingRoomGroupRequest request);
 
     /**
+     * @param request the request parameters of DeletePermission  DeletePermissionRequest
+     * @return DeletePermissionResponse
+     */
+    CompletableFuture<DeletePermissionResponse> deletePermission(DeletePermissionRequest request);
+
+    /**
      * @param request the request parameters of DeleteRows  DeleteRowsRequest
      * @return DeleteRowsResponse
      */
@@ -398,6 +422,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteWorkspaceMembersResponse
      */
     CompletableFuture<DeleteWorkspaceMembersResponse> deleteWorkspaceMembers(DeleteWorkspaceMembersRequest request);
+
+    /**
+     * @param request the request parameters of DocUpdateContent  DocUpdateContentRequest
+     * @return DocUpdateContentResponse
+     */
+    CompletableFuture<DocUpdateContentResponse> docUpdateContent(DocUpdateContentRequest request);
 
     /**
      * @param request the request parameters of ExecuteBatchTask  ExecuteBatchTaskRequest
@@ -906,6 +936,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListNodesResponse> listNodes(ListNodesRequest request);
 
     /**
+     * @param request the request parameters of ListPermissions  ListPermissionsRequest
+     * @return ListPermissionsResponse
+     */
+    CompletableFuture<ListPermissionsResponse> listPermissions(ListPermissionsRequest request);
+
+    /**
      * @param request the request parameters of ListReport  ListReportRequest
      * @return ListReportResponse
      */
@@ -1348,6 +1384,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateMeetingRoomGroupResponse
      */
     CompletableFuture<UpdateMeetingRoomGroupResponse> updateMeetingRoomGroup(UpdateMeetingRoomGroupRequest request);
+
+    /**
+     * @param request the request parameters of UpdatePermission  UpdatePermissionRequest
+     * @return UpdatePermissionResponse
+     */
+    CompletableFuture<UpdatePermissionResponse> updatePermission(UpdatePermissionRequest request);
 
     /**
      * @param request the request parameters of UpdateRange  UpdateRangeRequest
