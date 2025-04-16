@@ -147,7 +147,7 @@ public class ListImagesResponseBody extends TeaModel {
         private String releaseFileMd5;
 
         @com.aliyun.core.annotation.NameInMap("ReleaseFileSize")
-        private Long releaseFileSize;
+        private String releaseFileSize;
 
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
@@ -232,7 +232,7 @@ public class ListImagesResponseBody extends TeaModel {
         /**
          * @return releaseFileSize
          */
-        public Long getReleaseFileSize() {
+        public String getReleaseFileSize() {
             return this.releaseFileSize;
         }
 
@@ -252,7 +252,7 @@ public class ListImagesResponseBody extends TeaModel {
             private Long nodeCount; 
             private String platform; 
             private String releaseFileMd5; 
-            private Long releaseFileSize; 
+            private String releaseFileSize; 
             private String type; 
 
             private Builder() {
@@ -365,7 +365,7 @@ public class ListImagesResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>5.8G</p>
              */
-            public Builder releaseFileSize(Long releaseFileSize) {
+            public Builder releaseFileSize(String releaseFileSize) {
                 this.releaseFileSize = releaseFileSize;
                 return this;
             }

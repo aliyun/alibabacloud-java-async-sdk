@@ -42,7 +42,7 @@ public class DescribeClusterResponseBody extends TeaModel {
     private String hpnZone;
 
     @com.aliyun.core.annotation.NameInMap("Networks")
-    private java.util.List<Networks> networks;
+    private Networks networks;
 
     @com.aliyun.core.annotation.NameInMap("NodeCount")
     private Long nodeCount;
@@ -163,7 +163,7 @@ public class DescribeClusterResponseBody extends TeaModel {
     /**
      * @return networks
      */
-    public java.util.List<Networks> getNetworks() {
+    public Networks getNetworks() {
         return this.networks;
     }
 
@@ -239,7 +239,7 @@ public class DescribeClusterResponseBody extends TeaModel {
         private String computingIpVersion; 
         private String createTime; 
         private String hpnZone; 
-        private java.util.List<Networks> networks; 
+        private Networks networks; 
         private Long nodeCount; 
         private Long nodeGroupCount; 
         private String openEniJumboFrame; 
@@ -362,7 +362,7 @@ public class DescribeClusterResponseBody extends TeaModel {
         /**
          * <p>Network Information</p>
          */
-        public Builder networks(java.util.List<Networks> networks) {
+        public Builder networks(Networks networks) {
             this.networks = networks;
             return this;
         }
@@ -593,10 +593,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>VPC Segment ID</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vpd-iqd7xunc</p>
+             * VpdId.
              */
             public Builder vpdId(String vpdId) {
                 this.vpdId = vpdId;
